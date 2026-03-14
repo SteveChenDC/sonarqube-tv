@@ -88,7 +88,7 @@ function FilterGroup<T extends string>({
             className={`rounded-full px-3 py-1.5 font-heading text-xs font-medium transition-colors ${
               value === opt.value
                 ? "bg-qube-blue text-n1"
-                : "bg-n8 text-n5 hover:bg-n7"
+                : "bg-n8 text-n4 hover:bg-n7 hover:text-n2"
             }`}
           >
             {opt.label}

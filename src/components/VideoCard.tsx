@@ -60,7 +60,7 @@ export default function VideoCard({ video, fluid = false }: Readonly<{ video: Vi
         </span>
 
         {Date.now() - new Date(video.publishedAt).getTime() < 7 * 24 * 60 * 60 * 1000 && progress === 0 && (
-          <span className="absolute top-2 left-2 rounded bg-sonar-red px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-n1">
+          <span className="absolute top-2 left-2 rounded bg-sonar-red px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-n1">
             New
           </span>
         )}

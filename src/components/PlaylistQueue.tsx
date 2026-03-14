@@ -73,7 +73,7 @@ export default function PlaylistQueue({
               </svg>
             </Link>
           ) : (
-            <span className="cursor-not-allowed rounded p-1.5 text-n8 opacity-50" aria-disabled="true" aria-label="No previous video">
+            <span className="cursor-not-allowed rounded p-1.5 text-n7" aria-disabled="true" aria-label="No previous video">
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
               </svg>
@@ -100,7 +100,7 @@ export default function PlaylistQueue({
               </svg>
             </Link>
           ) : (
-            <span className="cursor-not-allowed rounded p-1.5 text-n8 opacity-50" aria-disabled="true" aria-label="No next video">
+            <span className="cursor-not-allowed rounded p-1.5 text-n7" aria-disabled="true" aria-label="No next video">
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
@@ -109,7 +109,7 @@ export default function PlaylistQueue({
         </div>
       </div>
 
-      <div className="max-h-80 overflow-y-auto">
+      <div className="max-h-[60vh] overflow-y-auto sm:max-h-80">
         {playlistVideos.map((video, index) => (
           <Link
             key={video.id}
@@ -152,7 +152,7 @@ export default function PlaylistQueue({
               >
                 {video.title}
               </p>
-              <p className="font-body text-[10px] text-n7">
+              <p className="font-body text-xs text-n7">
                 {video.duration}
               </p>
             </div>
