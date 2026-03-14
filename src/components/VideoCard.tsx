@@ -97,7 +97,7 @@ export default function VideoCard({ video, fluid = false, onRemove }: Readonly<{
           </>
         )}
       </div>
-      <h3 className={`mt-3 line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 ${fluid ? "text-base" : "w-[280px] text-[15px] sm:w-[320px]"}`}>
+      <h3 className={`mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 ${fluid ? "text-base" : "w-[280px] text-[15px] sm:w-[320px]"}`}>
         {video.title}
       </h3>
       <div className={`mt-1.5 flex items-center gap-2 ${fluid ? "" : "w-[280px] sm:w-[320px]"}`}>
