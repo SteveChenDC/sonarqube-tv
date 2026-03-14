@@ -79,12 +79,14 @@ export default function VideoRow({ title, categorySlug, videos, hideHeader, divi
       <div className="group/row relative">
         <button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-0 z-10 flex h-full w-10 items-center justify-center opacity-0 transition-opacity duration-300 group-hover/row:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
+          className="absolute left-0 top-0 z-10 flex h-full w-10 items-center justify-center bg-gradient-to-r from-background/80 to-transparent opacity-0 transition-opacity duration-300 group-hover/row:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
           aria-label="Scroll left"
         >
-          <svg className="h-6 w-6 text-n1 drop-shadow-md" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-n9/70 backdrop-blur-sm">
+            <svg className="h-5 w-5 text-n1 drop-shadow-md" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </span>
         </button>
 
         <div
@@ -127,12 +129,14 @@ export default function VideoRow({ title, categorySlug, videos, hideHeader, divi
 
         <button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-0 z-10 flex h-full w-10 items-center justify-center opacity-0 transition-opacity duration-300 group-hover/row:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
+          className="absolute right-0 top-0 z-10 flex h-full w-10 items-center justify-center bg-gradient-to-l from-background/80 to-transparent opacity-0 transition-opacity duration-300 group-hover/row:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
           aria-label="Scroll right"
         >
-          <svg className="h-6 w-6 text-n1 drop-shadow-md" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-n9/70 backdrop-blur-sm">
+            <svg className="h-5 w-5 text-n1 drop-shadow-md" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
         </button>
       </div>
     </section>
