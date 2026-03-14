@@ -41,7 +41,20 @@ export function toggleTheme(): Theme {
     ? "dark"
     : "light";
   const next: Theme = current === "dark" ? "light" : "dark";
+
+  // Enable smooth color transition only during intentional toggle,
+  // not on page load or navigation
+  document.documentElement.classList.add("theme-transitioning");
   setTheme(next);
+
+  // Remove after transition completes to avoid unwanted transitions elsewhere
+  const cleanup = () => {
+    document.documentElement.classList.remove("theme-transitioning");
+  };
+  document.documentElement.addEventListener("transitionend", cleanup, { once: true });
+  // Fallback in case transitionend doesn't fire
+  setTimeout(cleanup, 600);
+
   return next;
 }
 
