@@ -42,15 +42,15 @@ export default function VideoPlayer({ youtubeId, title, videoId }: Readonly<Vide
   }, [videoId]);
 
   const initPlayer = useCallback(() => {
-    if (!window.YT || !containerRef.current) return;
+    if (!globalThis.window?.YT || !containerRef.current) return;
     playerRef.current?.destroy();
-    playerRef.current = new window.YT.Player("yt-player", {
+    playerRef.current = new globalThis.window.YT.Player("yt-player", {
       videoId: youtubeId,
       playerVars: {
         rel: 0,
         modestbranding: 1,
         enablejsapi: 1,
-        origin: window.location.origin,
+        origin: globalThis.location.origin,
       },
       events: {},
     });
@@ -58,11 +58,11 @@ export default function VideoPlayer({ youtubeId, title, videoId }: Readonly<Vide
 
   useEffect(() => {
     // Load YT API script if not loaded yet
-    if (window.YT) {
+    if (globalThis.window?.YT) {
       initPlayer();
     } else {
-      const prev = window.onYouTubeIframeAPIReady;
-      window.onYouTubeIframeAPIReady = () => {
+      const prev = globalThis.window?.onYouTubeIframeAPIReady;
+      globalThis.window.onYouTubeIframeAPIReady = () => {
         prev?.();
         initPlayer();
       };
@@ -105,8 +105,8 @@ export default function VideoPlayer({ youtubeId, title, videoId }: Readonly<Vide
       const seconds = (e as CustomEvent<number>).detail;
       playerRef.current?.seekTo(seconds, true);
     }
-    window.addEventListener("yt-seek", handleSeek);
-    return () => window.removeEventListener("yt-seek", handleSeek);
+    globalThis.addEventListener("yt-seek", handleSeek);
+    return () => globalThis.removeEventListener("yt-seek", handleSeek);
   }, []);
 
   return (

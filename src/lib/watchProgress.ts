@@ -5,7 +5,7 @@ interface WatchProgressMap {
 }
 
 export function getAllProgress(): WatchProgressMap {
-  if (typeof window === "undefined") return {};
+  if (typeof globalThis.window === "undefined") return {};
   try {
     const data = localStorage.getItem(STORAGE_KEY);
     return data ? JSON.parse(data) : {};
@@ -19,14 +19,14 @@ export function getProgress(videoId: string): number {
 }
 
 export function removeProgress(videoId: string): void {
-  if (typeof window === "undefined") return;
+  if (typeof globalThis.window === "undefined") return;
   const all = getAllProgress();
   delete all[videoId];
   localStorage.setItem(STORAGE_KEY, JSON.stringify(all));
 }
 
 export function setProgress(videoId: string, percent: number): void {
-  if (typeof window === "undefined") return;
+  if (typeof globalThis.window === "undefined") return;
   const all = getAllProgress();
   all[videoId] = Math.min(100, Math.max(0, Math.round(percent)));
   localStorage.setItem(STORAGE_KEY, JSON.stringify(all));

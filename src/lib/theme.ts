@@ -2,14 +2,14 @@ const STORAGE_KEY = "sonarqube-tv-theme";
 type Theme = "light" | "dark";
 
 function getSystemTheme(): Theme {
-  if (typeof window === "undefined") return "dark";
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
+  if (typeof globalThis.window === "undefined") return "dark";
+  return globalThis.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
     : "light";
 }
 
 function getStoredTheme(): Theme | null {
-  if (typeof window === "undefined") return null;
+  if (typeof globalThis.window === "undefined") return null;
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored === "light" || stored === "dark") return stored;
@@ -48,7 +48,7 @@ export function toggleTheme(): Theme {
 export function subscribeToSystemTheme(
   callback: (theme: Theme) => void
 ): () => void {
-  const mql = window.matchMedia("(prefers-color-scheme: dark)");
+  const mql = globalThis.matchMedia("(prefers-color-scheme: dark)");
   function handler(e: MediaQueryListEvent) {
     if (!getStoredTheme()) {
       const theme: Theme = e.matches ? "dark" : "light";

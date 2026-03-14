@@ -9,7 +9,7 @@ function formatTime(ms: number): string {
   return `${minutes}:${seconds.toString().padStart(2, "0")}`;
 }
 
-function SegmentRow({ seg, onSeek }: { seg: TranscriptSegment; onSeek: (ms: number) => void }) {
+function SegmentRow({ seg, onSeek }: Readonly<{ seg: TranscriptSegment; onSeek: (ms: number) => void }>) {
   return (
     <div className="flex gap-3 rounded p-1.5 hover:bg-n8/30">
       <button
@@ -28,15 +28,15 @@ export default function TranscriptView({
   chapters = [],
 }: Readonly<{ segments: TranscriptSegment[]; chapters?: TranscriptChapter[] }>) {
   const handleSeek = (offsetMs: number) => {
-    window.dispatchEvent(new CustomEvent("yt-seek", { detail: offsetMs / 1000 }));
+    globalThis.dispatchEvent(new CustomEvent("yt-seek", { detail: offsetMs / 1000 }));
   };
 
   // No chapters — flat list
   if (chapters.length === 0) {
     return (
       <div className="max-h-96 space-y-1 overflow-y-auto scrollbar-hide">
-        {segments.map((seg, i) => (
-          <SegmentRow key={i} seg={seg} onSeek={handleSeek} />
+        {segments.map((seg) => (
+          <SegmentRow key={seg.offset} seg={seg} onSeek={handleSeek} />
         ))}
       </div>
     );
@@ -67,7 +67,7 @@ export default function TranscriptView({
   return (
     <div className="max-h-[32rem] overflow-y-auto scrollbar-hide">
       {groups.map((group, gi) => (
-        <div key={gi} className={gi > 0 ? "mt-4" : ""}>
+        <div key={group.title} className={gi > 0 ? "mt-4" : ""}>
           <button
             onClick={() => handleSeek(group.startTime)}
             className="sticky top-0 z-10 flex w-full items-center gap-2 bg-n9/95 backdrop-blur-sm px-2 py-2 text-left"
@@ -81,7 +81,7 @@ export default function TranscriptView({
           </button>
           <div className="space-y-1 pl-2">
             {group.segments.map((seg, i) => (
-              <SegmentRow key={i} seg={seg} onSeek={handleSeek} />
+              <SegmentRow key={seg.offset} seg={seg} onSeek={handleSeek} />
             ))}
           </div>
         </div>

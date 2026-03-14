@@ -128,8 +128,8 @@ export default function Header() {
                   </Link>
                 </div>
                 <div className="grid grid-cols-1 gap-x-6 gap-y-1 sm:grid-cols-3">
-                  {[col1, col2, col3].map((col, colIdx) => (
-                    <div key={colIdx} className="space-y-1">
+                  {[col1, col2, col3].map((col) => (
+                    <div key={col[0]?.slug ?? "empty"} className="space-y-1">
                       {col.map((cat) => (
                         <a
                           key={cat.slug}

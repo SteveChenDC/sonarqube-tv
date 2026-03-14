@@ -19,7 +19,7 @@ const STOP_WORDS = new Set([
 function extractKeywords(text: string): string[] {
   return text
     .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, "")
+    .replaceAll(/[^a-z0-9\s]/g, "")
     .split(/\s+/)
     .filter((w) => w.length > 2 && !STOP_WORDS.has(w));
 }
@@ -59,6 +59,45 @@ function extractSections(markdown: string): ArticleSection[] {
   return sections;
 }
 
+const WINDOW = 15; // segments to compare at once
+
+/** Score how many keywords appear in a window of segments starting at `from`. */
+function scoreWindow(
+  segments: TranscriptSegment[],
+  from: number,
+  keywordSet: Set<string>
+): number {
+  const windowEnd = Math.min(from + WINDOW, segments.length);
+  let score = 0;
+  for (let j = from; j < windowEnd; j++) {
+    const words = segments[j].text.toLowerCase().split(/\s+/);
+    for (const w of words) {
+      if (keywordSet.has(w.replaceAll(/[^a-z0-9]/g, ""))) score++;
+    }
+  }
+  return score;
+}
+
+/** Find the segment index (starting from `searchFrom`) with the best keyword overlap. */
+function findBestMatch(
+  segments: TranscriptSegment[],
+  keywordSet: Set<string>,
+  searchFrom: number
+): { bestIndex: number; bestScore: number } {
+  let bestIndex = searchFrom;
+  let bestScore = -1;
+
+  for (let i = searchFrom; i < segments.length; i++) {
+    const score = scoreWindow(segments, i, keywordSet);
+    if (score > bestScore) {
+      bestScore = score;
+      bestIndex = i;
+    }
+  }
+
+  return { bestIndex, bestScore };
+}
+
 /**
  * Match article sections to transcript segments by keyword overlap.
  * Scans transcript in order and assigns each section to the segment window
@@ -71,7 +110,6 @@ export function extractChapters(
   const sections = extractSections(markdown);
   if (sections.length === 0 || segments.length === 0) return [];
 
-  const WINDOW = 15; // segments to compare at once
   const chapters: TranscriptChapter[] = [];
   let searchFrom = 0;
 
@@ -79,27 +117,8 @@ export function extractChapters(
     if (section.keywords.length === 0) continue;
 
     const keywordSet = new Set(section.keywords);
-    let bestIndex = searchFrom;
-    let bestScore = -1;
+    const { bestIndex, bestScore } = findBestMatch(segments, keywordSet, searchFrom);
 
-    for (let i = searchFrom; i < segments.length; i++) {
-      // Score a window of segments starting at i
-      const windowEnd = Math.min(i + WINDOW, segments.length);
-      let score = 0;
-      for (let j = i; j < windowEnd; j++) {
-        const words = segments[j].text.toLowerCase().split(/\s+/);
-        for (const w of words) {
-          if (keywordSet.has(w.replace(/[^a-z0-9]/g, ""))) score++;
-        }
-      }
-
-      if (score > bestScore) {
-        bestScore = score;
-        bestIndex = i;
-      }
-    }
-
-    // Only add if we found a meaningful match
     if (bestScore > 0) {
       chapters.push({ title: section.title, startIndex: bestIndex });
       searchFrom = bestIndex + 1;
