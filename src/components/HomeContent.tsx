@@ -91,14 +91,15 @@ export default function HomeContent({
     filteredVideos.filter((v) => v.category === slug);
 
   const topRowVideos = useMemo(() => {
+    const MAX_TOP_ROW = 15;
     if (sortBy === "oldest") {
-      return filteredVideos.slice(0, 20);
+      return filteredVideos.slice(0, MAX_TOP_ROW);
     }
     const thirtyDaysAgo = new Date();
     thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-    return filteredVideos.filter(
-      (v) => new Date(v.publishedAt) >= thirtyDaysAgo
-    );
+    return filteredVideos
+      .filter((v) => new Date(v.publishedAt) >= thirtyDaysAgo)
+      .slice(0, MAX_TOP_ROW);
   }, [filteredVideos, sortBy]);
 
   const reset = () => {
