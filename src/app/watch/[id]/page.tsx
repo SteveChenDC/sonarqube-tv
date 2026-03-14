@@ -58,20 +58,24 @@ export default async function WatchPage({
 
         <VideoPlayer youtubeId={video.youtubeId} title={video.title} videoId={video.id} />
 
-        <div className="mt-6">
+        <div className="mt-8">
           {category && (
             <Link
               href={`/category/${category.slug}`}
-              className="mb-2 inline-block font-heading text-sm text-qube-blue hover:underline"
+              className="mb-3 inline-block font-heading text-sm text-qube-blue hover:underline"
             >
               {category.title}
             </Link>
           )}
-          <h1 className="font-heading text-2xl font-bold text-n1 sm:text-3xl">
+          <h1 className="font-heading text-2xl font-bold leading-tight text-n1 sm:text-3xl">
             {video.title}
           </h1>
-          <p className="mt-2 text-sm text-n7">{formatDate(video.publishedAt)}</p>
-          <p className="mt-4 text-base leading-relaxed text-n5">
+          <div className="mt-3 flex items-center gap-3">
+            <span className="text-sm text-n6">{formatDate(video.publishedAt)}</span>
+            <span className="text-n8">|</span>
+            <span className="text-sm text-n6">{video.duration}</span>
+          </div>
+          <p className="mt-5 text-base leading-relaxed text-n5">
             {video.description}
           </p>
         </div>

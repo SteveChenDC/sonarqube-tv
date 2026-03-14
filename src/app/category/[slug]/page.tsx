@@ -44,14 +44,17 @@ export default async function CategoryPage({
           Back
         </Link>
 
-        <h1 className="mb-2 font-heading text-3xl font-bold text-n1 sm:text-4xl">
-          {category.title}
-        </h1>
-        <p className="mb-8 max-w-2xl text-base text-n6">
+        <div className="mb-3 flex items-baseline gap-3">
+          <h1 className="font-heading text-3xl font-bold text-n1 sm:text-4xl">
+            {category.title}
+          </h1>
+          <span className="font-heading text-lg text-n7">{categoryVideos.length}</span>
+        </div>
+        <p className="mb-10 max-w-2xl text-base leading-relaxed text-n6">
           {category.description}
         </p>
 
-        <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {categoryVideos.map((video) => (
             <Link
               key={video.id}
@@ -79,10 +82,10 @@ export default async function CategoryPage({
                   {video.duration}
                 </span>
               </div>
-              <h3 className="mt-3 line-clamp-2 font-heading text-base font-medium text-n3 transition-colors group-hover:text-n1">
+              <h3 className="mt-3 line-clamp-2 font-heading text-base font-medium leading-snug text-n3 transition-colors group-hover:text-n1">
                 {video.title}
               </h3>
-              <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-n6">
+              <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-n6">
                 {video.description}
               </p>
             </Link>

@@ -81,13 +81,13 @@ export default function VideoCard({ video }: Readonly<{ video: Video }>) {
           </>
         )}
       </div>
-      <h3 className="mt-2 line-clamp-2 w-[280px] font-heading text-sm font-medium text-n3 transition-colors group-hover:text-n1 sm:w-[320px]">
+      <h3 className="mt-3 line-clamp-2 w-[280px] font-heading text-sm font-medium leading-snug text-n3 transition-colors group-hover:text-n1 sm:w-[320px]">
         {video.title}
       </h3>
-      <div className="mt-1 flex w-[280px] items-center gap-2 sm:w-[320px]">
-        <span className="text-xs text-n7">{timeAgo(video.publishedAt)}</span>
+      <div className="mt-1.5 flex w-[280px] items-center gap-2 sm:w-[320px]">
+        <span className="text-xs text-n6">{timeAgo(video.publishedAt)}</span>
         {categoryTitle && (
-          <span className="rounded bg-sonar-purple/30 px-1.5 py-0.5 text-[10px] font-medium text-n6">
+          <span className="rounded bg-sonar-purple/30 px-1.5 py-0.5 text-[11px] font-medium text-n6">
             {categoryTitle}
           </span>
         )}
