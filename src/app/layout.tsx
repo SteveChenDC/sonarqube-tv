@@ -27,9 +27,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('sonarqube-tv-theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}else{document.documentElement.classList.remove('dark')}}catch(e){document.documentElement.classList.add('dark')}})()`,
+          }}
+        />
+      </head>
       <body
-        className={`${poppins.variable} ${inter.variable} min-h-screen bg-[#0a0a0a] font-body antialiased`}
+        className={`${poppins.variable} ${inter.variable} min-h-screen bg-background font-body antialiased`}
       >
         <Header />
         <main className="min-h-screen">{children}</main>

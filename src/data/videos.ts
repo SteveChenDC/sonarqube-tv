@@ -1510,16 +1510,6 @@ export const videos: Video[] = [
     publishedAt: "2024-03-13",
   },
   {
-    id: "v146",
-    title: "Interview with a Java Developer | Developer Relations Advocate",
-    description: "Interview with a Java Developer | Developer Relations Advocate",
-    youtubeId: "nOJooDwqDQQ",
-    thumbnail: "https://img.youtube.com/vi/nOJooDwqDQQ/maxresdefault.jpg",
-    category: "clean-code",
-    duration: "5:26",
-    publishedAt: "2024-03-13",
-  },
-  {
     id: "v147",
     title: "Interview with a Java Developer | Product Manager",
     description: "Interview with a Java Developer | Product Manager",
@@ -2363,6 +2353,23 @@ export function getCategoryBySlug(slug: string): Category | undefined {
   return categories.find((c) => c.slug === slug);
 }
 
+const featuredYoutubeIds = [
+  "F1F_CVD33WI", // Seven habits of highly effective AI coding (Erin Kouri)
+  "el9OKGrqU6o", // Refactoring with Cognitive Complexity (Ann Campbell)
+  "DiF4VfW4zco", // Customer Stories | Modino.io (Blazej Pawlak)
+  "g6BqDORtdkE", // Fireside chat with DATEV (two people)
+  "ACZqTrM5Frs", // Interview - Product Manager
+  "2jYXRu9dOJM", // Interview - Software Engineer
+  "i95lJmsWEHc", // Interview - Python Developer
+  "D-ycv935v64", // Live with ISMG
+  "cPxwIpV6VBI", // SecurityGuy TV (three people)
+  "doEikRO9GF8", // MISRA C++ 2023 (Phil Nash & Andreas Weis)
+  "4Ya5K95pmKQ", // MS Build 2024 (Manish Kapur)
+  "kfu0M0G591s", // Linux Foundation (two people)
+  "vGfM3FInXTQ", // Supercharge your developers (three people)
+];
+
 export function getFeaturedVideo(): Video {
-  return videos.find((v) => v.youtubeId === "el9OKGrqU6o") ?? videos[0];
+  const id = featuredYoutubeIds[Math.floor(Math.random() * featuredYoutubeIds.length)];
+  return videos.find((v) => v.youtubeId === id) ?? videos[0];
 }

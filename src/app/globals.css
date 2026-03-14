@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Dark theme (default) */
 :root {
   --background: #0a0a0a;
   --foreground: #E8EFF7;
@@ -15,6 +16,22 @@
   --n7: #5F656D;
   --n8: #3B3F44;
   --n9: #000000;
+}
+
+/* Light theme — reverse the neutral scale */
+html:not(.dark) {
+  --background: #F4F7FB;
+  --foreground: #1a1a2e;
+  --sonar-purple: #4a0e6e;
+  --n1: #0a0a0a;
+  --n2: #1a1a2e;
+  --n3: #2d2d3f;
+  --n4: #3B3F44;
+  --n5: #5F656D;
+  --n6: #6b7280;
+  --n7: #A8B3C2;
+  --n8: #DDE6F3;
+  --n9: #FFFFFF;
 }
 
 @theme inline {

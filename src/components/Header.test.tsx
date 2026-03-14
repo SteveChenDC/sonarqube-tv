@@ -9,9 +9,9 @@ vi.mock("next/link", () => ({
 }));
 
 describe("Header", () => {
-  it("renders the SonarQube.tv brand logo linking to home", () => {
+  it("renders the Sonar.tv brand logo linking to home", () => {
     render(<Header />);
-    const homeLink = screen.getByRole("link", { name: /sonarqube/i });
+    const homeLink = screen.getByRole("link", { name: /sonar/i });
     expect(homeLink).toHaveAttribute("href", "/");
   });
 
@@ -24,8 +24,13 @@ describe("Header", () => {
   it("renders brand text with correct segments", () => {
     render(<Header />);
     expect(screen.getByText("Sonar")).toBeTruthy();
-    expect(screen.getByText("Qube")).toBeTruthy();
     expect(screen.getByText(".tv")).toBeTruthy();
+  });
+
+  it("renders the whale mark SVG", () => {
+    const { container } = render(<Header />);
+    const svg = container.querySelector("svg[aria-hidden='true']");
+    expect(svg).toBeTruthy();
   });
 
   it("has a fixed header with proper z-index class", () => {
