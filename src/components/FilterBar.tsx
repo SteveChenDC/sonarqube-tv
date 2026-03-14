@@ -244,7 +244,7 @@ export function FilterTrigger({
       <span>Filters</span>
       <SlidersIcon />
       {activeCount > 0 && (
-        <span className="ml-1 flex h-5 w-5 items-center justify-center rounded-full bg-qube-blue text-xs font-bold text-white">
+        <span className="ml-1 flex h-5 w-5 items-center justify-center rounded-full bg-white text-xs font-bold text-qube-blue">
           {activeCount}
         </span>
       )}

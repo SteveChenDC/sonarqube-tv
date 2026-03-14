@@ -294,7 +294,7 @@ export default function HomeContent({
         </svg>
         <span className="font-heading text-xs font-semibold">Filters</span>
         {activeFilterCount > 0 && (
-          <span className="flex h-4.5 w-4.5 items-center justify-center rounded-full bg-qube-blue text-[10px] font-bold text-white">
+          <span className="flex h-4.5 w-4.5 items-center justify-center rounded-full bg-white text-[10px] font-bold text-qube-blue">
             {activeFilterCount}
           </span>
         )}
