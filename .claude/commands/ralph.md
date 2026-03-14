@@ -25,6 +25,16 @@ Run `tmux send-keys -t ralphs:loop C-c` to pause the loop.
 ### "review"
 Run `npm run build && npm test` to check if the Ralphs broke anything. Then use the Chrome MCP tools to open `http://localhost:3000` and take a screenshot to visually verify the UI changes.
 
+### "ship"
+Commit all changes and push to the remote. Follow these steps:
+1. Run `git status` (never use `-uall`) and `git diff` to review changes.
+2. Run `git log --oneline -5` to match commit message style.
+3. Stage relevant changed files by name (skip secrets like `.env`).
+4. Write a concise commit message ending with `Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>`.
+5. Commit using a HEREDOC for the message.
+6. Push with `git push -u origin HEAD`.
+7. Report branch name, commit hash, and result.
+
 ### "merge"
 Show the user the diff vs main with `git diff main...HEAD --stat` and ask for confirmation before merging into main.
 
@@ -38,7 +48,7 @@ Edit ralph-rc.sh and update the MAX_TURNS variable to the specified number.
 Run `git log --since="24 hours ago" --oneline | wc -l` to count commits in the last 24h. Multiply by $2 (estimated avg cost per commit) and report: "~X commits in last 24h, estimated cost: ~$Y". Also show the current BUDGET and SLEEP values from ralph-rc.sh.
 
 ### "peek"
-Read and display `ralph-logs/changelog.md` to show what the Ralphs have been up to. If the file doesn't exist yet, run `git log --oneline -10` instead.
+First, print the current timestamp by running `date '+%Y-%m-%d %H:%M:%S %Z'` and display it as a header (e.g. "**Peek at 2026-03-14 04:30:00 EDT**"). Then read and display `ralph-logs/changelog.md` to show what the Ralphs have been up to. If the file doesn't exist yet, run `git log --oneline -10` instead.
 
 If no argument is provided, show this help menu and current status.
 

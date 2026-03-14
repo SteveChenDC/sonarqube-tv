@@ -24,7 +24,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2">
           <SonarWhaleMark className="h-7 w-auto" />
           <span className="font-heading text-2xl font-bold text-n1">
-            <span className="rounded bg-sonar-red px-1.5 py-0.5 text-n1">Sonar</span><span className="rounded bg-qube-blue px-1.5 py-0.5 text-n1">Qube</span>
+            <span className="rounded bg-sonar-purple px-1.5 py-0.5 text-n1">Sonar</span><span className="rounded bg-qube-blue px-1.5 py-0.5 text-n1">Qube</span>
             <span className="text-n1">.tv</span>
           </span>
         </Link>
