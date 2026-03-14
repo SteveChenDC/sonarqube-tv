@@ -1,0 +1,44 @@
+/* [project]/Desktop/workspace/sonarqube-tv/src/app/globals.css [app-client] (css) */
+:root {
+  --background: #0a0a0a;
+  --foreground: #e8eff7;
+  --sonar-purple: #290042;
+  --sonar-red: #d3121d;
+  --qube-blue: #126ed3;
+  --n1: #fff;
+  --n2: #f4f7fb;
+  --n3: #e8eff7;
+  --n4: #dde6f3;
+  --n5: #d3dce9;
+  --n6: #a8b3c2;
+  --n7: #5f656d;
+  --n8: #3b3f44;
+  --n9: #000;
+}
+
+@theme inline {
+  --color-background: var(--background) ; --color-foreground: var(--foreground) ; --color-sonar-purple: var(--sonar-purple) ; --color-sonar-red: var(--sonar-red) ; --color-qube-blue: var(--qube-blue) ; --color-n1: var(--n1) ; --color-n2: var(--n2) ; --color-n3: var(--n3) ; --color-n4: var(--n4) ; --color-n5: var(--n5) ; --color-n6: var(--n6) ; --color-n7: var(--n7) ; --color-n8: var(--n8) ; --color-n9: var(--n9) ; --font-heading: var(--font-poppins) ; --font-body: var(--font-inter) ;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--qube-blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/*# sourceMappingURL=Desktop_workspace_sonarqube-tv_src_app_globals_css_bad6b30c._.single.css.map*/

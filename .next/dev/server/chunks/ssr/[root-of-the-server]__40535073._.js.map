@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/stevec/Desktop/workspace/sonarqube-tv/src/app/page.tsx"],"sourcesContent":["import HomeContent from \"@/components/HomeContent\";\nimport { categories, videos, getFeaturedVideo } from \"@/data/videos\";\n\nexport default function Home() {\n  return (\n    <HomeContent\n      categories={categories}\n      videos={videos}\n      featuredVideo={getFeaturedVideo()}\n    />\n  );\n}\n"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;AAGe,SAAS;IACtB,qBACE,yRAAC;QACC,YAAY;QACZ,QAAQ;QACR,eAAe;;;;;;AAGrB"}}]
+}
