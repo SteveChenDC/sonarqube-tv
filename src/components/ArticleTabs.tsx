@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import type { Article, Transcript } from "@/types";
 import TranscriptView from "./TranscriptView";
+import { extractChapters } from "@/lib/extractChapters";
 
 function renderMarkdown(md: string) {
   const lines = md.split("\n");
@@ -58,6 +59,11 @@ export default function ArticleTabs({
 }>) {
   const [tab, setTab] = useState<"article" | "transcript">(article ? "article" : "transcript");
 
+  const chapters = useMemo(() => {
+    if (!article || !transcript) return [];
+    return extractChapters(article.markdown, transcript.segments);
+  }, [article, transcript]);
+
   if (!article && !transcript) return null;
 
   const tabs = [
@@ -88,7 +94,7 @@ export default function ArticleTabs({
           <div>{renderMarkdown(article.markdown)}</div>
         )}
         {tab === "transcript" && transcript && (
-          <TranscriptView segments={transcript.segments} />
+          <TranscriptView segments={transcript.segments} chapters={chapters} />
         )}
       </div>
     </div>

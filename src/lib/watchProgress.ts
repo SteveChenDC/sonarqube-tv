@@ -18,6 +18,13 @@ export function getProgress(videoId: string): number {
   return getAllProgress()[videoId] ?? 0;
 }
 
+export function removeProgress(videoId: string): void {
+  if (typeof window === "undefined") return;
+  const all = getAllProgress();
+  delete all[videoId];
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(all));
+}
+
 export function setProgress(videoId: string, percent: number): void {
   if (typeof window === "undefined") return;
   const all = getAllProgress();

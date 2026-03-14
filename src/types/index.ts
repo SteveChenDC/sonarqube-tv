@@ -37,3 +37,8 @@ export interface Article {
   generatedAt: string;
   wordCount: number;
 }
+
+export interface TranscriptChapter {
+  title: string;
+  startIndex: number;
+}
