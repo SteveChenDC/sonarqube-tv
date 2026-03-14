@@ -30,7 +30,7 @@ export default function VideoRow({ title, categorySlug, videos }: Readonly<Video
       <div className="mb-4 flex items-center justify-between px-4 sm:px-6">
         <h2 className="font-heading text-lg font-semibold text-n1 sm:text-xl">
             {title}
-            <span className="ml-2 text-sm font-normal text-n7">{videos.length}</span>
+            <span className="ml-2 text-sm font-normal text-n6">{videos.length}</span>
           </h2>
         {categorySlug && (
           <div className="flex items-center gap-4">

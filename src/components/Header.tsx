@@ -10,10 +10,16 @@ export default function Header() {
             <span className="text-n6">.tv</span>
           </span>
         </Link>
-        <nav className="flex items-center gap-6">
-<Link
+        <nav className="flex items-center gap-1">
+          <Link
+            href="/"
+            className="rounded-lg px-3 py-2 font-heading text-sm font-medium text-n6 transition-colors hover:bg-n8/50 hover:text-n1"
+          >
+            Home
+          </Link>
+          <Link
             href="/#categories"
-            className="font-heading text-sm font-medium text-n6 transition-colors hover:text-n1"
+            className="rounded-lg px-3 py-2 font-heading text-sm font-medium text-n6 transition-colors hover:bg-n8/50 hover:text-n1"
           >
             Categories
           </Link>

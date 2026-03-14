@@ -26,7 +26,7 @@ export default async function CategoryPage({
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Link
           href="/"
-          className="mb-4 inline-flex items-center gap-1 font-heading text-sm text-n6 transition-colors hover:text-n1"
+          className="mb-6 inline-flex items-center gap-1.5 font-heading text-sm text-n6 transition-colors hover:text-n1"
         >
           <svg
             className="h-4 w-4"
@@ -48,14 +48,14 @@ export default async function CategoryPage({
           <h1 className="font-heading text-3xl font-bold text-n1 sm:text-4xl">
             {category.title}
           </h1>
-          <span className="font-heading text-lg text-n7">{categoryVideos.length}</span>
+          <span className="font-heading text-lg text-n6">{categoryVideos.length} videos</span>
         </div>
         <p className="max-w-2xl text-base leading-relaxed text-n5">
           {category.description}
         </p>
-        <div className="mb-10 mt-6 border-t border-n8/40" />
+        <div className="mb-10 mt-8 border-t border-n8/40" />
 
-        <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {categoryVideos.map((video) => (
             <VideoCard key={video.id} video={video} fluid />
           ))}
