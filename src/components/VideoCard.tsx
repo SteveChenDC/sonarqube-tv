@@ -68,7 +68,7 @@ export default function VideoCard({ video, fluid = false }: Readonly<{ video: Vi
         {progress > 0 && (
           <>
             {/* Progress percentage badge - visible on hover */}
-            <span className="absolute top-2 left-2 rounded bg-n9/80 px-1.5 py-0.5 text-xs font-medium text-qube-blue opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <span className="absolute top-2 left-2 rounded bg-n9/90 px-1.5 py-0.5 text-xs font-medium text-n2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               {progress}% watched
             </span>
             {/* Progress bar - always visible */}

@@ -55,11 +55,11 @@ export default function PlaylistQueue({
           {prevVideo ? (
             <Link
               href={`/watch/${prevVideo.id}?playlist=${playlistSlug}`}
-              className="rounded p-1.5 text-n6 transition-colors hover:bg-n8 hover:text-n1"
+              className="rounded p-2 text-n6 transition-colors hover:bg-n8 hover:text-n1"
               aria-label="Previous video"
             >
               <svg
-                className="h-4 w-4"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -73,8 +73,8 @@ export default function PlaylistQueue({
               </svg>
             </Link>
           ) : (
-            <span className="cursor-not-allowed rounded p-1.5 text-n7" aria-disabled="true" aria-label="No previous video">
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <span className="cursor-not-allowed rounded p-2 text-n7" aria-disabled="true" aria-label="No previous video">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
               </svg>
             </span>
@@ -82,11 +82,11 @@ export default function PlaylistQueue({
           {nextVideo ? (
             <Link
               href={`/watch/${nextVideo.id}?playlist=${playlistSlug}`}
-              className="rounded p-1.5 text-n6 transition-colors hover:bg-n8 hover:text-n1"
+              className="rounded p-2 text-n6 transition-colors hover:bg-n8 hover:text-n1"
               aria-label="Next video"
             >
               <svg
-                className="h-4 w-4"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -100,8 +100,8 @@ export default function PlaylistQueue({
               </svg>
             </Link>
           ) : (
-            <span className="cursor-not-allowed rounded p-1.5 text-n7" aria-disabled="true" aria-label="No next video">
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <span className="cursor-not-allowed rounded p-2 text-n7" aria-disabled="true" aria-label="No next video">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </span>
