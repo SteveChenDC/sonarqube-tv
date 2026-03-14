@@ -211,7 +211,8 @@ export default async function WatchPage({
           <VideoRow
             title={`More in ${category?.title ?? "this category"}`}
             categorySlug={video.category}
-            videos={relatedVideos}
+            videos={relatedVideos.slice(0, 15)}
+            totalCount={relatedVideos.length}
           />
         </div>
       )}
