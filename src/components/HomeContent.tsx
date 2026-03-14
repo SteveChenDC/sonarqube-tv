@@ -91,6 +91,7 @@ export default function HomeContent({
     return result;
   }, [videos, uploadDate, duration, sortBy]);
 
+  const MAX_CATEGORY_ROW = 15;
   const getVideosByCategory = (slug: string) =>
     filteredVideos.filter((v) => v.category === slug);
 
@@ -223,7 +224,8 @@ export default function HomeContent({
                 <VideoRow
                   title={category.title}
                   categorySlug={category.slug}
-                  videos={categoryVideos}
+                  videos={categoryVideos.slice(0, MAX_CATEGORY_ROW)}
+                  totalCount={categoryVideos.length}
                 />
               </div>
             );

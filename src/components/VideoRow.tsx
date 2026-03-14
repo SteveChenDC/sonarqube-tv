@@ -17,13 +17,14 @@ interface VideoRowProps {
   title: string;
   categorySlug?: string;
   videos: Video[];
+  totalCount?: number;
   hideHeader?: boolean;
   dividerAfterIndex?: number;
   sectionLabels?: SectionLabels;
   onRemoveVideo?: (videoId: string) => void;
 }
 
-export default function VideoRow({ title, categorySlug, videos, hideHeader, dividerAfterIndex, sectionLabels, onRemoveVideo }: Readonly<VideoRowProps>) {
+export default function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, dividerAfterIndex, sectionLabels, onRemoveVideo }: Readonly<VideoRowProps>) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -54,7 +55,7 @@ export default function VideoRow({ title, categorySlug, videos, hideHeader, divi
         <div className="mb-4 flex items-center justify-between px-4 sm:px-6">
           <h2 className="font-heading text-lg font-semibold text-n1 sm:text-xl">
             {title}
-            <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">{videos.length}</span>
+            <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">{totalCount ?? videos.length}</span>
           </h2>
           {categorySlug && (
             <Link
