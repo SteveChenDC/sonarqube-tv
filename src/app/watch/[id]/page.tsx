@@ -156,7 +156,7 @@ export default async function WatchPage({
         <div className="mt-6 rounded-xl border border-n8 bg-n8/15 p-5 sm:p-6">
           {category && (
             <Link
-              href={`/category/${category.slug}`}
+              href={`/#${category.slug}`}
               className="mb-3 inline-block font-heading text-sm text-qube-blue hover:underline"
             >
               {category.title}
