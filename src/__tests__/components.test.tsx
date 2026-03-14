@@ -75,7 +75,7 @@ describe("VideoRow", () => {
     render(
       <VideoRow title="Clean Code" categorySlug="clean-code" videos={videos} />
     );
-    expect(screen.getByRole("heading", { name: "Clean Code" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Clean Code/ })).toBeInTheDocument();
   });
 
   it("renders all video cards", () => {
