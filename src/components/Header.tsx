@@ -4,9 +4,12 @@ function SonarLogo({ className }: { className?: string }) {
   return (
     <svg
       className={className}
+      width="128"
+      height="32"
       viewBox="0 0 256 64"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
       aria-label="Sonar logo"
     >
       {/* Whale mark - red accents */}
@@ -32,7 +35,7 @@ export default function Header() {
     <header className="fixed top-0 z-50 w-full bg-gradient-to-b from-black/90 to-transparent backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <SonarLogo className="h-8 w-auto" />
+          <SonarLogo className="h-8 shrink-0" />
         </Link>
         <nav className="flex items-center gap-6">
 <Link

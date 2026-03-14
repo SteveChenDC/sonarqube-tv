@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Video } from "@/types";
+import { categories } from "@/data/videos";
 import { getProgress } from "@/lib/watchProgress";
 
 function timeAgo(dateString: string): string {
@@ -26,6 +27,7 @@ function timeAgo(dateString: string): string {
 
 export default function VideoCard({ video }: Readonly<{ video: Video }>) {
   const [progress, setProgressState] = useState(0);
+  const categoryTitle = categories.find((c) => c.slug === video.category)?.title;
 
   useEffect(() => {
     setProgressState(getProgress(video.id));
@@ -76,9 +78,14 @@ export default function VideoCard({ video }: Readonly<{ video: Video }>) {
       <h3 className="mt-2 line-clamp-2 w-[280px] font-heading text-sm font-medium text-n3 transition-colors group-hover:text-n1 sm:w-[320px]">
         {video.title}
       </h3>
-      <p className="mt-0.5 w-[280px] text-xs text-n7 sm:w-[320px]">
-        {timeAgo(video.publishedAt)}
-      </p>
+      <div className="mt-1 flex w-[280px] items-center gap-2 sm:w-[320px]">
+        <span className="text-xs text-n7">{timeAgo(video.publishedAt)}</span>
+        {categoryTitle && (
+          <span className="rounded bg-sonar-purple/30 px-1.5 py-0.5 text-[10px] font-medium text-n6">
+            {categoryTitle}
+          </span>
+        )}
+      </div>
     </Link>
   );
 }

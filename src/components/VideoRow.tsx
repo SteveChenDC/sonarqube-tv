@@ -29,7 +29,10 @@ export default function VideoRow({ title, categorySlug, videos }: Readonly<Video
     <section className="relative py-4">
       <div className="mx-4 mb-4 border-t border-n8/50 sm:mx-6" />
       <div className="mb-3 flex items-center justify-between px-4 sm:px-6">
-        <h2 className="font-heading text-lg font-semibold text-n1 sm:text-xl">{title}</h2>
+        <h2 className="font-heading text-lg font-semibold text-n1 sm:text-xl">
+            {title}
+            <span className="ml-2 text-sm font-normal text-n7">{videos.length}</span>
+          </h2>
         <div className="flex items-center gap-4">
           <Link
             href={`/watch/${videos[0].id}?playlist=${categorySlug}`}
