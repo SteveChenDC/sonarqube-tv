@@ -89,7 +89,7 @@ export default function VideoRow({ title, categorySlug, videos, hideHeader, divi
 
         <div
           ref={scrollRef}
-          className="flex gap-4 overflow-x-auto scroll-smooth px-4 scrollbar-hide snap-x snap-mandatory sm:px-6"
+          className="flex gap-4 overflow-x-auto scroll-smooth px-6 scrollbar-hide snap-x snap-mandatory sm:px-8 lg:px-10"
         >
           {sectionLabels ? (
             <>

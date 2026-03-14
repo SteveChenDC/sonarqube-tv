@@ -46,7 +46,7 @@ export default function VideoCard({ video, fluid = false, onRemove }: Readonly<{
           className="object-cover transition-transform duration-300 group-hover:scale-105"
           sizes="320px"
         />
-        <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-sonar-purple/40">
+        <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30">
           <svg
             className="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
             fill="currentColor"
