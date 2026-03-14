@@ -33,7 +33,9 @@ export default function ScrollToTop({ hidden = false }: Readonly<{ hidden?: bool
         strokeLinejoin="round"
         aria-hidden="true"
       >
-        <polyline points="18 15 12 9 6 15" />
+        <line x1="12" y1="19" x2="12" y2="6" />
+        <polyline points="6 11 12 5 18 11" />
+        <line x1="5" y1="3" x2="19" y2="3" />
       </svg>
     </button>
   );
