@@ -265,6 +265,38 @@ describe("HomeContent", () => {
     expect(screen.queryByText("Long Webinar")).toBeNull();
   });
 
+  it("treats exactly 20 minutes as medium duration", () => {
+    const boundaryVideos = [
+      makeVideo({
+        id: "exact-20",
+        title: "Exactly Twenty",
+        duration: "20:00",
+        category: "tutorials",
+      }),
+      makeVideo({
+        id: "over-20",
+        title: "Twenty One Min",
+        duration: "21:00",
+        category: "tutorials",
+      }),
+    ];
+
+    render(
+      <HomeContent
+        categories={categories}
+        videos={boundaryVideos}
+        featuredVideo={boundaryVideos[0]}
+      />
+    );
+
+    openFilters();
+    fireEvent.click(screen.getByText("4–20 min"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    expect(screen.getAllByText("Exactly Twenty").length).toBeGreaterThanOrEqual(1);
+    expect(screen.queryByText("Twenty One Min")).toBeNull();
+  });
+
   it("resets filters and shows all videos again", () => {
     render(
       <HomeContent

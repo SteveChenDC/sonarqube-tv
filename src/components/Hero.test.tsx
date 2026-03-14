@@ -52,4 +52,16 @@ describe("Hero", () => {
     // But no category badge should appear (Getting Started should not be rendered)
     expect(queryByText("Getting Started")).toBeNull();
   });
+
+  it("renders custom actions content when provided", () => {
+    const { getByText } = render(
+      <Hero video={mockVideo} actions={<button>Custom Action</button>} />
+    );
+    expect(getByText("Custom Action")).toBeTruthy();
+  });
+
+  it("renders without actions when none are provided", () => {
+    const { queryByText } = render(<Hero video={mockVideo} />);
+    expect(queryByText("Custom Action")).toBeNull();
+  });
 });

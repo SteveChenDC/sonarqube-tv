@@ -83,5 +83,25 @@ describe("video data utilities", () => {
       const slugs = categories.map((c) => c.slug);
       expect(new Set(slugs).size).toBe(slugs.length);
     });
+
+    it("all videos have valid duration format (MM:SS or H:MM:SS)", () => {
+      videos.forEach((v) => {
+        expect(v.duration).toMatch(/^\d{1,2}:\d{2}(:\d{2})?$/);
+      });
+    });
+
+    it("all videos have valid publishedAt date strings", () => {
+      videos.forEach((v) => {
+        const date = new Date(v.publishedAt);
+        expect(date.getTime()).not.toBeNaN();
+      });
+    });
+
+    it("all videos have non-empty youtubeId and thumbnail", () => {
+      videos.forEach((v) => {
+        expect(v.youtubeId.length).toBeGreaterThan(0);
+        expect(v.thumbnail.length).toBeGreaterThan(0);
+      });
+    });
   });
 });
