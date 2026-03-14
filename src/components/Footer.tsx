@@ -14,7 +14,7 @@ export default function Footer() {
               href="https://www.sonarsource.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-qube-blue hover:underline"
+              className="text-qube-blue underline decoration-qube-blue/40 hover:decoration-qube-blue"
             >
               SonarSource
             </a>{" "}
