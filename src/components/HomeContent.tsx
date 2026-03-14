@@ -248,7 +248,7 @@ export default function HomeContent({
       <button
         onClick={() => setFilterOpen(true)}
         aria-label="Open filters"
-        className={`fixed bottom-6 right-18 z-40 flex h-10 items-center gap-2 rounded-full border border-n8 bg-n9/90 px-4 text-n5 shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-n7 hover:bg-n8 hover:text-n1 focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:outline-none ${
+        className={`fixed bottom-6 right-18 z-40 flex h-10 items-center gap-2 rounded-full border border-qube-blue/50 bg-qube-blue/15 px-4 text-qube-blue shadow-lg shadow-qube-blue/10 backdrop-blur-md transition-all duration-300 hover:border-qube-blue hover:bg-qube-blue/25 hover:text-white hover:shadow-xl hover:shadow-qube-blue/20 focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:outline-none ${
           heroOutOfView
             ? "translate-y-0 opacity-100"
             : "pointer-events-none translate-y-4 opacity-0"
@@ -274,7 +274,7 @@ export default function HomeContent({
           <line x1="9" y1="8" x2="15" y2="8" />
           <line x1="17" y1="16" x2="23" y2="16" />
         </svg>
-        <span className="font-heading text-xs font-medium">Filters</span>
+        <span className="font-heading text-xs font-semibold">Filters</span>
         {activeFilterCount > 0 && (
           <span className="flex h-4.5 w-4.5 items-center justify-center rounded-full bg-qube-blue text-[10px] font-bold text-white">
             {activeFilterCount}

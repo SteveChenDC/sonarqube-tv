@@ -27,19 +27,13 @@ export default function ScrollToTop() {
         className="h-5 w-5"
         viewBox="0 0 24 24"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         aria-hidden="true"
       >
-        {/* Top bar — indicates "go to the very top" */}
-        <line x1="5" y1="4" x2="19" y2="4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        {/* Upward arrow */}
-        <path
-          d="M12 20V8M12 8l-5 5M12 8l5 5"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+        <polyline points="18 15 12 9 6 15" />
       </svg>
     </button>
   );
