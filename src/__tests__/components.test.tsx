@@ -72,10 +72,11 @@ afterEach(cleanup);
 describe("VideoRow", () => {
   it("renders the category title", () => {
     const videos = makeVideos(3);
-    render(
+    const { container } = render(
       <VideoRow title="Clean Code" categorySlug="clean-code" videos={videos} />
     );
-    expect(screen.getByRole("heading", { name: /Clean Code/ })).toBeInTheDocument();
+    const categoryLink = container.querySelector('a[href="/category/clean-code"]');
+    expect(categoryLink?.textContent).toContain("Clean Code");
   });
 
   it("renders all video cards", () => {
@@ -97,13 +98,14 @@ describe("VideoRow", () => {
     expect(container.innerHTML).toBe("");
   });
 
-  it("renders a See All link to the category page", () => {
+  it("renders category title as a link to the category page", () => {
     const videos = makeVideos(2);
-    render(
+    const { container } = render(
       <VideoRow title="Clean Code" categorySlug="clean-code" videos={videos} />
     );
-    const seeAll = screen.getByText("See All");
-    expect(seeAll.closest("a")).toHaveAttribute("href", "/category/clean-code");
+    const categoryLink = container.querySelector('a[href="/category/clean-code"]');
+    expect(categoryLink).toBeTruthy();
+    expect(categoryLink?.textContent).toContain("Clean Code");
   });
 });
 

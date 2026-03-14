@@ -53,18 +53,17 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
     <section id={categorySlug} className="relative scroll-mt-20 py-8">
       {!hideHeader && (
         <div className="mb-4 flex items-center justify-between px-4 sm:px-6">
-          <h2 className="font-heading text-lg font-semibold text-n1 sm:text-xl">
-            {title}
-            <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">{totalCount ?? videos.length}</span>
-          </h2>
-          {categorySlug && (
+          {categorySlug ? (
             <Link
               href={`/category/${categorySlug}`}
-              className="group/link inline-flex items-center gap-1 rounded-md px-2.5 py-1 font-heading text-sm font-medium text-qube-blue transition-all hover:bg-qube-blue/10 hover:text-qube-blue/80"
+              className="group/link inline-flex items-center gap-1.5 font-heading text-lg font-semibold text-n1 transition-colors hover:text-qube-blue sm:text-xl"
             >
-              See All
+              {title}
+              <span className="inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">
+                {totalCount ?? videos.length}
+              </span>
               <svg
-                className="h-3.5 w-3.5 transition-transform duration-200 group-hover/link:translate-x-0.5"
+                className="h-4 w-4 text-n5 transition-all duration-200 group-hover/link:translate-x-0.5 group-hover/link:text-qube-blue"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -73,6 +72,11 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </Link>
+          ) : (
+            <h2 className="font-heading text-lg font-semibold text-n1 sm:text-xl">
+              {title}
+              <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">{totalCount ?? videos.length}</span>
+            </h2>
           )}
         </div>
       )}
