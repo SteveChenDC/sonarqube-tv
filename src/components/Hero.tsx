@@ -31,7 +31,7 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
                   {category.title}
                 </span>
               )}
-              <span className="inline-flex items-center gap-1 rounded bg-n9/60 px-2.5 py-1 font-heading text-sm font-medium text-n6">
+              <span className="inline-flex items-center gap-1 rounded bg-n9/60 px-3 py-1 font-heading text-sm font-medium text-n6">
                 <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <circle cx="12" cy="12" r="10" />
                   <polyline points="12 6 12 12 16 14" />
