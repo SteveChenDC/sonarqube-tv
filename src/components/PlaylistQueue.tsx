@@ -152,7 +152,7 @@ export default function PlaylistQueue({
               >
                 {video.title}
               </p>
-              <p className="font-body text-xs text-n7">
+              <p className="font-body text-xs text-n5">
                 {video.duration}
               </p>
             </div>

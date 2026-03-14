@@ -164,12 +164,12 @@ export default function HomeContent({
 
           {hasActiveFilters && filteredVideos.length === 0 && (
             <div className="px-4 py-16 text-center sm:px-6">
-              <p className="font-heading text-lg text-n6">
+              <p className="font-heading text-lg text-n4">
                 No videos match your filters.
               </p>
               <button
                 onClick={reset}
-                className="mt-3 font-heading text-sm text-qube-blue hover:underline"
+                className="mt-3 font-heading text-sm text-qube-blue hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 rounded"
               >
                 Reset filters
               </button>

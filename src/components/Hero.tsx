@@ -27,7 +27,7 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
                 Featured
               </span>
               {category && (
-                <span className="inline-block rounded bg-sonar-purple/40 px-3 py-1 font-heading text-sm font-medium text-n5">
+                <span className="inline-block rounded bg-sonar-purple/40 px-3 py-1 font-heading text-sm font-medium text-n3">
                   {category.title}
                 </span>
               )}
