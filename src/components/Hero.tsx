@@ -4,6 +4,19 @@ import { Video } from "@/types";
 import { ReactNode } from "react";
 import { categories } from "@/data/videos";
 
+/** Returns true when the description adds little value beyond the title. */
+function isDescriptionRedundant(title: string, description: string): boolean {
+  const t = title.toLowerCase().trim();
+  const d = description.toLowerCase().trim();
+  if (d === t) return true;
+  // Description starts with or contains the full title
+  if (d.startsWith(t) || d.includes(t)) return true;
+  // Title is a substring of the first sentence of description
+  const firstSentence = d.split(/[.!?]/)[0];
+  if (firstSentence.includes(t)) return true;
+  return false;
+}
+
 export default function Hero({ video, actions }: Readonly<{ video: Video; actions?: ReactNode }>) {
   const category = categories.find((c) => c.slug === video.category);
   return (
@@ -46,7 +59,7 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
             <h1 className="mb-4 font-heading text-3xl font-bold text-white sm:text-5xl">
               {video.title}
             </h1>
-            {video.description && video.description !== video.title && (
+            {video.description && !isDescriptionRedundant(video.title, video.description) && (
               <p className="mb-6 line-clamp-3 text-base leading-relaxed text-white/80 sm:text-lg">
                 {video.description}
               </p>

@@ -64,4 +64,30 @@ describe("Hero", () => {
     const { queryByText } = render(<Hero video={mockVideo} />);
     expect(queryByText("Custom Action")).toBeNull();
   });
+
+  it("hides description when it exactly matches the title", () => {
+    const dupeVideo: Video = { ...mockVideo, description: mockVideo.title };
+    const { queryByText } = render(<Hero video={dupeVideo} />);
+    // Title still shows as h1
+    expect(queryByText(mockVideo.title)).toBeTruthy();
+    // Description paragraph should not render (same text as title)
+    const paragraphs = document.querySelectorAll("p");
+    const descP = Array.from(paragraphs).find((p) => p.textContent === mockVideo.title);
+    expect(descP).toBeUndefined();
+  });
+
+  it("hides description when it contains the title as a substring", () => {
+    const redundantVideo: Video = {
+      ...mockVideo,
+      description: `${mockVideo.title} is a great topic to learn about.`,
+    };
+    const { container } = render(<Hero video={redundantVideo} />);
+    const paragraphs = container.querySelectorAll("p");
+    expect(paragraphs.length).toBe(0);
+  });
+
+  it("shows description when it is meaningfully different from the title", () => {
+    const { getByText } = render(<Hero video={mockVideo} />);
+    expect(getByText("Learn how to deploy SonarQube at scale")).toBeTruthy();
+  });
 });
