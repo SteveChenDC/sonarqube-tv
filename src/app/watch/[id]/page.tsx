@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { formatDate } from "@/lib/formatDate";
+import { durationToISO } from "@/lib/durationToISO";
 import { Suspense } from "react";
 import VideoPlayer from "@/components/VideoPlayer";
 import VideoRow from "@/components/VideoRow";
@@ -14,6 +16,28 @@ import {
 
 export function generateStaticParams() {
   return videos.map((video) => ({ id: video.id }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const video = getVideoById(id);
+  if (!video) return {};
+
+  return {
+    title: video.title,
+    description: video.description,
+    openGraph: {
+      images: [video.thumbnail],
+      type: "video.other",
+    },
+    alternates: {
+      canonical: `/watch/${id}`,
+    },
+  };
 }
 
 export default async function WatchPage({
@@ -33,12 +57,75 @@ export default async function WatchPage({
     (v) => v.id !== video.id
   );
 
+  const videoJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: video.title,
+    description: video.description,
+    thumbnailUrl: video.thumbnail,
+    uploadDate: video.publishedAt,
+    duration: durationToISO(video.duration),
+    contentUrl: `https://www.youtube.com/watch?v=${video.youtubeId}`,
+    embedUrl: `https://www.youtube.com/embed/${video.youtubeId}`,
+    publisher: {
+      "@type": "Organization",
+      name: "SonarSource",
+      url: "https://www.sonarsource.com",
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://sonarqube-tv.vercel.app",
+      },
+      ...(category
+        ? [
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: category.title,
+              item: `https://sonarqube-tv.vercel.app/category/${category.slug}`,
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: video.title,
+            },
+          ]
+        : [
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: video.title,
+            },
+          ]),
+    ],
+  };
+
   return (
     <div className="pt-20 pb-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(videoJsonLd),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <Link
           href="/"
-          className="mb-4 inline-flex items-center gap-1 font-heading text-sm text-n6 transition-colors hover:text-n1"
+          className="mb-6 inline-flex items-center gap-1 rounded font-heading text-sm text-n6 transition-colors hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
         >
           <svg
             className="h-4 w-4"

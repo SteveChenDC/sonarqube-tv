@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { categories, getCategoryBySlug, getVideosByCategory } from "@/data/videos";
@@ -5,6 +6,24 @@ import VideoCard from "@/components/VideoCard";
 
 export function generateStaticParams() {
   return categories.map((cat) => ({ slug: cat.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const category = getCategoryBySlug(slug);
+  if (!category) return {};
+
+  return {
+    title: category.title,
+    description: category.description,
+    alternates: {
+      canonical: `/category/${slug}`,
+    },
+  };
 }
 
 export default async function CategoryPage({
@@ -21,12 +40,36 @@ export default async function CategoryPage({
 
   const categoryVideos = getVideosByCategory(slug);
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://sonarqube-tv.vercel.app",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: category.title,
+      },
+    ],
+  };
+
   return (
     <div className="pt-20 pb-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Link
           href="/"
-          className="mb-6 inline-flex items-center gap-1.5 font-heading text-sm text-n6 transition-colors hover:text-n1"
+          className="mb-6 inline-flex items-center gap-1.5 rounded font-heading text-sm text-n6 transition-colors hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
         >
           <svg
             className="h-4 w-4"

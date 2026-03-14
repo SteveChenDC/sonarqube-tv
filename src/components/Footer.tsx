@@ -26,7 +26,7 @@ export default function Footer() {
             href="https://www.youtube.com/c/SonarSource"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-heading text-sm text-n6 transition-colors hover:text-n1"
+            className="rounded font-heading text-sm text-n6 transition-colors hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
           >
             YouTube
           </a>
@@ -34,7 +34,7 @@ export default function Footer() {
             href="https://github.com/SonarSource"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-heading text-sm text-n6 transition-colors hover:text-n1"
+            className="rounded font-heading text-sm text-n6 transition-colors hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
           >
             GitHub
           </a>
@@ -42,7 +42,7 @@ export default function Footer() {
             href="https://www.sonarsource.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-heading text-sm text-n6 transition-colors hover:text-n1"
+            className="rounded font-heading text-sm text-n6 transition-colors hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
           >
             SonarSource
           </a>

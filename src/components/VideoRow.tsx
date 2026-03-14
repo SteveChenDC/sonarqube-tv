@@ -30,7 +30,7 @@ export default function VideoRow({ title, categorySlug, videos }: Readonly<Video
       <div className="mb-4 flex items-center justify-between px-4 sm:px-6">
         <h2 className="font-heading text-lg font-semibold text-n1 sm:text-xl">
             {title}
-            <span className="ml-2 rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">{videos.length}</span>
+            <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">{videos.length}</span>
           </h2>
         {categorySlug && (
           <div className="flex items-center gap-4">
@@ -57,7 +57,7 @@ export default function VideoRow({ title, categorySlug, videos }: Readonly<Video
       <div className="group/row relative">
         <button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-0 z-10 flex h-full w-12 items-center justify-center bg-gradient-to-r from-background to-transparent opacity-0 transition-opacity duration-300 group-hover/row:opacity-100"
+          className="absolute left-0 top-0 z-10 flex h-full w-12 items-center justify-center bg-gradient-to-r from-background to-transparent opacity-0 transition-opacity duration-300 group-hover/row:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
           aria-label="Scroll left"
         >
           <svg className="h-6 w-6 text-n1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -76,7 +76,7 @@ export default function VideoRow({ title, categorySlug, videos }: Readonly<Video
 
         <button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-0 z-10 flex h-full w-12 items-center justify-center bg-gradient-to-l from-background to-transparent opacity-0 transition-opacity duration-300 group-hover/row:opacity-100"
+          className="absolute right-0 top-0 z-10 flex h-full w-12 items-center justify-center bg-gradient-to-l from-background to-transparent opacity-0 transition-opacity duration-300 group-hover/row:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
           aria-label="Scroll right"
         >
           <svg className="h-6 w-6 text-n1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

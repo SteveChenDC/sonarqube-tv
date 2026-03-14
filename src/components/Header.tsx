@@ -1,5 +1,9 @@
+"use client";
+
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
+import { categories } from "@/data/videos";
 
 function SonarWhaleMark({ className }: { className?: string }) {
   return (
@@ -19,6 +23,34 @@ function SonarWhaleMark({ className }: { className?: string }) {
 }
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setMenuOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const handleMouseEnter = () => {
+    clearTimeout(timeoutRef.current);
+    setMenuOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => setMenuOpen(false), 200);
+  };
+
+  // Split categories into 3 columns
+  const col1 = categories.slice(0, 4);
+  const col2 = categories.slice(4, 8);
+  const col3 = categories.slice(8);
+
   return (
     <header className="fixed top-0 z-50 w-full bg-gradient-to-b from-n9/90 to-transparent backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
@@ -31,16 +63,70 @@ export default function Header() {
         <nav className="flex items-center gap-1">
           <Link
             href="/"
-            className="rounded-lg px-3 py-2 font-heading text-sm font-medium text-n6 transition-colors hover:bg-n8/50 hover:text-n1"
+            className="rounded-lg px-3 py-2 font-heading text-sm font-medium text-n6 transition-colors hover:bg-n8/50 hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
           >
             Home
           </Link>
-          <Link
-            href="/#categories"
-            className="rounded-lg px-3 py-2 font-heading text-sm font-medium text-n6 transition-colors hover:bg-n8/50 hover:text-n1"
+          <div
+            ref={menuRef}
+            className="relative"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
-            Categories
-          </Link>
+            <button
+              onClick={() => setMenuOpen((prev) => !prev)}
+              className="flex items-center gap-1 rounded-lg px-3 py-2 font-heading text-sm font-medium text-n6 transition-colors hover:bg-n8/50 hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
+            >
+              Categories
+              <svg
+                className={`h-3.5 w-3.5 transition-transform duration-200 ${menuOpen ? "rotate-180" : ""}`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2.5"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {menuOpen && (
+              <div className="absolute right-0 top-full mt-2 w-[720px] rounded-xl border border-n8 bg-n9/95 p-6 shadow-2xl backdrop-blur-md">
+                <div className="mb-4 flex items-center justify-between">
+                  <h3 className="font-heading text-sm font-semibold uppercase tracking-wider text-n6">
+                    Browse by Category
+                  </h3>
+                  <Link
+                    href="/#categories"
+                    onClick={() => setMenuOpen(false)}
+                    className="font-heading text-xs font-medium text-qube-blue transition-colors hover:text-qube-blue/80"
+                  >
+                    View All &rarr;
+                  </Link>
+                </div>
+                <div className="grid grid-cols-3 gap-x-6 gap-y-1">
+                  {[col1, col2, col3].map((col, colIdx) => (
+                    <div key={colIdx} className="space-y-1">
+                      {col.map((cat) => (
+                        <Link
+                          key={cat.slug}
+                          href={`/#categories`}
+                          onClick={() => setMenuOpen(false)}
+                          className="group block rounded-lg p-2.5 transition-colors hover:bg-n8/50"
+                        >
+                          <span className="font-heading text-sm font-semibold text-qube-blue group-hover:text-qube-blue/80">
+                            {cat.title}
+                          </span>
+                          <p className="mt-0.5 line-clamp-2 text-xs leading-relaxed text-n6">
+                            {cat.description}
+                          </p>
+                        </Link>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
           <ThemeToggle />
         </nav>
       </div>
