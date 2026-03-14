@@ -21,7 +21,7 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
       <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-sonar-purple/40 to-transparent" />
       {/* Dark scrim ensures white text stays readable in both themes;
           light mode needs heavier opacity since from-background is near-white */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-black/15 dark:from-black/40 dark:via-black/20 dark:to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/45 to-black/20 dark:from-black/40 dark:via-black/20 dark:to-transparent" />
 
       <div className="absolute bottom-0 left-0 right-0 px-4 pb-16 sm:px-6">
         <div className="mx-auto max-w-7xl">
@@ -31,11 +31,11 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
                 Featured
               </span>
               {category && (
-                <span className="inline-block rounded bg-black/60 px-3 py-1 font-heading text-sm font-medium text-white">
+                <span className="inline-block rounded bg-black/80 px-3 py-1 font-heading text-sm font-medium text-white dark:bg-black/60">
                   {category.title}
                 </span>
               )}
-              <span className="inline-flex items-center gap-1 rounded bg-black/80 px-3 py-1 font-heading text-sm font-medium text-white">
+              <span className="inline-flex items-center gap-1 rounded bg-black/90 px-3 py-1 font-heading text-sm font-medium text-white dark:bg-black/80">
                 <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <circle cx="12" cy="12" r="10" />
                   <polyline points="12 6 12 12 16 14" />
