@@ -266,7 +266,7 @@ export default function HomeContent({
       <button
         onClick={() => setFilterOpen(true)}
         aria-label="Open filters"
-        className={`fixed bottom-6 right-18 z-40 flex h-10 items-center gap-2 rounded-full border border-qube-blue/50 bg-qube-blue/15 px-4 text-qube-blue shadow-lg shadow-qube-blue/10 backdrop-blur-md transition-all duration-300 hover:border-qube-blue hover:bg-qube-blue/25 hover:text-white hover:shadow-xl hover:shadow-qube-blue/20 focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:outline-none ${
+        className={`fixed bottom-6 right-18 z-40 flex h-10 items-center gap-2 rounded-full border border-qube-blue bg-qube-blue px-4 text-white shadow-lg shadow-qube-blue/30 backdrop-blur-md transition-all duration-300 hover:bg-qube-blue/85 hover:shadow-xl hover:shadow-qube-blue/40 focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:outline-none ${
           heroOutOfView && !footerInView
             ? "translate-y-0 opacity-100"
             : "pointer-events-none translate-y-4 opacity-0"
