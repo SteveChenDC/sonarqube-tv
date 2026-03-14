@@ -73,7 +73,7 @@ export default function Header() {
     : "text-white/70 hover:bg-white/10 hover:text-white";
 
   return (
-    <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled ? "border-b border-n8/30 bg-background/95 shadow-sm backdrop-blur-md" : "border-b border-transparent bg-gradient-to-b from-black/70 to-transparent"}`}>
+    <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled ? "border-b border-n8/50 bg-background/95 shadow-md shadow-black/5 backdrop-blur-md" : "border-b border-transparent bg-gradient-to-b from-black/70 to-transparent"}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2">
           <SonarWhaleMark className={`h-7 w-auto transition-colors duration-300 ${scrolled ? "text-n1" : "text-white"}`} />
