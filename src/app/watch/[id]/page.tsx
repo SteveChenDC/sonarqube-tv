@@ -33,8 +33,14 @@ export async function generateMetadata({
     title: video.title,
     description: video.description,
     openGraph: {
-      images: [video.thumbnail],
+      images: [{ url: video.thumbnail, width: 1280, height: 720, alt: video.title }],
       type: "video.other",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: video.title,
+      description: video.description,
+      images: [video.thumbnail],
     },
     alternates: {
       canonical: `/watch/${id}`,

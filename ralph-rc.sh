@@ -12,8 +12,8 @@ BUDGET=3
 QA_BUDGET=3
 QA_TURNS=15
 MAX_TURNS=30
-SLEEP=120    # 2 min between runs — paces usage across 5hr session window
-BACKOFF=600  # 10 min backoff when rate limited — gentler retry
+SLEEP=600    # 10 min between runs — targets ~50% of 5hr session window
+BACKOFF=900  # 15 min backoff when rate limited
 
 # Create or switch to the improvement branch
 git checkout -b "$BRANCH" 2>/dev/null || git checkout "$BRANCH"

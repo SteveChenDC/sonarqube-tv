@@ -13,17 +13,7 @@ export default function TranscriptView({
   segments,
 }: Readonly<{ segments: TranscriptSegment[] }>) {
   const handleSeek = (offsetMs: number) => {
-    const iframe = document.querySelector<HTMLIFrameElement>("iframe[src*='youtube']");
-    if (iframe?.contentWindow) {
-      iframe.contentWindow.postMessage(
-        JSON.stringify({
-          event: "command",
-          func: "seekTo",
-          args: [offsetMs / 1000, true],
-        }),
-        "*"
-      );
-    }
+    window.dispatchEvent(new CustomEvent("yt-seek", { detail: offsetMs / 1000 }));
   };
 
   return (

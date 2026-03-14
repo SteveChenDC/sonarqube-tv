@@ -140,7 +140,7 @@ export default function HomeContent({
         }
       />
 
-      <div className="relative z-10">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8">
         <FilterBar
           uploadDate={uploadDate}
           duration={duration}
@@ -166,7 +166,7 @@ export default function HomeContent({
               }
               videos={
                 continueWatchingVideos.length > 0 && topRowVideos.length > 0
-                  ? [...continueWatchingVideos, ...topRowVideos]
+                  ? [...continueWatchingVideos, ...topRowVideos.filter(v => !continueWatchingVideos.some(cw => cw.id === v.id))]
                   : continueWatchingVideos.length > 0
                     ? continueWatchingVideos
                     : topRowVideos
@@ -183,7 +183,7 @@ export default function HomeContent({
                       firstLabel: "Continue Watching",
                       firstCount: continueWatchingVideos.length,
                       secondLabel: sortBy === "oldest" ? "Oldest" : "Latest",
-                      secondCount: topRowVideos.length,
+                      secondCount: topRowVideos.filter(v => !continueWatchingVideos.some(cw => cw.id === v.id)).length,
                       splitAt: continueWatchingVideos.length,
                     }
                   : undefined

@@ -1,21 +1,47 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, vi, afterEach } from "vitest";
 import { render, act, waitFor } from "@testing-library/react";
 import VideoPlayer from "./VideoPlayer";
 import { setProgress } from "@/lib/watchProgress";
 
+// Mock YT.Player
+function createMockPlayer() {
+  return {
+    seekTo: vi.fn(),
+    getCurrentTime: vi.fn(() => 0),
+    getDuration: vi.fn(() => 0),
+    destroy: vi.fn(),
+  };
+}
+
 describe("VideoPlayer", () => {
+  let mockPlayer: ReturnType<typeof createMockPlayer>;
+
   beforeEach(() => {
     localStorage.clear();
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+    mockPlayer = createMockPlayer();
+
+    // Mock YT API — must use function() for new-ability
+    (window as unknown as Record<string, unknown>).YT = {
+      Player: vi.fn().mockImplementation(function (this: unknown) {
+        Object.assign(this as object, mockPlayer);
+        return this;
+      }),
+    };
   });
 
-  it("renders iframe with correct src and title", () => {
+  afterEach(() => {
+    vi.useRealTimers();
+    delete (window as unknown as Record<string, unknown>).YT;
+  });
+
+  it("renders player container with title", () => {
     const { container } = render(
       <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
     );
-    const iframe = container.querySelector("iframe")!;
-    expect(iframe).toBeTruthy();
-    expect(iframe.src).toContain("abc123");
-    expect(iframe.title).toBe("Test Video");
+    const div = container.querySelector("#yt-player");
+    expect(div).toBeTruthy();
+    expect(div?.getAttribute("title")).toBe("Test Video");
   });
 
   it("shows progress bar when localStorage has existing progress", async () => {
@@ -35,21 +61,16 @@ describe("VideoPlayer", () => {
     expect(container.querySelector(".bg-sonar-red")).toBeNull();
   });
 
-  it("updates progress bar on YouTube postMessage", async () => {
+  it("updates progress bar via polling interval", async () => {
     const { container } = render(
       <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
     );
 
+    mockPlayer.getCurrentTime.mockReturnValue(30);
+    mockPlayer.getDuration.mockReturnValue(100);
+
     act(() => {
-      window.dispatchEvent(
-        new MessageEvent("message", {
-          origin: "https://www.youtube.com",
-          data: JSON.stringify({
-            event: "infoDelivery",
-            info: { currentTime: 30, duration: 100 },
-          }),
-        })
-      );
+      vi.advanceTimersByTime(2000);
     });
 
     await waitFor(() => {
@@ -59,89 +80,33 @@ describe("VideoPlayer", () => {
     });
   });
 
-  it("ignores YouTube postMessage when currentTime is zero", async () => {
+  it("does not show progress when currentTime is zero", async () => {
     const { container } = render(
       <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
     );
 
-    act(() => {
-      window.dispatchEvent(
-        new MessageEvent("message", {
-          origin: "https://www.youtube.com",
-          data: JSON.stringify({
-            event: "infoDelivery",
-            info: { currentTime: 0, duration: 100 },
-          }),
-        })
-      );
-    });
-
-    await new Promise((r) => setTimeout(r, 50));
-    expect(container.querySelector(".bg-sonar-red")).toBeNull();
-  });
-
-  it("handles non-JSON postMessage from YouTube without crashing", async () => {
-    const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
-    );
+    mockPlayer.getCurrentTime.mockReturnValue(0);
+    mockPlayer.getDuration.mockReturnValue(100);
 
     act(() => {
-      window.dispatchEvent(
-        new MessageEvent("message", {
-          origin: "https://www.youtube.com",
-          data: "not-valid-json{{{",
-        })
-      );
-    });
-
-    await new Promise((r) => setTimeout(r, 50));
-    // Should not crash and should not show progress
-    expect(container.querySelector(".bg-sonar-red")).toBeNull();
-  });
-
-  it("ignores YouTube infoDelivery when duration or currentTime is missing", async () => {
-    const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
-    );
-
-    act(() => {
-      window.dispatchEvent(
-        new MessageEvent("message", {
-          origin: "https://www.youtube.com",
-          data: JSON.stringify({
-            event: "infoDelivery",
-            info: { currentTime: 50 },
-          }),
-        })
-      );
-    });
-
-    await new Promise((r) => setTimeout(r, 50));
-    expect(container.querySelector(".bg-sonar-red")).toBeNull();
-  });
-
-  it("handles postMessage with object data (non-string) from YouTube", async () => {
-    const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
-    );
-
-    act(() => {
-      window.dispatchEvent(
-        new MessageEvent("message", {
-          origin: "https://www.youtube.com",
-          data: {
-            event: "infoDelivery",
-            info: { currentTime: 75, duration: 100 },
-          },
-        })
-      );
+      vi.advanceTimersByTime(2000);
     });
 
     await waitFor(() => {
-      const bar = container.querySelector(".bg-sonar-red") as HTMLElement;
-      expect(bar).toBeTruthy();
-      expect(bar.style.width).toBe("75%");
+      expect(container.querySelector(".bg-sonar-red")).toBeNull();
     });
+  });
+
+  it("seeks when yt-seek custom event is dispatched", () => {
+    render(
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+    );
+
+    act(() => {
+      window.dispatchEvent(new CustomEvent("yt-seek", { detail: 45 }));
+    });
+
+    expect(mockPlayer.seekTo).toHaveBeenCalledWith(45, true);
   });
 
   it("caps progress bar at 100% even when reported progress exceeds 100", async () => {
@@ -156,25 +121,20 @@ describe("VideoPlayer", () => {
     });
   });
 
-  it("ignores postMessage from non-YouTube origins", async () => {
+  it("handles player errors gracefully during polling", async () => {
     const { container } = render(
       <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
     );
 
-    act(() => {
-      window.dispatchEvent(
-        new MessageEvent("message", {
-          origin: "https://evil.com",
-          data: JSON.stringify({
-            event: "infoDelivery",
-            info: { currentTime: 50, duration: 100 },
-          }),
-        })
-      );
+    mockPlayer.getCurrentTime.mockImplementation(() => {
+      throw new Error("player not ready");
     });
 
-    // Small wait to ensure no async update happens
-    await new Promise((r) => setTimeout(r, 50));
+    act(() => {
+      vi.advanceTimersByTime(2000);
+    });
+
+    // Should not crash and should not show progress
     expect(container.querySelector(".bg-sonar-red")).toBeNull();
   });
 });

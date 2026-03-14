@@ -13,11 +13,23 @@ function renderMarkdown(md: string) {
     const trimmed = line.trim();
     if (!trimmed) {
       elements.push(<div key={key++} className="h-3" />);
+    } else if (trimmed.startsWith("### ")) {
+      elements.push(
+        <h3 key={key++} className="mb-2 mt-5 font-heading text-base font-semibold text-n1 first:mt-0">
+          {trimmed.slice(4)}
+        </h3>
+      );
     } else if (trimmed.startsWith("## ")) {
       elements.push(
         <h2 key={key++} className="mb-3 mt-6 font-heading text-lg font-semibold text-n1 first:mt-0">
           {trimmed.slice(3)}
         </h2>
+      );
+    } else if (trimmed.startsWith("# ")) {
+      elements.push(
+        <h1 key={key++} className="mb-4 mt-6 font-heading text-xl font-bold text-n1 first:mt-0">
+          {trimmed.slice(2)}
+        </h1>
       );
     } else if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) {
       elements.push(

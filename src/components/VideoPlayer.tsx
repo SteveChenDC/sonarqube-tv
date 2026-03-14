@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { getProgress, setProgress } from "@/lib/watchProgress";
 
 interface VideoPlayerProps {
@@ -9,47 +9,110 @@ interface VideoPlayerProps {
   videoId: string;
 }
 
+declare global {
+  interface Window {
+    YT?: {
+      Player: new (
+        el: HTMLElement | string,
+        opts: {
+          videoId: string;
+          playerVars?: Record<string, string | number>;
+          events?: Record<string, (e: unknown) => void>;
+        }
+      ) => YTPlayer;
+    };
+    onYouTubeIframeAPIReady?: () => void;
+  }
+}
+
+interface YTPlayer {
+  seekTo(seconds: number, allowSeekAhead: boolean): void;
+  getCurrentTime(): number;
+  getDuration(): number;
+  destroy(): void;
+}
+
 export default function VideoPlayer({ youtubeId, title, videoId }: Readonly<VideoPlayerProps>) {
-  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const playerRef = useRef<YTPlayer | null>(null);
   const [progress, setProgressState] = useState(0);
 
   useEffect(() => {
     setProgressState(getProgress(videoId));
   }, [videoId]);
 
+  const initPlayer = useCallback(() => {
+    if (!window.YT || !containerRef.current) return;
+    playerRef.current?.destroy();
+    playerRef.current = new window.YT.Player("yt-player", {
+      videoId: youtubeId,
+      playerVars: {
+        rel: 0,
+        modestbranding: 1,
+        enablejsapi: 1,
+        origin: window.location.origin,
+      },
+      events: {},
+    });
+  }, [youtubeId]);
+
   useEffect(() => {
-    // Listen for postMessage from YouTube iframe API
-    function handleMessage(event: MessageEvent) {
-      if (event.origin !== "https://www.youtube.com") return;
-      try {
-        const data = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
-        if (data.event === "infoDelivery" && data.info?.currentTime != null && data.info?.duration) {
-          const percent = (data.info.currentTime / data.info.duration) * 100;
-          if (percent > 0) {
-            setProgress(videoId, percent);
-            setProgressState(percent);
-          }
-        }
-      } catch {
-        // ignore non-JSON messages
+    // Load YT API script if not loaded yet
+    if (window.YT) {
+      initPlayer();
+    } else {
+      const prev = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = () => {
+        prev?.();
+        initPlayer();
+      };
+      if (!document.querySelector('script[src*="youtube.com/iframe_api"]')) {
+        const tag = document.createElement("script");
+        tag.src = "https://www.youtube.com/iframe_api";
+        document.head.appendChild(tag);
       }
     }
 
-    window.addEventListener("message", handleMessage);
-    return () => window.removeEventListener("message", handleMessage);
+    return () => {
+      playerRef.current?.destroy();
+      playerRef.current = null;
+    };
+  }, [initPlayer]);
+
+  // Track progress
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const player = playerRef.current;
+      if (!player) return;
+      try {
+        const current = player.getCurrentTime();
+        const duration = player.getDuration();
+        if (duration > 0 && current > 0) {
+          const percent = (current / duration) * 100;
+          setProgress(videoId, percent);
+          setProgressState(percent);
+        }
+      } catch {
+        // player not ready yet
+      }
+    }, 2000);
+    return () => clearInterval(interval);
   }, [videoId]);
+
+  // Listen for seek requests from TranscriptView
+  useEffect(() => {
+    function handleSeek(e: Event) {
+      const seconds = (e as CustomEvent<number>).detail;
+      playerRef.current?.seekTo(seconds, true);
+    }
+    window.addEventListener("yt-seek", handleSeek);
+    return () => window.removeEventListener("yt-seek", handleSeek);
+  }, []);
 
   return (
     <div className="w-full">
-      <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-n8 bg-n9">
-        <iframe
-          ref={iframeRef}
-          src={`https://www.youtube.com/embed/${youtubeId}?rel=0&modestbranding=1&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}`}
-          title={title}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          className="absolute inset-0 h-full w-full"
-        />
+      <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-n8 bg-n9" ref={containerRef}>
+        <div id="yt-player" className="absolute inset-0 h-full w-full" title={title} />
       </div>
       <div className="h-1 w-full bg-n8 rounded-b-lg overflow-hidden">
         {progress > 0 && (
