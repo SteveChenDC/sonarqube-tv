@@ -25,7 +25,7 @@ function timeAgo(dateString: string): string {
   return "Just now";
 }
 
-export default function VideoCard({ video, fluid = false, onRemove }: Readonly<{ video: Video; fluid?: boolean; onRemove?: () => void }>) {
+export default function VideoCard({ video, fluid = false, onRemove, hideCategory = false }: Readonly<{ video: Video; fluid?: boolean; onRemove?: () => void; hideCategory?: boolean }>) {
   const [progress, setProgressState] = useState(0);
   const categoryTitle = categories.find((c) => c.slug === video.category)?.title;
 
@@ -102,7 +102,7 @@ export default function VideoCard({ video, fluid = false, onRemove }: Readonly<{
       </h3>
       <div className={`mt-1.5 flex items-center gap-2 ${fluid ? "" : "w-[280px] sm:w-[320px]"}`}>
         <span className="text-xs text-n6">{timeAgo(video.publishedAt)}</span>
-        {categoryTitle && (
+        {categoryTitle && !hideCategory && (
           <span className="rounded bg-n8/60 px-2 py-0.5 text-xs font-medium text-n5">
             {categoryTitle}
           </span>
