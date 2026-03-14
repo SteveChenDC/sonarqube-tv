@@ -172,17 +172,18 @@ export default function HomeContent({
           </div>
         )}
 
-        <div id="categories" className="space-y-4 pt-8 pb-16">
+        <div id="categories" className="pt-8 pb-16">
           {categories.map((category) => {
             const categoryVideos = getVideosByCategory(category.slug);
             if (categoryVideos.length === 0 && hasActiveFilters) return null;
             return (
-              <VideoRow
-                key={category.slug}
-                title={category.title}
-                categorySlug={category.slug}
-                videos={categoryVideos}
-              />
+              <div key={category.slug} className="border-t border-n8/40 pt-6">
+                <VideoRow
+                  title={category.title}
+                  categorySlug={category.slug}
+                  videos={categoryVideos}
+                />
+              </div>
             );
           })}
 
