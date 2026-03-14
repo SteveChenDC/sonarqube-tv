@@ -41,7 +41,6 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
 
   const MOBILE_CAP = 6;
   const mobileVideos = videos.slice(0, MOBILE_CAP);
-  const hasMore = videos.length > MOBILE_CAP;
 
   function renderLabel(label: string, count: number) {
     return (
@@ -110,14 +109,6 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
               <VideoCard key={video.id} video={video} fluid hideCategory={hideCategoryBadge} onRemove={onRemoveVideo ? () => onRemoveVideo(video.id) : undefined} />
             ))}
           </div>
-        )}
-        {hasMore && categorySlug && (
-          <Link
-            href={`/category/${categorySlug}`}
-            className="mt-4 inline-flex items-center gap-1 font-heading text-sm font-medium text-qube-blue transition-colors hover:text-qube-blue/80"
-          >
-            See all &rarr;
-          </Link>
         )}
       </div>
 
