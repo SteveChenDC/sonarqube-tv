@@ -87,7 +87,7 @@ export default function VideoCard({ video, fluid = false }: Readonly<{ video: Vi
       <div className={`mt-1.5 flex items-center gap-2 ${fluid ? "" : "w-[280px] sm:w-[320px]"}`}>
         <span className="text-xs text-n6">{timeAgo(video.publishedAt)}</span>
         {categoryTitle && (
-          <span className="rounded bg-sonar-purple/30 px-1.5 py-0.5 text-[11px] font-medium text-n4">
+          <span className="rounded bg-sonar-purple/30 px-2 py-0.5 text-xs font-medium text-n4">
             {categoryTitle}
           </span>
         )}

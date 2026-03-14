@@ -50,10 +50,10 @@ export default async function CategoryPage({
           </h1>
           <span className="font-heading text-lg text-n6">{categoryVideos.length} videos</span>
         </div>
-        <p className="max-w-2xl text-base leading-relaxed text-n5">
+        <p className="max-w-2xl text-base leading-relaxed text-n4">
           {category.description}
         </p>
-        <div className="mb-10 mt-8 border-t border-n8/40" />
+        <div className="mb-8 mt-6 border-t border-n8/40" />
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {categoryVideos.map((video) => (
