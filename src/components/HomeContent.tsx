@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import Hero from "./Hero";
 import VideoRow from "./VideoRow";
 import { getAllProgress, removeProgress } from "@/lib/watchProgress";
@@ -131,17 +131,34 @@ export default function HomeContent({
     sortBy !== "newest",
   ].filter(Boolean).length;
 
+  // Track when hero is scrolled out of view to show floating filter button
+  const heroRef = useRef<HTMLDivElement>(null);
+  const [heroOutOfView, setHeroOutOfView] = useState(false);
+
+  useEffect(() => {
+    const el = heroRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setHeroOutOfView(!entry.isIntersecting),
+      { threshold: 0 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div>
-      <Hero
-        video={featuredVideo}
-        actions={
-          <FilterTrigger
-            activeCount={activeFilterCount}
-            onClick={() => setFilterOpen(true)}
-          />
-        }
-      />
+      <div ref={heroRef}>
+        <Hero
+          video={featuredVideo}
+          actions={
+            <FilterTrigger
+              activeCount={activeFilterCount}
+              onClick={() => setFilterOpen(true)}
+            />
+          }
+        />
+      </div>
 
       <div className="relative z-10 px-4 sm:px-6 lg:px-8">
         <FilterBar
@@ -227,6 +244,43 @@ export default function HomeContent({
           )}
         </div>
       </div>
+      {/* Floating filter button — appears when hero's inline trigger scrolls out of view */}
+      <button
+        onClick={() => setFilterOpen(true)}
+        aria-label="Open filters"
+        className={`fixed bottom-6 right-18 z-40 flex h-10 items-center gap-2 rounded-full border border-n8 bg-n9/90 px-4 text-n5 shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-n7 hover:bg-n8 hover:text-n1 focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:outline-none ${
+          heroOutOfView
+            ? "translate-y-0 opacity-100"
+            : "pointer-events-none translate-y-4 opacity-0"
+        }`}
+      >
+        <svg
+          className="h-4 w-4"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <line x1="4" y1="21" x2="4" y2="14" />
+          <line x1="4" y1="10" x2="4" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="12" />
+          <line x1="12" y1="8" x2="12" y2="3" />
+          <line x1="20" y1="21" x2="20" y2="16" />
+          <line x1="20" y1="12" x2="20" y2="3" />
+          <line x1="1" y1="14" x2="7" y2="14" />
+          <line x1="9" y1="8" x2="15" y2="8" />
+          <line x1="17" y1="16" x2="23" y2="16" />
+        </svg>
+        <span className="font-heading text-xs font-medium">Filters</span>
+        {activeFilterCount > 0 && (
+          <span className="flex h-4.5 w-4.5 items-center justify-center rounded-full bg-qube-blue text-[10px] font-bold text-white">
+            {activeFilterCount}
+          </span>
+        )}
+      </button>
       <ScrollToTop />
     </div>
   );
