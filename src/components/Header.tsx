@@ -141,7 +141,7 @@ export default function Header() {
                     onClick={() => setMenuOpen(false)}
                     className="group/link inline-flex items-center gap-1 font-heading text-xs font-medium text-qube-blue transition-colors hover:text-qube-blue/80"
                   >
-                    See All
+                    All Categories
                     <svg
                       className="h-3 w-3 transition-transform duration-200 group-hover/link:translate-x-0.5"
                       fill="none"

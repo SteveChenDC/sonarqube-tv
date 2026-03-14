@@ -33,7 +33,7 @@ export default function ThemeToggle({ className }: Readonly<{ className?: string
     <button
       onClick={handleToggle}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      className={`rounded-lg p-2 transition-colors ${className ?? "text-n6 hover:bg-n8/50 hover:text-n1"}`}
+      className={`rounded-lg p-2 transition-all duration-300 active:scale-90 ${className ?? "text-n6 hover:bg-n8/50 hover:text-n1"}`}
     >
       <span className="relative block h-5 w-5">
         <svg

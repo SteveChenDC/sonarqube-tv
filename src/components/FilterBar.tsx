@@ -239,7 +239,7 @@ export function FilterTrigger({
     <button
       onClick={onClick}
       aria-label="Filters"
-      className="flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-5 py-2.5 font-heading text-sm font-semibold text-white shadow-md backdrop-blur-md transition-all hover:border-white/40 hover:bg-white/20 hover:shadow-lg"
+      className="flex items-center gap-2 rounded-lg border border-qube-blue/60 bg-qube-blue/20 px-5 py-2.5 font-heading text-sm font-semibold text-white shadow-md shadow-qube-blue/10 backdrop-blur-md transition-all hover:border-qube-blue hover:bg-qube-blue/30 hover:shadow-lg hover:shadow-qube-blue/20 active:scale-95"
     >
       <span>Filters</span>
       <SlidersIcon />
