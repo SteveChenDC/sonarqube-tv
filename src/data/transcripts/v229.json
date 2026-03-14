@@ -1,0 +1,2613 @@
+{
+  "videoId": "v229",
+  "youtubeId": "1-TRlxBGrkI",
+  "segments": [
+    {
+      "text": "So I'll jump straight into today's",
+      "offset": 480,
+      "duration": 4480
+    },
+    {
+      "text": "topic, empowering developers to own code",
+      "offset": 2320,
+      "duration": 5680
+    },
+    {
+      "text": "security. Now if you are familiar with",
+      "offset": 4960,
+      "duration": 4719
+    },
+    {
+      "text": "Sonors first, you may be wondering why",
+      "offset": 8000,
+      "duration": 3759
+    },
+    {
+      "text": "I'm talking about security today when",
+      "offset": 9679,
+      "duration": 3601
+    },
+    {
+      "text": "traditionally you've thought of us in",
+      "offset": 11759,
+      "duration": 2880
+    },
+    {
+      "text": "terms of maintainability and",
+      "offset": 13280,
+      "duration": 3919
+    },
+    {
+      "text": "reliability. But security has always",
+      "offset": 14639,
+      "duration": 4881
+    },
+    {
+      "text": "been in our sites. You might say that we",
+      "offset": 17199,
+      "duration": 4641
+    },
+    {
+      "text": "learned our craft with maintainability.",
+      "offset": 19520,
+      "duration": 5040
+    },
+    {
+      "text": "We honed it with reliability. And now",
+      "offset": 21840,
+      "duration": 5120
+    },
+    {
+      "text": "we're fleshing it out with security.",
+      "offset": 24560,
+      "duration": 3920
+    },
+    {
+      "text": "Now, we've still got a lot we want to do",
+      "offset": 26960,
+      "duration": 3040
+    },
+    {
+      "text": "with security and that'll probably",
+      "offset": 28480,
+      "duration": 3520
+    },
+    {
+      "text": "always be the case, but we've already",
+      "offset": 30000,
+      "duration": 4399
+    },
+    {
+      "text": "done a tremendous amount in this area.",
+      "offset": 32000,
+      "duration": 5040
+    },
+    {
+      "text": "Um, for instance, we can find a large",
+      "offset": 34399,
+      "duration": 6401
+    },
+    {
+      "text": "range of u injection issues uh such as",
+      "offset": 37040,
+      "duration": 5920
+    },
+    {
+      "text": "SQL injection, LDAP injection, OS",
+      "offset": 40800,
+      "duration": 3680
+    },
+    {
+      "text": "command injection, and a number of",
+      "offset": 42960,
+      "duration": 5040
+    },
+    {
+      "text": "others. Um, we're currently working on",
+      "offset": 44480,
+      "duration": 7680
+    },
+    {
+      "text": "cross-sight scripting, XXs, and XXE, XML",
+      "offset": 48000,
+      "duration": 6800
+    },
+    {
+      "text": "external entity processing. Had to write",
+      "offset": 52160,
+      "duration": 5760
+    },
+    {
+      "text": "that down. Um now throughout that",
+      "offset": 54800,
+      "duration": 4880
+    },
+    {
+      "text": "journey from maintainability to",
+      "offset": 57920,
+      "duration": 4080
+    },
+    {
+      "text": "reliability to security we've kept the",
+      "offset": 59680,
+      "duration": 4000
+    },
+    {
+      "text": "same core values in place the whole",
+      "offset": 62000,
+      "duration": 4960
+    },
+    {
+      "text": "time. So the whole time our focus has",
+      "offset": 63680,
+      "duration": 5759
+    },
+    {
+      "text": "been making tools for developers and",
+      "offset": 66960,
+      "duration": 4800
+    },
+    {
+      "text": "development teams that are simple and",
+      "offset": 69439,
+      "duration": 5121
+    },
+    {
+      "text": "transparent, easy to integrate into your",
+      "offset": 71760,
+      "duration": 5039
+    },
+    {
+      "text": "development process and accurate and",
+      "offset": 74560,
+      "duration": 4960
+    },
+    {
+      "text": "helpful always. And specifically that",
+      "offset": 76799,
+      "duration": 4801
+    },
+    {
+      "text": "means no false positives. We work really",
+      "offset": 79520,
+      "duration": 5040
+    },
+    {
+      "text": "hard on um making sure that when we",
+      "offset": 81600,
+      "duration": 5040
+    },
+    {
+      "text": "raise an issue, you can be confident",
+      "offset": 84560,
+      "duration": 3440
+    },
+    {
+      "text": "that there's actually something there",
+      "offset": 86640,
+      "duration": 3920
+    },
+    {
+      "text": "that needs dealing with. When you move",
+      "offset": 88000,
+      "duration": 5040
+    },
+    {
+      "text": "into the security market though, that",
+      "offset": 90560,
+      "duration": 5040
+    },
+    {
+      "text": "changes a little bit. Um security is a",
+      "offset": 93040,
+      "duration": 4560
+    },
+    {
+      "text": "broad umbrella. There are lots of pieces",
+      "offset": 95600,
+      "duration": 3680
+    },
+    {
+      "text": "to this. There's a lot of jargon that",
+      "offset": 97600,
+      "duration": 2960
+    },
+    {
+      "text": "you'll encounter when you're dealing",
+      "offset": 99280,
+      "duration": 3839
+    },
+    {
+      "text": "with this. Um and people can find it",
+      "offset": 100560,
+      "duration": 4559
+    },
+    {
+      "text": "somewhat overwhelming. Uh when people",
+      "offset": 103119,
+      "duration": 4000
+    },
+    {
+      "text": "think about security, they think, \"Wow,",
+      "offset": 105119,
+      "duration": 4320
+    },
+    {
+      "text": "this is really complicated. I'm going to",
+      "offset": 107119,
+      "duration": 4320
+    },
+    {
+      "text": "need to bring in experts. Um, and",
+      "offset": 109439,
+      "duration": 3921
+    },
+    {
+      "text": "there's a lot of fear around this.",
+      "offset": 111439,
+      "duration": 3921
+    },
+    {
+      "text": "People are afraid of hackers. They're",
+      "offset": 113360,
+      "duration": 3840
+    },
+    {
+      "text": "afraid of data breaches. No one wants to",
+      "offset": 115360,
+      "duration": 3600
+    },
+    {
+      "text": "be the next name in the news. And no one",
+      "offset": 117200,
+      "duration": 3840
+    },
+    {
+      "text": "certainly wants to be named in a CVE,",
+      "offset": 118960,
+      "duration": 3920
+    },
+    {
+      "text": "which is common vulnerabilities and",
+      "offset": 121040,
+      "duration": 6560
+    },
+    {
+      "text": "exposures. Um, and we get that, but our",
+      "offset": 122880,
+      "duration": 6480
+    },
+    {
+      "text": "approach is different because we believe",
+      "offset": 127600,
+      "duration": 3760
+    },
+    {
+      "text": "it is possible to do simple and",
+      "offset": 129360,
+      "duration": 3680
+    },
+    {
+      "text": "transparent tools for developers and",
+      "offset": 131360,
+      "duration": 5200
+    },
+    {
+      "text": "development teams for code security. So,",
+      "offset": 133040,
+      "duration": 5440
+    },
+    {
+      "text": "which security? Uh, I'm going to go back",
+      "offset": 136560,
+      "duration": 3600
+    },
+    {
+      "text": "to that word map that I threw up a",
+      "offset": 138480,
+      "duration": 3280
+    },
+    {
+      "text": "second ago. Let's break this down a",
+      "offset": 140160,
+      "duration": 2960
+    },
+    {
+      "text": "little bit because, like I said, there",
+      "offset": 141760,
+      "duration": 3839
+    },
+    {
+      "text": "are a lot of pieces to this. First of",
+      "offset": 143120,
+      "duration": 3920
+    },
+    {
+      "text": "all, there's the security of your",
+      "offset": 145599,
+      "duration": 3201
+    },
+    {
+      "text": "environment. For instance, do you have a",
+      "offset": 147040,
+      "duration": 3919
+    },
+    {
+      "text": "firewall in place? There's also the",
+      "offset": 148800,
+      "duration": 4400
+    },
+    {
+      "text": "security of your processes. So, do you",
+      "offset": 150959,
+      "duration": 4401
+    },
+    {
+      "text": "have your permissions ratcheted down to",
+      "offset": 153200,
+      "duration": 4800
+    },
+    {
+      "text": "least required? There's the security of",
+      "offset": 155360,
+      "duration": 5120
+    },
+    {
+      "text": "your dependencies. So, are you using",
+      "offset": 158000,
+      "duration": 4400
+    },
+    {
+      "text": "that version of that library that's",
+      "offset": 160480,
+      "duration": 3680
+    },
+    {
+      "text": "known to have a problem and you need to",
+      "offset": 162400,
+      "duration": 4240
+    },
+    {
+      "text": "upgrade? And then finally, there's the",
+      "offset": 164160,
+      "duration": 4560
+    },
+    {
+      "text": "security of the code itself. And that's",
+      "offset": 166640,
+      "duration": 4959
+    },
+    {
+      "text": "where we come in. Now, at owner source,",
+      "offset": 168720,
+      "duration": 4960
+    },
+    {
+      "text": "it's our goal that every developer and",
+      "offset": 171599,
+      "duration": 3920
+    },
+    {
+      "text": "development team use our products for",
+      "offset": 173680,
+      "duration": 3839
+    },
+    {
+      "text": "code quality and security. We see this",
+      "offset": 175519,
+      "duration": 4241
+    },
+    {
+      "text": "as mission possible. And specifically,",
+      "offset": 177519,
+      "duration": 4080
+    },
+    {
+      "text": "we see it as mission possible that every",
+      "offset": 179760,
+      "duration": 3759
+    },
+    {
+      "text": "developer and development team use our",
+      "offset": 181599,
+      "duration": 5201
+    },
+    {
+      "text": "products for code security. So, let's",
+      "offset": 183519,
+      "duration": 5761
+    },
+    {
+      "text": "talk about code security.",
+      "offset": 186800,
+      "duration": 5439
+    },
+    {
+      "text": "Um, it doesn't mean SCA or software",
+      "offset": 189280,
+      "duration": 5520
+    },
+    {
+      "text": "composition analysis. This is again when",
+      "offset": 192239,
+      "duration": 4241
+    },
+    {
+      "text": "you look at the libraries to see that",
+      "offset": 194800,
+      "duration": 3439
+    },
+    {
+      "text": "you're using that version of that",
+      "offset": 196480,
+      "duration": 3440
+    },
+    {
+      "text": "library that has a problem and you need",
+      "offset": 198239,
+      "duration": 3681
+    },
+    {
+      "text": "to upgrade. There are other companies",
+      "offset": 199920,
+      "duration": 4080
+    },
+    {
+      "text": "that do that such as snake and white",
+      "offset": 201920,
+      "duration": 4239
+    },
+    {
+      "text": "source. They do it well. We don't need",
+      "offset": 204000,
+      "duration": 4879
+    },
+    {
+      "text": "to do that. It's also not DAST or",
+      "offset": 206159,
+      "duration": 4720
+    },
+    {
+      "text": "dynamic application security testing.",
+      "offset": 208879,
+      "duration": 3841
+    },
+    {
+      "text": "Now this is when you spin up an instance",
+      "offset": 210879,
+      "duration": 4321
+    },
+    {
+      "text": "of your application and the tester pokes",
+      "offset": 212720,
+      "duration": 4560
+    },
+    {
+      "text": "at it to see what she can find. That's",
+      "offset": 215200,
+      "duration": 4399
+    },
+    {
+      "text": "not what we do. What we do is static",
+      "offset": 217280,
+      "duration": 4959
+    },
+    {
+      "text": "analysis. So it's natural that we would",
+      "offset": 219599,
+      "duration": 5200
+    },
+    {
+      "text": "do static application security testing",
+      "offset": 222239,
+      "duration": 5360
+    },
+    {
+      "text": "or automated code review.",
+      "offset": 224799,
+      "duration": 4401
+    },
+    {
+      "text": "Um now [clears throat]",
+      "offset": 227599,
+      "duration": 3041
+    },
+    {
+      "text": "that doesn't mean that we don't think",
+      "offset": 229200,
+      "duration": 3360
+    },
+    {
+      "text": "you can should use those tools. You",
+      "offset": 230640,
+      "duration": 3519
+    },
+    {
+      "text": "should totally use those tools. They're",
+      "offset": 232560,
+      "duration": 4239
+    },
+    {
+      "text": "completely complimentary. But what we've",
+      "offset": 234159,
+      "duration": 5440
+    },
+    {
+      "text": "decided to focus on and to kick ass at",
+      "offset": 236799,
+      "duration": 5440
+    },
+    {
+      "text": "is SAS and to do it in the code review",
+      "offset": 239599,
+      "duration": 6401
+    },
+    {
+      "text": "process. So what we have to offer here",
+      "offset": 242239,
+      "duration": 7521
+    },
+    {
+      "text": "is okay buzzword alert. Shift left. Now,",
+      "offset": 246000,
+      "duration": 6319
+    },
+    {
+      "text": "shift left is a buzzword. It's overused,",
+      "offset": 249760,
+      "duration": 4720
+    },
+    {
+      "text": "but it's overused because there's a lot",
+      "offset": 252319,
+      "duration": 4241
+    },
+    {
+      "text": "of real meaning and value here. And",
+      "offset": 254480,
+      "duration": 4640
+    },
+    {
+      "text": "specifically in this context, what we",
+      "offset": 256560,
+      "duration": 5760
+    },
+    {
+      "text": "mean is moving the security testing of",
+      "offset": 259120,
+      "duration": 5280
+    },
+    {
+      "text": "the code as close to the developer who",
+      "offset": 262320,
+      "duration": 5040
+    },
+    {
+      "text": "wrote the code as possible. So, not 3",
+      "offset": 264400,
+      "duration": 5280
+    },
+    {
+      "text": "months after the code was written, not",
+      "offset": 267360,
+      "duration": 4240
+    },
+    {
+      "text": "right before it goes into production,",
+      "offset": 269680,
+      "duration": 3840
+    },
+    {
+      "text": "you send a raft of issues back to the",
+      "offset": 271600,
+      "duration": 3280
+    },
+    {
+      "text": "developer when the developers have",
+      "offset": 273520,
+      "duration": 3840
+    },
+    {
+      "text": "completely forgotten about it. Instead,",
+      "offset": 274880,
+      "duration": 4960
+    },
+    {
+      "text": "what we do is raise the issues as soon",
+      "offset": 277360,
+      "duration": 4399
+    },
+    {
+      "text": "as possible after the code was written",
+      "offset": 279840,
+      "duration": 4320
+    },
+    {
+      "text": "while it's still fresh in mind, so it's",
+      "offset": 281759,
+      "duration": 6641
+    },
+    {
+      "text": "cheaper and easier and faster to fix.",
+      "offset": 284160,
+      "duration": 5599
+    },
+    {
+      "text": "So, that's what we're talking about,",
+      "offset": 288400,
+      "duration": 4880
+    },
+    {
+      "text": "code security for developers.",
+      "offset": 289759,
+      "duration": 5121
+    },
+    {
+      "text": "Now, when we do this, we're going to",
+      "offset": 293280,
+      "duration": 3280
+    },
+    {
+      "text": "give you the same awesome Sonar Cube",
+      "offset": 294880,
+      "duration": 3200
+    },
+    {
+      "text": "experience that you've come to know and",
+      "offset": 296560,
+      "duration": 3520
+    },
+    {
+      "text": "love. So, you're going to get precise",
+      "offset": 298080,
+      "duration": 3679
+    },
+    {
+      "text": "issue locations. You're going to get",
+      "offset": 300080,
+      "duration": 3440
+    },
+    {
+      "text": "secondary locations when that's",
+      "offset": 301759,
+      "duration": 3841
+    },
+    {
+      "text": "required. We're going to raise issues in",
+      "offset": 303520,
+      "duration": 4000
+    },
+    {
+      "text": "new code. so that you can find them and",
+      "offset": 305600,
+      "duration": 4000
+    },
+    {
+      "text": "fix them as soon as possible after the",
+      "offset": 307520,
+      "duration": 4399
+    },
+    {
+      "text": "code was written. And when we raise an",
+      "offset": 309600,
+      "duration": 3680
+    },
+    {
+      "text": "issue, we're going to give you guidance",
+      "offset": 311919,
+      "duration": 3441
+    },
+    {
+      "text": "to help you understand and fix the",
+      "offset": 313280,
+      "duration": 4240
+    },
+    {
+      "text": "issue. We do this for security",
+      "offset": 315360,
+      "duration": 5119
+    },
+    {
+      "text": "vulnerabilities. Um, and so when we",
+      "offset": 317520,
+      "duration": 4959
+    },
+    {
+      "text": "raise a security vulnerability on your",
+      "offset": 320479,
+      "duration": 4481
+    },
+    {
+      "text": "code, you know that it's an exploitable",
+      "offset": 322479,
+      "duration": 5521
+    },
+    {
+      "text": "problem in your code and that a code fix",
+      "offset": 324960,
+      "duration": 6640
+    },
+    {
+      "text": "is required. Now, along with this, um,",
+      "offset": 328000,
+      "duration": 5919
+    },
+    {
+      "text": "there's security hotspots. This is a new",
+      "offset": 331600,
+      "duration": 6080
+    },
+    {
+      "text": "concept that we've invented and we raise",
+      "offset": 333919,
+      "duration": 6321
+    },
+    {
+      "text": "it on a security sensitive piece of",
+      "offset": 337680,
+      "duration": 4400
+    },
+    {
+      "text": "code. Now, I like to think of these as",
+      "offset": 340240,
+      "duration": 4399
+    },
+    {
+      "text": "Schroinger's vulnerabilities because for",
+      "offset": 342080,
+      "duration": 4399
+    },
+    {
+      "text": "a security hotspot, it might be a",
+      "offset": 344639,
+      "duration": 4400
+    },
+    {
+      "text": "vulnerability, it might not. You're not",
+      "offset": 346479,
+      "duration": 4241
+    },
+    {
+      "text": "going to know until you look. Human",
+      "offset": 349039,
+      "duration": 3681
+    },
+    {
+      "text": "review is required. So, with a",
+      "offset": 350720,
+      "duration": 4080
+    },
+    {
+      "text": "vulnerability, a fix is required, but",
+      "offset": 352720,
+      "duration": 5919
+    },
+    {
+      "text": "with a hotspot, review is required.",
+      "offset": 354800,
+      "duration": 6239
+    },
+    {
+      "text": "Now, in 8.2, 2, we introduced a brand",
+      "offset": 358639,
+      "duration": 5361
+    },
+    {
+      "text": "new interface around hotspots",
+      "offset": 361039,
+      "duration": 6000
+    },
+    {
+      "text": "um to help you understand and get into",
+      "offset": 364000,
+      "duration": 4960
+    },
+    {
+      "text": "the issues. And right now, I'm showing",
+      "offset": 367039,
+      "duration": 4561
+    },
+    {
+      "text": "you a hotspot and a vulnerability.",
+      "offset": 368960,
+      "duration": 5200
+    },
+    {
+      "text": "Elsa's about to open up a poll um",
+      "offset": 371600,
+      "duration": 4719
+    },
+    {
+      "text": "because I'd like you to tell me which",
+      "offset": 374160,
+      "duration": 4479
+    },
+    {
+      "text": "one of these you think is the hot spot,",
+      "offset": 376319,
+      "duration": 4241
+    },
+    {
+      "text": "A or B.",
+      "offset": 378639,
+      "duration": 4000
+    },
+    {
+      "text": "I'm going to give a few seconds for",
+      "offset": 380560,
+      "duration": 3759
+    },
+    {
+      "text": "people to vote.",
+      "offset": 382639,
+      "duration": 4641
+    },
+    {
+      "text": "Yep, the votes are coming in. Poll is",
+      "offset": 384319,
+      "duration": 5681
+    },
+    {
+      "text": "launched.",
+      "offset": 387280,
+      "duration": 4960
+    },
+    {
+      "text": "And just so you know, I can't see the",
+      "offset": 390000,
+      "duration": 4000
+    },
+    {
+      "text": "voting, so Elsa's going to have to tell",
+      "offset": 392240,
+      "duration": 4079
+    },
+    {
+      "text": "me when people have answered.",
+      "offset": 394000,
+      "duration": 5919
+    },
+    {
+      "text": "And it looks like the majority of people",
+      "offset": 396319,
+      "duration": 6641
+    },
+    {
+      "text": "are guessing B.",
+      "offset": 399919,
+      "duration": 5201
+    },
+    {
+      "text": "Okay. Well, for those of you that said",
+      "offset": 402960,
+      "duration": 5519
+    },
+    {
+      "text": "B, you're right. That is the hotspot.",
+      "offset": 405120,
+      "duration": 5440
+    },
+    {
+      "text": "We'll see more of this when I get to the",
+      "offset": 408479,
+      "duration": 4560
+    },
+    {
+      "text": "demo in a minute,",
+      "offset": 410560,
+      "duration": 4320
+    },
+    {
+      "text": "but for right now, let's go back to",
+      "offset": 413039,
+      "duration": 3440
+    },
+    {
+      "text": "security vulnerabilities for just a",
+      "offset": 414880,
+      "duration": 4319
+    },
+    {
+      "text": "second. We offer vulnerabilities in four",
+      "offset": 416479,
+      "duration": 6321
+    },
+    {
+      "text": "languages: C#, Java, PHP, and a recent",
+      "offset": 419199,
+      "duration": 6720
+    },
+    {
+      "text": "addition to this list is Python. Now, by",
+      "offset": 422800,
+      "duration": 4640
+    },
+    {
+      "text": "the end of the year, the list is going",
+      "offset": 425919,
+      "duration": 3361
+    },
+    {
+      "text": "to get even longer. We're going to add",
+      "offset": 427440,
+      "duration": 5759
+    },
+    {
+      "text": "JavaScript, TypeScript, C, and C++. For",
+      "offset": 429280,
+      "duration": 6800
+    },
+    {
+      "text": "hotspots, we currently offer those in C,",
+      "offset": 433199,
+      "duration": 7041
+    },
+    {
+      "text": "Java, PHP, VB, JavaScript, and Python",
+      "offset": 436080,
+      "duration": 7200
+    },
+    {
+      "text": "with TypeScript, C, and C++ coming by",
+      "offset": 440240,
+      "duration": 5359
+    },
+    {
+      "text": "the end of the year.",
+      "offset": 443280,
+      "duration": 5600
+    },
+    {
+      "text": "Excuse me. Um, so simple and transparent",
+      "offset": 445599,
+      "duration": 5761
+    },
+    {
+      "text": "for developers and development teams.",
+      "offset": 448880,
+      "duration": 6319
+    },
+    {
+      "text": "Um, as a contrast, um, I've sort of",
+      "offset": 451360,
+      "duration": 7040
+    },
+    {
+      "text": "photoshopped, uh, an image here, um, to",
+      "offset": 455199,
+      "duration": 5280
+    },
+    {
+      "text": "show you what we think is an unhelpful",
+      "offset": 458400,
+      "duration": 5359
+    },
+    {
+      "text": "UX. So as a developer I come to this and",
+      "offset": 460479,
+      "duration": 6081
+    },
+    {
+      "text": "I see okay",
+      "offset": 463759,
+      "duration": 6961
+    },
+    {
+      "text": "sonar cube thinks that on line 17 I'm",
+      "offset": 466560,
+      "duration": 6960
+    },
+    {
+      "text": "constructing an operating system command",
+      "offset": 470720,
+      "duration": 6080
+    },
+    {
+      "text": "from tainted user control data which",
+      "offset": 473520,
+      "duration": 5840
+    },
+    {
+      "text": "means that it thinks that there's user",
+      "offset": 476800,
+      "duration": 7920
+    },
+    {
+      "text": "provided data in the command variable.",
+      "offset": 479360,
+      "duration": 9279
+    },
+    {
+      "text": "I wonder how I got there.",
+      "offset": 484720,
+      "duration": 6080
+    },
+    {
+      "text": "And then of course what follows is",
+      "offset": 488639,
+      "duration": 4641
+    },
+    {
+      "text": "probably several hours of back tracing",
+      "offset": 490800,
+      "duration": 5280
+    },
+    {
+      "text": "through the code to try and figure out",
+      "offset": 493280,
+      "duration": 5199
+    },
+    {
+      "text": "uh where the user provided data got into",
+      "offset": 496080,
+      "duration": 4640
+    },
+    {
+      "text": "command and how it got there without",
+      "offset": 498479,
+      "duration": 4241
+    },
+    {
+      "text": "being sanitized.",
+      "offset": 500720,
+      "duration": 5199
+    },
+    {
+      "text": "So by contrast uh what we think is a",
+      "offset": 502720,
+      "duration": 5759
+    },
+    {
+      "text": "helpful UX is one that's going to show",
+      "offset": 505919,
+      "duration": 4720
+    },
+    {
+      "text": "you how to track the untrusted user",
+      "offset": 508479,
+      "duration": 4641
+    },
+    {
+      "text": "input throughout the execution flow of",
+      "offset": 510639,
+      "duration": 5441
+    },
+    {
+      "text": "the code. Um and there could be multiple",
+      "offset": 513120,
+      "duration": 4320
+    },
+    {
+      "text": "flows through the code. We're going to",
+      "offset": 516080,
+      "duration": 3199
+    },
+    {
+      "text": "show you all of them so that you can",
+      "offset": 517440,
+      "duration": 4240
+    },
+    {
+      "text": "visualize the data source or where the",
+      "offset": 519279,
+      "duration": 4880
+    },
+    {
+      "text": "user data comes into the program, the",
+      "offset": 521680,
+      "duration": 5680
+    },
+    {
+      "text": "different flows and to the sync which is",
+      "offset": 524159,
+      "duration": 4800
+    },
+    {
+      "text": "where you do something with it like",
+      "offset": 527360,
+      "duration": 4080
+    },
+    {
+      "text": "stuff it in the database so that you can",
+      "offset": 528959,
+      "duration": 4560
+    },
+    {
+      "text": "figure out the best place to go into",
+      "offset": 531440,
+      "duration": 4880
+    },
+    {
+      "text": "those flows to sanitize the data before",
+      "offset": 533519,
+      "duration": 5921
+    },
+    {
+      "text": "you actually use it. So, now it's time",
+      "offset": 536320,
+      "duration": 6959
+    },
+    {
+      "text": "for the demo. And let me get to that",
+      "offset": 539440,
+      "duration": 9120
+    },
+    {
+      "text": "screen. And I'm starting here with a um",
+      "offset": 543279,
+      "duration": 7921
+    },
+    {
+      "text": "the the same vulnerability that we were",
+      "offset": 548560,
+      "duration": 4959
+    },
+    {
+      "text": "looking at before. And you can see now",
+      "offset": 551200,
+      "duration": 4160
+    },
+    {
+      "text": "what got photoshopped out of the",
+      "offset": 553519,
+      "duration": 7361
+    },
+    {
+      "text": "picture. So here again on line 17 uh I'm",
+      "offset": 555360,
+      "duration": 9760
+    },
+    {
+      "text": "executing an OS command using the",
+      "offset": 560880,
+      "duration": 6800
+    },
+    {
+      "text": "command variable which sonar cube is",
+      "offset": 565120,
+      "duration": 4880
+    },
+    {
+      "text": "telling me is constructed with user",
+      "offset": 567680,
+      "duration": 4560
+    },
+    {
+      "text": "controlled data. So I've got these",
+      "offset": 570000,
+      "duration": 5920
+    },
+    {
+      "text": "numbers out to the left um and they",
+      "offset": 572240,
+      "duration": 7279
+    },
+    {
+      "text": "correspond to the steps in the path. So",
+      "offset": 575920,
+      "duration": 5440
+    },
+    {
+      "text": "it was collapsed by default. When I",
+      "offset": 579519,
+      "duration": 4401
+    },
+    {
+      "text": "expand it, I see that my path from",
+      "offset": 581360,
+      "duration": 5200
+    },
+    {
+      "text": "source or where the user data comes in",
+      "offset": 583920,
+      "duration": 6400
+    },
+    {
+      "text": "to sync or where I use the data crosses",
+      "offset": 586560,
+      "duration": 6320
+    },
+    {
+      "text": "two files. Uh now I'm going to click on",
+      "offset": 590320,
+      "duration": 6480
+    },
+    {
+      "text": "one to jump me to the first location and",
+      "offset": 592880,
+      "duration": 7920
+    },
+    {
+      "text": "I see that uh I'm getting a field value",
+      "offset": 596800,
+      "duration": 6560
+    },
+    {
+      "text": "uh out of a user provided request. Now",
+      "offset": 600800,
+      "duration": 6159
+    },
+    {
+      "text": "just for um full transparency here, we",
+      "offset": 603360,
+      "duration": 6479
+    },
+    {
+      "text": "are looking at a demo project. So, you",
+      "offset": 606959,
+      "duration": 4481
+    },
+    {
+      "text": "know, you're going to see some hinky",
+      "offset": 609839,
+      "duration": 3120
+    },
+    {
+      "text": "looking variable names, some",
+      "offset": 611440,
+      "duration": 3760
+    },
+    {
+      "text": "strangelooking method names, but the",
+      "offset": 612959,
+      "duration": 4961
+    },
+    {
+      "text": "fact is that we find very similar issues",
+      "offset": 615200,
+      "duration": 5360
+    },
+    {
+      "text": "in real programs. So, you know, try to",
+      "offset": 617920,
+      "duration": 4240
+    },
+    {
+      "text": "ignore the fact that we're looking at a",
+      "offset": 620560,
+      "duration": 4560
+    },
+    {
+      "text": "demo program. So, here in step one, I",
+      "offset": 622160,
+      "duration": 6560
+    },
+    {
+      "text": "get the user data. In step two, I assign",
+      "offset": 625120,
+      "duration": 6480
+    },
+    {
+      "text": "it to a variable. In steps three and",
+      "offset": 628720,
+      "duration": 5359
+    },
+    {
+      "text": "four, I manipulate it, but don't run it",
+      "offset": 631600,
+      "duration": 4640
+    },
+    {
+      "text": "through one of the methods that's known",
+      "offset": 634079,
+      "duration": 4961
+    },
+    {
+      "text": "to make user data safe. So it's still",
+      "offset": 636240,
+      "duration": 5520
+    },
+    {
+      "text": "considered tainted. I reassign it to my",
+      "offset": 639040,
+      "duration": 5359
+    },
+    {
+      "text": "variable here in four. Then I pass it",
+      "offset": 641760,
+      "duration": 6560
+    },
+    {
+      "text": "off in five to another method. So here",
+      "offset": 644399,
+      "duration": 6801
+    },
+    {
+      "text": "at six, I've jumped to another file.",
+      "offset": 648320,
+      "duration": 5600
+    },
+    {
+      "text": "Sonar sonar cube does that for me very",
+      "offset": 651200,
+      "duration": 6160
+    },
+    {
+      "text": "smoothly. So I land here in this method",
+      "offset": 653920,
+      "duration": 6000
+    },
+    {
+      "text": "and my user provided data is here in the",
+      "offset": 657360,
+      "duration": 6400
+    },
+    {
+      "text": "argument. And then in step seven I",
+      "offset": 659920,
+      "duration": 6400
+    },
+    {
+      "text": "reassign that to yet another variable.",
+      "offset": 663760,
+      "duration": 5440
+    },
+    {
+      "text": "And then sure enough here in step eight",
+      "offset": 666320,
+      "duration": 6400
+    },
+    {
+      "text": "I pass it out to the operating system.",
+      "offset": 669200,
+      "duration": 6960
+    },
+    {
+      "text": "Now if I had this code out in production",
+      "offset": 672720,
+      "duration": 5520
+    },
+    {
+      "text": "um I would have a problem and I would",
+      "offset": 676160,
+      "duration": 4880
+    },
+    {
+      "text": "want to get it fixed obviously.",
+      "offset": 678240,
+      "duration": 6000
+    },
+    {
+      "text": "Uh so I'm going to look at one more",
+      "offset": 681040,
+      "duration": 6479
+    },
+    {
+      "text": "uh taint analysis issue. Um and this",
+      "offset": 684240,
+      "duration": 6480
+    },
+    {
+      "text": "time I've got 16 issues. If I expand my",
+      "offset": 687519,
+      "duration": 7201
+    },
+    {
+      "text": "locations, I see that I'm weaving back",
+      "offset": 690720,
+      "duration": 6160
+    },
+    {
+      "text": "and forth through multiple files. I'm",
+      "offset": 694720,
+      "duration": 5359
+    },
+    {
+      "text": "going to start in serlet java, step over",
+      "offset": 696880,
+      "duration": 6560
+    },
+    {
+      "text": "to business things util java, and then",
+      "offset": 700079,
+      "duration": 7521
+    },
+    {
+      "text": "back to serlet java before I finally put",
+      "offset": 703440,
+      "duration": 7040
+    },
+    {
+      "text": "the data into the database here in SQL",
+      "offset": 707600,
+      "duration": 7120
+    },
+    {
+      "text": "injection vulnerability uh file here at",
+      "offset": 710480,
+      "duration": 7280
+    },
+    {
+      "text": "16, which is where we started from. Now,",
+      "offset": 714720,
+      "duration": 7440
+    },
+    {
+      "text": "the point I want to make here is that",
+      "offset": 717760,
+      "duration": 6160
+    },
+    {
+      "text": "even though you're going from file to",
+      "offset": 722160,
+      "duration": 4080
+    },
+    {
+      "text": "file and back and forth within a file,",
+      "offset": 723920,
+      "duration": 4320
+    },
+    {
+      "text": "we've worked hard to present this to you",
+      "offset": 726240,
+      "duration": 4399
+    },
+    {
+      "text": "linearly so that you can start at the",
+      "offset": 728240,
+      "duration": 7279
+    },
+    {
+      "text": "top of the path and go through",
+      "offset": 730639,
+      "duration": 7200
+    },
+    {
+      "text": "in a very easy flow so that you're not",
+      "offset": 735519,
+      "duration": 4081
+    },
+    {
+      "text": "having to jump back and forth and around",
+      "offset": 737839,
+      "duration": 4481
+    },
+    {
+      "text": "from file to file. We do that for you to",
+      "offset": 739600,
+      "duration": 6320
+    },
+    {
+      "text": "make it easy to understand exactly how",
+      "offset": 742320,
+      "duration": 6959
+    },
+    {
+      "text": "the data gets from the user to your",
+      "offset": 745920,
+      "duration": 5200
+    },
+    {
+      "text": "database.",
+      "offset": 749279,
+      "duration": 3921
+    },
+    {
+      "text": "Okay, so those were both um taint",
+      "offset": 751120,
+      "duration": 5440
+    },
+    {
+      "text": "analysis or injection detection issues.",
+      "offset": 753200,
+      "duration": 5120
+    },
+    {
+      "text": "I want to show you some simpler",
+      "offset": 756560,
+      "duration": 3360
+    },
+    {
+      "text": "vulnerabilities before I move on to",
+      "offset": 758320,
+      "duration": 4639
+    },
+    {
+      "text": "hotspots because not all vulnerabilities",
+      "offset": 759920,
+      "duration": 6640
+    },
+    {
+      "text": "require tain analysis to find um and and",
+      "offset": 762959,
+      "duration": 5041
+    },
+    {
+      "text": "not all vulnerabilities require",
+      "offset": 766560,
+      "duration": 3680
+    },
+    {
+      "text": "secondary locations. Some of them are",
+      "offset": 768000,
+      "duration": 4639
+    },
+    {
+      "text": "very simple um and once they're pointed",
+      "offset": 770240,
+      "duration": 4880
+    },
+    {
+      "text": "out to you very obvious such as this use",
+      "offset": 772639,
+      "duration": 6000
+    },
+    {
+      "text": "of a key that's only 512 bits. Um",
+      "offset": 775120,
+      "duration": 5680
+    },
+    {
+      "text": "obviously that's too short to really be",
+      "offset": 778639,
+      "duration": 5601
+    },
+    {
+      "text": "safe. U you should be using 240 bits",
+      "offset": 780800,
+      "duration": 6880
+    },
+    {
+      "text": "instead at least. Uh similarly I've got",
+      "offset": 784240,
+      "duration": 6080
+    },
+    {
+      "text": "a cookie here that's created without",
+      "offset": 787680,
+      "duration": 5760
+    },
+    {
+      "text": "using the HTTP only attribute. Um,",
+      "offset": 790320,
+      "duration": 6480
+    },
+    {
+      "text": "again, this is simple, straightforward,",
+      "offset": 793440,
+      "duration": 6720
+    },
+    {
+      "text": "um, but also very valuable.",
+      "offset": 796800,
+      "duration": 4560
+    },
+    {
+      "text": "Okay, so I'm going to move on to",
+      "offset": 800160,
+      "duration": 3840
+    },
+    {
+      "text": "hotspots now. Now, this is the new",
+      "offset": 801360,
+      "duration": 4800
+    },
+    {
+      "text": "interface that we introduced in Sonar",
+      "offset": 804000,
+      "duration": 4720
+    },
+    {
+      "text": "Sonar Cube 8.2, which just came out last",
+      "offset": 806160,
+      "duration": 5359
+    },
+    {
+      "text": "week. [snorts] Um, and over on the left,",
+      "offset": 808720,
+      "duration": 5760
+    },
+    {
+      "text": "we've got hotspots divided into",
+      "offset": 811519,
+      "duration": 5281
+    },
+    {
+      "text": "categories. We've got a count of the",
+      "offset": 814480,
+      "duration": 6479
+    },
+    {
+      "text": "hotspots in the category um, here. And I",
+      "offset": 816800,
+      "duration": 6719
+    },
+    {
+      "text": "by default uh I start at the first one",
+      "offset": 820959,
+      "duration": 5660
+    },
+    {
+      "text": "with the highest review priority. Over",
+      "offset": 823519,
+      "duration": 4801
+    },
+    {
+      "text": "[snorts] here on the right I see the",
+      "offset": 826619,
+      "duration": 5381
+    },
+    {
+      "text": "hotspot itself and I've got below some",
+      "offset": 828320,
+      "duration": 7040
+    },
+    {
+      "text": "data to help me understand what could be",
+      "offset": 832000,
+      "duration": 8320
+    },
+    {
+      "text": "the risk of this hotspot. Um once I",
+      "offset": 835360,
+      "duration": 6719
+    },
+    {
+      "text": "understand that I can move on to",
+      "offset": 840320,
+      "duration": 5040
+    },
+    {
+      "text": "understanding whether in this particular",
+      "offset": 842079,
+      "duration": 6880
+    },
+    {
+      "text": "context this actually is a problem. If I",
+      "offset": 845360,
+      "duration": 5360
+    },
+    {
+      "text": "think it is a problem, then I've got",
+      "offset": 848959,
+      "duration": 4961
+    },
+    {
+      "text": "some guidance on what I can do to fix",
+      "offset": 850720,
+      "duration": 7440
+    },
+    {
+      "text": "the problem. Now, at the top here, um I",
+      "offset": 853920,
+      "duration": 6719
+    },
+    {
+      "text": "see that this one's not assigned and",
+      "offset": 858160,
+      "duration": 4320
+    },
+    {
+      "text": "I've got a couple of different actions",
+      "offset": 860639,
+      "duration": 4000
+    },
+    {
+      "text": "that I can take. So, currently this is",
+      "offset": 862480,
+      "duration": 5520
+    },
+    {
+      "text": "in to review status. If I think this is",
+      "offset": 864639,
+      "duration": 6241
+    },
+    {
+      "text": "safe, I can mark it safe, add a comment",
+      "offset": 868000,
+      "duration": 5519
+    },
+    {
+      "text": "as to why, and move on. or if I've done",
+      "offset": 870880,
+      "duration": 5840
+    },
+    {
+      "text": "some work in the code to uh fix the",
+      "offset": 873519,
+      "duration": 5521
+    },
+    {
+      "text": "problem, I can mark it fixed and",
+      "offset": 876720,
+      "duration": 5280
+    },
+    {
+      "text": "similarly move on. So um I think this",
+      "offset": 879040,
+      "duration": 7640
+    },
+    {
+      "text": "one is safe. Uh so",
+      "offset": 882000,
+      "duration": 4680
+    },
+    {
+      "text": "I'm going to change the status and I'm",
+      "offset": 887279,
+      "duration": 4560
+    },
+    {
+      "text": "going to move on. This one is",
+      "offset": 889519,
+      "duration": 3841
+    },
+    {
+      "text": "automatically removed from the",
+      "offset": 891839,
+      "duration": 3921
+    },
+    {
+      "text": "interface. I'm moved on to the next one",
+      "offset": 893360,
+      "duration": 5200
+    },
+    {
+      "text": "in the list. My hotspot review",
+      "offset": 895760,
+      "duration": 5040
+    },
+    {
+      "text": "percentage here was updated in real",
+      "offset": 898560,
+      "duration": 3839
+    },
+    {
+      "text": "time. So that's the little carrot",
+      "offset": 900800,
+      "duration": 4399
+    },
+    {
+      "text": "dangling in front of me to sort of coax",
+      "offset": 902399,
+      "duration": 5201
+    },
+    {
+      "text": "me to get through the entire list. And",
+      "offset": 905199,
+      "duration": 4241
+    },
+    {
+      "text": "I'm automatically presented with the",
+      "offset": 907600,
+      "duration": 4720
+    },
+    {
+      "text": "next one that I need to work on.",
+      "offset": 909440,
+      "duration": 5920
+    },
+    {
+      "text": "So that's hotspot review. And now I'm",
+      "offset": 912320,
+      "duration": 7560
+    },
+    {
+      "text": "going to jump back to the presentation.",
+      "offset": 915360,
+      "duration": 4520
+    },
+    {
+      "text": "So what I just showed you was hotspots",
+      "offset": 921760,
+      "duration": 5360
+    },
+    {
+      "text": "uh which require code review. They're",
+      "offset": 925040,
+      "duration": 5120
+    },
+    {
+      "text": "available in Java, JavaScript, VB, C,",
+      "offset": 927120,
+      "duration": 5920
+    },
+    {
+      "text": "Python, and PHP with more coming by the",
+      "offset": 930160,
+      "duration": 4640
+    },
+    {
+      "text": "end of the year. And security",
+      "offset": 933040,
+      "duration": 3760
+    },
+    {
+      "text": "vulnerabilities which are available in",
+      "offset": 934800,
+      "duration": 5440
+    },
+    {
+      "text": "Java, C, Python, and PHP again with more",
+      "offset": 936800,
+      "duration": 5599
+    },
+    {
+      "text": "coming by the end of the year. These are",
+      "offset": 940240,
+      "duration": 4399
+    },
+    {
+      "text": "available for free in community edition",
+      "offset": 942399,
+      "duration": 3921
+    },
+    {
+      "text": "no matter how many lines of code you",
+      "offset": 944639,
+      "duration": 4401
+    },
+    {
+      "text": "have. Now, when we move into the",
+      "offset": 946320,
+      "duration": 5199
+    },
+    {
+      "text": "commercial editions, um, of course, we",
+      "offset": 949040,
+      "duration": 4400
+    },
+    {
+      "text": "step it up a little bit. So, for",
+      "offset": 951519,
+      "duration": 3521
+    },
+    {
+      "text": "developer edition, we add taint",
+      "offset": 953440,
+      "duration": 4160
+    },
+    {
+      "text": "analysis. Those were the SQL injection",
+      "offset": 955040,
+      "duration": 5200
+    },
+    {
+      "text": "and OS command injection issues I s I",
+      "offset": 957600,
+      "duration": 4479
+    },
+    {
+      "text": "showed you as well as you know a number",
+      "offset": 960240,
+      "duration": 5360
+    },
+    {
+      "text": "of other injection issues the XXS the",
+      "offset": 962079,
+      "duration": 6320
+    },
+    {
+      "text": "XXE that we're working on. Um also in",
+      "offset": 965600,
+      "duration": 5039
+    },
+    {
+      "text": "developer edition we add PR decoration",
+      "offset": 968399,
+      "duration": 4721
+    },
+    {
+      "text": "in the four major ALMs GitHub, GitLab,",
+      "offset": 970639,
+      "duration": 6241
+    },
+    {
+      "text": "Bitbucket, Azure DevOps. So that um you",
+      "offset": 973120,
+      "duration": 6719
+    },
+    {
+      "text": "see these issues not just once the code",
+      "offset": 976880,
+      "duration": 6160
+    },
+    {
+      "text": "is merged into master in sonar cube but",
+      "offset": 979839,
+      "duration": 6481
+    },
+    {
+      "text": "in your PR as soon as you create the PR.",
+      "offset": 983040,
+      "duration": 5599
+    },
+    {
+      "text": "So you see those again as quickly as",
+      "offset": 986320,
+      "duration": 4639
+    },
+    {
+      "text": "possible while the code is fresh in mind",
+      "offset": 988639,
+      "duration": 6081
+    },
+    {
+      "text": "so that you can fix it easily quickly.",
+      "offset": 990959,
+      "duration": 5521
+    },
+    {
+      "text": "Um once you get to the enterprise",
+      "offset": 994720,
+      "duration": 4000
+    },
+    {
+      "text": "edition level, the enterprise edition",
+      "offset": 996480,
+      "duration": 4080
+    },
+    {
+      "text": "size, then you're going to need",
+      "offset": 998720,
+      "duration": 4640
+    },
+    {
+      "text": "reporting. So we've added OASP top 10",
+      "offset": 1000560,
+      "duration": 6160
+    },
+    {
+      "text": "and SANS top 25 reports. Those are uh",
+      "offset": 1003360,
+      "duration": 6399
+    },
+    {
+      "text": "all of the issues out there available",
+      "offset": 1006720,
+      "duration": 5679
+    },
+    {
+      "text": "divided up into those two sets of",
+      "offset": 1009759,
+      "duration": 5041
+    },
+    {
+      "text": "categories. Additionally, we've got the",
+      "offset": 1012399,
+      "duration": 5521
+    },
+    {
+      "text": "sonar source categories, um which are",
+      "offset": 1014800,
+      "duration": 5279
+    },
+    {
+      "text": "the categories that developers are used",
+      "offset": 1017920,
+      "duration": 4479
+    },
+    {
+      "text": "to talking about in relation to",
+      "offset": 1020079,
+      "duration": 5201
+    },
+    {
+      "text": "security. Um, and also once you get to",
+      "offset": 1022399,
+      "duration": 5680
+    },
+    {
+      "text": "the enterprise edition, um, typically,",
+      "offset": 1025280,
+      "duration": 3840
+    },
+    {
+      "text": "excuse me, once you get to the",
+      "offset": 1028079,
+      "duration": 3760
+    },
+    {
+      "text": "enterprise size, um, typically you've",
+      "offset": 1029120,
+      "duration": 5839
+    },
+    {
+      "text": "got history, right? So you were",
+      "offset": 1031839,
+      "duration": 6000
+    },
+    {
+      "text": "developing before all of these current",
+      "offset": 1034959,
+      "duration": 5041
+    },
+    {
+      "text": "frameworks were available and so you had",
+      "offset": 1037839,
+      "duration": 4720
+    },
+    {
+      "text": "to build your own frameworks. So you've",
+      "offset": 1040000,
+      "duration": 4400
+    },
+    {
+      "text": "probably got code in place that is",
+      "offset": 1042559,
+      "duration": 4561
+    },
+    {
+      "text": "already sanitizing the user data, but",
+      "offset": 1044400,
+      "duration": 5200
+    },
+    {
+      "text": "when we analyze your code, we don't",
+      "offset": 1047120,
+      "duration": 4720
+    },
+    {
+      "text": "recognize those methods uh because",
+      "offset": 1049600,
+      "duration": 4240
+    },
+    {
+      "text": "they're not part of the public",
+      "offset": 1051840,
+      "duration": 4560
+    },
+    {
+      "text": "frameworks that we understand. And so",
+      "offset": 1053840,
+      "duration": 4400
+    },
+    {
+      "text": "we're raising false positives on those",
+      "offset": 1056400,
+      "duration": 4000
+    },
+    {
+      "text": "issues. So at the enterprise edition",
+      "offset": 1058240,
+      "duration": 5200
+    },
+    {
+      "text": "level, you can configure your homegrown",
+      "offset": 1060400,
+      "duration": 7680
+    },
+    {
+      "text": "sanitizers, um, syncs, sources into the",
+      "offset": 1063440,
+      "duration": 7520
+    },
+    {
+      "text": "analysis engine so that when we do an",
+      "offset": 1068080,
+      "duration": 5440
+    },
+    {
+      "text": "analysis, it's more accurate for your",
+      "offset": 1070960,
+      "duration": 4480
+    },
+    {
+      "text": "context.",
+      "offset": 1073520,
+      "duration": 4560
+    },
+    {
+      "text": "So [clears throat] in summary, uh, what",
+      "offset": 1075440,
+      "duration": 6080
+    },
+    {
+      "text": "we do is code security for developers.",
+      "offset": 1078080,
+      "duration": 5440
+    },
+    {
+      "text": "We do static application security",
+      "offset": 1081520,
+      "duration": 4480
+    },
+    {
+      "text": "testing in the code review process. We",
+      "offset": 1083520,
+      "duration": 4240
+    },
+    {
+      "text": "give you a clear distinction in issue",
+      "offset": 1086000,
+      "duration": 3919
+    },
+    {
+      "text": "type between vulnerabilities which",
+      "offset": 1087760,
+      "duration": 4640
+    },
+    {
+      "text": "require a code change and security",
+      "offset": 1089919,
+      "duration": 6241
+    },
+    {
+      "text": "hotspots which require a code review. We",
+      "offset": 1092400,
+      "duration": 5920
+    },
+    {
+      "text": "raise issues early when they're easy to",
+      "offset": 1096160,
+      "duration": 4720
+    },
+    {
+      "text": "fix. We give them to you in a clear",
+      "offset": 1098320,
+      "duration": 6160
+    },
+    {
+      "text": "helpful UX and we do our very best to",
+      "offset": 1100880,
+      "duration": 6320
+    },
+    {
+      "text": "raise no false positives.",
+      "offset": 1104480,
+      "duration": 5600
+    },
+    {
+      "text": "And that's all I've got. Elsa, do we",
+      "offset": 1107200,
+      "duration": 6160
+    },
+    {
+      "text": "have any questions?",
+      "offset": 1110080,
+      "duration": 5920
+    },
+    {
+      "text": "Great job, Ann. Thank you. Um there are",
+      "offset": 1113360,
+      "duration": 6720
+    },
+    {
+      "text": "lots of questions um but it looks like",
+      "offset": 1116000,
+      "duration": 7280
+    },
+    {
+      "text": "um Alex and Nico have been answering",
+      "offset": 1120080,
+      "duration": 6320
+    },
+    {
+      "text": "rapidly and if not um we are going to be",
+      "offset": 1123280,
+      "duration": 5759
+    },
+    {
+      "text": "following up afterwards. Um one question",
+      "offset": 1126400,
+      "duration": 4320
+    },
+    {
+      "text": "that I thought might be interesting to",
+      "offset": 1129039,
+      "duration": 4880
+    },
+    {
+      "text": "answer out loud for everybody um uh just",
+      "offset": 1130720,
+      "duration": 5199
+    },
+    {
+      "text": "in general is how is Sonar Source",
+      "offset": 1133919,
+      "duration": 3841
+    },
+    {
+      "text": "different from Sonar Cube? And I thought",
+      "offset": 1135919,
+      "duration": 4321
+    },
+    {
+      "text": "you could just make that clear for",
+      "offset": 1137760,
+      "duration": 4480
+    },
+    {
+      "text": "everyone in this presentation. Well,",
+      "offset": 1140240,
+      "duration": 4640
+    },
+    {
+      "text": "especially since I uh stumbled on that a",
+      "offset": 1142240,
+      "duration": 4720
+    },
+    {
+      "text": "couple times. So, Sonar Source is the",
+      "offset": 1144880,
+      "duration": 4799
+    },
+    {
+      "text": "company behind Sonar Cube, Sonar Cloud,",
+      "offset": 1146960,
+      "duration": 5360
+    },
+    {
+      "text": "and Sonar Lent. Um, a [clears throat]",
+      "offset": 1149679,
+      "duration": 4240
+    },
+    {
+      "text": "long time ago, Sonar Cube was called",
+      "offset": 1152320,
+      "duration": 3840
+    },
+    {
+      "text": "Sonar, and so the company was named",
+      "offset": 1153919,
+      "duration": 4640
+    },
+    {
+      "text": "Sonar Source because it was the source",
+      "offset": 1156160,
+      "duration": 4639
+    },
+    {
+      "text": "of Sonar. Now, we've moved on. It's",
+      "offset": 1158559,
+      "duration": 4240
+    },
+    {
+      "text": "Sonar Cube. I probably shouldn't have",
+      "offset": 1160799,
+      "duration": 4240
+    },
+    {
+      "text": "even said Sonar. Um, but that's the",
+      "offset": 1162799,
+      "duration": 4161
+    },
+    {
+      "text": "difference. Sonar Source is the company.",
+      "offset": 1165039,
+      "duration": 4640
+    },
+    {
+      "text": "Sonar Cube is the product.",
+      "offset": 1166960,
+      "duration": 5520
+    },
+    {
+      "text": "Okay. Awesome. And related to that um",
+      "offset": 1169679,
+      "duration": 4641
+    },
+    {
+      "text": "are these features also included in",
+      "offset": 1172480,
+      "duration": 3840
+    },
+    {
+      "text": "Sonar Cloud?",
+      "offset": 1174320,
+      "duration": 4400
+    },
+    {
+      "text": "So the developer edition features are",
+      "offset": 1176320,
+      "duration": 4719
+    },
+    {
+      "text": "available in Sonar Cloud. Um and in",
+      "offset": 1178720,
+      "duration": 5199
+    },
+    {
+      "text": "Sonar Cloud uh for open source projects,",
+      "offset": 1181039,
+      "duration": 4721
+    },
+    {
+      "text": "it's free no matter how many lines of",
+      "offset": 1183919,
+      "duration": 4721
+    },
+    {
+      "text": "code you have. Um if you want private",
+      "offset": 1185760,
+      "duration": 4480
+    },
+    {
+      "text": "projects, that's when it gets",
+      "offset": 1188640,
+      "duration": 5279
+    },
+    {
+      "text": "commercial, but um both levels include",
+      "offset": 1190240,
+      "duration": 5520
+    },
+    {
+      "text": "all of the community edition and",
+      "offset": 1193919,
+      "duration": 3521
+    },
+    {
+      "text": "developer edition features. So that's",
+      "offset": 1195760,
+      "duration": 4159
+    },
+    {
+      "text": "the tain analysis, the PR an PR",
+      "offset": 1197440,
+      "duration": 5200
+    },
+    {
+      "text": "analysis, etc.",
+      "offset": 1199919,
+      "duration": 6561
+    },
+    {
+      "text": "Okay. Awesome. Yes. So, um there's been",
+      "offset": 1202640,
+      "duration": 5440
+    },
+    {
+      "text": "a lot of questions about recordings and",
+      "offset": 1206480,
+      "duration": 3120
+    },
+    {
+      "text": "slides, which of course those will be",
+      "offset": 1208080,
+      "duration": 3200
+    },
+    {
+      "text": "ready. Um and there's a lot more",
+      "offset": 1209600,
+      "duration": 5920
+    },
+    {
+      "text": "questions that um uh Nico and Alex are",
+      "offset": 1211280,
+      "duration": 6320
+    },
+    {
+      "text": "are answering now and we will follow up",
+      "offset": 1215520,
+      "duration": 5920
+    },
+    {
+      "text": "with um after. Uh one that just came in",
+      "offset": 1217600,
+      "duration": 6000
+    },
+    {
+      "text": "that might be worth uh mentioning out",
+      "offset": 1221440,
+      "duration": 4320
+    },
+    {
+      "text": "loud. It says, \"I see mentions of C.WE",
+      "offset": 1223600,
+      "duration": 5040
+    },
+    {
+      "text": "we ows and sons references. What is",
+      "offset": 1225760,
+      "duration": 4560
+    },
+    {
+      "text": "that?",
+      "offset": 1228640,
+      "duration": 4960
+    },
+    {
+      "text": "Okay, so CWE is the common weakness",
+      "offset": 1230320,
+      "duration": 5760
+    },
+    {
+      "text": "enumeration. This is the list of about a",
+      "offset": 1233600,
+      "duration": 5120
+    },
+    {
+      "text": "thousand different items of things that",
+      "offset": 1236080,
+      "duration": 4504
+    },
+    {
+      "text": "can go wrong in your code. Now,",
+      "offset": 1238720,
+      "duration": 2959
+    },
+    {
+      "text": "[clears throat]",
+      "offset": 1240584,
+      "duration": 2856
+    },
+    {
+      "text": "it's it's a little bit of a misnomer to",
+      "offset": 1241679,
+      "duration": 3120
+    },
+    {
+      "text": "say it's a thousand different items",
+      "offset": 1243440,
+      "duration": 4000
+    },
+    {
+      "text": "because some of the items in C.WE are",
+      "offset": 1244799,
+      "duration": 5521
+    },
+    {
+      "text": "hierarchical categor categorizations.",
+      "offset": 1247440,
+      "duration": 4719
+    },
+    {
+      "text": "Um, but basically, it's the list of",
+      "offset": 1250320,
+      "duration": 4000
+    },
+    {
+      "text": "things that can go wrong in your code.",
+      "offset": 1252159,
+      "duration": 5201
+    },
+    {
+      "text": "So when we write a rule that's relevant",
+      "offset": 1254320,
+      "duration": 6880
+    },
+    {
+      "text": "to a CWE, we reference that in the rule.",
+      "offset": 1257360,
+      "duration": 7199
+    },
+    {
+      "text": "OASP top 10. I can't tell you what OASP",
+      "offset": 1261200,
+      "duration": 6800
+    },
+    {
+      "text": "stands for. Um but every few years OASP",
+      "offset": 1264559,
+      "duration": 5521
+    },
+    {
+      "text": "gets together and decides, okay, what",
+      "offset": 1268000,
+      "duration": 4400
+    },
+    {
+      "text": "are the top 10 most important things",
+      "offset": 1270080,
+      "duration": 5520
+    },
+    {
+      "text": "facing us security-wise right now? So",
+      "offset": 1272400,
+      "duration": 6480
+    },
+    {
+      "text": "the list does change over time. the 2013",
+      "offset": 1275600,
+      "duration": 5040
+    },
+    {
+      "text": "list is different from the I think it",
+      "offset": 1278880,
+      "duration": 5200
+    },
+    {
+      "text": "was 2015 list is different from the most",
+      "offset": 1280640,
+      "duration": 6560
+    },
+    {
+      "text": "recent list slightly. Um and so this is",
+      "offset": 1284080,
+      "duration": 6240
+    },
+    {
+      "text": "a list of broad categories such as",
+      "offset": 1287200,
+      "duration": 6240
+    },
+    {
+      "text": "cross-sight scripting um of things that",
+      "offset": 1290320,
+      "duration": 6239
+    },
+    {
+      "text": "people need to be very aware of in their",
+      "offset": 1293440,
+      "duration": 7680
+    },
+    {
+      "text": "code. And now Sanstop 25 ties back to",
+      "offset": 1296559,
+      "duration": 8641
+    },
+    {
+      "text": "CWE. I said C.WE is a list of let's say",
+      "offset": 1301120,
+      "duration": 6000
+    },
+    {
+      "text": "900 things that can go wrong in your",
+      "offset": 1305200,
+      "duration": 5280
+    },
+    {
+      "text": "code. The SANS Institute picked out the",
+      "offset": 1307120,
+      "duration": 6880
+    },
+    {
+      "text": "25 C.WE items that they thought were the",
+      "offset": 1310480,
+      "duration": 5920
+    },
+    {
+      "text": "most pressing. Um they grouped those",
+      "offset": 1314000,
+      "duration": 4080
+    },
+    {
+      "text": "into three categories, the names of",
+      "offset": 1316400,
+      "duration": 3920
+    },
+    {
+      "text": "which escape me at the moment. Um but",
+      "offset": 1318080,
+      "duration": 5040
+    },
+    {
+      "text": "that's what the SNS top 25 is. Is it's",
+      "offset": 1320320,
+      "duration": 6239
+    },
+    {
+      "text": "25 specific C.WE.",
+      "offset": 1323120,
+      "duration": 5439
+    },
+    {
+      "text": "Awesome. Thank you. And um there's lots",
+      "offset": 1326559,
+      "duration": 3600
+    },
+    {
+      "text": "of members of the audience telling us",
+      "offset": 1328559,
+      "duration": 4801
+    },
+    {
+      "text": "that it's open web application security",
+      "offset": 1330159,
+      "duration": 6801
+    },
+    {
+      "text": "project. So thank you everyone uh for",
+      "offset": 1333360,
+      "duration": 5760
+    },
+    {
+      "text": "helping us with that. That's awesome.",
+      "offset": 1336960,
+      "duration": 5120
+    },
+    {
+      "text": "Um, and I think that uh is all we have",
+      "offset": 1339120,
+      "duration": 5200
+    },
+    {
+      "text": "time",
+      "offset": 1342080,
+      "duration": 2240
+    }
+  ],
+  "fullText": "So I'll jump straight into today's topic, empowering developers to own code security. Now if you are familiar with Sonors first, you may be wondering why I'm talking about security today when traditionally you've thought of us in terms of maintainability and reliability. But security has always been in our sites. You might say that we learned our craft with maintainability. We honed it with reliability. And now we're fleshing it out with security. Now, we've still got a lot we want to do with security and that'll probably always be the case, but we've already done a tremendous amount in this area. Um, for instance, we can find a large range of u injection issues uh such as SQL injection, LDAP injection, OS command injection, and a number of others. Um, we're currently working on cross-sight scripting, XXs, and XXE, XML external entity processing. Had to write that down. Um now throughout that journey from maintainability to reliability to security we've kept the same core values in place the whole time. So the whole time our focus has been making tools for developers and development teams that are simple and transparent, easy to integrate into your development process and accurate and helpful always. And specifically that means no false positives. We work really hard on um making sure that when we raise an issue, you can be confident that there's actually something there that needs dealing with. When you move into the security market though, that changes a little bit. Um security is a broad umbrella. There are lots of pieces to this. There's a lot of jargon that you'll encounter when you're dealing with this. Um and people can find it somewhat overwhelming. Uh when people think about security, they think, \"Wow, this is really complicated. I'm going to need to bring in experts. Um, and there's a lot of fear around this. People are afraid of hackers. They're afraid of data breaches. No one wants to be the next name in the news. And no one certainly wants to be named in a CVE, which is common vulnerabilities and exposures. Um, and we get that, but our approach is different because we believe it is possible to do simple and transparent tools for developers and development teams for code security. So, which security? Uh, I'm going to go back to that word map that I threw up a second ago. Let's break this down a little bit because, like I said, there are a lot of pieces to this. First of all, there's the security of your environment. For instance, do you have a firewall in place? There's also the security of your processes. So, do you have your permissions ratcheted down to least required? There's the security of your dependencies. So, are you using that version of that library that's known to have a problem and you need to upgrade? And then finally, there's the security of the code itself. And that's where we come in. Now, at owner source, it's our goal that every developer and development team use our products for code quality and security. We see this as mission possible. And specifically, we see it as mission possible that every developer and development team use our products for code security. So, let's talk about code security. Um, it doesn't mean SCA or software composition analysis. This is again when you look at the libraries to see that you're using that version of that library that has a problem and you need to upgrade. There are other companies that do that such as snake and white source. They do it well. We don't need to do that. It's also not DAST or dynamic application security testing. Now this is when you spin up an instance of your application and the tester pokes at it to see what she can find. That's not what we do. What we do is static analysis. So it's natural that we would do static application security testing or automated code review. Um now [clears throat] that doesn't mean that we don't think you can should use those tools. You should totally use those tools. They're completely complimentary. But what we've decided to focus on and to kick ass at is SAS and to do it in the code review process. So what we have to offer here is okay buzzword alert. Shift left. Now, shift left is a buzzword. It's overused, but it's overused because there's a lot of real meaning and value here. And specifically in this context, what we mean is moving the security testing of the code as close to the developer who wrote the code as possible. So, not 3 months after the code was written, not right before it goes into production, you send a raft of issues back to the developer when the developers have completely forgotten about it. Instead, what we do is raise the issues as soon as possible after the code was written while it's still fresh in mind, so it's cheaper and easier and faster to fix. So, that's what we're talking about, code security for developers. Now, when we do this, we're going to give you the same awesome Sonar Cube experience that you've come to know and love. So, you're going to get precise issue locations. You're going to get secondary locations when that's required. We're going to raise issues in new code. so that you can find them and fix them as soon as possible after the code was written. And when we raise an issue, we're going to give you guidance to help you understand and fix the issue. We do this for security vulnerabilities. Um, and so when we raise a security vulnerability on your code, you know that it's an exploitable problem in your code and that a code fix is required. Now, along with this, um, there's security hotspots. This is a new concept that we've invented and we raise it on a security sensitive piece of code. Now, I like to think of these as Schroinger's vulnerabilities because for a security hotspot, it might be a vulnerability, it might not. You're not going to know until you look. Human review is required. So, with a vulnerability, a fix is required, but with a hotspot, review is required. Now, in 8.2, 2, we introduced a brand new interface around hotspots um to help you understand and get into the issues. And right now, I'm showing you a hotspot and a vulnerability. Elsa's about to open up a poll um because I'd like you to tell me which one of these you think is the hot spot, A or B. I'm going to give a few seconds for people to vote. Yep, the votes are coming in. Poll is launched. And just so you know, I can't see the voting, so Elsa's going to have to tell me when people have answered. And it looks like the majority of people are guessing B. Okay. Well, for those of you that said B, you're right. That is the hotspot. We'll see more of this when I get to the demo in a minute, but for right now, let's go back to security vulnerabilities for just a second. We offer vulnerabilities in four languages: C#, Java, PHP, and a recent addition to this list is Python. Now, by the end of the year, the list is going to get even longer. We're going to add JavaScript, TypeScript, C, and C++. For hotspots, we currently offer those in C, Java, PHP, VB, JavaScript, and Python with TypeScript, C, and C++ coming by the end of the year. Excuse me. Um, so simple and transparent for developers and development teams. Um, as a contrast, um, I've sort of photoshopped, uh, an image here, um, to show you what we think is an unhelpful UX. So as a developer I come to this and I see okay sonar cube thinks that on line 17 I'm constructing an operating system command from tainted user control data which means that it thinks that there's user provided data in the command variable. I wonder how I got there. And then of course what follows is probably several hours of back tracing through the code to try and figure out uh where the user provided data got into command and how it got there without being sanitized. So by contrast uh what we think is a helpful UX is one that's going to show you how to track the untrusted user input throughout the execution flow of the code. Um and there could be multiple flows through the code. We're going to show you all of them so that you can visualize the data source or where the user data comes into the program, the different flows and to the sync which is where you do something with it like stuff it in the database so that you can figure out the best place to go into those flows to sanitize the data before you actually use it. So, now it's time for the demo. And let me get to that screen. And I'm starting here with a um the the same vulnerability that we were looking at before. And you can see now what got photoshopped out of the picture. So here again on line 17 uh I'm executing an OS command using the command variable which sonar cube is telling me is constructed with user controlled data. So I've got these numbers out to the left um and they correspond to the steps in the path. So it was collapsed by default. When I expand it, I see that my path from source or where the user data comes in to sync or where I use the data crosses two files. Uh now I'm going to click on one to jump me to the first location and I see that uh I'm getting a field value uh out of a user provided request. Now just for um full transparency here, we are looking at a demo project. So, you know, you're going to see some hinky looking variable names, some strangelooking method names, but the fact is that we find very similar issues in real programs. So, you know, try to ignore the fact that we're looking at a demo program. So, here in step one, I get the user data. In step two, I assign it to a variable. In steps three and four, I manipulate it, but don't run it through one of the methods that's known to make user data safe. So it's still considered tainted. I reassign it to my variable here in four. Then I pass it off in five to another method. So here at six, I've jumped to another file. Sonar sonar cube does that for me very smoothly. So I land here in this method and my user provided data is here in the argument. And then in step seven I reassign that to yet another variable. And then sure enough here in step eight I pass it out to the operating system. Now if I had this code out in production um I would have a problem and I would want to get it fixed obviously. Uh so I'm going to look at one more uh taint analysis issue. Um and this time I've got 16 issues. If I expand my locations, I see that I'm weaving back and forth through multiple files. I'm going to start in serlet java, step over to business things util java, and then back to serlet java before I finally put the data into the database here in SQL injection vulnerability uh file here at 16, which is where we started from. Now, the point I want to make here is that even though you're going from file to file and back and forth within a file, we've worked hard to present this to you linearly so that you can start at the top of the path and go through in a very easy flow so that you're not having to jump back and forth and around from file to file. We do that for you to make it easy to understand exactly how the data gets from the user to your database. Okay, so those were both um taint analysis or injection detection issues. I want to show you some simpler vulnerabilities before I move on to hotspots because not all vulnerabilities require tain analysis to find um and and not all vulnerabilities require secondary locations. Some of them are very simple um and once they're pointed out to you very obvious such as this use of a key that's only 512 bits. Um obviously that's too short to really be safe. U you should be using 240 bits instead at least. Uh similarly I've got a cookie here that's created without using the HTTP only attribute. Um, again, this is simple, straightforward, um, but also very valuable. Okay, so I'm going to move on to hotspots now. Now, this is the new interface that we introduced in Sonar Sonar Cube 8.2, which just came out last week. [snorts] Um, and over on the left, we've got hotspots divided into categories. We've got a count of the hotspots in the category um, here. And I by default uh I start at the first one with the highest review priority. Over [snorts] here on the right I see the hotspot itself and I've got below some data to help me understand what could be the risk of this hotspot. Um once I understand that I can move on to understanding whether in this particular context this actually is a problem. If I think it is a problem, then I've got some guidance on what I can do to fix the problem. Now, at the top here, um I see that this one's not assigned and I've got a couple of different actions that I can take. So, currently this is in to review status. If I think this is safe, I can mark it safe, add a comment as to why, and move on. or if I've done some work in the code to uh fix the problem, I can mark it fixed and similarly move on. So um I think this one is safe. Uh so I'm going to change the status and I'm going to move on. This one is automatically removed from the interface. I'm moved on to the next one in the list. My hotspot review percentage here was updated in real time. So that's the little carrot dangling in front of me to sort of coax me to get through the entire list. And I'm automatically presented with the next one that I need to work on. So that's hotspot review. And now I'm going to jump back to the presentation. So what I just showed you was hotspots uh which require code review. They're available in Java, JavaScript, VB, C, Python, and PHP with more coming by the end of the year. And security vulnerabilities which are available in Java, C, Python, and PHP again with more coming by the end of the year. These are available for free in community edition no matter how many lines of code you have. Now, when we move into the commercial editions, um, of course, we step it up a little bit. So, for developer edition, we add taint analysis. Those were the SQL injection and OS command injection issues I s I showed you as well as you know a number of other injection issues the XXS the XXE that we're working on. Um also in developer edition we add PR decoration in the four major ALMs GitHub, GitLab, Bitbucket, Azure DevOps. So that um you see these issues not just once the code is merged into master in sonar cube but in your PR as soon as you create the PR. So you see those again as quickly as possible while the code is fresh in mind so that you can fix it easily quickly. Um once you get to the enterprise edition level, the enterprise edition size, then you're going to need reporting. So we've added OASP top 10 and SANS top 25 reports. Those are uh all of the issues out there available divided up into those two sets of categories. Additionally, we've got the sonar source categories, um which are the categories that developers are used to talking about in relation to security. Um, and also once you get to the enterprise edition, um, typically, excuse me, once you get to the enterprise size, um, typically you've got history, right? So you were developing before all of these current frameworks were available and so you had to build your own frameworks. So you've probably got code in place that is already sanitizing the user data, but when we analyze your code, we don't recognize those methods uh because they're not part of the public frameworks that we understand. And so we're raising false positives on those issues. So at the enterprise edition level, you can configure your homegrown sanitizers, um, syncs, sources into the analysis engine so that when we do an analysis, it's more accurate for your context. So [clears throat] in summary, uh, what we do is code security for developers. We do static application security testing in the code review process. We give you a clear distinction in issue type between vulnerabilities which require a code change and security hotspots which require a code review. We raise issues early when they're easy to fix. We give them to you in a clear helpful UX and we do our very best to raise no false positives. And that's all I've got. Elsa, do we have any questions? Great job, Ann. Thank you. Um there are lots of questions um but it looks like um Alex and Nico have been answering rapidly and if not um we are going to be following up afterwards. Um one question that I thought might be interesting to answer out loud for everybody um uh just in general is how is Sonar Source different from Sonar Cube? And I thought you could just make that clear for everyone in this presentation. Well, especially since I uh stumbled on that a couple times. So, Sonar Source is the company behind Sonar Cube, Sonar Cloud, and Sonar Lent. Um, a [clears throat] long time ago, Sonar Cube was called Sonar, and so the company was named Sonar Source because it was the source of Sonar. Now, we've moved on. It's Sonar Cube. I probably shouldn't have even said Sonar. Um, but that's the difference. Sonar Source is the company. Sonar Cube is the product. Okay. Awesome. And related to that um are these features also included in Sonar Cloud? So the developer edition features are available in Sonar Cloud. Um and in Sonar Cloud uh for open source projects, it's free no matter how many lines of code you have. Um if you want private projects, that's when it gets commercial, but um both levels include all of the community edition and developer edition features. So that's the tain analysis, the PR an PR analysis, etc. Okay. Awesome. Yes. So, um there's been a lot of questions about recordings and slides, which of course those will be ready. Um and there's a lot more questions that um uh Nico and Alex are are answering now and we will follow up with um after. Uh one that just came in that might be worth uh mentioning out loud. It says, \"I see mentions of C.WE we ows and sons references. What is that? Okay, so CWE is the common weakness enumeration. This is the list of about a thousand different items of things that can go wrong in your code. Now, [clears throat] it's it's a little bit of a misnomer to say it's a thousand different items because some of the items in C.WE are hierarchical categor categorizations. Um, but basically, it's the list of things that can go wrong in your code. So when we write a rule that's relevant to a CWE, we reference that in the rule. OASP top 10. I can't tell you what OASP stands for. Um but every few years OASP gets together and decides, okay, what are the top 10 most important things facing us security-wise right now? So the list does change over time. the 2013 list is different from the I think it was 2015 list is different from the most recent list slightly. Um and so this is a list of broad categories such as cross-sight scripting um of things that people need to be very aware of in their code. And now Sanstop 25 ties back to CWE. I said C.WE is a list of let's say 900 things that can go wrong in your code. The SANS Institute picked out the 25 C.WE items that they thought were the most pressing. Um they grouped those into three categories, the names of which escape me at the moment. Um but that's what the SNS top 25 is. Is it's 25 specific C.WE. Awesome. Thank you. And um there's lots of members of the audience telling us that it's open web application security project. So thank you everyone uh for helping us with that. That's awesome. Um, and I think that uh is all we have time",
+  "fetchedAt": "2026-03-14T09:25:52.500Z"
+}

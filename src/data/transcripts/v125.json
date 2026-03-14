@@ -1,0 +1,1353 @@
+{
+  "videoId": "v125",
+  "youtubeId": "uWmYvq2SoZU",
+  "segments": [
+    {
+      "text": "Okay, hello everyone. Thank you for joining and welcome to our sonar webinar entitled Clean as you code, no pain, lots to gain.",
+      "offset": 141,
+      "duration": 9000
+    },
+    {
+      "text": "I'm Liz Ryan, your moderator for this webinar, which will be presented by Vivik Reichugnap.",
+      "offset": 9141,
+      "duration": 4000
+    },
+    {
+      "text": "Please allow me to quickly go over some essential housekeeping items before we get started. So the session today will last approximately 45 min including Q&A.",
+      "offset": 13141,
+      "duration": 10000
+    },
+    {
+      "text": "You all are invited to submit your questions via the Q&A box in Zoom, not in the chat box but in the Zoom.",
+      "offset": 23141,
+      "duration": 6000
+    },
+    {
+      "text": "We have 2 panelists joining us today. Chris Levy and Jeeping Woo from our product management and Centre Keep Development Teams.",
+      "offset": 29141,
+      "duration": 7000
+    },
+    {
+      "text": "They're tasked with answering as many of your questions as possible live during the session. The session will be recorded and we will send out a link via email in the coming days.",
+      "offset": 36141,
+      "duration": 10000
+    },
+    {
+      "text": "Finally, at the end of this webinar, a short survey will appear on your screen. We welcome your feedback.",
+      "offset": 46141,
+      "duration": 5000
+    },
+    {
+      "text": "Thank you in advance for your participation. So without further ado, I'd like to introduce you to today's presenter, Vivik Reichugnat, Vivik is a product manager at Sonar and brings more than a decade of experience working with software static analysis and code quality.",
+      "offset": 51141,
+      "duration": 15000
+    },
+    {
+      "text": "His experience working with a wide spectrum of industries brings a holistic perspective to creating solutions for clean code. Vivic, over to you.",
+      "offset": 66141,
+      "duration": 8000
+    },
+    {
+      "text": "Thank you very much, Liz for the introduction. I'm really excited to talk about Clean As you caught the Maternity today to you and most importantly I hope I can inspire To change the way you look at claim code and the way you approach quality of code for G.",
+      "offset": 74141,
+      "duration": 16000
+    },
+    {
+      "text": "So, first let's see what we want to talk about today.",
+      "offset": 90141,
+      "duration": 4000
+    },
+    {
+      "text": "BUSINESS, a wipe clean as you cut. Why such a methodology is even needed?",
+      "offset": 94141,
+      "duration": 5000
+    },
+    {
+      "text": "We will see that very quickly and then setting up your projects for cleaner secret methodology in SO. Archive and then practicing cleanliness you could in summer keep.",
+      "offset": 99141,
+      "duration": 9000
+    },
+    {
+      "text": "Once you set up you have to practice it. We'll see how and then finally what benefits you can get once you practice cleanassy code in Sark you.",
+      "offset": 108141,
+      "duration": 5000
+    },
+    {
+      "text": "Alright, that is what we will cover today. Let's get started.",
+      "offset": 113141,
+      "duration": 11000
+    },
+    {
+      "text": "First, we need to understand why cleaner as you called such a methodology is needed, right? Cord level technical data is a bit like mortar.",
+      "offset": 124141,
+      "duration": 9000
+    },
+    {
+      "text": "Sneaky and bad. We don't see it until it is too late. That is the problem with code-level technical debt, isn't it?",
+      "offset": 133141,
+      "duration": 6000
+    },
+    {
+      "text": "And with the classical approach of addressing technical debt, there are some problems. Usually we have to look at overall code and look at a number of issues.",
+      "offset": 139141,
+      "duration": 10000
+    },
+    {
+      "text": "If you scan your total code base, you will see thousands of issues and prioritizing issues from that and fixing issues is not an effective or efficient approach at all.",
+      "offset": 149141,
+      "duration": 10000
+    },
+    {
+      "text": "Meanwhile, while you are Just waiting for the debt to accumulate, your team keep adding the debt. That means while on one side you are cleaning up the dead you are not fixing the leak so more and more that is getting added.",
+      "offset": 159141,
+      "duration": 14000
+    },
+    {
+      "text": "So that approach is not really sustainable is it? And this strategy have the biggest problem that while the debt is in the chord, That affects the velocity because you have to keep adding that and then you have to come back and clean it up with a data dressing sprint usually maybe when your release is approaching.",
+      "offset": 173141,
+      "duration": 21000
+    },
+    {
+      "text": "Problem again is velocity. How many features you could have shipped if you don't have to face such a situation in the first place.",
+      "offset": 194141,
+      "duration": 7000
+    },
+    {
+      "text": "Well, that takes us. To a need for a new. And with this, clean as you could approach, we will focus on new code.",
+      "offset": 201141,
+      "duration": 9000
+    },
+    {
+      "text": "Now, we need to see what is really new code. Now, we need to see what is really new code, right?",
+      "offset": 210141,
+      "duration": 5000
+    },
+    {
+      "text": "When we talk about software development in general, We go with increments of code, right? All the years we add new code or edit some of your existing or old code.",
+      "offset": 215141,
+      "duration": 14000
+    },
+    {
+      "text": "Let's call such a increment as a new code increment. As you can see, what happens is over time we keep adding new code increments and when we are new code increments we make sure that such increments are clean.",
+      "offset": 229141,
+      "duration": 15000
+    },
+    {
+      "text": "That is all we will do and what kind of effect that can have in your code base. First of all, if you do this, all-ard code is going to be clean.",
+      "offset": 244141,
+      "duration": 9000
+    },
+    {
+      "text": "That is very clear because we are making sure that added code is clean. That is what the new code is all about.",
+      "offset": 253141,
+      "duration": 6000
+    },
+    {
+      "text": "What else can happen? The most important part here is As we practice this, our overall chord gets cleaner and cleaner.",
+      "offset": 259141,
+      "duration": 9000
+    },
+    {
+      "text": "That is the most impressive benefit of this methodology and we need to see how to see how We need to understand the anatomy of NICO.",
+      "offset": 268141,
+      "duration": 11000
+    },
+    {
+      "text": "Yes, so usually when we talk about a new cord, what does it really mean? So we have some code added, right, when we develop some new feature.",
+      "offset": 279141,
+      "duration": 11000
+    },
+    {
+      "text": "Obviously, we are going to add some some new code. Totally brand new cord. What else will we do?",
+      "offset": 290141,
+      "duration": 6000
+    },
+    {
+      "text": "We are extending, right? So we will modify some of your old code. These are the 2 parts we will do.",
+      "offset": 296141,
+      "duration": 7000
+    },
+    {
+      "text": "And when we are making sure that the new code is clean, we are making sure that in whatever new code we added, the new issues that we are introducing, we are cleaning it at that time at the time itself.",
+      "offset": 303141,
+      "duration": 11000
+    },
+    {
+      "text": "Also, when you are modifying some of your old code, we are cleaning those. Port old parts of the court as well.",
+      "offset": 314141,
+      "duration": 7000
+    },
+    {
+      "text": "By virtue of this, we can make sure that we are fixing the most important parts of the old cord because the most dynamic areas of your code base are where we will modify anyway, right?",
+      "offset": 321141,
+      "duration": 11000
+    },
+    {
+      "text": "So with new code, approach, with this approach of focusing on new code, we are not only cleaning the new, new added code, but most important parts of your old code as well.",
+      "offset": 332141,
+      "duration": 12000
+    },
+    {
+      "text": "So let's see what will happen if you are practicing cleaner secret from today. First of all, All code added from today will be clean.",
+      "offset": 344141,
+      "duration": 10000
+    },
+    {
+      "text": "Most important parts of your old code will get cleaner. And finally, percentage of. Clean code in your overall code base will increase day by day.",
+      "offset": 354141,
+      "duration": 11000
+    },
+    {
+      "text": "That is the overall picture for you. Why cleanness record methodology is very effective. It just not only clean or fix the leak, it makes sure that your overall code is getting clean.",
+      "offset": 365141,
+      "duration": 12000
+    },
+    {
+      "text": "We go. And this basically is addressing the problems that we have with the classical approach and most importantly while we do this Developers can focus on their new code, the code they own, the one that they write and don't have to worry about what happened in the past.",
+      "offset": 377141,
+      "duration": 15000
+    },
+    {
+      "text": "This way, they can be happier. Cool. This is why we need such a methodology that is very efficient.",
+      "offset": 392141,
+      "duration": 8000
+    },
+    {
+      "text": "The most efficient way. To reach clean code. Now it's time for us to see how we do this, how we set this up in our product.",
+      "offset": 400141,
+      "duration": 11000
+    },
+    {
+      "text": "Sama cube setting up clean as you called Basically have 4 very simple steps and we will see all of it today.",
+      "offset": 411141,
+      "duration": 8000
+    },
+    {
+      "text": "And let me be clear in the beginning, we are not talking about So on our lint today, Sonar Lind is a solution from Sonar that runs in.",
+      "offset": 419141,
+      "duration": 11000
+    },
+    {
+      "text": "Your ID and helps you clean in the ID, but I would expect that you are using Sonar L to begin with.",
+      "offset": 430141,
+      "duration": 4000
+    },
+    {
+      "text": "But today we will focus on SO. NARQUE and how to do this cleaner secret methodology in Sonarquip that is what we will focus on today.",
+      "offset": 434141,
+      "duration": 11000
+    },
+    {
+      "text": "Right. Now, the first step is to set up a clean code goals or your quality standard, right?",
+      "offset": 445141,
+      "duration": 7000
+    },
+    {
+      "text": "Hey, remember why this is important? What is the job of clean energy code methodology is to carry you to the standard that is set up for the project.",
+      "offset": 452141,
+      "duration": 10000
+    },
+    {
+      "text": "So once you have the clean code gold setup. Cleanency code is a vehicle that will carry you Cheer goals.",
+      "offset": 462141,
+      "duration": 7000
+    },
+    {
+      "text": "It's a methodology that made sure that You are on the fastest path to your goal. So do that, we first need a standard, right?",
+      "offset": 469141,
+      "duration": 9000
+    },
+    {
+      "text": "Let's see how this standard can be set in Sonarkube.",
+      "offset": 478141,
+      "duration": 7000
+    },
+    {
+      "text": "So here we have something called quality profile. Quality profile is like a set of rules. The stools we enforce on our code.",
+      "offset": 485141,
+      "duration": 9000
+    },
+    {
+      "text": "New code or overall code. Now, there are such Profiles per language. You can see a lot of them and you will see Sona away.",
+      "offset": 494141,
+      "duration": 10000
+    },
+    {
+      "text": "So now away is the recommended quality profile for our projects. If you recommend that you use on our way.",
+      "offset": 504141,
+      "duration": 8000
+    },
+    {
+      "text": "However, you can obviously create your own custom quality profiles. Let's let's start with something.",
+      "offset": 512141,
+      "duration": 7000
+    },
+    {
+      "text": "Or see JavaScript",
+      "offset": 519141,
+      "duration": 8000
+    },
+    {
+      "text": "And I will inherit from, Sona away because I will use on our VS the base which is recommended.",
+      "offset": 527141,
+      "duration": 6000
+    },
+    {
+      "text": "Let's give a name like custom",
+      "offset": 533141,
+      "duration": 5000
+    },
+    {
+      "text": "Quality A file.",
+      "offset": 538141,
+      "duration": 11000
+    },
+    {
+      "text": "Great, we have a quality profile here. And what we can see here is there are many rules active in this and some roads are inactive.",
+      "offset": 549141,
+      "duration": 8000
+    },
+    {
+      "text": "You can obviously customize and activate models as you as you prefer. No problem. And basically, now we have a profile, a quality profile that is your standard for the project.",
+      "offset": 557141,
+      "duration": 12000
+    },
+    {
+      "text": "And you can basically assign projects to this. Let's see I want to assign one of my projects to it.",
+      "offset": 569141,
+      "duration": 9000
+    },
+    {
+      "text": "I can choose to do so. Basically now I have a quality standard defined for my project and this way we know where cleaner you code methodology have to carry you to remember.",
+      "offset": 578141,
+      "duration": 12000
+    },
+    {
+      "text": "We recommend you to use Sono Away as it is the most workable and more suitable quality profile that will make sure that you have the cleanest possible cord.",
+      "offset": 590141,
+      "duration": 11000
+    },
+    {
+      "text": "So we recommend you use that. Now, coming back here, let's see, we have done the first step.",
+      "offset": 601141,
+      "duration": 6000
+    },
+    {
+      "text": "We have a goal. We have a standard to reach. That is great. Now what else we have to do?",
+      "offset": 607141,
+      "duration": 6000
+    },
+    {
+      "text": "The next step for us here is obviously define new code. Earlier we discussed what is new code for SR, right?",
+      "offset": 613141,
+      "duration": 3000
+    },
+    {
+      "text": "And He said how important it is. Focus on your code that way just by focusing your new code you can make sure that our overall code is getting cleaner.",
+      "offset": 616141,
+      "duration": 17000
+    },
+    {
+      "text": "Now, we need to understand that, okay, for each team and their context, new code can be different suitable definition of what is new can be different, right?",
+      "offset": 633141,
+      "duration": 11000
+    },
+    {
+      "text": "For some it may be the changes made after the last release. For some it may be like number of days.",
+      "offset": 644141,
+      "duration": 6000
+    },
+    {
+      "text": "We will see how this is done, what kind of options we have. Let's see this inside I keep right.",
+      "offset": 650141,
+      "duration": 6000
+    },
+    {
+      "text": "Let's see it and as we go we will speak about that.",
+      "offset": 656141,
+      "duration": 8000
+    },
+    {
+      "text": "Cool. So we are in some recipe again. Now we are going to deal with new code definition and You know why we are doing this?",
+      "offset": 664141,
+      "duration": 10000
+    },
+    {
+      "text": "We are telling Sonar Cube. Okay, in our team, what does it mean? To say new chor.",
+      "offset": 674141,
+      "duration": 6000
+    },
+    {
+      "text": "This allows an encrypted detect and understand what is new so that we can report issues on your new code scope.",
+      "offset": 680141,
+      "duration": 8000
+    },
+    {
+      "text": "And you can go here and we can see new code. You see a few options here. Obviously, we are explaining what each option has been.",
+      "offset": 688141,
+      "duration": 9000
+    },
+    {
+      "text": "Let's see first of all we have something called a global setting, right? Use the global setting if I prefer to use that.",
+      "offset": 697141,
+      "duration": 8000
+    },
+    {
+      "text": "Now we need to understand what is the global setting. See if you're administering a sonar cube or generally quality in your in your organization you may want to set up a default value that can be used by most teams as the new code definition right and how can we do that we can obviously go to administration and let's search for new code.",
+      "offset": 705141,
+      "duration": 24000
+    },
+    {
+      "text": "And we can define and you could behavior here and by doing this We can make sure that any project will start with this option.",
+      "offset": 729141,
+      "duration": 5000
+    },
+    {
+      "text": "If most of your teams are using Continuous versioning proper versioning like OKAY from 10 dot 5 to 10 dot 6.",
+      "offset": 734141,
+      "duration": 12000
+    },
+    {
+      "text": "You can definitely use this option as your default. And then whenever you create a project or anybody in your organization creates a project that will start with this.",
+      "offset": 746141,
+      "duration": 5000
+    },
+    {
+      "text": "I have an opportunity to start with this option. Now let's get back to our previous screen where we were creating the nuclear definition.",
+      "offset": 751141,
+      "duration": 12000
+    },
+    {
+      "text": "Now, I may switch from my Global setting to specific setting that is suitable for my project.",
+      "offset": 763141,
+      "duration": 9000
+    },
+    {
+      "text": "Now, Let's see what options do we have. Previous version is a very popular option because many software teams, as you know, uses versioning proper versioning.",
+      "offset": 772141,
+      "duration": 11000
+    },
+    {
+      "text": "So if you have such versions like you're making a release every every one month, 2 months. Half a month, you can obviously use this previous version option and when the version bump happens, Sara Q relies on that version bump to detect, okay, everything happened after that version bump will be treated as new code and any issue in that will be what your team will focus on.",
+      "offset": 783141,
+      "duration": 23000
+    },
+    {
+      "text": "Now, what if your team is delivering multiple times a day, you are into continuous delivery, we recommend you use number of days in that case.",
+      "offset": 806141,
+      "duration": 10000
+    },
+    {
+      "text": "Let's say you can use something like 30 days as a window for new code. So what it does is that in that case,anaki will say okay Everything, every court change that you made.",
+      "offset": 816141,
+      "duration": 12000
+    },
+    {
+      "text": "In the last 30 days, is treated as new code. And any issue in that will be reported in the new code.",
+      "offset": 828141,
+      "duration": 1000
+    },
+    {
+      "text": "So that is how number of days as the option will behave. You can choose any number up to 90 days as the value.",
+      "offset": 829141,
+      "duration": 14000
+    },
+    {
+      "text": "So you have the ability to Taylor it based on your needs, your team's needs. Now, you can also use a reference branch as an option if your team is using feature branches.",
+      "offset": 843141,
+      "duration": 12000
+    },
+    {
+      "text": "Usually you may be using a feature branch to develop your feature and then you will merge back. In this case, you can use this option to compare with a reference branch and Contrast the difference and report everything in that contrast area as you're a new issue.",
+      "offset": 855141,
+      "duration": 17000
+    },
+    {
+      "text": "This is you to believe you are using feature branches of concept in your team. So you can see that we have a number of options here to customize your new code definition instead of just giving a simple option.",
+      "offset": 872141,
+      "duration": 14000
+    },
+    {
+      "text": "Why is this? Because it is very important that the customized this new code definition to suit the development context of your team.",
+      "offset": 886141,
+      "duration": 9000
+    },
+    {
+      "text": "Is very important because that is what will make this methodology really practicable. This way Your, the option you select will make sense for your team, right?",
+      "offset": 895141,
+      "duration": 7000
+    },
+    {
+      "text": "That is how we can ensure that you can actually use this methodology. Now, one more thing to note here is Automation.",
+      "offset": 902141,
+      "duration": 13000
+    },
+    {
+      "text": "A lot of times you will have thousands of projects if not hundreds and you may be relying on APIs to automatically onboard projects.",
+      "offset": 915141,
+      "duration": 10000
+    },
+    {
+      "text": "Alright, in that case, what will happen most of them is that you may have a symbol default that will be set as your niche definition when your project is on board, right?",
+      "offset": 925141,
+      "duration": 10000
+    },
+    {
+      "text": "Now that is great for many teams that will work. But it is always nice with the team's context if they are using release or daily release or monthly, whatever their context is, always a review, the new cut definition option they have chosen and you can always go to the UI like like we did today and override this option.",
+      "offset": 935141,
+      "duration": 16000
+    },
+    {
+      "text": "And make sure that the options selected is more suitable for the team. So that is what we need to do about new code setting.",
+      "offset": 951141,
+      "duration": 15000
+    },
+    {
+      "text": "One final thing I wanted to tell you about new code setting, the new code definition is You can also set this per branch if you have commercial additions or some our cube.",
+      "offset": 966141,
+      "duration": 6000
+    },
+    {
+      "text": "You can set different values for in for this new code definition per branch to absolutely tailor. To your needs.",
+      "offset": 972141,
+      "duration": 16000
+    },
+    {
+      "text": "Now, we have Clearly defined what is new. And view also have defined the standard. The quality standard with quality profile upfront.",
+      "offset": 988141,
+      "duration": 11000
+    },
+    {
+      "text": "2 steps are done. Now let's go to the next step at this stage. Which is set up a clean as you called compliant quality gate.",
+      "offset": 999141,
+      "duration": 11000
+    },
+    {
+      "text": "No, a qualitative allows you to add conditions to your new code or even overall chord. However, Today we are talking about Clean as your code and cleaners you could Mirozi as we discussed.",
+      "offset": 1010141,
+      "duration": 14000
+    },
+    {
+      "text": "Focuses on new code, right? New changes. The new code increment. So it is important that we focus today on new code and the conditions we will talk about today will be also about new code.",
+      "offset": 1024141,
+      "duration": 12000
+    },
+    {
+      "text": "Right. Let's see that recommended quality K by going into sonar cube again because it's better to show you rather than just talking about it, right?",
+      "offset": 1036141,
+      "duration": 10000
+    },
+    {
+      "text": "And let me introduce this new Cleaner C code criteria that we are introducing. This is coming with Sonark Q.",
+      "offset": 1046141,
+      "duration": 4000
+    },
+    {
+      "text": "10 or 3. And you can see there are 4 conditions, very simple conditions, and those conditions are on new code and this conditions are going to make sure That your new code is absolutely clean all the time.",
+      "offset": 1050141,
+      "duration": 18000
+    },
+    {
+      "text": "Remember, we are talking about new code and not old code. So our focus of where these conditions are applied is limited to our New code only.",
+      "offset": 1068141,
+      "duration": 11000
+    },
+    {
+      "text": "First condition here is 0 issues on your new code. That means we have to resolve all issues that is reported by Sonora Cube in your new code.",
+      "offset": 1079141,
+      "duration": 11000
+    },
+    {
+      "text": "New code, right? And all security hotspots must be reviewed. This way you make sure that the new code increment is clean, that is what are gone with clears you goddess anyway, right?",
+      "offset": 1090141,
+      "duration": 9000
+    },
+    {
+      "text": "And 2 more conditions. And that is we have sufficient coverage. There is 80% here and duplication should should not be more than 3%.",
+      "offset": 1099141,
+      "duration": 14000
+    },
+    {
+      "text": "Now, obviously when I say this, you might ask, we wake. We don't want to have 80% coverage here.",
+      "offset": 1113141,
+      "duration": 4000
+    },
+    {
+      "text": "We don't, we think some of the value will be more suitable for our team. Sure, no problem.",
+      "offset": 1117141,
+      "duration": 7000
+    },
+    {
+      "text": "That is where you can create a custom quality gate. Let's call it as custom. Call ticket.",
+      "offset": 1124141,
+      "duration": 11000
+    },
+    {
+      "text": "And I created a sample quality 8 here. You can see when we create a quality gate, we have the same conditions to start with.",
+      "offset": 1135141,
+      "duration": 8000
+    },
+    {
+      "text": "The quality gate is compliant with cleaner secret methodology. Clear sharing, right? And what else can we do?",
+      "offset": 1143141,
+      "duration": 4000
+    },
+    {
+      "text": "We can go ahead and customize the coverage to See, 60 because that is what you prefer. Yeah.",
+      "offset": 1147141,
+      "duration": 10000
+    },
+    {
+      "text": "You changed it. We are still clean as you could compliant. No problem for changing the coverage goal that you have.",
+      "offset": 1157141,
+      "duration": 8000
+    },
+    {
+      "text": "Or duplication you can customize that and you will be still clean as you could compliant. What is important is you remain with these conditions and you make sure that these conditions are here regardless of what value for this for these last 2 that is coverage and duplication.",
+      "offset": 1165141,
+      "duration": 16000
+    },
+    {
+      "text": "Now, sometimes you may want to add even more conditions, you may want to have some conditions on overall code.",
+      "offset": 1181141,
+      "duration": 6000
+    },
+    {
+      "text": "Just because you want to also make sure that overall code is, say for some reason, some use case.",
+      "offset": 1187141,
+      "duration": 7000
+    },
+    {
+      "text": "Of course you can do that. You can unlock editing in the art condition on our record. Let's say line coverage.",
+      "offset": 1194141,
+      "duration": 7000
+    },
+    {
+      "text": "And.",
+      "offset": 1201141,
+      "duration": 5000
+    },
+    {
+      "text": "Let's go here. And I will set something like 60. I have added the condition you have a condition on overall code now.",
+      "offset": 1206141,
+      "duration": 10000
+    },
+    {
+      "text": "And we are. Still clean as you could complain. So, one we need is a cleaners you cut compliant quality gate.",
+      "offset": 1216141,
+      "duration": 9000
+    },
+    {
+      "text": "You can still customize and still be clean as you could compliant and this quality gate will make sure.",
+      "offset": 1225141,
+      "duration": 7000
+    },
+    {
+      "text": "That we are in perfect shape to practice clean as you could later. So that is what we can do with a cleaner you could come line collate.",
+      "offset": 1232141,
+      "duration": 10000
+    },
+    {
+      "text": "So, whole thing you need to worry about is the 4 conditions are there, right? And you may configure your pipeline to fail.",
+      "offset": 1242141,
+      "duration": 11000
+    },
+    {
+      "text": "If your qualitative fails, you can find the S or Q documentation if you ever want to consider. I just wanted to let you know that such a possibility access.",
+      "offset": 1253141,
+      "duration": 9000
+    },
+    {
+      "text": "All right, it's time to get back to our steps. Now we have completed 3 steps. We have set up the Cleaned gold with the quality profile.",
+      "offset": 1262141,
+      "duration": 7000
+    },
+    {
+      "text": "We also set up our. You could definition we know now what is new in your project. We have also set up a quality gate that is clean as you could compliant.",
+      "offset": 1269141,
+      "duration": 14000
+    },
+    {
+      "text": "Perfect. Now, what does that take us to?",
+      "offset": 1283141,
+      "duration": 7000
+    },
+    {
+      "text": "It's time for Apple.",
+      "offset": 1290141,
+      "duration": 5000
+    },
+    {
+      "text": "Let's have a poll now. How often do you scan? Your delivery branch or your main brands for that matter every day, once a week, once a month.",
+      "offset": 1295141,
+      "duration": 11000
+    },
+    {
+      "text": "Once per release, work is set for you.",
+      "offset": 1306141,
+      "duration": 27000
+    },
+    {
+      "text": "Alright.",
+      "offset": 1333141,
+      "duration": 4000
+    },
+    {
+      "text": "I'm so interested to know this. Often do you scan?",
+      "offset": 1337141,
+      "duration": 9000
+    },
+    {
+      "text": "Excellent. So. We have the results here. Hello lot of people, 37% think the everyday that is impressive and at the same time 38%.",
+      "offset": 1346141,
+      "duration": 13000
+    },
+    {
+      "text": ". And why this is very important. Let's see why this is very important That is where the last part, the fourth step of our setup for Classic code is coming in.",
+      "offset": 1359141,
+      "duration": 12000
+    },
+    {
+      "text": "No matter how much setup we did with this call setting and quality gate and quality profile, everything is done.",
+      "offset": 1371141,
+      "duration": 5000
+    },
+    {
+      "text": "But if we are not scanning the project frequently enough, we sonar cube cannot help you, right?",
+      "offset": 1376141,
+      "duration": 6000
+    },
+    {
+      "text": "You need to make sure that the project is frequently scanned regularly scanned and this is something you can set up you don't have to manually worry about so do it so First thing, you are using poor rickets for example, you have to make sure that your pull requests are scanned.",
+      "offset": 1382141,
+      "duration": 17000
+    },
+    {
+      "text": "You have to also make sure that your branches, the active branches are also scanned. Regularly. And to do this, so I keep have really thorough coverage of CI and DevOps platform integrations.",
+      "offset": 1399141,
+      "duration": 15000
+    },
+    {
+      "text": "This way, a pie, take an advantage of these CI and the WOPS platform integrations.",
+      "offset": 1414141,
+      "duration": 6000
+    },
+    {
+      "text": "You can not only make sure that your branches, your active branches are scanned regularly. You can also make sure that all your poll requests are scanned as well.",
+      "offset": 1420141,
+      "duration": 9000
+    },
+    {
+      "text": "This way you can absolutely make sure that all your new code increments. Are clearly identified and for them there is a standard check and for them you have an opportunity to fix those issues that are detected by SOME.",
+      "offset": 1429141,
+      "duration": 17000
+    },
+    {
+      "text": "So don't forget this last step, even though. The previous 3 steps are done if we are not setting up regular scans.",
+      "offset": 1446141,
+      "duration": 8000
+    },
+    {
+      "text": "Sonic you cannot help you. So make sure you have CI integration, DevOps integration, so that the scan is done very regularly, not once per release, because if you do it once per release.",
+      "offset": 1454141,
+      "duration": 12000
+    },
+    {
+      "text": "We will be detecting issues way too late. In the process. That is the problem. And that will be not clean as you caught at that point.",
+      "offset": 1466141,
+      "duration": 7000
+    },
+    {
+      "text": "You have to come toously keep wides on your quality and keep fixing them as you make them so that the debt won't live in the repository affecting the velocity of your team.",
+      "offset": 1473141,
+      "duration": 11000
+    },
+    {
+      "text": "Cool. So congratulations. We have now set up your project or Clean As you core. Excellent.",
+      "offset": 1484141,
+      "duration": 7000
+    },
+    {
+      "text": "Now that will allow us to go to practicing clean as you could. Right. Let's talk a little bit about what does it mean to practice.",
+      "offset": 1491141,
+      "duration": 6000
+    },
+    {
+      "text": "Now, projects are set up for cleaners. You could great. Now we need to make sure that all new code increments are clean, right?",
+      "offset": 1497141,
+      "duration": 11000
+    },
+    {
+      "text": "What does it mean to say new code increments are clean? That means there is no unresolved issues in the new code increment.",
+      "offset": 1508141,
+      "duration": 9000
+    },
+    {
+      "text": "Clear. Now in the new code, we don't want any issues kept open for long. Very simple and we have such options to address like we recommend that when sonar give is detecting issues in your new court scope.",
+      "offset": 1517141,
+      "duration": 14000
+    },
+    {
+      "text": "Fix most of it because remember, Sara Q is detecting issues based on your source and quality standard.",
+      "offset": 1531141,
+      "duration": 8000
+    },
+    {
+      "text": "That means This standard is what we are. Trying to achieve and it is important to fix. All the issues, I is reported.",
+      "offset": 1539141,
+      "duration": 10000
+    },
+    {
+      "text": "If not all, as much as you can. Excellent. Now, sometimes what happens is You don't want to fix some issues, you don't want to do it now, you want to postpone it and maybe fix it later.",
+      "offset": 1549141,
+      "duration": 13000
+    },
+    {
+      "text": "In that case you can mark the mass warn fix. Or you can mar them as false positives if you think that a specific occurrence or reported issue is a false positive you can obviously do that.",
+      "offset": 1562141,
+      "duration": 13000
+    },
+    {
+      "text": "Now let's see how this is done in Sonic you. I will go and see there are issues here, right?",
+      "offset": 1575141,
+      "duration": 7000
+    },
+    {
+      "text": "You can just select an issue. And say.",
+      "offset": 1582141,
+      "duration": 5000
+    },
+    {
+      "text": "So what's one fix? Now that is shoecon into the pool of issues that you've won with you you may select another issue and say marcas false positive this is how you do it and when you do it you may want to revisit them you will obviously find them in the resolution tab on the filters you can find.",
+      "offset": 1587141,
+      "duration": 20000
+    },
+    {
+      "text": "One fix you can obviously go there and get back if you want to get them back you can reopen them Well, you got them back.",
+      "offset": 1607141,
+      "duration": 6000
+    },
+    {
+      "text": "So. If you want to also do a bulk action you want to act upon multiple issues at the same time you want to say one fix to multiple issues or one to mark multiple issues.",
+      "offset": 1613141,
+      "duration": 13000
+    },
+    {
+      "text": "Us false positive you can obviously select multiple issues and do a bar connection where you can say okay I'm not going to fix these issues you can put the reason here That way your team knows why you have decided not to fix it. Excellent.",
+      "offset": 1626141,
+      "duration": 12000
+    },
+    {
+      "text": "So this is what you can do to resolve your issues. But remember, try to fix as many issues as you can.",
+      "offset": 1638141,
+      "duration": 13000
+    },
+    {
+      "text": "That way you can make sure that your new code increment is clean. Now.",
+      "offset": 1651141,
+      "duration": 9000
+    },
+    {
+      "text": "Now we have another port. Let's say you have set up everything and we want to now know what person.",
+      "offset": 1660141,
+      "duration": 7000
+    },
+    {
+      "text": "Of issues do you fix when you're qualitative fails if you're already using some art cube or summer cloud.",
+      "offset": 1667141,
+      "duration": 6000
+    },
+    {
+      "text": "Tell us how many percent is it 100%? Are we fixing all of it? Or are we fixing at least 90% of it?",
+      "offset": 1673141,
+      "duration": 8000
+    },
+    {
+      "text": "Or is it something more than 50 but less than 90? Or is it even less than 50%? Let's see, let's see what our audience think today.",
+      "offset": 1681141,
+      "duration": 30000
+    },
+    {
+      "text": "Come on.",
+      "offset": 1711141,
+      "duration": 3000
+    },
+    {
+      "text": "Excellent. I'm so pleased we see that 19% of our audience do fix 100% of all issues that is excellent really remarkable and again another 34% more than 90% or fishes are fixed.",
+      "offset": 1714141,
+      "duration": 9000
+    },
+    {
+      "text": "So we see we see that a lot of you are already really really doing great with Sonickeep.",
+      "offset": 1723141,
+      "duration": 12000
+    },
+    {
+      "text": "That is excellent to see. Now let's move on to the next step at this point. What are the benefits of?",
+      "offset": 1735141,
+      "duration": 8000
+    },
+    {
+      "text": "Practice in Cleanasico, right? We have talked about setting up clean energy code and practicing Classic code.",
+      "offset": 1743141,
+      "duration": 8000
+    },
+    {
+      "text": "And initially, we we discussed why such a methodology to stand with, but now it is the time if you practice this as a developer, what benefit are you going to get, right?",
+      "offset": 1751141,
+      "duration": 11000
+    },
+    {
+      "text": "It's easy to show setup and stuff right now. Let's see. What is the result?",
+      "offset": 1762141,
+      "duration": 5000
+    },
+    {
+      "text": "I have taken an example project here and this is Viewjs and what would have happened if the team developing this project.",
+      "offset": 1767141,
+      "duration": 10000
+    },
+    {
+      "text": "Have used the key cleanassic code methodology for 2 years, right? For the last 2 years.",
+      "offset": 1777141,
+      "duration": 6000
+    },
+    {
+      "text": "It could have saved. 441 issues. Without additional effort. That addressing sprint without any addressing that addressing sprint they could have saved 1,441 issues.",
+      "offset": 1783141,
+      "duration": 15000
+    },
+    {
+      "text": "You can see how the issues kept adding to the repository. Now, just saying these issues, you know, here is a repository.",
+      "offset": 1798141,
+      "duration": 8000
+    },
+    {
+      "text": "Let's take a quick look at this situation here. You can see in summer cube that Here is our project you can see in the last 2 years alone.",
+      "offset": 1806141,
+      "duration": 9000
+    },
+    {
+      "text": "This is the area of Clint code attributes that are affected. You can see 294 issue on adaptability for example.",
+      "offset": 1815141,
+      "duration": 9000
+    },
+    {
+      "text": "Now let's come back here. And talk a bit about what does it really mean. What does it mean to say 1,441 fewer issues could have been the state of the project if you have used been as you could, right?",
+      "offset": 1824141,
+      "duration": 14000
+    },
+    {
+      "text": "That is what we are here for. Now, I have taken a look at the all issues on the left hand side here.",
+      "offset": 1838141,
+      "duration": 9000
+    },
+    {
+      "text": "That is Absolutely all issues in the project that is open. And here, new issues that are introduced in the last 2 years where the team could have used Cleanassic Cor.",
+      "offset": 1847141,
+      "duration": 12000
+    },
+    {
+      "text": "That means this. And that results. Clearly astounding, isn't it? 31% more reliable the project should have been.",
+      "offset": 1859141,
+      "duration": 11000
+    },
+    {
+      "text": "21% more maintainable, 19% more consistent, 18% intentional and 38% more adaptable.",
+      "offset": 1870141,
+      "duration": 11000
+    },
+    {
+      "text": "No. Let it sink in for a moment. What does that mean? We have to take this part.",
+      "offset": 1881141,
+      "duration": 7000
+    },
+    {
+      "text": "This is the app, minimum benefit this team could have been gained from using clean as you could because remember There is a lot of code leaving the repository, lot of code that is edited or modified and issues will be addressed there also right and some issues will leave the repository and we are not even talking about that.",
+      "offset": 1888141,
+      "duration": 20000
+    },
+    {
+      "text": "And if you factor that part Numbers will go even higher. So we can clearly see that by practicing Kleinasicoranating, any team using on a legacy project or NU project regardless of what kind of project you are working on.",
+      "offset": 1908141,
+      "duration": 9000
+    },
+    {
+      "text": "Everybody can benefit from Tennessee code and in practical life and this way. And now we will see, does that mean these numbers mean in your life as a developer, right?",
+      "offset": 1917141,
+      "duration": 19000
+    },
+    {
+      "text": "Here you go that are the benefits. Focus only on the new and edited chord as a developer you can focus on your new and edited code and not really old code that you have to read a lot to understand in the first place.",
+      "offset": 1936141,
+      "duration": 12000
+    },
+    {
+      "text": "This way developers can stay happy. Your development team happiness is one of the important thing, right? And any code added from now is clean.",
+      "offset": 1948141,
+      "duration": 4000
+    },
+    {
+      "text": "You fix the leak. Once you want to wrap this methodology, your new code, anything added from now is clean.",
+      "offset": 1952141,
+      "duration": 12000
+    },
+    {
+      "text": "Your software remains as an asset. By practicing cleaner as you could, your software remains an asset, not a liability, that you have to abandon at some point time, right?",
+      "offset": 1964141,
+      "duration": 10000
+    },
+    {
+      "text": "That is the most important part here. And easier to extend your code base because your code base is so maintainable now because thanks to clean energy code, your team members who are joining your team can on board much faster.",
+      "offset": 1974141,
+      "duration": 13000
+    },
+    {
+      "text": "It is easier to understand the most important and recent changes. Because there is no debt in that area. That is what fines you code is doing.",
+      "offset": 1987141,
+      "duration": 11000
+    },
+    {
+      "text": "For you and your future teammates who will join. No more depth addressing sprints because we stopped accumulating any new debt already, right?",
+      "offset": 1998141,
+      "duration": 3000
+    },
+    {
+      "text": "So what happens is you don't have to worry about, OK, release is coming, so we have to do a data addressing sprint now so that things are in an under control.",
+      "offset": 2001141,
+      "duration": 14000
+    },
+    {
+      "text": "You don't have to do it anymore because Heynessicord takes care of cleaning it as you cord, so yeah, improved feature delivery.",
+      "offset": 2015141,
+      "duration": 9000
+    },
+    {
+      "text": "An input feature delivery velocity. That is what you will get with this. I'm sure as a developer you appreciate these benefits and hopefully you can adopt this methodology for your team and that will change the way you approach clean code for good.",
+      "offset": 2024141,
+      "duration": 9000
+    },
+    {
+      "text": "Now let's recap. Clean as your code is the most efficient path to clean code. And the most sustainable one at that.",
+      "offset": 2033141,
+      "duration": 16000
+    },
+    {
+      "text": "This is minimum practice every team should do because this is very easy and you don't have to worry about you know trying to enforce a very high standard on our record base.",
+      "offset": 2049141,
+      "duration": 10000
+    },
+    {
+      "text": "So this is very approachable methodology for every team. So I recommend you start with Cleanas you've got today.",
+      "offset": 2059141,
+      "duration": 9000
+    },
+    {
+      "text": "And so I cube 10 root 3 is releasing today. So I welcome you to go and. Take a look at sonar cube as soon as it released 10 door 3 and.",
+      "offset": 2068141,
+      "duration": 11000
+    },
+    {
+      "text": "All the shiny features you go to see me demoing the song I kept under 3 fast nobody have seen it before you and I'm so happy that I could demo the song I kept under 3 to you today.",
+      "offset": 2079141,
+      "duration": 12000
+    },
+    {
+      "text": "And thank you very much for listening and we will continue now.",
+      "offset": 2091141,
+      "duration": 7000
+    },
+    {
+      "text": "After you list.",
+      "offset": 2098141,
+      "duration": 2000
+    },
+    {
+      "text": "Okay, great. Thanks, Vivek. As we move into a time of Q&A and we gather your questions, I briefly want to share that we have 2 more great webinars that you can register for.",
+      "offset": 2100141,
+      "duration": 10000
+    },
+    {
+      "text": "First, you can join Stefan Schiller for securing with Clean Code on. Or unveiling and mitigating vulnerabilities on December sixth.",
+      "offset": 2110141,
+      "duration": 8000
+    },
+    {
+      "text": "And you can also join our team and AWS for a webinar on integrating sonar clean code practices in AWS CI CD workflows on December, the twelfth.",
+      "offset": 2118141,
+      "duration": 8000
+    },
+    {
+      "text": "Links to register for both are available in the chat. Now you'll see a brief poll to indicate if you'd like to learn more from us.",
+      "offset": 2126141,
+      "duration": 3000
+    },
+    {
+      "text": "About our solution. So if you go ahead and take a minute. Fill out that poll. We greatly appreciate your feedback.",
+      "offset": 2129141,
+      "duration": 13000
+    },
+    {
+      "text": "Give it a couple minutes here for everyone to. Add their responses.",
+      "offset": 2142141,
+      "duration": 12000
+    },
+    {
+      "text": "Okay, looks great. So as a reminder, after the Q&A, a short survey will appear and we greatly appreciate your feedback and that's about our our webinar so we we appreciate that when you fill that out.",
+      "offset": 2154141,
+      "duration": 14000
+    },
+    {
+      "text": "So moving into our Q&A looks like we've got some questions to answer. First one, Vivic, here we go.",
+      "offset": 2168141,
+      "duration": 8000
+    },
+    {
+      "text": "How does new code work with a pull request in Sonar Cube Enterprise is the new code setting relevant.",
+      "offset": 2176141,
+      "duration": 6000
+    },
+    {
+      "text": "With pull requests.",
+      "offset": 2182141,
+      "duration": 2000
+    },
+    {
+      "text": "Excellent question. Actually, a lot of people ask this question that why do you need new code definition and new code for increment when you have pull rickers can already in sonar products we prioritize speed of feedback towards the left that is in in ID or in publicer scan the scan is done in such a way that we prioritize speed.",
+      "offset": 2184141,
+      "duration": 21000
+    },
+    {
+      "text": "So it is important that you scan your branches that are active or target branches so that you can make sure that all issues that Sonar Q can detect.",
+      "offset": 2205141,
+      "duration": 10000
+    },
+    {
+      "text": "Is detected in your new code increment because Every issue cannot be detected in a PR scan because we have to prioritize speed there.",
+      "offset": 2215141,
+      "duration": 4000
+    },
+    {
+      "text": "This is why it is important for you to also make sure that your target branches are scanned regularly. I hope that, is clear now.",
+      "offset": 2219141,
+      "duration": 14000
+    },
+    {
+      "text": "Perfect. Thanks, Vivic. How about this one? Let's see.",
+      "offset": 2233141,
+      "duration": 4000
+    },
+    {
+      "text": "What if our teams use continuous delivery? No versioning from a master branch. With feature branches merged to the master.",
+      "offset": 2237141,
+      "duration": 7000
+    },
+    {
+      "text": "Which option is recommended? Number of days or reference branch? And then what are the trade-offs for both options in this case?",
+      "offset": 2244141,
+      "duration": 8000
+    },
+    {
+      "text": "So if you are using continuous delivery for your team number of days is the recommended option in this case and because if you are continuously delivering you don't have too much time gap between Like every day you are delivering.",
+      "offset": 2252141,
+      "duration": 15000
+    },
+    {
+      "text": "So it makes sense that you take number of days. So if you are using reference branch as your option, the thing there is that it'll allow you to keep your changes in that branch and reference it to Aerophon surprise and every change done to that.",
+      "offset": 2267141,
+      "duration": 15000
+    },
+    {
+      "text": "Can be counted as new and merged. So you can do the both options in the same project with branches if you have that kind of mechanism you may keep number of days on the main branch and then on other specific feature branches you can use reference points as well.",
+      "offset": 2282141,
+      "duration": 16000
+    },
+    {
+      "text": "Great. Here's another one. Do we have to define our own unit test cases? And unit testing methods to test the coverage.",
+      "offset": 2298141,
+      "duration": 8000
+    },
+    {
+      "text": "Or does sonar cube do that automatically?",
+      "offset": 2306141,
+      "duration": 5000
+    },
+    {
+      "text": "Can you repeat the question Liz? Alright.",
+      "offset": 2311141,
+      "duration": 2000
+    },
+    {
+      "text": "Sure. Do, do we have to define our own unit test cases and unit testing methods to test the coverage?",
+      "offset": 2313141,
+      "duration": 7000
+    },
+    {
+      "text": "Or does Sonar Cube do that automatically? Says from our hit.",
+      "offset": 2320141,
+      "duration": 3000
+    },
+    {
+      "text": "Are you of course we will integrate the coverage and we will read it but we need a report and you have to do the rest on your own.",
+      "offset": 2323141,
+      "duration": 10000
+    },
+    {
+      "text": "Perfect. Let's see here. Why are cleaners you code criteria so strict?",
+      "offset": 2333141,
+      "duration": 9000
+    },
+    {
+      "text": "Cleaness equal criteria has strict, people. Think this way, but the truth is that this criteria is applied only to new code, right?",
+      "offset": 2342141,
+      "duration": 9000
+    },
+    {
+      "text": "Newcootscop. So the nucleus top is not the whole project. Only a specific part of the project that is changed recently or some code you have added.",
+      "offset": 2351141,
+      "duration": 8000
+    },
+    {
+      "text": "This is always going to be small. And this is why the quality standard there is high and this is the only way you can have a high standard actually if you try to apply a high standard to the overall code it's not going to be easy to apply that, right?",
+      "offset": 2359141,
+      "duration": 14000
+    },
+    {
+      "text": "That is why we focus on new code that is smaller scope where that you don't have too many issues to deal with so that it is viable to achieve a much higher standard and that is 0 issues.",
+      "offset": 2373141,
+      "duration": 11000
+    },
+    {
+      "text": "That is why we have a higher standard for the nicotescop, there is trina secret criteria.",
+      "offset": 2384141,
+      "duration": 8000
+    },
+    {
+      "text": "Perfect. Okay, let's see what else we have here. We've got a few more minutes.",
+      "offset": 2392141,
+      "duration": 1000
+    },
+    {
+      "text": "So I'm going to try to . We've got a lot of questions so you probably covered this but we'll refresh.",
+      "offset": 2393141,
+      "duration": 11000
+    },
+    {
+      "text": "What's the Clear difference between clean code and clean as you code.",
+      "offset": 2404141,
+      "duration": 5000
+    },
+    {
+      "text": "Cool. Clean code is the standard, right? It's a standard, a fourth chord that is secure.",
+      "offset": 2409141,
+      "duration": 7000
+    },
+    {
+      "text": "Maintainable and really clean. So it is the standard that you want to achieve. That is clean code.",
+      "offset": 2416141,
+      "duration": 1000
+    },
+    {
+      "text": "Whereas clean code is the methodology that will take you that it is a vehicle that will carry you to clean code.",
+      "offset": 2417141,
+      "duration": 12000
+    },
+    {
+      "text": "So that is the difference. Clean code will ensure that the standard will ensure that your code is an asset, your software is an asset and cleaner SU code will keep that as an asset as time passes.",
+      "offset": 2429141,
+      "duration": 12000
+    },
+    {
+      "text": "So the job of cleaners you could as a methodology is that it is a vehicle that carry you to clean code.",
+      "offset": 2441141,
+      "duration": 8000
+    },
+    {
+      "text": "That is the difference. Clean code is the standard.",
+      "offset": 2449141,
+      "duration": 2000
+    },
+    {
+      "text": "Perfect. Good to make that delineation. Okay, here's the next one.",
+      "offset": 2451141,
+      "duration": 7000
+    },
+    {
+      "text": "This one's a little specific. So, and we were just talking about new code versus overall code, so I think it's a good one.",
+      "offset": 2458141,
+      "duration": 5000
+    },
+    {
+      "text": "We follow clean as you code organizationally in that context. An issue we come across is our coverage numbers taking a hit when a line of code is modified.",
+      "offset": 2463141,
+      "duration": 10000
+    },
+    {
+      "text": "For example, when a variable is renamed or the formatting changes, is there a way to break out new versus modified?",
+      "offset": 2473141,
+      "duration": 11000
+    },
+    {
+      "text": "So in Sonic cube, we have something called the fudge factor so that when we look at new code that you can turn on turn off how the behavior of the coverage is handled.",
+      "offset": 2484141,
+      "duration": 13000
+    },
+    {
+      "text": "To address this problem. And generally, you can see that you can set up different target goals for coverage for new code and overall code with 2 different conditions.",
+      "offset": 2497141,
+      "duration": 12000
+    },
+    {
+      "text": "Okay, and we also consider and you've probably mentioned this too, like we also consider all added and edited code as new code.",
+      "offset": 2509141,
+      "duration": 7000
+    },
+    {
+      "text": "Yes.",
+      "offset": 2516141,
+      "duration": 1000
+    },
+    {
+      "text": "So good to mention. It's Cleanish code available in Sonar lent?",
+      "offset": 2517141,
+      "duration": 7000
+    },
+    {
+      "text": "It's coming. It's coming. That is all I can say today. You will see more of the concept there as time passes.",
+      "offset": 2524141,
+      "duration": 8000
+    },
+    {
+      "text": "Okay, alright, that's great. There are a ton more questions, but just in the interest of time, we're, we're gonna stop here and we will.",
+      "offset": 2532141,
+      "duration": 10000
+    },
+    {
+      "text": "If we didn't cover your question we'll add them to the community where you can reference any questions and answers that we didn't address today.",
+      "offset": 2542141,
+      "duration": 8000
+    },
+    {
+      "text": "You can also visit sonar source.com to see more on clean code and clean as you code and check out information on our future webinars and events.",
+      "offset": 2550141,
+      "duration": 7000
+    },
+    {
+      "text": "So thank you again, Vivek, for hosting today and and thank you for everyone in advance for attending and providing all of your great feedback on our on our survey and our poll questions.",
+      "offset": 2557141,
+      "duration": 10000
+    },
+    {
+      "text": "We really appreciate your attendance. So thank you and see you all soon.",
+      "offset": 2567141,
+      "duration": 5000
+    },
+    {
+      "text": "Thank you very much, please. Bye bye.",
+      "offset": 2572141,
+      "duration": 30000
+    }
+  ],
+  "fullText": "Okay, hello everyone. Thank you for joining and welcome to our sonar webinar entitled Clean as you code, no pain, lots to gain. I'm Liz Ryan, your moderator for this webinar, which will be presented by Vivik Reichugnap. Please allow me to quickly go over some essential housekeeping items before we get started. So the session today will last approximately 45 min including Q&A. You all are invited to submit your questions via the Q&A box in Zoom, not in the chat box but in the Zoom. We have 2 panelists joining us today. Chris Levy and Jeeping Woo from our product management and Centre Keep Development Teams. They're tasked with answering as many of your questions as possible live during the session. The session will be recorded and we will send out a link via email in the coming days. Finally, at the end of this webinar, a short survey will appear on your screen. We welcome your feedback. Thank you in advance for your participation. So without further ado, I'd like to introduce you to today's presenter, Vivik Reichugnat, Vivik is a product manager at Sonar and brings more than a decade of experience working with software static analysis and code quality. His experience working with a wide spectrum of industries brings a holistic perspective to creating solutions for clean code. Vivic, over to you. Thank you very much, Liz for the introduction. I'm really excited to talk about Clean As you caught the Maternity today to you and most importantly I hope I can inspire To change the way you look at claim code and the way you approach quality of code for G. So, first let's see what we want to talk about today. BUSINESS, a wipe clean as you cut. Why such a methodology is even needed? We will see that very quickly and then setting up your projects for cleaner secret methodology in SO. Archive and then practicing cleanliness you could in summer keep. Once you set up you have to practice it. We'll see how and then finally what benefits you can get once you practice cleanassy code in Sark you. Alright, that is what we will cover today. Let's get started. First, we need to understand why cleaner as you called such a methodology is needed, right? Cord level technical data is a bit like mortar. Sneaky and bad. We don't see it until it is too late. That is the problem with code-level technical debt, isn't it? And with the classical approach of addressing technical debt, there are some problems. Usually we have to look at overall code and look at a number of issues. If you scan your total code base, you will see thousands of issues and prioritizing issues from that and fixing issues is not an effective or efficient approach at all. Meanwhile, while you are Just waiting for the debt to accumulate, your team keep adding the debt. That means while on one side you are cleaning up the dead you are not fixing the leak so more and more that is getting added. So that approach is not really sustainable is it? And this strategy have the biggest problem that while the debt is in the chord, That affects the velocity because you have to keep adding that and then you have to come back and clean it up with a data dressing sprint usually maybe when your release is approaching. Problem again is velocity. How many features you could have shipped if you don't have to face such a situation in the first place. Well, that takes us. To a need for a new. And with this, clean as you could approach, we will focus on new code. Now, we need to see what is really new code. Now, we need to see what is really new code, right? When we talk about software development in general, We go with increments of code, right? All the years we add new code or edit some of your existing or old code. Let's call such a increment as a new code increment. As you can see, what happens is over time we keep adding new code increments and when we are new code increments we make sure that such increments are clean. That is all we will do and what kind of effect that can have in your code base. First of all, if you do this, all-ard code is going to be clean. That is very clear because we are making sure that added code is clean. That is what the new code is all about. What else can happen? The most important part here is As we practice this, our overall chord gets cleaner and cleaner. That is the most impressive benefit of this methodology and we need to see how to see how We need to understand the anatomy of NICO. Yes, so usually when we talk about a new cord, what does it really mean? So we have some code added, right, when we develop some new feature. Obviously, we are going to add some some new code. Totally brand new cord. What else will we do? We are extending, right? So we will modify some of your old code. These are the 2 parts we will do. And when we are making sure that the new code is clean, we are making sure that in whatever new code we added, the new issues that we are introducing, we are cleaning it at that time at the time itself. Also, when you are modifying some of your old code, we are cleaning those. Port old parts of the court as well. By virtue of this, we can make sure that we are fixing the most important parts of the old cord because the most dynamic areas of your code base are where we will modify anyway, right? So with new code, approach, with this approach of focusing on new code, we are not only cleaning the new, new added code, but most important parts of your old code as well. So let's see what will happen if you are practicing cleaner secret from today. First of all, All code added from today will be clean. Most important parts of your old code will get cleaner. And finally, percentage of. Clean code in your overall code base will increase day by day. That is the overall picture for you. Why cleanness record methodology is very effective. It just not only clean or fix the leak, it makes sure that your overall code is getting clean. We go. And this basically is addressing the problems that we have with the classical approach and most importantly while we do this Developers can focus on their new code, the code they own, the one that they write and don't have to worry about what happened in the past. This way, they can be happier. Cool. This is why we need such a methodology that is very efficient. The most efficient way. To reach clean code. Now it's time for us to see how we do this, how we set this up in our product. Sama cube setting up clean as you called Basically have 4 very simple steps and we will see all of it today. And let me be clear in the beginning, we are not talking about So on our lint today, Sonar Lind is a solution from Sonar that runs in. Your ID and helps you clean in the ID, but I would expect that you are using Sonar L to begin with. But today we will focus on SO. NARQUE and how to do this cleaner secret methodology in Sonarquip that is what we will focus on today. Right. Now, the first step is to set up a clean code goals or your quality standard, right? Hey, remember why this is important? What is the job of clean energy code methodology is to carry you to the standard that is set up for the project. So once you have the clean code gold setup. Cleanency code is a vehicle that will carry you Cheer goals. It's a methodology that made sure that You are on the fastest path to your goal. So do that, we first need a standard, right? Let's see how this standard can be set in Sonarkube. So here we have something called quality profile. Quality profile is like a set of rules. The stools we enforce on our code. New code or overall code. Now, there are such Profiles per language. You can see a lot of them and you will see Sona away. So now away is the recommended quality profile for our projects. If you recommend that you use on our way. However, you can obviously create your own custom quality profiles. Let's let's start with something. Or see JavaScript And I will inherit from, Sona away because I will use on our VS the base which is recommended. Let's give a name like custom Quality A file. Great, we have a quality profile here. And what we can see here is there are many rules active in this and some roads are inactive. You can obviously customize and activate models as you as you prefer. No problem. And basically, now we have a profile, a quality profile that is your standard for the project. And you can basically assign projects to this. Let's see I want to assign one of my projects to it. I can choose to do so. Basically now I have a quality standard defined for my project and this way we know where cleaner you code methodology have to carry you to remember. We recommend you to use Sono Away as it is the most workable and more suitable quality profile that will make sure that you have the cleanest possible cord. So we recommend you use that. Now, coming back here, let's see, we have done the first step. We have a goal. We have a standard to reach. That is great. Now what else we have to do? The next step for us here is obviously define new code. Earlier we discussed what is new code for SR, right? And He said how important it is. Focus on your code that way just by focusing your new code you can make sure that our overall code is getting cleaner. Now, we need to understand that, okay, for each team and their context, new code can be different suitable definition of what is new can be different, right? For some it may be the changes made after the last release. For some it may be like number of days. We will see how this is done, what kind of options we have. Let's see this inside I keep right. Let's see it and as we go we will speak about that. Cool. So we are in some recipe again. Now we are going to deal with new code definition and You know why we are doing this? We are telling Sonar Cube. Okay, in our team, what does it mean? To say new chor. This allows an encrypted detect and understand what is new so that we can report issues on your new code scope. And you can go here and we can see new code. You see a few options here. Obviously, we are explaining what each option has been. Let's see first of all we have something called a global setting, right? Use the global setting if I prefer to use that. Now we need to understand what is the global setting. See if you're administering a sonar cube or generally quality in your in your organization you may want to set up a default value that can be used by most teams as the new code definition right and how can we do that we can obviously go to administration and let's search for new code. And we can define and you could behavior here and by doing this We can make sure that any project will start with this option. If most of your teams are using Continuous versioning proper versioning like OKAY from 10 dot 5 to 10 dot 6. You can definitely use this option as your default. And then whenever you create a project or anybody in your organization creates a project that will start with this. I have an opportunity to start with this option. Now let's get back to our previous screen where we were creating the nuclear definition. Now, I may switch from my Global setting to specific setting that is suitable for my project. Now, Let's see what options do we have. Previous version is a very popular option because many software teams, as you know, uses versioning proper versioning. So if you have such versions like you're making a release every every one month, 2 months. Half a month, you can obviously use this previous version option and when the version bump happens, Sara Q relies on that version bump to detect, okay, everything happened after that version bump will be treated as new code and any issue in that will be what your team will focus on. Now, what if your team is delivering multiple times a day, you are into continuous delivery, we recommend you use number of days in that case. Let's say you can use something like 30 days as a window for new code. So what it does is that in that case,anaki will say okay Everything, every court change that you made. In the last 30 days, is treated as new code. And any issue in that will be reported in the new code. So that is how number of days as the option will behave. You can choose any number up to 90 days as the value. So you have the ability to Taylor it based on your needs, your team's needs. Now, you can also use a reference branch as an option if your team is using feature branches. Usually you may be using a feature branch to develop your feature and then you will merge back. In this case, you can use this option to compare with a reference branch and Contrast the difference and report everything in that contrast area as you're a new issue. This is you to believe you are using feature branches of concept in your team. So you can see that we have a number of options here to customize your new code definition instead of just giving a simple option. Why is this? Because it is very important that the customized this new code definition to suit the development context of your team. Is very important because that is what will make this methodology really practicable. This way Your, the option you select will make sense for your team, right? That is how we can ensure that you can actually use this methodology. Now, one more thing to note here is Automation. A lot of times you will have thousands of projects if not hundreds and you may be relying on APIs to automatically onboard projects. Alright, in that case, what will happen most of them is that you may have a symbol default that will be set as your niche definition when your project is on board, right? Now that is great for many teams that will work. But it is always nice with the team's context if they are using release or daily release or monthly, whatever their context is, always a review, the new cut definition option they have chosen and you can always go to the UI like like we did today and override this option. And make sure that the options selected is more suitable for the team. So that is what we need to do about new code setting. One final thing I wanted to tell you about new code setting, the new code definition is You can also set this per branch if you have commercial additions or some our cube. You can set different values for in for this new code definition per branch to absolutely tailor. To your needs. Now, we have Clearly defined what is new. And view also have defined the standard. The quality standard with quality profile upfront. 2 steps are done. Now let's go to the next step at this stage. Which is set up a clean as you called compliant quality gate. No, a qualitative allows you to add conditions to your new code or even overall chord. However, Today we are talking about Clean as your code and cleaners you could Mirozi as we discussed. Focuses on new code, right? New changes. The new code increment. So it is important that we focus today on new code and the conditions we will talk about today will be also about new code. Right. Let's see that recommended quality K by going into sonar cube again because it's better to show you rather than just talking about it, right? And let me introduce this new Cleaner C code criteria that we are introducing. This is coming with Sonark Q. 10 or 3. And you can see there are 4 conditions, very simple conditions, and those conditions are on new code and this conditions are going to make sure That your new code is absolutely clean all the time. Remember, we are talking about new code and not old code. So our focus of where these conditions are applied is limited to our New code only. First condition here is 0 issues on your new code. That means we have to resolve all issues that is reported by Sonora Cube in your new code. New code, right? And all security hotspots must be reviewed. This way you make sure that the new code increment is clean, that is what are gone with clears you goddess anyway, right? And 2 more conditions. And that is we have sufficient coverage. There is 80% here and duplication should should not be more than 3%. Now, obviously when I say this, you might ask, we wake. We don't want to have 80% coverage here. We don't, we think some of the value will be more suitable for our team. Sure, no problem. That is where you can create a custom quality gate. Let's call it as custom. Call ticket. And I created a sample quality 8 here. You can see when we create a quality gate, we have the same conditions to start with. The quality gate is compliant with cleaner secret methodology. Clear sharing, right? And what else can we do? We can go ahead and customize the coverage to See, 60 because that is what you prefer. Yeah. You changed it. We are still clean as you could compliant. No problem for changing the coverage goal that you have. Or duplication you can customize that and you will be still clean as you could compliant. What is important is you remain with these conditions and you make sure that these conditions are here regardless of what value for this for these last 2 that is coverage and duplication. Now, sometimes you may want to add even more conditions, you may want to have some conditions on overall code. Just because you want to also make sure that overall code is, say for some reason, some use case. Of course you can do that. You can unlock editing in the art condition on our record. Let's say line coverage. And. Let's go here. And I will set something like 60. I have added the condition you have a condition on overall code now. And we are. Still clean as you could complain. So, one we need is a cleaners you cut compliant quality gate. You can still customize and still be clean as you could compliant and this quality gate will make sure. That we are in perfect shape to practice clean as you could later. So that is what we can do with a cleaner you could come line collate. So, whole thing you need to worry about is the 4 conditions are there, right? And you may configure your pipeline to fail. If your qualitative fails, you can find the S or Q documentation if you ever want to consider. I just wanted to let you know that such a possibility access. All right, it's time to get back to our steps. Now we have completed 3 steps. We have set up the Cleaned gold with the quality profile. We also set up our. You could definition we know now what is new in your project. We have also set up a quality gate that is clean as you could compliant. Perfect. Now, what does that take us to? It's time for Apple. Let's have a poll now. How often do you scan? Your delivery branch or your main brands for that matter every day, once a week, once a month. Once per release, work is set for you. Alright. I'm so interested to know this. Often do you scan? Excellent. So. We have the results here. Hello lot of people, 37% think the everyday that is impressive and at the same time 38%. . And why this is very important. Let's see why this is very important That is where the last part, the fourth step of our setup for Classic code is coming in. No matter how much setup we did with this call setting and quality gate and quality profile, everything is done. But if we are not scanning the project frequently enough, we sonar cube cannot help you, right? You need to make sure that the project is frequently scanned regularly scanned and this is something you can set up you don't have to manually worry about so do it so First thing, you are using poor rickets for example, you have to make sure that your pull requests are scanned. You have to also make sure that your branches, the active branches are also scanned. Regularly. And to do this, so I keep have really thorough coverage of CI and DevOps platform integrations. This way, a pie, take an advantage of these CI and the WOPS platform integrations. You can not only make sure that your branches, your active branches are scanned regularly. You can also make sure that all your poll requests are scanned as well. This way you can absolutely make sure that all your new code increments. Are clearly identified and for them there is a standard check and for them you have an opportunity to fix those issues that are detected by SOME. So don't forget this last step, even though. The previous 3 steps are done if we are not setting up regular scans. Sonic you cannot help you. So make sure you have CI integration, DevOps integration, so that the scan is done very regularly, not once per release, because if you do it once per release. We will be detecting issues way too late. In the process. That is the problem. And that will be not clean as you caught at that point. You have to come toously keep wides on your quality and keep fixing them as you make them so that the debt won't live in the repository affecting the velocity of your team. Cool. So congratulations. We have now set up your project or Clean As you core. Excellent. Now that will allow us to go to practicing clean as you could. Right. Let's talk a little bit about what does it mean to practice. Now, projects are set up for cleaners. You could great. Now we need to make sure that all new code increments are clean, right? What does it mean to say new code increments are clean? That means there is no unresolved issues in the new code increment. Clear. Now in the new code, we don't want any issues kept open for long. Very simple and we have such options to address like we recommend that when sonar give is detecting issues in your new court scope. Fix most of it because remember, Sara Q is detecting issues based on your source and quality standard. That means This standard is what we are. Trying to achieve and it is important to fix. All the issues, I is reported. If not all, as much as you can. Excellent. Now, sometimes what happens is You don't want to fix some issues, you don't want to do it now, you want to postpone it and maybe fix it later. In that case you can mark the mass warn fix. Or you can mar them as false positives if you think that a specific occurrence or reported issue is a false positive you can obviously do that. Now let's see how this is done in Sonic you. I will go and see there are issues here, right? You can just select an issue. And say. So what's one fix? Now that is shoecon into the pool of issues that you've won with you you may select another issue and say marcas false positive this is how you do it and when you do it you may want to revisit them you will obviously find them in the resolution tab on the filters you can find. One fix you can obviously go there and get back if you want to get them back you can reopen them Well, you got them back. So. If you want to also do a bulk action you want to act upon multiple issues at the same time you want to say one fix to multiple issues or one to mark multiple issues. Us false positive you can obviously select multiple issues and do a bar connection where you can say okay I'm not going to fix these issues you can put the reason here That way your team knows why you have decided not to fix it. Excellent. So this is what you can do to resolve your issues. But remember, try to fix as many issues as you can. That way you can make sure that your new code increment is clean. Now. Now we have another port. Let's say you have set up everything and we want to now know what person. Of issues do you fix when you're qualitative fails if you're already using some art cube or summer cloud. Tell us how many percent is it 100%? Are we fixing all of it? Or are we fixing at least 90% of it? Or is it something more than 50 but less than 90? Or is it even less than 50%? Let's see, let's see what our audience think today. Come on. Excellent. I'm so pleased we see that 19% of our audience do fix 100% of all issues that is excellent really remarkable and again another 34% more than 90% or fishes are fixed. So we see we see that a lot of you are already really really doing great with Sonickeep. That is excellent to see. Now let's move on to the next step at this point. What are the benefits of? Practice in Cleanasico, right? We have talked about setting up clean energy code and practicing Classic code. And initially, we we discussed why such a methodology to stand with, but now it is the time if you practice this as a developer, what benefit are you going to get, right? It's easy to show setup and stuff right now. Let's see. What is the result? I have taken an example project here and this is Viewjs and what would have happened if the team developing this project. Have used the key cleanassic code methodology for 2 years, right? For the last 2 years. It could have saved. 441 issues. Without additional effort. That addressing sprint without any addressing that addressing sprint they could have saved 1,441 issues. You can see how the issues kept adding to the repository. Now, just saying these issues, you know, here is a repository. Let's take a quick look at this situation here. You can see in summer cube that Here is our project you can see in the last 2 years alone. This is the area of Clint code attributes that are affected. You can see 294 issue on adaptability for example. Now let's come back here. And talk a bit about what does it really mean. What does it mean to say 1,441 fewer issues could have been the state of the project if you have used been as you could, right? That is what we are here for. Now, I have taken a look at the all issues on the left hand side here. That is Absolutely all issues in the project that is open. And here, new issues that are introduced in the last 2 years where the team could have used Cleanassic Cor. That means this. And that results. Clearly astounding, isn't it? 31% more reliable the project should have been. 21% more maintainable, 19% more consistent, 18% intentional and 38% more adaptable. No. Let it sink in for a moment. What does that mean? We have to take this part. This is the app, minimum benefit this team could have been gained from using clean as you could because remember There is a lot of code leaving the repository, lot of code that is edited or modified and issues will be addressed there also right and some issues will leave the repository and we are not even talking about that. And if you factor that part Numbers will go even higher. So we can clearly see that by practicing Kleinasicoranating, any team using on a legacy project or NU project regardless of what kind of project you are working on. Everybody can benefit from Tennessee code and in practical life and this way. And now we will see, does that mean these numbers mean in your life as a developer, right? Here you go that are the benefits. Focus only on the new and edited chord as a developer you can focus on your new and edited code and not really old code that you have to read a lot to understand in the first place. This way developers can stay happy. Your development team happiness is one of the important thing, right? And any code added from now is clean. You fix the leak. Once you want to wrap this methodology, your new code, anything added from now is clean. Your software remains as an asset. By practicing cleaner as you could, your software remains an asset, not a liability, that you have to abandon at some point time, right? That is the most important part here. And easier to extend your code base because your code base is so maintainable now because thanks to clean energy code, your team members who are joining your team can on board much faster. It is easier to understand the most important and recent changes. Because there is no debt in that area. That is what fines you code is doing. For you and your future teammates who will join. No more depth addressing sprints because we stopped accumulating any new debt already, right? So what happens is you don't have to worry about, OK, release is coming, so we have to do a data addressing sprint now so that things are in an under control. You don't have to do it anymore because Heynessicord takes care of cleaning it as you cord, so yeah, improved feature delivery. An input feature delivery velocity. That is what you will get with this. I'm sure as a developer you appreciate these benefits and hopefully you can adopt this methodology for your team and that will change the way you approach clean code for good. Now let's recap. Clean as your code is the most efficient path to clean code. And the most sustainable one at that. This is minimum practice every team should do because this is very easy and you don't have to worry about you know trying to enforce a very high standard on our record base. So this is very approachable methodology for every team. So I recommend you start with Cleanas you've got today. And so I cube 10 root 3 is releasing today. So I welcome you to go and. Take a look at sonar cube as soon as it released 10 door 3 and. All the shiny features you go to see me demoing the song I kept under 3 fast nobody have seen it before you and I'm so happy that I could demo the song I kept under 3 to you today. And thank you very much for listening and we will continue now. After you list. Okay, great. Thanks, Vivek. As we move into a time of Q&A and we gather your questions, I briefly want to share that we have 2 more great webinars that you can register for. First, you can join Stefan Schiller for securing with Clean Code on. Or unveiling and mitigating vulnerabilities on December sixth. And you can also join our team and AWS for a webinar on integrating sonar clean code practices in AWS CI CD workflows on December, the twelfth. Links to register for both are available in the chat. Now you'll see a brief poll to indicate if you'd like to learn more from us. About our solution. So if you go ahead and take a minute. Fill out that poll. We greatly appreciate your feedback. Give it a couple minutes here for everyone to. Add their responses. Okay, looks great. So as a reminder, after the Q&A, a short survey will appear and we greatly appreciate your feedback and that's about our our webinar so we we appreciate that when you fill that out. So moving into our Q&A looks like we've got some questions to answer. First one, Vivic, here we go. How does new code work with a pull request in Sonar Cube Enterprise is the new code setting relevant. With pull requests. Excellent question. Actually, a lot of people ask this question that why do you need new code definition and new code for increment when you have pull rickers can already in sonar products we prioritize speed of feedback towards the left that is in in ID or in publicer scan the scan is done in such a way that we prioritize speed. So it is important that you scan your branches that are active or target branches so that you can make sure that all issues that Sonar Q can detect. Is detected in your new code increment because Every issue cannot be detected in a PR scan because we have to prioritize speed there. This is why it is important for you to also make sure that your target branches are scanned regularly. I hope that, is clear now. Perfect. Thanks, Vivic. How about this one? Let's see. What if our teams use continuous delivery? No versioning from a master branch. With feature branches merged to the master. Which option is recommended? Number of days or reference branch? And then what are the trade-offs for both options in this case? So if you are using continuous delivery for your team number of days is the recommended option in this case and because if you are continuously delivering you don't have too much time gap between Like every day you are delivering. So it makes sense that you take number of days. So if you are using reference branch as your option, the thing there is that it'll allow you to keep your changes in that branch and reference it to Aerophon surprise and every change done to that. Can be counted as new and merged. So you can do the both options in the same project with branches if you have that kind of mechanism you may keep number of days on the main branch and then on other specific feature branches you can use reference points as well. Great. Here's another one. Do we have to define our own unit test cases? And unit testing methods to test the coverage. Or does sonar cube do that automatically? Can you repeat the question Liz? Alright. Sure. Do, do we have to define our own unit test cases and unit testing methods to test the coverage? Or does Sonar Cube do that automatically? Says from our hit. Are you of course we will integrate the coverage and we will read it but we need a report and you have to do the rest on your own. Perfect. Let's see here. Why are cleaners you code criteria so strict? Cleaness equal criteria has strict, people. Think this way, but the truth is that this criteria is applied only to new code, right? Newcootscop. So the nucleus top is not the whole project. Only a specific part of the project that is changed recently or some code you have added. This is always going to be small. And this is why the quality standard there is high and this is the only way you can have a high standard actually if you try to apply a high standard to the overall code it's not going to be easy to apply that, right? That is why we focus on new code that is smaller scope where that you don't have too many issues to deal with so that it is viable to achieve a much higher standard and that is 0 issues. That is why we have a higher standard for the nicotescop, there is trina secret criteria. Perfect. Okay, let's see what else we have here. We've got a few more minutes. So I'm going to try to . We've got a lot of questions so you probably covered this but we'll refresh. What's the Clear difference between clean code and clean as you code. Cool. Clean code is the standard, right? It's a standard, a fourth chord that is secure. Maintainable and really clean. So it is the standard that you want to achieve. That is clean code. Whereas clean code is the methodology that will take you that it is a vehicle that will carry you to clean code. So that is the difference. Clean code will ensure that the standard will ensure that your code is an asset, your software is an asset and cleaner SU code will keep that as an asset as time passes. So the job of cleaners you could as a methodology is that it is a vehicle that carry you to clean code. That is the difference. Clean code is the standard. Perfect. Good to make that delineation. Okay, here's the next one. This one's a little specific. So, and we were just talking about new code versus overall code, so I think it's a good one. We follow clean as you code organizationally in that context. An issue we come across is our coverage numbers taking a hit when a line of code is modified. For example, when a variable is renamed or the formatting changes, is there a way to break out new versus modified? So in Sonic cube, we have something called the fudge factor so that when we look at new code that you can turn on turn off how the behavior of the coverage is handled. To address this problem. And generally, you can see that you can set up different target goals for coverage for new code and overall code with 2 different conditions. Okay, and we also consider and you've probably mentioned this too, like we also consider all added and edited code as new code. Yes. So good to mention. It's Cleanish code available in Sonar lent? It's coming. It's coming. That is all I can say today. You will see more of the concept there as time passes. Okay, alright, that's great. There are a ton more questions, but just in the interest of time, we're, we're gonna stop here and we will. If we didn't cover your question we'll add them to the community where you can reference any questions and answers that we didn't address today. You can also visit sonar source.com to see more on clean code and clean as you code and check out information on our future webinars and events. So thank you again, Vivek, for hosting today and and thank you for everyone in advance for attending and providing all of your great feedback on our on our survey and our poll questions. We really appreciate your attendance. So thank you and see you all soon. Thank you very much, please. Bye bye.",
+  "fetchedAt": "2026-03-14T09:23:39.697Z"
+}

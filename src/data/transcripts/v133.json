@@ -1,0 +1,453 @@
+{
+  "videoId": "v133",
+  "youtubeId": "WfhYL51qlKk",
+  "segments": [
+    {
+      "text": "hey folks welcome to this video on",
+      "offset": 80,
+      "duration": 4679
+    },
+    {
+      "text": "python 3.12 and FST strings I'm your",
+      "offset": 2000,
+      "duration": 5480
+    },
+    {
+      "text": "host nafal Islam a developer Advocate at",
+      "offset": 4759,
+      "duration": 5960
+    },
+    {
+      "text": "sonar this story starts with pep 701 now",
+      "offset": 7480,
+      "duration": 6440
+    },
+    {
+      "text": "pep 701 set out to fix a lot of the",
+      "offset": 10719,
+      "duration": 6361
+    },
+    {
+      "text": "things and F strings that we ran into in",
+      "offset": 13920,
+      "duration": 5840
+    },
+    {
+      "text": "the previous versions of python here you",
+      "offset": 17080,
+      "duration": 5720
+    },
+    {
+      "text": "have an FST string with the dictionary",
+      "offset": 19760,
+      "duration": 5200
+    },
+    {
+      "text": "bag and we're trying to retrieve the",
+      "offset": 22800,
+      "duration": 5280
+    },
+    {
+      "text": "item wand now this causes a syntax error",
+      "offset": 24960,
+      "duration": 5360
+    },
+    {
+      "text": "because you're not allowed to have a",
+      "offset": 28080,
+      "duration": 4760
+    },
+    {
+      "text": "single quote within an F string that",
+      "offset": 30320,
+      "duration": 4120
+    },
+    {
+      "text": "starts with a single quote now you might",
+      "offset": 32840,
+      "duration": 3640
+    },
+    {
+      "text": "want to solve this by backs slashing",
+      "offset": 34440,
+      "duration": 3920
+    },
+    {
+      "text": "that single quote but guess what that's",
+      "offset": 36480,
+      "duration": 4960
+    },
+    {
+      "text": "illegal inside of an F string at this",
+      "offset": 38360,
+      "duration": 4400
+    },
+    {
+      "text": "point in time you might be a little",
+      "offset": 41440,
+      "duration": 3760
+    },
+    {
+      "text": "surprised with all of this well not to",
+      "offset": 42760,
+      "duration": 5160
+    },
+    {
+      "text": "fear because in Python 3.12 we solve",
+      "offset": 45200,
+      "duration": 5600
+    },
+    {
+      "text": "this problem with the new and enhanced",
+      "offset": 47920,
+      "duration": 5080
+    },
+    {
+      "text": "fstring parsing engine so you can see",
+      "offset": 50800,
+      "duration": 4960
+    },
+    {
+      "text": "here that before wand from bag it",
+      "offset": 53000,
+      "duration": 5399
+    },
+    {
+      "text": "doesn't work but here letters works just",
+      "offset": 55760,
+      "duration": 4200
+    },
+    {
+      "text": "fine and you can do a lot more with",
+      "offset": 58399,
+      "duration": 3601
+    },
+    {
+      "text": "strings so for example you can do what",
+      "offset": 59960,
+      "duration": 4080
+    },
+    {
+      "text": "you used to do which is to evaluate",
+      "offset": 62000,
+      "duration": 4000
+    },
+    {
+      "text": "expressions within F strings but you can",
+      "offset": 64040,
+      "duration": 4880
+    },
+    {
+      "text": "also have FST strings within FST strings",
+      "offset": 66000,
+      "duration": 4439
+    },
+    {
+      "text": "however you can't really have FST",
+      "offset": 68920,
+      "duration": 4519
+    },
+    {
+      "text": "strings beside FST strings you should be",
+      "offset": 70439,
+      "duration": 5641
+    },
+    {
+      "text": "using FST strings within F strings but",
+      "offset": 73439,
+      "duration": 6081
+    },
+    {
+      "text": "also notice how wonderfully the new",
+      "offset": 76080,
+      "duration": 6120
+    },
+    {
+      "text": "syntax ER tells us exactly where our",
+      "offset": 79520,
+      "duration": 4880
+    },
+    {
+      "text": "problem is within our F string so what",
+      "offset": 82200,
+      "duration": 4520
+    },
+    {
+      "text": "changed let's dive into it the first",
+      "offset": 84400,
+      "duration": 4679
+    },
+    {
+      "text": "thing that changed is the grammar itself",
+      "offset": 86720,
+      "duration": 5920
+    },
+    {
+      "text": "so in Python 3.11 a string or strings",
+      "offset": 89079,
+      "duration": 5801
+    },
+    {
+      "text": "are just a bunch of strings put together",
+      "offset": 92640,
+      "duration": 3920
+    },
+    {
+      "text": "now that's not exactly the most",
+      "offset": 94880,
+      "duration": 3720
+    },
+    {
+      "text": "intuitive way of understanding what a",
+      "offset": 96560,
+      "duration": 4599
+    },
+    {
+      "text": "string is in Python 3.12 however you're",
+      "offset": 98600,
+      "duration": 4720
+    },
+    {
+      "text": "going to see that the grammar has been",
+      "offset": 101159,
+      "duration": 4320
+    },
+    {
+      "text": "expanded much further and it still",
+      "offset": 103320,
+      "duration": 5439
+    },
+    {
+      "text": "includes our favorite string as being",
+      "offset": 105479,
+      "duration": 6361
+    },
+    {
+      "text": "more strings so let's dive into what",
+      "offset": 108759,
+      "duration": 7201
+    },
+    {
+      "text": "this exactly means using the",
+      "offset": 111840,
+      "duration": 4120
+    },
+    {
+      "text": "tokenizer the first thing that we're",
+      "offset": 116079,
+      "duration": 4241
+    },
+    {
+      "text": "going to do is import a package called",
+      "offset": 117840,
+      "duration": 4879
+    },
+    {
+      "text": "tokenize and then import a package",
+      "offset": 120320,
+      "duration": 6280
+    },
+    {
+      "text": "called IO so tokenize is going to take a",
+      "offset": 122719,
+      "duration": 7721
+    },
+    {
+      "text": "bunch of bytes and turn it into a bunch",
+      "offset": 126600,
+      "duration": 6480
+    },
+    {
+      "text": "of tokens what that effectively means is",
+      "offset": 130440,
+      "duration": 4799
+    },
+    {
+      "text": "that we're going to take our F string",
+      "offset": 133080,
+      "duration": 4720
+    },
+    {
+      "text": "and then break it down into its",
+      "offset": 135239,
+      "duration": 5441
+    },
+    {
+      "text": "components and once we do break it down",
+      "offset": 137800,
+      "duration": 5040
+    },
+    {
+      "text": "into its components you're going to see",
+      "offset": 140680,
+      "duration": 6480
+    },
+    {
+      "text": "that python 3.12 and 3.11 parse strings",
+      "offset": 142840,
+      "duration": 7920
+    },
+    {
+      "text": "very differently so we have our string",
+      "offset": 147160,
+      "duration": 6560
+    },
+    {
+      "text": "we're going to pass it into io. bytes",
+      "offset": 150760,
+      "duration": 5280
+    },
+    {
+      "text": "iio because we want a by stream that we",
+      "offset": 153720,
+      "duration": 5159
+    },
+    {
+      "text": "can pass into tokenize do tokenize and",
+      "offset": 156040,
+      "duration": 4320
+    },
+    {
+      "text": "of course we're going to encode the",
+      "offset": 158879,
+      "duration": 4321
+    },
+    {
+      "text": "string in utf8 once we've encoded the",
+      "offset": 160360,
+      "duration": 4720
+    },
+    {
+      "text": "string what we're going to do is pass it",
+      "offset": 163200,
+      "duration": 4319
+    },
+    {
+      "text": "into token eyes. tokenize and of course",
+      "offset": 165080,
+      "duration": 5720
+    },
+    {
+      "text": "we're going to use by stream. readline",
+      "offset": 167519,
+      "duration": 5640
+    },
+    {
+      "text": "and we're not going to invoke it because",
+      "offset": 170800,
+      "duration": 5200
+    },
+    {
+      "text": "tokenize do tokenize expects a",
+      "offset": 173159,
+      "duration": 5360
+    },
+    {
+      "text": "callable and finally we're going to",
+      "offset": 176000,
+      "duration": 4239
+    },
+    {
+      "text": "print out the list of token tokens that",
+      "offset": 178519,
+      "duration": 4201
+    },
+    {
+      "text": "we generate now this comparison would",
+      "offset": 180239,
+      "duration": 5360
+    },
+    {
+      "text": "not be complete if I didn't do the exact",
+      "offset": 182720,
+      "duration": 5560
+    },
+    {
+      "text": "same thing in Python 3.11 so that's what",
+      "offset": 185599,
+      "duration": 5521
+    },
+    {
+      "text": "I'm going to do on the right hand side",
+      "offset": 188280,
+      "duration": 6879
+    },
+    {
+      "text": "you are going to see python 311 311 has",
+      "offset": 191120,
+      "duration": 7119
+    },
+    {
+      "text": "a lot fewer tokens that are generated",
+      "offset": 195159,
+      "duration": 5201
+    },
+    {
+      "text": "and in 312 you generate a lot more",
+      "offset": 198239,
+      "duration": 4481
+    },
+    {
+      "text": "tokens the reason for this is because",
+      "offset": 200360,
+      "duration": 4920
+    },
+    {
+      "text": "the parser is a lot more complex in",
+      "offset": 202720,
+      "duration": 4960
+    },
+    {
+      "text": "Python 3.12 and because of that",
+      "offset": 205280,
+      "duration": 5000
+    },
+    {
+      "text": "complexity it can handle things like",
+      "offset": 207680,
+      "duration": 5240
+    },
+    {
+      "text": "nested F strings what is also of note is",
+      "offset": 210280,
+      "duration": 5519
+    },
+    {
+      "text": "that you get richer tracebacks when",
+      "offset": 212920,
+      "duration": 4360
+    },
+    {
+      "text": "something goes wrong inside of an",
+      "offset": 215799,
+      "duration": 3601
+    },
+    {
+      "text": "fstring because of the new added",
+      "offset": 217280,
+      "duration": 4000
+    },
+    {
+      "text": "functionality in the parser all right",
+      "offset": 219400,
+      "duration": 4000
+    },
+    {
+      "text": "everybody thank you so much for watching",
+      "offset": 221280,
+      "duration": 5400
+    },
+    {
+      "text": "hope to see you again in the next",
+      "offset": 223400,
+      "duration": 3280
+    },
+    {
+      "text": "one",
+      "offset": 228959,
+      "duration": 3000
+    }
+  ],
+  "fullText": "hey folks welcome to this video on python 3.12 and FST strings I'm your host nafal Islam a developer Advocate at sonar this story starts with pep 701 now pep 701 set out to fix a lot of the things and F strings that we ran into in the previous versions of python here you have an FST string with the dictionary bag and we're trying to retrieve the item wand now this causes a syntax error because you're not allowed to have a single quote within an F string that starts with a single quote now you might want to solve this by backs slashing that single quote but guess what that's illegal inside of an F string at this point in time you might be a little surprised with all of this well not to fear because in Python 3.12 we solve this problem with the new and enhanced fstring parsing engine so you can see here that before wand from bag it doesn't work but here letters works just fine and you can do a lot more with strings so for example you can do what you used to do which is to evaluate expressions within F strings but you can also have FST strings within FST strings however you can't really have FST strings beside FST strings you should be using FST strings within F strings but also notice how wonderfully the new syntax ER tells us exactly where our problem is within our F string so what changed let's dive into it the first thing that changed is the grammar itself so in Python 3.11 a string or strings are just a bunch of strings put together now that's not exactly the most intuitive way of understanding what a string is in Python 3.12 however you're going to see that the grammar has been expanded much further and it still includes our favorite string as being more strings so let's dive into what this exactly means using the tokenizer the first thing that we're going to do is import a package called tokenize and then import a package called IO so tokenize is going to take a bunch of bytes and turn it into a bunch of tokens what that effectively means is that we're going to take our F string and then break it down into its components and once we do break it down into its components you're going to see that python 3.12 and 3.11 parse strings very differently so we have our string we're going to pass it into io. bytes iio because we want a by stream that we can pass into tokenize do tokenize and of course we're going to encode the string in utf8 once we've encoded the string what we're going to do is pass it into token eyes. tokenize and of course we're going to use by stream. readline and we're not going to invoke it because tokenize do tokenize expects a callable and finally we're going to print out the list of token tokens that we generate now this comparison would not be complete if I didn't do the exact same thing in Python 3.11 so that's what I'm going to do on the right hand side you are going to see python 311 311 has a lot fewer tokens that are generated and in 312 you generate a lot more tokens the reason for this is because the parser is a lot more complex in Python 3.12 and because of that complexity it can handle things like nested F strings what is also of note is that you get richer tracebacks when something goes wrong inside of an fstring because of the new added functionality in the parser all right everybody thank you so much for watching hope to see you again in the next one",
+  "fetchedAt": "2026-03-14T09:23:53.708Z"
+}

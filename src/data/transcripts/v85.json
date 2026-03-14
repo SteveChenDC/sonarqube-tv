@@ -1,0 +1,768 @@
+{
+  "videoId": "v85",
+  "youtubeId": "Ublfbijaqw4",
+  "segments": [
+    {
+      "text": "Now, we're going to take a look at the",
+      "offset": 80,
+      "duration": 3280
+    },
+    {
+      "text": "actual product. So, what you're seeing",
+      "offset": 1520,
+      "duration": 4000
+    },
+    {
+      "text": "here is the summary of the main branch",
+      "offset": 3360,
+      "duration": 4080
+    },
+    {
+      "text": "view with some details about the last",
+      "offset": 5520,
+      "duration": 5199
+    },
+    {
+      "text": "analysis that we ran. Um, there are 26",
+      "offset": 7440,
+      "duration": 5279
+    },
+    {
+      "text": "dependency risks that have shown up. So,",
+      "offset": 10719,
+      "duration": 5841
+    },
+    {
+      "text": "I'll go ahead and click into this view.",
+      "offset": 12719,
+      "duration": 5921
+    },
+    {
+      "text": "This is showing me everything that we",
+      "offset": 16560,
+      "duration": 3360
+    },
+    {
+      "text": "would expect to be out in production",
+      "offset": 18640,
+      "duration": 3280
+    },
+    {
+      "text": "right now. It's on the main branch. Um,",
+      "offset": 19920,
+      "duration": 4160
+    },
+    {
+      "text": "but what you can do here is instrument",
+      "offset": 21920,
+      "duration": 4400
+    },
+    {
+      "text": "quality gates to only show your",
+      "offset": 24080,
+      "duration": 5119
+    },
+    {
+      "text": "developers newly introduced risks. um or",
+      "offset": 26320,
+      "duration": 5919
+    },
+    {
+      "text": "you can elect to take that holistic view",
+      "offset": 29199,
+      "duration": 5441
+    },
+    {
+      "text": "um for your main branch or for any",
+      "offset": 32239,
+      "duration": 4721
+    },
+    {
+      "text": "branch. So the risk types that we have",
+      "offset": 34640,
+      "duration": 4400
+    },
+    {
+      "text": "here are vulnerabilities and prohibited",
+      "offset": 36960,
+      "duration": 5599
+    },
+    {
+      "text": "licenses. Um you can filter uh sort by",
+      "offset": 39040,
+      "duration": 6240
+    },
+    {
+      "text": "these types of views and you can also",
+      "offset": 42559,
+      "duration": 6320
+    },
+    {
+      "text": "use risk severity as a way to understand",
+      "offset": 45280,
+      "duration": 7279
+    },
+    {
+      "text": "quickly what's going on in your project.",
+      "offset": 48879,
+      "duration": 5360
+    },
+    {
+      "text": "Um so we're going to go ahead and take a",
+      "offset": 52559,
+      "duration": 4480
+    },
+    {
+      "text": "look at a specific um vulnerability",
+      "offset": 54239,
+      "duration": 5521
+    },
+    {
+      "text": "here.",
+      "offset": 57039,
+      "duration": 2721
+    },
+    {
+      "text": "Um, so this is an example of one of our",
+      "offset": 60480,
+      "duration": 5280
+    },
+    {
+      "text": "risks and what we're showing is the",
+      "offset": 63280,
+      "duration": 5120
+    },
+    {
+      "text": "description of the risk itself. Um,",
+      "offset": 65760,
+      "duration": 5120
+    },
+    {
+      "text": "we're giving the developer steps to take",
+      "offset": 68400,
+      "duration": 5039
+    },
+    {
+      "text": "to fix this risk, letting them know the",
+      "offset": 70880,
+      "duration": 3840
+    },
+    {
+      "text": "particular version that they're on",
+      "offset": 73439,
+      "duration": 4081
+    },
+    {
+      "text": "today. Um, where some partial fixes are",
+      "offset": 74720,
+      "duration": 4960
+    },
+    {
+      "text": "available as they move up um, in this",
+      "offset": 77520,
+      "duration": 5200
+    },
+    {
+      "text": "case along minor releases and that the",
+      "offset": 79680,
+      "duration": 4880
+    },
+    {
+      "text": "complete fix is looks like about seven",
+      "offset": 82720,
+      "duration": 4160
+    },
+    {
+      "text": "minor releases away.",
+      "offset": 84560,
+      "duration": 4559
+    },
+    {
+      "text": "Um this is a direct package so there's",
+      "offset": 86880,
+      "duration": 4879
+    },
+    {
+      "text": "no um dependency tree for how this is",
+      "offset": 89119,
+      "duration": 5121
+    },
+    {
+      "text": "coming in. Um but were there would there",
+      "offset": 91759,
+      "duration": 4000
+    },
+    {
+      "text": "be one you could click through here and",
+      "offset": 94240,
+      "duration": 4000
+    },
+    {
+      "text": "see that um and then you can also do the",
+      "offset": 95759,
+      "duration": 4481
+    },
+    {
+      "text": "same practice of changing the status",
+      "offset": 98240,
+      "duration": 4239
+    },
+    {
+      "text": "that we see on other kinds of code",
+      "offset": 100240,
+      "duration": 4800
+    },
+    {
+      "text": "quality issues or static analysis issues",
+      "offset": 102479,
+      "duration": 6081
+    },
+    {
+      "text": "in sonar Q. So developers can change the",
+      "offset": 105040,
+      "duration": 6160
+    },
+    {
+      "text": "status here. Um they may have specific",
+      "offset": 108560,
+      "duration": 5360
+    },
+    {
+      "text": "context to the project where they're",
+      "offset": 111200,
+      "duration": 4959
+    },
+    {
+      "text": "determining that there's no risk posed.",
+      "offset": 113920,
+      "duration": 4000
+    },
+    {
+      "text": "um they may accept it but know that they",
+      "offset": 116159,
+      "duration": 4161
+    },
+    {
+      "text": "won't be able to make a change soon. Um",
+      "offset": 117920,
+      "duration": 4799
+    },
+    {
+      "text": "or it may be that this is confirmed and",
+      "offset": 120320,
+      "duration": 4640
+    },
+    {
+      "text": "the intent there is to prioritize this",
+      "offset": 122719,
+      "duration": 4080
+    },
+    {
+      "text": "work quickly",
+      "offset": 124960,
+      "duration": 3439
+    },
+    {
+      "text": "regardless of what the decision is. The",
+      "offset": 126799,
+      "duration": 3041
+    },
+    {
+      "text": "developer can leave a note here",
+      "offset": 128399,
+      "duration": 3761
+    },
+    {
+      "text": "explaining um what what the note is",
+      "offset": 129840,
+      "duration": 3840
+    },
+    {
+      "text": "about and this creates better",
+      "offset": 132160,
+      "duration": 3760
+    },
+    {
+      "text": "auditability across your organization",
+      "offset": 133680,
+      "duration": 4400
+    },
+    {
+      "text": "for what's going on at any given point",
+      "offset": 135920,
+      "duration": 5399
+    },
+    {
+      "text": "in time.",
+      "offset": 138080,
+      "duration": 3239
+    },
+    {
+      "text": "One more thing I want to call out here.",
+      "offset": 142720,
+      "duration": 5040
+    },
+    {
+      "text": "Um this is actually an example of a",
+      "offset": 144879,
+      "duration": 5521
+    },
+    {
+      "text": "package where we have a um contractual",
+      "offset": 147760,
+      "duration": 4080
+    },
+    {
+      "text": "relationship in place with the",
+      "offset": 150400,
+      "duration": 4000
+    },
+    {
+      "text": "maintainer behind the package. And so in",
+      "offset": 151840,
+      "duration": 5119
+    },
+    {
+      "text": "this instance um there is a deeper uh",
+      "offset": 154400,
+      "duration": 5040
+    },
+    {
+      "text": "sort of post-mortem review on the CVE",
+      "offset": 156959,
+      "duration": 5920
+    },
+    {
+      "text": "that the maintainer contributes. Um it",
+      "offset": 159440,
+      "duration": 5200
+    },
+    {
+      "text": "will have additional information about",
+      "offset": 162879,
+      "duration": 4481
+    },
+    {
+      "text": "any potential workarounds. um anytime",
+      "offset": 164640,
+      "duration": 4400
+    },
+    {
+      "text": "there's a false positive, they'll call",
+      "offset": 167360,
+      "duration": 3599
+    },
+    {
+      "text": "that out and and the reasons behind",
+      "offset": 169040,
+      "duration": 4559
+    },
+    {
+      "text": "that. Um so it's just more kind of",
+      "offset": 170959,
+      "duration": 4801
+    },
+    {
+      "text": "context information from the person who",
+      "offset": 173599,
+      "duration": 4241
+    },
+    {
+      "text": "actually wrote the software in this",
+      "offset": 175760,
+      "duration": 5600
+    },
+    {
+      "text": "dependency that helps developers um take",
+      "offset": 177840,
+      "duration": 6000
+    },
+    {
+      "text": "action more quickly or more",
+      "offset": 181360,
+      "duration": 7360
+    },
+    {
+      "text": "strategically in a more informed manner.",
+      "offset": 183840,
+      "duration": 6399
+    },
+    {
+      "text": "I'm going to go back to my dependency",
+      "offset": 188720,
+      "duration": 3519
+    },
+    {
+      "text": "list here",
+      "offset": 190239,
+      "duration": 4241
+    },
+    {
+      "text": "um and take off this filter. Let's take",
+      "offset": 192239,
+      "duration": 5121
+    },
+    {
+      "text": "a look at a prohibited license one. So,",
+      "offset": 194480,
+      "duration": 5039
+    },
+    {
+      "text": "in this case, we've got a license that",
+      "offset": 197360,
+      "duration": 4640
+    },
+    {
+      "text": "has an LGPL",
+      "offset": 199519,
+      "duration": 5041
+    },
+    {
+      "text": "um with an additional additional sort of",
+      "offset": 202000,
+      "duration": 5280
+    },
+    {
+      "text": "exception text on the on the SPDX",
+      "offset": 204560,
+      "duration": 5039
+    },
+    {
+      "text": "expression. Um so, this is currently",
+      "offset": 207280,
+      "duration": 5200
+    },
+    {
+      "text": "prohibited by my licensing profile. Um",
+      "offset": 209599,
+      "duration": 5841
+    },
+    {
+      "text": "so again very helpful for developers to",
+      "offset": 212480,
+      "duration": 5600
+    },
+    {
+      "text": "see this um in the workflows they're",
+      "offset": 215440,
+      "duration": 5600
+    },
+    {
+      "text": "already using for code quality for code",
+      "offset": 218080,
+      "duration": 5840
+    },
+    {
+      "text": "security issues um and not have to",
+      "offset": 221040,
+      "duration": 6240
+    },
+    {
+      "text": "juggle different tooling.",
+      "offset": 223920,
+      "duration": 5760
+    },
+    {
+      "text": "Um we're also providing the software",
+      "offset": 227280,
+      "duration": 5599
+    },
+    {
+      "text": "bill of materials so you can search for",
+      "offset": 229680,
+      "duration": 6000
+    },
+    {
+      "text": "a particular dependency name. Um you can",
+      "offset": 232879,
+      "duration": 6000
+    },
+    {
+      "text": "also export a machine readable format of",
+      "offset": 235680,
+      "duration": 5440
+    },
+    {
+      "text": "your full dependency list. And there's a",
+      "offset": 238879,
+      "duration": 4801
+    },
+    {
+      "text": "couple of different filtering uh options",
+      "offset": 241120,
+      "duration": 6720
+    },
+    {
+      "text": "available here as well. Um",
+      "offset": 243680,
+      "duration": 6720
+    },
+    {
+      "text": "I also wanted to quickly show that you",
+      "offset": 247840,
+      "duration": 7119
+    },
+    {
+      "text": "can configure quality gates um based on",
+      "offset": 250400,
+      "duration": 8160
+    },
+    {
+      "text": "your dependency risks.",
+      "offset": 254959,
+      "duration": 6481
+    },
+    {
+      "text": "So to do that I will create my gate and",
+      "offset": 258560,
+      "duration": 6840
+    },
+    {
+      "text": "then I will add a condition",
+      "offset": 261440,
+      "duration": 3960
+    },
+    {
+      "text": "and I might want to say um I do want to",
+      "offset": 267040,
+      "duration": 8480
+    },
+    {
+      "text": "fail a gate on new code anytime um a",
+      "offset": 271919,
+      "duration": 5921
+    },
+    {
+      "text": "vulnerability comes in that's a high or",
+      "offset": 275520,
+      "duration": 4800
+    },
+    {
+      "text": "greater. Um so this is a condition that",
+      "offset": 277840,
+      "duration": 6799
+    },
+    {
+      "text": "I add and now um this will be applied to",
+      "offset": 280320,
+      "duration": 5920
+    },
+    {
+      "text": "any project that falls under this",
+      "offset": 284639,
+      "duration": 5120
+    },
+    {
+      "text": "quality gate licensing profiles a little",
+      "offset": 286240,
+      "duration": 5600
+    },
+    {
+      "text": "bit more of a specialized version or",
+      "offset": 289759,
+      "duration": 4961
+    },
+    {
+      "text": "specialized configuration. So again I",
+      "offset": 291840,
+      "duration": 7160
+    },
+    {
+      "text": "can create this here.",
+      "offset": 294720,
+      "duration": 4280
+    },
+    {
+      "text": "I can go in and manage um licenses and I",
+      "offset": 300639,
+      "duration": 6161
+    },
+    {
+      "text": "can go in one by one and say my policy",
+      "offset": 304560,
+      "duration": 4880
+    },
+    {
+      "text": "allows or prohibits this or I can use",
+      "offset": 306800,
+      "duration": 5520
+    },
+    {
+      "text": "some of our starter templates that give",
+      "offset": 309440,
+      "duration": 4800
+    },
+    {
+      "text": "me a quick way to say we're going to",
+      "offset": 312320,
+      "duration": 4960
+    },
+    {
+      "text": "allow um permissive licenses as an",
+      "offset": 314240,
+      "duration": 5280
+    },
+    {
+      "text": "example and maybe we're okay with weak",
+      "offset": 317280,
+      "duration": 5560
+    },
+    {
+      "text": "copy lift.",
+      "offset": 319520,
+      "duration": 3320
+    },
+    {
+      "text": "And a really great feature of this is",
+      "offset": 322960,
+      "duration": 3600
+    },
+    {
+      "text": "you can actually apply this to a",
+      "offset": 324479,
+      "duration": 4481
+    },
+    {
+      "text": "specific subset of projects if you want.",
+      "offset": 326560,
+      "duration": 3600
+    },
+    {
+      "text": "So, if you've got something that's more",
+      "offset": 328960,
+      "duration": 3120
+    },
+    {
+      "text": "of an internal application, you're not",
+      "offset": 330160,
+      "duration": 3520
+    },
+    {
+      "text": "necessarily worried about open source",
+      "offset": 332080,
+      "duration": 4240
+    },
+    {
+      "text": "licensing. Um, you can choose to leave",
+      "offset": 333680,
+      "duration": 5680
+    },
+    {
+      "text": "that out of a more strict policy. Um, if",
+      "offset": 336320,
+      "duration": 4319
+    },
+    {
+      "text": "you're doing mobile application",
+      "offset": 339360,
+      "duration": 3119
+    },
+    {
+      "text": "development or you have something that's",
+      "offset": 340639,
+      "duration": 3601
+    },
+    {
+      "text": "distributed application, that's where",
+      "offset": 342479,
+      "duration": 2560
+    },
+    {
+      "text": "you're going to want to be more",
+      "offset": 344240,
+      "duration": 4239
+    },
+    {
+      "text": "sensitive to um licensing uh",
+      "offset": 345039,
+      "duration": 5361
+    },
+    {
+      "text": "configuration and licensing compliance",
+      "offset": 348479,
+      "duration": 4241
+    },
+    {
+      "text": "enforcement. Um, so it's nice to have",
+      "offset": 350400,
+      "duration": 4799
+    },
+    {
+      "text": "that that option. And you can create um",
+      "offset": 352720,
+      "duration": 4240
+    },
+    {
+      "text": "multiple flavors of this as well, which",
+      "offset": 355199,
+      "duration": 4801
+    },
+    {
+      "text": "is also helpful if you are in a moment",
+      "offset": 356960,
+      "duration": 5120
+    },
+    {
+      "text": "where you want to take a graduated",
+      "offset": 360000,
+      "duration": 3600
+    },
+    {
+      "text": "approach to rolling this out to your",
+      "offset": 362080,
+      "duration": 4399
+    },
+    {
+      "text": "developers. Um you know, if you have",
+      "offset": 363600,
+      "duration": 4560
+    },
+    {
+      "text": "never dealt with open source licensing",
+      "offset": 366479,
+      "duration": 4160
+    },
+    {
+      "text": "before, you may want to start with sort",
+      "offset": 368160,
+      "duration": 4720
+    },
+    {
+      "text": "of the more most egregious types of",
+      "offset": 370639,
+      "duration": 5601
+    },
+    {
+      "text": "licensing um license violations that",
+      "offset": 372880,
+      "duration": 6960
+    },
+    {
+      "text": "could happen and go from there.",
+      "offset": 376240,
+      "duration": 5920
+    },
+    {
+      "text": "Um so this is just a quick overview.",
+      "offset": 379840,
+      "duration": 4960
+    },
+    {
+      "text": "really hope that folks are connecting",
+      "offset": 382160,
+      "duration": 4720
+    },
+    {
+      "text": "with us online and letting us know what",
+      "offset": 384800,
+      "duration": 4480
+    },
+    {
+      "text": "you think.",
+      "offset": 386880,
+      "duration": 2400
+    }
+  ],
+  "fullText": "Now, we're going to take a look at the actual product. So, what you're seeing here is the summary of the main branch view with some details about the last analysis that we ran. Um, there are 26 dependency risks that have shown up. So, I'll go ahead and click into this view. This is showing me everything that we would expect to be out in production right now. It's on the main branch. Um, but what you can do here is instrument quality gates to only show your developers newly introduced risks. um or you can elect to take that holistic view um for your main branch or for any branch. So the risk types that we have here are vulnerabilities and prohibited licenses. Um you can filter uh sort by these types of views and you can also use risk severity as a way to understand quickly what's going on in your project. Um so we're going to go ahead and take a look at a specific um vulnerability here. Um, so this is an example of one of our risks and what we're showing is the description of the risk itself. Um, we're giving the developer steps to take to fix this risk, letting them know the particular version that they're on today. Um, where some partial fixes are available as they move up um, in this case along minor releases and that the complete fix is looks like about seven minor releases away. Um this is a direct package so there's no um dependency tree for how this is coming in. Um but were there would there be one you could click through here and see that um and then you can also do the same practice of changing the status that we see on other kinds of code quality issues or static analysis issues in sonar Q. So developers can change the status here. Um they may have specific context to the project where they're determining that there's no risk posed. um they may accept it but know that they won't be able to make a change soon. Um or it may be that this is confirmed and the intent there is to prioritize this work quickly regardless of what the decision is. The developer can leave a note here explaining um what what the note is about and this creates better auditability across your organization for what's going on at any given point in time. One more thing I want to call out here. Um this is actually an example of a package where we have a um contractual relationship in place with the maintainer behind the package. And so in this instance um there is a deeper uh sort of post-mortem review on the CVE that the maintainer contributes. Um it will have additional information about any potential workarounds. um anytime there's a false positive, they'll call that out and and the reasons behind that. Um so it's just more kind of context information from the person who actually wrote the software in this dependency that helps developers um take action more quickly or more strategically in a more informed manner. I'm going to go back to my dependency list here um and take off this filter. Let's take a look at a prohibited license one. So, in this case, we've got a license that has an LGPL um with an additional additional sort of exception text on the on the SPDX expression. Um so, this is currently prohibited by my licensing profile. Um so again very helpful for developers to see this um in the workflows they're already using for code quality for code security issues um and not have to juggle different tooling. Um we're also providing the software bill of materials so you can search for a particular dependency name. Um you can also export a machine readable format of your full dependency list. And there's a couple of different filtering uh options available here as well. Um I also wanted to quickly show that you can configure quality gates um based on your dependency risks. So to do that I will create my gate and then I will add a condition and I might want to say um I do want to fail a gate on new code anytime um a vulnerability comes in that's a high or greater. Um so this is a condition that I add and now um this will be applied to any project that falls under this quality gate licensing profiles a little bit more of a specialized version or specialized configuration. So again I can create this here. I can go in and manage um licenses and I can go in one by one and say my policy allows or prohibits this or I can use some of our starter templates that give me a quick way to say we're going to allow um permissive licenses as an example and maybe we're okay with weak copy lift. And a really great feature of this is you can actually apply this to a specific subset of projects if you want. So, if you've got something that's more of an internal application, you're not necessarily worried about open source licensing. Um, you can choose to leave that out of a more strict policy. Um, if you're doing mobile application development or you have something that's distributed application, that's where you're going to want to be more sensitive to um licensing uh configuration and licensing compliance enforcement. Um, so it's nice to have that that option. And you can create um multiple flavors of this as well, which is also helpful if you are in a moment where you want to take a graduated approach to rolling this out to your developers. Um you know, if you have never dealt with open source licensing before, you may want to start with sort of the more most egregious types of licensing um license violations that could happen and go from there. Um so this is just a quick overview. really hope that folks are connecting with us online and letting us know what you think.",
+  "fetchedAt": "2026-03-14T09:22:47.863Z"
+}

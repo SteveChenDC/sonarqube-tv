@@ -1,0 +1,388 @@
+{
+  "videoId": "v43",
+  "youtubeId": "YqwHYJjtXcM",
+  "segments": [
+    {
+      "text": "Hi everyone, I'm Segev, senior product manager at JFrog.",
+      "offset": 18500,
+      "duration": 5000
+    },
+    {
+      "text": "Today we all see how fast AI is moving and the speed it is bringing to our pipelines.",
+      "offset": 23500,
+      "duration": 5000
+    },
+    {
+      "text": "But we also feel the pressure—the pressure of how to keep our trust when the amount of code is just exploding.",
+      "offset": 28500,
+      "duration": 7000
+    },
+    {
+      "text": "Well, today I'm going to show you the answer. We will see how integrating SonarQube directly into the JFrog platform",
+      "offset": 35500,
+      "duration": 8000
+    },
+    {
+      "text": "lets you keep that high speed without losing control. Let's dive in.",
+      "offset": 43500,
+      "duration": 6000
+    },
+    {
+      "text": "So, let's be honest about where we are right now. On one hand, it's a huge success story. We have got AI agents.",
+      "offset": 49500,
+      "duration": 8000
+    },
+    {
+      "text": "We got coding assistants and we are writing code at a speed we couldn't even imagine five years ago. It's amazing.",
+      "offset": 57500,
+      "duration": 8000
+    },
+    {
+      "text": "But this success has created what I call a \"tsunami of code.\" And the reality is the old ways of doing things—",
+      "offset": 65500,
+      "duration": 9000
+    },
+    {
+      "text": "the manual code reviews, the spreadsheets, and checking the box before the release—they are dead.",
+      "offset": 74500,
+      "duration": 7000
+    },
+    {
+      "text": "They just can't keep up with the volume of code that AI is pushing out.",
+      "offset": 81500,
+      "duration": 7000
+    },
+    {
+      "text": "Basically, our velocity is moving way faster than our ability to govern it.",
+      "offset": 88500,
+      "duration": 8000
+    },
+    {
+      "text": "Right now, we are standing in the middle of a collision. It's a crash between three major forces.",
+      "offset": 96500,
+      "duration": 6000
+    },
+    {
+      "text": "First, velocity. We are seeing 10 times the code volume. And honestly, this just breaks traditional delivery pipelines.",
+      "offset": 102500,
+      "duration": 7000
+    },
+    {
+      "text": "It can't hold it. Second, the attack surface.",
+      "offset": 109500,
+      "duration": 5000
+    },
+    {
+      "text": "Because we are moving so fast and using so many open source components and AI snippets, supply chain attacks have jumped by 300%.",
+      "offset": 114500,
+      "duration": 9000
+    },
+    {
+      "text": "And third, regulation. Governments are starting to notice.",
+      "offset": 123500,
+      "duration": 6000
+    },
+    {
+      "text": "New rules like the CRA in Europe mean that if you are not compliant, you are looking at huge fines.",
+      "offset": 129500,
+      "duration": 7000
+    },
+    {
+      "text": "But here's the kicker. Almost 80% of compliance issues are only found after deployment.",
+      "offset": 136500,
+      "duration": 7000
+    },
+    {
+      "text": "Think about it. That means we are shipping risk and then spending our weekends trying to fix it.",
+      "offset": 143500,
+      "duration": 6000
+    },
+    {
+      "text": "So what does all of this mean? It creates what I call the velocity bottleneck. And it happens for two main reasons.",
+      "offset": 149500,
+      "duration": 7000
+    },
+    {
+      "text": "First, the context gap. Think about it. You have millions of artifacts and binaries sitting in your repositories",
+      "offset": 156500,
+      "duration": 8000
+    },
+    {
+      "text": "but you usually don't have context.",
+      "offset": 164500,
+      "duration": 4000
+    },
+    {
+      "text": "Let me ask you a question: if a vulnerability hits right now, do you know exactly which business application owns that binary?",
+      "offset": 168500,
+      "duration": 8000
+    },
+    {
+      "text": "For most of us the answer is a big no. And second, manual evidence.",
+      "offset": 176500,
+      "duration": 8000
+    },
+    {
+      "text": "We are wasting so much engineering talent just digging through logs, taking screenshots of scans, and filling our spreadsheets.",
+      "offset": 184500,
+      "duration": 9000
+    },
+    {
+      "text": "All that work just to prove we are safe. In fact, almost half of all CISOs say it is their number one challenge",
+      "offset": 193500,
+      "duration": 9000
+    },
+    {
+      "text": "when they try to implement a new security framework.",
+      "offset": 202500,
+      "duration": 5000
+    },
+    {
+      "text": "So what do we do about it? Well, it's time to shift our thinking.",
+      "offset": 207500,
+      "duration": 9000
+    },
+    {
+      "text": "We need to move away from those old manual ways and move toward something we call DevSecOps.",
+      "offset": 216500,
+      "duration": 8000
+    },
+    {
+      "text": "Basically, we are bringing governance directly into the DevOps process. The old way was disconnected.",
+      "offset": 224500,
+      "duration": 8000
+    },
+    {
+      "text": "You had a security tool over there, a quality tool over here, and a deployment tool somewhere else.",
+      "offset": 232500,
+      "duration": 7000
+    },
+    {
+      "text": "You had to manually stitch them all together like a puzzle. But the new way is continuous.",
+      "offset": 239500,
+      "duration": 7000
+    },
+    {
+      "text": "We want to bind what we call immutable evidence directly to the application.",
+      "offset": 246500,
+      "duration": 9000
+    },
+    {
+      "text": "Think of it like a digital seal, a real proof of quality and security that stays with the code.",
+      "offset": 255500,
+      "duration": 8000
+    },
+    {
+      "text": "By enforcing this integrity automatically, you finally get what we call a trusted release.",
+      "offset": 263500,
+      "duration": 8000
+    },
+    {
+      "text": "And this is exactly why we built JFrog AppTrust. It's built on three main pillars.",
+      "offset": 271500,
+      "duration": 6000
+    },
+    {
+      "text": "First, application context. We group everything into what we call an application entity.",
+      "offset": 277500,
+      "duration": 7000
+    },
+    {
+      "text": "Second, integrated evidence. This is where our partnership with Sonar is so critical.",
+      "offset": 284500,
+      "duration": 7000
+    },
+    {
+      "text": "We automatically take the results from your SonarQube and attach them directly to the binary.",
+      "offset": 291500,
+      "duration": 7000
+    },
+    {
+      "text": "It's like a tamper-proof seal that proves your code is clean and safe. And third, active enforcement.",
+      "offset": 298500,
+      "duration": 9000
+    },
+    {
+      "text": "We trigger automated policy gates. If the Sonar evidence is missing or if the quality gates failed,",
+      "offset": 307500,
+      "duration": 7000
+    },
+    {
+      "text": "AppTrust will physically block that release from moving to production. No more manual checks.",
+      "offset": 314500,
+      "duration": 7000
+    },
+    {
+      "text": "But look, I know you prefer proof over promises. So let's jump straight into the platform.",
+      "offset": 321500,
+      "duration": 8000
+    },
+    {
+      "text": "I want to show you exactly how this works in a real-life pipeline. Let's take a look.",
+      "offset": 329500,
+      "duration": 7000
+    },
+    {
+      "text": "So, welcome to the JFrog platform. Right now, we are looking at the application page.",
+      "offset": 336500,
+      "duration": 7000
+    },
+    {
+      "text": "Here we can see the applications in my project. In a large organization, it's easy to get lost in the noise.",
+      "offset": 343500,
+      "duration": 6000
+    },
+    {
+      "text": "But here we provide a clean high-level view. We are looking at business applications.",
+      "offset": 349500,
+      "duration": 8000
+    },
+    {
+      "text": "Let's take a look at the BTC wallet. This is the engine room of AppTrust, the lifecycle page.",
+      "offset": 357500,
+      "duration": 8000
+    },
+    {
+      "text": "You can see the different stages: development, QA, staging, and finally production.",
+      "offset": 365500,
+      "duration": 7000
+    },
+    {
+      "text": "Think of each box as a specific version of our application trying to reach the finish line.",
+      "offset": 372500,
+      "duration": 9000
+    },
+    {
+      "text": "In a traditional setup, moving a version between these stages is usually a mess—it's risky and slow.",
+      "offset": 381500,
+      "duration": 7000
+    },
+    {
+      "text": "But here it's a fully governed process. Every version has to get a green light from our automated gates.",
+      "offset": 388500,
+      "duration": 8000
+    },
+    {
+      "text": "This ensures that only trusted code ever reaches your customers.",
+      "offset": 396500,
+      "duration": 19000
+    },
+    {
+      "text": "In the release gate, we have an SBOM check, an exposure check, and a custom policy for SonarQube coverage.",
+      "offset": 415500,
+      "duration": 11000
+    },
+    {
+      "text": "It means any version trying to reach the release candidate stage must pass all of these policies.",
+      "offset": 426500,
+      "duration": 8000
+    },
+    {
+      "text": "And this part is critical. We are looking for signed evidence that proves the specific artifact passed the SonarQube quality gate.",
+      "offset": 434500,
+      "duration": 8000
+    },
+    {
+      "text": "AppTrust lets you write these custom policies using Rego, so you can codify your company-specific requirements.",
+      "offset": 442500,
+      "duration": 11000
+    },
+    {
+      "text": "All right, I have a version here, version 13. Let's take a closer look at the metadata.",
+      "offset": 453500,
+      "duration": 11000
+    },
+    {
+      "text": "It's the full ID card of the version. Next, look at the timeline. This is a complete automated audit trail.",
+      "offset": 464500,
+      "duration": 9000
+    },
+    {
+      "text": "Every attempt to release this version is logged with a timestamp. Now let's look at the content.",
+      "offset": 473500,
+      "duration": 10000
+    },
+    {
+      "text": "We see the actual releasable artifact and the SBOM. It shows every package type, version, and license.",
+      "offset": 483500,
+      "duration": 11000
+    },
+    {
+      "text": "The content graph shows us the attestations. We see the SBOM is attached, but look at the evidence list.",
+      "offset": 494500,
+      "duration": 12000
+    },
+    {
+      "text": "We are missing the SonarQube scan. The developer rushed this and we have no proof of quality.",
+      "offset": 506500,
+      "duration": 8000
+    },
+    {
+      "text": "I'm going to try and promote this anyway. And it failed.",
+      "offset": 514500,
+      "duration": 10000
+    },
+    {
+      "text": "The platform physically blocks the release because it doesn't meet our standards.",
+      "offset": 524500,
+      "duration": 8000
+    },
+    {
+      "text": "Okay, let's do it the right way. Here is our fixed version, 1.3.6.",
+      "offset": 532500,
+      "duration": 11000
+    },
+    {
+      "text": "The developer ran the full pipeline, the SonarQube scan finished successfully, and evidence was uploaded to AppTrust.",
+      "offset": 543500,
+      "duration": 11000
+    },
+    {
+      "text": "Now, let's try to promote this version to production. Success.",
+      "offset": 554500,
+      "duration": 9000
+    },
+    {
+      "text": "Because we followed the rules and provided the evidence, this artifact is now officially a trusted release.",
+      "offset": 563500,
+      "duration": 10000
+    },
+    {
+      "text": "We proved this version is safe, high quality, and compliant without manual reports.",
+      "offset": 573500,
+      "duration": 11000
+    },
+    {
+      "text": "JFrog handled the governance, so the developers can just keep on coding.",
+      "offset": 584500,
+      "duration": 11000
+    },
+    {
+      "text": "We saw lifecycle management, immutable evidence, and a policy engine.",
+      "offset": 595500,
+      "duration": 11000
+    },
+    {
+      "text": "By using SonarQube as automated evidence, we stop the manual chase for screenshots.",
+      "offset": 606500,
+      "duration": 9000
+    },
+    {
+      "text": "We are getting rid of all that audit overhead. We turn complex regulations into simple policy as code.",
+      "offset": 615500,
+      "duration": 10000
+    },
+    {
+      "text": "Your developers know the rules up front. It prevents bad merges and lowers failed build rates.",
+      "offset": 625500,
+      "duration": 10000
+    },
+    {
+      "text": "You can learn more at the JFrog website. Thank you for your time and enjoy the rest of the summit.",
+      "offset": 635500,
+      "duration": 69500
+    }
+  ],
+  "fullText": "Hi everyone, I'm Segev, senior product manager at JFrog. Today we all see how fast AI is moving and the speed it is bringing to our pipelines. But we also feel the pressure—the pressure of how to keep our trust when the amount of code is just exploding. Well, today I'm going to show you the answer. We will see how integrating SonarQube directly into the JFrog platform lets you keep that high speed without losing control. Let's dive in. So, let's be honest about where we are right now. On one hand, it's a huge success story. We have got AI agents. We got coding assistants and we are writing code at a speed we couldn't even imagine five years ago. It's amazing. But this success has created what I call a \"tsunami of code.\" And the reality is the old ways of doing things— the manual code reviews, the spreadsheets, and checking the box before the release—they are dead. They just can't keep up with the volume of code that AI is pushing out. Basically, our velocity is moving way faster than our ability to govern it. Right now, we are standing in the middle of a collision. It's a crash between three major forces. First, velocity. We are seeing 10 times the code volume. And honestly, this just breaks traditional delivery pipelines. It can't hold it. Second, the attack surface. Because we are moving so fast and using so many open source components and AI snippets, supply chain attacks have jumped by 300%. And third, regulation. Governments are starting to notice. New rules like the CRA in Europe mean that if you are not compliant, you are looking at huge fines. But here's the kicker. Almost 80% of compliance issues are only found after deployment. Think about it. That means we are shipping risk and then spending our weekends trying to fix it. So what does all of this mean? It creates what I call the velocity bottleneck. And it happens for two main reasons. First, the context gap. Think about it. You have millions of artifacts and binaries sitting in your repositories but you usually don't have context. Let me ask you a question: if a vulnerability hits right now, do you know exactly which business application owns that binary? For most of us the answer is a big no. And second, manual evidence. We are wasting so much engineering talent just digging through logs, taking screenshots of scans, and filling our spreadsheets. All that work just to prove we are safe. In fact, almost half of all CISOs say it is their number one challenge when they try to implement a new security framework. So what do we do about it? Well, it's time to shift our thinking. We need to move away from those old manual ways and move toward something we call DevSecOps. Basically, we are bringing governance directly into the DevOps process. The old way was disconnected. You had a security tool over there, a quality tool over here, and a deployment tool somewhere else. You had to manually stitch them all together like a puzzle. But the new way is continuous. We want to bind what we call immutable evidence directly to the application. Think of it like a digital seal, a real proof of quality and security that stays with the code. By enforcing this integrity automatically, you finally get what we call a trusted release. And this is exactly why we built JFrog AppTrust. It's built on three main pillars. First, application context. We group everything into what we call an application entity. Second, integrated evidence. This is where our partnership with Sonar is so critical. We automatically take the results from your SonarQube and attach them directly to the binary. It's like a tamper-proof seal that proves your code is clean and safe. And third, active enforcement. We trigger automated policy gates. If the Sonar evidence is missing or if the quality gates failed, AppTrust will physically block that release from moving to production. No more manual checks. But look, I know you prefer proof over promises. So let's jump straight into the platform. I want to show you exactly how this works in a real-life pipeline. Let's take a look. So, welcome to the JFrog platform. Right now, we are looking at the application page. Here we can see the applications in my project. In a large organization, it's easy to get lost in the noise. But here we provide a clean high-level view. We are looking at business applications. Let's take a look at the BTC wallet. This is the engine room of AppTrust, the lifecycle page. You can see the different stages: development, QA, staging, and finally production. Think of each box as a specific version of our application trying to reach the finish line. In a traditional setup, moving a version between these stages is usually a mess—it's risky and slow. But here it's a fully governed process. Every version has to get a green light from our automated gates. This ensures that only trusted code ever reaches your customers. In the release gate, we have an SBOM check, an exposure check, and a custom policy for SonarQube coverage. It means any version trying to reach the release candidate stage must pass all of these policies. And this part is critical. We are looking for signed evidence that proves the specific artifact passed the SonarQube quality gate. AppTrust lets you write these custom policies using Rego, so you can codify your company-specific requirements. All right, I have a version here, version 13. Let's take a closer look at the metadata. It's the full ID card of the version. Next, look at the timeline. This is a complete automated audit trail. Every attempt to release this version is logged with a timestamp. Now let's look at the content. We see the actual releasable artifact and the SBOM. It shows every package type, version, and license. The content graph shows us the attestations. We see the SBOM is attached, but look at the evidence list. We are missing the SonarQube scan. The developer rushed this and we have no proof of quality. I'm going to try and promote this anyway. And it failed. The platform physically blocks the release because it doesn't meet our standards. Okay, let's do it the right way. Here is our fixed version, 1.3.6. The developer ran the full pipeline, the SonarQube scan finished successfully, and evidence was uploaded to AppTrust. Now, let's try to promote this version to production. Success. Because we followed the rules and provided the evidence, this artifact is now officially a trusted release. We proved this version is safe, high quality, and compliant without manual reports. JFrog handled the governance, so the developers can just keep on coding. We saw lifecycle management, immutable evidence, and a policy engine. By using SonarQube as automated evidence, we stop the manual chase for screenshots. We are getting rid of all that audit overhead. We turn complex regulations into simple policy as code. Your developers know the rules up front. It prevents bad merges and lowers failed build rates. You can learn more at the JFrog website. Thank you for your time and enjoy the rest of the summit.",
+  "fetchedAt": "2026-03-14T09:22:08.328Z"
+}

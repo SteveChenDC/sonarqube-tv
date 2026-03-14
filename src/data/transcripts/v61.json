@@ -1,0 +1,393 @@
+{
+  "videoId": "v61",
+  "youtubeId": "ZQ3rZFDLibc",
+  "segments": [
+    {
+      "text": "Hi, I'm Robert Curlee, technical product",
+      "offset": 0,
+      "duration": 3000
+    },
+    {
+      "text": "marketing manager here at Sonar. Today",
+      "offset": 3000,
+      "duration": 3000
+    },
+    {
+      "text": "I'm going to show you server",
+      "offset": 6000,
+      "duration": 2000
+    },
+    {
+      "text": "integration with Cursor using our MCP server.",
+      "offset": 8000,
+      "duration": 4000
+    },
+    {
+      "text": "Basically, I'm going to",
+      "offset": 12000,
+      "duration": 3000
+    },
+    {
+      "text": "take a look at this project and inspect",
+      "offset": 15000,
+      "duration": 3000
+    },
+    {
+      "text": "it within Cursor and show you how you",
+      "offset": 18000,
+      "duration": 3000
+    },
+    {
+      "text": "can do all the great things you do in",
+      "offset": 21000,
+      "duration": 2000
+    },
+    {
+      "text": "but within Cursor. But",
+      "offset": 23000,
+      "duration": 3000
+    },
+    {
+      "text": "first, I want to show you what we're",
+      "offset": 26000,
+      "duration": 2000
+    },
+    {
+      "text": "going to talk about. And I want to show",
+      "offset": 28000,
+      "duration": 2000
+    },
+    {
+      "text": "you this issue in this project. And you",
+      "offset": 30000,
+      "duration": 4000
+    },
+    {
+      "text": "can see that it's in an open state.",
+      "offset": 34000,
+      "duration": 2000
+    },
+    {
+      "text": "And I just wanted to show you before I",
+      "offset": 36000,
+      "duration": 2000
+    },
+    {
+      "text": "get into cursor what state it's in in",
+      "offset": 38000,
+      "duration": 2000
+    },
+    {
+      "text": "sonar. But now let's take a look at",
+      "offset": 40000,
+      "duration": 3000
+    },
+    {
+      "text": "cursor. So here's my MCP server. And you",
+      "offset": 43000,
+      "duration": 3000
+    },
+    {
+      "text": "can see that I've got 22 tools enabled.",
+      "offset": 46000,
+      "duration": 3000
+    },
+    {
+      "text": "These are cursor settings. And I'm going",
+      "offset": 49000,
+      "duration": 3000
+    },
+    {
+      "text": "to go over to this file and I'm going to",
+      "offset": 52000,
+      "duration": 3000
+    },
+    {
+      "text": "start asking cursor a few questions",
+      "offset": 55000,
+      "duration": 2000
+    },
+    {
+      "text": "about and I can use natural language. So",
+      "offset": 57000,
+      "duration": 2000
+    },
+    {
+      "text": "I'm going to ask it a few questions",
+      "offset": 59000,
+      "duration": 2000
+    },
+    {
+      "text": "about this project. So",
+      "offset": 61000,
+      "duration": 4000
+    },
+    {
+      "text": "show me the issues in this",
+      "offset": 65000,
+      "duration": 5000
+    },
+    {
+      "text": "file",
+      "offset": 70000,
+      "duration": 2000
+    },
+    {
+      "text": "from sonar.",
+      "offset": 72000,
+      "duration": 7000
+    },
+    {
+      "text": "Okay. Now it's",
+      "offset": 79000,
+      "duration": 2000
+    },
+    {
+      "text": "probing the MCP server to ask",
+      "offset": 81000,
+      "duration": 5000
+    },
+    {
+      "text": "what issues are in this file.",
+      "offset": 86000,
+      "duration": 14000
+    },
+    {
+      "text": "There it is. And there's the list of all",
+      "offset": 100000,
+      "duration": 2000
+    },
+    {
+      "text": "the issues in this file. And here's that",
+      "offset": 102000,
+      "duration": 2000
+    },
+    {
+      "text": "one I was talking about that added a",
+      "offset": 104000,
+      "duration": 2000
+    },
+    {
+      "text": "fault case to the switch. So we're going",
+      "offset": 106000,
+      "duration": 1000
+    },
+    {
+      "text": "to ask about that. So, I'm going to say",
+      "offset": 107000,
+      "duration": 4000
+    },
+    {
+      "text": "why issue",
+      "offset": 111000,
+      "duration": 6000
+    },
+    {
+      "text": "number three on line",
+      "offset": 117000,
+      "duration": 3000
+    },
+    {
+      "text": "87",
+      "offset": 120000,
+      "duration": 1000
+    },
+    {
+      "text": "an issue in sonar.",
+      "offset": 121000,
+      "duration": 8000
+    },
+    {
+      "text": "And again, it's going to start probing",
+      "offset": 129000,
+      "duration": 1000
+    },
+    {
+      "text": "sonar and looking up what it finds in",
+      "offset": 130000,
+      "duration": 3000
+    },
+    {
+      "text": "sonar. Why does it matter?",
+      "offset": 133000,
+      "duration": 6000
+    },
+    {
+      "text": "What to do about it?",
+      "offset": 139000,
+      "duration": 3000
+    },
+    {
+      "text": "And you know what? I don't think this is",
+      "offset": 142000,
+      "duration": 1000
+    },
+    {
+      "text": "really a problem to not have a default.",
+      "offset": 143000,
+      "duration": 3000
+    },
+    {
+      "text": "So I'm going to say",
+      "offset": 146000,
+      "duration": 3000
+    },
+    {
+      "text": "set the set issue",
+      "offset": 149000,
+      "duration": 5000
+    },
+    {
+      "text": "number three on line 87 to accepted",
+      "offset": 154000,
+      "duration": 9000
+    },
+    {
+      "text": "in sonar",
+      "offset": 163000,
+      "duration": 8000
+    },
+    {
+      "text": "again. It's going to start communicating",
+      "offset": 171000,
+      "duration": 2000
+    },
+    {
+      "text": "with the MCP server.",
+      "offset": 173000,
+      "duration": 3000
+    },
+    {
+      "text": "And",
+      "offset": 176000,
+      "duration": 3000
+    },
+    {
+      "text": "now it says it's accepted. I'm going to",
+      "offset": 179000,
+      "duration": 2000
+    },
+    {
+      "text": "flip back to my project and refresh the",
+      "offset": 181000,
+      "duration": 4000
+    },
+    {
+      "text": "page.",
+      "offset": 185000,
+      "duration": 4000
+    },
+    {
+      "text": "And you'll see now it flipped to",
+      "offset": 189000,
+      "duration": 1000
+    },
+    {
+      "text": "accepted state.",
+      "offset": 190000,
+      "duration": 3000
+    },
+    {
+      "text": "Before I go, I'm going to ask it one",
+      "offset": 193000,
+      "duration": 1000
+    },
+    {
+      "text": "more thing. What is the",
+      "offset": 194000,
+      "duration": 3000
+    },
+    {
+      "text": "quality",
+      "offset": 197000,
+      "duration": 2000
+    },
+    {
+      "text": "gate status",
+      "offset": 199000,
+      "duration": 3000
+    },
+    {
+      "text": "of this project",
+      "offset": 202000,
+      "duration": 11000
+    },
+    {
+      "text": "again? It's thinking about it, telling",
+      "offset": 213000,
+      "duration": 2000
+    },
+    {
+      "text": "me what it knows.",
+      "offset": 215000,
+      "duration": 5000
+    },
+    {
+      "text": "Oh, and it says it's failing. And it's",
+      "offset": 220000,
+      "duration": 2000
+    },
+    {
+      "text": "telling me why it's why it's failing.",
+      "offset": 222000,
+      "duration": 2000
+    },
+    {
+      "text": "and the reason the conditions of why",
+      "offset": 224000,
+      "duration": 2000
+    },
+    {
+      "text": "it's failing. So you can see here now I",
+      "offset": 226000,
+      "duration": 2000
+    },
+    {
+      "text": "can use natural language and cursor and",
+      "offset": 228000,
+      "duration": 4000
+    },
+    {
+      "text": "query my project and find out issues",
+      "offset": 232000,
+      "duration": 2000
+    },
+    {
+      "text": "with my project and interact with",
+      "offset": 234000,
+      "duration": 3000
+    },
+    {
+      "text": "all within cursor using natural",
+      "offset": 237000,
+      "duration": 3000
+    },
+    {
+      "text": "language. So this is a great example of",
+      "offset": 240000,
+      "duration": 3000
+    },
+    {
+      "text": "how we've been updating",
+      "offset": 243000,
+      "duration": 3000
+    },
+    {
+      "text": "server to work where developers work",
+      "offset": 246000,
+      "duration": 2000
+    },
+    {
+      "text": "using the new tools that developers are",
+      "offset": 248000,
+      "duration": 2000
+    },
+    {
+      "text": "using. Thanks and have a good day.",
+      "offset": 250000,
+      "duration": 5000
+    }
+  ],
+  "fullText": "Hi, I'm Robert Curlee, technical product marketing manager here at Sonar. Today I'm going to show you server integration with Cursor using our MCP server. Basically, I'm going to take a look at this project and inspect it within Cursor and show you how you can do all the great things you do in but within Cursor. But first, I want to show you what we're going to talk about. And I want to show you this issue in this project. And you can see that it's in an open state. And I just wanted to show you before I get into cursor what state it's in in sonar. But now let's take a look at cursor. So here's my MCP server. And you can see that I've got 22 tools enabled. These are cursor settings. And I'm going to go over to this file and I'm going to start asking cursor a few questions about and I can use natural language. So I'm going to ask it a few questions about this project. So show me the issues in this file from sonar. Okay. Now it's probing the MCP server to ask what issues are in this file. There it is. And there's the list of all the issues in this file. And here's that one I was talking about that added a fault case to the switch. So we're going to ask about that. So, I'm going to say why issue number three on line 87 an issue in sonar. And again, it's going to start probing sonar and looking up what it finds in sonar. Why does it matter? What to do about it? And you know what? I don't think this is really a problem to not have a default. So I'm going to say set the set issue number three on line 87 to accepted in sonar again. It's going to start communicating with the MCP server. And now it says it's accepted. I'm going to flip back to my project and refresh the page. And you'll see now it flipped to accepted state. Before I go, I'm going to ask it one more thing. What is the quality gate status of this project again? It's thinking about it, telling me what it knows. Oh, and it says it's failing. And it's telling me why it's why it's failing. and the reason the conditions of why it's failing. So you can see here now I can use natural language and cursor and query my project and find out issues with my project and interact with all within cursor using natural language. So this is a great example of how we've been updating server to work where developers work using the new tools that developers are using. Thanks and have a good day.",
+  "fetchedAt": "2026-03-14T09:22:21.129Z"
+}

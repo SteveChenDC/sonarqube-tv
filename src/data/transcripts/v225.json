@@ -1,0 +1,518 @@
+{
+  "videoId": "v225",
+  "youtubeId": "KaoI4jiySkQ",
+  "segments": [
+    {
+      "text": "hi thanks for joining I'm Clint Cameron",
+      "offset": 0,
+      "duration": 4770
+    },
+    {
+      "text": "and I am a product marketing manager for",
+      "offset": 2460,
+      "duration": 4799
+    },
+    {
+      "text": "sonar source and in this video I'm going",
+      "offset": 4770,
+      "duration": 4260
+    },
+    {
+      "text": "to demonstrate how sonar cube integrates",
+      "offset": 7259,
+      "duration": 3811
+    },
+    {
+      "text": "into your bitbucket workflow and how",
+      "offset": 9030,
+      "duration": 4140
+    },
+    {
+      "text": "that's valuable for your team developers",
+      "offset": 11070,
+      "duration": 3930
+    },
+    {
+      "text": "love to write better code and feedback",
+      "offset": 13170,
+      "duration": 3350
+    },
+    {
+      "text": "is an important part of that process",
+      "offset": 15000,
+      "duration": 3600
+    },
+    {
+      "text": "they ask for feedback from their",
+      "offset": 16520,
+      "duration": 3730
+    },
+    {
+      "text": "teammates to find problems and to",
+      "offset": 18600,
+      "duration": 3480
+    },
+    {
+      "text": "improve their code and of course they",
+      "offset": 20250,
+      "duration": 3750
+    },
+    {
+      "text": "want minimal distractions there's no",
+      "offset": 22080,
+      "duration": 3630
+    },
+    {
+      "text": "doubt developers spend a lot of time in",
+      "offset": 24000,
+      "duration": 4140
+    },
+    {
+      "text": "bitbucket and these pull requests and so",
+      "offset": 25710,
+      "duration": 5250
+    },
+    {
+      "text": "this is where we should add our value so",
+      "offset": 28140,
+      "duration": 4500
+    },
+    {
+      "text": "let's see first hand house on our cube",
+      "offset": 30960,
+      "duration": 3660
+    },
+    {
+      "text": "integrates with bitbucket and what it",
+      "offset": 32640,
+      "duration": 4290
+    },
+    {
+      "text": "does for your PRS this feature is",
+      "offset": 34620,
+      "duration": 3689
+    },
+    {
+      "text": "available starting with developer",
+      "offset": 36930,
+      "duration": 4080
+    },
+    {
+      "text": "edition and it's easy to request a free",
+      "offset": 38309,
+      "duration": 5011
+    },
+    {
+      "text": "trial online at sonarqube",
+      "offset": 41010,
+      "duration": 4680
+    },
+    {
+      "text": "org now before we see that live demo",
+      "offset": 43320,
+      "duration": 4559
+    },
+    {
+      "text": "let's take a quick look at a typical",
+      "offset": 45690,
+      "duration": 3000
+    },
+    {
+      "text": "workflow",
+      "offset": 47879,
+      "duration": 2691
+    },
+    {
+      "text": "it starts with sonar lint in your IDE",
+      "offset": 48690,
+      "duration": 5250
+    },
+    {
+      "text": "sonar lint is a free open-source add-in",
+      "offset": 50570,
+      "duration": 5950
+    },
+    {
+      "text": "that finds bugs vulnerabilities and code",
+      "offset": 53940,
+      "duration": 5310
+    },
+    {
+      "text": "smells as you write your code and it's",
+      "offset": 56520,
+      "duration": 6570
+    },
+    {
+      "text": "available for four popular ide s.vs code",
+      "offset": 59250,
+      "duration": 8430
+    },
+    {
+      "text": "Visual Studio Eclipse and IntelliJ ok so",
+      "offset": 63090,
+      "duration": 7020
+    },
+    {
+      "text": "now once we've finished writing our code",
+      "offset": 67680,
+      "duration": 4560
+    },
+    {
+      "text": "and we're ready to open that PR let's do",
+      "offset": 70110,
+      "duration": 2939
+    },
+    {
+      "text": "that in bitbucket",
+      "offset": 72240,
+      "duration": 2340
+    },
+    {
+      "text": "then we're going to go ahead and kick",
+      "offset": 73049,
+      "duration": 4171
+    },
+    {
+      "text": "off our CI systems and with that we can",
+      "offset": 74580,
+      "duration": 4950
+    },
+    {
+      "text": "automatically kick off a sonar cube",
+      "offset": 77220,
+      "duration": 4920
+    },
+    {
+      "text": "analysis and when that analysis is done",
+      "offset": 79530,
+      "duration": 4740
+    },
+    {
+      "text": "it's going to decorate right back into",
+      "offset": 82140,
+      "duration": 3890
+    },
+    {
+      "text": "the pull request with any issues found",
+      "offset": 84270,
+      "duration": 5459
+    },
+    {
+      "text": "ok let's see that demo here we have an",
+      "offset": 86030,
+      "duration": 5710
+    },
+    {
+      "text": "open pull request in bitbucket",
+      "offset": 89729,
+      "duration": 3780
+    },
+    {
+      "text": "and up in the right hand corner we can",
+      "offset": 91740,
+      "duration": 3750
+    },
+    {
+      "text": "see the Soner cube decoration and it",
+      "offset": 93509,
+      "duration": 4411
+    },
+    {
+      "text": "looks like we have a problem so let's",
+      "offset": 95490,
+      "duration": 3780
+    },
+    {
+      "text": "click on that to get some more",
+      "offset": 97920,
+      "duration": 4409
+    },
+    {
+      "text": "information and you can see that we have",
+      "offset": 99270,
+      "duration": 5340
+    },
+    {
+      "text": "a failed quality gate and a failed",
+      "offset": 102329,
+      "duration": 4711
+    },
+    {
+      "text": "quality gate is due to 0% security",
+      "offset": 104610,
+      "duration": 4890
+    },
+    {
+      "text": "hotspots reviewed for this particular",
+      "offset": 107040,
+      "duration": 3960
+    },
+    {
+      "text": "quality gate that we're using for this",
+      "offset": 109500,
+      "duration": 4770
+    },
+    {
+      "text": "demonstration we require 100% review of",
+      "offset": 111000,
+      "duration": 5340
+    },
+    {
+      "text": "security hotspots so there's some work",
+      "offset": 114270,
+      "duration": 5279
+    },
+    {
+      "text": "to do now that's easy to do we can drill",
+      "offset": 116340,
+      "duration": 5610
+    },
+    {
+      "text": "down into issues by clicking there and",
+      "offset": 119549,
+      "duration": 5911
+    },
+    {
+      "text": "opening up sonar cube and here we can",
+      "offset": 121950,
+      "duration": 5279
+    },
+    {
+      "text": "see the same code metrics and the same",
+      "offset": 125460,
+      "duration": 3120
+    },
+    {
+      "text": "issues that we saw in the pull request",
+      "offset": 127229,
+      "duration": 4131
+    },
+    {
+      "text": "and here's that pesky security hotspot",
+      "offset": 128580,
+      "duration": 5190
+    },
+    {
+      "text": "let's take a closer look",
+      "offset": 131360,
+      "duration": 3940
+    },
+    {
+      "text": "that's going to take us to our security",
+      "offset": 133770,
+      "duration": 5340
+    },
+    {
+      "text": "hotspots dedicated review page and here",
+      "offset": 135300,
+      "duration": 5220
+    },
+    {
+      "text": "we can see we have a potential",
+      "offset": 139110,
+      "duration": 5580
+    },
+    {
+      "text": "cross-site request forgery issue okay as",
+      "offset": 140520,
+      "duration": 6780
+    },
+    {
+      "text": "a developer I would then make that it I",
+      "offset": 144690,
+      "duration": 3810
+    },
+    {
+      "text": "would review the code and make a",
+      "offset": 147300,
+      "duration": 3060
+    },
+    {
+      "text": "determination as to whether or not this",
+      "offset": 148500,
+      "duration": 4440
+    },
+    {
+      "text": "was truly an issue now for this",
+      "offset": 150360,
+      "duration": 3900
+    },
+    {
+      "text": "demonstration we'll go ahead and Mark",
+      "offset": 152940,
+      "duration": 3570
+    },
+    {
+      "text": "that it's safe we'll change the status",
+      "offset": 154260,
+      "duration": 5940
+    },
+    {
+      "text": "and boom no more security hotspots to",
+      "offset": 156510,
+      "duration": 6540
+    },
+    {
+      "text": "review and if we go back to take a look",
+      "offset": 160200,
+      "duration": 7530
+    },
+    {
+      "text": "at our pull request we can see we now",
+      "offset": 163050,
+      "duration": 7020
+    },
+    {
+      "text": "have a passing quality gate and so we",
+      "offset": 167730,
+      "duration": 9930
+    },
+    {
+      "text": "can feel confident to merge this code so",
+      "offset": 170070,
+      "duration": 9630
+    },
+    {
+      "text": "you can see for bitbucket we bring a",
+      "offset": 177660,
+      "duration": 4680
+    },
+    {
+      "text": "consistent valuable feature set with",
+      "offset": 179700,
+      "duration": 5010
+    },
+    {
+      "text": "every pull request and that starts with",
+      "offset": 182340,
+      "duration": 4020
+    },
+    {
+      "text": "the right information in the right place",
+      "offset": 184710,
+      "duration": 4440
+    },
+    {
+      "text": "at the right time furthermore we gave",
+      "offset": 186360,
+      "duration": 4920
+    },
+    {
+      "text": "you a quality gate and metrics right in",
+      "offset": 189150,
+      "duration": 4740
+    },
+    {
+      "text": "that bitbucket pull request you also saw",
+      "offset": 191280,
+      "duration": 5100
+    },
+    {
+      "text": "the ability to block a merge with that",
+      "offset": 193890,
+      "duration": 4680
+    },
+    {
+      "text": "pull request when we had an issue you",
+      "offset": 196380,
+      "duration": 3870
+    },
+    {
+      "text": "also saw how we're able to drill right",
+      "offset": 198570,
+      "duration": 4440
+    },
+    {
+      "text": "down into that issue in sonar cube we",
+      "offset": 200250,
+      "duration": 4320
+    },
+    {
+      "text": "change the status and that gave us a",
+      "offset": 203010,
+      "duration": 4620
+    },
+    {
+      "text": "live update back into the pit bucket PR",
+      "offset": 204570,
+      "duration": 6000
+    },
+    {
+      "text": "now for now we have support for bit",
+      "offset": 207630,
+      "duration": 6000
+    },
+    {
+      "text": "bucket server bit bucket cloud is on our",
+      "offset": 210570,
+      "duration": 5389
+    },
+    {
+      "text": "roadmap for a future sonar cube release",
+      "offset": 213630,
+      "duration": 4710
+    },
+    {
+      "text": "now there's a lot to discover in the",
+      "offset": 215959,
+      "duration": 4000
+    },
+    {
+      "text": "product drop down on the sonar cube",
+      "offset": 218340,
+      "duration": 3960
+    },
+    {
+      "text": "homepage including a page dedicated to",
+      "offset": 219959,
+      "duration": 5701
+    },
+    {
+      "text": "our bit bucket integration that's it for",
+      "offset": 222300,
+      "duration": 5070
+    },
+    {
+      "text": "the video at sooner source we're not",
+      "offset": 225660,
+      "duration": 4020
+    },
+    {
+      "text": "done any value future sonar cube",
+      "offset": 227370,
+      "duration": 4260
+    },
+    {
+      "text": "versions will add even more good vibes",
+      "offset": 229680,
+      "duration": 6150
+    },
+    {
+      "text": "and keep you writing clean safe code be",
+      "offset": 231630,
+      "duration": 5940
+    },
+    {
+      "text": "sure to check out the rest of our",
+      "offset": 235830,
+      "duration": 3570
+    },
+    {
+      "text": "YouTube videos and please subscribe to",
+      "offset": 237570,
+      "duration": 2550
+    },
+    {
+      "text": "our Channel",
+      "offset": 239400,
+      "duration": 3830
+    },
+    {
+      "text": "thank you for watching",
+      "offset": 240120,
+      "duration": 3110
+    }
+  ],
+  "fullText": "hi thanks for joining I'm Clint Cameron and I am a product marketing manager for sonar source and in this video I'm going to demonstrate how sonar cube integrates into your bitbucket workflow and how that's valuable for your team developers love to write better code and feedback is an important part of that process they ask for feedback from their teammates to find problems and to improve their code and of course they want minimal distractions there's no doubt developers spend a lot of time in bitbucket and these pull requests and so this is where we should add our value so let's see first hand house on our cube integrates with bitbucket and what it does for your PRS this feature is available starting with developer edition and it's easy to request a free trial online at sonarqube org now before we see that live demo let's take a quick look at a typical workflow it starts with sonar lint in your IDE sonar lint is a free open-source add-in that finds bugs vulnerabilities and code smells as you write your code and it's available for four popular ide s.vs code Visual Studio Eclipse and IntelliJ ok so now once we've finished writing our code and we're ready to open that PR let's do that in bitbucket then we're going to go ahead and kick off our CI systems and with that we can automatically kick off a sonar cube analysis and when that analysis is done it's going to decorate right back into the pull request with any issues found ok let's see that demo here we have an open pull request in bitbucket and up in the right hand corner we can see the Soner cube decoration and it looks like we have a problem so let's click on that to get some more information and you can see that we have a failed quality gate and a failed quality gate is due to 0% security hotspots reviewed for this particular quality gate that we're using for this demonstration we require 100% review of security hotspots so there's some work to do now that's easy to do we can drill down into issues by clicking there and opening up sonar cube and here we can see the same code metrics and the same issues that we saw in the pull request and here's that pesky security hotspot let's take a closer look that's going to take us to our security hotspots dedicated review page and here we can see we have a potential cross-site request forgery issue okay as a developer I would then make that it I would review the code and make a determination as to whether or not this was truly an issue now for this demonstration we'll go ahead and Mark that it's safe we'll change the status and boom no more security hotspots to review and if we go back to take a look at our pull request we can see we now have a passing quality gate and so we can feel confident to merge this code so you can see for bitbucket we bring a consistent valuable feature set with every pull request and that starts with the right information in the right place at the right time furthermore we gave you a quality gate and metrics right in that bitbucket pull request you also saw the ability to block a merge with that pull request when we had an issue you also saw how we're able to drill right down into that issue in sonar cube we change the status and that gave us a live update back into the pit bucket PR now for now we have support for bit bucket server bit bucket cloud is on our roadmap for a future sonar cube release now there's a lot to discover in the product drop down on the sonar cube homepage including a page dedicated to our bit bucket integration that's it for the video at sooner source we're not done any value future sonar cube versions will add even more good vibes and keep you writing clean safe code be sure to check out the rest of our YouTube videos and please subscribe to our Channel thank you for watching",
+  "fetchedAt": "2026-03-14T09:25:49.482Z"
+}

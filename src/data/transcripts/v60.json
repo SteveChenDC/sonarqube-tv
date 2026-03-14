@@ -1,0 +1,93 @@
+{
+  "videoId": "v60",
+  "youtubeId": "3ghmJPBVBgU",
+  "segments": [
+    {
+      "text": "Hi, I'm Robert Curlee, technical product\nmarketing manager here at Sonar.",
+      "offset": 1000,
+      "duration": 6000
+    },
+    {
+      "text": "And today I'm going to walk you through a\nnew issue sandboxing capability inside\nSonarQube Server that was released in\nthe new 2026.1 LTA.",
+      "offset": 7000,
+      "duration": 7000
+    },
+    {
+      "text": "This is what you'll see when you first\nsign in to the server after updating to\nthe latest version.",
+      "offset": 18000,
+      "duration": 6000
+    },
+    {
+      "text": "And you'll get this prompt and it'll ask\nyou to turn on this new sandboxing capability.",
+      "offset": 24000,
+      "duration": 6000
+    },
+    {
+      "text": "You click turn it on and you'll jump directly\nto the administration section where you'll\nneed to configure it and save your settings.",
+      "offset": 30000,
+      "duration": 10000
+    },
+    {
+      "text": "But let's take a look at what happens.",
+      "offset": 43000,
+      "duration": 5000
+    },
+    {
+      "text": "So after updating to the latest server,\nyou'll see that my project's quality gate\nis still passed.",
+      "offset": 48000,
+      "duration": 5000
+    },
+    {
+      "text": "What happened is the issues that were found\nfrom the new rules in the update did not\ncause my quality gate to change to failed.",
+      "offset": 53000,
+      "duration": 8000
+    },
+    {
+      "text": "And instead, if I jump to overall code,\nthere's this new area called issue sandbox.",
+      "offset": 61000,
+      "duration": 8000
+    },
+    {
+      "text": "And inside here are those issues\nthat were discovered after the update.",
+      "offset": 69000,
+      "duration": 3000
+    },
+    {
+      "text": "When I click into one of the issues,\nyou'll see that it tells me that this issue\nis in the issue sandbox.",
+      "offset": 76000,
+      "duration": 8000
+    },
+    {
+      "text": "And the status is in sandbox status.\nThis allows me to triage these issues\nat my own pace at any time,",
+      "offset": 84000,
+      "duration": 7000
+    },
+    {
+      "text": "to decide when I want to switch them to open\nor any other status and decide what to do\nwith them.",
+      "offset": 91000,
+      "duration": 8000
+    },
+    {
+      "text": "And that means my quality gate will only change\nwhen I'm ready for it to change,",
+      "offset": 103000,
+      "duration": 5000
+    },
+    {
+      "text": "if I decide to move it to open.",
+      "offset": 108000,
+      "duration": 4000
+    },
+    {
+      "text": "So hopefully that'll help your updates go better\nand you'll like this new capability",
+      "offset": 112000,
+      "duration": 5000
+    },
+    {
+      "text": "and start using it.\nThanks, and I'll see you in the next demo.",
+      "offset": 117000,
+      "duration": 5000
+    }
+  ],
+  "fullText": "Hi, I'm Robert Curlee, technical product\nmarketing manager here at Sonar. And today I'm going to walk you through a\nnew issue sandboxing capability inside\nSonarQube Server that was released in\nthe new 2026.1 LTA. This is what you'll see when you first\nsign in to the server after updating to\nthe latest version. And you'll get this prompt and it'll ask\nyou to turn on this new sandboxing capability. You click turn it on and you'll jump directly\nto the administration section where you'll\nneed to configure it and save your settings. But let's take a look at what happens. So after updating to the latest server,\nyou'll see that my project's quality gate\nis still passed. What happened is the issues that were found\nfrom the new rules in the update did not\ncause my quality gate to change to failed. And instead, if I jump to overall code,\nthere's this new area called issue sandbox. And inside here are those issues\nthat were discovered after the update. When I click into one of the issues,\nyou'll see that it tells me that this issue\nis in the issue sandbox. And the status is in sandbox status.\nThis allows me to triage these issues\nat my own pace at any time, to decide when I want to switch them to open\nor any other status and decide what to do\nwith them. And that means my quality gate will only change\nwhen I'm ready for it to change, if I decide to move it to open. So hopefully that'll help your updates go better\nand you'll like this new capability and start using it.\nThanks, and I'll see you in the next demo.",
+  "fetchedAt": "2026-03-14T09:22:20.458Z"
+}

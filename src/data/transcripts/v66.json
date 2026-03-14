@@ -1,0 +1,2683 @@
+{
+  "videoId": "v66",
+  "youtubeId": "3eHXBgaDs60",
+  "segments": [
+    {
+      "text": "Hello and welcome to our webinar uh",
+      "offset": 80,
+      "duration": 6640
+    },
+    {
+      "text": "qualitative analysis of six leading",
+      "offset": 3919,
+      "duration": 5680
+    },
+    {
+      "text": "LLMs. My name is Prasinjit Sarkcar and",
+      "offset": 6720,
+      "duration": 4320
+    },
+    {
+      "text": "I'm a technical product marketing",
+      "offset": 9599,
+      "duration": 4401
+    },
+    {
+      "text": "manager at Sonar.",
+      "offset": 11040,
+      "duration": 5200
+    },
+    {
+      "text": "So let's look at what we are going to",
+      "offset": 14000,
+      "duration": 6000
+    },
+    {
+      "text": "talk about it today. So we have a packed",
+      "offset": 16240,
+      "duration": 6720
+    },
+    {
+      "text": "agenda and um you know in couple of",
+      "offset": 20000,
+      "duration": 5039
+    },
+    {
+      "text": "slides we'll be talking about the the",
+      "offset": 22960,
+      "duration": 5760
+    },
+    {
+      "text": "new landscape of AI development um and",
+      "offset": 25039,
+      "duration": 5761
+    },
+    {
+      "text": "we'll be focusing on our research",
+      "offset": 28720,
+      "duration": 5280
+    },
+    {
+      "text": "methodology about how we have uh done",
+      "offset": 30800,
+      "duration": 6080
+    },
+    {
+      "text": "the analysis of those leading LMS. We'll",
+      "offset": 34000,
+      "duration": 5360
+    },
+    {
+      "text": "share the key findings which are",
+      "offset": 36880,
+      "duration": 4880
+    },
+    {
+      "text": "inherently the the coding personalities",
+      "offset": 39360,
+      "duration": 6240
+    },
+    {
+      "text": "of LLMs. We'll uh look at the root cause",
+      "offset": 41760,
+      "duration": 5840
+    },
+    {
+      "text": "and little bit of case studies as well",
+      "offset": 45600,
+      "duration": 4720
+    },
+    {
+      "text": "and we'll talk about the solutions. All",
+      "offset": 47600,
+      "duration": 5119
+    },
+    {
+      "text": "right. So let's not wait for this and",
+      "offset": 50320,
+      "duration": 4960
+    },
+    {
+      "text": "let's straight away jump into the",
+      "offset": 52719,
+      "duration": 6640
+    },
+    {
+      "text": "landscape of the AI development.",
+      "offset": 55280,
+      "duration": 7279
+    },
+    {
+      "text": "So we are in the middle of this",
+      "offset": 59359,
+      "duration": 5681
+    },
+    {
+      "text": "fundamental shift in how the software",
+      "offset": 62559,
+      "duration": 6321
+    },
+    {
+      "text": "you know is is created and the force uh",
+      "offset": 65040,
+      "duration": 6480
+    },
+    {
+      "text": "behind this shift is artificial",
+      "offset": 68880,
+      "duration": 5760
+    },
+    {
+      "text": "intelligence. Now AI is not just a new",
+      "offset": 71520,
+      "duration": 6000
+    },
+    {
+      "text": "tool or a feature. It's completely",
+      "offset": 74640,
+      "duration": 5360
+    },
+    {
+      "text": "rewriting the rules of development and",
+      "offset": 77520,
+      "duration": 5680
+    },
+    {
+      "text": "it is happening at a scale that is hard",
+      "offset": 80000,
+      "duration": 6159
+    },
+    {
+      "text": "to comprehend. Now let's start with the",
+      "offset": 83200,
+      "duration": 5919
+    },
+    {
+      "text": "kind of numbers to see how uh profound",
+      "offset": 86159,
+      "duration": 6481
+    },
+    {
+      "text": "this change is. First, the revolution is",
+      "offset": 89119,
+      "duration": 5281
+    },
+    {
+      "text": "being led by the developers themselves",
+      "offset": 92640,
+      "duration": 4000
+    },
+    {
+      "text": "and we have to acknowledge that um a",
+      "offset": 94400,
+      "duration": 4560
+    },
+    {
+      "text": "recent stack overflow survey found that",
+      "offset": 96640,
+      "duration": 4880
+    },
+    {
+      "text": "76% of those developers are already",
+      "offset": 98960,
+      "duration": 6640
+    },
+    {
+      "text": "using or planning to use",
+      "offset": 101520,
+      "duration": 6400
+    },
+    {
+      "text": "uh this AI tools in their work. Uh and",
+      "offset": 105600,
+      "duration": 4720
+    },
+    {
+      "text": "this is not a top- down mandate you know",
+      "offset": 107920,
+      "duration": 5360
+    },
+    {
+      "text": "um it's a grassroot grassroot movement.",
+      "offset": 110320,
+      "duration": 5759
+    },
+    {
+      "text": "Second, the sheer volume of this AI",
+      "offset": 113280,
+      "duration": 6000
+    },
+    {
+      "text": "generated code is staggering. Now just",
+      "offset": 116079,
+      "duration": 6320
+    },
+    {
+      "text": "one tool let's say cursor writes almost",
+      "offset": 119280,
+      "duration": 5439
+    },
+    {
+      "text": "about a billion lines of accepted code",
+      "offset": 122399,
+      "duration": 4561
+    },
+    {
+      "text": "every single day. Think about it right?",
+      "offset": 124719,
+      "duration": 4880
+    },
+    {
+      "text": "So put that in into your perspective.",
+      "offset": 126960,
+      "duration": 4720
+    },
+    {
+      "text": "That's more code than every human",
+      "offset": 129599,
+      "duration": 4000
+    },
+    {
+      "text": "developer in the whole world produces",
+      "offset": 131680,
+      "duration": 3520
+    },
+    {
+      "text": "combined.",
+      "offset": 133599,
+      "duration": 4720
+    },
+    {
+      "text": "And finally this is the new standard by",
+      "offset": 135200,
+      "duration": 5920
+    },
+    {
+      "text": "the way. Um Gartner predicts that by",
+      "offset": 138319,
+      "duration": 6721
+    },
+    {
+      "text": "2028 90% of all enterprise engineers",
+      "offset": 141120,
+      "duration": 6479
+    },
+    {
+      "text": "will be using AI coding assistance or AI",
+      "offset": 145040,
+      "duration": 6000
+    },
+    {
+      "text": "coding agents. Now this soon will be as",
+      "offset": 147599,
+      "duration": 5681
+    },
+    {
+      "text": "common as you know you are uh working",
+      "offset": 151040,
+      "duration": 4240
+    },
+    {
+      "text": "through the idees.",
+      "offset": 153280,
+      "duration": 3920
+    },
+    {
+      "text": "So we have a technology uh you know",
+      "offset": 155280,
+      "duration": 4880
+    },
+    {
+      "text": "being adopted at an incredible speed and",
+      "offset": 157200,
+      "duration": 5039
+    },
+    {
+      "text": "generating code at an unprecedented",
+      "offset": 160160,
+      "duration": 5520
+    },
+    {
+      "text": "scale. Now this promises a massive leap",
+      "offset": 162239,
+      "duration": 6161
+    },
+    {
+      "text": "in the productivity but it also raises a",
+      "offset": 165680,
+      "duration": 5760
+    },
+    {
+      "text": "critical question with this much of AI",
+      "offset": 168400,
+      "duration": 5919
+    },
+    {
+      "text": "generated code flooding our systems how",
+      "offset": 171440,
+      "duration": 5760
+    },
+    {
+      "text": "do we need how do we ensure that it's",
+      "offset": 174319,
+      "duration": 5280
+    },
+    {
+      "text": "secure it's reliable and it's also",
+      "offset": 177200,
+      "duration": 5600
+    },
+    {
+      "text": "maintainable right um so to answer that",
+      "offset": 179599,
+      "duration": 7360
+    },
+    {
+      "text": "we deep dive uh into uh you know leading",
+      "offset": 182800,
+      "duration": 8159
+    },
+    {
+      "text": "uh models and what we found is that uh",
+      "offset": 186959,
+      "duration": 7280
+    },
+    {
+      "text": "the key to navigating this new world.",
+      "offset": 190959,
+      "duration": 6481
+    },
+    {
+      "text": "So, we discovered that these AIs uh are",
+      "offset": 194239,
+      "duration": 5441
+    },
+    {
+      "text": "not just the tools. They have their own",
+      "offset": 197440,
+      "duration": 4799
+    },
+    {
+      "text": "distinct coding personalities.",
+      "offset": 199680,
+      "duration": 4559
+    },
+    {
+      "text": "Over the next few minutes, we'll show",
+      "offset": 202239,
+      "duration": 5360
+    },
+    {
+      "text": "you what those personalities are um with",
+      "offset": 204239,
+      "duration": 5601
+    },
+    {
+      "text": "their unique flaws and strengths looks",
+      "offset": 207599,
+      "duration": 5121
+    },
+    {
+      "text": "like and how uh you know, understanding",
+      "offset": 209840,
+      "duration": 5679
+    },
+    {
+      "text": "them uh is the key to harness this power",
+      "offset": 212720,
+      "duration": 8040
+    },
+    {
+      "text": "of AI safety uh you know, effectively.",
+      "offset": 215519,
+      "duration": 5241
+    },
+    {
+      "text": "So we just saw AI is generating a tidal",
+      "offset": 221040,
+      "duration": 7759
+    },
+    {
+      "text": "wave of code. Now the logical assumption",
+      "offset": 225280,
+      "duration": 6239
+    },
+    {
+      "text": "is that this should be leading to an",
+      "offset": 228799,
+      "duration": 5041
+    },
+    {
+      "text": "unprecedented explosion in productivity.",
+      "offset": 231519,
+      "duration": 4481
+    },
+    {
+      "text": "Right? I mean that's a common sense. But",
+      "offset": 233840,
+      "duration": 5200
+    },
+    {
+      "text": "the reality is far more complicated. Now",
+      "offset": 236000,
+      "duration": 5680
+    },
+    {
+      "text": "this brings us directly to the central",
+      "offset": 239040,
+      "duration": 5119
+    },
+    {
+      "text": "challenge we are here to talk about",
+      "offset": 241680,
+      "duration": 4400
+    },
+    {
+      "text": "today which is the engineering",
+      "offset": 244159,
+      "duration": 5121
+    },
+    {
+      "text": "productivity paradox. Now the paradox is",
+      "offset": 246080,
+      "duration": 5920
+    },
+    {
+      "text": "this that think about these companies at",
+      "offset": 249280,
+      "duration": 5039
+    },
+    {
+      "text": "the forefront like Google are reporting",
+      "offset": 252000,
+      "duration": 5440
+    },
+    {
+      "text": "that while AI is generating over 30% of",
+      "offset": 254319,
+      "duration": 5440
+    },
+    {
+      "text": "their new code they're only seeing about",
+      "offset": 257440,
+      "duration": 6080
+    },
+    {
+      "text": "10% productivity gain. So the question",
+      "offset": 259759,
+      "duration": 6321
+    },
+    {
+      "text": "is where is all that extra efficiency",
+      "offset": 263520,
+      "duration": 5360
+    },
+    {
+      "text": "going? Why isn't that impact much",
+      "offset": 266080,
+      "duration": 5520
+    },
+    {
+      "text": "bigger? Now this graph that you see",
+      "offset": 268880,
+      "duration": 5920
+    },
+    {
+      "text": "today explains this the disconnect",
+      "offset": 271600,
+      "duration": 5840
+    },
+    {
+      "text": "perfectly. The blue line that you see is",
+      "offset": 274800,
+      "duration": 6000
+    },
+    {
+      "text": "the promise of AI. Uh is the exponential",
+      "offset": 277440,
+      "duration": 5280
+    },
+    {
+      "text": "speed. It is the exponential speed at",
+      "offset": 280800,
+      "duration": 4560
+    },
+    {
+      "text": "which the code is being written faster",
+      "offset": 282720,
+      "duration": 5600
+    },
+    {
+      "text": "than ever before. But the red line is",
+      "offset": 285360,
+      "duration": 5200
+    },
+    {
+      "text": "actually the human bottleneck. Now it's",
+      "offset": 288320,
+      "duration": 5760
+    },
+    {
+      "text": "much slower that you can think of linear",
+      "offset": 290560,
+      "duration": 5600
+    },
+    {
+      "text": "pace at and it's also at a linear pace",
+      "offset": 294080,
+      "duration": 4240
+    },
+    {
+      "text": "at which your engineers can manually",
+      "offset": 296160,
+      "duration": 5039
+    },
+    {
+      "text": "review and verify all that code for",
+      "offset": 298320,
+      "duration": 4480
+    },
+    {
+      "text": "security, for quality and",
+      "offset": 301199,
+      "duration": 3121
+    },
+    {
+      "text": "maintainability.",
+      "offset": 302800,
+      "duration": 4480
+    },
+    {
+      "text": "And that growing gap between the two",
+      "offset": 304320,
+      "duration": 6159
+    },
+    {
+      "text": "curve is the paradox. Now it is where",
+      "offset": 307280,
+      "duration": 6240
+    },
+    {
+      "text": "the massive productivity gains uh you",
+      "offset": 310479,
+      "duration": 6801
+    },
+    {
+      "text": "know promised by AI uh get lost. Most",
+      "offset": 313520,
+      "duration": 6880
+    },
+    {
+      "text": "importantly it's a danger zone where",
+      "offset": 317280,
+      "duration": 5120
+    },
+    {
+      "text": "hidden complexity security",
+      "offset": 320400,
+      "duration": 4239
+    },
+    {
+      "text": "vulnerabilities and subtle bugs from",
+      "offset": 322400,
+      "duration": 5120
+    },
+    {
+      "text": "that AI generated code accumulate. Now",
+      "offset": 324639,
+      "duration": 6801
+    },
+    {
+      "text": "this gap is a single biggest challenge",
+      "offset": 327520,
+      "duration": 6800
+    },
+    {
+      "text": "and risk in this new area of the",
+      "offset": 331440,
+      "duration": 5360
+    },
+    {
+      "text": "development. Now for the rest of this",
+      "offset": 334320,
+      "duration": 5280
+    },
+    {
+      "text": "presentation we are going to go do deep",
+      "offset": 336800,
+      "duration": 6000
+    },
+    {
+      "text": "dive into that gap. We'll show you",
+      "offset": 339600,
+      "duration": 5680
+    },
+    {
+      "text": "exactly what kind of issues are hiding",
+      "offset": 342800,
+      "duration": 5360
+    },
+    {
+      "text": "in there, why they are so hard to find",
+      "offset": 345280,
+      "duration": 5040
+    },
+    {
+      "text": "and then you how you can solve it as",
+      "offset": 348160,
+      "duration": 5160
+    },
+    {
+      "text": "well.",
+      "offset": 350320,
+      "duration": 3000
+    },
+    {
+      "text": "So um we have identified this huge risky",
+      "offset": 353440,
+      "duration": 6800
+    },
+    {
+      "text": "gap between the AI speed and the human",
+      "offset": 358080,
+      "duration": 4640
+    },
+    {
+      "text": "verification. So to truly understand",
+      "offset": 360240,
+      "duration": 4480
+    },
+    {
+      "text": "what is hiding inside the gap that I",
+      "offset": 362720,
+      "duration": 4319
+    },
+    {
+      "text": "talked about in the previous slide, you",
+      "offset": 364720,
+      "duration": 3599
+    },
+    {
+      "text": "can't just rely on the standard",
+      "offset": 367039,
+      "duration": 3681
+    },
+    {
+      "text": "benchmark that you that you see all the",
+      "offset": 368319,
+      "duration": 4401
+    },
+    {
+      "text": "time when a new LLM comes out in the",
+      "offset": 370720,
+      "duration": 5440
+    },
+    {
+      "text": "market. You need to go much more deeper.",
+      "offset": 372720,
+      "duration": 6400
+    },
+    {
+      "text": "And that is exactly what we did. We",
+      "offset": 376160,
+      "duration": 5920
+    },
+    {
+      "text": "built an unique analytical framework",
+      "offset": 379120,
+      "duration": 6079
+    },
+    {
+      "text": "from the ground up with just one goal to",
+      "offset": 382080,
+      "duration": 5920
+    },
+    {
+      "text": "assess the true quality of this LM",
+      "offset": 385199,
+      "duration": 5921
+    },
+    {
+      "text": "generated code. Now this is not about",
+      "offset": 388000,
+      "duration": 6240
+    },
+    {
+      "text": "measuring simple pass or fail rates. Our",
+      "offset": 391120,
+      "duration": 5519
+    },
+    {
+      "text": "analysis is designed to detect the",
+      "offset": 394240,
+      "duration": 4079
+    },
+    {
+      "text": "things that matters for the production",
+      "offset": 396639,
+      "duration": 4641
+    },
+    {
+      "text": "code. Complex bugs, critical security,",
+      "offset": 398319,
+      "duration": 5121
+    },
+    {
+      "text": "you know, vulnerabilities and the kind",
+      "offset": 401280,
+      "duration": 4880
+    },
+    {
+      "text": "of bad practices or code smells that",
+      "offset": 403440,
+      "duration": 5680
+    },
+    {
+      "text": "lead to technical debt, right? So to do",
+      "offset": 406160,
+      "duration": 5360
+    },
+    {
+      "text": "this we put the leading models on the",
+      "offset": 409120,
+      "duration": 5519
+    },
+    {
+      "text": "market to the test. As you can see, we",
+      "offset": 411520,
+      "duration": 5600
+    },
+    {
+      "text": "have evaluated a wide range from the",
+      "offset": 414639,
+      "duration": 5441
+    },
+    {
+      "text": "very latest like you know GPT5 and",
+      "offset": 417120,
+      "duration": 5519
+    },
+    {
+      "text": "Claude Sonnet 4 to established players",
+      "offset": 420080,
+      "duration": 6080
+    },
+    {
+      "text": "like you know Llama 3 and we subjected",
+      "offset": 422639,
+      "duration": 6560
+    },
+    {
+      "text": "them to a rigorous test giving this all",
+      "offset": 426160,
+      "duration": 5200
+    },
+    {
+      "text": "all of the each of these models over",
+      "offset": 429199,
+      "duration": 3761
+    },
+    {
+      "text": "4,400",
+      "offset": 431360,
+      "duration": 3760
+    },
+    {
+      "text": "distinct Java programming assignments to",
+      "offset": 432960,
+      "duration": 5600
+    },
+    {
+      "text": "see how they behaved across a huge",
+      "offset": 435120,
+      "duration": 6320
+    },
+    {
+      "text": "variety of task. The result of this deep",
+      "offset": 438560,
+      "duration": 5359
+    },
+    {
+      "text": "analysis is a series of critical",
+      "offset": 441440,
+      "duration": 4879
+    },
+    {
+      "text": "insights that reveal the unique",
+      "offset": 443919,
+      "duration": 6161
+    },
+    {
+      "text": "personality of each model. So now let's",
+      "offset": 446319,
+      "duration": 6320
+    },
+    {
+      "text": "get into the findings and see what these",
+      "offset": 450080,
+      "duration": 5920
+    },
+    {
+      "text": "personalities looks like.",
+      "offset": 452639,
+      "duration": 6081
+    },
+    {
+      "text": "So you know after putting all these",
+      "offset": 456000,
+      "duration": 4479
+    },
+    {
+      "text": "models through our deep analysis",
+      "offset": 458720,
+      "duration": 5520
+    },
+    {
+      "text": "framework, what did we actually find?",
+      "offset": 460479,
+      "duration": 6481
+    },
+    {
+      "text": "Now our research revealed uh several",
+      "offset": 464240,
+      "duration": 5280
+    },
+    {
+      "text": "critical insights um that challenge the",
+      "offset": 466960,
+      "duration": 5760
+    },
+    {
+      "text": "common narrative around the AI. Now this",
+      "offset": 469520,
+      "duration": 6959
+    },
+    {
+      "text": "slide is the summary of our findings and",
+      "offset": 472720,
+      "duration": 5759
+    },
+    {
+      "text": "it's it's essentially the road map for",
+      "offset": 476479,
+      "duration": 5521
+    },
+    {
+      "text": "the rest of our session today. First we",
+      "offset": 478479,
+      "duration": 6801
+    },
+    {
+      "text": "will establish a baseline reality. All",
+      "offset": 482000,
+      "duration": 6400
+    },
+    {
+      "text": "models produce code with a significant",
+      "offset": 485280,
+      "duration": 5680
+    },
+    {
+      "text": "number of issues. There is no silver",
+      "offset": 488400,
+      "duration": 6239
+    },
+    {
+      "text": "bullet. Okay. Next, we will challenge",
+      "offset": 490960,
+      "duration": 7760
+    },
+    {
+      "text": "the bigger is always better myth as we",
+      "offset": 494639,
+      "duration": 6240
+    },
+    {
+      "text": "will show you the newest and the largest",
+      "offset": 498720,
+      "duration": 4960
+    },
+    {
+      "text": "models come with hidden trade-offs that",
+      "offset": 500879,
+      "duration": 5201
+    },
+    {
+      "text": "are crucial to understand. In fact, for",
+      "offset": 503680,
+      "duration": 4959
+    },
+    {
+      "text": "some task like for smaller models can be",
+      "offset": 506080,
+      "duration": 5360
+    },
+    {
+      "text": "better choice. We will then deep dive",
+      "offset": 508639,
+      "duration": 5681
+    },
+    {
+      "text": "into the concept of trade-offs. The",
+      "offset": 511440,
+      "duration": 5839
+    },
+    {
+      "text": "latest models like GPT5 are a prime",
+      "offset": 514320,
+      "duration": 5839
+    },
+    {
+      "text": "example of this where every choice even",
+      "offset": 517279,
+      "duration": 5760
+    },
+    {
+      "text": "just adjusting just the reasoning level",
+      "offset": 520159,
+      "duration": 6081
+    },
+    {
+      "text": "introduces a whole new set of risk um",
+      "offset": 523039,
+      "duration": 4641
+    },
+    {
+      "text": "alongside the benefit that you're going",
+      "offset": 526240,
+      "duration": 5200
+    },
+    {
+      "text": "to get and all of this leads us to a",
+      "offset": 527680,
+      "duration": 7279
+    },
+    {
+      "text": "central thesis. These models have unique",
+      "offset": 531440,
+      "duration": 5920
+    },
+    {
+      "text": "coding personalities.",
+      "offset": 534959,
+      "duration": 5761
+    },
+    {
+      "text": "Each one has its own quirks, its own",
+      "offset": 537360,
+      "duration": 6800
+    },
+    {
+      "text": "strengths, and more importantly its own",
+      "offset": 540720,
+      "duration": 5840
+    },
+    {
+      "text": "predictable weaknesses.",
+      "offset": 544160,
+      "duration": 5040
+    },
+    {
+      "text": "Our goal is to change the way you think",
+      "offset": 546560,
+      "duration": 5440
+    },
+    {
+      "text": "about these tools.",
+      "offset": 549200,
+      "duration": 5440
+    },
+    {
+      "text": "Instead of searching for the single best",
+      "offset": 552000,
+      "duration": 6320
+    },
+    {
+      "text": "model, you will today you leave today",
+      "offset": 554640,
+      "duration": 5840
+    },
+    {
+      "text": "with a framework for understanding a",
+      "offset": 558320,
+      "duration": 4800
+    },
+    {
+      "text": "model specific personality that will",
+      "offset": 560480,
+      "duration": 5680
+    },
+    {
+      "text": "allow you to anticipate its flaws and",
+      "offset": 563120,
+      "duration": 4960
+    },
+    {
+      "text": "build the right uh safeguards around",
+      "offset": 566160,
+      "duration": 6960
+    },
+    {
+      "text": "that. So let's deep dive into the data.",
+      "offset": 568080,
+      "duration": 7280
+    },
+    {
+      "text": "In the introduction, I made the claim",
+      "offset": 573120,
+      "duration": 5040
+    },
+    {
+      "text": "that bigger and the newer is not",
+      "offset": 575360,
+      "duration": 5039
+    },
+    {
+      "text": "necessarily better when it comes down to",
+      "offset": 578160,
+      "duration": 6239
+    },
+    {
+      "text": "the lens. This slide shows you exactly",
+      "offset": 580399,
+      "duration": 6721
+    },
+    {
+      "text": "what we meant by that.",
+      "offset": 584399,
+      "duration": 6401
+    },
+    {
+      "text": "Um, what you are looking at is a chart",
+      "offset": 587120,
+      "duration": 6000
+    },
+    {
+      "text": "mapping uh the performance of several",
+      "offset": 590800,
+      "duration": 4960
+    },
+    {
+      "text": "leading models against the complexity of",
+      "offset": 593120,
+      "duration": 4880
+    },
+    {
+      "text": "the code that they produce.",
+      "offset": 595760,
+      "duration": 4480
+    },
+    {
+      "text": "Along the bottom you have the functional",
+      "offset": 598000,
+      "duration": 4880
+    },
+    {
+      "text": "performance basically how often the code",
+      "offset": 600240,
+      "duration": 5360
+    },
+    {
+      "text": "actually works. Uh further to the right",
+      "offset": 602880,
+      "duration": 6639
+    },
+    {
+      "text": "is a better now and on the other side",
+      "offset": 605600,
+      "duration": 6480
+    },
+    {
+      "text": "you have the cognitive complexity. You",
+      "offset": 609519,
+      "duration": 4721
+    },
+    {
+      "text": "can think of this as like how difficult",
+      "offset": 612080,
+      "duration": 4319
+    },
+    {
+      "text": "the code is for a human developer to",
+      "offset": 614240,
+      "duration": 5839
+    },
+    {
+      "text": "read and maintain. For this axis lower",
+      "offset": 616399,
+      "duration": 6321
+    },
+    {
+      "text": "is better but as you can see that",
+      "offset": 620079,
+      "duration": 5361
+    },
+    {
+      "text": "there's a clear trend. The highest",
+      "offset": 622720,
+      "duration": 5760
+    },
+    {
+      "text": "performing models which are up there in",
+      "offset": 625440,
+      "duration": 5680
+    },
+    {
+      "text": "the right top right corner are the ones",
+      "offset": 628480,
+      "duration": 5520
+    },
+    {
+      "text": "that generate the most verbose and most",
+      "offset": 631120,
+      "duration": 6560
+    },
+    {
+      "text": "complex code. Now there is a direct uh",
+      "offset": 634000,
+      "duration": 6160
+    },
+    {
+      "text": "trade-off between performance and",
+      "offset": 637680,
+      "duration": 5040
+    },
+    {
+      "text": "simplicity. Now I want to draw your",
+      "offset": 640160,
+      "duration": 4560
+    },
+    {
+      "text": "attention to GPT5",
+      "offset": 642720,
+      "duration": 5440
+    },
+    {
+      "text": "because it's an extreme and fascinating",
+      "offset": 644720,
+      "duration": 6400
+    },
+    {
+      "text": "uh example.",
+      "offset": 648160,
+      "duration": 7679
+    },
+    {
+      "text": "Um so look at this performance at 75% it",
+      "offset": 651120,
+      "duration": 7600
+    },
+    {
+      "text": "is very very very close to cloud sonet 4",
+      "offset": 655839,
+      "duration": 5281
+    },
+    {
+      "text": "which is at 77%.",
+      "offset": 658720,
+      "duration": 6640
+    },
+    {
+      "text": "So on the surface they seem comparable",
+      "offset": 661120,
+      "duration": 7200
+    },
+    {
+      "text": "but look at the cost. To achieve that",
+      "offset": 665360,
+      "duration": 6640
+    },
+    {
+      "text": "performance, GPT5 produces code that is",
+      "offset": 668320,
+      "duration": 6959
+    },
+    {
+      "text": "vastly more complex. In fact, it has",
+      "offset": 672000,
+      "duration": 4959
+    },
+    {
+      "text": "more than double the cognitive",
+      "offset": 675279,
+      "duration": 4800
+    },
+    {
+      "text": "complexity of Claude's output. We are",
+      "offset": 676959,
+      "duration": 5440
+    },
+    {
+      "text": "talking about generating nearly half a",
+      "offset": 680079,
+      "duration": 4561
+    },
+    {
+      "text": "million lines of verbos code. Right? And",
+      "offset": 682399,
+      "duration": 5521
+    },
+    {
+      "text": "this is a huge hidden cost. That extra",
+      "offset": 684640,
+      "duration": 6319
+    },
+    {
+      "text": "complexity creates a massive review and",
+      "offset": 687920,
+      "duration": 5120
+    },
+    {
+      "text": "maintenance burden for your development",
+      "offset": 690959,
+      "duration": 4721
+    },
+    {
+      "text": "teams down the line.",
+      "offset": 693040,
+      "duration": 4560
+    },
+    {
+      "text": "Now in the next slide we'll be showing",
+      "offset": 695680,
+      "duration": 6399
+    },
+    {
+      "text": "you that how every single model has",
+      "offset": 697600,
+      "duration": 8000
+    },
+    {
+      "text": "their unique security personality. So in",
+      "offset": 702079,
+      "duration": 4880
+    },
+    {
+      "text": "the previous slide we have seen how the",
+      "offset": 705600,
+      "duration": 4400
+    },
+    {
+      "text": "models trade performance for simplicity.",
+      "offset": 706959,
+      "duration": 5761
+    },
+    {
+      "text": "Now let's apply that same idea to the",
+      "offset": 710000,
+      "duration": 5279
+    },
+    {
+      "text": "security which is where the concept of",
+      "offset": 712720,
+      "duration": 4559
+    },
+    {
+      "text": "coding personalities really comes to",
+      "offset": 715279,
+      "duration": 5201
+    },
+    {
+      "text": "life. Now this chart breaks down the",
+      "offset": 717279,
+      "duration": 4881
+    },
+    {
+      "text": "different type of uh security",
+      "offset": 720480,
+      "duration": 4160
+    },
+    {
+      "text": "vulnerabilities we found across the",
+      "offset": 722160,
+      "duration": 5600
+    },
+    {
+      "text": "leading models. Now each colored block",
+      "offset": 724640,
+      "duration": 5600
+    },
+    {
+      "text": "that you see represents a different",
+      "offset": 727760,
+      "duration": 6319
+    },
+    {
+      "text": "category of log. Um now the first thing",
+      "offset": 730240,
+      "duration": 6080
+    },
+    {
+      "text": "you will notice is the amount of green",
+      "offset": 734079,
+      "duration": 5121
+    },
+    {
+      "text": "on this chart that represents the path",
+      "offset": 736320,
+      "duration": 6000
+    },
+    {
+      "text": "traversal and injection flaws. Now this",
+      "offset": 739200,
+      "duration": 7360
+    },
+    {
+      "text": "is the one universal blind spot. It is",
+      "offset": 742320,
+      "duration": 7360
+    },
+    {
+      "text": "the biggest security risk across every",
+      "offset": 746560,
+      "duration": 6160
+    },
+    {
+      "text": "single model that we tested often making",
+      "offset": 749680,
+      "duration": 5200
+    },
+    {
+      "text": "up you know more than a quarter of all",
+      "offset": 752720,
+      "duration": 4000
+    },
+    {
+      "text": "the vulnerabilities.",
+      "offset": 754880,
+      "duration": 3759
+    },
+    {
+      "text": "But once you look past that common",
+      "offset": 756720,
+      "duration": 4320
+    },
+    {
+      "text": "weakness, you see that distinct",
+      "offset": 758639,
+      "duration": 5281
+    },
+    {
+      "text": "personalities emerge. Now each model has",
+      "offset": 761040,
+      "duration": 6160
+    },
+    {
+      "text": "its own favorite way of being insecure.",
+      "offset": 763920,
+      "duration": 6240
+    },
+    {
+      "text": "For example, take a look at Llama 3.2",
+      "offset": 767200,
+      "duration": 5920
+    },
+    {
+      "text": "over to the far right. Now see that huge",
+      "offset": 770160,
+      "duration": 5119
+    },
+    {
+      "text": "red block. That's a hardcoded",
+      "offset": 773120,
+      "duration": 6000
+    },
+    {
+      "text": "credentials. Like over 23% of its flaws",
+      "offset": 775279,
+      "duration": 6081
+    },
+    {
+      "text": "were coming from storing secrets",
+      "offset": 779120,
+      "duration": 5600
+    },
+    {
+      "text": "directly in the code. That is its",
+      "offset": 781360,
+      "duration": 5520
+    },
+    {
+      "text": "signature weakness.",
+      "offset": 784720,
+      "duration": 6720
+    },
+    {
+      "text": "Now contrast that with a new GPD5 model",
+      "offset": 786880,
+      "duration": 6880
+    },
+    {
+      "text": "and it int",
+      "offset": 791440,
+      "duration": 4880
+    },
+    {
+      "text": "introduces a completely new dominant",
+      "offset": 793760,
+      "duration": 5840
+    },
+    {
+      "text": "flop. That massive out uh you know",
+      "offset": 796320,
+      "duration": 5360
+    },
+    {
+      "text": "orange section that you see is",
+      "offset": 799600,
+      "duration": 5120
+    },
+    {
+      "text": "inadequate IO error handling. Now this",
+      "offset": 801680,
+      "duration": 5839
+    },
+    {
+      "text": "single category makes up 30% of its",
+      "offset": 804720,
+      "duration": 5600
+    },
+    {
+      "text": "issues while for the other models it was",
+      "offset": 807519,
+      "duration": 5361
+    },
+    {
+      "text": "just a minor factor.",
+      "offset": 810320,
+      "duration": 6240
+    },
+    {
+      "text": "and GPD5's personality shows another",
+      "offset": 812880,
+      "duration": 5680
+    },
+    {
+      "text": "interesting trade-off.",
+      "offset": 816560,
+      "duration": 4959
+    },
+    {
+      "text": "It's actually very unlikely to leak",
+      "offset": 818560,
+      "duration": 5440
+    },
+    {
+      "text": "hard-coded credentials that we have seen",
+      "offset": 821519,
+      "duration": 6320
+    },
+    {
+      "text": "in the case of uh Llama 3. But uh you",
+      "offset": 824000,
+      "duration": 5920
+    },
+    {
+      "text": "know in this case for the GPD5 that's",
+      "offset": 827839,
+      "duration": 5680
+    },
+    {
+      "text": "only about like 5% of his flaws. But it",
+      "offset": 829920,
+      "duration": 6240
+    },
+    {
+      "text": "seems to have traded that strength for",
+      "offset": 833519,
+      "duration": 5521
+    },
+    {
+      "text": "another weakness a very high rate of",
+      "offset": 836160,
+      "duration": 5440
+    },
+    {
+      "text": "cryptography misconfigurations which you",
+      "offset": 839040,
+      "duration": 6640
+    },
+    {
+      "text": "can see in the light yellow block.",
+      "offset": 841600,
+      "duration": 7200
+    },
+    {
+      "text": "Now we'll be talking about uh a",
+      "offset": 845680,
+      "duration": 5440
+    },
+    {
+      "text": "different type of bugs. um and let's",
+      "offset": 848800,
+      "duration": 6080
+    },
+    {
+      "text": "look at uh you know a reliability uh",
+      "offset": 851120,
+      "duration": 5440
+    },
+    {
+      "text": "personalities rather than security",
+      "offset": 854880,
+      "duration": 3360
+    },
+    {
+      "text": "personalities.",
+      "offset": 856560,
+      "duration": 4000
+    },
+    {
+      "text": "So we have seen that every model has a",
+      "offset": 858240,
+      "duration": 4719
+    },
+    {
+      "text": "unique security personality. It turns",
+      "offset": 860560,
+      "duration": 3920
+    },
+    {
+      "text": "out",
+      "offset": 862959,
+      "duration": 5201
+    },
+    {
+      "text": "uh the exact same is true for the",
+      "offset": 864480,
+      "duration": 6400
+    },
+    {
+      "text": "reliability as well. So not all the bugs",
+      "offset": 868160,
+      "duration": 6000
+    },
+    {
+      "text": "are created equal. We know that and each",
+      "offset": 870880,
+      "duration": 6160
+    },
+    {
+      "text": "model has its own preferred type of bug",
+      "offset": 874160,
+      "duration": 5600
+    },
+    {
+      "text": "to create when the code is functionally",
+      "offset": 877040,
+      "duration": 5200
+    },
+    {
+      "text": "incorrect. So think about it. It's it's",
+      "offset": 879760,
+      "duration": 4639
+    },
+    {
+      "text": "really interesting to just deep dive",
+      "offset": 882240,
+      "duration": 4959
+    },
+    {
+      "text": "into this chart that I have uh presented",
+      "offset": 884399,
+      "duration": 6240
+    },
+    {
+      "text": "in here. Now this table um you know",
+      "offset": 887199,
+      "duration": 5841
+    },
+    {
+      "text": "breaks down into uh those reliability",
+      "offset": 890639,
+      "duration": 5200
+    },
+    {
+      "text": "bugs into different kind of categories",
+      "offset": 893040,
+      "duration": 4720
+    },
+    {
+      "text": "and the personalities become very very",
+      "offset": 895839,
+      "duration": 4000
+    },
+    {
+      "text": "clear when you look at the data. Now",
+      "offset": 897760,
+      "duration": 4879
+    },
+    {
+      "text": "let's start with GPT40 because it's a",
+      "offset": 899839,
+      "duration": 5680
+    },
+    {
+      "text": "massive outlier. Now look at the look at",
+      "offset": 902639,
+      "duration": 5921
+    },
+    {
+      "text": "the top row. It's incredibly 48% like",
+      "offset": 905519,
+      "duration": 6081
+    },
+    {
+      "text": "nearly half of its bugs which are",
+      "offset": 908560,
+      "duration": 6079
+    },
+    {
+      "text": "fundamentally the control flowistics. We",
+      "offset": 911600,
+      "duration": 5280
+    },
+    {
+      "text": "are talking about those absolute basics",
+      "offset": 914639,
+      "duration": 3841
+    },
+    {
+      "text": "of those programming like you know",
+      "offset": 916880,
+      "duration": 4880
+    },
+    {
+      "text": "getting loops or if statements wrong.",
+      "offset": 918480,
+      "duration": 6479
+    },
+    {
+      "text": "Now this is the you know defining flaw",
+      "offset": 921760,
+      "duration": 5920
+    },
+    {
+      "text": "of its reliability personality.",
+      "offset": 924959,
+      "duration": 6801
+    },
+    {
+      "text": "Now compare that to clawson sonnet 4.",
+      "offset": 927680,
+      "duration": 7200
+    },
+    {
+      "text": "Its bug profile is much more balanced",
+      "offset": 931760,
+      "duration": 6960
+    },
+    {
+      "text": "and evenly distributed but it still has",
+      "offset": 934880,
+      "duration": 6639
+    },
+    {
+      "text": "a signature weakness. It uniquely",
+      "offset": 938720,
+      "duration": 4799
+    },
+    {
+      "text": "struggles with concurrency and threading",
+      "offset": 941519,
+      "duration": 5201
+    },
+    {
+      "text": "issues. But the most interesting story",
+      "offset": 943519,
+      "duration": 6481
+    },
+    {
+      "text": "here is the trade-off you see with the",
+      "offset": 946720,
+      "duration": 6479
+    },
+    {
+      "text": "newer GPT5.",
+      "offset": 950000,
+      "duration": 6720
+    },
+    {
+      "text": "It seems to have learned from GPD40's",
+      "offset": 953199,
+      "duration": 6161
+    },
+    {
+      "text": "mistake. It dramatically reduces those",
+      "offset": 956720,
+      "duration": 5280
+    },
+    {
+      "text": "basic control flow mistakes cutting them",
+      "offset": 959360,
+      "duration": 6800
+    },
+    {
+      "text": "almost in like half. But this is the",
+      "offset": 962000,
+      "duration": 6800
+    },
+    {
+      "text": "critical takeaway. It trades one flaw",
+      "offset": 966160,
+      "duration": 5599
+    },
+    {
+      "text": "for another. So in place of those simple",
+      "offset": 968800,
+      "duration": 5440
+    },
+    {
+      "text": "tra you know logic errors, it introduces",
+      "offset": 971759,
+      "duration": 5361
+    },
+    {
+      "text": "a huge new problem which is a massive",
+      "offset": 974240,
+      "duration": 6000
+    },
+    {
+      "text": "20% of his bugs are now complex",
+      "offset": 977120,
+      "duration": 5680
+    },
+    {
+      "text": "concurrency and threading issues.",
+      "offset": 980240,
+      "duration": 6320
+    },
+    {
+      "text": "So what does it mean for you? It means",
+      "offset": 982800,
+      "duration": 7599
+    },
+    {
+      "text": "your code review and testing strategy",
+      "offset": 986560,
+      "duration": 6399
+    },
+    {
+      "text": "has to be tailored to the model that",
+      "offset": 990399,
+      "duration": 6321
+    },
+    {
+      "text": "you're using. For code from GPD4, you",
+      "offset": 992959,
+      "duration": 6880
+    },
+    {
+      "text": "need to be laser focused on uh on basic",
+      "offset": 996720,
+      "duration": 6239
+    },
+    {
+      "text": "logic. But for GPD5, you need a",
+      "offset": 999839,
+      "duration": 5281
+    },
+    {
+      "text": "completely different more specialized",
+      "offset": 1002959,
+      "duration": 5120
+    },
+    {
+      "text": "approach to hunt for those incredibly",
+      "offset": 1005120,
+      "duration": 6079
+    },
+    {
+      "text": "difficult concurrency bugs. Knowing the",
+      "offset": 1008079,
+      "duration": 5760
+    },
+    {
+      "text": "model's personality tells you exactly",
+      "offset": 1011199,
+      "duration": 4801
+    },
+    {
+      "text": "where to focus your you know quality",
+      "offset": 1013839,
+      "duration": 4800
+    },
+    {
+      "text": "assurance efforts.",
+      "offset": 1016000,
+      "duration": 5360
+    },
+    {
+      "text": "Now let's look at why these challenges",
+      "offset": 1018639,
+      "duration": 5841
+    },
+    {
+      "text": "are occurring. So why you know we so we",
+      "offset": 1021360,
+      "duration": 5599
+    },
+    {
+      "text": "have seen that uh that every model has",
+      "offset": 1024480,
+      "duration": 4880
+    },
+    {
+      "text": "these kind of a unique security and",
+      "offset": 1026959,
+      "duration": 4801
+    },
+    {
+      "text": "reliability personalities.",
+      "offset": 1029360,
+      "duration": 5360
+    },
+    {
+      "text": "A natural question is like why why do",
+      "offset": 1031760,
+      "duration": 6159
+    },
+    {
+      "text": "this specific patterns emerge?",
+      "offset": 1034720,
+      "duration": 7199
+    },
+    {
+      "text": "The answer is that all of these",
+      "offset": 1037919,
+      "duration": 7040
+    },
+    {
+      "text": "challenges are rooted in the one thing",
+      "offset": 1041919,
+      "duration": 5520
+    },
+    {
+      "text": "that they have in common which is the",
+      "offset": 1044959,
+      "duration": 5521
+    },
+    {
+      "text": "data that they were trained on. Now",
+      "offset": 1047439,
+      "duration": 6321
+    },
+    {
+      "text": "think about it. These models learn to",
+      "offset": 1050480,
+      "duration": 6160
+    },
+    {
+      "text": "code uh by ingesting billions of lines",
+      "offset": 1053760,
+      "duration": 5520
+    },
+    {
+      "text": "of code from internet. And the simple",
+      "offset": 1056640,
+      "duration": 4960
+    },
+    {
+      "text": "truth is that a lot of that code is not",
+      "offset": 1059280,
+      "duration": 5360
+    },
+    {
+      "text": "very good code. This creates three",
+      "offset": 1061600,
+      "duration": 5680
+    },
+    {
+      "text": "fundamental problem. First, you have the",
+      "offset": 1064640,
+      "duration": 4960
+    },
+    {
+      "text": "mixed quality code. So, the training",
+      "offset": 1067280,
+      "duration": 5759
+    },
+    {
+      "text": "data is a massive soup combining",
+      "offset": 1069600,
+      "duration": 6160
+    },
+    {
+      "text": "beautiful, well-written examples with",
+      "offset": 1073039,
+      "duration": 5520
+    },
+    {
+      "text": "unclean, outdated, and frankly terrible",
+      "offset": 1075760,
+      "duration": 6799
+    },
+    {
+      "text": "code. The model learns from all of it,",
+      "offset": 1078559,
+      "duration": 6480
+    },
+    {
+      "text": "picking up bad habits right alongside",
+      "offset": 1082559,
+      "duration": 4961
+    },
+    {
+      "text": "the good ones as well. Now, this is a",
+      "offset": 1085039,
+      "duration": 4241
+    },
+    {
+      "text": "classic garbage in and garbage out",
+      "offset": 1087520,
+      "duration": 4159
+    },
+    {
+      "text": "problem. Now, that is the first problem.",
+      "offset": 1089280,
+      "duration": 4960
+    },
+    {
+      "text": "The second problem is uh are the second",
+      "offset": 1091679,
+      "duration": 5281
+    },
+    {
+      "text": "problems are more dangerous and that is",
+      "offset": 1094240,
+      "duration": 4880
+    },
+    {
+      "text": "the data that has built-in security",
+      "offset": 1096960,
+      "duration": 5200
+    },
+    {
+      "text": "flaws. Now if a code with a known",
+      "offset": 1099120,
+      "duration": 5280
+    },
+    {
+      "text": "vulnerability makes into the code makes",
+      "offset": 1102160,
+      "duration": 4720
+    },
+    {
+      "text": "into the training set the model learns",
+      "offset": 1104400,
+      "duration": 4560
+    },
+    {
+      "text": "that risky pattern as a legitimate way",
+      "offset": 1106880,
+      "duration": 4720
+    },
+    {
+      "text": "to code. That's not right. But then it",
+      "offset": 1108960,
+      "duration": 5680
+    },
+    {
+      "text": "it it basically then reproduces those",
+      "offset": 1111600,
+      "duration": 6720
+    },
+    {
+      "text": "unsafe patterns in the code it generates",
+      "offset": 1114640,
+      "duration": 6560
+    },
+    {
+      "text": "for you. the vulnerabilities are",
+      "offset": 1118320,
+      "duration": 6320
+    },
+    {
+      "text": "literally baked in from the start and",
+      "offset": 1121200,
+      "duration": 7200
+    },
+    {
+      "text": "finally you have the problem of hidden",
+      "offset": 1124640,
+      "duration": 6640
+    },
+    {
+      "text": "bugs. Now these are the subtle logic",
+      "offset": 1128400,
+      "duration": 4480
+    },
+    {
+      "text": "errors that are really really hard to",
+      "offset": 1131280,
+      "duration": 5120
+    },
+    {
+      "text": "spot. Um when this buggy code is part of",
+      "offset": 1132880,
+      "duration": 6400
+    },
+    {
+      "text": "the training pool the model learns uh",
+      "offset": 1136400,
+      "duration": 6159
+    },
+    {
+      "text": "the flawed logic and then replicates it.",
+      "offset": 1139280,
+      "duration": 6080
+    },
+    {
+      "text": "This is where many of those tricky hard",
+      "offset": 1142559,
+      "duration": 4641
+    },
+    {
+      "text": "to diagnose reliability issues comes",
+      "offset": 1145360,
+      "duration": 3439
+    },
+    {
+      "text": "from.",
+      "offset": 1147200,
+      "duration": 4479
+    },
+    {
+      "text": "So when we talk about a model's",
+      "offset": 1148799,
+      "duration": 5921
+    },
+    {
+      "text": "personality, what we are really talking",
+      "offset": 1151679,
+      "duration": 7360
+    },
+    {
+      "text": "about is a reflection of the unique",
+      "offset": 1154720,
+      "duration": 7600
+    },
+    {
+      "text": "blend of good, bad, and insecure code",
+      "offset": 1159039,
+      "duration": 6081
+    },
+    {
+      "text": "that it was trained on. Now these are",
+      "offset": 1162320,
+      "duration": 5920
+    },
+    {
+      "text": "not random quirks. They are learned",
+      "offset": 1165120,
+      "duration": 4960
+    },
+    {
+      "text": "behavior.",
+      "offset": 1168240,
+      "duration": 5600
+    },
+    {
+      "text": "Now in the next slide I'll show you uh",
+      "offset": 1170080,
+      "duration": 6640
+    },
+    {
+      "text": "what exactly has happened when you apply",
+      "offset": 1173840,
+      "duration": 7520
+    },
+    {
+      "text": "reasoning to these LLM models. Now GPT5",
+      "offset": 1176720,
+      "duration": 7920
+    },
+    {
+      "text": "came up with a unique personality when",
+      "offset": 1181360,
+      "duration": 6160
+    },
+    {
+      "text": "you uh just apply a little bit of",
+      "offset": 1184640,
+      "duration": 5600
+    },
+    {
+      "text": "reasoning. So let's dig into what",
+      "offset": 1187520,
+      "duration": 4560
+    },
+    {
+      "text": "happens when you turn up that reasoning",
+      "offset": 1190240,
+      "duration": 4960
+    },
+    {
+      "text": "dial, right? Um we found that it's a",
+      "offset": 1192080,
+      "duration": 6320
+    },
+    {
+      "text": "classic double-edged sword, not a sword.",
+      "offset": 1195200,
+      "duration": 5760
+    },
+    {
+      "text": "Um yes it's a word because we are",
+      "offset": 1198400,
+      "duration": 4240
+    },
+    {
+      "text": "emphasizing on the word called",
+      "offset": 1200960,
+      "duration": 3280
+    },
+    {
+      "text": "reasoning.",
+      "offset": 1202640,
+      "duration": 4000
+    },
+    {
+      "text": "First let's talk about the performance.",
+      "offset": 1204240,
+      "duration": 5439
+    },
+    {
+      "text": "Does reasoning actually work? Yes,",
+      "offset": 1206640,
+      "duration": 5919
+    },
+    {
+      "text": "absolutely. It generally makes the code",
+      "offset": 1209679,
+      "duration": 5761
+    },
+    {
+      "text": "more likely to run successfully. Now we",
+      "offset": 1212559,
+      "duration": 6161
+    },
+    {
+      "text": "found there is a real sweet spot. The",
+      "offset": 1215440,
+      "duration": 6320
+    },
+    {
+      "text": "medium reasoning mode gives us the best",
+      "offset": 1218720,
+      "duration": 4800
+    },
+    {
+      "text": "results",
+      "offset": 1221760,
+      "duration": 5680
+    },
+    {
+      "text": "um hitting a success rate of about 82%.",
+      "offset": 1223520,
+      "duration": 5760
+    },
+    {
+      "text": "So it is not just a gimmick. It",
+      "offset": 1227440,
+      "duration": 6080
+    },
+    {
+      "text": "concretely improves performance. But as",
+      "offset": 1229280,
+      "duration": 6399
+    },
+    {
+      "text": "you might expect that performance comes",
+      "offset": 1233520,
+      "duration": 5680
+    },
+    {
+      "text": "with a price. This brings me to the",
+      "offset": 1235679,
+      "duration": 6801
+    },
+    {
+      "text": "rising cost. The higher that you set the",
+      "offset": 1239200,
+      "duration": 5920
+    },
+    {
+      "text": "reasoning model uh reasoning mode, the",
+      "offset": 1242480,
+      "duration": 5040
+    },
+    {
+      "text": "more expensive that it becomes. And that",
+      "offset": 1245120,
+      "duration": 4320
+    },
+    {
+      "text": "is not just in terms of the financial",
+      "offset": 1247520,
+      "duration": 5680
+    },
+    {
+      "text": "cost. The model also produces a lot more",
+      "offset": 1249440,
+      "duration": 6640
+    },
+    {
+      "text": "code. It becomes more verbose and more",
+      "offset": 1253200,
+      "duration": 6640
+    },
+    {
+      "text": "complex. So you are paying in cost but",
+      "offset": 1256080,
+      "duration": 6000
+    },
+    {
+      "text": "also in code blow that your teams will",
+      "offset": 1259840,
+      "duration": 4319
+    },
+    {
+      "text": "have to maintain in the future. So",
+      "offset": 1262080,
+      "duration": 3599
+    },
+    {
+      "text": "that's the cost that I was talking about",
+      "offset": 1264159,
+      "duration": 3681
+    },
+    {
+      "text": "in total.",
+      "offset": 1265679,
+      "duration": 4961
+    },
+    {
+      "text": "And this final point is probably the",
+      "offset": 1267840,
+      "duration": 5280
+    },
+    {
+      "text": "most crucial takeaway for any team",
+      "offset": 1270640,
+      "duration": 6000
+    },
+    {
+      "text": "implementing this. We call it the risk",
+      "offset": 1273120,
+      "duration": 5120
+    },
+    {
+      "text": "shift.",
+      "offset": 1276640,
+      "duration": 4000
+    },
+    {
+      "text": "This is fascinating. You know reasoning",
+      "offset": 1278240,
+      "duration": 5280
+    },
+    {
+      "text": "does not just remove bugs. It changes",
+      "offset": 1280640,
+      "duration": 6240
+    },
+    {
+      "text": "the kind of bugs that you get. It's very",
+      "offset": 1283520,
+      "duration": 6320
+    },
+    {
+      "text": "effective at getting rid of those",
+      "offset": 1286880,
+      "duration": 6000
+    },
+    {
+      "text": "obvious high severity blocker issues,",
+      "offset": 1289840,
+      "duration": 4800
+    },
+    {
+      "text": "the things that you'd like to catch",
+      "offset": 1292880,
+      "duration": 5679
+    },
+    {
+      "text": "easily. However, in their place, it",
+      "offset": 1294640,
+      "duration": 7360
+    },
+    {
+      "text": "introduces more subtle bugs. We are",
+      "offset": 1298559,
+      "duration": 5600
+    },
+    {
+      "text": "talking about those tricky things like",
+      "offset": 1302000,
+      "duration": 5200
+    },
+    {
+      "text": "concurrency issues or flawed IO error",
+      "offset": 1304159,
+      "duration": 4640
+    },
+    {
+      "text": "handling.",
+      "offset": 1307200,
+      "duration": 4560
+    },
+    {
+      "text": "So, you are essentially trading those",
+      "offset": 1308799,
+      "duration": 5921
+    },
+    {
+      "text": "obvious problems for the hidden ones.",
+      "offset": 1311760,
+      "duration": 5360
+    },
+    {
+      "text": "And in the long run, those hidden bugs",
+      "offset": 1314720,
+      "duration": 5839
+    },
+    {
+      "text": "can be much harder to find and far more",
+      "offset": 1317120,
+      "duration": 5520
+    },
+    {
+      "text": "dangerous.",
+      "offset": 1320559,
+      "duration": 6201
+    },
+    {
+      "text": "So what's the solution?",
+      "offset": 1322640,
+      "duration": 4120
+    },
+    {
+      "text": "We have talked through and walked",
+      "offset": 1327600,
+      "duration": 4720
+    },
+    {
+      "text": "through the productivity paradox, the",
+      "offset": 1329520,
+      "duration": 5680
+    },
+    {
+      "text": "risk hiding in that gap and the unique",
+      "offset": 1332320,
+      "duration": 5920
+    },
+    {
+      "text": "flawed personalities of all of these",
+      "offset": 1335200,
+      "duration": 5440
+    },
+    {
+      "text": "different AI models.",
+      "offset": 1338240,
+      "duration": 5280
+    },
+    {
+      "text": "The fundamental challenge is clear. How",
+      "offset": 1340640,
+      "duration": 5600
+    },
+    {
+      "text": "do you embrace the incredible speed of",
+      "offset": 1343520,
+      "duration": 5360
+    },
+    {
+      "text": "AI without inheriting all of this risk",
+      "offset": 1346240,
+      "duration": 5679
+    },
+    {
+      "text": "that we talked about? Our answer is",
+      "offset": 1348880,
+      "duration": 6240
+    },
+    {
+      "text": "simple but powerful philosophy for this",
+      "offset": 1351919,
+      "duration": 6081
+    },
+    {
+      "text": "new era which is called vibe but then",
+      "offset": 1355120,
+      "duration": 7120
+    },
+    {
+      "text": "verify. So let your developers vibe. Let",
+      "offset": 1358000,
+      "duration": 7039
+    },
+    {
+      "text": "them use this amazing AI tools to",
+      "offset": 1362240,
+      "duration": 5040
+    },
+    {
+      "text": "accelerate the development and innovate",
+      "offset": 1365039,
+      "duration": 5681
+    },
+    {
+      "text": "at full speed. But then you must empower",
+      "offset": 1367280,
+      "duration": 6720
+    },
+    {
+      "text": "them to verify that the code is secure,",
+      "offset": 1370720,
+      "duration": 6560
+    },
+    {
+      "text": "is reliable and is also maintainable.",
+      "offset": 1374000,
+      "duration": 6640
+    },
+    {
+      "text": "This is our value proposition at Sonar.",
+      "offset": 1377280,
+      "duration": 6560
+    },
+    {
+      "text": "We are the platform that enables you to",
+      "offset": 1380640,
+      "duration": 4960
+    },
+    {
+      "text": "do both.",
+      "offset": 1383840,
+      "duration": 6160
+    },
+    {
+      "text": "On one hand, we fill AI enable uh",
+      "offset": 1385600,
+      "duration": 7920
+    },
+    {
+      "text": "development. Now, Sonar integrates very",
+      "offset": 1390000,
+      "duration": 5600
+    },
+    {
+      "text": "seamlessly into your uh development",
+      "offset": 1393520,
+      "duration": 4800
+    },
+    {
+      "text": "workflow and that will provide you real",
+      "offset": 1395600,
+      "duration": 5760
+    },
+    {
+      "text": "time feedback and automated fixes for",
+      "offset": 1398320,
+      "duration": 5359
+    },
+    {
+      "text": "both human written and AI generated",
+      "offset": 1401360,
+      "duration": 5760
+    },
+    {
+      "text": "code. We help you move fast and on the",
+      "offset": 1403679,
+      "duration": 6321
+    },
+    {
+      "text": "other hand we help you build trust into",
+      "offset": 1407120,
+      "duration": 5840
+    },
+    {
+      "text": "every line of code that you write.",
+      "offset": 1410000,
+      "duration": 5200
+    },
+    {
+      "text": "Again, either a human developer or AI",
+      "offset": 1412960,
+      "duration": 4959
+    },
+    {
+      "text": "developer. This is the critical verify",
+      "offset": 1415200,
+      "duration": 5440
+    },
+    {
+      "text": "step as the gold standard in the code",
+      "offset": 1417919,
+      "duration": 5841
+    },
+    {
+      "text": "quality and security. We provide you the",
+      "offset": 1420640,
+      "duration": 5760
+    },
+    {
+      "text": "industry's broad you know broadest",
+      "offset": 1423760,
+      "duration": 5279
+    },
+    {
+      "text": "coverage to ensure that all the code",
+      "offset": 1426400,
+      "duration": 5920
+    },
+    {
+      "text": "meets your standard. We help you move",
+      "offset": 1429039,
+      "duration": 4961
+    },
+    {
+      "text": "safely.",
+      "offset": 1432320,
+      "duration": 5280
+    },
+    {
+      "text": "This idea of Vive then verify is really",
+      "offset": 1434000,
+      "duration": 6960
+    },
+    {
+      "text": "a modern take on a timeless principle",
+      "offset": 1437600,
+      "duration": 7040
+    },
+    {
+      "text": "which is trust but verify. So trust your",
+      "offset": 1440960,
+      "duration": 7440
+    },
+    {
+      "text": "teams that their AI tools to be",
+      "offset": 1444640,
+      "duration": 7519
+    },
+    {
+      "text": "productive but have the systems in place",
+      "offset": 1448400,
+      "duration": 6800
+    },
+    {
+      "text": "to verify the quality and security of",
+      "offset": 1452159,
+      "duration": 5681
+    },
+    {
+      "text": "the output. Sonar provides that",
+      "offset": 1455200,
+      "duration": 6000
+    },
+    {
+      "text": "essential verification layer. With Sonar",
+      "offset": 1457840,
+      "duration": 5680
+    },
+    {
+      "text": "you can finally close the productivity",
+      "offset": 1461200,
+      "duration": 4719
+    },
+    {
+      "text": "gap and embrace the future of",
+      "offset": 1463520,
+      "duration": 5759
+    },
+    {
+      "text": "development with confidence.",
+      "offset": 1465919,
+      "duration": 7760
+    },
+    {
+      "text": "Now uh in the next slide I have given",
+      "offset": 1469279,
+      "duration": 7601
+    },
+    {
+      "text": "you the QR code to download our full",
+      "offset": 1473679,
+      "duration": 7041
+    },
+    {
+      "text": "report on the coding personalities.",
+      "offset": 1476880,
+      "duration": 7120
+    },
+    {
+      "text": "It has two different reports. One is for",
+      "offset": 1480720,
+      "duration": 5520
+    },
+    {
+      "text": "all the models that we talked about and",
+      "offset": 1484000,
+      "duration": 5360
+    },
+    {
+      "text": "we have also revealed the reasoning",
+      "offset": 1486240,
+      "duration": 6160
+    },
+    {
+      "text": "model effect on GPD5 and what exactly",
+      "offset": 1489360,
+      "duration": 4720
+    },
+    {
+      "text": "has happened when you dial in all the",
+      "offset": 1492400,
+      "duration": 5600
+    },
+    {
+      "text": "different GPD 5 uh reasoning levels.",
+      "offset": 1494080,
+      "duration": 5520
+    },
+    {
+      "text": "Please feel free to just go ahead and",
+      "offset": 1498000,
+      "duration": 4000
+    },
+    {
+      "text": "download that read through the paper and",
+      "offset": 1499600,
+      "duration": 5199
+    },
+    {
+      "text": "understand it in a much more broader",
+      "offset": 1502000,
+      "duration": 4320
+    },
+    {
+      "text": "way.",
+      "offset": 1504799,
+      "duration": 4000
+    },
+    {
+      "text": "All right, that comes to an end of this",
+      "offset": 1506320,
+      "duration": 4640
+    },
+    {
+      "text": "webinar.",
+      "offset": 1508799,
+      "duration": 7480
+    },
+    {
+      "text": "Thank you and have a great day ahead.",
+      "offset": 1510960,
+      "duration": 5319
+    }
+  ],
+  "fullText": "Hello and welcome to our webinar uh qualitative analysis of six leading LLMs. My name is Prasinjit Sarkcar and I'm a technical product marketing manager at Sonar. So let's look at what we are going to talk about it today. So we have a packed agenda and um you know in couple of slides we'll be talking about the the new landscape of AI development um and we'll be focusing on our research methodology about how we have uh done the analysis of those leading LMS. We'll share the key findings which are inherently the the coding personalities of LLMs. We'll uh look at the root cause and little bit of case studies as well and we'll talk about the solutions. All right. So let's not wait for this and let's straight away jump into the landscape of the AI development. So we are in the middle of this fundamental shift in how the software you know is is created and the force uh behind this shift is artificial intelligence. Now AI is not just a new tool or a feature. It's completely rewriting the rules of development and it is happening at a scale that is hard to comprehend. Now let's start with the kind of numbers to see how uh profound this change is. First, the revolution is being led by the developers themselves and we have to acknowledge that um a recent stack overflow survey found that 76% of those developers are already using or planning to use uh this AI tools in their work. Uh and this is not a top- down mandate you know um it's a grassroot grassroot movement. Second, the sheer volume of this AI generated code is staggering. Now just one tool let's say cursor writes almost about a billion lines of accepted code every single day. Think about it right? So put that in into your perspective. That's more code than every human developer in the whole world produces combined. And finally this is the new standard by the way. Um Gartner predicts that by 2028 90% of all enterprise engineers will be using AI coding assistance or AI coding agents. Now this soon will be as common as you know you are uh working through the idees. So we have a technology uh you know being adopted at an incredible speed and generating code at an unprecedented scale. Now this promises a massive leap in the productivity but it also raises a critical question with this much of AI generated code flooding our systems how do we need how do we ensure that it's secure it's reliable and it's also maintainable right um so to answer that we deep dive uh into uh you know leading uh models and what we found is that uh the key to navigating this new world. So, we discovered that these AIs uh are not just the tools. They have their own distinct coding personalities. Over the next few minutes, we'll show you what those personalities are um with their unique flaws and strengths looks like and how uh you know, understanding them uh is the key to harness this power of AI safety uh you know, effectively. So we just saw AI is generating a tidal wave of code. Now the logical assumption is that this should be leading to an unprecedented explosion in productivity. Right? I mean that's a common sense. But the reality is far more complicated. Now this brings us directly to the central challenge we are here to talk about today which is the engineering productivity paradox. Now the paradox is this that think about these companies at the forefront like Google are reporting that while AI is generating over 30% of their new code they're only seeing about 10% productivity gain. So the question is where is all that extra efficiency going? Why isn't that impact much bigger? Now this graph that you see today explains this the disconnect perfectly. The blue line that you see is the promise of AI. Uh is the exponential speed. It is the exponential speed at which the code is being written faster than ever before. But the red line is actually the human bottleneck. Now it's much slower that you can think of linear pace at and it's also at a linear pace at which your engineers can manually review and verify all that code for security, for quality and maintainability. And that growing gap between the two curve is the paradox. Now it is where the massive productivity gains uh you know promised by AI uh get lost. Most importantly it's a danger zone where hidden complexity security vulnerabilities and subtle bugs from that AI generated code accumulate. Now this gap is a single biggest challenge and risk in this new area of the development. Now for the rest of this presentation we are going to go do deep dive into that gap. We'll show you exactly what kind of issues are hiding in there, why they are so hard to find and then you how you can solve it as well. So um we have identified this huge risky gap between the AI speed and the human verification. So to truly understand what is hiding inside the gap that I talked about in the previous slide, you can't just rely on the standard benchmark that you that you see all the time when a new LLM comes out in the market. You need to go much more deeper. And that is exactly what we did. We built an unique analytical framework from the ground up with just one goal to assess the true quality of this LM generated code. Now this is not about measuring simple pass or fail rates. Our analysis is designed to detect the things that matters for the production code. Complex bugs, critical security, you know, vulnerabilities and the kind of bad practices or code smells that lead to technical debt, right? So to do this we put the leading models on the market to the test. As you can see, we have evaluated a wide range from the very latest like you know GPT5 and Claude Sonnet 4 to established players like you know Llama 3 and we subjected them to a rigorous test giving this all all of the each of these models over 4,400 distinct Java programming assignments to see how they behaved across a huge variety of task. The result of this deep analysis is a series of critical insights that reveal the unique personality of each model. So now let's get into the findings and see what these personalities looks like. So you know after putting all these models through our deep analysis framework, what did we actually find? Now our research revealed uh several critical insights um that challenge the common narrative around the AI. Now this slide is the summary of our findings and it's it's essentially the road map for the rest of our session today. First we will establish a baseline reality. All models produce code with a significant number of issues. There is no silver bullet. Okay. Next, we will challenge the bigger is always better myth as we will show you the newest and the largest models come with hidden trade-offs that are crucial to understand. In fact, for some task like for smaller models can be better choice. We will then deep dive into the concept of trade-offs. The latest models like GPT5 are a prime example of this where every choice even just adjusting just the reasoning level introduces a whole new set of risk um alongside the benefit that you're going to get and all of this leads us to a central thesis. These models have unique coding personalities. Each one has its own quirks, its own strengths, and more importantly its own predictable weaknesses. Our goal is to change the way you think about these tools. Instead of searching for the single best model, you will today you leave today with a framework for understanding a model specific personality that will allow you to anticipate its flaws and build the right uh safeguards around that. So let's deep dive into the data. In the introduction, I made the claim that bigger and the newer is not necessarily better when it comes down to the lens. This slide shows you exactly what we meant by that. Um, what you are looking at is a chart mapping uh the performance of several leading models against the complexity of the code that they produce. Along the bottom you have the functional performance basically how often the code actually works. Uh further to the right is a better now and on the other side you have the cognitive complexity. You can think of this as like how difficult the code is for a human developer to read and maintain. For this axis lower is better but as you can see that there's a clear trend. The highest performing models which are up there in the right top right corner are the ones that generate the most verbose and most complex code. Now there is a direct uh trade-off between performance and simplicity. Now I want to draw your attention to GPT5 because it's an extreme and fascinating uh example. Um so look at this performance at 75% it is very very very close to cloud sonet 4 which is at 77%. So on the surface they seem comparable but look at the cost. To achieve that performance, GPT5 produces code that is vastly more complex. In fact, it has more than double the cognitive complexity of Claude's output. We are talking about generating nearly half a million lines of verbos code. Right? And this is a huge hidden cost. That extra complexity creates a massive review and maintenance burden for your development teams down the line. Now in the next slide we'll be showing you that how every single model has their unique security personality. So in the previous slide we have seen how the models trade performance for simplicity. Now let's apply that same idea to the security which is where the concept of coding personalities really comes to life. Now this chart breaks down the different type of uh security vulnerabilities we found across the leading models. Now each colored block that you see represents a different category of log. Um now the first thing you will notice is the amount of green on this chart that represents the path traversal and injection flaws. Now this is the one universal blind spot. It is the biggest security risk across every single model that we tested often making up you know more than a quarter of all the vulnerabilities. But once you look past that common weakness, you see that distinct personalities emerge. Now each model has its own favorite way of being insecure. For example, take a look at Llama 3.2 over to the far right. Now see that huge red block. That's a hardcoded credentials. Like over 23% of its flaws were coming from storing secrets directly in the code. That is its signature weakness. Now contrast that with a new GPD5 model and it int introduces a completely new dominant flop. That massive out uh you know orange section that you see is inadequate IO error handling. Now this single category makes up 30% of its issues while for the other models it was just a minor factor. and GPD5's personality shows another interesting trade-off. It's actually very unlikely to leak hard-coded credentials that we have seen in the case of uh Llama 3. But uh you know in this case for the GPD5 that's only about like 5% of his flaws. But it seems to have traded that strength for another weakness a very high rate of cryptography misconfigurations which you can see in the light yellow block. Now we'll be talking about uh a different type of bugs. um and let's look at uh you know a reliability uh personalities rather than security personalities. So we have seen that every model has a unique security personality. It turns out uh the exact same is true for the reliability as well. So not all the bugs are created equal. We know that and each model has its own preferred type of bug to create when the code is functionally incorrect. So think about it. It's it's really interesting to just deep dive into this chart that I have uh presented in here. Now this table um you know breaks down into uh those reliability bugs into different kind of categories and the personalities become very very clear when you look at the data. Now let's start with GPT40 because it's a massive outlier. Now look at the look at the top row. It's incredibly 48% like nearly half of its bugs which are fundamentally the control flowistics. We are talking about those absolute basics of those programming like you know getting loops or if statements wrong. Now this is the you know defining flaw of its reliability personality. Now compare that to clawson sonnet 4. Its bug profile is much more balanced and evenly distributed but it still has a signature weakness. It uniquely struggles with concurrency and threading issues. But the most interesting story here is the trade-off you see with the newer GPT5. It seems to have learned from GPD40's mistake. It dramatically reduces those basic control flow mistakes cutting them almost in like half. But this is the critical takeaway. It trades one flaw for another. So in place of those simple tra you know logic errors, it introduces a huge new problem which is a massive 20% of his bugs are now complex concurrency and threading issues. So what does it mean for you? It means your code review and testing strategy has to be tailored to the model that you're using. For code from GPD4, you need to be laser focused on uh on basic logic. But for GPD5, you need a completely different more specialized approach to hunt for those incredibly difficult concurrency bugs. Knowing the model's personality tells you exactly where to focus your you know quality assurance efforts. Now let's look at why these challenges are occurring. So why you know we so we have seen that uh that every model has these kind of a unique security and reliability personalities. A natural question is like why why do this specific patterns emerge? The answer is that all of these challenges are rooted in the one thing that they have in common which is the data that they were trained on. Now think about it. These models learn to code uh by ingesting billions of lines of code from internet. And the simple truth is that a lot of that code is not very good code. This creates three fundamental problem. First, you have the mixed quality code. So, the training data is a massive soup combining beautiful, well-written examples with unclean, outdated, and frankly terrible code. The model learns from all of it, picking up bad habits right alongside the good ones as well. Now, this is a classic garbage in and garbage out problem. Now, that is the first problem. The second problem is uh are the second problems are more dangerous and that is the data that has built-in security flaws. Now if a code with a known vulnerability makes into the code makes into the training set the model learns that risky pattern as a legitimate way to code. That's not right. But then it it it basically then reproduces those unsafe patterns in the code it generates for you. the vulnerabilities are literally baked in from the start and finally you have the problem of hidden bugs. Now these are the subtle logic errors that are really really hard to spot. Um when this buggy code is part of the training pool the model learns uh the flawed logic and then replicates it. This is where many of those tricky hard to diagnose reliability issues comes from. So when we talk about a model's personality, what we are really talking about is a reflection of the unique blend of good, bad, and insecure code that it was trained on. Now these are not random quirks. They are learned behavior. Now in the next slide I'll show you uh what exactly has happened when you apply reasoning to these LLM models. Now GPT5 came up with a unique personality when you uh just apply a little bit of reasoning. So let's dig into what happens when you turn up that reasoning dial, right? Um we found that it's a classic double-edged sword, not a sword. Um yes it's a word because we are emphasizing on the word called reasoning. First let's talk about the performance. Does reasoning actually work? Yes, absolutely. It generally makes the code more likely to run successfully. Now we found there is a real sweet spot. The medium reasoning mode gives us the best results um hitting a success rate of about 82%. So it is not just a gimmick. It concretely improves performance. But as you might expect that performance comes with a price. This brings me to the rising cost. The higher that you set the reasoning model uh reasoning mode, the more expensive that it becomes. And that is not just in terms of the financial cost. The model also produces a lot more code. It becomes more verbose and more complex. So you are paying in cost but also in code blow that your teams will have to maintain in the future. So that's the cost that I was talking about in total. And this final point is probably the most crucial takeaway for any team implementing this. We call it the risk shift. This is fascinating. You know reasoning does not just remove bugs. It changes the kind of bugs that you get. It's very effective at getting rid of those obvious high severity blocker issues, the things that you'd like to catch easily. However, in their place, it introduces more subtle bugs. We are talking about those tricky things like concurrency issues or flawed IO error handling. So, you are essentially trading those obvious problems for the hidden ones. And in the long run, those hidden bugs can be much harder to find and far more dangerous. So what's the solution? We have talked through and walked through the productivity paradox, the risk hiding in that gap and the unique flawed personalities of all of these different AI models. The fundamental challenge is clear. How do you embrace the incredible speed of AI without inheriting all of this risk that we talked about? Our answer is simple but powerful philosophy for this new era which is called vibe but then verify. So let your developers vibe. Let them use this amazing AI tools to accelerate the development and innovate at full speed. But then you must empower them to verify that the code is secure, is reliable and is also maintainable. This is our value proposition at Sonar. We are the platform that enables you to do both. On one hand, we fill AI enable uh development. Now, Sonar integrates very seamlessly into your uh development workflow and that will provide you real time feedback and automated fixes for both human written and AI generated code. We help you move fast and on the other hand we help you build trust into every line of code that you write. Again, either a human developer or AI developer. This is the critical verify step as the gold standard in the code quality and security. We provide you the industry's broad you know broadest coverage to ensure that all the code meets your standard. We help you move safely. This idea of Vive then verify is really a modern take on a timeless principle which is trust but verify. So trust your teams that their AI tools to be productive but have the systems in place to verify the quality and security of the output. Sonar provides that essential verification layer. With Sonar you can finally close the productivity gap and embrace the future of development with confidence. Now uh in the next slide I have given you the QR code to download our full report on the coding personalities. It has two different reports. One is for all the models that we talked about and we have also revealed the reasoning model effect on GPD5 and what exactly has happened when you dial in all the different GPD 5 uh reasoning levels. Please feel free to just go ahead and download that read through the paper and understand it in a much more broader way. All right, that comes to an end of this webinar. Thank you and have a great day ahead.",
+  "fetchedAt": "2026-03-14T09:22:29.608Z"
+}

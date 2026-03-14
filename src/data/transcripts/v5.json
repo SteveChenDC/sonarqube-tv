@@ -1,0 +1,3188 @@
+{
+  "videoId": "v5",
+  "youtubeId": "y7RrpkZTml8",
+  "segments": [
+    {
+      "text": "Hello folks and welcome to our session",
+      "offset": 17600,
+      "duration": 4080
+    },
+    {
+      "text": "the self-healing applications decade is",
+      "offset": 19439,
+      "duration": 4561
+    },
+    {
+      "text": "here. Uh I'm your host Servanchy. do",
+      "offset": 21680,
+      "duration": 3759
+    },
+    {
+      "text": "product marketing here at Sonar and I'm",
+      "offset": 24000,
+      "duration": 3119
+    },
+    {
+      "text": "very thrilled to be joined by Boris",
+      "offset": 25439,
+      "duration": 4561
+    },
+    {
+      "text": "Pascalv who is the co-founder and CEO of",
+      "offset": 27119,
+      "duration": 4960
+    },
+    {
+      "text": "Logicar which builds a decision engine",
+      "offset": 30000,
+      "duration": 4160
+    },
+    {
+      "text": "for production reliability. Prior to",
+      "offset": 32079,
+      "duration": 4640
+    },
+    {
+      "text": "running Logicar, he co-founded Deep Code",
+      "offset": 34160,
+      "duration": 4399
+    },
+    {
+      "text": "which is one of the first AI systems for",
+      "offset": 36719,
+      "duration": 4160
+    },
+    {
+      "text": "largecale code analysis that was later",
+      "offset": 38559,
+      "duration": 4320
+    },
+    {
+      "text": "acquired by Sneak. Boris welcome. Thank",
+      "offset": 40879,
+      "duration": 3441
+    },
+    {
+      "text": "you for joining us.",
+      "offset": 42879,
+      "duration": 3200
+    },
+    {
+      "text": ">> Welcome. Thank you Ans for the",
+      "offset": 44320,
+      "duration": 2800
+    },
+    {
+      "text": "introduction.",
+      "offset": 46079,
+      "duration": 2960
+    },
+    {
+      "text": ">> Of course. Uh we're really excited to",
+      "offset": 47120,
+      "duration": 4000
+    },
+    {
+      "text": "have this conversation today about why",
+      "offset": 49039,
+      "duration": 4321
+    },
+    {
+      "text": "engineering managers uh need a decision",
+      "offset": 51120,
+      "duration": 3919
+    },
+    {
+      "text": "layer to help them prioritize the work",
+      "offset": 53360,
+      "duration": 3839
+    },
+    {
+      "text": "that they and their teams do. Before we",
+      "offset": 55039,
+      "duration": 4000
+    },
+    {
+      "text": "get to that, I do want to uh just",
+      "offset": 57199,
+      "duration": 3441
+    },
+    {
+      "text": "quickly talk about your background and",
+      "offset": 59039,
+      "duration": 2721
+    },
+    {
+      "text": "what you're coming in with. Can you talk",
+      "offset": 60640,
+      "duration": 1840
+    },
+    {
+      "text": "a little bit about what you're working",
+      "offset": 61760,
+      "duration": 2320
+    },
+    {
+      "text": "on these days?",
+      "offset": 62480,
+      "duration": 3840
+    },
+    {
+      "text": ">> Uh I mean uh we're building on top of",
+      "offset": 64080,
+      "duration": 4960
+    },
+    {
+      "text": "what uh we already started with deep",
+      "offset": 66320,
+      "duration": 5360
+    },
+    {
+      "text": "code back in the days. Uh so today we're",
+      "offset": 69040,
+      "duration": 4480
+    },
+    {
+      "text": "seeing AI already made it kind of",
+      "offset": 71680,
+      "duration": 4080
+    },
+    {
+      "text": "dramatic dramatically easier to write",
+      "offset": 73520,
+      "duration": 5520
+    },
+    {
+      "text": "and ship code by far right and tasks",
+      "offset": 75760,
+      "duration": 5280
+    },
+    {
+      "text": "tasks are completed much faster PRs are",
+      "offset": 79040,
+      "duration": 5119
+    },
+    {
+      "text": "created in minutes uh but uh something",
+      "offset": 81040,
+      "duration": 5920
+    },
+    {
+      "text": "that's kind of all the AI labs did not",
+      "offset": 84159,
+      "duration": 5361
+    },
+    {
+      "text": "actually focus on accelerating uh at the",
+      "offset": 86960,
+      "duration": 4640
+    },
+    {
+      "text": "same pace has been exactly the decision",
+      "offset": 89520,
+      "duration": 5599
+    },
+    {
+      "text": "making um uh that you mentioned and uh",
+      "offset": 91600,
+      "duration": 6400
+    },
+    {
+      "text": "exactly managers pretty much no longer",
+      "offset": 95119,
+      "duration": 4801
+    },
+    {
+      "text": "actually constrained by this calling",
+      "offset": 98000,
+      "duration": 3520
+    },
+    {
+      "text": "speeds But they actually facing this",
+      "offset": 99920,
+      "duration": 4480
+    },
+    {
+      "text": "constraint by prioritizing",
+      "offset": 101520,
+      "duration": 4559
+    },
+    {
+      "text": "clearly what has to be actually fixed",
+      "offset": 104400,
+      "duration": 4079
+    },
+    {
+      "text": "next and in in reality what should not",
+      "offset": 106079,
+      "duration": 3761
+    },
+    {
+      "text": "be fixed.",
+      "offset": 108479,
+      "duration": 2401
+    },
+    {
+      "text": ">> Thank you for that. I feel like we're",
+      "offset": 109840,
+      "duration": 2160
+    },
+    {
+      "text": "getting a little ahead of ourselves. So",
+      "offset": 110880,
+      "duration": 3040
+    },
+    {
+      "text": "let's maybe back up a little bit and",
+      "offset": 112000,
+      "duration": 3680
+    },
+    {
+      "text": "talk about why this is such a problem",
+      "offset": 113920,
+      "duration": 3519
+    },
+    {
+      "text": "and and and what the pain point is",
+      "offset": 115680,
+      "duration": 3119
+    },
+    {
+      "text": "because one thing that we're seeing that",
+      "offset": 117439,
+      "duration": 2481
+    },
+    {
+      "text": "you and I have talked about is that",
+      "offset": 118799,
+      "duration": 3121
+    },
+    {
+      "text": "there is evidence that while development",
+      "offset": 119920,
+      "duration": 4799
+    },
+    {
+      "text": "teams are actually uh getting faster and",
+      "offset": 121920,
+      "duration": 4159
+    },
+    {
+      "text": "more productive and completing their",
+      "offset": 124719,
+      "duration": 4001
+    },
+    {
+      "text": "work more quickly, they're also seeing",
+      "offset": 126079,
+      "duration": 4880
+    },
+    {
+      "text": "increases in you know pull request a few",
+      "offset": 128720,
+      "duration": 5840
+    },
+    {
+      "text": "times in code churn and in issue volume.",
+      "offset": 130959,
+      "duration": 6481
+    },
+    {
+      "text": "Uh I'm when you you've seen this uh in",
+      "offset": 134560,
+      "duration": 6000
+    },
+    {
+      "text": "your work what is driving? Yeah, and",
+      "offset": 137440,
+      "duration": 5040
+    },
+    {
+      "text": "that's exactly what where the paradox",
+      "offset": 140560,
+      "duration": 4000
+    },
+    {
+      "text": "actually begins. There is so much data",
+      "offset": 142480,
+      "duration": 5759
+    },
+    {
+      "text": "out there that we have seen um that uh",
+      "offset": 144560,
+      "duration": 6240
+    },
+    {
+      "text": "that the optimized velocity has been the",
+      "offset": 148239,
+      "duration": 4561
+    },
+    {
+      "text": "main focus and we have achieved it. I",
+      "offset": 150800,
+      "duration": 4079
+    },
+    {
+      "text": "mean uh pull requests numbers are",
+      "offset": 152800,
+      "duration": 4240
+    },
+    {
+      "text": "growing through the roof like more than",
+      "offset": 154879,
+      "duration": 4241
+    },
+    {
+      "text": "doubling the amount in some people every",
+      "offset": 157040,
+      "duration": 3919
+    },
+    {
+      "text": "month or every every 3 months which is",
+      "offset": 159120,
+      "duration": 4640
+    },
+    {
+      "text": "which is crazy. um but uh we haven't",
+      "offset": 160959,
+      "duration": 4881
+    },
+    {
+      "text": "actually optimized for the decision",
+      "offset": 163760,
+      "duration": 3920
+    },
+    {
+      "text": "quality what we actually have to work on",
+      "offset": 165840,
+      "duration": 3840
+    },
+    {
+      "text": "right so this is kind of the secondary",
+      "offset": 167680,
+      "duration": 3520
+    },
+    {
+      "text": "part that we've seen at the very",
+      "offset": 169680,
+      "duration": 4880
+    },
+    {
+      "text": "beginning of um uh of the AI generative",
+      "offset": 171200,
+      "duration": 6640
+    },
+    {
+      "text": "uh uh uh generative code capabilities",
+      "offset": 174560,
+      "duration": 5440
+    },
+    {
+      "text": "that uh all the speed and velocity",
+      "offset": 177840,
+      "duration": 4160
+    },
+    {
+      "text": "actually come comes in with the cost",
+      "offset": 180000,
+      "duration": 3920
+    },
+    {
+      "text": "right with the kind of the review time",
+      "offset": 182000,
+      "duration": 3840
+    },
+    {
+      "text": "have increased the actual number of",
+      "offset": 183920,
+      "duration": 3840
+    },
+    {
+      "text": "lines of code that are producing those",
+      "offset": 185840,
+      "duration": 4240
+    },
+    {
+      "text": "requests have more than doubled code",
+      "offset": 187760,
+      "duration": 4479
+    },
+    {
+      "text": "duplication code stability All of these",
+      "offset": 190080,
+      "duration": 3840
+    },
+    {
+      "text": "have actually been impacted negatively,",
+      "offset": 192239,
+      "duration": 3601
+    },
+    {
+      "text": "right? And this is kind of the the the",
+      "offset": 193920,
+      "duration": 4720
+    },
+    {
+      "text": "duality, right? So the problem is not uh",
+      "offset": 195840,
+      "duration": 6160
+    },
+    {
+      "text": "exactly kind of where you're getting the",
+      "offset": 198640,
+      "duration": 5679
+    },
+    {
+      "text": "signals for all those problems but",
+      "offset": 202000,
+      "duration": 3840
+    },
+    {
+      "text": "actually deciding what really you have",
+      "offset": 204319,
+      "duration": 3920
+    },
+    {
+      "text": "to be fixing to maintain that balance,",
+      "offset": 205840,
+      "duration": 3600
+    },
+    {
+      "text": "right? Because if you just fix",
+      "offset": 208239,
+      "duration": 3521
+    },
+    {
+      "text": "everything, then likely you actually",
+      "offset": 209440,
+      "duration": 5439
+    },
+    {
+      "text": "building up a lot of um uh tech debt",
+      "offset": 211760,
+      "duration": 5360
+    },
+    {
+      "text": "that that sooner or later will come back",
+      "offset": 214879,
+      "duration": 4241
+    },
+    {
+      "text": "to bite you. I was about to say the tech",
+      "offset": 217120,
+      "duration": 4000
+    },
+    {
+      "text": "debt seems to be the biggest uh outcome",
+      "offset": 219120,
+      "duration": 3119
+    },
+    {
+      "text": "of that, right? Because if you're just",
+      "offset": 221120,
+      "duration": 2640
+    },
+    {
+      "text": "fixing problems that aren't worth being",
+      "offset": 222239,
+      "duration": 2801
+    },
+    {
+      "text": "fixed, you're just kind of spinning your",
+      "offset": 223760,
+      "duration": 2479
+    },
+    {
+      "text": "wheels and creating more problems down",
+      "offset": 225040,
+      "duration": 2559
+    },
+    {
+      "text": "the stream, right?",
+      "offset": 226239,
+      "duration": 2801
+    },
+    {
+      "text": ">> Yeah. So, that's exactly you have to",
+      "offset": 227599,
+      "duration": 2801
+    },
+    {
+      "text": "figure out where to draw the line in the",
+      "offset": 229040,
+      "duration": 3680
+    },
+    {
+      "text": "right balances, right? More more AI",
+      "offset": 230400,
+      "duration": 4240
+    },
+    {
+      "text": "generates more code. More code creates",
+      "offset": 232720,
+      "duration": 4079
+    },
+    {
+      "text": "more duplication. Take that that creates",
+      "offset": 234640,
+      "duration": 3840
+    },
+    {
+      "text": "even more signals and that's actually",
+      "offset": 236799,
+      "duration": 3520
+    },
+    {
+      "text": "makes the decision what to fix even",
+      "offset": 238480,
+      "duration": 4560
+    },
+    {
+      "text": "harder, right? And this is where uh uh",
+      "offset": 240319,
+      "duration": 4801
+    },
+    {
+      "text": "where exactly we're trying to focus on.",
+      "offset": 243040,
+      "duration": 4240
+    },
+    {
+      "text": ">> Yeah. Is this why development teams",
+      "offset": 245120,
+      "duration": 4319
+    },
+    {
+      "text": "often struggle with finding the space to",
+      "offset": 247280,
+      "duration": 3760
+    },
+    {
+      "text": "innovate? Uh because they're stuck in",
+      "offset": 249439,
+      "duration": 3201
+    },
+    {
+      "text": "this maintenance loop.",
+      "offset": 251040,
+      "duration": 3040
+    },
+    {
+      "text": ">> Yeah, that's kind of the trade-off of",
+      "offset": 252640,
+      "duration": 2959
+    },
+    {
+      "text": "timing. I mean, developers definitely",
+      "offset": 254080,
+      "duration": 3520
+    },
+    {
+      "text": "feel very fast and productive, but then",
+      "offset": 255599,
+      "duration": 3441
+    },
+    {
+      "text": "they actually stuck actually keep on",
+      "offset": 257600,
+      "duration": 3280
+    },
+    {
+      "text": "fixing more things and we've seen kind",
+      "offset": 259040,
+      "duration": 3840
+    },
+    {
+      "text": "of the number of bugs per developer have",
+      "offset": 260880,
+      "duration": 4480
+    },
+    {
+      "text": "actually increased uh substantially as",
+      "offset": 262880,
+      "duration": 5039
+    },
+    {
+      "text": "well uh uh very recently. So that's that",
+      "offset": 265360,
+      "duration": 4320
+    },
+    {
+      "text": "is indeed the challenge. You would think",
+      "offset": 267919,
+      "duration": 4081
+    },
+    {
+      "text": "that they'd be able to to handle this by",
+      "offset": 269680,
+      "duration": 4000
+    },
+    {
+      "text": "just having a bit of discipline around",
+      "offset": 272000,
+      "duration": 3040
+    },
+    {
+      "text": "the way they manage their backlog,",
+      "offset": 273680,
+      "duration": 2640
+    },
+    {
+      "text": "right? So that's the part that's",
+      "offset": 275040,
+      "duration": 3040
+    },
+    {
+      "text": "failing, I take it.",
+      "offset": 276320,
+      "duration": 4080
+    },
+    {
+      "text": ">> Yeah, indeed. Indeed.",
+      "offset": 278080,
+      "duration": 3679
+    },
+    {
+      "text": ">> So can you talk a little bit about that?",
+      "offset": 280400,
+      "duration": 4000
+    },
+    {
+      "text": "Like why is backlog management so hard",
+      "offset": 281759,
+      "duration": 4481
+    },
+    {
+      "text": "especially in this current environment?",
+      "offset": 284400,
+      "duration": 4239
+    },
+    {
+      "text": ">> Yeah, it is it is a good question. So",
+      "offset": 286240,
+      "duration": 4080
+    },
+    {
+      "text": "the backlogs in general, they actually",
+      "offset": 288639,
+      "duration": 3761
+    },
+    {
+      "text": "capture a specific intent. What do you",
+      "offset": 290320,
+      "duration": 3760
+    },
+    {
+      "text": "actually want to want to fix? They don't",
+      "offset": 292400,
+      "duration": 3920
+    },
+    {
+      "text": "usually talk about the impact that is",
+      "offset": 294080,
+      "duration": 4240
+    },
+    {
+      "text": "there, right? uh and this code",
+      "offset": 296320,
+      "duration": 4960
+    },
+    {
+      "text": "generation acceleration uh uh uh as we",
+      "offset": 298320,
+      "duration": 5680
+    },
+    {
+      "text": "spoke about it pretty much um the",
+      "offset": 301280,
+      "duration": 5440
+    },
+    {
+      "text": "detection is also in a way automated",
+      "offset": 304000,
+      "duration": 5120
+    },
+    {
+      "text": "right we're not actually uh shy of",
+      "offset": 306720,
+      "duration": 4319
+    },
+    {
+      "text": "signals right on the bottom of the layer",
+      "offset": 309120,
+      "duration": 3680
+    },
+    {
+      "text": "as I show on the slide here we actually",
+      "offset": 311039,
+      "duration": 3281
+    },
+    {
+      "text": "said okay we're generating code that's",
+      "offset": 312800,
+      "duration": 4000
+    },
+    {
+      "text": "great we're able to run it that's great",
+      "offset": 314320,
+      "duration": 5120
+    },
+    {
+      "text": "and then things like sonar finds things",
+      "offset": 316800,
+      "duration": 5280
+    },
+    {
+      "text": "sentry identifies observability things",
+      "offset": 319440,
+      "duration": 4240
+    },
+    {
+      "text": "those things are also automated we've",
+      "offset": 322080,
+      "duration": 3520
+    },
+    {
+      "text": "been having those signals actually for",
+      "offset": 323680,
+      "duration": 3280
+    },
+    {
+      "text": "years right Right.",
+      "offset": 325600,
+      "duration": 3120
+    },
+    {
+      "text": ">> And most engineer managers that we",
+      "offset": 326960,
+      "duration": 4000
+    },
+    {
+      "text": "actually speak to, they're not worried",
+      "offset": 328720,
+      "duration": 4479
+    },
+    {
+      "text": "uh uh they're not worried about the",
+      "offset": 330960,
+      "duration": 3519
+    },
+    {
+      "text": "backlog. They actually worried about",
+      "offset": 333199,
+      "duration": 3280
+    },
+    {
+      "text": "what's actually hidden in those signals",
+      "offset": 334479,
+      "duration": 3601
+    },
+    {
+      "text": "that they don't have time to look at.",
+      "offset": 336479,
+      "duration": 2961
+    },
+    {
+      "text": "Actually, some research a couple of",
+      "offset": 338080,
+      "duration": 3679
+    },
+    {
+      "text": "years ago, I think, mentioned that more",
+      "offset": 339440,
+      "duration": 4800
+    },
+    {
+      "text": "than 90% of all the production incidents",
+      "offset": 341759,
+      "duration": 4961
+    },
+    {
+      "text": "that happened are actually already had a",
+      "offset": 344240,
+      "duration": 5519
+    },
+    {
+      "text": "signal either in a in a scanner or a",
+      "offset": 346720,
+      "duration": 4560
+    },
+    {
+      "text": "production system or that there's",
+      "offset": 349759,
+      "duration": 2801
+    },
+    {
+      "text": "something in the backlog tells them,",
+      "offset": 351280,
+      "duration": 2400
+    },
+    {
+      "text": "hey, that's a problem. It has to be",
+      "offset": 352560,
+      "duration": 3440
+    },
+    {
+      "text": "fixed. But we either did not have time",
+      "offset": 353680,
+      "duration": 4480
+    },
+    {
+      "text": "to work on it or we just ignored it.",
+      "offset": 356000,
+      "duration": 3759
+    },
+    {
+      "text": "Right.",
+      "offset": 358160,
+      "duration": 2879
+    },
+    {
+      "text": ">> So there's there's a noise there's",
+      "offset": 359759,
+      "duration": 2880
+    },
+    {
+      "text": "there's a signal to noise issue. It",
+      "offset": 361039,
+      "duration": 3440
+    },
+    {
+      "text": "seems like there's there's all these",
+      "offset": 362639,
+      "duration": 4560
+    },
+    {
+      "text": "things coming in difficulty even seeing",
+      "offset": 364479,
+      "duration": 4241
+    },
+    {
+      "text": "them in time or the difficulty",
+      "offset": 367199,
+      "duration": 2881
+    },
+    {
+      "text": "prioritizing them to find out what to",
+      "offset": 368720,
+      "duration": 2319
+    },
+    {
+      "text": "work on.",
+      "offset": 370080,
+      "duration": 2800
+    },
+    {
+      "text": ">> Yeah. So those backlogs they were never",
+      "offset": 371039,
+      "duration": 4081
+    },
+    {
+      "text": "designed to actually understand and",
+      "offset": 372880,
+      "duration": 4400
+    },
+    {
+      "text": "collect all this evidence. they're all",
+      "offset": 375120,
+      "duration": 4320
+    },
+    {
+      "text": "about uh and when this happens pretty",
+      "offset": 377280,
+      "duration": 4560
+    },
+    {
+      "text": "much it's up to the engineers manager or",
+      "offset": 379440,
+      "duration": 4479
+    },
+    {
+      "text": "even product manager sometimes to kind",
+      "offset": 381840,
+      "duration": 3840
+    },
+    {
+      "text": "of go and collect this evidence before",
+      "offset": 383919,
+      "duration": 3201
+    },
+    {
+      "text": "they can decide and send it to",
+      "offset": 385680,
+      "duration": 4079
+    },
+    {
+      "text": "engineerings. I I think I've heard teams",
+      "offset": 387120,
+      "duration": 4079
+    },
+    {
+      "text": "pushing that all the way up to the",
+      "offset": 389759,
+      "duration": 2801
+    },
+    {
+      "text": "customer success people on the phone",
+      "offset": 391199,
+      "duration": 2801
+    },
+    {
+      "text": "that they have to go and pull things",
+      "offset": 392560,
+      "duration": 3520
+    },
+    {
+      "text": "from observability system before they",
+      "offset": 394000,
+      "duration": 3680
+    },
+    {
+      "text": "can send it down to the engineering just",
+      "offset": 396080,
+      "duration": 3360
+    },
+    {
+      "text": "because engineers don't have time to",
+      "offset": 397680,
+      "duration": 3040
+    },
+    {
+      "text": "deal with the volume.",
+      "offset": 399440,
+      "duration": 2720
+    },
+    {
+      "text": ">> Exactly. and and all of this everything",
+      "offset": 400720,
+      "duration": 2880
+    },
+    {
+      "text": "you described these sound like problems",
+      "offset": 402160,
+      "duration": 3280
+    },
+    {
+      "text": "that they're not new right I think",
+      "offset": 403600,
+      "duration": 3840
+    },
+    {
+      "text": "development teams for for 10 20 years",
+      "offset": 405440,
+      "duration": 4080
+    },
+    {
+      "text": "have had these problems but AI I think",
+      "offset": 407440,
+      "duration": 5759
+    },
+    {
+      "text": "has uh really remixed uh the impact",
+      "offset": 409520,
+      "duration": 5440
+    },
+    {
+      "text": "these problems can have right there's a",
+      "offset": 413199,
+      "duration": 3280
+    },
+    {
+      "text": "there's a greater volume of code being",
+      "offset": 414960,
+      "duration": 3519
+    },
+    {
+      "text": "written there's a greater velocity of",
+      "offset": 416479,
+      "duration": 4321
+    },
+    {
+      "text": "code being deployed does that amplify",
+      "offset": 418479,
+      "duration": 3601
+    },
+    {
+      "text": "these issues",
+      "offset": 420800,
+      "duration": 2560
+    },
+    {
+      "text": ">> obviously what you're having on the",
+      "offset": 422080,
+      "duration": 2640
+    },
+    {
+      "text": "scale on the bottom you're increasing",
+      "offset": 423360,
+      "duration": 4800
+    },
+    {
+      "text": "the the velocity and the scale by orders",
+      "offset": 424720,
+      "duration": 5039
+    },
+    {
+      "text": "of magnitude right but then the",
+      "offset": 428160,
+      "duration": 3920
+    },
+    {
+      "text": "prioritization on top remains uh remains",
+      "offset": 429759,
+      "duration": 5121
+    },
+    {
+      "text": "menu right this really creates a chaos",
+      "offset": 432080,
+      "duration": 5280
+    },
+    {
+      "text": "at the end of today right so it's uh I'm",
+      "offset": 434880,
+      "duration": 3840
+    },
+    {
+      "text": "seeing more and more engineering",
+      "offset": 437360,
+      "duration": 4640
+    },
+    {
+      "text": "managers uh g gaining more gray hair",
+      "offset": 438720,
+      "duration": 5520
+    },
+    {
+      "text": "because they have to deal with that",
+      "offset": 442000,
+      "duration": 4800
+    },
+    {
+      "text": ">> yeah and are there additional signals",
+      "offset": 444240,
+      "duration": 4000
+    },
+    {
+      "text": "that are coming in because of the AI",
+      "offset": 446800,
+      "duration": 3280
+    },
+    {
+      "text": "there's there's there's way more AI",
+      "offset": 448240,
+      "duration": 3280
+    },
+    {
+      "text": "tools that are also being used right",
+      "offset": 450080,
+      "duration": 3440
+    },
+    {
+      "text": "that the ecosystem is expanding",
+      "offset": 451520,
+      "duration": 3920
+    },
+    {
+      "text": "dramatically and I'm wondering if",
+      "offset": 453520,
+      "duration": 3840
+    },
+    {
+      "text": "there's also an increasing signal to",
+      "offset": 455440,
+      "duration": 3920
+    },
+    {
+      "text": "noise issue just from that alone",
+      "offset": 457360,
+      "duration": 4959
+    },
+    {
+      "text": ">> that is correct also In addition to uh",
+      "offset": 459360,
+      "duration": 4399
+    },
+    {
+      "text": "the acceleration of actually the",
+      "offset": 462319,
+      "duration": 3041
+    },
+    {
+      "text": "creation of new things, there's also new",
+      "offset": 463759,
+      "duration": 3280
+    },
+    {
+      "text": "tools that are giving you more signals.",
+      "offset": 465360,
+      "duration": 3520
+    },
+    {
+      "text": "I mean there's also capabilities of",
+      "offset": 467039,
+      "duration": 3521
+    },
+    {
+      "text": "cleaning up signals and you are asking",
+      "offset": 468880,
+      "duration": 3599
+    },
+    {
+      "text": "are you actually getting rid of them. Uh",
+      "offset": 470560,
+      "duration": 3440
+    },
+    {
+      "text": "but the idea is is how do you actually",
+      "offset": 472479,
+      "duration": 3521
+    },
+    {
+      "text": "end up correlating multiple of them",
+      "offset": 474000,
+      "duration": 4319
+    },
+    {
+      "text": "right? So if we look at this um this is",
+      "offset": 476000,
+      "duration": 4400
+    },
+    {
+      "text": "how the compression of the signals into",
+      "offset": 478319,
+      "duration": 5121
+    },
+    {
+      "text": "one kind of looks like. Um for example I",
+      "offset": 480400,
+      "duration": 4880
+    },
+    {
+      "text": "I actually put one example here that you",
+      "offset": 483440,
+      "duration": 4240
+    },
+    {
+      "text": "have multiple sentry issues kind of a",
+      "offset": 485280,
+      "duration": 4960
+    },
+    {
+      "text": "Jira ticket right then a pull request",
+      "offset": 487680,
+      "duration": 4880
+    },
+    {
+      "text": "was correlated that was old and then",
+      "offset": 490240,
+      "duration": 4160
+    },
+    {
+      "text": "that shows you the impact that it's",
+      "offset": 492560,
+      "duration": 3680
+    },
+    {
+      "text": "there who was actually responsible for",
+      "offset": 494400,
+      "duration": 2799
+    },
+    {
+      "text": "it",
+      "offset": 496240,
+      "duration": 3440
+    },
+    {
+      "text": ">> um and and all of this kind of gives you",
+      "offset": 497199,
+      "duration": 4641
+    },
+    {
+      "text": "not a single rank rank decision but kind",
+      "offset": 499680,
+      "duration": 4079
+    },
+    {
+      "text": "of the engineering managers kind of",
+      "offset": 501840,
+      "duration": 3440
+    },
+    {
+      "text": "doesn't see just the alerts but they",
+      "offset": 503759,
+      "duration": 3201
+    },
+    {
+      "text": "actually see what really has to be fixed",
+      "offset": 505280,
+      "duration": 3680
+    },
+    {
+      "text": "next and they have the full evidence up",
+      "offset": 506960,
+      "duration": 4239
+    },
+    {
+      "text": "and down the chain so they can explain",
+      "offset": 508960,
+      "duration": 3759
+    },
+    {
+      "text": "that should be worked on because it",
+      "offset": 511199,
+      "duration": 3441
+    },
+    {
+      "text": "impacts that many customers the",
+      "offset": 512719,
+      "duration": 4081
+    },
+    {
+      "text": "engineers have all the context they need",
+      "offset": 514640,
+      "duration": 2959
+    },
+    {
+      "text": "etc",
+      "offset": 516800,
+      "duration": 2799
+    },
+    {
+      "text": ">> right is is code quality and code",
+      "offset": 517599,
+      "duration": 3841
+    },
+    {
+      "text": "security like part of the signals that",
+      "offset": 519599,
+      "duration": 3841
+    },
+    {
+      "text": "are being collected and compressed here",
+      "offset": 521440,
+      "duration": 3680
+    },
+    {
+      "text": ">> absolutely I mean the the amount of",
+      "offset": 523440,
+      "duration": 3760
+    },
+    {
+      "text": "signals I think this is as you mentioned",
+      "offset": 525120,
+      "duration": 4399
+    },
+    {
+      "text": "with the new tools will be exploding but",
+      "offset": 527200,
+      "duration": 4960
+    },
+    {
+      "text": "uh any signal you can be getting a lot",
+      "offset": 529519,
+      "duration": 4161
+    },
+    {
+      "text": "of those signals are actually be purely",
+      "offset": 532160,
+      "duration": 3440
+    },
+    {
+      "text": "coming from customer success from match",
+      "offset": 533680,
+      "duration": 3599
+    },
+    {
+      "text": "scanners from productions",
+      "offset": 535600,
+      "duration": 3520
+    },
+    {
+      "text": ">> from the code and how the code has",
+      "offset": 537279,
+      "duration": 4081
+    },
+    {
+      "text": "evolved over time we're now giving some",
+      "offset": 539120,
+      "duration": 6000
+    },
+    {
+      "text": "specification uh agent.mmd files like",
+      "offset": 541360,
+      "duration": 5599
+    },
+    {
+      "text": "the number of signals actually will be",
+      "offset": 545120,
+      "duration": 3839
+    },
+    {
+      "text": "exploding over time I think and this is",
+      "offset": 546959,
+      "duration": 4320
+    },
+    {
+      "text": "the reason why engineering managers",
+      "offset": 548959,
+      "duration": 4560
+    },
+    {
+      "text": "alone cannot deal with that right kind",
+      "offset": 551279,
+      "duration": 3841
+    },
+    {
+      "text": "of in the triage meetings everybody",
+      "offset": 553519,
+      "duration": 3841
+    },
+    {
+      "text": "comes up with their own view of the",
+      "offset": 555120,
+      "duration": 4399
+    },
+    {
+      "text": "universe and what's important right but",
+      "offset": 557360,
+      "duration": 3760
+    },
+    {
+      "text": "actually putting everything together and",
+      "offset": 559519,
+      "duration": 3361
+    },
+    {
+      "text": "finding some kind of a union to decide",
+      "offset": 561120,
+      "duration": 4320
+    },
+    {
+      "text": "what it is most likely if it's done by",
+      "offset": 562880,
+      "duration": 3920
+    },
+    {
+      "text": "humans you will come up with local",
+      "offset": 565440,
+      "duration": 3519
+    },
+    {
+      "text": "minimums right rather than uh finding an",
+      "offset": 566800,
+      "duration": 3680
+    },
+    {
+      "text": "optimal solution",
+      "offset": 568959,
+      "duration": 4560
+    },
+    {
+      "text": "How does uh reliability figure in?",
+      "offset": 570480,
+      "duration": 4960
+    },
+    {
+      "text": "Because I I think one thing that uh I I",
+      "offset": 573519,
+      "duration": 4320
+    },
+    {
+      "text": "know you've talked about and is treating",
+      "offset": 575440,
+      "duration": 4800
+    },
+    {
+      "text": "the production reliability of of the",
+      "offset": 577839,
+      "duration": 4321
+    },
+    {
+      "text": "team as a competitive strategy to",
+      "offset": 580240,
+      "duration": 3680
+    },
+    {
+      "text": "actually gain leadership that way. How",
+      "offset": 582160,
+      "duration": 3440
+    },
+    {
+      "text": "does re reliability work into this",
+      "offset": 583920,
+      "duration": 2880
+    },
+    {
+      "text": "model?",
+      "offset": 585600,
+      "duration": 3040
+    },
+    {
+      "text": ">> It's it's a good question. Reliability",
+      "offset": 586800,
+      "duration": 3920
+    },
+    {
+      "text": "is not just about actually avoiding",
+      "offset": 588640,
+      "duration": 3520
+    },
+    {
+      "text": "outages. A lot of people think about",
+      "offset": 590720,
+      "duration": 3679
+    },
+    {
+      "text": "like sRes because this is where the rel",
+      "offset": 592160,
+      "duration": 4480
+    },
+    {
+      "text": "reliability comes from. But what I've",
+      "offset": 594399,
+      "duration": 5440
+    },
+    {
+      "text": "been is is actually protecting the road",
+      "offset": 596640,
+      "duration": 4720
+    },
+    {
+      "text": "map and the time for actually building",
+      "offset": 599839,
+      "duration": 3281
+    },
+    {
+      "text": "new things, protecting the engineering",
+      "offset": 601360,
+      "duration": 4320
+    },
+    {
+      "text": "time, lowering the complaints that you",
+      "offset": 603120,
+      "duration": 4159
+    },
+    {
+      "text": "actually have from customers which a lot",
+      "offset": 605680,
+      "duration": 4000
+    },
+    {
+      "text": "of companies has as part of the OKRs.",
+      "offset": 607279,
+      "duration": 4560
+    },
+    {
+      "text": "Getting rid of the repeat investig uh",
+      "offset": 609680,
+      "duration": 4000
+    },
+    {
+      "text": "repeat investigations that are happening",
+      "offset": 611839,
+      "duration": 4560
+    },
+    {
+      "text": "after a release, improving them in time",
+      "offset": 613680,
+      "duration": 4960
+    },
+    {
+      "text": "to resolution, having much more stable",
+      "offset": 616399,
+      "duration": 3521
+    },
+    {
+      "text": "things. So a lot of them are kind of",
+      "offset": 618640,
+      "duration": 3759
+    },
+    {
+      "text": "active and proactive and this kind of",
+      "offset": 619920,
+      "duration": 4640
+    },
+    {
+      "text": "really changes the dynamics of a",
+      "offset": 622399,
+      "duration": 3761
+    },
+    {
+      "text": "company, right? So once this is actually",
+      "offset": 624560,
+      "duration": 4719
+    },
+    {
+      "text": "get uh get put into into production they",
+      "offset": 626160,
+      "duration": 5280
+    },
+    {
+      "text": "we oper the question is is how do you",
+      "offset": 629279,
+      "duration": 4401
+    },
+    {
+      "text": "make them operational right everybody",
+      "offset": 631440,
+      "duration": 3839
+    },
+    {
+      "text": "understands that it's needed but we're",
+      "offset": 633680,
+      "duration": 3760
+    },
+    {
+      "text": "kind of stuck into the reactive part and",
+      "offset": 635279,
+      "duration": 4240
+    },
+    {
+      "text": "firefighting and we can never kind of",
+      "offset": 637440,
+      "duration": 5360
+    },
+    {
+      "text": "move away and really impact those core",
+      "offset": 639519,
+      "duration": 7281
+    },
+    {
+      "text": "OKRs in a way that um uh that customers",
+      "offset": 642800,
+      "duration": 5200
+    },
+    {
+      "text": "ultimately benefit from and the",
+      "offset": 646800,
+      "duration": 3200
+    },
+    {
+      "text": "companies themselves. Yeah, I'm getting",
+      "offset": 648000,
+      "duration": 3760
+    },
+    {
+      "text": "a lot of deja vu right now because uh in",
+      "offset": 650000,
+      "duration": 3920
+    },
+    {
+      "text": "a prior life I worked in IT operations",
+      "offset": 651760,
+      "duration": 4079
+    },
+    {
+      "text": "and and one of the things that solutions",
+      "offset": 653920,
+      "duration": 3200
+    },
+    {
+      "text": "that we worked on is actually doing",
+      "offset": 655839,
+      "duration": 2881
+    },
+    {
+      "text": "something very similar for IT operations",
+      "offset": 657120,
+      "duration": 2959
+    },
+    {
+      "text": "events, right? Where you'd have all",
+      "offset": 658720,
+      "duration": 2320
+    },
+    {
+      "text": "these different monitoring and",
+      "offset": 660079,
+      "duration": 2801
+    },
+    {
+      "text": "observability tools like like an",
+      "offset": 661040,
+      "duration": 3680
+    },
+    {
+      "text": "application monitor or a network monitor",
+      "offset": 662880,
+      "duration": 3280
+    },
+    {
+      "text": "or an infrastruure monitor and you'd be",
+      "offset": 664720,
+      "duration": 3679
+    },
+    {
+      "text": "getting all these events that you would",
+      "offset": 666160,
+      "duration": 3840
+    },
+    {
+      "text": "need to correlate together and bundle",
+      "offset": 668399,
+      "duration": 3361
+    },
+    {
+      "text": "together to compress the noise exactly",
+      "offset": 670000,
+      "duration": 3760
+    },
+    {
+      "text": "like you're describing, right?",
+      "offset": 671760,
+      "duration": 3600
+    },
+    {
+      "text": ">> To provide something that can actually",
+      "offset": 673760,
+      "duration": 2960
+    },
+    {
+      "text": "be a decision point for the IT",
+      "offset": 675360,
+      "duration": 3599
+    },
+    {
+      "text": "operations team. So there's a lot of",
+      "offset": 676720,
+      "duration": 4080
+    },
+    {
+      "text": "parallels between that world and what",
+      "offset": 678959,
+      "duration": 4081
+    },
+    {
+      "text": "you're describing here where a developer",
+      "offset": 680800,
+      "duration": 5200
+    },
+    {
+      "text": "just needs to have like a contextualized",
+      "offset": 683040,
+      "duration": 5680
+    },
+    {
+      "text": "set of signals that allows them to have",
+      "offset": 686000,
+      "duration": 4880
+    },
+    {
+      "text": "a holistic view of what the actual issue",
+      "offset": 688720,
+      "duration": 3920
+    },
+    {
+      "text": "is that they can then you know point",
+      "offset": 690880,
+      "duration": 4320
+    },
+    {
+      "text": "resources at solving. Right? There's a",
+      "offset": 692640,
+      "duration": 4480
+    },
+    {
+      "text": "there's a ton of I think there's still",
+      "offset": 695200,
+      "duration": 3520
+    },
+    {
+      "text": "probably opportunity at the front end of",
+      "offset": 697120,
+      "duration": 3200
+    },
+    {
+      "text": "this to make sure that the cleanest",
+      "offset": 698720,
+      "duration": 3920
+    },
+    {
+      "text": "signals possible are making their way",
+      "offset": 700320,
+      "duration": 4240
+    },
+    {
+      "text": "into this into this engine. Right?",
+      "offset": 702640,
+      "duration": 4240
+    },
+    {
+      "text": "Right. I know sonar cube for example uh",
+      "offset": 704560,
+      "duration": 3440
+    },
+    {
+      "text": "you know we spend a lot of time on",
+      "offset": 706880,
+      "duration": 2800
+    },
+    {
+      "text": "making sure that our false positive rate",
+      "offset": 708000,
+      "duration": 5120
+    },
+    {
+      "text": "is extremely low like around 30%. Uh you",
+      "offset": 709680,
+      "duration": 6560
+    },
+    {
+      "text": "know and that's something that helps the",
+      "offset": 713120,
+      "duration": 5200
+    },
+    {
+      "text": "signal to noise ratio but I think when",
+      "offset": 716240,
+      "duration": 3279
+    },
+    {
+      "text": "you start to correlate with other",
+      "offset": 718320,
+      "duration": 2880
+    },
+    {
+      "text": "sources of data like Jira like you have",
+      "offset": 719519,
+      "duration": 5281
+    },
+    {
+      "text": "here for example um or or sentry then",
+      "offset": 721200,
+      "duration": 5840
+    },
+    {
+      "text": "having a good signal to noise ratio up",
+      "offset": 724800,
+      "duration": 3839
+    },
+    {
+      "text": "front really helps with that I would",
+      "offset": 727040,
+      "duration": 3039
+    },
+    {
+      "text": "imagine right?",
+      "offset": 728639,
+      "duration": 3760
+    },
+    {
+      "text": ">> I mean absolutely right. uh as we know",
+      "offset": 730079,
+      "duration": 5281
+    },
+    {
+      "text": "it is if you put bad data uh on the",
+      "offset": 732399,
+      "duration": 4880
+    },
+    {
+      "text": "inside, right? Bad data will come out at",
+      "offset": 735360,
+      "duration": 3760
+    },
+    {
+      "text": "the end. So the the cleanest possible",
+      "offset": 737279,
+      "duration": 3601
+    },
+    {
+      "text": "inputs are actually always the best,",
+      "offset": 739120,
+      "duration": 2080
+    },
+    {
+      "text": ">> right?",
+      "offset": 740880,
+      "duration": 2480
+    },
+    {
+      "text": ">> Um unfortunately with AI, it's not",
+      "offset": 741200,
+      "duration": 3520
+    },
+    {
+      "text": "always the case. As you mentioned, the",
+      "offset": 743360,
+      "duration": 4080
+    },
+    {
+      "text": "new AI tools, they they are not highly",
+      "offset": 744720,
+      "duration": 4160
+    },
+    {
+      "text": "predictive. They're not repeatable. They",
+      "offset": 747440,
+      "duration": 3920
+    },
+    {
+      "text": "could be much noisier. Um and that",
+      "offset": 748880,
+      "duration": 4000
+    },
+    {
+      "text": "actually provides more noise. So",
+      "offset": 751360,
+      "duration": 3520
+    },
+    {
+      "text": "figuring out how to clean that up is",
+      "offset": 752880,
+      "duration": 4880
+    },
+    {
+      "text": "also uh also important. uh but yes",
+      "offset": 754880,
+      "duration": 4959
+    },
+    {
+      "text": "having pristine uh pristine data is",
+      "offset": 757760,
+      "duration": 4240
+    },
+    {
+      "text": "always the best. Do you also see",
+      "offset": 759839,
+      "duration": 4161
+    },
+    {
+      "text": "opportunities for teams like in",
+      "offset": 762000,
+      "duration": 3120
+    },
+    {
+      "text": "different parts of automation to have",
+      "offset": 764000,
+      "duration": 3120
+    },
+    {
+      "text": "like a unified view of reality like the",
+      "offset": 765120,
+      "duration": 3519
+    },
+    {
+      "text": "security team and the development team",
+      "offset": 767120,
+      "duration": 4080
+    },
+    {
+      "text": "for example because that there's each",
+      "offset": 768639,
+      "duration": 4721
+    },
+    {
+      "text": "team kind of uses their own set of tools",
+      "offset": 771200,
+      "duration": 4240
+    },
+    {
+      "text": "right but they all feed into the same",
+      "offset": 773360,
+      "duration": 4400
+    },
+    {
+      "text": "matrix does that help them get a common",
+      "offset": 775440,
+      "duration": 4160
+    },
+    {
+      "text": "set of visibility",
+      "offset": 777760,
+      "duration": 5280
+    },
+    {
+      "text": ">> uh in general yes because ultimately uh",
+      "offset": 779600,
+      "duration": 5520
+    },
+    {
+      "text": "uh the goal of the company is the same",
+      "offset": 783040,
+      "duration": 4320
+    },
+    {
+      "text": "right they want to have a stable product",
+      "offset": 785120,
+      "duration": 3920
+    },
+    {
+      "text": "then the customers could be happy they",
+      "offset": 787360,
+      "duration": 3680
+    },
+    {
+      "text": "could be profitable etc. So when you",
+      "offset": 789040,
+      "duration": 4320
+    },
+    {
+      "text": "start from this kind of highest level",
+      "offset": 791040,
+      "duration": 3919
+    },
+    {
+      "text": "kind of first principles from the",
+      "offset": 793360,
+      "duration": 3279
+    },
+    {
+      "text": "companies right then you go down and",
+      "offset": 794959,
+      "duration": 3521
+    },
+    {
+      "text": "they'll actually trickle down into each",
+      "offset": 796639,
+      "duration": 3760
+    },
+    {
+      "text": "functional organization right and having",
+      "offset": 798480,
+      "duration": 3280
+    },
+    {
+      "text": "the same view and being able to",
+      "offset": 800399,
+      "duration": 3361
+    },
+    {
+      "text": "understand when a developer works on it",
+      "offset": 801760,
+      "duration": 3199
+    },
+    {
+      "text": "if they actually have all the",
+      "offset": 803760,
+      "duration": 3440
+    },
+    {
+      "text": "information why that's important they",
+      "offset": 804959,
+      "duration": 3921
+    },
+    {
+      "text": "are as if they having the product",
+      "offset": 807200,
+      "duration": 3520
+    },
+    {
+      "text": "manager next to them explaining all the",
+      "offset": 808880,
+      "duration": 3040
+    },
+    {
+      "text": "questions they would otherwise go and",
+      "offset": 810720,
+      "duration": 2960
+    },
+    {
+      "text": "ask them right and same thing for the",
+      "offset": 811920,
+      "duration": 3359
+    },
+    {
+      "text": "security right if you have the security",
+      "offset": 813680,
+      "duration": 3520
+    },
+    {
+      "text": "person understand hey that's there and",
+      "offset": 815279,
+      "duration": 4800
+    },
+    {
+      "text": "by the way I'm actually seeing that a",
+      "offset": 817200,
+      "duration": 4879
+    },
+    {
+      "text": "customer over the past week was hitting",
+      "offset": 820079,
+      "duration": 4241
+    },
+    {
+      "text": "exactly this endpoint. Right. Right. So",
+      "offset": 822079,
+      "duration": 4401
+    },
+    {
+      "text": "if they were just put the input that",
+      "offset": 824320,
+      "duration": 3519
+    },
+    {
+      "text": "they created there, they would actually",
+      "offset": 826480,
+      "duration": 3919
+    },
+    {
+      "text": "been exploiting that that vulnerability.",
+      "offset": 827839,
+      "duration": 4000
+    },
+    {
+      "text": "So it's not some kind of very",
+      "offset": 830399,
+      "duration": 3120
+    },
+    {
+      "text": "theoretical one. People are actually",
+      "offset": 831839,
+      "duration": 3361
+    },
+    {
+      "text": "knocking at the door, right? If they",
+      "offset": 833519,
+      "duration": 3361
+    },
+    {
+      "text": "knock a bit harder, the dog will just",
+      "offset": 835200,
+      "duration": 3360
+    },
+    {
+      "text": "fall down. So you know that that's",
+      "offset": 836880,
+      "duration": 2800
+    },
+    {
+      "text": "important.",
+      "offset": 838560,
+      "duration": 3839
+    },
+    {
+      "text": ">> Absolutely. So uh once you've got this",
+      "offset": 839680,
+      "duration": 4080
+    },
+    {
+      "text": "visibility, once you have all these",
+      "offset": 842399,
+      "duration": 2961
+    },
+    {
+      "text": "tools feeding into a common sense of",
+      "offset": 843760,
+      "duration": 3280
+    },
+    {
+      "text": "reality, the next step is probably",
+      "offset": 845360,
+      "duration": 3520
+    },
+    {
+      "text": "adding automation to the mix, right? How",
+      "offset": 847040,
+      "duration": 4880
+    },
+    {
+      "text": "as we move towards this automated STLC,",
+      "offset": 848880,
+      "duration": 4800
+    },
+    {
+      "text": "how does the role of the developer",
+      "offset": 851920,
+      "duration": 4159
+    },
+    {
+      "text": "change in in this environment?",
+      "offset": 853680,
+      "duration": 3680
+    },
+    {
+      "text": ">> Yeah, that's the billion dollar",
+      "offset": 856079,
+      "duration": 2721
+    },
+    {
+      "text": "question. I think everybody from the",
+      "offset": 857360,
+      "duration": 3120
+    },
+    {
+      "text": "industry and outside the industry has",
+      "offset": 858800,
+      "duration": 4399
+    },
+    {
+      "text": "been asking this for a while, right? Um",
+      "offset": 860480,
+      "duration": 4960
+    },
+    {
+      "text": "the idea is is that uh I I don't think",
+      "offset": 863199,
+      "duration": 4721
+    },
+    {
+      "text": "that uh the tools will kind of replace",
+      "offset": 865440,
+      "duration": 5280
+    },
+    {
+      "text": "people uh per se, right? Uh at the end",
+      "offset": 867920,
+      "duration": 4320
+    },
+    {
+      "text": "of the day,",
+      "offset": 870720,
+      "duration": 3919
+    },
+    {
+      "text": ">> I mean people will be there. They're",
+      "offset": 872240,
+      "duration": 3520
+    },
+    {
+      "text": "just going to be doing a different type",
+      "offset": 874639,
+      "duration": 2880
+    },
+    {
+      "text": "of job, right? they will we already said",
+      "offset": 875760,
+      "duration": 2960
+    },
+    {
+      "text": "they're not going to be writing as much",
+      "offset": 877519,
+      "duration": 4081
+    },
+    {
+      "text": "as code or I mean they will be directing",
+      "offset": 878720,
+      "duration": 4799
+    },
+    {
+      "text": "the code to be written but they actually",
+      "offset": 881600,
+      "duration": 4080
+    },
+    {
+      "text": "have to own the decision authority on",
+      "offset": 883519,
+      "duration": 4401
+    },
+    {
+      "text": "top of it right because going to be",
+      "offset": 885680,
+      "duration": 4320
+    },
+    {
+      "text": "created mostly by AI there's almost no",
+      "offset": 887920,
+      "duration": 4159
+    },
+    {
+      "text": "doubt there right uh so developers",
+      "offset": 890000,
+      "duration": 4240
+    },
+    {
+      "text": "should should receive kind of clearly",
+      "offset": 892079,
+      "duration": 4801
+    },
+    {
+      "text": "scoped issues at this point right not",
+      "offset": 894240,
+      "duration": 6000
+    },
+    {
+      "text": "the classical like just hey something is",
+      "offset": 896880,
+      "duration": 5199
+    },
+    {
+      "text": "crashing figure it out right you're",
+      "offset": 900240,
+      "duration": 2880
+    },
+    {
+      "text": "actually going to have all the",
+      "offset": 902079,
+      "duration": 2641
+    },
+    {
+      "text": "information that is there and based on",
+      "offset": 903120,
+      "duration": 3440
+    },
+    {
+      "text": "this highle description",
+      "offset": 904720,
+      "duration": 4160
+    },
+    {
+      "text": "is going to be evidencebacked context",
+      "offset": 906560,
+      "duration": 4320
+    },
+    {
+      "text": "being pushed directly and then they can",
+      "offset": 908880,
+      "duration": 5519
+    },
+    {
+      "text": "work on it. But that's um in a way",
+      "offset": 910880,
+      "duration": 5440
+    },
+    {
+      "text": "humans will not be the one filtering the",
+      "offset": 914399,
+      "duration": 3921
+    },
+    {
+      "text": "noise, right? They should validate those",
+      "offset": 916320,
+      "duration": 4319
+    },
+    {
+      "text": "high level impact and decisions uh kind",
+      "offset": 918320,
+      "duration": 4319
+    },
+    {
+      "text": "of for example autofixing without",
+      "offset": 920639,
+      "duration": 5121
+    },
+    {
+      "text": "prioritization increases the risk u of",
+      "offset": 922639,
+      "duration": 4721
+    },
+    {
+      "text": "regressions. We already talked about it",
+      "offset": 925760,
+      "duration": 3519
+    },
+    {
+      "text": "right fixing everything is dangerous. So",
+      "offset": 927360,
+      "duration": 3520
+    },
+    {
+      "text": "the humans will have to kind of draw",
+      "offset": 929279,
+      "duration": 3761
+    },
+    {
+      "text": "those lines saying hey how much I want",
+      "offset": 930880,
+      "duration": 4560
+    },
+    {
+      "text": "to go there versus how much I can trust",
+      "offset": 933040,
+      "duration": 4560
+    },
+    {
+      "text": "the system that it will not generate",
+      "offset": 935440,
+      "duration": 5440
+    },
+    {
+      "text": "more more tech that as we u highlighted",
+      "offset": 937600,
+      "duration": 4720
+    },
+    {
+      "text": "uh much earlier.",
+      "offset": 940880,
+      "duration": 2880
+    },
+    {
+      "text": ">> Do you see a system like this actually",
+      "offset": 942320,
+      "duration": 3199
+    },
+    {
+      "text": "influencing automated decision-m where",
+      "offset": 943760,
+      "duration": 3439
+    },
+    {
+      "text": "like the system itself actually decides",
+      "offset": 945519,
+      "duration": 3281
+    },
+    {
+      "text": "how to fix a problem or do you always",
+      "offset": 947199,
+      "duration": 4481
+    },
+    {
+      "text": "see a human being in the loop?",
+      "offset": 948800,
+      "duration": 4479
+    },
+    {
+      "text": "We already see that for small problems,",
+      "offset": 951680,
+      "duration": 3920
+    },
+    {
+      "text": "right? I mean like they need a library",
+      "offset": 953279,
+      "duration": 4961
+    },
+    {
+      "text": "that doesn't change uh the signature",
+      "offset": 955600,
+      "duration": 4000
+    },
+    {
+      "text": "that",
+      "offset": 958240,
+      "duration": 2959
+    },
+    {
+      "text": ">> almost everybody does that right. I",
+      "offset": 959600,
+      "duration": 3359
+    },
+    {
+      "text": "actually see a number of companies that",
+      "offset": 961199,
+      "duration": 3841
+    },
+    {
+      "text": "actually have moved away of actually",
+      "offset": 962959,
+      "duration": 5281
+    },
+    {
+      "text": "having a 100% uh pull request reviews by",
+      "offset": 965040,
+      "duration": 5280
+    },
+    {
+      "text": "a human. They said we just do it like",
+      "offset": 968240,
+      "duration": 4080
+    },
+    {
+      "text": "this. We want to monitor it. They do it",
+      "offset": 970320,
+      "duration": 4639
+    },
+    {
+      "text": "randomly as well as they learning right",
+      "offset": 972320,
+      "duration": 4720
+    },
+    {
+      "text": "figure out when and uh uh when uh they",
+      "offset": 974959,
+      "duration": 4081
+    },
+    {
+      "text": "should do it and when not. But that's",
+      "offset": 977040,
+      "duration": 3680
+    },
+    {
+      "text": "part of the velocity, right? you have",
+      "offset": 979040,
+      "duration": 4799
+    },
+    {
+      "text": "you cannot apply 100% code review. So in",
+      "offset": 980720,
+      "duration": 4880
+    },
+    {
+      "text": "a way think about it like reinforced",
+      "offset": 983839,
+      "duration": 3521
+    },
+    {
+      "text": "learning over time will figure out hey",
+      "offset": 985600,
+      "duration": 3280
+    },
+    {
+      "text": "in which cases the human did not touch",
+      "offset": 987360,
+      "duration": 3200
+    },
+    {
+      "text": "it in which cases they actually touched",
+      "offset": 988880,
+      "duration": 3759
+    },
+    {
+      "text": "it right and then you slowly will be",
+      "offset": 990560,
+      "duration": 3760
+    },
+    {
+      "text": "able to say hey there's an extremely",
+      "offset": 992639,
+      "duration": 4081
+    },
+    {
+      "text": "high chance that this type of fix in",
+      "offset": 994320,
+      "duration": 4800
+    },
+    {
+      "text": "this type of the code nobody will ever",
+      "offset": 996720,
+      "duration": 4720
+    },
+    {
+      "text": "change it nobody will ever want to touch",
+      "offset": 999120,
+      "duration": 4480
+    },
+    {
+      "text": "it while yeah obviously you have to",
+      "offset": 1001440,
+      "duration": 4160
+    },
+    {
+      "text": "change databases you have to rearchitect",
+      "offset": 1003600,
+      "duration": 4159
+    },
+    {
+      "text": "things clearly a human will have to be",
+      "offset": 1005600,
+      "duration": 3280
+    },
+    {
+      "text": "involved",
+      "offset": 1007759,
+      "duration": 2401
+    },
+    {
+      "text": ">> I think it's super important for the",
+      "offset": 1008880,
+      "duration": 2560
+    },
+    {
+      "text": "human to be in the loop especially for",
+      "offset": 1010160,
+      "duration": 3359
+    },
+    {
+      "text": "these like high criticality decisions",
+      "offset": 1011440,
+      "duration": 3519
+    },
+    {
+      "text": "have to be made, but also the humans",
+      "offset": 1013519,
+      "duration": 2721
+    },
+    {
+      "text": "need to have the space to make those",
+      "offset": 1014959,
+      "duration": 3361
+    },
+    {
+      "text": "decisions. They can't be overwhelmed and",
+      "offset": 1016240,
+      "duration": 3920
+    },
+    {
+      "text": "overloaded as they do so because then",
+      "offset": 1018320,
+      "duration": 3600
+    },
+    {
+      "text": "they'll decide poorly. There was there",
+      "offset": 1020160,
+      "duration": 2960
+    },
+    {
+      "text": "was something in the news just a few",
+      "offset": 1021920,
+      "duration": 4720
+    },
+    {
+      "text": "days ago uh like Amazon uh actually uh",
+      "offset": 1023120,
+      "duration": 5679
+    },
+    {
+      "text": "empowered an AI to actually take down a",
+      "offset": 1026640,
+      "duration": 4559
+    },
+    {
+      "text": "service pretty recently. Uh and that was",
+      "offset": 1028799,
+      "duration": 3841
+    },
+    {
+      "text": "a situation where if I if I read",
+      "offset": 1031199,
+      "duration": 2640
+    },
+    {
+      "text": "correctly, what happened was the",
+      "offset": 1032640,
+      "duration": 3439
+    },
+    {
+      "text": "developer that was in the loop to to",
+      "offset": 1033839,
+      "duration": 3921
+    },
+    {
+      "text": "review the decision had more permissions",
+      "offset": 1036079,
+      "duration": 3120
+    },
+    {
+      "text": "than they thought the developer did.",
+      "offset": 1037760,
+      "duration": 3360
+    },
+    {
+      "text": "that the AI actually used that",
+      "offset": 1039199,
+      "duration": 3360
+    },
+    {
+      "text": "developer's permissions to do things it",
+      "offset": 1041120,
+      "duration": 3280
+    },
+    {
+      "text": "wasn't actually permitted to do. That",
+      "offset": 1042559,
+      "duration": 3120
+    },
+    {
+      "text": "that's the example of the kind of thing",
+      "offset": 1044400,
+      "duration": 3600
+    },
+    {
+      "text": "that can occur when you don't have like",
+      "offset": 1045679,
+      "duration": 5201
+    },
+    {
+      "text": "these guard rails in place to help the",
+      "offset": 1048000,
+      "duration": 4960
+    },
+    {
+      "text": "human make the right decision but also",
+      "offset": 1050880,
+      "duration": 4320
+    },
+    {
+      "text": "make sure that bad things don't happen",
+      "offset": 1052960,
+      "duration": 4000
+    },
+    {
+      "text": "if the human occasionally messes up.",
+      "offset": 1055200,
+      "duration": 3440
+    },
+    {
+      "text": "This is I think this all fits in the",
+      "offset": 1056960,
+      "duration": 2880
+    },
+    {
+      "text": "same framework, right?",
+      "offset": 1058640,
+      "duration": 2800
+    },
+    {
+      "text": ">> Yeah. No, it totally makes sense and",
+      "offset": 1059840,
+      "duration": 3680
+    },
+    {
+      "text": "kind of stories like this and everybody",
+      "offset": 1061440,
+      "duration": 4239
+    },
+    {
+      "text": "gets scared about kind of AI coming and",
+      "offset": 1063520,
+      "duration": 4560
+    },
+    {
+      "text": "kind of destroying the world. uh and I",
+      "offset": 1065679,
+      "duration": 3360
+    },
+    {
+      "text": "think there's going to be a whole new",
+      "offset": 1068080,
+      "duration": 2959
+    },
+    {
+      "text": "category of things coming is uh more of",
+      "offset": 1069039,
+      "duration": 5281
+    },
+    {
+      "text": "a automated compliance and auditing",
+      "offset": 1071039,
+      "duration": 4880
+    },
+    {
+      "text": "right because right now this is more of",
+      "offset": 1074320,
+      "duration": 3920
+    },
+    {
+      "text": "a kind of I'll say you do it every 3",
+      "offset": 1075919,
+      "duration": 4640
+    },
+    {
+      "text": "months every year etc but in the",
+      "offset": 1078240,
+      "duration": 4400
+    },
+    {
+      "text": "meantime an AI got more permissions and",
+      "offset": 1080559,
+      "duration": 4000
+    },
+    {
+      "text": "could destroy things so it's nice to be",
+      "offset": 1082640,
+      "duration": 3360
+    },
+    {
+      "text": "able to continuously monitor that as",
+      "offset": 1084559,
+      "duration": 3041
+    },
+    {
+      "text": "well so I am actually looking forward to",
+      "offset": 1086000,
+      "duration": 3360
+    },
+    {
+      "text": "see more in that direction as well",
+      "offset": 1087600,
+      "duration": 2560
+    },
+    {
+      "text": ">> me too",
+      "offset": 1089360,
+      "duration": 3840
+    },
+    {
+      "text": ">> yeah so so as we're trying to help",
+      "offset": 1090160,
+      "duration": 4800
+    },
+    {
+      "text": "developers and their leaders make the",
+      "offset": 1093200,
+      "duration": 3440
+    },
+    {
+      "text": "best decisions possible like what steps",
+      "offset": 1094960,
+      "duration": 3839
+    },
+    {
+      "text": "can engineering manager take to to help",
+      "offset": 1096640,
+      "duration": 4399
+    },
+    {
+      "text": "their teams reduce noise and focus on",
+      "offset": 1098799,
+      "duration": 4401
+    },
+    {
+      "text": "the where they can make the most impact.",
+      "offset": 1101039,
+      "duration": 4481
+    },
+    {
+      "text": "I mean definitely try to stop priorizing",
+      "offset": 1103200,
+      "duration": 4479
+    },
+    {
+      "text": "things on two by two basis right one",
+      "offset": 1105520,
+      "duration": 3840
+    },
+    {
+      "text": "person goes there and they say okay from",
+      "offset": 1107679,
+      "duration": 3761
+    },
+    {
+      "text": "the centric it's there coming up with",
+      "offset": 1109360,
+      "duration": 4000
+    },
+    {
+      "text": "kind of the old school priority okay is",
+      "offset": 1111440,
+      "duration": 4080
+    },
+    {
+      "text": "that P1 or P2 kind of senior engineers",
+      "offset": 1113360,
+      "duration": 5439
+    },
+    {
+      "text": "arguing right but kind of come down rank",
+      "offset": 1115520,
+      "duration": 5120
+    },
+    {
+      "text": "multiple things at the same time kind of",
+      "offset": 1118799,
+      "duration": 4801
+    },
+    {
+      "text": "production impact uh recurrence uh how",
+      "offset": 1120640,
+      "duration": 4560
+    },
+    {
+      "text": "recently that was changed who really",
+      "offset": 1123600,
+      "duration": 4560
+    },
+    {
+      "text": "owns it is it easy to fix actually right",
+      "offset": 1125200,
+      "duration": 4479
+    },
+    {
+      "text": "how likely is it it has to impact",
+      "offset": 1128160,
+      "duration": 3519
+    },
+    {
+      "text": "something else was the problem clear",
+      "offset": 1129679,
+      "duration": 4321
+    },
+    {
+      "text": "enough to from the beginning etc. So",
+      "offset": 1131679,
+      "duration": 3681
+    },
+    {
+      "text": "adding all those things in each",
+      "offset": 1134000,
+      "duration": 2880
+    },
+    {
+      "text": "organization will have that it allows",
+      "offset": 1135360,
+      "duration": 3439
+    },
+    {
+      "text": "you to really prioritize what's",
+      "offset": 1136880,
+      "duration": 3840
+    },
+    {
+      "text": "important. So getting all those together",
+      "offset": 1138799,
+      "duration": 4321
+    },
+    {
+      "text": "and kind of trying to get rid of those",
+      "offset": 1140720,
+      "duration": 4640
+    },
+    {
+      "text": "manual meetings that everybody pulls and",
+      "offset": 1143120,
+      "duration": 4960
+    },
+    {
+      "text": "tries to decide based on I believe is",
+      "offset": 1145360,
+      "duration": 4640
+    },
+    {
+      "text": "this or I heard that somebody complain",
+      "offset": 1148080,
+      "duration": 3599
+    },
+    {
+      "text": "about this but really have all those",
+      "offset": 1150000,
+      "duration": 4799
+    },
+    {
+      "text": "data so decision could be uh crisp with",
+      "offset": 1151679,
+      "duration": 5921
+    },
+    {
+      "text": "evidence supported and there will be no",
+      "offset": 1154799,
+      "duration": 4401
+    },
+    {
+      "text": "no doubt in people's mind that that's",
+      "offset": 1157600,
+      "duration": 2880
+    },
+    {
+      "text": "what they should go for.",
+      "offset": 1159200,
+      "duration": 2719
+    },
+    {
+      "text": ">> Yeah. Yeah, let's let's talk about the",
+      "offset": 1160480,
+      "duration": 4160
+    },
+    {
+      "text": "evidence for a second. So, how how will",
+      "offset": 1161919,
+      "duration": 4401
+    },
+    {
+      "text": "an engineering manager know if they've",
+      "offset": 1164640,
+      "duration": 4159
+    },
+    {
+      "text": "been successful um at reducing the noise",
+      "offset": 1166320,
+      "duration": 3840
+    },
+    {
+      "text": "and helping empower their team to make",
+      "offset": 1168799,
+      "duration": 2721
+    },
+    {
+      "text": "the right decisions? How will they know",
+      "offset": 1170160,
+      "duration": 3360
+    },
+    {
+      "text": "they're fixing the right problems?",
+      "offset": 1171520,
+      "duration": 3920
+    },
+    {
+      "text": ">> I mean, if you're pritoriizing the based",
+      "offset": 1173520,
+      "duration": 3680
+    },
+    {
+      "text": "on the most important things, your AK",
+      "offset": 1175440,
+      "duration": 3840
+    },
+    {
+      "text": "OKR is going to look better, right? Your",
+      "offset": 1177200,
+      "duration": 4400
+    },
+    {
+      "text": "customer NP4 is going to look better.",
+      "offset": 1179280,
+      "duration": 3600
+    },
+    {
+      "text": ">> You're going to have less production",
+      "offset": 1181600,
+      "duration": 3760
+    },
+    {
+      "text": "incidents. Uh the backlog of things",
+      "offset": 1182880,
+      "duration": 4640
+    },
+    {
+      "text": "going to be likely lower, right? Because",
+      "offset": 1185360,
+      "duration": 4480
+    },
+    {
+      "text": "all the easy things you just Okay,",
+      "offset": 1187520,
+      "duration": 4399
+    },
+    {
+      "text": "great. That's a very quick fix and it's",
+      "offset": 1189840,
+      "duration": 4240
+    },
+    {
+      "text": "going to help 17 customers. Yeah, just",
+      "offset": 1191919,
+      "duration": 4880
+    },
+    {
+      "text": "do it. Right. Um, so that's kind of the",
+      "offset": 1194080,
+      "duration": 5599
+    },
+    {
+      "text": "uh uh those are kind of the the kind of",
+      "offset": 1196799,
+      "duration": 4961
+    },
+    {
+      "text": "the higher level value people will get.",
+      "offset": 1199679,
+      "duration": 3601
+    },
+    {
+      "text": "People will be have less stress.",
+      "offset": 1201760,
+      "duration": 3279
+    },
+    {
+      "text": "Hopefully the white hair is going to",
+      "offset": 1203280,
+      "duration": 3040
+    },
+    {
+      "text": "start getting darker. I guess that",
+      "offset": 1205039,
+      "duration": 3681
+    },
+    {
+      "text": "doesn't happen anymore, but less white",
+      "offset": 1206320,
+      "duration": 4800
+    },
+    {
+      "text": "hair will be appearing on people uh on",
+      "offset": 1208720,
+      "duration": 4319
+    },
+    {
+      "text": "on people heads. They won't be they",
+      "offset": 1211120,
+      "duration": 3600
+    },
+    {
+      "text": "won't be sleepless nights wondering what",
+      "offset": 1213039,
+      "duration": 4161
+    },
+    {
+      "text": "could happen. Um and and that's the the",
+      "offset": 1214720,
+      "duration": 4079
+    },
+    {
+      "text": "belief. And the bottom line I guess I",
+      "offset": 1217200,
+      "duration": 3680
+    },
+    {
+      "text": "think there was data that um for the",
+      "offset": 1218799,
+      "duration": 4961
+    },
+    {
+      "text": "fortune 2000 companies production",
+      "offset": 1220880,
+      "duration": 4880
+    },
+    {
+      "text": "incidents every year cost like 400",
+      "offset": 1223760,
+      "duration": 6159
+    },
+    {
+      "text": "billion right so giving a big dent into",
+      "offset": 1225760,
+      "duration": 6000
+    },
+    {
+      "text": "that actually is pretty nice as well.",
+      "offset": 1229919,
+      "duration": 4401
+    },
+    {
+      "text": "Yeah, absolutely. I mean, I I think one",
+      "offset": 1231760,
+      "duration": 4320
+    },
+    {
+      "text": "of the hardest ones to measure, but also",
+      "offset": 1234320,
+      "duration": 2960
+    },
+    {
+      "text": "the most impactful is just like our",
+      "offset": 1236080,
+      "duration": 2640
+    },
+    {
+      "text": "developers happy doing their jobs,",
+      "offset": 1237280,
+      "duration": 3759
+    },
+    {
+      "text": "right? I I see the same thing with with",
+      "offset": 1238720,
+      "duration": 4000
+    },
+    {
+      "text": "AI tools as well, is like how do how do",
+      "offset": 1241039,
+      "duration": 3361
+    },
+    {
+      "text": "you know if an AI tool is working? And",
+      "offset": 1242720,
+      "duration": 3760
+    },
+    {
+      "text": "they've tried so many different KPIs to",
+      "offset": 1244400,
+      "duration": 3600
+    },
+    {
+      "text": "measure like was it number of pull",
+      "offset": 1246480,
+      "duration": 3360
+    },
+    {
+      "text": "requests, was it number of lines of code",
+      "offset": 1248000,
+      "duration": 3679
+    },
+    {
+      "text": "or was it, you know, how many how many",
+      "offset": 1249840,
+      "duration": 3839
+    },
+    {
+      "text": "things did you ship when really, you",
+      "offset": 1251679,
+      "duration": 3601
+    },
+    {
+      "text": "know, the the bottom line is developers",
+      "offset": 1253679,
+      "duration": 2961
+    },
+    {
+      "text": "want to use those tools. I think the",
+      "offset": 1255280,
+      "duration": 3680
+    },
+    {
+      "text": "same is the case here, right? developers",
+      "offset": 1256640,
+      "duration": 5120
+    },
+    {
+      "text": "are working on impactful work and not",
+      "offset": 1258960,
+      "duration": 4079
+    },
+    {
+      "text": "maintenance, right? As you were talking",
+      "offset": 1261760,
+      "duration": 3200
+    },
+    {
+      "text": "about before, they're going to get more",
+      "offset": 1263039,
+      "duration": 3201
+    },
+    {
+      "text": "fulfilled from their work and they're",
+      "offset": 1264960,
+      "duration": 2400
+    },
+    {
+      "text": "going to feel more enjoyment as a",
+      "offset": 1266240,
+      "duration": 2400
+    },
+    {
+      "text": "result. And if you're able to somehow",
+      "offset": 1267360,
+      "duration": 2720
+    },
+    {
+      "text": "measure that, that tells you you're",
+      "offset": 1268640,
+      "duration": 3120
+    },
+    {
+      "text": "doing something right, I think.",
+      "offset": 1270080,
+      "duration": 4000
+    },
+    {
+      "text": ">> Yeah, exactly.",
+      "offset": 1271760,
+      "duration": 3840
+    },
+    {
+      "text": ">> Yeah, Boris, I really enjoyed this",
+      "offset": 1274080,
+      "duration": 3280
+    },
+    {
+      "text": "conversation with you today. Um",
+      "offset": 1275600,
+      "duration": 3280
+    },
+    {
+      "text": "hopefully we have a chance to do this",
+      "offset": 1277360,
+      "duration": 3679
+    },
+    {
+      "text": "again. For those of you who are who are",
+      "offset": 1278880,
+      "duration": 3600
+    },
+    {
+      "text": "on with us, thank you for joining us.",
+      "offset": 1281039,
+      "duration": 3281
+    },
+    {
+      "text": "There's plenty more uh sessions for you",
+      "offset": 1282480,
+      "duration": 3920
+    },
+    {
+      "text": "to go explore and we hope you enjoy your",
+      "offset": 1284320,
+      "duration": 4080
+    },
+    {
+      "text": "day at Soner Summit. Thank you.",
+      "offset": 1286400,
+      "duration": 5480
+    },
+    {
+      "text": "Thank you. Bye.",
+      "offset": 1288400,
+      "duration": 3480
+    }
+  ],
+  "fullText": "Hello folks and welcome to our session the self-healing applications decade is here. Uh I'm your host Servanchy. do product marketing here at Sonar and I'm very thrilled to be joined by Boris Pascalv who is the co-founder and CEO of Logicar which builds a decision engine for production reliability. Prior to running Logicar, he co-founded Deep Code which is one of the first AI systems for largecale code analysis that was later acquired by Sneak. Boris welcome. Thank you for joining us. >> Welcome. Thank you Ans for the introduction. >> Of course. Uh we're really excited to have this conversation today about why engineering managers uh need a decision layer to help them prioritize the work that they and their teams do. Before we get to that, I do want to uh just quickly talk about your background and what you're coming in with. Can you talk a little bit about what you're working on these days? >> Uh I mean uh we're building on top of what uh we already started with deep code back in the days. Uh so today we're seeing AI already made it kind of dramatic dramatically easier to write and ship code by far right and tasks tasks are completed much faster PRs are created in minutes uh but uh something that's kind of all the AI labs did not actually focus on accelerating uh at the same pace has been exactly the decision making um uh that you mentioned and uh exactly managers pretty much no longer actually constrained by this calling speeds But they actually facing this constraint by prioritizing clearly what has to be actually fixed next and in in reality what should not be fixed. >> Thank you for that. I feel like we're getting a little ahead of ourselves. So let's maybe back up a little bit and talk about why this is such a problem and and and what the pain point is because one thing that we're seeing that you and I have talked about is that there is evidence that while development teams are actually uh getting faster and more productive and completing their work more quickly, they're also seeing increases in you know pull request a few times in code churn and in issue volume. Uh I'm when you you've seen this uh in your work what is driving? Yeah, and that's exactly what where the paradox actually begins. There is so much data out there that we have seen um that uh that the optimized velocity has been the main focus and we have achieved it. I mean uh pull requests numbers are growing through the roof like more than doubling the amount in some people every month or every every 3 months which is which is crazy. um but uh we haven't actually optimized for the decision quality what we actually have to work on right so this is kind of the secondary part that we've seen at the very beginning of um uh of the AI generative uh uh uh generative code capabilities that uh all the speed and velocity actually come comes in with the cost right with the kind of the review time have increased the actual number of lines of code that are producing those requests have more than doubled code duplication code stability All of these have actually been impacted negatively, right? And this is kind of the the the duality, right? So the problem is not uh exactly kind of where you're getting the signals for all those problems but actually deciding what really you have to be fixing to maintain that balance, right? Because if you just fix everything, then likely you actually building up a lot of um uh tech debt that that sooner or later will come back to bite you. I was about to say the tech debt seems to be the biggest uh outcome of that, right? Because if you're just fixing problems that aren't worth being fixed, you're just kind of spinning your wheels and creating more problems down the stream, right? >> Yeah. So, that's exactly you have to figure out where to draw the line in the right balances, right? More more AI generates more code. More code creates more duplication. Take that that creates even more signals and that's actually makes the decision what to fix even harder, right? And this is where uh uh where exactly we're trying to focus on. >> Yeah. Is this why development teams often struggle with finding the space to innovate? Uh because they're stuck in this maintenance loop. >> Yeah, that's kind of the trade-off of timing. I mean, developers definitely feel very fast and productive, but then they actually stuck actually keep on fixing more things and we've seen kind of the number of bugs per developer have actually increased uh substantially as well uh uh very recently. So that's that is indeed the challenge. You would think that they'd be able to to handle this by just having a bit of discipline around the way they manage their backlog, right? So that's the part that's failing, I take it. >> Yeah, indeed. Indeed. >> So can you talk a little bit about that? Like why is backlog management so hard especially in this current environment? >> Yeah, it is it is a good question. So the backlogs in general, they actually capture a specific intent. What do you actually want to want to fix? They don't usually talk about the impact that is there, right? uh and this code generation acceleration uh uh uh as we spoke about it pretty much um the detection is also in a way automated right we're not actually uh shy of signals right on the bottom of the layer as I show on the slide here we actually said okay we're generating code that's great we're able to run it that's great and then things like sonar finds things sentry identifies observability things those things are also automated we've been having those signals actually for years right Right. >> And most engineer managers that we actually speak to, they're not worried uh uh they're not worried about the backlog. They actually worried about what's actually hidden in those signals that they don't have time to look at. Actually, some research a couple of years ago, I think, mentioned that more than 90% of all the production incidents that happened are actually already had a signal either in a in a scanner or a production system or that there's something in the backlog tells them, hey, that's a problem. It has to be fixed. But we either did not have time to work on it or we just ignored it. Right. >> So there's there's a noise there's there's a signal to noise issue. It seems like there's there's all these things coming in difficulty even seeing them in time or the difficulty prioritizing them to find out what to work on. >> Yeah. So those backlogs they were never designed to actually understand and collect all this evidence. they're all about uh and when this happens pretty much it's up to the engineers manager or even product manager sometimes to kind of go and collect this evidence before they can decide and send it to engineerings. I I think I've heard teams pushing that all the way up to the customer success people on the phone that they have to go and pull things from observability system before they can send it down to the engineering just because engineers don't have time to deal with the volume. >> Exactly. and and all of this everything you described these sound like problems that they're not new right I think development teams for for 10 20 years have had these problems but AI I think has uh really remixed uh the impact these problems can have right there's a there's a greater volume of code being written there's a greater velocity of code being deployed does that amplify these issues >> obviously what you're having on the scale on the bottom you're increasing the the velocity and the scale by orders of magnitude right but then the prioritization on top remains uh remains menu right this really creates a chaos at the end of today right so it's uh I'm seeing more and more engineering managers uh g gaining more gray hair because they have to deal with that >> yeah and are there additional signals that are coming in because of the AI there's there's there's way more AI tools that are also being used right that the ecosystem is expanding dramatically and I'm wondering if there's also an increasing signal to noise issue just from that alone >> that is correct also In addition to uh the acceleration of actually the creation of new things, there's also new tools that are giving you more signals. I mean there's also capabilities of cleaning up signals and you are asking are you actually getting rid of them. Uh but the idea is is how do you actually end up correlating multiple of them right? So if we look at this um this is how the compression of the signals into one kind of looks like. Um for example I I actually put one example here that you have multiple sentry issues kind of a Jira ticket right then a pull request was correlated that was old and then that shows you the impact that it's there who was actually responsible for it >> um and and all of this kind of gives you not a single rank rank decision but kind of the engineering managers kind of doesn't see just the alerts but they actually see what really has to be fixed next and they have the full evidence up and down the chain so they can explain that should be worked on because it impacts that many customers the engineers have all the context they need etc >> right is is code quality and code security like part of the signals that are being collected and compressed here >> absolutely I mean the the amount of signals I think this is as you mentioned with the new tools will be exploding but uh any signal you can be getting a lot of those signals are actually be purely coming from customer success from match scanners from productions >> from the code and how the code has evolved over time we're now giving some specification uh agent.mmd files like the number of signals actually will be exploding over time I think and this is the reason why engineering managers alone cannot deal with that right kind of in the triage meetings everybody comes up with their own view of the universe and what's important right but actually putting everything together and finding some kind of a union to decide what it is most likely if it's done by humans you will come up with local minimums right rather than uh finding an optimal solution How does uh reliability figure in? Because I I think one thing that uh I I know you've talked about and is treating the production reliability of of the team as a competitive strategy to actually gain leadership that way. How does re reliability work into this model? >> It's it's a good question. Reliability is not just about actually avoiding outages. A lot of people think about like sRes because this is where the rel reliability comes from. But what I've been is is actually protecting the road map and the time for actually building new things, protecting the engineering time, lowering the complaints that you actually have from customers which a lot of companies has as part of the OKRs. Getting rid of the repeat investig uh repeat investigations that are happening after a release, improving them in time to resolution, having much more stable things. So a lot of them are kind of active and proactive and this kind of really changes the dynamics of a company, right? So once this is actually get uh get put into into production they we oper the question is is how do you make them operational right everybody understands that it's needed but we're kind of stuck into the reactive part and firefighting and we can never kind of move away and really impact those core OKRs in a way that um uh that customers ultimately benefit from and the companies themselves. Yeah, I'm getting a lot of deja vu right now because uh in a prior life I worked in IT operations and and one of the things that solutions that we worked on is actually doing something very similar for IT operations events, right? Where you'd have all these different monitoring and observability tools like like an application monitor or a network monitor or an infrastruure monitor and you'd be getting all these events that you would need to correlate together and bundle together to compress the noise exactly like you're describing, right? >> To provide something that can actually be a decision point for the IT operations team. So there's a lot of parallels between that world and what you're describing here where a developer just needs to have like a contextualized set of signals that allows them to have a holistic view of what the actual issue is that they can then you know point resources at solving. Right? There's a there's a ton of I think there's still probably opportunity at the front end of this to make sure that the cleanest signals possible are making their way into this into this engine. Right? Right. I know sonar cube for example uh you know we spend a lot of time on making sure that our false positive rate is extremely low like around 30%. Uh you know and that's something that helps the signal to noise ratio but I think when you start to correlate with other sources of data like Jira like you have here for example um or or sentry then having a good signal to noise ratio up front really helps with that I would imagine right? >> I mean absolutely right. uh as we know it is if you put bad data uh on the inside, right? Bad data will come out at the end. So the the cleanest possible inputs are actually always the best, >> right? >> Um unfortunately with AI, it's not always the case. As you mentioned, the new AI tools, they they are not highly predictive. They're not repeatable. They could be much noisier. Um and that actually provides more noise. So figuring out how to clean that up is also uh also important. uh but yes having pristine uh pristine data is always the best. Do you also see opportunities for teams like in different parts of automation to have like a unified view of reality like the security team and the development team for example because that there's each team kind of uses their own set of tools right but they all feed into the same matrix does that help them get a common set of visibility >> uh in general yes because ultimately uh uh the goal of the company is the same right they want to have a stable product then the customers could be happy they could be profitable etc. So when you start from this kind of highest level kind of first principles from the companies right then you go down and they'll actually trickle down into each functional organization right and having the same view and being able to understand when a developer works on it if they actually have all the information why that's important they are as if they having the product manager next to them explaining all the questions they would otherwise go and ask them right and same thing for the security right if you have the security person understand hey that's there and by the way I'm actually seeing that a customer over the past week was hitting exactly this endpoint. Right. Right. So if they were just put the input that they created there, they would actually been exploiting that that vulnerability. So it's not some kind of very theoretical one. People are actually knocking at the door, right? If they knock a bit harder, the dog will just fall down. So you know that that's important. >> Absolutely. So uh once you've got this visibility, once you have all these tools feeding into a common sense of reality, the next step is probably adding automation to the mix, right? How as we move towards this automated STLC, how does the role of the developer change in in this environment? >> Yeah, that's the billion dollar question. I think everybody from the industry and outside the industry has been asking this for a while, right? Um the idea is is that uh I I don't think that uh the tools will kind of replace people uh per se, right? Uh at the end of the day, >> I mean people will be there. They're just going to be doing a different type of job, right? they will we already said they're not going to be writing as much as code or I mean they will be directing the code to be written but they actually have to own the decision authority on top of it right because going to be created mostly by AI there's almost no doubt there right uh so developers should should receive kind of clearly scoped issues at this point right not the classical like just hey something is crashing figure it out right you're actually going to have all the information that is there and based on this highle description is going to be evidencebacked context being pushed directly and then they can work on it. But that's um in a way humans will not be the one filtering the noise, right? They should validate those high level impact and decisions uh kind of for example autofixing without prioritization increases the risk u of regressions. We already talked about it right fixing everything is dangerous. So the humans will have to kind of draw those lines saying hey how much I want to go there versus how much I can trust the system that it will not generate more more tech that as we u highlighted uh much earlier. >> Do you see a system like this actually influencing automated decision-m where like the system itself actually decides how to fix a problem or do you always see a human being in the loop? We already see that for small problems, right? I mean like they need a library that doesn't change uh the signature that >> almost everybody does that right. I actually see a number of companies that actually have moved away of actually having a 100% uh pull request reviews by a human. They said we just do it like this. We want to monitor it. They do it randomly as well as they learning right figure out when and uh uh when uh they should do it and when not. But that's part of the velocity, right? you have you cannot apply 100% code review. So in a way think about it like reinforced learning over time will figure out hey in which cases the human did not touch it in which cases they actually touched it right and then you slowly will be able to say hey there's an extremely high chance that this type of fix in this type of the code nobody will ever change it nobody will ever want to touch it while yeah obviously you have to change databases you have to rearchitect things clearly a human will have to be involved >> I think it's super important for the human to be in the loop especially for these like high criticality decisions have to be made, but also the humans need to have the space to make those decisions. They can't be overwhelmed and overloaded as they do so because then they'll decide poorly. There was there was something in the news just a few days ago uh like Amazon uh actually uh empowered an AI to actually take down a service pretty recently. Uh and that was a situation where if I if I read correctly, what happened was the developer that was in the loop to to review the decision had more permissions than they thought the developer did. that the AI actually used that developer's permissions to do things it wasn't actually permitted to do. That that's the example of the kind of thing that can occur when you don't have like these guard rails in place to help the human make the right decision but also make sure that bad things don't happen if the human occasionally messes up. This is I think this all fits in the same framework, right? >> Yeah. No, it totally makes sense and kind of stories like this and everybody gets scared about kind of AI coming and kind of destroying the world. uh and I think there's going to be a whole new category of things coming is uh more of a automated compliance and auditing right because right now this is more of a kind of I'll say you do it every 3 months every year etc but in the meantime an AI got more permissions and could destroy things so it's nice to be able to continuously monitor that as well so I am actually looking forward to see more in that direction as well >> me too >> yeah so so as we're trying to help developers and their leaders make the best decisions possible like what steps can engineering manager take to to help their teams reduce noise and focus on the where they can make the most impact. I mean definitely try to stop priorizing things on two by two basis right one person goes there and they say okay from the centric it's there coming up with kind of the old school priority okay is that P1 or P2 kind of senior engineers arguing right but kind of come down rank multiple things at the same time kind of production impact uh recurrence uh how recently that was changed who really owns it is it easy to fix actually right how likely is it it has to impact something else was the problem clear enough to from the beginning etc. So adding all those things in each organization will have that it allows you to really prioritize what's important. So getting all those together and kind of trying to get rid of those manual meetings that everybody pulls and tries to decide based on I believe is this or I heard that somebody complain about this but really have all those data so decision could be uh crisp with evidence supported and there will be no no doubt in people's mind that that's what they should go for. >> Yeah. Yeah, let's let's talk about the evidence for a second. So, how how will an engineering manager know if they've been successful um at reducing the noise and helping empower their team to make the right decisions? How will they know they're fixing the right problems? >> I mean, if you're pritoriizing the based on the most important things, your AK OKR is going to look better, right? Your customer NP4 is going to look better. >> You're going to have less production incidents. Uh the backlog of things going to be likely lower, right? Because all the easy things you just Okay, great. That's a very quick fix and it's going to help 17 customers. Yeah, just do it. Right. Um, so that's kind of the uh uh those are kind of the the kind of the higher level value people will get. People will be have less stress. Hopefully the white hair is going to start getting darker. I guess that doesn't happen anymore, but less white hair will be appearing on people uh on on people heads. They won't be they won't be sleepless nights wondering what could happen. Um and and that's the the belief. And the bottom line I guess I think there was data that um for the fortune 2000 companies production incidents every year cost like 400 billion right so giving a big dent into that actually is pretty nice as well. Yeah, absolutely. I mean, I I think one of the hardest ones to measure, but also the most impactful is just like our developers happy doing their jobs, right? I I see the same thing with with AI tools as well, is like how do how do you know if an AI tool is working? And they've tried so many different KPIs to measure like was it number of pull requests, was it number of lines of code or was it, you know, how many how many things did you ship when really, you know, the the bottom line is developers want to use those tools. I think the same is the case here, right? developers are working on impactful work and not maintenance, right? As you were talking about before, they're going to get more fulfilled from their work and they're going to feel more enjoyment as a result. And if you're able to somehow measure that, that tells you you're doing something right, I think. >> Yeah, exactly. >> Yeah, Boris, I really enjoyed this conversation with you today. Um hopefully we have a chance to do this again. For those of you who are who are on with us, thank you for joining us. There's plenty more uh sessions for you to go explore and we hope you enjoy your day at Soner Summit. Thank you. Thank you. Bye.",
+  "fetchedAt": "2026-03-14T09:18:43.469Z"
+}

@@ -1,0 +1,1008 @@
+{
+  "videoId": "v200",
+  "youtubeId": "7_jdW2Co_ns",
+  "segments": [
+    {
+      "text": "hi i'm anne campbell and today i'm going",
+      "offset": 640,
+      "duration": 3360
+    },
+    {
+      "text": "to talk about the key features of sonar",
+      "offset": 2320,
+      "duration": 4320
+    },
+    {
+      "text": "cube 9.5 let's start with the speed of",
+      "offset": 4000,
+      "duration": 3919
+    },
+    {
+      "text": "analysis",
+      "offset": 6640,
+      "duration": 3680
+    },
+    {
+      "text": "faster analysis is a key focus area for",
+      "offset": 7919,
+      "duration": 4800
+    },
+    {
+      "text": "us this year and in 9.4 you saw that",
+      "offset": 10320,
+      "duration": 4560
+    },
+    {
+      "text": "with faster java analysis",
+      "offset": 12719,
+      "duration": 5041
+    },
+    {
+      "text": "in 9.5 we're bringing you faster c and c",
+      "offset": 14880,
+      "duration": 4640
+    },
+    {
+      "text": "plus plus analysis by turning on",
+      "offset": 17760,
+      "duration": 3840
+    },
+    {
+      "text": "multi-threading and analysis caching by",
+      "offset": 19520,
+      "duration": 3200
+    },
+    {
+      "text": "default",
+      "offset": 21600,
+      "duration": 2800
+    },
+    {
+      "text": "these features have been available for a",
+      "offset": 22720,
+      "duration": 3200
+    },
+    {
+      "text": "while but you had to configure them",
+      "offset": 24400,
+      "duration": 3199
+    },
+    {
+      "text": "manually and it seems that most people",
+      "offset": 25920,
+      "duration": 3759
+    },
+    {
+      "text": "just didn't so we've turned them on for",
+      "offset": 27599,
+      "duration": 3920
+    },
+    {
+      "text": "you by default and what you'll see is",
+      "offset": 29679,
+      "duration": 3521
+    },
+    {
+      "text": "that multi-threading scales to the",
+      "offset": 31519,
+      "duration": 4641
+    },
+    {
+      "text": "number of cpus on your analysis box and",
+      "offset": 33200,
+      "duration": 5199
+    },
+    {
+      "text": "analysis caching means that the duration",
+      "offset": 36160,
+      "duration": 4399
+    },
+    {
+      "text": "of your analysis will be relative to the",
+      "offset": 38399,
+      "duration": 4961
+    },
+    {
+      "text": "number of files affected by your change",
+      "offset": 40559,
+      "duration": 6000
+    },
+    {
+      "text": "set and for users of all languages we've",
+      "offset": 43360,
+      "duration": 5600
+    },
+    {
+      "text": "sped up the first analysis of git based",
+      "offset": 46559,
+      "duration": 3601
+    },
+    {
+      "text": "projects",
+      "offset": 48960,
+      "duration": 3360
+    },
+    {
+      "text": "as an example we analyzed the matomo",
+      "offset": 50160,
+      "duration": 5840
+    },
+    {
+      "text": "project on both sonar cube 9.4 and 9.5",
+      "offset": 52320,
+      "duration": 6399
+    },
+    {
+      "text": "now this is a project with about 710 000",
+      "offset": 56000,
+      "duration": 5920
+    },
+    {
+      "text": "lines of code on 9.4 that first analysis",
+      "offset": 58719,
+      "duration": 7281
+    },
+    {
+      "text": "took 11 minutes 23 seconds and on 9.5 it",
+      "offset": 61920,
+      "duration": 7280
+    },
+    {
+      "text": "only took 4 minutes and 26 seconds",
+      "offset": 66000,
+      "duration": 5040
+    },
+    {
+      "text": "we did that by making the initial",
+      "offset": 69200,
+      "duration": 4480
+    },
+    {
+      "text": "retrieval of blame data more efficient",
+      "offset": 71040,
+      "duration": 4640
+    },
+    {
+      "text": "and what it did was give us about a",
+      "offset": 73680,
+      "duration": 4799
+    },
+    {
+      "text": "sixty percent increase in analysis speed",
+      "offset": 75680,
+      "duration": 4240
+    },
+    {
+      "text": "that's something i think everyone can",
+      "offset": 78479,
+      "duration": 4161
+    },
+    {
+      "text": "appreciate regardless of language",
+      "offset": 79920,
+      "duration": 5760
+    },
+    {
+      "text": "next i want to talk about coverage so",
+      "offset": 82640,
+      "duration": 5440
+    },
+    {
+      "text": "speaking of setting up analysis",
+      "offset": 85680,
+      "duration": 4079
+    },
+    {
+      "text": "we've seen that getting coverage",
+      "offset": 88080,
+      "duration": 3679
+    },
+    {
+      "text": "information into your analysis is an",
+      "offset": 89759,
+      "duration": 3761
+    },
+    {
+      "text": "area where people have struggled over",
+      "offset": 91759,
+      "duration": 4720
+    },
+    {
+      "text": "the years so with 9.5 we've overhauled",
+      "offset": 93520,
+      "duration": 5200
+    },
+    {
+      "text": "the documentation on coverage to give",
+      "offset": 96479,
+      "duration": 3921
+    },
+    {
+      "text": "you better specific",
+      "offset": 98720,
+      "duration": 4320
+    },
+    {
+      "text": "guidance for the key languages",
+      "offset": 100400,
+      "duration": 4079
+    },
+    {
+      "text": "hopefully that's going to help a lot of",
+      "offset": 103040,
+      "duration": 3759
+    },
+    {
+      "text": "people going forward",
+      "offset": 104479,
+      "duration": 4401
+    },
+    {
+      "text": "moving on to the ui",
+      "offset": 106799,
+      "duration": 4241
+    },
+    {
+      "text": "we have updated the issues interface to",
+      "offset": 108880,
+      "duration": 5199
+    },
+    {
+      "text": "help you focus more tightly on the issue",
+      "offset": 111040,
+      "duration": 5600
+    },
+    {
+      "text": "at hand and also to make the rule",
+      "offset": 114079,
+      "duration": 4881
+    },
+    {
+      "text": "description more obvious and easier to",
+      "offset": 116640,
+      "duration": 3920
+    },
+    {
+      "text": "find",
+      "offset": 118960,
+      "duration": 3280
+    },
+    {
+      "text": "speaking of issues",
+      "offset": 120560,
+      "duration": 4640
+    },
+    {
+      "text": "in c sharp we have expanded our support",
+      "offset": 122240,
+      "duration": 6480
+    },
+    {
+      "text": "for c-sharp 10 by adding support for the",
+      "offset": 125200,
+      "duration": 5440
+    },
+    {
+      "text": "record struct concept",
+      "offset": 128720,
+      "duration": 4960
+    },
+    {
+      "text": "so now 31 rules that didn't before",
+      "offset": 130640,
+      "duration": 5200
+    },
+    {
+      "text": "understand what a record struct is and",
+      "offset": 133680,
+      "duration": 4400
+    },
+    {
+      "text": "can correctly raise issues",
+      "offset": 135840,
+      "duration": 3840
+    },
+    {
+      "text": "in a record struct and that's what",
+      "offset": 138080,
+      "duration": 3840
+    },
+    {
+      "text": "you're seeing here is issues raised by a",
+      "offset": 139680,
+      "duration": 4720
+    },
+    {
+      "text": "number of those rules on frankly some",
+      "offset": 141920,
+      "duration": 4399
+    },
+    {
+      "text": "demo code",
+      "offset": 144400,
+      "duration": 4320
+    },
+    {
+      "text": "still in c-sharp we have also added a",
+      "offset": 146319,
+      "duration": 5041
+    },
+    {
+      "text": "rule to help you find",
+      "offset": 148720,
+      "duration": 3760
+    },
+    {
+      "text": "deadlocks",
+      "offset": 151360,
+      "duration": 1920
+    },
+    {
+      "text": "so",
+      "offset": 152480,
+      "duration": 2720
+    },
+    {
+      "text": "when you have a lock that's only",
+      "offset": 153280,
+      "duration": 4000
+    },
+    {
+      "text": "conditionally released within a method",
+      "offset": 155200,
+      "duration": 4160
+    },
+    {
+      "text": "we're now going to raise an issue to",
+      "offset": 157280,
+      "duration": 4239
+    },
+    {
+      "text": "help you find and avoid those runtime",
+      "offset": 159360,
+      "duration": 3360
+    },
+    {
+      "text": "errors",
+      "offset": 161519,
+      "duration": 3440
+    },
+    {
+      "text": "on the topic of runtime errors",
+      "offset": 162720,
+      "duration": 4960
+    },
+    {
+      "text": "we have added five new rules in java to",
+      "offset": 164959,
+      "duration": 6161
+    },
+    {
+      "text": "help you find and fix runtime errors so",
+      "offset": 167680,
+      "duration": 5600
+    },
+    {
+      "text": "the categories for these rules are",
+      "offset": 171120,
+      "duration": 4479
+    },
+    {
+      "text": "runtime exceptions inappropriate",
+      "offset": 173280,
+      "duration": 4800
+    },
+    {
+      "text": "collection operations and my personal",
+      "offset": 175599,
+      "duration": 6000
+    },
+    {
+      "text": "favorite infinite recursion",
+      "offset": 178080,
+      "duration": 3519
+    },
+    {
+      "text": "so these are the five rules that we've",
+      "offset": 182400,
+      "duration": 4160
+    },
+    {
+      "text": "added for java runtime error detection",
+      "offset": 184239,
+      "duration": 4080
+    },
+    {
+      "text": "i'll give a dramatic pause here to let",
+      "offset": 186560,
+      "duration": 4560
+    },
+    {
+      "text": "you eyeball them",
+      "offset": 188319,
+      "duration": 2801
+    },
+    {
+      "text": "and also in java",
+      "offset": 191280,
+      "duration": 4720
+    },
+    {
+      "text": "in the on the topic of security now",
+      "offset": 193760,
+      "duration": 4320
+    },
+    {
+      "text": "we've had a rule to help you detect",
+      "offset": 196000,
+      "duration": 4400
+    },
+    {
+      "text": "hard-coded passwords for quite a while",
+      "offset": 198080,
+      "duration": 4400
+    },
+    {
+      "text": "so if you have a",
+      "offset": 200400,
+      "duration": 4000
+    },
+    {
+      "text": "variable name something like password or",
+      "offset": 202480,
+      "duration": 4399
+    },
+    {
+      "text": "passwd etc",
+      "offset": 204400,
+      "duration": 5119
+    },
+    {
+      "text": "we would help you find that",
+      "offset": 206879,
+      "duration": 4881
+    },
+    {
+      "text": "what we weren't finding was other types",
+      "offset": 209519,
+      "duration": 4800
+    },
+    {
+      "text": "of secrets so we've added a new rule",
+      "offset": 211760,
+      "duration": 4640
+    },
+    {
+      "text": "side by side with that to help you find",
+      "offset": 214319,
+      "duration": 4401
+    },
+    {
+      "text": "secrets in variables named things like",
+      "offset": 216400,
+      "duration": 5280
+    },
+    {
+      "text": "secret token credential and so on so",
+      "offset": 218720,
+      "duration": 5680
+    },
+    {
+      "text": "when we see a pseudo-random hard-coded",
+      "offset": 221680,
+      "duration": 5279
+    },
+    {
+      "text": "value for something named secret we're",
+      "offset": 224400,
+      "duration": 4240
+    },
+    {
+      "text": "going to raise an issue to help you fix",
+      "offset": 226959,
+      "duration": 2961
+    },
+    {
+      "text": "that",
+      "offset": 228640,
+      "duration": 3920
+    },
+    {
+      "text": "also in the security realm for python",
+      "offset": 229920,
+      "duration": 4879
+    },
+    {
+      "text": "we've added four new security hotspots",
+      "offset": 232560,
+      "duration": 6640
+    },
+    {
+      "text": "to help you use the aws cdk better",
+      "offset": 234799,
+      "duration": 6961
+    },
+    {
+      "text": "to create s3 buckets",
+      "offset": 239200,
+      "duration": 5119
+    },
+    {
+      "text": "and moving on still in the security",
+      "offset": 241760,
+      "duration": 4320
+    },
+    {
+      "text": "realm a lot of people are going to be",
+      "offset": 244319,
+      "duration": 4401
+    },
+    {
+      "text": "happy to see this we have reworked token",
+      "offset": 246080,
+      "duration": 3760
+    },
+    {
+      "text": "creation",
+      "offset": 248720,
+      "duration": 3439
+    },
+    {
+      "text": "so now there are three different types",
+      "offset": 249840,
+      "duration": 5039
+    },
+    {
+      "text": "of tokens and if i want to create a",
+      "offset": 252159,
+      "duration": 5521
+    },
+    {
+      "text": "token to analyze a specific project",
+      "offset": 254879,
+      "duration": 4721
+    },
+    {
+      "text": "i can do that so",
+      "offset": 257680,
+      "duration": 4880
+    },
+    {
+      "text": "if i pick this project and let's name it",
+      "offset": 259600,
+      "duration": 5680
+    },
+    {
+      "text": "appropriately",
+      "offset": 262560,
+      "duration": 2720
+    },
+    {
+      "text": "now i have a token that can be used only",
+      "offset": 266000,
+      "duration": 5759
+    },
+    {
+      "text": "to analyze the project chestnut the",
+      "offset": 268960,
+      "duration": 4400
+    },
+    {
+      "text": "other thing we've done here is add a",
+      "offset": 271759,
+      "duration": 3281
+    },
+    {
+      "text": "prefix to the token so that if i",
+      "offset": 273360,
+      "duration": 4399
+    },
+    {
+      "text": "encounter this value in the wild i can",
+      "offset": 275040,
+      "duration": 4560
+    },
+    {
+      "text": "understand that i'm dealing with a sonar",
+      "offset": 277759,
+      "duration": 4961
+    },
+    {
+      "text": "cube project token now there are two",
+      "offset": 279600,
+      "duration": 5360
+    },
+    {
+      "text": "other types there's the global analysis",
+      "offset": 282720,
+      "duration": 4479
+    },
+    {
+      "text": "token notice that i'm not asked to pick",
+      "offset": 284960,
+      "duration": 4720
+    },
+    {
+      "text": "a project",
+      "offset": 287199,
+      "duration": 2481
+    },
+    {
+      "text": "and it has its own prefix for sonar cube",
+      "offset": 290000,
+      "duration": 5040
+    },
+    {
+      "text": "analysis token",
+      "offset": 293280,
+      "duration": 3680
+    },
+    {
+      "text": "and finally there's the legacy token",
+      "offset": 295040,
+      "duration": 3680
+    },
+    {
+      "text": "type which we're calling the user token",
+      "offset": 296960,
+      "duration": 4320
+    },
+    {
+      "text": "type this is the type that we've had all",
+      "offset": 298720,
+      "duration": 4000
+    },
+    {
+      "text": "along which grants all of the",
+      "offset": 301280,
+      "duration": 6320
+    },
+    {
+      "text": "permissions for the issuing user",
+      "offset": 302720,
+      "duration": 4880
+    },
+    {
+      "text": "and it also has its own prefix sonar",
+      "offset": 307840,
+      "duration": 4880
+    },
+    {
+      "text": "cube user",
+      "offset": 310880,
+      "duration": 3840
+    },
+    {
+      "text": "now since i've just published three",
+      "offset": 312720,
+      "duration": 3919
+    },
+    {
+      "text": "tokens to the world i'm going to go",
+      "offset": 314720,
+      "duration": 3600
+    },
+    {
+      "text": "ahead and do my housekeeping while we're",
+      "offset": 316639,
+      "duration": 2801
+    },
+    {
+      "text": "all looking",
+      "offset": 318320,
+      "duration": 4480
+    },
+    {
+      "text": "and revoke these tokens",
+      "offset": 319440,
+      "duration": 3360
+    },
+    {
+      "text": "finally we have added a new report type",
+      "offset": 322960,
+      "duration": 5840
+    },
+    {
+      "text": "at the project level so you'll find it",
+      "offset": 326720,
+      "duration": 4160
+    },
+    {
+      "text": "tucked up here under project information",
+      "offset": 328800,
+      "duration": 3600
+    },
+    {
+      "text": "it is called we're calling it the",
+      "offset": 330880,
+      "duration": 4400
+    },
+    {
+      "text": "regulatory report although to be clear",
+      "offset": 332400,
+      "duration": 4880
+    },
+    {
+      "text": "there is no specific regulator or",
+      "offset": 335280,
+      "duration": 4720
+    },
+    {
+      "text": "regulation that this corresponds to",
+      "offset": 337280,
+      "duration": 5600
+    },
+    {
+      "text": "but what it does do is give you a full",
+      "offset": 340000,
+      "duration": 5600
+    },
+    {
+      "text": "detailed project status at the moment",
+      "offset": 342880,
+      "duration": 5759
+    },
+    {
+      "text": "the report was created so i created this",
+      "offset": 345600,
+      "duration": 5240
+    },
+    {
+      "text": "particular report on may",
+      "offset": 348639,
+      "duration": 5521
+    },
+    {
+      "text": "25th this is the commit that was the",
+      "offset": 350840,
+      "duration": 6120
+    },
+    {
+      "text": "most recent in the branch at the time i",
+      "offset": 354160,
+      "duration": 4879
+    },
+    {
+      "text": "created the report",
+      "offset": 356960,
+      "duration": 4480
+    },
+    {
+      "text": "and on the first page here i've got the",
+      "offset": 359039,
+      "duration": 5681
+    },
+    {
+      "text": "full listing of the major",
+      "offset": 361440,
+      "duration": 5920
+    },
+    {
+      "text": "values for the project for both new and",
+      "offset": 364720,
+      "duration": 4640
+    },
+    {
+      "text": "overall code",
+      "offset": 367360,
+      "duration": 3920
+    },
+    {
+      "text": "on the second page",
+      "offset": 369360,
+      "duration": 4399
+    },
+    {
+      "text": "i've got all of the failing quality gate",
+      "offset": 371280,
+      "duration": 4960
+    },
+    {
+      "text": "conditions now we don't have any failing",
+      "offset": 373759,
+      "duration": 4321
+    },
+    {
+      "text": "quality gate conditions because we did",
+      "offset": 376240,
+      "duration": 3360
+    },
+    {
+      "text": "see on the front page that we had a",
+      "offset": 378080,
+      "duration": 3520
+    },
+    {
+      "text": "passing quality gate",
+      "offset": 379600,
+      "duration": 4000
+    },
+    {
+      "text": "if it were failing it would show us why",
+      "offset": 381600,
+      "duration": 2879
+    },
+    {
+      "text": "here",
+      "offset": 383600,
+      "duration": 3760
+    },
+    {
+      "text": "and we've also here under new code and",
+      "offset": 384479,
+      "duration": 5440
+    },
+    {
+      "text": "overall code in the findings area",
+      "offset": 387360,
+      "duration": 5600
+    },
+    {
+      "text": "we have a full listing of the issues",
+      "offset": 389919,
+      "duration": 5120
+    },
+    {
+      "text": "that exist in the project at the time",
+      "offset": 392960,
+      "duration": 5040
+    },
+    {
+      "text": "the report was created so we've got all",
+      "offset": 395039,
+      "duration": 5600
+    },
+    {
+      "text": "open issues in this csv",
+      "offset": 398000,
+      "duration": 4800
+    },
+    {
+      "text": "and we've got all resolved issues in",
+      "offset": 400639,
+      "duration": 4560
+    },
+    {
+      "text": "this csv and by resolved what we mean",
+      "offset": 402800,
+      "duration": 3440
+    },
+    {
+      "text": "here is",
+      "offset": 405199,
+      "duration": 2560
+    },
+    {
+      "text": "issues that have been marked by the",
+      "offset": 406240,
+      "duration": 4560
+    },
+    {
+      "text": "developers false positive or won't fix",
+      "offset": 407759,
+      "duration": 4880
+    },
+    {
+      "text": "so you have comprehensive listings for",
+      "offset": 410800,
+      "duration": 4560
+    },
+    {
+      "text": "that for both new code and overall code",
+      "offset": 412639,
+      "duration": 4881
+    },
+    {
+      "text": "and yes the overall code listing",
+      "offset": 415360,
+      "duration": 4880
+    },
+    {
+      "text": "does include what's in the new code",
+      "offset": 417520,
+      "duration": 4079
+    },
+    {
+      "text": "and finally",
+      "offset": 420240,
+      "duration": 4160
+    },
+    {
+      "text": "we have a full analysis context report",
+      "offset": 421599,
+      "duration": 5281
+    },
+    {
+      "text": "so first we have all of the analysis",
+      "offset": 424400,
+      "duration": 5440
+    },
+    {
+      "text": "analysis parameters so for instance if",
+      "offset": 426880,
+      "duration": 6000
+    },
+    {
+      "text": "an exclusion had been added to analysis",
+      "offset": 429840,
+      "duration": 5359
+    },
+    {
+      "text": "on the command line that would show up",
+      "offset": 432880,
+      "duration": 5120
+    },
+    {
+      "text": "here we have a full listing of the",
+      "offset": 435199,
+      "duration": 5201
+    },
+    {
+      "text": "quality gate conditions so we know what",
+      "offset": 438000,
+      "duration": 5280
+    },
+    {
+      "text": "conditions were used to run the quality",
+      "offset": 440400,
+      "duration": 4480
+    },
+    {
+      "text": "gate we can make sure that the quality",
+      "offset": 443280,
+      "duration": 3840
+    },
+    {
+      "text": "gate had every all the tests in it that",
+      "offset": 444880,
+      "duration": 4159
+    },
+    {
+      "text": "we expected to see there",
+      "offset": 447120,
+      "duration": 4400
+    },
+    {
+      "text": "and finally we have a full listing of",
+      "offset": 449039,
+      "duration": 4560
+    },
+    {
+      "text": "all of the rules in each of the quality",
+      "offset": 451520,
+      "duration": 4720
+    },
+    {
+      "text": "profiles that was applied during the",
+      "offset": 453599,
+      "duration": 6320
+    },
+    {
+      "text": "analysis so a full and comprehensive",
+      "offset": 456240,
+      "duration": 6959
+    },
+    {
+      "text": "listing of project quality at the moment",
+      "offset": 459919,
+      "duration": 5441
+    },
+    {
+      "text": "the report was generated",
+      "offset": 463199,
+      "duration": 3601
+    },
+    {
+      "text": "and that's what i wanted to show you",
+      "offset": 465360,
+      "duration": 5880
+    },
+    {
+      "text": "today i'll see you next time",
+      "offset": 466800,
+      "duration": 4440
+    }
+  ],
+  "fullText": "hi i'm anne campbell and today i'm going to talk about the key features of sonar cube 9.5 let's start with the speed of analysis faster analysis is a key focus area for us this year and in 9.4 you saw that with faster java analysis in 9.5 we're bringing you faster c and c plus plus analysis by turning on multi-threading and analysis caching by default these features have been available for a while but you had to configure them manually and it seems that most people just didn't so we've turned them on for you by default and what you'll see is that multi-threading scales to the number of cpus on your analysis box and analysis caching means that the duration of your analysis will be relative to the number of files affected by your change set and for users of all languages we've sped up the first analysis of git based projects as an example we analyzed the matomo project on both sonar cube 9.4 and 9.5 now this is a project with about 710 000 lines of code on 9.4 that first analysis took 11 minutes 23 seconds and on 9.5 it only took 4 minutes and 26 seconds we did that by making the initial retrieval of blame data more efficient and what it did was give us about a sixty percent increase in analysis speed that's something i think everyone can appreciate regardless of language next i want to talk about coverage so speaking of setting up analysis we've seen that getting coverage information into your analysis is an area where people have struggled over the years so with 9.5 we've overhauled the documentation on coverage to give you better specific guidance for the key languages hopefully that's going to help a lot of people going forward moving on to the ui we have updated the issues interface to help you focus more tightly on the issue at hand and also to make the rule description more obvious and easier to find speaking of issues in c sharp we have expanded our support for c-sharp 10 by adding support for the record struct concept so now 31 rules that didn't before understand what a record struct is and can correctly raise issues in a record struct and that's what you're seeing here is issues raised by a number of those rules on frankly some demo code still in c-sharp we have also added a rule to help you find deadlocks so when you have a lock that's only conditionally released within a method we're now going to raise an issue to help you find and avoid those runtime errors on the topic of runtime errors we have added five new rules in java to help you find and fix runtime errors so the categories for these rules are runtime exceptions inappropriate collection operations and my personal favorite infinite recursion so these are the five rules that we've added for java runtime error detection i'll give a dramatic pause here to let you eyeball them and also in java in the on the topic of security now we've had a rule to help you detect hard-coded passwords for quite a while so if you have a variable name something like password or passwd etc we would help you find that what we weren't finding was other types of secrets so we've added a new rule side by side with that to help you find secrets in variables named things like secret token credential and so on so when we see a pseudo-random hard-coded value for something named secret we're going to raise an issue to help you fix that also in the security realm for python we've added four new security hotspots to help you use the aws cdk better to create s3 buckets and moving on still in the security realm a lot of people are going to be happy to see this we have reworked token creation so now there are three different types of tokens and if i want to create a token to analyze a specific project i can do that so if i pick this project and let's name it appropriately now i have a token that can be used only to analyze the project chestnut the other thing we've done here is add a prefix to the token so that if i encounter this value in the wild i can understand that i'm dealing with a sonar cube project token now there are two other types there's the global analysis token notice that i'm not asked to pick a project and it has its own prefix for sonar cube analysis token and finally there's the legacy token type which we're calling the user token type this is the type that we've had all along which grants all of the permissions for the issuing user and it also has its own prefix sonar cube user now since i've just published three tokens to the world i'm going to go ahead and do my housekeeping while we're all looking and revoke these tokens finally we have added a new report type at the project level so you'll find it tucked up here under project information it is called we're calling it the regulatory report although to be clear there is no specific regulator or regulation that this corresponds to but what it does do is give you a full detailed project status at the moment the report was created so i created this particular report on may 25th this is the commit that was the most recent in the branch at the time i created the report and on the first page here i've got the full listing of the major values for the project for both new and overall code on the second page i've got all of the failing quality gate conditions now we don't have any failing quality gate conditions because we did see on the front page that we had a passing quality gate if it were failing it would show us why here and we've also here under new code and overall code in the findings area we have a full listing of the issues that exist in the project at the time the report was created so we've got all open issues in this csv and we've got all resolved issues in this csv and by resolved what we mean here is issues that have been marked by the developers false positive or won't fix so you have comprehensive listings for that for both new code and overall code and yes the overall code listing does include what's in the new code and finally we have a full analysis context report so first we have all of the analysis analysis parameters so for instance if an exclusion had been added to analysis on the command line that would show up here we have a full listing of the quality gate conditions so we know what conditions were used to run the quality gate we can make sure that the quality gate had every all the tests in it that we expected to see there and finally we have a full listing of all of the rules in each of the quality profiles that was applied during the analysis so a full and comprehensive listing of project quality at the moment the report was generated and that's what i wanted to show you today i'll see you next time",
+  "fetchedAt": "2026-03-14T09:25:11.621Z"
+}

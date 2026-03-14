@@ -1,0 +1,853 @@
+{
+  "videoId": "v27",
+  "youtubeId": "4DTYuQTguV0",
+  "segments": [
+    {
+      "text": "Hi there. I'm Chris Grams. I'm the VP of corporate marketing for Sonar and I'm excited to have you join me for this fireside chat today on engineering in the age of AI.",
+      "offset": 17000,
+      "duration": 9000
+    },
+    {
+      "text": "I'm joined here today by Ganesh Datta who is the co-founder and CTO of Cortex. So welcome Ganesh.",
+      "offset": 26000,
+      "duration": 9000
+    },
+    {
+      "text": "Nice to have you here.",
+      "offset": 35000,
+      "duration": 3000
+    },
+    {
+      "text": "Excited to be here. Thanks for having me.",
+      "offset": 38000,
+      "duration": 2000
+    },
+    {
+      "text": "So Ganesh I'd like to start and just have you introduce yourself, your background for a couple of minutes and then maybe tell us a little bit about Cortex.",
+      "offset": 40000,
+      "duration": 9000
+    },
+    {
+      "text": "Absolutely. So I'm Ganesh, one of the co-founders and CTO at Cortex. Like you mentioned Cortex is an engineering operations platform. Our goal is to",
+      "offset": 49000,
+      "duration": 8000
+    },
+    {
+      "text": "help organizations continuously improve their operational maturity and remove friction for the developers so that teams can operate as one unit.",
+      "offset": 57000,
+      "duration": 9000
+    },
+    {
+      "text": "Before starting Cortex, I was a software engineer. I worked in fintech for a while and I saw the monolith to microservices journey from service one to a",
+      "offset": 66000,
+      "duration": 8000
+    },
+    {
+      "text": "couple hundred services by the time I left and there was a lot of complexity around not knowing what teams own different services and getting people to care about things like production",
+      "offset": 74000,
+      "duration": 9000
+    },
+    {
+      "text": "readiness standards was really painful and we did a lot of this stuff in spreadsheets and confluence pages.",
+      "offset": 83000,
+      "duration": 5000
+    },
+    {
+      "text": "And that was kind of the pain that led me to start Cortex and really focus on how do we help organizations get better at getting better and improving their operational maturity.",
+      "offset": 88000,
+      "duration": 10000
+    },
+    {
+      "text": "And so that's what led me to where I am today.",
+      "offset": 98000,
+      "duration": 3000
+    },
+    {
+      "text": "Awesome. Well, thanks for the background and glad to have you here. I know you recently released a new research report and I'd love to spend a",
+      "offset": 101000,
+      "duration": 7000
+    },
+    {
+      "text": "little bit of time talking about it today. Can you just give us an overview of what the report was and maybe what you were trying to accomplish with it?",
+      "offset": 108000,
+      "duration": 7000
+    },
+    {
+      "text": "Yeah, the report was about engineering in the age of AI. And essentially what we were trying to do was combine the quantitative and",
+      "offset": 115000,
+      "duration": 8000
+    },
+    {
+      "text": "qualitative side of the world with a lot of our customers and folks in the industry to understand are they seeing the impact that they expected to see, are",
+      "offset": 123000,
+      "duration": 8000
+    },
+    {
+      "text": "things going as well as they wanted to. And I think the key takeaway from the report and I think actually a lot of reports that have",
+      "offset": 131000,
+      "duration": 8000
+    },
+    {
+      "text": "come out since have also come to the same conclusion that yes we actually are moving faster, you know about 20% or so is what we saw in our data, but we",
+      "offset": 139000,
+      "duration": 9000
+    },
+    {
+      "text": "have a roughly similar percentage increase in incidents or quality regressions and so while we are moving faster things are maybe getting a little",
+      "offset": 148000,
+      "duration": 9000
+    },
+    {
+      "text": "bit worse from a quality standpoint and that was kind of the big takeaway. There's some other takeaways in there,",
+      "offset": 157000,
+      "duration": 4000
+    },
+    {
+      "text": "around the number of organizations that have governance policies around AI. It's fewer than you would expect. A lot of people are thinking about",
+      "offset": 161000,
+      "duration": 9000
+    },
+    {
+      "text": "how to govern AI adoption within their organizations. Some of them had, some of them have ideas, some of them have put it into practice. It's kind of all over",
+      "offset": 170000,
+      "duration": 7000
+    },
+    {
+      "text": "the place. AI adoption is pretty much everywhere at this point. Levels of adoption are different, but pretty much most organizations have at least large",
+      "offset": 177000,
+      "duration": 8000
+    },
+    {
+      "text": "pockets of the organization that have adopted AI coding assistance. But universally of those people who have adopted it, speed is going up and",
+      "offset": 185000,
+      "duration": 7000
+    },
+    {
+      "text": "quality is going down. And that was kind of the big thing that we... Well, let's dive in. Let's dive into some of those in a little bit more detail. So, we also just did a",
+      "offset": 192000,
+      "duration": 10000
+    },
+    {
+      "text": "research survey report. And what's funny is I don't know when yours was in the field. We were in the field sort of October and November of last year. And",
+      "offset": 202000,
+      "duration": 8000
+    },
+    {
+      "text": "so some really interesting stats, but also I was doing a podcast the other day where I kind of fessed up that I",
+      "offset": 210000,
+      "duration": 8000
+    },
+    {
+      "text": "feel like so much has changed just here since like December and January in terms of AI coding that as I was doing the conversation, I wanted to put some",
+      "offset": 218000,
+      "duration": 9000
+    },
+    {
+      "text": "asterisks beside some of the stats. And so maybe we can talk about that too.",
+      "offset": 227000,
+      "duration": 3000
+    },
+    {
+      "text": "Like if there's stats in here that you looked at and you sort of feel like this is probably as true as it was when you were in the field and some of",
+      "offset": 230000,
+      "duration": 8000
+    },
+    {
+      "text": "them that you feel like are probably changing as well. When was this in the field?",
+      "offset": 238000,
+      "duration": 5000
+    },
+    {
+      "text": "We were doing this kind of early to mid last year. And so I think those things are probably still true. I",
+      "offset": 243000,
+      "duration": 8000
+    },
+    {
+      "text": "know the Dora report that came out recently also came to the same findings with very similar numbers. And if",
+      "offset": 251000,
+      "duration": 7000
+    },
+    {
+      "text": "anything, my hypothesis is that this is probably more true than ever before. And it kind of goes to this idea that code was never really the bottleneck, right?",
+      "offset": 258000,
+      "duration": 8000
+    },
+    {
+      "text": "Like, you know, yeah, obviously how fast you could type. I don't know,",
+      "offset": 266000,
+      "duration": 4000
+    },
+    {
+      "text": "those things were part of the problem, but or the inner loop and CI/CD and things like that, but there was all this other stuff",
+      "offset": 270000,
+      "duration": 8000
+    },
+    {
+      "text": "in the organization that was always a bottleneck, right? Like even if you were generating a bunch of code, the human as a process, the compliance, the reliability, like those are the things",
+      "offset": 278000,
+      "duration": 8000
+    },
+    {
+      "text": "that kind of got in the way of our ability to ship and making sure that we were testing and all that stuff. And so like those",
+      "offset": 286000,
+      "duration": 7000
+    },
+    {
+      "text": "processes are kind of the same as they were pre-AI. We haven't really gotten better that much in aggregate at getting stuff through the",
+      "offset": 293000,
+      "duration": 8000
+    },
+    {
+      "text": "organizational pipe. And so all of a sudden on one side of the equation, if you're generating more and more and more and more code and you're getting better at generating code, the funnel is",
+      "offset": 301000,
+      "duration": 8000
+    },
+    {
+      "text": "still kind of the same. And so I think my hypothesis is that if you want to survey organizations today, they're probably starting to reckon with some of those issues. But for the most part,",
+      "offset": 309000,
+      "duration": 9000
+    },
+    {
+      "text": "speed is probably continuing to go up and incidents are probably also ratcheting it up, maybe at a slightly slower pace, but my guess is that it's",
+      "offset": 318000,
+      "duration": 8000
+    },
+    {
+      "text": "probably still true. So, it's really less about the time it takes and the cost it takes to write software",
+      "offset": 326000,
+      "duration": 7000
+    },
+    {
+      "text": "and more of the cost and the time it takes to ship software successfully is really the issue. And that's what people are starting to grapple with with AI,",
+      "offset": 333000,
+      "duration": 8000
+    },
+    {
+      "text": "you think?",
+      "offset": 341000,
+      "duration": 1000
+    },
+    {
+      "text": "Exactly. Exactly. It's like everything but the coding. It's like how do you align organizations on what good looks like? How do you",
+      "offset": 342000,
+      "duration": 8000
+    },
+    {
+      "text": "measure what good looks like in your organization? How do you get people all rowing in the same direction? Because if you can do that, if you're not all rowing in the same direction, you could be moving really fast, but you're not",
+      "offset": 350000,
+      "duration": 8000
+    },
+    {
+      "text": "going to go anywhere. And so making sure you're kind of going the right way is really really important.",
+      "offset": 358000,
+      "duration": 6000
+    },
+    {
+      "text": "So, one of the stats in the report that jumped out at me was this idea of incidents per pull requests increasing 23.5%.",
+      "offset": 364000,
+      "duration": 12000
+    },
+    {
+      "text": "What do you think that is? Is that a volume issue or is the AI generated code itself inherently more complex or harder to vet?",
+      "offset": 376000,
+      "duration": 10000
+    },
+    {
+      "text": "I think it's probably the latter. Now,",
+      "offset": 386000,
+      "duration": 3000
+    },
+    {
+      "text": "incidents for PR is not like an industry standard metric for sure. And basically what we're trying to do was capture some sort of proxy that normalized incidents",
+      "offset": 389000,
+      "duration": 8000
+    },
+    {
+      "text": "versus things shipped. And you know the metric a lot of companies are using to measure speed with AI. If you're doing Dora, you have deploy",
+      "offset": 397000,
+      "duration": 8000
+    },
+    {
+      "text": "frequency, but the number of PRs you're opening is like a kind of simple proxy that allowed us to aggregate this across a variety of organizations.",
+      "offset": 405000,
+      "duration": 8000
+    },
+    {
+      "text": "And basically the thing that we found was for every PR that you ship,",
+      "offset": 413000,
+      "duration": 6000
+    },
+    {
+      "text": "you know, there's 20% higher rate of incidents. And so it's not only are you shipping more and there's a higher number of incidents, but the ratio of that is changing quite a bit.",
+      "offset": 419000,
+      "duration": 10000
+    },
+    {
+      "text": "And I think to your point, it's because we understand less of our code. We are amplifying the existing bottlenecks",
+      "offset": 429000,
+      "duration": 8000
+    },
+    {
+      "text": "in our process. Like we talked a lot about how like one of the reasons why testing and code coverage and stuff like that is so important. It's not necessarily just for the quality, but",
+      "offset": 437000,
+      "duration": 9000
+    },
+    {
+      "text": "it's about the psychological safety of the organization itself, right? Like the more confident you are in your code,",
+      "offset": 446000,
+      "duration": 5000
+    },
+    {
+      "text": "the more confident you are about shipping that to production and saying like, okay, if something goes wrong, we know we have the confidence that we'll be able to fix it because we",
+      "offset": 451000,
+      "duration": 7000
+    },
+    {
+      "text": "have things that are covered. I think what's happening now is like you're shipping more stuff, you understand less of the code that you're writing. When there is an incident, maybe you didn't",
+      "offset": 458000,
+      "duration": 8000
+    },
+    {
+      "text": "have the right guardrails starting to pop up now. And so what I would imagine will happen is a lot of organizations are going to divert",
+      "offset": 466000,
+      "duration": 9000
+    },
+    {
+      "text": "some of their engineering capacity because they've gotten more capacity back now. They'll divert some of that capacity to like making those things better. If you think about",
+      "offset": 475000,
+      "duration": 9000
+    },
+    {
+      "text": "writing code now as almost like it's kind of like reinforcement learning, right? You give it the right optimization function and like you train",
+      "offset": 484000,
+      "duration": 9000
+    },
+    {
+      "text": "your model within that. It kind of figures out how to do stuff. Like writing code is kind of the same thing now. Whereas things like unit testing are like the harness for the AI, right? If you say like, hey,",
+      "offset": 493000,
+      "duration": 9000
+    },
+    {
+      "text": "here's the things that I expect you to do, like write these tests and then write the code that it fits within these guardrails I've given you, it's much easier for those things to operate.",
+      "offset": 502000,
+      "duration": 8000
+    },
+    {
+      "text": "And so developers will be thinking more about like the expected outcomes, which I think will then drive down the incident rate. But I think like you said, it is a function of people just",
+      "offset": 510000,
+      "duration": 7000
+    },
+    {
+      "text": "not being able to keep up with the volume of stuff that we're generating and that leads to these downstream effects such as incidents.",
+      "offset": 517000,
+      "duration": 6000
+    },
+    {
+      "text": "Yeah. Yeah. One of the things that I was mentioning earlier that we've seen just in the last couple of months is the models themselves have actually gotten a",
+      "offset": 523000,
+      "duration": 7000
+    },
+    {
+      "text": "lot better. Like Sonar has a LLM leaderboard that we've been tracking not just the performance",
+      "offset": 530000,
+      "duration": 8000
+    },
+    {
+      "text": "metrics of the different LLMs but also how complex is the code and security issues and things",
+      "offset": 538000,
+      "duration": 7000
+    },
+    {
+      "text": "like that. Do you think since you did the survey last year, like do you think the incidents per pull request could go down based on what you're seeing with some of the the newer models coming out?",
+      "offset": 545000,
+      "duration": 12000
+    },
+    {
+      "text": "I think there's a possibility, but I think what's happening in the industry and what we see even internally is that while the",
+      "offset": 557000,
+      "duration": 8000
+    },
+    {
+      "text": "code might that it's producing might be getting better, that just means that we're throwing harder and harder problems at it. So the question is, is it better at the older",
+      "offset": 565000,
+      "duration": 9000
+    },
+    {
+      "text": "problems that we felt comfortable giving it or is it also better at the new complex problems that we're giving it now because we're more confident in it.",
+      "offset": 574000,
+      "duration": 6000
+    },
+    {
+      "text": "And so I think that's yet to be seen, that's what we're seeing anecdotally.",
+      "offset": 580000,
+      "duration": 4000
+    },
+    {
+      "text": "Yeah. One of the other things you kind of worry about is you end up even if it does write better code with like a needle and a haystack problem where",
+      "offset": 584000,
+      "duration": 8000
+    },
+    {
+      "text": "there may be fewer issues but they're more pernicious and hard to find because they're caught somewhere deep where people don't know to look easily because",
+      "offset": 592000,
+      "duration": 8000
+    },
+    {
+      "text": "they didn't write the code in the first place.",
+      "offset": 600000,
+      "duration": 2000
+    },
+    {
+      "text": "Exactly. And I think that's why like operational maturity and operational excellence are so important for organizations now. Because",
+      "offset": 602000,
+      "duration": 8000
+    },
+    {
+      "text": "the way I think about it is your customers, our customers' customers don't really care that you're using AI or",
+      "offset": 610000,
+      "duration": 9000
+    },
+    {
+      "text": "you're moving so much faster. What they care about at the end of the day from their vendors is that the vendors they're paying are reliable, they're following security and compliance practices, they can trust those",
+      "offset": 619000,
+      "duration": 9000
+    },
+    {
+      "text": "vendors, the vendors are responsive to feedback and so on and those are the things they care about. Like are you using AI, are humans writing your code? Don't",
+      "offset": 628000,
+      "duration": 8000
+    },
+    {
+      "text": "really care, like as long as you do those things and your product does what you said it would do when we bought that product. And so it's like okay even if",
+      "offset": 636000,
+      "duration": 7000
+    },
+    {
+      "text": "AI is getting better at writing code and whatnot the thing that really matters is what you've told customers",
+      "offset": 643000,
+      "duration": 7000
+    },
+    {
+      "text": "your product will do and so things like SLOs and testing and all that kind of stuff is going to become more important because at some point that is the only thing you can control right you can say",
+      "offset": 650000,
+      "duration": 9000
+    },
+    {
+      "text": "like hey we hold our product to the standard that it'll have X% availability and this particular flow is going to have some",
+      "offset": 659000,
+      "duration": 8000
+    },
+    {
+      "text": "sort of latency or it'll respond properly 99.99% of the time.",
+      "offset": 667000,
+      "duration": 6000
+    },
+    {
+      "text": "And to your point around like this kind of needle in the haystack problem,",
+      "offset": 673000,
+      "duration": 4000
+    },
+    {
+      "text": "maybe you don't need to go hunting for that every single time. So maybe it's okay that AI introduces those issues if you can still guarantee in the aggregate",
+      "offset": 677000,
+      "duration": 8000
+    },
+    {
+      "text": "that you're delivering what you promise to your customers. I mean that's the whole point of SLOs and stuff like that. So this idea of the meta of operational maturity becomes ever so",
+      "offset": 685000,
+      "duration": 9000
+    },
+    {
+      "text": "more important as AI is writing more of our code and we have less of an understanding of what's going on under the hood. It's interesting. I was just",
+      "offset": 694000,
+      "duration": 7000
+    },
+    {
+      "text": "talking to an industry analyst today and we were talking about AI code review as an example of this as",
+      "offset": 701000,
+      "duration": 9000
+    },
+    {
+      "text": "one of those processes and one of the things that he said is he said code is code and",
+      "offset": 710000,
+      "duration": 7000
+    },
+    {
+      "text": "if you had a really good process in place for doing this sort of thing for developer written code the same process is probably going to get",
+      "offset": 717000,
+      "duration": 9000
+    },
+    {
+      "text": "you a long way ahead for AI generated code because at the end of the day it comes down to does it compile",
+      "offset": 726000,
+      "duration": 7000
+    },
+    {
+      "text": "and how does it actually function so I don't know if you have a point of view on that from the perspective of Cortex like that idea",
+      "offset": 733000,
+      "duration": 8000
+    },
+    {
+      "text": "of code is code whether AI is writing it or humans are writing it. 100% again it kind of goes back to the idea that your customers don't care who",
+      "offset": 741000,
+      "duration": 8000
+    },
+    {
+      "text": "wrote it. It's about the end results and the organizations that have invested the most in those operational maturity practices like CI and test",
+      "offset": 749000,
+      "duration": 9000
+    },
+    {
+      "text": "environments and canary deploys and things like that are the ones that are going to get the most out of AI. And the reason for that is if you look at an organization that has been on",
+      "offset": 758000,
+      "duration": 8000
+    },
+    {
+      "text": "the cutting edge of this kind of thing for a long time. It's like AWS, they popularized this idea that it's never a human's issue. If a human made a",
+      "offset": 766000,
+      "duration": 9000
+    },
+    {
+      "text": "problem it was actually indicative of the system. The system should have never let you make that mistake in the first place. And so actually human mistake is actually a systems mistake.",
+      "offset": 775000,
+      "duration": 9000
+    },
+    {
+      "text": "And so next time around that kind of mistake will never happen again. And so what that means is you're actually very comfortable in an organization like that",
+      "offset": 784000,
+      "duration": 7000
+    },
+    {
+      "text": "letting junior engineers go haywire and go nuts and write a ton of code and ship to production because there's so many processes and",
+      "offset": 791000,
+      "duration": 7000
+    },
+    {
+      "text": "systems in place that will catch those kind of things from happening. And so now they're probably more likely to be able to take advantage of AI because it's cool, AI is writing the code.",
+      "offset": 798000,
+      "duration": 8000
+    },
+    {
+      "text": "Let us ship, we have systems that will help us catch those issues. And so those practices that the best organizations have been following and we've been talking about for years and",
+      "offset": 806000,
+      "duration": 8000
+    },
+    {
+      "text": "years and years at this point are the things that are going to make organizations successful in this next era. It's like how can we confidently",
+      "offset": 814000,
+      "duration": 7000
+    },
+    {
+      "text": "take code, code is code and put that in production, put in customers' hands and know that it's not going to break. And that's the thing that really really matters.",
+      "offset": 821000,
+      "duration": 8000
+    },
+    {
+      "text": "And probably the organizations that are most at risk are the ones that don't have those formal processes in place but go ahead and use AI code anyway. And",
+      "offset": 829000,
+      "duration": 8000
+    },
+    {
+      "text": "how do you think what should they do, how should those organizations change to meet this new world?",
+      "offset": 837000,
+      "duration": 9000
+    },
+    {
+      "text": "I think it's starting with the customer mindset. So saying what guarantees do we owe our customers and",
+      "offset": 846000,
+      "duration": 7000
+    },
+    {
+      "text": "that's security, it's operational things like your SLOs and SLAs and starting with that. Can we even",
+      "offset": 853000,
+      "duration": 7000
+    },
+    {
+      "text": "articulate the things that we're holding ourselves to? Once you know that then you can say what the hotspots are. Organizations generally have",
+      "offset": 860000,
+      "duration": 9000
+    },
+    {
+      "text": "allocated capacity towards tech debt or improvement type things in the past. Some of these organizations that maybe haven't made those investments",
+      "offset": 869000,
+      "duration": 8000
+    },
+    {
+      "text": "before were doing that because they didn't have enough capacity to allocate to infrastructury type things. We know the data that AI is",
+      "offset": 877000,
+      "duration": 9000
+    },
+    {
+      "text": "making people more productive and so you could argue that whatever that delta and productivity they're getting is actually new capacity that you",
+      "offset": 886000,
+      "duration": 7000
+    },
+    {
+      "text": "can now reallocate to improving the foundations and so I think those organizations should take a close hard look at their internal systems and say",
+      "offset": 893000,
+      "duration": 8000
+    },
+    {
+      "text": "are we going to get left behind if we don't actually turn inwards using the velocity advantages that",
+      "offset": 901000,
+      "duration": 9000
+    },
+    {
+      "text": "AI is giving us and directing that towards making our systems and processes better so that we can kind of slow down to speed up, right? And I think a",
+      "offset": 910000,
+      "duration": 8000
+    },
+    {
+      "text": "lot of organizations should be thinking about how to use AI to make these systems better. Like that is a new gift that we've been given. It's allowing us to tackle things that we",
+      "offset": 918000,
+      "duration": 8000
+    },
+    {
+      "text": "maybe didn't have the capacity to do before.",
+      "offset": 926000,
+      "duration": 2000
+    },
+    {
+      "text": "Yeah. So in other words, if in the software world a good part of their time was spent writing code and they have this gift of all the time back now,",
+      "offset": 928000,
+      "duration": 9000
+    },
+    {
+      "text": "there's no better time to put in place the sort of policies and processes and things like that that can actually continue to accelerate your development.",
+      "offset": 937000,
+      "duration": 8000
+    },
+    {
+      "text": "Yeah, exactly. And I think maybe the two other things I'll add to that. One, when I was saying okay, you should define what the expectations of your customers are, you should also be able to measure that.",
+      "offset": 945000,
+      "duration": 9000
+    },
+    {
+      "text": "If you're not able to measure what you're holding yourself to, that's step one. Start measuring. You can't improve what you don't measure.",
+      "offset": 954000,
+      "duration": 5000
+    },
+    {
+      "text": "So measuring that is really important. I think the second thing is being able to define a shared definition of good. And this is common across organizations whether it's AI or not.",
+      "offset": 959000,
+      "duration": 8000
+    },
+    {
+      "text": "Like one of the problems, it's not that developers don't want to ship good code or like it's not like somebody sits down at the beginning",
+      "offset": 967000,
+      "duration": 8000
+    },
+    {
+      "text": "of the day like \"let me ship a couple of bugs today.\" That's not the intention of people, right? It's like we're crafts people. We want to build things but in a lot of cases",
+      "offset": 975000,
+      "duration": 10000
+    },
+    {
+      "text": "we don't have a clear definition of \"hey, this is what good looks like.\" If you can tell people, \"hey, this is what good looks like,\" it's much easier to have conversations about like, \"okay,",
+      "offset": 985000,
+      "duration": 7000
+    },
+    {
+      "text": "well how do we get there? What are the trade-offs?\" And so, I think it also comes down to being able to as an organization say, we don't care if it's humans or agents writing this code.",
+      "offset": 992000,
+      "duration": 9000
+    },
+    {
+      "text": "These are the things, these are the practices that we expect our software to exhibit. Everything from observability practices to cost",
+      "offset": 1001000,
+      "duration": 8000
+    },
+    {
+      "text": "to code quality and security. Like all these things, here's what good looks like across your organization.",
+      "offset": 1009000,
+      "duration": 5000
+    },
+    {
+      "text": "Now, give your teams autonomy to figure out how to get there. Because again, it's not that teams don't want to get there. It's just they don't know where you expect them to be. If they're like,",
+      "offset": 1014000,
+      "duration": 7000
+    },
+    {
+      "text": "\"All right, well, if I don't know where to go, then I'm just gonna do whatever we've been doing and things will break or whatever.\" But it's like if you can tell them this is what",
+      "offset": 1021000,
+      "duration": 7000
+    },
+    {
+      "text": "we expect, then give the teams the autonomy to get there. You will naturally drive towards that kind of outcome. And so, that's one of the things that we think about a lot as well.",
+      "offset": 1028000,
+      "duration": 9000
+    },
+    {
+      "text": "Yeah. Well, thinking about that like the team sort of getting a better sense for what to expect. One of the",
+      "offset": 1037000,
+      "duration": 8000
+    },
+    {
+      "text": "other things I wanted to touch on is like feels like there's a growing concern about developers losing skills",
+      "offset": 1045000,
+      "duration": 8000
+    },
+    {
+      "text": "and not having mentors and things like that and so if as we're talking about this whole idea of setting up processes",
+      "offset": 1053000,
+      "duration": 8000
+    },
+    {
+      "text": "and developers aren't writing code and doing that sort of work anymore like is there going to be a skills gap?",
+      "offset": 1061000,
+      "duration": 6000
+    },
+    {
+      "text": "Because what do we do to ensure the developers of the future who may not even be traditionally trained developers actually know and",
+      "offset": 1067000,
+      "duration": 8000
+    },
+    {
+      "text": "understand these processes and how to set them up.",
+      "offset": 1075000,
+      "duration": 3000
+    },
+    {
+      "text": "You know, it's interesting like I personally don't believe that to be as big of a problem as some folks in the industry think. And the reason for that",
+      "offset": 1078000,
+      "duration": 7000
+    },
+    {
+      "text": "is because I think it's just another skill, right? Why see it as a thing that is taking away our ability to learn skills? Using AI is",
+      "offset": 1085000,
+      "duration": 9000
+    },
+    {
+      "text": "just another skill that reduces the need for one skill and increases the need for the other skill.",
+      "offset": 1094000,
+      "duration": 5000
+    },
+    {
+      "text": "If you think about a junior engineer starting fresh out of college the expectation is that you start like just writing code. You've never written code that goes to",
+      "offset": 1099000,
+      "duration": 8000
+    },
+    {
+      "text": "production and so figuring out how to understand a codebase and ship small features inside of a giant codebase and get those things to production and test those things like",
+      "offset": 1107000,
+      "duration": 8000
+    },
+    {
+      "text": "those are the skills you're learning at the beginning. That's what you expect from junior engineers now, AI can do those things for you right? Like you use Claude or",
+      "offset": 1115000,
+      "duration": 8000
+    },
+    {
+      "text": "whatever to go and understand a codebase and figure out how to make changes and it'll write tests for you and whatnot and so maybe that initial skill building that we used to coach people on is",
+      "offset": 1123000,
+      "duration": 9000
+    },
+    {
+      "text": "not as important anymore. However by the time you became a senior software engineer or staff software engineer we expected your scope to widen. It's like okay stop thinking",
+      "offset": 1132000,
+      "duration": 8000
+    },
+    {
+      "text": "about the code, you know how to do the code now, that's table stakes. Now you need to think about how these systems fit together and how do we prevent issues, the right",
+      "offset": 1140000,
+      "duration": 9000
+    },
+    {
+      "text": "architectural pattern they should be thinking about. That's what you start thinking about as you go higher up right? You have very senior ICs like individual contributors that",
+      "offset": 1149000,
+      "duration": 8000
+    },
+    {
+      "text": "don't write any code but they have a ton of impact. Why is that? It's because they're thinking about system design. Now the expectation is that junior engineers will be doing that instead so it's not",
+      "offset": 1157000,
+      "duration": 9000
+    },
+    {
+      "text": "and again it's not that there's something special about later stages of your career that makes you more likely to be able to learn",
+      "offset": 1166000,
+      "duration": 7000
+    },
+    {
+      "text": "those things. It was just like the pyramid of stuff that you have to learn.",
+      "offset": 1173000,
+      "duration": 4000
+    },
+    {
+      "text": "You kind of just go up the chain. We're just saying that the bottom rung now we're throwing away. Another great example of this is IDEs. Like people probably said like, \"Oh, if you're using IntelliJ or something, oh my god,",
+      "offset": 1177000,
+      "duration": 10000
+    },
+    {
+      "text": "like you're never going to have to memorize like we OGs had to memorize all the syntax.\" But like in IntelliJ,",
+      "offset": 1187000,
+      "duration": 8000
+    },
+    {
+      "text": "it'll autocomplete stuff for you and it's like \"oh my god, are we losing those skills?\" It's like no, that became a skill and you made some people very",
+      "offset": 1195000,
+      "duration": 7000
+    },
+    {
+      "text": "productive and you have to go learn different skills. So I think there's going to be a middle period where there's a gap where people don't really know how to teach this next set of skills.",
+      "offset": 1202000,
+      "duration": 10000
+    },
+    {
+      "text": "But I think we're going to get there and you know we'll iterate from that point onward. So that's kind of how I think about the lack of skill. It's just another skill that",
+      "offset": 1212000,
+      "duration": 9000
+    },
+    {
+      "text": "people need to learn. Yeah. No, I hear you. Anything that we didn't get to from the report that you'd like to make sure we touch on before we close here?",
+      "offset": 1221000,
+      "duration": 9000
+    },
+    {
+      "text": "No, I think we talked a lot about it. Your guys' report found the same thing. Our report found the same thing. Dora found the same",
+      "offset": 1230000,
+      "duration": 7000
+    },
+    {
+      "text": "thing. It's this idea that the things we've always been talking about, the fundamentals, are what really matter,",
+      "offset": 1237000,
+      "duration": 7000
+    },
+    {
+      "text": "right? AI is just exposing problems, right? High functioning teams are functioning better and low performing teams are functioning",
+      "offset": 1244000,
+      "duration": 7000
+    },
+    {
+      "text": "worse because of AI because it's shining a spotlight on all of your bottlenecks. And so rather than thinking about it from a lens of",
+      "offset": 1251000,
+      "duration": 7000
+    },
+    {
+      "text": "what is AI doing to our organization, just think about it the same way you would have thought about bottlenecks before. Focus on the problems, figure out where things are falling down in your",
+      "offset": 1258000,
+      "duration": 9000
+    },
+    {
+      "text": "code delivery path and just systematically attack those things. Make it easier for your developers to ship with confidence and naturally you'll ride the wave of AI",
+      "offset": 1267000,
+      "duration": 8000
+    },
+    {
+      "text": "productivity. Like I think that's the main takeaway from the entire report and I think what a lot of folks like yourselves are talking about as well.",
+      "offset": 1275000,
+      "duration": 8000
+    },
+    {
+      "text": "Ganesh, this has been fun. I appreciate you making the time. I appreciate you participating in the Sonar Summit, this inaugural Sonar Summit. So thank you for making the time today.",
+      "offset": 1283000,
+      "duration": 10000
+    },
+    {
+      "text": "Thanks for having me. Really enjoyed it.",
+      "offset": 1293000,
+      "duration": 7000
+    }
+  ],
+  "fullText": "Hi there. I'm Chris Grams. I'm the VP of corporate marketing for Sonar and I'm excited to have you join me for this fireside chat today on engineering in the age of AI. I'm joined here today by Ganesh Datta who is the co-founder and CTO of Cortex. So welcome Ganesh. Nice to have you here. Excited to be here. Thanks for having me. So Ganesh I'd like to start and just have you introduce yourself, your background for a couple of minutes and then maybe tell us a little bit about Cortex. Absolutely. So I'm Ganesh, one of the co-founders and CTO at Cortex. Like you mentioned Cortex is an engineering operations platform. Our goal is to help organizations continuously improve their operational maturity and remove friction for the developers so that teams can operate as one unit. Before starting Cortex, I was a software engineer. I worked in fintech for a while and I saw the monolith to microservices journey from service one to a couple hundred services by the time I left and there was a lot of complexity around not knowing what teams own different services and getting people to care about things like production readiness standards was really painful and we did a lot of this stuff in spreadsheets and confluence pages. And that was kind of the pain that led me to start Cortex and really focus on how do we help organizations get better at getting better and improving their operational maturity. And so that's what led me to where I am today. Awesome. Well, thanks for the background and glad to have you here. I know you recently released a new research report and I'd love to spend a little bit of time talking about it today. Can you just give us an overview of what the report was and maybe what you were trying to accomplish with it? Yeah, the report was about engineering in the age of AI. And essentially what we were trying to do was combine the quantitative and qualitative side of the world with a lot of our customers and folks in the industry to understand are they seeing the impact that they expected to see, are things going as well as they wanted to. And I think the key takeaway from the report and I think actually a lot of reports that have come out since have also come to the same conclusion that yes we actually are moving faster, you know about 20% or so is what we saw in our data, but we have a roughly similar percentage increase in incidents or quality regressions and so while we are moving faster things are maybe getting a little bit worse from a quality standpoint and that was kind of the big takeaway. There's some other takeaways in there, around the number of organizations that have governance policies around AI. It's fewer than you would expect. A lot of people are thinking about how to govern AI adoption within their organizations. Some of them had, some of them have ideas, some of them have put it into practice. It's kind of all over the place. AI adoption is pretty much everywhere at this point. Levels of adoption are different, but pretty much most organizations have at least large pockets of the organization that have adopted AI coding assistance. But universally of those people who have adopted it, speed is going up and quality is going down. And that was kind of the big thing that we... Well, let's dive in. Let's dive into some of those in a little bit more detail. So, we also just did a research survey report. And what's funny is I don't know when yours was in the field. We were in the field sort of October and November of last year. And so some really interesting stats, but also I was doing a podcast the other day where I kind of fessed up that I feel like so much has changed just here since like December and January in terms of AI coding that as I was doing the conversation, I wanted to put some asterisks beside some of the stats. And so maybe we can talk about that too. Like if there's stats in here that you looked at and you sort of feel like this is probably as true as it was when you were in the field and some of them that you feel like are probably changing as well. When was this in the field? We were doing this kind of early to mid last year. And so I think those things are probably still true. I know the Dora report that came out recently also came to the same findings with very similar numbers. And if anything, my hypothesis is that this is probably more true than ever before. And it kind of goes to this idea that code was never really the bottleneck, right? Like, you know, yeah, obviously how fast you could type. I don't know, those things were part of the problem, but or the inner loop and CI/CD and things like that, but there was all this other stuff in the organization that was always a bottleneck, right? Like even if you were generating a bunch of code, the human as a process, the compliance, the reliability, like those are the things that kind of got in the way of our ability to ship and making sure that we were testing and all that stuff. And so like those processes are kind of the same as they were pre-AI. We haven't really gotten better that much in aggregate at getting stuff through the organizational pipe. And so all of a sudden on one side of the equation, if you're generating more and more and more and more code and you're getting better at generating code, the funnel is still kind of the same. And so I think my hypothesis is that if you want to survey organizations today, they're probably starting to reckon with some of those issues. But for the most part, speed is probably continuing to go up and incidents are probably also ratcheting it up, maybe at a slightly slower pace, but my guess is that it's probably still true. So, it's really less about the time it takes and the cost it takes to write software and more of the cost and the time it takes to ship software successfully is really the issue. And that's what people are starting to grapple with with AI, you think? Exactly. Exactly. It's like everything but the coding. It's like how do you align organizations on what good looks like? How do you measure what good looks like in your organization? How do you get people all rowing in the same direction? Because if you can do that, if you're not all rowing in the same direction, you could be moving really fast, but you're not going to go anywhere. And so making sure you're kind of going the right way is really really important. So, one of the stats in the report that jumped out at me was this idea of incidents per pull requests increasing 23.5%. What do you think that is? Is that a volume issue or is the AI generated code itself inherently more complex or harder to vet? I think it's probably the latter. Now, incidents for PR is not like an industry standard metric for sure. And basically what we're trying to do was capture some sort of proxy that normalized incidents versus things shipped. And you know the metric a lot of companies are using to measure speed with AI. If you're doing Dora, you have deploy frequency, but the number of PRs you're opening is like a kind of simple proxy that allowed us to aggregate this across a variety of organizations. And basically the thing that we found was for every PR that you ship, you know, there's 20% higher rate of incidents. And so it's not only are you shipping more and there's a higher number of incidents, but the ratio of that is changing quite a bit. And I think to your point, it's because we understand less of our code. We are amplifying the existing bottlenecks in our process. Like we talked a lot about how like one of the reasons why testing and code coverage and stuff like that is so important. It's not necessarily just for the quality, but it's about the psychological safety of the organization itself, right? Like the more confident you are in your code, the more confident you are about shipping that to production and saying like, okay, if something goes wrong, we know we have the confidence that we'll be able to fix it because we have things that are covered. I think what's happening now is like you're shipping more stuff, you understand less of the code that you're writing. When there is an incident, maybe you didn't have the right guardrails starting to pop up now. And so what I would imagine will happen is a lot of organizations are going to divert some of their engineering capacity because they've gotten more capacity back now. They'll divert some of that capacity to like making those things better. If you think about writing code now as almost like it's kind of like reinforcement learning, right? You give it the right optimization function and like you train your model within that. It kind of figures out how to do stuff. Like writing code is kind of the same thing now. Whereas things like unit testing are like the harness for the AI, right? If you say like, hey, here's the things that I expect you to do, like write these tests and then write the code that it fits within these guardrails I've given you, it's much easier for those things to operate. And so developers will be thinking more about like the expected outcomes, which I think will then drive down the incident rate. But I think like you said, it is a function of people just not being able to keep up with the volume of stuff that we're generating and that leads to these downstream effects such as incidents. Yeah. Yeah. One of the things that I was mentioning earlier that we've seen just in the last couple of months is the models themselves have actually gotten a lot better. Like Sonar has a LLM leaderboard that we've been tracking not just the performance metrics of the different LLMs but also how complex is the code and security issues and things like that. Do you think since you did the survey last year, like do you think the incidents per pull request could go down based on what you're seeing with some of the the newer models coming out? I think there's a possibility, but I think what's happening in the industry and what we see even internally is that while the code might that it's producing might be getting better, that just means that we're throwing harder and harder problems at it. So the question is, is it better at the older problems that we felt comfortable giving it or is it also better at the new complex problems that we're giving it now because we're more confident in it. And so I think that's yet to be seen, that's what we're seeing anecdotally. Yeah. One of the other things you kind of worry about is you end up even if it does write better code with like a needle and a haystack problem where there may be fewer issues but they're more pernicious and hard to find because they're caught somewhere deep where people don't know to look easily because they didn't write the code in the first place. Exactly. And I think that's why like operational maturity and operational excellence are so important for organizations now. Because the way I think about it is your customers, our customers' customers don't really care that you're using AI or you're moving so much faster. What they care about at the end of the day from their vendors is that the vendors they're paying are reliable, they're following security and compliance practices, they can trust those vendors, the vendors are responsive to feedback and so on and those are the things they care about. Like are you using AI, are humans writing your code? Don't really care, like as long as you do those things and your product does what you said it would do when we bought that product. And so it's like okay even if AI is getting better at writing code and whatnot the thing that really matters is what you've told customers your product will do and so things like SLOs and testing and all that kind of stuff is going to become more important because at some point that is the only thing you can control right you can say like hey we hold our product to the standard that it'll have X% availability and this particular flow is going to have some sort of latency or it'll respond properly 99.99% of the time. And to your point around like this kind of needle in the haystack problem, maybe you don't need to go hunting for that every single time. So maybe it's okay that AI introduces those issues if you can still guarantee in the aggregate that you're delivering what you promise to your customers. I mean that's the whole point of SLOs and stuff like that. So this idea of the meta of operational maturity becomes ever so more important as AI is writing more of our code and we have less of an understanding of what's going on under the hood. It's interesting. I was just talking to an industry analyst today and we were talking about AI code review as an example of this as one of those processes and one of the things that he said is he said code is code and if you had a really good process in place for doing this sort of thing for developer written code the same process is probably going to get you a long way ahead for AI generated code because at the end of the day it comes down to does it compile and how does it actually function so I don't know if you have a point of view on that from the perspective of Cortex like that idea of code is code whether AI is writing it or humans are writing it. 100% again it kind of goes back to the idea that your customers don't care who wrote it. It's about the end results and the organizations that have invested the most in those operational maturity practices like CI and test environments and canary deploys and things like that are the ones that are going to get the most out of AI. And the reason for that is if you look at an organization that has been on the cutting edge of this kind of thing for a long time. It's like AWS, they popularized this idea that it's never a human's issue. If a human made a problem it was actually indicative of the system. The system should have never let you make that mistake in the first place. And so actually human mistake is actually a systems mistake. And so next time around that kind of mistake will never happen again. And so what that means is you're actually very comfortable in an organization like that letting junior engineers go haywire and go nuts and write a ton of code and ship to production because there's so many processes and systems in place that will catch those kind of things from happening. And so now they're probably more likely to be able to take advantage of AI because it's cool, AI is writing the code. Let us ship, we have systems that will help us catch those issues. And so those practices that the best organizations have been following and we've been talking about for years and years and years at this point are the things that are going to make organizations successful in this next era. It's like how can we confidently take code, code is code and put that in production, put in customers' hands and know that it's not going to break. And that's the thing that really really matters. And probably the organizations that are most at risk are the ones that don't have those formal processes in place but go ahead and use AI code anyway. And how do you think what should they do, how should those organizations change to meet this new world? I think it's starting with the customer mindset. So saying what guarantees do we owe our customers and that's security, it's operational things like your SLOs and SLAs and starting with that. Can we even articulate the things that we're holding ourselves to? Once you know that then you can say what the hotspots are. Organizations generally have allocated capacity towards tech debt or improvement type things in the past. Some of these organizations that maybe haven't made those investments before were doing that because they didn't have enough capacity to allocate to infrastructury type things. We know the data that AI is making people more productive and so you could argue that whatever that delta and productivity they're getting is actually new capacity that you can now reallocate to improving the foundations and so I think those organizations should take a close hard look at their internal systems and say are we going to get left behind if we don't actually turn inwards using the velocity advantages that AI is giving us and directing that towards making our systems and processes better so that we can kind of slow down to speed up, right? And I think a lot of organizations should be thinking about how to use AI to make these systems better. Like that is a new gift that we've been given. It's allowing us to tackle things that we maybe didn't have the capacity to do before. Yeah. So in other words, if in the software world a good part of their time was spent writing code and they have this gift of all the time back now, there's no better time to put in place the sort of policies and processes and things like that that can actually continue to accelerate your development. Yeah, exactly. And I think maybe the two other things I'll add to that. One, when I was saying okay, you should define what the expectations of your customers are, you should also be able to measure that. If you're not able to measure what you're holding yourself to, that's step one. Start measuring. You can't improve what you don't measure. So measuring that is really important. I think the second thing is being able to define a shared definition of good. And this is common across organizations whether it's AI or not. Like one of the problems, it's not that developers don't want to ship good code or like it's not like somebody sits down at the beginning of the day like \"let me ship a couple of bugs today.\" That's not the intention of people, right? It's like we're crafts people. We want to build things but in a lot of cases we don't have a clear definition of \"hey, this is what good looks like.\" If you can tell people, \"hey, this is what good looks like,\" it's much easier to have conversations about like, \"okay, well how do we get there? What are the trade-offs?\" And so, I think it also comes down to being able to as an organization say, we don't care if it's humans or agents writing this code. These are the things, these are the practices that we expect our software to exhibit. Everything from observability practices to cost to code quality and security. Like all these things, here's what good looks like across your organization. Now, give your teams autonomy to figure out how to get there. Because again, it's not that teams don't want to get there. It's just they don't know where you expect them to be. If they're like, \"All right, well, if I don't know where to go, then I'm just gonna do whatever we've been doing and things will break or whatever.\" But it's like if you can tell them this is what we expect, then give the teams the autonomy to get there. You will naturally drive towards that kind of outcome. And so, that's one of the things that we think about a lot as well. Yeah. Well, thinking about that like the team sort of getting a better sense for what to expect. One of the other things I wanted to touch on is like feels like there's a growing concern about developers losing skills and not having mentors and things like that and so if as we're talking about this whole idea of setting up processes and developers aren't writing code and doing that sort of work anymore like is there going to be a skills gap? Because what do we do to ensure the developers of the future who may not even be traditionally trained developers actually know and understand these processes and how to set them up. You know, it's interesting like I personally don't believe that to be as big of a problem as some folks in the industry think. And the reason for that is because I think it's just another skill, right? Why see it as a thing that is taking away our ability to learn skills? Using AI is just another skill that reduces the need for one skill and increases the need for the other skill. If you think about a junior engineer starting fresh out of college the expectation is that you start like just writing code. You've never written code that goes to production and so figuring out how to understand a codebase and ship small features inside of a giant codebase and get those things to production and test those things like those are the skills you're learning at the beginning. That's what you expect from junior engineers now, AI can do those things for you right? Like you use Claude or whatever to go and understand a codebase and figure out how to make changes and it'll write tests for you and whatnot and so maybe that initial skill building that we used to coach people on is not as important anymore. However by the time you became a senior software engineer or staff software engineer we expected your scope to widen. It's like okay stop thinking about the code, you know how to do the code now, that's table stakes. Now you need to think about how these systems fit together and how do we prevent issues, the right architectural pattern they should be thinking about. That's what you start thinking about as you go higher up right? You have very senior ICs like individual contributors that don't write any code but they have a ton of impact. Why is that? It's because they're thinking about system design. Now the expectation is that junior engineers will be doing that instead so it's not and again it's not that there's something special about later stages of your career that makes you more likely to be able to learn those things. It was just like the pyramid of stuff that you have to learn. You kind of just go up the chain. We're just saying that the bottom rung now we're throwing away. Another great example of this is IDEs. Like people probably said like, \"Oh, if you're using IntelliJ or something, oh my god, like you're never going to have to memorize like we OGs had to memorize all the syntax.\" But like in IntelliJ, it'll autocomplete stuff for you and it's like \"oh my god, are we losing those skills?\" It's like no, that became a skill and you made some people very productive and you have to go learn different skills. So I think there's going to be a middle period where there's a gap where people don't really know how to teach this next set of skills. But I think we're going to get there and you know we'll iterate from that point onward. So that's kind of how I think about the lack of skill. It's just another skill that people need to learn. Yeah. No, I hear you. Anything that we didn't get to from the report that you'd like to make sure we touch on before we close here? No, I think we talked a lot about it. Your guys' report found the same thing. Our report found the same thing. Dora found the same thing. It's this idea that the things we've always been talking about, the fundamentals, are what really matter, right? AI is just exposing problems, right? High functioning teams are functioning better and low performing teams are functioning worse because of AI because it's shining a spotlight on all of your bottlenecks. And so rather than thinking about it from a lens of what is AI doing to our organization, just think about it the same way you would have thought about bottlenecks before. Focus on the problems, figure out where things are falling down in your code delivery path and just systematically attack those things. Make it easier for your developers to ship with confidence and naturally you'll ride the wave of AI productivity. Like I think that's the main takeaway from the entire report and I think what a lot of folks like yourselves are talking about as well. Ganesh, this has been fun. I appreciate you making the time. I appreciate you participating in the Sonar Summit, this inaugural Sonar Summit. So thank you for making the time today. Thanks for having me. Really enjoyed it.",
+  "fetchedAt": "2026-03-14T09:21:56.648Z"
+}

@@ -1,0 +1,2583 @@
+{
+  "videoId": "v95",
+  "youtubeId": "8sUrGwlffv0",
+  "segments": [
+    {
+      "text": "Hello! Everyone.",
+      "offset": 869,
+      "duration": 1000
+    },
+    {
+      "text": "Thank you for joining and welcome to our webinar.",
+      "offset": 1869,
+      "duration": 3000
+    },
+    {
+      "text": "Secure by design how implementing good quality delivers better quality.",
+      "offset": 4869,
+      "duration": 6000
+    },
+    {
+      "text": "In this webinar, we'll learn how high code quality and how tackling quality, as early as in the design stage, ultimately drives the most accurate and secure software at the lowest cost.",
+      "offset": 10869,
+      "duration": 13000
+    },
+    {
+      "text": "This webinar will focus on a true shift approach and the resulting challenges of handling quality. Later in the development lifecycle.",
+      "offset": 23869,
+      "duration": 8000
+    },
+    {
+      "text": "By starting from the left.",
+      "offset": 31869,
+      "duration": 2000
+    },
+    {
+      "text": "Your time and energy are optimized in the area where code quality serves as a stimulus for secure code.",
+      "offset": 33869,
+      "duration": 7000
+    },
+    {
+      "text": "I'm Robert Curly, product, marketing manager for sonarcube.",
+      "offset": 40869,
+      "duration": 4000
+    },
+    {
+      "text": "And your moderator for today.",
+      "offset": 44869,
+      "duration": 1000
+    },
+    {
+      "text": "Jonathan Slaughter is the present presenter on today's topic.",
+      "offset": 45869,
+      "duration": 5000
+    },
+    {
+      "text": "Sorry, Jonathan. I fumbled that one.",
+      "offset": 50869,
+      "duration": 2000
+    },
+    {
+      "text": "Jonathan is a security governance officer at Sonar, and has worked in the quality, management and security space for over 20 years.",
+      "offset": 52869,
+      "duration": 8000
+    },
+    {
+      "text": "His experience.",
+      "offset": 60869,
+      "duration": 1000
+    },
+    {
+      "text": "In highly regulated spaces.",
+      "offset": 61869,
+      "duration": 3000
+    },
+    {
+      "text": "Such as life, sciences.",
+      "offset": 64869,
+      "duration": 2000
+    },
+    {
+      "text": "Healthcare, automotive energy, and us Federal brings a unique perspective of how quality and security can intersect to deliver optimal application, health.",
+      "offset": 66869,
+      "duration": 9000
+    },
+    {
+      "text": "And the best value for the organizations that deliver them.",
+      "offset": 75869,
+      "duration": 4000
+    },
+    {
+      "text": "Jonathan and I have had some great conversations on this topic, and trust me, you are in good hands.",
+      "offset": 79869,
+      "duration": 5000
+    },
+    {
+      "text": "Before we start. I want to go over a few housekeeping items.",
+      "offset": 84869,
+      "duration": 5000
+    },
+    {
+      "text": "This session is going to be 45 min.",
+      "offset": 89869,
+      "duration": 2000
+    },
+    {
+      "text": "And includes Q. And a session at the end.",
+      "offset": 91869,
+      "duration": 3000
+    },
+    {
+      "text": "We will have time at the end to answer your important questions.",
+      "offset": 94869,
+      "duration": 4000
+    },
+    {
+      "text": "During the webinar, you are invited to submit your questions via the Q. And a box in zoom.",
+      "offset": 98869,
+      "duration": 5000
+    },
+    {
+      "text": "Please do not use the chat box.",
+      "offset": 103869,
+      "duration": 3000
+    },
+    {
+      "text": "Throughout this session we will use the Q&A area to respond to your questions.",
+      "offset": 106869,
+      "duration": 5000
+    },
+    {
+      "text": "We'll post all the questions asked during the session, including your answers in our community Forum.",
+      "offset": 111869,
+      "duration": 5000
+    },
+    {
+      "text": "Don't worry. Responding to you is very important to us.",
+      "offset": 116869,
+      "duration": 4000
+    },
+    {
+      "text": "You can be sure your questions will be answered, even if we don't get through them. During the session today.",
+      "offset": 120869,
+      "duration": 6000
+    },
+    {
+      "text": "Additionally, we have 2 fantastic panelists behind the scenes. Who will answer your questions? Live during this webinar.",
+      "offset": 126869,
+      "duration": 6000
+    },
+    {
+      "text": "From our analysis team.",
+      "offset": 132869,
+      "duration": 2000
+    },
+    {
+      "text": "Nicola, Gottier.",
+      "offset": 134869,
+      "duration": 2000
+    },
+    {
+      "text": "And Lucas Grevy, Solution, engineer at Sonar.",
+      "offset": 136869,
+      "duration": 4000
+    },
+    {
+      "text": "This session will be recorded.",
+      "offset": 140869,
+      "duration": 2000
+    },
+    {
+      "text": "Emphasis on will. We are recording it.",
+      "offset": 142869,
+      "duration": 2000
+    },
+    {
+      "text": "And we'll send you a link.",
+      "offset": 144869,
+      "duration": 2000
+    },
+    {
+      "text": "To it via email. Within the next few days.",
+      "offset": 146869,
+      "duration": 4000
+    },
+    {
+      "text": "Lastly, at the end of the webinar.",
+      "offset": 150869,
+      "duration": 1000
+    },
+    {
+      "text": "A quick survey will appear on your screen. We appreciate your feedback, we really want it. So thank you in advance for your participation.",
+      "offset": 151869,
+      "duration": 8000
+    },
+    {
+      "text": "Alright!",
+      "offset": 159869,
+      "duration": 1000
+    },
+    {
+      "text": "Enough of me rambling on.",
+      "offset": 160869,
+      "duration": 1000
+    },
+    {
+      "text": "Let's dive into the session.",
+      "offset": 161869,
+      "duration": 2000
+    },
+    {
+      "text": "We're all here for right.",
+      "offset": 163869,
+      "duration": 2000
+    },
+    {
+      "text": "Over to you, Jonathan.",
+      "offset": 165869,
+      "duration": 2000
+    },
+    {
+      "text": "Excellent. Thank you so much, Robert. I really appreciate it. Welcome everyone. As you said. My name is Jonathan.",
+      "offset": 167869,
+      "duration": 6000
+    },
+    {
+      "text": "Security Governance officer here at Sonar.",
+      "offset": 173869,
+      "duration": 4000
+    },
+    {
+      "text": "And I would ask for everybody else to introduce themselves. But.",
+      "offset": 177869,
+      "duration": 4000
+    },
+    {
+      "text": "We don't have time for that, so I'll go ahead and continue on. So today the agenda for",
+      "offset": 181869,
+      "duration": 6000
+    },
+    {
+      "text": "We're gonna be talking about is.",
+      "offset": 187869,
+      "duration": 2000
+    },
+    {
+      "text": "Kind of posted right here.",
+      "offset": 189869,
+      "duration": 3000
+    },
+    {
+      "text": "I'm not gonna read it off to you, because I know that everybody here can read. But I will say a little bit about myself a little bit more detail. I've had the opportunity over the past 20 to 25 years to work in both quality and security, and in many roles have actually managed and been responsible for both. So what this is is an opportunity for me to express some of my experiences.",
+      "offset": 192869,
+      "duration": 20000
+    },
+    {
+      "text": "And the ways that I have found value and partnering quality and security together in a myriad of different organizations.",
+      "offset": 212869,
+      "duration": 7000
+    },
+    {
+      "text": "Obviously, as as Robert said, if you have questions, please put them in the chat. At the end, we will make time to be able to answer some questions, live and.",
+      "offset": 219869,
+      "duration": 11000
+    },
+    {
+      "text": "As always, your feedback is going to be warmly appreciated.",
+      "offset": 230869,
+      "duration": 5000
+    },
+    {
+      "text": "So.",
+      "offset": 235869,
+      "duration": 1000
+    },
+    {
+      "text": "Well, let's start us off with a poll real quick.",
+      "offset": 236869,
+      "duration": 2000
+    },
+    {
+      "text": "And this poll is really just to give me a chance to select all that apply. But I would like to know which of the following quality methodology of frameworks. Do your organizations currently use? And if I could have anybody to just please as you're signing in there, let us know",
+      "offset": 238869,
+      "duration": 17000
+    },
+    {
+      "text": "This helps me understand kind of my audience to a degree. While this is a.",
+      "offset": 255869,
+      "duration": 4000
+    },
+    {
+      "text": "Quality focused and quality management focus presentation. You should hear some familiar terms. But I also want to make sure that I honor the audience.",
+      "offset": 259869,
+      "duration": 30000
+    },
+    {
+      "text": "Genuinely appreciating the individuals who are.",
+      "offset": 291869,
+      "duration": 3000
+    },
+    {
+      "text": "Answering no clue.",
+      "offset": 294869,
+      "duration": 2000
+    },
+    {
+      "text": "Honesty is an excellent policy.",
+      "offset": 296869,
+      "duration": 5000
+    },
+    {
+      "text": "So.",
+      "offset": 301869,
+      "duration": 8000
+    },
+    {
+      "text": "Alright. So whenever I think we're getting pretty close, or give another 15 or 20 seconds on the poll, and then we'll close it out.",
+      "offset": 309869,
+      "duration": 14000
+    },
+    {
+      "text": "That's me!",
+      "offset": 323869,
+      "duration": 4000
+    },
+    {
+      "text": "Okay.",
+      "offset": 327869,
+      "duration": 1000
+    },
+    {
+      "text": "Good. I'm gonna go and stop sharing that.",
+      "offset": 328869,
+      "duration": 2000
+    },
+    {
+      "text": "Okay.",
+      "offset": 330869,
+      "duration": 1000
+    },
+    {
+      "text": "And we're gonna",
+      "offset": 331869,
+      "duration": 1000
+    },
+    {
+      "text": "And share results.",
+      "offset": 332869,
+      "duration": 12000
+    },
+    {
+      "text": "Okay.",
+      "offset": 344869,
+      "duration": 1000
+    },
+    {
+      "text": "And I will move on from here.",
+      "offset": 345869,
+      "duration": 2000
+    },
+    {
+      "text": "Thank you. I see we got a pretty good",
+      "offset": 347869,
+      "duration": 3000
+    },
+    {
+      "text": "Setup of.",
+      "offset": 350869,
+      "duration": 1000
+    },
+    {
+      "text": "Iso.",
+      "offset": 351869,
+      "duration": 2000
+    },
+    {
+      "text": "Decent on continuous improvement, and a lot of no clue.",
+      "offset": 353869,
+      "duration": 4000
+    },
+    {
+      "text": "Alright, so let's go ahead and move on through here.",
+      "offset": 357869,
+      "duration": 2000
+    },
+    {
+      "text": "So the one thing, one thing that I want everybody to take away from here. And the reason I put this slide up front is. This is the last page of the book.",
+      "offset": 359869,
+      "duration": 7000
+    },
+    {
+      "text": "The one thing that I have put in here is this, that good quality is security. And I think that's an important thing to focus on. And that's really what this entire presentation is going to be around doing it right the 1st time.",
+      "offset": 366869,
+      "duration": 13000
+    },
+    {
+      "text": "Is one of the best security practices that you can implement.",
+      "offset": 379869,
+      "duration": 5000
+    },
+    {
+      "text": "If not the single best. And so we're gonna talk about that as we go through.",
+      "offset": 384869,
+      "duration": 4000
+    },
+    {
+      "text": "A little bit of inspiration. So you're gonna see some inspirational quotes at least inspiration to me from individuals like short, who is the father of grandfather, they would say, of statistical quality.",
+      "offset": 388869,
+      "duration": 12000
+    },
+    {
+      "text": "And then obviously demoing and some other individuals who are his, his followers. So data have no meaning apart from their context. And so that's an important thing, and and we'll begin to discuss what that means here. So.",
+      "offset": 400869,
+      "duration": 13000
+    },
+    {
+      "text": "What is good quality.",
+      "offset": 413869,
+      "duration": 2000
+    },
+    {
+      "text": "So.",
+      "offset": 415869,
+      "duration": 1000
+    },
+    {
+      "text": "Good quality.",
+      "offset": 416869,
+      "duration": 1000
+    },
+    {
+      "text": "Is actually.",
+      "offset": 417869,
+      "duration": 2000
+    },
+    {
+      "text": "An outcome, and we'll talk about this in a moment.",
+      "offset": 419869,
+      "duration": 2000
+    },
+    {
+      "text": "But quality itself is just a measurement. So when you think about the term quality, it's the standard of something as measured against other things of a similar kind.",
+      "offset": 421869,
+      "duration": 8000
+    },
+    {
+      "text": "The degree of excellence, of something.",
+      "offset": 429869,
+      "duration": 3000
+    },
+    {
+      "text": "And.",
+      "offset": 432869,
+      "duration": 1000
+    },
+    {
+      "text": "Then let's take a look at good quality is an outcome.",
+      "offset": 433869,
+      "duration": 3000
+    },
+    {
+      "text": "And this is a legal definition. So this is probably the best definition I've seen, and it really comes from your medical devices. Pharmaceutical life sciences background. The product is effective and appropriate for present and anticipated in future circumstances. So really, it's operates as intended, and it's fit for purpose",
+      "offset": 436869,
+      "duration": 20000
+    },
+    {
+      "text": "We think about the difference between these 2 terms. We talk about quality. The example I often use is, when I go to play golf with my friends. I might beat my friend by a couple of strokes and so I've won. So at the end of the day I'm more excellent than they are. But if we both shot.",
+      "offset": 456869,
+      "duration": 15000
+    },
+    {
+      "text": "You know.",
+      "offset": 471869,
+      "duration": 1000
+    },
+    {
+      "text": "48 over par, and I shot 46 over par.",
+      "offset": 472869,
+      "duration": 4000
+    },
+    {
+      "text": "Neither one of us is very good. Let's be quite honest. And so the idea of good quality is more of an outcome. Is, what is it you're trying to achieve? And the purpose of.",
+      "offset": 476869,
+      "duration": 9000
+    },
+    {
+      "text": "Quality is to achieve those type of outcomes.",
+      "offset": 485869,
+      "duration": 3000
+    },
+    {
+      "text": "Equally the purpose of security is to achieve outcomes that are secure.",
+      "offset": 488869,
+      "duration": 4000
+    },
+    {
+      "text": "And their delivery.",
+      "offset": 492869,
+      "duration": 1000
+    },
+    {
+      "text": "And we'll start talking more about that as we go through here.",
+      "offset": 493869,
+      "duration": 4000
+    },
+    {
+      "text": "So we think about a term like 99.9%.",
+      "offset": 497869,
+      "duration": 5000
+    },
+    {
+      "text": "Is good enough or good enough quality. We're right there, I mean, at the end of the day it's an a plus. We're all getting our 4 on something like that. But if we were to take 99.9 as good.",
+      "offset": 502869,
+      "duration": 11000
+    },
+    {
+      "text": "Then here's some things that we'd be running into.",
+      "offset": 513869,
+      "duration": 3000
+    },
+    {
+      "text": "4,400 newborns, or 12 per day, would be delivered to the wrong.",
+      "offset": 516869,
+      "duration": 5000
+    },
+    {
+      "text": "Parents.",
+      "offset": 521869,
+      "duration": 1000
+    },
+    {
+      "text": "When leaving the hospital.",
+      "offset": 522869,
+      "duration": 3000
+    },
+    {
+      "text": "880,000 credit cards in circulation would have the wrong cardholder information on their strips.",
+      "offset": 525869,
+      "duration": 8000
+    },
+    {
+      "text": "291 pacemaker.",
+      "offset": 533869,
+      "duration": 3000
+    },
+    {
+      "text": "Operations would be incorrectly performed each year.",
+      "offset": 536869,
+      "duration": 4000
+    },
+    {
+      "text": "Well, that number is high. It's also much lower than the 107 per day of general incorrect medical procedures.",
+      "offset": 540869,
+      "duration": 8000
+    },
+    {
+      "text": "That would be performed.",
+      "offset": 548869,
+      "duration": 1000
+    },
+    {
+      "text": "So we start talking about data saying, we're 99.9. It really can be a great number, but it really is, and of itself a system measurements not necessarily an outcome. The question is, is it a good outcome? Is 99.9 a good outcome.",
+      "offset": 549869,
+      "duration": 15000
+    },
+    {
+      "text": "In these particular situations? And the answer, I think we could all agree, is no.",
+      "offset": 564869,
+      "duration": 5000
+    },
+    {
+      "text": "So the idea around good quality versus traditional quality.",
+      "offset": 569869,
+      "duration": 5000
+    },
+    {
+      "text": "Really comes from the concept of kind of a cost benefit analysis. And so most people, when you see the left, you'll see that kind of traditional quality model in which the decision is made, and says.",
+      "offset": 574869,
+      "duration": 12000
+    },
+    {
+      "text": "Right here is an optimal level of quality.",
+      "offset": 586869,
+      "duration": 3000
+    },
+    {
+      "text": "Because in order to implement anything further.",
+      "offset": 589869,
+      "duration": 3000
+    },
+    {
+      "text": "It's actually gonna cost us more money.",
+      "offset": 592869,
+      "duration": 4000
+    },
+    {
+      "text": "And we're not gonna get the same return on investment.",
+      "offset": 596869,
+      "duration": 2000
+    },
+    {
+      "text": "Whereas if you start taking the idea of a true total quality or a good quality model, and you start looking at it from an outcome standpoint.",
+      "offset": 598869,
+      "duration": 9000
+    },
+    {
+      "text": "Over time. You'll generally see that as you move closer to that, 100%.",
+      "offset": 607869,
+      "duration": 5000
+    },
+    {
+      "text": "You're actually lowering your overall cost. You're improving your overall quality.",
+      "offset": 612869,
+      "duration": 4000
+    },
+    {
+      "text": "And you're delivering lower conformance.",
+      "offset": 616869,
+      "duration": 4000
+    },
+    {
+      "text": "Which is a super essential task. And we'll start talking about how that works. As we kind of go through here.",
+      "offset": 620869,
+      "duration": 6000
+    },
+    {
+      "text": "So.",
+      "offset": 626869,
+      "duration": 1000
+    },
+    {
+      "text": "Which leads to the next slide. How do we achieve good quality.",
+      "offset": 627869,
+      "duration": 4000
+    },
+    {
+      "text": "And before we do that, I want to take a break because we're gonna get into some more details here and do our second poll.",
+      "offset": 631869,
+      "duration": 6000
+    },
+    {
+      "text": "So the second poll here really is asking the question.",
+      "offset": 637869,
+      "duration": 5000
+    },
+    {
+      "text": "Which of these 2 characters that are Harrison Ford? Iconic characters do you most identify with? Are you a Han solo, or are you an Indiana Jones, and we'll go ahead and take some time to go ahead and look at those results.",
+      "offset": 642869,
+      "duration": 21000
+    },
+    {
+      "text": "Everybody feels very comfortable. These answers are coming in pretty fast. I. This is interesting to watch this. Everybody feels very comfortable in their answer.",
+      "offset": 663869,
+      "duration": 13000
+    },
+    {
+      "text": "Yeah, this is a fun one.",
+      "offset": 676869,
+      "duration": 1000
+    },
+    {
+      "text": "Yeah.",
+      "offset": 677869,
+      "duration": 3000
+    },
+    {
+      "text": "And I do promise there's a method to this particular madness.",
+      "offset": 680869,
+      "duration": 10000
+    },
+    {
+      "text": "Looks like it's getting interesting.",
+      "offset": 690869,
+      "duration": 2000
+    },
+    {
+      "text": "I give it a few more seconds.",
+      "offset": 692869,
+      "duration": 11000
+    },
+    {
+      "text": "Alright and when we're ready I think we can go ahead and end the poll.",
+      "offset": 703869,
+      "duration": 4000
+    },
+    {
+      "text": "And then go ahead and share the results, and we got there alright. So, as you can see, we got about a 60 people kind of tend to lean Indiana Jones.",
+      "offset": 707869,
+      "duration": 12000
+    },
+    {
+      "text": "Han makes a good performance, but you know.",
+      "offset": 719869,
+      "duration": 3000
+    },
+    {
+      "text": "Tried to catch up a little bit, but didn't quite make it all right, so.",
+      "offset": 722869,
+      "duration": 4000
+    },
+    {
+      "text": "Good job on there. So what we'll do is I'm gonna go ahead and ask the answers to why. The reason that I asked this question is.",
+      "offset": 726869,
+      "duration": 6000
+    },
+    {
+      "text": "From a thought process is, these are 2 iconic characters that have a completely different understanding of how they approach, risk.",
+      "offset": 732869,
+      "duration": 8000
+    },
+    {
+      "text": "And so I wanna think about when we look at the way that complex systems and things along those lines that we get into all sorts of like.",
+      "offset": 740869,
+      "duration": 8000
+    },
+    {
+      "text": "Sociological science and everything. Han solo. I often think of Han solo as a developer.",
+      "offset": 748869,
+      "duration": 6000
+    },
+    {
+      "text": "And an engineer.",
+      "offset": 754869,
+      "duration": 2000
+    },
+    {
+      "text": "The type of individual who says, You know. Think about C. 3. Po. He's like, sir, the odds of going through this, you know, asteroid hyperspeed, or, you know, 3,800 to one, and he's like, don't ever tell me the odds.",
+      "offset": 756869,
+      "duration": 10000
+    },
+    {
+      "text": "Whereas Indiana Jones is is much different. He's much more risk oriented, a little bit more risk averse, I mean, you think, about.",
+      "offset": 766869,
+      "duration": 6000
+    },
+    {
+      "text": "Engineers and an engineer mindset might say, You know what I want to go. And I wanna I wanna rip off the mask of the universe and stare God in the face, you know, whereas Indiana Jones is sort of that risk person is like, have you seen the end of raiders? It doesn't really end well when you do that.",
+      "offset": 772869,
+      "duration": 14000
+    },
+    {
+      "text": "And so there is that sort of idea and mindset about how we tend to look at risk, how we tend to look at unpredictability, what could potentially happen? And so we start thinking about unpredictability or entropy or things along those lines. We'll start talking about that a bit more. But that really kind of comes into quality security. And it really does approach how we look at the world.",
+      "offset": 786869,
+      "duration": 19000
+    },
+    {
+      "text": "So, and with that we will move on.",
+      "offset": 805869,
+      "duration": 3000
+    },
+    {
+      "text": "Thank you all for taking the time to participate in that little poll.",
+      "offset": 808869,
+      "duration": 4000
+    },
+    {
+      "text": "All right. So more inspiration, higher quality is less expensive to produce than lower quality.",
+      "offset": 812869,
+      "duration": 6000
+    },
+    {
+      "text": "From our friend Edward dimming. So this is something that we're gonna focus on. Now, we're gonna start talking about the concepts of cost.",
+      "offset": 818869,
+      "duration": 7000
+    },
+    {
+      "text": "And.",
+      "offset": 825869,
+      "duration": 2000
+    },
+    {
+      "text": "The cost of quality. So this is a coq is a methodology that a lot of organizations will use to understand the extent of its resources, which we'll call cost.",
+      "offset": 827869,
+      "duration": 10000
+    },
+    {
+      "text": "That's personnel, that's technology things along those lines that are used to either prevent poor quality.",
+      "offset": 837869,
+      "duration": 8000
+    },
+    {
+      "text": "That will appraise the quality of the products or services.",
+      "offset": 845869,
+      "duration": 4000
+    },
+    {
+      "text": "Or result from.",
+      "offset": 849869,
+      "duration": 2000
+    },
+    {
+      "text": "Internal and external failures. And so failures are where.",
+      "offset": 851869,
+      "duration": 3000
+    },
+    {
+      "text": "We've had a situation where something internally has escaped.",
+      "offset": 854869,
+      "duration": 4000
+    },
+    {
+      "text": "And or externally has escaped out into the wild. And so, from a security standpoint or a quality standpoint, we'll talk about some specific examples there in a minute.",
+      "offset": 858869,
+      "duration": 7000
+    },
+    {
+      "text": "This data really does allow organizations to determine the potential savings gained by implementing specific improvements. So.",
+      "offset": 865869,
+      "duration": 7000
+    },
+    {
+      "text": "What's the cost to implement something in prevention?",
+      "offset": 872869,
+      "duration": 3000
+    },
+    {
+      "text": "Versus, what's the cost of implementing something in the appraisal stage? And so we'll start talking about that. So these costs, they fall into 3 categories. You can see I highlighted them so they're kind of obvious preventive and failure.",
+      "offset": 875869,
+      "duration": 12000
+    },
+    {
+      "text": "And so we'll we'll break down. So we call this path modeling.",
+      "offset": 887869,
+      "duration": 4000
+    },
+    {
+      "text": "I saw somebody that started thinking about as we start talking about quality concepts. So when I think about prevention, this is where it could go wrong.",
+      "offset": 891869,
+      "duration": 7000
+    },
+    {
+      "text": "So when you think about prevention and preventive controls.",
+      "offset": 898869,
+      "duration": 3000
+    },
+    {
+      "text": "You're asking the question.",
+      "offset": 901869,
+      "duration": 3000
+    },
+    {
+      "text": "What could go wrong? You've identified it.",
+      "offset": 904869,
+      "duration": 3000
+    },
+    {
+      "text": "And you start to address it there. A great concept is.",
+      "offset": 907869,
+      "duration": 4000
+    },
+    {
+      "text": "By. It's called inverting for those of you who are into 19th century German mathematicians, Carl Gustavo, who's the father of elliptical functions, talked about inverting and basically flipping it on its head and helping you solve a problem. So don't ask how it can be successful. Ask what will cause it to fail.",
+      "offset": 911869,
+      "duration": 20000
+    },
+    {
+      "text": "So when we ask that question, what will we cause it to fail? Those types of things are, for example, we would do that in the planning phase and the product design phase, process, design, data, collection analysis and of course, training people to do it right the 1st time.",
+      "offset": 931869,
+      "duration": 13000
+    },
+    {
+      "text": "Appraisal. This is kind of when we're checking, we're saying it will go wrong as in if this makes it out.",
+      "offset": 944869,
+      "duration": 5000
+    },
+    {
+      "text": "It will go wrong.",
+      "offset": 949869,
+      "duration": 2000
+    },
+    {
+      "text": "And so we start thinking about a lot of things like inspection.",
+      "offset": 951869,
+      "duration": 4000
+    },
+    {
+      "text": "Testing.",
+      "offset": 955869,
+      "duration": 1000
+    },
+    {
+      "text": "The equipment used to test and or the software for implementation.",
+      "offset": 956869,
+      "duration": 6000
+    },
+    {
+      "text": "Internal failures. So this is.",
+      "offset": 962869,
+      "duration": 2000
+    },
+    {
+      "text": "It's.",
+      "offset": 964869,
+      "duration": 1000
+    },
+    {
+      "text": "Going wrong. It is going wrong right now. And so that could be things like, Hey, we've gone through it.",
+      "offset": 965869,
+      "duration": 5000
+    },
+    {
+      "text": "This has come out.",
+      "offset": 970869,
+      "duration": 1000
+    },
+    {
+      "text": "And we start looking at it and go. This can't work. So a lot of quality individuals, if you work in this, you talk about things like scrap. I can't use it anymore. Rework. I gotta go back and do it again, retesting. I've got to revalidate it. So reworking is I've got to go back and do it right the 1st time or second time. Retesting is I gotta check it to make sure.",
+      "offset": 971869,
+      "duration": 16000
+    },
+    {
+      "text": "Yield losses. This is a great example of. I expect to get this much output, but because of my problems I'm only getting this much output.",
+      "offset": 987869,
+      "duration": 7000
+    },
+    {
+      "text": "And therefore that lower output.",
+      "offset": 994869,
+      "duration": 3000
+    },
+    {
+      "text": "And occupancy and efficiency is actually leading to missed deadlines, missed timelines, Miss deliverables downtime. Obviously nobody likes that, especially in the software world. We don't like to have our systems go down. And then obviously, technical debt, which is a really more. So software, more technology focused idea. But if you're constantly",
+      "offset": 997869,
+      "duration": 21000
+    },
+    {
+      "text": "Building, poor product.",
+      "offset": 1018869,
+      "duration": 2000
+    },
+    {
+      "text": "That's getting stacked back over here. You're eventually running out of time to actually go do anything with it. And it just builds up.",
+      "offset": 1020869,
+      "duration": 5000
+    },
+    {
+      "text": "Builds up over time, and it becomes untenable.",
+      "offset": 1025869,
+      "duration": 2000
+    },
+    {
+      "text": "And then, obviously, when you get to external failures, this is where it's wronged other people. And so it's gone out. Whether it's a customer. That's other individuals. That's a patient.",
+      "offset": 1027869,
+      "duration": 8000
+    },
+    {
+      "text": "This deals with things like returns and replacements, warranty, liability complaints and adjustments. Another great one from a security world, data, breaches.",
+      "offset": 1035869,
+      "duration": 11000
+    },
+    {
+      "text": "So let's take a look at some of this. And so as we kind of talk into this going, okay, these are costs, and we use the word costs, because this is where you put your money. You put your investment.",
+      "offset": 1046869,
+      "duration": 10000
+    },
+    {
+      "text": "So what's the value? How much does it cost? And you know which one is the best place to put our funds.",
+      "offset": 1056869,
+      "duration": 6000
+    },
+    {
+      "text": "So.",
+      "offset": 1062869,
+      "duration": 1000
+    },
+    {
+      "text": "Talk about an ounce of prevention, it's usually worth the pound of cure. This is actually really aligns well with this. So what we use is what's called a factor of 10.",
+      "offset": 1063869,
+      "duration": 10000
+    },
+    {
+      "text": "And so a factor of 10 is a methodology for scoring how much it's going to cost to actually implement.",
+      "offset": 1073869,
+      "duration": 6000
+    },
+    {
+      "text": "A necessary control.",
+      "offset": 1079869,
+      "duration": 2000
+    },
+    {
+      "text": "To provide the same.",
+      "offset": 1081869,
+      "duration": 2000
+    },
+    {
+      "text": "Protection as something earlier in stage.",
+      "offset": 1083869,
+      "duration": 3000
+    },
+    {
+      "text": "So that's the way to think about it. So.",
+      "offset": 1086869,
+      "duration": 3000
+    },
+    {
+      "text": "For every dollar you spend in prevention.",
+      "offset": 1089869,
+      "duration": 4000
+    },
+    {
+      "text": "It's gonna cost you $10 an appraisal.",
+      "offset": 1093869,
+      "duration": 3000
+    },
+    {
+      "text": "So if you think about for every time I if I train somebody right the 1st time.",
+      "offset": 1096869,
+      "duration": 4000
+    },
+    {
+      "text": "Then I can actually.",
+      "offset": 1100869,
+      "duration": 2000
+    },
+    {
+      "text": "More trust in my quality process, so maybe I can do more. Do.",
+      "offset": 1102869,
+      "duration": 5000
+    },
+    {
+      "text": "A little bit less sampling, and I can have a higher trust deal. I can do some of that lower. I don't have to make much investment in testing and inspection resources. But if I have failures, I can then focus those. But in order to, if I have a problem.",
+      "offset": 1107869,
+      "duration": 14000
+    },
+    {
+      "text": "And I have something that inspection catches. I have to go back, and I have to not only.",
+      "offset": 1121869,
+      "duration": 4000
+    },
+    {
+      "text": "Make sure that a a protocol is built for that. I also have to go back in and start doing retesting. So all of a sudden just saying, I'm gonna put this inspection and check for it. I've got to go back, and I've got to spend money now.",
+      "offset": 1125869,
+      "duration": 11000
+    },
+    {
+      "text": "Because inside of my inspection going back and doing training. So it actually cost me more. At that point.",
+      "offset": 1136869,
+      "duration": 6000
+    },
+    {
+      "text": "Internal failure. I'm not gonna do a.",
+      "offset": 1142869,
+      "duration": 3000
+    },
+    {
+      "text": "10 times 10 is a hundred. I'm not gonna do a hundred dollar signs here, but give you the idea that it's factor of 10. So for every dollar it's $10 inspection. It's $100 worth of, and it's going wrong, an internal failure. And so you start thinking about that. Why would that be so expensive? Because not only do you have to do prevention, and I have to do that.",
+      "offset": 1145869,
+      "duration": 18000
+    },
+    {
+      "text": "Rework.",
+      "offset": 1163869,
+      "duration": 1000
+    },
+    {
+      "text": "But I also have to do an event potential retesting. Do different testing, add testing protocol potentially add testing resources. Do I need to invest in software or technology or equipment in order to be able to catch these things.",
+      "offset": 1164869,
+      "duration": 12000
+    },
+    {
+      "text": "That could have been caught or should have been caught, but weren't. So. There's a failure in that process, and I have to go back and figure that out.",
+      "offset": 1176869,
+      "duration": 7000
+    },
+    {
+      "text": "And then, finally, you get into our favorite category, which is the external failure which is 10 cubed.",
+      "offset": 1183869,
+      "duration": 5000
+    },
+    {
+      "text": "Which is 1,000. So it's a thousand times more expensive on average. And this is where you start getting into.",
+      "offset": 1188869,
+      "duration": 7000
+    },
+    {
+      "text": "The the cost of an external. So when we start talking about costs, let's look at average security breach data breach. I think last year was about 4.5 million 5 million dollars for a company. If you look at healthcare, I think it was a little bit higher, like 7.",
+      "offset": 1195869,
+      "duration": 14000
+    },
+    {
+      "text": "Point 8 million somewhere on there, whereas if you start looking at things like downtime or failures and systems that led to outages, I think you started looking at. I think, for example, in certain things like you.",
+      "offset": 1209869,
+      "duration": 11000
+    },
+    {
+      "text": "80 million a year on average, when it comes to like energy sector, when you're dealing with the software on an oil rig.",
+      "offset": 1220869,
+      "duration": 7000
+    },
+    {
+      "text": "Up to product recalls. For as a medical device, I think it's up to 5 million a day. In some case, I think there's 1 that's up to 600 million dollars. So you can see, these are significant amounts of money.",
+      "offset": 1227869,
+      "duration": 9000
+    },
+    {
+      "text": "And what's happening is because you've got those outcomes that.",
+      "offset": 1236869,
+      "duration": 3000
+    },
+    {
+      "text": "Are unpredictable, and they lead to failures.",
+      "offset": 1239869,
+      "duration": 3000
+    },
+    {
+      "text": "So.",
+      "offset": 1242869,
+      "duration": 1000
+    },
+    {
+      "text": "We call these 1st group the costs of quality.",
+      "offset": 1243869,
+      "duration": 4000
+    },
+    {
+      "text": "So this is the cost of doing it right.",
+      "offset": 1247869,
+      "duration": 2000
+    },
+    {
+      "text": "Whereas these we call these are the costs that you have to expend because you chose to do it.",
+      "offset": 1249869,
+      "duration": 6000
+    },
+    {
+      "text": "To to not invest early on. So you need to put your money in the places that are gonna deliver the most value. And so we call it the cost of poor quality or cop queue.",
+      "offset": 1255869,
+      "duration": 10000
+    },
+    {
+      "text": "All right. So more inspiration. It is not enough to do your best. You must know what to do, and then do your best. Another Deming quote. And so, as we kind of move into this section.",
+      "offset": 1265869,
+      "duration": 10000
+    },
+    {
+      "text": "What I want us to focus on. We've kind of talked about cost. We sort of talked about good quality as a concept.",
+      "offset": 1275869,
+      "duration": 5000
+    },
+    {
+      "text": "And now we're going to talk about how we kind of dig in and go through that process a bit more.",
+      "offset": 1280869,
+      "duration": 5000
+    },
+    {
+      "text": "So.",
+      "offset": 1285869,
+      "duration": 1000
+    },
+    {
+      "text": "Books on a shelf.",
+      "offset": 1286869,
+      "duration": 2000
+    },
+    {
+      "text": "So some people here may be familiar with the books on the shelf. Analogy. I happen to love it. I think it's a very good example.",
+      "offset": 1288869,
+      "duration": 6000
+    },
+    {
+      "text": "So the question is, how many different ways can you order.",
+      "offset": 1295869,
+      "duration": 3000
+    },
+    {
+      "text": "X. Number of Books.",
+      "offset": 1298869,
+      "duration": 2000
+    },
+    {
+      "text": "On a single shelf, so stacking them next to each other, and any specific order.",
+      "offset": 1300869,
+      "duration": 5000
+    },
+    {
+      "text": "So you start thinking about that. If I have 2 books I get.",
+      "offset": 1305869,
+      "duration": 3000
+    },
+    {
+      "text": "2 possible outcomes.",
+      "offset": 1308869,
+      "duration": 2000
+    },
+    {
+      "text": "Book, one book, 2, or book 2, and book one.",
+      "offset": 1310869,
+      "duration": 4000
+    },
+    {
+      "text": "3 books.",
+      "offset": 1314869,
+      "duration": 1000
+    },
+    {
+      "text": "I can go. 1, 2, 3.",
+      "offset": 1315869,
+      "duration": 2000
+    },
+    {
+      "text": "1, 3, 2.",
+      "offset": 1317869,
+      "duration": 2000
+    },
+    {
+      "text": "21323131232, one. You can do all those different ways. So all right, all of a sudden I go to 6 books, and I have 720 possible outcomes.",
+      "offset": 1319869,
+      "duration": 11000
+    },
+    {
+      "text": "All of a sudden that exponentially grew out of control.",
+      "offset": 1330869,
+      "duration": 3000
+    },
+    {
+      "text": "So I start thinking about the different sort of things that go into place here and now I have 10 books, 3.6 million possible outcomes.",
+      "offset": 1333869,
+      "duration": 8000
+    },
+    {
+      "text": "And so if you start thinking about the books, you're gonna go, how does that happen? And this is factorials? And so what this is dealing with different types of.",
+      "offset": 1341869,
+      "duration": 8000
+    },
+    {
+      "text": "Permutations.",
+      "offset": 1349869,
+      "duration": 1000
+    },
+    {
+      "text": "And so you start thinking about permutations and math. It's anytime, you see, like a number with a.",
+      "offset": 1350869,
+      "duration": 4000
+    },
+    {
+      "text": "Exclamation point next to it. It's called a factorial. And what you do is you take that number times, N, minus one again all the way down to one. So 6 times, 5 times, 4 times, 3 times, 2 times one is 720.",
+      "offset": 1354869,
+      "duration": 13000
+    },
+    {
+      "text": "And so what you find is, you can have 10 books on a shelf, and you could spend.",
+      "offset": 1367869,
+      "duration": 4000
+    },
+    {
+      "text": "3.6 million different ways.",
+      "offset": 1371869,
+      "duration": 4000
+    },
+    {
+      "text": "Of stacking those books in a way that.",
+      "offset": 1375869,
+      "duration": 2000
+    },
+    {
+      "text": "If anybody asked if I said, Just take 10 books, and my only rule was, put them on a shelf.",
+      "offset": 1377869,
+      "duration": 5000
+    },
+    {
+      "text": "Then stack them horizontally, or whatever.",
+      "offset": 1382869,
+      "duration": 2000
+    },
+    {
+      "text": "As opposed to vertically as Egon would say, is a problem. What we would look at we would go. That is 3.6 million.",
+      "offset": 1384869,
+      "duration": 7000
+    },
+    {
+      "text": "That's a lot of uncertainty.",
+      "offset": 1391869,
+      "duration": 2000
+    },
+    {
+      "text": "Into what you can do, and the odds of predicting which one somebody's gonna do is just pointless. And that's only with 10.",
+      "offset": 1393869,
+      "duration": 6000
+    },
+    {
+      "text": "So",
+      "offset": 1399869,
+      "duration": 2000
+    },
+    {
+      "text": "Kind of leads us to our conversation here. So unpredictable outcomes are not only poor quality, I can't.",
+      "offset": 1401869,
+      "duration": 6000
+    },
+    {
+      "text": "Have no idea what's going to be the outcome of what I'm doing.",
+      "offset": 1407869,
+      "duration": 3000
+    },
+    {
+      "text": "They also increase the likelihood that the product's going to fail. Because if I have one way that it works, and I haven't established.",
+      "offset": 1410869,
+      "duration": 6000
+    },
+    {
+      "text": "The right combinations to make that work.",
+      "offset": 1416869,
+      "duration": 4000
+    },
+    {
+      "text": "I'm gonna get a lot of unpredictable outcomes. So it's increasing the likelihood that I get the wrong outcome.",
+      "offset": 1420869,
+      "duration": 5000
+    },
+    {
+      "text": "It's gonna lead to an impact on.",
+      "offset": 1425869,
+      "duration": 3000
+    },
+    {
+      "text": "End users through longer resolutions. I don't know why it did what it did.",
+      "offset": 1428869,
+      "duration": 4000
+    },
+    {
+      "text": "I don't know what particular combination, or what particular.",
+      "offset": 1432869,
+      "duration": 4000
+    },
+    {
+      "text": "Code improvement, I should do. What is the particular control or outcome that I'm trying to focus on? I don't have the right guardrail in place here. I didn't pass a quality gate things along those lines, so I have to go back and investigate that again. I've had an external failure. I now have to go back and go.",
+      "offset": 1436869,
+      "duration": 16000
+    },
+    {
+      "text": "Do some rework, but I've also got a retest, and I've got to understand why it made it outside of our environment.",
+      "offset": 1452869,
+      "duration": 6000
+    },
+    {
+      "text": "And then obviously risk to the assets and the product support and processes. So assets. This could be your software code. This could be patient data. This could just be personal health data. This could be the operation. And we're not talking just about risk of the assets when it comes to their confidentiality or their integrity. We're also talking about the availability and the case of it just doesn't work. And if it doesn't work in certain aspects.",
+      "offset": 1458869,
+      "duration": 22000
+    },
+    {
+      "text": "Forget about security.",
+      "offset": 1480869,
+      "duration": 2000
+    },
+    {
+      "text": "You're impacting people's lives in a way that could be potentially fatal.",
+      "offset": 1482869,
+      "duration": 5000
+    },
+    {
+      "text": "So what we wanna do is wanna build from the desired outcome. And you heard me talk about good quality as an outcome.",
+      "offset": 1487869,
+      "duration": 6000
+    },
+    {
+      "text": "And so good quality is when the product itself is effective and appropriate for present and anticipated future circumstances.",
+      "offset": 1493869,
+      "duration": 8000
+    },
+    {
+      "text": "So what effective really means? If you look at the definition, is, deliver the intended or desired results every time. Does it do what you intended it to do.",
+      "offset": 1501869,
+      "duration": 8000
+    },
+    {
+      "text": "It actually works as I intended it.",
+      "offset": 1509869,
+      "duration": 3000
+    },
+    {
+      "text": "Efficient.",
+      "offset": 1512869,
+      "duration": 1000
+    },
+    {
+      "text": "The products deliver the intended or desired results in a way that doesn't race resources.",
+      "offset": 1513869,
+      "duration": 5000
+    },
+    {
+      "text": "So again, if every time we talk about security, this is one of those where quality and security tend to.",
+      "offset": 1518869,
+      "duration": 7000
+    },
+    {
+      "text": "Feel like they'll want to collide.",
+      "offset": 1525869,
+      "duration": 2000
+    },
+    {
+      "text": "Because the idea of it needs to be effective. It's got to work every time the right way, and it's got to be secure.",
+      "offset": 1527869,
+      "duration": 6000
+    },
+    {
+      "text": "Can't waste resources, but it's also got to be efficient if it takes me too long to log in.",
+      "offset": 1533869,
+      "duration": 5000
+    },
+    {
+      "text": "If I have to go through many pages in order to be able to get access to the information.",
+      "offset": 1538869,
+      "duration": 4000
+    },
+    {
+      "text": "You'll have product people. You'll have other types of individuals pushing and saying it needs to be quicker. I need to be able to have further uptake. I'm not getting the type of uplift that I need on this particular software application. And it's because we have too many pages that we gotta check in, or we've got too many different things. It's about making it more efficient.",
+      "offset": 1542869,
+      "duration": 17000
+    },
+    {
+      "text": "It needs to be efficient.",
+      "offset": 1559869,
+      "duration": 2000
+    },
+    {
+      "text": "And then appropriate products, deliver the intended or desired results, regardless of changing circumstances.",
+      "offset": 1561869,
+      "duration": 6000
+    },
+    {
+      "text": "Those take. Circumstances can be new regulations.",
+      "offset": 1567869,
+      "duration": 3000
+    },
+    {
+      "text": "They can be a change in the market. They can be the fact that you've had a merger and acquisition. And so why you had that acquisition. Are you buying in New IP? Are you buying market share? What are you doing? Are you going into a particular new industry? Vertical? So a lot of tools themselves, a lot of people on here, probably in an industry agnostic tool. So if they're working in software, maybe I design something specific for healthcare. So I have very specific regulations.",
+      "offset": 1570869,
+      "duration": 25000
+    },
+    {
+      "text": "Change constantly. But maybe I'm a software technology, for example, that doesn't really have an industry, but can be used by lots. Well, I still have to be in play in a lot of different moving parts that go into it.",
+      "offset": 1595869,
+      "duration": 14000
+    },
+    {
+      "text": "So let's take a little example. Let's go back to our books on a shelf, and let's start looking at the idea. So books on a shelf. 2. The search for less entropy. And if anybody can guess what Mel Brooks film this is making reference to.",
+      "offset": 1609869,
+      "duration": 11000
+    },
+    {
+      "text": "Kudos to you. You can go ahead and throw that in the chat, and then at the end of the day I'll see if anybody gets it? So how do we know the lower number of possible outcomes by 99 without lowering the number of books? So what we wanna do is we wanna take that.",
+      "offset": 1620869,
+      "duration": 15000
+    },
+    {
+      "text": "10 books, with its 3.6 2.",
+      "offset": 1635869,
+      "duration": 4000
+    },
+    {
+      "text": "8 million possible outcomes. And we want to take that 99% that we talked about earlier. And say, if I could reduce.",
+      "offset": 1639869,
+      "duration": 8000
+    },
+    {
+      "text": "10 bucks.",
+      "offset": 1647869,
+      "duration": 2000
+    },
+    {
+      "text": "The number of possible outcomes by 99.9. How can I do that?",
+      "offset": 1649869,
+      "duration": 4000
+    },
+    {
+      "text": "There's lots of different ways. But let's take a look and see what we can do.",
+      "offset": 1653869,
+      "duration": 4000
+    },
+    {
+      "text": "So.",
+      "offset": 1657869,
+      "duration": 1000
+    },
+    {
+      "text": "An example, approach.",
+      "offset": 1658869,
+      "duration": 1000
+    },
+    {
+      "text": "10 books, and put the following guidelines.",
+      "offset": 1659869,
+      "duration": 4000
+    },
+    {
+      "text": "In place. You can pick any 6 hardcover books you want.",
+      "offset": 1663869,
+      "duration": 3000
+    },
+    {
+      "text": "And you could pick.",
+      "offset": 1666869,
+      "duration": 1000
+    },
+    {
+      "text": "Any 4 paperback books you want.",
+      "offset": 1667869,
+      "duration": 3000
+    },
+    {
+      "text": "That's fine!",
+      "offset": 1670869,
+      "duration": 1000
+    },
+    {
+      "text": "You have that freedom.",
+      "offset": 1671869,
+      "duration": 2000
+    },
+    {
+      "text": "All I'm asking is if you take the 6 and the 4.",
+      "offset": 1673869,
+      "duration": 3000
+    },
+    {
+      "text": "And you split them into 2 groups of 5.",
+      "offset": 1676869,
+      "duration": 3000
+    },
+    {
+      "text": "And can you make sure that each one of those groups has at least one.",
+      "offset": 1679869,
+      "duration": 4000
+    },
+    {
+      "text": "Paperback, and one hardback.",
+      "offset": 1683869,
+      "duration": 3000
+    },
+    {
+      "text": "Very simple sort of rule, structure.",
+      "offset": 1686869,
+      "duration": 2000
+    },
+    {
+      "text": "Number of possible outcomes.",
+      "offset": 1688869,
+      "duration": 2000
+    },
+    {
+      "text": "Instead of 3.6.",
+      "offset": 1690869,
+      "duration": 2000
+    },
+    {
+      "text": "3,628,800. I think it is. You come out with 256.",
+      "offset": 1692869,
+      "duration": 7000
+    },
+    {
+      "text": "That is reduction of 99.9 3%.",
+      "offset": 1699869,
+      "duration": 5000
+    },
+    {
+      "text": "So when you start thinking about just a few guidelines.",
+      "offset": 1704869,
+      "duration": 4000
+    },
+    {
+      "text": "Help with the outcome.",
+      "offset": 1708869,
+      "duration": 2000
+    },
+    {
+      "text": "And this is where we start talking about. We'll talk a bit more about security as we kind of go through here. This is where security being implemented.",
+      "offset": 1710869,
+      "duration": 7000
+    },
+    {
+      "text": "At the right stages, especially in the preventive stage, and early on through good quality practices and making sure that it's part of that you're able to reduce the number of possible outcomes. And again, we think about possible outcomes. We think about entropy. We think about unpredictability. I don't know what's going to happen.",
+      "offset": 1717869,
+      "duration": 17000
+    },
+    {
+      "text": "And that's a concern.",
+      "offset": 1734869,
+      "duration": 2000
+    },
+    {
+      "text": "So let's talk about that good quality and security relationship a bit.",
+      "offset": 1736869,
+      "duration": 4000
+    },
+    {
+      "text": "So.",
+      "offset": 1740869,
+      "duration": 1000
+    },
+    {
+      "text": "When we think about costs and the preventive costs on the impact on quality, it's that minimize your code and consistency and inefficiency. When we think about software world.",
+      "offset": 1741869,
+      "duration": 9000
+    },
+    {
+      "text": "We think about security as you're minimizing your threats and attack vectors.",
+      "offset": 1750869,
+      "duration": 4000
+    },
+    {
+      "text": "So that's what we're really looking at. So a security is to say, what are the threats? What can derail that? What can take that down?",
+      "offset": 1754869,
+      "duration": 8000
+    },
+    {
+      "text": "I used to work at a company, and you know we had a. The idea of what we wanted to do is we had our business continuity and disaster recovery, and everybody talked about how they wanted to make the product work. So we named our Bcdr. Plan.",
+      "offset": 1762869,
+      "duration": 14000
+    },
+    {
+      "text": "The company was called Babylon.",
+      "offset": 1776869,
+      "duration": 1000
+    },
+    {
+      "text": "And what we did is we named the.",
+      "offset": 1777869,
+      "duration": 2000
+    },
+    {
+      "text": "We named the the Bcdr. Program that we were working on. We call it project because 539 BC. Was when Babylon was overrun.",
+      "offset": 1779869,
+      "duration": 9000
+    },
+    {
+      "text": "By Cyrus of Persia, and it was like, that's when it happened. And so this is Project. How do we take it down? And what we did was we really worked on asking those questions and addressing those.",
+      "offset": 1788869,
+      "duration": 10000
+    },
+    {
+      "text": "And again it kind of goes back to inverting what we talked about.",
+      "offset": 1798869,
+      "duration": 3000
+    },
+    {
+      "text": "Appraisal.",
+      "offset": 1801869,
+      "duration": 1000
+    },
+    {
+      "text": "And the quality and impact on quality. This is identify, mitigate, sinks, taints, things along those lines that we would often see in the software quality world, where in the impact on security is, it identifies and mitigate weaknesses. Now, weaknesses aren't the same as vulnerabilities. Weaknesses are.",
+      "offset": 1802869,
+      "duration": 16000
+    },
+    {
+      "text": "I'm tapping on that door, perhaps, and I think I could possibly go in there. That's a potential thing that we need to look at.",
+      "offset": 1818869,
+      "duration": 8000
+    },
+    {
+      "text": "And that's a separate set of eyes looking at it because oftentimes, when you're doing it in the prevention, you've got somebody sitting there who's inside the product.",
+      "offset": 1826869,
+      "duration": 9000
+    },
+    {
+      "text": "Whereas in that appraisal somebody who's outside most of the time, appraisals are independent appraisals and independent individuals going. You know what I think that's not as strong. You keep using that word. I do not think it means what you think it means.",
+      "offset": 1835869,
+      "duration": 11000
+    },
+    {
+      "text": "You keep using that term, you keep using that product. I don't think it's as strong as you think. It is.",
+      "offset": 1846869,
+      "duration": 5000
+    },
+    {
+      "text": "And then you get into the internal.",
+      "offset": 1851869,
+      "duration": 2000
+    },
+    {
+      "text": "And so this is where you start looking at things like providing for again, these are the cost for making up for poor quality provide funding for resources for rework and tech debt management. So.",
+      "offset": 1853869,
+      "duration": 12000
+    },
+    {
+      "text": "I have to. I have limited number of software developers and engineers. I need to. I have a product that needs to constantly move forward. I need new features. I've got to keep up with the market space, but I've got this growing amount of technical debt, so I'm constantly having to do service packs. I'm halfway constantly having to go back and refix things which I'm missing deadlines. It's making it very hard to compete. Whereas you get that internal failure. We're providing funding for resources for vulnerability, remediation.",
+      "offset": 1865869,
+      "duration": 24000
+    },
+    {
+      "text": "And this is where you start.",
+      "offset": 1889869,
+      "duration": 1000
+    },
+    {
+      "text": "Here you start. See me talk about tooling and security tooling and traditional security tooling.",
+      "offset": 1890869,
+      "duration": 4000
+    },
+    {
+      "text": "Most security tools literally sit in here. Your vulnerability, management tools, things that we're all common of. And things along. Those lines are like right. It lights up like a Christmas tree all over the dashboard, like, what are we going to do.",
+      "offset": 1894869,
+      "duration": 14000
+    },
+    {
+      "text": "And we'll talk a little bit more about that in a minute, and then you get the external. And this is where you just say, you know what? We're gonna set aside funds and resources for credits, recalls and legal support.",
+      "offset": 1908869,
+      "duration": 9000
+    },
+    {
+      "text": "So we have insurance to handle that. And the same thing on the other side is you're providing insurance and your cyber insurance resources support data breaches. And also you're working out to get independent and incident forensics. So again, a lot of external security support needed there.",
+      "offset": 1917869,
+      "duration": 15000
+    },
+    {
+      "text": "Those are expensive. A lot of those are retainer, so you may never need them. But you're paying for them just in case you ever do so again, you're getting a lot of investment upfront. But you're not actually getting a used case. And actually being able to use that. And if you do have to use that money, it's basically because you know, it's hit. The fan and thing is just gone wrong.",
+      "offset": 1932869,
+      "duration": 19000
+    },
+    {
+      "text": "So.",
+      "offset": 1951869,
+      "duration": 2000
+    },
+    {
+      "text": "Even more inspiration.",
+      "offset": 1953869,
+      "duration": 2000
+    },
+    {
+      "text": "So the greatest waste in America.",
+      "offset": 1955869,
+      "duration": 2000
+    },
+    {
+      "text": "Is failure to use the ability of people.",
+      "offset": 1957869,
+      "duration": 3000
+    },
+    {
+      "text": "Money and time spent for training will be ineffective unless inhibitors to good work are removed.",
+      "offset": 1960869,
+      "duration": 8000
+    },
+    {
+      "text": "I love me some dimming, by the way.",
+      "offset": 1968869,
+      "duration": 1000
+    },
+    {
+      "text": "Alright, so security traditional place at the table. So we start thinking about security tooling.",
+      "offset": 1969869,
+      "duration": 7000
+    },
+    {
+      "text": "It tends to sit over here.",
+      "offset": 1976869,
+      "duration": 2000
+    },
+    {
+      "text": "So. And I want to bring that up most of the time security tooling security teams, engineering management tools. They tend to sit over in this area that I've got highlighted. They sit in that internal failure. It's already out.",
+      "offset": 1978869,
+      "duration": 15000
+    },
+    {
+      "text": "Gonna go wrong.",
+      "offset": 1993869,
+      "duration": 2000
+    },
+    {
+      "text": "You've seen this all the time. You get a vulnerability. If you're on the developer side or your security engineer, you see your.",
+      "offset": 1995869,
+      "duration": 5000
+    },
+    {
+      "text": "You know. You see your dashboard, you're like, here's the list of vulnerabilities that have come through scan or whatever I need to do. And here's the 468 vulnerabilities that we've identified. Would you please take care of them?",
+      "offset": 2000869,
+      "duration": 11000
+    },
+    {
+      "text": "And then you hand them to the engineering team and they're looking around kind of going. We're never gonna get this done.",
+      "offset": 2011869,
+      "duration": 5000
+    },
+    {
+      "text": "How are we gonna do this? Well, we have Sla's. And you run into this combative environment. What's happened is you have all these, and guess what.",
+      "offset": 2016869,
+      "duration": 6000
+    },
+    {
+      "text": "Some of them may get remediated. But what's gonna end up happening is next month. You're like, Hey, it's actually we've got more now.",
+      "offset": 2022869,
+      "duration": 6000
+    },
+    {
+      "text": "How do we go up more? We actually fix some of these? Yes, but there's a whole bunch more, because what we didn't do is, we actually didn't fix the problem. We just fixed the symptom. We just basically gave cough medicine because somebody had a cough. We didn't figure out why they were coughing.",
+      "offset": 2028869,
+      "duration": 13000
+    },
+    {
+      "text": "And that's really where a lot of those tools sit. And if you'll notice from a cost standpoint, a lot of them sit there, and their cost is accordingly. They tend to be pretty much more expensive when you start looking at security tooling. And I say this as a security expert. Oftentimes I spend time looking at security tools, and I go.",
+      "offset": 2041869,
+      "duration": 15000
+    },
+    {
+      "text": "There's a cost element, and that's what you're paying for. You're paying for.",
+      "offset": 2056869,
+      "duration": 4000
+    },
+    {
+      "text": "Them to capture work that you yourself could capture with a little bit better investment and training and a little bit better investment and just putting some basic guardrails in place.",
+      "offset": 2060869,
+      "duration": 10000
+    },
+    {
+      "text": "So",
+      "offset": 2070869,
+      "duration": 2000
+    },
+    {
+      "text": "One of the things that we'll talk about here is good quality and security best practices for code as we kind of dig into it quality methodologies can help you. They talk about shifting security left, and where possible, start left. And for those of you who are old.",
+      "offset": 2072869,
+      "duration": 15000
+    },
+    {
+      "text": "Old school individuals from the devops and devsec role like me. The actual term shift left was.",
+      "offset": 2087869,
+      "duration": 6000
+    },
+    {
+      "text": "Actually start, left.",
+      "offset": 2093869,
+      "duration": 1000
+    },
+    {
+      "text": "Go back to the beginning and start there.",
+      "offset": 2094869,
+      "duration": 4000
+    },
+    {
+      "text": "And work from the front.",
+      "offset": 2098869,
+      "duration": 2000
+    },
+    {
+      "text": "Know what your outcome is going to be.",
+      "offset": 2100869,
+      "duration": 2000
+    },
+    {
+      "text": "And then establish.",
+      "offset": 2102869,
+      "duration": 2000
+    },
+    {
+      "text": "Those parameters that you need to do beforehand. Oftentimes what happens is you don't do it from a security standpoint.",
+      "offset": 2104869,
+      "duration": 7000
+    },
+    {
+      "text": "Then you get all of that potential unpredictability. All those vulnerabilities are really.",
+      "offset": 2111869,
+      "duration": 4000
+    },
+    {
+      "text": "Potential outcomes and unknown outcomes. And then you have to invest in tooling to capture all of it, this big net to capture everything. And then they just kind of have to throw it back over.",
+      "offset": 2115869,
+      "duration": 9000
+    },
+    {
+      "text": "And none of it ever actually gets done. But if you start over there on that left side from a security standpoint, just start left. Not just links when you think shift left. Also think, start left getting over there and asking those questions, and from a security standpoint asking what's the outcome. And how do we secure the outcome? How does it cause? It? Can't be a good outcome if it's not effective.",
+      "offset": 2124869,
+      "duration": 20000
+    },
+    {
+      "text": "If it's not efficient.",
+      "offset": 2144869,
+      "duration": 2000
+    },
+    {
+      "text": "And if it's not fit for the current and future purposes, so we have to have all of those things factored in both from a quality standpoint as well as a security standpoint. They have to work together.",
+      "offset": 2146869,
+      "duration": 10000
+    },
+    {
+      "text": "So implement security by design within your design stage and then focus on securing the desired outcome. Not just security controls. And this is one of the biggest things that I have seen having worked in both elements is the idea that we can just fix problems with security by putting controls, bolting controls on.",
+      "offset": 2156869,
+      "duration": 20000
+    },
+    {
+      "text": "At at the cost of the outcome. And what that does is it creates",
+      "offset": 2176869,
+      "duration": 6000
+    },
+    {
+      "text": "It creates a lot of.",
+      "offset": 2182869,
+      "duration": 2000
+    },
+    {
+      "text": "Conflict.",
+      "offset": 2184869,
+      "duration": 1000
+    },
+    {
+      "text": "It creates a lot of unnecessary work.",
+      "offset": 2185869,
+      "duration": 5000
+    },
+    {
+      "text": "Because nobody ever actually communicates this point, you hand it off to somebody at 90% of the way done.",
+      "offset": 2190869,
+      "duration": 5000
+    },
+    {
+      "text": "And say, Oh, by the way, you now have to do the Security Review, and the Security has said, oh, you have to do these other things. Oh, by the way, I know you're running, and you've been doing this, Marathon, but for the last 200 for the last 2 miles we're Gonna.",
+      "offset": 2195869,
+      "duration": 11000
+    },
+    {
+      "text": "Throw on a weighted vest. And have you carry these Kettlebells? Go for it, please. Thank you so much. It's just not going to happen. And it's gonna create a lot of stress. It's gonna create a lot of breaking. And that's not a good thing. And then obviously focusing on security as lighting the path forward, not blocking it. So the way I often think about it is for those of you who again, think old old school Jeffrey Moore's S curve.",
+      "offset": 2206869,
+      "duration": 23000
+    },
+    {
+      "text": "And so the idea of we talk about the S curve talks about those crossing the chasm, and he mentions about how you know you have your innovators, you have your early adopters. You have this big chasm before you get to your early majority, late majority and laggards. And so the idea of, rather than having to make that chasm leap.",
+      "offset": 2229869,
+      "duration": 17000
+    },
+    {
+      "text": "Blindly, and hope for the best, or in reference to Indiana Jones and the last crusade, rather than have to take that leap of faith, build the bridge for which them to be able to walk across. And you know then.",
+      "offset": 2246869,
+      "duration": 13000
+    },
+    {
+      "text": "Pick the right.",
+      "offset": 2259869,
+      "duration": 2000
+    },
+    {
+      "text": "Holy Grail to work from anyway, with that.",
+      "offset": 2261869,
+      "duration": 3000
+    },
+    {
+      "text": "And so.",
+      "offset": 2264869,
+      "duration": 2000
+    },
+    {
+      "text": "Go on. And then, as we kind of go through here, that kind of wraps in here where we had our upcoming webinar coming up, and I'm gonna hand this back over to to Robert, and we talk more about that.",
+      "offset": 2266869,
+      "duration": 15000
+    },
+    {
+      "text": "Hey!",
+      "offset": 2281869,
+      "duration": 2000
+    },
+    {
+      "text": "Thanks. Jonathan. Wow! That was that was really great.",
+      "offset": 2283869,
+      "duration": 3000
+    },
+    {
+      "text": "My favorite part.",
+      "offset": 2286869,
+      "duration": 1000
+    },
+    {
+      "text": "But was about the ounce of prevention cost model.",
+      "offset": 2287869,
+      "duration": 3000
+    },
+    {
+      "text": "And then from a like a Devsec Ops perspective, I perceive it as being about.",
+      "offset": 2290869,
+      "duration": 5000
+    },
+    {
+      "text": "Finding security issues at later stages in the Cicd pipeline results in an order of magnitude.",
+      "offset": 2295869,
+      "duration": 6000
+    },
+    {
+      "text": "Per later stage.",
+      "offset": 2301869,
+      "duration": 2000
+    },
+    {
+      "text": "Absolutely.",
+      "offset": 2303869,
+      "duration": 1000
+    },
+    {
+      "text": "So that's really fascinating.",
+      "offset": 2304869,
+      "duration": 1000
+    },
+    {
+      "text": "Before we move on to the Q. And a portion of the webinar. I want to let you know about a few things that are coming up.",
+      "offset": 2305869,
+      "duration": 5000
+    },
+    {
+      "text": "And Jonathan said, Oh, yeah, look, we've got a webinar coming up. So on August 28.th",
+      "offset": 2310869,
+      "duration": 5000
+    },
+    {
+      "text": "You're welcome to join Peter Mckee, our head of developer relations.",
+      "offset": 2315869,
+      "duration": 4000
+    },
+    {
+      "text": "Who will be presenting on code quality at warp.",
+      "offset": 2319869,
+      "duration": 3000
+    },
+    {
+      "text": "Powering up continuous delivery with static analysis.",
+      "offset": 2322869,
+      "duration": 4000
+    },
+    {
+      "text": "Let's see, we just dropped a link in the chat that you can use to register for the webinar.",
+      "offset": 2326869,
+      "duration": 5000
+    },
+    {
+      "text": "So check it out.",
+      "offset": 2331869,
+      "duration": 2000
+    },
+    {
+      "text": "As a reminder. A short survey will appear at the end of the Q. And a session, and we greatly appreciate your feedback.",
+      "offset": 2333869,
+      "duration": 6000
+    },
+    {
+      "text": "Okay, one more thing right now on your screen, you should see a brief poll asking if you'd like to learn more about our solution. So please take an instant to respond.",
+      "offset": 2339869,
+      "duration": 9000
+    },
+    {
+      "text": "We'd love to get back to you.",
+      "offset": 2348869,
+      "duration": 2000
+    },
+    {
+      "text": "Okay.",
+      "offset": 2350869,
+      "duration": 3000
+    },
+    {
+      "text": "Let's see Q. And A. We have some good questions.",
+      "offset": 2353869,
+      "duration": 5000
+    },
+    {
+      "text": "I think.",
+      "offset": 2358869,
+      "duration": 1000
+    },
+    {
+      "text": "John, this is one is, with your experiences particularly suited for you to answer. How have you seen this approach put in place in real organisations. And what were the results? You've got a lot of background.",
+      "offset": 2359869,
+      "duration": 11000
+    },
+    {
+      "text": "In applying this, you know. Start left.",
+      "offset": 2370869,
+      "duration": 3000
+    },
+    {
+      "text": "Approach.",
+      "offset": 2373869,
+      "duration": 1000
+    },
+    {
+      "text": "How does it work for you?",
+      "offset": 2374869,
+      "duration": 2000
+    },
+    {
+      "text": "Yeah, so",
+      "offset": 2376869,
+      "duration": 2000
+    },
+    {
+      "text": "Interestingly enough.",
+      "offset": 2378869,
+      "duration": 2000
+    },
+    {
+      "text": "Prior to working at Sonar, I actually had.",
+      "offset": 2380869,
+      "duration": 3000
+    },
+    {
+      "text": "Actually onboard and sonar as a as a product an organization. I was working out on healthcare technology.",
+      "offset": 2383869,
+      "duration": 8000
+    },
+    {
+      "text": "And so",
+      "offset": 2391869,
+      "duration": 2000
+    },
+    {
+      "text": "One of the opportunities that I had. There is. I was the senior director for risk and compliance, and so I was really kind of sitting on the on the security side. But I had just a large view on on everything that we needed to do, and being in a healthcare organization, healthcare technology. There was a highly regulated requirement. So I had to understand all the regulations and the requirements there for medical devices, things along those lines. Whether it was pharmaceutical.",
+      "offset": 2393869,
+      "duration": 22000
+    },
+    {
+      "text": "Hipaa. You name it everything along those lines. And so what often we would find is, we had the opportunity to sit down, and I would have like the Vp. Of engineering came over to one day, said, Hey, we wanna be able to look at.",
+      "offset": 2415869,
+      "duration": 13000
+    },
+    {
+      "text": "How is it that.",
+      "offset": 2428869,
+      "duration": 1000
+    },
+    {
+      "text": "You know, trouble for the idea of tooling. And so we're able to do.",
+      "offset": 2429869,
+      "duration": 4000
+    },
+    {
+      "text": "Example, we were able to sit there and have a conversation.",
+      "offset": 2433869,
+      "duration": 2000
+    },
+    {
+      "text": "And say, Hey, we want to improve our code quality.",
+      "offset": 2435869,
+      "duration": 4000
+    },
+    {
+      "text": "We wanna understand how to improve our code quality. But we wanna understand what we need to be able to do. So.",
+      "offset": 2439869,
+      "duration": 5000
+    },
+    {
+      "text": "He was having trouble, actually getting funding.",
+      "offset": 2444869,
+      "duration": 3000
+    },
+    {
+      "text": "For the product, and we all understand we all live in a budget world where budgets are usually set and everybody's got their own budget, and they already have ideas of how they want to spend that money.",
+      "offset": 2447869,
+      "duration": 8000
+    },
+    {
+      "text": "And so we had to actually have a conversation was, okay. This is not just.",
+      "offset": 2455869,
+      "duration": 4000
+    },
+    {
+      "text": "A.",
+      "offset": 2459869,
+      "duration": 2000
+    },
+    {
+      "text": "Engineering or development thing.",
+      "offset": 2461869,
+      "duration": 3000
+    },
+    {
+      "text": "This is a.",
+      "offset": 2464869,
+      "duration": 1000
+    },
+    {
+      "text": "Finance department and talking to the Cfo. And helping them understand the the way that we're utilizing our resources and making sure that our utilization costs are what they need to be, because that's gonna.",
+      "offset": 2465869,
+      "duration": 11000
+    },
+    {
+      "text": "Participate and help us manage the funding associated with onboarding more resources. Can we do more with less? How do you do that? Going to my boss, who is the Ciso, and having the conversation of Hey, from a security standpoint, we need to be able to. We spend a lot of time and money looking at dashboards, tuning dashboards, building things, and identifying stuff that quite honestly, it never goes away.",
+      "offset": 2476869,
+      "duration": 22000
+    },
+    {
+      "text": "We need to do a better job of actually going back and investing in quality and saying, How can we improve the overall quality outcomes, and being able to show that what we would do over time is, Look, I will lower the noise. And so it became more of an approach of.",
+      "offset": 2498869,
+      "duration": 15000
+    },
+    {
+      "text": "Noise. Red noise, canceling versus noise, reduction.",
+      "offset": 2513869,
+      "duration": 4000
+    },
+    {
+      "text": "So a lot of noise reduction headphones. And this was the example I actually used them. I said, right now we have a noise reduction process where basically, we put a physical barrier and it blocks out all noise sound equally even those things that you know it blocks off the things that aren't really important, but it also blocks off the things that are important. And we need to do a better job of being able to identify our priorities. And so by taking the quality approach and looking going back into that original design, what we're able to do is actually have these.",
+      "offset": 2517869,
+      "duration": 25000
+    },
+    {
+      "text": "Conversations and say, Right, let's look at the noise canceling. So what we're able to do is actually sit in a.",
+      "offset": 2542869,
+      "duration": 5000
+    },
+    {
+      "text": "A room of 500 people.",
+      "offset": 2547869,
+      "duration": 2000
+    },
+    {
+      "text": "Here all the different conversations going on. But I can focus on the important conversations I can focus on the important sounds, and I can say, those are.",
+      "offset": 2549869,
+      "duration": 9000
+    },
+    {
+      "text": "The things that I need to prioritize right now.",
+      "offset": 2558869,
+      "duration": 3000
+    },
+    {
+      "text": "And by prioritizing these things I will solve larger problems. If I can focus on the conversation in front of me.",
+      "offset": 2561869,
+      "duration": 7000
+    },
+    {
+      "text": "Because it's the most important thing. If I can go focus on this particular thing, it's the most important thing it allows me to put",
+      "offset": 2568869,
+      "duration": 7000
+    },
+    {
+      "text": "That emphasis in place. So when I do have things that escape and go into an internal failure stage that identify that they're able to be prioritized.",
+      "offset": 2575869,
+      "duration": 9000
+    },
+    {
+      "text": "And then further reduce the entropy. And it kind of goes that idea of how quality and security have always been aligned.",
+      "offset": 2584869,
+      "duration": 6000
+    },
+    {
+      "text": "Think about. Quality has been around since the.",
+      "offset": 2590869,
+      "duration": 3000
+    },
+    {
+      "text": "The guild.",
+      "offset": 2593869,
+      "duration": 1000
+    },
+    {
+      "text": "The guilds of, you know, medieval Europe. And so then you get into things like the factory model, the and you know a part of the industrial Revolution. And then you, you know, you get into what was BSI 51 50, I think, which was the 1950 s, which is basically your plan to check act. All of that that eventually became Iso, 9,001 and 1987.",
+      "offset": 2594869,
+      "duration": 21000
+    },
+    {
+      "text": "You take that, and you start thinking about centuries of quality management methodology. And then you partner up against like information security. And so for those of you who aren't as old as me. The very 1st information security standard really didn't come formalized until 1,009, and that was BSI 7, 9, 9, which most of you would now know today is iso 2, 7 0 0 1 didn't.",
+      "offset": 2615869,
+      "duration": 23000
+    },
+    {
+      "text": "Take on the Iso language until, like 2,000.",
+      "offset": 2638869,
+      "duration": 4000
+    },
+    {
+      "text": "But.",
+      "offset": 2642869,
+      "duration": 1000
+    },
+    {
+      "text": "That was 1,995, and for those of you who.",
+      "offset": 2643869,
+      "duration": 3000
+    },
+    {
+      "text": "Don't remember. Back to 1,995, I mean the entire.",
+      "offset": 2646869,
+      "duration": 3000
+    },
+    {
+      "text": "Sound the entire like discography of Nirvana.",
+      "offset": 2649869,
+      "duration": 4000
+    },
+    {
+      "text": "Was over 5, you know, before 1,995 like.",
+      "offset": 2653869,
+      "duration": 3000
+    },
+    {
+      "text": "The entire popularity of the counting crows was over before 1,995. I mean, there's all these different things that were going on but.",
+      "offset": 2656869,
+      "duration": 7000
+    },
+    {
+      "text": "When start thinking about that. That original information security standard really wasn't cyber security. So it was like.",
+      "offset": 2663869,
+      "duration": 6000
+    },
+    {
+      "text": "It was built off of it, the actual standard, 799 7, 9, 2. Which for those of you who know Iso, for example.",
+      "offset": 2669869,
+      "duration": 8000
+    },
+    {
+      "text": "Is027-72-7002.",
+      "offset": 2677869,
+      "duration": 3000
+    },
+    {
+      "text": "Is the annexa, controls good practice, controls.",
+      "offset": 2680869,
+      "duration": 4000
+    },
+    {
+      "text": "7, 7, 9, 2 was the same thing, but it was all based upon quality, modeling, and continual improvement. So the inception of security was always founded in the idea of quality and the continuous improvement. And so it's really not 2 separate things.",
+      "offset": 2684869,
+      "duration": 14000
+    },
+    {
+      "text": "Quote, good quality has security as a component, and it is part of what makes things fit for purpose or deliver that. And so actually being able to take that at a highly regulated space. We were able to do that. But we have also taken it in other places where we're dealing with things globally, like localization and translation and and other companies that I've worked at in my past.",
+      "offset": 2698869,
+      "duration": 18000
+    },
+    {
+      "text": "Here's here's a good one about the ounce of prevention cost model.",
+      "offset": 2716869,
+      "duration": 5000
+    },
+    {
+      "text": "Question is, is there proof for the factor of 10 statements? I've seen pitches before, but I've found it very hard to find evidence for this.",
+      "offset": 2721869,
+      "duration": 8000
+    },
+    {
+      "text": "Yeah, so that's a great question. So there are different types of use cases. And most of the time is actually ends.",
+      "offset": 2729869,
+      "duration": 6000
+    },
+    {
+      "text": "At at somewhat of an industry level. There is more data around there. You have to dig for it. Usually. What I have found is when I've done my own modeling within an organization.",
+      "offset": 2735869,
+      "duration": 11000
+    },
+    {
+      "text": "What I've been able to do, because most of the time I've had both quality and security within my job titles. Anybody who's checked me out on Linkedin knows that most of the time I've got both of those in there. Whenever I do the modeling it tends to pan out close to that factor of 10, sometimes the factor of 8, sometimes the Roi might be 7, sometimes it might be even be higher, but it tends to come out on average, but it will actually work more in the idea of",
+      "offset": 2746869,
+      "duration": 25000
+    },
+    {
+      "text": "How much you're currently investing in tools and then asking the question of where you should invest them, because most of the time the struggle.",
+      "offset": 2771869,
+      "duration": 6000
+    },
+    {
+      "text": "That people run into, and the factor of 10 is.",
+      "offset": 2777869,
+      "duration": 4000
+    },
+    {
+      "text": "Being able to showcase it over a long enough timeframe to show. Here's what we're currently spending and where we're spending our money, which might be out of alignment.",
+      "offset": 2781869,
+      "duration": 8000
+    },
+    {
+      "text": "Here's where we make that investment. And then being able to see the transition. Because if you've got a lot of quality issues, and this, especially for those who have a sick Sigma background.",
+      "offset": 2789869,
+      "duration": 10000
+    },
+    {
+      "text": "You know that if you're currently sitting at a Sigma 3, and you're trying to get to a Sigma 4 sigma 5 that you're most people. If.",
+      "offset": 2799869,
+      "duration": 9000
+    },
+    {
+      "text": "For those who don't know, like Cmi for more software like Cmi content maturity. If you're at a 3 and you're trying to get to a 4 the level of investment.",
+      "offset": 2808869,
+      "duration": 8000
+    },
+    {
+      "text": "And the feedback, and and where you're gonna want to put your efforts is gonna be different. And so, being able to model it over a long period of time. Most organizations.",
+      "offset": 2816869,
+      "duration": 9000
+    },
+    {
+      "text": "Don't really invest the amount of time.",
+      "offset": 2825869,
+      "duration": 3000
+    },
+    {
+      "text": "To be able to say like, Here's where you begin to see it, and it can take. When I was doing my investments I would sit there and take a look at something, and it might take me 18 months of constantly looking at the value chain.",
+      "offset": 2828869,
+      "duration": 10000
+    },
+    {
+      "text": "But it also meant a lot of conversations to be fair on the upfront with personnel about saying, you know, we need to get out of.",
+      "offset": 2838869,
+      "duration": 9000
+    },
+    {
+      "text": "Out of certain budget mindsets of being able to say, This is my money, this is your money, and these are our resources, but it often becomes that difficult, because organizations are so quick to move forward. And there's such a dynamic change.",
+      "offset": 2847869,
+      "duration": 10000
+    },
+    {
+      "text": "That those individuals.",
+      "offset": 2857869,
+      "duration": 2000
+    },
+    {
+      "text": "Aren't normally in the same position.",
+      "offset": 2859869,
+      "duration": 2000
+    },
+    {
+      "text": "Long enough to be able to assess that particular, that model and things along those lines. But if you do have the chance, it does pan out. And whoever asked that question, it's a great question. It does vary, I think, over the long enough period of time, though.",
+      "offset": 2861869,
+      "duration": 22000
+    },
+    {
+      "text": "Yeah, we can follow up with them.",
+      "offset": 2883869,
+      "duration": 1000
+    },
+    {
+      "text": "People have taken that theory, and they have to apply it at their organization or individual level. Obviously, if there's additional questions about that, you know. And and there's a way for me to contact. I can follow up with them indirectly. I'd love to.",
+      "offset": 2884869,
+      "duration": 3000
+    },
+    {
+      "text": "Here's a really good one I like, is there a mapping cheat between software code quality and software code security.",
+      "offset": 2887869,
+      "duration": 7000
+    },
+    {
+      "text": "Controls metrics, requirements that can aid a developer in the prevention.",
+      "offset": 2894869,
+      "duration": 5000
+    },
+    {
+      "text": "And and appraisal phases.",
+      "offset": 2899869,
+      "duration": 3000
+    },
+    {
+      "text": "Oh, yeah, I would say, if I was gonna use a good one.",
+      "offset": 2902869,
+      "duration": 5000
+    },
+    {
+      "text": "I think it's iso. You guys may have seen it on the poll that we originally. I don't know how many people are familiar with Iso 25.",
+      "offset": 2907869,
+      "duration": 8000
+    },
+    {
+      "text": "That's a software quality.",
+      "offset": 2915869,
+      "duration": 2000
+    },
+    {
+      "text": "Iso.",
+      "offset": 2917869,
+      "duration": 1000
+    },
+    {
+      "text": "And it incorporates actual security protocols into place inside there. So if you start thinking about anybody who's got a data protection background, you understand that data security like you have to keep it secure. But you also have to keep it accurate. You have to. It's 1 component of it. One of the things that that Iso 25 standard does a really good job of.",
+      "offset": 2918869,
+      "duration": 18000
+    },
+    {
+      "text": "Is giving you that framework to work from, and it's got some controls. If you take that 25 family, the normative.",
+      "offset": 2936869,
+      "duration": 7000
+    },
+    {
+      "text": "So I'm talking Iso language, and I apologize. But for those of you who talk about normative Normative, 25,000 normative reference. And you look at the 25 0, 1 0 standard the recent updates have actually been really good.",
+      "offset": 2943869,
+      "duration": 13000
+    },
+    {
+      "text": "And so you can begin to see sort of that mapping, and how you would want to build in that control. I don't think that's probably the best way to start again. If you see that you have other questions about it more than happy to speak to you one on one about it, but that's that's probably where I would start. If you're wanting to say, how do I do? A mapping between something like a 9,001 and a 2 7 0 0 1 find yourself especially in software world. Just go to 25 0 1 0. And just look at the Normative family for the 25,000 series.",
+      "offset": 2956869,
+      "duration": 26000
+    },
+    {
+      "text": "Let's see, here's a good one outdated are often associated with security risks, but if I only use safe methods, I don't need to update the library. What are your thoughts?",
+      "offset": 2982869,
+      "duration": 13000
+    },
+    {
+      "text": "So.",
+      "offset": 2995869,
+      "duration": 2000
+    },
+    {
+      "text": "Do you have to update? The answer is, do you have to make those updates? And I'm gonna break this down? So.",
+      "offset": 2997869,
+      "duration": 6000
+    },
+    {
+      "text": "My thoughts are. Everything is based upon the concept of risk. And are you comfortable with the outcomes and.",
+      "offset": 3003869,
+      "duration": 6000
+    },
+    {
+      "text": "Each organization is gonna have a different approach. And this is where I think we struggle and go back to the Han Solo Indiana Jones.",
+      "offset": 3009869,
+      "duration": 8000
+    },
+    {
+      "text": "Variation. There are going to be some people on here who are very Indiana Jones, and are like, absolutely. You must do this, and there you got people who are like don't ever tell me the odds. And so when you start doing that real risk asking yourself",
+      "offset": 3017869,
+      "duration": 13000
+    },
+    {
+      "text": "What is? What is the overall risk score? What am I comfortable with? And so if you think about, I say, the likelihood is, something's gonna happen once a year. That's the annual risk occurrence. And you start having the conversation. If it's gonna cost me about X months, this, my single loss, occurrence, or sla. I'm gonna multiply those 2 together, and I get what's called an Al an Al, because like I'm gonna drink but it's the Al E, and so what it is is, that's the annual loss, expectancy.",
+      "offset": 3030869,
+      "duration": 23000
+    },
+    {
+      "text": "And so.",
+      "offset": 3053869,
+      "duration": 1000
+    },
+    {
+      "text": "I would tell people to to do that kind of exercise and actually spend some time talking with your risk. People, because quality and security are both very much risk driven standards. And I think, to the person who was asking about the 25. That, I answer about the 2510 on code quality another standard. Okay? So just look at your standard risk management frameworks. I personally think one of the best risk management frameworks out there is. Rmf.",
+      "offset": 3054869,
+      "duration": 22000
+    },
+    {
+      "text": "That is nested 37, I think. R, 2. Just because of the tearing model. But what it will let you do is basically sit there and say, Hey, here's an it asset risk. And that's actually one of their classes and the types and being able to sit there and kind of do an exercise, and ask yourself what is the comfort level that we have for those types of losses and understanding? What.",
+      "offset": 3076869,
+      "duration": 19000
+    },
+    {
+      "text": "Those old code bases are used for, like, if they're not used for anything that is, gonna have certain levels of access to criticality. That's fine. If you think about the old school, Osi 7 layer model depending upon where those particular vulnerabilities are sitting. If they're sitting at one layer, they can potentially impact all the layers above them.",
+      "offset": 3095869,
+      "duration": 17000
+    },
+    {
+      "text": "And so a lot of vulnerabilities tend to go up one down one things along those lines. But you just have to be conscious of where it sits. And what's what's also sitting there? If you got something that's potentially gonna cause a problem at the data layer versus something that's gonna cause a an issue at the application or the presentation layer things along those lines. Yeah.",
+      "offset": 3112869,
+      "duration": 25000
+    },
+    {
+      "text": "Because I'm talkative.",
+      "offset": 3137869,
+      "duration": 1000
+    },
+    {
+      "text": "Well, there were a lot of other questions that we thought we could get to in the in the live Q. And a. But we didn't. So I'll remind you that.",
+      "offset": 3138869,
+      "duration": 1000
+    },
+    {
+      "text": "Yeah, no, it's good. We will answer those. We'll post those in communities, Jonathan, and thanks for all the excellent questions.",
+      "offset": 3139869,
+      "duration": 10000
+    },
+    {
+      "text": "Again go to the community. It's a great place to pose additional questions and review questions along with our responses. We.",
+      "offset": 3149869,
+      "duration": 9000
+    },
+    {
+      "text": "We.",
+      "offset": 3158869,
+      "duration": 1000
+    },
+    {
+      "text": "Scrub those the the community all the time, and people are on top of of questions. So it's a great resource for you.",
+      "offset": 3159869,
+      "duration": 5000
+    },
+    {
+      "text": "Please visit sonar com for further information on how clean as you code benefits you as a developer.",
+      "offset": 3164869,
+      "duration": 7000
+    },
+    {
+      "text": "And to find information on our future webinars and events.",
+      "offset": 3171869,
+      "duration": 3000
+    },
+    {
+      "text": "Thank you again in advance for providing your feedback a survey that it's about to pop up.",
+      "offset": 3174869,
+      "duration": 5000
+    }
+  ],
+  "fullText": "Hello! Everyone. Thank you for joining and welcome to our webinar. Secure by design how implementing good quality delivers better quality. In this webinar, we'll learn how high code quality and how tackling quality, as early as in the design stage, ultimately drives the most accurate and secure software at the lowest cost. This webinar will focus on a true shift approach and the resulting challenges of handling quality. Later in the development lifecycle. By starting from the left. Your time and energy are optimized in the area where code quality serves as a stimulus for secure code. I'm Robert Curly, product, marketing manager for sonarcube. And your moderator for today. Jonathan Slaughter is the present presenter on today's topic. Sorry, Jonathan. I fumbled that one. Jonathan is a security governance officer at Sonar, and has worked in the quality, management and security space for over 20 years. His experience. In highly regulated spaces. Such as life, sciences. Healthcare, automotive energy, and us Federal brings a unique perspective of how quality and security can intersect to deliver optimal application, health. And the best value for the organizations that deliver them. Jonathan and I have had some great conversations on this topic, and trust me, you are in good hands. Before we start. I want to go over a few housekeeping items. This session is going to be 45 min. And includes Q. And a session at the end. We will have time at the end to answer your important questions. During the webinar, you are invited to submit your questions via the Q. And a box in zoom. Please do not use the chat box. Throughout this session we will use the Q&A area to respond to your questions. We'll post all the questions asked during the session, including your answers in our community Forum. Don't worry. Responding to you is very important to us. You can be sure your questions will be answered, even if we don't get through them. During the session today. Additionally, we have 2 fantastic panelists behind the scenes. Who will answer your questions? Live during this webinar. From our analysis team. Nicola, Gottier. And Lucas Grevy, Solution, engineer at Sonar. This session will be recorded. Emphasis on will. We are recording it. And we'll send you a link. To it via email. Within the next few days. Lastly, at the end of the webinar. A quick survey will appear on your screen. We appreciate your feedback, we really want it. So thank you in advance for your participation. Alright! Enough of me rambling on. Let's dive into the session. We're all here for right. Over to you, Jonathan. Excellent. Thank you so much, Robert. I really appreciate it. Welcome everyone. As you said. My name is Jonathan. Security Governance officer here at Sonar. And I would ask for everybody else to introduce themselves. But. We don't have time for that, so I'll go ahead and continue on. So today the agenda for We're gonna be talking about is. Kind of posted right here. I'm not gonna read it off to you, because I know that everybody here can read. But I will say a little bit about myself a little bit more detail. I've had the opportunity over the past 20 to 25 years to work in both quality and security, and in many roles have actually managed and been responsible for both. So what this is is an opportunity for me to express some of my experiences. And the ways that I have found value and partnering quality and security together in a myriad of different organizations. Obviously, as as Robert said, if you have questions, please put them in the chat. At the end, we will make time to be able to answer some questions, live and. As always, your feedback is going to be warmly appreciated. So. Well, let's start us off with a poll real quick. And this poll is really just to give me a chance to select all that apply. But I would like to know which of the following quality methodology of frameworks. Do your organizations currently use? And if I could have anybody to just please as you're signing in there, let us know This helps me understand kind of my audience to a degree. While this is a. Quality focused and quality management focus presentation. You should hear some familiar terms. But I also want to make sure that I honor the audience. Genuinely appreciating the individuals who are. Answering no clue. Honesty is an excellent policy. So. Alright. So whenever I think we're getting pretty close, or give another 15 or 20 seconds on the poll, and then we'll close it out. That's me! Okay. Good. I'm gonna go and stop sharing that. Okay. And we're gonna And share results. Okay. And I will move on from here. Thank you. I see we got a pretty good Setup of. Iso. Decent on continuous improvement, and a lot of no clue. Alright, so let's go ahead and move on through here. So the one thing, one thing that I want everybody to take away from here. And the reason I put this slide up front is. This is the last page of the book. The one thing that I have put in here is this, that good quality is security. And I think that's an important thing to focus on. And that's really what this entire presentation is going to be around doing it right the 1st time. Is one of the best security practices that you can implement. If not the single best. And so we're gonna talk about that as we go through. A little bit of inspiration. So you're gonna see some inspirational quotes at least inspiration to me from individuals like short, who is the father of grandfather, they would say, of statistical quality. And then obviously demoing and some other individuals who are his, his followers. So data have no meaning apart from their context. And so that's an important thing, and and we'll begin to discuss what that means here. So. What is good quality. So. Good quality. Is actually. An outcome, and we'll talk about this in a moment. But quality itself is just a measurement. So when you think about the term quality, it's the standard of something as measured against other things of a similar kind. The degree of excellence, of something. And. Then let's take a look at good quality is an outcome. And this is a legal definition. So this is probably the best definition I've seen, and it really comes from your medical devices. Pharmaceutical life sciences background. The product is effective and appropriate for present and anticipated in future circumstances. So really, it's operates as intended, and it's fit for purpose We think about the difference between these 2 terms. We talk about quality. The example I often use is, when I go to play golf with my friends. I might beat my friend by a couple of strokes and so I've won. So at the end of the day I'm more excellent than they are. But if we both shot. You know. 48 over par, and I shot 46 over par. Neither one of us is very good. Let's be quite honest. And so the idea of good quality is more of an outcome. Is, what is it you're trying to achieve? And the purpose of. Quality is to achieve those type of outcomes. Equally the purpose of security is to achieve outcomes that are secure. And their delivery. And we'll start talking more about that as we go through here. So we think about a term like 99.9%. Is good enough or good enough quality. We're right there, I mean, at the end of the day it's an a plus. We're all getting our 4 on something like that. But if we were to take 99.9 as good. Then here's some things that we'd be running into. 4,400 newborns, or 12 per day, would be delivered to the wrong. Parents. When leaving the hospital. 880,000 credit cards in circulation would have the wrong cardholder information on their strips. 291 pacemaker. Operations would be incorrectly performed each year. Well, that number is high. It's also much lower than the 107 per day of general incorrect medical procedures. That would be performed. So we start talking about data saying, we're 99.9. It really can be a great number, but it really is, and of itself a system measurements not necessarily an outcome. The question is, is it a good outcome? Is 99.9 a good outcome. In these particular situations? And the answer, I think we could all agree, is no. So the idea around good quality versus traditional quality. Really comes from the concept of kind of a cost benefit analysis. And so most people, when you see the left, you'll see that kind of traditional quality model in which the decision is made, and says. Right here is an optimal level of quality. Because in order to implement anything further. It's actually gonna cost us more money. And we're not gonna get the same return on investment. Whereas if you start taking the idea of a true total quality or a good quality model, and you start looking at it from an outcome standpoint. Over time. You'll generally see that as you move closer to that, 100%. You're actually lowering your overall cost. You're improving your overall quality. And you're delivering lower conformance. Which is a super essential task. And we'll start talking about how that works. As we kind of go through here. So. Which leads to the next slide. How do we achieve good quality. And before we do that, I want to take a break because we're gonna get into some more details here and do our second poll. So the second poll here really is asking the question. Which of these 2 characters that are Harrison Ford? Iconic characters do you most identify with? Are you a Han solo, or are you an Indiana Jones, and we'll go ahead and take some time to go ahead and look at those results. Everybody feels very comfortable. These answers are coming in pretty fast. I. This is interesting to watch this. Everybody feels very comfortable in their answer. Yeah, this is a fun one. Yeah. And I do promise there's a method to this particular madness. Looks like it's getting interesting. I give it a few more seconds. Alright and when we're ready I think we can go ahead and end the poll. And then go ahead and share the results, and we got there alright. So, as you can see, we got about a 60 people kind of tend to lean Indiana Jones. Han makes a good performance, but you know. Tried to catch up a little bit, but didn't quite make it all right, so. Good job on there. So what we'll do is I'm gonna go ahead and ask the answers to why. The reason that I asked this question is. From a thought process is, these are 2 iconic characters that have a completely different understanding of how they approach, risk. And so I wanna think about when we look at the way that complex systems and things along those lines that we get into all sorts of like. Sociological science and everything. Han solo. I often think of Han solo as a developer. And an engineer. The type of individual who says, You know. Think about C. 3. Po. He's like, sir, the odds of going through this, you know, asteroid hyperspeed, or, you know, 3,800 to one, and he's like, don't ever tell me the odds. Whereas Indiana Jones is is much different. He's much more risk oriented, a little bit more risk averse, I mean, you think, about. Engineers and an engineer mindset might say, You know what I want to go. And I wanna I wanna rip off the mask of the universe and stare God in the face, you know, whereas Indiana Jones is sort of that risk person is like, have you seen the end of raiders? It doesn't really end well when you do that. And so there is that sort of idea and mindset about how we tend to look at risk, how we tend to look at unpredictability, what could potentially happen? And so we start thinking about unpredictability or entropy or things along those lines. We'll start talking about that a bit more. But that really kind of comes into quality security. And it really does approach how we look at the world. So, and with that we will move on. Thank you all for taking the time to participate in that little poll. All right. So more inspiration, higher quality is less expensive to produce than lower quality. From our friend Edward dimming. So this is something that we're gonna focus on. Now, we're gonna start talking about the concepts of cost. And. The cost of quality. So this is a coq is a methodology that a lot of organizations will use to understand the extent of its resources, which we'll call cost. That's personnel, that's technology things along those lines that are used to either prevent poor quality. That will appraise the quality of the products or services. Or result from. Internal and external failures. And so failures are where. We've had a situation where something internally has escaped. And or externally has escaped out into the wild. And so, from a security standpoint or a quality standpoint, we'll talk about some specific examples there in a minute. This data really does allow organizations to determine the potential savings gained by implementing specific improvements. So. What's the cost to implement something in prevention? Versus, what's the cost of implementing something in the appraisal stage? And so we'll start talking about that. So these costs, they fall into 3 categories. You can see I highlighted them so they're kind of obvious preventive and failure. And so we'll we'll break down. So we call this path modeling. I saw somebody that started thinking about as we start talking about quality concepts. So when I think about prevention, this is where it could go wrong. So when you think about prevention and preventive controls. You're asking the question. What could go wrong? You've identified it. And you start to address it there. A great concept is. By. It's called inverting for those of you who are into 19th century German mathematicians, Carl Gustavo, who's the father of elliptical functions, talked about inverting and basically flipping it on its head and helping you solve a problem. So don't ask how it can be successful. Ask what will cause it to fail. So when we ask that question, what will we cause it to fail? Those types of things are, for example, we would do that in the planning phase and the product design phase, process, design, data, collection analysis and of course, training people to do it right the 1st time. Appraisal. This is kind of when we're checking, we're saying it will go wrong as in if this makes it out. It will go wrong. And so we start thinking about a lot of things like inspection. Testing. The equipment used to test and or the software for implementation. Internal failures. So this is. It's. Going wrong. It is going wrong right now. And so that could be things like, Hey, we've gone through it. This has come out. And we start looking at it and go. This can't work. So a lot of quality individuals, if you work in this, you talk about things like scrap. I can't use it anymore. Rework. I gotta go back and do it again, retesting. I've got to revalidate it. So reworking is I've got to go back and do it right the 1st time or second time. Retesting is I gotta check it to make sure. Yield losses. This is a great example of. I expect to get this much output, but because of my problems I'm only getting this much output. And therefore that lower output. And occupancy and efficiency is actually leading to missed deadlines, missed timelines, Miss deliverables downtime. Obviously nobody likes that, especially in the software world. We don't like to have our systems go down. And then obviously, technical debt, which is a really more. So software, more technology focused idea. But if you're constantly Building, poor product. That's getting stacked back over here. You're eventually running out of time to actually go do anything with it. And it just builds up. Builds up over time, and it becomes untenable. And then, obviously, when you get to external failures, this is where it's wronged other people. And so it's gone out. Whether it's a customer. That's other individuals. That's a patient. This deals with things like returns and replacements, warranty, liability complaints and adjustments. Another great one from a security world, data, breaches. So let's take a look at some of this. And so as we kind of talk into this going, okay, these are costs, and we use the word costs, because this is where you put your money. You put your investment. So what's the value? How much does it cost? And you know which one is the best place to put our funds. So. Talk about an ounce of prevention, it's usually worth the pound of cure. This is actually really aligns well with this. So what we use is what's called a factor of 10. And so a factor of 10 is a methodology for scoring how much it's going to cost to actually implement. A necessary control. To provide the same. Protection as something earlier in stage. So that's the way to think about it. So. For every dollar you spend in prevention. It's gonna cost you $10 an appraisal. So if you think about for every time I if I train somebody right the 1st time. Then I can actually. More trust in my quality process, so maybe I can do more. Do. A little bit less sampling, and I can have a higher trust deal. I can do some of that lower. I don't have to make much investment in testing and inspection resources. But if I have failures, I can then focus those. But in order to, if I have a problem. And I have something that inspection catches. I have to go back, and I have to not only. Make sure that a a protocol is built for that. I also have to go back in and start doing retesting. So all of a sudden just saying, I'm gonna put this inspection and check for it. I've got to go back, and I've got to spend money now. Because inside of my inspection going back and doing training. So it actually cost me more. At that point. Internal failure. I'm not gonna do a. 10 times 10 is a hundred. I'm not gonna do a hundred dollar signs here, but give you the idea that it's factor of 10. So for every dollar it's $10 inspection. It's $100 worth of, and it's going wrong, an internal failure. And so you start thinking about that. Why would that be so expensive? Because not only do you have to do prevention, and I have to do that. Rework. But I also have to do an event potential retesting. Do different testing, add testing protocol potentially add testing resources. Do I need to invest in software or technology or equipment in order to be able to catch these things. That could have been caught or should have been caught, but weren't. So. There's a failure in that process, and I have to go back and figure that out. And then, finally, you get into our favorite category, which is the external failure which is 10 cubed. Which is 1,000. So it's a thousand times more expensive on average. And this is where you start getting into. The the cost of an external. So when we start talking about costs, let's look at average security breach data breach. I think last year was about 4.5 million 5 million dollars for a company. If you look at healthcare, I think it was a little bit higher, like 7. Point 8 million somewhere on there, whereas if you start looking at things like downtime or failures and systems that led to outages, I think you started looking at. I think, for example, in certain things like you. 80 million a year on average, when it comes to like energy sector, when you're dealing with the software on an oil rig. Up to product recalls. For as a medical device, I think it's up to 5 million a day. In some case, I think there's 1 that's up to 600 million dollars. So you can see, these are significant amounts of money. And what's happening is because you've got those outcomes that. Are unpredictable, and they lead to failures. So. We call these 1st group the costs of quality. So this is the cost of doing it right. Whereas these we call these are the costs that you have to expend because you chose to do it. To to not invest early on. So you need to put your money in the places that are gonna deliver the most value. And so we call it the cost of poor quality or cop queue. All right. So more inspiration. It is not enough to do your best. You must know what to do, and then do your best. Another Deming quote. And so, as we kind of move into this section. What I want us to focus on. We've kind of talked about cost. We sort of talked about good quality as a concept. And now we're going to talk about how we kind of dig in and go through that process a bit more. So. Books on a shelf. So some people here may be familiar with the books on the shelf. Analogy. I happen to love it. I think it's a very good example. So the question is, how many different ways can you order. X. Number of Books. On a single shelf, so stacking them next to each other, and any specific order. So you start thinking about that. If I have 2 books I get. 2 possible outcomes. Book, one book, 2, or book 2, and book one. 3 books. I can go. 1, 2, 3. 1, 3, 2. 21323131232, one. You can do all those different ways. So all right, all of a sudden I go to 6 books, and I have 720 possible outcomes. All of a sudden that exponentially grew out of control. So I start thinking about the different sort of things that go into place here and now I have 10 books, 3.6 million possible outcomes. And so if you start thinking about the books, you're gonna go, how does that happen? And this is factorials? And so what this is dealing with different types of. Permutations. And so you start thinking about permutations and math. It's anytime, you see, like a number with a. Exclamation point next to it. It's called a factorial. And what you do is you take that number times, N, minus one again all the way down to one. So 6 times, 5 times, 4 times, 3 times, 2 times one is 720. And so what you find is, you can have 10 books on a shelf, and you could spend. 3.6 million different ways. Of stacking those books in a way that. If anybody asked if I said, Just take 10 books, and my only rule was, put them on a shelf. Then stack them horizontally, or whatever. As opposed to vertically as Egon would say, is a problem. What we would look at we would go. That is 3.6 million. That's a lot of uncertainty. Into what you can do, and the odds of predicting which one somebody's gonna do is just pointless. And that's only with 10. So Kind of leads us to our conversation here. So unpredictable outcomes are not only poor quality, I can't. Have no idea what's going to be the outcome of what I'm doing. They also increase the likelihood that the product's going to fail. Because if I have one way that it works, and I haven't established. The right combinations to make that work. I'm gonna get a lot of unpredictable outcomes. So it's increasing the likelihood that I get the wrong outcome. It's gonna lead to an impact on. End users through longer resolutions. I don't know why it did what it did. I don't know what particular combination, or what particular. Code improvement, I should do. What is the particular control or outcome that I'm trying to focus on? I don't have the right guardrail in place here. I didn't pass a quality gate things along those lines, so I have to go back and investigate that again. I've had an external failure. I now have to go back and go. Do some rework, but I've also got a retest, and I've got to understand why it made it outside of our environment. And then obviously risk to the assets and the product support and processes. So assets. This could be your software code. This could be patient data. This could just be personal health data. This could be the operation. And we're not talking just about risk of the assets when it comes to their confidentiality or their integrity. We're also talking about the availability and the case of it just doesn't work. And if it doesn't work in certain aspects. Forget about security. You're impacting people's lives in a way that could be potentially fatal. So what we wanna do is wanna build from the desired outcome. And you heard me talk about good quality as an outcome. And so good quality is when the product itself is effective and appropriate for present and anticipated future circumstances. So what effective really means? If you look at the definition, is, deliver the intended or desired results every time. Does it do what you intended it to do. It actually works as I intended it. Efficient. The products deliver the intended or desired results in a way that doesn't race resources. So again, if every time we talk about security, this is one of those where quality and security tend to. Feel like they'll want to collide. Because the idea of it needs to be effective. It's got to work every time the right way, and it's got to be secure. Can't waste resources, but it's also got to be efficient if it takes me too long to log in. If I have to go through many pages in order to be able to get access to the information. You'll have product people. You'll have other types of individuals pushing and saying it needs to be quicker. I need to be able to have further uptake. I'm not getting the type of uplift that I need on this particular software application. And it's because we have too many pages that we gotta check in, or we've got too many different things. It's about making it more efficient. It needs to be efficient. And then appropriate products, deliver the intended or desired results, regardless of changing circumstances. Those take. Circumstances can be new regulations. They can be a change in the market. They can be the fact that you've had a merger and acquisition. And so why you had that acquisition. Are you buying in New IP? Are you buying market share? What are you doing? Are you going into a particular new industry? Vertical? So a lot of tools themselves, a lot of people on here, probably in an industry agnostic tool. So if they're working in software, maybe I design something specific for healthcare. So I have very specific regulations. Change constantly. But maybe I'm a software technology, for example, that doesn't really have an industry, but can be used by lots. Well, I still have to be in play in a lot of different moving parts that go into it. So let's take a little example. Let's go back to our books on a shelf, and let's start looking at the idea. So books on a shelf. 2. The search for less entropy. And if anybody can guess what Mel Brooks film this is making reference to. Kudos to you. You can go ahead and throw that in the chat, and then at the end of the day I'll see if anybody gets it? So how do we know the lower number of possible outcomes by 99 without lowering the number of books? So what we wanna do is we wanna take that. 10 books, with its 3.6 2. 8 million possible outcomes. And we want to take that 99% that we talked about earlier. And say, if I could reduce. 10 bucks. The number of possible outcomes by 99.9. How can I do that? There's lots of different ways. But let's take a look and see what we can do. So. An example, approach. 10 books, and put the following guidelines. In place. You can pick any 6 hardcover books you want. And you could pick. Any 4 paperback books you want. That's fine! You have that freedom. All I'm asking is if you take the 6 and the 4. And you split them into 2 groups of 5. And can you make sure that each one of those groups has at least one. Paperback, and one hardback. Very simple sort of rule, structure. Number of possible outcomes. Instead of 3.6. 3,628,800. I think it is. You come out with 256. That is reduction of 99.9 3%. So when you start thinking about just a few guidelines. Help with the outcome. And this is where we start talking about. We'll talk a bit more about security as we kind of go through here. This is where security being implemented. At the right stages, especially in the preventive stage, and early on through good quality practices and making sure that it's part of that you're able to reduce the number of possible outcomes. And again, we think about possible outcomes. We think about entropy. We think about unpredictability. I don't know what's going to happen. And that's a concern. So let's talk about that good quality and security relationship a bit. So. When we think about costs and the preventive costs on the impact on quality, it's that minimize your code and consistency and inefficiency. When we think about software world. We think about security as you're minimizing your threats and attack vectors. So that's what we're really looking at. So a security is to say, what are the threats? What can derail that? What can take that down? I used to work at a company, and you know we had a. The idea of what we wanted to do is we had our business continuity and disaster recovery, and everybody talked about how they wanted to make the product work. So we named our Bcdr. Plan. The company was called Babylon. And what we did is we named the. We named the the Bcdr. Program that we were working on. We call it project because 539 BC. Was when Babylon was overrun. By Cyrus of Persia, and it was like, that's when it happened. And so this is Project. How do we take it down? And what we did was we really worked on asking those questions and addressing those. And again it kind of goes back to inverting what we talked about. Appraisal. And the quality and impact on quality. This is identify, mitigate, sinks, taints, things along those lines that we would often see in the software quality world, where in the impact on security is, it identifies and mitigate weaknesses. Now, weaknesses aren't the same as vulnerabilities. Weaknesses are. I'm tapping on that door, perhaps, and I think I could possibly go in there. That's a potential thing that we need to look at. And that's a separate set of eyes looking at it because oftentimes, when you're doing it in the prevention, you've got somebody sitting there who's inside the product. Whereas in that appraisal somebody who's outside most of the time, appraisals are independent appraisals and independent individuals going. You know what I think that's not as strong. You keep using that word. I do not think it means what you think it means. You keep using that term, you keep using that product. I don't think it's as strong as you think. It is. And then you get into the internal. And so this is where you start looking at things like providing for again, these are the cost for making up for poor quality provide funding for resources for rework and tech debt management. So. I have to. I have limited number of software developers and engineers. I need to. I have a product that needs to constantly move forward. I need new features. I've got to keep up with the market space, but I've got this growing amount of technical debt, so I'm constantly having to do service packs. I'm halfway constantly having to go back and refix things which I'm missing deadlines. It's making it very hard to compete. Whereas you get that internal failure. We're providing funding for resources for vulnerability, remediation. And this is where you start. Here you start. See me talk about tooling and security tooling and traditional security tooling. Most security tools literally sit in here. Your vulnerability, management tools, things that we're all common of. And things along. Those lines are like right. It lights up like a Christmas tree all over the dashboard, like, what are we going to do. And we'll talk a little bit more about that in a minute, and then you get the external. And this is where you just say, you know what? We're gonna set aside funds and resources for credits, recalls and legal support. So we have insurance to handle that. And the same thing on the other side is you're providing insurance and your cyber insurance resources support data breaches. And also you're working out to get independent and incident forensics. So again, a lot of external security support needed there. Those are expensive. A lot of those are retainer, so you may never need them. But you're paying for them just in case you ever do so again, you're getting a lot of investment upfront. But you're not actually getting a used case. And actually being able to use that. And if you do have to use that money, it's basically because you know, it's hit. The fan and thing is just gone wrong. So. Even more inspiration. So the greatest waste in America. Is failure to use the ability of people. Money and time spent for training will be ineffective unless inhibitors to good work are removed. I love me some dimming, by the way. Alright, so security traditional place at the table. So we start thinking about security tooling. It tends to sit over here. So. And I want to bring that up most of the time security tooling security teams, engineering management tools. They tend to sit over in this area that I've got highlighted. They sit in that internal failure. It's already out. Gonna go wrong. You've seen this all the time. You get a vulnerability. If you're on the developer side or your security engineer, you see your. You know. You see your dashboard, you're like, here's the list of vulnerabilities that have come through scan or whatever I need to do. And here's the 468 vulnerabilities that we've identified. Would you please take care of them? And then you hand them to the engineering team and they're looking around kind of going. We're never gonna get this done. How are we gonna do this? Well, we have Sla's. And you run into this combative environment. What's happened is you have all these, and guess what. Some of them may get remediated. But what's gonna end up happening is next month. You're like, Hey, it's actually we've got more now. How do we go up more? We actually fix some of these? Yes, but there's a whole bunch more, because what we didn't do is, we actually didn't fix the problem. We just fixed the symptom. We just basically gave cough medicine because somebody had a cough. We didn't figure out why they were coughing. And that's really where a lot of those tools sit. And if you'll notice from a cost standpoint, a lot of them sit there, and their cost is accordingly. They tend to be pretty much more expensive when you start looking at security tooling. And I say this as a security expert. Oftentimes I spend time looking at security tools, and I go. There's a cost element, and that's what you're paying for. You're paying for. Them to capture work that you yourself could capture with a little bit better investment and training and a little bit better investment and just putting some basic guardrails in place. So One of the things that we'll talk about here is good quality and security best practices for code as we kind of dig into it quality methodologies can help you. They talk about shifting security left, and where possible, start left. And for those of you who are old. Old school individuals from the devops and devsec role like me. The actual term shift left was. Actually start, left. Go back to the beginning and start there. And work from the front. Know what your outcome is going to be. And then establish. Those parameters that you need to do beforehand. Oftentimes what happens is you don't do it from a security standpoint. Then you get all of that potential unpredictability. All those vulnerabilities are really. Potential outcomes and unknown outcomes. And then you have to invest in tooling to capture all of it, this big net to capture everything. And then they just kind of have to throw it back over. And none of it ever actually gets done. But if you start over there on that left side from a security standpoint, just start left. Not just links when you think shift left. Also think, start left getting over there and asking those questions, and from a security standpoint asking what's the outcome. And how do we secure the outcome? How does it cause? It? Can't be a good outcome if it's not effective. If it's not efficient. And if it's not fit for the current and future purposes, so we have to have all of those things factored in both from a quality standpoint as well as a security standpoint. They have to work together. So implement security by design within your design stage and then focus on securing the desired outcome. Not just security controls. And this is one of the biggest things that I have seen having worked in both elements is the idea that we can just fix problems with security by putting controls, bolting controls on. At at the cost of the outcome. And what that does is it creates It creates a lot of. Conflict. It creates a lot of unnecessary work. Because nobody ever actually communicates this point, you hand it off to somebody at 90% of the way done. And say, Oh, by the way, you now have to do the Security Review, and the Security has said, oh, you have to do these other things. Oh, by the way, I know you're running, and you've been doing this, Marathon, but for the last 200 for the last 2 miles we're Gonna. Throw on a weighted vest. And have you carry these Kettlebells? Go for it, please. Thank you so much. It's just not going to happen. And it's gonna create a lot of stress. It's gonna create a lot of breaking. And that's not a good thing. And then obviously focusing on security as lighting the path forward, not blocking it. So the way I often think about it is for those of you who again, think old old school Jeffrey Moore's S curve. And so the idea of we talk about the S curve talks about those crossing the chasm, and he mentions about how you know you have your innovators, you have your early adopters. You have this big chasm before you get to your early majority, late majority and laggards. And so the idea of, rather than having to make that chasm leap. Blindly, and hope for the best, or in reference to Indiana Jones and the last crusade, rather than have to take that leap of faith, build the bridge for which them to be able to walk across. And you know then. Pick the right. Holy Grail to work from anyway, with that. And so. Go on. And then, as we kind of go through here, that kind of wraps in here where we had our upcoming webinar coming up, and I'm gonna hand this back over to to Robert, and we talk more about that. Hey! Thanks. Jonathan. Wow! That was that was really great. My favorite part. But was about the ounce of prevention cost model. And then from a like a Devsec Ops perspective, I perceive it as being about. Finding security issues at later stages in the Cicd pipeline results in an order of magnitude. Per later stage. Absolutely. So that's really fascinating. Before we move on to the Q. And a portion of the webinar. I want to let you know about a few things that are coming up. And Jonathan said, Oh, yeah, look, we've got a webinar coming up. So on August 28.th You're welcome to join Peter Mckee, our head of developer relations. Who will be presenting on code quality at warp. Powering up continuous delivery with static analysis. Let's see, we just dropped a link in the chat that you can use to register for the webinar. So check it out. As a reminder. A short survey will appear at the end of the Q. And a session, and we greatly appreciate your feedback. Okay, one more thing right now on your screen, you should see a brief poll asking if you'd like to learn more about our solution. So please take an instant to respond. We'd love to get back to you. Okay. Let's see Q. And A. We have some good questions. I think. John, this is one is, with your experiences particularly suited for you to answer. How have you seen this approach put in place in real organisations. And what were the results? You've got a lot of background. In applying this, you know. Start left. Approach. How does it work for you? Yeah, so Interestingly enough. Prior to working at Sonar, I actually had. Actually onboard and sonar as a as a product an organization. I was working out on healthcare technology. And so One of the opportunities that I had. There is. I was the senior director for risk and compliance, and so I was really kind of sitting on the on the security side. But I had just a large view on on everything that we needed to do, and being in a healthcare organization, healthcare technology. There was a highly regulated requirement. So I had to understand all the regulations and the requirements there for medical devices, things along those lines. Whether it was pharmaceutical. Hipaa. You name it everything along those lines. And so what often we would find is, we had the opportunity to sit down, and I would have like the Vp. Of engineering came over to one day, said, Hey, we wanna be able to look at. How is it that. You know, trouble for the idea of tooling. And so we're able to do. Example, we were able to sit there and have a conversation. And say, Hey, we want to improve our code quality. We wanna understand how to improve our code quality. But we wanna understand what we need to be able to do. So. He was having trouble, actually getting funding. For the product, and we all understand we all live in a budget world where budgets are usually set and everybody's got their own budget, and they already have ideas of how they want to spend that money. And so we had to actually have a conversation was, okay. This is not just. A. Engineering or development thing. This is a. Finance department and talking to the Cfo. And helping them understand the the way that we're utilizing our resources and making sure that our utilization costs are what they need to be, because that's gonna. Participate and help us manage the funding associated with onboarding more resources. Can we do more with less? How do you do that? Going to my boss, who is the Ciso, and having the conversation of Hey, from a security standpoint, we need to be able to. We spend a lot of time and money looking at dashboards, tuning dashboards, building things, and identifying stuff that quite honestly, it never goes away. We need to do a better job of actually going back and investing in quality and saying, How can we improve the overall quality outcomes, and being able to show that what we would do over time is, Look, I will lower the noise. And so it became more of an approach of. Noise. Red noise, canceling versus noise, reduction. So a lot of noise reduction headphones. And this was the example I actually used them. I said, right now we have a noise reduction process where basically, we put a physical barrier and it blocks out all noise sound equally even those things that you know it blocks off the things that aren't really important, but it also blocks off the things that are important. And we need to do a better job of being able to identify our priorities. And so by taking the quality approach and looking going back into that original design, what we're able to do is actually have these. Conversations and say, Right, let's look at the noise canceling. So what we're able to do is actually sit in a. A room of 500 people. Here all the different conversations going on. But I can focus on the important conversations I can focus on the important sounds, and I can say, those are. The things that I need to prioritize right now. And by prioritizing these things I will solve larger problems. If I can focus on the conversation in front of me. Because it's the most important thing. If I can go focus on this particular thing, it's the most important thing it allows me to put That emphasis in place. So when I do have things that escape and go into an internal failure stage that identify that they're able to be prioritized. And then further reduce the entropy. And it kind of goes that idea of how quality and security have always been aligned. Think about. Quality has been around since the. The guild. The guilds of, you know, medieval Europe. And so then you get into things like the factory model, the and you know a part of the industrial Revolution. And then you, you know, you get into what was BSI 51 50, I think, which was the 1950 s, which is basically your plan to check act. All of that that eventually became Iso, 9,001 and 1987. You take that, and you start thinking about centuries of quality management methodology. And then you partner up against like information security. And so for those of you who aren't as old as me. The very 1st information security standard really didn't come formalized until 1,009, and that was BSI 7, 9, 9, which most of you would now know today is iso 2, 7 0 0 1 didn't. Take on the Iso language until, like 2,000. But. That was 1,995, and for those of you who. Don't remember. Back to 1,995, I mean the entire. Sound the entire like discography of Nirvana. Was over 5, you know, before 1,995 like. The entire popularity of the counting crows was over before 1,995. I mean, there's all these different things that were going on but. When start thinking about that. That original information security standard really wasn't cyber security. So it was like. It was built off of it, the actual standard, 799 7, 9, 2. Which for those of you who know Iso, for example. Is027-72-7002. Is the annexa, controls good practice, controls. 7, 7, 9, 2 was the same thing, but it was all based upon quality, modeling, and continual improvement. So the inception of security was always founded in the idea of quality and the continuous improvement. And so it's really not 2 separate things. Quote, good quality has security as a component, and it is part of what makes things fit for purpose or deliver that. And so actually being able to take that at a highly regulated space. We were able to do that. But we have also taken it in other places where we're dealing with things globally, like localization and translation and and other companies that I've worked at in my past. Here's here's a good one about the ounce of prevention cost model. Question is, is there proof for the factor of 10 statements? I've seen pitches before, but I've found it very hard to find evidence for this. Yeah, so that's a great question. So there are different types of use cases. And most of the time is actually ends. At at somewhat of an industry level. There is more data around there. You have to dig for it. Usually. What I have found is when I've done my own modeling within an organization. What I've been able to do, because most of the time I've had both quality and security within my job titles. Anybody who's checked me out on Linkedin knows that most of the time I've got both of those in there. Whenever I do the modeling it tends to pan out close to that factor of 10, sometimes the factor of 8, sometimes the Roi might be 7, sometimes it might be even be higher, but it tends to come out on average, but it will actually work more in the idea of How much you're currently investing in tools and then asking the question of where you should invest them, because most of the time the struggle. That people run into, and the factor of 10 is. Being able to showcase it over a long enough timeframe to show. Here's what we're currently spending and where we're spending our money, which might be out of alignment. Here's where we make that investment. And then being able to see the transition. Because if you've got a lot of quality issues, and this, especially for those who have a sick Sigma background. You know that if you're currently sitting at a Sigma 3, and you're trying to get to a Sigma 4 sigma 5 that you're most people. If. For those who don't know, like Cmi for more software like Cmi content maturity. If you're at a 3 and you're trying to get to a 4 the level of investment. And the feedback, and and where you're gonna want to put your efforts is gonna be different. And so, being able to model it over a long period of time. Most organizations. Don't really invest the amount of time. To be able to say like, Here's where you begin to see it, and it can take. When I was doing my investments I would sit there and take a look at something, and it might take me 18 months of constantly looking at the value chain. But it also meant a lot of conversations to be fair on the upfront with personnel about saying, you know, we need to get out of. Out of certain budget mindsets of being able to say, This is my money, this is your money, and these are our resources, but it often becomes that difficult, because organizations are so quick to move forward. And there's such a dynamic change. That those individuals. Aren't normally in the same position. Long enough to be able to assess that particular, that model and things along those lines. But if you do have the chance, it does pan out. And whoever asked that question, it's a great question. It does vary, I think, over the long enough period of time, though. Yeah, we can follow up with them. People have taken that theory, and they have to apply it at their organization or individual level. Obviously, if there's additional questions about that, you know. And and there's a way for me to contact. I can follow up with them indirectly. I'd love to. Here's a really good one I like, is there a mapping cheat between software code quality and software code security. Controls metrics, requirements that can aid a developer in the prevention. And and appraisal phases. Oh, yeah, I would say, if I was gonna use a good one. I think it's iso. You guys may have seen it on the poll that we originally. I don't know how many people are familiar with Iso 25. That's a software quality. Iso. And it incorporates actual security protocols into place inside there. So if you start thinking about anybody who's got a data protection background, you understand that data security like you have to keep it secure. But you also have to keep it accurate. You have to. It's 1 component of it. One of the things that that Iso 25 standard does a really good job of. Is giving you that framework to work from, and it's got some controls. If you take that 25 family, the normative. So I'm talking Iso language, and I apologize. But for those of you who talk about normative Normative, 25,000 normative reference. And you look at the 25 0, 1 0 standard the recent updates have actually been really good. And so you can begin to see sort of that mapping, and how you would want to build in that control. I don't think that's probably the best way to start again. If you see that you have other questions about it more than happy to speak to you one on one about it, but that's that's probably where I would start. If you're wanting to say, how do I do? A mapping between something like a 9,001 and a 2 7 0 0 1 find yourself especially in software world. Just go to 25 0 1 0. And just look at the Normative family for the 25,000 series. Let's see, here's a good one outdated are often associated with security risks, but if I only use safe methods, I don't need to update the library. What are your thoughts? So. Do you have to update? The answer is, do you have to make those updates? And I'm gonna break this down? So. My thoughts are. Everything is based upon the concept of risk. And are you comfortable with the outcomes and. Each organization is gonna have a different approach. And this is where I think we struggle and go back to the Han Solo Indiana Jones. Variation. There are going to be some people on here who are very Indiana Jones, and are like, absolutely. You must do this, and there you got people who are like don't ever tell me the odds. And so when you start doing that real risk asking yourself What is? What is the overall risk score? What am I comfortable with? And so if you think about, I say, the likelihood is, something's gonna happen once a year. That's the annual risk occurrence. And you start having the conversation. If it's gonna cost me about X months, this, my single loss, occurrence, or sla. I'm gonna multiply those 2 together, and I get what's called an Al an Al, because like I'm gonna drink but it's the Al E, and so what it is is, that's the annual loss, expectancy. And so. I would tell people to to do that kind of exercise and actually spend some time talking with your risk. People, because quality and security are both very much risk driven standards. And I think, to the person who was asking about the 25. That, I answer about the 2510 on code quality another standard. Okay? So just look at your standard risk management frameworks. I personally think one of the best risk management frameworks out there is. Rmf. That is nested 37, I think. R, 2. Just because of the tearing model. But what it will let you do is basically sit there and say, Hey, here's an it asset risk. And that's actually one of their classes and the types and being able to sit there and kind of do an exercise, and ask yourself what is the comfort level that we have for those types of losses and understanding? What. Those old code bases are used for, like, if they're not used for anything that is, gonna have certain levels of access to criticality. That's fine. If you think about the old school, Osi 7 layer model depending upon where those particular vulnerabilities are sitting. If they're sitting at one layer, they can potentially impact all the layers above them. And so a lot of vulnerabilities tend to go up one down one things along those lines. But you just have to be conscious of where it sits. And what's what's also sitting there? If you got something that's potentially gonna cause a problem at the data layer versus something that's gonna cause a an issue at the application or the presentation layer things along those lines. Yeah. Because I'm talkative. Well, there were a lot of other questions that we thought we could get to in the in the live Q. And a. But we didn't. So I'll remind you that. Yeah, no, it's good. We will answer those. We'll post those in communities, Jonathan, and thanks for all the excellent questions. Again go to the community. It's a great place to pose additional questions and review questions along with our responses. We. We. Scrub those the the community all the time, and people are on top of of questions. So it's a great resource for you. Please visit sonar com for further information on how clean as you code benefits you as a developer. And to find information on our future webinars and events. Thank you again in advance for providing your feedback a survey that it's about to pop up.",
+  "fetchedAt": "2026-03-14T09:23:00.189Z"
+}

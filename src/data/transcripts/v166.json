@@ -1,0 +1,853 @@
+{
+  "videoId": "v166",
+  "youtubeId": "fYr5Yxz7w_Q",
+  "segments": [
+    {
+      "text": "[Music]",
+      "offset": 1180,
+      "duration": 5499
+    },
+    {
+      "text": "hi this is Robbie from sonar in this",
+      "offset": 7480,
+      "duration": 3520
+    },
+    {
+      "text": "video I'm going to be demonstrating how",
+      "offset": 9840,
+      "duration": 4160
+    },
+    {
+      "text": "to scan C++ code with sonar",
+      "offset": 11000,
+      "duration": 4719
+    },
+    {
+      "text": "Cube the first thing you're going to",
+      "offset": 14000,
+      "duration": 3800
+    },
+    {
+      "text": "want to do is check our documentation",
+      "offset": 15719,
+      "duration": 3241
+    },
+    {
+      "text": "and ensure that the project you're",
+      "offset": 17800,
+      "duration": 3479
+    },
+    {
+      "text": "scanning is supported by sonar",
+      "offset": 18960,
+      "duration": 4479
+    },
+    {
+      "text": "Cube we support a large number of",
+      "offset": 21279,
+      "duration": 3920
+    },
+    {
+      "text": "language standards compilers and build",
+      "offset": 23439,
+      "duration": 5240
+    },
+    {
+      "text": "tools from Custom scripts to make to Ms",
+      "offset": 25199,
+      "duration": 5961
+    },
+    {
+      "text": "build we have two different methods for",
+      "offset": 28679,
+      "duration": 4001
+    },
+    {
+      "text": "scanning c-based",
+      "offset": 31160,
+      "duration": 3960
+    },
+    {
+      "text": "languages one is to use the sonar build",
+      "offset": 32680,
+      "duration": 4000
+    },
+    {
+      "text": "wrapper and the other is to use a",
+      "offset": 35120,
+      "duration": 3439
+    },
+    {
+      "text": "compilation",
+      "offset": 36680,
+      "duration": 3840
+    },
+    {
+      "text": "database the build wrapper is the",
+      "offset": 38559,
+      "duration": 4761
+    },
+    {
+      "text": "recommended method for scanning C++ code",
+      "offset": 40520,
+      "duration": 4400
+    },
+    {
+      "text": "but if your build system doesn't support",
+      "offset": 43320,
+      "duration": 3239
+    },
+    {
+      "text": "the build wrapper if you don't want to",
+      "offset": 44920,
+      "duration": 3720
+    },
+    {
+      "text": "run a clean build before analysis or if",
+      "offset": 46559,
+      "duration": 3721
+    },
+    {
+      "text": "the build wrapper isn't compatible with",
+      "offset": 48640,
+      "duration": 3719
+    },
+    {
+      "text": "your Hardware you can use a tool like",
+      "offset": 50280,
+      "duration": 4240
+    },
+    {
+      "text": "cmake or ninja to generate a file",
+      "offset": 52359,
+      "duration": 3680
+    },
+    {
+      "text": "containing the commands to build your",
+      "offset": 54520,
+      "duration": 4320
+    },
+    {
+      "text": "project called a compilation database",
+      "offset": 56039,
+      "duration": 4200
+    },
+    {
+      "text": "this file can then be passed to the",
+      "offset": 58840,
+      "duration": 3519
+    },
+    {
+      "text": "sonar scanner for your",
+      "offset": 60239,
+      "duration": 4441
+    },
+    {
+      "text": "analysis I'll cover examples of both of",
+      "offset": 62359,
+      "duration": 5080
+    },
+    {
+      "text": "these methods in this",
+      "offset": 64680,
+      "duration": 5160
+    },
+    {
+      "text": "video for this example I have an",
+      "offset": 67439,
+      "duration": 4161
+    },
+    {
+      "text": "instance of sonar Cube running locally",
+      "offset": 69840,
+      "duration": 2840
+    },
+    {
+      "text": "on Port",
+      "offset": 71600,
+      "duration": 3879
+    },
+    {
+      "text": "9000 to run a sample scan locally I'll",
+      "offset": 72680,
+      "duration": 4479
+    },
+    {
+      "text": "need the sonar scanner executable",
+      "offset": 75479,
+      "duration": 3000
+    },
+    {
+      "text": "downloaded on the machine I'm running",
+      "offset": 77159,
+      "duration": 2401
+    },
+    {
+      "text": "the scan",
+      "offset": 78479,
+      "duration": 3881
+    },
+    {
+      "text": "from you can download this executable",
+      "offset": 79560,
+      "duration": 6320
+    },
+    {
+      "text": "from our documentation page on the sonar",
+      "offset": 82360,
+      "duration": 5759
+    },
+    {
+      "text": "scanner for this example I've already",
+      "offset": 85880,
+      "duration": 4040
+    },
+    {
+      "text": "downloaded the zip file for my windows",
+      "offset": 88119,
+      "duration": 4161
+    },
+    {
+      "text": "machine extracted the contents and added",
+      "offset": 89920,
+      "duration": 5080
+    },
+    {
+      "text": "the bin directory to my path this would",
+      "offset": 92280,
+      "duration": 4280
+    },
+    {
+      "text": "typically be downloaded and made",
+      "offset": 95000,
+      "duration": 3439
+    },
+    {
+      "text": "available for use as a part of a build",
+      "offset": 96560,
+      "duration": 3680
+    },
+    {
+      "text": "or CI",
+      "offset": 98439,
+      "duration": 4040
+    },
+    {
+      "text": "process next I'll download the sonar",
+      "offset": 100240,
+      "duration": 4000
+    },
+    {
+      "text": "build wrapper from my Sonar Cube",
+      "offset": 102479,
+      "duration": 3881
+    },
+    {
+      "text": "instance you can find the path to",
+      "offset": 104240,
+      "duration": 4120
+    },
+    {
+      "text": "download this in our build rapper",
+      "offset": 106360,
+      "duration": 4200
+    },
+    {
+      "text": "documentation on the C family languages",
+      "offset": 108360,
+      "duration": 4240
+    },
+    {
+      "text": "documentation",
+      "offset": 110560,
+      "duration": 5280
+    },
+    {
+      "text": "page once you've copied the URL",
+      "offset": 112600,
+      "duration": 5799
+    },
+    {
+      "text": "path append it to your server URL and",
+      "offset": 115840,
+      "duration": 6000
+    },
+    {
+      "text": "the download should begin immediately",
+      "offset": 118399,
+      "duration": 3441
+    },
+    {
+      "text": "next you'll unzip the build wrapper and",
+      "offset": 123399,
+      "duration": 5561
+    },
+    {
+      "text": "add its file location to your path as",
+      "offset": 125159,
+      "duration": 3801
+    },
+    {
+      "text": "well I'm now ready to run the build with",
+      "offset": 129000,
+      "duration": 5040
+    },
+    {
+      "text": "the build wrapper for this project I'm",
+      "offset": 131520,
+      "duration": 4999
+    },
+    {
+      "text": "using Ms build but in all cases the",
+      "offset": 134040,
+      "duration": 4279
+    },
+    {
+      "text": "build wrapper can be added as a prefix",
+      "offset": 136519,
+      "duration": 3440
+    },
+    {
+      "text": "to any clean build command for the",
+      "offset": 138319,
+      "duration": 4521
+    },
+    {
+      "text": "supported compilers one thing to note is",
+      "offset": 139959,
+      "duration": 4401
+    },
+    {
+      "text": "that we need to specify an output",
+      "offset": 142840,
+      "duration": 3800
+    },
+    {
+      "text": "directory for the build wrapper this is",
+      "offset": 144360,
+      "duration": 6720
+    },
+    {
+      "text": "specified using the outdoor parameter",
+      "offset": 146640,
+      "duration": 4440
+    },
+    {
+      "text": "after I've run the clean build and have",
+      "offset": 157280,
+      "duration": 4959
+    },
+    {
+      "text": "an output from the build",
+      "offset": 159080,
+      "duration": 3159
+    },
+    {
+      "text": "wrapper we need to make sure our scanner",
+      "offset": 162920,
+      "duration": 4399
+    },
+    {
+      "text": "knows how to find the output",
+      "offset": 165440,
+      "duration": 4200
+    },
+    {
+      "text": "directory I've added a file to the root",
+      "offset": 167319,
+      "duration": 5761
+    },
+    {
+      "text": "of my C++ project called sonar project.",
+      "offset": 169640,
+      "duration": 5800
+    },
+    {
+      "text": "properties this is a configuration file",
+      "offset": 173080,
+      "duration": 4799
+    },
+    {
+      "text": "for the scanner where we can specify",
+      "offset": 175440,
+      "duration": 4040
+    },
+    {
+      "text": "analysis parameters for the project",
+      "offset": 177879,
+      "duration": 4481
+    },
+    {
+      "text": "we're working working with in this file",
+      "offset": 179480,
+      "duration": 5360
+    },
+    {
+      "text": "I've added the property sonar. cam.",
+      "offset": 182360,
+      "duration": 4519
+    },
+    {
+      "text": "build wrapper output and set it to the",
+      "offset": 184840,
+      "duration": 4240
+    },
+    {
+      "text": "location of the outo parameter from our",
+      "offset": 186879,
+      "duration": 4041
+    },
+    {
+      "text": "build wrapper",
+      "offset": 189080,
+      "duration": 5200
+    },
+    {
+      "text": "step I'm now ready to scan the project",
+      "offset": 190920,
+      "duration": 5120
+    },
+    {
+      "text": "at this point I've already specified all",
+      "offset": 194280,
+      "duration": 3879
+    },
+    {
+      "text": "of the parameters for my project in the",
+      "offset": 196040,
+      "duration": 4160
+    },
+    {
+      "text": "properties file so I can simply run the",
+      "offset": 198159,
+      "duration": 4881
+    },
+    {
+      "text": "command sonar",
+      "offset": 200200,
+      "duration": 2840
+    },
+    {
+      "text": "scanner a few things to note about using",
+      "offset": 206760,
+      "duration": 5280
+    },
+    {
+      "text": "the build w method this should always be",
+      "offset": 209200,
+      "duration": 4399
+    },
+    {
+      "text": "run on the same machine from which you",
+      "offset": 212040,
+      "duration": 3960
+    },
+    {
+      "text": "are performing the scan it should always",
+      "offset": 213599,
+      "duration": 4481
+    },
+    {
+      "text": "be run before each build and should",
+      "offset": 216000,
+      "duration": 4760
+    },
+    {
+      "text": "always be used with a clean build if",
+      "offset": 218080,
+      "duration": 4320
+    },
+    {
+      "text": "you're running the build wrapper as a",
+      "offset": 220760,
+      "duration": 4000
+    },
+    {
+      "text": "part of an automated analysis you should",
+      "offset": 222400,
+      "duration": 4199
+    },
+    {
+      "text": "download and install it before each",
+      "offset": 224760,
+      "duration": 5640
+    },
+    {
+      "text": "analysis so you always have the latest",
+      "offset": 226599,
+      "duration": 3801
+    },
+    {
+      "text": "version our project has now been scanned",
+      "offset": 230920,
+      "duration": 4720
+    },
+    {
+      "text": "and we can review the results on Sonar",
+      "offset": 233920,
+      "duration": 4720
+    },
+    {
+      "text": "Cube",
+      "offset": 235640,
+      "duration": 3000
+    },
+    {
+      "text": "this concludes the demonstration for the",
+      "offset": 240120,
+      "duration": 4319
+    },
+    {
+      "text": "build wrapper",
+      "offset": 241799,
+      "duration": 2640
+    },
+    {
+      "text": "method to demonstrate a scan using a",
+      "offset": 244840,
+      "duration": 4959
+    },
+    {
+      "text": "compilation database I'll be using a Mac",
+      "offset": 247360,
+      "duration": 4799
+    },
+    {
+      "text": "with an M2 Chip since this setup is not",
+      "offset": 249799,
+      "duration": 5000
+    },
+    {
+      "text": "supported by the build wrapper I have a",
+      "offset": 252159,
+      "duration": 4961
+    },
+    {
+      "text": "similar C++ project here however this",
+      "offset": 254799,
+      "duration": 4641
+    },
+    {
+      "text": "one is built using the cmake build",
+      "offset": 257120,
+      "duration": 5320
+    },
+    {
+      "text": "tool for this project I'll run cmake",
+      "offset": 259440,
+      "duration": 6000
+    },
+    {
+      "text": "from a directory called",
+      "offset": 262440,
+      "duration": 3000
+    },
+    {
+      "text": "build after running the cmate command a",
+      "offset": 265520,
+      "duration": 4679
+    },
+    {
+      "text": "file called compile command commands.",
+      "offset": 268520,
+      "duration": 4720
+    },
+    {
+      "text": "Json is generated in the build",
+      "offset": 270199,
+      "duration": 5000
+    },
+    {
+      "text": "directory this is the compilation",
+      "offset": 273240,
+      "duration": 3519
+    },
+    {
+      "text": "database that contains the commands to",
+      "offset": 275199,
+      "duration": 4081
+    },
+    {
+      "text": "build my",
+      "offset": 276759,
+      "duration": 2521
+    },
+    {
+      "text": "project I then run make to actually",
+      "offset": 279840,
+      "duration": 4880
+    },
+    {
+      "text": "build my",
+      "offset": 282160,
+      "duration": 2560
+    },
+    {
+      "text": "project before using this file with the",
+      "offset": 285880,
+      "duration": 3720
+    },
+    {
+      "text": "sonar scanner you should ensure that",
+      "offset": 287960,
+      "duration": 3040
+    },
+    {
+      "text": "your build tool is generating the",
+      "offset": 289600,
+      "duration": 3080
+    },
+    {
+      "text": "correct commands to build your project",
+      "offset": 291000,
+      "duration": 4360
+    },
+    {
+      "text": "by running them to verify they succeed",
+      "offset": 292680,
+      "duration": 4400
+    },
+    {
+      "text": "now that I have the compilation database",
+      "offset": 295360,
+      "duration": 3520
+    },
+    {
+      "text": "generated I need to point my Sonar",
+      "offset": 297080,
+      "duration": 4280
+    },
+    {
+      "text": "scanner to the file",
+      "offset": 298880,
+      "duration": 5000
+    },
+    {
+      "text": "I can do this using the sonar. cam.",
+      "offset": 301360,
+      "duration": 4760
+    },
+    {
+      "text": "compile commands and providing a path to",
+      "offset": 303880,
+      "duration": 4840
+    },
+    {
+      "text": "the compilation",
+      "offset": 306120,
+      "duration": 4880
+    },
+    {
+      "text": "database I can place this in my Sonar",
+      "offset": 308720,
+      "duration": 4600
+    },
+    {
+      "text": "project. properties file or use it as a",
+      "offset": 311000,
+      "duration": 4960
+    },
+    {
+      "text": "part of the scan",
+      "offset": 313320,
+      "duration": 5080
+    },
+    {
+      "text": "command I can now run the sonar scanner",
+      "offset": 315960,
+      "duration": 4239
+    },
+    {
+      "text": "command and after the scan completes I",
+      "offset": 318400,
+      "duration": 6239
+    },
+    {
+      "text": "can review my results in sonar Cube",
+      "offset": 320199,
+      "duration": 4440
+    },
+    {
+      "text": "here's a few additional notes to",
+      "offset": 332639,
+      "duration": 3921
+    },
+    {
+      "text": "consider as you set up your own C++",
+      "offset": 333960,
+      "duration": 5000
+    },
+    {
+      "text": "projects the project Setup Wizard",
+      "offset": 336560,
+      "duration": 4160
+    },
+    {
+      "text": "provides detailed instructions for",
+      "offset": 338960,
+      "duration": 3840
+    },
+    {
+      "text": "scanning projects across all operating",
+      "offset": 340720,
+      "duration": 4680
+    },
+    {
+      "text": "systems we support it will get you set",
+      "offset": 342800,
+      "duration": 4600
+    },
+    {
+      "text": "up with an analysis token provide the",
+      "offset": 345400,
+      "duration": 3799
+    },
+    {
+      "text": "build wrapper download and provide the",
+      "offset": 347400,
+      "duration": 3680
+    },
+    {
+      "text": "commands you'll need to scan your",
+      "offset": 349199,
+      "duration": 4280
+    },
+    {
+      "text": "project it also includes a link to our",
+      "offset": 351080,
+      "duration": 4920
+    },
+    {
+      "text": "GitHub page with dozens of configuration",
+      "offset": 353479,
+      "duration": 6881
+    },
+    {
+      "text": "examples for C++ projects",
+      "offset": 356000,
+      "duration": 4360
+    },
+    {
+      "text": "if you run into issues setting the",
+      "offset": 361199,
+      "duration": 4120
+    },
+    {
+      "text": "sonar. verbos parameter and your",
+      "offset": 363120,
+      "duration": 5000
+    },
+    {
+      "text": "properties file will enable debug logs",
+      "offset": 365319,
+      "duration": 5241
+    },
+    {
+      "text": "this should help you",
+      "offset": 368120,
+      "duration": 4359
+    },
+    {
+      "text": "troubleshoot if the problem is still",
+      "offset": 370560,
+      "duration": 3800
+    },
+    {
+      "text": "unclear you can submit a help desk",
+      "offset": 372479,
+      "duration": 3641
+    },
+    {
+      "text": "ticket via your support portal if you",
+      "offset": 374360,
+      "duration": 4520
+    },
+    {
+      "text": "purchase commercial support otherwise",
+      "offset": 376120,
+      "duration": 4519
+    },
+    {
+      "text": "our community forum is a great resource",
+      "offset": 378880,
+      "duration": 3120
+    },
+    {
+      "text": "to reach out for",
+      "offset": 380639,
+      "duration": 3721
+    },
+    {
+      "text": "help create a new",
+      "offset": 382000,
+      "duration": 6160
+    },
+    {
+      "text": "topic add the sonar Cube or sonar Cloud",
+      "offset": 384360,
+      "duration": 7800
+    },
+    {
+      "text": "category add the C family",
+      "offset": 388160,
+      "duration": 4000
+    },
+    {
+      "text": "tag and don't forget to attach a file",
+      "offset": 393360,
+      "duration": 4200
+    },
+    {
+      "text": "containing a copy of your debug logs",
+      "offset": 395840,
+      "duration": 4359
+    },
+    {
+      "text": "from your project",
+      "offset": 397560,
+      "duration": 2639
+    },
+    {
+      "text": "scan if you're using a commercial",
+      "offset": 400280,
+      "duration": 4319
+    },
+    {
+      "text": "edition of sonar Cube check out our",
+      "offset": 402520,
+      "duration": 3720
+    },
+    {
+      "text": "documentation for how to set up branch",
+      "offset": 404599,
+      "duration": 4401
+    },
+    {
+      "text": "and pull request scanning this leverages",
+      "offset": 406240,
+      "duration": 4840
+    },
+    {
+      "text": "our incremental analysis feature which",
+      "offset": 409000,
+      "duration": 4039
+    },
+    {
+      "text": "will speed things up after you get your",
+      "offset": 411080,
+      "duration": 5710
+    },
+    {
+      "text": "initial scan run on your project",
+      "offset": 413039,
+      "duration": 8170
+    },
+    {
+      "text": "[Music]",
+      "offset": 416790,
+      "duration": 4419
+    }
+  ],
+  "fullText": "[Music] hi this is Robbie from sonar in this video I'm going to be demonstrating how to scan C++ code with sonar Cube the first thing you're going to want to do is check our documentation and ensure that the project you're scanning is supported by sonar Cube we support a large number of language standards compilers and build tools from Custom scripts to make to Ms build we have two different methods for scanning c-based languages one is to use the sonar build wrapper and the other is to use a compilation database the build wrapper is the recommended method for scanning C++ code but if your build system doesn't support the build wrapper if you don't want to run a clean build before analysis or if the build wrapper isn't compatible with your Hardware you can use a tool like cmake or ninja to generate a file containing the commands to build your project called a compilation database this file can then be passed to the sonar scanner for your analysis I'll cover examples of both of these methods in this video for this example I have an instance of sonar Cube running locally on Port 9000 to run a sample scan locally I'll need the sonar scanner executable downloaded on the machine I'm running the scan from you can download this executable from our documentation page on the sonar scanner for this example I've already downloaded the zip file for my windows machine extracted the contents and added the bin directory to my path this would typically be downloaded and made available for use as a part of a build or CI process next I'll download the sonar build wrapper from my Sonar Cube instance you can find the path to download this in our build rapper documentation on the C family languages documentation page once you've copied the URL path append it to your server URL and the download should begin immediately next you'll unzip the build wrapper and add its file location to your path as well I'm now ready to run the build with the build wrapper for this project I'm using Ms build but in all cases the build wrapper can be added as a prefix to any clean build command for the supported compilers one thing to note is that we need to specify an output directory for the build wrapper this is specified using the outdoor parameter after I've run the clean build and have an output from the build wrapper we need to make sure our scanner knows how to find the output directory I've added a file to the root of my C++ project called sonar project. properties this is a configuration file for the scanner where we can specify analysis parameters for the project we're working working with in this file I've added the property sonar. cam. build wrapper output and set it to the location of the outo parameter from our build wrapper step I'm now ready to scan the project at this point I've already specified all of the parameters for my project in the properties file so I can simply run the command sonar scanner a few things to note about using the build w method this should always be run on the same machine from which you are performing the scan it should always be run before each build and should always be used with a clean build if you're running the build wrapper as a part of an automated analysis you should download and install it before each analysis so you always have the latest version our project has now been scanned and we can review the results on Sonar Cube this concludes the demonstration for the build wrapper method to demonstrate a scan using a compilation database I'll be using a Mac with an M2 Chip since this setup is not supported by the build wrapper I have a similar C++ project here however this one is built using the cmake build tool for this project I'll run cmake from a directory called build after running the cmate command a file called compile command commands. Json is generated in the build directory this is the compilation database that contains the commands to build my project I then run make to actually build my project before using this file with the sonar scanner you should ensure that your build tool is generating the correct commands to build your project by running them to verify they succeed now that I have the compilation database generated I need to point my Sonar scanner to the file I can do this using the sonar. cam. compile commands and providing a path to the compilation database I can place this in my Sonar project. properties file or use it as a part of the scan command I can now run the sonar scanner command and after the scan completes I can review my results in sonar Cube here's a few additional notes to consider as you set up your own C++ projects the project Setup Wizard provides detailed instructions for scanning projects across all operating systems we support it will get you set up with an analysis token provide the build wrapper download and provide the commands you'll need to scan your project it also includes a link to our GitHub page with dozens of configuration examples for C++ projects if you run into issues setting the sonar. verbos parameter and your properties file will enable debug logs this should help you troubleshoot if the problem is still unclear you can submit a help desk ticket via your support portal if you purchase commercial support otherwise our community forum is a great resource to reach out for help create a new topic add the sonar Cube or sonar Cloud category add the C family tag and don't forget to attach a file containing a copy of your debug logs from your project scan if you're using a commercial edition of sonar Cube check out our documentation for how to set up branch and pull request scanning this leverages our incremental analysis feature which will speed things up after you get your initial scan run on your project [Music]",
+  "fetchedAt": "2026-03-14T09:24:42.480Z"
+}

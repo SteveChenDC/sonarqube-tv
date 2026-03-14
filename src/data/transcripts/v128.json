@@ -1,0 +1,1558 @@
+{
+  "videoId": "v128",
+  "youtubeId": "bBHKuKr-E7Q",
+  "segments": [
+    {
+      "text": "A story of monsters, heroes and victories. We invite you to learn about this, the need for good practices in Clean code today.",
+      "offset": 10201,
+      "duration": 10000
+    },
+    {
+      "text": "Along with the consequences of. Not using it. Showing concepts like PIN and learn as you code using free and open source tools.",
+      "offset": 20201,
+      "duration": 10000
+    },
+    {
+      "text": "Will help you write better Java code. My name is Manish Kapoor and I will be a moderator today for this webinar.",
+      "offset": 30201,
+      "duration": 8000
+    },
+    {
+      "text": "The webinar will be presented by Jonathan Villa. Who is joining us all the way from Prague.",
+      "offset": 38201,
+      "duration": 6000
+    },
+    {
+      "text": "Please allow me to very quickly go through some essential housekeeping points before we start the webinar. This session will last about 40 min.",
+      "offset": 44201,
+      "duration": 9000
+    },
+    {
+      "text": "And it will include a Q&A. At the end of the webinar. You're invited to submit your questions via the Q&A box.",
+      "offset": 53201,
+      "duration": 8000
+    },
+    {
+      "text": "In Zoom and not via the chat box.",
+      "offset": 61201,
+      "duration": 4000
+    },
+    {
+      "text": "We have 2 panelists today from Sona joining us. Thanks, Dorian and Hassin for joining us today.",
+      "offset": 65201,
+      "duration": 7000
+    },
+    {
+      "text": "They will be here during the entire session. Answering your questions live during the webinar in the Q&A box.",
+      "offset": 72201,
+      "duration": 9000
+    },
+    {
+      "text": "This session will be recorded and we'll send out a link via email in the upcoming days. Finally, at the end of this webinar, a short survey will pop up on your screen.",
+      "offset": 81201,
+      "duration": 12000
+    },
+    {
+      "text": "We consider feedback to be a gift. Thank you for in advance for participating in this survey.",
+      "offset": 93201,
+      "duration": 10000
+    },
+    {
+      "text": "So without further ado. I would like to introduce a speaker for today's webinar. Jonathan Villa.",
+      "offset": 103201,
+      "duration": 7000
+    },
+    {
+      "text": "Jonathan, take it away.",
+      "offset": 110201,
+      "duration": 4000
+    },
+    {
+      "text": "Hello, thank you. Thank you, Manish, for the introduction. Well, I'm Jonathan.",
+      "offset": 114201,
+      "duration": 5000
+    },
+    {
+      "text": "I'm Java champion and I'm developer advocate at Sonar. But I'm also one of the leaders or the of the Barcelona Java community.",
+      "offset": 119201,
+      "duration": 11000
+    },
+    {
+      "text": "And co-founder of JVCN and the PC and conferences that we organize in Barcelona.",
+      "offset": 130201,
+      "duration": 7000
+    },
+    {
+      "text": "I think working as developer for more than 30 years using several languages, but mainly Java.",
+      "offset": 137201,
+      "duration": 13000
+    },
+    {
+      "text": "So let me start this presentation with, what it is for me, a huge number. 2 trillion dollars is the cost of poor quality code annually, but just only considering United States.",
+      "offset": 150201,
+      "duration": 13000
+    },
+    {
+      "text": "But you can tell me, okay, I'm not interested on money. Yeah. But for sure you are interested in time.",
+      "offset": 163201,
+      "duration": 10000
+    },
+    {
+      "text": "So for this is the time spent per month and developer. Fixing errors. So these are huge numbers.",
+      "offset": 173201,
+      "duration": 10000
+    },
+    {
+      "text": "That I hope now I have your attention to follow the presentation. And let's talk about clean code and sonar, but sonar, provides.",
+      "offset": 183201,
+      "duration": 12000
+    },
+    {
+      "text": "Companies and individuals with. Tooling and methodologies. In order to go to a clean code state. For all their Source code.",
+      "offset": 195201,
+      "duration": 12000
+    },
+    {
+      "text": "Using sonar link is a free plug-in that you can install in the most IDs that will help the developer to, spot issues and learn from them.",
+      "offset": 207201,
+      "duration": 10000
+    },
+    {
+      "text": "As they code or sonnet cube and sorry cloud that are the way to group and all the static statistics for clinkle for different projects and provide quality gates that can allow or reject.",
+      "offset": 217201,
+      "duration": 7000
+    },
+    {
+      "text": "Merging code into your. Main branches. If you want to know more, just Please, go to sunrise.",
+      "offset": 224201,
+      "duration": 15000
+    },
+    {
+      "text": "Dot com and you will see more information about these tools. But, I started the presentation saying, well, this is a story about monsters.",
+      "offset": 239201,
+      "duration": 10000
+    },
+    {
+      "text": "Keros and victories. And the first thing is to introduce our monster. So monster project, probably you can identify some of them.",
+      "offset": 249201,
+      "duration": 12000
+    },
+    {
+      "text": "That you have been working on? Well, they exhibit baggy behavior. Because well, yeah, you know, they fail sometimes in production.",
+      "offset": 261201,
+      "duration": 4000
+    },
+    {
+      "text": "It's not, they are not getting, users and developers enough confidence.",
+      "offset": 265201,
+      "duration": 13000
+    },
+    {
+      "text": "They have like a lot a high coupling when they have classes that are being depending on other classes.",
+      "offset": 278201,
+      "duration": 9000
+    },
+    {
+      "text": "And also they are they have low cohesion because. The main objects are not grouped together.",
+      "offset": 287201,
+      "duration": 4000
+    },
+    {
+      "text": "So you have the same domain object or the same concept scattered across the code. They are unmantainable because, well yes, these high coupling, low cohesion, a lot of bugs, several repetitions.",
+      "offset": 291201,
+      "duration": 17000
+    },
+    {
+      "text": "It's not clear, well, it's hard to maintain. You know what I mean, right?",
+      "offset": 308201,
+      "duration": 5000
+    },
+    {
+      "text": "They use obsolete libraries, frameworks, and it's, well, you are not up to date.",
+      "offset": 313201,
+      "duration": 7000
+    },
+    {
+      "text": "With performance improvements or even security improvements so yeah it's also a problem of those monster projects.",
+      "offset": 320201,
+      "duration": 10000
+    },
+    {
+      "text": "And they also have a lot of code. We PE across the, the source code. And and then every time that you want to refactor something you need to touch several places well in the end you don't touch all of the places so it's like you're improving some parts but not others.",
+      "offset": 330201,
+      "duration": 18000
+    },
+    {
+      "text": "But it's also about security. So they are those projects are more susceptible to common vulnerabilities and and exposures because well they are using Not updated, libraries, they are not scanning the security.",
+      "offset": 348201,
+      "duration": 17000
+    },
+    {
+      "text": "Therefore, well, it's more likely that this software will suffer from these CVs. It they also can lead to have more memory leaks and load through both and I will explain your why.",
+      "offset": 365201,
+      "duration": 14000
+    },
+    {
+      "text": "Because if you have big classes, big methods that are doing a lot of things. It's, more likely that every time that you want to do one thing, you will do several things at the same time.",
+      "offset": 379201,
+      "duration": 13000
+    },
+    {
+      "text": "Because you don't have the code separated by responsibilities. And that could lead that in some cases you are not closing resources for instance, therefore you are going to have memory there.",
+      "offset": 392201,
+      "duration": 7000
+    },
+    {
+      "text": "That you are not really seeing. And even you have low throughput because as you are doing a lot of things every time that you want to do one thing then this could lead that definitely you are doing more things than needed.",
+      "offset": 399201,
+      "duration": 22000
+    },
+    {
+      "text": "But also it is it has nondeterministic results. Because again, this, this code repeated this code, scattered across all the source code.",
+      "offset": 421201,
+      "duration": 14000
+    },
+    {
+      "text": "It's all those responsibilities mixed in one method. Or one class are making that every time they do something, you are also doing other things that you were not counting with.",
+      "offset": 435201,
+      "duration": 12000
+    },
+    {
+      "text": "Therefore, it could be that those extra things that you didn't want to do are creating results that you didn't expect.",
+      "offset": 447201,
+      "duration": 10000
+    },
+    {
+      "text": "As it is complicated. To create a specific test for a specific responsibility because you are mixing a lot of things.",
+      "offset": 457201,
+      "duration": 10000
+    },
+    {
+      "text": "And you are having code scattered across all the all the modules or all the packages. Then it's hard to define very specific.",
+      "offset": 467201,
+      "duration": 12000
+    },
+    {
+      "text": "Test that are covered in specific responsibilities or specific features. Therefore, it could be that you are missing some use cases.",
+      "offset": 479201,
+      "duration": 10000
+    },
+    {
+      "text": "Finally, everything is mixing and you have like a project with that. Big tech depth. For sure, you can think about some project that you have been working on.",
+      "offset": 489201,
+      "duration": 13000
+    },
+    {
+      "text": "That can. That can have some of all. Of these features, right?",
+      "offset": 502201,
+      "duration": 9000
+    },
+    {
+      "text": "But what about the cost of those monster projects? Well, just on the considering 4 quality code, well, it's more than 2.4 trillion dollars.",
+      "offset": 511201,
+      "duration": 10000
+    },
+    {
+      "text": "And from those finding and fixing backs, it's more than 600 billions. So it's a lot of money.",
+      "offset": 521201,
+      "duration": 8000
+    },
+    {
+      "text": "Impacted by errors and poor quality code. With the chart on the lab, you can see that obviously the healthier your code is.",
+      "offset": 529201,
+      "duration": 12000
+    },
+    {
+      "text": "The less number of defects it will have Therefore, the less money we are going to spend on fixing those bugs.",
+      "offset": 541201,
+      "duration": 8000
+    },
+    {
+      "text": "That's clear, right? But it's not everything lost. Okay, we have those, monster projects, but we have also.",
+      "offset": 549201,
+      "duration": 10000
+    },
+    {
+      "text": "Ketos, you know, probably you know someone that it is a hero. Probably you are a heal that you have been working in a monster project.",
+      "offset": 559201,
+      "duration": 9000
+    },
+    {
+      "text": "And you fix it somehow. Some parts so let's let's see Who is our hero? What's what's our, our, our hero does in our favorite day?",
+      "offset": 568201,
+      "duration": 12000
+    },
+    {
+      "text": "But basically, obviously, through those new features because this is what we are paid off, right?",
+      "offset": 580201,
+      "duration": 7000
+    },
+    {
+      "text": "Paid for. We fix box? Yes, definitely, some of them.",
+      "offset": 587201,
+      "duration": 7000
+    },
+    {
+      "text": "But it's clear that we don't have enough time or take that fixing you know some cases I remember some days where we were creating those epics.",
+      "offset": 594201,
+      "duration": 13000
+    },
+    {
+      "text": "TED, those, sprints have been a lot of issues. They, regarding TED.",
+      "offset": 607201,
+      "duration": 8000
+    },
+    {
+      "text": "And in every sprint we were pushing.",
+      "offset": 615201,
+      "duration": 5000
+    },
+    {
+      "text": "Those springs, those epics. And it was very hard that we solved any of them. It's hard to dedicate time to tech depth fixing.",
+      "offset": 620201,
+      "duration": 12000
+    },
+    {
+      "text": "Do you okay? Obviously. You know, studies, new technologies. Well, we have here, a, a Paul.",
+      "offset": 632201,
+      "duration": 13000
+    },
+    {
+      "text": "Dedicated time to fixing technical depth. Jack, I would I would love to see.",
+      "offset": 645201,
+      "duration": 8000
+    },
+    {
+      "text": "Which is your opinion if you had enough time or if you have enough time to fix technical debt. Hmm.",
+      "offset": 653201,
+      "duration": 7000
+    },
+    {
+      "text": "It would be a surprise for me to see. And in off or a whole sprint. My experience is not that.",
+      "offset": 660201,
+      "duration": 6000
+    },
+    {
+      "text": "It's, we didn't have enough time. And we were adding more tech that.",
+      "offset": 666201,
+      "duration": 9000
+    },
+    {
+      "text": "To future sprints",
+      "offset": 675201,
+      "duration": 3000
+    },
+    {
+      "text": "But, let's see which are your answers.",
+      "offset": 678201,
+      "duration": 7000
+    },
+    {
+      "text": "Yeah, only a little. Yeah, looks more, more. Aligned to what I thought.",
+      "offset": 685201,
+      "duration": 5000
+    },
+    {
+      "text": "So, it's just considering non, only a little. It's, it's a lot.",
+      "offset": 690201,
+      "duration": 7000
+    },
+    {
+      "text": "It's a. So yeah. I, I thought that was that. That was the case.",
+      "offset": 697201,
+      "duration": 5000
+    },
+    {
+      "text": "So yeah, you are in my team, right? Okay. So what do you do to? To be up to date.",
+      "offset": 702201,
+      "duration": 8000
+    },
+    {
+      "text": "Well, you studied new technologies, right? The videos. Online, you do training, to do courses.",
+      "offset": 710201,
+      "duration": 12000
+    },
+    {
+      "text": "You go to Meetops, I hope so. Did you go to meet ups and you go to conferences or webinars like this one.",
+      "offset": 722201,
+      "duration": 9000
+    },
+    {
+      "text": "Yeah, so you keep up to date and you keep trained. Well, basically in cool things and cool and trendy, trendy technologies, but that's also important too.",
+      "offset": 731201,
+      "duration": 12000
+    },
+    {
+      "text": "So that's that's very good for you. Let me congratulate you for being here. It's a very a bit in a great step.",
+      "offset": 743201,
+      "duration": 8000
+    },
+    {
+      "text": "Also you do some meetings, right? Who doesn't? And as I do. For sure you are investing a lot of time saying you're a mute to some of your colleagues.",
+      "offset": 751201,
+      "duration": 13000
+    },
+    {
+      "text": "But I would say that most of the time you rant about all code. So you could be well.",
+      "offset": 764201,
+      "duration": 7000
+    },
+    {
+      "text": "Now, there's those computers and those keyboards are not and monitors are not common. But I started being that guy.",
+      "offset": 771201,
+      "duration": 9000
+    },
+    {
+      "text": "Even with the ties, at that time we were we were wearing a tie. So what the surprise is, the Jacob rant about code, you complain about all cold, until the moment.",
+      "offset": 780201,
+      "duration": 12000
+    },
+    {
+      "text": "You check the blame in GET and see it was your who created that code. But that that's common.",
+      "offset": 792201,
+      "duration": 8000
+    },
+    {
+      "text": "Things happen. So the important part here is that. For all of us. That are.",
+      "offset": 800201,
+      "duration": 10000
+    },
+    {
+      "text": "Trying to be heroes. We need to define which is our need banner. So which is our goal?",
+      "offset": 810201,
+      "duration": 8000
+    },
+    {
+      "text": "In life.",
+      "offset": 818201,
+      "duration": 3000
+    },
+    {
+      "text": "Well, there are 2 different For software, we have software that is secure. Untainable, reliable, portable, that's clear, right?",
+      "offset": 821201,
+      "duration": 11000
+    },
+    {
+      "text": "But for the developer, it's also important. That the developer needs to be confident about what they are Pushing the repository.",
+      "offset": 832201,
+      "duration": 12000
+    },
+    {
+      "text": "Is what it is expected and they are not introducing. Neil issues. The developer needs to be proud about the job that they are doing.",
+      "offset": 844201,
+      "duration": 12000
+    },
+    {
+      "text": "And also skilled so they need to learn about the issues about the railroads. In order to be a better developer every day.",
+      "offset": 856201,
+      "duration": 11000
+    },
+    {
+      "text": "So our hero in this case heard about 1 one order the clean code warriors order And our hero decided to join them.",
+      "offset": 867201,
+      "duration": 14000
+    },
+    {
+      "text": "Because yeah, it's a fancy name. It's, from movies, right? So it they should be.",
+      "offset": 881201,
+      "duration": 6000
+    },
+    {
+      "text": "Clear about what to do in order to fix. Cold. And the first thing that our hero learns is the principles.",
+      "offset": 887201,
+      "duration": 13000
+    },
+    {
+      "text": "Or week principles. So the code that they Police has to be consistent. Has to have the same format across all the software.",
+      "offset": 900201,
+      "duration": 12000
+    },
+    {
+      "text": "The same conventions used to. Same problems.",
+      "offset": 912201,
+      "duration": 7000
+    },
+    {
+      "text": "It has to be identifiable because we use, clear naming for, our variables, methods.",
+      "offset": 919201,
+      "duration": 8000
+    },
+    {
+      "text": "And it's clear what a variable is containing, not using. IAD as names of variables.",
+      "offset": 927201,
+      "duration": 9000
+    },
+    {
+      "text": "It has to be intentional because it has to be it has to have a clear goal, clear focus of what it is doing.",
+      "offset": 936201,
+      "duration": 8000
+    },
+    {
+      "text": "Not having several responsibilities. Logical because we are using Simple and logic approach not over engineering.",
+      "offset": 944201,
+      "duration": 11000
+    },
+    {
+      "text": "Anything. Complete? Yeah, obviously, because we don't have That code, it's not going to have incomplete.",
+      "offset": 955201,
+      "duration": 9000
+    },
+    {
+      "text": "Parts, you know, those 2 do comments. We will see in a minute and efficient obviously because it is not concerning more resources than needed.",
+      "offset": 964201,
+      "duration": 10000
+    },
+    {
+      "text": "Again, the having a clear focus and not over engineering. Any solution. Adaptable because this call for sure is going to above.",
+      "offset": 974201,
+      "duration": 13000
+    },
+    {
+      "text": "Yeah, I have some friends that are still running Java 5 applications with swing. In specific servers.",
+      "offset": 987201,
+      "duration": 8000
+    },
+    {
+      "text": "But that's not the common case. It has to evolve, therefore, needs to be focused so the code doesn't have to have several responsibilities.",
+      "offset": 995201,
+      "duration": 11000
+    },
+    {
+      "text": "No repetitions, that's why it should be distinct in order to refactor code. Once with refactor one part.",
+      "offset": 1006201,
+      "duration": 9000
+    },
+    {
+      "text": "Hello, parts that are consumers of that part are already fixed modular because it will help us to evolve individually every domain of our application.",
+      "offset": 1015201,
+      "duration": 11000
+    },
+    {
+      "text": "And obviously tested. So it has to be. It has to have a good test coverage. But more, more importantly.",
+      "offset": 1026201,
+      "duration": 10000
+    },
+    {
+      "text": "It has to be, it has to have. Well, or good tests. It's not only important.",
+      "offset": 1036201,
+      "duration": 7000
+    },
+    {
+      "text": "Lines covered by test but also that your tests are Cool, and are testing the right thing. Does not only simply",
+      "offset": 1043201,
+      "duration": 11000
+    },
+    {
+      "text": "So change red lines to green lines. And also responsible. Because obviously it has to be lawful, not infringing any.",
+      "offset": 1054201,
+      "duration": 11000
+    },
+    {
+      "text": "Copyrights and licensing. Also trash worth it because it doesn't have to include hard coded passwords.",
+      "offset": 1065201,
+      "duration": 11000
+    },
+    {
+      "text": "And private information. Yeah, you think that's not common, but we will see in a minute that it is most more common than we think.",
+      "offset": 1076201,
+      "duration": 8000
+    },
+    {
+      "text": "And respectful because obviously children use offensive language. This is also important.",
+      "offset": 1084201,
+      "duration": 8000
+    },
+    {
+      "text": "So our hero after joining the order of the clean code warriors, well. Hey, are trained with several tricks.",
+      "offset": 1092201,
+      "duration": 10000
+    },
+    {
+      "text": "Let's see which are the tricks. They are trained. Well, first, let's see for those principles.",
+      "offset": 1102201,
+      "duration": 8000
+    },
+    {
+      "text": "Examples of code. Yeah, show me the code. So for being consistent for MADAM, identifiable.",
+      "offset": 1110201,
+      "duration": 8000
+    },
+    {
+      "text": "Yeah, you see in the left. It's complicated to understand what the variable A is containing.",
+      "offset": 1118201,
+      "duration": 8000
+    },
+    {
+      "text": "Or a variable that it is a name that it is going to be hard to read. That's complicated.",
+      "offset": 1126201,
+      "duration": 7000
+    },
+    {
+      "text": "It's not identifiable. And probably we can have even. Formatting problems.",
+      "offset": 1133201,
+      "duration": 7000
+    },
+    {
+      "text": "So use a clear name for our variables identifying whether they are containing methods, classes. We are not paying by characters so you are not going to be.",
+      "offset": 1140201,
+      "duration": 17000
+    },
+    {
+      "text": "Accounted for using more characters.",
+      "offset": 1157201,
+      "duration": 5000
+    },
+    {
+      "text": "Intentional. Clear. Yeah, the complexity of the code should be Hello?",
+      "offset": 1162201,
+      "duration": 10000
+    },
+    {
+      "text": "I assume that you are more familiar with the concept called, Cyclomatic complexity.",
+      "offset": 1172201,
+      "duration": 8000
+    },
+    {
+      "text": "I would use this in order to explain these other concept. You know, cyclomatic complexity is counting or calculating the complexity.",
+      "offset": 1180201,
+      "duration": 10000
+    },
+    {
+      "text": "For a given part of the call. So on the top, part on the left, we see a code that it is doing.",
+      "offset": 1190201,
+      "duration": 9000
+    },
+    {
+      "text": "I don't know exactly from a first glance what it is doing. If we don't read the first comment.",
+      "offset": 1199201,
+      "duration": 6000
+    },
+    {
+      "text": "But the cyclomatic complexity is 5. And on the right, we have a simple Switch case.",
+      "offset": 1205201,
+      "duration": 10000
+    },
+    {
+      "text": "Easy, right? But it has the same cyclomatic complexity. So from this point, you You both agree with me.",
+      "offset": 1215201,
+      "duration": 9000
+    },
+    {
+      "text": "That the left part is way more complex than the right part. But the number is the same. So then we introduce another concept called cognitive complexity.",
+      "offset": 1224201,
+      "duration": 11000
+    },
+    {
+      "text": "That it is really calculating. The difference or well the level of complexity for a given code to be read.",
+      "offset": 1235201,
+      "duration": 8000
+    },
+    {
+      "text": "So on the left side, on the bottom part. You see the same method as a ball, but now it has a level of 9.",
+      "offset": 1243201,
+      "duration": 8000
+    },
+    {
+      "text": "But on the right part now it has a level of one. It's clear that a switch case is very simple to understand.",
+      "offset": 1251201,
+      "duration": 6000
+    },
+    {
+      "text": "It's and a method with several branches. And conditionals is more complex. Now we have the 2 different numbers and it's clear.",
+      "offset": 1257201,
+      "duration": 9000
+    },
+    {
+      "text": "We should go to the cognitive. Complexity number one. And only going up. If it is really, Need it.",
+      "offset": 1266201,
+      "duration": 12000
+    },
+    {
+      "text": "Intentional efficient. Well, in this case, I've seen this in several cases in my past. Yeah let's write a calculator let's write a an agnostic parser.",
+      "offset": 1278201,
+      "duration": 12000
+    },
+    {
+      "text": "Let's write I don't know. Database, connector because yeah one day We will do extra features.",
+      "offset": 1290201,
+      "duration": 11000
+    },
+    {
+      "text": "One day we will connect to our random database. Yeah, but that day never comes. So it's being efficient.",
+      "offset": 1301201,
+      "duration": 10000
+    },
+    {
+      "text": "In this case, if we only need to sum 5 plus 10, Let's go 5 plus 10.",
+      "offset": 1311201,
+      "duration": 7000
+    },
+    {
+      "text": "Don't over engineering. Don't overengineer your methods. This is all also. Wasting resources.",
+      "offset": 1318201,
+      "duration": 9000
+    },
+    {
+      "text": "So why if it's not needed, don't do it.",
+      "offset": 1327201,
+      "duration": 5000
+    },
+    {
+      "text": "Adaptable, in this case, this thing, okay, because in the in the left part we are using the same code to get the username and the password to connect the database abstracted in a method that's it, no repetition.",
+      "offset": 1332201,
+      "duration": 16000
+    },
+    {
+      "text": "It will be easier to evolve. With Focus. In this case, we have an entity.",
+      "offset": 1348201,
+      "duration": 7000
+    },
+    {
+      "text": "That is. He's representing a book. It should have only this.",
+      "offset": 1355201,
+      "duration": 7000
+    },
+    {
+      "text": "An entity. That is a book in this case we are even adding a method to print to console that it is not A book is not responsible to print.",
+      "offset": 1362201,
+      "duration": 12000
+    },
+    {
+      "text": "A book is an entity. That's it.",
+      "offset": 1374201,
+      "duration": 3000
+    },
+    {
+      "text": "That's worth it. Yeah. In some in some projects that are passwords are coded.",
+      "offset": 1377201,
+      "duration": 11000
+    },
+    {
+      "text": "And this is this is a serious problem. There are. Even several github scrappers that are going to search for passwords.",
+      "offset": 1388201,
+      "duration": 9000
+    },
+    {
+      "text": "So, use an external and external. Service to handle passwords for the for instance. There are different ways but do not hard code as words.",
+      "offset": 1397201,
+      "duration": 13000
+    },
+    {
+      "text": "So now that our hero Well, we know the monster, we know the hero, we know what a hero does.",
+      "offset": 1410201,
+      "duration": 4000
+    },
+    {
+      "text": "Every day. The rules. Sorry, the principles and now some of the tricks. Before our hero.",
+      "offset": 1414201,
+      "duration": 11000
+    },
+    {
+      "text": "Starts fighting our monster. They need a report, okay? Our projects out there. Really?",
+      "offset": 1425201,
+      "duration": 10000
+    },
+    {
+      "text": "Because it could be that everything is fine already. Right? No reason to worry about. But the thing is That, taking the reports or the telemetry from Sonar Link.",
+      "offset": 1435201,
+      "duration": 17000
+    },
+    {
+      "text": "We see that lots and lots of projects out there thousands are having a lot of issues and these are the most detected issues.",
+      "offset": 1452201,
+      "duration": 6000
+    },
+    {
+      "text": "Cognitive complexity. Is to hide. We are having assignments for local variables, function parameters, private fields and methods.",
+      "offset": 1458201,
+      "duration": 16000
+    },
+    {
+      "text": "Not used. That's it's. Definitely.",
+      "offset": 1474201,
+      "duration": 6000
+    },
+    {
+      "text": "Not in favor of having a clear code and even not having a complete code because you never know if those if this code is not used because it's not needed or because the consumer of this code is not.",
+      "offset": 1480201,
+      "duration": 17000
+    },
+    {
+      "text": "Created yet. So yeah, you never know. That's a problem.",
+      "offset": 1497201,
+      "duration": 5000
+    },
+    {
+      "text": "A lot of to the tax. Yeah, so. It's like to do we need to fix this connection.",
+      "offset": 1502201,
+      "duration": 7000
+    },
+    {
+      "text": "Yeah, and it never happens.",
+      "offset": 1509201,
+      "duration": 3000
+    },
+    {
+      "text": "Prototypes, well in Java if you are using. A collection. Yeah, specify which is the type of the collection, not just use the generic.",
+      "offset": 1512201,
+      "duration": 10000
+    },
+    {
+      "text": "Collection type on the variable. So it's important to use. The specific, collection type.",
+      "offset": 1522201,
+      "duration": 11000
+    },
+    {
+      "text": "Genetic exceptions, we should create a specific exceptions to be thrown.",
+      "offset": 1533201,
+      "duration": 7000
+    },
+    {
+      "text": "Local variables. Yeah, again, we are declaring A to a variable and then doing the return A, simply do the return.",
+      "offset": 1540201,
+      "duration": 10000
+    },
+    {
+      "text": "Mmm, the content. And, reference to node should never different. Well, in this case, we are not checking for notes.",
+      "offset": 1550201,
+      "duration": 8000
+    },
+    {
+      "text": "And we will suffer from node pointer exceptions.",
+      "offset": 1558201,
+      "duration": 4000
+    },
+    {
+      "text": "Yeah, we are having methods empty. Yeah, it's weird, but we have this issue.",
+      "offset": 1562201,
+      "duration": 7000
+    },
+    {
+      "text": "And most detected security issues. Secure power should be useful. Correct into a database. Again, we are using not non secure cryptographic algorithms.",
+      "offset": 1569201,
+      "duration": 12000
+    },
+    {
+      "text": "Or passwords. Attacks for xml s with remote Scripting.",
+      "offset": 1581201,
+      "duration": 12000
+    },
+    {
+      "text": "Endpoints that are BUNNERL across side script. And credentials that are hard coded.",
+      "offset": 1593201,
+      "duration": 7000
+    },
+    {
+      "text": "So we are suffering from a lot of issues, security issues in the, in the project analyzed by.",
+      "offset": 1600201,
+      "duration": 7000
+    },
+    {
+      "text": "By Sonarland. And function calls to the input output that are vulnerable to path injection when we are using the path.",
+      "offset": 1607201,
+      "duration": 12000
+    },
+    {
+      "text": "Valuable. Sent by the user. So in summary, what we have is a lot of the code.",
+      "offset": 1619201,
+      "duration": 7000
+    },
+    {
+      "text": "Also, a lot of complexity issues to do blogs, error handling. Not handling is some vulnerable. At this point, it's also important for our hero to know some of the Java hints because they are Java developers.",
+      "offset": 1626201,
+      "duration": 20000
+    },
+    {
+      "text": "So they are they want some Java specific things. Well, basically this is one of them. In order to avoid, SQL injection.",
+      "offset": 1646201,
+      "duration": 12000
+    },
+    {
+      "text": "So instead of using a string concatenation. Just use prepared statements and then Hmm, specify the value of those.",
+      "offset": 1658201,
+      "duration": 5000
+    },
+    {
+      "text": "Parameters and this will avoid. Ed. With HTTP request the directions. Well, in this case, if we use a value coming from the user and we use it as a for the direction well we should we should have like a list of allow endpoints or destinations and then check that the value from the user.",
+      "offset": 1663201,
+      "duration": 28000
+    },
+    {
+      "text": "Is in in God list. And if you're using a spring. Yes spring does a discovery of the The beans.",
+      "offset": 1691201,
+      "duration": 13000
+    },
+    {
+      "text": "From the. From a package and below. If we don't specify the package. In our.",
+      "offset": 1704201,
+      "duration": 8000
+    },
+    {
+      "text": "Springboard application. It will start from the clasp. So anyone having jars to the class path can have been running in your system.",
+      "offset": 1712201,
+      "duration": 14000
+    },
+    {
+      "text": "So that definitely do not miss the package. On your Springboard application. Class that with the, the, the.",
+      "offset": 1726201,
+      "duration": 11000
+    },
+    {
+      "text": "If you have threats and you have a method that is synchronized, that means it will be only accepting one of one call.",
+      "offset": 1737201,
+      "duration": 11000
+    },
+    {
+      "text": "If we need to. Sleep the thread. Do not use 3 thread sleep. Because this is going to block.",
+      "offset": 1748201,
+      "duration": 8000
+    },
+    {
+      "text": "Correct. Instead of this, use the weight. And with this weight. The lock is released and used by other threats.",
+      "offset": 1756201,
+      "duration": 9000
+    },
+    {
+      "text": "So it's it's better to use this. And this way instead of the red sleep.",
+      "offset": 1765201,
+      "duration": 9000
+    },
+    {
+      "text": "Also with a printf style format. Well, you know, it happens to me that when I use this this code.",
+      "offset": 1774201,
+      "duration": 12000
+    },
+    {
+      "text": "Sometimes I miss. The argument. Sometimes I use a different type argument for the value that I'm using.",
+      "offset": 1786201,
+      "duration": 2000
+    },
+    {
+      "text": "So it's important to have the right arguments. In the in the method call. And also the right type.",
+      "offset": 1788201,
+      "duration": 19000
+    },
+    {
+      "text": "Arguments on the method call. In order to not have. Weird and respected behaviors. Okay, this could be silly, but it is not.",
+      "offset": 1807201,
+      "duration": 13000
+    },
+    {
+      "text": "Sorry, it's important that tests. Are really testing. So if you are using a subj for instance and you do a search that Okay, if you don't do the condition at the end, the method will pass, the test will pass.",
+      "offset": 1820201,
+      "duration": 18000
+    },
+    {
+      "text": "Green, fine. Yeah, because you haven't tested anything. So it's important to check that you're all your ascends as really are really having the condition.",
+      "offset": 1838201,
+      "duration": 12000
+    },
+    {
+      "text": "In the. Again, this seems, obvious. Sometimes it's not that obvious. A nice thing for Java.",
+      "offset": 1850201,
+      "duration": 10000
+    },
+    {
+      "text": "19 is that when you are creating a hash map and you want to specify capacity. If you use the constructor.",
+      "offset": 1860201,
+      "duration": 13000
+    },
+    {
+      "text": "This. In this case, if you send the capacity of 1 million. Then this is not a sure.",
+      "offset": 1873201,
+      "duration": 8000
+    },
+    {
+      "text": "That you will have a hash map of 1 million elements. It is going to create. The elements with bunches.",
+      "offset": 1881201,
+      "duration": 10000
+    },
+    {
+      "text": "So it like first batch. 1,000 when you reach. The limit another 1,000 and another 1,000 so you can have like the your picks or memory picks.",
+      "offset": 1891201,
+      "duration": 14000
+    },
+    {
+      "text": "Instead of that, if you use, the static method of the high set in this case, new has said, then with this you are going to have the 1 million elements.",
+      "offset": 1905201,
+      "duration": 15000
+    },
+    {
+      "text": "At that at that moment so you don't know you will not suffer from picks. Yeah, in the future.",
+      "offset": 1920201,
+      "duration": 7000
+    },
+    {
+      "text": "Well, this is simple, but it's important that, don't. Make a class depending on A lot of classes.",
+      "offset": 1927201,
+      "duration": 10000
+    },
+    {
+      "text": "This will simplify. Your tests definitely. And yeah, the reading of what really a class is doing.",
+      "offset": 1937201,
+      "duration": 11000
+    },
+    {
+      "text": "Also, it's important, methods should not perform too many tasks. So, yes, break them down into smaller methods that are really doing.",
+      "offset": 1948201,
+      "duration": 11000
+    },
+    {
+      "text": "Simpler task that you can test. And that you can really understand. The goal of those methods.",
+      "offset": 1959201,
+      "duration": 12000
+    },
+    {
+      "text": "So that's it's a lot of things to have in mind. It's our hero alone with the IDE and the code.",
+      "offset": 1971201,
+      "duration": 11000
+    },
+    {
+      "text": "And having all these things in mind. Well, basically, no. So we can have, con analyzer in the IDE.",
+      "offset": 1982201,
+      "duration": 12000
+    },
+    {
+      "text": "Where you as you code you are going to see as you can see now here all the highlighted exceptions.",
+      "offset": 1994201,
+      "duration": 9000
+    },
+    {
+      "text": "Sorry, issues. So, Sunderland will show you which are the issues that you are introducing in your code on the open files.",
+      "offset": 2003201,
+      "duration": 8000
+    },
+    {
+      "text": "Then you can fix them. As they happen. So it's, it's important to use this tool in order to avoid having issues.",
+      "offset": 2011201,
+      "duration": 12000
+    },
+    {
+      "text": "Does that possibly? Also, son are cubes on a cloud that are introducing quality gates that you can connect in the CI.",
+      "offset": 2023201,
+      "duration": 9000
+    },
+    {
+      "text": "So, in the CI, you are going to, have this. Tool having to quality.",
+      "offset": 2032201,
+      "duration": 8000
+    },
+    {
+      "text": "And if your code is not, aligned with the quality gate, it's not passing.",
+      "offset": 2040201,
+      "duration": 5000
+    },
+    {
+      "text": "Considering test coverage issues, bugs, vulnerabilities, then your port request will not be allowed to be merged in the main branch.",
+      "offset": 2045201,
+      "duration": 11000
+    },
+    {
+      "text": "And basically, with all of this, these tools. This knowledge which are the benefits that our hero will get from this.",
+      "offset": 2056201,
+      "duration": 11000
+    },
+    {
+      "text": "Well, considering the cleaners you code, It's that, yeah, you are fixing issues.",
+      "offset": 2067201,
+      "duration": 6000
+    },
+    {
+      "text": "Before they go to the repository. So it's between you and your ID. And you fix tissues and you submit.",
+      "offset": 2073201,
+      "duration": 10000
+    },
+    {
+      "text": "Clinko to the repository. That's important. For the developer. To be confident about the work.",
+      "offset": 2083201,
+      "duration": 8000
+    },
+    {
+      "text": "That they are pushing so that are positive. And it's very easy with the tool.",
+      "offset": 2091201,
+      "duration": 6000
+    },
+    {
+      "text": "Learn as you code because it's not about only fixing issues. It's also about learning from them.",
+      "offset": 2097201,
+      "duration": 8000
+    },
+    {
+      "text": "And Sunderland for the uses. A good. Information. That will help you to understand.",
+      "offset": 2105201,
+      "duration": 9000
+    },
+    {
+      "text": "Which is the why is that an issue? How can you fix it and you will learn about it? Here we have another call question.",
+      "offset": 2114201,
+      "duration": 10000
+    },
+    {
+      "text": "Do you use any linker in your ID? I gave an example. Of Sonar L, but there are Hold that options, just knowing if.",
+      "offset": 2124201,
+      "duration": 15000
+    },
+    {
+      "text": "You are using any of those. Tools? Well it all depends on the on the ID that you're using.",
+      "offset": 2139201,
+      "duration": 7000
+    },
+    {
+      "text": "But yeah, that are linkers for. Most of the of the IDs. Yeah, that's that's great.",
+      "offset": 2146201,
+      "duration": 8000
+    },
+    {
+      "text": "Most of you are using, Sonar L, but for those that are not using a winter Definitely go and try them.",
+      "offset": 2154201,
+      "duration": 12000
+    },
+    {
+      "text": "If you're not just in sonar link yeah you can start with this one it's free easy to download and install in your ID and will help you a lot definitely",
+      "offset": 2166201,
+      "duration": 15000
+    },
+    {
+      "text": "But our hero also has another problem. That using those tools. Yes, there are a lot it can be a lot of information.",
+      "offset": 2181201,
+      "duration": 4000
+    },
+    {
+      "text": "You start your you add your linker, you are your your static code analyzer and then you see lots of issues.",
+      "offset": 2185201,
+      "duration": 15000
+    },
+    {
+      "text": "Some of those issues you could say okay this is a false positive I'm not going to fix this because you haven't consider it some parts of the call.",
+      "offset": 2200201,
+      "duration": 10000
+    },
+    {
+      "text": "Yeah. Thatic code analyzers are not Always.",
+      "offset": 2210201,
+      "duration": 8000
+    },
+    {
+      "text": "100%.",
+      "offset": 2218201,
+      "duration": 4000
+    },
+    {
+      "text": "Correct. So in some cases, depending on the call, If you code is depending on. Different parts.",
+      "offset": 2222201,
+      "duration": 6000
+    },
+    {
+      "text": "It could be that it is giving you a a false positive. So you have an issue here, but you haven't.",
+      "offset": 2228201,
+      "duration": 8000
+    },
+    {
+      "text": "In this case, you can see here that well one issue. Is that instead of in get lawyers you should then use string concatenation but you should use arguments or parameters.",
+      "offset": 2236201,
+      "duration": 16000
+    },
+    {
+      "text": "In the log method. But in this case, Const value. Is a static final element. So in terms of compilation.",
+      "offset": 2252201,
+      "duration": 12000
+    },
+    {
+      "text": "It will replace the variable with a string. So in the end you are not concatenating the strings on runtime.",
+      "offset": 2264201,
+      "duration": 9000
+    },
+    {
+      "text": "So therefore this is not exactly an issue. But you can using this tools, you can say, okay, I'm.",
+      "offset": 2273201,
+      "duration": 8000
+    },
+    {
+      "text": "Which is all this is a false positive because in reality I know. That this is not. An issue.",
+      "offset": 2281201,
+      "duration": 7000
+    },
+    {
+      "text": "So you also need to take care of this when you select. Which is that tool that you're going to use depending on the false positives level.",
+      "offset": 2288201,
+      "duration": 9000
+    },
+    {
+      "text": "That they have.",
+      "offset": 2297201,
+      "duration": 3000
+    },
+    {
+      "text": "But. One of the problems that I've seen using these kind of tools is that people can be easily overwhelming.",
+      "offset": 2300201,
+      "duration": 9000
+    },
+    {
+      "text": "About the number of issues. So yeah, you have. Project is a lot of modules a lot of classes and just start, analyze it with sonar cube.",
+      "offset": 2309201,
+      "duration": 11000
+    },
+    {
+      "text": "And you see thousands of issues. And he's like, wow, man. I had a lot of features to do a lot of work to do and now you tell me that I have thousands of issues.",
+      "offset": 2320201,
+      "duration": 11000
+    },
+    {
+      "text": "And more importantly. All the team, my team lead, everyone. Is really aware of those issues. That's a big problem that can also impact on your confidence and also on the work of the team.",
+      "offset": 2331201,
+      "duration": 16000
+    },
+    {
+      "text": "But the thing is, you shouldn't focus on the whole code because Nice thing is that eventually code dice.",
+      "offset": 2347201,
+      "duration": 13000
+    },
+    {
+      "text": "So usually, as you can see in this graph, code introduced in 2012. In 2022 we almost have nothing about it so Every year, around 20% of the code is changed.",
+      "offset": 2360201,
+      "duration": 16000
+    },
+    {
+      "text": "So there's no point on focusing on all code. Just focus on new code. Code that you are introducing now, not code introduced in the past.",
+      "offset": 2376201,
+      "duration": 11000
+    },
+    {
+      "text": "Call that is new and new can be. From the previous version. For a number of days or specific analysis comparison.",
+      "offset": 2387201,
+      "duration": 10000
+    },
+    {
+      "text": "Or for a reference branch or even for a pull request.",
+      "offset": 2397201,
+      "duration": 6000
+    },
+    {
+      "text": "So. With all this information that I have given to you, I hope you are still all awake.",
+      "offset": 2403201,
+      "duration": 8000
+    },
+    {
+      "text": "I will give you my conclusions about This topic basically not using clean code. Is something that is going to have a huge impact on money time.",
+      "offset": 2411201,
+      "duration": 13000
+    },
+    {
+      "text": "Reputation and morale of the team, it's important to tackle, definitely. Because it will impact positively.",
+      "offset": 2424201,
+      "duration": 8000
+    },
+    {
+      "text": "On the software, it's clear, but also on developers. There are hundreds of roads to consider to clean code just only considering Java.",
+      "offset": 2432201,
+      "duration": 9000
+    },
+    {
+      "text": "In our in our tool. We have more than 600 rules. That are checking your code. It's a lot to have in mind.",
+      "offset": 2441201,
+      "duration": 8000
+    },
+    {
+      "text": "But we are lucky. Several tools will help us on this. So we have IDE, Lters, we have tools with quality gates.",
+      "offset": 2449201,
+      "duration": 9000
+    },
+    {
+      "text": "I've shown you some of, on our queue, definitely is worth trying.",
+      "offset": 2458201,
+      "duration": 7000
+    },
+    {
+      "text": "And there's no point on. Focusing on all code, but focusing on new code is the goal.",
+      "offset": 2465201,
+      "duration": 6000
+    },
+    {
+      "text": "Because eventually code dies as the rest of things. In the earth. So focus on new code. And eventually you will have a clean code.",
+      "offset": 2471201,
+      "duration": 16000
+    },
+    {
+      "text": "Project. Here you have also some references if you want to follow. More to play this topic.",
+      "offset": 2487201,
+      "duration": 9000
+    },
+    {
+      "text": "But you will have these references on the in the post. Okay. And basically. That's it.",
+      "offset": 2496201,
+      "duration": 11000
+    },
+    {
+      "text": "Manish if you want to.",
+      "offset": 2507201,
+      "duration": 3000
+    },
+    {
+      "text": "About the upcoming webinar.",
+      "offset": 2510201,
+      "duration": 1000
+    },
+    {
+      "text": "Yes. Yes. Thank you, Jonathan. That was excellent.",
+      "offset": 2511201,
+      "duration": 7000
+    },
+    {
+      "text": "Thank you for delivering the webinar today. Please join us for the upcoming webinar. If you're available, it's on November, the fifteenth.",
+      "offset": 2518201,
+      "duration": 8000
+    },
+    {
+      "text": "The topic is on there. We'll go deeper into clean as you code methodology. And thanks to all of you who posted the questions in the Q&A.",
+      "offset": 2526201,
+      "duration": 7000
+    },
+    {
+      "text": "We had plenty of them. Jonathan, I particularly enjoyed the story about monsters, heroes and victories.",
+      "offset": 2533201,
+      "duration": 7000
+    },
+    {
+      "text": "So this was the first time listening to your presentation this one. I think those are all in some very good suggestions as to how to write better Java code.",
+      "offset": 2540201,
+      "duration": 12000
+    },
+    {
+      "text": "Sorry, we didn't get a chance to answer all of your life questions coming in, but we, you know.",
+      "offset": 2552201,
+      "duration": 6000
+    },
+    {
+      "text": "Answer them as many as, as many as we can during the rest of the time. Our community, by the way, is a great place to post questions and also review some of the previously asked questions that have been responded in the past.",
+      "offset": 2558201,
+      "duration": 16000
+    },
+    {
+      "text": "Please do visit us on sunnisource.com. For further information on on how to clean quickly do adopt clean as you code methodology.",
+      "offset": 2574201,
+      "duration": 10000
+    },
+    {
+      "text": "And also check out our future webinars and events under the resources. Sonar source.com. Thank you again for you know for joining us today.",
+      "offset": 2584201,
+      "duration": 14000
+    },
+    {
+      "text": "We'll take a few questions that came up in the next 5 min and then we'll wrap it up.",
+      "offset": 2598201,
+      "duration": 7000
+    },
+    {
+      "text": "So let's look at. The questions, Jonathan, are you ready for them?",
+      "offset": 2605201,
+      "duration": 6000
+    },
+    {
+      "text": "Yes.",
+      "offset": 2611201,
+      "duration": 2000
+    },
+    {
+      "text": "Okay, so one of the, you know, attendees wants to know if you are delivering the same presentation next in your conference that you're back today, Gcon.",
+      "offset": 2613201,
+      "duration": 12000
+    },
+    {
+      "text": "In Prague are you going to deliver this one or will it be a different one?",
+      "offset": 2625201,
+      "duration": 5000
+    },
+    {
+      "text": "Yeah, it's similar. It's similar to this one. Yeah, tomorrow at 11 at Dcon here in Brac.",
+      "offset": 2630201,
+      "duration": 7000
+    },
+    {
+      "text": "Yeah, it's a similar. Presentation, yes.",
+      "offset": 2637201,
+      "duration": 4000
+    },
+    {
+      "text": "Okay. Here are some questions which I think might be good to address. Is sonar lent and sona cube are only covering Java.",
+      "offset": 2641201,
+      "duration": 15000
+    },
+    {
+      "text": "No, definitely that's not the case. We cover several languages. Let me.",
+      "offset": 2656201,
+      "duration": 9000
+    },
+    {
+      "text": "Yeah.",
+      "offset": 2665201,
+      "duration": 6000
+    },
+    {
+      "text": "And I can share.",
+      "offset": 2671201,
+      "duration": 3000
+    },
+    {
+      "text": "My screen.",
+      "offset": 2674201,
+      "duration": 10000
+    },
+    {
+      "text": "I should be.",
+      "offset": 2684201,
+      "duration": 6000
+    },
+    {
+      "text": "Yes, I. Yes.",
+      "offset": 2690201,
+      "duration": 1000
+    },
+    {
+      "text": "Do you see? The page of So here in the left you can see several languages. Java, JavaScript, codlin.",
+      "offset": 2691201,
+      "duration": 8000
+    },
+    {
+      "text": "Even infrastructure is called like you or docker. But also she sharp Python.",
+      "offset": 2699201,
+      "duration": 9000
+    },
+    {
+      "text": "So we are covering lots of, of languages.",
+      "offset": 2708201,
+      "duration": 5000
+    },
+    {
+      "text": "Excellent. Can you talk a little bit about, you know, the rules for Java code analysis?",
+      "offset": 2713201,
+      "duration": 9000
+    },
+    {
+      "text": "Well, as you can see here, we are covering more than 600 rules. Covering vulnerabilities back security hotspots.",
+      "offset": 2722201,
+      "duration": 11000
+    },
+    {
+      "text": "G, with also rules that have quick fix that we are going to use with Sunderland. And, yeah, we, cover,",
+      "offset": 2733201,
+      "duration": 12000
+    },
+    {
+      "text": "We covered Java 17 Java 20 with some with few roles. But yeah they are covering Yeah, 600.",
+      "offset": 2745201,
+      "duration": 10000
+    },
+    {
+      "text": "Aspects of the code. So lot of, lot of, elements of Java.",
+      "offset": 2755201,
+      "duration": 7000
+    },
+    {
+      "text": "Alright. There was a question and I'll attempt to answer this. Jonathan.",
+      "offset": 2762201,
+      "duration": 6000
+    },
+    {
+      "text": "Do you provide free educational licenses for institutions? We do have Sonar Lent is always free. So you can use Sona Lint anytime.",
+      "offset": 2768201,
+      "duration": 9000
+    },
+    {
+      "text": "We do have a community edition of which is always free which is open source version for SONA QUEUE.",
+      "offset": 2777201,
+      "duration": 6000
+    },
+    {
+      "text": "And if you would like to try out the enterprise edition or developer edition. We do have trials available for those.",
+      "offset": 2783201,
+      "duration": 7000
+    },
+    {
+      "text": "We also have a trial available for Sonar Cloud. And if you need a longer period license you can definitely send us an email via the contact us button on our website.",
+      "offset": 2790201,
+      "duration": 11000
+    },
+    {
+      "text": "And we can look into it with a that can be done or not. Okay.",
+      "offset": 2801201,
+      "duration": 10000
+    },
+    {
+      "text": "There was a question about we still use Java 8. Yes, Java it is still supported.",
+      "offset": 2811201,
+      "duration": 8000
+    },
+    {
+      "text": "However, we strongly encourage you to move to JDK 17. Jdk, Java 8 was released, I believe, 9 years ago in 2,014.",
+      "offset": 2819201,
+      "duration": 10000
+    },
+    {
+      "text": "So it's time that we move to a newer supported LTS version. Which has more features and not only features at some point of time.",
+      "offset": 2829201,
+      "duration": 11000
+    },
+    {
+      "text": "You know support for JDK 8 or Java 8 will end. And then you are basically exposing yourself to 1 one that may occur after that.",
+      "offset": 2840201,
+      "duration": 12000
+    },
+    {
+      "text": "Let me see if there are any other questions. Jonathan.",
+      "offset": 2852201,
+      "duration": 9000
+    },
+    {
+      "text": "They have a couple of questions around, PDF of the, presentation and, recording of the presentation.",
+      "offset": 2861201,
+      "duration": 6000
+    },
+    {
+      "text": "Recording of the presentation will be posted soon in a few days. You will have access to it.",
+      "offset": 2867201,
+      "duration": 11000
+    },
+    {
+      "text": "There was a ask about a question about doing a similar webcast for Go programming language and clean code. And we will definitely put it on our roadmap.",
+      "offset": 2878201,
+      "duration": 9000
+    },
+    {
+      "text": "We'll look into it and schedule one as quickly as possible. So thanks for that input.",
+      "offset": 2887201,
+      "duration": 20000
+    },
+    {
+      "text": "Alright, I think there are a few more questions, but we are almost at, 10 min over the allocated time for this webinar.",
+      "offset": 2907201,
+      "duration": 9000
+    },
+    {
+      "text": "We will try to answer as many of the remaining questions which we did not get to. And our panelists are still responding to a few of them so we will respond to the remaining questions and, get back to you.",
+      "offset": 2916201,
+      "duration": 13000
+    },
+    {
+      "text": "Otherwise, community is an excellent place, a place to engage with us where we have product managers. And so on source engineers working collaboratively with you to answer your questions and so on source engineers working collaboratively with you to answer your questions.",
+      "offset": 2929201,
+      "duration": 12000
+    },
+    {
+      "text": "Alright, with that, I will wrap up today's webinar and look forward to seeing you all in a future webinar.",
+      "offset": 2941201,
+      "duration": 8000
+    },
+    {
+      "text": "Thanks for taking the time and I would appreciate if you could fill in the survey that shortly pops up on your screen.",
+      "offset": 2949201,
+      "duration": 6000
+    },
+    {
+      "text": "Thank you.",
+      "offset": 2955201,
+      "duration": 30000
+    }
+  ],
+  "fullText": "A story of monsters, heroes and victories. We invite you to learn about this, the need for good practices in Clean code today. Along with the consequences of. Not using it. Showing concepts like PIN and learn as you code using free and open source tools. Will help you write better Java code. My name is Manish Kapoor and I will be a moderator today for this webinar. The webinar will be presented by Jonathan Villa. Who is joining us all the way from Prague. Please allow me to very quickly go through some essential housekeeping points before we start the webinar. This session will last about 40 min. And it will include a Q&A. At the end of the webinar. You're invited to submit your questions via the Q&A box. In Zoom and not via the chat box. We have 2 panelists today from Sona joining us. Thanks, Dorian and Hassin for joining us today. They will be here during the entire session. Answering your questions live during the webinar in the Q&A box. This session will be recorded and we'll send out a link via email in the upcoming days. Finally, at the end of this webinar, a short survey will pop up on your screen. We consider feedback to be a gift. Thank you for in advance for participating in this survey. So without further ado. I would like to introduce a speaker for today's webinar. Jonathan Villa. Jonathan, take it away. Hello, thank you. Thank you, Manish, for the introduction. Well, I'm Jonathan. I'm Java champion and I'm developer advocate at Sonar. But I'm also one of the leaders or the of the Barcelona Java community. And co-founder of JVCN and the PC and conferences that we organize in Barcelona. I think working as developer for more than 30 years using several languages, but mainly Java. So let me start this presentation with, what it is for me, a huge number. 2 trillion dollars is the cost of poor quality code annually, but just only considering United States. But you can tell me, okay, I'm not interested on money. Yeah. But for sure you are interested in time. So for this is the time spent per month and developer. Fixing errors. So these are huge numbers. That I hope now I have your attention to follow the presentation. And let's talk about clean code and sonar, but sonar, provides. Companies and individuals with. Tooling and methodologies. In order to go to a clean code state. For all their Source code. Using sonar link is a free plug-in that you can install in the most IDs that will help the developer to, spot issues and learn from them. As they code or sonnet cube and sorry cloud that are the way to group and all the static statistics for clinkle for different projects and provide quality gates that can allow or reject. Merging code into your. Main branches. If you want to know more, just Please, go to sunrise. Dot com and you will see more information about these tools. But, I started the presentation saying, well, this is a story about monsters. Keros and victories. And the first thing is to introduce our monster. So monster project, probably you can identify some of them. That you have been working on? Well, they exhibit baggy behavior. Because well, yeah, you know, they fail sometimes in production. It's not, they are not getting, users and developers enough confidence. They have like a lot a high coupling when they have classes that are being depending on other classes. And also they are they have low cohesion because. The main objects are not grouped together. So you have the same domain object or the same concept scattered across the code. They are unmantainable because, well yes, these high coupling, low cohesion, a lot of bugs, several repetitions. It's not clear, well, it's hard to maintain. You know what I mean, right? They use obsolete libraries, frameworks, and it's, well, you are not up to date. With performance improvements or even security improvements so yeah it's also a problem of those monster projects. And they also have a lot of code. We PE across the, the source code. And and then every time that you want to refactor something you need to touch several places well in the end you don't touch all of the places so it's like you're improving some parts but not others. But it's also about security. So they are those projects are more susceptible to common vulnerabilities and and exposures because well they are using Not updated, libraries, they are not scanning the security. Therefore, well, it's more likely that this software will suffer from these CVs. It they also can lead to have more memory leaks and load through both and I will explain your why. Because if you have big classes, big methods that are doing a lot of things. It's, more likely that every time that you want to do one thing, you will do several things at the same time. Because you don't have the code separated by responsibilities. And that could lead that in some cases you are not closing resources for instance, therefore you are going to have memory there. That you are not really seeing. And even you have low throughput because as you are doing a lot of things every time that you want to do one thing then this could lead that definitely you are doing more things than needed. But also it is it has nondeterministic results. Because again, this, this code repeated this code, scattered across all the source code. It's all those responsibilities mixed in one method. Or one class are making that every time they do something, you are also doing other things that you were not counting with. Therefore, it could be that those extra things that you didn't want to do are creating results that you didn't expect. As it is complicated. To create a specific test for a specific responsibility because you are mixing a lot of things. And you are having code scattered across all the all the modules or all the packages. Then it's hard to define very specific. Test that are covered in specific responsibilities or specific features. Therefore, it could be that you are missing some use cases. Finally, everything is mixing and you have like a project with that. Big tech depth. For sure, you can think about some project that you have been working on. That can. That can have some of all. Of these features, right? But what about the cost of those monster projects? Well, just on the considering 4 quality code, well, it's more than 2.4 trillion dollars. And from those finding and fixing backs, it's more than 600 billions. So it's a lot of money. Impacted by errors and poor quality code. With the chart on the lab, you can see that obviously the healthier your code is. The less number of defects it will have Therefore, the less money we are going to spend on fixing those bugs. That's clear, right? But it's not everything lost. Okay, we have those, monster projects, but we have also. Ketos, you know, probably you know someone that it is a hero. Probably you are a heal that you have been working in a monster project. And you fix it somehow. Some parts so let's let's see Who is our hero? What's what's our, our, our hero does in our favorite day? But basically, obviously, through those new features because this is what we are paid off, right? Paid for. We fix box? Yes, definitely, some of them. But it's clear that we don't have enough time or take that fixing you know some cases I remember some days where we were creating those epics. TED, those, sprints have been a lot of issues. They, regarding TED. And in every sprint we were pushing. Those springs, those epics. And it was very hard that we solved any of them. It's hard to dedicate time to tech depth fixing. Do you okay? Obviously. You know, studies, new technologies. Well, we have here, a, a Paul. Dedicated time to fixing technical depth. Jack, I would I would love to see. Which is your opinion if you had enough time or if you have enough time to fix technical debt. Hmm. It would be a surprise for me to see. And in off or a whole sprint. My experience is not that. It's, we didn't have enough time. And we were adding more tech that. To future sprints But, let's see which are your answers. Yeah, only a little. Yeah, looks more, more. Aligned to what I thought. So, it's just considering non, only a little. It's, it's a lot. It's a. So yeah. I, I thought that was that. That was the case. So yeah, you are in my team, right? Okay. So what do you do to? To be up to date. Well, you studied new technologies, right? The videos. Online, you do training, to do courses. You go to Meetops, I hope so. Did you go to meet ups and you go to conferences or webinars like this one. Yeah, so you keep up to date and you keep trained. Well, basically in cool things and cool and trendy, trendy technologies, but that's also important too. So that's that's very good for you. Let me congratulate you for being here. It's a very a bit in a great step. Also you do some meetings, right? Who doesn't? And as I do. For sure you are investing a lot of time saying you're a mute to some of your colleagues. But I would say that most of the time you rant about all code. So you could be well. Now, there's those computers and those keyboards are not and monitors are not common. But I started being that guy. Even with the ties, at that time we were we were wearing a tie. So what the surprise is, the Jacob rant about code, you complain about all cold, until the moment. You check the blame in GET and see it was your who created that code. But that that's common. Things happen. So the important part here is that. For all of us. That are. Trying to be heroes. We need to define which is our need banner. So which is our goal? In life. Well, there are 2 different For software, we have software that is secure. Untainable, reliable, portable, that's clear, right? But for the developer, it's also important. That the developer needs to be confident about what they are Pushing the repository. Is what it is expected and they are not introducing. Neil issues. The developer needs to be proud about the job that they are doing. And also skilled so they need to learn about the issues about the railroads. In order to be a better developer every day. So our hero in this case heard about 1 one order the clean code warriors order And our hero decided to join them. Because yeah, it's a fancy name. It's, from movies, right? So it they should be. Clear about what to do in order to fix. Cold. And the first thing that our hero learns is the principles. Or week principles. So the code that they Police has to be consistent. Has to have the same format across all the software. The same conventions used to. Same problems. It has to be identifiable because we use, clear naming for, our variables, methods. And it's clear what a variable is containing, not using. IAD as names of variables. It has to be intentional because it has to be it has to have a clear goal, clear focus of what it is doing. Not having several responsibilities. Logical because we are using Simple and logic approach not over engineering. Anything. Complete? Yeah, obviously, because we don't have That code, it's not going to have incomplete. Parts, you know, those 2 do comments. We will see in a minute and efficient obviously because it is not concerning more resources than needed. Again, the having a clear focus and not over engineering. Any solution. Adaptable because this call for sure is going to above. Yeah, I have some friends that are still running Java 5 applications with swing. In specific servers. But that's not the common case. It has to evolve, therefore, needs to be focused so the code doesn't have to have several responsibilities. No repetitions, that's why it should be distinct in order to refactor code. Once with refactor one part. Hello, parts that are consumers of that part are already fixed modular because it will help us to evolve individually every domain of our application. And obviously tested. So it has to be. It has to have a good test coverage. But more, more importantly. It has to be, it has to have. Well, or good tests. It's not only important. Lines covered by test but also that your tests are Cool, and are testing the right thing. Does not only simply So change red lines to green lines. And also responsible. Because obviously it has to be lawful, not infringing any. Copyrights and licensing. Also trash worth it because it doesn't have to include hard coded passwords. And private information. Yeah, you think that's not common, but we will see in a minute that it is most more common than we think. And respectful because obviously children use offensive language. This is also important. So our hero after joining the order of the clean code warriors, well. Hey, are trained with several tricks. Let's see which are the tricks. They are trained. Well, first, let's see for those principles. Examples of code. Yeah, show me the code. So for being consistent for MADAM, identifiable. Yeah, you see in the left. It's complicated to understand what the variable A is containing. Or a variable that it is a name that it is going to be hard to read. That's complicated. It's not identifiable. And probably we can have even. Formatting problems. So use a clear name for our variables identifying whether they are containing methods, classes. We are not paying by characters so you are not going to be. Accounted for using more characters. Intentional. Clear. Yeah, the complexity of the code should be Hello? I assume that you are more familiar with the concept called, Cyclomatic complexity. I would use this in order to explain these other concept. You know, cyclomatic complexity is counting or calculating the complexity. For a given part of the call. So on the top, part on the left, we see a code that it is doing. I don't know exactly from a first glance what it is doing. If we don't read the first comment. But the cyclomatic complexity is 5. And on the right, we have a simple Switch case. Easy, right? But it has the same cyclomatic complexity. So from this point, you You both agree with me. That the left part is way more complex than the right part. But the number is the same. So then we introduce another concept called cognitive complexity. That it is really calculating. The difference or well the level of complexity for a given code to be read. So on the left side, on the bottom part. You see the same method as a ball, but now it has a level of 9. But on the right part now it has a level of one. It's clear that a switch case is very simple to understand. It's and a method with several branches. And conditionals is more complex. Now we have the 2 different numbers and it's clear. We should go to the cognitive. Complexity number one. And only going up. If it is really, Need it. Intentional efficient. Well, in this case, I've seen this in several cases in my past. Yeah let's write a calculator let's write a an agnostic parser. Let's write I don't know. Database, connector because yeah one day We will do extra features. One day we will connect to our random database. Yeah, but that day never comes. So it's being efficient. In this case, if we only need to sum 5 plus 10, Let's go 5 plus 10. Don't over engineering. Don't overengineer your methods. This is all also. Wasting resources. So why if it's not needed, don't do it. Adaptable, in this case, this thing, okay, because in the in the left part we are using the same code to get the username and the password to connect the database abstracted in a method that's it, no repetition. It will be easier to evolve. With Focus. In this case, we have an entity. That is. He's representing a book. It should have only this. An entity. That is a book in this case we are even adding a method to print to console that it is not A book is not responsible to print. A book is an entity. That's it. That's worth it. Yeah. In some in some projects that are passwords are coded. And this is this is a serious problem. There are. Even several github scrappers that are going to search for passwords. So, use an external and external. Service to handle passwords for the for instance. There are different ways but do not hard code as words. So now that our hero Well, we know the monster, we know the hero, we know what a hero does. Every day. The rules. Sorry, the principles and now some of the tricks. Before our hero. Starts fighting our monster. They need a report, okay? Our projects out there. Really? Because it could be that everything is fine already. Right? No reason to worry about. But the thing is That, taking the reports or the telemetry from Sonar Link. We see that lots and lots of projects out there thousands are having a lot of issues and these are the most detected issues. Cognitive complexity. Is to hide. We are having assignments for local variables, function parameters, private fields and methods. Not used. That's it's. Definitely. Not in favor of having a clear code and even not having a complete code because you never know if those if this code is not used because it's not needed or because the consumer of this code is not. Created yet. So yeah, you never know. That's a problem. A lot of to the tax. Yeah, so. It's like to do we need to fix this connection. Yeah, and it never happens. Prototypes, well in Java if you are using. A collection. Yeah, specify which is the type of the collection, not just use the generic. Collection type on the variable. So it's important to use. The specific, collection type. Genetic exceptions, we should create a specific exceptions to be thrown. Local variables. Yeah, again, we are declaring A to a variable and then doing the return A, simply do the return. Mmm, the content. And, reference to node should never different. Well, in this case, we are not checking for notes. And we will suffer from node pointer exceptions. Yeah, we are having methods empty. Yeah, it's weird, but we have this issue. And most detected security issues. Secure power should be useful. Correct into a database. Again, we are using not non secure cryptographic algorithms. Or passwords. Attacks for xml s with remote Scripting. Endpoints that are BUNNERL across side script. And credentials that are hard coded. So we are suffering from a lot of issues, security issues in the, in the project analyzed by. By Sonarland. And function calls to the input output that are vulnerable to path injection when we are using the path. Valuable. Sent by the user. So in summary, what we have is a lot of the code. Also, a lot of complexity issues to do blogs, error handling. Not handling is some vulnerable. At this point, it's also important for our hero to know some of the Java hints because they are Java developers. So they are they want some Java specific things. Well, basically this is one of them. In order to avoid, SQL injection. So instead of using a string concatenation. Just use prepared statements and then Hmm, specify the value of those. Parameters and this will avoid. Ed. With HTTP request the directions. Well, in this case, if we use a value coming from the user and we use it as a for the direction well we should we should have like a list of allow endpoints or destinations and then check that the value from the user. Is in in God list. And if you're using a spring. Yes spring does a discovery of the The beans. From the. From a package and below. If we don't specify the package. In our. Springboard application. It will start from the clasp. So anyone having jars to the class path can have been running in your system. So that definitely do not miss the package. On your Springboard application. Class that with the, the, the. If you have threats and you have a method that is synchronized, that means it will be only accepting one of one call. If we need to. Sleep the thread. Do not use 3 thread sleep. Because this is going to block. Correct. Instead of this, use the weight. And with this weight. The lock is released and used by other threats. So it's it's better to use this. And this way instead of the red sleep. Also with a printf style format. Well, you know, it happens to me that when I use this this code. Sometimes I miss. The argument. Sometimes I use a different type argument for the value that I'm using. So it's important to have the right arguments. In the in the method call. And also the right type. Arguments on the method call. In order to not have. Weird and respected behaviors. Okay, this could be silly, but it is not. Sorry, it's important that tests. Are really testing. So if you are using a subj for instance and you do a search that Okay, if you don't do the condition at the end, the method will pass, the test will pass. Green, fine. Yeah, because you haven't tested anything. So it's important to check that you're all your ascends as really are really having the condition. In the. Again, this seems, obvious. Sometimes it's not that obvious. A nice thing for Java. 19 is that when you are creating a hash map and you want to specify capacity. If you use the constructor. This. In this case, if you send the capacity of 1 million. Then this is not a sure. That you will have a hash map of 1 million elements. It is going to create. The elements with bunches. So it like first batch. 1,000 when you reach. The limit another 1,000 and another 1,000 so you can have like the your picks or memory picks. Instead of that, if you use, the static method of the high set in this case, new has said, then with this you are going to have the 1 million elements. At that at that moment so you don't know you will not suffer from picks. Yeah, in the future. Well, this is simple, but it's important that, don't. Make a class depending on A lot of classes. This will simplify. Your tests definitely. And yeah, the reading of what really a class is doing. Also, it's important, methods should not perform too many tasks. So, yes, break them down into smaller methods that are really doing. Simpler task that you can test. And that you can really understand. The goal of those methods. So that's it's a lot of things to have in mind. It's our hero alone with the IDE and the code. And having all these things in mind. Well, basically, no. So we can have, con analyzer in the IDE. Where you as you code you are going to see as you can see now here all the highlighted exceptions. Sorry, issues. So, Sunderland will show you which are the issues that you are introducing in your code on the open files. Then you can fix them. As they happen. So it's, it's important to use this tool in order to avoid having issues. Does that possibly? Also, son are cubes on a cloud that are introducing quality gates that you can connect in the CI. So, in the CI, you are going to, have this. Tool having to quality. And if your code is not, aligned with the quality gate, it's not passing. Considering test coverage issues, bugs, vulnerabilities, then your port request will not be allowed to be merged in the main branch. And basically, with all of this, these tools. This knowledge which are the benefits that our hero will get from this. Well, considering the cleaners you code, It's that, yeah, you are fixing issues. Before they go to the repository. So it's between you and your ID. And you fix tissues and you submit. Clinko to the repository. That's important. For the developer. To be confident about the work. That they are pushing so that are positive. And it's very easy with the tool. Learn as you code because it's not about only fixing issues. It's also about learning from them. And Sunderland for the uses. A good. Information. That will help you to understand. Which is the why is that an issue? How can you fix it and you will learn about it? Here we have another call question. Do you use any linker in your ID? I gave an example. Of Sonar L, but there are Hold that options, just knowing if. You are using any of those. Tools? Well it all depends on the on the ID that you're using. But yeah, that are linkers for. Most of the of the IDs. Yeah, that's that's great. Most of you are using, Sonar L, but for those that are not using a winter Definitely go and try them. If you're not just in sonar link yeah you can start with this one it's free easy to download and install in your ID and will help you a lot definitely But our hero also has another problem. That using those tools. Yes, there are a lot it can be a lot of information. You start your you add your linker, you are your your static code analyzer and then you see lots of issues. Some of those issues you could say okay this is a false positive I'm not going to fix this because you haven't consider it some parts of the call. Yeah. Thatic code analyzers are not Always. 100%. Correct. So in some cases, depending on the call, If you code is depending on. Different parts. It could be that it is giving you a a false positive. So you have an issue here, but you haven't. In this case, you can see here that well one issue. Is that instead of in get lawyers you should then use string concatenation but you should use arguments or parameters. In the log method. But in this case, Const value. Is a static final element. So in terms of compilation. It will replace the variable with a string. So in the end you are not concatenating the strings on runtime. So therefore this is not exactly an issue. But you can using this tools, you can say, okay, I'm. Which is all this is a false positive because in reality I know. That this is not. An issue. So you also need to take care of this when you select. Which is that tool that you're going to use depending on the false positives level. That they have. But. One of the problems that I've seen using these kind of tools is that people can be easily overwhelming. About the number of issues. So yeah, you have. Project is a lot of modules a lot of classes and just start, analyze it with sonar cube. And you see thousands of issues. And he's like, wow, man. I had a lot of features to do a lot of work to do and now you tell me that I have thousands of issues. And more importantly. All the team, my team lead, everyone. Is really aware of those issues. That's a big problem that can also impact on your confidence and also on the work of the team. But the thing is, you shouldn't focus on the whole code because Nice thing is that eventually code dice. So usually, as you can see in this graph, code introduced in 2012. In 2022 we almost have nothing about it so Every year, around 20% of the code is changed. So there's no point on focusing on all code. Just focus on new code. Code that you are introducing now, not code introduced in the past. Call that is new and new can be. From the previous version. For a number of days or specific analysis comparison. Or for a reference branch or even for a pull request. So. With all this information that I have given to you, I hope you are still all awake. I will give you my conclusions about This topic basically not using clean code. Is something that is going to have a huge impact on money time. Reputation and morale of the team, it's important to tackle, definitely. Because it will impact positively. On the software, it's clear, but also on developers. There are hundreds of roads to consider to clean code just only considering Java. In our in our tool. We have more than 600 rules. That are checking your code. It's a lot to have in mind. But we are lucky. Several tools will help us on this. So we have IDE, Lters, we have tools with quality gates. I've shown you some of, on our queue, definitely is worth trying. And there's no point on. Focusing on all code, but focusing on new code is the goal. Because eventually code dies as the rest of things. In the earth. So focus on new code. And eventually you will have a clean code. Project. Here you have also some references if you want to follow. More to play this topic. But you will have these references on the in the post. Okay. And basically. That's it. Manish if you want to. About the upcoming webinar. Yes. Yes. Thank you, Jonathan. That was excellent. Thank you for delivering the webinar today. Please join us for the upcoming webinar. If you're available, it's on November, the fifteenth. The topic is on there. We'll go deeper into clean as you code methodology. And thanks to all of you who posted the questions in the Q&A. We had plenty of them. Jonathan, I particularly enjoyed the story about monsters, heroes and victories. So this was the first time listening to your presentation this one. I think those are all in some very good suggestions as to how to write better Java code. Sorry, we didn't get a chance to answer all of your life questions coming in, but we, you know. Answer them as many as, as many as we can during the rest of the time. Our community, by the way, is a great place to post questions and also review some of the previously asked questions that have been responded in the past. Please do visit us on sunnisource.com. For further information on on how to clean quickly do adopt clean as you code methodology. And also check out our future webinars and events under the resources. Sonar source.com. Thank you again for you know for joining us today. We'll take a few questions that came up in the next 5 min and then we'll wrap it up. So let's look at. The questions, Jonathan, are you ready for them? Yes. Okay, so one of the, you know, attendees wants to know if you are delivering the same presentation next in your conference that you're back today, Gcon. In Prague are you going to deliver this one or will it be a different one? Yeah, it's similar. It's similar to this one. Yeah, tomorrow at 11 at Dcon here in Brac. Yeah, it's a similar. Presentation, yes. Okay. Here are some questions which I think might be good to address. Is sonar lent and sona cube are only covering Java. No, definitely that's not the case. We cover several languages. Let me. Yeah. And I can share. My screen. I should be. Yes, I. Yes. Do you see? The page of So here in the left you can see several languages. Java, JavaScript, codlin. Even infrastructure is called like you or docker. But also she sharp Python. So we are covering lots of, of languages. Excellent. Can you talk a little bit about, you know, the rules for Java code analysis? Well, as you can see here, we are covering more than 600 rules. Covering vulnerabilities back security hotspots. G, with also rules that have quick fix that we are going to use with Sunderland. And, yeah, we, cover, We covered Java 17 Java 20 with some with few roles. But yeah they are covering Yeah, 600. Aspects of the code. So lot of, lot of, elements of Java. Alright. There was a question and I'll attempt to answer this. Jonathan. Do you provide free educational licenses for institutions? We do have Sonar Lent is always free. So you can use Sona Lint anytime. We do have a community edition of which is always free which is open source version for SONA QUEUE. And if you would like to try out the enterprise edition or developer edition. We do have trials available for those. We also have a trial available for Sonar Cloud. And if you need a longer period license you can definitely send us an email via the contact us button on our website. And we can look into it with a that can be done or not. Okay. There was a question about we still use Java 8. Yes, Java it is still supported. However, we strongly encourage you to move to JDK 17. Jdk, Java 8 was released, I believe, 9 years ago in 2,014. So it's time that we move to a newer supported LTS version. Which has more features and not only features at some point of time. You know support for JDK 8 or Java 8 will end. And then you are basically exposing yourself to 1 one that may occur after that. Let me see if there are any other questions. Jonathan. They have a couple of questions around, PDF of the, presentation and, recording of the presentation. Recording of the presentation will be posted soon in a few days. You will have access to it. There was a ask about a question about doing a similar webcast for Go programming language and clean code. And we will definitely put it on our roadmap. We'll look into it and schedule one as quickly as possible. So thanks for that input. Alright, I think there are a few more questions, but we are almost at, 10 min over the allocated time for this webinar. We will try to answer as many of the remaining questions which we did not get to. And our panelists are still responding to a few of them so we will respond to the remaining questions and, get back to you. Otherwise, community is an excellent place, a place to engage with us where we have product managers. And so on source engineers working collaboratively with you to answer your questions and so on source engineers working collaboratively with you to answer your questions. Alright, with that, I will wrap up today's webinar and look forward to seeing you all in a future webinar. Thanks for taking the time and I would appreciate if you could fill in the survey that shortly pops up on your screen. Thank you.",
+  "fetchedAt": "2026-03-14T09:23:46.798Z"
+}

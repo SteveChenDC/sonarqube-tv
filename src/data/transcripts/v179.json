@@ -1,0 +1,3863 @@
+{
+  "videoId": "v179",
+  "youtubeId": "V00IFs2EzdE",
+  "segments": [
+    {
+      "text": "Welcome to our sonar webinar entitled",
+      "offset": 0,
+      "duration": 5220
+    },
+    {
+      "text": "Finding the Bad Apple in your regular",
+      "offset": 2540,
+      "duration": 6099
+    },
+    {
+      "text": "Expressions where we will demonstrate",
+      "offset": 5220,
+      "duration": 6299
+    },
+    {
+      "text": "some common mistakes which can occur",
+      "offset": 8639,
+      "duration": 5580
+    },
+    {
+      "text": "whilst writing regular expressions",
+      "offset": 11519,
+      "duration": 5241
+    },
+    {
+      "text": "we'll show you how sonar can detect",
+      "offset": 14219,
+      "duration": 5820
+    },
+    {
+      "text": "problematic Expressions plus give you",
+      "offset": 16760,
+      "duration": 4840
+    },
+    {
+      "text": "techniques to improve your regular",
+      "offset": 20039,
+      "duration": 4740
+    },
+    {
+      "text": "expression performance",
+      "offset": 21600,
+      "duration": 5999
+    },
+    {
+      "text": "I'm Andrew Osborne your moderator for",
+      "offset": 24779,
+      "duration": 5281
+    },
+    {
+      "text": "this webinar which will be presented by",
+      "offset": 27599,
+      "duration": 5041
+    },
+    {
+      "text": "your embolitis",
+      "offset": 30060,
+      "duration": 4860
+    },
+    {
+      "text": "please allow me to very quickly go over",
+      "offset": 32640,
+      "duration": 4800
+    },
+    {
+      "text": "the essential housekeeping points before",
+      "offset": 34920,
+      "duration": 4979
+    },
+    {
+      "text": "we start the session will last 30",
+      "offset": 37440,
+      "duration": 6360
+    },
+    {
+      "text": "minutes and we will include a q a at the",
+      "offset": 39899,
+      "duration": 6421
+    },
+    {
+      "text": "end you are invited to submit your",
+      "offset": 43800,
+      "duration": 5520
+    },
+    {
+      "text": "questions via the Q a box in Zoom during",
+      "offset": 46320,
+      "duration": 5880
+    },
+    {
+      "text": "the session not via the chat box so via",
+      "offset": 49320,
+      "duration": 4680
+    },
+    {
+      "text": "the Q a box",
+      "offset": 52200,
+      "duration": 5940
+    },
+    {
+      "text": "and we have two panelists standing by uh",
+      "offset": 54000,
+      "duration": 7140
+    },
+    {
+      "text": "Sebastian jungle wrecker and Joe Ting",
+      "offset": 58140,
+      "duration": 6300
+    },
+    {
+      "text": "San Charlie from r d and support teams",
+      "offset": 61140,
+      "duration": 6000
+    },
+    {
+      "text": "respectively they are tasked with",
+      "offset": 64440,
+      "duration": 4980
+    },
+    {
+      "text": "answering as many of your questions live",
+      "offset": 67140,
+      "duration": 4799
+    },
+    {
+      "text": "during the webinar",
+      "offset": 69420,
+      "duration": 5400
+    },
+    {
+      "text": "this session will be recorded and we",
+      "offset": 71939,
+      "duration": 5220
+    },
+    {
+      "text": "will send out a link via email in the",
+      "offset": 74820,
+      "duration": 3240
+    },
+    {
+      "text": "coming days",
+      "offset": 77159,
+      "duration": 3661
+    },
+    {
+      "text": "finally at the end of this webinar a",
+      "offset": 78060,
+      "duration": 4800
+    },
+    {
+      "text": "short survey will pop up on your screen",
+      "offset": 80820,
+      "duration": 4920
+    },
+    {
+      "text": "we consider your feedback to be a gift",
+      "offset": 82860,
+      "duration": 4860
+    },
+    {
+      "text": "so thank you in advance for your",
+      "offset": 85740,
+      "duration": 4199
+    },
+    {
+      "text": "petition participation",
+      "offset": 87720,
+      "duration": 4380
+    },
+    {
+      "text": "so without further Ado I'd like to",
+      "offset": 89939,
+      "duration": 4201
+    },
+    {
+      "text": "introduce to you today's presenter",
+      "offset": 92100,
+      "duration": 4740
+    },
+    {
+      "text": "Johann bilites",
+      "offset": 94140,
+      "duration": 5820
+    },
+    {
+      "text": "Johan is a Java kotlin software engineer",
+      "offset": 96840,
+      "duration": 5760
+    },
+    {
+      "text": "at sonar part of the team developing",
+      "offset": 99960,
+      "duration": 4680
+    },
+    {
+      "text": "static code analyzers for Java and",
+      "offset": 102600,
+      "duration": 6900
+    },
+    {
+      "text": "kotlin as well as Scala Ruby go and Apex",
+      "offset": 104640,
+      "duration": 7259
+    },
+    {
+      "text": "he was a core contributor to the SAS",
+      "offset": 109500,
+      "duration": 5159
+    },
+    {
+      "text": "dungeon developed by rips Technologies",
+      "offset": 111899,
+      "duration": 5521
+    },
+    {
+      "text": "an integration of cell engine into the",
+      "offset": 114659,
+      "duration": 4561
+    },
+    {
+      "text": "sonar products",
+      "offset": 117420,
+      "duration": 4199
+    },
+    {
+      "text": "he received a ba in computer science",
+      "offset": 119220,
+      "duration": 5219
+    },
+    {
+      "text": "from the University of Cambridge and an",
+      "offset": 121619,
+      "duration": 5221
+    },
+    {
+      "text": "MSC and I.T security from the rura",
+      "offset": 124439,
+      "duration": 4441
+    },
+    {
+      "text": "University welcome",
+      "offset": 126840,
+      "duration": 5720
+    },
+    {
+      "text": "Joanne over to you",
+      "offset": 128880,
+      "duration": 3680
+    },
+    {
+      "text": "thank you Andrew yes so",
+      "offset": 133739,
+      "duration": 6241
+    },
+    {
+      "text": "let's talk a little bit about some of",
+      "offset": 137580,
+      "duration": 4680
+    },
+    {
+      "text": "the problems we have with the regular",
+      "offset": 139980,
+      "duration": 4259
+    },
+    {
+      "text": "Expressions nowadays and for that I'd",
+      "offset": 142260,
+      "duration": 3540
+    },
+    {
+      "text": "like to start with a little bit of",
+      "offset": 144239,
+      "duration": 3841
+    },
+    {
+      "text": "motivation a background",
+      "offset": 145800,
+      "duration": 3900
+    },
+    {
+      "text": "so",
+      "offset": 148080,
+      "duration": 4379
+    },
+    {
+      "text": "there have been a couple of high profile",
+      "offset": 149700,
+      "duration": 5460
+    },
+    {
+      "text": "outages and and the last few years so",
+      "offset": 152459,
+      "duration": 5161
+    },
+    {
+      "text": "stack overflow on cloudflare both went",
+      "offset": 155160,
+      "duration": 4500
+    },
+    {
+      "text": "down for around half an hour",
+      "offset": 157620,
+      "duration": 5460
+    },
+    {
+      "text": "um in 2016 and 19 respectively and both",
+      "offset": 159660,
+      "duration": 5760
+    },
+    {
+      "text": "those outages could be traced back to",
+      "offset": 163080,
+      "duration": 4680
+    },
+    {
+      "text": "the same core problem",
+      "offset": 165420,
+      "duration": 5580
+    },
+    {
+      "text": "which was a redos issuer regular",
+      "offset": 167760,
+      "duration": 6059
+    },
+    {
+      "text": "expression denial of service and it's",
+      "offset": 171000,
+      "duration": 4200
+    },
+    {
+      "text": "also referred to as runaway regular",
+      "offset": 173819,
+      "duration": 3060
+    },
+    {
+      "text": "expressions or catastrophic backtracking",
+      "offset": 175200,
+      "duration": 3660
+    },
+    {
+      "text": "I'll refer to it as catastrophic",
+      "offset": 176879,
+      "duration": 3720
+    },
+    {
+      "text": "backtracking for the rest of this talk",
+      "offset": 178860,
+      "duration": 4140
+    },
+    {
+      "text": "mainly",
+      "offset": 180599,
+      "duration": 6181
+    },
+    {
+      "text": "so in fact apart from this there is many",
+      "offset": 183000,
+      "duration": 6180
+    },
+    {
+      "text": "other uh problems still present today we",
+      "offset": 186780,
+      "duration": 7739
+    },
+    {
+      "text": "have CBE as recently as 20 2022 and so",
+      "offset": 189180,
+      "duration": 8040
+    },
+    {
+      "text": "at Sona we started looking at this",
+      "offset": 194519,
+      "duration": 5220
+    },
+    {
+      "text": "problem of Great Expressions being in",
+      "offset": 197220,
+      "duration": 4620
+    },
+    {
+      "text": "the static code analysis world and",
+      "offset": 199739,
+      "duration": 4920
+    },
+    {
+      "text": "writing tools for that uh two years ago",
+      "offset": 201840,
+      "duration": 5520
+    },
+    {
+      "text": "and did some work into it which I would",
+      "offset": 204659,
+      "duration": 6000
+    },
+    {
+      "text": "like to talk a little bit about today",
+      "offset": 207360,
+      "duration": 4440
+    },
+    {
+      "text": "so",
+      "offset": 210659,
+      "duration": 2881
+    },
+    {
+      "text": "I want to go into particular",
+      "offset": 211800,
+      "duration": 3480
+    },
+    {
+      "text": "catastrophic backtracking as one of the",
+      "offset": 213540,
+      "duration": 3240
+    },
+    {
+      "text": "issues you can have with regular",
+      "offset": 215280,
+      "duration": 3120
+    },
+    {
+      "text": "Expressions into a little bit more depth",
+      "offset": 216780,
+      "duration": 5099
+    },
+    {
+      "text": "we can't fully go into into the entirety",
+      "offset": 218400,
+      "duration": 4680
+    },
+    {
+      "text": "of the depth but",
+      "offset": 221879,
+      "duration": 2761
+    },
+    {
+      "text": "um there's a lot of eyes online reading",
+      "offset": 223080,
+      "duration": 3719
+    },
+    {
+      "text": "about it as well and then I'll briefly",
+      "offset": 224640,
+      "duration": 5159
+    },
+    {
+      "text": "cover a few other areas of issues in",
+      "offset": 226799,
+      "duration": 4800
+    },
+    {
+      "text": "Vector Expressions as well",
+      "offset": 229799,
+      "duration": 4201
+    },
+    {
+      "text": "so let's talk about this catastrophic",
+      "offset": 231599,
+      "duration": 3541
+    },
+    {
+      "text": "backtracking and to understand",
+      "offset": 234000,
+      "duration": 2519
+    },
+    {
+      "text": "catastrophic backtracking we need to",
+      "offset": 235140,
+      "duration": 3720
+    },
+    {
+      "text": "know what backtracking is first of all",
+      "offset": 236519,
+      "duration": 5881
+    },
+    {
+      "text": "and backtracking is a technique used by",
+      "offset": 238860,
+      "duration": 5340
+    },
+    {
+      "text": "many regular expression engines not all",
+      "offset": 242400,
+      "duration": 5520
+    },
+    {
+      "text": "of them but many two uh well match input",
+      "offset": 244200,
+      "duration": 6720
+    },
+    {
+      "text": "strings and and provide certain features",
+      "offset": 247920,
+      "duration": 4739
+    },
+    {
+      "text": "to the developer to match those",
+      "offset": 250920,
+      "duration": 3060
+    },
+    {
+      "text": "different strings",
+      "offset": 252659,
+      "duration": 2821
+    },
+    {
+      "text": "I'll give you an example in just a",
+      "offset": 253980,
+      "duration": 3840
+    },
+    {
+      "text": "moment but essentially what it is is the",
+      "offset": 255480,
+      "duration": 4020
+    },
+    {
+      "text": "regular expand Express expression engine",
+      "offset": 257820,
+      "duration": 4220
+    },
+    {
+      "text": "can sometimes choose different",
+      "offset": 259500,
+      "duration": 6600
+    },
+    {
+      "text": "sub-expressions of a regex to match a",
+      "offset": 262040,
+      "duration": 5560
+    },
+    {
+      "text": "certain character in the in the input or",
+      "offset": 266100,
+      "duration": 2280
+    },
+    {
+      "text": "certain",
+      "offset": 267600,
+      "duration": 2520
+    },
+    {
+      "text": "series of characters",
+      "offset": 268380,
+      "duration": 4920
+    },
+    {
+      "text": "and it can make a decision on which",
+      "offset": 270120,
+      "duration": 6900
+    },
+    {
+      "text": "sub-expression to use and we'll try one",
+      "offset": 273300,
+      "duration": 5640
+    },
+    {
+      "text": "or the other and then later on if it",
+      "offset": 277020,
+      "duration": 3780
+    },
+    {
+      "text": "cannot find a match for this input",
+      "offset": 278940,
+      "duration": 5160
+    },
+    {
+      "text": "string it'll try the other uh the other",
+      "offset": 280800,
+      "duration": 4520
+    },
+    {
+      "text": "option",
+      "offset": 284100,
+      "duration": 2879
+    },
+    {
+      "text": "backtracking",
+      "offset": 285320,
+      "duration": 5319
+    },
+    {
+      "text": "some decisions it made afterwards so",
+      "offset": 286979,
+      "duration": 6121
+    },
+    {
+      "text": "we'll we'll see an example in a minute",
+      "offset": 290639,
+      "duration": 4340
+    },
+    {
+      "text": "when we talk about catastrophic",
+      "offset": 293100,
+      "duration": 4500
+    },
+    {
+      "text": "backtracking we talk about backtracking",
+      "offset": 294979,
+      "duration": 5261
+    },
+    {
+      "text": "that causes the engine to well backtrack",
+      "offset": 297600,
+      "duration": 4379
+    },
+    {
+      "text": "so many times and do so many steps that",
+      "offset": 300240,
+      "duration": 3300
+    },
+    {
+      "text": "attack the number of steps that the",
+      "offset": 301979,
+      "duration": 4081
+    },
+    {
+      "text": "engine needs to take to to to try to",
+      "offset": 303540,
+      "duration": 4260
+    },
+    {
+      "text": "generate a match with the input becomes",
+      "offset": 306060,
+      "duration": 3720
+    },
+    {
+      "text": "super linear so it was anywhere between",
+      "offset": 307800,
+      "duration": 4260
+    },
+    {
+      "text": "quadratic time or even as as bad as",
+      "offset": 309780,
+      "duration": 4380
+    },
+    {
+      "text": "exponential as an exponential number of",
+      "offset": 312060,
+      "duration": 3060
+    },
+    {
+      "text": "steps",
+      "offset": 314160,
+      "duration": 3720
+    },
+    {
+      "text": "given the input length and which of",
+      "offset": 315120,
+      "duration": 4620
+    },
+    {
+      "text": "course as well now is not great to have",
+      "offset": 317880,
+      "duration": 5099
+    },
+    {
+      "text": "exponential anything in your code in",
+      "offset": 319740,
+      "duration": 4799
+    },
+    {
+      "text": "most cases",
+      "offset": 322979,
+      "duration": 5581
+    },
+    {
+      "text": "so I want to take a little example here",
+      "offset": 324539,
+      "duration": 7021
+    },
+    {
+      "text": "a uh example right expression imagine I",
+      "offset": 328560,
+      "duration": 5160
+    },
+    {
+      "text": "want to match email domains I'm going to",
+      "offset": 331560,
+      "duration": 3720
+    },
+    {
+      "text": "ignore everything that comes before the",
+      "offset": 333720,
+      "duration": 3720
+    },
+    {
+      "text": "ad for this for the moment and I'm going",
+      "offset": 335280,
+      "duration": 4139
+    },
+    {
+      "text": "to try to match only email domains in",
+      "offset": 337440,
+      "duration": 4699
+    },
+    {
+      "text": "edu and acuk let's assume I want to",
+      "offset": 339419,
+      "duration": 5220
+    },
+    {
+      "text": "filter out students from the UK and the",
+      "offset": 342139,
+      "duration": 4021
+    },
+    {
+      "text": "US for some",
+      "offset": 344639,
+      "duration": 3481
+    },
+    {
+      "text": "student-focused program",
+      "offset": 346160,
+      "duration": 3700
+    },
+    {
+      "text": "and I'm going to show you how this",
+      "offset": 348120,
+      "duration": 4200
+    },
+    {
+      "text": "regular expression would match this",
+      "offset": 349860,
+      "duration": 3960
+    },
+    {
+      "text": "input we saw before",
+      "offset": 352320,
+      "duration": 3980
+    },
+    {
+      "text": "that I have",
+      "offset": 353820,
+      "duration": 4500
+    },
+    {
+      "text": "transformed the spectral expression into",
+      "offset": 356300,
+      "duration": 5860
+    },
+    {
+      "text": "a little graph of how it functions and",
+      "offset": 358320,
+      "duration": 5099
+    },
+    {
+      "text": "you can read the slide from left to",
+      "offset": 362160,
+      "duration": 3960
+    },
+    {
+      "text": "right and we'll step to it step by step",
+      "offset": 363419,
+      "duration": 6780
+    },
+    {
+      "text": "I I do merge and skip a few steps the",
+      "offset": 366120,
+      "duration": 5760
+    },
+    {
+      "text": "real regular expression engines to this",
+      "offset": 370199,
+      "duration": 3720
+    },
+    {
+      "text": "really character the character will will",
+      "offset": 371880,
+      "duration": 5940
+    },
+    {
+      "text": "merge a little bit to be slightly faster",
+      "offset": 373919,
+      "duration": 5881
+    },
+    {
+      "text": "so we have this input",
+      "offset": 377820,
+      "duration": 4080
+    },
+    {
+      "text": "um this at cam.ac.k",
+      "offset": 379800,
+      "duration": 3780
+    },
+    {
+      "text": "and of course the first character the at",
+      "offset": 381900,
+      "duration": 4139
+    },
+    {
+      "text": "character simply matches uh onto one we",
+      "offset": 383580,
+      "duration": 3839
+    },
+    {
+      "text": "have an hat in the regular expression",
+      "offset": 386039,
+      "duration": 4321
+    },
+    {
+      "text": "corresponds to the at an input Market",
+      "offset": 387419,
+      "duration": 6720
+    },
+    {
+      "text": "then we get to the next sub expression",
+      "offset": 390360,
+      "duration": 5880
+    },
+    {
+      "text": "in this vergex which is this dot",
+      "offset": 394139,
+      "duration": 4021
+    },
+    {
+      "text": "asterisk question mark and essentially",
+      "offset": 396240,
+      "duration": 3959
+    },
+    {
+      "text": "what that is the dot is in any character",
+      "offset": 398160,
+      "duration": 3780
+    },
+    {
+      "text": "wildcard so it matches pretty much any",
+      "offset": 400199,
+      "duration": 5401
+    },
+    {
+      "text": "character the Asterix is a quantifier or",
+      "offset": 401940,
+      "duration": 6300
+    },
+    {
+      "text": "a repetition and it says that this any",
+      "offset": 405600,
+      "duration": 5159
+    },
+    {
+      "text": "character wildcard can be repeated zero",
+      "offset": 408240,
+      "duration": 4200
+    },
+    {
+      "text": "or more times",
+      "offset": 410759,
+      "duration": 3660
+    },
+    {
+      "text": "with a question mark making that",
+      "offset": 412440,
+      "duration": 4740
+    },
+    {
+      "text": "quantifier a lazy or non-greedy",
+      "offset": 414419,
+      "duration": 4801
+    },
+    {
+      "text": "quantifier and what that means is that",
+      "offset": 417180,
+      "duration": 3180
+    },
+    {
+      "text": "the engine",
+      "offset": 419220,
+      "duration": 3720
+    },
+    {
+      "text": "will only use this wild card if it has",
+      "offset": 420360,
+      "duration": 5279
+    },
+    {
+      "text": "to if it can match the character in some",
+      "offset": 422940,
+      "duration": 5580
+    },
+    {
+      "text": "other way it'll do that so in this case",
+      "offset": 425639,
+      "duration": 6721
+    },
+    {
+      "text": "we encounter the C the AVM of Cam in the",
+      "offset": 428520,
+      "duration": 5399
+    },
+    {
+      "text": "input",
+      "offset": 432360,
+      "duration": 4679
+    },
+    {
+      "text": "as seen at the bottom here and all those",
+      "offset": 433919,
+      "duration": 6060
+    },
+    {
+      "text": "letters can only matched be matched by",
+      "offset": 437039,
+      "duration": 5041
+    },
+    {
+      "text": "the by this wildcard",
+      "offset": 439979,
+      "duration": 5401
+    },
+    {
+      "text": "until we get to the dot and the start in",
+      "offset": 442080,
+      "duration": 4739
+    },
+    {
+      "text": "fact could be matched by the Wildcat but",
+      "offset": 445380,
+      "duration": 4560
+    },
+    {
+      "text": "it can also be matched by this stash",
+      "offset": 446819,
+      "duration": 5820
+    },
+    {
+      "text": "dock which is a DOT literal",
+      "offset": 449940,
+      "duration": 5099
+    },
+    {
+      "text": "so the engine will prefer to match it",
+      "offset": 452639,
+      "duration": 3780
+    },
+    {
+      "text": "with the dotted rule since we have this",
+      "offset": 455039,
+      "duration": 3660
+    },
+    {
+      "text": "question mark as a non-greedy quantifier",
+      "offset": 456419,
+      "duration": 4201
+    },
+    {
+      "text": "and it'll do that",
+      "offset": 458699,
+      "duration": 4921
+    },
+    {
+      "text": "and all is good essentially I'm skipping",
+      "offset": 460620,
+      "duration": 5220
+    },
+    {
+      "text": "a few steps here but eventually we'll",
+      "offset": 463620,
+      "duration": 4560
+    },
+    {
+      "text": "find this ac.2k at the end and we match",
+      "offset": 465840,
+      "duration": 5400
+    },
+    {
+      "text": "the entire input it takes around 30 to",
+      "offset": 468180,
+      "duration": 4799
+    },
+    {
+      "text": "40 steps depending on the engine and",
+      "offset": 471240,
+      "duration": 3060
+    },
+    {
+      "text": "depending on how exactly you count just",
+      "offset": 472979,
+      "duration": 4741
+    },
+    {
+      "text": "keep in mind that order of magnitude for",
+      "offset": 474300,
+      "duration": 5700
+    },
+    {
+      "text": "later",
+      "offset": 477720,
+      "duration": 4560
+    },
+    {
+      "text": "so all good there",
+      "offset": 480000,
+      "duration": 4919
+    },
+    {
+      "text": "what happens if we have a slightly less",
+      "offset": 482280,
+      "duration": 4740
+    },
+    {
+      "text": "expected input so here I have a",
+      "offset": 484919,
+      "duration": 3780
+    },
+    {
+      "text": "malformed input and I've not properly",
+      "offset": 487020,
+      "duration": 4200
+    },
+    {
+      "text": "thought about it as a developer",
+      "offset": 488699,
+      "duration": 3780
+    },
+    {
+      "text": "so",
+      "offset": 491220,
+      "duration": 2879
+    },
+    {
+      "text": "it fails which is correct because it",
+      "offset": 492479,
+      "duration": 4500
+    },
+    {
+      "text": "ends in com and not an edu or AC doc UK",
+      "offset": 494099,
+      "duration": 6061
+    },
+    {
+      "text": "but it takes over 200 000 steps for that",
+      "offset": 496979,
+      "duration": 6120
+    },
+    {
+      "text": "now remember was 30 to 40 steps that we",
+      "offset": 500160,
+      "duration": 5400
+    },
+    {
+      "text": "required earlier to match this valid",
+      "offset": 503099,
+      "duration": 6201
+    },
+    {
+      "text": "input and so this is a huge change in",
+      "offset": 505560,
+      "duration": 6839
+    },
+    {
+      "text": "size in terms of how many steps this",
+      "offset": 509300,
+      "duration": 5500
+    },
+    {
+      "text": "engine requires to to find out that in",
+      "offset": 512399,
+      "duration": 5301
+    },
+    {
+      "text": "fact the input is not matching",
+      "offset": 514800,
+      "duration": 7200
+    },
+    {
+      "text": "so how come well the app of course is",
+      "offset": 517700,
+      "duration": 6040
+    },
+    {
+      "text": "still matches yet but what happens if we",
+      "offset": 522000,
+      "duration": 4320
+    },
+    {
+      "text": "encounter all these dots so it's 14 dots",
+      "offset": 523740,
+      "duration": 3539
+    },
+    {
+      "text": "total",
+      "offset": 526320,
+      "duration": 2340
+    },
+    {
+      "text": "and",
+      "offset": 527279,
+      "duration": 3301
+    },
+    {
+      "text": "we saw earlier that in fact since we",
+      "offset": 528660,
+      "duration": 3480
+    },
+    {
+      "text": "have this question mark",
+      "offset": 530580,
+      "duration": 3960
+    },
+    {
+      "text": "in the regular expression that makes the",
+      "offset": 532140,
+      "duration": 4920
+    },
+    {
+      "text": "quantifier of the that's attached to the",
+      "offset": 534540,
+      "duration": 4760
+    },
+    {
+      "text": "wildcard non-greedy",
+      "offset": 537060,
+      "duration": 4860
+    },
+    {
+      "text": "the engine will actually prefer matching",
+      "offset": 539300,
+      "duration": 4719
+    },
+    {
+      "text": "dots with the starter tool",
+      "offset": 541920,
+      "duration": 5580
+    },
+    {
+      "text": "and then it will take this this plus is",
+      "offset": 544019,
+      "duration": 5221
+    },
+    {
+      "text": "a quantifier that means once or more",
+      "offset": 547500,
+      "duration": 3600
+    },
+    {
+      "text": "it's Auto repetition and it was",
+      "offset": 549240,
+      "duration": 5159
+    },
+    {
+      "text": "basically just do 14 dot lit worlds to",
+      "offset": 551100,
+      "duration": 5760
+    },
+    {
+      "text": "match those 14 dots in the input that's",
+      "offset": 554399,
+      "duration": 4681
+    },
+    {
+      "text": "it's fine that they can do that",
+      "offset": 556860,
+      "duration": 5039
+    },
+    {
+      "text": "and then it moves on to the next sub",
+      "offset": 559080,
+      "duration": 4140
+    },
+    {
+      "text": "expression in the regular expression",
+      "offset": 561899,
+      "duration": 3781
+    },
+    {
+      "text": "which is the edu or AC K which of course",
+      "offset": 563220,
+      "duration": 4980
+    },
+    {
+      "text": "does match because we e",
+      "offset": 565680,
+      "duration": 5520
+    },
+    {
+      "text": "or the a of EU and AC K does not match",
+      "offset": 568200,
+      "duration": 5520
+    },
+    {
+      "text": "the C of.com",
+      "offset": 571200,
+      "duration": 6060
+    },
+    {
+      "text": "all right so at this stage is where the",
+      "offset": 573720,
+      "duration": 6660
+    },
+    {
+      "text": "backtracking uh happened and in this",
+      "offset": 577260,
+      "duration": 5579
+    },
+    {
+      "text": "example of a backtracking the engine",
+      "offset": 580380,
+      "duration": 4920
+    },
+    {
+      "text": "can't proceed so it has to go backwards",
+      "offset": 582839,
+      "duration": 5461
+    },
+    {
+      "text": "it has to change some decisions that it",
+      "offset": 585300,
+      "duration": 5219
+    },
+    {
+      "text": "made earlier so what it does is it looks",
+      "offset": 588300,
+      "duration": 4080
+    },
+    {
+      "text": "at the characters it had matched before",
+      "offset": 590519,
+      "duration": 4380
+    },
+    {
+      "text": "with this dot literal and sees RK so the",
+      "offset": 592380,
+      "duration": 4079
+    },
+    {
+      "text": "last character in fact it has to match",
+      "offset": 594899,
+      "duration": 3361
+    },
+    {
+      "text": "with the dot literal there's a choice",
+      "offset": 596459,
+      "duration": 5820
+    },
+    {
+      "text": "but then the second to last Dot it could",
+      "offset": 598260,
+      "duration": 6420
+    },
+    {
+      "text": "also match with the wildcard we didn't",
+      "offset": 602279,
+      "duration": 3481
+    },
+    {
+      "text": "do that earlier because it's a",
+      "offset": 604680,
+      "duration": 2580
+    },
+    {
+      "text": "non-greedy quantifier attached to the",
+      "offset": 605760,
+      "duration": 3480
+    },
+    {
+      "text": "wildcard but that doesn't mean it",
+      "offset": 607260,
+      "duration": 3780
+    },
+    {
+      "text": "wouldn't be possible",
+      "offset": 609240,
+      "duration": 4200
+    },
+    {
+      "text": "so in fact the engine buys that it'll",
+      "offset": 611040,
+      "duration": 4799
+    },
+    {
+      "text": "use the in a character wildcard and then",
+      "offset": 613440,
+      "duration": 4200
+    },
+    {
+      "text": "the dotted rule",
+      "offset": 615839,
+      "duration": 6120
+    },
+    {
+      "text": "just uh and to to basically summarize",
+      "offset": 617640,
+      "duration": 6500
+    },
+    {
+      "text": "that we have two different ways of",
+      "offset": 621959,
+      "duration": 5521
+    },
+    {
+      "text": "matching those two last dots right two",
+      "offset": 624140,
+      "duration": 6819
+    },
+    {
+      "text": "dotted worlds or wildcon in the arbitral",
+      "offset": 627480,
+      "duration": 4919
+    },
+    {
+      "text": "obviously",
+      "offset": 630959,
+      "duration": 4380
+    },
+    {
+      "text": "once we proceed to the hum we'll still",
+      "offset": 632399,
+      "duration": 4741
+    },
+    {
+      "text": "fail because the E and the a still don't",
+      "offset": 635339,
+      "duration": 4440
+    },
+    {
+      "text": "match the C and we as humans can already",
+      "offset": 637140,
+      "duration": 4319
+    },
+    {
+      "text": "see this is never going to succeed",
+      "offset": 639779,
+      "duration": 3901
+    },
+    {
+      "text": "because Ena will never match C and then",
+      "offset": 641459,
+      "duration": 4921
+    },
+    {
+      "text": "this is not going to change the or a lot",
+      "offset": 643680,
+      "duration": 4620
+    },
+    {
+      "text": "of regular expression engines don't have",
+      "offset": 646380,
+      "duration": 4380
+    },
+    {
+      "text": "this kind of oversight and they'll just",
+      "offset": 648300,
+      "duration": 4979
+    },
+    {
+      "text": "try every possible way of generating a",
+      "offset": 650760,
+      "duration": 3420
+    },
+    {
+      "text": "match",
+      "offset": 653279,
+      "duration": 3961
+    },
+    {
+      "text": "no matter what essentially",
+      "offset": 654180,
+      "duration": 4920
+    },
+    {
+      "text": "and of course there's some automation",
+      "offset": 657240,
+      "duration": 3480
+    },
+    {
+      "text": "optimization and some engines but",
+      "offset": 659100,
+      "duration": 3540
+    },
+    {
+      "text": "generally speaking this is a danger in",
+      "offset": 660720,
+      "duration": 4920
+    },
+    {
+      "text": "many engines so it'll backtrack one more",
+      "offset": 662640,
+      "duration": 4800
+    },
+    {
+      "text": "character let's try the last two already",
+      "offset": 665640,
+      "duration": 3540
+    },
+    {
+      "text": "it'll backtrack to the third to last dot",
+      "offset": 667440,
+      "duration": 4860
+    },
+    {
+      "text": "again it can choose to match it with a",
+      "offset": 669180,
+      "duration": 6060
+    },
+    {
+      "text": "wild card instead of the dark literal",
+      "offset": 672300,
+      "duration": 5880
+    },
+    {
+      "text": "adding two more different ways of",
+      "offset": 675240,
+      "duration": 5039
+    },
+    {
+      "text": "matching those three dots in the end so",
+      "offset": 678180,
+      "duration": 3659
+    },
+    {
+      "text": "in total to match those three dots on",
+      "offset": 680279,
+      "duration": 3661
+    },
+    {
+      "text": "the end we have four different ways the",
+      "offset": 681839,
+      "duration": 5461
+    },
+    {
+      "text": "two we just tried before and now two",
+      "offset": 683940,
+      "duration": 6300
+    },
+    {
+      "text": "more by changing the decision we make",
+      "offset": 687300,
+      "duration": 5900
+    },
+    {
+      "text": "for the third to last",
+      "offset": 690240,
+      "duration": 2960
+    },
+    {
+      "text": "still the E and the A1 match a c of",
+      "offset": 693420,
+      "duration": 4560
+    },
+    {
+      "text": "course so we backtrack once more we have",
+      "offset": 696480,
+      "duration": 4560
+    },
+    {
+      "text": "four dots and four dots can be matched",
+      "offset": 697980,
+      "duration": 5160
+    },
+    {
+      "text": "in a total of well two times two times",
+      "offset": 701040,
+      "duration": 4979
+    },
+    {
+      "text": "two so eight different ways and you can",
+      "offset": 703140,
+      "duration": 4199
+    },
+    {
+      "text": "already see where this is going to match",
+      "offset": 706019,
+      "duration": 4681
+    },
+    {
+      "text": "the entire 14 dot sequence the engine",
+      "offset": 707339,
+      "duration": 5281
+    },
+    {
+      "text": "actually has a",
+      "offset": 710700,
+      "duration": 3480
+    },
+    {
+      "text": "a huge number of possibilities are",
+      "offset": 712620,
+      "duration": 3060
+    },
+    {
+      "text": "matching those by choosing either",
+      "offset": 714180,
+      "duration": 2640
+    },
+    {
+      "text": "whether it wants to match each",
+      "offset": 715680,
+      "duration": 3540
+    },
+    {
+      "text": "individual dot with a dot literal or",
+      "offset": 716820,
+      "duration": 4500
+    },
+    {
+      "text": "with the wildcard so a total of 2 to the",
+      "offset": 719220,
+      "duration": 4679
+    },
+    {
+      "text": "N minus one in this case and 2 to the 13",
+      "offset": 721320,
+      "duration": 4740
+    },
+    {
+      "text": "different ways which of course is an",
+      "offset": 723899,
+      "duration": 4021
+    },
+    {
+      "text": "exponential amount of different ways to",
+      "offset": 726060,
+      "duration": 4620
+    },
+    {
+      "text": "match it now imagine every time the",
+      "offset": 727920,
+      "duration": 6599
+    },
+    {
+      "text": "engine tries to generate a match it",
+      "offset": 730680,
+      "duration": 6060
+    },
+    {
+      "text": "takes let's say 30 to 40 steps and voila",
+      "offset": 734519,
+      "duration": 6861
+    },
+    {
+      "text": "you're at over 200 000 tips",
+      "offset": 736740,
+      "duration": 4640
+    },
+    {
+      "text": "so this is an issue in terms of",
+      "offset": 741600,
+      "duration": 4799
+    },
+    {
+      "text": "performance it could take down your",
+      "offset": 743700,
+      "duration": 5100
+    },
+    {
+      "text": "service in some rare circumstances as we",
+      "offset": 746399,
+      "duration": 3781
+    },
+    {
+      "text": "saw with the cloudflare and stack",
+      "offset": 748800,
+      "duration": 3779
+    },
+    {
+      "text": "Overflow examples in most cases it'll",
+      "offset": 750180,
+      "duration": 5520
+    },
+    {
+      "text": "probably just be a bit slow and in many",
+      "offset": 752579,
+      "duration": 4741
+    },
+    {
+      "text": "cases it won't immediately take down",
+      "offset": 755700,
+      "duration": 5040
+    },
+    {
+      "text": "your service still not great",
+      "offset": 757320,
+      "duration": 5880
+    },
+    {
+      "text": "of course there's a lot of other issues",
+      "offset": 760740,
+      "duration": 4260
+    },
+    {
+      "text": "we experience when we write project",
+      "offset": 763200,
+      "duration": 4379
+    },
+    {
+      "text": "Expressions I think most of us will not",
+      "offset": 765000,
+      "duration": 5940
+    },
+    {
+      "text": "disagree with that and",
+      "offset": 767579,
+      "duration": 7260
+    },
+    {
+      "text": "essentially the same sort of problems",
+      "offset": 770940,
+      "duration": 6420
+    },
+    {
+      "text": "that affect regular code that we develop",
+      "offset": 774839,
+      "duration": 5341
+    },
+    {
+      "text": "in any other language also affect mental",
+      "offset": 777360,
+      "duration": 4620
+    },
+    {
+      "text": "expression so we have issues with",
+      "offset": 780180,
+      "duration": 3779
+    },
+    {
+      "text": "readability a lot of times we have",
+      "offset": 781980,
+      "duration": 4020
+    },
+    {
+      "text": "unnecessary complexity in regular",
+      "offset": 783959,
+      "duration": 4261
+    },
+    {
+      "text": "Expressions often because we don't",
+      "offset": 786000,
+      "duration": 3660
+    },
+    {
+      "text": "understand features properly or because",
+      "offset": 788220,
+      "duration": 3840
+    },
+    {
+      "text": "there are ways to make things more",
+      "offset": 789660,
+      "duration": 4619
+    },
+    {
+      "text": "concise that we don't know about because",
+      "offset": 792060,
+      "duration": 4740
+    },
+    {
+      "text": "the expression has grown over time",
+      "offset": 794279,
+      "duration": 4941
+    },
+    {
+      "text": "many reasons right",
+      "offset": 796800,
+      "duration": 5700
+    },
+    {
+      "text": "there are very very specific or like",
+      "offset": 799220,
+      "duration": 5220
+    },
+    {
+      "text": "feature specific",
+      "offset": 802500,
+      "duration": 4680
+    },
+    {
+      "text": "misunderstandings and problems we can",
+      "offset": 804440,
+      "duration": 4899
+    },
+    {
+      "text": "introduce such as we have duplicate",
+      "offset": 807180,
+      "duration": 3599
+    },
+    {
+      "text": "characters and character classes or",
+      "offset": 809339,
+      "duration": 3500
+    },
+    {
+      "text": "empty character classes for instance",
+      "offset": 810779,
+      "duration": 5881
+    },
+    {
+      "text": "leading to potentially behavior that is",
+      "offset": 812839,
+      "duration": 7120
+    },
+    {
+      "text": "different to what we expect when we look",
+      "offset": 816660,
+      "duration": 6000
+    },
+    {
+      "text": "at the regex or maybe",
+      "offset": 819959,
+      "duration": 6180
+    },
+    {
+      "text": "um it's just a little bit less readable",
+      "offset": 822660,
+      "duration": 5479
+    },
+    {
+      "text": "in either case",
+      "offset": 826139,
+      "duration": 5281
+    },
+    {
+      "text": "logical errors are easy to introduce you",
+      "offset": 828139,
+      "duration": 6041
+    },
+    {
+      "text": "know all kinds of things we can have",
+      "offset": 831420,
+      "duration": 5700
+    },
+    {
+      "text": "impossible back references we just",
+      "offset": 834180,
+      "duration": 4920
+    },
+    {
+      "text": "matching or not matching certain things",
+      "offset": 837120,
+      "duration": 4140
+    },
+    {
+      "text": "where we didn't expect our regex to",
+      "offset": 839100,
+      "duration": 3600
+    },
+    {
+      "text": "behave that way",
+      "offset": 841260,
+      "duration": 2460
+    },
+    {
+      "text": "um",
+      "offset": 842700,
+      "duration": 3300
+    },
+    {
+      "text": "we're dealing with text here and with",
+      "offset": 843720,
+      "duration": 4619
+    },
+    {
+      "text": "powers and text of course Unicode is an",
+      "offset": 846000,
+      "duration": 3540
+    },
+    {
+      "text": "issue",
+      "offset": 848339,
+      "duration": 3000
+    },
+    {
+      "text": "um it depends on the engine some engines",
+      "offset": 849540,
+      "duration": 3660
+    },
+    {
+      "text": "have more support for Unicode some have",
+      "offset": 851339,
+      "duration": 4081
+    },
+    {
+      "text": "less support for Unicode in Java for",
+      "offset": 853200,
+      "duration": 3240
+    },
+    {
+      "text": "instance",
+      "offset": 855420,
+      "duration": 4260
+    },
+    {
+      "text": "to make the case insensitivity work",
+      "offset": 856440,
+      "duration": 6180
+    },
+    {
+      "text": "property properly you have to pass the",
+      "offset": 859680,
+      "duration": 4980
+    },
+    {
+      "text": "Radix engine a specific flag to also",
+      "offset": 862620,
+      "duration": 3540
+    },
+    {
+      "text": "consider Unicode characters otherwise",
+      "offset": 864660,
+      "duration": 3119
+    },
+    {
+      "text": "they wouldn't be considered by default",
+      "offset": 866160,
+      "duration": 3239
+    },
+    {
+      "text": "so",
+      "offset": 867779,
+      "duration": 4021
+    },
+    {
+      "text": "a lot of other edge cases that we can",
+      "offset": 869399,
+      "duration": 4081
+    },
+    {
+      "text": "also Encounter of course",
+      "offset": 871800,
+      "duration": 2940
+    },
+    {
+      "text": "um all in all it's a lot to keep in mind",
+      "offset": 873480,
+      "duration": 3440
+    },
+    {
+      "text": "for maybe you're just writing a quick",
+      "offset": 874740,
+      "duration": 5700
+    },
+    {
+      "text": "expression to to uh",
+      "offset": 876920,
+      "duration": 5859
+    },
+    {
+      "text": "do a task",
+      "offset": 880440,
+      "duration": 4800
+    },
+    {
+      "text": "so okay so we have all these problems",
+      "offset": 882779,
+      "duration": 3961
+    },
+    {
+      "text": "and",
+      "offset": 885240,
+      "duration": 3959
+    },
+    {
+      "text": "as toner we're in the world of well",
+      "offset": 886740,
+      "duration": 4320
+    },
+    {
+      "text": "static code analysis and writing",
+      "offset": 889199,
+      "duration": 3061
+    },
+    {
+      "text": "analyzers for all kinds of different",
+      "offset": 891060,
+      "duration": 2399
+    },
+    {
+      "text": "languages",
+      "offset": 892260,
+      "duration": 3660
+    },
+    {
+      "text": "and there isn't much good static",
+      "offset": 893459,
+      "duration": 4201
+    },
+    {
+      "text": "analysis of regular expressions or",
+      "offset": 895920,
+      "duration": 4560
+    },
+    {
+      "text": "automatic static analysis out there so",
+      "offset": 897660,
+      "duration": 5160
+    },
+    {
+      "text": "we thought okay let's see if we can do",
+      "offset": 900480,
+      "duration": 3900
+    },
+    {
+      "text": "something about it and so a couple of",
+      "offset": 902820,
+      "duration": 2639
+    },
+    {
+      "text": "years ago",
+      "offset": 904380,
+      "duration": 3480
+    },
+    {
+      "text": "we started developing developing a new",
+      "offset": 905459,
+      "duration": 5341
+    },
+    {
+      "text": "regex analyzer and it's based on",
+      "offset": 907860,
+      "duration": 5219
+    },
+    {
+      "text": "non-atomistic finite automata",
+      "offset": 910800,
+      "duration": 5700
+    },
+    {
+      "text": "which if you're not familiar with an NFA",
+      "offset": 913079,
+      "duration": 5401
+    },
+    {
+      "text": "it's essentially the little images",
+      "offset": 916500,
+      "duration": 4800
+    },
+    {
+      "text": "little graphs that we saw earlier when",
+      "offset": 918480,
+      "duration": 4859
+    },
+    {
+      "text": "we went through the regular expression",
+      "offset": 921300,
+      "duration": 5820
+    },
+    {
+      "text": "how it matches uh the input and and the",
+      "offset": 923339,
+      "duration": 5881
+    },
+    {
+      "text": "graph of State",
+      "offset": 927120,
+      "duration": 5159
+    },
+    {
+      "text": "nodes with some edges in between that's",
+      "offset": 929220,
+      "duration": 5100
+    },
+    {
+      "text": "essentially the NFA for that expression",
+      "offset": 932279,
+      "duration": 3721
+    },
+    {
+      "text": "it's based on a couple of papers here",
+      "offset": 934320,
+      "duration": 4440
+    },
+    {
+      "text": "you can look at those in your own time",
+      "offset": 936000,
+      "duration": 5220
+    },
+    {
+      "text": "um and that's kind of the the core",
+      "offset": 938760,
+      "duration": 5759
+    },
+    {
+      "text": "of the engine we generate the NFA from a",
+      "offset": 941220,
+      "duration": 5220
+    },
+    {
+      "text": "regex we find in the code and then we",
+      "offset": 944519,
+      "duration": 4260
+    },
+    {
+      "text": "can analyze that NFA for certain",
+      "offset": 946440,
+      "duration": 3480
+    },
+    {
+      "text": "patterns",
+      "offset": 948779,
+      "duration": 3961
+    },
+    {
+      "text": "that indicate that we have issues in",
+      "offset": 949920,
+      "duration": 4320
+    },
+    {
+      "text": "those categories that we saw earlier",
+      "offset": 952740,
+      "duration": 4980
+    },
+    {
+      "text": "I'll give you one example the example of",
+      "offset": 954240,
+      "duration": 4980
+    },
+    {
+      "text": "the catastrophic backtracking the",
+      "offset": 957720,
+      "duration": 3059
+    },
+    {
+      "text": "exponential catastrophic backtracking",
+      "offset": 959220,
+      "duration": 4739
+    },
+    {
+      "text": "that we saw with the 14 dots",
+      "offset": 960779,
+      "duration": 5701
+    },
+    {
+      "text": "and here we're looking for a pattern of",
+      "offset": 963959,
+      "duration": 4740
+    },
+    {
+      "text": "intersecting Loop execution paths and",
+      "offset": 966480,
+      "duration": 3780
+    },
+    {
+      "text": "what do I mean by that",
+      "offset": 968699,
+      "duration": 3781
+    },
+    {
+      "text": "so take this example here",
+      "offset": 970260,
+      "duration": 4019
+    },
+    {
+      "text": "this particular expression",
+      "offset": 972480,
+      "duration": 4260
+    },
+    {
+      "text": "it's it's a repetition so we have a plus",
+      "offset": 974279,
+      "duration": 3841
+    },
+    {
+      "text": "here which which means it's repeated",
+      "offset": 976740,
+      "duration": 5700
+    },
+    {
+      "text": "once or more of an A or a word character",
+      "offset": 978120,
+      "duration": 7740
+    },
+    {
+      "text": "the double backslash W is a word",
+      "offset": 982440,
+      "duration": 5459
+    },
+    {
+      "text": "character class now this word character",
+      "offset": 985860,
+      "duration": 4380
+    },
+    {
+      "text": "test already includes amongst other",
+      "offset": 987899,
+      "duration": 5701
+    },
+    {
+      "text": "things a lowercase a so every time the",
+      "offset": 990240,
+      "duration": 5940
+    },
+    {
+      "text": "engine encounters that a in the input it",
+      "offset": 993600,
+      "duration": 3840
+    },
+    {
+      "text": "can choose whether it wants to match",
+      "offset": 996180,
+      "duration": 3540
+    },
+    {
+      "text": "that a with with the A and the regex or",
+      "offset": 997440,
+      "duration": 4500
+    },
+    {
+      "text": "with the word character class",
+      "offset": 999720,
+      "duration": 4260
+    },
+    {
+      "text": "so essentially if we have three A's in",
+      "offset": 1001940,
+      "duration": 3780
+    },
+    {
+      "text": "the input we can match it in in two to",
+      "offset": 1003980,
+      "duration": 4020
+    },
+    {
+      "text": "the three so eight different ways by",
+      "offset": 1005720,
+      "duration": 4200
+    },
+    {
+      "text": "combining the A and the projector class",
+      "offset": 1008000,
+      "duration": 5399
+    },
+    {
+      "text": "in any uh in any way we want and so",
+      "offset": 1009920,
+      "duration": 6240
+    },
+    {
+      "text": "essentially we have different uh",
+      "offset": 1013399,
+      "duration": 4981
+    },
+    {
+      "text": "executions of that repetition or or if",
+      "offset": 1016160,
+      "duration": 4619
+    },
+    {
+      "text": "you will you can unroll that Loop or",
+      "offset": 1018380,
+      "duration": 5100
+    },
+    {
+      "text": "that repetition in different ways by",
+      "offset": 1020779,
+      "duration": 4261
+    },
+    {
+      "text": "making a different decision in in each",
+      "offset": 1023480,
+      "duration": 3780
+    },
+    {
+      "text": "of those iterations",
+      "offset": 1025040,
+      "duration": 4440
+    },
+    {
+      "text": "while still matching the same input so",
+      "offset": 1027260,
+      "duration": 4559
+    },
+    {
+      "text": "all those executions or enrollments of",
+      "offset": 1029480,
+      "duration": 3839
+    },
+    {
+      "text": "that Loop are intersecting because they",
+      "offset": 1031819,
+      "duration": 2941
+    },
+    {
+      "text": "intersect and that they match the same",
+      "offset": 1033319,
+      "duration": 2880
+    },
+    {
+      "text": "input",
+      "offset": 1034760,
+      "duration": 3000
+    },
+    {
+      "text": "and once we detect a pattern like that",
+      "offset": 1036199,
+      "duration": 4201
+    },
+    {
+      "text": "in the NFA we know okay there's some",
+      "offset": 1037760,
+      "duration": 6179
+    },
+    {
+      "text": "catastrophic backtracking here so",
+      "offset": 1040400,
+      "duration": 6419
+    },
+    {
+      "text": "there are some limitations uh to this",
+      "offset": 1043939,
+      "duration": 5221
+    },
+    {
+      "text": "approach they don't lend themselves well",
+      "offset": 1046819,
+      "duration": 4740
+    },
+    {
+      "text": "to some of the more advanced regex",
+      "offset": 1049160,
+      "duration": 4500
+    },
+    {
+      "text": "features such as look arounds they can",
+      "offset": 1051559,
+      "duration": 5221
+    },
+    {
+      "text": "be exponentially complex to analyze with",
+      "offset": 1053660,
+      "duration": 6240
+    },
+    {
+      "text": "this approach however and we have a an",
+      "offset": 1056780,
+      "duration": 4259
+    },
+    {
+      "text": "intern who's currently doing some",
+      "offset": 1059900,
+      "duration": 2820
+    },
+    {
+      "text": "research in this",
+      "offset": 1061039,
+      "duration": 4520
+    },
+    {
+      "text": "um their simple cases are probably",
+      "offset": 1062720,
+      "duration": 5459
+    },
+    {
+      "text": "supportable uh they're not yet but they",
+      "offset": 1065559,
+      "duration": 4301
+    },
+    {
+      "text": "might come in future",
+      "offset": 1068179,
+      "duration": 3421
+    },
+    {
+      "text": "also difficult are back references",
+      "offset": 1069860,
+      "duration": 4319
+    },
+    {
+      "text": "because they actually",
+      "offset": 1071600,
+      "duration": 4439
+    },
+    {
+      "text": "result in regular Expressions being able",
+      "offset": 1074179,
+      "duration": 3421
+    },
+    {
+      "text": "to match more than just regular",
+      "offset": 1076039,
+      "duration": 3961
+    },
+    {
+      "text": "languages and they can match us also",
+      "offset": 1077600,
+      "duration": 4500
+    },
+    {
+      "text": "context free and contact sensitive",
+      "offset": 1080000,
+      "duration": 5520
+    },
+    {
+      "text": "languages which are also not very well",
+      "offset": 1082100,
+      "duration": 5060
+    },
+    {
+      "text": "suited to be represented by",
+      "offset": 1085520,
+      "duration": 4380
+    },
+    {
+      "text": "non-enterministic finite automata",
+      "offset": 1087160,
+      "duration": 4840
+    },
+    {
+      "text": "again it's something we could probably",
+      "offset": 1089900,
+      "duration": 4680
+    },
+    {
+      "text": "build in some rudimentary support",
+      "offset": 1092000,
+      "duration": 4200
+    },
+    {
+      "text": "um and",
+      "offset": 1094580,
+      "duration": 4260
+    },
+    {
+      "text": "we may do in the future the nice thing",
+      "offset": 1096200,
+      "duration": 4620
+    },
+    {
+      "text": "about this approach is though that we",
+      "offset": 1098840,
+      "duration": 4079
+    },
+    {
+      "text": "can really see once we identify a",
+      "offset": 1100820,
+      "duration": 3660
+    },
+    {
+      "text": "pattern we can",
+      "offset": 1102919,
+      "duration": 4201
+    },
+    {
+      "text": "we can map it back to the regex and",
+      "offset": 1104480,
+      "duration": 4079
+    },
+    {
+      "text": "exactly",
+      "offset": 1107120,
+      "duration": 4679
+    },
+    {
+      "text": "where in that Reg X the problem is to to",
+      "offset": 1108559,
+      "duration": 6181
+    },
+    {
+      "text": "flag that to the user",
+      "offset": 1111799,
+      "duration": 5161
+    },
+    {
+      "text": "or to the develop so",
+      "offset": 1114740,
+      "duration": 4100
+    },
+    {
+      "text": "then I talk about a couple of",
+      "offset": 1116960,
+      "duration": 4440
+    },
+    {
+      "text": "generic tips on how you can avoid some",
+      "offset": 1118840,
+      "duration": 4540
+    },
+    {
+      "text": "of these issues and especially the",
+      "offset": 1121400,
+      "duration": 3659
+    },
+    {
+      "text": "catastrophic backtracking and some other",
+      "offset": 1123380,
+      "duration": 3419
+    },
+    {
+      "text": "issues",
+      "offset": 1125059,
+      "duration": 2401
+    },
+    {
+      "text": "um",
+      "offset": 1126799,
+      "duration": 2041
+    },
+    {
+      "text": "particularly for catastrophic",
+      "offset": 1127460,
+      "duration": 2700
+    },
+    {
+      "text": "backtracking if you don't use a",
+      "offset": 1128840,
+      "duration": 3360
+    },
+    {
+      "text": "backtracking dragx engine and there are",
+      "offset": 1130160,
+      "duration": 3960
+    },
+    {
+      "text": "algorithms out there that don't use",
+      "offset": 1132200,
+      "duration": 3180
+    },
+    {
+      "text": "backtracking",
+      "offset": 1134120,
+      "duration": 3540
+    },
+    {
+      "text": "you can't cut a softly backtrack",
+      "offset": 1135380,
+      "duration": 5100
+    },
+    {
+      "text": "obviously it does change the feature set",
+      "offset": 1137660,
+      "duration": 4860
+    },
+    {
+      "text": "that the engine provides a bit and in",
+      "offset": 1140480,
+      "duration": 5100
+    },
+    {
+      "text": "most cases but it might be an option",
+      "offset": 1142520,
+      "duration": 5340
+    },
+    {
+      "text": "depending on use case",
+      "offset": 1145580,
+      "duration": 4080
+    },
+    {
+      "text": "you can use possessive quantifiers I'm",
+      "offset": 1147860,
+      "duration": 4020
+    },
+    {
+      "text": "not going to go into too much detail if",
+      "offset": 1149660,
+      "duration": 3480
+    },
+    {
+      "text": "you're unfamiliar with possessive",
+      "offset": 1151880,
+      "duration": 3539
+    },
+    {
+      "text": "quantifiers maybe worth reading up on",
+      "offset": 1153140,
+      "duration": 5340
+    },
+    {
+      "text": "quick summary essentially there's three",
+      "offset": 1155419,
+      "duration": 5101
+    },
+    {
+      "text": "types of quantifiers and many regex",
+      "offset": 1158480,
+      "duration": 3540
+    },
+    {
+      "text": "engines",
+      "offset": 1160520,
+      "duration": 4740
+    },
+    {
+      "text": "greedy is the default uh non-greedy is",
+      "offset": 1162020,
+      "duration": 5880
+    },
+    {
+      "text": "with the question mark afterwards that",
+      "offset": 1165260,
+      "duration": 5220
+    },
+    {
+      "text": "we saw earlier and both those allow the",
+      "offset": 1167900,
+      "duration": 4440
+    },
+    {
+      "text": "engine to backtrack and to kind of",
+      "offset": 1170480,
+      "duration": 5220
+    },
+    {
+      "text": "change the Behavior Uh that the matching",
+      "offset": 1172340,
+      "duration": 4500
+    },
+    {
+      "text": "Behavior",
+      "offset": 1175700,
+      "duration": 3240
+    },
+    {
+      "text": "if there's an alternative",
+      "offset": 1176840,
+      "duration": 4560
+    },
+    {
+      "text": "to using the the",
+      "offset": 1178940,
+      "duration": 4500
+    },
+    {
+      "text": "expression that is preceding the",
+      "offset": 1181400,
+      "duration": 3720
+    },
+    {
+      "text": "quantifier there's also possessive",
+      "offset": 1183440,
+      "duration": 3300
+    },
+    {
+      "text": "quantifiers and many engines which",
+      "offset": 1185120,
+      "duration": 3240
+    },
+    {
+      "text": "essentially forbid the engine from",
+      "offset": 1186740,
+      "duration": 3840
+    },
+    {
+      "text": "backtracking and so of course if the",
+      "offset": 1188360,
+      "duration": 3420
+    },
+    {
+      "text": "engine is not allowed to backtrack it",
+      "offset": 1190580,
+      "duration": 3240
+    },
+    {
+      "text": "can't get circuit backtrack although",
+      "offset": 1191780,
+      "duration": 3840
+    },
+    {
+      "text": "that also changes the logic of your",
+      "offset": 1193820,
+      "duration": 3840
+    },
+    {
+      "text": "regular slightly and I know that some",
+      "offset": 1195620,
+      "duration": 4320
+    },
+    {
+      "text": "regex engines don't support this the.net",
+      "offset": 1197660,
+      "duration": 4560
+    },
+    {
+      "text": "Regis ended for instance doesn't have",
+      "offset": 1199940,
+      "duration": 4979
+    },
+    {
+      "text": "native support for the quantifiers with",
+      "offset": 1202220,
+      "duration": 5520
+    },
+    {
+      "text": "some ways to emulate it anyway not going",
+      "offset": 1204919,
+      "duration": 5461
+    },
+    {
+      "text": "into too much detail yeah",
+      "offset": 1207740,
+      "duration": 5880
+    },
+    {
+      "text": "generally speaking be cautious if you",
+      "offset": 1210380,
+      "duration": 4620
+    },
+    {
+      "text": "find you're using intersecting sub",
+      "offset": 1213620,
+      "duration": 3600
+    },
+    {
+      "text": "Expressions so that is different",
+      "offset": 1215000,
+      "duration": 4559
+    },
+    {
+      "text": "expression sub-expressions in a regex",
+      "offset": 1217220,
+      "duration": 4260
+    },
+    {
+      "text": "that can match the same input so think",
+      "offset": 1219559,
+      "duration": 3901
+    },
+    {
+      "text": "of an A and A word character class for",
+      "offset": 1221480,
+      "duration": 4260
+    },
+    {
+      "text": "instance if the engine can choose which",
+      "offset": 1223460,
+      "duration": 4680
+    },
+    {
+      "text": "one to use that would be dangerous there",
+      "offset": 1225740,
+      "duration": 4080
+    },
+    {
+      "text": "are valid use cases of course",
+      "offset": 1228140,
+      "duration": 4080
+    },
+    {
+      "text": "similar with NASA quantifiers",
+      "offset": 1229820,
+      "duration": 4380
+    },
+    {
+      "text": "it's a repetition inside of a repetition",
+      "offset": 1232220,
+      "duration": 5280
+    },
+    {
+      "text": "so it could be dangerous if the engine",
+      "offset": 1234200,
+      "duration": 6780
+    },
+    {
+      "text": "can choose different paths and it's also",
+      "offset": 1237500,
+      "duration": 4919
+    },
+    {
+      "text": "a bit harder to understand if you have",
+      "offset": 1240980,
+      "duration": 3780
+    },
+    {
+      "text": "nested repetitions uh what the the",
+      "offset": 1242419,
+      "duration": 4441
+    },
+    {
+      "text": "variants can actually match",
+      "offset": 1244760,
+      "duration": 4740
+    },
+    {
+      "text": "generally speaking if you use or if you",
+      "offset": 1246860,
+      "duration": 4980
+    },
+    {
+      "text": "try to match single characters try to",
+      "offset": 1249500,
+      "duration": 4080
+    },
+    {
+      "text": "use character classes instead of",
+      "offset": 1251840,
+      "duration": 4380
+    },
+    {
+      "text": "Alternatives if you can so use the one",
+      "offset": 1253580,
+      "duration": 4380
+    },
+    {
+      "text": "on the left here",
+      "offset": 1256220,
+      "duration": 3660
+    },
+    {
+      "text": "because as soon as you have an",
+      "offset": 1257960,
+      "duration": 3660
+    },
+    {
+      "text": "alternative the regex engine can try",
+      "offset": 1259880,
+      "duration": 4740
+    },
+    {
+      "text": "both and here the interesting part is",
+      "offset": 1261620,
+      "duration": 5160
+    },
+    {
+      "text": "that underscores actually also contained",
+      "offset": 1264620,
+      "duration": 3360
+    },
+    {
+      "text": "in the word character class already",
+      "offset": 1266780,
+      "duration": 3779
+    },
+    {
+      "text": "which might not always be obvious if you",
+      "offset": 1267980,
+      "duration": 4439
+    },
+    {
+      "text": "use a character class it's essentially",
+      "offset": 1270559,
+      "duration": 4801
+    },
+    {
+      "text": "treated as a set and it won't try it",
+      "offset": 1272419,
+      "duration": 4140
+    },
+    {
+      "text": "twice",
+      "offset": 1275360,
+      "duration": 3360
+    },
+    {
+      "text": "of course even better don't have",
+      "offset": 1276559,
+      "duration": 4561
+    },
+    {
+      "text": "duplicates in character classes at all",
+      "offset": 1278720,
+      "duration": 5160
+    },
+    {
+      "text": "just use the in this case word character",
+      "offset": 1281120,
+      "duration": 6900
+    },
+    {
+      "text": "cast and these the the fact that you",
+      "offset": 1283880,
+      "duration": 6480
+    },
+    {
+      "text": "could transform them to simpler or more",
+      "offset": 1288020,
+      "duration": 5100
+    },
+    {
+      "text": "efficient constructs or sub Expressions",
+      "offset": 1290360,
+      "duration": 4620
+    },
+    {
+      "text": "um there's where static analysis can",
+      "offset": 1293120,
+      "duration": 3360
+    },
+    {
+      "text": "really help you because those rules are",
+      "offset": 1294980,
+      "duration": 3420
+    },
+    {
+      "text": "encoded some of those rules are encoded",
+      "offset": 1296480,
+      "duration": 4620
+    },
+    {
+      "text": "in static analysis",
+      "offset": 1298400,
+      "duration": 5880
+    },
+    {
+      "text": "so a little example uh",
+      "offset": 1301100,
+      "duration": 5520
+    },
+    {
+      "text": "I wonder if you can see a problem with",
+      "offset": 1304280,
+      "duration": 4500
+    },
+    {
+      "text": "the swag X and obviously that's a trick",
+      "offset": 1306620,
+      "duration": 4080
+    },
+    {
+      "text": "question because if I ask you then there",
+      "offset": 1308780,
+      "duration": 4320
+    },
+    {
+      "text": "is a problem or a couple of problems so",
+      "offset": 1310700,
+      "duration": 5339
+    },
+    {
+      "text": "already we can see it's so we have three",
+      "offset": 1313100,
+      "duration": 4680
+    },
+    {
+      "text": "Alternatives here we have a to z or",
+      "offset": 1316039,
+      "duration": 4741
+    },
+    {
+      "text": "underscore or a DOT literal",
+      "offset": 1317780,
+      "duration": 5399
+    },
+    {
+      "text": "repeat it once or more",
+      "offset": 1320780,
+      "duration": 5100
+    },
+    {
+      "text": "once or more times and",
+      "offset": 1323179,
+      "duration": 4321
+    },
+    {
+      "text": "so there's a couple of problems first of",
+      "offset": 1325880,
+      "duration": 3120
+    },
+    {
+      "text": "all we're trying to match character",
+      "offset": 1327500,
+      "duration": 2880
+    },
+    {
+      "text": "characters so generally speaking we",
+      "offset": 1329000,
+      "duration": 3659
+    },
+    {
+      "text": "should use a character class",
+      "offset": 1330380,
+      "duration": 3419
+    },
+    {
+      "text": "and",
+      "offset": 1332659,
+      "duration": 3541
+    },
+    {
+      "text": "in this particular case it's even worse",
+      "offset": 1333799,
+      "duration": 4500
+    },
+    {
+      "text": "because notice how we have capital A",
+      "offset": 1336200,
+      "duration": 4440
+    },
+    {
+      "text": "through to lowercase z subtle difference",
+      "offset": 1338299,
+      "duration": 4860
+    },
+    {
+      "text": "I know but it is there and the fact that",
+      "offset": 1340640,
+      "duration": 4380
+    },
+    {
+      "text": "includes all characters ranging in the",
+      "offset": 1343159,
+      "duration": 3841
+    },
+    {
+      "text": "ASCII range from capital A to local Z",
+      "offset": 1345020,
+      "duration": 4080
+    },
+    {
+      "text": "which includes all capital and lowercase",
+      "offset": 1347000,
+      "duration": 4260
+    },
+    {
+      "text": "letters and a couple of special symbols",
+      "offset": 1349100,
+      "duration": 3840
+    },
+    {
+      "text": "such as underscore",
+      "offset": 1351260,
+      "duration": 3600
+    },
+    {
+      "text": "so we have an alternative of underscore",
+      "offset": 1352940,
+      "duration": 4859
+    },
+    {
+      "text": "or a character task that includes",
+      "offset": 1354860,
+      "duration": 5160
+    },
+    {
+      "text": "underscore which can lead to",
+      "offset": 1357799,
+      "duration": 3841
+    },
+    {
+      "text": "catastrophic backtracking in the worst",
+      "offset": 1360020,
+      "duration": 5340
+    },
+    {
+      "text": "case and again of course even better",
+      "offset": 1361640,
+      "duration": 6180
+    },
+    {
+      "text": "please don't use character ranges with",
+      "offset": 1365360,
+      "duration": 5520
+    },
+    {
+      "text": "capital and lowercase that is mixed uh",
+      "offset": 1367820,
+      "duration": 5099
+    },
+    {
+      "text": "more explicit of course",
+      "offset": 1370880,
+      "duration": 6200
+    },
+    {
+      "text": "is something like the ones down here",
+      "offset": 1372919,
+      "duration": 4161
+    },
+    {
+      "text": "all right so this is the example that",
+      "offset": 1378320,
+      "duration": 4320
+    },
+    {
+      "text": "brought down cloudflare already you can",
+      "offset": 1379940,
+      "duration": 4440
+    },
+    {
+      "text": "see it's starting to get slightly more",
+      "offset": 1382640,
+      "duration": 4800
+    },
+    {
+      "text": "complicated maybe hard to find an issue",
+      "offset": 1384380,
+      "duration": 4140
+    },
+    {
+      "text": "immediately",
+      "offset": 1387440,
+      "duration": 2820
+    },
+    {
+      "text": "and the nice thing is when we build an",
+      "offset": 1388520,
+      "duration": 4800
+    },
+    {
+      "text": "NFA you can we can analyze it",
+      "offset": 1390260,
+      "duration": 5760
+    },
+    {
+      "text": "part by part and find those patterns no",
+      "offset": 1393320,
+      "duration": 4859
+    },
+    {
+      "text": "matter how complex the rest of the of",
+      "offset": 1396020,
+      "duration": 3840
+    },
+    {
+      "text": "the very exists or more or less not",
+      "offset": 1398179,
+      "duration": 3721
+    },
+    {
+      "text": "matter in fact here at the very end we",
+      "offset": 1399860,
+      "duration": 4860
+    },
+    {
+      "text": "have several repetitions in a row of a",
+      "offset": 1401900,
+      "duration": 5159
+    },
+    {
+      "text": "wildcat character and so at every time",
+      "offset": 1404720,
+      "duration": 4439
+    },
+    {
+      "text": "the or the engine can essentially choose",
+      "offset": 1407059,
+      "duration": 4261
+    },
+    {
+      "text": "which of those repetitions if you use",
+      "offset": 1409159,
+      "duration": 3721
+    },
+    {
+      "text": "more or less",
+      "offset": 1411320,
+      "duration": 2880
+    },
+    {
+      "text": "and that can lead to customer",
+      "offset": 1412880,
+      "duration": 4440
+    },
+    {
+      "text": "backtracking so much so that it caused a",
+      "offset": 1414200,
+      "duration": 4740
+    },
+    {
+      "text": "nearly half an hour output for",
+      "offset": 1417320,
+      "duration": 2760
+    },
+    {
+      "text": "cloudflare",
+      "offset": 1418940,
+      "duration": 3440
+    },
+    {
+      "text": "foreign",
+      "offset": 1420080,
+      "duration": 2300
+    },
+    {
+      "text": "Expressions out there",
+      "offset": 1423159,
+      "duration": 4241
+    },
+    {
+      "text": "um this is just an example which",
+      "offset": 1425179,
+      "duration": 4561
+    },
+    {
+      "text": "probably has many issues uh it's",
+      "offset": 1427400,
+      "duration": 4259
+    },
+    {
+      "text": "actually a regex to match email",
+      "offset": 1429740,
+      "duration": 5700
+    },
+    {
+      "text": "addresses so it's just as a reminder you",
+      "offset": 1431659,
+      "duration": 5701
+    },
+    {
+      "text": "can write very complicated regular",
+      "offset": 1435440,
+      "duration": 4140
+    },
+    {
+      "text": "Expressions to do seemingly simple",
+      "offset": 1437360,
+      "duration": 3780
+    },
+    {
+      "text": "things",
+      "offset": 1439580,
+      "duration": 3719
+    },
+    {
+      "text": "maybe ask yourself if that's the best",
+      "offset": 1441140,
+      "duration": 4380
+    },
+    {
+      "text": "the best technique or best tool to use",
+      "offset": 1443299,
+      "duration": 4441
+    },
+    {
+      "text": "in those cases",
+      "offset": 1445520,
+      "duration": 4680
+    },
+    {
+      "text": "some takeaways uh I think",
+      "offset": 1447740,
+      "duration": 5280
+    },
+    {
+      "text": "a few people would disagree Here regular",
+      "offset": 1450200,
+      "duration": 5400
+    },
+    {
+      "text": "Expressions can be quite difficult",
+      "offset": 1453020,
+      "duration": 5159
+    },
+    {
+      "text": "and hard to read and maintain in many",
+      "offset": 1455600,
+      "duration": 6660
+    },
+    {
+      "text": "cases especially as they get longer and",
+      "offset": 1458179,
+      "duration": 6061
+    },
+    {
+      "text": "well older",
+      "offset": 1462260,
+      "duration": 3659
+    },
+    {
+      "text": "a lot of times when we do write regular",
+      "offset": 1464240,
+      "duration": 3900
+    },
+    {
+      "text": "Expressions it's with what we are trying",
+      "offset": 1465919,
+      "duration": 4681
+    },
+    {
+      "text": "to match in mind we",
+      "offset": 1468140,
+      "duration": 4860
+    },
+    {
+      "text": "often don't really consider what we",
+      "offset": 1470600,
+      "duration": 5340
+    },
+    {
+      "text": "don't want to match as as much and also",
+      "offset": 1473000,
+      "duration": 4980
+    },
+    {
+      "text": "a lot of edge cases of course are hard",
+      "offset": 1475940,
+      "duration": 4080
+    },
+    {
+      "text": "to consider so so",
+      "offset": 1477980,
+      "duration": 5699
+    },
+    {
+      "text": "trying to consider the non-matching case",
+      "offset": 1480020,
+      "duration": 5820
+    },
+    {
+      "text": "or the edge case slightly more uh well",
+      "offset": 1483679,
+      "duration": 4561
+    },
+    {
+      "text": "it can't harm of course",
+      "offset": 1485840,
+      "duration": 3839
+    },
+    {
+      "text": "um regex features behave differently",
+      "offset": 1488240,
+      "duration": 4260
+    },
+    {
+      "text": "than expected due to the developer",
+      "offset": 1489679,
+      "duration": 4500
+    },
+    {
+      "text": "simply not being familiar with the",
+      "offset": 1492500,
+      "duration": 4320
+    },
+    {
+      "text": "feature enough or also",
+      "offset": 1494179,
+      "duration": 4681
+    },
+    {
+      "text": "the regex engine implementation doing",
+      "offset": 1496820,
+      "duration": 4140
+    },
+    {
+      "text": "something different than maybe what the",
+      "offset": 1498860,
+      "duration": 3780
+    },
+    {
+      "text": "developers used to or a different engine",
+      "offset": 1500960,
+      "duration": 5219
+    },
+    {
+      "text": "of notation that he's used to so",
+      "offset": 1502640,
+      "duration": 6360
+    },
+    {
+      "text": "that's something to be wary of uh know",
+      "offset": 1506179,
+      "duration": 5221
+    },
+    {
+      "text": "which engine you're writing your regular",
+      "offset": 1509000,
+      "duration": 3539
+    },
+    {
+      "text": "expressions for",
+      "offset": 1511400,
+      "duration": 3240
+    },
+    {
+      "text": "and finally of course",
+      "offset": 1512539,
+      "duration": 5401
+    },
+    {
+      "text": "if you can use static code analysis so",
+      "offset": 1514640,
+      "duration": 5220
+    },
+    {
+      "text": "so now we do have this regular",
+      "offset": 1517940,
+      "duration": 3900
+    },
+    {
+      "text": "expression engine available now it's",
+      "offset": 1519860,
+      "duration": 5040
+    },
+    {
+      "text": "open source and free to use and in fact",
+      "offset": 1521840,
+      "duration": 4500
+    },
+    {
+      "text": "the nice thing is we've been able to",
+      "offset": 1524900,
+      "duration": 2700
+    },
+    {
+      "text": "find some bugs in our own web",
+      "offset": 1526340,
+      "duration": 4860
+    },
+    {
+      "text": "Expressions uh that in our own products",
+      "offset": 1527600,
+      "duration": 6360
+    },
+    {
+      "text": "using our analyzer so in fact even the",
+      "offset": 1531200,
+      "duration": 5520
+    },
+    {
+      "text": "people here who have researched a lot",
+      "offset": 1533960,
+      "duration": 4260
+    },
+    {
+      "text": "about this topic and are now quite in",
+      "offset": 1536720,
+      "duration": 3420
+    },
+    {
+      "text": "depth still make some of these mistakes",
+      "offset": 1538220,
+      "duration": 4920
+    },
+    {
+      "text": "and uh using a static analysis helps us",
+      "offset": 1540140,
+      "duration": 5539
+    },
+    {
+      "text": "as well",
+      "offset": 1543140,
+      "duration": 2539
+    },
+    {
+      "text": "so special thanks here goes out to",
+      "offset": 1545779,
+      "duration": 4561
+    },
+    {
+      "text": "Sebastian hongaka who is here in the pub",
+      "offset": 1548240,
+      "duration": 3900
+    },
+    {
+      "text": "with us today who kind of kicked off",
+      "offset": 1550340,
+      "duration": 2880
+    },
+    {
+      "text": "this whole",
+      "offset": 1552140,
+      "duration": 4080
+    },
+    {
+      "text": "engine or its whole analyzer project",
+      "offset": 1553220,
+      "duration": 4680
+    },
+    {
+      "text": "as well as the sonar languages team",
+      "offset": 1556220,
+      "duration": 4380
+    },
+    {
+      "text": "which then invested in the last two",
+      "offset": 1557900,
+      "duration": 5220
+    },
+    {
+      "text": "years to bring this engine to various",
+      "offset": 1560600,
+      "duration": 3959
+    },
+    {
+      "text": "different languages",
+      "offset": 1563120,
+      "duration": 3539
+    },
+    {
+      "text": "there's some references at the end if",
+      "offset": 1564559,
+      "duration": 5120
+    },
+    {
+      "text": "you want to have a look later",
+      "offset": 1566659,
+      "duration": 3020
+    },
+    {
+      "text": "otherwise I'll go back to Andrew",
+      "offset": 1570380,
+      "duration": 3380
+    },
+    {
+      "text": "excellent thank you so much Joanne that",
+      "offset": 1573940,
+      "duration": 4420
+    },
+    {
+      "text": "was great",
+      "offset": 1577279,
+      "duration": 5161
+    },
+    {
+      "text": "um as we move into a short time of q a",
+      "offset": 1578360,
+      "duration": 4980
+    },
+    {
+      "text": "now",
+      "offset": 1582440,
+      "duration": 2520
+    },
+    {
+      "text": "um please do put any last minute",
+      "offset": 1583340,
+      "duration": 3900
+    },
+    {
+      "text": "questions in the Q a box and I will",
+      "offset": 1584960,
+      "duration": 3719
+    },
+    {
+      "text": "gather those",
+      "offset": 1587240,
+      "duration": 3179
+    },
+    {
+      "text": "um I just wanted to briefly share whilst",
+      "offset": 1588679,
+      "duration": 3901
+    },
+    {
+      "text": "you're doing that that we have",
+      "offset": 1590419,
+      "duration": 3841
+    },
+    {
+      "text": "um some upcoming webinars on your screen",
+      "offset": 1592580,
+      "duration": 5520
+    },
+    {
+      "text": "for the sonar Cube LTS our long-term",
+      "offset": 1594260,
+      "duration": 6060
+    },
+    {
+      "text": "support webinars so I do invite you to",
+      "offset": 1598100,
+      "duration": 4740
+    },
+    {
+      "text": "register now for the session that's most",
+      "offset": 1600320,
+      "duration": 4080
+    },
+    {
+      "text": "convenient for you there should be a",
+      "offset": 1602840,
+      "duration": 5579
+    },
+    {
+      "text": "link in the chat as we speak",
+      "offset": 1604400,
+      "duration": 7259
+    },
+    {
+      "text": "right on to a few questions if I may",
+      "offset": 1608419,
+      "duration": 6661
+    },
+    {
+      "text": "Joanne um the first question",
+      "offset": 1611659,
+      "duration": 5701
+    },
+    {
+      "text": "um how would you handle user provided",
+      "offset": 1615080,
+      "duration": 5339
+    },
+    {
+      "text": "regular Expressions so at runtime with",
+      "offset": 1617360,
+      "duration": 6000
+    },
+    {
+      "text": "this context in mind",
+      "offset": 1620419,
+      "duration": 5041
+    },
+    {
+      "text": "yeah um so",
+      "offset": 1623360,
+      "duration": 3540
+    },
+    {
+      "text": "of course if you have a user provided",
+      "offset": 1625460,
+      "duration": 5520
+    },
+    {
+      "text": "regular Expressions you can't verify",
+      "offset": 1626900,
+      "duration": 6060
+    },
+    {
+      "text": "them very easily if they contain",
+      "offset": 1630980,
+      "duration": 4439
+    },
+    {
+      "text": "dangerous dangerous sub-expressions or",
+      "offset": 1632960,
+      "duration": 4260
+    },
+    {
+      "text": "if they contain something vulnerable to",
+      "offset": 1635419,
+      "duration": 4140
+    },
+    {
+      "text": "redos a regular expression analog",
+      "offset": 1637220,
+      "duration": 4800
+    },
+    {
+      "text": "service so even if you can do some",
+      "offset": 1639559,
+      "duration": 3841
+    },
+    {
+      "text": "static analysis it's always a risk",
+      "offset": 1642020,
+      "duration": 4440
+    },
+    {
+      "text": "something serves through I think you",
+      "offset": 1643400,
+      "duration": 6000
+    },
+    {
+      "text": "have to use a timeout in the end you",
+      "offset": 1646460,
+      "duration": 5339
+    },
+    {
+      "text": "won't get around that",
+      "offset": 1649400,
+      "duration": 3120
+    },
+    {
+      "text": "um",
+      "offset": 1651799,
+      "duration": 3120
+    },
+    {
+      "text": "but yeah user input in the regular",
+      "offset": 1652520,
+      "duration": 3539
+    },
+    {
+      "text": "expression",
+      "offset": 1654919,
+      "duration": 3841
+    },
+    {
+      "text": "case of course always slightly more",
+      "offset": 1656059,
+      "duration": 6120
+    },
+    {
+      "text": "difficult to deal with okay",
+      "offset": 1658760,
+      "duration": 6539
+    },
+    {
+      "text": "um catastrophic backtracking uh in a",
+      "offset": 1662179,
+      "duration": 5641
+    },
+    {
+      "text": "nutshell how would you how would do you",
+      "offset": 1665299,
+      "duration": 6360
+    },
+    {
+      "text": "prevent catastrophic backtracking",
+      "offset": 1667820,
+      "duration": 5099
+    },
+    {
+      "text": "so",
+      "offset": 1671659,
+      "duration": 3361
+    },
+    {
+      "text": "I mean there is uh",
+      "offset": 1672919,
+      "duration": 4441
+    },
+    {
+      "text": "several techniques that that kind of",
+      "offset": 1675020,
+      "duration": 3960
+    },
+    {
+      "text": "mentioned",
+      "offset": 1677360,
+      "duration": 4080
+    },
+    {
+      "text": "um in in a nutshell it's very hard to",
+      "offset": 1678980,
+      "duration": 5040
+    },
+    {
+      "text": "say because it depends on your records",
+      "offset": 1681440,
+      "duration": 3239
+    },
+    {
+      "text": "[Music]",
+      "offset": 1684020,
+      "duration": 1440
+    },
+    {
+      "text": "um",
+      "offset": 1684679,
+      "duration": 3721
+    },
+    {
+      "text": "using an static code analysis tool can",
+      "offset": 1685460,
+      "duration": 7440
+    },
+    {
+      "text": "help you detect some of those issues",
+      "offset": 1688400,
+      "duration": 6600
+    },
+    {
+      "text": "but of course how you fix them depends",
+      "offset": 1692900,
+      "duration": 3480
+    },
+    {
+      "text": "on your particular situation and those",
+      "offset": 1695000,
+      "duration": 3539
+    },
+    {
+      "text": "approaches mentioned earlier can be some",
+      "offset": 1696380,
+      "duration": 3919
+    },
+    {
+      "text": "of them",
+      "offset": 1698539,
+      "duration": 5640
+    },
+    {
+      "text": "great yeah yeah I'll just move some",
+      "offset": 1700299,
+      "duration": 5021
+    },
+    {
+      "text": "quickly because it's got quite a few",
+      "offset": 1704179,
+      "duration": 2880
+    },
+    {
+      "text": "questions I wanted to try and get to you",
+      "offset": 1705320,
+      "duration": 4680
+    },
+    {
+      "text": "um Which languages do does Sona provide",
+      "offset": 1707059,
+      "duration": 6000
+    },
+    {
+      "text": "rules for regular expressions",
+      "offset": 1710000,
+      "duration": 5640
+    },
+    {
+      "text": "so we have quite a few languages in",
+      "offset": 1713059,
+      "duration": 4401
+    },
+    {
+      "text": "general that we provide",
+      "offset": 1715640,
+      "duration": 6240
+    },
+    {
+      "text": "regular Expressions uh support for",
+      "offset": 1717460,
+      "duration": 5199
+    },
+    {
+      "text": "um",
+      "offset": 1721880,
+      "duration": 2820
+    },
+    {
+      "text": "the more advanced support that is based",
+      "offset": 1722659,
+      "duration": 4861
+    },
+    {
+      "text": "on on techniques like this one is I",
+      "offset": 1724700,
+      "duration": 5820
+    },
+    {
+      "text": "think it's Java cotton PHP python I",
+      "offset": 1727520,
+      "duration": 5220
+    },
+    {
+      "text": "think jsts pretty much",
+      "offset": 1730520,
+      "duration": 5039
+    },
+    {
+      "text": "not forgetting anything yeah yep",
+      "offset": 1732740,
+      "duration": 5460
+    },
+    {
+      "text": "um and which regex engine can I use it",
+      "offset": 1735559,
+      "duration": 5161
+    },
+    {
+      "text": "does not suffer from catastrophic",
+      "offset": 1738200,
+      "duration": 3839
+    },
+    {
+      "text": "backtracking",
+      "offset": 1740720,
+      "duration": 3600
+    },
+    {
+      "text": "so there's uh many regex engine",
+      "offset": 1742039,
+      "duration": 3781
+    },
+    {
+      "text": "Solutions out there depends on the",
+      "offset": 1744320,
+      "duration": 3000
+    },
+    {
+      "text": "language you're using of course and and",
+      "offset": 1745820,
+      "duration": 3359
+    },
+    {
+      "text": "the environment you have there is",
+      "offset": 1747320,
+      "duration": 5280
+    },
+    {
+      "text": "Googled re2 which I believe doesn't use",
+      "offset": 1749179,
+      "duration": 4860
+    },
+    {
+      "text": "backtracking so that's something you",
+      "offset": 1752600,
+      "duration": 3420
+    },
+    {
+      "text": "could look into for example",
+      "offset": 1754039,
+      "duration": 5041
+    },
+    {
+      "text": "excellent Johan um thank you thank you",
+      "offset": 1756020,
+      "duration": 4920
+    },
+    {
+      "text": "so much and thank you to everybody who's",
+      "offset": 1759080,
+      "duration": 3420
+    },
+    {
+      "text": "who have posed questions",
+      "offset": 1760940,
+      "duration": 3479
+    },
+    {
+      "text": "um sorry we didn't get time to cover",
+      "offset": 1762500,
+      "duration": 4260
+    },
+    {
+      "text": "them all live but our community is a",
+      "offset": 1764419,
+      "duration": 4380
+    },
+    {
+      "text": "great place to pose those questions and",
+      "offset": 1766760,
+      "duration": 4680
+    },
+    {
+      "text": "also review those previously asked and",
+      "offset": 1768799,
+      "duration": 4740
+    },
+    {
+      "text": "responded to in the past",
+      "offset": 1771440,
+      "duration": 4500
+    },
+    {
+      "text": "um so once again thank you Johan and",
+      "offset": 1773539,
+      "duration": 4500
+    },
+    {
+      "text": "thank you all to those who've attended",
+      "offset": 1775940,
+      "duration": 3180
+    },
+    {
+      "text": "today",
+      "offset": 1778039,
+      "duration": 2880
+    },
+    {
+      "text": "um please do visit sonasource.com for",
+      "offset": 1779120,
+      "duration": 4140
+    },
+    {
+      "text": "further information on how to clean",
+      "offset": 1780919,
+      "duration": 4801
+    },
+    {
+      "text": "Azure code and also to check out",
+      "offset": 1783260,
+      "duration": 4919
+    },
+    {
+      "text": "information on our future webinars and",
+      "offset": 1785720,
+      "duration": 4920
+    },
+    {
+      "text": "events and finally thank you again for",
+      "offset": 1788179,
+      "duration": 4620
+    },
+    {
+      "text": "providing your feedback via the survey",
+      "offset": 1790640,
+      "duration": 5100
+    },
+    {
+      "text": "that will shortly pop up on your screen",
+      "offset": 1792799,
+      "duration": 6860
+    },
+    {
+      "text": "see you all soon thank you",
+      "offset": 1795740,
+      "duration": 3919
+    }
+  ],
+  "fullText": "Welcome to our sonar webinar entitled Finding the Bad Apple in your regular Expressions where we will demonstrate some common mistakes which can occur whilst writing regular expressions we'll show you how sonar can detect problematic Expressions plus give you techniques to improve your regular expression performance I'm Andrew Osborne your moderator for this webinar which will be presented by your embolitis please allow me to very quickly go over the essential housekeeping points before we start the session will last 30 minutes and we will include a q a at the end you are invited to submit your questions via the Q a box in Zoom during the session not via the chat box so via the Q a box and we have two panelists standing by uh Sebastian jungle wrecker and Joe Ting San Charlie from r d and support teams respectively they are tasked with answering as many of your questions live during the webinar this session will be recorded and we will send out a link via email in the coming days finally at the end of this webinar a short survey will pop up on your screen we consider your feedback to be a gift so thank you in advance for your petition participation so without further Ado I'd like to introduce to you today's presenter Johann bilites Johan is a Java kotlin software engineer at sonar part of the team developing static code analyzers for Java and kotlin as well as Scala Ruby go and Apex he was a core contributor to the SAS dungeon developed by rips Technologies an integration of cell engine into the sonar products he received a ba in computer science from the University of Cambridge and an MSC and I.T security from the rura University welcome Joanne over to you thank you Andrew yes so let's talk a little bit about some of the problems we have with the regular Expressions nowadays and for that I'd like to start with a little bit of motivation a background so there have been a couple of high profile outages and and the last few years so stack overflow on cloudflare both went down for around half an hour um in 2016 and 19 respectively and both those outages could be traced back to the same core problem which was a redos issuer regular expression denial of service and it's also referred to as runaway regular expressions or catastrophic backtracking I'll refer to it as catastrophic backtracking for the rest of this talk mainly so in fact apart from this there is many other uh problems still present today we have CBE as recently as 20 2022 and so at Sona we started looking at this problem of Great Expressions being in the static code analysis world and writing tools for that uh two years ago and did some work into it which I would like to talk a little bit about today so I want to go into particular catastrophic backtracking as one of the issues you can have with regular Expressions into a little bit more depth we can't fully go into into the entirety of the depth but um there's a lot of eyes online reading about it as well and then I'll briefly cover a few other areas of issues in Vector Expressions as well so let's talk about this catastrophic backtracking and to understand catastrophic backtracking we need to know what backtracking is first of all and backtracking is a technique used by many regular expression engines not all of them but many two uh well match input strings and and provide certain features to the developer to match those different strings I'll give you an example in just a moment but essentially what it is is the regular expand Express expression engine can sometimes choose different sub-expressions of a regex to match a certain character in the in the input or certain series of characters and it can make a decision on which sub-expression to use and we'll try one or the other and then later on if it cannot find a match for this input string it'll try the other uh the other option backtracking some decisions it made afterwards so we'll we'll see an example in a minute when we talk about catastrophic backtracking we talk about backtracking that causes the engine to well backtrack so many times and do so many steps that attack the number of steps that the engine needs to take to to to try to generate a match with the input becomes super linear so it was anywhere between quadratic time or even as as bad as exponential as an exponential number of steps given the input length and which of course as well now is not great to have exponential anything in your code in most cases so I want to take a little example here a uh example right expression imagine I want to match email domains I'm going to ignore everything that comes before the ad for this for the moment and I'm going to try to match only email domains in edu and acuk let's assume I want to filter out students from the UK and the US for some student-focused program and I'm going to show you how this regular expression would match this input we saw before that I have transformed the spectral expression into a little graph of how it functions and you can read the slide from left to right and we'll step to it step by step I I do merge and skip a few steps the real regular expression engines to this really character the character will will merge a little bit to be slightly faster so we have this input um this at cam.ac.k and of course the first character the at character simply matches uh onto one we have an hat in the regular expression corresponds to the at an input Market then we get to the next sub expression in this vergex which is this dot asterisk question mark and essentially what that is the dot is in any character wildcard so it matches pretty much any character the Asterix is a quantifier or a repetition and it says that this any character wildcard can be repeated zero or more times with a question mark making that quantifier a lazy or non-greedy quantifier and what that means is that the engine will only use this wild card if it has to if it can match the character in some other way it'll do that so in this case we encounter the C the AVM of Cam in the input as seen at the bottom here and all those letters can only matched be matched by the by this wildcard until we get to the dot and the start in fact could be matched by the Wildcat but it can also be matched by this stash dock which is a DOT literal so the engine will prefer to match it with the dotted rule since we have this question mark as a non-greedy quantifier and it'll do that and all is good essentially I'm skipping a few steps here but eventually we'll find this ac.2k at the end and we match the entire input it takes around 30 to 40 steps depending on the engine and depending on how exactly you count just keep in mind that order of magnitude for later so all good there what happens if we have a slightly less expected input so here I have a malformed input and I've not properly thought about it as a developer so it fails which is correct because it ends in com and not an edu or AC doc UK but it takes over 200 000 steps for that now remember was 30 to 40 steps that we required earlier to match this valid input and so this is a huge change in size in terms of how many steps this engine requires to to find out that in fact the input is not matching so how come well the app of course is still matches yet but what happens if we encounter all these dots so it's 14 dots total and we saw earlier that in fact since we have this question mark in the regular expression that makes the quantifier of the that's attached to the wildcard non-greedy the engine will actually prefer matching dots with the starter tool and then it will take this this plus is a quantifier that means once or more it's Auto repetition and it was basically just do 14 dot lit worlds to match those 14 dots in the input that's it's fine that they can do that and then it moves on to the next sub expression in the regular expression which is the edu or AC K which of course does match because we e or the a of EU and AC K does not match the C of.com all right so at this stage is where the backtracking uh happened and in this example of a backtracking the engine can't proceed so it has to go backwards it has to change some decisions that it made earlier so what it does is it looks at the characters it had matched before with this dot literal and sees RK so the last character in fact it has to match with the dot literal there's a choice but then the second to last Dot it could also match with the wildcard we didn't do that earlier because it's a non-greedy quantifier attached to the wildcard but that doesn't mean it wouldn't be possible so in fact the engine buys that it'll use the in a character wildcard and then the dotted rule just uh and to to basically summarize that we have two different ways of matching those two last dots right two dotted worlds or wildcon in the arbitral obviously once we proceed to the hum we'll still fail because the E and the a still don't match the C and we as humans can already see this is never going to succeed because Ena will never match C and then this is not going to change the or a lot of regular expression engines don't have this kind of oversight and they'll just try every possible way of generating a match no matter what essentially and of course there's some automation optimization and some engines but generally speaking this is a danger in many engines so it'll backtrack one more character let's try the last two already it'll backtrack to the third to last dot again it can choose to match it with a wild card instead of the dark literal adding two more different ways of matching those three dots in the end so in total to match those three dots on the end we have four different ways the two we just tried before and now two more by changing the decision we make for the third to last still the E and the A1 match a c of course so we backtrack once more we have four dots and four dots can be matched in a total of well two times two times two so eight different ways and you can already see where this is going to match the entire 14 dot sequence the engine actually has a a huge number of possibilities are matching those by choosing either whether it wants to match each individual dot with a dot literal or with the wildcard so a total of 2 to the N minus one in this case and 2 to the 13 different ways which of course is an exponential amount of different ways to match it now imagine every time the engine tries to generate a match it takes let's say 30 to 40 steps and voila you're at over 200 000 tips so this is an issue in terms of performance it could take down your service in some rare circumstances as we saw with the cloudflare and stack Overflow examples in most cases it'll probably just be a bit slow and in many cases it won't immediately take down your service still not great of course there's a lot of other issues we experience when we write project Expressions I think most of us will not disagree with that and essentially the same sort of problems that affect regular code that we develop in any other language also affect mental expression so we have issues with readability a lot of times we have unnecessary complexity in regular Expressions often because we don't understand features properly or because there are ways to make things more concise that we don't know about because the expression has grown over time many reasons right there are very very specific or like feature specific misunderstandings and problems we can introduce such as we have duplicate characters and character classes or empty character classes for instance leading to potentially behavior that is different to what we expect when we look at the regex or maybe um it's just a little bit less readable in either case logical errors are easy to introduce you know all kinds of things we can have impossible back references we just matching or not matching certain things where we didn't expect our regex to behave that way um we're dealing with text here and with powers and text of course Unicode is an issue um it depends on the engine some engines have more support for Unicode some have less support for Unicode in Java for instance to make the case insensitivity work property properly you have to pass the Radix engine a specific flag to also consider Unicode characters otherwise they wouldn't be considered by default so a lot of other edge cases that we can also Encounter of course um all in all it's a lot to keep in mind for maybe you're just writing a quick expression to to uh do a task so okay so we have all these problems and as toner we're in the world of well static code analysis and writing analyzers for all kinds of different languages and there isn't much good static analysis of regular expressions or automatic static analysis out there so we thought okay let's see if we can do something about it and so a couple of years ago we started developing developing a new regex analyzer and it's based on non-atomistic finite automata which if you're not familiar with an NFA it's essentially the little images little graphs that we saw earlier when we went through the regular expression how it matches uh the input and and the graph of State nodes with some edges in between that's essentially the NFA for that expression it's based on a couple of papers here you can look at those in your own time um and that's kind of the the core of the engine we generate the NFA from a regex we find in the code and then we can analyze that NFA for certain patterns that indicate that we have issues in those categories that we saw earlier I'll give you one example the example of the catastrophic backtracking the exponential catastrophic backtracking that we saw with the 14 dots and here we're looking for a pattern of intersecting Loop execution paths and what do I mean by that so take this example here this particular expression it's it's a repetition so we have a plus here which which means it's repeated once or more of an A or a word character the double backslash W is a word character class now this word character test already includes amongst other things a lowercase a so every time the engine encounters that a in the input it can choose whether it wants to match that a with with the A and the regex or with the word character class so essentially if we have three A's in the input we can match it in in two to the three so eight different ways by combining the A and the projector class in any uh in any way we want and so essentially we have different uh executions of that repetition or or if you will you can unroll that Loop or that repetition in different ways by making a different decision in in each of those iterations while still matching the same input so all those executions or enrollments of that Loop are intersecting because they intersect and that they match the same input and once we detect a pattern like that in the NFA we know okay there's some catastrophic backtracking here so there are some limitations uh to this approach they don't lend themselves well to some of the more advanced regex features such as look arounds they can be exponentially complex to analyze with this approach however and we have a an intern who's currently doing some research in this um their simple cases are probably supportable uh they're not yet but they might come in future also difficult are back references because they actually result in regular Expressions being able to match more than just regular languages and they can match us also context free and contact sensitive languages which are also not very well suited to be represented by non-enterministic finite automata again it's something we could probably build in some rudimentary support um and we may do in the future the nice thing about this approach is though that we can really see once we identify a pattern we can we can map it back to the regex and exactly where in that Reg X the problem is to to flag that to the user or to the develop so then I talk about a couple of generic tips on how you can avoid some of these issues and especially the catastrophic backtracking and some other issues um particularly for catastrophic backtracking if you don't use a backtracking dragx engine and there are algorithms out there that don't use backtracking you can't cut a softly backtrack obviously it does change the feature set that the engine provides a bit and in most cases but it might be an option depending on use case you can use possessive quantifiers I'm not going to go into too much detail if you're unfamiliar with possessive quantifiers maybe worth reading up on quick summary essentially there's three types of quantifiers and many regex engines greedy is the default uh non-greedy is with the question mark afterwards that we saw earlier and both those allow the engine to backtrack and to kind of change the Behavior Uh that the matching Behavior if there's an alternative to using the the expression that is preceding the quantifier there's also possessive quantifiers and many engines which essentially forbid the engine from backtracking and so of course if the engine is not allowed to backtrack it can't get circuit backtrack although that also changes the logic of your regular slightly and I know that some regex engines don't support this the.net Regis ended for instance doesn't have native support for the quantifiers with some ways to emulate it anyway not going into too much detail yeah generally speaking be cautious if you find you're using intersecting sub Expressions so that is different expression sub-expressions in a regex that can match the same input so think of an A and A word character class for instance if the engine can choose which one to use that would be dangerous there are valid use cases of course similar with NASA quantifiers it's a repetition inside of a repetition so it could be dangerous if the engine can choose different paths and it's also a bit harder to understand if you have nested repetitions uh what the the variants can actually match generally speaking if you use or if you try to match single characters try to use character classes instead of Alternatives if you can so use the one on the left here because as soon as you have an alternative the regex engine can try both and here the interesting part is that underscores actually also contained in the word character class already which might not always be obvious if you use a character class it's essentially treated as a set and it won't try it twice of course even better don't have duplicates in character classes at all just use the in this case word character cast and these the the fact that you could transform them to simpler or more efficient constructs or sub Expressions um there's where static analysis can really help you because those rules are encoded some of those rules are encoded in static analysis so a little example uh I wonder if you can see a problem with the swag X and obviously that's a trick question because if I ask you then there is a problem or a couple of problems so already we can see it's so we have three Alternatives here we have a to z or underscore or a DOT literal repeat it once or more once or more times and so there's a couple of problems first of all we're trying to match character characters so generally speaking we should use a character class and in this particular case it's even worse because notice how we have capital A through to lowercase z subtle difference I know but it is there and the fact that includes all characters ranging in the ASCII range from capital A to local Z which includes all capital and lowercase letters and a couple of special symbols such as underscore so we have an alternative of underscore or a character task that includes underscore which can lead to catastrophic backtracking in the worst case and again of course even better please don't use character ranges with capital and lowercase that is mixed uh more explicit of course is something like the ones down here all right so this is the example that brought down cloudflare already you can see it's starting to get slightly more complicated maybe hard to find an issue immediately and the nice thing is when we build an NFA you can we can analyze it part by part and find those patterns no matter how complex the rest of the of the very exists or more or less not matter in fact here at the very end we have several repetitions in a row of a wildcat character and so at every time the or the engine can essentially choose which of those repetitions if you use more or less and that can lead to customer backtracking so much so that it caused a nearly half an hour output for cloudflare foreign Expressions out there um this is just an example which probably has many issues uh it's actually a regex to match email addresses so it's just as a reminder you can write very complicated regular Expressions to do seemingly simple things maybe ask yourself if that's the best the best technique or best tool to use in those cases some takeaways uh I think a few people would disagree Here regular Expressions can be quite difficult and hard to read and maintain in many cases especially as they get longer and well older a lot of times when we do write regular Expressions it's with what we are trying to match in mind we often don't really consider what we don't want to match as as much and also a lot of edge cases of course are hard to consider so so trying to consider the non-matching case or the edge case slightly more uh well it can't harm of course um regex features behave differently than expected due to the developer simply not being familiar with the feature enough or also the regex engine implementation doing something different than maybe what the developers used to or a different engine of notation that he's used to so that's something to be wary of uh know which engine you're writing your regular expressions for and finally of course if you can use static code analysis so so now we do have this regular expression engine available now it's open source and free to use and in fact the nice thing is we've been able to find some bugs in our own web Expressions uh that in our own products using our analyzer so in fact even the people here who have researched a lot about this topic and are now quite in depth still make some of these mistakes and uh using a static analysis helps us as well so special thanks here goes out to Sebastian hongaka who is here in the pub with us today who kind of kicked off this whole engine or its whole analyzer project as well as the sonar languages team which then invested in the last two years to bring this engine to various different languages there's some references at the end if you want to have a look later otherwise I'll go back to Andrew excellent thank you so much Joanne that was great um as we move into a short time of q a now um please do put any last minute questions in the Q a box and I will gather those um I just wanted to briefly share whilst you're doing that that we have um some upcoming webinars on your screen for the sonar Cube LTS our long-term support webinars so I do invite you to register now for the session that's most convenient for you there should be a link in the chat as we speak right on to a few questions if I may Joanne um the first question um how would you handle user provided regular Expressions so at runtime with this context in mind yeah um so of course if you have a user provided regular Expressions you can't verify them very easily if they contain dangerous dangerous sub-expressions or if they contain something vulnerable to redos a regular expression analog service so even if you can do some static analysis it's always a risk something serves through I think you have to use a timeout in the end you won't get around that um but yeah user input in the regular expression case of course always slightly more difficult to deal with okay um catastrophic backtracking uh in a nutshell how would you how would do you prevent catastrophic backtracking so I mean there is uh several techniques that that kind of mentioned um in in a nutshell it's very hard to say because it depends on your records [Music] um using an static code analysis tool can help you detect some of those issues but of course how you fix them depends on your particular situation and those approaches mentioned earlier can be some of them great yeah yeah I'll just move some quickly because it's got quite a few questions I wanted to try and get to you um Which languages do does Sona provide rules for regular expressions so we have quite a few languages in general that we provide regular Expressions uh support for um the more advanced support that is based on on techniques like this one is I think it's Java cotton PHP python I think jsts pretty much not forgetting anything yeah yep um and which regex engine can I use it does not suffer from catastrophic backtracking so there's uh many regex engine Solutions out there depends on the language you're using of course and and the environment you have there is Googled re2 which I believe doesn't use backtracking so that's something you could look into for example excellent Johan um thank you thank you so much and thank you to everybody who's who have posed questions um sorry we didn't get time to cover them all live but our community is a great place to pose those questions and also review those previously asked and responded to in the past um so once again thank you Johan and thank you all to those who've attended today um please do visit sonasource.com for further information on how to clean Azure code and also to check out information on our future webinars and events and finally thank you again for providing your feedback via the survey that will shortly pop up on your screen see you all soon thank you",
+  "fetchedAt": "2026-03-14T09:24:51.859Z"
+}

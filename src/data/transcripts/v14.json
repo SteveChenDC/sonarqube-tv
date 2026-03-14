@@ -1,0 +1,2203 @@
+{
+  "videoId": "v14",
+  "youtubeId": "frHiiHAmLuQ",
+  "segments": [
+    {
+      "text": "Hello, I'm Andrew Osborne and I'm a",
+      "offset": 17000,
+      "duration": 3000
+    },
+    {
+      "text": "technical product marketing manager at",
+      "offset": 20000,
+      "duration": 2000
+    },
+    {
+      "text": "Sonar. And today I'm really pleased and",
+      "offset": 22000,
+      "duration": 3000
+    },
+    {
+      "text": "honored to be joined by two special",
+      "offset": 25000,
+      "duration": 3000
+    },
+    {
+      "text": "guests from Rush. We have with me",
+      "offset": 28000,
+      "duration": 4000
+    },
+    {
+      "text": "Chary Narasimha who is a lead devops",
+      "offset": 32000,
+      "duration": 3000
+    },
+    {
+      "text": "engineer and product owner for code",
+      "offset": 35000,
+      "duration": 2000
+    },
+    {
+      "text": "quality and container runtime security",
+      "offset": 37000,
+      "duration": 3000
+    },
+    {
+      "text": "at Rush and also Deepak Pandey who",
+      "offset": 40000,
+      "duration": 3000
+    },
+    {
+      "text": "is a lead dev sec ops and cloud engineer",
+      "offset": 43000,
+      "duration": 4000
+    },
+    {
+      "text": "also at rush. So thank you guys for",
+      "offset": 47000,
+      "duration": 2000
+    },
+    {
+      "text": "joining me. I really appreciate your",
+      "offset": 49000,
+      "duration": 2000
+    },
+    {
+      "text": "time and I'm really looking forward to",
+      "offset": 51000,
+      "duration": 2000
+    },
+    {
+      "text": "this session. If we can start by",
+      "offset": 53000,
+      "duration": 3000
+    },
+    {
+      "text": "perhaps asking you both, can you tell us",
+      "offset": 56000,
+      "duration": 2000
+    },
+    {
+      "text": "a little bit about yourselves and",
+      "offset": 58000,
+      "duration": 3000
+    },
+    {
+      "text": "briefly what you do at rush?",
+      "offset": 61000,
+      "duration": 2000
+    },
+    {
+      "text": "Hi, my name is Deepak. I've been a part",
+      "offset": 63000,
+      "duration": 2000
+    },
+    {
+      "text": "of Raj for about a year and a half as",
+      "offset": 65000,
+      "duration": 3000
+    },
+    {
+      "text": "part of the embedded security and",
+      "offset": 68000,
+      "duration": 2000
+    },
+    {
+      "text": "compliance team. So Sari and me we are",
+      "offset": 70000,
+      "duration": 3000
+    },
+    {
+      "text": "part of the same team and the goal of",
+      "offset": 73000,
+      "duration": 2000
+    },
+    {
+      "text": "the team is to ensure that the entire",
+      "offset": 75000,
+      "duration": 2000
+    },
+    {
+      "text": "software development life cycle we",
+      "offset": 77000,
+      "duration": 3000
+    },
+    {
+      "text": "have different security capabilities",
+      "offset": 80000,
+      "duration": 2000
+    },
+    {
+      "text": "that we can leverage to make the overall",
+      "offset": 82000,
+      "duration": 2000
+    },
+    {
+      "text": "product development and secure over to",
+      "offset": 84000,
+      "duration": 2000
+    },
+    {
+      "text": "you Charl",
+      "offset": 86000,
+      "duration": 1000
+    },
+    {
+      "text": "thank you thank you thank you Andrew so",
+      "offset": 87000,
+      "duration": 3000
+    },
+    {
+      "text": "hello myself Narima so I've been part",
+      "offset": 90000,
+      "duration": 3000
+    },
+    {
+      "text": "of a rash since last three years",
+      "offset": 93000,
+      "duration": 3000
+    },
+    {
+      "text": "I'm a product owner for",
+      "offset": 96000,
+      "duration": 2000
+    },
+    {
+      "text": "embedded security and complian clients",
+      "offset": 98000,
+      "duration": 2000
+    },
+    {
+      "text": "as Deepo mentioned I'm enlisting",
+      "offset": 100000,
+      "duration": 3000
+    },
+    {
+      "text": "enabling the security and the DevOps",
+      "offset": 103000,
+      "duration": 3000
+    },
+    {
+      "text": "process at all phases of DevOps so",
+      "offset": 106000,
+      "duration": 4000
+    },
+    {
+      "text": "that's what we do",
+      "offset": 110000,
+      "duration": 3000
+    },
+    {
+      "text": "excellent thank you and maybe we",
+      "offset": 113000,
+      "duration": 2000
+    },
+    {
+      "text": "should start by just getting one",
+      "offset": 115000,
+      "duration": 1000
+    },
+    {
+      "text": "of you to tell us a little bit about your",
+      "offset": 116000,
+      "duration": 2000
+    },
+    {
+      "text": "codebase its size how it's evolving",
+      "offset": 118000,
+      "duration": 4000
+    },
+    {
+      "text": "and perhaps how many developers work on",
+      "offset": 122000,
+      "duration": 2000
+    },
+    {
+      "text": "it just to set the scene",
+      "offset": 124000,
+      "duration": 4000
+    },
+    {
+      "text": "right so Maybe I'll just take that",
+      "offset": 128000,
+      "duration": 3000
+    },
+    {
+      "text": "answer take that question. So with",
+      "offset": 131000,
+      "duration": 4000
+    },
+    {
+      "text": "regards to the code base we have a very",
+      "offset": 135000,
+      "duration": 2000
+    },
+    {
+      "text": "huge code base the technology stack",
+      "offset": 137000,
+      "duration": 3000
+    },
+    {
+      "text": "what we have is not limited. So we do",
+      "offset": 140000,
+      "duration": 2000
+    },
+    {
+      "text": "have various technologies that's been",
+      "offset": 142000,
+      "duration": 3000
+    },
+    {
+      "text": "used to develop the products like Java",
+      "offset": 145000,
+      "duration": 3000
+    },
+    {
+      "text": "C.NET C++ even the Rust and Python.",
+      "offset": 148000,
+      "duration": 4000
+    },
+    {
+      "text": "So there are different technology",
+      "offset": 152000,
+      "duration": 5000
+    },
+    {
+      "text": "stacks that are being used in",
+      "offset": 157000,
+      "duration": 2000
+    },
+    {
+      "text": "our rash and we do have a very huge",
+      "offset": 159000,
+      "duration": 2000
+    },
+    {
+      "text": "number of developers which are",
+      "offset": 161000,
+      "duration": 4000
+    },
+    {
+      "text": "who are doing the development across",
+      "offset": 165000,
+      "duration": 3000
+    },
+    {
+      "text": "the world in different countries.",
+      "offset": 168000,
+      "duration": 2000
+    },
+    {
+      "text": "Excellent. And I believe we were",
+      "offset": 170000,
+      "duration": 4000
+    },
+    {
+      "text": "honored enough to have Raj and one of",
+      "offset": 174000,
+      "duration": 4000
+    },
+    {
+      "text": "your colleagues speak at I think maybe",
+      "offset": 178000,
+      "duration": 3000
+    },
+    {
+      "text": "one of you were there in Zurich",
+      "offset": 181000,
+      "duration": 2000
+    },
+    {
+      "text": "last year and one of the key themes",
+      "offset": 183000,
+      "duration": 2000
+    },
+    {
+      "text": "that you shared was the journey that",
+      "offset": 185000,
+      "duration": 3000
+    },
+    {
+      "text": "you're currently on around quality gates",
+      "offset": 188000,
+      "duration": 3000
+    },
+    {
+      "text": "and in particular standardizing quality",
+      "offset": 191000,
+      "duration": 3000
+    },
+    {
+      "text": "gates across many of the thousands of",
+      "offset": 194000,
+      "duration": 2000
+    },
+    {
+      "text": "projects that you have. Can you",
+      "offset": 196000,
+      "duration": 4000
+    },
+    {
+      "text": "tell us a bit more about this challenge,",
+      "offset": 200000,
+      "duration": 3000
+    },
+    {
+      "text": "what was the goal and the",
+      "offset": 203000,
+      "duration": 2000
+    },
+    {
+      "text": "timelines behind that?",
+      "offset": 205000,
+      "duration": 2000
+    },
+    {
+      "text": "Absolutely. So it has some",
+      "offset": 207000,
+      "duration": 2000
+    },
+    {
+      "text": "history to it actually. In a rush we",
+      "offset": 209000,
+      "duration": 3000
+    },
+    {
+      "text": "started somewhere around",
+      "offset": 212000,
+      "duration": 4000
+    },
+    {
+      "text": "2016 so it's almost 10 years ago.",
+      "offset": 216000,
+      "duration": 4000
+    },
+    {
+      "text": "We had an intention.",
+      "offset": 224000,
+      "duration": 2000
+    },
+    {
+      "text": "We had an intention that a",
+      "offset": 226000,
+      "duration": 4000
+    },
+    {
+      "text": "self-servicing security tool that",
+      "offset": 230000,
+      "duration": 3000
+    },
+    {
+      "text": "is available for the developers so that",
+      "offset": 233000,
+      "duration": 3000
+    },
+    {
+      "text": "they themselves can—whoever has a",
+      "offset": 236000,
+      "duration": 2000
+    },
+    {
+      "text": "rush account—can themselves log into the",
+      "offset": 238000,
+      "duration": 3000
+    },
+    {
+      "text": "sonar server and they start creating the",
+      "offset": 241000,
+      "duration": 3000
+    },
+    {
+      "text": "projects and defining the quality gates,",
+      "offset": 244000,
+      "duration": 4000
+    },
+    {
+      "text": "quality profiles and all those things.",
+      "offset": 248000,
+      "duration": 2000
+    },
+    {
+      "text": "So that way we started and then",
+      "offset": 250000,
+      "duration": 2000
+    },
+    {
+      "text": "it just boomed into a kind of a thing",
+      "offset": 252000,
+      "duration": 3000
+    },
+    {
+      "text": "where every product team started",
+      "offset": 255000,
+      "duration": 4000
+    },
+    {
+      "text": "creating their own quality gates. So",
+      "offset": 259000,
+      "duration": 3000
+    },
+    {
+      "text": "that we do not have a standard way of",
+      "offset": 262000,
+      "duration": 2000
+    },
+    {
+      "text": "measuring things at the organization",
+      "offset": 264000,
+      "duration": 3000
+    },
+    {
+      "text": "level, where we are at the quality, where",
+      "offset": 267000,
+      "duration": 4000
+    },
+    {
+      "text": "we are at the security, and how the",
+      "offset": 271000,
+      "duration": 2000
+    },
+    {
+      "text": "things are progressing. So that is",
+      "offset": 273000,
+      "duration": 2000
+    },
+    {
+      "text": "how it has been boomed and we nearly had",
+      "offset": 275000,
+      "duration": 3000
+    },
+    {
+      "text": "more than 160 quality gates defined in",
+      "offset": 278000,
+      "duration": 3000
+    },
+    {
+      "text": "our sonar instance. So we started",
+      "offset": 281000,
+      "duration": 4000
+    },
+    {
+      "text": "defining the quality gates, we wanted to",
+      "offset": 285000,
+      "duration": 4000
+    },
+    {
+      "text": "enforce the strict quality gates onto",
+      "offset": 289000,
+      "duration": 2000
+    },
+    {
+      "text": "the development teams and as well as",
+      "offset": 291000,
+      "duration": 3000
+    },
+    {
+      "text": "maintain these conditions so that they",
+      "offset": 294000,
+      "duration": 2000
+    },
+    {
+      "text": "pass on these things. So we started",
+      "offset": 296000,
+      "duration": 6000
+    },
+    {
+      "text": "working on it with the DcoE team and",
+      "offset": 302000,
+      "duration": 3000
+    },
+    {
+      "text": "others who has expertise in the",
+      "offset": 305000,
+      "duration": 3000
+    },
+    {
+      "text": "security and as well as sonar. So we",
+      "offset": 308000,
+      "duration": 2000
+    },
+    {
+      "text": "defined these quality gates around—",
+      "offset": 310000,
+      "duration": 2000
+    },
+    {
+      "text": "currently we are around 8 to 10 quality",
+      "offset": 312000,
+      "duration": 3000
+    },
+    {
+      "text": "gates we have defined keeping different",
+      "offset": 315000,
+      "duration": 2000
+    },
+    {
+      "text": "scenarios like there might be",
+      "offset": 317000,
+      "duration": 2000
+    },
+    {
+      "text": "product teams which doesn't have",
+      "offset": 319000,
+      "duration": 2000
+    },
+    {
+      "text": "any kind of coverage at all, like maybe",
+      "offset": 321000,
+      "duration": 2000
+    },
+    {
+      "text": "just they wanted to do some quick",
+      "offset": 323000,
+      "duration": 3000
+    },
+    {
+      "text": "automations where you might not have a",
+      "offset": 326000,
+      "duration": 2000
+    },
+    {
+      "text": "coverage. So such kind of scenarios,",
+      "offset": 328000,
+      "duration": 4000
+    },
+    {
+      "text": "and you might also have product teams",
+      "offset": 332000,
+      "duration": 2000
+    },
+    {
+      "text": "who is going to focus only on the new",
+      "offset": 334000,
+      "duration": 3000
+    },
+    {
+      "text": "code like basically if you take an",
+      "offset": 337000,
+      "duration": 3000
+    },
+    {
+      "text": "example legacy products which are",
+      "offset": 340000,
+      "duration": 2000
+    },
+    {
+      "text": "long created but fixing those",
+      "offset": 342000,
+      "duration": 3000
+    },
+    {
+      "text": "technical dirt is going to be really",
+      "offset": 345000,
+      "duration": 3000
+    },
+    {
+      "text": "difficult but to ensure the clean",
+      "offset": 348000,
+      "duration": 2000
+    },
+    {
+      "text": "as code approach, they are going to",
+      "offset": 350000,
+      "duration": 2000
+    },
+    {
+      "text": "focus on the new code. So that's how",
+      "offset": 352000,
+      "duration": 3000
+    },
+    {
+      "text": "we define these 8 to 10 quality gates",
+      "offset": 355000,
+      "duration": 2000
+    },
+    {
+      "text": "with different scenarios keeping in",
+      "offset": 357000,
+      "duration": 3000
+    },
+    {
+      "text": "place and of course this might not fit",
+      "offset": 360000,
+      "duration": 2000
+    },
+    {
+      "text": "all cases as well. We might increase",
+      "offset": 362000,
+      "duration": 2000
+    },
+    {
+      "text": "them as well but currently we are at",
+      "offset": 364000,
+      "duration": 3000
+    },
+    {
+      "text": "that stage where we have defined these",
+      "offset": 367000,
+      "duration": 3000
+    },
+    {
+      "text": "10 quality gates and enforced these",
+      "offset": 370000,
+      "duration": 2000
+    },
+    {
+      "text": "quality gates into the product teams.",
+      "offset": 372000,
+      "duration": 3000
+    },
+    {
+      "text": "Across the 9,000 projects out of 170",
+      "offset": 375000,
+      "duration": 2000
+    },
+    {
+      "text": "quality gates we have reduced those",
+      "offset": 377000,
+      "duration": 2000
+    },
+    {
+      "text": "number of quality gates into this 10 and",
+      "offset": 379000,
+      "duration": 2000
+    },
+    {
+      "text": "we are able to measure now okay we do",
+      "offset": 381000,
+      "duration": 4000
+    },
+    {
+      "text": "have this levels these quality gates",
+      "offset": 385000,
+      "duration": 2000
+    },
+    {
+      "text": "have been defined in such a way that",
+      "offset": 387000,
+      "duration": 2000
+    },
+    {
+      "text": "at level one, level two, level three, in",
+      "offset": 389000,
+      "duration": 2000
+    },
+    {
+      "text": "increasing order. So now we know that",
+      "offset": 391000,
+      "duration": 5000
+    },
+    {
+      "text": "this projects are at this level and",
+      "offset": 396000,
+      "duration": 2000
+    },
+    {
+      "text": "probably they need more focus on",
+      "offset": 398000,
+      "duration": 2000
+    },
+    {
+      "text": "improving the code quality and probably",
+      "offset": 400000,
+      "duration": 3000
+    },
+    {
+      "text": "improving the security posture. That's",
+      "offset": 403000,
+      "duration": 1000
+    },
+    {
+      "text": "how we started this one.",
+      "offset": 404000,
+      "duration": 3000
+    },
+    {
+      "text": "That's fascinating. I mean, that's quite",
+      "offset": 411000,
+      "duration": 4000
+    },
+    {
+      "text": "a shift down from 170, I think you said,",
+      "offset": 415000,
+      "duration": 2000
+    },
+    {
+      "text": "down to 8 or 10 quality gates. How",
+      "offset": 417000,
+      "duration": 2000
+    },
+    {
+      "text": "has that been embraced internally? I",
+      "offset": 419000,
+      "duration": 5000
+    },
+    {
+      "text": "mean, that's quite a shift for the",
+      "offset": 424000,
+      "duration": 2000
+    },
+    {
+      "text": "developers as well.",
+      "offset": 426000,
+      "duration": 2000
+    },
+    {
+      "text": "Correct. So, we connected—it's not that",
+      "offset": 430000,
+      "duration": 3000
+    },
+    {
+      "text": "a unilateral decision taken by the",
+      "offset": 433000,
+      "duration": 1000
+    },
+    {
+      "text": "platform team. Basically we involved",
+      "offset": 434000,
+      "duration": 2000
+    },
+    {
+      "text": "various stakeholders: the developers,",
+      "offset": 436000,
+      "duration": 3000
+    },
+    {
+      "text": "the security experts and as well as",
+      "offset": 439000,
+      "duration": 3000
+    },
+    {
+      "text": "the architects. So all these various",
+      "offset": 442000,
+      "duration": 2000
+    },
+    {
+      "text": "stakeholders have been involved and we",
+      "offset": 444000,
+      "duration": 3000
+    },
+    {
+      "text": "designed those quality gates in such a",
+      "offset": 447000,
+      "duration": 6000
+    },
+    {
+      "text": "way that everyone at least fits into",
+      "offset": 453000,
+      "duration": 2000
+    },
+    {
+      "text": "one of these quality gates. So that's how",
+      "offset": 455000,
+      "duration": 2000
+    },
+    {
+      "text": "we came to this state.",
+      "offset": 457000,
+      "duration": 2000
+    },
+    {
+      "text": "Excellent. That's really interesting.",
+      "offset": 463000,
+      "duration": 2000
+    },
+    {
+      "text": "And I guess if you were listening to",
+      "offset": 465000,
+      "duration": 2000
+    },
+    {
+      "text": "this, watching this video now and you",
+      "offset": 467000,
+      "duration": 3000
+    },
+    {
+      "text": "were about to embark on a similar",
+      "offset": 470000,
+      "duration": 3000
+    },
+    {
+      "text": "project in another company, what would",
+      "offset": 473000,
+      "duration": 3000
+    },
+    {
+      "text": "you say is a pearl of wisdom for anybody",
+      "offset": 476000,
+      "duration": 2000
+    },
+    {
+      "text": "else who wants to try and do something",
+      "offset": 478000,
+      "duration": 2000
+    },
+    {
+      "text": "similar? Because that's quite a big shift.",
+      "offset": 480000,
+      "duration": 2000
+    },
+    {
+      "text": "It works differently for the different",
+      "offset": 483000,
+      "duration": 3000
+    },
+    {
+      "text": "stakeholders but the thing is we should",
+      "offset": 486000,
+      "duration": 5000
+    },
+    {
+      "text": "involve all the stakeholders who are",
+      "offset": 491000,
+      "duration": 3000
+    },
+    {
+      "text": "involved in because it is the",
+      "offset": 494000,
+      "duration": 2000
+    },
+    {
+      "text": "development teams who are going to be",
+      "offset": 496000,
+      "duration": 2000
+    },
+    {
+      "text": "impacted with this one—mainly the new",
+      "offset": 498000,
+      "duration": 2000
+    },
+    {
+      "text": "development teams, the new product teams",
+      "offset": 500000,
+      "duration": 2000
+    },
+    {
+      "text": "which are going to be onboarded easily.",
+      "offset": 502000,
+      "duration": 2000
+    },
+    {
+      "text": "But the legacy products who are already",
+      "offset": 504000,
+      "duration": 2000
+    },
+    {
+      "text": "there and the things which are in a",
+      "offset": 506000,
+      "duration": 3000
+    },
+    {
+      "text": "maintenance phase and maybe you might",
+      "offset": 509000,
+      "duration": 3000
+    },
+    {
+      "text": "not have much of resources time to take",
+      "offset": 512000,
+      "duration": 2000
+    },
+    {
+      "text": "care of those things. This is where it",
+      "offset": 514000,
+      "duration": 4000
+    },
+    {
+      "text": "is going to be impacted. So you need to",
+      "offset": 518000,
+      "duration": 1000
+    },
+    {
+      "text": "involve the various stakeholders into",
+      "offset": 519000,
+      "duration": 2000
+    },
+    {
+      "text": "these things and take a collective and",
+      "offset": 521000,
+      "duration": 2000
+    },
+    {
+      "text": "combined decision. That's what I would say.",
+      "offset": 523000,
+      "duration": 3000
+    },
+    {
+      "text": "Yes, that makes sense. That's very wise.",
+      "offset": 528000,
+      "duration": 3000
+    },
+    {
+      "text": "Getting buy-in effectively in that way.",
+      "offset": 531000,
+      "duration": 3000
+    },
+    {
+      "text": "And as part of that journey, has that",
+      "offset": 534000,
+      "duration": 3000
+    },
+    {
+      "text": "impacted—because you talked at the top",
+      "offset": 537000,
+      "duration": 3000
+    },
+    {
+      "text": "of the call, the size of your codebase",
+      "offset": 540000,
+      "duration": 1000
+    },
+    {
+      "text": "is huge. Has this program impacted the",
+      "offset": 541000,
+      "duration": 3000
+    },
+    {
+      "text": "size of the codebase at all?",
+      "offset": 544000,
+      "duration": 4000
+    },
+    {
+      "text": "Yes. So we nearly have 100 million",
+      "offset": 552000,
+      "duration": 6000
+    },
+    {
+      "text": "sample lines of code that's being",
+      "offset": 558000,
+      "duration": 3000
+    },
+    {
+      "text": "analyzed by sonar itself.",
+      "offset": 561000,
+      "duration": 2000
+    },
+    {
+      "text": "With this quality gates, the strict",
+      "offset": 564000,
+      "duration": 4000
+    },
+    {
+      "text": "quality gates that we have enforced, it",
+      "offset": 568000,
+      "duration": 1000
+    },
+    {
+      "text": "helped us to identify the code",
+      "offset": 569000,
+      "duration": 4000
+    },
+    {
+      "text": "duplicates, we know the legacy code,",
+      "offset": 573000,
+      "duration": 2000
+    },
+    {
+      "text": "and reduced a lot of the bloated code",
+      "offset": 575000,
+      "duration": 4000
+    },
+    {
+      "text": "which may not be needed. So this helped",
+      "offset": 579000,
+      "duration": 3000
+    },
+    {
+      "text": "the developers to identify okay where we",
+      "offset": 582000,
+      "duration": 2000
+    },
+    {
+      "text": "forced them to focus only on the new",
+      "offset": 584000,
+      "duration": 3000
+    },
+    {
+      "text": "code. while fixing the new code, if",
+      "offset": 587000,
+      "duration": 2000
+    },
+    {
+      "text": "there is any dead code that is lying",
+      "offset": 589000,
+      "duration": 2000
+    },
+    {
+      "text": "around this new code, so that helped",
+      "offset": 591000,
+      "duration": 2000
+    },
+    {
+      "text": "them to realize this is not needed and",
+      "offset": 593000,
+      "duration": 2000
+    },
+    {
+      "text": "probably what we have done is ensure",
+      "offset": 595000,
+      "duration": 1000
+    },
+    {
+      "text": "that if the code is not being utilized",
+      "offset": 596000,
+      "duration": 6000
+    },
+    {
+      "text": "or it is just for some testing purpose",
+      "offset": 602000,
+      "duration": 2000
+    },
+    {
+      "text": "if that has been introduced, you should",
+      "offset": 604000,
+      "duration": 3000
+    },
+    {
+      "text": "see whether that is really useful and do",
+      "offset": 607000,
+      "duration": 2000
+    },
+    {
+      "text": "not fear that if I touch something",
+      "offset": 609000,
+      "duration": 2000
+    },
+    {
+      "text": "which is not done by me is going to",
+      "offset": 611000,
+      "duration": 3000
+    },
+    {
+      "text": "impact. So that kind of fear we have",
+      "offset": 614000,
+      "duration": 2000
+    },
+    {
+      "text": "removed and ensured that the code",
+      "offset": 616000,
+      "duration": 3000
+    },
+    {
+      "text": "duplications and this fear helped us to",
+      "offset": 619000,
+      "duration": 3000
+    },
+    {
+      "text": "reduce the codebase size considerably.",
+      "offset": 622000,
+      "duration": 4000
+    },
+    {
+      "text": "Wow. Okay. So that's good. Focusing on",
+      "offset": 632000,
+      "duration": 4000
+    },
+    {
+      "text": "that move towards a smaller group of 10",
+      "offset": 636000,
+      "duration": 3000
+    },
+    {
+      "text": "quality gates has positively impacted the",
+      "offset": 639000,
+      "duration": 3000
+    },
+    {
+      "text": "size of your codebase which reduces code",
+      "offset": 642000,
+      "duration": 3000
+    },
+    {
+      "text": "bloat, helps people feel—what I'm",
+      "offset": 645000,
+      "duration": 2000
+    },
+    {
+      "text": "hearing you saying—the developers feel",
+      "offset": 647000,
+      "duration": 2000
+    },
+    {
+      "text": "empowered because they're working on code",
+      "offset": 649000,
+      "duration": 3000
+    },
+    {
+      "text": "that is new as opposed to worrying about",
+      "offset": 652000,
+      "duration": 2000
+    },
+    {
+      "text": "the older code they perhaps haven't",
+      "offset": 654000,
+      "duration": 2000
+    },
+    {
+      "text": "worked upon at the same time. Okay,",
+      "offset": 656000,
+      "duration": 3000
+    },
+    {
+      "text": "that's fantastic. I wanted to now just",
+      "offset": 659000,
+      "duration": 3000
+    },
+    {
+      "text": "pivot a little bit and talk because",
+      "offset": 662000,
+      "duration": 5000
+    },
+    {
+      "text": "obviously Raj is working in a very highly",
+      "offset": 667000,
+      "duration": 2000
+    },
+    {
+      "text": "regulated industry. I wondered if you",
+      "offset": 669000,
+      "duration": 2000
+    },
+    {
+      "text": "could expand a bit on compliance and",
+      "offset": 671000,
+      "duration": 2000
+    },
+    {
+      "text": "perhaps how you use sonar in conjunction",
+      "offset": 673000,
+      "duration": 4000
+    },
+    {
+      "text": "with meeting any standards or compliance",
+      "offset": 677000,
+      "duration": 2000
+    },
+    {
+      "text": "requirements related to the vertical",
+      "offset": 679000,
+      "duration": 3000
+    },
+    {
+      "text": "industry that you work in.",
+      "offset": 682000,
+      "duration": 4000
+    },
+    {
+      "text": "Absolutely. So we have multiple",
+      "offset": 688000,
+      "duration": 3000
+    },
+    {
+      "text": "different compliance requirements because",
+      "offset": 691000,
+      "duration": 3000
+    },
+    {
+      "text": "we operate globally and one of the",
+      "offset": 694000,
+      "duration": 4000
+    },
+    {
+      "text": "challenges is compliance is not just",
+      "offset": 698000,
+      "duration": 1000
+    },
+    {
+      "text": "about following regulatory standards and",
+      "offset": 699000,
+      "duration": 4000
+    },
+    {
+      "text": "showing a few reports. It also acts as a",
+      "offset": 703000,
+      "duration": 3000
+    },
+    {
+      "text": "bridge where the end customer can trust",
+      "offset": 706000,
+      "duration": 2000
+    },
+    {
+      "text": "you that okay there is a particular",
+      "offset": 708000,
+      "duration": 2000
+    },
+    {
+      "text": "industry a particular organization",
+      "offset": 710000,
+      "duration": 2000
+    },
+    {
+      "text": "working within it with years of history",
+      "offset": 712000,
+      "duration": 3000
+    },
+    {
+      "text": "and I can trust it. So it is imperative",
+      "offset": 715000,
+      "duration": 3000
+    },
+    {
+      "text": "that we do it on a daily basis with all",
+      "offset": 718000,
+      "duration": 2000
+    },
+    {
+      "text": "the modern attacks that are coming in as",
+      "offset": 720000,
+      "duration": 3000
+    },
+    {
+      "text": "well as to follow all these things. So we",
+      "offset": 723000,
+      "duration": 4000
+    },
+    {
+      "text": "are leveraging some of this",
+      "offset": 727000,
+      "duration": 2000
+    },
+    {
+      "text": "standardization in terms of gates and",
+      "offset": 729000,
+      "duration": 2000
+    },
+    {
+      "text": "putting some security gating based",
+      "offset": 731000,
+      "duration": 2000
+    },
+    {
+      "text": "requirements and so on. So that",
+      "offset": 733000,
+      "duration": 2000
+    },
+    {
+      "text": "developers can know what is failing and",
+      "offset": 735000,
+      "duration": 2000
+    },
+    {
+      "text": "why it is failing. So they are getting",
+      "offset": 737000,
+      "duration": 3000
+    },
+    {
+      "text": "that real-time feedback in an automated",
+      "offset": 740000,
+      "duration": 3000
+    },
+    {
+      "text": "manner and it really helps them to",
+      "offset": 743000,
+      "duration": 2000
+    },
+    {
+      "text": "understand what the issues are and",
+      "offset": 745000,
+      "duration": 3000
+    },
+    {
+      "text": "resolve them more proactively. So that is",
+      "offset": 748000,
+      "duration": 3000
+    },
+    {
+      "text": "one of the ways in which we are using",
+      "offset": 751000,
+      "duration": 3000
+    },
+    {
+      "text": "sonar.",
+      "offset": 754000,
+      "duration": 2000
+    },
+    {
+      "text": "That makes sense. And from a compliance",
+      "offset": 759000,
+      "duration": 3000
+    },
+    {
+      "text": "perspective is reporting something that",
+      "offset": 762000,
+      "duration": 2000
+    },
+    {
+      "text": "you have to leverage to report back in",
+      "offset": 764000,
+      "duration": 3000
+    },
+    {
+      "text": "terms of that compliance journey?",
+      "offset": 767000,
+      "duration": 3000
+    },
+    {
+      "text": "Absolutely. So different compliance",
+      "offset": 773000,
+      "duration": 3000
+    },
+    {
+      "text": "requirements follow different reporting",
+      "offset": 776000,
+      "duration": 2000
+    },
+    {
+      "text": "standardization. So some of the data",
+      "offset": 778000,
+      "duration": 2000
+    },
+    {
+      "text": "that we get we do have to refine it",
+      "offset": 780000,
+      "duration": 3000
+    },
+    {
+      "text": "further depending on the industry and",
+      "offset": 783000,
+      "duration": 2000
+    },
+    {
+      "text": "the regulatory requirements basis which",
+      "offset": 785000,
+      "duration": 2000
+    },
+    {
+      "text": "we need to submit those results. But",
+      "offset": 787000,
+      "duration": 3000
+    },
+    {
+      "text": "some of those are like more standard in",
+      "offset": 790000,
+      "duration": 1000
+    },
+    {
+      "text": "terms of the typical security standards",
+      "offset": 791000,
+      "duration": 2000
+    },
+    {
+      "text": "available in the market which are",
+      "offset": 793000,
+      "duration": 3000
+    },
+    {
+      "text": "readily auditable internally as well as",
+      "offset": 796000,
+      "duration": 3000
+    },
+    {
+      "text": "by developers.",
+      "offset": 799000,
+      "duration": 3000
+    },
+    {
+      "text": "That makes sense. So would you say that",
+      "offset": 802000,
+      "duration": 3000
+    },
+    {
+      "text": "sonar really acts as like a",
+      "offset": 805000,
+      "duration": 3000
+    },
+    {
+      "text": "verification layer for your developers",
+      "offset": 808000,
+      "duration": 2000
+    },
+    {
+      "text": "and your codebase? Checking what's",
+      "offset": 810000,
+      "duration": 2000
+    },
+    {
+      "text": "been done?",
+      "offset": 812000,
+      "duration": 4000
+    },
+    {
+      "text": "Yes, actually I can say that it's a",
+      "offset": 816000,
+      "duration": 2000
+    },
+    {
+      "text": "verification layer because we have been",
+      "offset": 818000,
+      "duration": 3000
+    },
+    {
+      "text": "able to automate a fair bit using it. So",
+      "offset": 821000,
+      "duration": 3000
+    },
+    {
+      "text": "it acts as a trusting bridge between the",
+      "offset": 824000,
+      "duration": 2000
+    },
+    {
+      "text": "security team and the developers where",
+      "offset": 826000,
+      "duration": 3000
+    },
+    {
+      "text": "the kind of regulatory requirements",
+      "offset": 829000,
+      "duration": 2000
+    },
+    {
+      "text": "are automated and a basic gating",
+      "offset": 831000,
+      "duration": 2000
+    },
+    {
+      "text": "has been created.",
+      "offset": 833000,
+      "duration": 4000
+    },
+    {
+      "text": "I like that phrase trusting bridge.",
+      "offset": 837000,
+      "duration": 2000
+    },
+    {
+      "text": "That's a good one. I like that. I did",
+      "offset": 839000,
+      "duration": 2000
+    },
+    {
+      "text": "want to quickly touch on the topic of",
+      "offset": 841000,
+      "duration": 4000
+    },
+    {
+      "text": "AI. It seems like it's on everybody's",
+      "offset": 845000,
+      "duration": 3000
+    },
+    {
+      "text": "lips. Firstly I wanted to ask you",
+      "offset": 848000,
+      "duration": 4000
+    },
+    {
+      "text": "both how is it impacting your world? How",
+      "offset": 852000,
+      "duration": 2000
+    },
+    {
+      "text": "is it impacting the world of the",
+      "offset": 854000,
+      "duration": 3000
+    },
+    {
+      "text": "developers at Rash and your world as a",
+      "offset": 857000,
+      "duration": 1000
+    },
+    {
+      "text": "DevOps engineer?",
+      "offset": 858000,
+      "duration": 3000
+    },
+    {
+      "text": "Well the scale at which code used to be",
+      "offset": 866000,
+      "duration": 3000
+    },
+    {
+      "text": "developed has increased a lot. Previously",
+      "offset": 869000,
+      "duration": 2000
+    },
+    {
+      "text": "what used to take months is getting done",
+      "offset": 871000,
+      "duration": 3000
+    },
+    {
+      "text": "in probably days or a few hours. So it",
+      "offset": 874000,
+      "duration": 2000
+    },
+    {
+      "text": "is important that as an organization",
+      "offset": 876000,
+      "duration": 4000
+    },
+    {
+      "text": "while we provide tools to our developers",
+      "offset": 880000,
+      "duration": 3000
+    },
+    {
+      "text": "so that they can do their work faster",
+      "offset": 883000,
+      "duration": 2000
+    },
+    {
+      "text": "and better, at the same time it has to be",
+      "offset": 885000,
+      "duration": 3000
+    },
+    {
+      "text": "more secure in terms of not a lot of",
+      "offset": 888000,
+      "duration": 2000
+    },
+    {
+      "text": "junk code. So wipe coding as a concept",
+      "offset": 890000,
+      "duration": 3000
+    },
+    {
+      "text": "it's very good but it's a security",
+      "offset": 893000,
+      "duration": 3000
+    },
+    {
+      "text": "nightmare as well. So we are happy we",
+      "offset": 896000,
+      "duration": 2000
+    },
+    {
+      "text": "have features from sonar as well to",
+      "offset": 898000,
+      "duration": 3000
+    },
+    {
+      "text": "identify AI generated code versus human",
+      "offset": 901000,
+      "duration": 2000
+    },
+    {
+      "text": "code and we are also working on a little",
+      "offset": 903000,
+      "duration": 3000
+    },
+    {
+      "text": "bit of a gating mechanism by which we",
+      "offset": 906000,
+      "duration": 2000
+    },
+    {
+      "text": "can in the future block some of this",
+      "offset": 908000,
+      "duration": 4000
+    },
+    {
+      "text": "code in case it is not meeting a",
+      "offset": 912000,
+      "duration": 2000
+    },
+    {
+      "text": "particular criteria. Because initially",
+      "offset": 914000,
+      "duration": 2000
+    },
+    {
+      "text": "when LLMs were new it was easier to",
+      "offset": 916000,
+      "duration": 3000
+    },
+    {
+      "text": "identify what is human generated versus",
+      "offset": 919000,
+      "duration": 3000
+    },
+    {
+      "text": "what is AI generated. But now with the",
+      "offset": 922000,
+      "duration": 3000
+    },
+    {
+      "text": "newer updates that differentiation is",
+      "offset": 925000,
+      "duration": 2000
+    },
+    {
+      "text": "becoming very thin and LLMs are trying to",
+      "offset": 927000,
+      "duration": 3000
+    },
+    {
+      "text": "do a bit of spoofing where the code looks",
+      "offset": 930000,
+      "duration": 3000
+    },
+    {
+      "text": "as good as human. So we are also adding a",
+      "offset": 933000,
+      "duration": 2000
+    },
+    {
+      "text": "layer from our side on those aspects by",
+      "offset": 935000,
+      "duration": 3000
+    },
+    {
+      "text": "creating some rules and policies which",
+      "offset": 938000,
+      "duration": 2000
+    },
+    {
+      "text": "will work in conjunction with the",
+      "offset": 940000,
+      "duration": 2000
+    },
+    {
+      "text": "existing tools so that we can define",
+      "offset": 942000,
+      "duration": 2000
+    },
+    {
+      "text": "that layer more appropriately.",
+      "offset": 944000,
+      "duration": 2000
+    },
+    {
+      "text": "And you Cherry how how is it impacting",
+      "offset": 951000,
+      "duration": 2000
+    },
+    {
+      "text": "you? What are you seeing?",
+      "offset": 953000,
+      "duration": 2000
+    },
+    {
+      "text": "I wanted to circle back on these",
+      "offset": 957000,
+      "duration": 5000
+    },
+    {
+      "text": "quality gates. So sonar has also helped",
+      "offset": 962000,
+      "duration": 2000
+    },
+    {
+      "text": "us to identify projects which have this",
+      "offset": 964000,
+      "duration": 4000
+    },
+    {
+      "text": "AI generated code, and the AI code",
+      "offset": 968000,
+      "duration": 3000
+    },
+    {
+      "text": "assurance feature helps us to fix those",
+      "offset": 971000,
+      "duration": 2000
+    },
+    {
+      "text": "in a one-click way. As Deepo mentioned,",
+      "offset": 973000,
+      "duration": 2000
+    },
+    {
+      "text": "the code generated by these AI agents—",
+      "offset": 975000,
+      "duration": 7000
+    },
+    {
+      "text": "we are really strict. We wanted to",
+      "offset": 982000,
+      "duration": 2000
+    },
+    {
+      "text": "follow a strict approach on this one",
+      "offset": 984000,
+      "duration": 4000
+    },
+    {
+      "text": "because humans we can expect some",
+      "offset": 988000,
+      "duration": 2000
+    },
+    {
+      "text": "things they don't know, but still the",
+      "offset": 990000,
+      "duration": 3000
+    },
+    {
+      "text": "code that is being generated by AI",
+      "offset": 993000,
+      "duration": 2000
+    },
+    {
+      "text": "should be on a high security and high",
+      "offset": 995000,
+      "duration": 4000
+    },
+    {
+      "text": "quality code. So we ensure that we are",
+      "offset": 999000,
+      "duration": 3000
+    },
+    {
+      "text": "utilizing the AI quality gate provided",
+      "offset": 1002000,
+      "duration": 2000
+    },
+    {
+      "text": "by sonar and ensuring that this is not",
+      "offset": 1004000,
+      "duration": 4000
+    },
+    {
+      "text": "impacting things.",
+      "offset": 1008000,
+      "duration": 5000
+    },
+    {
+      "text": "I read somewhere this week that AI tools",
+      "offset": 1019000,
+      "duration": 5000
+    },
+    {
+      "text": "are estimated to be generating",
+      "offset": 1024000,
+      "duration": 2000
+    },
+    {
+      "text": "approximately 50% more lines of code",
+      "offset": 1026000,
+      "duration": 3000
+    },
+    {
+      "text": "than a developer would to achieve the",
+      "offset": 1029000,
+      "duration": 3000
+    },
+    {
+      "text": "same task. We were talking earlier about",
+      "offset": 1032000,
+      "duration": 3000
+    },
+    {
+      "text": "how you've done excellent work in",
+      "offset": 1035000,
+      "duration": 3000
+    },
+    {
+      "text": "reducing the size of your code base, but",
+      "offset": 1038000,
+      "duration": 2000
+    },
+    {
+      "text": "how do you see that—as AI tools increase",
+      "offset": 1040000,
+      "duration": 3000
+    },
+    {
+      "text": "the amount of code developed—how do you",
+      "offset": 1043000,
+      "duration": 2000
+    },
+    {
+      "text": "see that paradigm moving forward?",
+      "offset": 1045000,
+      "duration": 2000
+    },
+    {
+      "text": "It's good in terms of enabling",
+      "offset": 1053000,
+      "duration": 3000
+    },
+    {
+      "text": "developers to write faster and research",
+      "offset": 1056000,
+      "duration": 3000
+    },
+    {
+      "text": "better and get tasks done. But as the",
+      "offset": 1059000,
+      "duration": 3000
+    },
+    {
+      "text": "codebase expands, one of the biggest",
+      "offset": 1062000,
+      "duration": 3000
+    },
+    {
+      "text": "problems is that it lacks context in",
+      "offset": 1065000,
+      "duration": 2000
+    },
+    {
+      "text": "terms of what was written 10 years ago",
+      "offset": 1067000,
+      "duration": 3000
+    },
+    {
+      "text": "or even one year ago by a different set",
+      "offset": 1070000,
+      "duration": 2000
+    },
+    {
+      "text": "of developers or even by the same",
+      "offset": 1072000,
+      "duration": 2000
+    },
+    {
+      "text": "developer. He might not necessarily",
+      "offset": 1074000,
+      "duration": 3000
+    },
+    {
+      "text": "remember what was done a year or a",
+      "offset": 1077000,
+      "duration": 2000
+    },
+    {
+      "text": "couple of years ago. For AI to have the",
+      "offset": 1079000,
+      "duration": 2000
+    },
+    {
+      "text": "entire context about why a particular",
+      "offset": 1081000,
+      "duration": 2000
+    },
+    {
+      "text": "variable was defined in a particular way",
+      "offset": 1083000,
+      "duration": 3000
+    },
+    {
+      "text": "or why a business logic works in a",
+      "offset": 1086000,
+      "duration": 3000
+    },
+    {
+      "text": "particular way, it is extremely",
+      "offset": 1089000,
+      "duration": 1000
+    },
+    {
+      "text": "challenging. So we encourage our",
+      "offset": 1090000,
+      "duration": 3000
+    },
+    {
+      "text": "developers to use AI with some human",
+      "offset": 1093000,
+      "duration": 2000
+    },
+    {
+      "text": "context by having a human in the loop,",
+      "offset": 1095000,
+      "duration": 3000
+    },
+    {
+      "text": "because that is the best way to avoid",
+      "offset": 1098000,
+      "duration": 3000
+    },
+    {
+      "text": "potential issues with the overall code",
+      "offset": 1101000,
+      "duration": 3000
+    },
+    {
+      "text": "in terms of breakability and performance",
+      "offset": 1104000,
+      "duration": 2000
+    },
+    {
+      "text": "issues. And at the same time, we leverage",
+      "offset": 1106000,
+      "duration": 3000
+    },
+    {
+      "text": "security tools like sonar to make",
+      "offset": 1109000,
+      "duration": 2000
+    },
+    {
+      "text": "things easier for them.",
+      "offset": 1111000,
+      "duration": 3000
+    },
+    {
+      "text": "That makes sense. I guess companies are",
+      "offset": 1116000,
+      "duration": 2000
+    },
+    {
+      "text": "looking for—I mean AI is great, it speeds",
+      "offset": 1118000,
+      "duration": 3000
+    },
+    {
+      "text": "things up, but you need some kind of",
+      "offset": 1121000,
+      "duration": 2000
+    },
+    {
+      "text": "deterministic verification of the code",
+      "offset": 1123000,
+      "duration": 5000
+    },
+    {
+      "text": "that is being produced and you need some",
+      "offset": 1128000,
+      "duration": 3000
+    },
+    {
+      "text": "way of ensuring that when you do verify",
+      "offset": 1131000,
+      "duration": 3000
+    },
+    {
+      "text": "your code it's repeatable and reliable.",
+      "offset": 1134000,
+      "duration": 2000
+    },
+    {
+      "text": "I'd be curious to know your views on how",
+      "offset": 1138000,
+      "duration": 4000
+    },
+    {
+      "text": "your developers are feeling—being able",
+      "offset": 1142000,
+      "duration": 3000
+    },
+    {
+      "text": "to run twice as fast, three times as",
+      "offset": 1145000,
+      "duration": 2000
+    },
+    {
+      "text": "fast, but then are they running into",
+      "offset": 1147000,
+      "duration": 2000
+    },
+    {
+      "text": "bottlenecks as a result?",
+      "offset": 1149000,
+      "duration": 2000
+    },
+    {
+      "text": "Absolutely. AI as Deepak mentioned—",
+      "offset": 1153000,
+      "duration": 2000
+    },
+    {
+      "text": "sometimes the lack of context might",
+      "offset": 1155000,
+      "duration": 2000
+    },
+    {
+      "text": "bring assumptions that can be done by",
+      "offset": 1157000,
+      "duration": 3000
+    },
+    {
+      "text": "the AI which brings malicious things or",
+      "offset": 1160000,
+      "duration": 2000
+    },
+    {
+      "text": "things which don't exist. It can include",
+      "offset": 1162000,
+      "duration": 3000
+    },
+    {
+      "text": "and generate a lot of code for which",
+      "offset": 1165000,
+      "duration": 3000
+    },
+    {
+      "text": "identifying those things and fixing",
+      "offset": 1168000,
+      "duration": 2000
+    },
+    {
+      "text": "those things definitely increased",
+      "offset": 1170000,
+      "duration": 3000
+    },
+    {
+      "text": "bottlenecks for the developers.",
+      "offset": 1173000,
+      "duration": 2000
+    },
+    {
+      "text": "One thing that AI has been viewed",
+      "offset": 1182000,
+      "duration": 5000
+    },
+    {
+      "text": "differently by different people. Everyone",
+      "offset": 1187000,
+      "duration": 2000
+    },
+    {
+      "text": "has their own opinion on it depending",
+      "offset": 1189000,
+      "duration": 3000
+    },
+    {
+      "text": "on the use cases. Like any other",
+      "offset": 1192000,
+      "duration": 2000
+    },
+    {
+      "text": "technology it has good and bad aspects.",
+      "offset": 1194000,
+      "duration": 3000
+    },
+    {
+      "text": "We don't see large-scale bottlenecks as",
+      "offset": 1197000,
+      "duration": 3000
+    },
+    {
+      "text": "such because we are in the business of",
+      "offset": 1200000,
+      "duration": 3000
+    },
+    {
+      "text": "saving lives and whatever helps our",
+      "offset": 1203000,
+      "duration": 3000
+    },
+    {
+      "text": "developers to innovate faster is more",
+      "offset": 1206000,
+      "duration": 2000
+    },
+    {
+      "text": "important. That is why we have never",
+      "offset": 1208000,
+      "duration": 3000
+    },
+    {
+      "text": "really had technology stack",
+      "offset": 1211000,
+      "duration": 2000
+    },
+    {
+      "text": "discrimination within rush. So",
+      "offset": 1213000,
+      "duration": 3000
+    },
+    {
+      "text": "developers use whatever they want to",
+      "offset": 1216000,
+      "duration": 2000
+    },
+    {
+      "text": "get things done faster and at the same",
+      "offset": 1218000,
+      "duration": 3000
+    },
+    {
+      "text": "time it is the job of our team to ensure",
+      "offset": 1221000,
+      "duration": 2000
+    },
+    {
+      "text": "they are able to do it in a secure manner.",
+      "offset": 1223000,
+      "duration": 3000
+    },
+    {
+      "text": "And adding on to that, it's fantastic",
+      "offset": 1230000,
+      "duration": 2000
+    },
+    {
+      "text": "you're saying that—the business you're",
+      "offset": 1232000,
+      "duration": 3000
+    },
+    {
+      "text": "in is saving lives, and everything you",
+      "offset": 1235000,
+      "duration": 2000
+    },
+    {
+      "text": "do in your stack is built around that.",
+      "offset": 1237000,
+      "duration": 2000
+    },
+    {
+      "text": "From our perspective, if sonar can help",
+      "offset": 1239000,
+      "duration": 3000
+    },
+    {
+      "text": "by being the verification layer that",
+      "offset": 1242000,
+      "duration": 3000
+    },
+    {
+      "text": "moves fast to give you that quality and",
+      "offset": 1245000,
+      "duration": 2000
+    },
+    {
+      "text": "secure perspective on your code, that's",
+      "offset": 1247000,
+      "duration": 3000
+    },
+    {
+      "text": "where we can come in and help with your",
+      "offset": 1250000,
+      "duration": 2000
+    },
+    {
+      "text": "mission. Charepack, thank you so much",
+      "offset": 1252000,
+      "duration": 2000
+    },
+    {
+      "text": "for giving up your valuable time today.",
+      "offset": 1254000,
+      "duration": 3000
+    },
+    {
+      "text": "I really appreciate it. This is going to",
+      "offset": 1257000,
+      "duration": 5000
+    },
+    {
+      "text": "be really interesting for others to",
+      "offset": 1262000,
+      "duration": 2000
+    },
+    {
+      "text": "understand the journey you've been on",
+      "offset": 1264000,
+      "duration": 3000
+    },
+    {
+      "text": "both with sonar and also with your",
+      "offset": 1267000,
+      "duration": 3000
+    },
+    {
+      "text": "codebase. I want to wish you all the",
+      "offset": 1270000,
+      "duration": 3000
+    },
+    {
+      "text": "best and thank you so much.",
+      "offset": 1273000,
+      "duration": 4000
+    },
+    {
+      "text": "Thank you. Thanks for the opportunity.",
+      "offset": 1282000,
+      "duration": 2000
+    }
+  ],
+  "fullText": "Hello, I'm Andrew Osborne and I'm a technical product marketing manager at Sonar. And today I'm really pleased and honored to be joined by two special guests from Rush. We have with me Chary Narasimha who is a lead devops engineer and product owner for code quality and container runtime security at Rush and also Deepak Pandey who is a lead dev sec ops and cloud engineer also at rush. So thank you guys for joining me. I really appreciate your time and I'm really looking forward to this session. If we can start by perhaps asking you both, can you tell us a little bit about yourselves and briefly what you do at rush? Hi, my name is Deepak. I've been a part of Raj for about a year and a half as part of the embedded security and compliance team. So Sari and me we are part of the same team and the goal of the team is to ensure that the entire software development life cycle we have different security capabilities that we can leverage to make the overall product development and secure over to you Charl thank you thank you thank you Andrew so hello myself Narima so I've been part of a rash since last three years I'm a product owner for embedded security and complian clients as Deepo mentioned I'm enlisting enabling the security and the DevOps process at all phases of DevOps so that's what we do excellent thank you and maybe we should start by just getting one of you to tell us a little bit about your codebase its size how it's evolving and perhaps how many developers work on it just to set the scene right so Maybe I'll just take that answer take that question. So with regards to the code base we have a very huge code base the technology stack what we have is not limited. So we do have various technologies that's been used to develop the products like Java C.NET C++ even the Rust and Python. So there are different technology stacks that are being used in our rash and we do have a very huge number of developers which are who are doing the development across the world in different countries. Excellent. And I believe we were honored enough to have Raj and one of your colleagues speak at I think maybe one of you were there in Zurich last year and one of the key themes that you shared was the journey that you're currently on around quality gates and in particular standardizing quality gates across many of the thousands of projects that you have. Can you tell us a bit more about this challenge, what was the goal and the timelines behind that? Absolutely. So it has some history to it actually. In a rush we started somewhere around 2016 so it's almost 10 years ago. We had an intention. We had an intention that a self-servicing security tool that is available for the developers so that they themselves can—whoever has a rush account—can themselves log into the sonar server and they start creating the projects and defining the quality gates, quality profiles and all those things. So that way we started and then it just boomed into a kind of a thing where every product team started creating their own quality gates. So that we do not have a standard way of measuring things at the organization level, where we are at the quality, where we are at the security, and how the things are progressing. So that is how it has been boomed and we nearly had more than 160 quality gates defined in our sonar instance. So we started defining the quality gates, we wanted to enforce the strict quality gates onto the development teams and as well as maintain these conditions so that they pass on these things. So we started working on it with the DcoE team and others who has expertise in the security and as well as sonar. So we defined these quality gates around— currently we are around 8 to 10 quality gates we have defined keeping different scenarios like there might be product teams which doesn't have any kind of coverage at all, like maybe just they wanted to do some quick automations where you might not have a coverage. So such kind of scenarios, and you might also have product teams who is going to focus only on the new code like basically if you take an example legacy products which are long created but fixing those technical dirt is going to be really difficult but to ensure the clean as code approach, they are going to focus on the new code. So that's how we define these 8 to 10 quality gates with different scenarios keeping in place and of course this might not fit all cases as well. We might increase them as well but currently we are at that stage where we have defined these 10 quality gates and enforced these quality gates into the product teams. Across the 9,000 projects out of 170 quality gates we have reduced those number of quality gates into this 10 and we are able to measure now okay we do have this levels these quality gates have been defined in such a way that at level one, level two, level three, in increasing order. So now we know that this projects are at this level and probably they need more focus on improving the code quality and probably improving the security posture. That's how we started this one. That's fascinating. I mean, that's quite a shift down from 170, I think you said, down to 8 or 10 quality gates. How has that been embraced internally? I mean, that's quite a shift for the developers as well. Correct. So, we connected—it's not that a unilateral decision taken by the platform team. Basically we involved various stakeholders: the developers, the security experts and as well as the architects. So all these various stakeholders have been involved and we designed those quality gates in such a way that everyone at least fits into one of these quality gates. So that's how we came to this state. Excellent. That's really interesting. And I guess if you were listening to this, watching this video now and you were about to embark on a similar project in another company, what would you say is a pearl of wisdom for anybody else who wants to try and do something similar? Because that's quite a big shift. It works differently for the different stakeholders but the thing is we should involve all the stakeholders who are involved in because it is the development teams who are going to be impacted with this one—mainly the new development teams, the new product teams which are going to be onboarded easily. But the legacy products who are already there and the things which are in a maintenance phase and maybe you might not have much of resources time to take care of those things. This is where it is going to be impacted. So you need to involve the various stakeholders into these things and take a collective and combined decision. That's what I would say. Yes, that makes sense. That's very wise. Getting buy-in effectively in that way. And as part of that journey, has that impacted—because you talked at the top of the call, the size of your codebase is huge. Has this program impacted the size of the codebase at all? Yes. So we nearly have 100 million sample lines of code that's being analyzed by sonar itself. With this quality gates, the strict quality gates that we have enforced, it helped us to identify the code duplicates, we know the legacy code, and reduced a lot of the bloated code which may not be needed. So this helped the developers to identify okay where we forced them to focus only on the new code. while fixing the new code, if there is any dead code that is lying around this new code, so that helped them to realize this is not needed and probably what we have done is ensure that if the code is not being utilized or it is just for some testing purpose if that has been introduced, you should see whether that is really useful and do not fear that if I touch something which is not done by me is going to impact. So that kind of fear we have removed and ensured that the code duplications and this fear helped us to reduce the codebase size considerably. Wow. Okay. So that's good. Focusing on that move towards a smaller group of 10 quality gates has positively impacted the size of your codebase which reduces code bloat, helps people feel—what I'm hearing you saying—the developers feel empowered because they're working on code that is new as opposed to worrying about the older code they perhaps haven't worked upon at the same time. Okay, that's fantastic. I wanted to now just pivot a little bit and talk because obviously Raj is working in a very highly regulated industry. I wondered if you could expand a bit on compliance and perhaps how you use sonar in conjunction with meeting any standards or compliance requirements related to the vertical industry that you work in. Absolutely. So we have multiple different compliance requirements because we operate globally and one of the challenges is compliance is not just about following regulatory standards and showing a few reports. It also acts as a bridge where the end customer can trust you that okay there is a particular industry a particular organization working within it with years of history and I can trust it. So it is imperative that we do it on a daily basis with all the modern attacks that are coming in as well as to follow all these things. So we are leveraging some of this standardization in terms of gates and putting some security gating based requirements and so on. So that developers can know what is failing and why it is failing. So they are getting that real-time feedback in an automated manner and it really helps them to understand what the issues are and resolve them more proactively. So that is one of the ways in which we are using sonar. That makes sense. And from a compliance perspective is reporting something that you have to leverage to report back in terms of that compliance journey? Absolutely. So different compliance requirements follow different reporting standardization. So some of the data that we get we do have to refine it further depending on the industry and the regulatory requirements basis which we need to submit those results. But some of those are like more standard in terms of the typical security standards available in the market which are readily auditable internally as well as by developers. That makes sense. So would you say that sonar really acts as like a verification layer for your developers and your codebase? Checking what's been done? Yes, actually I can say that it's a verification layer because we have been able to automate a fair bit using it. So it acts as a trusting bridge between the security team and the developers where the kind of regulatory requirements are automated and a basic gating has been created. I like that phrase trusting bridge. That's a good one. I like that. I did want to quickly touch on the topic of AI. It seems like it's on everybody's lips. Firstly I wanted to ask you both how is it impacting your world? How is it impacting the world of the developers at Rash and your world as a DevOps engineer? Well the scale at which code used to be developed has increased a lot. Previously what used to take months is getting done in probably days or a few hours. So it is important that as an organization while we provide tools to our developers so that they can do their work faster and better, at the same time it has to be more secure in terms of not a lot of junk code. So wipe coding as a concept it's very good but it's a security nightmare as well. So we are happy we have features from sonar as well to identify AI generated code versus human code and we are also working on a little bit of a gating mechanism by which we can in the future block some of this code in case it is not meeting a particular criteria. Because initially when LLMs were new it was easier to identify what is human generated versus what is AI generated. But now with the newer updates that differentiation is becoming very thin and LLMs are trying to do a bit of spoofing where the code looks as good as human. So we are also adding a layer from our side on those aspects by creating some rules and policies which will work in conjunction with the existing tools so that we can define that layer more appropriately. And you Cherry how how is it impacting you? What are you seeing? I wanted to circle back on these quality gates. So sonar has also helped us to identify projects which have this AI generated code, and the AI code assurance feature helps us to fix those in a one-click way. As Deepo mentioned, the code generated by these AI agents— we are really strict. We wanted to follow a strict approach on this one because humans we can expect some things they don't know, but still the code that is being generated by AI should be on a high security and high quality code. So we ensure that we are utilizing the AI quality gate provided by sonar and ensuring that this is not impacting things. I read somewhere this week that AI tools are estimated to be generating approximately 50% more lines of code than a developer would to achieve the same task. We were talking earlier about how you've done excellent work in reducing the size of your code base, but how do you see that—as AI tools increase the amount of code developed—how do you see that paradigm moving forward? It's good in terms of enabling developers to write faster and research better and get tasks done. But as the codebase expands, one of the biggest problems is that it lacks context in terms of what was written 10 years ago or even one year ago by a different set of developers or even by the same developer. He might not necessarily remember what was done a year or a couple of years ago. For AI to have the entire context about why a particular variable was defined in a particular way or why a business logic works in a particular way, it is extremely challenging. So we encourage our developers to use AI with some human context by having a human in the loop, because that is the best way to avoid potential issues with the overall code in terms of breakability and performance issues. And at the same time, we leverage security tools like sonar to make things easier for them. That makes sense. I guess companies are looking for—I mean AI is great, it speeds things up, but you need some kind of deterministic verification of the code that is being produced and you need some way of ensuring that when you do verify your code it's repeatable and reliable. I'd be curious to know your views on how your developers are feeling—being able to run twice as fast, three times as fast, but then are they running into bottlenecks as a result? Absolutely. AI as Deepak mentioned— sometimes the lack of context might bring assumptions that can be done by the AI which brings malicious things or things which don't exist. It can include and generate a lot of code for which identifying those things and fixing those things definitely increased bottlenecks for the developers. One thing that AI has been viewed differently by different people. Everyone has their own opinion on it depending on the use cases. Like any other technology it has good and bad aspects. We don't see large-scale bottlenecks as such because we are in the business of saving lives and whatever helps our developers to innovate faster is more important. That is why we have never really had technology stack discrimination within rush. So developers use whatever they want to get things done faster and at the same time it is the job of our team to ensure they are able to do it in a secure manner. And adding on to that, it's fantastic you're saying that—the business you're in is saving lives, and everything you do in your stack is built around that. From our perspective, if sonar can help by being the verification layer that moves fast to give you that quality and secure perspective on your code, that's where we can come in and help with your mission. Charepack, thank you so much for giving up your valuable time today. I really appreciate it. This is going to be really interesting for others to understand the journey you've been on both with sonar and also with your codebase. I want to wish you all the best and thank you so much. Thank you. Thanks for the opportunity.",
+  "fetchedAt": "2026-03-14T09:18:50.014Z"
+}

@@ -1,0 +1,1458 @@
+{
+  "videoId": "v49",
+  "youtubeId": "O0yd2bRD4S8",
+  "segments": [
+    {
+      "text": "Hi, my name is Valeriy Leykin and I'm",
+      "offset": 17000,
+      "duration": 3000
+    },
+    {
+      "text": "product manager from Dynatrace. I",
+      "offset": 20000,
+      "duration": 2000
+    },
+    {
+      "text": "want to walk you through today through",
+      "offset": 22000,
+      "duration": 2000
+    },
+    {
+      "text": "the integration with SonarQube",
+      "offset": 24000,
+      "duration": 4000
+    },
+    {
+      "text": "for vulnerability ingestion into Dynatrace.",
+      "offset": 28000,
+      "duration": 2000
+    },
+    {
+      "text": "But before that just a few words about",
+      "offset": 30000,
+      "duration": 2000
+    },
+    {
+      "text": "the platform of Dynatrace. Dynatrace is",
+      "offset": 32000,
+      "duration": 4000
+    },
+    {
+      "text": "a data intelligence platform that",
+      "offset": 36000,
+      "duration": 4000
+    },
+    {
+      "text": "monitors your environment and within",
+      "offset": 40000,
+      "duration": 5000
+    },
+    {
+      "text": "your environment it discovers different",
+      "offset": 45000,
+      "duration": 2000
+    },
+    {
+      "text": "issues and problems and can identify",
+      "offset": 47000,
+      "duration": 4000
+    },
+    {
+      "text": "things such as performance issues as",
+      "offset": 51000,
+      "duration": 3000
+    },
+    {
+      "text": "well as the runtime vulnerabilities.",
+      "offset": 54000,
+      "duration": 3000
+    },
+    {
+      "text": "We integrate with partners such as SonarQube",
+      "offset": 57000,
+      "duration": 3000
+    },
+    {
+      "text": "for data ingestion to enrich and",
+      "offset": 60000,
+      "duration": 2000
+    },
+    {
+      "text": "reach out our visibility into",
+      "offset": 62000,
+      "duration": 4000
+    },
+    {
+      "text": "pre-production environments and to your",
+      "offset": 66000,
+      "duration": 2000
+    },
+    {
+      "text": "code and build time.",
+      "offset": 68000,
+      "duration": 5000
+    },
+    {
+      "text": "For example, what Dynatrace",
+      "offset": 73000,
+      "duration": 3000
+    },
+    {
+      "text": "monitoring capabilities look like can",
+      "offset": 76000,
+      "duration": 4000
+    },
+    {
+      "text": "be visualized in Smartscape",
+      "offset": 80000,
+      "duration": 3000
+    },
+    {
+      "text": "application where you can see all the",
+      "offset": 83000,
+      "duration": 3000
+    },
+    {
+      "text": "different entities. In this example,",
+      "offset": 86000,
+      "duration": 2000
+    },
+    {
+      "text": "Kubernetes cluster being monitored with",
+      "offset": 88000,
+      "duration": 3000
+    },
+    {
+      "text": "various containers monitors by",
+      "offset": 91000,
+      "duration": 3000
+    },
+    {
+      "text": "Dynatrace. And this is a visual",
+      "offset": 94000,
+      "duration": 2000
+    },
+    {
+      "text": "representation that allows you also to",
+      "offset": 96000,
+      "duration": 3000
+    },
+    {
+      "text": "dive deeper into each and every",
+      "offset": 99000,
+      "duration": 4000
+    },
+    {
+      "text": "runtime entity. So for example, I can",
+      "offset": 103000,
+      "duration": 3000
+    },
+    {
+      "text": "click and dive into a specific",
+      "offset": 106000,
+      "duration": 2000
+    },
+    {
+      "text": "container.",
+      "offset": 108000,
+      "duration": 2000
+    },
+    {
+      "text": "Okay. So this is a few words about Dynatrace.",
+      "offset": 110000,
+      "duration": 2000
+    },
+    {
+      "text": "Now let's talk about the SonarQube",
+      "offset": 112000,
+      "duration": 2000
+    },
+    {
+      "text": "integration and how it's all",
+      "offset": 114000,
+      "duration": 2000
+    },
+    {
+      "text": "connected together. Code time, build",
+      "offset": 116000,
+      "duration": 2000
+    },
+    {
+      "text": "time and runtime. The SonarQube",
+      "offset": 118000,
+      "duration": 3000
+    },
+    {
+      "text": "integration is delivered as an",
+      "offset": 121000,
+      "duration": 4000
+    },
+    {
+      "text": "extension which you can install. And",
+      "offset": 125000,
+      "duration": 3000
+    },
+    {
+      "text": "then the Dynatrace extension fetches SonarQube",
+      "offset": 128000,
+      "duration": 3000
+    },
+    {
+      "text": "vulnerabilities as well as quality",
+      "offset": 131000,
+      "duration": 4000
+    },
+    {
+      "text": "ratings and ingest them into",
+      "offset": 135000,
+      "duration": 4000
+    },
+    {
+      "text": "Dynatrace and within Dynatrace we visualize",
+      "offset": 139000,
+      "duration": 4000
+    },
+    {
+      "text": "both those vulnerability findings as",
+      "offset": 143000,
+      "duration": 2000
+    },
+    {
+      "text": "well as the quality metrics which I",
+      "offset": 145000,
+      "duration": 2000
+    },
+    {
+      "text": "will demonstrate next.",
+      "offset": 147000,
+      "duration": 4000
+    },
+    {
+      "text": "As soon as the data is ingested into",
+      "offset": 151000,
+      "duration": 2000
+    },
+    {
+      "text": "Dynatrace it's being mapped to",
+      "offset": 153000,
+      "duration": 4000
+    },
+    {
+      "text": "so-called semantic dictionary which",
+      "offset": 157000,
+      "duration": 2000
+    },
+    {
+      "text": "allows it to prioritize and work",
+      "offset": 159000,
+      "duration": 3000
+    },
+    {
+      "text": "uniformly with any kind of data ingested",
+      "offset": 162000,
+      "duration": 3000
+    },
+    {
+      "text": "into Dynatrace. In this example,",
+      "offset": 165000,
+      "duration": 3000
+    },
+    {
+      "text": "SonarQube findings are being ingested",
+      "offset": 168000,
+      "duration": 1000
+    },
+    {
+      "text": "and summarize in a dashboard where you",
+      "offset": 169000,
+      "duration": 4000
+    },
+    {
+      "text": "can explore and prioritize",
+      "offset": 173000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerabilities by risk, explore",
+      "offset": 175000,
+      "duration": 3000
+    },
+    {
+      "text": "individual findings and connect",
+      "offset": 178000,
+      "duration": 3000
+    },
+    {
+      "text": "actually to the original finding from",
+      "offset": 181000,
+      "duration": 3000
+    },
+    {
+      "text": "SonarQube if you want to look at it for",
+      "offset": 184000,
+      "duration": 2000
+    },
+    {
+      "text": "example",
+      "offset": 186000,
+      "duration": 4000
+    },
+    {
+      "text": "or understand the various levels of",
+      "offset": 190000,
+      "duration": 5000
+    },
+    {
+      "text": "distribution of the vulnerabilities and",
+      "offset": 195000,
+      "duration": 2000
+    },
+    {
+      "text": "the issues discovered, which",
+      "offset": 197000,
+      "duration": 1000
+    },
+    {
+      "text": "repositories they are, what are the",
+      "offset": 198000,
+      "duration": 3000
+    },
+    {
+      "text": "top affected objects or code artifacts",
+      "offset": 201000,
+      "duration": 3000
+    },
+    {
+      "text": "in other words and what are the top",
+      "offset": 204000,
+      "duration": 3000
+    },
+    {
+      "text": "affected vulnerable components.",
+      "offset": 207000,
+      "duration": 3000
+    },
+    {
+      "text": "At the same time, what is possible to do",
+      "offset": 210000,
+      "duration": 3000
+    },
+    {
+      "text": "is to look at",
+      "offset": 213000,
+      "duration": 3000
+    },
+    {
+      "text": "SonarQube",
+      "offset": 216000,
+      "duration": 3000
+    },
+    {
+      "text": "posture overview based on various rating",
+      "offset": 219000,
+      "duration": 4000
+    },
+    {
+      "text": "ingested into Dynatrace. So this",
+      "offset": 223000,
+      "duration": 2000
+    },
+    {
+      "text": "essentially summarizes for your projects",
+      "offset": 225000,
+      "duration": 2000
+    },
+    {
+      "text": "all the data that you're probably",
+      "offset": 227000,
+      "duration": 2000
+    },
+    {
+      "text": "familiar from SonarQube already with",
+      "offset": 229000,
+      "duration": 3000
+    },
+    {
+      "text": "the security ratings, reliability,",
+      "offset": 232000,
+      "duration": 2000
+    },
+    {
+      "text": "maintainability",
+      "offset": 234000,
+      "duration": 2000
+    },
+    {
+      "text": "etc. Here you can also use this data",
+      "offset": 236000,
+      "duration": 5000
+    },
+    {
+      "text": "not only for visualization but rather in",
+      "offset": 241000,
+      "duration": 3000
+    },
+    {
+      "text": "Dynatrace automate on top of the any ingested",
+      "offset": 244000,
+      "duration": 3000
+    },
+    {
+      "text": "data. As a quick example in simple one,",
+      "offset": 247000,
+      "duration": 3000
+    },
+    {
+      "text": "the ingested vulnerability findings can",
+      "offset": 250000,
+      "duration": 3000
+    },
+    {
+      "text": "be automated with Dynatrace workflows where",
+      "offset": 253000,
+      "duration": 3000
+    },
+    {
+      "text": "you can query the ingested data which",
+      "offset": 256000,
+      "duration": 2000
+    },
+    {
+      "text": "resides within Dynatrace's database which",
+      "offset": 258000,
+      "duration": 3000
+    },
+    {
+      "text": "called Grail",
+      "offset": 261000,
+      "duration": 2000
+    },
+    {
+      "text": "and fetch the data fetch the new",
+      "offset": 263000,
+      "duration": 3000
+    },
+    {
+      "text": "vulnerabilities filter them based on the",
+      "offset": 266000,
+      "duration": 2000
+    },
+    {
+      "text": "criticality",
+      "offset": 268000,
+      "duration": 2000
+    },
+    {
+      "text": "and then and then notify",
+      "offset": 270000,
+      "duration": 4000
+    },
+    {
+      "text": "different stakeholders. You can create",
+      "offset": 274000,
+      "duration": 2000
+    },
+    {
+      "text": "tickets, notify Slack, Teams, etc.",
+      "offset": 276000,
+      "duration": 4000
+    },
+    {
+      "text": "Where it really becomes interesting is",
+      "offset": 280000,
+      "duration": 3000
+    },
+    {
+      "text": "with the runtime contextualization.",
+      "offset": 283000,
+      "duration": 3000
+    },
+    {
+      "text": "I have showed the Smartscape and the",
+      "offset": 286000,
+      "duration": 2000
+    },
+    {
+      "text": "Dynatrace's ability to monitor runtime",
+      "offset": 288000,
+      "duration": 2000
+    },
+    {
+      "text": "entities. And this is the point which",
+      "offset": 290000,
+      "duration": 3000
+    },
+    {
+      "text": "becomes the most valuable for our",
+      "offset": 293000,
+      "duration": 3000
+    },
+    {
+      "text": "customers when they integrate code",
+      "offset": 296000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerability findings and they want to",
+      "offset": 298000,
+      "duration": 2000
+    },
+    {
+      "text": "verify and understand whether they",
+      "offset": 300000,
+      "duration": 3000
+    },
+    {
+      "text": "affect any of the production",
+      "offset": 303000,
+      "duration": 1000
+    },
+    {
+      "text": "applications",
+      "offset": 304000,
+      "duration": 2000
+    },
+    {
+      "text": "and it's possible actually to filter and",
+      "offset": 306000,
+      "duration": 3000
+    },
+    {
+      "text": "narrow down and prioritize those",
+      "offset": 309000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerabilities with this runtime",
+      "offset": 311000,
+      "duration": 1000
+    },
+    {
+      "text": "context. Here is an example of a",
+      "offset": 312000,
+      "duration": 3000
+    },
+    {
+      "text": "workflow that I just set up to",
+      "offset": 315000,
+      "duration": 2000
+    },
+    {
+      "text": "demonstrate those capabilities.",
+      "offset": 317000,
+      "duration": 3000
+    },
+    {
+      "text": "In this example, I'm querying or",
+      "offset": 320000,
+      "duration": 5000
+    },
+    {
+      "text": "the workflow triggers every time",
+      "offset": 325000,
+      "duration": 2000
+    },
+    {
+      "text": "there is a new critical or high",
+      "offset": 327000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerability ingested from SonarQube",
+      "offset": 329000,
+      "duration": 3000
+    },
+    {
+      "text": "and I want to contextualize",
+      "offset": 332000,
+      "duration": 3000
+    },
+    {
+      "text": "them only with the production",
+      "offset": 335000,
+      "duration": 4000
+    },
+    {
+      "text": "entities. So I don't care about any my",
+      "offset": 339000,
+      "duration": 2000
+    },
+    {
+      "text": "staging or development environments. I",
+      "offset": 341000,
+      "duration": 2000
+    },
+    {
+      "text": "really want to understand if a new",
+      "offset": 343000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerability or an existing",
+      "offset": 345000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerability affects some of the",
+      "offset": 347000,
+      "duration": 2000
+    },
+    {
+      "text": "production entities.",
+      "offset": 349000,
+      "duration": 2000
+    },
+    {
+      "text": "In this example that I'm walking you",
+      "offset": 351000,
+      "duration": 2000
+    },
+    {
+      "text": "through I'm demonstrating how we",
+      "offset": 353000,
+      "duration": 3000
+    },
+    {
+      "text": "contextualize it to containers",
+      "offset": 356000,
+      "duration": 3000
+    },
+    {
+      "text": "running in Kubernetes. So with a few",
+      "offset": 359000,
+      "duration": 3000
+    },
+    {
+      "text": "queries on top of the Smartscape and the",
+      "offset": 362000,
+      "duration": 2000
+    },
+    {
+      "text": "original event coming from SonarQube",
+      "offset": 364000,
+      "duration": 3000
+    },
+    {
+      "text": "which I will later show how it looks",
+      "offset": 367000,
+      "duration": 2000
+    },
+    {
+      "text": "like, we can actually add this",
+      "offset": 369000,
+      "duration": 4000
+    },
+    {
+      "text": "context, understand which artifacts",
+      "offset": 373000,
+      "duration": 3000
+    },
+    {
+      "text": "are being affected in runtime. And",
+      "offset": 376000,
+      "duration": 3000
+    },
+    {
+      "text": "the way that we are doing here is by",
+      "offset": 379000,
+      "duration": 4000
+    },
+    {
+      "text": "a lookup of the repository names and",
+      "offset": 383000,
+      "duration": 3000
+    },
+    {
+      "text": "the service names deployed in the",
+      "offset": 386000,
+      "duration": 2000
+    },
+    {
+      "text": "environment.\nMaybe as a quick example coming back to",
+      "offset": 388000,
+      "duration": 6000
+    },
+    {
+      "text": "this container and the workflow. So",
+      "offset": 394000,
+      "duration": 4000
+    },
+    {
+      "text": "when it is deployed, Dynatrace actually",
+      "offset": 398000,
+      "duration": 2000
+    },
+    {
+      "text": "sees all the configuration of your",
+      "offset": 400000,
+      "duration": 4000
+    },
+    {
+      "text": "deployment and as part of this",
+      "offset": 404000,
+      "duration": 2000
+    },
+    {
+      "text": "configuration we also read all the",
+      "offset": 406000,
+      "duration": 2000
+    },
+    {
+      "text": "specification and environment variables",
+      "offset": 408000,
+      "duration": 3000
+    },
+    {
+      "text": "and if you put in the labels",
+      "offset": 411000,
+      "duration": 2000
+    },
+    {
+      "text": "or environment variables of your",
+      "offset": 413000,
+      "duration": 2000
+    },
+    {
+      "text": "deployments labels such as",
+      "offset": 415000,
+      "duration": 3000
+    },
+    {
+      "text": "production, staging etc. This is exactly",
+      "offset": 418000,
+      "duration": 3000
+    },
+    {
+      "text": "where we can understand and bring",
+      "offset": 421000,
+      "duration": 2000
+    },
+    {
+      "text": "the value of prioritization with",
+      "offset": 423000,
+      "duration": 3000
+    },
+    {
+      "text": "runtime context.",
+      "offset": 426000,
+      "duration": 2000
+    },
+    {
+      "text": "So jumping back to the workflow, what",
+      "offset": 428000,
+      "duration": 3000
+    },
+    {
+      "text": "happens next? We also want to add",
+      "offset": 431000,
+      "duration": 3000
+    },
+    {
+      "text": "additional runtime context such as",
+      "offset": 434000,
+      "duration": 3000
+    },
+    {
+      "text": "exposure to the internet or a proximity",
+      "offset": 437000,
+      "duration": 4000
+    },
+    {
+      "text": "to sensitive data assets. The way that",
+      "offset": 441000,
+      "duration": 2000
+    },
+    {
+      "text": "we do that is that in Dynatrace we have an",
+      "offset": 443000,
+      "duration": 3000
+    },
+    {
+      "text": "additional capability which called",
+      "offset": 446000,
+      "duration": 2000
+    },
+    {
+      "text": "runtime vulnerability analytics which",
+      "offset": 448000,
+      "duration": 2000
+    },
+    {
+      "text": "analyzes your runtime entities for",
+      "offset": 450000,
+      "duration": 3000
+    },
+    {
+      "text": "vulnerabilities in runtime at runtime.",
+      "offset": 453000,
+      "duration": 4000
+    },
+    {
+      "text": "So it means that we are looking at",
+      "offset": 457000,
+      "duration": 3000
+    },
+    {
+      "text": "all the connections that Dynatrace has and",
+      "offset": 460000,
+      "duration": 3000
+    },
+    {
+      "text": "analyze whether there are external",
+      "offset": 463000,
+      "duration": 3000
+    },
+    {
+      "text": "connectivity or database services",
+      "offset": 466000,
+      "duration": 2000
+    },
+    {
+      "text": "accessible from those points. And this",
+      "offset": 468000,
+      "duration": 2000
+    },
+    {
+      "text": "information is very useful when",
+      "offset": 470000,
+      "duration": 2000
+    },
+    {
+      "text": "prioritizing",
+      "offset": 472000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerabilities. So",
+      "offset": 474000,
+      "duration": 3000
+    },
+    {
+      "text": "what this workflow does it also adds the",
+      "offset": 477000,
+      "duration": 3000
+    },
+    {
+      "text": "context about the exposure status",
+      "offset": 480000,
+      "duration": 2000
+    },
+    {
+      "text": "whether it's public internet or not and",
+      "offset": 482000,
+      "duration": 1000
+    },
+    {
+      "text": "the data data asset status and",
+      "offset": 483000,
+      "duration": 3000
+    },
+    {
+      "text": "accessibility.",
+      "offset": 486000,
+      "duration": 2000
+    },
+    {
+      "text": "Then what happens next is that we ingest",
+      "offset": 488000,
+      "duration": 3000
+    },
+    {
+      "text": "the enriched events back into Dynatrace",
+      "offset": 491000,
+      "duration": 3000
+    },
+    {
+      "text": "so that we can later also work with",
+      "offset": 494000,
+      "duration": 2000
+    },
+    {
+      "text": "those enriched events and I will show",
+      "offset": 496000,
+      "duration": 2000
+    },
+    {
+      "text": "you in a second how and we also want",
+      "offset": 498000,
+      "duration": 3000
+    },
+    {
+      "text": "to create a ticket. So you can imagine",
+      "offset": 501000,
+      "duration": 2000
+    },
+    {
+      "text": "this workflow triggers on critical",
+      "offset": 503000,
+      "duration": 2000
+    },
+    {
+      "text": "and high vulnerabilities but it does not",
+      "offset": 505000,
+      "duration": 2000
+    },
+    {
+      "text": "create a ticket for each and every",
+      "offset": 507000,
+      "duration": 3000
+    },
+    {
+      "text": "vulnerability. It only would create a",
+      "offset": 510000,
+      "duration": 1000
+    },
+    {
+      "text": "ticket for vulnerabilities that affect",
+      "offset": 511000,
+      "duration": 3000
+    },
+    {
+      "text": "your production applications.",
+      "offset": 514000,
+      "duration": 2000
+    },
+    {
+      "text": "So in that sense we first query if there",
+      "offset": 516000,
+      "duration": 3000
+    },
+    {
+      "text": "are already existing vulnerabilities and",
+      "offset": 519000,
+      "duration": 2000
+    },
+    {
+      "text": "we are using Davis intelligence a",
+      "offset": 521000,
+      "duration": 3000
+    },
+    {
+      "text": "workflow action that is capable of",
+      "offset": 524000,
+      "duration": 3000
+    },
+    {
+      "text": "summarizing all the insights that were",
+      "offset": 527000,
+      "duration": 2000
+    },
+    {
+      "text": "collected by different actions in this",
+      "offset": 529000,
+      "duration": 2000
+    },
+    {
+      "text": "workflow and prepare Jira ticket for",
+      "offset": 531000,
+      "duration": 3000
+    },
+    {
+      "text": "you. So a very simple and",
+      "offset": 534000,
+      "duration": 1000
+    },
+    {
+      "text": "straightforward AI usage in this case",
+      "offset": 535000,
+      "duration": 3000
+    },
+    {
+      "text": "and finally we create the ticket in",
+      "offset": 538000,
+      "duration": 3000
+    },
+    {
+      "text": "Jira. So now I will show an example",
+      "offset": 541000,
+      "duration": 5000
+    },
+    {
+      "text": "of the ticket created by such a",
+      "offset": 546000,
+      "duration": 2000
+    },
+    {
+      "text": "workflow.",
+      "offset": 548000,
+      "duration": 2000
+    },
+    {
+      "text": "Here is a Jira ticket that summarizes",
+      "offset": 550000,
+      "duration": 3000
+    },
+    {
+      "text": "says that this is a confirmed",
+      "offset": 553000,
+      "duration": 1000
+    },
+    {
+      "text": "vulnerability from SonarQube",
+      "offset": 554000,
+      "duration": 3000
+    },
+    {
+      "text": "confirmed by Dynatrace. It provides a",
+      "offset": 557000,
+      "duration": 3000
+    },
+    {
+      "text": "few quick insights about the",
+      "offset": 560000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerability as well as what exact",
+      "offset": 562000,
+      "duration": 3000
+    },
+    {
+      "text": "entities being mapped and matched",
+      "offset": 565000,
+      "duration": 4000
+    },
+    {
+      "text": "for this vulnerability. From here on",
+      "offset": 569000,
+      "duration": 3000
+    },
+    {
+      "text": "you can also drill in and open this",
+      "offset": 572000,
+      "duration": 2000
+    },
+    {
+      "text": "Kubernetes workload and you can",
+      "offset": 574000,
+      "duration": 7000
+    },
+    {
+      "text": "understand why Dynatrace and this",
+      "offset": 581000,
+      "duration": 3000
+    },
+    {
+      "text": "workflow choose this vulnerability",
+      "offset": 584000,
+      "duration": 3000
+    },
+    {
+      "text": "because there is a tag with production",
+      "offset": 587000,
+      "duration": 3000
+    },
+    {
+      "text": "which was set as part of the workflow as",
+      "offset": 590000,
+      "duration": 3000
+    },
+    {
+      "text": "something to look for in the",
+      "offset": 593000,
+      "duration": 3000
+    },
+    {
+      "text": "deployments. Then it also tells here",
+      "offset": 596000,
+      "duration": 3000
+    },
+    {
+      "text": "whether there is any",
+      "offset": 599000,
+      "duration": 4000
+    },
+    {
+      "text": "public internet exposure or sensitive",
+      "offset": 603000,
+      "duration": 2000
+    },
+    {
+      "text": "data access allowed or possible from",
+      "offset": 605000,
+      "duration": 4000
+    },
+    {
+      "text": "this entity and in this case you can see",
+      "offset": 609000,
+      "duration": 3000
+    },
+    {
+      "text": "that there is a public internet exposure",
+      "offset": 612000,
+      "duration": 3000
+    },
+    {
+      "text": "and in addition to that from the",
+      "offset": 615000,
+      "duration": 3000
+    },
+    {
+      "text": "Dynatrace runtime vulnerability analytics",
+      "offset": 618000,
+      "duration": 2000
+    },
+    {
+      "text": "it also brings some additional summary",
+      "offset": 620000,
+      "duration": 2000
+    },
+    {
+      "text": "of what other vulnerabilities exist in",
+      "offset": 622000,
+      "duration": 3000
+    },
+    {
+      "text": "this workload and in this case there are",
+      "offset": 625000,
+      "duration": 3000
+    },
+    {
+      "text": "two additional vulnerabilities that you",
+      "offset": 628000,
+      "duration": 2000
+    },
+    {
+      "text": "can also drill in and explore within",
+      "offset": 630000,
+      "duration": 2000
+    },
+    {
+      "text": "Dynatrace. Those vulnerabilities are",
+      "offset": 632000,
+      "duration": 2000
+    },
+    {
+      "text": "not directly related to SonarQube",
+      "offset": 634000,
+      "duration": 3000
+    },
+    {
+      "text": "vulnerabilities but it just provides",
+      "offset": 637000,
+      "duration": 2000
+    },
+    {
+      "text": "additional information about what else",
+      "offset": 639000,
+      "duration": 1000
+    },
+    {
+      "text": "is wrong and is possible and",
+      "offset": 640000,
+      "duration": 3000
+    },
+    {
+      "text": "vulnerable on top of the same entities",
+      "offset": 643000,
+      "duration": 3000
+    },
+    {
+      "text": "monitored by Dynatrace.\nI mentioned that we ingest those",
+      "offset": 646000,
+      "duration": 7000
+    },
+    {
+      "text": "events back to Dynatrace which also",
+      "offset": 653000,
+      "duration": 3000
+    },
+    {
+      "text": "allows to visualize it",
+      "offset": 656000,
+      "duration": 6000
+    },
+    {
+      "text": "in the same dashboard",
+      "offset": 662000,
+      "duration": 3000
+    },
+    {
+      "text": "that I showed in the beginning. So this",
+      "offset": 665000,
+      "duration": 2000
+    },
+    {
+      "text": "dashboard shows initially the SonarQube",
+      "offset": 667000,
+      "duration": 2000
+    },
+    {
+      "text": "findings but there is a section",
+      "offset": 669000,
+      "duration": 3000
+    },
+    {
+      "text": "where we also provide you the",
+      "offset": 672000,
+      "duration": 2000
+    },
+    {
+      "text": "contextualization, the runtime entities",
+      "offset": 674000,
+      "duration": 3000
+    },
+    {
+      "text": "and as in this example you can see that",
+      "offset": 677000,
+      "duration": 3000
+    },
+    {
+      "text": "we have mapped a container right",
+      "offset": 680000,
+      "duration": 3000
+    },
+    {
+      "text": "there with critical issues discovered",
+      "offset": 683000,
+      "duration": 4000
+    },
+    {
+      "text": "and mapped from SonarQube and from here",
+      "offset": 687000,
+      "duration": 2000
+    },
+    {
+      "text": "it's also possible to drill into this",
+      "offset": 689000,
+      "duration": 2000
+    },
+    {
+      "text": "container and view additional details.\nSo this is the container which is part",
+      "offset": 691000,
+      "duration": 8000
+    },
+    {
+      "text": "of the same cluster that we have seen",
+      "offset": 699000,
+      "duration": 3000
+    },
+    {
+      "text": "before. And if we want to drill in into",
+      "offset": 702000,
+      "duration": 3000
+    },
+    {
+      "text": "the namespace and analyze what other",
+      "offset": 705000,
+      "duration": 2000
+    },
+    {
+      "text": "things exist in this environment or who",
+      "offset": 707000,
+      "duration": 2000
+    },
+    {
+      "text": "owns them, this information also exists",
+      "offset": 709000,
+      "duration": 3000
+    },
+    {
+      "text": "in Dynatrace which also allows you to",
+      "offset": 712000,
+      "duration": 2000
+    },
+    {
+      "text": "better address issues in the runtime.\nAll right moving on. Another use case",
+      "offset": 714000,
+      "duration": 8000
+    },
+    {
+      "text": "which is possible to be",
+      "offset": 722000,
+      "duration": 2000
+    },
+    {
+      "text": "accomplished with this runtime",
+      "offset": 724000,
+      "duration": 2000
+    },
+    {
+      "text": "contextualization is security gates.",
+      "offset": 726000,
+      "duration": 4000
+    },
+    {
+      "text": "In SonarQube you probably familiar",
+      "offset": 730000,
+      "duration": 2000
+    },
+    {
+      "text": "with security gates for the code",
+      "offset": 732000,
+      "duration": 2000
+    },
+    {
+      "text": "findings but in runtime there is also",
+      "offset": 734000,
+      "duration": 3000
+    },
+    {
+      "text": "such a thing as a security gate. For",
+      "offset": 737000,
+      "duration": 2000
+    },
+    {
+      "text": "example, if you want to deploy your",
+      "offset": 739000,
+      "duration": 2000
+    },
+    {
+      "text": "application from staging environment",
+      "offset": 741000,
+      "duration": 2000
+    },
+    {
+      "text": "to production while running Dynatrace in",
+      "offset": 743000,
+      "duration": 3000
+    },
+    {
+      "text": "staging environment, you can also",
+      "offset": 746000,
+      "duration": 2000
+    },
+    {
+      "text": "benefit from this additional security",
+      "offset": 748000,
+      "duration": 3000
+    },
+    {
+      "text": "gate which would take the SonarQube",
+      "offset": 751000,
+      "duration": 2000
+    },
+    {
+      "text": "findings contextualized by Dynatrace runtime",
+      "offset": 753000,
+      "duration": 3000
+    },
+    {
+      "text": "entities and check whether there are any",
+      "offset": 756000,
+      "duration": 5000
+    },
+    {
+      "text": "enriched findings from",
+      "offset": 761000,
+      "duration": 4000
+    },
+    {
+      "text": "critical and high risk levels that",
+      "offset": 765000,
+      "duration": 2000
+    },
+    {
+      "text": "affect your production application. So",
+      "offset": 767000,
+      "duration": 3000
+    },
+    {
+      "text": "basically affect your runtime entities",
+      "offset": 770000,
+      "duration": 2000
+    },
+    {
+      "text": "and in that case the security gate",
+      "offset": 772000,
+      "duration": 3000
+    },
+    {
+      "text": "will fail and you can also use",
+      "offset": 775000,
+      "duration": 3000
+    },
+    {
+      "text": "workflows as a mechanism to connect",
+      "offset": 778000,
+      "duration": 4000
+    },
+    {
+      "text": "to this execution of the security gate",
+      "offset": 782000,
+      "duration": 3000
+    },
+    {
+      "text": "and then notify stakeholders as soon as",
+      "offset": 785000,
+      "duration": 2000
+    },
+    {
+      "text": "it's failed. You can also integrate this",
+      "offset": 787000,
+      "duration": 2000
+    },
+    {
+      "text": "workflow as part of your deployment",
+      "offset": 789000,
+      "duration": 2000
+    },
+    {
+      "text": "process and roll back the deployment",
+      "offset": 791000,
+      "duration": 3000
+    },
+    {
+      "text": "if such thing exist. So you have",
+      "offset": 794000,
+      "duration": 3000
+    },
+    {
+      "text": "a lot of possibilities to play around",
+      "offset": 797000,
+      "duration": 2000
+    },
+    {
+      "text": "and automate around those findings.\nYes. So coming back to this dashboard",
+      "offset": 799000,
+      "duration": 8000
+    },
+    {
+      "text": "and summing it up. This is how",
+      "offset": 807000,
+      "duration": 2000
+    },
+    {
+      "text": "Dynatrace and SonarQube together help to",
+      "offset": 809000,
+      "duration": 4000
+    },
+    {
+      "text": "both see your runtime and shift left to",
+      "offset": 813000,
+      "duration": 3000
+    },
+    {
+      "text": "your code time, connecting those two",
+      "offset": 816000,
+      "duration": 2000
+    },
+    {
+      "text": "worlds together to understand what",
+      "offset": 818000,
+      "duration": 2000
+    },
+    {
+      "text": "impact your code level vulnerabilities",
+      "offset": 820000,
+      "duration": 3000
+    },
+    {
+      "text": "have on your runtime and production",
+      "offset": 823000,
+      "duration": 2000
+    },
+    {
+      "text": "applications.\nThank you.",
+      "offset": 825000,
+      "duration": 5000
+    },
+    {
+      "text": "[End of Video]",
+      "offset": 830000,
+      "duration": 20000
+    }
+  ],
+  "fullText": "Hi, my name is Valeriy Leykin and I'm product manager from Dynatrace. I want to walk you through today through the integration with SonarQube for vulnerability ingestion into Dynatrace. But before that just a few words about the platform of Dynatrace. Dynatrace is a data intelligence platform that monitors your environment and within your environment it discovers different issues and problems and can identify things such as performance issues as well as the runtime vulnerabilities. We integrate with partners such as SonarQube for data ingestion to enrich and reach out our visibility into pre-production environments and to your code and build time. For example, what Dynatrace monitoring capabilities look like can be visualized in Smartscape application where you can see all the different entities. In this example, Kubernetes cluster being monitored with various containers monitors by Dynatrace. And this is a visual representation that allows you also to dive deeper into each and every runtime entity. So for example, I can click and dive into a specific container. Okay. So this is a few words about Dynatrace. Now let's talk about the SonarQube integration and how it's all connected together. Code time, build time and runtime. The SonarQube integration is delivered as an extension which you can install. And then the Dynatrace extension fetches SonarQube vulnerabilities as well as quality ratings and ingest them into Dynatrace and within Dynatrace we visualize both those vulnerability findings as well as the quality metrics which I will demonstrate next. As soon as the data is ingested into Dynatrace it's being mapped to so-called semantic dictionary which allows it to prioritize and work uniformly with any kind of data ingested into Dynatrace. In this example, SonarQube findings are being ingested and summarize in a dashboard where you can explore and prioritize vulnerabilities by risk, explore individual findings and connect actually to the original finding from SonarQube if you want to look at it for example or understand the various levels of distribution of the vulnerabilities and the issues discovered, which repositories they are, what are the top affected objects or code artifacts in other words and what are the top affected vulnerable components. At the same time, what is possible to do is to look at SonarQube posture overview based on various rating ingested into Dynatrace. So this essentially summarizes for your projects all the data that you're probably familiar from SonarQube already with the security ratings, reliability, maintainability etc. Here you can also use this data not only for visualization but rather in Dynatrace automate on top of the any ingested data. As a quick example in simple one, the ingested vulnerability findings can be automated with Dynatrace workflows where you can query the ingested data which resides within Dynatrace's database which called Grail and fetch the data fetch the new vulnerabilities filter them based on the criticality and then and then notify different stakeholders. You can create tickets, notify Slack, Teams, etc. Where it really becomes interesting is with the runtime contextualization. I have showed the Smartscape and the Dynatrace's ability to monitor runtime entities. And this is the point which becomes the most valuable for our customers when they integrate code vulnerability findings and they want to verify and understand whether they affect any of the production applications and it's possible actually to filter and narrow down and prioritize those vulnerabilities with this runtime context. Here is an example of a workflow that I just set up to demonstrate those capabilities. In this example, I'm querying or the workflow triggers every time there is a new critical or high vulnerability ingested from SonarQube and I want to contextualize them only with the production entities. So I don't care about any my staging or development environments. I really want to understand if a new vulnerability or an existing vulnerability affects some of the production entities. In this example that I'm walking you through I'm demonstrating how we contextualize it to containers running in Kubernetes. So with a few queries on top of the Smartscape and the original event coming from SonarQube which I will later show how it looks like, we can actually add this context, understand which artifacts are being affected in runtime. And the way that we are doing here is by a lookup of the repository names and the service names deployed in the environment.\nMaybe as a quick example coming back to this container and the workflow. So when it is deployed, Dynatrace actually sees all the configuration of your deployment and as part of this configuration we also read all the specification and environment variables and if you put in the labels or environment variables of your deployments labels such as production, staging etc. This is exactly where we can understand and bring the value of prioritization with runtime context. So jumping back to the workflow, what happens next? We also want to add additional runtime context such as exposure to the internet or a proximity to sensitive data assets. The way that we do that is that in Dynatrace we have an additional capability which called runtime vulnerability analytics which analyzes your runtime entities for vulnerabilities in runtime at runtime. So it means that we are looking at all the connections that Dynatrace has and analyze whether there are external connectivity or database services accessible from those points. And this information is very useful when prioritizing vulnerabilities. So what this workflow does it also adds the context about the exposure status whether it's public internet or not and the data data asset status and accessibility. Then what happens next is that we ingest the enriched events back into Dynatrace so that we can later also work with those enriched events and I will show you in a second how and we also want to create a ticket. So you can imagine this workflow triggers on critical and high vulnerabilities but it does not create a ticket for each and every vulnerability. It only would create a ticket for vulnerabilities that affect your production applications. So in that sense we first query if there are already existing vulnerabilities and we are using Davis intelligence a workflow action that is capable of summarizing all the insights that were collected by different actions in this workflow and prepare Jira ticket for you. So a very simple and straightforward AI usage in this case and finally we create the ticket in Jira. So now I will show an example of the ticket created by such a workflow. Here is a Jira ticket that summarizes says that this is a confirmed vulnerability from SonarQube confirmed by Dynatrace. It provides a few quick insights about the vulnerability as well as what exact entities being mapped and matched for this vulnerability. From here on you can also drill in and open this Kubernetes workload and you can understand why Dynatrace and this workflow choose this vulnerability because there is a tag with production which was set as part of the workflow as something to look for in the deployments. Then it also tells here whether there is any public internet exposure or sensitive data access allowed or possible from this entity and in this case you can see that there is a public internet exposure and in addition to that from the Dynatrace runtime vulnerability analytics it also brings some additional summary of what other vulnerabilities exist in this workload and in this case there are two additional vulnerabilities that you can also drill in and explore within Dynatrace. Those vulnerabilities are not directly related to SonarQube vulnerabilities but it just provides additional information about what else is wrong and is possible and vulnerable on top of the same entities monitored by Dynatrace.\nI mentioned that we ingest those events back to Dynatrace which also allows to visualize it in the same dashboard that I showed in the beginning. So this dashboard shows initially the SonarQube findings but there is a section where we also provide you the contextualization, the runtime entities and as in this example you can see that we have mapped a container right there with critical issues discovered and mapped from SonarQube and from here it's also possible to drill into this container and view additional details.\nSo this is the container which is part of the same cluster that we have seen before. And if we want to drill in into the namespace and analyze what other things exist in this environment or who owns them, this information also exists in Dynatrace which also allows you to better address issues in the runtime.\nAll right moving on. Another use case which is possible to be accomplished with this runtime contextualization is security gates. In SonarQube you probably familiar with security gates for the code findings but in runtime there is also such a thing as a security gate. For example, if you want to deploy your application from staging environment to production while running Dynatrace in staging environment, you can also benefit from this additional security gate which would take the SonarQube findings contextualized by Dynatrace runtime entities and check whether there are any enriched findings from critical and high risk levels that affect your production application. So basically affect your runtime entities and in that case the security gate will fail and you can also use workflows as a mechanism to connect to this execution of the security gate and then notify stakeholders as soon as it's failed. You can also integrate this workflow as part of your deployment process and roll back the deployment if such thing exist. So you have a lot of possibilities to play around and automate around those findings.\nYes. So coming back to this dashboard and summing it up. This is how Dynatrace and SonarQube together help to both see your runtime and shift left to your code time, connecting those two worlds together to understand what impact your code level vulnerabilities have on your runtime and production applications.\nThank you. [End of Video]",
+  "fetchedAt": "2026-03-14T09:22:12.725Z"
+}

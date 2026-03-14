@@ -1,0 +1,3458 @@
+{
+  "videoId": "v93",
+  "youtubeId": "6cdV-oN_Yao",
+  "segments": [
+    {
+      "text": "Manish Kapur: All right.",
+      "offset": 1366,
+      "duration": 2426
+    },
+    {
+      "text": "Manish Kapur: Alright. Hello, \neveryone. Thanks for joining today.",
+      "offset": 3792,
+      "duration": 2143
+    },
+    {
+      "text": "Manish Kapur: Today's webinar is end \nto end security in a web application.",
+      "offset": 5935,
+      "duration": 5746
+    },
+    {
+      "text": "Manish Kapur: This session will \nfocus on how authentication,",
+      "offset": 11681,
+      "duration": 2734
+    },
+    {
+      "text": "authorization and security requirements \ncan be implemented in asp.net core.",
+      "offset": 14415,
+      "duration": 5480
+    },
+    {
+      "text": "Manish Kapur: My name is Manish Kapur, and \nI'm your moderator for today's webinar.",
+      "offset": 19895,
+      "duration": 4986
+    },
+    {
+      "text": "Manish Kapur: This webinar will be presented \nby Damien Borden and Dennis Troller.",
+      "offset": 24881,
+      "duration": 6880
+    },
+    {
+      "text": "Manish Kapur: So before we begin, let me \ngo through some housekeeping essentials",
+      "offset": 31761,
+      "duration": 5174
+    },
+    {
+      "text": "Manish Kapur: this session will be \nabout 45 min with a Q&A towards the end",
+      "offset": 36935,
+      "duration": 5866
+    },
+    {
+      "text": "Manish Kapur: you are invited \nto submit your questions via",
+      "offset": 42801,
+      "duration": 2574
+    },
+    {
+      "text": "the Q. And a box in zoom, not the chat box.",
+      "offset": 45375,
+      "duration": 4306
+    },
+    {
+      "text": "Manish Kapur: Our panelists today \nare Andrei Epure and Zsolt Kolbay.",
+      "offset": 49681,
+      "duration": 5640
+    },
+    {
+      "text": "Manish Kapur: They will monitor and \nanswer your questions as they come in.",
+      "offset": 55321,
+      "duration": 3454
+    },
+    {
+      "text": "Manish Kapur: They will answer as many \nquestions as possible during the live webinar.",
+      "offset": 58775,
+      "duration": 5626
+    },
+    {
+      "text": "Manish Kapur: This session will be recorded.",
+      "offset": 64401,
+      "duration": 2160
+    },
+    {
+      "text": "Manish Kapur: and we will send you a link \nwith the recording in the upcoming days.",
+      "offset": 66561,
+      "duration": 6000
+    },
+    {
+      "text": "Manish Kapur: Finally, at the \nend of the webinar there will",
+      "offset": 72561,
+      "duration": 1814
+    },
+    {
+      "text": "be a short survey that will pop up on your screen.",
+      "offset": 74375,
+      "duration": 3386
+    },
+    {
+      "text": "Manish Kapur: It will be very nice \nof you if you can submit that survey",
+      "offset": 77761,
+      "duration": 3600
+    },
+    {
+      "text": "Manish Kapur: we consider feedback to be a gift.",
+      "offset": 81361,
+      "duration": 2560
+    },
+    {
+      "text": "Manish Kapur: Thanks in \nadvance for your participation.",
+      "offset": 83921,
+      "duration": 2934
+    },
+    {
+      "text": "Manish Kapur: So let's",
+      "offset": 86855,
+      "duration": 5426
+    },
+    {
+      "text": "Manish Kapur: let's let me introduce \nthe speak speakers for today's webinar.",
+      "offset": 92281,
+      "duration": 4774
+    },
+    {
+      "text": "Manish Kapur: we have. We have \na special guest, Damien Borden,",
+      "offset": 97055,
+      "duration": 6520
+    },
+    {
+      "text": "who's a web developer at \nisolutions in Switzerland.",
+      "offset": 103575,
+      "duration": 4226
+    },
+    {
+      "text": "Manish Kapur: and he's also a Microsoft \nMVP. Who will be delivering this webinar",
+      "offset": 107801,
+      "duration": 3974
+    },
+    {
+      "text": "alongside our product manager, \nDennis Troller, from Sonar.",
+      "offset": 111775,
+      "duration": 3880
+    },
+    {
+      "text": "Manish Kapur: So thank you for delivering \nthis Webinar Damien and Dennis.",
+      "offset": 115655,
+      "duration": 5186
+    },
+    {
+      "text": "Manish Kapur: They will answer your questions also \nat the end of this webinar that we want to cover,",
+      "offset": 120841,
+      "duration": 5494
+    },
+    {
+      "text": "which we couldn't answer during the in the \nchat panel. This session will be recorded,",
+      "offset": 126335,
+      "duration": 4160
+    },
+    {
+      "text": "and we'll send out a link \nagain in the upcoming days",
+      "offset": 130495,
+      "duration": 3720
+    },
+    {
+      "text": "Manish Kapur: So without any, for let me \nlet me pass it on to our speaker today,",
+      "offset": 134215,
+      "duration": 7800
+    },
+    {
+      "text": "Damien Borden, to kick off the webinar for today.",
+      "offset": 142015,
+      "duration": 3100
+    },
+    {
+      "text": "Manish Kapur: Thanks, Damian, over to you.",
+      "offset": 145115,
+      "duration": 3020
+    },
+    {
+      "text": "Damien Bowden: Okay, thanks for the \nintroduction. I'll just share my screen now",
+      "offset": 148135,
+      "duration": 5265
+    },
+    {
+      "text": "Damien Bowden: the screen.",
+      "offset": 153400,
+      "duration": 3320
+    },
+    {
+      "text": "Damien Bowden: So I just put \nup the whole agenda on Github",
+      "offset": 156720,
+      "duration": 3960
+    },
+    {
+      "text": "Damien Bowden: and",
+      "offset": 160680,
+      "duration": 1215
+    },
+    {
+      "text": "Damien Bowden: and what I \nthought to do is, I just explain.",
+      "offset": 161895,
+      "duration": 2640
+    },
+    {
+      "text": "Damien Bowden: and what I recommend implementing \nend to end security and a web application,",
+      "offset": 164535,
+      "duration": 4200
+    },
+    {
+      "text": "but just actually creating a application which \nI think could be used in production. And but of",
+      "offset": 168735,
+      "duration": 6120
+    },
+    {
+      "text": "course, there's many different ways of \ndoing this in many different forms. So",
+      "offset": 174855,
+      "duration": 3720
+    },
+    {
+      "text": "Damien Bowden: and that'll \nexplain different things, maybe,",
+      "offset": 178575,
+      "duration": 2320
+    },
+    {
+      "text": "how you could do the authentication. What's \nbest practice was recommended? How Microsoft",
+      "offset": 180895,
+      "duration": 4040
+    },
+    {
+      "text": "Nchid could implement this and a small \nbit about session protection. And then,",
+      "offset": 184935,
+      "duration": 3760
+    },
+    {
+      "text": "of course, then how to implement the Cicd and \nthe build, and so on. So the application itself.",
+      "offset": 188695,
+      "duration": 7320
+    },
+    {
+      "text": "Damien Bowden: And there's been a big change \nlately. How you implement security at the",
+      "offset": 196015,
+      "duration": 3400
+    },
+    {
+      "text": "moment. And in the last couple of years \nwe've been switching and doing single page",
+      "offset": 199415,
+      "duration": 4160
+    },
+    {
+      "text": "applications with backends, but nearly always \nimplemented with different technical stacks.",
+      "offset": 203575,
+      "duration": 5000
+    },
+    {
+      "text": "Damien Bowden: So what happened also \nwith the split in the technical stacks",
+      "offset": 208575,
+      "duration": 3560
+    },
+    {
+      "text": "is that we split the security as \nwell, and which was a bad idea,",
+      "offset": 212135,
+      "duration": 4000
+    },
+    {
+      "text": "because we're so secure and sensitive \ninformation in the browsers. And what's",
+      "offset": 216135,
+      "duration": 3520
+    },
+    {
+      "text": "happened there was that, and we deployed \nthe 2 as one. Now is new recommendation.",
+      "offset": 219655,
+      "duration": 4400
+    },
+    {
+      "text": "So all web applications is recommended that \nwe secure them as a single security context.",
+      "offset": 224055,
+      "duration": 5585
+    },
+    {
+      "text": "Damien Bowden: And we use a secret that \nwe validate the application and as well",
+      "offset": 229640,
+      "duration": 3695
+    },
+    {
+      "text": "as the user authenticating. So what \nwe do nowadays are what's recommended",
+      "offset": 233335,
+      "duration": 3680
+    },
+    {
+      "text": "for some setups is that we we deploy them \nas one and and we secure them as one. So",
+      "offset": 237015,
+      "duration": 6905
+    },
+    {
+      "text": "Damien Bowden: this works fairly good. \nBut one of the problems we have is that",
+      "offset": 243920,
+      "duration": 2375
+    },
+    {
+      "text": "when we're setting these settings up for local \ndevelopment, a angle of development, for example,",
+      "offset": 246295,
+      "duration": 5200
+    },
+    {
+      "text": "does not want to be using.net core tools or.net \ncore developer does not want to be using angler",
+      "offset": 251495,
+      "duration": 4600
+    },
+    {
+      "text": "tools. So for local development. We need to \nsplit them and let the the developers or the",
+      "offset": 256095,
+      "duration": 4600
+    },
+    {
+      "text": "architects use the tools that they know and want \nto use, because then to the most and productive.",
+      "offset": 260695,
+      "duration": 5145
+    },
+    {
+      "text": "Damien Bowden: but when we deploy it, then we have \nto build them together and deploy it as one. So",
+      "offset": 265840,
+      "duration": 4080
+    },
+    {
+      "text": "Damien Bowden: the angle application is no longer",
+      "offset": 269920,
+      "duration": 1695
+    },
+    {
+      "text": "a standalone application. I'm using \nAngle 18 in this example. When Nx.",
+      "offset": 271615,
+      "duration": 4665
+    },
+    {
+      "text": "Damien Bowden: it's actually part of \nthe back end. So it's you can see as",
+      "offset": 276280,
+      "duration": 3335
+    },
+    {
+      "text": "a Ui view of the back end application, \nwhich is a.net core application, and the",
+      "offset": 279615,
+      "duration": 5457
+    },
+    {
+      "text": "Damien Bowden: walk us worn together. We secured \nthe whole thing as a open id connect code, flow,",
+      "offset": 285072,
+      "duration": 4063
+    },
+    {
+      "text": "confidential client, and with Pixie, then, \nis what's recommended. Now, we usually. Now.",
+      "offset": 289135,
+      "duration": 4945
+    },
+    {
+      "text": "Damien Bowden: I could also implement \nthis as standalone application,",
+      "offset": 294080,
+      "duration": 2455
+    },
+    {
+      "text": "which doesn't connect to any other open \n80 connect hour is completely standalone.",
+      "offset": 296535,
+      "duration": 4280
+    },
+    {
+      "text": "Damien Bowden: And but that's not really \nrecommended anymore for enterprise deployments.",
+      "offset": 300815,
+      "duration": 3800
+    },
+    {
+      "text": "Or it's actually your implement. You introduce \nmore complexity as you actually reduce. And so I",
+      "offset": 304615,
+      "duration": 5120
+    },
+    {
+      "text": "always try to use existing identity providers \nor systems, especially in enterprise world,",
+      "offset": 309735,
+      "duration": 4760
+    },
+    {
+      "text": "where nearly any company I work with, \nor any deployment. They already have",
+      "offset": 314495,
+      "duration": 4240
+    },
+    {
+      "text": "an Id density provider somewhere, and I just \ntry to reuse whatever the company is using,",
+      "offset": 318735,
+      "duration": 4440
+    },
+    {
+      "text": "and then I use open need to connect, \nto connect into that. Then so",
+      "offset": 323175,
+      "duration": 3825
+    },
+    {
+      "text": "Damien Bowden: in this setup, and maybe \njust show you I use a proxy to separate",
+      "offset": 327000,
+      "duration": 4415
+    },
+    {
+      "text": "the angle development to the.net back end. \nAnd then you can use your own tools. So",
+      "offset": 331415,
+      "duration": 5600
+    },
+    {
+      "text": "that's really important that you, you \nneed a local setup and development that",
+      "offset": 337015,
+      "duration": 3745
+    },
+    {
+      "text": "Damien Bowden: you need to have a \nproduction setup, but you wanna keep",
+      "offset": 340760,
+      "duration": 2455
+    },
+    {
+      "text": "the 2 of them as close as possible. So, \nfor example, I always use Hts everywhere,",
+      "offset": 343215,
+      "duration": 4440
+    },
+    {
+      "text": "so I can use the same type of session protection \non my local development as on my deployment,",
+      "offset": 347655,
+      "duration": 4000
+    },
+    {
+      "text": "and that saves an awful lot of \neffort after I do deployments.",
+      "offset": 351655,
+      "duration": 4865
+    },
+    {
+      "text": "Damien Bowden: So.",
+      "offset": 356520,
+      "duration": 960
+    },
+    {
+      "text": "Damien Bowden: looking at the authentication \nflows, and the recommended flow nowadays would",
+      "offset": 357480,
+      "duration": 4495
+    },
+    {
+      "text": "be open, ready to connect Code flow with \nPixie, and with a confidential client. So",
+      "offset": 361975,
+      "duration": 5240
+    },
+    {
+      "text": "just to show how this works is, and \nthis is the flow without the pixie,",
+      "offset": 367215,
+      "duration": 3920
+    },
+    {
+      "text": "and it's a 2 step. Authentication flow. So what \nhappens is that when the browser and is open.",
+      "offset": 371135,
+      "duration": 4880
+    },
+    {
+      "text": "You want to authenticate the application. You \nredirect the whole application to the server,",
+      "offset": 376015,
+      "duration": 4200
+    },
+    {
+      "text": "and this could be entry. Id. It could be \nart 0. It could be any identity provider.",
+      "offset": 380215,
+      "duration": 4520
+    },
+    {
+      "text": "Damien Bowden: And if all \nthe parameters are correct,",
+      "offset": 384735,
+      "duration": 2080
+    },
+    {
+      "text": "and then you can log into your \nauthentication. Do your multi factor,",
+      "offset": 386815,
+      "duration": 2560
+    },
+    {
+      "text": "authentication, use your phishing, resist \nnotification like pass keys or feet or 2,",
+      "offset": 389375,
+      "duration": 4625
+    },
+    {
+      "text": "Damien Bowden: then you give your consent. \nIf all is okay, you get redirected back to",
+      "offset": 394000,
+      "duration": 4295
+    },
+    {
+      "text": "the ui in the browser with a code. Now this code \ncomes back in the front channel in the browser,",
+      "offset": 398295,
+      "duration": 4640
+    },
+    {
+      "text": "and then the code is taken, and in \nthe back end of the application,",
+      "offset": 402935,
+      "duration": 3040
+    },
+    {
+      "text": "and and it sent them with with their secret. \nOr if you're using certificate authentication,",
+      "offset": 405975,
+      "duration": 4440
+    },
+    {
+      "text": "you send a client assertion to the server, \nand then you get your Co. Tokens back here,",
+      "offset": 410415,
+      "duration": 5440
+    },
+    {
+      "text": "Id token a access token, and maybe refresh \ntoken back, depending on what you requested. Now",
+      "offset": 415855,
+      "duration": 5665
+    },
+    {
+      "text": "Damien Bowden: there's different flavors \nand flows and variance of this, for example,",
+      "offset": 421520,
+      "duration": 3095
+    },
+    {
+      "text": "and you're meant to keep the id \ntokens really small, if possible,",
+      "offset": 424615,
+      "duration": 2600
+    },
+    {
+      "text": "because you need that to log out usually.",
+      "offset": 427215,
+      "duration": 2240
+    },
+    {
+      "text": "Damien Bowden: And so if I'm doing that. \nI'd probably use a user in for endpoint,",
+      "offset": 429455,
+      "duration": 2920
+    },
+    {
+      "text": "and then there'd be an extra step at \nthe end, or sometimes you can make",
+      "offset": 432375,
+      "duration": 2600
+    },
+    {
+      "text": "it a 3 step authentication with par \na a new Rfc. That's just come out.",
+      "offset": 434975,
+      "duration": 4425
+    },
+    {
+      "text": "Damien Bowden: or you could use Mtls to \nstrengthen securities, different ways of",
+      "offset": 439400,
+      "duration": 2935
+    },
+    {
+      "text": "change and improving this. But at the end of the \nday it's always opening that code flow with Pixie,",
+      "offset": 442335,
+      "duration": 4080
+    },
+    {
+      "text": "and I validate the application as well as the \nuse authenticating, using the application.",
+      "offset": 446415,
+      "duration": 5585
+    },
+    {
+      "text": "Damien Bowden: So I mentioned Pixie \na few times. So what is Pixie and",
+      "offset": 452000,
+      "duration": 3835
+    },
+    {
+      "text": "Damien Bowden: pixies used anytime you \nuse code flow so you should never use",
+      "offset": 455835,
+      "duration": 3860
+    },
+    {
+      "text": "open any connect code flow without \nPixie. It's required everywhere. No,",
+      "offset": 459695,
+      "duration": 3920
+    },
+    {
+      "text": "and that's the recommendation. So what is it? \nAnd it's actually really simple. I took this",
+      "offset": 463615,
+      "duration": 4400
+    },
+    {
+      "text": "from the Rfc. Itself. All you're trying to do is \nmake sure that the application that sent the 1st",
+      "offset": 468015,
+      "duration": 4400
+    },
+    {
+      "text": "request is the same application to sends the \nsecond request. It's a 2 step authentication.",
+      "offset": 472415,
+      "duration": 4745
+    },
+    {
+      "text": "Damien Bowden: So it's actually \nvery simple. To implement this,",
+      "offset": 477160,
+      "duration": 2055
+    },
+    {
+      "text": "all you do is create some random string. \nYou hash it, use it a 1 way, encryption,",
+      "offset": 479215,
+      "duration": 3760
+    },
+    {
+      "text": "and you send that to the server to service saves \nthis, and on the second and request, where you",
+      "offset": 482975,
+      "duration": 5600
+    },
+    {
+      "text": "send a code, you also send a code verifier, which \nis the original string. The server hash to start",
+      "offset": 488575,
+      "duration": 4960
+    },
+    {
+      "text": "using the same encryption and validates that the \n2 hashes are the same, and then you know that the",
+      "offset": 493535,
+      "duration": 4240
+    },
+    {
+      "text": "application to send the 1st request is the same \nas the application to send the second request,",
+      "offset": 497775,
+      "duration": 3800
+    },
+    {
+      "text": "and with that then you can prevent people robbing \nthe codes or taken over hijacking the session.",
+      "offset": 501575,
+      "duration": 6680
+    },
+    {
+      "text": "Damien Bowden: So",
+      "offset": 508255,
+      "duration": 1225
+    },
+    {
+      "text": "Damien Bowden: that's authentication. Now, if I \nwas implementing this with a Microsoft enter Id,",
+      "offset": 509480,
+      "duration": 4095
+    },
+    {
+      "text": "I'd be using Microsoft and identity web and every \nsingle identity provider has its own little flavor",
+      "offset": 513575,
+      "duration": 6040
+    },
+    {
+      "text": "of open id connect. So the problem is that if \nyou're using key clock or you're using art 0,",
+      "offset": 519615,
+      "duration": 5680
+    },
+    {
+      "text": "or use any of them. They all have \nslight differences in the flavors,",
+      "offset": 525295,
+      "duration": 4120
+    },
+    {
+      "text": "so nearly all them produce their own clients.",
+      "offset": 529415,
+      "duration": 2545
+    },
+    {
+      "text": "Damien Bowden: and all the \nclients are, is really is,",
+      "offset": 531960,
+      "duration": 1655
+    },
+    {
+      "text": "wrap us around the open id connect. So \nyou can implement any open id, connect and",
+      "offset": 533615,
+      "duration": 4880
+    },
+    {
+      "text": "client using the original defaults and open \nconnect and implementation for us we do not call.",
+      "offset": 538495,
+      "duration": 5233
+    },
+    {
+      "text": "Damien Bowden: but you can \nalso use the client libraries,",
+      "offset": 543728,
+      "duration": 2887
+    },
+    {
+      "text": "which is just a wrapper. So, for \nexample, Microsoft's wrapper is called",
+      "offset": 546615,
+      "duration": 4305
+    },
+    {
+      "text": "Damien Bowden: Microsoft \nIdentity Web, and with this,",
+      "offset": 550920,
+      "duration": 2335
+    },
+    {
+      "text": "then all you need to do to implement the \nwhole application is 4 lines of code.",
+      "offset": 553255,
+      "duration": 4585
+    },
+    {
+      "text": "Damien Bowden: So",
+      "offset": 557840,
+      "duration": 1040
+    },
+    {
+      "text": "Damien Bowden: this is just implementing the flow \nI showed you in the previous screen, and what it",
+      "offset": 558880,
+      "duration": 3655
+    },
+    {
+      "text": "does is it sets up the updated connect code flow, \nconfidential client, and it's recommended. Use",
+      "offset": 562535,
+      "duration": 5000
+    },
+    {
+      "text": "client certificates. So it was a client to session \nand not a shared secret to do the second call.",
+      "offset": 567535,
+      "duration": 5800
+    },
+    {
+      "text": "Damien Bowden: and you have to enable \nthe dancing Api to make sure that using",
+      "offset": 573335,
+      "duration": 3480
+    },
+    {
+      "text": "cold flow with Pixie and not implicit \nflow with confidential client. It's",
+      "offset": 576815,
+      "duration": 4400
+    },
+    {
+      "text": "just a Microsoft thing. And then, of \ncourse, if I'm getting profile data,",
+      "offset": 581215,
+      "duration": 3240
+    },
+    {
+      "text": "I'm using extrings and using delegate \ncalls to Microsoft graph Api as well.",
+      "offset": 584455,
+      "duration": 4025
+    },
+    {
+      "text": "Damien Bowden: A special thing here is that you \nhave to use a type of token cache, and because I",
+      "offset": 588480,
+      "duration": 4535
+    },
+    {
+      "text": "use in memory mostly to test. And what happens if \nyou restart the application, you lose your tokens,",
+      "offset": 593015,
+      "duration": 5160
+    },
+    {
+      "text": "and then you still have your cookie, and \nthen you get funny errors by deployment,",
+      "offset": 598175,
+      "duration": 4360
+    },
+    {
+      "text": "sometimes by restart the application. So you \nhave to use a proper cash, or you have to",
+      "offset": 602535,
+      "duration": 3800
+    },
+    {
+      "text": "delete the cookies if you don't have correct \ntokens. But other than that, it's it's basic",
+      "offset": 606335,
+      "duration": 5105
+    },
+    {
+      "text": "Damien Bowden: exactly like before. Now, if \nI was implementing this work key clock or any",
+      "offset": 611440,
+      "duration": 3575
+    },
+    {
+      "text": "other server, and if I've only got a single \nopen id connect client in my application,",
+      "offset": 615015,
+      "duration": 4200
+    },
+    {
+      "text": "I'd always try to use the default recommendation \nfrom whatever whatever idp you're using.",
+      "offset": 619215,
+      "duration": 5465
+    },
+    {
+      "text": "Damien Bowden: and but as soon as you go to \nmultiple idps in one application, or like, it's",
+      "offset": 624680,
+      "duration": 3695
+    },
+    {
+      "text": "a bit more complicated, you always \nhave to revert back to default,",
+      "offset": 628375,
+      "duration": 2640
+    },
+    {
+      "text": "open id connect. Otherwise you get \nyourself into trouble really fast.",
+      "offset": 631015,
+      "duration": 3985
+    },
+    {
+      "text": "Damien Bowden: So",
+      "offset": 635000,
+      "duration": 1200
+    },
+    {
+      "text": "Damien Bowden: yeah, that's my recommendation that",
+      "offset": 636200,
+      "duration": 2215
+    },
+    {
+      "text": "Damien Bowden: always use the client from whatever \nidp you're using. But as soon as things get",
+      "offset": 638415,
+      "duration": 4080
+    },
+    {
+      "text": "complicated or whatever. Then you have to default \nto the default. What Microsoft delivers that?",
+      "offset": 642495,
+      "duration": 5945
+    },
+    {
+      "text": "Damien Bowden: Okay? And the next little \nthing I didn't talk about is session,",
+      "offset": 648440,
+      "duration": 3015
+    },
+    {
+      "text": "protection so, and the authentication idp the \nauthentication. And that's only for setting up",
+      "offset": 651455,
+      "duration": 4960
+    },
+    {
+      "text": "the session and also for logging out. And \nwe have standards now of sees for that,",
+      "offset": 656415,
+      "duration": 3800
+    },
+    {
+      "text": "and should always stick to the standards, and \nyou should never try to roll out your own art",
+      "offset": 660215,
+      "duration": 3785
+    },
+    {
+      "text": "Damien Bowden: and reuse one of the and \nwhatever's provided by, or whatever you can use,",
+      "offset": 664000,
+      "duration": 3815
+    },
+    {
+      "text": "never try to do it yourself. Just try \nto reuse something that exists already",
+      "offset": 667815,
+      "duration": 3420
+    },
+    {
+      "text": "Damien Bowden: in between the authentication \nto the start or the log out to the sign out at",
+      "offset": 671235,
+      "duration": 5260
+    },
+    {
+      "text": "the end. You need to protect the session. Now, \nthe recommendation is that we're using cookies",
+      "offset": 676495,
+      "duration": 4440
+    },
+    {
+      "text": "at the moment. So if you're using cookies, you \nhave to add in some extra protections, because,",
+      "offset": 680935,
+      "duration": 3840
+    },
+    {
+      "text": "for example, you need to make sure that you're \nnot open to cross site request for 3 attacks,",
+      "offset": 684775,
+      "duration": 3640
+    },
+    {
+      "text": "or you're not open to cross \norigin request site attacks.",
+      "offset": 688415,
+      "duration": 4520
+    },
+    {
+      "text": "Damien Bowden: And so it's really important \nthat you add in the extra protection,",
+      "offset": 692935,
+      "duration": 2720
+    },
+    {
+      "text": "and there's a load of different tools \nand different ways of protecting the",
+      "offset": 695655,
+      "duration": 3200
+    },
+    {
+      "text": "session. So you have to make sure that \nyour cookies protected the Hb. Only",
+      "offset": 698855,
+      "duration": 3760
+    },
+    {
+      "text": "same site and only cookie. And then you \nhave to make sure you have some type of",
+      "offset": 702615,
+      "duration": 4800
+    },
+    {
+      "text": "Damien Bowden: anti forgery, cookie \nprotection, or you're using a custom header,",
+      "offset": 707415,
+      "duration": 4040
+    },
+    {
+      "text": "which is validating the back end to make sure \nthat you're not open to open cross origin attacks.",
+      "offset": 711455,
+      "duration": 5185
+    },
+    {
+      "text": "Damien Bowden: And of course, then you've \ngot a load of security headers and all the",
+      "offset": 716640,
+      "duration": 2335
+    },
+    {
+      "text": "browsers which are supported. And \nyou can just add in the security",
+      "offset": 718975,
+      "duration": 2560
+    },
+    {
+      "text": "headers to all your responses \nthat comes from the server. So",
+      "offset": 721535,
+      "duration": 3865
+    },
+    {
+      "text": "Damien Bowden: what I usually do \nis I use a library from Angel Lock,",
+      "offset": 725400,
+      "duration": 2815
+    },
+    {
+      "text": "and to implement a security, Edison, \nthat has everything in one stop.",
+      "offset": 728215,
+      "duration": 4905
+    },
+    {
+      "text": "Damien Bowden: and you find these",
+      "offset": 733120,
+      "duration": 1840
+    },
+    {
+      "text": "Damien Bowden: and the Netscape security headers \nis what I recommend is the easy way. Now,",
+      "offset": 734960,
+      "duration": 4695
+    },
+    {
+      "text": "the problem with security headers, \nthe setup for the session protection",
+      "offset": 739655,
+      "duration": 2760
+    },
+    {
+      "text": "is that every single tech stack has a different \nsettings are so much better somewhere worse. So",
+      "offset": 742415,
+      "duration": 5560
+    },
+    {
+      "text": "Damien Bowden: if you want to get \nreally good session protection,",
+      "offset": 747975,
+      "duration": 2640
+    },
+    {
+      "text": "csp, nonsense is a must, and \nyou should be using Csp nonces.",
+      "offset": 750615,
+      "duration": 4240
+    },
+    {
+      "text": "Damien Bowden: not all \ntechnical stacks support that.",
+      "offset": 754855,
+      "duration": 3360
+    },
+    {
+      "text": "Damien Bowden: I used angle because Angle can \nactually has full support for Csp. Nonsense,",
+      "offset": 758215,
+      "duration": 4560
+    },
+    {
+      "text": "and into providers say angler 17. So if I send \na nonce from the back end to the front end,",
+      "offset": 762775,
+      "duration": 5120
+    },
+    {
+      "text": "I can add that to the Angler providers, and \nthen they'll add it to all the generated",
+      "offset": 767895,
+      "duration": 4560
+    },
+    {
+      "text": "Javascript. And for the modules, or \nwhatever they're creating. So so Angla",
+      "offset": 772455,
+      "duration": 3480
+    },
+    {
+      "text": "is actually really well and really \ngood. It's protecting the session.",
+      "offset": 775935,
+      "duration": 3705
+    },
+    {
+      "text": "Damien Bowden: whereas other frameworks \ndon't support. Csp answers. So I try to",
+      "offset": 779640,
+      "duration": 3095
+    },
+    {
+      "text": "avoid technical stacks that don't \nactually support Csp, nonce. No.",
+      "offset": 782735,
+      "duration": 5240
+    },
+    {
+      "text": "Damien Bowden: And",
+      "offset": 787975,
+      "duration": 705
+    },
+    {
+      "text": "Damien Bowden: then after session \nprotection. So you have authentication,",
+      "offset": 788680,
+      "duration": 2935
+    },
+    {
+      "text": "and you have to sign out. You have session. \nThen you also need to protect the build",
+      "offset": 791615,
+      "duration": 3880
+    },
+    {
+      "text": "and the setup. So you have continuous \nintegration, continuous development. So",
+      "offset": 795495,
+      "duration": 4785
+    },
+    {
+      "text": "Damien Bowden: one of the main things here \nis that you have to say I automate everything",
+      "offset": 800280,
+      "duration": 3095
+    },
+    {
+      "text": "from 8 to zoom. The more automation you \nhave and the better you can reproduce",
+      "offset": 803375,
+      "duration": 4760
+    },
+    {
+      "text": "things that the easiest to deploy and the \neasiest to validate errors. For example.",
+      "offset": 808135,
+      "duration": 4705
+    },
+    {
+      "text": "Damien Bowden: if I'm and need to rotate secrets,",
+      "offset": 812840,
+      "duration": 2175
+    },
+    {
+      "text": "and it's not automated in my deployment. And you \ndon't want to be doing this from hand. You wanna",
+      "offset": 815015,
+      "duration": 3520
+    },
+    {
+      "text": "do this automatically and you wanna rotate \nthe deployments. Maybe whenever you release,",
+      "offset": 818535,
+      "duration": 3360
+    },
+    {
+      "text": "build, or whatever. So a typical Cicd, I use \nazure devops or use github on github actions.",
+      "offset": 821895,
+      "duration": 6665
+    },
+    {
+      "text": "Damien Bowden: I use some other ones as \nwell. But did it do. I prefer the most",
+      "offset": 828560,
+      "duration": 3295
+    },
+    {
+      "text": "and normally what I try to do is I have a an \nautomatic build. I have an automatic quality",
+      "offset": 831855,
+      "duration": 6360
+    },
+    {
+      "text": "build and I'll have a automate deployment or \nthe development deployment build. And then,",
+      "offset": 838215,
+      "duration": 4480
+    },
+    {
+      "text": "of course, I have it to build for \nthe infrastructure as well, so",
+      "offset": 842695,
+      "duration": 3785
+    },
+    {
+      "text": "Damien Bowden: I portray to build the whole \ninfrastructure from throw it. Deploying to aws,",
+      "offset": 846480,
+      "duration": 3575
+    },
+    {
+      "text": "are deploying to azure, and things like \nterraform or biceps should be usually",
+      "offset": 850055,
+      "duration": 4280
+    },
+    {
+      "text": "deployed to azure. And then, if I need to \nreproduce a dev test, prod environment,",
+      "offset": 854335,
+      "duration": 4320
+    },
+    {
+      "text": "I want to rebuild it to a delete the whole \ntenant, and then deploy it again. I can",
+      "offset": 858655,
+      "duration": 5040
+    },
+    {
+      "text": "set up the whole thing as infrastructure. That's \nusually something that you only do once or twice,",
+      "offset": 863695,
+      "duration": 4480
+    },
+    {
+      "text": "but it's really useful. If you need to \nreset or redeploy or and change environment.",
+      "offset": 868175,
+      "duration": 6665
+    },
+    {
+      "text": "Damien Bowden: then, of course, the Development \nPill deployment bills and I do them on every poll",
+      "offset": 874840,
+      "duration": 4175
+    },
+    {
+      "text": "request, maybe just different ways implementing \nyour your get flows, or whatever. And but I",
+      "offset": 879015,
+      "duration": 5840
+    },
+    {
+      "text": "tried to automate the whole thing, which is most \nimportant, and then, of course, the quality build.",
+      "offset": 884855,
+      "duration": 4240
+    },
+    {
+      "text": "And I try to use always Sonic cloud. And I'm gonna \nuse sonic cloud as well for the quality build. And",
+      "offset": 889095,
+      "duration": 5840
+    },
+    {
+      "text": "Damien Bowden: I tried to analyze the the code",
+      "offset": 894935,
+      "duration": 3040
+    },
+    {
+      "text": "and have Sas tools now in Sona \nCloud, which is available.",
+      "offset": 897975,
+      "duration": 2945
+    },
+    {
+      "text": "Damien Bowden: But it's slightly complicated when",
+      "offset": 900920,
+      "duration": 1295
+    },
+    {
+      "text": "you're using different tech \nstacks and problem is that",
+      "offset": 902215,
+      "duration": 3785
+    },
+    {
+      "text": "Damien Bowden: it's not so \neasy to. It is actually,",
+      "offset": 906000,
+      "duration": 2295
+    },
+    {
+      "text": "when you know help. You need to reference",
+      "offset": 908295,
+      "duration": 3185
+    },
+    {
+      "text": "Damien Bowden: one project from \nthe other project. To be able to",
+      "offset": 911480,
+      "duration": 2055
+    },
+    {
+      "text": "do this on analytics and 2 different tech \nstack. So in this setup, I'm using angler,",
+      "offset": 913535,
+      "duration": 4120
+    },
+    {
+      "text": "and I'm using a.net back end. So I'm analyzing \nfor.net in the build, and then I have to link in",
+      "offset": 917655,
+      "duration": 6960
+    },
+    {
+      "text": "the Angler tech stack so that we get the analyst \nand the Anglophiles as well as the.net. So",
+      "offset": 924615,
+      "duration": 5705
+    },
+    {
+      "text": "Damien Bowden: it's a little \nbit hacky. But we have to do",
+      "offset": 930320,
+      "duration": 1655
+    },
+    {
+      "text": "is in your.net projects. If you want to \nanalyze 2 tech stacks using Sona Cloud,",
+      "offset": 931975,
+      "duration": 4280
+    },
+    {
+      "text": "you have to reference the Angler project \nthe Ts and J's files, but just not use",
+      "offset": 936255,
+      "duration": 3600
+    },
+    {
+      "text": "them. So I referenced them. But I don't show \nthem. We use them when you in the project,",
+      "offset": 939855,
+      "duration": 3560
+    },
+    {
+      "text": "and with this reference, then Sona can then \nanalyze both the angle files and the.net files.",
+      "offset": 943415,
+      "duration": 7265
+    },
+    {
+      "text": "Damien Bowden: So when I showed them under",
+      "offset": 950680,
+      "duration": 1455
+    },
+    {
+      "text": "the uid and using Github is actually \nreally good integration using sunup.",
+      "offset": 952135,
+      "duration": 5240
+    },
+    {
+      "text": "Damien Bowden: And I can add the badges then,",
+      "offset": 957375,
+      "duration": 2000
+    },
+    {
+      "text": "and I could link them directly into my results \nfrom sono, whatever I'm using it. And so on.",
+      "offset": 959375,
+      "duration": 7225
+    },
+    {
+      "text": "Damien Bowden: Another little thing \nthat's really handy, I think, is that",
+      "offset": 966600,
+      "duration": 2175
+    },
+    {
+      "text": "if I have security issues or problems, they will \ndirectly be displayed in my get repo to saying,",
+      "offset": 968775,
+      "duration": 5520
+    },
+    {
+      "text": "you have a security problem, just like \nany other Sas tools. And then you have",
+      "offset": 974295,
+      "duration": 2840
+    },
+    {
+      "text": "security warnings here to saying you need to \nfix this this and this in your application.",
+      "offset": 977135,
+      "duration": 4225
+    },
+    {
+      "text": "Damien Bowden: So I think this is \na really easy and good setup, for.",
+      "offset": 981360,
+      "duration": 5080
+    },
+    {
+      "text": "Damien Bowden: I think, with the maximum \npossible security web applications.",
+      "offset": 986440,
+      "duration": 3160
+    },
+    {
+      "text": "Damien Bowden: And then you have \ngreat tools to analyze as well.",
+      "offset": 989600,
+      "duration": 2575
+    },
+    {
+      "text": "Damien Bowden: And maybe you want to \nsay something to that to Denise, do you.",
+      "offset": 992175,
+      "duration": 3000
+    },
+    {
+      "text": "Denis Troller: Well, I do have a 1 or \n2 questions for you. Thanks for the",
+      "offset": 995175,
+      "duration": 5200
+    },
+    {
+      "text": "presentation. First.st you you mentioned that \nusing angular 17 because it supports non Csp,",
+      "offset": 1000375,
+      "duration": 8200
+    },
+    {
+      "text": "and do you know of any other front \nend library that would be applicable,",
+      "offset": 1008575,
+      "duration": 4200
+    },
+    {
+      "text": "I'm thinking, mainly reactive being the other \nbig one. Is there any solution that works.",
+      "offset": 1012775,
+      "duration": 4880
+    },
+    {
+      "text": "Damien Bowden: I haven't seen any react using a \nCsp nonsense so easy to integrate. And so what",
+      "offset": 1017655,
+      "duration": 5040
+    },
+    {
+      "text": "we do in a lot of Csp react applications. Either \nwe create a local index file. We add the nonce to",
+      "offset": 1022695,
+      "duration": 7400
+    },
+    {
+      "text": "that, and that we use it for the base files. \nAnd then we have to add in hashes as well.",
+      "offset": 1030095,
+      "duration": 3960
+    },
+    {
+      "text": "Damien Bowden: And but there's no direct \nand integration for Csp non sustain react.",
+      "offset": 1034055,
+      "duration": 4400
+    },
+    {
+      "text": "If I'm using blazor server, you can use Csp \nnonces. If I'm using Blazor Web assembly,",
+      "offset": 1038455,
+      "duration": 5040
+    },
+    {
+      "text": "I cannot use nonsus, so I tend to use blazor. And \nwith the new.net versions only at the moment. No,",
+      "offset": 1043495,
+      "duration": 5280
+    },
+    {
+      "text": "because you don't have support for \nCsp, non system, blazor, web, assembly.",
+      "offset": 1048775,
+      "duration": 4163
+    },
+    {
+      "text": "Denis Troller: Second.",
+      "offset": 1052938,
+      "duration": 22
+    },
+    {
+      "text": "Damien Bowden: So, and Vujs. And as far \nas the last time I checked it doesn't",
+      "offset": 1052960,
+      "duration": 3575
+    },
+    {
+      "text": "support Csp answers. And I think that's \nthat the big 4 ui frameworks that I use.",
+      "offset": 1056535,
+      "duration": 5225
+    },
+    {
+      "text": "Denis Troller: Can make sense.",
+      "offset": 1061760,
+      "duration": 2255
+    },
+    {
+      "text": "Denis Troller: and yeah, you quickly went \nover the authentication part and using open id",
+      "offset": 1064015,
+      "duration": 9600
+    },
+    {
+      "text": "Denis Troller: maybe you want to explain with \nwhat an Idp is, because maybe not everyone is",
+      "offset": 1073615,
+      "duration": 4640
+    },
+    {
+      "text": "Denis Troller: fully aware of what that \nmeans. When you're doing web development",
+      "offset": 1078255,
+      "duration": 5360
+    },
+    {
+      "text": "today. Because in the old days you would \nuse whatever solution Microsoft provided",
+      "offset": 1083615,
+      "duration": 6160
+    },
+    {
+      "text": "with you. And you would, you would basically \ndeal with your whole system inside your app.",
+      "offset": 1089775,
+      "duration": 6425
+    },
+    {
+      "text": "Denis Troller: And what happens today is \nthat the landscape is a bit different.",
+      "offset": 1096200,
+      "duration": 4295
+    },
+    {
+      "text": "Damien Bowden: Okay, so",
+      "offset": 1100495,
+      "duration": 3105
+    },
+    {
+      "text": "Damien Bowden: Idp is identity provider. And",
+      "offset": 1103600,
+      "duration": 3520
+    },
+    {
+      "text": "Damien Bowden: in an enterprise \nscenario. And this is really important,",
+      "offset": 1107120,
+      "duration": 2975
+    },
+    {
+      "text": "there's no almost no companies \nthat doesn't have its own identity",
+      "offset": 1110095,
+      "duration": 3360
+    },
+    {
+      "text": "provided. So a typical company uses \noffice 3, 65. That's the the big",
+      "offset": 1113455,
+      "duration": 4505
+    },
+    {
+      "text": "Damien Bowden: Enterprise provider in \nthe Enterprise world. So if I was making",
+      "offset": 1117960,
+      "duration": 3655
+    },
+    {
+      "text": "application. I don't want to be managing \nand and adding users, removing users,",
+      "offset": 1121615,
+      "duration": 5840
+    },
+    {
+      "text": "making sure the user no longer valid, making sure \nthat the data is correct when they get married,",
+      "offset": 1127455,
+      "duration": 3800
+    },
+    {
+      "text": "you have to change the emails update. I \ndon't want to be doing all that stuff. And",
+      "offset": 1131255,
+      "duration": 3600
+    },
+    {
+      "text": "Damien Bowden: so why do it twice, when \nyou already could just reuse that type of",
+      "offset": 1134855,
+      "duration": 3800
+    },
+    {
+      "text": "implementation from the company, because \nthe company already has this on board and",
+      "offset": 1138655,
+      "duration": 3320
+    },
+    {
+      "text": "off board of identities, account management \nand all that stuff. And then, second of all,",
+      "offset": 1141975,
+      "duration": 4160
+    },
+    {
+      "text": "and when I implement a my own identity solution, \nI also have to implement my own security. So",
+      "offset": 1146135,
+      "duration": 4520
+    },
+    {
+      "text": "if I'm using, ask you to call identity. \nAnd it's very good solution as well. And",
+      "offset": 1150655,
+      "duration": 4580
+    },
+    {
+      "text": "Damien Bowden: I also need to keep it up to \ndate. And there's always new attacks happening,",
+      "offset": 1155235,
+      "duration": 4060
+    },
+    {
+      "text": "new problems happening, and I have to make \nsure I'm using recommended best practice. For,",
+      "offset": 1159295,
+      "duration": 4640
+    },
+    {
+      "text": "for example, the latest, as we don't know \nidentity doesn't support pass keys are feet or",
+      "offset": 1163935,
+      "duration": 3520
+    },
+    {
+      "text": "2 keys, whereas nearly all the other identity \nproviders which support open id, connect,",
+      "offset": 1168015,
+      "duration": 4360
+    },
+    {
+      "text": "or Samuel do support us, for so if I use an \nenter Id. I get pass keys and feed or 2 keys",
+      "offset": 1172375,
+      "duration": 4640
+    },
+    {
+      "text": "out the box where she do not get that with and \naspirin identity, and I do not need to manage it.",
+      "offset": 1177015,
+      "duration": 5705
+    },
+    {
+      "text": "Damien Bowden: If you're using passwords,",
+      "offset": 1182720,
+      "duration": 1215
+    },
+    {
+      "text": "what happens if people forget the passwords \nyou have to implement your own password",
+      "offset": 1183935,
+      "duration": 3160
+    },
+    {
+      "text": "management policy where you can just reuse \nthe company ones. If you're using the company.",
+      "offset": 1187095,
+      "duration": 3985
+    },
+    {
+      "text": "Damien Bowden: then if I make an application where \nI'm deploying it to multiple scenarios, and I",
+      "offset": 1191080,
+      "duration": 4095
+    },
+    {
+      "text": "don't want to create a new authentication identity \nsolution for every single deployment. I can just",
+      "offset": 1195175,
+      "duration": 4840
+    },
+    {
+      "text": "say, Here's my open id connect. You. Take care \nof the rest. That's where you are. The expert.",
+      "offset": 1200015,
+      "duration": 4465
+    },
+    {
+      "text": "Damien Bowden: So I asked you to focus \non that, and I want to remove and do",
+      "offset": 1204480,
+      "duration": 3815
+    },
+    {
+      "text": "as little as possible with that. \nSo we can focus on the business.",
+      "offset": 1208295,
+      "duration": 4065
+    },
+    {
+      "text": "Damien Bowden: So the easiest and \nleast complex way of doing it is",
+      "offset": 1212360,
+      "duration": 3295
+    },
+    {
+      "text": "to actually use openly, connect \nand not roll out your own art.",
+      "offset": 1215655,
+      "duration": 3520
+    },
+    {
+      "text": "Damien Bowden: and people seem to think \nit's quicker and easier to use name,",
+      "offset": 1219175,
+      "duration": 3000
+    },
+    {
+      "text": "password, and login, and it starts off \nreally fast, and you get your cookie back",
+      "offset": 1222175,
+      "duration": 4680
+    },
+    {
+      "text": "Damien Bowden: and everything's gone well. But \nonce your application gets successful and that",
+      "offset": 1226855,
+      "duration": 3480
+    },
+    {
+      "text": "you have to start actually managing users from \nrotating and updating them. Then you get into",
+      "offset": 1230335,
+      "duration": 3800
+    },
+    {
+      "text": "a massive problems, or when you have to deploy to \na new company. A lot of enterprise will not allow",
+      "offset": 1234135,
+      "duration": 4320
+    },
+    {
+      "text": "you to roll roll out your application, though, if \nyou're not using a proper authentication. So if",
+      "offset": 1238455,
+      "duration": 4560
+    },
+    {
+      "text": "you call with your own authentication system, \nand you want to connect into my enterprise,",
+      "offset": 1243015,
+      "duration": 3320
+    },
+    {
+      "text": "especially if I'm a big enterprise, I will say \nyou're not allowed. Connect that up. You have to.",
+      "offset": 1246335,
+      "duration": 3320
+    },
+    {
+      "text": "Damien Bowden: Edu, Sam, or openly \nconnect. There are stunts of snow, so",
+      "offset": 1249655,
+      "duration": 3745
+    },
+    {
+      "text": "Damien Bowden: it's easiest in \nthe best way forward. If you",
+      "offset": 1253400,
+      "duration": 2295
+    },
+    {
+      "text": "want to make your application \nreusable and the most secure.",
+      "offset": 1255695,
+      "duration": 4225
+    },
+    {
+      "text": "Damien Bowden: and that's why roll out your own \nart should be always for me the last resort,",
+      "offset": 1259920,
+      "duration": 4695
+    },
+    {
+      "text": "even if you do it well, you're you're making \nmore problems than you're actually saving. Now.",
+      "offset": 1264615,
+      "duration": 4185
+    },
+    {
+      "text": "Damien Bowden: the sort of scenarios, for \nexample, of in business to consumer market.",
+      "offset": 1268800,
+      "duration": 3295
+    },
+    {
+      "text": "And you have to implement your own art because \nyou don't know your clients that are coming from",
+      "offset": 1272095,
+      "duration": 3960
+    },
+    {
+      "text": "different places. So you have really great \nsolutions for that as well, for example,",
+      "offset": 1276055,
+      "duration": 3280
+    },
+    {
+      "text": "art 0 is a really good B, 2 C, and product. Or \nyou can use your own system. And if you need to,",
+      "offset": 1279335,
+      "duration": 5240
+    },
+    {
+      "text": "for example, identity, save or open it. \nIf you want to roll that out yourself,",
+      "offset": 1284575,
+      "duration": 3560
+    },
+    {
+      "text": "and then you have full control \nand customization for that.",
+      "offset": 1288135,
+      "duration": 3080
+    },
+    {
+      "text": "Damien Bowden: And",
+      "offset": 1291215,
+      "duration": 785
+    },
+    {
+      "text": "Damien Bowden: it depends, of course, where \nyou're deploying what you're building,",
+      "offset": 1292000,
+      "duration": 2855
+    },
+    {
+      "text": "and but you have to try and choose the one \nwith the least effort and least maintenance.",
+      "offset": 1294855,
+      "duration": 4465
+    },
+    {
+      "text": "Damien Bowden: and if you do go the own \nway. Then you have to keep up the modern",
+      "offset": 1299320,
+      "duration": 3015
+    },
+    {
+      "text": "standards on modern recommendations. For example, \nusername password is something that should be no",
+      "offset": 1302335,
+      "duration": 5080
+    },
+    {
+      "text": "longer pushed or used. And and we still see new \napplications implementing with username password,",
+      "offset": 1307415,
+      "duration": 5640
+    },
+    {
+      "text": "which is not recommended, or this would \nbe really avoided. And this is one of the",
+      "offset": 1313055,
+      "duration": 3280
+    },
+    {
+      "text": "typical security. Always you have a single \nfactor, authentication. And you're handling,",
+      "offset": 1316335,
+      "duration": 3520
+    },
+    {
+      "text": "maybe finance state, or you're handling \nhealth data. So it's it's totally wrong.",
+      "offset": 1319855,
+      "duration": 3520
+    },
+    {
+      "text": "And and these are the things that we \nhave to as developers move away from. So",
+      "offset": 1323375,
+      "duration": 4225
+    },
+    {
+      "text": "Damien Bowden: we should be choosing \narchitecture which allows us to implement",
+      "offset": 1327600,
+      "duration": 2935
+    },
+    {
+      "text": "the best possible authentication and best \npossible application security. And usually",
+      "offset": 1330535,
+      "duration": 5200
+    },
+    {
+      "text": "that means just don't implement yourself, \nbut delegate that to an identity provider.",
+      "offset": 1335735,
+      "duration": 4505
+    },
+    {
+      "text": "Damien Bowden: Does that help.",
+      "offset": 1340240,
+      "duration": 1600
+    },
+    {
+      "text": "Denis Troller: Yes, I must say I",
+      "offset": 1341840,
+      "duration": 2120
+    },
+    {
+      "text": "Denis Troller: fully agree with that. Having tried \nto implement such thing, I quickly realized that",
+      "offset": 1343960,
+      "duration": 5000
+    },
+    {
+      "text": "Denis Troller: the best idea was not to do it, \nbecause it's it can get hairy very quickly.",
+      "offset": 1348960,
+      "duration": 7275
+    },
+    {
+      "text": "Denis Troller: Kill so.",
+      "offset": 1356235,
+      "duration": 605
+    },
+    {
+      "text": "Damien Bowden: And maybe that's another problem.",
+      "offset": 1356840,
+      "duration": 1015
+    },
+    {
+      "text": "People think open id connect. And \nO, 2 was really complicated. And",
+      "offset": 1357855,
+      "duration": 4000
+    },
+    {
+      "text": "Damien Bowden: maybe the problem is the",
+      "offset": 1361855,
+      "duration": 2745
+    },
+    {
+      "text": "Damien Bowden: we don't have \ngood documentation, because each",
+      "offset": 1364600,
+      "duration": 2880
+    },
+    {
+      "text": "Damien Bowden: solution only make documents their \nown solutions, and they don't actually share the",
+      "offset": 1367480,
+      "duration": 3615
+    },
+    {
+      "text": "shared solutions. And but at the end of the \nday, if we're doing a web application, it's",
+      "offset": 1371095,
+      "duration": 4560
+    },
+    {
+      "text": "pretty simple. Now you just use open id connect, \nconfidential client, and then you try to connect",
+      "offset": 1375655,
+      "duration": 4600
+    },
+    {
+      "text": "to any Idp doesn't matter which one, and then \nfollow their recommendations, and it should be",
+      "offset": 1380255,
+      "duration": 5360
+    },
+    {
+      "text": "fairly simple. So the authentication part is easy. \nThe session protection is all also fairly simple.",
+      "offset": 1385615,
+      "duration": 8025
+    },
+    {
+      "text": "Damien Bowden: The authorization is always \ndifficult, because that's always application",
+      "offset": 1393640,
+      "duration": 3655
+    },
+    {
+      "text": "specific. And there's a thousand ways of solving \nthis. And how do you log out the dynamic or static",
+      "offset": 1397295,
+      "duration": 5360
+    },
+    {
+      "text": "authenticate authorization. It's not ever \ndifficult. And it's every new application,",
+      "offset": 1402655,
+      "duration": 4120
+    },
+    {
+      "text": "its own authorization problem. And it has \nits own authorization. Business logic,",
+      "offset": 1406775,
+      "duration": 4000
+    },
+    {
+      "text": "which is different. So authorization is \nnever easy to solve. The others are. If",
+      "offset": 1410775,
+      "duration": 5240
+    },
+    {
+      "text": "you're using the right tools in the right mindset.",
+      "offset": 1416015,
+      "duration": 2480
+    },
+    {
+      "text": "Denis Troller: Right.",
+      "offset": 1418495,
+      "duration": 6545
+    },
+    {
+      "text": "Denis Troller: do you?",
+      "offset": 1425040,
+      "duration": 1195
+    },
+    {
+      "text": "Denis Troller: The question is the so you \nmentioned use in a cloud? So thank you",
+      "offset": 1426235,
+      "duration": 4580
+    },
+    {
+      "text": "for that. Do you have any kind of specific \nflow. You follow when you use in a cloud.",
+      "offset": 1430815,
+      "duration": 9065
+    },
+    {
+      "text": "Damien Bowden: Okay. So",
+      "offset": 1439880,
+      "duration": 1200
+    },
+    {
+      "text": "Damien Bowden: we try to use it",
+      "offset": 1441080,
+      "duration": 1640
+    },
+    {
+      "text": "Damien Bowden: really early in our development. \nSo anytime we have a new application.",
+      "offset": 1442720,
+      "duration": 3975
+    },
+    {
+      "text": "Damien Bowden: depends on the application. \nSonic cloud is not in my country hosted.",
+      "offset": 1446695,
+      "duration": 6320
+    },
+    {
+      "text": "So the 1st thing we have to make sure is that \nwe're actually allowed. Use the client date and",
+      "offset": 1453015,
+      "duration": 3160
+    },
+    {
+      "text": "put onto Sona Cloud. So the 1st flow we have \nis decide if we're allowed to use Sona Cloud",
+      "offset": 1456175,
+      "duration": 4160
+    },
+    {
+      "text": "or Sona cube. And these are 2 different \ntypes of things we've decided, because",
+      "offset": 1460335,
+      "duration": 4265
+    },
+    {
+      "text": "Damien Bowden: if we're doing a high security \napplication where the date is not allowed, leave",
+      "offset": 1464600,
+      "duration": 3455
+    },
+    {
+      "text": "the country, or we have to get the permission. The \nclient, and they they don't actually allow that.",
+      "offset": 1468055,
+      "duration": 4465
+    },
+    {
+      "text": "Damien Bowden: That's the 1st decision we \nmake. And son of Cloud, if always, if possible,",
+      "offset": 1472520,
+      "duration": 3895
+    },
+    {
+      "text": "because then we don't have to manage it, look \nafter sales. Otherwise we could use on a queue.",
+      "offset": 1476415,
+      "duration": 4640
+    },
+    {
+      "text": "Damien Bowden: and after that, then what \nwe try to do is we try to build in the",
+      "offset": 1481055,
+      "duration": 2920
+    },
+    {
+      "text": "quality. Build as early as possible, and but \nsometimes the quality bill takes long, and",
+      "offset": 1483975,
+      "duration": 5200
+    },
+    {
+      "text": "Damien Bowden: we don't want to be. \nFor every little commit every little",
+      "offset": 1489175,
+      "duration": 2880
+    },
+    {
+      "text": "push be run of this quality. Build the whole time,",
+      "offset": 1492055,
+      "duration": 2560
+    },
+    {
+      "text": "and if you have a big project it can \nmaybe take up to 10 min sometimes,",
+      "offset": 1494615,
+      "duration": 3240
+    },
+    {
+      "text": "and and you don't want to wait for 10 min, and \nevery commit, and otherwise you stop checking it.",
+      "offset": 1497855,
+      "duration": 4665
+    },
+    {
+      "text": "Damien Bowden: So we try to optimize.",
+      "offset": 1502520,
+      "duration": 2000
+    },
+    {
+      "text": "Damien Bowden: There's no proper answer \nto that, either, and we try to use it",
+      "offset": 1504520,
+      "duration": 2375
+    },
+    {
+      "text": "as much as possible, and but we need \nto keep the bill times really short.",
+      "offset": 1506895,
+      "duration": 4825
+    },
+    {
+      "text": "Damien Bowden: and before we merge \nyou, should we have dev test prod",
+      "offset": 1511720,
+      "duration": 3055
+    },
+    {
+      "text": "and sometimes integration. Anytime, \nwe're making a release to we always",
+      "offset": 1514775,
+      "duration": 4120
+    },
+    {
+      "text": "run the complete code analysis \nand the sonic queue cloud analysis",
+      "offset": 1518895,
+      "duration": 4785
+    },
+    {
+      "text": "Damien Bowden: before actually releasing. So I \nthink this is great quality control. And it's",
+      "offset": 1523680,
+      "duration": 5560
+    },
+    {
+      "text": "Damien Bowden: they're",
+      "offset": 1529240,
+      "duration": 920
+    },
+    {
+      "text": "Damien Bowden: the quality the code controls \nthat we get out of it is this really high",
+      "offset": 1530160,
+      "duration": 3135
+    },
+    {
+      "text": "quality. And this this saves us loads of time \nas well. So I'm doing a lot of market for you.",
+      "offset": 1533295,
+      "duration": 3880
+    },
+    {
+      "text": "Denis Troller: Thanks. Yeah.",
+      "offset": 1538148,
+      "duration": 532
+    },
+    {
+      "text": "Damien Bowden: Tool.",
+      "offset": 1538680,
+      "duration": 3360
+    },
+    {
+      "text": "Denis Troller: And",
+      "offset": 1542040,
+      "duration": 495
+    },
+    {
+      "text": "Damien Bowden: Fully integrated in the \nbuild. And that's the main thing. It",
+      "offset": 1542535,
+      "duration": 3545
+    },
+    {
+      "text": "Damien Bowden: everything has to be \nautomated. It's just the the golden rule.",
+      "offset": 1546080,
+      "duration": 3720
+    },
+    {
+      "text": "Damien Bowden: Yeah.",
+      "offset": 1549800,
+      "duration": 480
+    },
+    {
+      "text": "Denis Troller: I again agree,",
+      "offset": 1550280,
+      "duration": 1975
+    },
+    {
+      "text": "build deployments quality control. If it's \nnot automated very soon, you will not do it.",
+      "offset": 1552255,
+      "duration": 7225
+    },
+    {
+      "text": "Denis Troller: Yeah. So it needs to be",
+      "offset": 1559480,
+      "duration": 1920
+    },
+    {
+      "text": "Denis Troller: transparent and \npainless, otherwise nobody knows it.",
+      "offset": 1561400,
+      "duration": 4775
+    },
+    {
+      "text": "Damien Bowden: Another thing we do is over. \nThe sequence, then, is that, for example,",
+      "offset": 1566175,
+      "duration": 2720
+    },
+    {
+      "text": "when we're doing local development, I we \ntry to have as little as possible and cloud",
+      "offset": 1568895,
+      "duration": 5200
+    },
+    {
+      "text": "dependencies. So all a secrets we save under the \nuser profile using user secrets from visual studio",
+      "offset": 1574095,
+      "duration": 5745
+    },
+    {
+      "text": "Damien Bowden: or from the.net tools. And \nonly when we deploy it to deployments do",
+      "offset": 1579840,
+      "duration": 4095
+    },
+    {
+      "text": "we actually start using azure key vault \nor cloud service to store the secrets.",
+      "offset": 1583935,
+      "duration": 3120
+    },
+    {
+      "text": "So we have no sequence. Anyway, inside the the \nbuild, and then with the azure devops or with the",
+      "offset": 1587575,
+      "duration": 4640
+    },
+    {
+      "text": "Github actions. Then then there's different \nstrategies to how to actually implement the",
+      "offset": 1592215,
+      "duration": 3680
+    },
+    {
+      "text": "sequence for the build pipelines, or the the \nresource. So the deployments and so on. But",
+      "offset": 1595895,
+      "duration": 4705
+    },
+    {
+      "text": "Damien Bowden: then, yeah, I think it works out. \nAll of them fit in well together, you can see that",
+      "offset": 1600600,
+      "duration": 4055
+    },
+    {
+      "text": "they they walk together different tools, and it \ndoesn't matter if you're using github actions now,",
+      "offset": 1604655,
+      "duration": 3640
+    },
+    {
+      "text": "or using azure devops. And they all work \nwell with all these different tools, I think.",
+      "offset": 1608295,
+      "duration": 7225
+    },
+    {
+      "text": "Denis Troller: And",
+      "offset": 1615520,
+      "duration": 695
+    },
+    {
+      "text": "Denis Troller: for me, for me,",
+      "offset": 1616215,
+      "duration": 1960
+    },
+    {
+      "text": "experience which part of the all that \nyou've presented do most developer like",
+      "offset": 1618175,
+      "duration": 5760
+    },
+    {
+      "text": "Denis Troller: have problem with like, what's the",
+      "offset": 1623935,
+      "duration": 4120
+    },
+    {
+      "text": "biggest issue you encounter, \nor as far as understanding or.",
+      "offset": 1628055,
+      "duration": 5185
+    },
+    {
+      "text": "Damien Bowden: So",
+      "offset": 1633240,
+      "duration": 880
+    },
+    {
+      "text": "Damien Bowden: I think it's.",
+      "offset": 1634120,
+      "duration": 415
+    },
+    {
+      "text": "Denis Troller: Security.",
+      "offset": 1634535,
+      "duration": 1785
+    },
+    {
+      "text": "Damien Bowden: Authentication which \nflow to use where is always the same.",
+      "offset": 1636320,
+      "duration": 4455
+    },
+    {
+      "text": "Damien Bowden: And so you get an awful lot of \narchitects. They try to build the architecture,",
+      "offset": 1640775,
+      "duration": 3960
+    },
+    {
+      "text": "and they just design it. They they have \nthe different patterns that they start",
+      "offset": 1644735,
+      "duration": 3360
+    },
+    {
+      "text": "doing. This is, I want to do containers. I \nwant to use this tool. I want to use this,",
+      "offset": 1648095,
+      "duration": 3560
+    },
+    {
+      "text": "and then they try to add the security at the end.",
+      "offset": 1651655,
+      "duration": 2545
+    },
+    {
+      "text": "Damien Bowden: and that's where they all crash, \nbecause then they're trying to fix at the end",
+      "offset": 1654200,
+      "duration": 2935
+    },
+    {
+      "text": "or tried to fit it in, and they should be \ndoing as part of the architecture from the",
+      "offset": 1657135,
+      "duration": 3760
+    },
+    {
+      "text": "start. They should be also doing the security \ncontext and security architecture same time. So",
+      "offset": 1660895,
+      "duration": 5105
+    },
+    {
+      "text": "Damien Bowden: if they start splitting \nup applications of the micro services,",
+      "offset": 1666000,
+      "duration": 3055
+    },
+    {
+      "text": "artists not splitting it out into different uis. \nThey're all completely separate applications. And",
+      "offset": 1669055,
+      "duration": 4400
+    },
+    {
+      "text": "you have to start solving problems like downstream \nApi access. You have to single sign on. And the",
+      "offset": 1673455,
+      "duration": 5000
+    },
+    {
+      "text": "security gets really complicated. And you have \na fairly complicated security setup, then,",
+      "offset": 1678455,
+      "duration": 4280
+    },
+    {
+      "text": "where you should keep it simple, and you only \nhave one, maybe one web ui, and you don't have",
+      "offset": 1682735,
+      "duration": 4520
+    },
+    {
+      "text": "separated web uis within the ui, and your security \ncontext is much simpler. And so you need to",
+      "offset": 1687255,
+      "duration": 6945
+    },
+    {
+      "text": "Damien Bowden: have an architect that's security \nat the same time as doing the architecture from",
+      "offset": 1694200,
+      "duration": 3455
+    },
+    {
+      "text": "the application. I think that's where most people \nfail is that the decisions that are made at the",
+      "offset": 1697655,
+      "duration": 4000
+    },
+    {
+      "text": "start is what's makes it really hard to secure \nthe end of example is that doing a some type of",
+      "offset": 1701655,
+      "duration": 5360
+    },
+    {
+      "text": "coup and container deployments? You have to \nbuild everything locally using Htp. And because",
+      "offset": 1707015,
+      "duration": 5480
+    },
+    {
+      "text": "you don't have the time or the knowledge \nhow to build it up. Locally using Hps,",
+      "offset": 1712495,
+      "duration": 3600
+    },
+    {
+      "text": "you deploy it. You're still using Htp on your \ndeployments, and then you have phones with",
+      "offset": 1716095,
+      "duration": 3880
+    },
+    {
+      "text": "security, because you have no security \nway. If you're using Htp and not Hbs.",
+      "offset": 1719975,
+      "duration": 3905
+    },
+    {
+      "text": "Damien Bowden: and then suddenly, you have \nto stop building in things to add into",
+      "offset": 1723880,
+      "duration": 2455
+    },
+    {
+      "text": "Hbs between the different connections, \nand then you have to earn the security",
+      "offset": 1726335,
+      "duration": 3000
+    },
+    {
+      "text": "headers between every connection you have \nto decide. If you're using Api to Api,",
+      "offset": 1729335,
+      "duration": 4160
+    },
+    {
+      "text": "or using delegated authorization, flows. \nIt gets really complicated as soon as you",
+      "offset": 1733495,
+      "duration": 3760
+    },
+    {
+      "text": "start splitting it. So I also keep it simple \nand don't split unless you really need to,",
+      "offset": 1737255,
+      "duration": 4880
+    },
+    {
+      "text": "and when you're splitting it, then stop planning \nthe authentication. And then, of course.",
+      "offset": 1742135,
+      "duration": 5145
+    },
+    {
+      "text": "Damien Bowden: should I use tokens, or should \nI use implement my yachts? For example,",
+      "offset": 1747280,
+      "duration": 3135
+    },
+    {
+      "text": "I see people implementing Jwt's \nand creating the Jwt's themselves",
+      "offset": 1750415,
+      "duration": 3400
+    },
+    {
+      "text": "and code from a username password flow. That's \nthat's always wrong. You should never do that",
+      "offset": 1753815,
+      "duration": 4360
+    },
+    {
+      "text": "because you're open to so many different \ntypes of attacks, which is always gonna",
+      "offset": 1758175,
+      "duration": 2640
+    },
+    {
+      "text": "get you later down the path. If you ever \ndo a pen test yet failure, for example.",
+      "offset": 1760815,
+      "duration": 3785
+    },
+    {
+      "text": "Damien Bowden: because you \nyou're open to impersonation,",
+      "offset": 1764600,
+      "duration": 1975
+    },
+    {
+      "text": "you're open to semetically should \nnot be used anyway, for Jwt's",
+      "offset": 1766575,
+      "duration": 4905
+    },
+    {
+      "text": "Damien Bowden: just so many things goes \nwrong with that type of approach. And then.",
+      "offset": 1771480,
+      "duration": 3560
+    },
+    {
+      "text": "Damien Bowden: if you just read open, you \nfollow one of the guidelines. When the big",
+      "offset": 1775040,
+      "duration": 2375
+    },
+    {
+      "text": "service providers actually delivered \nat the documentation for each of the",
+      "offset": 1777415,
+      "duration": 3520
+    },
+    {
+      "text": "identity providers a secure Token service, \nor the products that actually implement this.",
+      "offset": 1780935,
+      "duration": 4145
+    },
+    {
+      "text": "Damien Bowden: they recommend best practice, \nusually pretty up to date. So, for example,",
+      "offset": 1785080,
+      "duration": 4615
+    },
+    {
+      "text": "at the moment. There's a new best practice \ncoming out called and best practice for Bro.",
+      "offset": 1789695,
+      "duration": 3880
+    },
+    {
+      "text": "Browser based applications which \nis pretty much the same stuff,",
+      "offset": 1793575,
+      "duration": 3680
+    },
+    {
+      "text": "as I'm saying with more technical language, and \nrecommend the back end for front, and so on. But",
+      "offset": 1797255,
+      "duration": 5745
+    },
+    {
+      "text": "Damien Bowden: they recommend, and",
+      "offset": 1803000,
+      "duration": 1295
+    },
+    {
+      "text": "Damien Bowden: pretty much everything \nyou should be doing nowadays,",
+      "offset": 1804295,
+      "duration": 3200
+    },
+    {
+      "text": "and it keeps getting updated or \nchanged. And if you look at, then what",
+      "offset": 1807495,
+      "duration": 4065
+    },
+    {
+      "text": "Damien Bowden: ping identity, or Octa or Microsoft \nenter Id recommend! You see them almost parallel.",
+      "offset": 1811560,
+      "duration": 6095
+    },
+    {
+      "text": "What they recommend, or you look at the \nidentity of a documentation. The best practice",
+      "offset": 1817655,
+      "duration": 3800
+    },
+    {
+      "text": "recommendations is nearly always up to date \nthere, and if you follow what they're documenting.",
+      "offset": 1821455,
+      "duration": 4985
+    },
+    {
+      "text": "Damien Bowden: you know, moving in the right \ndirection. That's why I always open Id connect.",
+      "offset": 1826440,
+      "duration": 3695
+    },
+    {
+      "text": "I never recommend Samuel anymore as well, not \nbecause Saml is not a good. It's because it's",
+      "offset": 1830135,
+      "duration": 5600
+    },
+    {
+      "text": "just too complicated. And you can run into \ntroubles really fast if you start using Saml.",
+      "offset": 1835735,
+      "duration": 4160
+    },
+    {
+      "text": "That's why it's much easier to implement open \nid connect at the moment, and not Samuel. And",
+      "offset": 1839895,
+      "duration": 4800
+    },
+    {
+      "text": "Damien Bowden: that's why I \nalways try to choose the most",
+      "offset": 1844695,
+      "duration": 2200
+    },
+    {
+      "text": "simple solution and use what's \nrecommended and best practice.",
+      "offset": 1846895,
+      "duration": 4505
+    },
+    {
+      "text": "Denis Troller: Okay.",
+      "offset": 1851400,
+      "duration": 1560
+    },
+    {
+      "text": "Denis Troller: well, thank you very much for all \nthat. I think it's gonna be time to move on to",
+      "offset": 1852960,
+      "duration": 7320
+    },
+    {
+      "text": "Denis Troller: some housekeeping and some \nQA. Before that. Do you have any any last",
+      "offset": 1860280,
+      "duration": 6000
+    },
+    {
+      "text": "Denis Troller: words?",
+      "offset": 1866280,
+      "duration": 1055
+    },
+    {
+      "text": "Denis Troller: What's what's next for you?",
+      "offset": 1867335,
+      "duration": 3705
+    },
+    {
+      "text": "Damien Bowden: Okay. So I I do teach this as well, \nand show people how to implement this as well. And",
+      "offset": 1871040,
+      "duration": 4415
+    },
+    {
+      "text": "Damien Bowden: anything I make or try I always \nput open my Github repos. So if people have",
+      "offset": 1875455,
+      "duration": 4520
+    },
+    {
+      "text": "questions after this, so I want to get back \nand show me different channels, such as Rusana",
+      "offset": 1879975,
+      "duration": 3960
+    },
+    {
+      "text": "doesn't matter. And you finally, everything I \ndocument on Github and I always get to update",
+      "offset": 1883935,
+      "duration": 6400
+    },
+    {
+      "text": "and keep the best practice recommend. I always \ndo new and templates and new Demos had to do",
+      "offset": 1890335,
+      "duration": 5280
+    },
+    {
+      "text": "this and just check out my Github repos \nas well, or ping me directly as well. And",
+      "offset": 1895615,
+      "duration": 4700
+    },
+    {
+      "text": "Damien Bowden: you you find \neverything online anywhere. In Github.",
+      "offset": 1900315,
+      "duration": 3165
+    },
+    {
+      "text": "Damien Bowden: especially the new \nspecifications, the standards which are coming.",
+      "offset": 1903480,
+      "duration": 3760
+    },
+    {
+      "text": "Denis Troller: Okay, well, thank you very much. \nAnd with that I think Mane shits back to you.",
+      "offset": 1907240,
+      "duration": 6201
+    },
+    {
+      "text": "Manish Kapur: All right.",
+      "offset": 1913441,
+      "duration": 1054
+    },
+    {
+      "text": "Manish Kapur: Can you see my \nscreen Damian and and Dennis.",
+      "offset": 1914495,
+      "duration": 3680
+    },
+    {
+      "text": "Damien Bowden: Yeah, it's black. That's it.",
+      "offset": 1918175,
+      "duration": 954
+    },
+    {
+      "text": "Denis Troller: But it's coming.",
+      "offset": 1919129,
+      "duration": 1512
+    },
+    {
+      "text": "Manish Kapur: Not yet.",
+      "offset": 1920641,
+      "duration": 1440
+    },
+    {
+      "text": "Manish Kapur: It's working.",
+      "offset": 1925883,
+      "duration": 919
+    },
+    {
+      "text": "Denis Troller: Yes. Yeah.",
+      "offset": 1926802,
+      "duration": 1281
+    },
+    {
+      "text": "Manish Kapur: Okay,",
+      "offset": 1928083,
+      "duration": 634
+    },
+    {
+      "text": "Manish Kapur: you know, here I am in 2024,",
+      "offset": 1928717,
+      "duration": 2740
+    },
+    {
+      "text": "trying to figure out how zoom sharing \nworks. Sorry about that mishap.",
+      "offset": 1931457,
+      "duration": 3320
+    },
+    {
+      "text": "Manish Kapur: But thank you, Damian and Dennis. \nIt. That was great content. I appreciate,",
+      "offset": 1934777,
+      "duration": 5800
+    },
+    {
+      "text": "Damian, you taking the time and joining us as a \nguest speaker here in this our monthly webinar.",
+      "offset": 1940577,
+      "duration": 4860
+    },
+    {
+      "text": "Manish Kapur: We have had some \nquestions and thank you to our",
+      "offset": 1945437,
+      "duration": 3420
+    },
+    {
+      "text": "panelists for answering those questions on the fly",
+      "offset": 1948857,
+      "duration": 3160
+    },
+    {
+      "text": "Manish Kapur: as we gather \nsome more questions for to",
+      "offset": 1952017,
+      "duration": 3040
+    },
+    {
+      "text": "answer them. Live in the next couple \nof minutes. I do want to, basically.",
+      "offset": 1955057,
+      "duration": 5380
+    },
+    {
+      "text": "Manish Kapur: you know, invite you to answer \nthe next short pool that will be appearing on",
+      "offset": 1960437,
+      "duration": 4460
+    },
+    {
+      "text": "your school screens shortly after this \npresentation, and tell us whether you",
+      "offset": 1964897,
+      "duration": 4880
+    },
+    {
+      "text": "would like us to be whether you would like to be \ncontacted, learn more about the product, pricing,",
+      "offset": 1969777,
+      "duration": 4920
+    },
+    {
+      "text": "etc, and then also what to invite you to join our \nnext 2 upcoming webinars in the month of June.",
+      "offset": 1974697,
+      "duration": 9546
+    },
+    {
+      "text": "Manish Kapur: The 1st one is everything \nyou need to know about Sona cube. I did see",
+      "offset": 1984243,
+      "duration": 4734
+    },
+    {
+      "text": "some Sona cube questions come in, so that \nwould be another good avenue for you to,",
+      "offset": 1988977,
+      "duration": 5680
+    },
+    {
+      "text": "you know. Learn more about sona cube and \nunderstand what that product does. And",
+      "offset": 1994657,
+      "duration": 5560
+    },
+    {
+      "text": "then we also have a dedicated session \nfor Federal agencies coming up in June",
+      "offset": 2000217,
+      "duration": 5020
+    },
+    {
+      "text": "Manish Kapur: which it's although it \nsays it's for Federal agencies. But",
+      "offset": 2005237,
+      "duration": 4020
+    },
+    {
+      "text": "I personally think it will be beneficial \nfor anybody who has some strict governance",
+      "offset": 2009257,
+      "duration": 5320
+    },
+    {
+      "text": "and compliance requirements. So if \nyou ha! If you would like to know",
+      "offset": 2014577,
+      "duration": 3760
+    },
+    {
+      "text": "more about our how we help in those \nenvironments, and for those customers",
+      "offset": 2018337,
+      "duration": 4146
+    },
+    {
+      "text": "Manish Kapur: that Webinar is on June 13, \nth and that will be beneficial for you.",
+      "offset": 2022483,
+      "duration": 3834
+    },
+    {
+      "text": "Manish Kapur: alright should we take some",
+      "offset": 2026317,
+      "duration": 4140
+    },
+    {
+      "text": "Manish Kapur: questions of.",
+      "offset": 2030457,
+      "duration": 3360
+    },
+    {
+      "text": "Damien Bowden: That golf.",
+      "offset": 2033817,
+      "duration": 1866
+    },
+    {
+      "text": "Manish Kapur: Are you? Are \nyou ready for it? Damian?",
+      "offset": 2035683,
+      "duration": 2854
+    },
+    {
+      "text": "Manish Kapur: soul!",
+      "offset": 2038537,
+      "duration": 2826
+    },
+    {
+      "text": "Manish Kapur: Why do you recommend?",
+      "offset": 2041363,
+      "duration": 1254
+    },
+    {
+      "text": "Manish Kapur: backend of front-end \narchitecture? Bff, architecture.",
+      "offset": 2042617,
+      "duration": 5225
+    },
+    {
+      "text": "Damien Bowden: Okay? So",
+      "offset": 2047842,
+      "duration": 815
+    },
+    {
+      "text": "Damien Bowden: the problem is that before. \nAnd when we had this technology spit between,",
+      "offset": 2048657,
+      "duration": 5920
+    },
+    {
+      "text": "and when people start doing user interfaces,",
+      "offset": 2054577,
+      "duration": 2640
+    },
+    {
+      "text": "using Javascript technologies like \nangle react to Vujs or whatever",
+      "offset": 2057217,
+      "duration": 3400
+    },
+    {
+      "text": "you're using. And we had a spit between the \napplications. And then we start securing the",
+      "offset": 2060617,
+      "duration": 5945
+    },
+    {
+      "text": "Damien Bowden: Sba applications in the front end",
+      "offset": 2066562,
+      "duration": 2480
+    },
+    {
+      "text": "Damien Bowden: on your in your browsers. And \nthen we had a back end where we did. The Apa",
+      "offset": 2069042,
+      "duration": 3055
+    },
+    {
+      "text": "calls in the business, and the problem was \nthat. And we are using openly connect to",
+      "offset": 2072097,
+      "duration": 4080
+    },
+    {
+      "text": "authenticate the applications. But \nwe're storing the tokens and the",
+      "offset": 2076177,
+      "duration": 4480
+    },
+    {
+      "text": "Damien Bowden: and sensitive data that we \nand people talk to rob in the browser. So",
+      "offset": 2080657,
+      "duration": 3880
+    },
+    {
+      "text": "it's eating your local storage or your session \nstorage, or you're using a maybe a web walker",
+      "offset": 2084537,
+      "duration": 4880
+    },
+    {
+      "text": "which is accessible from Javascript. And \nthe problem is that it's impossible to",
+      "offset": 2089417,
+      "duration": 4400
+    },
+    {
+      "text": "prevent an excess attack, and you always \nto be always a new way of doing excess.",
+      "offset": 2093817,
+      "duration": 4000
+    },
+    {
+      "text": "And if I have sensitive data stored in the \nbrowser. It's easier to rob that. And and",
+      "offset": 2097817,
+      "duration": 6825
+    },
+    {
+      "text": "Damien Bowden: by implement the back in the \nfront. Then we've actually removed the attacks",
+      "offset": 2104642,
+      "duration": 3055
+    },
+    {
+      "text": "office because there's there's less to rob in the \nbrowser you can take still take over the session,",
+      "offset": 2107697,
+      "duration": 4400
+    },
+    {
+      "text": "but there's no tokens to rob which I can \nstart using that against the Api. Now I",
+      "offset": 2112097,
+      "duration": 4080
+    },
+    {
+      "text": "can. The cookie is, has its own browser \nprotections, and it's much harder to rob,",
+      "offset": 2116177,
+      "duration": 4960
+    },
+    {
+      "text": "and if you implement your cookie protection pro \nproperly, it's easier to secure it, as when you're",
+      "offset": 2121137,
+      "duration": 4840
+    },
+    {
+      "text": "using Jwt. Tokens which a single page application \nwhich stores these tokens in the browser. So",
+      "offset": 2125977,
+      "duration": 8185
+    },
+    {
+      "text": "Damien Bowden: there's less to rob, and it's \neasy to implement. So the backend for front",
+      "offset": 2134162,
+      "duration": 2975
+    },
+    {
+      "text": "and architecture. What it does is, and it \nsays every ui now is a confidential client.",
+      "offset": 2137137,
+      "duration": 5665
+    },
+    {
+      "text": "Damien Bowden: and with this type of setup that \nthe standard setup that most people do is they",
+      "offset": 2142802,
+      "duration": 3255
+    },
+    {
+      "text": "don't actually implement the business logic in \nthe same place as the front end ui application.",
+      "offset": 2146057,
+      "duration": 4560
+    },
+    {
+      "text": "They just implement the layer, which is \nthe confidential client for the security.",
+      "offset": 2150617,
+      "duration": 3080
+    },
+    {
+      "text": "All the security is moved \ninto this bff, the backend.",
+      "offset": 2154337,
+      "duration": 2400
+    },
+    {
+      "text": "Damien Bowden: And then all it does is actually \nis, proxies the request from this ui part of the",
+      "offset": 2156737,
+      "duration": 5560
+    },
+    {
+      "text": "application. The angler reactor rule and sends \nit through the back end to whatever downstream.",
+      "offset": 2162297,
+      "duration": 4680
+    },
+    {
+      "text": "Api uses some type of proxy, so it comes in with a \ncookie to my back end. It cannot access anything.",
+      "offset": 2166977,
+      "duration": 5920
+    },
+    {
+      "text": "Cross, domain, cross site. Everything is blocked, \nexcept exactly the same domain, same origin.",
+      "offset": 2172897,
+      "duration": 5785
+    },
+    {
+      "text": "Damien Bowden: and then from there, then you \ngo through the proxy, and then you can use",
+      "offset": 2178682,
+      "duration": 3855
+    },
+    {
+      "text": "anything you want. After that you can use the \ncertificate and access, token and application",
+      "offset": 2182537,
+      "duration": 4520
+    },
+    {
+      "text": "access token. There's so many different things \nyou can use between app to app security.",
+      "offset": 2187057,
+      "duration": 4505
+    },
+    {
+      "text": "Damien Bowden: but behind that. Then \nyou could proxy that you get the data",
+      "offset": 2191562,
+      "duration": 2615
+    },
+    {
+      "text": "from whatever businesses, and then you can \nbring it back. No, you don't have to use",
+      "offset": 2194177,
+      "duration": 4280
+    },
+    {
+      "text": "back in the front end. What I set up here \nis without the back end front end. I have",
+      "offset": 2198457,
+      "duration": 3360
+    },
+    {
+      "text": "the business logic directly in the back end. So \nyou don't actually need to make the second hop,",
+      "offset": 2201817,
+      "duration": 6000
+    },
+    {
+      "text": "and then the performance is almost the score. The \nonly difference in performance is, I'm using a",
+      "offset": 2207817,
+      "duration": 3440
+    },
+    {
+      "text": "cookie instead of a Jwt. But it's still only one \nhop, and you don't usually notice that, anyway,",
+      "offset": 2211257,
+      "duration": 5560
+    },
+    {
+      "text": "because if you're doing database requests, anyway, \nthat's the slowest in the whole chain or so.",
+      "offset": 2216817,
+      "duration": 5065
+    },
+    {
+      "text": "Damien Bowden: I don't see any",
+      "offset": 2221882,
+      "duration": 2240
+    },
+    {
+      "text": "Damien Bowden: performance problems \nwithout either. And to be honest,",
+      "offset": 2224122,
+      "duration": 2375
+    },
+    {
+      "text": "so it's more secure. Just it's hard to rob \nstuff, and it's not perfect. Of course,",
+      "offset": 2226497,
+      "duration": 5160
+    },
+    {
+      "text": "nothing is ever perfect, but it's it's now \nthe recommended way of doing security. So",
+      "offset": 2231657,
+      "duration": 5385
+    },
+    {
+      "text": "Damien Bowden: when you put it really short,",
+      "offset": 2237042,
+      "duration": 1495
+    },
+    {
+      "text": "everything is a confidential client. Every ui has \na back end somewhere which is used for security.",
+      "offset": 2238537,
+      "duration": 5040
+    },
+    {
+      "text": "Manish Kapur: Okay.",
+      "offset": 2243577,
+      "duration": 2220
+    },
+    {
+      "text": "Manish Kapur: Thanks. Damon, I do have a couple \nof more questions and we are, you know, coming",
+      "offset": 2245797,
+      "duration": 5300
+    },
+    {
+      "text": "up to the time we have about 7 min, 6 min left so. \nBut I will go through the questions here quickly.",
+      "offset": 2251097,
+      "duration": 8180
+    },
+    {
+      "text": "Manish Kapur: what's the best way to \nhandle unit and integration tests for",
+      "offset": 2259277,
+      "duration": 4820
+    },
+    {
+      "text": "an authenticated application as part \nof the CICD. Pipelines from pipeline.",
+      "offset": 2264097,
+      "duration": 5040
+    },
+    {
+      "text": "Damien Bowden: Okay. So for you to test. \nAnd that's easy. And you're you're you're",
+      "offset": 2269137,
+      "duration": 4120
+    },
+    {
+      "text": "testing directly against the application. \nYou have no security involved in it. And",
+      "offset": 2273257,
+      "duration": 3940
+    },
+    {
+      "text": "Damien Bowden: there's no problem \nwith that for integration test and for",
+      "offset": 2277197,
+      "duration": 5205
+    },
+    {
+      "text": "Damien Bowden: Apis, it's slightly more \ndifficult depending what type of Api you",
+      "offset": 2282402,
+      "duration": 3455
+    },
+    {
+      "text": "have. So there's 2 different types \nof Apis. You have Apis for delegated",
+      "offset": 2285857,
+      "duration": 2960
+    },
+    {
+      "text": "user apps flows. And you have Apis for \napplications. So if it's an Api which is",
+      "offset": 2288817,
+      "duration": 5240
+    },
+    {
+      "text": "used from an application. And it's really \neasy to set up an integration test. Then,",
+      "offset": 2294057,
+      "duration": 4240
+    },
+    {
+      "text": "where you test from the outside and you test \neverything from the outside include into security.",
+      "offset": 2298297,
+      "duration": 4625
+    },
+    {
+      "text": "Damien Bowden: So there's lots of examples. \nI seen online how people actually do that.",
+      "offset": 2302922,
+      "duration": 3255
+    },
+    {
+      "text": "If you're doing a delegate flow, then you have \nto type and make a back door, and in some type,",
+      "offset": 2306177,
+      "duration": 4760
+    },
+    {
+      "text": "a build environment where you can allow a \naccess token to be given to a non delegate",
+      "offset": 2310937,
+      "duration": 5560
+    },
+    {
+      "text": "user because a delegate access token \nshould be only acquired by a user login,",
+      "offset": 2316497,
+      "duration": 4520
+    },
+    {
+      "text": "which means you have to get consent. And some \nhuman has to actually click. Okay, somewhere.",
+      "offset": 2321017,
+      "duration": 3880
+    },
+    {
+      "text": "So if you shorten that out for integration test, \nwhere you want to test everything against the Api.",
+      "offset": 2324897,
+      "duration": 5440
+    },
+    {
+      "text": "Damien Bowden: and you have to make a back \ndoor. And then you have to be really careful",
+      "offset": 2330337,
+      "duration": 2880
+    },
+    {
+      "text": "that I cannot actually use that backdoor \nin a production deployment. So it should",
+      "offset": 2333217,
+      "duration": 3480
+    },
+    {
+      "text": "be only on your development environment. So \nI test from the outside include the security",
+      "offset": 2336697,
+      "duration": 5120
+    },
+    {
+      "text": "of the integration test against \nthe Apis, and then and you can",
+      "offset": 2341817,
+      "duration": 3840
+    },
+    {
+      "text": "do the whole lot into the database and \nbackup. Or that's up to this different",
+      "offset": 2345657,
+      "duration": 4025
+    },
+    {
+      "text": "Damien Bowden: strategies as well. You can use \ncontainers as well to rebuild it to them. Good",
+      "offset": 2349682,
+      "duration": 3535
+    },
+    {
+      "text": "tools using their their aspectical back \nends. How to build up integration tests.",
+      "offset": 2353217,
+      "duration": 4800
+    },
+    {
+      "text": "I think I seen one or 2 blogs, and \nnot a month ago what was about that?",
+      "offset": 2358017,
+      "duration": 5225
+    },
+    {
+      "text": "Damien Bowden: It's pretty easy set up, and \nI'd recommend, try and have a look at those",
+      "offset": 2363242,
+      "duration": 3295
+    },
+    {
+      "text": "blogs and build it, but always have to include \nthe security in your integration test as well,",
+      "offset": 2366537,
+      "duration": 4080
+    },
+    {
+      "text": "I think, because then you get the claim. \nSo you get the their use also in some of",
+      "offset": 2370617,
+      "duration": 4360
+    },
+    {
+      "text": "the happy calls. Now, of course, you can go lay \nit down and just test against the layers. Just",
+      "offset": 2374977,
+      "duration": 4825
+    },
+    {
+      "text": "Damien Bowden: it depends. It's",
+      "offset": 2379802,
+      "duration": 1440
+    },
+    {
+      "text": "Damien Bowden: there's no correct answers \nto that. But I tried to include as much as",
+      "offset": 2381242,
+      "duration": 4175
+    },
+    {
+      "text": "possible when I'm doing integration tests. So \nif something does go wrong I'll find it. I just",
+      "offset": 2385417,
+      "duration": 4360
+    },
+    {
+      "text": "don't know what, but if it passes I know \nthat I think the whole thing is walking.",
+      "offset": 2389777,
+      "duration": 3600
+    },
+    {
+      "text": "Manish Kapur: Okay.",
+      "offset": 2393377,
+      "duration": 2180
+    },
+    {
+      "text": "Manish Kapur: you talked about Saml \nand open Id. Are there any advantages",
+      "offset": 2395557,
+      "duration": 4820
+    },
+    {
+      "text": "to use one over the other in \nterms of Samuel and open id.",
+      "offset": 2400377,
+      "duration": 4480
+    },
+    {
+      "text": "Damien Bowden: I don't see any advantages from \na security perspective if bought done correctly,",
+      "offset": 2404857,
+      "duration": 5680
+    },
+    {
+      "text": "and but there's less knowledge on less",
+      "offset": 2410537,
+      "duration": 3625
+    },
+    {
+      "text": "Damien Bowden: development \nin the Samo world, I think,",
+      "offset": 2414162,
+      "duration": 1775
+    },
+    {
+      "text": "and open id connect is moving really \nfast forward with the news protocols,",
+      "offset": 2415937,
+      "duration": 3640
+    },
+    {
+      "text": "new specifications. OR. 2 and open 80 connect \nis more or less the one there, because the",
+      "offset": 2419577,
+      "duration": 4840
+    },
+    {
+      "text": "same people right into different specs and are \ninvolved in both of these teams. And there's",
+      "offset": 2424417,
+      "duration": 3760
+    },
+    {
+      "text": "new Rcs new specifications being created and made \nthe whole time based on OR. 2 and open id connect.",
+      "offset": 2428177,
+      "duration": 7000
+    },
+    {
+      "text": "Damien Bowden: And",
+      "offset": 2435177,
+      "duration": 1665
+    },
+    {
+      "text": "Damien Bowden: it's moving forward. And I \nthink one big advantage for opening connect",
+      "offset": 2436842,
+      "duration": 3775
+    },
+    {
+      "text": "is much simpler to implement and \nunderstand that, compared to Samuel",
+      "offset": 2440617,
+      "duration": 3760
+    },
+    {
+      "text": "Damien Bowden: and Samuel, is much \nharder to implement in this Xml base,",
+      "offset": 2444377,
+      "duration": 2600
+    },
+    {
+      "text": "and you have regular reserve \ninitiated, a client initiated,",
+      "offset": 2446977,
+      "duration": 2360
+    },
+    {
+      "text": "and it's really hard to configure that, and you \nneed a tool to help you configure it. And if you",
+      "offset": 2449337,
+      "duration": 3680
+    },
+    {
+      "text": "don't know what to do, and you might be making \na security hole. Or if something does go wrong,",
+      "offset": 2453017,
+      "duration": 3840
+    },
+    {
+      "text": "you have to really search long and hard to \nfind someone that actually understands it.",
+      "offset": 2456857,
+      "duration": 3905
+    },
+    {
+      "text": "Damien Bowden: And so it's complexity is \nthe main disadvantage of sound. Lighting",
+      "offset": 2460762,
+      "duration": 4335
+    },
+    {
+      "text": "and open. Lady connect is much \nsimpler to implement and roll out.",
+      "offset": 2465097,
+      "duration": 4146
+    },
+    {
+      "text": "Manish Kapur: Okay, thanks. You \nalso spoke about client to service,",
+      "offset": 2469243,
+      "duration": 5094
+    },
+    {
+      "text": "authentication and authorization.",
+      "offset": 2474337,
+      "duration": 1600
+    },
+    {
+      "text": "Manish Kapur: Let's say, I \nhave multiple micro services.",
+      "offset": 2475937,
+      "duration": 4000
+    },
+    {
+      "text": "What is the recommendation for service to \nservice, authentication, and authorization",
+      "offset": 2479937,
+      "duration": 4826
+    },
+    {
+      "text": "Manish Kapur: which Osid flow. Should I use that.",
+      "offset": 2484763,
+      "duration": 3374
+    },
+    {
+      "text": "Damien Bowden: Helps with the pay.",
+      "offset": 2488137,
+      "duration": 1202
+    },
+    {
+      "text": "Manish Kapur: Question.",
+      "offset": 2489339,
+      "duration": 23
+    },
+    {
+      "text": "Damien Bowden: Yeah. So there's about 7 \nor 8 different correct answers to that.",
+      "offset": 2489362,
+      "duration": 3855
+    },
+    {
+      "text": "Damien Bowden: So",
+      "offset": 2493217,
+      "duration": 1905
+    },
+    {
+      "text": "Damien Bowden: it depends how you set up your",
+      "offset": 2495122,
+      "duration": 1555
+    },
+    {
+      "text": "Damien Bowden: Jose the Api to Api so, and what \nMicrosoft does, and they use this thing called",
+      "offset": 2496677,
+      "duration": 5660
+    },
+    {
+      "text": "the on behalf of flow. And so they're using \ndelegated access tokens which are given to the",
+      "offset": 2502337,
+      "duration": 4400
+    },
+    {
+      "text": "application on behalf of that user. So somewhere \nup to chain, you have a user interface that",
+      "offset": 2506737,
+      "duration": 4760
+    },
+    {
+      "text": "logged in. And it's the best way of doing this \nbecause you're reducing the amount of access. So",
+      "offset": 2511497,
+      "duration": 5640
+    },
+    {
+      "text": "Damien Bowden: Apa, one does \nnot actually trust Api 2,",
+      "offset": 2517137,
+      "duration": 2520
+    },
+    {
+      "text": "it just does trust the access token, the \nuser which authenticate to the Api one.",
+      "offset": 2519657,
+      "duration": 4600
+    },
+    {
+      "text": "So you actually reduce the blast radius by \nusing on behalf of flow. So you're using. I",
+      "offset": 2524257,
+      "duration": 4200
+    },
+    {
+      "text": "asked you to use a delegate access token \nfor any downstream Apis for my Api. Now.",
+      "offset": 2528457,
+      "duration": 6185
+    },
+    {
+      "text": "Damien Bowden: if that's not possible, \nfor if you're in any other world,",
+      "offset": 2534642,
+      "duration": 2575
+    },
+    {
+      "text": "and you can use that a Grant exchange as well,",
+      "offset": 2537217,
+      "duration": 2800
+    },
+    {
+      "text": "which is a similar thing possible. But usually \nyou just use a client. Credentials flow,",
+      "offset": 2540017,
+      "duration": 4600
+    },
+    {
+      "text": "which is an Api to Api, which means you have a \nfull trust between the 2 servers, which means",
+      "offset": 2544617,
+      "duration": 5465
+    },
+    {
+      "text": "Damien Bowden: that Api is fully \ntrusted by your Api. So anything",
+      "offset": 2550082,
+      "duration": 3295
+    },
+    {
+      "text": "that's allowed to do in the Api with \nhis access token, and it's full trust.",
+      "offset": 2553377,
+      "duration": 4105
+    },
+    {
+      "text": "Damien Bowden: So you want to reduce the \nblast racing. I may be made less things",
+      "offset": 2557482,
+      "duration": 3055
+    },
+    {
+      "text": "possible. Some things to do is I never \nmix delegated access tokens on Api access",
+      "offset": 2560537,
+      "duration": 4800
+    },
+    {
+      "text": "tokens. I call applications. You have to keep \nthem separate. So I make a application. Api,",
+      "offset": 2565337,
+      "duration": 4760
+    },
+    {
+      "text": "either for an app to app or a user using the \napp, and I keep them completely separate. And",
+      "offset": 2570097,
+      "duration": 5040
+    },
+    {
+      "text": "then I can actually implement my security test \nand then separate on them. So I try to separate",
+      "offset": 2575137,
+      "duration": 5425
+    },
+    {
+      "text": "Damien Bowden: what the app is being used for.",
+      "offset": 2580562,
+      "duration": 2335
+    },
+    {
+      "text": "Damien Bowden: and I never mix delegate \nin the application tokens ever and then,",
+      "offset": 2582897,
+      "duration": 3720
+    },
+    {
+      "text": "and decide after that. Now we could also \nuse certificate authentication from Appe,",
+      "offset": 2586617,
+      "duration": 3640
+    },
+    {
+      "text": "or I can use an Api key as \nwell. Am I try to avoid that?",
+      "offset": 2590257,
+      "duration": 3505
+    },
+    {
+      "text": "Damien Bowden: But",
+      "offset": 2593762,
+      "duration": 800
+    },
+    {
+      "text": "Damien Bowden: all of these are \nokay in certain scenarios and",
+      "offset": 2594562,
+      "duration": 3415
+    },
+    {
+      "text": "Damien Bowden: bought",
+      "offset": 2597977,
+      "duration": 1745
+    },
+    {
+      "text": "Damien Bowden: the main scope, is.",
+      "offset": 2599722,
+      "duration": 1520
+    },
+    {
+      "text": "Damien Bowden: try to reduce the blast or Asias, \nand only make it possible for the Api from one",
+      "offset": 2601242,
+      "duration": 4815
+    },
+    {
+      "text": "application to do as little as possible, and only \nwhat it's allowed to do in the other application.",
+      "offset": 2606057,
+      "duration": 4585
+    },
+    {
+      "text": "Damien Bowden: But then keep on complicated \nbecause it has to be simple. If it gets",
+      "offset": 2610642,
+      "duration": 3215
+    },
+    {
+      "text": "complicated. It's bad, anyway. And then, \nof course, then, when I'm accessing Apis,",
+      "offset": 2613857,
+      "duration": 4400
+    },
+    {
+      "text": "I don't want to pick, saying I get the access \ntoken, and I have to go to the well known points,",
+      "offset": 2618257,
+      "duration": 3880
+    },
+    {
+      "text": "and then I get I get the data. You should \nonly do that flow once, and then the next",
+      "offset": 2622137,
+      "duration": 3120
+    },
+    {
+      "text": "time you just say I've got a valid access token. \nI use that again. You have to reduce the amount",
+      "offset": 2625257,
+      "duration": 3800
+    },
+    {
+      "text": "of network calls as well, and so simplicity \nand blast races would be maybe 2 key words.",
+      "offset": 2629057,
+      "duration": 6826
+    },
+    {
+      "text": "Manish Kapur: Okay, thank \nyou. That was very helpful.",
+      "offset": 2635883,
+      "duration": 1974
+    },
+    {
+      "text": "Manish Kapur: One last question. \nDamian. Considering the applications",
+      "offset": 2637857,
+      "duration": 5880
+    },
+    {
+      "text": "are moving towards using more Saml or open. Id.",
+      "offset": 2643737,
+      "duration": 4146
+    },
+    {
+      "text": "Manish Kapur: Do we see individual logins fade \naway, or does it still have any advantages.",
+      "offset": 2647883,
+      "duration": 6719
+    },
+    {
+      "text": "Damien Bowden: I'm not quite sure. What I \nmean is this, the Login sign in logs and.",
+      "offset": 2654602,
+      "duration": 3408
+    },
+    {
+      "text": "Manish Kapur: Cause, yeah.",
+      "offset": 2658010,
+      "duration": 952
+    },
+    {
+      "text": "Damien Bowden: It doesn't matter what you're \nusing. You see, both them are nearly in all",
+      "offset": 2658962,
+      "duration": 3015
+    },
+    {
+      "text": "the provided. So if you use an enter Id, I \nuse an odd 0 octa ping those logs available.",
+      "offset": 2661977,
+      "duration": 6585
+    },
+    {
+      "text": "Damien Bowden: no matter which one you're using \nin their providers inside the applications, and",
+      "offset": 2668562,
+      "duration": 4995
+    },
+    {
+      "text": "Damien Bowden: you'll see your interaction with it",
+      "offset": 2673557,
+      "duration": 2780
+    },
+    {
+      "text": "depend on the lab we are using. \nYou'll see more, you see, less.",
+      "offset": 2676337,
+      "duration": 3985
+    },
+    {
+      "text": "Damien Bowden: I'm not sure if you \nunderstood the question correctly, though.",
+      "offset": 2680322,
+      "duration": 3361
+    },
+    {
+      "text": "Manish Kapur: Yup. So if the person who \nasked that question, if you have any,",
+      "offset": 2683683,
+      "duration": 2574
+    },
+    {
+      "text": "follow up questions, do reach \nout to us on the community forum",
+      "offset": 2686257,
+      "duration": 2920
+    },
+    {
+      "text": "Manish Kapur: and we will \nexpand on that. But I think",
+      "offset": 2689177,
+      "duration": 3420
+    },
+    {
+      "text": "Manish Kapur: that should have \nanswered that question, I'm thinking.",
+      "offset": 2692597,
+      "duration": 4020
+    },
+    {
+      "text": "Manish Kapur: okay, I think it's time to wrap up.",
+      "offset": 2696617,
+      "duration": 3866
+    },
+    {
+      "text": "Manish Kapur: So thanks again, Damian \nand Dennis, our presenters for today,",
+      "offset": 2700483,
+      "duration": 4014
+    },
+    {
+      "text": "and thanks to all of you who joined \nus today and posted your questions.",
+      "offset": 2704497,
+      "duration": 4146
+    },
+    {
+      "text": "Manish Kapur: I would also take this opportunity \nto thank Camille and Emma from our events team",
+      "offset": 2708643,
+      "duration": 5174
+    },
+    {
+      "text": "for all their support and hard work behind the \nscenes. They run these webinars every month,",
+      "offset": 2713817,
+      "duration": 4680
+    },
+    {
+      "text": "and so I should take this opportunity to \nthank them. I think we have covered all",
+      "offset": 2718497,
+      "duration": 4760
+    },
+    {
+      "text": "of the questions, but if we didn't \nget time to cover any questions,",
+      "offset": 2723257,
+      "duration": 3640
+    },
+    {
+      "text": "we will respond to them. And we will post the \nrecording and the QA. On the community Forum",
+      "offset": 2726897,
+      "duration": 6480
+    },
+    {
+      "text": "Manish Kapur: feel free to visit our website. \nsonos.com to learn more information about clean",
+      "offset": 2733377,
+      "duration": 6040
+    },
+    {
+      "text": "as you could, and some of the other topics \nthat were answered in the QA chat panel.",
+      "offset": 2739417,
+      "duration": 6100
+    },
+    {
+      "text": "Manish Kapur: Thank you again for providing \nthe feedback that you've shared with us,",
+      "offset": 2745517,
+      "duration": 5620
+    },
+    {
+      "text": "and we will look forward to seeing \nyou all in the next webinars.",
+      "offset": 2751137,
+      "duration": 4346
+    },
+    {
+      "text": "Manish Kapur: Thank you. Have a good day.",
+      "offset": 2755483,
+      "duration": 2079
+    },
+    {
+      "text": "Damien Bowden: Thanks.",
+      "offset": 2757562,
+      "duration": 720
+    },
+    {
+      "text": "Denis Troller: Thank you.",
+      "offset": 2758282,
+      "duration": 1200
+    }
+  ],
+  "fullText": "Manish Kapur: All right. Manish Kapur: Alright. Hello, \neveryone. Thanks for joining today. Manish Kapur: Today's webinar is end \nto end security in a web application. Manish Kapur: This session will \nfocus on how authentication, authorization and security requirements \ncan be implemented in asp.net core. Manish Kapur: My name is Manish Kapur, and \nI'm your moderator for today's webinar. Manish Kapur: This webinar will be presented \nby Damien Borden and Dennis Troller. Manish Kapur: So before we begin, let me \ngo through some housekeeping essentials Manish Kapur: this session will be \nabout 45 min with a Q&A towards the end Manish Kapur: you are invited \nto submit your questions via the Q. And a box in zoom, not the chat box. Manish Kapur: Our panelists today \nare Andrei Epure and Zsolt Kolbay. Manish Kapur: They will monitor and \nanswer your questions as they come in. Manish Kapur: They will answer as many \nquestions as possible during the live webinar. Manish Kapur: This session will be recorded. Manish Kapur: and we will send you a link \nwith the recording in the upcoming days. Manish Kapur: Finally, at the \nend of the webinar there will be a short survey that will pop up on your screen. Manish Kapur: It will be very nice \nof you if you can submit that survey Manish Kapur: we consider feedback to be a gift. Manish Kapur: Thanks in \nadvance for your participation. Manish Kapur: So let's Manish Kapur: let's let me introduce \nthe speak speakers for today's webinar. Manish Kapur: we have. We have \na special guest, Damien Borden, who's a web developer at \nisolutions in Switzerland. Manish Kapur: and he's also a Microsoft \nMVP. Who will be delivering this webinar alongside our product manager, \nDennis Troller, from Sonar. Manish Kapur: So thank you for delivering \nthis Webinar Damien and Dennis. Manish Kapur: They will answer your questions also \nat the end of this webinar that we want to cover, which we couldn't answer during the in the \nchat panel. This session will be recorded, and we'll send out a link \nagain in the upcoming days Manish Kapur: So without any, for let me \nlet me pass it on to our speaker today, Damien Borden, to kick off the webinar for today. Manish Kapur: Thanks, Damian, over to you. Damien Bowden: Okay, thanks for the \nintroduction. I'll just share my screen now Damien Bowden: the screen. Damien Bowden: So I just put \nup the whole agenda on Github Damien Bowden: and Damien Bowden: and what I \nthought to do is, I just explain. Damien Bowden: and what I recommend implementing \nend to end security and a web application, but just actually creating a application which \nI think could be used in production. And but of course, there's many different ways of \ndoing this in many different forms. So Damien Bowden: and that'll \nexplain different things, maybe, how you could do the authentication. What's \nbest practice was recommended? How Microsoft Nchid could implement this and a small \nbit about session protection. And then, of course, then how to implement the Cicd and \nthe build, and so on. So the application itself. Damien Bowden: And there's been a big change \nlately. How you implement security at the moment. And in the last couple of years \nwe've been switching and doing single page applications with backends, but nearly always \nimplemented with different technical stacks. Damien Bowden: So what happened also \nwith the split in the technical stacks is that we split the security as \nwell, and which was a bad idea, because we're so secure and sensitive \ninformation in the browsers. And what's happened there was that, and we deployed \nthe 2 as one. Now is new recommendation. So all web applications is recommended that \nwe secure them as a single security context. Damien Bowden: And we use a secret that \nwe validate the application and as well as the user authenticating. So what \nwe do nowadays are what's recommended for some setups is that we we deploy them \nas one and and we secure them as one. So Damien Bowden: this works fairly good. \nBut one of the problems we have is that when we're setting these settings up for local \ndevelopment, a angle of development, for example, does not want to be using.net core tools or.net \ncore developer does not want to be using angler tools. So for local development. We need to \nsplit them and let the the developers or the architects use the tools that they know and want \nto use, because then to the most and productive. Damien Bowden: but when we deploy it, then we have \nto build them together and deploy it as one. So Damien Bowden: the angle application is no longer a standalone application. I'm using \nAngle 18 in this example. When Nx. Damien Bowden: it's actually part of \nthe back end. So it's you can see as a Ui view of the back end application, \nwhich is a.net core application, and the Damien Bowden: walk us worn together. We secured \nthe whole thing as a open id connect code, flow, confidential client, and with Pixie, then, \nis what's recommended. Now, we usually. Now. Damien Bowden: I could also implement \nthis as standalone application, which doesn't connect to any other open \n80 connect hour is completely standalone. Damien Bowden: And but that's not really \nrecommended anymore for enterprise deployments. Or it's actually your implement. You introduce \nmore complexity as you actually reduce. And so I always try to use existing identity providers \nor systems, especially in enterprise world, where nearly any company I work with, \nor any deployment. They already have an Id density provider somewhere, and I just \ntry to reuse whatever the company is using, and then I use open need to connect, \nto connect into that. Then so Damien Bowden: in this setup, and maybe \njust show you I use a proxy to separate the angle development to the.net back end. \nAnd then you can use your own tools. So that's really important that you, you \nneed a local setup and development that Damien Bowden: you need to have a \nproduction setup, but you wanna keep the 2 of them as close as possible. So, \nfor example, I always use Hts everywhere, so I can use the same type of session protection \non my local development as on my deployment, and that saves an awful lot of \neffort after I do deployments. Damien Bowden: So. Damien Bowden: looking at the authentication \nflows, and the recommended flow nowadays would be open, ready to connect Code flow with \nPixie, and with a confidential client. So just to show how this works is, and \nthis is the flow without the pixie, and it's a 2 step. Authentication flow. So what \nhappens is that when the browser and is open. You want to authenticate the application. You \nredirect the whole application to the server, and this could be entry. Id. It could be \nart 0. It could be any identity provider. Damien Bowden: And if all \nthe parameters are correct, and then you can log into your \nauthentication. Do your multi factor, authentication, use your phishing, resist \nnotification like pass keys or feet or 2, Damien Bowden: then you give your consent. \nIf all is okay, you get redirected back to the ui in the browser with a code. Now this code \ncomes back in the front channel in the browser, and then the code is taken, and in \nthe back end of the application, and and it sent them with with their secret. \nOr if you're using certificate authentication, you send a client assertion to the server, \nand then you get your Co. Tokens back here, Id token a access token, and maybe refresh \ntoken back, depending on what you requested. Now Damien Bowden: there's different flavors \nand flows and variance of this, for example, and you're meant to keep the id \ntokens really small, if possible, because you need that to log out usually. Damien Bowden: And so if I'm doing that. \nI'd probably use a user in for endpoint, and then there'd be an extra step at \nthe end, or sometimes you can make it a 3 step authentication with par \na a new Rfc. That's just come out. Damien Bowden: or you could use Mtls to \nstrengthen securities, different ways of change and improving this. But at the end of the \nday it's always opening that code flow with Pixie, and I validate the application as well as the \nuse authenticating, using the application. Damien Bowden: So I mentioned Pixie \na few times. So what is Pixie and Damien Bowden: pixies used anytime you \nuse code flow so you should never use open any connect code flow without \nPixie. It's required everywhere. No, and that's the recommendation. So what is it? \nAnd it's actually really simple. I took this from the Rfc. Itself. All you're trying to do is \nmake sure that the application that sent the 1st request is the same application to sends the \nsecond request. It's a 2 step authentication. Damien Bowden: So it's actually \nvery simple. To implement this, all you do is create some random string. \nYou hash it, use it a 1 way, encryption, and you send that to the server to service saves \nthis, and on the second and request, where you send a code, you also send a code verifier, which \nis the original string. The server hash to start using the same encryption and validates that the \n2 hashes are the same, and then you know that the application to send the 1st request is the same \nas the application to send the second request, and with that then you can prevent people robbing \nthe codes or taken over hijacking the session. Damien Bowden: So Damien Bowden: that's authentication. Now, if I \nwas implementing this with a Microsoft enter Id, I'd be using Microsoft and identity web and every \nsingle identity provider has its own little flavor of open id connect. So the problem is that if \nyou're using key clock or you're using art 0, or use any of them. They all have \nslight differences in the flavors, so nearly all them produce their own clients. Damien Bowden: and all the \nclients are, is really is, wrap us around the open id connect. So \nyou can implement any open id, connect and client using the original defaults and open \nconnect and implementation for us we do not call. Damien Bowden: but you can \nalso use the client libraries, which is just a wrapper. So, for \nexample, Microsoft's wrapper is called Damien Bowden: Microsoft \nIdentity Web, and with this, then all you need to do to implement the \nwhole application is 4 lines of code. Damien Bowden: So Damien Bowden: this is just implementing the flow \nI showed you in the previous screen, and what it does is it sets up the updated connect code flow, \nconfidential client, and it's recommended. Use client certificates. So it was a client to session \nand not a shared secret to do the second call. Damien Bowden: and you have to enable \nthe dancing Api to make sure that using cold flow with Pixie and not implicit \nflow with confidential client. It's just a Microsoft thing. And then, of \ncourse, if I'm getting profile data, I'm using extrings and using delegate \ncalls to Microsoft graph Api as well. Damien Bowden: A special thing here is that you \nhave to use a type of token cache, and because I use in memory mostly to test. And what happens if \nyou restart the application, you lose your tokens, and then you still have your cookie, and \nthen you get funny errors by deployment, sometimes by restart the application. So you \nhave to use a proper cash, or you have to delete the cookies if you don't have correct \ntokens. But other than that, it's it's basic Damien Bowden: exactly like before. Now, if \nI was implementing this work key clock or any other server, and if I've only got a single \nopen id connect client in my application, I'd always try to use the default recommendation \nfrom whatever whatever idp you're using. Damien Bowden: and but as soon as you go to \nmultiple idps in one application, or like, it's a bit more complicated, you always \nhave to revert back to default, open id connect. Otherwise you get \nyourself into trouble really fast. Damien Bowden: So Damien Bowden: yeah, that's my recommendation that Damien Bowden: always use the client from whatever \nidp you're using. But as soon as things get complicated or whatever. Then you have to default \nto the default. What Microsoft delivers that? Damien Bowden: Okay? And the next little \nthing I didn't talk about is session, protection so, and the authentication idp the \nauthentication. And that's only for setting up the session and also for logging out. And \nwe have standards now of sees for that, and should always stick to the standards, and \nyou should never try to roll out your own art Damien Bowden: and reuse one of the and \nwhatever's provided by, or whatever you can use, never try to do it yourself. Just try \nto reuse something that exists already Damien Bowden: in between the authentication \nto the start or the log out to the sign out at the end. You need to protect the session. Now, \nthe recommendation is that we're using cookies at the moment. So if you're using cookies, you \nhave to add in some extra protections, because, for example, you need to make sure that you're \nnot open to cross site request for 3 attacks, or you're not open to cross \norigin request site attacks. Damien Bowden: And so it's really important \nthat you add in the extra protection, and there's a load of different tools \nand different ways of protecting the session. So you have to make sure that \nyour cookies protected the Hb. Only same site and only cookie. And then you \nhave to make sure you have some type of Damien Bowden: anti forgery, cookie \nprotection, or you're using a custom header, which is validating the back end to make sure \nthat you're not open to open cross origin attacks. Damien Bowden: And of course, then you've \ngot a load of security headers and all the browsers which are supported. And \nyou can just add in the security headers to all your responses \nthat comes from the server. So Damien Bowden: what I usually do \nis I use a library from Angel Lock, and to implement a security, Edison, \nthat has everything in one stop. Damien Bowden: and you find these Damien Bowden: and the Netscape security headers \nis what I recommend is the easy way. Now, the problem with security headers, \nthe setup for the session protection is that every single tech stack has a different \nsettings are so much better somewhere worse. So Damien Bowden: if you want to get \nreally good session protection, csp, nonsense is a must, and \nyou should be using Csp nonces. Damien Bowden: not all \ntechnical stacks support that. Damien Bowden: I used angle because Angle can \nactually has full support for Csp. Nonsense, and into providers say angler 17. So if I send \na nonce from the back end to the front end, I can add that to the Angler providers, and \nthen they'll add it to all the generated Javascript. And for the modules, or \nwhatever they're creating. So so Angla is actually really well and really \ngood. It's protecting the session. Damien Bowden: whereas other frameworks \ndon't support. Csp answers. So I try to avoid technical stacks that don't \nactually support Csp, nonce. No. Damien Bowden: And Damien Bowden: then after session \nprotection. So you have authentication, and you have to sign out. You have session. \nThen you also need to protect the build and the setup. So you have continuous \nintegration, continuous development. So Damien Bowden: one of the main things here \nis that you have to say I automate everything from 8 to zoom. The more automation you \nhave and the better you can reproduce things that the easiest to deploy and the \neasiest to validate errors. For example. Damien Bowden: if I'm and need to rotate secrets, and it's not automated in my deployment. And you \ndon't want to be doing this from hand. You wanna do this automatically and you wanna rotate \nthe deployments. Maybe whenever you release, build, or whatever. So a typical Cicd, I use \nazure devops or use github on github actions. Damien Bowden: I use some other ones as \nwell. But did it do. I prefer the most and normally what I try to do is I have a an \nautomatic build. I have an automatic quality build and I'll have a automate deployment or \nthe development deployment build. And then, of course, I have it to build for \nthe infrastructure as well, so Damien Bowden: I portray to build the whole \ninfrastructure from throw it. Deploying to aws, are deploying to azure, and things like \nterraform or biceps should be usually deployed to azure. And then, if I need to \nreproduce a dev test, prod environment, I want to rebuild it to a delete the whole \ntenant, and then deploy it again. I can set up the whole thing as infrastructure. That's \nusually something that you only do once or twice, but it's really useful. If you need to \nreset or redeploy or and change environment. Damien Bowden: then, of course, the Development \nPill deployment bills and I do them on every poll request, maybe just different ways implementing \nyour your get flows, or whatever. And but I tried to automate the whole thing, which is most \nimportant, and then, of course, the quality build. And I try to use always Sonic cloud. And I'm gonna \nuse sonic cloud as well for the quality build. And Damien Bowden: I tried to analyze the the code and have Sas tools now in Sona \nCloud, which is available. Damien Bowden: But it's slightly complicated when you're using different tech \nstacks and problem is that Damien Bowden: it's not so \neasy to. It is actually, when you know help. You need to reference Damien Bowden: one project from \nthe other project. To be able to do this on analytics and 2 different tech \nstack. So in this setup, I'm using angler, and I'm using a.net back end. So I'm analyzing \nfor.net in the build, and then I have to link in the Angler tech stack so that we get the analyst \nand the Anglophiles as well as the.net. So Damien Bowden: it's a little \nbit hacky. But we have to do is in your.net projects. If you want to \nanalyze 2 tech stacks using Sona Cloud, you have to reference the Angler project \nthe Ts and J's files, but just not use them. So I referenced them. But I don't show \nthem. We use them when you in the project, and with this reference, then Sona can then \nanalyze both the angle files and the.net files. Damien Bowden: So when I showed them under the uid and using Github is actually \nreally good integration using sunup. Damien Bowden: And I can add the badges then, and I could link them directly into my results \nfrom sono, whatever I'm using it. And so on. Damien Bowden: Another little thing \nthat's really handy, I think, is that if I have security issues or problems, they will \ndirectly be displayed in my get repo to saying, you have a security problem, just like \nany other Sas tools. And then you have security warnings here to saying you need to \nfix this this and this in your application. Damien Bowden: So I think this is \na really easy and good setup, for. Damien Bowden: I think, with the maximum \npossible security web applications. Damien Bowden: And then you have \ngreat tools to analyze as well. Damien Bowden: And maybe you want to \nsay something to that to Denise, do you. Denis Troller: Well, I do have a 1 or \n2 questions for you. Thanks for the presentation. First.st you you mentioned that \nusing angular 17 because it supports non Csp, and do you know of any other front \nend library that would be applicable, I'm thinking, mainly reactive being the other \nbig one. Is there any solution that works. Damien Bowden: I haven't seen any react using a \nCsp nonsense so easy to integrate. And so what we do in a lot of Csp react applications. Either \nwe create a local index file. We add the nonce to that, and that we use it for the base files. \nAnd then we have to add in hashes as well. Damien Bowden: And but there's no direct \nand integration for Csp non sustain react. If I'm using blazor server, you can use Csp \nnonces. If I'm using Blazor Web assembly, I cannot use nonsus, so I tend to use blazor. And \nwith the new.net versions only at the moment. No, because you don't have support for \nCsp, non system, blazor, web, assembly. Denis Troller: Second. Damien Bowden: So, and Vujs. And as far \nas the last time I checked it doesn't support Csp answers. And I think that's \nthat the big 4 ui frameworks that I use. Denis Troller: Can make sense. Denis Troller: and yeah, you quickly went \nover the authentication part and using open id Denis Troller: maybe you want to explain with \nwhat an Idp is, because maybe not everyone is Denis Troller: fully aware of what that \nmeans. When you're doing web development today. Because in the old days you would \nuse whatever solution Microsoft provided with you. And you would, you would basically \ndeal with your whole system inside your app. Denis Troller: And what happens today is \nthat the landscape is a bit different. Damien Bowden: Okay, so Damien Bowden: Idp is identity provider. And Damien Bowden: in an enterprise \nscenario. And this is really important, there's no almost no companies \nthat doesn't have its own identity provided. So a typical company uses \noffice 3, 65. That's the the big Damien Bowden: Enterprise provider in \nthe Enterprise world. So if I was making application. I don't want to be managing \nand and adding users, removing users, making sure the user no longer valid, making sure \nthat the data is correct when they get married, you have to change the emails update. I \ndon't want to be doing all that stuff. And Damien Bowden: so why do it twice, when \nyou already could just reuse that type of implementation from the company, because \nthe company already has this on board and off board of identities, account management \nand all that stuff. And then, second of all, and when I implement a my own identity solution, \nI also have to implement my own security. So if I'm using, ask you to call identity. \nAnd it's very good solution as well. And Damien Bowden: I also need to keep it up to \ndate. And there's always new attacks happening, new problems happening, and I have to make \nsure I'm using recommended best practice. For, for example, the latest, as we don't know \nidentity doesn't support pass keys are feet or 2 keys, whereas nearly all the other identity \nproviders which support open id, connect, or Samuel do support us, for so if I use an \nenter Id. I get pass keys and feed or 2 keys out the box where she do not get that with and \naspirin identity, and I do not need to manage it. Damien Bowden: If you're using passwords, what happens if people forget the passwords \nyou have to implement your own password management policy where you can just reuse \nthe company ones. If you're using the company. Damien Bowden: then if I make an application where \nI'm deploying it to multiple scenarios, and I don't want to create a new authentication identity \nsolution for every single deployment. I can just say, Here's my open id connect. You. Take care \nof the rest. That's where you are. The expert. Damien Bowden: So I asked you to focus \non that, and I want to remove and do as little as possible with that. \nSo we can focus on the business. Damien Bowden: So the easiest and \nleast complex way of doing it is to actually use openly, connect \nand not roll out your own art. Damien Bowden: and people seem to think \nit's quicker and easier to use name, password, and login, and it starts off \nreally fast, and you get your cookie back Damien Bowden: and everything's gone well. But \nonce your application gets successful and that you have to start actually managing users from \nrotating and updating them. Then you get into a massive problems, or when you have to deploy to \na new company. A lot of enterprise will not allow you to roll roll out your application, though, if \nyou're not using a proper authentication. So if you call with your own authentication system, \nand you want to connect into my enterprise, especially if I'm a big enterprise, I will say \nyou're not allowed. Connect that up. You have to. Damien Bowden: Edu, Sam, or openly \nconnect. There are stunts of snow, so Damien Bowden: it's easiest in \nthe best way forward. If you want to make your application \nreusable and the most secure. Damien Bowden: and that's why roll out your own \nart should be always for me the last resort, even if you do it well, you're you're making \nmore problems than you're actually saving. Now. Damien Bowden: the sort of scenarios, for \nexample, of in business to consumer market. And you have to implement your own art because \nyou don't know your clients that are coming from different places. So you have really great \nsolutions for that as well, for example, art 0 is a really good B, 2 C, and product. Or \nyou can use your own system. And if you need to, for example, identity, save or open it. \nIf you want to roll that out yourself, and then you have full control \nand customization for that. Damien Bowden: And Damien Bowden: it depends, of course, where \nyou're deploying what you're building, and but you have to try and choose the one \nwith the least effort and least maintenance. Damien Bowden: and if you do go the own \nway. Then you have to keep up the modern standards on modern recommendations. For example, \nusername password is something that should be no longer pushed or used. And and we still see new \napplications implementing with username password, which is not recommended, or this would \nbe really avoided. And this is one of the typical security. Always you have a single \nfactor, authentication. And you're handling, maybe finance state, or you're handling \nhealth data. So it's it's totally wrong. And and these are the things that we \nhave to as developers move away from. So Damien Bowden: we should be choosing \narchitecture which allows us to implement the best possible authentication and best \npossible application security. And usually that means just don't implement yourself, \nbut delegate that to an identity provider. Damien Bowden: Does that help. Denis Troller: Yes, I must say I Denis Troller: fully agree with that. Having tried \nto implement such thing, I quickly realized that Denis Troller: the best idea was not to do it, \nbecause it's it can get hairy very quickly. Denis Troller: Kill so. Damien Bowden: And maybe that's another problem. People think open id connect. And \nO, 2 was really complicated. And Damien Bowden: maybe the problem is the Damien Bowden: we don't have \ngood documentation, because each Damien Bowden: solution only make documents their \nown solutions, and they don't actually share the shared solutions. And but at the end of the \nday, if we're doing a web application, it's pretty simple. Now you just use open id connect, \nconfidential client, and then you try to connect to any Idp doesn't matter which one, and then \nfollow their recommendations, and it should be fairly simple. So the authentication part is easy. \nThe session protection is all also fairly simple. Damien Bowden: The authorization is always \ndifficult, because that's always application specific. And there's a thousand ways of solving \nthis. And how do you log out the dynamic or static authenticate authorization. It's not ever \ndifficult. And it's every new application, its own authorization problem. And it has \nits own authorization. Business logic, which is different. So authorization is \nnever easy to solve. The others are. If you're using the right tools in the right mindset. Denis Troller: Right. Denis Troller: do you? Denis Troller: The question is the so you \nmentioned use in a cloud? So thank you for that. Do you have any kind of specific \nflow. You follow when you use in a cloud. Damien Bowden: Okay. So Damien Bowden: we try to use it Damien Bowden: really early in our development. \nSo anytime we have a new application. Damien Bowden: depends on the application. \nSonic cloud is not in my country hosted. So the 1st thing we have to make sure is that \nwe're actually allowed. Use the client date and put onto Sona Cloud. So the 1st flow we have \nis decide if we're allowed to use Sona Cloud or Sona cube. And these are 2 different \ntypes of things we've decided, because Damien Bowden: if we're doing a high security \napplication where the date is not allowed, leave the country, or we have to get the permission. The \nclient, and they they don't actually allow that. Damien Bowden: That's the 1st decision we \nmake. And son of Cloud, if always, if possible, because then we don't have to manage it, look \nafter sales. Otherwise we could use on a queue. Damien Bowden: and after that, then what \nwe try to do is we try to build in the quality. Build as early as possible, and but \nsometimes the quality bill takes long, and Damien Bowden: we don't want to be. \nFor every little commit every little push be run of this quality. Build the whole time, and if you have a big project it can \nmaybe take up to 10 min sometimes, and and you don't want to wait for 10 min, and \nevery commit, and otherwise you stop checking it. Damien Bowden: So we try to optimize. Damien Bowden: There's no proper answer \nto that, either, and we try to use it as much as possible, and but we need \nto keep the bill times really short. Damien Bowden: and before we merge \nyou, should we have dev test prod and sometimes integration. Anytime, \nwe're making a release to we always run the complete code analysis \nand the sonic queue cloud analysis Damien Bowden: before actually releasing. So I \nthink this is great quality control. And it's Damien Bowden: they're Damien Bowden: the quality the code controls \nthat we get out of it is this really high quality. And this this saves us loads of time \nas well. So I'm doing a lot of market for you. Denis Troller: Thanks. Yeah. Damien Bowden: Tool. Denis Troller: And Damien Bowden: Fully integrated in the \nbuild. And that's the main thing. It Damien Bowden: everything has to be \nautomated. It's just the the golden rule. Damien Bowden: Yeah. Denis Troller: I again agree, build deployments quality control. If it's \nnot automated very soon, you will not do it. Denis Troller: Yeah. So it needs to be Denis Troller: transparent and \npainless, otherwise nobody knows it. Damien Bowden: Another thing we do is over. \nThe sequence, then, is that, for example, when we're doing local development, I we \ntry to have as little as possible and cloud dependencies. So all a secrets we save under the \nuser profile using user secrets from visual studio Damien Bowden: or from the.net tools. And \nonly when we deploy it to deployments do we actually start using azure key vault \nor cloud service to store the secrets. So we have no sequence. Anyway, inside the the \nbuild, and then with the azure devops or with the Github actions. Then then there's different \nstrategies to how to actually implement the sequence for the build pipelines, or the the \nresource. So the deployments and so on. But Damien Bowden: then, yeah, I think it works out. \nAll of them fit in well together, you can see that they they walk together different tools, and it \ndoesn't matter if you're using github actions now, or using azure devops. And they all work \nwell with all these different tools, I think. Denis Troller: And Denis Troller: for me, for me, experience which part of the all that \nyou've presented do most developer like Denis Troller: have problem with like, what's the biggest issue you encounter, \nor as far as understanding or. Damien Bowden: So Damien Bowden: I think it's. Denis Troller: Security. Damien Bowden: Authentication which \nflow to use where is always the same. Damien Bowden: And so you get an awful lot of \narchitects. They try to build the architecture, and they just design it. They they have \nthe different patterns that they start doing. This is, I want to do containers. I \nwant to use this tool. I want to use this, and then they try to add the security at the end. Damien Bowden: and that's where they all crash, \nbecause then they're trying to fix at the end or tried to fit it in, and they should be \ndoing as part of the architecture from the start. They should be also doing the security \ncontext and security architecture same time. So Damien Bowden: if they start splitting \nup applications of the micro services, artists not splitting it out into different uis. \nThey're all completely separate applications. And you have to start solving problems like downstream \nApi access. You have to single sign on. And the security gets really complicated. And you have \na fairly complicated security setup, then, where you should keep it simple, and you only \nhave one, maybe one web ui, and you don't have separated web uis within the ui, and your security \ncontext is much simpler. And so you need to Damien Bowden: have an architect that's security \nat the same time as doing the architecture from the application. I think that's where most people \nfail is that the decisions that are made at the start is what's makes it really hard to secure \nthe end of example is that doing a some type of coup and container deployments? You have to \nbuild everything locally using Htp. And because you don't have the time or the knowledge \nhow to build it up. Locally using Hps, you deploy it. You're still using Htp on your \ndeployments, and then you have phones with security, because you have no security \nway. If you're using Htp and not Hbs. Damien Bowden: and then suddenly, you have \nto stop building in things to add into Hbs between the different connections, \nand then you have to earn the security headers between every connection you have \nto decide. If you're using Api to Api, or using delegated authorization, flows. \nIt gets really complicated as soon as you start splitting it. So I also keep it simple \nand don't split unless you really need to, and when you're splitting it, then stop planning \nthe authentication. And then, of course. Damien Bowden: should I use tokens, or should \nI use implement my yachts? For example, I see people implementing Jwt's \nand creating the Jwt's themselves and code from a username password flow. That's \nthat's always wrong. You should never do that because you're open to so many different \ntypes of attacks, which is always gonna get you later down the path. If you ever \ndo a pen test yet failure, for example. Damien Bowden: because you \nyou're open to impersonation, you're open to semetically should \nnot be used anyway, for Jwt's Damien Bowden: just so many things goes \nwrong with that type of approach. And then. Damien Bowden: if you just read open, you \nfollow one of the guidelines. When the big service providers actually delivered \nat the documentation for each of the identity providers a secure Token service, \nor the products that actually implement this. Damien Bowden: they recommend best practice, \nusually pretty up to date. So, for example, at the moment. There's a new best practice \ncoming out called and best practice for Bro. Browser based applications which \nis pretty much the same stuff, as I'm saying with more technical language, and \nrecommend the back end for front, and so on. But Damien Bowden: they recommend, and Damien Bowden: pretty much everything \nyou should be doing nowadays, and it keeps getting updated or \nchanged. And if you look at, then what Damien Bowden: ping identity, or Octa or Microsoft \nenter Id recommend! You see them almost parallel. What they recommend, or you look at the \nidentity of a documentation. The best practice recommendations is nearly always up to date \nthere, and if you follow what they're documenting. Damien Bowden: you know, moving in the right \ndirection. That's why I always open Id connect. I never recommend Samuel anymore as well, not \nbecause Saml is not a good. It's because it's just too complicated. And you can run into \ntroubles really fast if you start using Saml. That's why it's much easier to implement open \nid connect at the moment, and not Samuel. And Damien Bowden: that's why I \nalways try to choose the most simple solution and use what's \nrecommended and best practice. Denis Troller: Okay. Denis Troller: well, thank you very much for all \nthat. I think it's gonna be time to move on to Denis Troller: some housekeeping and some \nQA. Before that. Do you have any any last Denis Troller: words? Denis Troller: What's what's next for you? Damien Bowden: Okay. So I I do teach this as well, \nand show people how to implement this as well. And Damien Bowden: anything I make or try I always \nput open my Github repos. So if people have questions after this, so I want to get back \nand show me different channels, such as Rusana doesn't matter. And you finally, everything I \ndocument on Github and I always get to update and keep the best practice recommend. I always \ndo new and templates and new Demos had to do this and just check out my Github repos \nas well, or ping me directly as well. And Damien Bowden: you you find \neverything online anywhere. In Github. Damien Bowden: especially the new \nspecifications, the standards which are coming. Denis Troller: Okay, well, thank you very much. \nAnd with that I think Mane shits back to you. Manish Kapur: All right. Manish Kapur: Can you see my \nscreen Damian and and Dennis. Damien Bowden: Yeah, it's black. That's it. Denis Troller: But it's coming. Manish Kapur: Not yet. Manish Kapur: It's working. Denis Troller: Yes. Yeah. Manish Kapur: Okay, Manish Kapur: you know, here I am in 2024, trying to figure out how zoom sharing \nworks. Sorry about that mishap. Manish Kapur: But thank you, Damian and Dennis. \nIt. That was great content. I appreciate, Damian, you taking the time and joining us as a \nguest speaker here in this our monthly webinar. Manish Kapur: We have had some \nquestions and thank you to our panelists for answering those questions on the fly Manish Kapur: as we gather \nsome more questions for to answer them. Live in the next couple \nof minutes. I do want to, basically. Manish Kapur: you know, invite you to answer \nthe next short pool that will be appearing on your school screens shortly after this \npresentation, and tell us whether you would like us to be whether you would like to be \ncontacted, learn more about the product, pricing, etc, and then also what to invite you to join our \nnext 2 upcoming webinars in the month of June. Manish Kapur: The 1st one is everything \nyou need to know about Sona cube. I did see some Sona cube questions come in, so that \nwould be another good avenue for you to, you know. Learn more about sona cube and \nunderstand what that product does. And then we also have a dedicated session \nfor Federal agencies coming up in June Manish Kapur: which it's although it \nsays it's for Federal agencies. But I personally think it will be beneficial \nfor anybody who has some strict governance and compliance requirements. So if \nyou ha! If you would like to know more about our how we help in those \nenvironments, and for those customers Manish Kapur: that Webinar is on June 13, \nth and that will be beneficial for you. Manish Kapur: alright should we take some Manish Kapur: questions of. Damien Bowden: That golf. Manish Kapur: Are you? Are \nyou ready for it? Damian? Manish Kapur: soul! Manish Kapur: Why do you recommend? Manish Kapur: backend of front-end \narchitecture? Bff, architecture. Damien Bowden: Okay? So Damien Bowden: the problem is that before. \nAnd when we had this technology spit between, and when people start doing user interfaces, using Javascript technologies like \nangle react to Vujs or whatever you're using. And we had a spit between the \napplications. And then we start securing the Damien Bowden: Sba applications in the front end Damien Bowden: on your in your browsers. And \nthen we had a back end where we did. The Apa calls in the business, and the problem was \nthat. And we are using openly connect to authenticate the applications. But \nwe're storing the tokens and the Damien Bowden: and sensitive data that we \nand people talk to rob in the browser. So it's eating your local storage or your session \nstorage, or you're using a maybe a web walker which is accessible from Javascript. And \nthe problem is that it's impossible to prevent an excess attack, and you always \nto be always a new way of doing excess. And if I have sensitive data stored in the \nbrowser. It's easier to rob that. And and Damien Bowden: by implement the back in the \nfront. Then we've actually removed the attacks office because there's there's less to rob in the \nbrowser you can take still take over the session, but there's no tokens to rob which I can \nstart using that against the Api. Now I can. The cookie is, has its own browser \nprotections, and it's much harder to rob, and if you implement your cookie protection pro \nproperly, it's easier to secure it, as when you're using Jwt. Tokens which a single page application \nwhich stores these tokens in the browser. So Damien Bowden: there's less to rob, and it's \neasy to implement. So the backend for front and architecture. What it does is, and it \nsays every ui now is a confidential client. Damien Bowden: and with this type of setup that \nthe standard setup that most people do is they don't actually implement the business logic in \nthe same place as the front end ui application. They just implement the layer, which is \nthe confidential client for the security. All the security is moved \ninto this bff, the backend. Damien Bowden: And then all it does is actually \nis, proxies the request from this ui part of the application. The angler reactor rule and sends \nit through the back end to whatever downstream. Api uses some type of proxy, so it comes in with a \ncookie to my back end. It cannot access anything. Cross, domain, cross site. Everything is blocked, \nexcept exactly the same domain, same origin. Damien Bowden: and then from there, then you \ngo through the proxy, and then you can use anything you want. After that you can use the \ncertificate and access, token and application access token. There's so many different things \nyou can use between app to app security. Damien Bowden: but behind that. Then \nyou could proxy that you get the data from whatever businesses, and then you can \nbring it back. No, you don't have to use back in the front end. What I set up here \nis without the back end front end. I have the business logic directly in the back end. So \nyou don't actually need to make the second hop, and then the performance is almost the score. The \nonly difference in performance is, I'm using a cookie instead of a Jwt. But it's still only one \nhop, and you don't usually notice that, anyway, because if you're doing database requests, anyway, \nthat's the slowest in the whole chain or so. Damien Bowden: I don't see any Damien Bowden: performance problems \nwithout either. And to be honest, so it's more secure. Just it's hard to rob \nstuff, and it's not perfect. Of course, nothing is ever perfect, but it's it's now \nthe recommended way of doing security. So Damien Bowden: when you put it really short, everything is a confidential client. Every ui has \na back end somewhere which is used for security. Manish Kapur: Okay. Manish Kapur: Thanks. Damon, I do have a couple \nof more questions and we are, you know, coming up to the time we have about 7 min, 6 min left so. \nBut I will go through the questions here quickly. Manish Kapur: what's the best way to \nhandle unit and integration tests for an authenticated application as part \nof the CICD. Pipelines from pipeline. Damien Bowden: Okay. So for you to test. \nAnd that's easy. And you're you're you're testing directly against the application. \nYou have no security involved in it. And Damien Bowden: there's no problem \nwith that for integration test and for Damien Bowden: Apis, it's slightly more \ndifficult depending what type of Api you have. So there's 2 different types \nof Apis. You have Apis for delegated user apps flows. And you have Apis for \napplications. So if it's an Api which is used from an application. And it's really \neasy to set up an integration test. Then, where you test from the outside and you test \neverything from the outside include into security. Damien Bowden: So there's lots of examples. \nI seen online how people actually do that. If you're doing a delegate flow, then you have \nto type and make a back door, and in some type, a build environment where you can allow a \naccess token to be given to a non delegate user because a delegate access token \nshould be only acquired by a user login, which means you have to get consent. And some \nhuman has to actually click. Okay, somewhere. So if you shorten that out for integration test, \nwhere you want to test everything against the Api. Damien Bowden: and you have to make a back \ndoor. And then you have to be really careful that I cannot actually use that backdoor \nin a production deployment. So it should be only on your development environment. So \nI test from the outside include the security of the integration test against \nthe Apis, and then and you can do the whole lot into the database and \nbackup. Or that's up to this different Damien Bowden: strategies as well. You can use \ncontainers as well to rebuild it to them. Good tools using their their aspectical back \nends. How to build up integration tests. I think I seen one or 2 blogs, and \nnot a month ago what was about that? Damien Bowden: It's pretty easy set up, and \nI'd recommend, try and have a look at those blogs and build it, but always have to include \nthe security in your integration test as well, I think, because then you get the claim. \nSo you get the their use also in some of the happy calls. Now, of course, you can go lay \nit down and just test against the layers. Just Damien Bowden: it depends. It's Damien Bowden: there's no correct answers \nto that. But I tried to include as much as possible when I'm doing integration tests. So \nif something does go wrong I'll find it. I just don't know what, but if it passes I know \nthat I think the whole thing is walking. Manish Kapur: Okay. Manish Kapur: you talked about Saml \nand open Id. Are there any advantages to use one over the other in \nterms of Samuel and open id. Damien Bowden: I don't see any advantages from \na security perspective if bought done correctly, and but there's less knowledge on less Damien Bowden: development \nin the Samo world, I think, and open id connect is moving really \nfast forward with the news protocols, new specifications. OR. 2 and open 80 connect \nis more or less the one there, because the same people right into different specs and are \ninvolved in both of these teams. And there's new Rcs new specifications being created and made \nthe whole time based on OR. 2 and open id connect. Damien Bowden: And Damien Bowden: it's moving forward. And I \nthink one big advantage for opening connect is much simpler to implement and \nunderstand that, compared to Samuel Damien Bowden: and Samuel, is much \nharder to implement in this Xml base, and you have regular reserve \ninitiated, a client initiated, and it's really hard to configure that, and you \nneed a tool to help you configure it. And if you don't know what to do, and you might be making \na security hole. Or if something does go wrong, you have to really search long and hard to \nfind someone that actually understands it. Damien Bowden: And so it's complexity is \nthe main disadvantage of sound. Lighting and open. Lady connect is much \nsimpler to implement and roll out. Manish Kapur: Okay, thanks. You \nalso spoke about client to service, authentication and authorization. Manish Kapur: Let's say, I \nhave multiple micro services. What is the recommendation for service to \nservice, authentication, and authorization Manish Kapur: which Osid flow. Should I use that. Damien Bowden: Helps with the pay. Manish Kapur: Question. Damien Bowden: Yeah. So there's about 7 \nor 8 different correct answers to that. Damien Bowden: So Damien Bowden: it depends how you set up your Damien Bowden: Jose the Api to Api so, and what \nMicrosoft does, and they use this thing called the on behalf of flow. And so they're using \ndelegated access tokens which are given to the application on behalf of that user. So somewhere \nup to chain, you have a user interface that logged in. And it's the best way of doing this \nbecause you're reducing the amount of access. So Damien Bowden: Apa, one does \nnot actually trust Api 2, it just does trust the access token, the \nuser which authenticate to the Api one. So you actually reduce the blast radius by \nusing on behalf of flow. So you're using. I asked you to use a delegate access token \nfor any downstream Apis for my Api. Now. Damien Bowden: if that's not possible, \nfor if you're in any other world, and you can use that a Grant exchange as well, which is a similar thing possible. But usually \nyou just use a client. Credentials flow, which is an Api to Api, which means you have a \nfull trust between the 2 servers, which means Damien Bowden: that Api is fully \ntrusted by your Api. So anything that's allowed to do in the Api with \nhis access token, and it's full trust. Damien Bowden: So you want to reduce the \nblast racing. I may be made less things possible. Some things to do is I never \nmix delegated access tokens on Api access tokens. I call applications. You have to keep \nthem separate. So I make a application. Api, either for an app to app or a user using the \napp, and I keep them completely separate. And then I can actually implement my security test \nand then separate on them. So I try to separate Damien Bowden: what the app is being used for. Damien Bowden: and I never mix delegate \nin the application tokens ever and then, and decide after that. Now we could also \nuse certificate authentication from Appe, or I can use an Api key as \nwell. Am I try to avoid that? Damien Bowden: But Damien Bowden: all of these are \nokay in certain scenarios and Damien Bowden: bought Damien Bowden: the main scope, is. Damien Bowden: try to reduce the blast or Asias, \nand only make it possible for the Api from one application to do as little as possible, and only \nwhat it's allowed to do in the other application. Damien Bowden: But then keep on complicated \nbecause it has to be simple. If it gets complicated. It's bad, anyway. And then, \nof course, then, when I'm accessing Apis, I don't want to pick, saying I get the access \ntoken, and I have to go to the well known points, and then I get I get the data. You should \nonly do that flow once, and then the next time you just say I've got a valid access token. \nI use that again. You have to reduce the amount of network calls as well, and so simplicity \nand blast races would be maybe 2 key words. Manish Kapur: Okay, thank \nyou. That was very helpful. Manish Kapur: One last question. \nDamian. Considering the applications are moving towards using more Saml or open. Id. Manish Kapur: Do we see individual logins fade \naway, or does it still have any advantages. Damien Bowden: I'm not quite sure. What I \nmean is this, the Login sign in logs and. Manish Kapur: Cause, yeah. Damien Bowden: It doesn't matter what you're \nusing. You see, both them are nearly in all the provided. So if you use an enter Id, I \nuse an odd 0 octa ping those logs available. Damien Bowden: no matter which one you're using \nin their providers inside the applications, and Damien Bowden: you'll see your interaction with it depend on the lab we are using. \nYou'll see more, you see, less. Damien Bowden: I'm not sure if you \nunderstood the question correctly, though. Manish Kapur: Yup. So if the person who \nasked that question, if you have any, follow up questions, do reach \nout to us on the community forum Manish Kapur: and we will \nexpand on that. But I think Manish Kapur: that should have \nanswered that question, I'm thinking. Manish Kapur: okay, I think it's time to wrap up. Manish Kapur: So thanks again, Damian \nand Dennis, our presenters for today, and thanks to all of you who joined \nus today and posted your questions. Manish Kapur: I would also take this opportunity \nto thank Camille and Emma from our events team for all their support and hard work behind the \nscenes. They run these webinars every month, and so I should take this opportunity to \nthank them. I think we have covered all of the questions, but if we didn't \nget time to cover any questions, we will respond to them. And we will post the \nrecording and the QA. On the community Forum Manish Kapur: feel free to visit our website. \nsonos.com to learn more information about clean as you could, and some of the other topics \nthat were answered in the QA chat panel. Manish Kapur: Thank you again for providing \nthe feedback that you've shared with us, and we will look forward to seeing \nyou all in the next webinars. Manish Kapur: Thank you. Have a good day. Damien Bowden: Thanks. Denis Troller: Thank you.",
+  "fetchedAt": "2026-03-14T09:22:58.645Z"
+}

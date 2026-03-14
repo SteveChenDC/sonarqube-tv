@@ -1,0 +1,3633 @@
+{
+  "videoId": "v180",
+  "youtubeId": "dY76ed3YBaw",
+  "segments": [
+    {
+      "text": "all right cool so let's get started",
+      "offset": 2820,
+      "duration": 5819
+    },
+    {
+      "text": "hello everyone and welcome to another",
+      "offset": 5460,
+      "duration": 6020
+    },
+    {
+      "text": "session of our clean code webinar series",
+      "offset": 8639,
+      "duration": 6181
+    },
+    {
+      "text": "thank you so much for joining us today I",
+      "offset": 11480,
+      "duration": 5559
+    },
+    {
+      "text": "am kirti Joshi and I lead the Enterprise",
+      "offset": 14820,
+      "duration": 4860
+    },
+    {
+      "text": "product marketing team at sonar source",
+      "offset": 17039,
+      "duration": 5101
+    },
+    {
+      "text": "and I'll be your host and moderator for",
+      "offset": 19680,
+      "duration": 3720
+    },
+    {
+      "text": "today's session",
+      "offset": 22140,
+      "duration": 3840
+    },
+    {
+      "text": "and I have with me Brian cipolloni from",
+      "offset": 23400,
+      "duration": 4740
+    },
+    {
+      "text": "the sales engineering team who's the",
+      "offset": 25980,
+      "duration": 4379
+    },
+    {
+      "text": "presenter for today's topic",
+      "offset": 28140,
+      "duration": 4320
+    },
+    {
+      "text": "so Brian's going to be talking to you",
+      "offset": 30359,
+      "duration": 4681
+    },
+    {
+      "text": "about how you can effectively scale",
+      "offset": 32460,
+      "duration": 4460
+    },
+    {
+      "text": "clean code for your growing Enterprise",
+      "offset": 35040,
+      "duration": 4500
+    },
+    {
+      "text": "he's going to cover some actionable",
+      "offset": 36920,
+      "duration": 4360
+    },
+    {
+      "text": "items and he's going to demo some",
+      "offset": 39540,
+      "duration": 3420
+    },
+    {
+      "text": "capabilities that you can start",
+      "offset": 41280,
+      "duration": 3599
+    },
+    {
+      "text": "implementing today",
+      "offset": 42960,
+      "duration": 4320
+    },
+    {
+      "text": "so before I go ahead and let Brian",
+      "offset": 44879,
+      "duration": 5041
+    },
+    {
+      "text": "introduce himself I'm going to take a",
+      "offset": 47280,
+      "duration": 4320
+    },
+    {
+      "text": "brief minute to go over some",
+      "offset": 49920,
+      "duration": 3420
+    },
+    {
+      "text": "housekeeping items",
+      "offset": 51600,
+      "duration": 4680
+    },
+    {
+      "text": "so this is a 30 minute session that",
+      "offset": 53340,
+      "duration": 4739
+    },
+    {
+      "text": "includes a q a",
+      "offset": 56280,
+      "duration": 4020
+    },
+    {
+      "text": "so throughout the session you can submit",
+      "offset": 58079,
+      "duration": 4800
+    },
+    {
+      "text": "your questions via the Q a box in Zoom",
+      "offset": 60300,
+      "duration": 5700
+    },
+    {
+      "text": "or not the chat box but the Q a box",
+      "offset": 62879,
+      "duration": 5641
+    },
+    {
+      "text": "and on our side we have two panelists",
+      "offset": 66000,
+      "duration": 5640
+    },
+    {
+      "text": "Jason and Silva from the services team",
+      "offset": 68520,
+      "duration": 6240
+    },
+    {
+      "text": "who will triage your questions some they",
+      "offset": 71640,
+      "duration": 5940
+    },
+    {
+      "text": "will answer directly during the webinar",
+      "offset": 74760,
+      "duration": 4740
+    },
+    {
+      "text": "and others they will kind of you know",
+      "offset": 77580,
+      "duration": 3899
+    },
+    {
+      "text": "queue up so that Brian can address them",
+      "offset": 79500,
+      "duration": 5040
+    },
+    {
+      "text": "at the end of his presentation",
+      "offset": 81479,
+      "duration": 5161
+    },
+    {
+      "text": "another thing to note that this session",
+      "offset": 84540,
+      "duration": 4439
+    },
+    {
+      "text": "is being recorded and so in a few days",
+      "offset": 86640,
+      "duration": 4440
+    },
+    {
+      "text": "you should receive an email with the",
+      "offset": 88979,
+      "duration": 4021
+    },
+    {
+      "text": "recording",
+      "offset": 91080,
+      "duration": 3600
+    },
+    {
+      "text": "um another thing is that after the",
+      "offset": 93000,
+      "duration": 3479
+    },
+    {
+      "text": "webinar we are going to send over a",
+      "offset": 94680,
+      "duration": 4140
+    },
+    {
+      "text": "survey uh please please do tell us what",
+      "offset": 96479,
+      "duration": 4921
+    },
+    {
+      "text": "you liked uh where we can improve and",
+      "offset": 98820,
+      "duration": 4979
+    },
+    {
+      "text": "what other topics and deep dive sessions",
+      "offset": 101400,
+      "duration": 5160
+    },
+    {
+      "text": "will be interesting for us to cover in",
+      "offset": 103799,
+      "duration": 4381
+    },
+    {
+      "text": "future webinars",
+      "offset": 106560,
+      "duration": 4440
+    },
+    {
+      "text": "all right so okay then without any delay",
+      "offset": 108180,
+      "duration": 5640
+    },
+    {
+      "text": "let's get started Brian uh the floor is",
+      "offset": 111000,
+      "duration": 5299
+    },
+    {
+      "text": "all yours",
+      "offset": 113820,
+      "duration": 2479
+    },
+    {
+      "text": "thank you Kirsty and uh thank you all",
+      "offset": 116939,
+      "duration": 4500
+    },
+    {
+      "text": "for joining me today uh I'm Brian",
+      "offset": 119159,
+      "duration": 4021
+    },
+    {
+      "text": "cipolloni from the sonar sales",
+      "offset": 121439,
+      "duration": 3960
+    },
+    {
+      "text": "engineering team uh one of the great",
+      "offset": 123180,
+      "duration": 5100
+    },
+    {
+      "text": "things I get to do here in my role is to",
+      "offset": 125399,
+      "duration": 4981
+    },
+    {
+      "text": "meet customers and help them get the",
+      "offset": 128280,
+      "duration": 3780
+    },
+    {
+      "text": "most out of our tools",
+      "offset": 130380,
+      "duration": 3660
+    },
+    {
+      "text": "in today's webinar I'd like to start by",
+      "offset": 132060,
+      "duration": 4860
+    },
+    {
+      "text": "sharing a case study from a major retail",
+      "offset": 134040,
+      "duration": 4680
+    },
+    {
+      "text": "that I've worked with a few years ago",
+      "offset": 136920,
+      "duration": 4080
+    },
+    {
+      "text": "that was struggling a little bit to",
+      "offset": 138720,
+      "duration": 6180
+    },
+    {
+      "text": "scale clean code across our organization",
+      "offset": 141000,
+      "duration": 5879
+    },
+    {
+      "text": "particular customer had been using Sonar",
+      "offset": 144900,
+      "duration": 4740
+    },
+    {
+      "text": "Cube for several years and they shared",
+      "offset": 146879,
+      "duration": 5821
+    },
+    {
+      "text": "with me that they were scanning 100 of",
+      "offset": 149640,
+      "duration": 6540
+    },
+    {
+      "text": "their code with sonar Cube and also they",
+      "offset": 152700,
+      "duration": 5640
+    },
+    {
+      "text": "had sonar Cube integrated with every one",
+      "offset": 156180,
+      "duration": 4080
+    },
+    {
+      "text": "of their Jenkins Pipelines",
+      "offset": 158340,
+      "duration": 3539
+    },
+    {
+      "text": "but even though they were scanning all",
+      "offset": 160260,
+      "duration": 3780
+    },
+    {
+      "text": "their code they didn't really feel like",
+      "offset": 161879,
+      "duration": 3841
+    },
+    {
+      "text": "they were seeing much of an improvement",
+      "offset": 164040,
+      "duration": 3900
+    },
+    {
+      "text": "in overall quality",
+      "offset": 165720,
+      "duration": 4140
+    },
+    {
+      "text": "so on the screen you can see the results",
+      "offset": 167940,
+      "duration": 3960
+    },
+    {
+      "text": "from a couple of the projects that we",
+      "offset": 169860,
+      "duration": 4140
+    },
+    {
+      "text": "reviewed together",
+      "offset": 171900,
+      "duration": 4559
+    },
+    {
+      "text": "and I'd like to take a quick poll just",
+      "offset": 174000,
+      "duration": 4319
+    },
+    {
+      "text": "to get everyone in the audience's",
+      "offset": 176459,
+      "duration": 4801
+    },
+    {
+      "text": "opinion on based on whether the results",
+      "offset": 178319,
+      "duration": 5700
+    },
+    {
+      "text": "you're seeing here which of these two",
+      "offset": 181260,
+      "duration": 5600
+    },
+    {
+      "text": "applications you think is best to raise",
+      "offset": 184019,
+      "duration": 6121
+    },
+    {
+      "text": "to release into production so we're",
+      "offset": 186860,
+      "duration": 6159
+    },
+    {
+      "text": "going to pop up that poll here and we'll",
+      "offset": 190140,
+      "duration": 5700
+    },
+    {
+      "text": "give you about 30 seconds to go ahead",
+      "offset": 193019,
+      "duration": 5821
+    },
+    {
+      "text": "and just you know give us your uh",
+      "offset": 195840,
+      "duration": 6000
+    },
+    {
+      "text": "opinion what you think uh is the the",
+      "offset": 198840,
+      "duration": 5340
+    },
+    {
+      "text": "best option here to release to",
+      "offset": 201840,
+      "duration": 5899
+    },
+    {
+      "text": "production foreign",
+      "offset": 204180,
+      "duration": 3559
+    },
+    {
+      "text": "and go ahead and choose which one you",
+      "offset": 209060,
+      "duration": 4179
+    },
+    {
+      "text": "think is best",
+      "offset": 211980,
+      "duration": 3600
+    },
+    {
+      "text": "um this is uh these are a couple of real",
+      "offset": 213239,
+      "duration": 5701
+    },
+    {
+      "text": "projects that we have been scanned with",
+      "offset": 215580,
+      "duration": 6360
+    },
+    {
+      "text": "sonar cube a few versions ago",
+      "offset": 218940,
+      "duration": 5159
+    },
+    {
+      "text": "um but these represent the the results",
+      "offset": 221940,
+      "duration": 4200
+    },
+    {
+      "text": "that we were seeing with this particular",
+      "offset": 224099,
+      "duration": 6121
+    },
+    {
+      "text": "customer uh we have a couple uh more",
+      "offset": 226140,
+      "duration": 7440
+    },
+    {
+      "text": "seconds here okay let's go ahead and",
+      "offset": 230220,
+      "duration": 7340
+    },
+    {
+      "text": "take a look at the results here",
+      "offset": 233580,
+      "duration": 6000
+    },
+    {
+      "text": "and uh",
+      "offset": 237560,
+      "duration": 5319
+    },
+    {
+      "text": "not surprisingly uh most of you uh",
+      "offset": 239580,
+      "duration": 6840
+    },
+    {
+      "text": "agreed that project B uh appears to be",
+      "offset": 242879,
+      "duration": 5341
+    },
+    {
+      "text": "the better code and that's the one that",
+      "offset": 246420,
+      "duration": 5899
+    },
+    {
+      "text": "you would likely release into production",
+      "offset": 248220,
+      "duration": 4099
+    },
+    {
+      "text": "the truth is here is that this",
+      "offset": 255720,
+      "duration": 4079
+    },
+    {
+      "text": "particular customer had really no idea",
+      "offset": 257699,
+      "duration": 3720
+    },
+    {
+      "text": "whether or not either of these",
+      "offset": 259799,
+      "duration": 3781
+    },
+    {
+      "text": "applications should be released",
+      "offset": 261419,
+      "duration": 4261
+    },
+    {
+      "text": "when we dug deeper into these projects",
+      "offset": 263580,
+      "duration": 4740
+    },
+    {
+      "text": "we found that the first job of project",
+      "offset": 265680,
+      "duration": 4140
+    },
+    {
+      "text": "project a",
+      "offset": 268320,
+      "duration": 5040
+    },
+    {
+      "text": "had over 1600 tests enabled in addition",
+      "offset": 269820,
+      "duration": 6420
+    },
+    {
+      "text": "to the rules that we provide with our",
+      "offset": 273360,
+      "duration": 5100
+    },
+    {
+      "text": "products out of the box this particular",
+      "offset": 276240,
+      "duration": 5399
+    },
+    {
+      "text": "user had gone and found every single",
+      "offset": 278460,
+      "duration": 6120
+    },
+    {
+      "text": "Java plug-in that they could find out",
+      "offset": 281639,
+      "duration": 5521
+    },
+    {
+      "text": "there in our community and they",
+      "offset": 284580,
+      "duration": 4740
+    },
+    {
+      "text": "installed them and they also enabled",
+      "offset": 287160,
+      "duration": 4860
+    },
+    {
+      "text": "every single rule that was available and",
+      "offset": 289320,
+      "duration": 4379
+    },
+    {
+      "text": "some of these rules were even duplicates",
+      "offset": 292020,
+      "duration": 3360
+    },
+    {
+      "text": "of each other so if there was a",
+      "offset": 293699,
+      "duration": 4081
+    },
+    {
+      "text": "particular issue in their code that",
+      "offset": 295380,
+      "duration": 4860
+    },
+    {
+      "text": "would create multiple issues with sonar",
+      "offset": 297780,
+      "duration": 5100
+    },
+    {
+      "text": "Cube so in this particular case there's",
+      "offset": 300240,
+      "duration": 5820
+    },
+    {
+      "text": "over 12 000 open issues and these",
+      "offset": 302880,
+      "duration": 5460
+    },
+    {
+      "text": "require tens of thousands of remediation",
+      "offset": 306060,
+      "duration": 3359
+    },
+    {
+      "text": "effort",
+      "offset": 308340,
+      "duration": 2760
+    },
+    {
+      "text": "sorry tens of thousands of hours of",
+      "offset": 309419,
+      "duration": 4081
+    },
+    {
+      "text": "remediation effort so when I asked the",
+      "offset": 311100,
+      "duration": 5280
+    },
+    {
+      "text": "team how they use these results uh",
+      "offset": 313500,
+      "duration": 4740
+    },
+    {
+      "text": "considering that this project had never",
+      "offset": 316380,
+      "duration": 4920
+    },
+    {
+      "text": "met any sort of quality standard their",
+      "offset": 318240,
+      "duration": 5760
+    },
+    {
+      "text": "response was well we really don't we",
+      "offset": 321300,
+      "duration": 4679
+    },
+    {
+      "text": "gave this particular team a waiver and",
+      "offset": 324000,
+      "duration": 3120
+    },
+    {
+      "text": "they always released their project",
+      "offset": 325979,
+      "duration": 4381
+    },
+    {
+      "text": "regardless of what sonar Cube's saying",
+      "offset": 327120,
+      "duration": 5820
+    },
+    {
+      "text": "in the second project really looked",
+      "offset": 330360,
+      "duration": 5520
+    },
+    {
+      "text": "impressive on the service project b as",
+      "offset": 332940,
+      "duration": 5099
+    },
+    {
+      "text": "you see here and it looked like a really",
+      "offset": 335880,
+      "duration": 4500
+    },
+    {
+      "text": "high quality application but when we",
+      "offset": 338039,
+      "duration": 4261
+    },
+    {
+      "text": "looked closely we had found that their",
+      "offset": 340380,
+      "duration": 3539
+    },
+    {
+      "text": "project administrator had simply",
+      "offset": 342300,
+      "duration": 4320
+    },
+    {
+      "text": "disabled all the sonar Cube rules they",
+      "offset": 343919,
+      "duration": 4560
+    },
+    {
+      "text": "were barely testing anything and of",
+      "offset": 346620,
+      "duration": 4260
+    },
+    {
+      "text": "course this project always passed their",
+      "offset": 348479,
+      "duration": 3720
+    },
+    {
+      "text": "standards",
+      "offset": 350880,
+      "duration": 3900
+    },
+    {
+      "text": "so we took a step back and and I asked",
+      "offset": 352199,
+      "duration": 5641
+    },
+    {
+      "text": "uh this customer what do you expect from",
+      "offset": 354780,
+      "duration": 6359
+    },
+    {
+      "text": "your code what do you feel is absolutely",
+      "offset": 357840,
+      "duration": 6540
+    },
+    {
+      "text": "necessary before you reach production",
+      "offset": 361139,
+      "duration": 5221
+    },
+    {
+      "text": "what needs to be fixed what needs to be",
+      "offset": 364380,
+      "duration": 4740
+    },
+    {
+      "text": "addressed and they stated that they",
+      "offset": 366360,
+      "duration": 4860
+    },
+    {
+      "text": "wanted no critical vulnerabilities in",
+      "offset": 369120,
+      "duration": 4680
+    },
+    {
+      "text": "their code in no critical bugs they felt",
+      "offset": 371220,
+      "duration": 3660
+    },
+    {
+      "text": "like all those things should be",
+      "offset": 373800,
+      "duration": 2880
+    },
+    {
+      "text": "addressed before their code gets",
+      "offset": 374880,
+      "duration": 3840
+    },
+    {
+      "text": "released but when we looked at the",
+      "offset": 376680,
+      "duration": 3720
+    },
+    {
+      "text": "standards that they were actually using",
+      "offset": 378720,
+      "duration": 4319
+    },
+    {
+      "text": "in addition to covering vulnerabilities",
+      "offset": 380400,
+      "duration": 4859
+    },
+    {
+      "text": "in bugs they had a bunch of other",
+      "offset": 383039,
+      "duration": 5761
+    },
+    {
+      "text": "arbitrary conditions in place they had",
+      "offset": 385259,
+      "duration": 6000
+    },
+    {
+      "text": "things like less than five code smells",
+      "offset": 388800,
+      "duration": 6300
+    },
+    {
+      "text": "or a complexity score less than 100 most",
+      "offset": 391259,
+      "duration": 5761
+    },
+    {
+      "text": "of these things had nothing to do with",
+      "offset": 395100,
+      "duration": 3900
+    },
+    {
+      "text": "vulnerabilities or bugs and they",
+      "offset": 397020,
+      "duration": 3780
+    },
+    {
+      "text": "completely distracted their developers",
+      "offset": 399000,
+      "duration": 3600
+    },
+    {
+      "text": "from the problems that their business",
+      "offset": 400800,
+      "duration": 3420
+    },
+    {
+      "text": "felt was important",
+      "offset": 402600,
+      "duration": 3480
+    },
+    {
+      "text": "so even though this organization was",
+      "offset": 404220,
+      "duration": 4140
+    },
+    {
+      "text": "scanning all their code they were seeing",
+      "offset": 406080,
+      "duration": 4260
+    },
+    {
+      "text": "very little benefit",
+      "offset": 408360,
+      "duration": 4440
+    },
+    {
+      "text": "they had no consistent standard and no",
+      "offset": 410340,
+      "duration": 4560
+    },
+    {
+      "text": "way to let developers know what they",
+      "offset": 412800,
+      "duration": 4760
+    },
+    {
+      "text": "should be fixing",
+      "offset": 414900,
+      "duration": 2660
+    },
+    {
+      "text": "so here's an example of the results a",
+      "offset": 418500,
+      "duration": 5280
+    },
+    {
+      "text": "software team would see when they first",
+      "offset": 421680,
+      "duration": 4500
+    },
+    {
+      "text": "scanned their code with sonar",
+      "offset": 423780,
+      "duration": 5160
+    },
+    {
+      "text": "or really any sort of static analysis",
+      "offset": 426180,
+      "duration": 6180
+    },
+    {
+      "text": "tool these results alone usually create",
+      "offset": 428940,
+      "duration": 6120
+    },
+    {
+      "text": "more questions and answers are these",
+      "offset": 432360,
+      "duration": 4740
+    },
+    {
+      "text": "good or bad results",
+      "offset": 435060,
+      "duration": 4199
+    },
+    {
+      "text": "where should my developers be focusing",
+      "offset": 437100,
+      "duration": 3240
+    },
+    {
+      "text": "attention",
+      "offset": 439259,
+      "duration": 2940
+    },
+    {
+      "text": "how should we tackle these issues",
+      "offset": 440340,
+      "duration": 3660
+    },
+    {
+      "text": "without disrupting our production",
+      "offset": 442199,
+      "duration": 3301
+    },
+    {
+      "text": "schedule",
+      "offset": 444000,
+      "duration": 3360
+    },
+    {
+      "text": "this code's been running in production",
+      "offset": 445500,
+      "duration": 4020
+    },
+    {
+      "text": "for years should we really be messing",
+      "offset": 447360,
+      "duration": 3779
+    },
+    {
+      "text": "with any of this",
+      "offset": 449520,
+      "duration": 4140
+    },
+    {
+      "text": "and hey we can accept these results for",
+      "offset": 451139,
+      "duration": 4981
+    },
+    {
+      "text": "now but how do we avoid introducing new",
+      "offset": 453660,
+      "duration": 4740
+    },
+    {
+      "text": "problems in the future",
+      "offset": 456120,
+      "duration": 4680
+    },
+    {
+      "text": "now you imagine an Enterprise where",
+      "offset": 458400,
+      "duration": 4320
+    },
+    {
+      "text": "you're scanning hundreds or thousands of",
+      "offset": 460800,
+      "duration": 4200
+    },
+    {
+      "text": "repositories those questions start",
+      "offset": 462720,
+      "duration": 5479
+    },
+    {
+      "text": "piling up across hundreds of developers",
+      "offset": 465000,
+      "duration": 7199
+    },
+    {
+      "text": "it creates a mess that really disrupts",
+      "offset": 468199,
+      "duration": 6821
+    },
+    {
+      "text": "you from getting any sort of value from",
+      "offset": 472199,
+      "duration": 5461
+    },
+    {
+      "text": "sonar's products so it's not just enough",
+      "offset": 475020,
+      "duration": 5459
+    },
+    {
+      "text": "to run static analysis on your code you",
+      "offset": 477660,
+      "duration": 5220
+    },
+    {
+      "text": "need to set a standard that developers",
+      "offset": 480479,
+      "duration": 5701
+    },
+    {
+      "text": "will respect and well and one that",
+      "offset": 482880,
+      "duration": 6860
+    },
+    {
+      "text": "they'll know when they need to act on",
+      "offset": 486180,
+      "duration": 7380
+    },
+    {
+      "text": "so to help you create a clean code",
+      "offset": 489740,
+      "duration": 5859
+    },
+    {
+      "text": "standard that scales across your",
+      "offset": 493560,
+      "duration": 4259
+    },
+    {
+      "text": "Enterprise I'm going to show you four",
+      "offset": 495599,
+      "duration": 4320
+    },
+    {
+      "text": "tools and sonar's products that will",
+      "offset": 497819,
+      "duration": 4141
+    },
+    {
+      "text": "help you adopt meaningful quality",
+      "offset": 499919,
+      "duration": 4861
+    },
+    {
+      "text": "standards the first is quality profiles",
+      "offset": 501960,
+      "duration": 5459
+    },
+    {
+      "text": "these Define the rules that your source",
+      "offset": 504780,
+      "duration": 5099
+    },
+    {
+      "text": "code must follow the next is quality",
+      "offset": 507419,
+      "duration": 5221
+    },
+    {
+      "text": "Gates these Define the conditions that",
+      "offset": 509879,
+      "duration": 4921
+    },
+    {
+      "text": "your code must meet to conform with your",
+      "offset": 512640,
+      "duration": 3319
+    },
+    {
+      "text": "standards",
+      "offset": 514800,
+      "duration": 4200
+    },
+    {
+      "text": "notifications let your developers know",
+      "offset": 515959,
+      "duration": 4960
+    },
+    {
+      "text": "when they need to take remediation",
+      "offset": 519000,
+      "duration": 2940
+    },
+    {
+      "text": "action",
+      "offset": 520919,
+      "duration": 3901
+    },
+    {
+      "text": "import Enterprise report excuse me",
+      "offset": 521940,
+      "duration": 4980
+    },
+    {
+      "text": "Enterprise reporting helps you monitor",
+      "offset": 524820,
+      "duration": 4560
+    },
+    {
+      "text": "the quality and security of hundreds or",
+      "offset": 526920,
+      "duration": 5280
+    },
+    {
+      "text": "even thousands of software projects",
+      "offset": 529380,
+      "duration": 5280
+    },
+    {
+      "text": "so I'm going to jump over into sonar",
+      "offset": 532200,
+      "duration": 6980
+    },
+    {
+      "text": "Cube and show you a few of these things",
+      "offset": 534660,
+      "duration": 4520
+    },
+    {
+      "text": "the first tool I want to talk about is",
+      "offset": 544740,
+      "duration": 3960
+    },
+    {
+      "text": "quality profiles",
+      "offset": 546720,
+      "duration": 4320
+    },
+    {
+      "text": "quality profiles represent the rule book",
+      "offset": 548700,
+      "duration": 4740
+    },
+    {
+      "text": "that developers should be following when",
+      "offset": 551040,
+      "duration": 4200
+    },
+    {
+      "text": "they're writing code",
+      "offset": 553440,
+      "duration": 3839
+    },
+    {
+      "text": "now we ship our products with thousands",
+      "offset": 555240,
+      "duration": 3659
+    },
+    {
+      "text": "of rules that can be used to test your",
+      "offset": 557279,
+      "duration": 3841
+    },
+    {
+      "text": "code in deciding which of these rules",
+      "offset": 558899,
+      "duration": 3901
+    },
+    {
+      "text": "you should be using can be a little bit",
+      "offset": 561120,
+      "duration": 4140
+    },
+    {
+      "text": "overwhelming the good news is that we've",
+      "offset": 562800,
+      "duration": 4860
+    },
+    {
+      "text": "already done a lot of this work for you",
+      "offset": 565260,
+      "duration": 4019
+    },
+    {
+      "text": "for every one of our supported language",
+      "offset": 567660,
+      "duration": 4200
+    },
+    {
+      "text": "we've created a built-in sonar way",
+      "offset": 569279,
+      "duration": 5461
+    },
+    {
+      "text": "quality profile that represents the",
+      "offset": 571860,
+      "duration": 4979
+    },
+    {
+      "text": "recommendations for what rules your",
+      "offset": 574740,
+      "duration": 4200
+    },
+    {
+      "text": "developer should be following to write",
+      "offset": 576839,
+      "duration": 3841
+    },
+    {
+      "text": "clean code",
+      "offset": 578940,
+      "duration": 3899
+    },
+    {
+      "text": "this should be your starting point for",
+      "offset": 580680,
+      "duration": 4560
+    },
+    {
+      "text": "sonar Cube across your organization",
+      "offset": 582839,
+      "duration": 4440
+    },
+    {
+      "text": "and once you have some experience users",
+      "offset": 585240,
+      "duration": 4620
+    },
+    {
+      "text": "using Sonar Cube you can decide to",
+      "offset": 587279,
+      "duration": 5461
+    },
+    {
+      "text": "customize these rules but before you",
+      "offset": 589860,
+      "duration": 4800
+    },
+    {
+      "text": "start doing that you want to make sure",
+      "offset": 592740,
+      "duration": 3719
+    },
+    {
+      "text": "that you're Gathering feedback from",
+      "offset": 594660,
+      "duration": 3000
+    },
+    {
+      "text": "Developers",
+      "offset": 596459,
+      "duration": 3060
+    },
+    {
+      "text": "you may start hearing from developers",
+      "offset": 597660,
+      "duration": 4500
+    },
+    {
+      "text": "that some of the rules in in that you're",
+      "offset": 599519,
+      "duration": 5641
+    },
+    {
+      "text": "using are too noisy or maybe they just",
+      "offset": 602160,
+      "duration": 4440
+    },
+    {
+      "text": "don't fit in with the way your",
+      "offset": 605160,
+      "duration": 3600
+    },
+    {
+      "text": "organization writes code",
+      "offset": 606600,
+      "duration": 4560
+    },
+    {
+      "text": "take this feedback into account when",
+      "offset": 608760,
+      "duration": 4380
+    },
+    {
+      "text": "you're developing these custom quality",
+      "offset": 611160,
+      "duration": 3359
+    },
+    {
+      "text": "profiles",
+      "offset": 613140,
+      "duration": 3960
+    },
+    {
+      "text": "a great place to gather feedback from",
+      "offset": 614519,
+      "duration": 4440
+    },
+    {
+      "text": "your developers is from within sonar",
+      "offset": 617100,
+      "duration": 5280
+    },
+    {
+      "text": "Cube itself you can go into the issues",
+      "offset": 618959,
+      "duration": 6000
+    },
+    {
+      "text": "tab in sonar Cube and take a look at",
+      "offset": 622380,
+      "duration": 3920
+    },
+    {
+      "text": "which",
+      "offset": 624959,
+      "duration": 4261
+    },
+    {
+      "text": "items developers may have marked as",
+      "offset": 626300,
+      "duration": 6280
+    },
+    {
+      "text": "won't fix and maybe even as won't uh",
+      "offset": 629220,
+      "duration": 5340
+    },
+    {
+      "text": "false positives this is going to give",
+      "offset": 632580,
+      "duration": 4140
+    },
+    {
+      "text": "you some feedback from the tool to let",
+      "offset": 634560,
+      "duration": 5459
+    },
+    {
+      "text": "you know which rules developers feel are",
+      "offset": 636720,
+      "duration": 5280
+    },
+    {
+      "text": "a little too noisy and that can create",
+      "offset": 640019,
+      "duration": 5401
+    },
+    {
+      "text": "some guidance on where to go if you",
+      "offset": 642000,
+      "duration": 5940
+    },
+    {
+      "text": "decide to start customizing your quality",
+      "offset": 645420,
+      "duration": 4380
+    },
+    {
+      "text": "profiles",
+      "offset": 647940,
+      "duration": 6120
+    },
+    {
+      "text": "also after if you do decide to go ahead",
+      "offset": 649800,
+      "duration": 7680
+    },
+    {
+      "text": "and customize your quality profiles make",
+      "offset": 654060,
+      "duration": 5219
+    },
+    {
+      "text": "sure you're periodically revisiting",
+      "offset": 657480,
+      "duration": 4799
+    },
+    {
+      "text": "these quality profiles to make sure they",
+      "offset": 659279,
+      "duration": 5761
+    },
+    {
+      "text": "are consistent uh with the latest",
+      "offset": 662279,
+      "duration": 6421
+    },
+    {
+      "text": "releases of our products and that you're",
+      "offset": 665040,
+      "duration": 6000
+    },
+    {
+      "text": "taking advantage of all the new tests",
+      "offset": 668700,
+      "duration": 6180
+    },
+    {
+      "text": "available to you for example when you",
+      "offset": 671040,
+      "duration": 6539
+    },
+    {
+      "text": "are reviewing a quality profile you can",
+      "offset": 674880,
+      "duration": 5340
+    },
+    {
+      "text": "see here that we list all the deprecated",
+      "offset": 677579,
+      "duration": 3781
+    },
+    {
+      "text": "rules",
+      "offset": 680220,
+      "duration": 3600
+    },
+    {
+      "text": "and also any of our recommendations that",
+      "offset": 681360,
+      "duration": 3719
+    },
+    {
+      "text": "you're not following with this quality",
+      "offset": 683820,
+      "duration": 3420
+    },
+    {
+      "text": "profile to give you some guidance of",
+      "offset": 685079,
+      "duration": 5661
+    },
+    {
+      "text": "things that you may need to update",
+      "offset": 687240,
+      "duration": 3500
+    },
+    {
+      "text": "the next item I want to talk about is",
+      "offset": 691079,
+      "duration": 4380
+    },
+    {
+      "text": "quality Gates",
+      "offset": 693660,
+      "duration": 3720
+    },
+    {
+      "text": "so if you think of quality profiles as",
+      "offset": 695459,
+      "duration": 3721
+    },
+    {
+      "text": "the rule book your developers need to",
+      "offset": 697380,
+      "duration": 4440
+    },
+    {
+      "text": "follow you can think of quality Gates as",
+      "offset": 699180,
+      "duration": 4620
+    },
+    {
+      "text": "the referee",
+      "offset": 701820,
+      "duration": 4199
+    },
+    {
+      "text": "it's important to make sure that your",
+      "offset": 703800,
+      "duration": 5099
+    },
+    {
+      "text": "quality Gates focus on the aspects of",
+      "offset": 706019,
+      "duration": 5221
+    },
+    {
+      "text": "code quality and security that are",
+      "offset": 708899,
+      "duration": 5041
+    },
+    {
+      "text": "important to your organization these",
+      "offset": 711240,
+      "duration": 5460
+    },
+    {
+      "text": "standards should be actionable not",
+      "offset": 713940,
+      "duration": 4380
+    },
+    {
+      "text": "aspirational",
+      "offset": 716700,
+      "duration": 3780
+    },
+    {
+      "text": "When developing your quality Gates ask",
+      "offset": 718320,
+      "duration": 4500
+    },
+    {
+      "text": "yourself what do I expect my developers",
+      "offset": 720480,
+      "duration": 5280
+    },
+    {
+      "text": "to fix before merging their code or",
+      "offset": 722820,
+      "duration": 4860
+    },
+    {
+      "text": "releasing it if you don't expect",
+      "offset": 725760,
+      "duration": 3960
+    },
+    {
+      "text": "developers to fix something immediately",
+      "offset": 727680,
+      "duration": 5159
+    },
+    {
+      "text": "then it really doesn't belong in your",
+      "offset": 729720,
+      "duration": 4559
+    },
+    {
+      "text": "quality gate",
+      "offset": 732839,
+      "duration": 3361
+    },
+    {
+      "text": "and since you've probably been working",
+      "offset": 734279,
+      "duration": 4441
+    },
+    {
+      "text": "on your code for a while uh before you",
+      "offset": 736200,
+      "duration": 4860
+    },
+    {
+      "text": "started using Sonar Cube you should",
+      "offset": 738720,
+      "duration": 5760
+    },
+    {
+      "text": "focus your efforts your your conditions",
+      "offset": 741060,
+      "duration": 4920
+    },
+    {
+      "text": "and your quality Gates on new code",
+      "offset": 744480,
+      "duration": 3180
+    },
+    {
+      "text": "because you're really not expecting",
+      "offset": 745980,
+      "duration": 4380
+    },
+    {
+      "text": "developers to fix years worth of issues",
+      "offset": 747660,
+      "duration": 5100
+    },
+    {
+      "text": "before your next release",
+      "offset": 750360,
+      "duration": 4380
+    },
+    {
+      "text": "developers may decide to go back and",
+      "offset": 752760,
+      "duration": 4319
+    },
+    {
+      "text": "address some of those older issues but",
+      "offset": 754740,
+      "duration": 5279
+    },
+    {
+      "text": "they must keep their new code clean",
+      "offset": 757079,
+      "duration": 5281
+    },
+    {
+      "text": "so When developing these quality Gates a",
+      "offset": 760019,
+      "duration": 4921
+    },
+    {
+      "text": "best practice is to focus on some of the",
+      "offset": 762360,
+      "duration": 5820
+    },
+    {
+      "text": "key metrics that we've developed to help",
+      "offset": 764940,
+      "duration": 5579
+    },
+    {
+      "text": "you compare software projects of",
+      "offset": 768180,
+      "duration": 4260
+    },
+    {
+      "text": "different sizes and of different",
+      "offset": 770519,
+      "duration": 4861
+    },
+    {
+      "text": "languages you can see here in this",
+      "offset": 772440,
+      "duration": 6000
+    },
+    {
+      "text": "particular project that we created some",
+      "offset": 775380,
+      "duration": 5540
+    },
+    {
+      "text": "grades in each of these categories",
+      "offset": 778440,
+      "duration": 5639
+    },
+    {
+      "text": "reliability security security review and",
+      "offset": 780920,
+      "duration": 4539
+    },
+    {
+      "text": "maintainability",
+      "offset": 784079,
+      "duration": 3000
+    },
+    {
+      "text": "and these grades are calculated",
+      "offset": 785459,
+      "duration": 4201
+    },
+    {
+      "text": "separately both for new code so recently",
+      "offset": 787079,
+      "duration": 4801
+    },
+    {
+      "text": "changed code",
+      "offset": 789660,
+      "duration": 5340
+    },
+    {
+      "text": "as well as overall code so you're still",
+      "offset": 791880,
+      "duration": 4860
+    },
+    {
+      "text": "getting these ratings across your entire",
+      "offset": 795000,
+      "duration": 3959
+    },
+    {
+      "text": "code base but you should really be",
+      "offset": 796740,
+      "duration": 5700
+    },
+    {
+      "text": "focusing your quality standards on these",
+      "offset": 798959,
+      "duration": 8180
+    },
+    {
+      "text": "ratings uh on your newer code",
+      "offset": 802440,
+      "duration": 4699
+    },
+    {
+      "text": "the next tool I want to talk about is",
+      "offset": 808139,
+      "duration": 5581
+    },
+    {
+      "text": "notifications so now that you've set up",
+      "offset": 810779,
+      "duration": 5761
+    },
+    {
+      "text": "your clean codes standard",
+      "offset": 813720,
+      "duration": 4980
+    },
+    {
+      "text": "with quality profiles and quality Gates",
+      "offset": 816540,
+      "duration": 4380
+    },
+    {
+      "text": "it's important to let developers know",
+      "offset": 818700,
+      "duration": 3840
+    },
+    {
+      "text": "when they're not meeting those standards",
+      "offset": 820920,
+      "duration": 3900
+    },
+    {
+      "text": "if they don't know when to act nothing",
+      "offset": 822540,
+      "duration": 4320
+    },
+    {
+      "text": "uh none of these issues are really going",
+      "offset": 824820,
+      "duration": 6180
+    },
+    {
+      "text": "to get resolved so uh the best time to",
+      "offset": 826860,
+      "duration": 6300
+    },
+    {
+      "text": "notify developers that there is",
+      "offset": 831000,
+      "duration": 4380
+    },
+    {
+      "text": "something they need to address is when",
+      "offset": 833160,
+      "duration": 5160
+    },
+    {
+      "text": "the quality gate has failed so when you",
+      "offset": 835380,
+      "duration": 5220
+    },
+    {
+      "text": "see a quality gate failed this is a",
+      "offset": 838320,
+      "duration": 5880
+    },
+    {
+      "text": "great time to get everybody on board to",
+      "offset": 840600,
+      "duration": 6479
+    },
+    {
+      "text": "go and address these problems and to",
+      "offset": 844200,
+      "duration": 6740
+    },
+    {
+      "text": "bring this code back into compliance",
+      "offset": 847079,
+      "duration": 6481
+    },
+    {
+      "text": "so if you're passing the quality gate",
+      "offset": 850940,
+      "duration": 5620
+    },
+    {
+      "text": "you know there may be some findings but",
+      "offset": 853560,
+      "duration": 5459
+    },
+    {
+      "text": "you've already determined that they are",
+      "offset": 856560,
+      "duration": 4980
+    },
+    {
+      "text": "not serious enough for you uh for",
+      "offset": 859019,
+      "duration": 4801
+    },
+    {
+      "text": "developers to take action so some of the",
+      "offset": 861540,
+      "duration": 4560
+    },
+    {
+      "text": "ways that you can uh notify developers",
+      "offset": 863820,
+      "duration": 5100
+    },
+    {
+      "text": "is through son or Lin sonar Lin is our",
+      "offset": 866100,
+      "duration": 6359
+    },
+    {
+      "text": "companion IDE plugin and uh when that is",
+      "offset": 868920,
+      "duration": 5240
+    },
+    {
+      "text": "connected to your sonar Cube server",
+      "offset": 872459,
+      "duration": 5281
+    },
+    {
+      "text": "those notifications will pop up right",
+      "offset": 874160,
+      "duration": 5440
+    },
+    {
+      "text": "there in the IDE",
+      "offset": 877740,
+      "duration": 4620
+    },
+    {
+      "text": "also developers can subscribe to email",
+      "offset": 879600,
+      "duration": 5580
+    },
+    {
+      "text": "notifications so every user in sonar",
+      "offset": 882360,
+      "duration": 6900
+    },
+    {
+      "text": "Cube can go in and choose when they want",
+      "offset": 885180,
+      "duration": 7620
+    },
+    {
+      "text": "to be notified uh when something is is",
+      "offset": 889260,
+      "duration": 7139
+    },
+    {
+      "text": "uh is wrong in sonar Cube uh when their",
+      "offset": 892800,
+      "duration": 5219
+    },
+    {
+      "text": "quality Gates failed really any",
+      "offset": 896399,
+      "duration": 3060
+    },
+    {
+      "text": "conditions that they want to pay",
+      "offset": 898019,
+      "duration": 3241
+    },
+    {
+      "text": "attention to",
+      "offset": 899459,
+      "duration": 4261
+    },
+    {
+      "text": "also with sonar Cube Developer Edition",
+      "offset": 901260,
+      "duration": 6300
+    },
+    {
+      "text": "uh we'll go out to pull requests and",
+      "offset": 903720,
+      "duration": 6540
+    },
+    {
+      "text": "decorate the results with the sonar Cube",
+      "offset": 907560,
+      "duration": 5880
+    },
+    {
+      "text": "scan so here you can see uh in this",
+      "offset": 910260,
+      "duration": 5519
+    },
+    {
+      "text": "particular GitHub pull request sonar",
+      "offset": 913440,
+      "duration": 4380
+    },
+    {
+      "text": "Cube has",
+      "offset": 915779,
+      "duration": 5461
+    },
+    {
+      "text": "gone out and added a comment to let",
+      "offset": 917820,
+      "duration": 6240
+    },
+    {
+      "text": "whoever's doing this review know that",
+      "offset": 921240,
+      "duration": 6120
+    },
+    {
+      "text": "something uh needs to be addressed in",
+      "offset": 924060,
+      "duration": 6000
+    },
+    {
+      "text": "this project",
+      "offset": 927360,
+      "duration": 4560
+    },
+    {
+      "text": "another way you can do this is through",
+      "offset": 930060,
+      "duration": 5420
+    },
+    {
+      "text": "badges so with each project you have",
+      "offset": 931920,
+      "duration": 6539
+    },
+    {
+      "text": "some a snippet of code here",
+      "offset": 935480,
+      "duration": 5859
+    },
+    {
+      "text": "where you can get a project badge you",
+      "offset": 938459,
+      "duration": 4981
+    },
+    {
+      "text": "can put this on a wall board you can put",
+      "offset": 941339,
+      "duration": 4141
+    },
+    {
+      "text": "this on your project Pages whatever",
+      "offset": 943440,
+      "duration": 4500
+    },
+    {
+      "text": "developers are paying attention to and",
+      "offset": 945480,
+      "duration": 3659
+    },
+    {
+      "text": "if you really want to get your",
+      "offset": 947940,
+      "duration": 3540
+    },
+    {
+      "text": "developers attentions you can go ahead",
+      "offset": 949139,
+      "duration": 4921
+    },
+    {
+      "text": "and uh break your pipelines when you've",
+      "offset": 951480,
+      "duration": 6120
+    },
+    {
+      "text": "failed uh quality Gates that usually uh",
+      "offset": 954060,
+      "duration": 7219
+    },
+    {
+      "text": "Drive some action pretty quickly",
+      "offset": 957600,
+      "duration": 3679
+    },
+    {
+      "text": "the final tool I want to talk about is",
+      "offset": 962339,
+      "duration": 4620
+    },
+    {
+      "text": "Enterprise reporting",
+      "offset": 964860,
+      "duration": 3300
+    },
+    {
+      "text": "so",
+      "offset": 966959,
+      "duration": 4141
+    },
+    {
+      "text": "you've established a clean code standard",
+      "offset": 968160,
+      "duration": 5520
+    },
+    {
+      "text": "across your Enterprise and",
+      "offset": 971100,
+      "duration": 4560
+    },
+    {
+      "text": "in addition to your developers you'll",
+      "offset": 973680,
+      "duration": 4080
+    },
+    {
+      "text": "likely have a lot of stakeholders that",
+      "offset": 975660,
+      "duration": 3660
+    },
+    {
+      "text": "are interested in the quality and",
+      "offset": 977760,
+      "duration": 3300
+    },
+    {
+      "text": "security of your code",
+      "offset": 979320,
+      "duration": 4440
+    },
+    {
+      "text": "with sonar Cube Enterprise Edition",
+      "offset": 981060,
+      "duration": 4139
+    },
+    {
+      "text": "you'll have access to additional",
+      "offset": 983760,
+      "duration": 2819
+    },
+    {
+      "text": "reporting that allows you to create",
+      "offset": 985199,
+      "duration": 3421
+    },
+    {
+      "text": "portfolios a project",
+      "offset": 986579,
+      "duration": 4620
+    },
+    {
+      "text": "that maps to your business needs this",
+      "offset": 988620,
+      "duration": 5300
+    },
+    {
+      "text": "feature rolls up project level reporting",
+      "offset": 991199,
+      "duration": 5101
+    },
+    {
+      "text": "from your teams",
+      "offset": 993920,
+      "duration": 4839
+    },
+    {
+      "text": "and it maps to your business units your",
+      "offset": 996300,
+      "duration": 4860
+    },
+    {
+      "text": "technology areas really whatever makes",
+      "offset": 998759,
+      "duration": 4801
+    },
+    {
+      "text": "sense in your organization",
+      "offset": 1001160,
+      "duration": 4859
+    },
+    {
+      "text": "these portfolio ports allow stakeholders",
+      "offset": 1003560,
+      "duration": 5219
+    },
+    {
+      "text": "to subscribe and share these reports and",
+      "offset": 1006019,
+      "duration": 5760
+    },
+    {
+      "text": "create additional metrics across these",
+      "offset": 1008779,
+      "duration": 6541
+    },
+    {
+      "text": "projects this release ability grade here",
+      "offset": 1011779,
+      "duration": 7860
+    },
+    {
+      "text": "from this portfolio is a very",
+      "offset": 1015320,
+      "duration": 7199
+    },
+    {
+      "text": "um useful indicator that reflects what",
+      "offset": 1019639,
+      "duration": 4501
+    },
+    {
+      "text": "percentage of your projects are meeting",
+      "offset": 1022519,
+      "duration": 3420
+    },
+    {
+      "text": "your quality standards",
+      "offset": 1024140,
+      "duration": 5340
+    },
+    {
+      "text": "these reports also summarize clean code",
+      "offset": 1025939,
+      "duration": 6601
+    },
+    {
+      "text": "in the other categories in really any",
+      "offset": 1029480,
+      "duration": 5520
+    },
+    {
+      "text": "performance measure that sonar Cube",
+      "offset": 1032540,
+      "duration": 5279
+    },
+    {
+      "text": "keeps track of",
+      "offset": 1035000,
+      "duration": 5280
+    },
+    {
+      "text": "so in closing I want to share with you a",
+      "offset": 1037819,
+      "duration": 5760
+    },
+    {
+      "text": "few things that you can do today uh to",
+      "offset": 1040280,
+      "duration": 8399
+    },
+    {
+      "text": "go out after this webinar and",
+      "offset": 1043579,
+      "duration": 5100
+    },
+    {
+      "text": "and start scaling clean code in your",
+      "offset": 1049040,
+      "duration": 6420
+    },
+    {
+      "text": "organization the first step is to go in",
+      "offset": 1052100,
+      "duration": 5699
+    },
+    {
+      "text": "review and consolidate your quality",
+      "offset": 1055460,
+      "duration": 6000
+    },
+    {
+      "text": "profiles if you find in your sonar Cube",
+      "offset": 1057799,
+      "duration": 5760
+    },
+    {
+      "text": "instance or if you're using Sonar Cloud",
+      "offset": 1061460,
+      "duration": 4440
+    },
+    {
+      "text": "our our software as a service offering",
+      "offset": 1063559,
+      "duration": 5641
+    },
+    {
+      "text": "that there's a lot of quality profiles",
+      "offset": 1065900,
+      "duration": 6300
+    },
+    {
+      "text": "a lot of teams are using uh their own",
+      "offset": 1069200,
+      "duration": 6479
+    },
+    {
+      "text": "set of rules uh it may be a good idea to",
+      "offset": 1072200,
+      "duration": 6900
+    },
+    {
+      "text": "go ahead and start consolidating those",
+      "offset": 1075679,
+      "duration": 5761
+    },
+    {
+      "text": "um you can if you feel that that's too",
+      "offset": 1079100,
+      "duration": 4199
+    },
+    {
+      "text": "much work you can go ahead and start",
+      "offset": 1081440,
+      "duration": 4739
+    },
+    {
+      "text": "using uh those out of the box sonar",
+      "offset": 1083299,
+      "duration": 5101
+    },
+    {
+      "text": "weight profiles",
+      "offset": 1086179,
+      "duration": 5101
+    },
+    {
+      "text": "you should refocus your quality gates to",
+      "offset": 1088400,
+      "duration": 6480
+    },
+    {
+      "text": "focus on the conditions that um that",
+      "offset": 1091280,
+      "duration": 5700
+    },
+    {
+      "text": "developers will fix immediately so what",
+      "offset": 1094880,
+      "duration": 4200
+    },
+    {
+      "text": "do you expect to be fixed before release",
+      "offset": 1096980,
+      "duration": 4620
+    },
+    {
+      "text": "what do you expect to be",
+      "offset": 1099080,
+      "duration": 5459
+    },
+    {
+      "text": "sticks before code is merged if your",
+      "offset": 1101600,
+      "duration": 5939
+    },
+    {
+      "text": "quality gates are covering things that",
+      "offset": 1104539,
+      "duration": 5041
+    },
+    {
+      "text": "you don't care about where you don't",
+      "offset": 1107539,
+      "duration": 3601
+    },
+    {
+      "text": "want a developer to drop what they're",
+      "offset": 1109580,
+      "duration": 3240
+    },
+    {
+      "text": "doing and go address the problem",
+      "offset": 1111140,
+      "duration": 4020
+    },
+    {
+      "text": "immediately you should rethink whether",
+      "offset": 1112820,
+      "duration": 3599
+    },
+    {
+      "text": "or not that should be part of your",
+      "offset": 1115160,
+      "duration": 3000
+    },
+    {
+      "text": "quality gate",
+      "offset": 1116419,
+      "duration": 4081
+    },
+    {
+      "text": "and finally you want to make sure that",
+      "offset": 1118160,
+      "duration": 4920
+    },
+    {
+      "text": "developers receive notifications every",
+      "offset": 1120500,
+      "duration": 4740
+    },
+    {
+      "text": "time your quality gate fails",
+      "offset": 1123080,
+      "duration": 5040
+    },
+    {
+      "text": "so if they're working on a project the",
+      "offset": 1125240,
+      "duration": 4319
+    },
+    {
+      "text": "quality gate should be something that",
+      "offset": 1128120,
+      "duration": 4140
+    },
+    {
+      "text": "they act on when it fails they should",
+      "offset": 1129559,
+      "duration": 3661
+    },
+    {
+      "text": "know",
+      "offset": 1132260,
+      "duration": 4200
+    },
+    {
+      "text": "go looking sonar Cube go look at my pull",
+      "offset": 1133220,
+      "duration": 6540
+    },
+    {
+      "text": "requests whatever you need to do to make",
+      "offset": 1136460,
+      "duration": 6480
+    },
+    {
+      "text": "sure uh that um you know that they know",
+      "offset": 1139760,
+      "duration": 7220
+    },
+    {
+      "text": "that something needs to be addressed",
+      "offset": 1142940,
+      "duration": 4040
+    },
+    {
+      "text": "so uh thank you all for listening uh",
+      "offset": 1147260,
+      "duration": 6060
+    },
+    {
+      "text": "we'll go ahead and take a few questions",
+      "offset": 1149539,
+      "duration": 5880
+    },
+    {
+      "text": "um if you have uh questions that came up",
+      "offset": 1153320,
+      "duration": 5099
+    },
+    {
+      "text": "please feel free to add them to the Q a",
+      "offset": 1155419,
+      "duration": 7620
+    },
+    {
+      "text": "box and uh guaranteed let me know what",
+      "offset": 1158419,
+      "duration": 7260
+    },
+    {
+      "text": "we have here sounds good thank you Brian",
+      "offset": 1163039,
+      "duration": 5281
+    },
+    {
+      "text": "that was uh really interesting I",
+      "offset": 1165679,
+      "duration": 4081
+    },
+    {
+      "text": "particularly like the you know first",
+      "offset": 1168320,
+      "duration": 4680
+    },
+    {
+      "text": "part of the project a versus Project B",
+      "offset": 1169760,
+      "duration": 6240
+    },
+    {
+      "text": "it's a real life example and that was",
+      "offset": 1173000,
+      "duration": 5760
+    },
+    {
+      "text": "very interesting to me so just another",
+      "offset": 1176000,
+      "duration": 4620
+    },
+    {
+      "text": "reminder for the audience to get your",
+      "offset": 1178760,
+      "duration": 4020
+    },
+    {
+      "text": "questions in on the Q a I see a bunch of",
+      "offset": 1180620,
+      "duration": 5700
+    },
+    {
+      "text": "questions that Jason and Silva already",
+      "offset": 1182780,
+      "duration": 6660
+    },
+    {
+      "text": "answering but as more questions trickle",
+      "offset": 1186320,
+      "duration": 5700
+    },
+    {
+      "text": "in I think Brian I wanted to ask you you",
+      "offset": 1189440,
+      "duration": 5640
+    },
+    {
+      "text": "know a question that we often get from",
+      "offset": 1192020,
+      "duration": 4680
+    },
+    {
+      "text": "our customers and you've talked about",
+      "offset": 1195080,
+      "duration": 4020
+    },
+    {
+      "text": "quality profiles and quality Gates here",
+      "offset": 1196700,
+      "duration": 6180
+    },
+    {
+      "text": "what is your recommendation on teams uh",
+      "offset": 1199100,
+      "duration": 6720
+    },
+    {
+      "text": "to set up their quality profiles should",
+      "offset": 1202880,
+      "duration": 5340
+    },
+    {
+      "text": "should you let each of the team members",
+      "offset": 1205820,
+      "duration": 4800
+    },
+    {
+      "text": "like set up their own quality profiles",
+      "offset": 1208220,
+      "duration": 5339
+    },
+    {
+      "text": "what's the best practice here",
+      "offset": 1210620,
+      "duration": 5040
+    },
+    {
+      "text": "so letting teams set up their own",
+      "offset": 1213559,
+      "duration": 4681
+    },
+    {
+      "text": "quality profile may seem like a good way",
+      "offset": 1215660,
+      "duration": 4920
+    },
+    {
+      "text": "to sort of crowdsource uh the",
+      "offset": 1218240,
+      "duration": 5880
+    },
+    {
+      "text": "responsibility of setting those up but",
+      "offset": 1220580,
+      "duration": 6479
+    },
+    {
+      "text": "what often happens or what I've observed",
+      "offset": 1224120,
+      "duration": 5220
+    },
+    {
+      "text": "in those situations",
+      "offset": 1227059,
+      "duration": 5881
+    },
+    {
+      "text": "is that um every team ends up following",
+      "offset": 1229340,
+      "duration": 6420
+    },
+    {
+      "text": "their own set of rules so there's really",
+      "offset": 1232940,
+      "duration": 4979
+    },
+    {
+      "text": "no consistent standard across your",
+      "offset": 1235760,
+      "duration": 4620
+    },
+    {
+      "text": "organization and as I showed in those uh",
+      "offset": 1237919,
+      "duration": 4620
+    },
+    {
+      "text": "those examples at the beginning",
+      "offset": 1240380,
+      "duration": 5340
+    },
+    {
+      "text": "um you know two projects one can look",
+      "offset": 1242539,
+      "duration": 4201
+    },
+    {
+      "text": "great",
+      "offset": 1245720,
+      "duration": 3540
+    },
+    {
+      "text": "and simply because you know they're not",
+      "offset": 1246740,
+      "duration": 4860
+    },
+    {
+      "text": "following many rules",
+      "offset": 1249260,
+      "duration": 3539
+    },
+    {
+      "text": "um so",
+      "offset": 1251600,
+      "duration": 4319
+    },
+    {
+      "text": "in most organizations we recommend that",
+      "offset": 1252799,
+      "duration": 5221
+    },
+    {
+      "text": "you have a team you know maybe folks",
+      "offset": 1255919,
+      "duration": 5281
+    },
+    {
+      "text": "like Architects or uh you know people",
+      "offset": 1258020,
+      "duration": 6180
+    },
+    {
+      "text": "who are familiar with sonar Cube as a",
+      "offset": 1261200,
+      "duration": 6359
+    },
+    {
+      "text": "platform they should be in charge of",
+      "offset": 1264200,
+      "duration": 5820
+    },
+    {
+      "text": "managing those customized quality Gates",
+      "offset": 1267559,
+      "duration": 4801
+    },
+    {
+      "text": "I'm sorry those customized quality",
+      "offset": 1270020,
+      "duration": 5580
+    },
+    {
+      "text": "profiles and they should have a feedback",
+      "offset": 1272360,
+      "duration": 5939
+    },
+    {
+      "text": "loop so there should be a channel where",
+      "offset": 1275600,
+      "duration": 6000
+    },
+    {
+      "text": "developers can let them know what they",
+      "offset": 1278299,
+      "duration": 5521
+    },
+    {
+      "text": "think give feedback you can take it from",
+      "offset": 1281600,
+      "duration": 5000
+    },
+    {
+      "text": "the tool you can have other channels",
+      "offset": 1283820,
+      "duration": 5160
+    },
+    {
+      "text": "but make sure you're incorporating that",
+      "offset": 1286600,
+      "duration": 4360
+    },
+    {
+      "text": "so they have a voice in the process as",
+      "offset": 1288980,
+      "duration": 3600
+    },
+    {
+      "text": "well",
+      "offset": 1290960,
+      "duration": 3780
+    },
+    {
+      "text": "all right",
+      "offset": 1292580,
+      "duration": 4079
+    },
+    {
+      "text": "um we have we have several questions",
+      "offset": 1294740,
+      "duration": 3000
+    },
+    {
+      "text": "here",
+      "offset": 1296659,
+      "duration": 3900
+    },
+    {
+      "text": "um one of the attendees asks can so now",
+      "offset": 1297740,
+      "duration": 5819
+    },
+    {
+      "text": "Cube add information on a pull request",
+      "offset": 1300559,
+      "duration": 5461
+    },
+    {
+      "text": "for azure devops",
+      "offset": 1303559,
+      "duration": 4681
+    },
+    {
+      "text": "yeah so um the the pull request",
+      "offset": 1306020,
+      "duration": 5039
+    },
+    {
+      "text": "decoration that I showed you uh that",
+      "offset": 1308240,
+      "duration": 5340
+    },
+    {
+      "text": "works for GitHub it also works for git",
+      "offset": 1311059,
+      "duration": 6240
+    },
+    {
+      "text": "lab Azure devops and for bitbucket and",
+      "offset": 1313580,
+      "duration": 5820
+    },
+    {
+      "text": "this includes the the cloud hosted",
+      "offset": 1317299,
+      "duration": 4081
+    },
+    {
+      "text": "versions as well as self-hosted versions",
+      "offset": 1319400,
+      "duration": 4920
+    },
+    {
+      "text": "of those devops platforms",
+      "offset": 1321380,
+      "duration": 5480
+    },
+    {
+      "text": "foreign",
+      "offset": 1324320,
+      "duration": 2540
+    },
+    {
+      "text": "very cool you also talked about you know",
+      "offset": 1328059,
+      "duration": 5381
+    },
+    {
+      "text": "the reporting capabilities uh and we",
+      "offset": 1330860,
+      "duration": 4819
+    },
+    {
+      "text": "have a question here uh about",
+      "offset": 1333440,
+      "duration": 4859
+    },
+    {
+      "text": "customizing those reports so can you",
+      "offset": 1335679,
+      "duration": 5681
+    },
+    {
+      "text": "tell us a little bit more about that",
+      "offset": 1338299,
+      "duration": 7441
+    },
+    {
+      "text": "yeah so we developed uh our reporting uh",
+      "offset": 1341360,
+      "duration": 7799
+    },
+    {
+      "text": "included uh to really reflect uh what we",
+      "offset": 1345740,
+      "duration": 6419
+    },
+    {
+      "text": "feel is important for more organizations",
+      "offset": 1349159,
+      "duration": 6000
+    },
+    {
+      "text": "so in addition uh to that portfolio",
+      "offset": 1352159,
+      "duration": 5161
+    },
+    {
+      "text": "reporting we have some security focused",
+      "offset": 1355159,
+      "duration": 3781
+    },
+    {
+      "text": "reporting",
+      "offset": 1357320,
+      "duration": 3239
+    },
+    {
+      "text": "um and and then we have that project",
+      "offset": 1358940,
+      "duration": 4979
+    },
+    {
+      "text": "level reporting as well if you have",
+      "offset": 1360559,
+      "duration": 6480
+    },
+    {
+      "text": "other reporting needs uh we do have an",
+      "offset": 1363919,
+      "duration": 6721
+    },
+    {
+      "text": "open json-based web API you can go",
+      "offset": 1367039,
+      "duration": 5880
+    },
+    {
+      "text": "extract any of the data that you're",
+      "offset": 1370640,
+      "duration": 4980
+    },
+    {
+      "text": "seeing in the sonar Cube UI and you can",
+      "offset": 1372919,
+      "duration": 5521
+    },
+    {
+      "text": "create whatever reports Integrations you",
+      "offset": 1375620,
+      "duration": 4640
+    },
+    {
+      "text": "like so if you want to put those in PDFs",
+      "offset": 1378440,
+      "duration": 4560
+    },
+    {
+      "text": "spreadsheets uh you know you can",
+      "offset": 1380260,
+      "duration": 7080
+    },
+    {
+      "text": "definitely do that uh through our API",
+      "offset": 1383000,
+      "duration": 4340
+    },
+    {
+      "text": "um cool",
+      "offset": 1388820,
+      "duration": 5040
+    },
+    {
+      "text": "one of the you uh audience asks here uh",
+      "offset": 1389960,
+      "duration": 5640
+    },
+    {
+      "text": "does the sonar Cube I think is uh",
+      "offset": 1393860,
+      "duration": 3720
+    },
+    {
+      "text": "related to the pull request analysis but",
+      "offset": 1395600,
+      "duration": 4860
+    },
+    {
+      "text": "does the sonar Cube PR analysis Feature",
+      "offset": 1397580,
+      "duration": 8180
+    },
+    {
+      "text": "work with github's draft pull requests",
+      "offset": 1400460,
+      "duration": 5300
+    },
+    {
+      "text": "um",
+      "offset": 1407059,
+      "duration": 5881
+    },
+    {
+      "text": "yes yes if you have set up a draft pull",
+      "offset": 1409100,
+      "duration": 7380
+    },
+    {
+      "text": "request and your uh DeVos platform would",
+      "offset": 1412940,
+      "duration": 6780
+    },
+    {
+      "text": "run a build uh based on that you can",
+      "offset": 1416480,
+      "duration": 7079
+    },
+    {
+      "text": "absolutely uh run an analysis there and",
+      "offset": 1419720,
+      "duration": 6060
+    },
+    {
+      "text": "uh perform that that pull request",
+      "offset": 1423559,
+      "duration": 4881
+    },
+    {
+      "text": "reporting",
+      "offset": 1425780,
+      "duration": 2660
+    },
+    {
+      "text": "um all right there's one question about",
+      "offset": 1430580,
+      "duration": 4620
+    },
+    {
+      "text": "portfolios here",
+      "offset": 1433220,
+      "duration": 3480
+    },
+    {
+      "text": "um you may have briefly kind of you know",
+      "offset": 1435200,
+      "duration": 3540
+    },
+    {
+      "text": "touched upon that but",
+      "offset": 1436700,
+      "duration": 4740
+    },
+    {
+      "text": "um which versions of sonar Cube have the",
+      "offset": 1438740,
+      "duration": 4559
+    },
+    {
+      "text": "portfolio section where you can you know",
+      "offset": 1441440,
+      "duration": 5280
+    },
+    {
+      "text": "see the full view of all your projects",
+      "offset": 1443299,
+      "duration": 6000
+    },
+    {
+      "text": "so that portfolio feature is exclusive",
+      "offset": 1446720,
+      "duration": 5520
+    },
+    {
+      "text": "to the Enterprise Edition of our product",
+      "offset": 1449299,
+      "duration": 4681
+    },
+    {
+      "text": "um if you're using uh one of the other",
+      "offset": 1452240,
+      "duration": 5040
+    },
+    {
+      "text": "editions of sonar Cube or you're using",
+      "offset": 1453980,
+      "duration": 5880
+    },
+    {
+      "text": "Sonar Cloud you won't have access to",
+      "offset": 1457280,
+      "duration": 4680
+    },
+    {
+      "text": "that and by the way in addition to",
+      "offset": 1459860,
+      "duration": 4080
+    },
+    {
+      "text": "Enterprise Edition also our our data",
+      "offset": 1461960,
+      "duration": 3660
+    },
+    {
+      "text": "center Edition which adds some",
+      "offset": 1463940,
+      "duration": 4440
+    },
+    {
+      "text": "clustering capabilities to sonar Cube",
+      "offset": 1465620,
+      "duration": 6179
+    },
+    {
+      "text": "that also uh has uh that portfolio",
+      "offset": 1468380,
+      "duration": 4799
+    },
+    {
+      "text": "reporting",
+      "offset": 1471799,
+      "duration": 4921
+    },
+    {
+      "text": "it's really meant to support uh larger",
+      "offset": 1473179,
+      "duration": 6740
+    },
+    {
+      "text": "Enterprises uh you know like I mentioned",
+      "offset": 1476720,
+      "duration": 6600
+    },
+    {
+      "text": "once you start uh analyzing hundreds of",
+      "offset": 1479919,
+      "duration": 6461
+    },
+    {
+      "text": "repositories with sonar Cube there's",
+      "offset": 1483320,
+      "duration": 6000
+    },
+    {
+      "text": "more stakeholders involved they're the",
+      "offset": 1486380,
+      "duration": 4679
+    },
+    {
+      "text": "ones that are going to get the most",
+      "offset": 1489320,
+      "duration": 5540
+    },
+    {
+      "text": "benefit from that type of reporting",
+      "offset": 1491059,
+      "duration": 3801
+    },
+    {
+      "text": "okay",
+      "offset": 1495140,
+      "duration": 2460
+    },
+    {
+      "text": "very nice",
+      "offset": 1496100,
+      "duration": 3559
+    },
+    {
+      "text": "um",
+      "offset": 1497600,
+      "duration": 2059
+    },
+    {
+      "text": "quality Gates uh one of our audience",
+      "offset": 1500059,
+      "duration": 5341
+    },
+    {
+      "text": "asks a question and what what is your",
+      "offset": 1503179,
+      "duration": 4740
+    },
+    {
+      "text": "recommendation about configuring",
+      "offset": 1505400,
+      "duration": 4259
+    },
+    {
+      "text": "different quality gates for different",
+      "offset": 1507919,
+      "duration": 4921
+    },
+    {
+      "text": "languages uh should should they be doing",
+      "offset": 1509659,
+      "duration": 6541
+    },
+    {
+      "text": "that what is what is the best practice",
+      "offset": 1512840,
+      "duration": 6060
+    },
+    {
+      "text": "so if you take a look at the uh",
+      "offset": 1516200,
+      "duration": 4680
+    },
+    {
+      "text": "different types of conditions especially",
+      "offset": 1518900,
+      "duration": 3720
+    },
+    {
+      "text": "the ones that we recommend with the",
+      "offset": 1520880,
+      "duration": 4980
+    },
+    {
+      "text": "sonar whey quality uh gate those are",
+      "offset": 1522620,
+      "duration": 4919
+    },
+    {
+      "text": "language agnostic",
+      "offset": 1525860,
+      "duration": 6240
+    },
+    {
+      "text": "um so each it reflects on each of the um",
+      "offset": 1527539,
+      "duration": 7020
+    },
+    {
+      "text": "those categories that I showed you those",
+      "offset": 1532100,
+      "duration": 3780
+    },
+    {
+      "text": "grades",
+      "offset": 1534559,
+      "duration": 3061
+    },
+    {
+      "text": "um regardless of the language you're",
+      "offset": 1535880,
+      "duration": 4440
+    },
+    {
+      "text": "analyzing those grades are going to be",
+      "offset": 1537620,
+      "duration": 6720
+    },
+    {
+      "text": "consistent across all of them so you",
+      "offset": 1540320,
+      "duration": 6719
+    },
+    {
+      "text": "should be able to create uh one or or",
+      "offset": 1544340,
+      "duration": 5640
+    },
+    {
+      "text": "maybe a couple of quality Gates and have",
+      "offset": 1547039,
+      "duration": 5101
+    },
+    {
+      "text": "those apply to all of your projects",
+      "offset": 1549980,
+      "duration": 4380
+    },
+    {
+      "text": "regardless of the language you're",
+      "offset": 1552140,
+      "duration": 4820
+    },
+    {
+      "text": "analyzing",
+      "offset": 1554360,
+      "duration": 2600
+    },
+    {
+      "text": "I see and what about delegating quality",
+      "offset": 1557480,
+      "duration": 4380
+    },
+    {
+      "text": "gate management",
+      "offset": 1560179,
+      "duration": 3301
+    },
+    {
+      "text": "um I think we have a question related to",
+      "offset": 1561860,
+      "duration": 3540
+    },
+    {
+      "text": "that as well",
+      "offset": 1563480,
+      "duration": 4679
+    },
+    {
+      "text": "so you can do that um there is a special",
+      "offset": 1565400,
+      "duration": 5879
+    },
+    {
+      "text": "role in sonar Cube where those uh people",
+      "offset": 1568159,
+      "duration": 6541
+    },
+    {
+      "text": "with that role will be able to manage uh",
+      "offset": 1571279,
+      "duration": 5000
+    },
+    {
+      "text": "all of the quality gates in your system",
+      "offset": 1574700,
+      "duration": 5099
+    },
+    {
+      "text": "also with uh quality profiles and",
+      "offset": 1576279,
+      "duration": 6221
+    },
+    {
+      "text": "quality Gates you'll have the ability to",
+      "offset": 1579799,
+      "duration": 4921
+    },
+    {
+      "text": "give individual users uh the",
+      "offset": 1582500,
+      "duration": 5159
+    },
+    {
+      "text": "responsibility to manage a single uh",
+      "offset": 1584720,
+      "duration": 4860
+    },
+    {
+      "text": "quality profile or quality game let me",
+      "offset": 1587659,
+      "duration": 3120
+    },
+    {
+      "text": "pull this up",
+      "offset": 1589580,
+      "duration": 4260
+    },
+    {
+      "text": "real quick here when I pull up one of",
+      "offset": 1590779,
+      "duration": 6061
+    },
+    {
+      "text": "these I can go ahead and give permission",
+      "offset": 1593840,
+      "duration": 6540
+    },
+    {
+      "text": "to a specific user to let them uh have",
+      "offset": 1596840,
+      "duration": 6180
+    },
+    {
+      "text": "access to this so um for example I can",
+      "offset": 1600380,
+      "duration": 5880
+    },
+    {
+      "text": "give myself access to be the manager of",
+      "offset": 1603020,
+      "duration": 5880
+    },
+    {
+      "text": "this one so if you have um some some",
+      "offset": 1606260,
+      "duration": 4500
+    },
+    {
+      "text": "folks that maybe you want to be in",
+      "offset": 1608900,
+      "duration": 4740
+    },
+    {
+      "text": "charge of a particular languages quality",
+      "offset": 1610760,
+      "duration": 5820
+    },
+    {
+      "text": "profile or want to be in charge of",
+      "offset": 1613640,
+      "duration": 6360
+    },
+    {
+      "text": "specific quality Gates that map to you",
+      "offset": 1616580,
+      "duration": 5400
+    },
+    {
+      "text": "know their their portion of the business",
+      "offset": 1620000,
+      "duration": 4500
+    },
+    {
+      "text": "you can definitely do that with all",
+      "offset": 1621980,
+      "duration": 5780
+    },
+    {
+      "text": "versions of sonar Cube",
+      "offset": 1624500,
+      "duration": 3260
+    },
+    {
+      "text": "all right",
+      "offset": 1630260,
+      "duration": 4080
+    },
+    {
+      "text": "um we have a few more minutes here so",
+      "offset": 1631880,
+      "duration": 3600
+    },
+    {
+      "text": "I'm just going to take a couple of",
+      "offset": 1634340,
+      "duration": 2699
+    },
+    {
+      "text": "questions uh there were a bunch of",
+      "offset": 1635480,
+      "duration": 3720
+    },
+    {
+      "text": "questions around uh sonal and questions",
+      "offset": 1637039,
+      "duration": 3901
+    },
+    {
+      "text": "and comments",
+      "offset": 1639200,
+      "duration": 3719
+    },
+    {
+      "text": "um can you I think one of this question",
+      "offset": 1640940,
+      "duration": 4380
+    },
+    {
+      "text": "asks can so now let me be linked to get",
+      "offset": 1642919,
+      "duration": 5281
+    },
+    {
+      "text": "notices from sonar Cube and can those",
+      "offset": 1645320,
+      "duration": 6000
+    },
+    {
+      "text": "issues be identified in sonarlint",
+      "offset": 1648200,
+      "duration": 5760
+    },
+    {
+      "text": "um as seen on the Enterprise dashboard",
+      "offset": 1651320,
+      "duration": 5280
+    },
+    {
+      "text": "uh can you talk a little bit about our",
+      "offset": 1653960,
+      "duration": 4199
+    },
+    {
+      "text": "connected mode and how that works",
+      "offset": 1656600,
+      "duration": 5400
+    },
+    {
+      "text": "together sure so with uh sonarlint which",
+      "offset": 1658159,
+      "duration": 6721
+    },
+    {
+      "text": "is again an IDE plugin that's available",
+      "offset": 1662000,
+      "duration": 5940
+    },
+    {
+      "text": "for jetbrains based Ides Eclipse space",
+      "offset": 1664880,
+      "duration": 6539
+    },
+    {
+      "text": "Ides visual studio and visual studio",
+      "offset": 1667940,
+      "duration": 4800
+    },
+    {
+      "text": "code",
+      "offset": 1671419,
+      "duration": 3961
+    },
+    {
+      "text": "um you can enter what we call connected",
+      "offset": 1672740,
+      "duration": 5280
+    },
+    {
+      "text": "mode that allows you to log into the",
+      "offset": 1675380,
+      "duration": 5940
+    },
+    {
+      "text": "sonar Cube server the benefits that you",
+      "offset": 1678020,
+      "duration": 5279
+    },
+    {
+      "text": "see from that is one is those",
+      "offset": 1681320,
+      "duration": 4560
+    },
+    {
+      "text": "notifications I mentioned earlier",
+      "offset": 1683299,
+      "duration": 5341
+    },
+    {
+      "text": "uh when certain events happen on the",
+      "offset": 1685880,
+      "duration": 5220
+    },
+    {
+      "text": "sonar Cube server such as you're working",
+      "offset": 1688640,
+      "duration": 4680
+    },
+    {
+      "text": "on a project and that project has failed",
+      "offset": 1691100,
+      "duration": 5400
+    },
+    {
+      "text": "its quality gate you'll see alerts right",
+      "offset": 1693320,
+      "duration": 5400
+    },
+    {
+      "text": "there in the IDE",
+      "offset": 1696500,
+      "duration": 4620
+    },
+    {
+      "text": "um it also syncs up the quality profile",
+      "offset": 1698720,
+      "duration": 5579
+    },
+    {
+      "text": "so um that you'll have consistent rules",
+      "offset": 1701120,
+      "duration": 5400
+    },
+    {
+      "text": "being applied on the survey based scans",
+      "offset": 1704299,
+      "duration": 5341
+    },
+    {
+      "text": "as well as the local scans",
+      "offset": 1706520,
+      "duration": 6000
+    },
+    {
+      "text": "and also if someone goes and marks an",
+      "offset": 1709640,
+      "duration": 5700
+    },
+    {
+      "text": "issue as false positive or won't fix on",
+      "offset": 1712520,
+      "duration": 4860
+    },
+    {
+      "text": "the sonar Cube server that will be",
+      "offset": 1715340,
+      "duration": 4319
+    },
+    {
+      "text": "suppressed in the ID so you'll no longer",
+      "offset": 1717380,
+      "duration": 5539
+    },
+    {
+      "text": "see that particular issue",
+      "offset": 1719659,
+      "duration": 6301
+    },
+    {
+      "text": "there are a few rules in our commercial",
+      "offset": 1722919,
+      "duration": 4841
+    },
+    {
+      "text": "editions of the product that are only",
+      "offset": 1725960,
+      "duration": 5940
+    },
+    {
+      "text": "run on server-based scans these are",
+      "offset": 1727760,
+      "duration": 6299
+    },
+    {
+      "text": "typically security rules they're very",
+      "offset": 1731900,
+      "duration": 4980
+    },
+    {
+      "text": "resource intensive we don't want to",
+      "offset": 1734059,
+      "duration": 6181
+    },
+    {
+      "text": "disrupt a developer's workstation uh by",
+      "offset": 1736880,
+      "duration": 6299
+    },
+    {
+      "text": "chugging along uh running uh you know",
+      "offset": 1740240,
+      "duration": 5760
+    },
+    {
+      "text": "really heavy duty rules there however",
+      "offset": 1743179,
+      "duration": 5581
+    },
+    {
+      "text": "you can still see those results in the",
+      "offset": 1746000,
+      "duration": 5880
+    },
+    {
+      "text": "IDE when you're in Connected mode but",
+      "offset": 1748760,
+      "duration": 5279
+    },
+    {
+      "text": "other than those all of the other rules",
+      "offset": 1751880,
+      "duration": 7340
+    },
+    {
+      "text": "that we ship are run there in your IDE",
+      "offset": 1754039,
+      "duration": 5181
+    },
+    {
+      "text": "a okay I think we have just about a",
+      "offset": 1759919,
+      "duration": 4500
+    },
+    {
+      "text": "minute left here uh for the questions",
+      "offset": 1762320,
+      "duration": 4440
+    },
+    {
+      "text": "that we are not able to get to today we",
+      "offset": 1764419,
+      "duration": 4801
+    },
+    {
+      "text": "will answer them on the community and I",
+      "offset": 1766760,
+      "duration": 4080
+    },
+    {
+      "text": "think a bunch of you guys also asked",
+      "offset": 1769220,
+      "duration": 3839
+    },
+    {
+      "text": "about a copy of the recording so we're",
+      "offset": 1770840,
+      "duration": 4140
+    },
+    {
+      "text": "going to send over an email",
+      "offset": 1773059,
+      "duration": 4801
+    },
+    {
+      "text": "um with with the webinar recording for",
+      "offset": 1774980,
+      "duration": 5040
+    },
+    {
+      "text": "everyone so I'm gonna just have one more",
+      "offset": 1777860,
+      "duration": 3840
+    },
+    {
+      "text": "question here",
+      "offset": 1780020,
+      "duration": 4259
+    },
+    {
+      "text": "um Brian for you this is uh about new",
+      "offset": 1781700,
+      "duration": 5040
+    },
+    {
+      "text": "code so the question asks apart from",
+      "offset": 1784279,
+      "duration": 4441
+    },
+    {
+      "text": "starting with new code do you have any",
+      "offset": 1786740,
+      "duration": 4760
+    },
+    {
+      "text": "tips on driving sonar Cube team adoption",
+      "offset": 1788720,
+      "duration": 6199
+    },
+    {
+      "text": "across the Enterprise",
+      "offset": 1791500,
+      "duration": 3419
+    },
+    {
+      "text": "um so",
+      "offset": 1796940,
+      "duration": 4020
+    },
+    {
+      "text": "um one of the one of the big things is",
+      "offset": 1798860,
+      "duration": 5640
+    },
+    {
+      "text": "is just making sonar Cube more visible",
+      "offset": 1800960,
+      "duration": 6240
+    },
+    {
+      "text": "so having those notifications uh having",
+      "offset": 1804500,
+      "duration": 5700
+    },
+    {
+      "text": "that reporting available uh making sure",
+      "offset": 1807200,
+      "duration": 5880
+    },
+    {
+      "text": "that you're focused on standards that",
+      "offset": 1810200,
+      "duration": 5339
+    },
+    {
+      "text": "your developers care about",
+      "offset": 1813080,
+      "duration": 5160
+    },
+    {
+      "text": "um and uh I found that you know when",
+      "offset": 1815539,
+      "duration": 4681
+    },
+    {
+      "text": "you're focusing on just the code they're",
+      "offset": 1818240,
+      "duration": 4740
+    },
+    {
+      "text": "writing today uh when you're not being",
+      "offset": 1820220,
+      "duration": 5400
+    },
+    {
+      "text": "too nitpicky and really focusing on the",
+      "offset": 1822980,
+      "duration": 4860
+    },
+    {
+      "text": "on the things that your entire business",
+      "offset": 1825620,
+      "duration": 6299
+    },
+    {
+      "text": "agrees is important uh that tends to",
+      "offset": 1827840,
+      "duration": 7740
+    },
+    {
+      "text": "really help uh developers Embrace uh",
+      "offset": 1831919,
+      "duration": 6781
+    },
+    {
+      "text": "products like sonar Cube or really any",
+      "offset": 1835580,
+      "duration": 6540
+    },
+    {
+      "text": "static analysis tool and begin including",
+      "offset": 1838700,
+      "duration": 5160
+    },
+    {
+      "text": "it as part of their day-to-day routine",
+      "offset": 1842120,
+      "duration": 4980
+    },
+    {
+      "text": "which is really the only way that you're",
+      "offset": 1843860,
+      "duration": 6660
+    },
+    {
+      "text": "going to improve code over time",
+      "offset": 1847100,
+      "duration": 6000
+    },
+    {
+      "text": "all right thank you very much Brian and",
+      "offset": 1850520,
+      "duration": 4259
+    },
+    {
+      "text": "thanks to everyone for attending today",
+      "offset": 1853100,
+      "duration": 4980
+    },
+    {
+      "text": "uh we will see you in the next webinar",
+      "offset": 1854779,
+      "duration": 6921
+    },
+    {
+      "text": "take care and have a great day",
+      "offset": 1858080,
+      "duration": 3620
+    }
+  ],
+  "fullText": "all right cool so let's get started hello everyone and welcome to another session of our clean code webinar series thank you so much for joining us today I am kirti Joshi and I lead the Enterprise product marketing team at sonar source and I'll be your host and moderator for today's session and I have with me Brian cipolloni from the sales engineering team who's the presenter for today's topic so Brian's going to be talking to you about how you can effectively scale clean code for your growing Enterprise he's going to cover some actionable items and he's going to demo some capabilities that you can start implementing today so before I go ahead and let Brian introduce himself I'm going to take a brief minute to go over some housekeeping items so this is a 30 minute session that includes a q a so throughout the session you can submit your questions via the Q a box in Zoom or not the chat box but the Q a box and on our side we have two panelists Jason and Silva from the services team who will triage your questions some they will answer directly during the webinar and others they will kind of you know queue up so that Brian can address them at the end of his presentation another thing to note that this session is being recorded and so in a few days you should receive an email with the recording um another thing is that after the webinar we are going to send over a survey uh please please do tell us what you liked uh where we can improve and what other topics and deep dive sessions will be interesting for us to cover in future webinars all right so okay then without any delay let's get started Brian uh the floor is all yours thank you Kirsty and uh thank you all for joining me today uh I'm Brian cipolloni from the sonar sales engineering team uh one of the great things I get to do here in my role is to meet customers and help them get the most out of our tools in today's webinar I'd like to start by sharing a case study from a major retail that I've worked with a few years ago that was struggling a little bit to scale clean code across our organization particular customer had been using Sonar Cube for several years and they shared with me that they were scanning 100 of their code with sonar Cube and also they had sonar Cube integrated with every one of their Jenkins Pipelines but even though they were scanning all their code they didn't really feel like they were seeing much of an improvement in overall quality so on the screen you can see the results from a couple of the projects that we reviewed together and I'd like to take a quick poll just to get everyone in the audience's opinion on based on whether the results you're seeing here which of these two applications you think is best to raise to release into production so we're going to pop up that poll here and we'll give you about 30 seconds to go ahead and just you know give us your uh opinion what you think uh is the the best option here to release to production foreign and go ahead and choose which one you think is best um this is uh these are a couple of real projects that we have been scanned with sonar cube a few versions ago um but these represent the the results that we were seeing with this particular customer uh we have a couple uh more seconds here okay let's go ahead and take a look at the results here and uh not surprisingly uh most of you uh agreed that project B uh appears to be the better code and that's the one that you would likely release into production the truth is here is that this particular customer had really no idea whether or not either of these applications should be released when we dug deeper into these projects we found that the first job of project project a had over 1600 tests enabled in addition to the rules that we provide with our products out of the box this particular user had gone and found every single Java plug-in that they could find out there in our community and they installed them and they also enabled every single rule that was available and some of these rules were even duplicates of each other so if there was a particular issue in their code that would create multiple issues with sonar Cube so in this particular case there's over 12 000 open issues and these require tens of thousands of remediation effort sorry tens of thousands of hours of remediation effort so when I asked the team how they use these results uh considering that this project had never met any sort of quality standard their response was well we really don't we gave this particular team a waiver and they always released their project regardless of what sonar Cube's saying in the second project really looked impressive on the service project b as you see here and it looked like a really high quality application but when we looked closely we had found that their project administrator had simply disabled all the sonar Cube rules they were barely testing anything and of course this project always passed their standards so we took a step back and and I asked uh this customer what do you expect from your code what do you feel is absolutely necessary before you reach production what needs to be fixed what needs to be addressed and they stated that they wanted no critical vulnerabilities in their code in no critical bugs they felt like all those things should be addressed before their code gets released but when we looked at the standards that they were actually using in addition to covering vulnerabilities in bugs they had a bunch of other arbitrary conditions in place they had things like less than five code smells or a complexity score less than 100 most of these things had nothing to do with vulnerabilities or bugs and they completely distracted their developers from the problems that their business felt was important so even though this organization was scanning all their code they were seeing very little benefit they had no consistent standard and no way to let developers know what they should be fixing so here's an example of the results a software team would see when they first scanned their code with sonar or really any sort of static analysis tool these results alone usually create more questions and answers are these good or bad results where should my developers be focusing attention how should we tackle these issues without disrupting our production schedule this code's been running in production for years should we really be messing with any of this and hey we can accept these results for now but how do we avoid introducing new problems in the future now you imagine an Enterprise where you're scanning hundreds or thousands of repositories those questions start piling up across hundreds of developers it creates a mess that really disrupts you from getting any sort of value from sonar's products so it's not just enough to run static analysis on your code you need to set a standard that developers will respect and well and one that they'll know when they need to act on so to help you create a clean code standard that scales across your Enterprise I'm going to show you four tools and sonar's products that will help you adopt meaningful quality standards the first is quality profiles these Define the rules that your source code must follow the next is quality Gates these Define the conditions that your code must meet to conform with your standards notifications let your developers know when they need to take remediation action import Enterprise report excuse me Enterprise reporting helps you monitor the quality and security of hundreds or even thousands of software projects so I'm going to jump over into sonar Cube and show you a few of these things the first tool I want to talk about is quality profiles quality profiles represent the rule book that developers should be following when they're writing code now we ship our products with thousands of rules that can be used to test your code in deciding which of these rules you should be using can be a little bit overwhelming the good news is that we've already done a lot of this work for you for every one of our supported language we've created a built-in sonar way quality profile that represents the recommendations for what rules your developer should be following to write clean code this should be your starting point for sonar Cube across your organization and once you have some experience users using Sonar Cube you can decide to customize these rules but before you start doing that you want to make sure that you're Gathering feedback from Developers you may start hearing from developers that some of the rules in in that you're using are too noisy or maybe they just don't fit in with the way your organization writes code take this feedback into account when you're developing these custom quality profiles a great place to gather feedback from your developers is from within sonar Cube itself you can go into the issues tab in sonar Cube and take a look at which items developers may have marked as won't fix and maybe even as won't uh false positives this is going to give you some feedback from the tool to let you know which rules developers feel are a little too noisy and that can create some guidance on where to go if you decide to start customizing your quality profiles also after if you do decide to go ahead and customize your quality profiles make sure you're periodically revisiting these quality profiles to make sure they are consistent uh with the latest releases of our products and that you're taking advantage of all the new tests available to you for example when you are reviewing a quality profile you can see here that we list all the deprecated rules and also any of our recommendations that you're not following with this quality profile to give you some guidance of things that you may need to update the next item I want to talk about is quality Gates so if you think of quality profiles as the rule book your developers need to follow you can think of quality Gates as the referee it's important to make sure that your quality Gates focus on the aspects of code quality and security that are important to your organization these standards should be actionable not aspirational When developing your quality Gates ask yourself what do I expect my developers to fix before merging their code or releasing it if you don't expect developers to fix something immediately then it really doesn't belong in your quality gate and since you've probably been working on your code for a while uh before you started using Sonar Cube you should focus your efforts your your conditions and your quality Gates on new code because you're really not expecting developers to fix years worth of issues before your next release developers may decide to go back and address some of those older issues but they must keep their new code clean so When developing these quality Gates a best practice is to focus on some of the key metrics that we've developed to help you compare software projects of different sizes and of different languages you can see here in this particular project that we created some grades in each of these categories reliability security security review and maintainability and these grades are calculated separately both for new code so recently changed code as well as overall code so you're still getting these ratings across your entire code base but you should really be focusing your quality standards on these ratings uh on your newer code the next tool I want to talk about is notifications so now that you've set up your clean codes standard with quality profiles and quality Gates it's important to let developers know when they're not meeting those standards if they don't know when to act nothing uh none of these issues are really going to get resolved so uh the best time to notify developers that there is something they need to address is when the quality gate has failed so when you see a quality gate failed this is a great time to get everybody on board to go and address these problems and to bring this code back into compliance so if you're passing the quality gate you know there may be some findings but you've already determined that they are not serious enough for you uh for developers to take action so some of the ways that you can uh notify developers is through son or Lin sonar Lin is our companion IDE plugin and uh when that is connected to your sonar Cube server those notifications will pop up right there in the IDE also developers can subscribe to email notifications so every user in sonar Cube can go in and choose when they want to be notified uh when something is is uh is wrong in sonar Cube uh when their quality Gates failed really any conditions that they want to pay attention to also with sonar Cube Developer Edition uh we'll go out to pull requests and decorate the results with the sonar Cube scan so here you can see uh in this particular GitHub pull request sonar Cube has gone out and added a comment to let whoever's doing this review know that something uh needs to be addressed in this project another way you can do this is through badges so with each project you have some a snippet of code here where you can get a project badge you can put this on a wall board you can put this on your project Pages whatever developers are paying attention to and if you really want to get your developers attentions you can go ahead and uh break your pipelines when you've failed uh quality Gates that usually uh Drive some action pretty quickly the final tool I want to talk about is Enterprise reporting so you've established a clean code standard across your Enterprise and in addition to your developers you'll likely have a lot of stakeholders that are interested in the quality and security of your code with sonar Cube Enterprise Edition you'll have access to additional reporting that allows you to create portfolios a project that maps to your business needs this feature rolls up project level reporting from your teams and it maps to your business units your technology areas really whatever makes sense in your organization these portfolio ports allow stakeholders to subscribe and share these reports and create additional metrics across these projects this release ability grade here from this portfolio is a very um useful indicator that reflects what percentage of your projects are meeting your quality standards these reports also summarize clean code in the other categories in really any performance measure that sonar Cube keeps track of so in closing I want to share with you a few things that you can do today uh to go out after this webinar and and start scaling clean code in your organization the first step is to go in review and consolidate your quality profiles if you find in your sonar Cube instance or if you're using Sonar Cloud our our software as a service offering that there's a lot of quality profiles a lot of teams are using uh their own set of rules uh it may be a good idea to go ahead and start consolidating those um you can if you feel that that's too much work you can go ahead and start using uh those out of the box sonar weight profiles you should refocus your quality gates to focus on the conditions that um that developers will fix immediately so what do you expect to be fixed before release what do you expect to be sticks before code is merged if your quality gates are covering things that you don't care about where you don't want a developer to drop what they're doing and go address the problem immediately you should rethink whether or not that should be part of your quality gate and finally you want to make sure that developers receive notifications every time your quality gate fails so if they're working on a project the quality gate should be something that they act on when it fails they should know go looking sonar Cube go look at my pull requests whatever you need to do to make sure uh that um you know that they know that something needs to be addressed so uh thank you all for listening uh we'll go ahead and take a few questions um if you have uh questions that came up please feel free to add them to the Q a box and uh guaranteed let me know what we have here sounds good thank you Brian that was uh really interesting I particularly like the you know first part of the project a versus Project B it's a real life example and that was very interesting to me so just another reminder for the audience to get your questions in on the Q a I see a bunch of questions that Jason and Silva already answering but as more questions trickle in I think Brian I wanted to ask you you know a question that we often get from our customers and you've talked about quality profiles and quality Gates here what is your recommendation on teams uh to set up their quality profiles should should you let each of the team members like set up their own quality profiles what's the best practice here so letting teams set up their own quality profile may seem like a good way to sort of crowdsource uh the responsibility of setting those up but what often happens or what I've observed in those situations is that um every team ends up following their own set of rules so there's really no consistent standard across your organization and as I showed in those uh those examples at the beginning um you know two projects one can look great and simply because you know they're not following many rules um so in most organizations we recommend that you have a team you know maybe folks like Architects or uh you know people who are familiar with sonar Cube as a platform they should be in charge of managing those customized quality Gates I'm sorry those customized quality profiles and they should have a feedback loop so there should be a channel where developers can let them know what they think give feedback you can take it from the tool you can have other channels but make sure you're incorporating that so they have a voice in the process as well all right um we have we have several questions here um one of the attendees asks can so now Cube add information on a pull request for azure devops yeah so um the the pull request decoration that I showed you uh that works for GitHub it also works for git lab Azure devops and for bitbucket and this includes the the cloud hosted versions as well as self-hosted versions of those devops platforms foreign very cool you also talked about you know the reporting capabilities uh and we have a question here uh about customizing those reports so can you tell us a little bit more about that yeah so we developed uh our reporting uh included uh to really reflect uh what we feel is important for more organizations so in addition uh to that portfolio reporting we have some security focused reporting um and and then we have that project level reporting as well if you have other reporting needs uh we do have an open json-based web API you can go extract any of the data that you're seeing in the sonar Cube UI and you can create whatever reports Integrations you like so if you want to put those in PDFs spreadsheets uh you know you can definitely do that uh through our API um cool one of the you uh audience asks here uh does the sonar Cube I think is uh related to the pull request analysis but does the sonar Cube PR analysis Feature work with github's draft pull requests um yes yes if you have set up a draft pull request and your uh DeVos platform would run a build uh based on that you can absolutely uh run an analysis there and uh perform that that pull request reporting um all right there's one question about portfolios here um you may have briefly kind of you know touched upon that but um which versions of sonar Cube have the portfolio section where you can you know see the full view of all your projects so that portfolio feature is exclusive to the Enterprise Edition of our product um if you're using uh one of the other editions of sonar Cube or you're using Sonar Cloud you won't have access to that and by the way in addition to Enterprise Edition also our our data center Edition which adds some clustering capabilities to sonar Cube that also uh has uh that portfolio reporting it's really meant to support uh larger Enterprises uh you know like I mentioned once you start uh analyzing hundreds of repositories with sonar Cube there's more stakeholders involved they're the ones that are going to get the most benefit from that type of reporting okay very nice um quality Gates uh one of our audience asks a question and what what is your recommendation about configuring different quality gates for different languages uh should should they be doing that what is what is the best practice so if you take a look at the uh different types of conditions especially the ones that we recommend with the sonar whey quality uh gate those are language agnostic um so each it reflects on each of the um those categories that I showed you those grades um regardless of the language you're analyzing those grades are going to be consistent across all of them so you should be able to create uh one or or maybe a couple of quality Gates and have those apply to all of your projects regardless of the language you're analyzing I see and what about delegating quality gate management um I think we have a question related to that as well so you can do that um there is a special role in sonar Cube where those uh people with that role will be able to manage uh all of the quality gates in your system also with uh quality profiles and quality Gates you'll have the ability to give individual users uh the responsibility to manage a single uh quality profile or quality game let me pull this up real quick here when I pull up one of these I can go ahead and give permission to a specific user to let them uh have access to this so um for example I can give myself access to be the manager of this one so if you have um some some folks that maybe you want to be in charge of a particular languages quality profile or want to be in charge of specific quality Gates that map to you know their their portion of the business you can definitely do that with all versions of sonar Cube all right um we have a few more minutes here so I'm just going to take a couple of questions uh there were a bunch of questions around uh sonal and questions and comments um can you I think one of this question asks can so now let me be linked to get notices from sonar Cube and can those issues be identified in sonarlint um as seen on the Enterprise dashboard uh can you talk a little bit about our connected mode and how that works together sure so with uh sonarlint which is again an IDE plugin that's available for jetbrains based Ides Eclipse space Ides visual studio and visual studio code um you can enter what we call connected mode that allows you to log into the sonar Cube server the benefits that you see from that is one is those notifications I mentioned earlier uh when certain events happen on the sonar Cube server such as you're working on a project and that project has failed its quality gate you'll see alerts right there in the IDE um it also syncs up the quality profile so um that you'll have consistent rules being applied on the survey based scans as well as the local scans and also if someone goes and marks an issue as false positive or won't fix on the sonar Cube server that will be suppressed in the ID so you'll no longer see that particular issue there are a few rules in our commercial editions of the product that are only run on server-based scans these are typically security rules they're very resource intensive we don't want to disrupt a developer's workstation uh by chugging along uh running uh you know really heavy duty rules there however you can still see those results in the IDE when you're in Connected mode but other than those all of the other rules that we ship are run there in your IDE a okay I think we have just about a minute left here uh for the questions that we are not able to get to today we will answer them on the community and I think a bunch of you guys also asked about a copy of the recording so we're going to send over an email um with with the webinar recording for everyone so I'm gonna just have one more question here um Brian for you this is uh about new code so the question asks apart from starting with new code do you have any tips on driving sonar Cube team adoption across the Enterprise um so um one of the one of the big things is is just making sonar Cube more visible so having those notifications uh having that reporting available uh making sure that you're focused on standards that your developers care about um and uh I found that you know when you're focusing on just the code they're writing today uh when you're not being too nitpicky and really focusing on the on the things that your entire business agrees is important uh that tends to really help uh developers Embrace uh products like sonar Cube or really any static analysis tool and begin including it as part of their day-to-day routine which is really the only way that you're going to improve code over time all right thank you very much Brian and thanks to everyone for attending today uh we will see you in the next webinar take care and have a great day",
+  "fetchedAt": "2026-03-14T09:24:52.679Z"
+}

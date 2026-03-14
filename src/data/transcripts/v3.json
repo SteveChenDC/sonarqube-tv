@@ -1,0 +1,688 @@
+{
+  "videoId": "v3",
+  "youtubeId": "OZLWa6qeO3A",
+  "segments": [
+    {
+      "text": "Hey Killian, I saw you wrote this",
+      "offset": 0,
+      "duration": 3040
+    },
+    {
+      "text": "amazing article about hooking up cloud",
+      "offset": 1360,
+      "duration": 3840
+    },
+    {
+      "text": "code to sonar cube. What problem are we",
+      "offset": 3040,
+      "duration": 4560
+    },
+    {
+      "text": "actually trying to solve here and how?",
+      "offset": 5200,
+      "duration": 4479
+    },
+    {
+      "text": "So AI agents are really good at",
+      "offset": 7600,
+      "duration": 4640
+    },
+    {
+      "text": "generating code fast. Uh but they're not",
+      "offset": 9679,
+      "duration": 4161
+    },
+    {
+      "text": "always great about reviewing the code",
+      "offset": 12240,
+      "duration": 3519
+    },
+    {
+      "text": "that they just generated. Sometimes",
+      "offset": 13840,
+      "duration": 2960
+    },
+    {
+      "text": "they'll introduce security",
+      "offset": 15759,
+      "duration": 2881
+    },
+    {
+      "text": "vulnerabilities or they'll miss edge",
+      "offset": 16800,
+      "duration": 3360
+    },
+    {
+      "text": "cases or they'll use deprecated",
+      "offset": 18640,
+      "duration": 4000
+    },
+    {
+      "text": "patterns. Um so then that means that",
+      "offset": 20160,
+      "duration": 4640
+    },
+    {
+      "text": "you're stuck with being the cleanup crew",
+      "offset": 22640,
+      "duration": 3520
+    },
+    {
+      "text": "and going through and making sure that",
+      "offset": 24800,
+      "duration": 5360
+    },
+    {
+      "text": "everything's kosher. So the idea is is",
+      "offset": 26160,
+      "duration": 6480
+    },
+    {
+      "text": "what if Claude was able to review its",
+      "offset": 30160,
+      "duration": 4480
+    },
+    {
+      "text": "own code and the way that that happens",
+      "offset": 32640,
+      "duration": 4160
+    },
+    {
+      "text": "is we give it access to Sonar Cube cloud",
+      "offset": 34640,
+      "duration": 4160
+    },
+    {
+      "text": "through the MCP server. And that means",
+      "offset": 36800,
+      "duration": 4240
+    },
+    {
+      "text": "that the loop is is that Cloud generates",
+      "offset": 38800,
+      "duration": 4880
+    },
+    {
+      "text": "the code and then runs the scanner and",
+      "offset": 41040,
+      "duration": 4960
+    },
+    {
+      "text": "then it will verify the scan and pull in",
+      "offset": 43680,
+      "duration": 4320
+    },
+    {
+      "text": "all those rules with the MCP server and",
+      "offset": 46000,
+      "duration": 3600
+    },
+    {
+      "text": "then anything that it sees it will go",
+      "offset": 48000,
+      "duration": 3600
+    },
+    {
+      "text": "ahead and make those fixes and then",
+      "offset": 49600,
+      "duration": 4479
+    },
+    {
+      "text": "rerun the scanner. So that means that by",
+      "offset": 51600,
+      "duration": 4799
+    },
+    {
+      "text": "the time anything even gets pushed, it's",
+      "offset": 54079,
+      "duration": 6601
+    },
+    {
+      "text": "already been verified and validated.",
+      "offset": 56399,
+      "duration": 4281
+    },
+    {
+      "text": "Two files here. First is this sonar",
+      "offset": 63440,
+      "duration": 5920
+    },
+    {
+      "text": "project properties file and that's in",
+      "offset": 66000,
+      "duration": 5600
+    },
+    {
+      "text": "the project root. And so what this does",
+      "offset": 69360,
+      "duration": 4560
+    },
+    {
+      "text": "is it tells the scanner some information",
+      "offset": 71600,
+      "duration": 4960
+    },
+    {
+      "text": "about your project like the key and the",
+      "offset": 73920,
+      "duration": 5360
+    },
+    {
+      "text": "org. Uh as well as this line here which",
+      "offset": 76560,
+      "duration": 5280
+    },
+    {
+      "text": "says quality gate.weight equals true.",
+      "offset": 79280,
+      "duration": 4400
+    },
+    {
+      "text": "And what that does is it makes the",
+      "offset": 81840,
+      "duration": 3840
+    },
+    {
+      "text": "scanner block until the analysis",
+      "offset": 83680,
+      "duration": 4560
+    },
+    {
+      "text": "finishes. So Claude gets a hard pass or",
+      "offset": 85680,
+      "duration": 6320
+    },
+    {
+      "text": "fail. And the second file here is the",
+      "offset": 88240,
+      "duration": 5919
+    },
+    {
+      "text": "claude.md.",
+      "offset": 92000,
+      "duration": 4400
+    },
+    {
+      "text": "And essentially it's the behavioral",
+      "offset": 94159,
+      "duration": 4801
+    },
+    {
+      "text": "contract for Claude. And it says you",
+      "offset": 96400,
+      "duration": 4160
+    },
+    {
+      "text": "have to scan every piece of code that",
+      "offset": 98960,
+      "duration": 4560
+    },
+    {
+      "text": "you generate. If something fails, fix it",
+      "offset": 100560,
+      "duration": 5040
+    },
+    {
+      "text": "and then scan again. Don't come back to",
+      "offset": 103520,
+      "duration": 5440
+    },
+    {
+      "text": "me until the quality gate passes.",
+      "offset": 105600,
+      "duration": 5839
+    },
+    {
+      "text": "So, I have a claw CLI session loaded up",
+      "offset": 108960,
+      "duration": 5839
+    },
+    {
+      "text": "here. Um, as you can see, uh, you can",
+      "offset": 111439,
+      "duration": 6561
+    },
+    {
+      "text": "use this uh, MCP command, and it'll list",
+      "offset": 114799,
+      "duration": 4960
+    },
+    {
+      "text": "out the MCPS that you have available.",
+      "offset": 118000,
+      "duration": 3280
+    },
+    {
+      "text": "So, we see that we have the Sonar Cube",
+      "offset": 119759,
+      "duration": 5040
+    },
+    {
+      "text": "MCP available. We can go ahead and paste",
+      "offset": 121280,
+      "duration": 6320
+    },
+    {
+      "text": "in a prompt. And I'm going to ask it to",
+      "offset": 124799,
+      "duration": 5361
+    },
+    {
+      "text": "write a Python script that uploads a CSV",
+      "offset": 127600,
+      "duration": 5520
+    },
+    {
+      "text": "to S3, which is a pretty standard task,",
+      "offset": 130160,
+      "duration": 5439
+    },
+    {
+      "text": "but it has some hidden security pitfalls",
+      "offset": 133120,
+      "duration": 5040
+    },
+    {
+      "text": "that we may see. So, we'll go ahead and",
+      "offset": 135599,
+      "duration": 7081
+    },
+    {
+      "text": "hit enter and let it generate.",
+      "offset": 138160,
+      "duration": 4520
+    },
+    {
+      "text": "It's reading those two files",
+      "offset": 144080,
+      "duration": 3960
+    },
+    {
+      "text": "and it'll write the code.",
+      "offset": 148560,
+      "duration": 4039
+    },
+    {
+      "text": "Let's take a quick look at what cloud",
+      "offset": 153920,
+      "duration": 5280
+    },
+    {
+      "text": "rep. [clears throat]",
+      "offset": 157040,
+      "duration": 6000
+    },
+    {
+      "text": "So we have read CSV here",
+      "offset": 159200,
+      "duration": 5679
+    },
+    {
+      "text": "to bytes",
+      "offset": 163040,
+      "duration": 4400
+    },
+    {
+      "text": "upload function",
+      "offset": 164879,
+      "duration": 5881
+    },
+    {
+      "text": "using boto3.",
+      "offset": 167440,
+      "duration": 3320
+    },
+    {
+      "text": "Watch what happens next.",
+      "offset": 172640,
+      "duration": 4120
+    },
+    {
+      "text": "So it automatically creates a test file",
+      "offset": 179519,
+      "duration": 8041
+    },
+    {
+      "text": "as well. Take a quick look through that.",
+      "offset": 182480,
+      "duration": 5080
+    },
+    {
+      "text": "I'll approve that edit.",
+      "offset": 188239,
+      "duration": 4241
+    },
+    {
+      "text": "It's going to update this uh sonar",
+      "offset": 190640,
+      "duration": 4640
+    },
+    {
+      "text": "project properties file so that sonar is",
+      "offset": 192480,
+      "duration": 5679
+    },
+    {
+      "text": "able to read uh the test coverage when",
+      "offset": 195280,
+      "duration": 4560
+    },
+    {
+      "text": "it scans.",
+      "offset": 198159,
+      "duration": 3921
+    },
+    {
+      "text": "So we'll approve that.",
+      "offset": 199840,
+      "duration": 4560
+    },
+    {
+      "text": "And now it automatically runs the sonar",
+      "offset": 202080,
+      "duration": 4239
+    },
+    {
+      "text": "scanner. It knows that scanning is",
+      "offset": 204400,
+      "duration": 3759
+    },
+    {
+      "text": "mandatory.",
+      "offset": 206319,
+      "duration": 3200
+    },
+    {
+      "text": "This is an option that you can do to",
+      "offset": 208159,
+      "duration": 3201
+    },
+    {
+      "text": "bind it. I'm going to click no just for",
+      "offset": 209519,
+      "duration": 4161
+    },
+    {
+      "text": "now.",
+      "offset": 211360,
+      "duration": 6239
+    },
+    {
+      "text": "We'll get that sonar scan going.",
+      "offset": 213680,
+      "duration": 5520
+    },
+    {
+      "text": "It looks like the quality gate failed.",
+      "offset": 217599,
+      "duration": 3441
+    },
+    {
+      "text": "And it'll automatically get detailed",
+      "offset": 219200,
+      "duration": 4000
+    },
+    {
+      "text": "results with the MCP tool. So, it's",
+      "offset": 221040,
+      "duration": 5720
+    },
+    {
+      "text": "going to grab the status.",
+      "offset": 223200,
+      "duration": 3560
+    },
+    {
+      "text": "Can pop that open.",
+      "offset": 231040,
+      "duration": 5040
+    },
+    {
+      "text": "Okay.",
+      "offset": 233840,
+      "duration": 5520
+    },
+    {
+      "text": "Uh expected bucket owner issue. So, rule",
+      "offset": 236080,
+      "duration": 7120
+    },
+    {
+      "text": "7 uh S7608 missing bucket ownership",
+      "offset": 239360,
+      "duration": 6879
+    },
+    {
+      "text": "verification. Um, if you upload to S3",
+      "offset": 243200,
+      "duration": 4560
+    },
+    {
+      "text": "without verifying that you own the",
+      "offset": 246239,
+      "duration": 3601
+    },
+    {
+      "text": "target bucket, you could be writing data",
+      "offset": 247760,
+      "duration": 4720
+    },
+    {
+      "text": "to a bucket and attacker controls. And",
+      "offset": 249840,
+      "duration": 3920
+    },
+    {
+      "text": "this is something that, you know,",
+      "offset": 252480,
+      "duration": 3360
+    },
+    {
+      "text": "someone could easily miss in a manual",
+      "offset": 253760,
+      "duration": 4960
+    },
+    {
+      "text": "review.",
+      "offset": 255840,
+      "duration": 4160
+    },
+    {
+      "text": "Get some more information about the",
+      "offset": 258720,
+      "duration": 4560
+    },
+    {
+      "text": "rule. [snorts]",
+      "offset": 260000,
+      "duration": 5520
+    },
+    {
+      "text": "So Claude drills into the rule via the",
+      "offset": 263280,
+      "duration": 5280
+    },
+    {
+      "text": "MCP. It pulls the full documentation and",
+      "offset": 265520,
+      "duration": 5679
+    },
+    {
+      "text": "reads the compliant code example. It's",
+      "offset": 268560,
+      "duration": 4480
+    },
+    {
+      "text": "connecting the scan failure to the",
+      "offset": 271199,
+      "duration": 5280
+    },
+    {
+      "text": "actual fix without any input from me.",
+      "offset": 273040,
+      "duration": 5120
+    },
+    {
+      "text": "Look, it's already offering to go ahead",
+      "offset": 276479,
+      "duration": 4000
+    },
+    {
+      "text": "and make that fix right there. So, it",
+      "offset": 278160,
+      "duration": 4240
+    },
+    {
+      "text": "added the expected bucket owner",
+      "offset": 280479,
+      "duration": 4921
+    },
+    {
+      "text": "parameter",
+      "offset": 282400,
+      "duration": 3000
+    },
+    {
+      "text": "and",
+      "offset": 291440,
+      "duration": 3000
+    },
+    {
+      "text": "it'll iterate in making proper fixes.",
+      "offset": 295199,
+      "duration": 9041
+    },
+    {
+      "text": "and it'll update the tests as well.",
+      "offset": 300560,
+      "duration": 5520
+    },
+    {
+      "text": "So, yep, I'll approve those changes to",
+      "offset": 304240,
+      "duration": 5000
+    },
+    {
+      "text": "the tests.",
+      "offset": 306080,
+      "duration": 3160
+    },
+    {
+      "text": "I'll rerun these tests.",
+      "offset": 310400,
+      "duration": 3960
+    },
+    {
+      "text": "Awesome. Automatically reruns the sonar",
+      "offset": 316080,
+      "duration": 5480
+    },
+    {
+      "text": "scanner.",
+      "offset": 318560,
+      "duration": 3000
+    },
+    {
+      "text": "Yep. So, the quality gate passes. We can",
+      "offset": 324639,
+      "duration": 7840
+    },
+    {
+      "text": "confirm that with the MCP tools again.",
+      "offset": 327759,
+      "duration": 8121
+    },
+    {
+      "text": "We can see",
+      "offset": 332479,
+      "duration": 3401
+    },
+    {
+      "text": "everything looks okay here.",
+      "offset": 336000,
+      "duration": 4039
+    },
+    {
+      "text": "Perfect. All conditions are green. And",
+      "offset": 342800,
+      "duration": 5920
+    },
+    {
+      "text": "so if I flip over",
+      "offset": 346160,
+      "duration": 5680
+    },
+    {
+      "text": "here, yep, we can see um everything's",
+      "offset": 348720,
+      "duration": 5759
+    },
+    {
+      "text": "green. The clo cod claude is handing me",
+      "offset": 351840,
+      "duration": 4560
+    },
+    {
+      "text": "spent through the same review that my CI",
+      "offset": 354479,
+      "duration": 4641
+    },
+    {
+      "text": "pipeline would run.",
+      "offset": 356400,
+      "duration": 4799
+    },
+    {
+      "text": "So it's not just generating the code.",
+      "offset": 359120,
+      "duration": 3600
+    },
+    {
+      "text": "It's accountable to the same quality",
+      "offset": 361199,
+      "duration": 4000
+    },
+    {
+      "text": "gate every developer on the team hits.",
+      "offset": 362720,
+      "duration": 5440
+    },
+    {
+      "text": "Five then verify. So we'll include the",
+      "offset": 365199,
+      "duration": 5361
+    },
+    {
+      "text": "claude MD file for you to download and",
+      "offset": 368160,
+      "duration": 4080
+    },
+    {
+      "text": "use on your own. So you just drop that",
+      "offset": 370560,
+      "duration": 3520
+    },
+    {
+      "text": "into your project and then hook up the",
+      "offset": 372240,
+      "duration": 3760
+    },
+    {
+      "text": "MCP server and then you have an agent",
+      "offset": 374080,
+      "duration": 3760
+    },
+    {
+      "text": "that's able to review its own work.",
+      "offset": 376000,
+      "duration": 4560
+    },
+    {
+      "text": "Happy coding.",
+      "offset": 377840,
+      "duration": 2720
+    }
+  ],
+  "fullText": "Hey Killian, I saw you wrote this amazing article about hooking up cloud code to sonar cube. What problem are we actually trying to solve here and how? So AI agents are really good at generating code fast. Uh but they're not always great about reviewing the code that they just generated. Sometimes they'll introduce security vulnerabilities or they'll miss edge cases or they'll use deprecated patterns. Um so then that means that you're stuck with being the cleanup crew and going through and making sure that everything's kosher. So the idea is is what if Claude was able to review its own code and the way that that happens is we give it access to Sonar Cube cloud through the MCP server. And that means that the loop is is that Cloud generates the code and then runs the scanner and then it will verify the scan and pull in all those rules with the MCP server and then anything that it sees it will go ahead and make those fixes and then rerun the scanner. So that means that by the time anything even gets pushed, it's already been verified and validated. Two files here. First is this sonar project properties file and that's in the project root. And so what this does is it tells the scanner some information about your project like the key and the org. Uh as well as this line here which says quality gate.weight equals true. And what that does is it makes the scanner block until the analysis finishes. So Claude gets a hard pass or fail. And the second file here is the claude.md. And essentially it's the behavioral contract for Claude. And it says you have to scan every piece of code that you generate. If something fails, fix it and then scan again. Don't come back to me until the quality gate passes. So, I have a claw CLI session loaded up here. Um, as you can see, uh, you can use this uh, MCP command, and it'll list out the MCPS that you have available. So, we see that we have the Sonar Cube MCP available. We can go ahead and paste in a prompt. And I'm going to ask it to write a Python script that uploads a CSV to S3, which is a pretty standard task, but it has some hidden security pitfalls that we may see. So, we'll go ahead and hit enter and let it generate. It's reading those two files and it'll write the code. Let's take a quick look at what cloud rep. [clears throat] So we have read CSV here to bytes upload function using boto3. Watch what happens next. So it automatically creates a test file as well. Take a quick look through that. I'll approve that edit. It's going to update this uh sonar project properties file so that sonar is able to read uh the test coverage when it scans. So we'll approve that. And now it automatically runs the sonar scanner. It knows that scanning is mandatory. This is an option that you can do to bind it. I'm going to click no just for now. We'll get that sonar scan going. It looks like the quality gate failed. And it'll automatically get detailed results with the MCP tool. So, it's going to grab the status. Can pop that open. Okay. Uh expected bucket owner issue. So, rule 7 uh S7608 missing bucket ownership verification. Um, if you upload to S3 without verifying that you own the target bucket, you could be writing data to a bucket and attacker controls. And this is something that, you know, someone could easily miss in a manual review. Get some more information about the rule. [snorts] So Claude drills into the rule via the MCP. It pulls the full documentation and reads the compliant code example. It's connecting the scan failure to the actual fix without any input from me. Look, it's already offering to go ahead and make that fix right there. So, it added the expected bucket owner parameter and it'll iterate in making proper fixes. and it'll update the tests as well. So, yep, I'll approve those changes to the tests. I'll rerun these tests. Awesome. Automatically reruns the sonar scanner. Yep. So, the quality gate passes. We can confirm that with the MCP tools again. We can see everything looks okay here. Perfect. All conditions are green. And so if I flip over here, yep, we can see um everything's green. The clo cod claude is handing me spent through the same review that my CI pipeline would run. So it's not just generating the code. It's accountable to the same quality gate every developer on the team hits. Five then verify. So we'll include the claude MD file for you to download and use on your own. So you just drop that into your project and then hook up the MCP server and then you have an agent that's able to review its own work. Happy coding.",
+  "fetchedAt": "2026-03-14T09:18:42.139Z"
+}

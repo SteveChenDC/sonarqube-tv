@@ -1,0 +1,1463 @@
+{
+  "videoId": "v122",
+  "youtubeId": "nAlhq6npw_4",
+  "segments": [
+    {
+      "text": "Alright. Let's get started. Hello, everyone. Thank you for joining.",
+      "offset": 1000,
+      "duration": 5000
+    },
+    {
+      "text": "Hope you've had a great day today and welcome to our webinar. Securing with clean code. Unveiling and mitigating vulnerabilities.",
+      "offset": 6000,
+      "duration": 10000
+    },
+    {
+      "text": "Today, we are gonna show you and you're gonna learn how Sonar plays an important role in discovering real-world vulnerabilities.",
+      "offset": 16000,
+      "duration": 9000
+    },
+    {
+      "text": "We are going to show you how these kind of vulnerabilities can be discovered. And also outline some of the offensive and defensive perspectives on this.",
+      "offset": 25000,
+      "duration": 12000
+    },
+    {
+      "text": "I'm Keithi Joshi, your host and moderator for today's webinar. And this webinar is going to be presented by my colleague Stefan Schiller.",
+      "offset": 37000,
+      "duration": 13000
+    },
+    {
+      "text": "So I'm gonna go quickly over some essential housekeeping items before we start this webinar. This is a 45 min session.",
+      "offset": 50000,
+      "duration": 10000
+    },
+    {
+      "text": "That includes Q&A. Throughout the webinar, we encourage you to submit your questions via the Q&A box in Zoom, not the chat box, but the Q&A box.",
+      "offset": 60000,
+      "duration": 12000
+    },
+    {
+      "text": "Today we have 2 panelists joining us. Gayton and Loris from our application security team.",
+      "offset": 72000,
+      "duration": 8000
+    },
+    {
+      "text": "They will answer many of your questions through the box that you submit them. Some they will post to me, to ask Stefan live during the webinar.",
+      "offset": 80000,
+      "duration": 12000
+    },
+    {
+      "text": "I also wanna let you know that this session will be recorded and we will send out a link via email in the upcoming days.",
+      "offset": 92000,
+      "duration": 9000
+    },
+    {
+      "text": "And then finally at the end of the webinar. We will present to you a short webinar. Survey to tell us what you liked, where we should improve.",
+      "offset": 101000,
+      "duration": 9000
+    },
+    {
+      "text": "And what other topics you'd like to see covered in future sessions. So with that said, I'm going to introduce you to today's presenters, Stephan Schiller.",
+      "offset": 110000,
+      "duration": 11000
+    },
+    {
+      "text": "Stefan is a vulnerability researcher in the Sonar research and development team. He has been passionate about software and programming since his early childhood days.",
+      "offset": 121000,
+      "duration": 13000
+    },
+    {
+      "text": "With a background in red teaming he has been working in the field of offensive IT security for many years now.",
+      "offset": 134000,
+      "duration": 7000
+    },
+    {
+      "text": "And particularly at Sonar he finds and responsibility discloses vulnerabilities in popular open source software. Welcome Stefan and I'm gonna hand it over to you.",
+      "offset": 141000,
+      "duration": 14000
+    },
+    {
+      "text": "Thank you very much for this introduction and welcome everybody. I hope you're doing well. So what can you expect from this session?",
+      "offset": 155000,
+      "duration": 8000
+    },
+    {
+      "text": "This session is all about unveiling and mitigating vulnerabilities. I will start by introduce you to Sunnis for theability Research Team which is dedicated to this topic.",
+      "offset": 163000,
+      "duration": 10000
+    },
+    {
+      "text": "We will then dive into a real-world case study of a vulnerable application. This application is an open source Java project called Open Refine.",
+      "offset": 173000,
+      "duration": 8000
+    },
+    {
+      "text": "We will see how we discovered a critical only built in this application by using Sona Cloud. How and the tech could exploit this vulnerability and how this vulnerability can be mitigated with a comprehensive patch with the help of SO.",
+      "offset": 181000,
+      "duration": 15000
+    },
+    {
+      "text": "Doing a live demo, I will show you how to set up the application on summer cloud and you can easily do this the same with your own application and discover vulnerabilities on your own.",
+      "offset": 196000,
+      "duration": 10000
+    },
+    {
+      "text": "Also, we will have an interactive quiz throughout the session. So if you are somehow familiar with Java and Linux, it's this might be helpful, but no worries if not every question and solution will be explained in detail.",
+      "offset": 206000,
+      "duration": 9000
+    },
+    {
+      "text": "And of course it's totally up to you if you want to participate in the quiz or not.",
+      "offset": 215000,
+      "duration": 8000
+    },
+    {
+      "text": "But it's fun and you just need to select an answer when the poll comes up. We don't collect any personal results and only have a look at the anonymous of all results after each question.",
+      "offset": 223000,
+      "duration": 11000
+    },
+    {
+      "text": "So let's stuff in. How does Sona do vulnerability research? Coat is the most important and fundamental keystone of a software application.",
+      "offset": 234000,
+      "duration": 9000
+    },
+    {
+      "text": "It's on our mission is to provide you a framework to turn your code into clean code. Making this code clean means that you increase its maintainability, reduce overall cost, increase the satisfaction of developers, and much more.",
+      "offset": 243000,
+      "duration": 15000
+    },
+    {
+      "text": "One important aspect of clean code is security. Your application should be free of security. In order to fully understand vulnerabilities in their related threads with a dedicated vulnerability research team at This team is doing well, vulnerability research of course, which is related to our products.",
+      "offset": 258000,
+      "duration": 20000
+    },
+    {
+      "text": "More specifically, this means that we are looking for vulnerabilities and popular open source software. We then use the knowledge obtain through our findings to sharpen the engine of our product.",
+      "offset": 278000,
+      "duration": 10000
+    },
+    {
+      "text": "To Also, we regularly publish blog posts about our research and give presentations at IT security conferences.",
+      "offset": 288000,
+      "duration": 6000
+    },
+    {
+      "text": "How our usual workflow consists of these 4 steps. Audit, report, dog food and published.",
+      "offset": 294000,
+      "duration": 7000
+    },
+    {
+      "text": "The first step is to audit the software application. We do this by leveraging our own products on our cloud and summer cube and also do manual code audits.",
+      "offset": 301000,
+      "duration": 10000
+    },
+    {
+      "text": "The outcome of this is a security vulnerability. These vulnerabilities are reported by us by responsibly disclosing these to the corresponding vendors or maintainers of the application.",
+      "offset": 311000,
+      "duration": 11000
+    },
+    {
+      "text": "We explain them the root cause of the vulnerabilities and also provide guidance on how to fix these. Once this reporting step is done and the vulnerabilities are hopefully fixed, we draw conclusions from this.",
+      "offset": 322000,
+      "duration": 11000
+    },
+    {
+      "text": "One of the most significant questions is, was the vulnerability discovered by our engine? If so, that's great, but it's not too interesting for us.",
+      "offset": 333000,
+      "duration": 5000
+    },
+    {
+      "text": "My tracing fast is if the vulnerability was not discard. In that case we determine why it was not discovered and how we can improve the engine to also discover this kind of vulnerability in the future.",
+      "offset": 338000,
+      "duration": 15000
+    },
+    {
+      "text": "This way we can continuously improve our security engine. And this has a huge multiply effect. Once we add a new vulnerability type to the engine, you will automatically be notified if your code contains this kind of vulnerability.",
+      "offset": 353000,
+      "duration": 14000
+    },
+    {
+      "text": "Just to give you some numbers on this on average, 120,000 security hotspots and vulnerabilities are resolved on summer cloud per week.",
+      "offset": 367000,
+      "duration": 10000
+    },
+    {
+      "text": "The last step in our workflow is to publish our research and shared with the community. As I already mentioned, we do this by releasing blog posts and also give presentations that IT security conferences.",
+      "offset": 377000,
+      "duration": 11000
+    },
+    {
+      "text": "Hmm, for the public channels includes, interviews, podcasts, and of course, So with this background context, let's get to the meat of it and dive into a real-world case study.",
+      "offset": 388000,
+      "duration": 12000
+    },
+    {
+      "text": "I already mentioned that we are using sonic cloud and send a cube to identify security vulnerabilities and popular open source projects.",
+      "offset": 400000,
+      "duration": 8000
+    },
+    {
+      "text": "One of the projects we've been scanning is Open Refine. Open refine is a Java based open source data cleaning and transformation tool.",
+      "offset": 408000,
+      "duration": 8000
+    },
+    {
+      "text": "It can be used to load different types of data, cleaner, converted and extended. All of this can be done from the browser by accessing Open Refined SIP interface.",
+      "offset": 416000,
+      "duration": 10000
+    },
+    {
+      "text": "With almost 10,000 stars and 2,000 forks on GitHub, it's quite popular project and will serve us as a good example for today.",
+      "offset": 426000,
+      "duration": 8000
+    },
+    {
+      "text": "How to do list for this application looks like this. We want to discover, understand, exploit and mitigate a vulnerability.",
+      "offset": 434000,
+      "duration": 10000
+    },
+    {
+      "text": "So let's get our hands dirty and start with the first point. Discover our security vulnerability.",
+      "offset": 444000,
+      "duration": 6000
+    },
+    {
+      "text": "How much effort does this take? Let's just see it ourselves and set up Open Refine on Sona Cloud.",
+      "offset": 450000,
+      "duration": 7000
+    },
+    {
+      "text": "What you can see here is a GitHub repository I created. In this case, it's a copy of the Open Refine application.",
+      "offset": 457000,
+      "duration": 7000
+    },
+    {
+      "text": "But of course, this could also be your own application. What I want to do now is to analyze this application with Sona Cloud.",
+      "offset": 464000,
+      "duration": 8000
+    },
+    {
+      "text": "So I simply head over to Sona Cloud. I'm already locked in. So I only need to click on the plus sign here.",
+      "offset": 472000,
+      "duration": 4000
+    },
+    {
+      "text": "At the top right and select analyze new project. Now I can select the GitHub organization which contains the repository I want to analyze.",
+      "offset": 476000,
+      "duration": 12000
+    },
+    {
+      "text": "In this case, the repository resides within the Sunna Source Research Organization. So I selected this one and I can now select the corresponding repository.",
+      "offset": 488000,
+      "duration": 4000
+    },
+    {
+      "text": "I want to analyze. So I select the here and. Simply click on setup. Now I need to select how to end a new code.",
+      "offset": 492000,
+      "duration": 15000
+    },
+    {
+      "text": "We just use previous version here for now and clicked on create project. Now, Sunna Cloud has already gone to analyze the source code of the application.",
+      "offset": 507000,
+      "duration": 10000
+    },
+    {
+      "text": "This may take some time to depending on the size of the application. So I've already, prepared the results for you, which looks like this.",
+      "offset": 517000,
+      "duration": 4000
+    },
+    {
+      "text": "We can see that Sonic class has detected multiple issues within this course code. See, there are bugs which influence a reliability.",
+      "offset": 521000,
+      "duration": 13000
+    },
+    {
+      "text": "We've got 6 cold smells here affecting in the mentality and most importantly for us now there are security hotspots and 7 security vulnerability.",
+      "offset": 534000,
+      "duration": 11000
+    },
+    {
+      "text": "So let's have a look at the security vulnerabilities. On the left side, we can filter the displayed issues.",
+      "offset": 545000,
+      "duration": 7000
+    },
+    {
+      "text": "Let's have a look at the category high here. And we can see that. There's actually a severe security vulnerability in this application.",
+      "offset": 552000,
+      "duration": 9000
+    },
+    {
+      "text": "The description has states that extracting archives should not lead to a zip slip vulnerabilities. So before we take a look at this specific vulnerability in detail, that's briefly talk about vulnerability discovery.",
+      "offset": 561000,
+      "duration": 15000
+    },
+    {
+      "text": "How will Senna Cloud even able to discover this vulnerability? On the SONNOT CLED UI, we can see this different steps.",
+      "offset": 576000,
+      "duration": 8000
+    },
+    {
+      "text": "On the left side, the first step with number one is named source. And the last step for number 5 is called SIG.",
+      "offset": 584000,
+      "duration": 7000
+    },
+    {
+      "text": "This is a team flow of the vulnerability. How does this work? And applications logic is all about data.",
+      "offset": 591000,
+      "duration": 9000
+    },
+    {
+      "text": "This data is passed from one part of the code to another part. So for example, when you call message, you pass some data to it in form of a parameter.",
+      "offset": 600000,
+      "duration": 8000
+    },
+    {
+      "text": "This. This flow of data can be visualized as a graph like this. Now there are specific entry points to this flow of data called sources.",
+      "offset": 608000,
+      "duration": 15000
+    },
+    {
+      "text": "An example for this might be a request parameter of an API handler method. And the techer could feed in some data to the application at this point.",
+      "offset": 623000,
+      "duration": 9000
+    },
+    {
+      "text": "On the bottom, we have dangerous things. These are functions or methods which are known to be security relevant.",
+      "offset": 632000,
+      "duration": 7000
+    },
+    {
+      "text": "So if you for example, pass on a take a control string to the runtime exit method, an attacker could run an arbitrary operating system command, which is definitely a severe security vulnerability.",
+      "offset": 639000,
+      "duration": 11000
+    },
+    {
+      "text": "Now, the big question is if an attacker can reach a security sensitive sink. In other words, is there a pass from a source to a sink?",
+      "offset": 650000,
+      "duration": 10000
+    },
+    {
+      "text": "This is a challenge a computer algorithm can solve very easily. This example, the others? Yes. Data originating from an attacker controllable source eventually reaches the dangerous things.",
+      "offset": 660000,
+      "duration": 13000
+    },
+    {
+      "text": "Steps in between the flow from the source to the sink are called pass through. See simply pass on the data.",
+      "offset": 673000,
+      "duration": 6000
+    },
+    {
+      "text": "In our case study examples, attain flow is very straightforward. The source is the entry name of an archive and the sink is the construct of the file output stream class.",
+      "offset": 679000,
+      "duration": 10000
+    },
+    {
+      "text": "It The great advantages of Sonic Cloud and some acute stained analysis is that it runs completely automatic and can easily discover much more complex tane flows.",
+      "offset": 689000,
+      "duration": 9000
+    },
+    {
+      "text": "While the vulnerable 10 flow here could have also been spotted manually. A tent flow like this where the data is passed through plenty of methods and different source code files is far more unlikely to be discovered by human.",
+      "offset": 698000,
+      "duration": 12000
+    },
+    {
+      "text": "This makes the engine so invaluable to discover complex security vulnerabilities. And it does not stop here.",
+      "offset": 710000,
+      "duration": 7000
+    },
+    {
+      "text": "We've just recently added deepzos to our engine. While you're usually most concerned about your own code, this is not the only portion of your application.",
+      "offset": 717000,
+      "duration": 3000
+    },
+    {
+      "text": "And attacker is targeting. In reality, your application usually depends on certain third party dependencies. And the takeer can who can reach this portion of the code can leverage the vulnerability net in order to exploit your application.",
+      "offset": 720000,
+      "duration": 20000
+    },
+    {
+      "text": "Can unveil these deeply hidden vulnerabilities in third party dependencies and protect your application from incorrectly used or vulnerable, Okay, so first task done.",
+      "offset": 740000,
+      "duration": 10000
+    },
+    {
+      "text": "We discovered a critical security vulnerability. Of course, we also want to understand this vulnerability. And now it's your turn.",
+      "offset": 750000,
+      "duration": 12000
+    },
+    {
+      "text": "We can see that the source of the painful for this vulnerability is the entry name of an archive and the sync is the constructor of the file output stream class.",
+      "offset": 762000,
+      "duration": 9000
+    },
+    {
+      "text": "So So knockloads also stated that this is a zip slip for n. So let's start our Chris with the first question.",
+      "offset": 771000,
+      "duration": 4000
+    },
+    {
+      "text": "What is a zip slip vulnerability? Let me lunch your poll here.",
+      "offset": 775000,
+      "duration": 10000
+    },
+    {
+      "text": "And you should see a popup on your screen now with 4 possible answers. You can select. If the pop-up window overlaps with the text on the slides, you can simply move.",
+      "offset": 785000,
+      "duration": 5000
+    },
+    {
+      "text": "The window by dragging it. I give you, 20 s to read or possible answers. Then you can select the one you think is the correct answer.",
+      "offset": 790000,
+      "duration": 11000
+    },
+    {
+      "text": "So, 20 s from now on.",
+      "offset": 801000,
+      "duration": 12000
+    },
+    {
+      "text": "10.",
+      "offset": 813000,
+      "duration": 7000
+    },
+    {
+      "text": "5, 4, 3. To one, can closing the poll now.",
+      "offset": 820000,
+      "duration": 9000
+    },
+    {
+      "text": "Okay, before we unveil the results, let's have a look at the possible answers.",
+      "offset": 829000,
+      "duration": 6000
+    },
+    {
+      "text": "So on the C is pretty much nonsense. I don't really know anything about close manufacturing, but probably the term zip slip vulnerability is not used here.",
+      "offset": 835000,
+      "duration": 8000
+    },
+    {
+      "text": "At least this is not the kind of issue we are facing here. So what else could be the correct answer?",
+      "offset": 843000,
+      "duration": 6000
+    },
+    {
+      "text": "On the A, suggests that a Zipzer vulnerability is a firewall bypass technique.",
+      "offset": 849000,
+      "duration": 4000
+    },
+    {
+      "text": "Also, a content filter or firewall might be Bypass by office cating or compressing data.",
+      "offset": 853000,
+      "duration": 6000
+    },
+    {
+      "text": "This is not called the vulnerability itself and it's definitely not a Zipzer vulnerability.",
+      "offset": 859000,
+      "duration": 4000
+    },
+    {
+      "text": "So on the A is also not correct. And the D is about data acceleration. Again, this is not what we are facing here.",
+      "offset": 863000,
+      "duration": 8000
+    },
+    {
+      "text": "And the D is also incorrect. This leaves us with the correct answer B. Zipzer vulnerability is a specific kind of past reversed vulnerability caused by unsenetized entry names in an archive.",
+      "offset": 871000,
+      "duration": 13000
+    },
+    {
+      "text": "So So let's see the results. I share them now. With for under A, 50% under B, 38% on the C 5% and under D, 42%.",
+      "offset": 884000,
+      "duration": 13000
+    },
+    {
+      "text": "So, congratulations to everyone who picked the correct owner here. If you like, you can hide the pop up in the now by simply closing it.",
+      "offset": 897000,
+      "duration": 8000
+    },
+    {
+      "text": "It will reappear automatically for the next quiz. So great if you already knew this kind of vulnerability, but not everyone of you collects the correct answer and what is What if you don't know what the specific vulnerability reported by sonic cloud is about?",
+      "offset": 905000,
+      "duration": 18000
+    },
+    {
+      "text": "Is that case you can simply click on the why is this an issue button on the Son or Cloud UI?",
+      "offset": 923000,
+      "duration": 1000
+    },
+    {
+      "text": "This will present you a detailed explanation of why the raised issues the security vulnerability and what this vulnerability is about.",
+      "offset": 924000,
+      "duration": 11000
+    },
+    {
+      "text": "To put the explanation from Sonnet Cloud into pictures, let's imagine we have this archive, which contains a single file called Data TXT.",
+      "offset": 935000,
+      "duration": 9000
+    },
+    {
+      "text": "Here on the left is the local file system on the server. When the archive is extracted by the application, the specific fold is defined in which all files of the archive should be extracted to.",
+      "offset": 944000,
+      "duration": 11000
+    },
+    {
+      "text": "And this example, apps open refine temp. That's the data TC 5 from the archive is stored into this folder.",
+      "offset": 955000,
+      "duration": 8000
+    },
+    {
+      "text": "Now let's imagine in the techer stores the file with this name in the archive. It contains the past revisit to can dot dot slash.",
+      "offset": 963000,
+      "duration": 8000
+    },
+    {
+      "text": "When the file is restricted to the temp folder, it is not stored here anymore. Instead, the dot dot slash sequences resourced as a relative pass, the contents of the file are stored in a file called heck in the DC folder.",
+      "offset": 971000,
+      "duration": 14000
+    },
+    {
+      "text": "So the file name of an entry within the archive was used to traverse out of the intended destination folder.",
+      "offset": 985000,
+      "duration": 6000
+    },
+    {
+      "text": "This can be exploited by an attacker to write or overwrite arbitrary files on the server, which is not good at all as we will see.",
+      "offset": 991000,
+      "duration": 9000
+    },
+    {
+      "text": "Regarding our to do list, we are aware of how summer cloud detects vulnerabilities now and also on understand.",
+      "offset": 1000000,
+      "duration": 6000
+    },
+    {
+      "text": "This specific Zipzer vulnerability. Now let's change our perspective and talk about exploitation.",
+      "offset": 1006000,
+      "duration": 7000
+    },
+    {
+      "text": "Order to determine the impact of the vulnerability and better understand how to mitigate it, we need to take on an attackers perspective.",
+      "offset": 1013000,
+      "duration": 8000
+    },
+    {
+      "text": "So let's try to exploit this zip slip vulnerability. Here is a vulnerable code snippet.",
+      "offset": 1021000,
+      "duration": 7000
+    },
+    {
+      "text": "We can see that the method containing the snippet is called Auntar. This method is called from the import project method in the fire project manager class.",
+      "offset": 1028000,
+      "duration": 10000
+    },
+    {
+      "text": "It's the name suggests this method implements a project import feature. Once the web interface, this feature looks like this.",
+      "offset": 1038000,
+      "duration": 8000
+    },
+    {
+      "text": "If an attacker controlled archive is uploaded here, or the URL to the archive is entered, the So Zipzer vulnerability can be triggered.",
+      "offset": 1046000,
+      "duration": 8000
+    },
+    {
+      "text": "We've already seen this this could be used to override arbitrary files on the server. But the final goal of an attacker is to execute code.",
+      "offset": 1054000,
+      "duration": 10000
+    },
+    {
+      "text": "Now it's your turn again. Let's assume the application is running with user permissions only, no root permissions.",
+      "offset": 1064000,
+      "duration": 6000
+    },
+    {
+      "text": "Put yourself into the attacker's perspective and answer the following question. What could an attacker do to gain execution from the arbitrary file write?",
+      "offset": 1070000,
+      "duration": 10000
+    },
+    {
+      "text": "I'm starting to pull now. Again, I give you 20 s to read all possible answers and hopefully correct the select the correct one.",
+      "offset": 1080000,
+      "duration": 10000
+    },
+    {
+      "text": "So, 20 s from now on.",
+      "offset": 1090000,
+      "duration": 12000
+    },
+    {
+      "text": "10.",
+      "offset": 1102000,
+      "duration": 6000
+    },
+    {
+      "text": "5 or 3, 2. One, I'm closing the poll now.",
+      "offset": 1108000,
+      "duration": 10000
+    },
+    {
+      "text": "Okay, let's have a look at the single on this again. On the scene suggests that an attacker could read CDC shadow file.",
+      "offset": 1118000,
+      "duration": 6000
+    },
+    {
+      "text": "This does not make sense since the vulnerability allows an attacker to write files and not read them. This is not the correct answer.",
+      "offset": 1124000,
+      "duration": 8000
+    },
+    {
+      "text": "How about on the B? . Those of you not familiar with Quan jobs, these are tasks which are scheduled to be executed at the specific time.",
+      "offset": 1132000,
+      "duration": 8000
+    },
+    {
+      "text": "So for example, in an attacker could add a Chron job to execute a malicious command every single minute.",
+      "offset": 1140000,
+      "duration": 6000
+    },
+    {
+      "text": "In general, an arbitrary file write like this could be used to do so. But as mentioned before, the application is running with user permissions only.",
+      "offset": 1146000,
+      "duration": 8000
+    },
+    {
+      "text": "So that's in attacker cannot override the ETC Chrome tab file, which would require root permissions.",
+      "offset": 1154000,
+      "duration": 6000
+    },
+    {
+      "text": "So under B is not correct. Let's have a look at on the D. What would happen if in the techer overrides the Java binary on the server with some malicious payload?",
+      "offset": 1160000,
+      "duration": 9000
+    },
+    {
+      "text": "Well, so next time the Java brand is involved, the payload would be executed. But is this the correct answer?",
+      "offset": 1169000,
+      "duration": 4000
+    },
+    {
+      "text": "No. Again, for the same reason as the previous answer. A regular user cannot override the Java binary as this would require root privileges.",
+      "offset": 1173000,
+      "duration": 10000
+    },
+    {
+      "text": "So the only remaining correct answer is answer A. In the techer could leverage the auto reload feature of multiplication and overwrite those class files.",
+      "offset": 1183000,
+      "duration": 10000
+    },
+    {
+      "text": "So how much of you did select this answer? I'm sharing the results now. For on the A, we have got 25%.",
+      "offset": 1193000,
+      "duration": 4000
+    },
+    {
+      "text": "For the correct answer, or the B, 23 on the C, 12 and on the D, 40%.",
+      "offset": 1197000,
+      "duration": 11000
+    },
+    {
+      "text": "So again, you can close a window now again if you would like. Congrats, who selected the correct answer.",
+      "offset": 1208000,
+      "duration": 5000
+    },
+    {
+      "text": "And also you Although you didn't even know the auto reload feature yet. So how does this feature work?",
+      "offset": 1213000,
+      "duration": 9000
+    },
+    {
+      "text": "This method of the refined server class is called scan for updates. It initializes the scanner which monitors the web in classes folder for changes of any dot class files.",
+      "offset": 1222000,
+      "duration": 12000
+    },
+    {
+      "text": "When a file changes detected, this files changed method is executed which restarts the context. This makes the application reload all dot class files in the web in classes folder.",
+      "offset": 1234000,
+      "duration": 12000
+    },
+    {
+      "text": "So if you need to take a overwrites an existing dot class class file here, the application is restarted and the attackers.",
+      "offset": 1246000,
+      "duration": 5000
+    },
+    {
+      "text": "Class file is executed. Since the attacker can put any payload in the SASs card file, arbitrary system commands can be executed.",
+      "offset": 1251000,
+      "duration": 10000
+    },
+    {
+      "text": "So let's see the corresponding exploit in action. Here we can see that it's the attacker prepares the payload by creating a malicious archive and starts an HTTP listener to serve this archive.",
+      "offset": 1261000,
+      "duration": 13000
+    },
+    {
+      "text": "Now, the tech also starts a net cat list now, which will be used to run commands in the victims machine.",
+      "offset": 1274000,
+      "duration": 6000
+    },
+    {
+      "text": "Now on the victim side. We can see how the attacker tricks the victim into importing a malicious archive into the application by sending its chat message.",
+      "offset": 1280000,
+      "duration": 9000
+    },
+    {
+      "text": "So the victim copies the UL, heads over to the import project feature. And it's a UL.",
+      "offset": 1289000,
+      "duration": 6000
+    },
+    {
+      "text": "Imports the project and something went wrong here. On the tech side, everything is already done. The techer has gained Access to the victims machine and can run any arbitrary command on this machine.",
+      "offset": 1295000,
+      "duration": 16000
+    },
+    {
+      "text": "So at this point, we are fully aware of the vulnerability and also understand how in the techer could exploit it.",
+      "offset": 1311000,
+      "duration": 6000
+    },
+    {
+      "text": "So now it's time to change our perspective again. This time to the defenders side. How can we mitigate this vulnerability and apply a comprehensive patch?",
+      "offset": 1317000,
+      "duration": 11000
+    },
+    {
+      "text": "Here is the code of the vulnerable. And, The Dest Dear Varabel contains the folder where the extracted data should be stored.",
+      "offset": 1328000,
+      "duration": 8000
+    },
+    {
+      "text": "In this case, apps open refine 10. If the name of the file is in the archive contains the past traverses, it cans like this.",
+      "offset": 1336000,
+      "duration": 9000
+    },
+    {
+      "text": "Polls are combined to this relative pass. The resulting absolute pass. Use to write the file is outside the intended destination folder.",
+      "offset": 1345000,
+      "duration": 9000
+    },
+    {
+      "text": "So our goal for the patch is to ensure that files can only be extracted below the desk T directory.",
+      "offset": 1354000,
+      "duration": 8000
+    },
+    {
+      "text": "Now it's up to you again to she says. What do you think is a correct fix for this?",
+      "offset": 1362000,
+      "duration": 2000
+    },
+    {
+      "text": "We have 4 different patches here which all try to prevent. That's the desk entry file is outside the intended desk dear directory.",
+      "offset": 1364000,
+      "duration": 11000
+    },
+    {
+      "text": "So I'm launching the poll now again. This time I give you a little bit more time.",
+      "offset": 1375000,
+      "duration": 5000
+    },
+    {
+      "text": "To read through everything we go for 40 s from here on.",
+      "offset": 1380000,
+      "duration": 30000
+    },
+    {
+      "text": "10.",
+      "offset": 1416000,
+      "duration": 6000
+    },
+    {
+      "text": "5, 4, 3. To one. So I'm closing the poll now.",
+      "offset": 1422000,
+      "duration": 10000
+    },
+    {
+      "text": "Okay, let's have a look at the single patch suggestions. Under A compares both file objects for the destination entry in the destination folder.",
+      "offset": 1432000,
+      "duration": 9000
+    },
+    {
+      "text": "This is definitely not what we want to do. And always triggers the exception because these are never the same objects.",
+      "offset": 1441000,
+      "duration": 6000
+    },
+    {
+      "text": "On the A is not correct. And the B uses the get pass message to convert both file objects into the string representation.",
+      "offset": 1447000,
+      "duration": 9000
+    },
+    {
+      "text": "Tenz starts this message is used in order to determine if the pass of the destination entry, test entry, begins with a path of the destination directory, desktop.",
+      "offset": 1456000,
+      "duration": 10000
+    },
+    {
+      "text": "This should verify that the destination entries below the destination directory. So let's assume that destination directory is set to apps.",
+      "offset": 1466000,
+      "duration": 8000
+    },
+    {
+      "text": "Open refined temp. And the file name of the archive is simply Data Chicks TS, as we've seen in the example.",
+      "offset": 1474000,
+      "duration": 7000
+    },
+    {
+      "text": "The pass of the destination entry is now a simple concatenation of both of these strings.",
+      "offset": 1481000,
+      "duration": 6000
+    },
+    {
+      "text": "This means that this starts with method call returns true because the path of the destination entry starts with a path of the destination directory.",
+      "offset": 1487000,
+      "duration": 9000
+    },
+    {
+      "text": "Everything fine here. But now let's consider our attack from beforehand. And the tech act can create a malicious archive and sets a final of an entry to dot slash dot slash.",
+      "offset": 1496000,
+      "duration": 12000
+    },
+    {
+      "text": "Again, the pass of the destination entry is the simple concatenation of both strings. This means it's a dot dot slash sequences are not resolved to an absolute pass.",
+      "offset": 1508000,
+      "duration": 10000
+    },
+    {
+      "text": "So the starts with check is successfully passed at no exceptions thrown. However, when the file is written to disk, the dot dot slash sequences are resolved and the actual file written is it DC hacked which is definitely not below the intended destination directory.",
+      "offset": 1518000,
+      "duration": 16000
+    },
+    {
+      "text": "This means that this is also not the correct fix. Let's continue with on the C. This time the get canonical paths method is used in order to convert the file objects into the string representation.",
+      "offset": 1534000,
+      "duration": 12000
+    },
+    {
+      "text": "This method does resolve dot slash sequences and returns an absolute pass. If in the techer now tries to leverage the past traverses the Kensen and entries file name, The get canonical path message resolves this sequence to an absolute pass.",
+      "offset": 1546000,
+      "duration": 14000
+    },
+    {
+      "text": "Does the start Swiss check is performed on this absolute pass, which does not start with the pass or destination directory.",
+      "offset": 1560000,
+      "duration": 7000
+    },
+    {
+      "text": "Does an exception is thrown and the attack is prevented. But this is really the correct answer. Security is a lot about corner cases and this specific case is no different.",
+      "offset": 1567000,
+      "duration": 12000
+    },
+    {
+      "text": "Please don't use this patch. It's actually not complete. Let's assume in a techer uses this file name for an archive entry.",
+      "offset": 1579000,
+      "duration": 9000
+    },
+    {
+      "text": "To get canonical pass method, resource the dotted slash sequence again and the resulting absolute pass looks like this.",
+      "offset": 1588000,
+      "duration": 7000
+    },
+    {
+      "text": "The problem though is that this parts does indeed begin with the path of the destination directory. Just starts with check is successfully passed and the file is written to disk.",
+      "offset": 1595000,
+      "duration": 12000
+    },
+    {
+      "text": "What's this file is not below the destination directory. It is below another directory which happens to begin with the same characters.",
+      "offset": 1607000,
+      "duration": 4000
+    },
+    {
+      "text": "In this case the templates folder, which is not the temp folder. This is called a partial past reversal and can have a huge security impact.",
+      "offset": 1611000,
+      "duration": 13000
+    },
+    {
+      "text": "Depending on the available folders and the files in it, an attacker could still turn this into code execution.",
+      "offset": 1624000,
+      "duration": 1000
+    },
+    {
+      "text": "And this attack and vulnerability are not only theoretical, there are impactful real-world examples like this one in the AWS SDK which was discovered by the security researcher Jonathan Lightshoe.",
+      "offset": 1625000,
+      "duration": 17000
+    },
+    {
+      "text": "He also presented the great research on this topic at the Defcon Security Conference. And we regularly attend these conferences to stay up to date with the latest security threads like this and incorporates these into the product.",
+      "offset": 1642000,
+      "duration": 13000
+    },
+    {
+      "text": "But let's get back to our quiz. Do, you may say, okay, but the fix work.",
+      "offset": 1655000,
+      "duration": 7000
+    },
+    {
+      "text": "The fix works. We only forgot a trailing slash and the configure destination directory. Okay, so let's add the 2 landing slash.",
+      "offset": 1662000,
+      "duration": 8000
+    },
+    {
+      "text": "The stream templates does not start with the string temp slash. That's this should solve the problem, right?",
+      "offset": 1670000,
+      "duration": 8000
+    },
+    {
+      "text": "No, not at all. The get pass and get canonical pass method implicitly stripped trade trailing slashes.",
+      "offset": 1678000,
+      "duration": 8000
+    },
+    {
+      "text": "Thus this change does not affect the string representation of the destination directory. It makes this still vulnerable to a partial pastoral attack.",
+      "offset": 1686000,
+      "duration": 9000
+    },
+    {
+      "text": "The only on the left is under T. Here the 2 pass message is used in order to convert the file objects into pass objects.",
+      "offset": 1695000,
+      "duration": 10000
+    },
+    {
+      "text": "Let's assume we have these values from our last example again. Both file objects, the desk entry and the desktop are converted to pass objects.",
+      "offset": 1705000,
+      "duration": 9000
+    },
+    {
+      "text": "At next, the normalized message is called and both of these. That's a dotted slash sequence in the desk entries resolved and the final folder is the templates full day again.",
+      "offset": 1714000,
+      "duration": 10000
+    },
+    {
+      "text": "No, both normalized pass objects are compared with a starts with method. The significant difference here is that this is not the string start Swiss method, but the pass starts with method.",
+      "offset": 1724000,
+      "duration": 13000
+    },
+    {
+      "text": "It's a pass start to this method does not only perform a simple string comparison but ensures that the desk entry pass starts with the same elements as the desktop part.",
+      "offset": 1737000,
+      "duration": 10000
+    },
+    {
+      "text": "This way the comparison fails in this case and the folder. Since the full attempt does not match the folder templates.",
+      "offset": 1747000,
+      "duration": 8000
+    },
+    {
+      "text": "This solution effectively mitigates even partial paste vertical attacks. So on the G is the correct solution.",
+      "offset": 1755000,
+      "duration": 7000
+    },
+    {
+      "text": "This was really a tricky one. How much of you selected this? I'm sharing the results now.",
+      "offset": 1762000,
+      "duration": 5000
+    },
+    {
+      "text": "So for under A, we've got 12% under B, 18% on the C which was almost almost correct.",
+      "offset": 1767000,
+      "duration": 7000
+    },
+    {
+      "text": "37% and under D is the correct 1, 33%. So. Who is everyone who determines the correct?",
+      "offset": 1774000,
+      "duration": 7000
+    },
+    {
+      "text": "And also almost correct patch here. A tiny difference like this can have a huge impact and decides whether your application is still vulnerable or not.",
+      "offset": 1781000,
+      "duration": 11000
+    },
+    {
+      "text": "Unfortunately, these tiny details are hard to remember. And we've only been looking at one specific type of vulnerability.",
+      "offset": 1792000,
+      "duration": 8000
+    },
+    {
+      "text": "There are plenty of other vulnerability types and corresponding security pitfalls. Again, Sunner Cloud can help you with this.",
+      "offset": 1800000,
+      "duration": 7000
+    },
+    {
+      "text": "You only need to click on the how can I fix that button on the sonic cloud UI. This will provide you a detailed explanation of how the specific vulnerability can be patched in the safe way, even including the corresponding code snippets.",
+      "offset": 1807000,
+      "duration": 14000
+    },
+    {
+      "text": "So that's it for to do list. We've successfully discovered, understood, exploited and mitigated a severe security vulnerability in the open refine application.",
+      "offset": 1821000,
+      "duration": 11000
+    },
+    {
+      "text": "So it's time for a final conclusion. We've seen that taint analysis is a very strong tool to automatically discover deeply hidden vulnerabilities.",
+      "offset": 1832000,
+      "duration": 10000
+    },
+    {
+      "text": "We are continuously improving this and just recently added D. Passer Store engine, which allows you to uncover vulnerabilities even in third party libraries you're using.",
+      "offset": 1842000,
+      "duration": 9000
+    },
+    {
+      "text": "At least for us in the vulnerability research team, it is essential to understand and now all about the techers and the way they exploit vulnerabilities in software.",
+      "offset": 1851000,
+      "duration": 9000
+    },
+    {
+      "text": "We constantly stay up to date with the latest transit techniques and incorporate our findings into the product so that all of you can benefit from it and easily discover critical vulnerabilities in your own application.",
+      "offset": 1860000,
+      "duration": 12000
+    },
+    {
+      "text": "Correctly fixing security vulnerabilities can be very challenging. Tiny difference in a patch can have a huge impact.",
+      "offset": 1872000,
+      "duration": 7000
+    },
+    {
+      "text": "So now cloud can help you not only to better understand vulnerabilities but also gives you guidance on how to correctly fix these.",
+      "offset": 1879000,
+      "duration": 8000
+    },
+    {
+      "text": "This is an important keystone of turning your code into clean code. And also, we've been looking at a Java example here.",
+      "offset": 1887000,
+      "duration": 5000
+    },
+    {
+      "text": "Sona Cloud supports more than 30 different programming languages and has over 800 security rules. So thank you very much for listening.",
+      "offset": 1892000,
+      "duration": 11000
+    },
+    {
+      "text": "We will now continue with our upcoming webinars. Pick to you, Cookie.",
+      "offset": 1903000,
+      "duration": 8000
+    },
+    {
+      "text": "All right, thank you, Stefan. That was really great. So, for the audience, if you have a question to ask, I encourage you to put that question in the Q&A box here in Zoom.",
+      "offset": 1911000,
+      "duration": 12000
+    },
+    {
+      "text": "And so as we move into this time of Q&A and gather the questions for you, I briefly wanted to share 2 upcoming webinars.",
+      "offset": 1923000,
+      "duration": 9000
+    },
+    {
+      "text": "So the first one is on December twelfth in partnership with AWS. So AWS solution engineer and one of our own sales engineers at Sonar will be talking about how you can integrate Sonar clean code practices in the AWSCICD workflows.",
+      "offset": 1932000,
+      "duration": 17000
+    },
+    {
+      "text": "So that's on December, the twelfth. And then the second one is on December, the fourteenth where we will talk about discovering what's new in Mr. C.",
+      "offset": 1949000,
+      "duration": 5000
+    },
+    {
+      "text": "Plus plus 2,023. Andrea Ves who is the C, developer for the Mistra working group will join Phil Nash, our developer advocate for C, to, talk about, 2023.",
+      "offset": 1954000,
+      "duration": 22000
+    },
+    {
+      "text": "So you should see. The links in the chat as we speak to register for these webinars if you are interested.",
+      "offset": 1976000,
+      "duration": 9000
+    },
+    {
+      "text": "And then, one last thing before we start with the questions, there's just a quick 1 s poll that you should see up on your screen right now if you would learn if you'd like to learn more and would be like to be contacted by Sonar.",
+      "offset": 1985000,
+      "duration": 18000
+    },
+    {
+      "text": "Sales engineer.",
+      "offset": 2003000,
+      "duration": 7000
+    },
+    {
+      "text": "Alright.",
+      "offset": 2010000,
+      "duration": 9000
+    },
+    {
+      "text": "Okay, I'm going to start looking at some questions. So we have a few. So the first one, Stefan, for you from Manuel is, he has a question around the sources and the sync.",
+      "offset": 2019000,
+      "duration": 11000
+    },
+    {
+      "text": "So the question here is that does sonar discover critical inputs from source to sync. Or does it just kind of you know throw security hotspots when it discovers the exact kind of command.",
+      "offset": 2030000,
+      "duration": 22000
+    },
+    {
+      "text": "Yeah, thank you. That's a great question. So basically what S does is actually discovering covering the tin flow.",
+      "offset": 2052000,
+      "duration": 7000
+    },
+    {
+      "text": "So there's a pre configured list of sources which are recognized. An example of this would be, yeah, some, some query per meter, which can be accessed via, VIPI and.",
+      "offset": 2059000,
+      "duration": 13000
+    },
+    {
+      "text": "This, this parameter, this variable is marked as a thing. So because, a techer can, can control it and now this parameters as we've seen on the slides with the graph of the code is now tracked through the application and once it hits a security sensitive sync, like for example, the XXF call you've been mentioning.",
+      "offset": 2072000,
+      "duration": 17000
+    },
+    {
+      "text": "Then this, yeah, an issue is raised because we've got a vulnerable tank flow here.",
+      "offset": 2089000,
+      "duration": 15000
+    },
+    {
+      "text": "Sounds good. Thank you. There's one another question from Sylvia and she asked, so you talked about the zip slip vulnerabilities, but she wants to know our other languages other than Java also affected by this vulnerability.",
+      "offset": 2104000,
+      "duration": 17000
+    },
+    {
+      "text": "Yes, yes, indeed. So, in our example here, we've been only covering Java, but.",
+      "offset": 2121000,
+      "duration": 6000
+    },
+    {
+      "text": "Basically all programming languages which can extract archives and don't automatically senditize the name of an entry up prone to this.",
+      "offset": 2127000,
+      "duration": 9000
+    },
+    {
+      "text": "So this like or through through all programming languages, this is a generic kind of vulnerability. And we we have different words for the specific languages you can view all these rules on rules.",
+      "offset": 2136000,
+      "duration": 15000
+    },
+    {
+      "text": "Sonosource, POMMENT. Can scroll them also by language and search for specific vulnerabilities and there can for example, you know, for Java, and we we've seen the vulnerable the corresponding rule for zip so vulnerability also for JavaScript you can confine it there on this page.",
+      "offset": 2151000,
+      "duration": 19000
+    },
+    {
+      "text": "Cool, we have several other questions. So I'm gonna ask this one from Tony. He wants to know, so you talked about sonar cloud, but he wants to know, so you talked about sonar cloud, but he wants to know if taint analysis is available in the cloud but he wants to know if taint analysis is available in the standalone sonar cube",
+      "offset": 2170000,
+      "duration": 18000
+    },
+    {
+      "text": "Taint and this is also available in Sona cube. Yeah. That's this is also a feature available here.",
+      "offset": 2188000,
+      "duration": 8000
+    },
+    {
+      "text": "Yeah.",
+      "offset": 2196000,
+      "duration": 1000
+    },
+    {
+      "text": "Yeah. So yeah, except for the community edition where it's not available, the other developer editions, plus.",
+      "offset": 2197000,
+      "duration": 7000
+    },
+    {
+      "text": "Stained analysis should be available, so that's good. Alright. Alright, I think this question is from Jed and he wants to know, so you talked about deep says, so he wants to know how he can enable deep says.",
+      "offset": 2204000,
+      "duration": 16000
+    },
+    {
+      "text": "And how does that affect the analysis duration?",
+      "offset": 2220000,
+      "duration": 5000
+    },
+    {
+      "text": "Yeah, okay, that's also a good question. I'm sorry for not mentioning in the first place.",
+      "offset": 2225000,
+      "duration": 3000
+    },
+    {
+      "text": "So in fact you don't need to enable GPS and you also cannot enable GPS and you also cannot enable it because it's applied automatically to the and you also cannot enable it because it's applied automatically to the and you also cannot enable it because it's applied automatically to the analysis of your application.",
+      "offset": 2228000,
+      "duration": 13000
+    },
+    {
+      "text": "Regarding the duration of an analysis, there is no difference. Basically, you don't even notice this.",
+      "offset": 2241000,
+      "duration": 3000
+    },
+    {
+      "text": "All common libraries are pre-analyzed on our infrastructure. And once your application is analyzed, which uses these libraries.",
+      "offset": 2244000,
+      "duration": 9000
+    },
+    {
+      "text": "The libraries don't need to be unlashed again. The pre-analyzed data is used to find vulnerable tain flows from your application through or into the library or even from the library to your application.",
+      "offset": 2253000,
+      "duration": 16000
+    },
+    {
+      "text": "This all depends on how your application is using the library. But, in summary, you don't have to do anything and will be automatically notified if you're application is using a library in an unsafe way.",
+      "offset": 2269000,
+      "duration": 14000
+    },
+    {
+      "text": "Sounds good. Thank you. I think on the same lines, Rodney has a question on which version of, Enterprises, the deep SAS available.",
+      "offset": 2283000,
+      "duration": 12000
+    },
+    {
+      "text": "Regarding the versions, I think we have to double check this. So, to be honest, I'm not 100% sure.",
+      "offset": 2295000,
+      "duration": 11000
+    },
+    {
+      "text": "Okay, cool.",
+      "offset": 2306000,
+      "duration": 1000
+    },
+    {
+      "text": "But yeah, you can definitely check out in the in our community, forum and there will for sure be an answer to this.",
+      "offset": 2307000,
+      "duration": 10000
+    },
+    {
+      "text": "Let's see. Yeah, this is an interesting question. Again, from Jonathan and he wants to know, you as you as a vulnerability research team, how do you select the open source applications that you actually analyzed with Sonar Cloud?",
+      "offset": 2317000,
+      "duration": 19000
+    },
+    {
+      "text": "Which ones would you do you choose and how do you go about that?",
+      "offset": 2336000,
+      "duration": 5000
+    },
+    {
+      "text": "Hey, yes. Yeah, so, the vulnerability research team, we generally only scan, we have very kind of popular applications.",
+      "offset": 2341000,
+      "duration": 10000
+    },
+    {
+      "text": "V vulnerabilities in these applications affect more users and thus we can have a greater impact to unveil vulnerabilities in these projects.",
+      "offset": 2351000,
+      "duration": 9000
+    },
+    {
+      "text": "In in terms of projects, we are generally not really restricted since the analysis of summer cloud is easy to set up and runs automatically, but what ResSA restricts us in terms of quantity is the number of detected vulnerabilities.",
+      "offset": 2360000,
+      "duration": 15000
+    },
+    {
+      "text": "The shocking truth is that there are a lot of vulnerabilities out there. Especially in less popular applications.",
+      "offset": 2375000,
+      "duration": 7000
+    },
+    {
+      "text": "And of course we cannot review all of them. I'm the maintenance could easily identify this by scanning the applications themselves.",
+      "offset": 2382000,
+      "duration": 7000
+    },
+    {
+      "text": "And that's actually what a lot of maintainers, especially for public, their open source projects are already doing.",
+      "offset": 2389000,
+      "duration": 6000
+    },
+    {
+      "text": "But yeah, not not all of them.",
+      "offset": 2395000,
+      "duration": 4000
+    },
+    {
+      "text": "Okay, thank you. Let's see this one more question here around sources and things, but the question asks, what happens if one source ends up in 2 or more dangerous things?",
+      "offset": 2399000,
+      "duration": 17000
+    },
+    {
+      "text": "In such a scenario, how is that handled?",
+      "offset": 2416000,
+      "duration": 4000
+    },
+    {
+      "text": "Okay, yeah, it's also a great question. So if I understand correctly, so basically the question is what happens if for example, there is one source and there are 2 independent passes to dangerous things.",
+      "offset": 2420000,
+      "duration": 8000
+    },
+    {
+      "text": "So it's like always good to have this graph graph graph in mind we've been looking at.",
+      "offset": 2428000,
+      "duration": 9000
+    },
+    {
+      "text": "So in that case, sonic cloud. We'll notify you about 2 vulnerabilities. Both of these vulnerable passes need to be fixed.",
+      "offset": 2437000,
+      "duration": 9000
+    },
+    {
+      "text": "So for example, if you've got one credit parameter, which ends up in 2 different SQL queries.",
+      "offset": 2446000,
+      "duration": 6000
+    },
+    {
+      "text": "In that case, you have 2 SQL injection vulnerabilities. And, there's another thing I didn't mention yet.",
+      "offset": 2452000,
+      "duration": 9000
+    },
+    {
+      "text": "If you escape the query parameter before inserting it in the, into the first SQL query.",
+      "offset": 2461000,
+      "duration": 5000
+    },
+    {
+      "text": "So now Cloud will recognize this caping function as a sanitizer and automatically resource this vulnerability is fixed because you're basically not prone to an SQL injection anymore because this current parameter is sanitized.",
+      "offset": 2466000,
+      "duration": 13000
+    },
+    {
+      "text": "So it's that point that you've only more more vulnerability, but you also need to escape the current parameter before it's inserted into the SQL query.",
+      "offset": 2479000,
+      "duration": 8000
+    },
+    {
+      "text": "Once this is done, both vulnerability both passes are resolved and nothing is shown on the UI anymore and sure, we are basically fine.",
+      "offset": 2487000,
+      "duration": 12000
+    },
+    {
+      "text": "Alright. Let's see.",
+      "offset": 2499000,
+      "duration": 7000
+    },
+    {
+      "text": "Okay, yeah, this is an interesting one. So. The question asked that what if my application has an intended feature?",
+      "offset": 2506000,
+      "duration": 10000
+    },
+    {
+      "text": "That runs that lets you run user operating system commands. When a scenario like that happens, how does sonar actually handle this?",
+      "offset": 2516000,
+      "duration": 7000
+    },
+    {
+      "text": "So it's an intended feature.",
+      "offset": 2523000,
+      "duration": 7000
+    },
+    {
+      "text": "Okay, yes, so yeah, okay, so maybe your application has an intended feature to run. Operating system for commands like this.",
+      "offset": 2530000,
+      "duration": 11000
+    },
+    {
+      "text": "In this case, Sona Cloud will still notify you about this as a vulnerability, because it's generally assumed to be unsafe to let the user run operating system commands.",
+      "offset": 2541000,
+      "duration": 11000
+    },
+    {
+      "text": "But, this is, is intended feature, which is true in this case and you are comfortable with the associated risks, you can for this specific issue issue just select resolve as won't fix on the summer cloud UI and this specific vulnerability will not be shown to you anymore and you can just keep on and I can law all other issues which are more relevant for you in that case.",
+      "offset": 2552000,
+      "duration": 30000
+    },
+    {
+      "text": "Alright, cool. There was just one question for you, Stefan, if you're gonna be, If you're gonna be at 37 C 3 for Sonocube in Hamburg, I believe is that a conference?",
+      "offset": 2582000,
+      "duration": 16000
+    },
+    {
+      "text": "Okay.",
+      "offset": 2598000,
+      "duration": 1000
+    },
+    {
+      "text": "Yeah, that's the case. Consum. Unfortunately not this year, but I would love to join.",
+      "offset": 2599000,
+      "duration": 4000
+    },
+    {
+      "text": "And maybe, maybe next year.",
+      "offset": 2603000,
+      "duration": 4000
+    },
+    {
+      "text": "Alright, cool.",
+      "offset": 2607000,
+      "duration": 4000
+    },
+    {
+      "text": "Let's see. There's a one question. From Peter around a detection of de serialization vulnerabilities.",
+      "offset": 2611000,
+      "duration": 11000
+    },
+    {
+      "text": "That's on our cloud support that. Can you share some light on it?",
+      "offset": 2622000,
+      "duration": 6000
+    },
+    {
+      "text": "Yes, for sure. Yeah, as I mentioned before, basically we can, find all roots on, rules.",
+      "offset": 2628000,
+      "duration": 11000
+    },
+    {
+      "text": "And, there are more than 800 security routes that cover a lot of different topics. And each of these rules.",
+      "offset": 2639000,
+      "duration": 5000
+    },
+    {
+      "text": "Detect issues in multiple languages and frameworks. But, a, dis, a, DD, d, which is a really big topic, but these kinds of vulnerabilities are definitely part of this and also covered by multipleities are definitely part of this and also covered by multiple rules are definitely part of this and also covered by multiple rules.",
+      "offset": 2644000,
+      "duration": 16000
+    },
+    {
+      "text": "Yeah, for also for different programming languages.",
+      "offset": 2660000,
+      "duration": 4000
+    },
+    {
+      "text": "Cool. Oh, I think we have time for probably one more question.",
+      "offset": 2664000,
+      "duration": 7000
+    },
+    {
+      "text": "Let me see. I think this question, talks further about the process. The question is, can deeper test also analyze Private libraries available within an organization or does it only look at publicly accessible libraries?",
+      "offset": 2671000,
+      "duration": 20000
+    },
+    {
+      "text": "So DPS itself runs on the, the, the data used for T. Using the pre analyzed data on our infrastructure.",
+      "offset": 2691000,
+      "duration": 7000
+    },
+    {
+      "text": "So of course this is only like public libraries we could have we could retrieve and analyze on our own infrastructure.",
+      "offset": 2698000,
+      "duration": 7000
+    },
+    {
+      "text": "But if you include and give the analyzer access to your private library code, then of course vulnerabilities in this code can also be detected.",
+      "offset": 2705000,
+      "duration": 17000
+    },
+    {
+      "text": "I mean, the important point is that you don't only scan your application itself, but also include your library.",
+      "offset": 2722000,
+      "duration": 11000
+    },
+    {
+      "text": "Alright, I think we are out of time, and at the end of the webinar, so thank you everyone.",
+      "offset": 2733000,
+      "duration": 5000
+    },
+    {
+      "text": "Who post questions and attended and thank you Stefan for a wonderful presentation. So if we didn't get to your question, we will take some of these questions and answer them.",
+      "offset": 2738000,
+      "duration": 5000
+    },
+    {
+      "text": "In the community and of course in the interim if you have any questions, please send them on the community and do visit sonar source.",
+      "offset": 2743000,
+      "duration": 10000
+    },
+    {
+      "text": "Com for any future information that you may have and we will see you soon in a future webinar and at an event.",
+      "offset": 2753000,
+      "duration": 14000
+    },
+    {
+      "text": "Thank you. Have a great day.",
+      "offset": 2767000,
+      "duration": 27000
+    }
+  ],
+  "fullText": "Alright. Let's get started. Hello, everyone. Thank you for joining. Hope you've had a great day today and welcome to our webinar. Securing with clean code. Unveiling and mitigating vulnerabilities. Today, we are gonna show you and you're gonna learn how Sonar plays an important role in discovering real-world vulnerabilities. We are going to show you how these kind of vulnerabilities can be discovered. And also outline some of the offensive and defensive perspectives on this. I'm Keithi Joshi, your host and moderator for today's webinar. And this webinar is going to be presented by my colleague Stefan Schiller. So I'm gonna go quickly over some essential housekeeping items before we start this webinar. This is a 45 min session. That includes Q&A. Throughout the webinar, we encourage you to submit your questions via the Q&A box in Zoom, not the chat box, but the Q&A box. Today we have 2 panelists joining us. Gayton and Loris from our application security team. They will answer many of your questions through the box that you submit them. Some they will post to me, to ask Stefan live during the webinar. I also wanna let you know that this session will be recorded and we will send out a link via email in the upcoming days. And then finally at the end of the webinar. We will present to you a short webinar. Survey to tell us what you liked, where we should improve. And what other topics you'd like to see covered in future sessions. So with that said, I'm going to introduce you to today's presenters, Stephan Schiller. Stefan is a vulnerability researcher in the Sonar research and development team. He has been passionate about software and programming since his early childhood days. With a background in red teaming he has been working in the field of offensive IT security for many years now. And particularly at Sonar he finds and responsibility discloses vulnerabilities in popular open source software. Welcome Stefan and I'm gonna hand it over to you. Thank you very much for this introduction and welcome everybody. I hope you're doing well. So what can you expect from this session? This session is all about unveiling and mitigating vulnerabilities. I will start by introduce you to Sunnis for theability Research Team which is dedicated to this topic. We will then dive into a real-world case study of a vulnerable application. This application is an open source Java project called Open Refine. We will see how we discovered a critical only built in this application by using Sona Cloud. How and the tech could exploit this vulnerability and how this vulnerability can be mitigated with a comprehensive patch with the help of SO. Doing a live demo, I will show you how to set up the application on summer cloud and you can easily do this the same with your own application and discover vulnerabilities on your own. Also, we will have an interactive quiz throughout the session. So if you are somehow familiar with Java and Linux, it's this might be helpful, but no worries if not every question and solution will be explained in detail. And of course it's totally up to you if you want to participate in the quiz or not. But it's fun and you just need to select an answer when the poll comes up. We don't collect any personal results and only have a look at the anonymous of all results after each question. So let's stuff in. How does Sona do vulnerability research? Coat is the most important and fundamental keystone of a software application. It's on our mission is to provide you a framework to turn your code into clean code. Making this code clean means that you increase its maintainability, reduce overall cost, increase the satisfaction of developers, and much more. One important aspect of clean code is security. Your application should be free of security. In order to fully understand vulnerabilities in their related threads with a dedicated vulnerability research team at This team is doing well, vulnerability research of course, which is related to our products. More specifically, this means that we are looking for vulnerabilities and popular open source software. We then use the knowledge obtain through our findings to sharpen the engine of our product. To Also, we regularly publish blog posts about our research and give presentations at IT security conferences. How our usual workflow consists of these 4 steps. Audit, report, dog food and published. The first step is to audit the software application. We do this by leveraging our own products on our cloud and summer cube and also do manual code audits. The outcome of this is a security vulnerability. These vulnerabilities are reported by us by responsibly disclosing these to the corresponding vendors or maintainers of the application. We explain them the root cause of the vulnerabilities and also provide guidance on how to fix these. Once this reporting step is done and the vulnerabilities are hopefully fixed, we draw conclusions from this. One of the most significant questions is, was the vulnerability discovered by our engine? If so, that's great, but it's not too interesting for us. My tracing fast is if the vulnerability was not discard. In that case we determine why it was not discovered and how we can improve the engine to also discover this kind of vulnerability in the future. This way we can continuously improve our security engine. And this has a huge multiply effect. Once we add a new vulnerability type to the engine, you will automatically be notified if your code contains this kind of vulnerability. Just to give you some numbers on this on average, 120,000 security hotspots and vulnerabilities are resolved on summer cloud per week. The last step in our workflow is to publish our research and shared with the community. As I already mentioned, we do this by releasing blog posts and also give presentations that IT security conferences. Hmm, for the public channels includes, interviews, podcasts, and of course, So with this background context, let's get to the meat of it and dive into a real-world case study. I already mentioned that we are using sonic cloud and send a cube to identify security vulnerabilities and popular open source projects. One of the projects we've been scanning is Open Refine. Open refine is a Java based open source data cleaning and transformation tool. It can be used to load different types of data, cleaner, converted and extended. All of this can be done from the browser by accessing Open Refined SIP interface. With almost 10,000 stars and 2,000 forks on GitHub, it's quite popular project and will serve us as a good example for today. How to do list for this application looks like this. We want to discover, understand, exploit and mitigate a vulnerability. So let's get our hands dirty and start with the first point. Discover our security vulnerability. How much effort does this take? Let's just see it ourselves and set up Open Refine on Sona Cloud. What you can see here is a GitHub repository I created. In this case, it's a copy of the Open Refine application. But of course, this could also be your own application. What I want to do now is to analyze this application with Sona Cloud. So I simply head over to Sona Cloud. I'm already locked in. So I only need to click on the plus sign here. At the top right and select analyze new project. Now I can select the GitHub organization which contains the repository I want to analyze. In this case, the repository resides within the Sunna Source Research Organization. So I selected this one and I can now select the corresponding repository. I want to analyze. So I select the here and. Simply click on setup. Now I need to select how to end a new code. We just use previous version here for now and clicked on create project. Now, Sunna Cloud has already gone to analyze the source code of the application. This may take some time to depending on the size of the application. So I've already, prepared the results for you, which looks like this. We can see that Sonic class has detected multiple issues within this course code. See, there are bugs which influence a reliability. We've got 6 cold smells here affecting in the mentality and most importantly for us now there are security hotspots and 7 security vulnerability. So let's have a look at the security vulnerabilities. On the left side, we can filter the displayed issues. Let's have a look at the category high here. And we can see that. There's actually a severe security vulnerability in this application. The description has states that extracting archives should not lead to a zip slip vulnerabilities. So before we take a look at this specific vulnerability in detail, that's briefly talk about vulnerability discovery. How will Senna Cloud even able to discover this vulnerability? On the SONNOT CLED UI, we can see this different steps. On the left side, the first step with number one is named source. And the last step for number 5 is called SIG. This is a team flow of the vulnerability. How does this work? And applications logic is all about data. This data is passed from one part of the code to another part. So for example, when you call message, you pass some data to it in form of a parameter. This. This flow of data can be visualized as a graph like this. Now there are specific entry points to this flow of data called sources. An example for this might be a request parameter of an API handler method. And the techer could feed in some data to the application at this point. On the bottom, we have dangerous things. These are functions or methods which are known to be security relevant. So if you for example, pass on a take a control string to the runtime exit method, an attacker could run an arbitrary operating system command, which is definitely a severe security vulnerability. Now, the big question is if an attacker can reach a security sensitive sink. In other words, is there a pass from a source to a sink? This is a challenge a computer algorithm can solve very easily. This example, the others? Yes. Data originating from an attacker controllable source eventually reaches the dangerous things. Steps in between the flow from the source to the sink are called pass through. See simply pass on the data. In our case study examples, attain flow is very straightforward. The source is the entry name of an archive and the sink is the construct of the file output stream class. It The great advantages of Sonic Cloud and some acute stained analysis is that it runs completely automatic and can easily discover much more complex tane flows. While the vulnerable 10 flow here could have also been spotted manually. A tent flow like this where the data is passed through plenty of methods and different source code files is far more unlikely to be discovered by human. This makes the engine so invaluable to discover complex security vulnerabilities. And it does not stop here. We've just recently added deepzos to our engine. While you're usually most concerned about your own code, this is not the only portion of your application. And attacker is targeting. In reality, your application usually depends on certain third party dependencies. And the takeer can who can reach this portion of the code can leverage the vulnerability net in order to exploit your application. Can unveil these deeply hidden vulnerabilities in third party dependencies and protect your application from incorrectly used or vulnerable, Okay, so first task done. We discovered a critical security vulnerability. Of course, we also want to understand this vulnerability. And now it's your turn. We can see that the source of the painful for this vulnerability is the entry name of an archive and the sync is the constructor of the file output stream class. So So knockloads also stated that this is a zip slip for n. So let's start our Chris with the first question. What is a zip slip vulnerability? Let me lunch your poll here. And you should see a popup on your screen now with 4 possible answers. You can select. If the pop-up window overlaps with the text on the slides, you can simply move. The window by dragging it. I give you, 20 s to read or possible answers. Then you can select the one you think is the correct answer. So, 20 s from now on. 10. 5, 4, 3. To one, can closing the poll now. Okay, before we unveil the results, let's have a look at the possible answers. So on the C is pretty much nonsense. I don't really know anything about close manufacturing, but probably the term zip slip vulnerability is not used here. At least this is not the kind of issue we are facing here. So what else could be the correct answer? On the A, suggests that a Zipzer vulnerability is a firewall bypass technique. Also, a content filter or firewall might be Bypass by office cating or compressing data. This is not called the vulnerability itself and it's definitely not a Zipzer vulnerability. So on the A is also not correct. And the D is about data acceleration. Again, this is not what we are facing here. And the D is also incorrect. This leaves us with the correct answer B. Zipzer vulnerability is a specific kind of past reversed vulnerability caused by unsenetized entry names in an archive. So So let's see the results. I share them now. With for under A, 50% under B, 38% on the C 5% and under D, 42%. So, congratulations to everyone who picked the correct owner here. If you like, you can hide the pop up in the now by simply closing it. It will reappear automatically for the next quiz. So great if you already knew this kind of vulnerability, but not everyone of you collects the correct answer and what is What if you don't know what the specific vulnerability reported by sonic cloud is about? Is that case you can simply click on the why is this an issue button on the Son or Cloud UI? This will present you a detailed explanation of why the raised issues the security vulnerability and what this vulnerability is about. To put the explanation from Sonnet Cloud into pictures, let's imagine we have this archive, which contains a single file called Data TXT. Here on the left is the local file system on the server. When the archive is extracted by the application, the specific fold is defined in which all files of the archive should be extracted to. And this example, apps open refine temp. That's the data TC 5 from the archive is stored into this folder. Now let's imagine in the techer stores the file with this name in the archive. It contains the past revisit to can dot dot slash. When the file is restricted to the temp folder, it is not stored here anymore. Instead, the dot dot slash sequences resourced as a relative pass, the contents of the file are stored in a file called heck in the DC folder. So the file name of an entry within the archive was used to traverse out of the intended destination folder. This can be exploited by an attacker to write or overwrite arbitrary files on the server, which is not good at all as we will see. Regarding our to do list, we are aware of how summer cloud detects vulnerabilities now and also on understand. This specific Zipzer vulnerability. Now let's change our perspective and talk about exploitation. Order to determine the impact of the vulnerability and better understand how to mitigate it, we need to take on an attackers perspective. So let's try to exploit this zip slip vulnerability. Here is a vulnerable code snippet. We can see that the method containing the snippet is called Auntar. This method is called from the import project method in the fire project manager class. It's the name suggests this method implements a project import feature. Once the web interface, this feature looks like this. If an attacker controlled archive is uploaded here, or the URL to the archive is entered, the So Zipzer vulnerability can be triggered. We've already seen this this could be used to override arbitrary files on the server. But the final goal of an attacker is to execute code. Now it's your turn again. Let's assume the application is running with user permissions only, no root permissions. Put yourself into the attacker's perspective and answer the following question. What could an attacker do to gain execution from the arbitrary file write? I'm starting to pull now. Again, I give you 20 s to read all possible answers and hopefully correct the select the correct one. So, 20 s from now on. 10. 5 or 3, 2. One, I'm closing the poll now. Okay, let's have a look at the single on this again. On the scene suggests that an attacker could read CDC shadow file. This does not make sense since the vulnerability allows an attacker to write files and not read them. This is not the correct answer. How about on the B? . Those of you not familiar with Quan jobs, these are tasks which are scheduled to be executed at the specific time. So for example, in an attacker could add a Chron job to execute a malicious command every single minute. In general, an arbitrary file write like this could be used to do so. But as mentioned before, the application is running with user permissions only. So that's in attacker cannot override the ETC Chrome tab file, which would require root permissions. So under B is not correct. Let's have a look at on the D. What would happen if in the techer overrides the Java binary on the server with some malicious payload? Well, so next time the Java brand is involved, the payload would be executed. But is this the correct answer? No. Again, for the same reason as the previous answer. A regular user cannot override the Java binary as this would require root privileges. So the only remaining correct answer is answer A. In the techer could leverage the auto reload feature of multiplication and overwrite those class files. So how much of you did select this answer? I'm sharing the results now. For on the A, we have got 25%. For the correct answer, or the B, 23 on the C, 12 and on the D, 40%. So again, you can close a window now again if you would like. Congrats, who selected the correct answer. And also you Although you didn't even know the auto reload feature yet. So how does this feature work? This method of the refined server class is called scan for updates. It initializes the scanner which monitors the web in classes folder for changes of any dot class files. When a file changes detected, this files changed method is executed which restarts the context. This makes the application reload all dot class files in the web in classes folder. So if you need to take a overwrites an existing dot class class file here, the application is restarted and the attackers. Class file is executed. Since the attacker can put any payload in the SASs card file, arbitrary system commands can be executed. So let's see the corresponding exploit in action. Here we can see that it's the attacker prepares the payload by creating a malicious archive and starts an HTTP listener to serve this archive. Now, the tech also starts a net cat list now, which will be used to run commands in the victims machine. Now on the victim side. We can see how the attacker tricks the victim into importing a malicious archive into the application by sending its chat message. So the victim copies the UL, heads over to the import project feature. And it's a UL. Imports the project and something went wrong here. On the tech side, everything is already done. The techer has gained Access to the victims machine and can run any arbitrary command on this machine. So at this point, we are fully aware of the vulnerability and also understand how in the techer could exploit it. So now it's time to change our perspective again. This time to the defenders side. How can we mitigate this vulnerability and apply a comprehensive patch? Here is the code of the vulnerable. And, The Dest Dear Varabel contains the folder where the extracted data should be stored. In this case, apps open refine 10. If the name of the file is in the archive contains the past traverses, it cans like this. Polls are combined to this relative pass. The resulting absolute pass. Use to write the file is outside the intended destination folder. So our goal for the patch is to ensure that files can only be extracted below the desk T directory. Now it's up to you again to she says. What do you think is a correct fix for this? We have 4 different patches here which all try to prevent. That's the desk entry file is outside the intended desk dear directory. So I'm launching the poll now again. This time I give you a little bit more time. To read through everything we go for 40 s from here on. 10. 5, 4, 3. To one. So I'm closing the poll now. Okay, let's have a look at the single patch suggestions. Under A compares both file objects for the destination entry in the destination folder. This is definitely not what we want to do. And always triggers the exception because these are never the same objects. On the A is not correct. And the B uses the get pass message to convert both file objects into the string representation. Tenz starts this message is used in order to determine if the pass of the destination entry, test entry, begins with a path of the destination directory, desktop. This should verify that the destination entries below the destination directory. So let's assume that destination directory is set to apps. Open refined temp. And the file name of the archive is simply Data Chicks TS, as we've seen in the example. The pass of the destination entry is now a simple concatenation of both of these strings. This means that this starts with method call returns true because the path of the destination entry starts with a path of the destination directory. Everything fine here. But now let's consider our attack from beforehand. And the tech act can create a malicious archive and sets a final of an entry to dot slash dot slash. Again, the pass of the destination entry is the simple concatenation of both strings. This means it's a dot dot slash sequences are not resolved to an absolute pass. So the starts with check is successfully passed at no exceptions thrown. However, when the file is written to disk, the dot dot slash sequences are resolved and the actual file written is it DC hacked which is definitely not below the intended destination directory. This means that this is also not the correct fix. Let's continue with on the C. This time the get canonical paths method is used in order to convert the file objects into the string representation. This method does resolve dot slash sequences and returns an absolute pass. If in the techer now tries to leverage the past traverses the Kensen and entries file name, The get canonical path message resolves this sequence to an absolute pass. Does the start Swiss check is performed on this absolute pass, which does not start with the pass or destination directory. Does an exception is thrown and the attack is prevented. But this is really the correct answer. Security is a lot about corner cases and this specific case is no different. Please don't use this patch. It's actually not complete. Let's assume in a techer uses this file name for an archive entry. To get canonical pass method, resource the dotted slash sequence again and the resulting absolute pass looks like this. The problem though is that this parts does indeed begin with the path of the destination directory. Just starts with check is successfully passed and the file is written to disk. What's this file is not below the destination directory. It is below another directory which happens to begin with the same characters. In this case the templates folder, which is not the temp folder. This is called a partial past reversal and can have a huge security impact. Depending on the available folders and the files in it, an attacker could still turn this into code execution. And this attack and vulnerability are not only theoretical, there are impactful real-world examples like this one in the AWS SDK which was discovered by the security researcher Jonathan Lightshoe. He also presented the great research on this topic at the Defcon Security Conference. And we regularly attend these conferences to stay up to date with the latest security threads like this and incorporates these into the product. But let's get back to our quiz. Do, you may say, okay, but the fix work. The fix works. We only forgot a trailing slash and the configure destination directory. Okay, so let's add the 2 landing slash. The stream templates does not start with the string temp slash. That's this should solve the problem, right? No, not at all. The get pass and get canonical pass method implicitly stripped trade trailing slashes. Thus this change does not affect the string representation of the destination directory. It makes this still vulnerable to a partial pastoral attack. The only on the left is under T. Here the 2 pass message is used in order to convert the file objects into pass objects. Let's assume we have these values from our last example again. Both file objects, the desk entry and the desktop are converted to pass objects. At next, the normalized message is called and both of these. That's a dotted slash sequence in the desk entries resolved and the final folder is the templates full day again. No, both normalized pass objects are compared with a starts with method. The significant difference here is that this is not the string start Swiss method, but the pass starts with method. It's a pass start to this method does not only perform a simple string comparison but ensures that the desk entry pass starts with the same elements as the desktop part. This way the comparison fails in this case and the folder. Since the full attempt does not match the folder templates. This solution effectively mitigates even partial paste vertical attacks. So on the G is the correct solution. This was really a tricky one. How much of you selected this? I'm sharing the results now. So for under A, we've got 12% under B, 18% on the C which was almost almost correct. 37% and under D is the correct 1, 33%. So. Who is everyone who determines the correct? And also almost correct patch here. A tiny difference like this can have a huge impact and decides whether your application is still vulnerable or not. Unfortunately, these tiny details are hard to remember. And we've only been looking at one specific type of vulnerability. There are plenty of other vulnerability types and corresponding security pitfalls. Again, Sunner Cloud can help you with this. You only need to click on the how can I fix that button on the sonic cloud UI. This will provide you a detailed explanation of how the specific vulnerability can be patched in the safe way, even including the corresponding code snippets. So that's it for to do list. We've successfully discovered, understood, exploited and mitigated a severe security vulnerability in the open refine application. So it's time for a final conclusion. We've seen that taint analysis is a very strong tool to automatically discover deeply hidden vulnerabilities. We are continuously improving this and just recently added D. Passer Store engine, which allows you to uncover vulnerabilities even in third party libraries you're using. At least for us in the vulnerability research team, it is essential to understand and now all about the techers and the way they exploit vulnerabilities in software. We constantly stay up to date with the latest transit techniques and incorporate our findings into the product so that all of you can benefit from it and easily discover critical vulnerabilities in your own application. Correctly fixing security vulnerabilities can be very challenging. Tiny difference in a patch can have a huge impact. So now cloud can help you not only to better understand vulnerabilities but also gives you guidance on how to correctly fix these. This is an important keystone of turning your code into clean code. And also, we've been looking at a Java example here. Sona Cloud supports more than 30 different programming languages and has over 800 security rules. So thank you very much for listening. We will now continue with our upcoming webinars. Pick to you, Cookie. All right, thank you, Stefan. That was really great. So, for the audience, if you have a question to ask, I encourage you to put that question in the Q&A box here in Zoom. And so as we move into this time of Q&A and gather the questions for you, I briefly wanted to share 2 upcoming webinars. So the first one is on December twelfth in partnership with AWS. So AWS solution engineer and one of our own sales engineers at Sonar will be talking about how you can integrate Sonar clean code practices in the AWSCICD workflows. So that's on December, the twelfth. And then the second one is on December, the fourteenth where we will talk about discovering what's new in Mr. C. Plus plus 2,023. Andrea Ves who is the C, developer for the Mistra working group will join Phil Nash, our developer advocate for C, to, talk about, 2023. So you should see. The links in the chat as we speak to register for these webinars if you are interested. And then, one last thing before we start with the questions, there's just a quick 1 s poll that you should see up on your screen right now if you would learn if you'd like to learn more and would be like to be contacted by Sonar. Sales engineer. Alright. Okay, I'm going to start looking at some questions. So we have a few. So the first one, Stefan, for you from Manuel is, he has a question around the sources and the sync. So the question here is that does sonar discover critical inputs from source to sync. Or does it just kind of you know throw security hotspots when it discovers the exact kind of command. Yeah, thank you. That's a great question. So basically what S does is actually discovering covering the tin flow. So there's a pre configured list of sources which are recognized. An example of this would be, yeah, some, some query per meter, which can be accessed via, VIPI and. This, this parameter, this variable is marked as a thing. So because, a techer can, can control it and now this parameters as we've seen on the slides with the graph of the code is now tracked through the application and once it hits a security sensitive sync, like for example, the XXF call you've been mentioning. Then this, yeah, an issue is raised because we've got a vulnerable tank flow here. Sounds good. Thank you. There's one another question from Sylvia and she asked, so you talked about the zip slip vulnerabilities, but she wants to know our other languages other than Java also affected by this vulnerability. Yes, yes, indeed. So, in our example here, we've been only covering Java, but. Basically all programming languages which can extract archives and don't automatically senditize the name of an entry up prone to this. So this like or through through all programming languages, this is a generic kind of vulnerability. And we we have different words for the specific languages you can view all these rules on rules. Sonosource, POMMENT. Can scroll them also by language and search for specific vulnerabilities and there can for example, you know, for Java, and we we've seen the vulnerable the corresponding rule for zip so vulnerability also for JavaScript you can confine it there on this page. Cool, we have several other questions. So I'm gonna ask this one from Tony. He wants to know, so you talked about sonar cloud, but he wants to know, so you talked about sonar cloud, but he wants to know if taint analysis is available in the cloud but he wants to know if taint analysis is available in the standalone sonar cube Taint and this is also available in Sona cube. Yeah. That's this is also a feature available here. Yeah. Yeah. So yeah, except for the community edition where it's not available, the other developer editions, plus. Stained analysis should be available, so that's good. Alright. Alright, I think this question is from Jed and he wants to know, so you talked about deep says, so he wants to know how he can enable deep says. And how does that affect the analysis duration? Yeah, okay, that's also a good question. I'm sorry for not mentioning in the first place. So in fact you don't need to enable GPS and you also cannot enable GPS and you also cannot enable it because it's applied automatically to the and you also cannot enable it because it's applied automatically to the and you also cannot enable it because it's applied automatically to the analysis of your application. Regarding the duration of an analysis, there is no difference. Basically, you don't even notice this. All common libraries are pre-analyzed on our infrastructure. And once your application is analyzed, which uses these libraries. The libraries don't need to be unlashed again. The pre-analyzed data is used to find vulnerable tain flows from your application through or into the library or even from the library to your application. This all depends on how your application is using the library. But, in summary, you don't have to do anything and will be automatically notified if you're application is using a library in an unsafe way. Sounds good. Thank you. I think on the same lines, Rodney has a question on which version of, Enterprises, the deep SAS available. Regarding the versions, I think we have to double check this. So, to be honest, I'm not 100% sure. Okay, cool. But yeah, you can definitely check out in the in our community, forum and there will for sure be an answer to this. Let's see. Yeah, this is an interesting question. Again, from Jonathan and he wants to know, you as you as a vulnerability research team, how do you select the open source applications that you actually analyzed with Sonar Cloud? Which ones would you do you choose and how do you go about that? Hey, yes. Yeah, so, the vulnerability research team, we generally only scan, we have very kind of popular applications. V vulnerabilities in these applications affect more users and thus we can have a greater impact to unveil vulnerabilities in these projects. In in terms of projects, we are generally not really restricted since the analysis of summer cloud is easy to set up and runs automatically, but what ResSA restricts us in terms of quantity is the number of detected vulnerabilities. The shocking truth is that there are a lot of vulnerabilities out there. Especially in less popular applications. And of course we cannot review all of them. I'm the maintenance could easily identify this by scanning the applications themselves. And that's actually what a lot of maintainers, especially for public, their open source projects are already doing. But yeah, not not all of them. Okay, thank you. Let's see this one more question here around sources and things, but the question asks, what happens if one source ends up in 2 or more dangerous things? In such a scenario, how is that handled? Okay, yeah, it's also a great question. So if I understand correctly, so basically the question is what happens if for example, there is one source and there are 2 independent passes to dangerous things. So it's like always good to have this graph graph graph in mind we've been looking at. So in that case, sonic cloud. We'll notify you about 2 vulnerabilities. Both of these vulnerable passes need to be fixed. So for example, if you've got one credit parameter, which ends up in 2 different SQL queries. In that case, you have 2 SQL injection vulnerabilities. And, there's another thing I didn't mention yet. If you escape the query parameter before inserting it in the, into the first SQL query. So now Cloud will recognize this caping function as a sanitizer and automatically resource this vulnerability is fixed because you're basically not prone to an SQL injection anymore because this current parameter is sanitized. So it's that point that you've only more more vulnerability, but you also need to escape the current parameter before it's inserted into the SQL query. Once this is done, both vulnerability both passes are resolved and nothing is shown on the UI anymore and sure, we are basically fine. Alright. Let's see. Okay, yeah, this is an interesting one. So. The question asked that what if my application has an intended feature? That runs that lets you run user operating system commands. When a scenario like that happens, how does sonar actually handle this? So it's an intended feature. Okay, yes, so yeah, okay, so maybe your application has an intended feature to run. Operating system for commands like this. In this case, Sona Cloud will still notify you about this as a vulnerability, because it's generally assumed to be unsafe to let the user run operating system commands. But, this is, is intended feature, which is true in this case and you are comfortable with the associated risks, you can for this specific issue issue just select resolve as won't fix on the summer cloud UI and this specific vulnerability will not be shown to you anymore and you can just keep on and I can law all other issues which are more relevant for you in that case. Alright, cool. There was just one question for you, Stefan, if you're gonna be, If you're gonna be at 37 C 3 for Sonocube in Hamburg, I believe is that a conference? Okay. Yeah, that's the case. Consum. Unfortunately not this year, but I would love to join. And maybe, maybe next year. Alright, cool. Let's see. There's a one question. From Peter around a detection of de serialization vulnerabilities. That's on our cloud support that. Can you share some light on it? Yes, for sure. Yeah, as I mentioned before, basically we can, find all roots on, rules. And, there are more than 800 security routes that cover a lot of different topics. And each of these rules. Detect issues in multiple languages and frameworks. But, a, dis, a, DD, d, which is a really big topic, but these kinds of vulnerabilities are definitely part of this and also covered by multipleities are definitely part of this and also covered by multiple rules are definitely part of this and also covered by multiple rules. Yeah, for also for different programming languages. Cool. Oh, I think we have time for probably one more question. Let me see. I think this question, talks further about the process. The question is, can deeper test also analyze Private libraries available within an organization or does it only look at publicly accessible libraries? So DPS itself runs on the, the, the data used for T. Using the pre analyzed data on our infrastructure. So of course this is only like public libraries we could have we could retrieve and analyze on our own infrastructure. But if you include and give the analyzer access to your private library code, then of course vulnerabilities in this code can also be detected. I mean, the important point is that you don't only scan your application itself, but also include your library. Alright, I think we are out of time, and at the end of the webinar, so thank you everyone. Who post questions and attended and thank you Stefan for a wonderful presentation. So if we didn't get to your question, we will take some of these questions and answer them. In the community and of course in the interim if you have any questions, please send them on the community and do visit sonar source. Com for any future information that you may have and we will see you soon in a future webinar and at an event. Thank you. Have a great day.",
+  "fetchedAt": "2026-03-14T09:23:37.575Z"
+}

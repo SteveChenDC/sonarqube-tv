@@ -1,0 +1,1253 @@
+{
+  "videoId": "v150",
+  "youtubeId": "oYvMmN6G3F0",
+  "segments": [
+    {
+      "text": "[Music]",
+      "offset": 1180,
+      "duration": 5499
+    },
+    {
+      "text": "in this video I'll show you how to map",
+      "offset": 8000,
+      "duration": 4480
+    },
+    {
+      "text": "your or into sonar Cube using the Azure",
+      "offset": 9840,
+      "duration": 4719
+    },
+    {
+      "text": "develops integration found within sonar",
+      "offset": 12480,
+      "duration": 4080
+    },
+    {
+      "text": "Cube there will be four parts to this",
+      "offset": 14559,
+      "duration": 5241
+    },
+    {
+      "text": "video the integration setup the user",
+      "offset": 16560,
+      "duration": 5719
+    },
+    {
+      "text": "authentication project onboarding as",
+      "offset": 19800,
+      "duration": 6120
+    },
+    {
+      "text": "well as the pool request analysis and",
+      "offset": 22279,
+      "duration": 6441
+    },
+    {
+      "text": "decoration after logging in you land on",
+      "offset": 25920,
+      "duration": 4759
+    },
+    {
+      "text": "the main Project screen where you can",
+      "offset": 28720,
+      "duration": 5600
+    },
+    {
+      "text": "create a project select more go to Azure",
+      "offset": 30679,
+      "duration": 5481
+    },
+    {
+      "text": "devops and this is where you can enter",
+      "offset": 34320,
+      "duration": 3800
+    },
+    {
+      "text": "your configuration you'll be able to do",
+      "offset": 36160,
+      "duration": 3559
+    },
+    {
+      "text": "the exact same thing under",
+      "offset": 38120,
+      "duration": 4320
+    },
+    {
+      "text": "Administration under the devops platform",
+      "offset": 39719,
+      "duration": 5160
+    },
+    {
+      "text": "integration section there's a aure",
+      "offset": 42440,
+      "duration": 5360
+    },
+    {
+      "text": "devops section Tab and click on create",
+      "offset": 44879,
+      "duration": 4680
+    },
+    {
+      "text": "configuration this will be the same",
+      "offset": 47800,
+      "duration": 4200
+    },
+    {
+      "text": "model that will drop down so let's head",
+      "offset": 49559,
+      "duration": 6561
+    },
+    {
+      "text": "back over to the previous place where we",
+      "offset": 52000,
+      "duration": 6800
+    },
+    {
+      "text": "wanted to enter our configuration over",
+      "offset": 56120,
+      "duration": 4399
+    },
+    {
+      "text": "here give this config configuration a",
+      "offset": 58800,
+      "duration": 3840
+    },
+    {
+      "text": "meaningful name and this will be what",
+      "offset": 60519,
+      "duration": 4521
+    },
+    {
+      "text": "your whole configuration will saved as a",
+      "offset": 62640,
+      "duration": 5560
+    },
+    {
+      "text": "URL also over here as you can see that I",
+      "offset": 65040,
+      "duration": 6119
+    },
+    {
+      "text": "took from my Azure devops instance and",
+      "offset": 68200,
+      "duration": 6200
+    },
+    {
+      "text": "as well as a personal access token click",
+      "offset": 71159,
+      "duration": 5881
+    },
+    {
+      "text": "on user settings in Azure develops and",
+      "offset": 74400,
+      "duration": 5440
+    },
+    {
+      "text": "go to personal access tokens where",
+      "offset": 77040,
+      "duration": 5880
+    },
+    {
+      "text": "you'll be able to generate a new access",
+      "offset": 79840,
+      "duration": 7200
+    },
+    {
+      "text": "token click on new token give it a name",
+      "offset": 82920,
+      "duration": 6519
+    },
+    {
+      "text": "and this token will be used for all",
+      "offset": 87040,
+      "duration": 5680
+    },
+    {
+      "text": "project integration if using the UI I'm",
+      "offset": 89439,
+      "duration": 5521
+    },
+    {
+      "text": "going to set for 90",
+      "offset": 92720,
+      "duration": 5880
+    },
+    {
+      "text": "days take note that you have to give it",
+      "offset": 94960,
+      "duration": 6799
+    },
+    {
+      "text": "the code read and write permissions so",
+      "offset": 98600,
+      "duration": 4400
+    },
+    {
+      "text": "over here I'm going to select the read",
+      "offset": 101759,
+      "duration": 4680
+    },
+    {
+      "text": "and write permissions and then create",
+      "offset": 103000,
+      "duration": 5600
+    },
+    {
+      "text": "once I press create uh token generated",
+      "offset": 106439,
+      "duration": 4960
+    },
+    {
+      "text": "I'm going to copy this and paste it",
+      "offset": 108600,
+      "duration": 6519
+    },
+    {
+      "text": "inside my personal access token field",
+      "offset": 111399,
+      "duration": 5720
+    },
+    {
+      "text": "press save configuration and this whole",
+      "offset": 115119,
+      "duration": 4000
+    },
+    {
+      "text": "configuration will save paste the same",
+      "offset": 117119,
+      "duration": 4680
+    },
+    {
+      "text": "token in and press list repositories and",
+      "offset": 119119,
+      "duration": 5280
+    },
+    {
+      "text": "you'll be able to see your aure devops",
+      "offset": 121799,
+      "duration": 4881
+    },
+    {
+      "text": "repositories loaded next we'll cover the",
+      "offset": 124399,
+      "duration": 4360
+    },
+    {
+      "text": "authentication options available which",
+      "offset": 126680,
+      "duration": 5320
+    },
+    {
+      "text": "will be saml and LP for the saml",
+      "offset": 128759,
+      "duration": 5560
+    },
+    {
+      "text": "authentication flow you can go under",
+      "offset": 132000,
+      "duration": 4360
+    },
+    {
+      "text": "Administration authentication and then",
+      "offset": 134319,
+      "duration": 4601
+    },
+    {
+      "text": "the samle section over here and this is",
+      "offset": 136360,
+      "duration": 5040
+    },
+    {
+      "text": "where you can authenticate users into",
+      "offset": 138920,
+      "duration": 6840
+    },
+    {
+      "text": "Sona Cube using the samle protocol since",
+      "offset": 141400,
+      "duration": 7520
+    },
+    {
+      "text": "Azure ad also supports saml you can then",
+      "offset": 145760,
+      "duration": 6520
+    },
+    {
+      "text": "connect azure ad and Sona Cube together",
+      "offset": 148920,
+      "duration": 7039
+    },
+    {
+      "text": "to authenticate users into Sona Cube you",
+      "offset": 152280,
+      "duration": 5520
+    },
+    {
+      "text": "can follow the step-by-step guide",
+      "offset": 155959,
+      "duration": 3280
+    },
+    {
+      "text": "available in our",
+      "offset": 157800,
+      "duration": 4040
+    },
+    {
+      "text": "documentation that shows you how to do",
+      "offset": 159239,
+      "duration": 5961
+    },
+    {
+      "text": "exactly that in addition you can also",
+      "offset": 161840,
+      "duration": 7600
+    },
+    {
+      "text": "integrate keycloak as well as OCTA via",
+      "offset": 165200,
+      "duration": 7360
+    },
+    {
+      "text": "saml to authenticate your users into",
+      "offset": 169440,
+      "duration": 5879
+    },
+    {
+      "text": "sonar cube next up is alep you can",
+      "offset": 172560,
+      "duration": 5880
+    },
+    {
+      "text": "actually use LP and configure this in",
+      "offset": 175319,
+      "duration": 7361
+    },
+    {
+      "text": "your sonar . properties File 2 to",
+      "offset": 178440,
+      "duration": 6719
+    },
+    {
+      "text": "connect your alep servers to your son",
+      "offset": 182680,
+      "duration": 6320
+    },
+    {
+      "text": "instance and this allows you to then use",
+      "offset": 185159,
+      "duration": 7241
+    },
+    {
+      "text": "the users inside your alab servers to",
+      "offset": 189000,
+      "duration": 5239
+    },
+    {
+      "text": "connect and to",
+      "offset": 192400,
+      "duration": 4720
+    },
+    {
+      "text": "authenticate into Sona Cube we allow",
+      "offset": 194239,
+      "duration": 5841
+    },
+    {
+      "text": "group synchronization and more than that",
+      "offset": 197120,
+      "duration": 5759
+    },
+    {
+      "text": "you can use this piece of documentation",
+      "offset": 200080,
+      "duration": 4840
+    },
+    {
+      "text": "to configure your sonar Cube instance",
+      "offset": 202879,
+      "duration": 5801
+    },
+    {
+      "text": "with your alep server or alep servers as",
+      "offset": 204920,
+      "duration": 6599
+    },
+    {
+      "text": "you can see over here you're able to use",
+      "offset": 208680,
+      "duration": 5440
+    },
+    {
+      "text": "multiple servers and note that",
+      "offset": 211519,
+      "duration": 4201
+    },
+    {
+      "text": "authentication will be tried on each",
+      "offset": 214120,
+      "duration": 4119
+    },
+    {
+      "text": "server in the order that they are listed",
+      "offset": 215720,
+      "duration": 5480
+    },
+    {
+      "text": "in the configuration until one succeeds",
+      "offset": 218239,
+      "duration": 5080
+    },
+    {
+      "text": "we'll move on now to talk about project",
+      "offset": 221200,
+      "duration": 4280
+    },
+    {
+      "text": "creation options there are three options",
+      "offset": 223319,
+      "duration": 5120
+    },
+    {
+      "text": "available the first of which would be to",
+      "offset": 225480,
+      "duration": 5759
+    },
+    {
+      "text": "create a new project via the sonac cube",
+      "offset": 228439,
+      "duration": 6241
+    },
+    {
+      "text": "UI guidance next you can use the sonac",
+      "offset": 231239,
+      "duration": 6121
+    },
+    {
+      "text": "cube API to programmatically create",
+      "offset": 234680,
+      "duration": 5000
+    },
+    {
+      "text": "projects lastly you're also able to",
+      "offset": 237360,
+      "duration": 4079
+    },
+    {
+      "text": "automatically create a project via the",
+      "offset": 239680,
+      "duration": 4919
+    },
+    {
+      "text": "first analysis by defining the sonar.",
+      "offset": 241439,
+      "duration": 7800
+    },
+    {
+      "text": "project key inside your son- project.",
+      "offset": 244599,
+      "duration": 7200
+    },
+    {
+      "text": "properties file or by defining it as an",
+      "offset": 249239,
+      "duration": 4761
+    },
+    {
+      "text": "option when running your Sona scanner",
+      "offset": 251799,
+      "duration": 6521
+    },
+    {
+      "text": "CLI command once you come into the Sona",
+      "offset": 254000,
+      "duration": 7359
+    },
+    {
+      "text": "Cube main project page click on create",
+      "offset": 258320,
+      "duration": 6920
+    },
+    {
+      "text": "project and then the Azure devops button",
+      "offset": 261359,
+      "duration": 5641
+    },
+    {
+      "text": "however before that take note that you",
+      "offset": 265240,
+      "duration": 3720
+    },
+    {
+      "text": "have to go over to Administration and",
+      "offset": 267000,
+      "duration": 5120
+    },
+    {
+      "text": "then General scroll all the way down",
+      "offset": 268960,
+      "duration": 6360
+    },
+    {
+      "text": "until you find the server based URL over",
+      "offset": 272120,
+      "duration": 9000
+    },
+    {
+      "text": "here set the base URL to your url of",
+      "offset": 275320,
+      "duration": 8240
+    },
+    {
+      "text": "your sonar Cube instance without the",
+      "offset": 281120,
+      "duration": 4760
+    },
+    {
+      "text": "slash at the back as you can see I've",
+      "offset": 283560,
+      "duration": 3720
+    },
+    {
+      "text": "already set it head back to your",
+      "offset": 285880,
+      "duration": 3480
+    },
+    {
+      "text": "projects and you can safely create and",
+      "offset": 287280,
+      "duration": 4400
+    },
+    {
+      "text": "onboard your Azure develops project onto",
+      "offset": 289360,
+      "duration": 4760
+    },
+    {
+      "text": "son Cube since you've already connected",
+      "offset": 291680,
+      "duration": 5040
+    },
+    {
+      "text": "your Azure devops instance to your Sona",
+      "offset": 294120,
+      "duration": 5720
+    },
+    {
+      "text": "Cube instance earlier on you'll be able",
+      "offset": 296720,
+      "duration": 5720
+    },
+    {
+      "text": "to then see your projects as well as the",
+      "offset": 299840,
+      "duration": 5280
+    },
+    {
+      "text": "repositories inside each project in this",
+      "offset": 302440,
+      "duration": 6560
+    },
+    {
+      "text": "case I'm going to connect the note JS",
+      "offset": 305120,
+      "duration": 5919
+    },
+    {
+      "text": "project that you see on my left and over",
+      "offset": 309000,
+      "duration": 4160
+    },
+    {
+      "text": "here I can select my new code setting I",
+      "offset": 311039,
+      "duration": 3961
+    },
+    {
+      "text": "can use the global setting or I can",
+      "offset": 313160,
+      "duration": 4160
+    },
+    {
+      "text": "specify the previous version number of",
+      "offset": 315000,
+      "duration": 5160
+    },
+    {
+      "text": "days or reference Branch to be used but",
+      "offset": 317320,
+      "duration": 5280
+    },
+    {
+      "text": "in this case I'm going to specify the",
+      "offset": 320160,
+      "duration": 3440
+    },
+    {
+      "text": "global",
+      "offset": 322600,
+      "duration": 4360
+    },
+    {
+      "text": "setting click on with Azure pipelines in",
+      "offset": 323600,
+      "duration": 5520
+    },
+    {
+      "text": "this case since I'll be using Azure",
+      "offset": 326960,
+      "duration": 3160
+    },
+    {
+      "text": "pipeline",
+      "offset": 329120,
+      "duration": 3519
+    },
+    {
+      "text": "and install the sonar Cube extension by",
+      "offset": 330120,
+      "duration": 4519
+    },
+    {
+      "text": "clicking on the link press on Get It",
+      "offset": 332639,
+      "duration": 4680
+    },
+    {
+      "text": "Free and this should install your sonar",
+      "offset": 334639,
+      "duration": 5441
+    },
+    {
+      "text": "Cube extension into your Azure devops",
+      "offset": 337319,
+      "duration": 4921
+    },
+    {
+      "text": "organization take note that this adds",
+      "offset": 340080,
+      "duration": 4160
+    },
+    {
+      "text": "sonar related functionality to your",
+      "offset": 342240,
+      "duration": 4399
+    },
+    {
+      "text": "Azure devops instance in this case you",
+      "offset": 344240,
+      "duration": 4320
+    },
+    {
+      "text": "can see that I've already installed it",
+      "offset": 346639,
+      "duration": 4560
+    },
+    {
+      "text": "over here press continue and then it",
+      "offset": 348560,
+      "duration": 4280
+    },
+    {
+      "text": "says that you have to go to Project",
+      "offset": 351199,
+      "duration": 4000
+    },
+    {
+      "text": "settings service connection add a",
+      "offset": 352840,
+      "duration": 4840
+    },
+    {
+      "text": "service connection of Type S Cube on the",
+      "offset": 355199,
+      "duration": 4481
+    },
+    {
+      "text": "left you can see that I'm going to to",
+      "offset": 357680,
+      "duration": 4040
+    },
+    {
+      "text": "the service connections create service",
+      "offset": 359680,
+      "duration": 3880
+    },
+    {
+      "text": "connection and I'm going to search up",
+      "offset": 361720,
+      "duration": 3919
+    },
+    {
+      "text": "son Cube over here I'm going to paste in",
+      "offset": 363560,
+      "duration": 4160
+    },
+    {
+      "text": "the server URL note that I've set this",
+      "offset": 365639,
+      "duration": 4840
+    },
+    {
+      "text": "earlier on in my Administration pane",
+      "offset": 367720,
+      "duration": 5039
+    },
+    {
+      "text": "this is why that server URL was able to",
+      "offset": 370479,
+      "duration": 5681
+    },
+    {
+      "text": "appear now generate a global token and",
+      "offset": 372759,
+      "duration": 6681
+    },
+    {
+      "text": "copy that and paste it in the field over",
+      "offset": 376160,
+      "duration": 5560
+    },
+    {
+      "text": "here the token is allowing Azure to",
+      "offset": 379440,
+      "duration": 4720
+    },
+    {
+      "text": "connect to Sona Cube and this will be",
+      "offset": 381720,
+      "duration": 4960
+    },
+    {
+      "text": "used for all pipeline runs that leverage",
+      "offset": 384160,
+      "duration": 4960
+    },
+    {
+      "text": "the same service connection for this",
+      "offset": 386680,
+      "duration": 4760
+    },
+    {
+      "text": "Serv connection name give it a",
+      "offset": 389120,
+      "duration": 4760
+    },
+    {
+      "text": "meaningful name because you'll be using",
+      "offset": 391440,
+      "duration": 5560
+    },
+    {
+      "text": "this later on inside your Azure develops",
+      "offset": 393880,
+      "duration": 5680
+    },
+    {
+      "text": "pipeline all right once you're done I",
+      "offset": 397000,
+      "duration": 4520
+    },
+    {
+      "text": "will want to Grant access permissions to",
+      "offset": 399560,
+      "duration": 4880
+    },
+    {
+      "text": "all pipelines in this case for demo sake",
+      "offset": 401520,
+      "duration": 5280
+    },
+    {
+      "text": "and I'll press the save button in my",
+      "offset": 404440,
+      "duration": 5039
+    },
+    {
+      "text": "Sona Cube instance press continue and",
+      "offset": 406800,
+      "duration": 5280
+    },
+    {
+      "text": "since my project is a JavaScript project",
+      "offset": 409479,
+      "duration": 5000
+    },
+    {
+      "text": "I will click on the JavaScript option",
+      "offset": 412080,
+      "duration": 4239
+    },
+    {
+      "text": "and I'll follow the instructions over",
+      "offset": 414479,
+      "duration": 4481
+    },
+    {
+      "text": "here normally you will have to create a",
+      "offset": 416319,
+      "duration": 4160
+    },
+    {
+      "text": "pipeline",
+      "offset": 418960,
+      "duration": 5160
+    },
+    {
+      "text": "and this will generate a Azure pipeline.",
+      "offset": 420479,
+      "duration": 7041
+    },
+    {
+      "text": "yo file so this is a note JS project and",
+      "offset": 424120,
+      "duration": 5400
+    },
+    {
+      "text": "you can see that over here I already",
+      "offset": 427520,
+      "duration": 5040
+    },
+    {
+      "text": "have one that I've created earlier on",
+      "offset": 429520,
+      "duration": 5040
+    },
+    {
+      "text": "I'll update the project key following",
+      "offset": 432560,
+      "duration": 4160
+    },
+    {
+      "text": "the instructions over here click on the",
+      "offset": 434560,
+      "duration": 4240
+    },
+    {
+      "text": "edit button and I'll update the project",
+      "offset": 436720,
+      "duration": 7039
+    },
+    {
+      "text": "key value over here next ensure that the",
+      "offset": 438800,
+      "duration": 7760
+    },
+    {
+      "text": "service connection name that you set",
+      "offset": 443759,
+      "duration": 5961
+    },
+    {
+      "text": "earli on is the same as the value over",
+      "offset": 446560,
+      "duration": 6039
+    },
+    {
+      "text": "here in this pipeline file so head over",
+      "offset": 449720,
+      "duration": 5960
+    },
+    {
+      "text": "to your settings service connections and",
+      "offset": 452599,
+      "duration": 4561
+    },
+    {
+      "text": "over here you see the the name of the",
+      "offset": 455680,
+      "duration": 3519
+    },
+    {
+      "text": "service connection is Joshua nodejs",
+      "offset": 457160,
+      "duration": 4920
+    },
+    {
+      "text": "service connection so update it to make",
+      "offset": 459199,
+      "duration": 4680
+    },
+    {
+      "text": "sure that this service connection is",
+      "offset": 462080,
+      "duration": 4600
+    },
+    {
+      "text": "correct press commit and commit the file",
+      "offset": 463879,
+      "duration": 5040
+    },
+    {
+      "text": "once the file is committed you can see",
+      "offset": 466680,
+      "duration": 4239
+    },
+    {
+      "text": "that your pipelines will begin to run",
+      "offset": 468919,
+      "duration": 4441
+    },
+    {
+      "text": "press continue and as you see the",
+      "offset": 470919,
+      "duration": 5441
+    },
+    {
+      "text": "pipeline runs you can just wait for Sona",
+      "offset": 473360,
+      "duration": 6000
+    },
+    {
+      "text": "Cube to be updated and there we go and",
+      "offset": 476360,
+      "duration": 5000
+    },
+    {
+      "text": "as you can see on the screen your",
+      "offset": 479360,
+      "duration": 5640
+    },
+    {
+      "text": "analysis scan is complete and showing on",
+      "offset": 481360,
+      "duration": 7959
+    },
+    {
+      "text": "SAA Cube and your pipeline on the left",
+      "offset": 485000,
+      "duration": 6319
+    },
+    {
+      "text": "has finished",
+      "offset": 489319,
+      "duration": 6041
+    },
+    {
+      "text": "running also take note of the new code",
+      "offset": 491319,
+      "duration": 6720
+    },
+    {
+      "text": "definition where the measures on new",
+      "offset": 495360,
+      "duration": 4920
+    },
+    {
+      "text": "code will appear only after the second",
+      "offset": 498039,
+      "duration": 5401
+    },
+    {
+      "text": "analysis of this",
+      "offset": 500280,
+      "duration": 6120
+    },
+    {
+      "text": "Branch next up we'll talk about polar",
+      "offset": 503440,
+      "duration": 5199
+    },
+    {
+      "text": "Crest analysis and polar Crest",
+      "offset": 506400,
+      "duration": 3799
+    },
+    {
+      "text": "decoration",
+      "offset": 508639,
+      "duration": 5400
+    },
+    {
+      "text": "so open up your Azure pipelines yo and",
+      "offset": 510199,
+      "duration": 8601
+    },
+    {
+      "text": "add a w card pattern for your future",
+      "offset": 514039,
+      "duration": 6761
+    },
+    {
+      "text": "branches and notice that I use a star",
+      "offset": 518800,
+      "duration": 5440
+    },
+    {
+      "text": "over here stop the pipeline from running",
+      "offset": 520800,
+      "duration": 5280
+    },
+    {
+      "text": "because whenever you commit it will",
+      "offset": 524240,
+      "duration": 4760
+    },
+    {
+      "text": "definitely trigger a pipeline run and so",
+      "offset": 526080,
+      "duration": 4960
+    },
+    {
+      "text": "I'm going to create a new branch and",
+      "offset": 529000,
+      "duration": 4680
+    },
+    {
+      "text": "over here this will actually trigger a",
+      "offset": 531040,
+      "duration": 5720
+    },
+    {
+      "text": "pipeline run which is the Baseline scan",
+      "offset": 533680,
+      "duration": 7279
+    },
+    {
+      "text": "for the branch so over here you can see",
+      "offset": 536760,
+      "duration": 6319
+    },
+    {
+      "text": "on the right side that I have my",
+      "offset": 540959,
+      "duration": 4801
+    },
+    {
+      "text": "Baseline scan for the branch next up you",
+      "offset": 543079,
+      "duration": 5041
+    },
+    {
+      "text": "will need to add build validation for",
+      "offset": 545760,
+      "duration": 4480
+    },
+    {
+      "text": "branches so head over to branches go",
+      "offset": 548120,
+      "duration": 4839
+    },
+    {
+      "text": "over to your main branch and note that",
+      "offset": 550240,
+      "duration": 6080
+    },
+    {
+      "text": "build validation has to be done on the",
+      "offset": 552959,
+      "duration": 5841
+    },
+    {
+      "text": "branch that you want to merge your pool",
+      "offset": 556320,
+      "duration": 4880
+    },
+    {
+      "text": "request into so go over here click on",
+      "offset": 558800,
+      "duration": 5719
+    },
+    {
+      "text": "Branch policies build validation and as",
+      "offset": 561200,
+      "duration": 6400
+    },
+    {
+      "text": "you see over here you will note that",
+      "offset": 564519,
+      "duration": 4801
+    },
+    {
+      "text": "ensure all your pull request get",
+      "offset": 567600,
+      "duration": 3400
+    },
+    {
+      "text": "automatically analyzed by adding a built",
+      "offset": 569320,
+      "duration": 4079
+    },
+    {
+      "text": "validation Branch policy on the target",
+      "offset": 571000,
+      "duration": 4760
+    },
+    {
+      "text": "Branch give it a meaningful name and",
+      "offset": 573399,
+      "duration": 4481
+    },
+    {
+      "text": "press the save button to save your built",
+      "offset": 575760,
+      "duration": 4440
+    },
+    {
+      "text": "policy configuration you might see an",
+      "offset": 577880,
+      "duration": 4079
+    },
+    {
+      "text": "Azure develops error but this could",
+      "offset": 580200,
+      "duration": 4240
+    },
+    {
+      "text": "possibly be an Azure develops bug ignore",
+      "offset": 581959,
+      "duration": 5041
+    },
+    {
+      "text": "this error and just press",
+      "offset": 584440,
+      "duration": 6160
+    },
+    {
+      "text": "save I'm going to create a file over",
+      "offset": 587000,
+      "duration": 6000
+    },
+    {
+      "text": "here I'm going to call it sample file",
+      "offset": 590600,
+      "duration": 4400
+    },
+    {
+      "text": "and after I commit the pipeline should",
+      "offset": 593000,
+      "duration": 4839
+    },
+    {
+      "text": "be triggered you can press the create a",
+      "offset": 595000,
+      "duration": 5320
+    },
+    {
+      "text": "pull request button over here and this",
+      "offset": 597839,
+      "duration": 5680
+    },
+    {
+      "text": "is where you will create a pull request",
+      "offset": 600320,
+      "duration": 5920
+    },
+    {
+      "text": "after that you will see that a pull",
+      "offset": 603519,
+      "duration": 5760
+    },
+    {
+      "text": "request pipeline job has been started",
+      "offset": 606240,
+      "duration": 5800
+    },
+    {
+      "text": "and once it's done you then be able to",
+      "offset": 609279,
+      "duration": 5921
+    },
+    {
+      "text": "see the pull request analysis that has",
+      "offset": 612040,
+      "duration": 6440
+    },
+    {
+      "text": "been run also you can see that there are",
+      "offset": 615200,
+      "duration": 6720
+    },
+    {
+      "text": "different icons for say the main branch",
+      "offset": 618480,
+      "duration": 6560
+    },
+    {
+      "text": "the pool request as well as the feature",
+      "offset": 621920,
+      "duration": 5200
+    },
+    {
+      "text": "Branch okay so this is the pool request",
+      "offset": 625040,
+      "duration": 4760
+    },
+    {
+      "text": "analysis and you can even click on the",
+      "offset": 627120,
+      "duration": 5279
+    },
+    {
+      "text": "assure devops icon to go into the",
+      "offset": 629800,
+      "duration": 5279
+    },
+    {
+      "text": "specific pull request and this is where",
+      "offset": 632399,
+      "duration": 5161
+    },
+    {
+      "text": "The annotation will be added on to the",
+      "offset": 635079,
+      "duration": 5440
+    },
+    {
+      "text": "poll request if you require any further",
+      "offset": 637560,
+      "duration": 4920
+    },
+    {
+      "text": "assistance we recommend that you go to",
+      "offset": 640519,
+      "duration": 3641
+    },
+    {
+      "text": "sonas source.com",
+      "offset": 642480,
+      "duration": 3880
+    },
+    {
+      "text": "ssupport where you can review your",
+      "offset": 644160,
+      "duration": 4720
+    },
+    {
+      "text": "support options including our free",
+      "offset": 646360,
+      "duration": 4919
+    },
+    {
+      "text": "community support as well as commercial",
+      "offset": 648880,
+      "duration": 4199
+    },
+    {
+      "text": "support if you've got a commercial",
+      "offset": 651279,
+      "duration": 4321
+    },
+    {
+      "text": "support contract with us and I'm sure",
+      "offset": 653079,
+      "duration": 5241
+    },
+    {
+      "text": "that our Sona sourcers will be happy to",
+      "offset": 655600,
+      "duration": 4290
+    },
+    {
+      "text": "help",
+      "offset": 658320,
+      "duration": 7079
+    },
+    {
+      "text": "[Music]",
+      "offset": 659890,
+      "duration": 5509
+    }
+  ],
+  "fullText": "[Music] in this video I'll show you how to map your or into sonar Cube using the Azure develops integration found within sonar Cube there will be four parts to this video the integration setup the user authentication project onboarding as well as the pool request analysis and decoration after logging in you land on the main Project screen where you can create a project select more go to Azure devops and this is where you can enter your configuration you'll be able to do the exact same thing under Administration under the devops platform integration section there's a aure devops section Tab and click on create configuration this will be the same model that will drop down so let's head back over to the previous place where we wanted to enter our configuration over here give this config configuration a meaningful name and this will be what your whole configuration will saved as a URL also over here as you can see that I took from my Azure devops instance and as well as a personal access token click on user settings in Azure develops and go to personal access tokens where you'll be able to generate a new access token click on new token give it a name and this token will be used for all project integration if using the UI I'm going to set for 90 days take note that you have to give it the code read and write permissions so over here I'm going to select the read and write permissions and then create once I press create uh token generated I'm going to copy this and paste it inside my personal access token field press save configuration and this whole configuration will save paste the same token in and press list repositories and you'll be able to see your aure devops repositories loaded next we'll cover the authentication options available which will be saml and LP for the saml authentication flow you can go under Administration authentication and then the samle section over here and this is where you can authenticate users into Sona Cube using the samle protocol since Azure ad also supports saml you can then connect azure ad and Sona Cube together to authenticate users into Sona Cube you can follow the step-by-step guide available in our documentation that shows you how to do exactly that in addition you can also integrate keycloak as well as OCTA via saml to authenticate your users into sonar cube next up is alep you can actually use LP and configure this in your sonar . properties File 2 to connect your alep servers to your son instance and this allows you to then use the users inside your alab servers to connect and to authenticate into Sona Cube we allow group synchronization and more than that you can use this piece of documentation to configure your sonar Cube instance with your alep server or alep servers as you can see over here you're able to use multiple servers and note that authentication will be tried on each server in the order that they are listed in the configuration until one succeeds we'll move on now to talk about project creation options there are three options available the first of which would be to create a new project via the sonac cube UI guidance next you can use the sonac cube API to programmatically create projects lastly you're also able to automatically create a project via the first analysis by defining the sonar. project key inside your son- project. properties file or by defining it as an option when running your Sona scanner CLI command once you come into the Sona Cube main project page click on create project and then the Azure devops button however before that take note that you have to go over to Administration and then General scroll all the way down until you find the server based URL over here set the base URL to your url of your sonar Cube instance without the slash at the back as you can see I've already set it head back to your projects and you can safely create and onboard your Azure develops project onto son Cube since you've already connected your Azure devops instance to your Sona Cube instance earlier on you'll be able to then see your projects as well as the repositories inside each project in this case I'm going to connect the note JS project that you see on my left and over here I can select my new code setting I can use the global setting or I can specify the previous version number of days or reference Branch to be used but in this case I'm going to specify the global setting click on with Azure pipelines in this case since I'll be using Azure pipeline and install the sonar Cube extension by clicking on the link press on Get It Free and this should install your sonar Cube extension into your Azure devops organization take note that this adds sonar related functionality to your Azure devops instance in this case you can see that I've already installed it over here press continue and then it says that you have to go to Project settings service connection add a service connection of Type S Cube on the left you can see that I'm going to to the service connections create service connection and I'm going to search up son Cube over here I'm going to paste in the server URL note that I've set this earlier on in my Administration pane this is why that server URL was able to appear now generate a global token and copy that and paste it in the field over here the token is allowing Azure to connect to Sona Cube and this will be used for all pipeline runs that leverage the same service connection for this Serv connection name give it a meaningful name because you'll be using this later on inside your Azure develops pipeline all right once you're done I will want to Grant access permissions to all pipelines in this case for demo sake and I'll press the save button in my Sona Cube instance press continue and since my project is a JavaScript project I will click on the JavaScript option and I'll follow the instructions over here normally you will have to create a pipeline and this will generate a Azure pipeline. yo file so this is a note JS project and you can see that over here I already have one that I've created earlier on I'll update the project key following the instructions over here click on the edit button and I'll update the project key value over here next ensure that the service connection name that you set earli on is the same as the value over here in this pipeline file so head over to your settings service connections and over here you see the the name of the service connection is Joshua nodejs service connection so update it to make sure that this service connection is correct press commit and commit the file once the file is committed you can see that your pipelines will begin to run press continue and as you see the pipeline runs you can just wait for Sona Cube to be updated and there we go and as you can see on the screen your analysis scan is complete and showing on SAA Cube and your pipeline on the left has finished running also take note of the new code definition where the measures on new code will appear only after the second analysis of this Branch next up we'll talk about polar Crest analysis and polar Crest decoration so open up your Azure pipelines yo and add a w card pattern for your future branches and notice that I use a star over here stop the pipeline from running because whenever you commit it will definitely trigger a pipeline run and so I'm going to create a new branch and over here this will actually trigger a pipeline run which is the Baseline scan for the branch so over here you can see on the right side that I have my Baseline scan for the branch next up you will need to add build validation for branches so head over to branches go over to your main branch and note that build validation has to be done on the branch that you want to merge your pool request into so go over here click on Branch policies build validation and as you see over here you will note that ensure all your pull request get automatically analyzed by adding a built validation Branch policy on the target Branch give it a meaningful name and press the save button to save your built policy configuration you might see an Azure develops error but this could possibly be an Azure develops bug ignore this error and just press save I'm going to create a file over here I'm going to call it sample file and after I commit the pipeline should be triggered you can press the create a pull request button over here and this is where you will create a pull request after that you will see that a pull request pipeline job has been started and once it's done you then be able to see the pull request analysis that has been run also you can see that there are different icons for say the main branch the pool request as well as the feature Branch okay so this is the pool request analysis and you can even click on the assure devops icon to go into the specific pull request and this is where The annotation will be added on to the poll request if you require any further assistance we recommend that you go to sonas source.com ssupport where you can review your support options including our free community support as well as commercial support if you've got a commercial support contract with us and I'm sure that our Sona sourcers will be happy to help [Music]",
+  "fetchedAt": "2026-03-14T09:24:15.208Z"
+}

@@ -1,0 +1,2108 @@
+{
+  "videoId": "v39",
+  "youtubeId": "dk2VBYzBkvs",
+  "segments": [
+    {
+      "text": "Hi everybody. My uh my name is Olivier",
+      "offset": 17199,
+      "duration": 5441
+    },
+    {
+      "text": "Gdan. I'm the co-founder of Sonar and",
+      "offset": 19840,
+      "duration": 5439
+    },
+    {
+      "text": "today I'm going to talk about the newly",
+      "offset": 22640,
+      "duration": 4879
+    },
+    {
+      "text": "released capability of architecture in",
+      "offset": 25279,
+      "duration": 5441
+    },
+    {
+      "text": "Sonar Cube. Um this presentation is",
+      "offset": 27519,
+      "duration": 6001
+    },
+    {
+      "text": "going to be divided into three parts. Uh",
+      "offset": 30720,
+      "duration": 4240
+    },
+    {
+      "text": "first I'm going to talk about the",
+      "offset": 33520,
+      "duration": 3840
+    },
+    {
+      "text": "problem we are trying to solve. Second",
+      "offset": 34960,
+      "duration": 4720
+    },
+    {
+      "text": "part is going to be about the solution",
+      "offset": 37360,
+      "duration": 4800
+    },
+    {
+      "text": "what we have implemented in in Sona to",
+      "offset": 39680,
+      "duration": 4800
+    },
+    {
+      "text": "solve this and the third part is going",
+      "offset": 42160,
+      "duration": 6800
+    },
+    {
+      "text": "to be what's uh what's next for you. So",
+      "offset": 44480,
+      "duration": 8399
+    },
+    {
+      "text": "let me start with the problem. Um so",
+      "offset": 48960,
+      "duration": 6160
+    },
+    {
+      "text": "basically as you know the world operates",
+      "offset": 52879,
+      "duration": 4801
+    },
+    {
+      "text": "on software which means that uh software",
+      "offset": 55120,
+      "duration": 5759
+    },
+    {
+      "text": "is now uh the single most valuable asset",
+      "offset": 57680,
+      "duration": 5920
+    },
+    {
+      "text": "for organization and one thing which",
+      "offset": 60879,
+      "duration": 6161
+    },
+    {
+      "text": "reduces um this value is actually",
+      "offset": 63600,
+      "duration": 7120
+    },
+    {
+      "text": "technical debt which I think we have in",
+      "offset": 67040,
+      "duration": 5840
+    },
+    {
+      "text": "the last 17 years done a very good job",
+      "offset": 70720,
+      "duration": 6960
+    },
+    {
+      "text": "to to help organization um handle u but",
+      "offset": 72880,
+      "duration": 7040
+    },
+    {
+      "text": "we have mostly worked at the code level",
+      "offset": 77680,
+      "duration": 4400
+    },
+    {
+      "text": "which is we have helped people to work",
+      "offset": 79920,
+      "duration": 5440
+    },
+    {
+      "text": "on their maintenability, reliability on",
+      "offset": 82080,
+      "duration": 4800
+    },
+    {
+      "text": "security",
+      "offset": 85360,
+      "duration": 5119
+    },
+    {
+      "text": "um with Sonar Cube and we felt it was",
+      "offset": 86880,
+      "duration": 7040
+    },
+    {
+      "text": "time to actually move into more like",
+      "offset": 90479,
+      "duration": 6881
+    },
+    {
+      "text": "structural debt which is about how the",
+      "offset": 93920,
+      "duration": 6080
+    },
+    {
+      "text": "um how the software how the application",
+      "offset": 97360,
+      "duration": 4480
+    },
+    {
+      "text": "is organized.",
+      "offset": 100000,
+      "duration": 3439
+    },
+    {
+      "text": "What's what are the abstractions? What's",
+      "offset": 101840,
+      "duration": 5040
+    },
+    {
+      "text": "the design? Do uh components have really",
+      "offset": 103439,
+      "duration": 5601
+    },
+    {
+      "text": "uh single responsibility",
+      "offset": 106880,
+      "duration": 4480
+    },
+    {
+      "text": "etc etc.",
+      "offset": 109040,
+      "duration": 6160
+    },
+    {
+      "text": "And when you do not follow this, it's",
+      "offset": 111360,
+      "duration": 6719
+    },
+    {
+      "text": "actually not that much fun, which is uh",
+      "offset": 115200,
+      "duration": 6239
+    },
+    {
+      "text": "you can see symptoms like um engineers",
+      "offset": 118079,
+      "duration": 5521
+    },
+    {
+      "text": "are leaving because it's uh the",
+      "offset": 121439,
+      "duration": 4720
+    },
+    {
+      "text": "environment is too messy. Every change",
+      "offset": 123600,
+      "duration": 5840
+    },
+    {
+      "text": "you make has side effects and which are",
+      "offset": 126159,
+      "duration": 7041
+    },
+    {
+      "text": "very difficult to explain and overall uh",
+      "offset": 129440,
+      "duration": 7040
+    },
+    {
+      "text": "your velocity is going to um uh to drop.",
+      "offset": 133200,
+      "duration": 6320
+    },
+    {
+      "text": "So the these are the symptoms of not",
+      "offset": 136480,
+      "duration": 7280
+    },
+    {
+      "text": "managing architecture. What's also um",
+      "offset": 139520,
+      "duration": 7680
+    },
+    {
+      "text": "what you should also know is that it",
+      "offset": 143760,
+      "duration": 6320
+    },
+    {
+      "text": "doesn't come like uh suddenly. This is",
+      "offset": 147200,
+      "duration": 7679
+    },
+    {
+      "text": "very um uh sneaky the way the way it uh",
+      "offset": 150080,
+      "duration": 7040
+    },
+    {
+      "text": "arises and it's it's very much an",
+      "offset": 154879,
+      "duration": 4720
+    },
+    {
+      "text": "erosion which is generally at software",
+      "offset": 157120,
+      "duration": 4960
+    },
+    {
+      "text": "creation application creation it's there",
+      "offset": 159599,
+      "duration": 4161
+    },
+    {
+      "text": "is no real problem. People thought about",
+      "offset": 162080,
+      "duration": 3120
+    },
+    {
+      "text": "what they want to build. They organize",
+      "offset": 163760,
+      "duration": 2640
+    },
+    {
+      "text": "it well.",
+      "offset": 165200,
+      "duration": 4160
+    },
+    {
+      "text": "And it's okay. But little by little uh",
+      "offset": 166400,
+      "duration": 6800
+    },
+    {
+      "text": "when you make uh shortcuts during",
+      "offset": 169360,
+      "duration": 6800
+    },
+    {
+      "text": "development to save time or because you",
+      "offset": 173200,
+      "duration": 4640
+    },
+    {
+      "text": "don't feel ready to do a bigger",
+      "offset": 176160,
+      "duration": 4400
+    },
+    {
+      "text": "investment uh it start to introduce that",
+      "offset": 177840,
+      "duration": 6160
+    },
+    {
+      "text": "uh erosion and you start to see the pain",
+      "offset": 180560,
+      "duration": 6800
+    },
+    {
+      "text": "and generally when you start to feel the",
+      "offset": 184000,
+      "duration": 7040
+    },
+    {
+      "text": "pain uh it's too late and uh in order to",
+      "offset": 187360,
+      "duration": 5840
+    },
+    {
+      "text": "change things it's going to require a",
+      "offset": 191040,
+      "duration": 6240
+    },
+    {
+      "text": "major change. So not really easy to uh",
+      "offset": 193200,
+      "duration": 6319
+    },
+    {
+      "text": "to deal with",
+      "offset": 197280,
+      "duration": 5440
+    },
+    {
+      "text": "and the goal here of a good architecture",
+      "offset": 199519,
+      "duration": 5761
+    },
+    {
+      "text": "is really that it should be easily",
+      "offset": 202720,
+      "duration": 5280
+    },
+    {
+      "text": "understood by everybody. It should be",
+      "offset": 205280,
+      "duration": 6640
+    },
+    {
+      "text": "modular and having that health in your",
+      "offset": 208000,
+      "duration": 6799
+    },
+    {
+      "text": "architecture will really be the only way",
+      "offset": 211920,
+      "duration": 6160
+    },
+    {
+      "text": "you can maintain um long-term speed",
+      "offset": 214799,
+      "duration": 5281
+    },
+    {
+      "text": "long-term velocity in your in your",
+      "offset": 218080,
+      "duration": 4159
+    },
+    {
+      "text": "development. So this is really the",
+      "offset": 220080,
+      "duration": 4239
+    },
+    {
+      "text": "problem we are uh trying to solve with",
+      "offset": 222239,
+      "duration": 6161
+    },
+    {
+      "text": "this new capability in sonar cube.",
+      "offset": 224319,
+      "duration": 7920
+    },
+    {
+      "text": "So now um solution um I'm going to go",
+      "offset": 228400,
+      "duration": 6479
+    },
+    {
+      "text": "through the solution philosophically but",
+      "offset": 232239,
+      "duration": 5601
+    },
+    {
+      "text": "also in terms of uh concept. So first",
+      "offset": 234879,
+      "duration": 4881
+    },
+    {
+      "text": "let me start a little bit with concept.",
+      "offset": 237840,
+      "duration": 3840
+    },
+    {
+      "text": "So what are we um what what's",
+      "offset": 239760,
+      "duration": 4559
+    },
+    {
+      "text": "architecture and architecture we divide",
+      "offset": 241680,
+      "duration": 6639
+    },
+    {
+      "text": "it into three. One is what is the",
+      "offset": 244319,
+      "duration": 6480
+    },
+    {
+      "text": "structure of your application which is",
+      "offset": 248319,
+      "duration": 4801
+    },
+    {
+      "text": "what are the components and how are they",
+      "offset": 250799,
+      "duration": 4160
+    },
+    {
+      "text": "organized in other words what's a",
+      "offset": 253120,
+      "duration": 4320
+    },
+    {
+      "text": "hierarchy of components. That's number",
+      "offset": 254959,
+      "duration": 5041
+    },
+    {
+      "text": "one. Number two is",
+      "offset": 257440,
+      "duration": 4400
+    },
+    {
+      "text": "what are the relations between the",
+      "offset": 260000,
+      "duration": 4560
+    },
+    {
+      "text": "component which is who",
+      "offset": 261840,
+      "duration": 5440
+    },
+    {
+      "text": "um has a relation what component has a",
+      "offset": 264560,
+      "duration": 5280
+    },
+    {
+      "text": "relation with what component",
+      "offset": 267280,
+      "duration": 5359
+    },
+    {
+      "text": "and the third one is really about design",
+      "offset": 269840,
+      "duration": 6240
+    },
+    {
+      "text": "which is hey how can a component uh how",
+      "offset": 272639,
+      "duration": 5521
+    },
+    {
+      "text": "should a component be used by other",
+      "offset": 276080,
+      "duration": 4960
+    },
+    {
+      "text": "components and once you put these three",
+      "offset": 278160,
+      "duration": 5280
+    },
+    {
+      "text": "things together and you start to manage",
+      "offset": 281040,
+      "duration": 5520
+    },
+    {
+      "text": "them together you actually manage your",
+      "offset": 283440,
+      "duration": 5120
+    },
+    {
+      "text": "architecture",
+      "offset": 286560,
+      "duration": 6000
+    },
+    {
+      "text": "So what we are doing um in sonar cube is",
+      "offset": 288560,
+      "duration": 7359
+    },
+    {
+      "text": "we have introduced um three concepts.",
+      "offset": 292560,
+      "duration": 6560
+    },
+    {
+      "text": "One is the current architecture and the",
+      "offset": 295919,
+      "duration": 5441
+    },
+    {
+      "text": "current architecture is what you what is",
+      "offset": 299120,
+      "duration": 4079
+    },
+    {
+      "text": "the actual architecture which is what do",
+      "offset": 301360,
+      "duration": 4320
+    },
+    {
+      "text": "you have today and we actually compute",
+      "offset": 303199,
+      "duration": 6401
+    },
+    {
+      "text": "this um at every analysis of your code.",
+      "offset": 305680,
+      "duration": 6160
+    },
+    {
+      "text": "So we reverse engineer and we present",
+      "offset": 309600,
+      "duration": 4400
+    },
+    {
+      "text": "you with a map of your current",
+      "offset": 311840,
+      "duration": 4720
+    },
+    {
+      "text": "architecture. I'm I'm going to go um",
+      "offset": 314000,
+      "duration": 5120
+    },
+    {
+      "text": "into this in more details uh in a",
+      "offset": 316560,
+      "duration": 5680
+    },
+    {
+      "text": "minute. The second thing the second",
+      "offset": 319120,
+      "duration": 5120
+    },
+    {
+      "text": "concept is really the intended",
+      "offset": 322240,
+      "duration": 4320
+    },
+    {
+      "text": "architecture which is what are you",
+      "offset": 324240,
+      "duration": 4480
+    },
+    {
+      "text": "shooting for? Sometimes it's going to be",
+      "offset": 326560,
+      "duration": 4479
+    },
+    {
+      "text": "like what did we intend to do initially",
+      "offset": 328720,
+      "duration": 4160
+    },
+    {
+      "text": "sometimes is what do we intend to do",
+      "offset": 331039,
+      "duration": 3841
+    },
+    {
+      "text": "now? It doesn't really matter where this",
+      "offset": 332880,
+      "duration": 4240
+    },
+    {
+      "text": "is coming from. This is really what you",
+      "offset": 334880,
+      "duration": 4800
+    },
+    {
+      "text": "are trying to achieve. And then the next",
+      "offset": 337120,
+      "duration": 5200
+    },
+    {
+      "text": "thing is about what we call deviations",
+      "offset": 339680,
+      "duration": 4480
+    },
+    {
+      "text": "which is this is really the difference",
+      "offset": 342320,
+      "duration": 4560
+    },
+    {
+      "text": "between the current architecture and the",
+      "offset": 344160,
+      "duration": 4960
+    },
+    {
+      "text": "intended architecture",
+      "offset": 346880,
+      "duration": 6240
+    },
+    {
+      "text": "and this is a basis for uh our solution.",
+      "offset": 349120,
+      "duration": 7200
+    },
+    {
+      "text": "So our philosophy from a product point",
+      "offset": 353120,
+      "duration": 6880
+    },
+    {
+      "text": "of view is that we are not we have not",
+      "offset": 356320,
+      "duration": 7360
+    },
+    {
+      "text": "built a um a product for architect. We",
+      "offset": 360000,
+      "duration": 5919
+    },
+    {
+      "text": "actually have built a product for team",
+      "offset": 363680,
+      "duration": 4480
+    },
+    {
+      "text": "which is and team",
+      "offset": 365919,
+      "duration": 4000
+    },
+    {
+      "text": "actually actually include architect but",
+      "offset": 368160,
+      "duration": 5200
+    },
+    {
+      "text": "this is not it. So it's about making",
+      "offset": 369919,
+      "duration": 6000
+    },
+    {
+      "text": "sure people understand what they are",
+      "offset": 373360,
+      "duration": 4559
+    },
+    {
+      "text": "dealing with what kind of animal they",
+      "offset": 375919,
+      "duration": 3521
+    },
+    {
+      "text": "are dealing with with their application",
+      "offset": 377919,
+      "duration": 3761
+    },
+    {
+      "text": "that they understand how it's structured",
+      "offset": 379440,
+      "duration": 5039
+    },
+    {
+      "text": "how what are the relationships etc etc.",
+      "offset": 381680,
+      "duration": 6079
+    },
+    {
+      "text": "you can force it and al it's about also",
+      "offset": 384479,
+      "duration": 5201
+    },
+    {
+      "text": "remediation which is what we have tried",
+      "offset": 387759,
+      "duration": 5121
+    },
+    {
+      "text": "to do is to really make things um",
+      "offset": 389680,
+      "duration": 4720
+    },
+    {
+      "text": "actionable",
+      "offset": 392880,
+      "duration": 5039
+    },
+    {
+      "text": "and we have made it so that human will",
+      "offset": 394400,
+      "duration": 6560
+    },
+    {
+      "text": "decide and then",
+      "offset": 397919,
+      "duration": 5280
+    },
+    {
+      "text": "um",
+      "offset": 400960,
+      "duration": 5359
+    },
+    {
+      "text": "uh stakeholders uh will solve the",
+      "offset": 403199,
+      "duration": 4961
+    },
+    {
+      "text": "problem which is stakeholder can be",
+      "offset": 406319,
+      "duration": 4561
+    },
+    {
+      "text": "human can be AI agent it doesn't really",
+      "offset": 408160,
+      "duration": 5920
+    },
+    {
+      "text": "matter but human will decide um for for",
+      "offset": 410880,
+      "duration": 6319
+    },
+    {
+      "text": "the for the application. So this is our",
+      "offset": 414080,
+      "duration": 7119
+    },
+    {
+      "text": "philosophy for that uh new capability",
+      "offset": 417199,
+      "duration": 7440
+    },
+    {
+      "text": "and the solution is built really on four",
+      "offset": 421199,
+      "duration": 7440
+    },
+    {
+      "text": "uh pillars. One is um we want everyone",
+      "offset": 424639,
+      "duration": 6321
+    },
+    {
+      "text": "so human or AI agents to be able to",
+      "offset": 428639,
+      "duration": 5280
+    },
+    {
+      "text": "understand the current architecture. So",
+      "offset": 430960,
+      "duration": 5359
+    },
+    {
+      "text": "everybody should have access as as part",
+      "offset": 433919,
+      "duration": 4400
+    },
+    {
+      "text": "of the let's say like a live",
+      "offset": 436319,
+      "duration": 3681
+    },
+    {
+      "text": "documentation should have access to the",
+      "offset": 438319,
+      "duration": 4320
+    },
+    {
+      "text": "current um architecture so that they",
+      "offset": 440000,
+      "duration": 5120
+    },
+    {
+      "text": "understand what's happening and we make",
+      "offset": 442639,
+      "duration": 5680
+    },
+    {
+      "text": "sure they actually follow um what what",
+      "offset": 445120,
+      "duration": 6799
+    },
+    {
+      "text": "is there. The second thing is ability to",
+      "offset": 448319,
+      "duration": 5921
+    },
+    {
+      "text": "formalize intended architecture and here",
+      "offset": 451919,
+      "duration": 4481
+    },
+    {
+      "text": "we I think we have done a good job in",
+      "offset": 454240,
+      "duration": 4640
+    },
+    {
+      "text": "making it very simple to understand",
+      "offset": 456400,
+      "duration": 4639
+    },
+    {
+      "text": "what's there. Um the way it is",
+      "offset": 458880,
+      "duration": 4080
+    },
+    {
+      "text": "formalized is very simple to understand",
+      "offset": 461039,
+      "duration": 5280
+    },
+    {
+      "text": "but it's also very easy to",
+      "offset": 462960,
+      "duration": 8239
+    },
+    {
+      "text": "define and update um create and update",
+      "offset": 466319,
+      "duration": 7280
+    },
+    {
+      "text": "uh this intended architecture which is",
+      "offset": 471199,
+      "duration": 5921
+    },
+    {
+      "text": "our approach makes it extremely simple",
+      "offset": 473599,
+      "duration": 5841
+    },
+    {
+      "text": "to um to",
+      "offset": 477120,
+      "duration": 3840
+    },
+    {
+      "text": "define it the first time and to",
+      "offset": 479440,
+      "duration": 3759
+    },
+    {
+      "text": "incrementally uh improve it in the",
+      "offset": 480960,
+      "duration": 3679
+    },
+    {
+      "text": "future.",
+      "offset": 483199,
+      "duration": 3280
+    },
+    {
+      "text": "The third thing is we have a clear way",
+      "offset": 484639,
+      "duration": 5041
+    },
+    {
+      "text": "of prioritizing issues which means um",
+      "offset": 486479,
+      "duration": 5681
+    },
+    {
+      "text": "one issue defined somewhere will not uh",
+      "offset": 489680,
+      "duration": 5760
+    },
+    {
+      "text": "overlap with another issue. For example,",
+      "offset": 492160,
+      "duration": 7599
+    },
+    {
+      "text": "as soon as we find um as as soon as we",
+      "offset": 495440,
+      "duration": 6720
+    },
+    {
+      "text": "find that there is a structural issue,",
+      "offset": 499759,
+      "duration": 7681
+    },
+    {
+      "text": "we actually ignore all um subsequent",
+      "offset": 502160,
+      "duration": 8560
+    },
+    {
+      "text": "relation uh issues that that are due to",
+      "offset": 507440,
+      "duration": 5279
+    },
+    {
+      "text": "that structural issue. So we only report",
+      "offset": 510720,
+      "duration": 5040
+    },
+    {
+      "text": "issues once and finally we make this",
+      "offset": 512719,
+      "duration": 6161
+    },
+    {
+      "text": "extremely uh actionable thanks to sonar",
+      "offset": 515760,
+      "duration": 6480
+    },
+    {
+      "text": "cube as we leverage all the capabilities",
+      "offset": 518880,
+      "duration": 6720
+    },
+    {
+      "text": "there workflow quality gate uh showing",
+      "offset": 522240,
+      "duration": 6000
+    },
+    {
+      "text": "issue in the code etc to make it really",
+      "offset": 525600,
+      "duration": 5520
+    },
+    {
+      "text": "actionable when it comes to remediation.",
+      "offset": 528240,
+      "duration": 5920
+    },
+    {
+      "text": "So let me uh dig a little bit into",
+      "offset": 531120,
+      "duration": 5279
+    },
+    {
+      "text": "current architecture. So the goal here",
+      "offset": 534160,
+      "duration": 7520
+    },
+    {
+      "text": "is really to discover slash explore",
+      "offset": 536399,
+      "duration": 8241
+    },
+    {
+      "text": "to understand the current architecture.",
+      "offset": 541680,
+      "duration": 7040
+    },
+    {
+      "text": "So here we have a full capability to see",
+      "offset": 544640,
+      "duration": 8240
+    },
+    {
+      "text": "top level up to be able to zoom in um um",
+      "offset": 548720,
+      "duration": 7360
+    },
+    {
+      "text": "obviously zoom out see the relations",
+      "offset": 552880,
+      "duration": 5920
+    },
+    {
+      "text": "understand the",
+      "offset": 556080,
+      "duration": 7040
+    },
+    {
+      "text": "um the complexity of the relations to",
+      "offset": 558800,
+      "duration": 6080
+    },
+    {
+      "text": "understand also the complexity of",
+      "offset": 563120,
+      "duration": 3360
+    },
+    {
+      "text": "components to understand whether they",
+      "offset": 564880,
+      "duration": 5120
+    },
+    {
+      "text": "are highly coupled um whether they are",
+      "offset": 566480,
+      "duration": 6320
+    },
+    {
+      "text": "uh they have a low uh coupling and to",
+      "offset": 570000,
+      "duration": 4320
+    },
+    {
+      "text": "understand what are the key components",
+      "offset": 572800,
+      "duration": 3920
+    },
+    {
+      "text": "not um you will see when you explore",
+      "offset": 574320,
+      "duration": 4880
+    },
+    {
+      "text": "your application that um certain",
+      "offset": 576720,
+      "duration": 4799
+    },
+    {
+      "text": "components they are super key and should",
+      "offset": 579200,
+      "duration": 5040
+    },
+    {
+      "text": "you have to change them uh it would be",
+      "offset": 581519,
+      "duration": 4880
+    },
+    {
+      "text": "extremely difficult. So that's really",
+      "offset": 584240,
+      "duration": 5599
+    },
+    {
+      "text": "the goal of our current architecture. Um",
+      "offset": 586399,
+      "duration": 6241
+    },
+    {
+      "text": "then the intended architecture is really",
+      "offset": 589839,
+      "duration": 5521
+    },
+    {
+      "text": "about defining what do you want to put",
+      "offset": 592640,
+      "duration": 5440
+    },
+    {
+      "text": "under control. Uh intended architecture",
+      "offset": 595360,
+      "duration": 6159
+    },
+    {
+      "text": "should not map your entire app. uh it",
+      "offset": 598080,
+      "duration": 4960
+    },
+    {
+      "text": "doesn't make sense if you if you start",
+      "offset": 601519,
+      "duration": 5121
+    },
+    {
+      "text": "to map your entire app. Um it means that",
+      "offset": 603040,
+      "duration": 5520
+    },
+    {
+      "text": "you're going to have pretty much to",
+      "offset": 606640,
+      "duration": 3759
+    },
+    {
+      "text": "change it every time you you you change",
+      "offset": 608560,
+      "duration": 4000
+    },
+    {
+      "text": "the app. And this is not what you want.",
+      "offset": 610399,
+      "duration": 4641
+    },
+    {
+      "text": "What you want there is to decide what's",
+      "offset": 612560,
+      "duration": 5519
+    },
+    {
+      "text": "important uh really starting from the",
+      "offset": 615040,
+      "duration": 5919
+    },
+    {
+      "text": "the top level. What's important? what do",
+      "offset": 618079,
+      "duration": 5281
+    },
+    {
+      "text": "you want to put under control",
+      "offset": 620959,
+      "duration": 4560
+    },
+    {
+      "text": "um in terms of components and then you",
+      "offset": 623360,
+      "duration": 4320
+    },
+    {
+      "text": "define the relationship between these",
+      "offset": 625519,
+      "duration": 4401
+    },
+    {
+      "text": "important components",
+      "offset": 627680,
+      "duration": 5279
+    },
+    {
+      "text": "and then it becomes really the blueprint",
+      "offset": 629920,
+      "duration": 6800
+    },
+    {
+      "text": "for all stakeholders. So human agent",
+      "offset": 632959,
+      "duration": 6560
+    },
+    {
+      "text": "doesn't matter this will be uh their",
+      "offset": 636720,
+      "duration": 6080
+    },
+    {
+      "text": "reference and every time um they drift",
+      "offset": 639519,
+      "duration": 6401
+    },
+    {
+      "text": "from that internet architecture the um",
+      "offset": 642800,
+      "duration": 4960
+    },
+    {
+      "text": "every time they will actually get",
+      "offset": 645920,
+      "duration": 4720
+    },
+    {
+      "text": "warnings it will break quality gate etc",
+      "offset": 647760,
+      "duration": 4639
+    },
+    {
+      "text": "etc",
+      "offset": 650640,
+      "duration": 3759
+    },
+    {
+      "text": "and how do you define this intended",
+      "offset": 652399,
+      "duration": 4481
+    },
+    {
+      "text": "architecture we have actually put a few",
+      "offset": 654399,
+      "duration": 5921
+    },
+    {
+      "text": "constraints in place in order to first",
+      "offset": 656880,
+      "duration": 5920
+    },
+    {
+      "text": "simplify the way you define architecture",
+      "offset": 660320,
+      "duration": 6400
+    },
+    {
+      "text": "second is it enables to easily",
+      "offset": 662800,
+      "duration": 6960
+    },
+    {
+      "text": "edit what you have. So be incremental.",
+      "offset": 666720,
+      "duration": 7760
+    },
+    {
+      "text": "And thirdly, it helps to make sure that",
+      "offset": 669760,
+      "duration": 6800
+    },
+    {
+      "text": "if three pe three different people want",
+      "offset": 674480,
+      "duration": 4479
+    },
+    {
+      "text": "to define the same architecture, the the",
+      "offset": 676560,
+      "duration": 5839
+    },
+    {
+      "text": "definition will be exactly identical. So",
+      "offset": 678959,
+      "duration": 5841
+    },
+    {
+      "text": "there are not several ways to do the",
+      "offset": 682399,
+      "duration": 5361
+    },
+    {
+      "text": "same thing. So how do we do it? do this",
+      "offset": 684800,
+      "duration": 7440
+    },
+    {
+      "text": "first. Um, you start top down which is",
+      "offset": 687760,
+      "duration": 7440
+    },
+    {
+      "text": "you cannot just work on a specific part",
+      "offset": 692240,
+      "duration": 6159
+    },
+    {
+      "text": "of the app. You have to really uh define",
+      "offset": 695200,
+      "duration": 8160
+    },
+    {
+      "text": "from the top um uh the the part you want",
+      "offset": 698399,
+      "duration": 8081
+    },
+    {
+      "text": "to work on. Um the second thing is which",
+      "offset": 703360,
+      "duration": 5440
+    },
+    {
+      "text": "is super important only what you add",
+      "offset": 706480,
+      "duration": 5280
+    },
+    {
+      "text": "will be verified which is anything which",
+      "offset": 708800,
+      "duration": 4880
+    },
+    {
+      "text": "is not in your intended architecture",
+      "offset": 711760,
+      "duration": 5040
+    },
+    {
+      "text": "will actually be ignored when we run um",
+      "offset": 713680,
+      "duration": 6719
+    },
+    {
+      "text": "the analysis. The third thing is that",
+      "offset": 716800,
+      "duration": 6800
+    },
+    {
+      "text": "you can only define a load dependencies",
+      "offset": 720399,
+      "duration": 6161
+    },
+    {
+      "text": "between components. You cannot say this",
+      "offset": 723600,
+      "duration": 5200
+    },
+    {
+      "text": "compon this uh relationship is",
+      "offset": 726560,
+      "duration": 4640
+    },
+    {
+      "text": "forbidden. Actually the way to say this",
+      "offset": 728800,
+      "duration": 6640
+    },
+    {
+      "text": "is to not define a dependency.",
+      "offset": 731200,
+      "duration": 6800
+    },
+    {
+      "text": "The fourth thing also it's in the third",
+      "offset": 735440,
+      "duration": 5360
+    },
+    {
+      "text": "bullet point here is that this allow",
+      "offset": 738000,
+      "duration": 5360
+    },
+    {
+      "text": "dependency will only be defined between",
+      "offset": 740800,
+      "duration": 4719
+    },
+    {
+      "text": "siblings I components that have the same",
+      "offset": 743360,
+      "duration": 5200
+    },
+    {
+      "text": "part which is you cannot define any",
+      "offset": 745519,
+      "duration": 5361
+    },
+    {
+      "text": "other type of dependencies and",
+      "offset": 748560,
+      "duration": 4399
+    },
+    {
+      "text": "dependencies will be inherit uh",
+      "offset": 750880,
+      "duration": 4720
+    },
+    {
+      "text": "inherited uh by sub components which",
+      "offset": 752959,
+      "duration": 5601
+    },
+    {
+      "text": "mean if you define for example in Java",
+      "offset": 755600,
+      "duration": 6160
+    },
+    {
+      "text": "that a relation is a load between module",
+      "offset": 758560,
+      "duration": 6800
+    },
+    {
+      "text": "A and module B it means that every",
+      "offset": 761760,
+      "duration": 6720
+    },
+    {
+      "text": "subcomponent of module A can um have a",
+      "offset": 765360,
+      "duration": 5919
+    },
+    {
+      "text": "relation with every uh component in",
+      "offset": 768480,
+      "duration": 6400
+    },
+    {
+      "text": "module B. For now we h we are not",
+      "offset": 771279,
+      "duration": 6560
+    },
+    {
+      "text": "dealing with design. Uh this is coming",
+      "offset": 774880,
+      "duration": 5120
+    },
+    {
+      "text": "in the next version and once we deal",
+      "offset": 777839,
+      "duration": 5601
+    },
+    {
+      "text": "with design we will also be able to say",
+      "offset": 780000,
+      "duration": 5680
+    },
+    {
+      "text": "um when you access module B you can only",
+      "offset": 783440,
+      "duration": 6160
+    },
+    {
+      "text": "access it through XYZ um which are",
+      "offset": 785680,
+      "duration": 8560
+    },
+    {
+      "text": "submponents of um module B. And finally",
+      "offset": 789600,
+      "duration": 7760
+    },
+    {
+      "text": "um dependencies are not transitive which",
+      "offset": 794240,
+      "duration": 5360
+    },
+    {
+      "text": "means if module A can have a relation to",
+      "offset": 797360,
+      "duration": 4000
+    },
+    {
+      "text": "module B and module B can have a",
+      "offset": 799600,
+      "duration": 4400
+    },
+    {
+      "text": "relation to module C it doesn't mean",
+      "offset": 801360,
+      "duration": 5279
+    },
+    {
+      "text": "module A can have a relation with module",
+      "offset": 804000,
+      "duration": 5440
+    },
+    {
+      "text": "C uh actually the opposite which is",
+      "offset": 806639,
+      "duration": 4961
+    },
+    {
+      "text": "unless you define specifically module A",
+      "offset": 809440,
+      "duration": 4160
+    },
+    {
+      "text": "to module C dependency it will be",
+      "offset": 811600,
+      "duration": 5280
+    },
+    {
+      "text": "forbidden. So these are the rules um",
+      "offset": 813600,
+      "duration": 5520
+    },
+    {
+      "text": "that you you have to use to create the",
+      "offset": 816880,
+      "duration": 4320
+    },
+    {
+      "text": "internet architecture which will make",
+      "offset": 819120,
+      "duration": 4959
+    },
+    {
+      "text": "that the uh it will be uniquely defined.",
+      "offset": 821200,
+      "duration": 6000
+    },
+    {
+      "text": "It will be unique once you define it. So",
+      "offset": 824079,
+      "duration": 5121
+    },
+    {
+      "text": "now let's talk a little bit about the",
+      "offset": 827200,
+      "duration": 6079
+    },
+    {
+      "text": "workflow here. So I mentioned earlier",
+      "offset": 829200,
+      "duration": 7520
+    },
+    {
+      "text": "um that as soon as you run an analysis",
+      "offset": 833279,
+      "duration": 6401
+    },
+    {
+      "text": "you get access to current architecture.",
+      "offset": 836720,
+      "duration": 5119
+    },
+    {
+      "text": "um you then can define your intended",
+      "offset": 839680,
+      "duration": 4959
+    },
+    {
+      "text": "architecture and once you have both we",
+      "offset": 841839,
+      "duration": 5921
+    },
+    {
+      "text": "are able to generate um what we call",
+      "offset": 844639,
+      "duration": 6000
+    },
+    {
+      "text": "architecture issues. Architecture issues",
+      "offset": 847760,
+      "duration": 5920
+    },
+    {
+      "text": "are actually divided into two. one is",
+      "offset": 850639,
+      "duration": 4560
+    },
+    {
+      "text": "deviations",
+      "offset": 853680,
+      "duration": 3760
+    },
+    {
+      "text": "which I mentioned earlier which is",
+      "offset": 855199,
+      "duration": 4721
+    },
+    {
+      "text": "really the difference between current",
+      "offset": 857440,
+      "duration": 5280
+    },
+    {
+      "text": "architecture and intended architecture",
+      "offset": 859920,
+      "duration": 5039
+    },
+    {
+      "text": "and the second type of issues that we",
+      "offset": 862720,
+      "duration": 4160
+    },
+    {
+      "text": "generate are what we call architecture",
+      "offset": 864959,
+      "duration": 6081
+    },
+    {
+      "text": "flows which is these issues are generic",
+      "offset": 866880,
+      "duration": 6480
+    },
+    {
+      "text": "they don't really depend upon your",
+      "offset": 871040,
+      "duration": 4720
+    },
+    {
+      "text": "intended architecture uh these are",
+      "offset": 873360,
+      "duration": 5680
+    },
+    {
+      "text": "things like tongles which is like uh",
+      "offset": 875760,
+      "duration": 5759
+    },
+    {
+      "text": "cycle dependencies between uh component",
+      "offset": 879040,
+      "duration": 3599
+    },
+    {
+      "text": "and sometimes",
+      "offset": 881519,
+      "duration": 4000
+    },
+    {
+      "text": "Tongle cycle, tongled cycle,",
+      "offset": 882639,
+      "duration": 5121
+    },
+    {
+      "text": "dependencies between components,",
+      "offset": 885519,
+      "duration": 4560
+    },
+    {
+      "text": "oversized component, uh too much",
+      "offset": 887760,
+      "duration": 4879
+    },
+    {
+      "text": "coupling, low coupling, etc., etc. So,",
+      "offset": 890079,
+      "duration": 5281
+    },
+    {
+      "text": "all of this uh comes as part of what we",
+      "offset": 892639,
+      "duration": 6000
+    },
+    {
+      "text": "call the architecture flow. So",
+      "offset": 895360,
+      "duration": 5520
+    },
+    {
+      "text": "um flows plus deviation make",
+      "offset": 898639,
+      "duration": 4721
+    },
+    {
+      "text": "architectural issues and these issues",
+      "offset": 900880,
+      "duration": 5120
+    },
+    {
+      "text": "get actually converted into what we call",
+      "offset": 903360,
+      "duration": 4800
+    },
+    {
+      "text": "sonar cube issues which are code level",
+      "offset": 906000,
+      "duration": 4880
+    },
+    {
+      "text": "issues which then becomes what you need",
+      "offset": 908160,
+      "duration": 4799
+    },
+    {
+      "text": "to solve in order to resolve the",
+      "offset": 910880,
+      "duration": 5040
+    },
+    {
+      "text": "architecture issues. Those sonar cube",
+      "offset": 912959,
+      "duration": 6000
+    },
+    {
+      "text": "issues they are very um they are very",
+      "offset": 915920,
+      "duration": 6800
+    },
+    {
+      "text": "useful because they actually show up in",
+      "offset": 918959,
+      "duration": 6801
+    },
+    {
+      "text": "uh existing dashboard. they will break",
+      "offset": 922720,
+      "duration": 6000
+    },
+    {
+      "text": "uh quality gate uh in the future. They",
+      "offset": 925760,
+      "duration": 6960
+    },
+    {
+      "text": "will be shown in um in the ID also so",
+      "offset": 928720,
+      "duration": 8160
+    },
+    {
+      "text": "that it can be uh really um done uh",
+      "offset": 932720,
+      "duration": 6239
+    },
+    {
+      "text": "really on the uh on the left of your",
+      "offset": 936880,
+      "duration": 5840
+    },
+    {
+      "text": "process uh to to solve it or to not",
+      "offset": 938959,
+      "duration": 7721
+    },
+    {
+      "text": "introduce problems.",
+      "offset": 942720,
+      "duration": 3960
+    },
+    {
+      "text": "Once uh all of this happens um you you",
+      "offset": 946880,
+      "duration": 7680
+    },
+    {
+      "text": "will note that every um architecture",
+      "offset": 951279,
+      "duration": 6480
+    },
+    {
+      "text": "issue will actually appear uh in two",
+      "offset": 954560,
+      "duration": 5600
+    },
+    {
+      "text": "forms in two shapes. One is architecture",
+      "offset": 957759,
+      "duration": 3921
+    },
+    {
+      "text": "issues which is really the high level",
+      "offset": 960160,
+      "duration": 5200
+    },
+    {
+      "text": "issue which is okay module A should not",
+      "offset": 961680,
+      "duration": 6159
+    },
+    {
+      "text": "have a relationship to module B will be",
+      "offset": 965360,
+      "duration": 5039
+    },
+    {
+      "text": "an architectural issue for example and",
+      "offset": 967839,
+      "duration": 5440
+    },
+    {
+      "text": "then we are going to um transform this",
+      "offset": 970399,
+      "duration": 5360
+    },
+    {
+      "text": "to code issue which is this module A to",
+      "offset": 973279,
+      "duration": 6240
+    },
+    {
+      "text": "module B actually can be could be broken",
+      "offset": 975759,
+      "duration": 7041
+    },
+    {
+      "text": "like 30 times. If that's the case, we",
+      "offset": 979519,
+      "duration": 5760
+    },
+    {
+      "text": "will create 30 code issues which will",
+      "offset": 982800,
+      "duration": 7120
+    },
+    {
+      "text": "really enable you to track uh what's the",
+      "offset": 985279,
+      "duration": 8000
+    },
+    {
+      "text": "real uh depth that you have here and",
+      "offset": 989920,
+      "duration": 6320
+    },
+    {
+      "text": "also enable you uh to track the progress",
+      "offset": 993279,
+      "duration": 5201
+    },
+    {
+      "text": "when you remediate which is instead of",
+      "offset": 996240,
+      "duration": 4320
+    },
+    {
+      "text": "saying it's one issue and it's going to",
+      "offset": 998480,
+      "duration": 5039
+    },
+    {
+      "text": "take you weeks to solve. What you can",
+      "offset": 1000560,
+      "duration": 5600
+    },
+    {
+      "text": "what you can see here it's it's actually",
+      "offset": 1003519,
+      "duration": 6481
+    },
+    {
+      "text": "30 uh 30 code issues and every time you",
+      "offset": 1006160,
+      "duration": 5359
+    },
+    {
+      "text": "fix one you're going to see the",
+      "offset": 1010000,
+      "duration": 5680
+    },
+    {
+      "text": "progress. Finally I would like to um say",
+      "offset": 1011519,
+      "duration": 7841
+    },
+    {
+      "text": "a word about some other work that we are",
+      "offset": 1015680,
+      "duration": 6560
+    },
+    {
+      "text": "doing around architecture which is we",
+      "offset": 1019360,
+      "duration": 5599
+    },
+    {
+      "text": "also are working on architecture as",
+      "offset": 1022240,
+      "duration": 6400
+    },
+    {
+      "text": "context for AI agents and this comes as",
+      "offset": 1024959,
+      "duration": 9281
+    },
+    {
+      "text": "um two twofold. One is um we are working",
+      "offset": 1028640,
+      "duration": 8559
+    },
+    {
+      "text": "on providing the current architecture um",
+      "offset": 1034240,
+      "duration": 6319
+    },
+    {
+      "text": "to AI agents so that they actually",
+      "offset": 1037199,
+      "duration": 5201
+    },
+    {
+      "text": "deliver",
+      "offset": 1040559,
+      "duration": 4161
+    },
+    {
+      "text": "code that works let's say they deliver",
+      "offset": 1042400,
+      "duration": 6800
+    },
+    {
+      "text": "more often code that will work better uh",
+      "offset": 1044720,
+      "duration": 7199
+    },
+    {
+      "text": "so they do a better job basically and",
+      "offset": 1049200,
+      "duration": 5760
+    },
+    {
+      "text": "code that also to deliver that code uh",
+      "offset": 1051919,
+      "duration": 5681
+    },
+    {
+      "text": "AI agents will also be more effective uh",
+      "offset": 1054960,
+      "duration": 4560
+    },
+    {
+      "text": "I mean I think here you can do",
+      "offset": 1057600,
+      "duration": 4400
+    },
+    {
+      "text": "comparison with human, which is if",
+      "offset": 1059520,
+      "duration": 4240
+    },
+    {
+      "text": "tomorrow you have to work on an app that",
+      "offset": 1062000,
+      "duration": 3600
+    },
+    {
+      "text": "you don't know and you have no idea how",
+      "offset": 1063760,
+      "duration": 4080
+    },
+    {
+      "text": "it's constructed, um it's going to take",
+      "offset": 1065600,
+      "duration": 5840
+    },
+    {
+      "text": "you a while to figure that out and the",
+      "offset": 1067840,
+      "duration": 5520
+    },
+    {
+      "text": "uh the probability that you actually do",
+      "offset": 1071440,
+      "duration": 4239
+    },
+    {
+      "text": "a good job is lower than if you fully",
+      "offset": 1073360,
+      "duration": 4640
+    },
+    {
+      "text": "know the architecture. Same for agents.",
+      "offset": 1075679,
+      "duration": 4240
+    },
+    {
+      "text": "Here we want to provide this current",
+      "offset": 1078000,
+      "duration": 4400
+    },
+    {
+      "text": "architecture as context for agents. The",
+      "offset": 1079919,
+      "duration": 4640
+    },
+    {
+      "text": "second part is we want to also provide",
+      "offset": 1082400,
+      "duration": 4159
+    },
+    {
+      "text": "intended architecture as context for",
+      "offset": 1084559,
+      "duration": 4881
+    },
+    {
+      "text": "agent in order for agents to deliver",
+      "offset": 1086559,
+      "duration": 5921
+    },
+    {
+      "text": "something that compliance to",
+      "offset": 1089440,
+      "duration": 5119
+    },
+    {
+      "text": "what we want them to do which is",
+      "offset": 1092480,
+      "duration": 4160
+    },
+    {
+      "text": "basically the blueprint uh for",
+      "offset": 1094559,
+      "duration": 4721
+    },
+    {
+      "text": "architecture. So we are working on these",
+      "offset": 1096640,
+      "duration": 6480
+    },
+    {
+      "text": "two things which should be delivered um",
+      "offset": 1099280,
+      "duration": 6800
+    },
+    {
+      "text": "pretty soon.",
+      "offset": 1103120,
+      "duration": 5040
+    },
+    {
+      "text": "Finally, I would like to talk to to talk",
+      "offset": 1106080,
+      "duration": 5200
+    },
+    {
+      "text": "about on now what um which is what's",
+      "offset": 1108160,
+      "duration": 6480
+    },
+    {
+      "text": "what's next for you uh if you want to",
+      "offset": 1111280,
+      "duration": 6320
+    },
+    {
+      "text": "engage with this new capability. So um",
+      "offset": 1114640,
+      "duration": 5120
+    },
+    {
+      "text": "for now architecture is only available",
+      "offset": 1117600,
+      "duration": 5360
+    },
+    {
+      "text": "in sonarcube cloud. Um it comes as part",
+      "offset": 1119760,
+      "duration": 6000
+    },
+    {
+      "text": "of all plans there and uh it comes at no",
+      "offset": 1122960,
+      "duration": 5120
+    },
+    {
+      "text": "additional cost. Uh we are planning to",
+      "offset": 1125760,
+      "duration": 4799
+    },
+    {
+      "text": "uh release son server later on this",
+      "offset": 1128080,
+      "duration": 6160
+    },
+    {
+      "text": "year. Uh it is available for five uh",
+      "offset": 1130559,
+      "duration": 5521
+    },
+    {
+      "text": "main languages. Java, JavaScript,",
+      "offset": 1134240,
+      "duration": 5679
+    },
+    {
+      "text": "TypeScript, Python and C. Um again we",
+      "offset": 1136080,
+      "duration": 6800
+    },
+    {
+      "text": "are we are going to add more languages",
+      "offset": 1139919,
+      "duration": 6241
+    },
+    {
+      "text": "later on this year. Um once you activate",
+      "offset": 1142880,
+      "duration": 5840
+    },
+    {
+      "text": "the feature uh you will get um",
+      "offset": 1146160,
+      "duration": 6480
+    },
+    {
+      "text": "architecture tab which is uh uh the",
+      "offset": 1148720,
+      "duration": 6319
+    },
+    {
+      "text": "entry point for architecture. It's a new",
+      "offset": 1152640,
+      "duration": 5120
+    },
+    {
+      "text": "dashboard and you should know that an",
+      "offset": 1155039,
+      "duration": 5361
+    },
+    {
+      "text": "analysis is required for when you make",
+      "offset": 1157760,
+      "duration": 5360
+    },
+    {
+      "text": "any change. So for any change to be",
+      "offset": 1160400,
+      "duration": 4880
+    },
+    {
+      "text": "taken into account uh you will need to",
+      "offset": 1163120,
+      "duration": 4880
+    },
+    {
+      "text": "run an analysis. Right now we have about",
+      "offset": 1165280,
+      "duration": 6320
+    },
+    {
+      "text": "800,000 uh lock limit uh to make sure we",
+      "offset": 1168000,
+      "duration": 6080
+    },
+    {
+      "text": "have good performances and that's about",
+      "offset": 1171600,
+      "duration": 6720
+    },
+    {
+      "text": "it. And just would like to um mention",
+      "offset": 1174080,
+      "duration": 7440
+    },
+    {
+      "text": "that everything I've described here will",
+      "offset": 1178320,
+      "duration": 6960
+    },
+    {
+      "text": "be demoed by Christian J in um the next",
+      "offset": 1181520,
+      "duration": 6320
+    },
+    {
+      "text": "session. So you will really have the",
+      "offset": 1185280,
+      "duration": 6399
+    },
+    {
+      "text": "sonar cube architecture in action um in",
+      "offset": 1187840,
+      "duration": 6640
+    },
+    {
+      "text": "that other session. Thank you for your",
+      "offset": 1191679,
+      "duration": 5801
+    },
+    {
+      "text": "attention.",
+      "offset": 1194480,
+      "duration": 3000
+    }
+  ],
+  "fullText": "Hi everybody. My uh my name is Olivier Gdan. I'm the co-founder of Sonar and today I'm going to talk about the newly released capability of architecture in Sonar Cube. Um this presentation is going to be divided into three parts. Uh first I'm going to talk about the problem we are trying to solve. Second part is going to be about the solution what we have implemented in in Sona to solve this and the third part is going to be what's uh what's next for you. So let me start with the problem. Um so basically as you know the world operates on software which means that uh software is now uh the single most valuable asset for organization and one thing which reduces um this value is actually technical debt which I think we have in the last 17 years done a very good job to to help organization um handle u but we have mostly worked at the code level which is we have helped people to work on their maintenability, reliability on security um with Sonar Cube and we felt it was time to actually move into more like structural debt which is about how the um how the software how the application is organized. What's what are the abstractions? What's the design? Do uh components have really uh single responsibility etc etc. And when you do not follow this, it's actually not that much fun, which is uh you can see symptoms like um engineers are leaving because it's uh the environment is too messy. Every change you make has side effects and which are very difficult to explain and overall uh your velocity is going to um uh to drop. So the these are the symptoms of not managing architecture. What's also um what you should also know is that it doesn't come like uh suddenly. This is very um uh sneaky the way the way it uh arises and it's it's very much an erosion which is generally at software creation application creation it's there is no real problem. People thought about what they want to build. They organize it well. And it's okay. But little by little uh when you make uh shortcuts during development to save time or because you don't feel ready to do a bigger investment uh it start to introduce that uh erosion and you start to see the pain and generally when you start to feel the pain uh it's too late and uh in order to change things it's going to require a major change. So not really easy to uh to deal with and the goal here of a good architecture is really that it should be easily understood by everybody. It should be modular and having that health in your architecture will really be the only way you can maintain um long-term speed long-term velocity in your in your development. So this is really the problem we are uh trying to solve with this new capability in sonar cube. So now um solution um I'm going to go through the solution philosophically but also in terms of uh concept. So first let me start a little bit with concept. So what are we um what what's architecture and architecture we divide it into three. One is what is the structure of your application which is what are the components and how are they organized in other words what's a hierarchy of components. That's number one. Number two is what are the relations between the component which is who um has a relation what component has a relation with what component and the third one is really about design which is hey how can a component uh how should a component be used by other components and once you put these three things together and you start to manage them together you actually manage your architecture So what we are doing um in sonar cube is we have introduced um three concepts. One is the current architecture and the current architecture is what you what is the actual architecture which is what do you have today and we actually compute this um at every analysis of your code. So we reverse engineer and we present you with a map of your current architecture. I'm I'm going to go um into this in more details uh in a minute. The second thing the second concept is really the intended architecture which is what are you shooting for? Sometimes it's going to be like what did we intend to do initially sometimes is what do we intend to do now? It doesn't really matter where this is coming from. This is really what you are trying to achieve. And then the next thing is about what we call deviations which is this is really the difference between the current architecture and the intended architecture and this is a basis for uh our solution. So our philosophy from a product point of view is that we are not we have not built a um a product for architect. We actually have built a product for team which is and team actually actually include architect but this is not it. So it's about making sure people understand what they are dealing with what kind of animal they are dealing with with their application that they understand how it's structured how what are the relationships etc etc. you can force it and al it's about also remediation which is what we have tried to do is to really make things um actionable and we have made it so that human will decide and then um uh stakeholders uh will solve the problem which is stakeholder can be human can be AI agent it doesn't really matter but human will decide um for for the for the application. So this is our philosophy for that uh new capability and the solution is built really on four uh pillars. One is um we want everyone so human or AI agents to be able to understand the current architecture. So everybody should have access as as part of the let's say like a live documentation should have access to the current um architecture so that they understand what's happening and we make sure they actually follow um what what is there. The second thing is ability to formalize intended architecture and here we I think we have done a good job in making it very simple to understand what's there. Um the way it is formalized is very simple to understand but it's also very easy to define and update um create and update uh this intended architecture which is our approach makes it extremely simple to um to define it the first time and to incrementally uh improve it in the future. The third thing is we have a clear way of prioritizing issues which means um one issue defined somewhere will not uh overlap with another issue. For example, as soon as we find um as as soon as we find that there is a structural issue, we actually ignore all um subsequent relation uh issues that that are due to that structural issue. So we only report issues once and finally we make this extremely uh actionable thanks to sonar cube as we leverage all the capabilities there workflow quality gate uh showing issue in the code etc to make it really actionable when it comes to remediation. So let me uh dig a little bit into current architecture. So the goal here is really to discover slash explore to understand the current architecture. So here we have a full capability to see top level up to be able to zoom in um um obviously zoom out see the relations understand the um the complexity of the relations to understand also the complexity of components to understand whether they are highly coupled um whether they are uh they have a low uh coupling and to understand what are the key components not um you will see when you explore your application that um certain components they are super key and should you have to change them uh it would be extremely difficult. So that's really the goal of our current architecture. Um then the intended architecture is really about defining what do you want to put under control. Uh intended architecture should not map your entire app. uh it doesn't make sense if you if you start to map your entire app. Um it means that you're going to have pretty much to change it every time you you you change the app. And this is not what you want. What you want there is to decide what's important uh really starting from the the top level. What's important? what do you want to put under control um in terms of components and then you define the relationship between these important components and then it becomes really the blueprint for all stakeholders. So human agent doesn't matter this will be uh their reference and every time um they drift from that internet architecture the um every time they will actually get warnings it will break quality gate etc etc and how do you define this intended architecture we have actually put a few constraints in place in order to first simplify the way you define architecture second is it enables to easily edit what you have. So be incremental. And thirdly, it helps to make sure that if three pe three different people want to define the same architecture, the the definition will be exactly identical. So there are not several ways to do the same thing. So how do we do it? do this first. Um, you start top down which is you cannot just work on a specific part of the app. You have to really uh define from the top um uh the the part you want to work on. Um the second thing is which is super important only what you add will be verified which is anything which is not in your intended architecture will actually be ignored when we run um the analysis. The third thing is that you can only define a load dependencies between components. You cannot say this compon this uh relationship is forbidden. Actually the way to say this is to not define a dependency. The fourth thing also it's in the third bullet point here is that this allow dependency will only be defined between siblings I components that have the same part which is you cannot define any other type of dependencies and dependencies will be inherit uh inherited uh by sub components which mean if you define for example in Java that a relation is a load between module A and module B it means that every subcomponent of module A can um have a relation with every uh component in module B. For now we h we are not dealing with design. Uh this is coming in the next version and once we deal with design we will also be able to say um when you access module B you can only access it through XYZ um which are submponents of um module B. And finally um dependencies are not transitive which means if module A can have a relation to module B and module B can have a relation to module C it doesn't mean module A can have a relation with module C uh actually the opposite which is unless you define specifically module A to module C dependency it will be forbidden. So these are the rules um that you you have to use to create the internet architecture which will make that the uh it will be uniquely defined. It will be unique once you define it. So now let's talk a little bit about the workflow here. So I mentioned earlier um that as soon as you run an analysis you get access to current architecture. um you then can define your intended architecture and once you have both we are able to generate um what we call architecture issues. Architecture issues are actually divided into two. one is deviations which I mentioned earlier which is really the difference between current architecture and intended architecture and the second type of issues that we generate are what we call architecture flows which is these issues are generic they don't really depend upon your intended architecture uh these are things like tongles which is like uh cycle dependencies between uh component and sometimes Tongle cycle, tongled cycle, dependencies between components, oversized component, uh too much coupling, low coupling, etc., etc. So, all of this uh comes as part of what we call the architecture flow. So um flows plus deviation make architectural issues and these issues get actually converted into what we call sonar cube issues which are code level issues which then becomes what you need to solve in order to resolve the architecture issues. Those sonar cube issues they are very um they are very useful because they actually show up in uh existing dashboard. they will break uh quality gate uh in the future. They will be shown in um in the ID also so that it can be uh really um done uh really on the uh on the left of your process uh to to solve it or to not introduce problems. Once uh all of this happens um you you will note that every um architecture issue will actually appear uh in two forms in two shapes. One is architecture issues which is really the high level issue which is okay module A should not have a relationship to module B will be an architectural issue for example and then we are going to um transform this to code issue which is this module A to module B actually can be could be broken like 30 times. If that's the case, we will create 30 code issues which will really enable you to track uh what's the real uh depth that you have here and also enable you uh to track the progress when you remediate which is instead of saying it's one issue and it's going to take you weeks to solve. What you can what you can see here it's it's actually 30 uh 30 code issues and every time you fix one you're going to see the progress. Finally I would like to um say a word about some other work that we are doing around architecture which is we also are working on architecture as context for AI agents and this comes as um two twofold. One is um we are working on providing the current architecture um to AI agents so that they actually deliver code that works let's say they deliver more often code that will work better uh so they do a better job basically and code that also to deliver that code uh AI agents will also be more effective uh I mean I think here you can do comparison with human, which is if tomorrow you have to work on an app that you don't know and you have no idea how it's constructed, um it's going to take you a while to figure that out and the uh the probability that you actually do a good job is lower than if you fully know the architecture. Same for agents. Here we want to provide this current architecture as context for agents. The second part is we want to also provide intended architecture as context for agent in order for agents to deliver something that compliance to what we want them to do which is basically the blueprint uh for architecture. So we are working on these two things which should be delivered um pretty soon. Finally, I would like to talk to to talk about on now what um which is what's what's next for you uh if you want to engage with this new capability. So um for now architecture is only available in sonarcube cloud. Um it comes as part of all plans there and uh it comes at no additional cost. Uh we are planning to uh release son server later on this year. Uh it is available for five uh main languages. Java, JavaScript, TypeScript, Python and C. Um again we are we are going to add more languages later on this year. Um once you activate the feature uh you will get um architecture tab which is uh uh the entry point for architecture. It's a new dashboard and you should know that an analysis is required for when you make any change. So for any change to be taken into account uh you will need to run an analysis. Right now we have about 800,000 uh lock limit uh to make sure we have good performances and that's about it. And just would like to um mention that everything I've described here will be demoed by Christian J in um the next session. So you will really have the sonar cube architecture in action um in that other session. Thank you for your attention.",
+  "fetchedAt": "2026-03-14T09:22:05.478Z"
+}

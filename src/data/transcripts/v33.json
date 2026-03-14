@@ -1,0 +1,2063 @@
+{
+  "videoId": "v33",
+  "youtubeId": "qoYaBSAsOys",
+  "segments": [
+    {
+      "text": "Hey everyone, I'm Tim Pohlmann.",
+      "offset": 17000,
+      "duration": 2000
+    },
+    {
+      "text": "I'm a software engineer at Sonar and today I",
+      "offset": 19000,
+      "duration": 3000
+    },
+    {
+      "text": "want to show you how we map the",
+      "offset": 22000,
+      "duration": 2000
+    },
+    {
+      "text": "multiverse of your codebase. Every time",
+      "offset": 24000,
+      "duration": 3000
+    },
+    {
+      "text": "you write an if statement in your",
+      "offset": 27000,
+      "duration": 2000
+    },
+    {
+      "text": "code, you basically create two",
+      "offset": 29000,
+      "duration": 2000
+    },
+    {
+      "text": "alternative universes depending on",
+      "offset": 31000,
+      "duration": 3000
+    },
+    {
+      "text": "which code path the execution takes. And",
+      "offset": 34000,
+      "duration": 3000
+    },
+    {
+      "text": "things can look very different in",
+      "offset": 37000,
+      "duration": 2000
+    },
+    {
+      "text": "these universes. And of course, every",
+      "offset": 39000,
+      "duration": 2000
+    },
+    {
+      "text": "time you add another conditional,",
+      "offset": 41000,
+      "duration": 2000
+    },
+    {
+      "text": "another condition to your code, you",
+      "offset": 43000,
+      "duration": 2000
+    },
+    {
+      "text": "create another universe or two. And",
+      "offset": 45000,
+      "duration": 3000
+    },
+    {
+      "text": "so it becomes this big pile of different",
+      "offset": 48000,
+      "duration": 3000
+    },
+    {
+      "text": "alternative universes of what could",
+      "offset": 51000,
+      "duration": 2000
+    },
+    {
+      "text": "happen in your code. Because we don't",
+      "offset": 53000,
+      "duration": 2000
+    },
+    {
+      "text": "know what actually happens, right? We're",
+      "offset": 55000,
+      "duration": 1000
+    },
+    {
+      "text": "doing static analysis. So we analyze",
+      "offset": 56000,
+      "duration": 2000
+    },
+    {
+      "text": "your code before it runs. But we can",
+      "offset": 58000,
+      "duration": 3000
+    },
+    {
+      "text": "make assumptions and we use a",
+      "offset": 61000,
+      "duration": 2000
+    },
+    {
+      "text": "technique called symbolic execution to",
+      "offset": 63000,
+      "duration": 3000
+    },
+    {
+      "text": "create a map of that multiverse of",
+      "offset": 66000,
+      "duration": 3000
+    },
+    {
+      "text": "code paths and we take a look at",
+      "offset": 69000,
+      "duration": 591000
+    },
+    {
+      "text": "that multiverse or at that map and try",
+      "offset": 72000,
+      "duration": 2000
+    },
+    {
+      "text": "to spot if we find anything that looks a",
+      "offset": 74000,
+      "duration": 2000
+    },
+    {
+      "text": "bit off or could be a problem. But",
+      "offset": 76000,
+      "duration": 3000
+    },
+    {
+      "text": "let's make it concrete and",
+      "offset": 79000,
+      "duration": 3000
+    },
+    {
+      "text": "take a look at an example. This piece",
+      "offset": 82000,
+      "duration": 2000
+    },
+    {
+      "text": "of code is actual production code",
+      "offset": 84000,
+      "duration": 3000
+    },
+    {
+      "text": "from Microsoft. This is part of the .NET",
+      "offset": 87000,
+      "duration": 3000
+    },
+    {
+      "text": "runtime codebase. Very important",
+      "offset": 90000,
+      "duration": 2000
+    },
+    {
+      "text": "codebase. And as I said, this is",
+      "offset": 92000,
+      "duration": 2000
+    },
+    {
+      "text": "production code. This is live right now.",
+      "offset": 94000,
+      "duration": 1000
+    },
+    {
+      "text": "You can check it out on GitHub if you",
+      "offset": 95000,
+      "duration": 2000
+    },
+    {
+      "text": "want. So this code looks nice. But it",
+      "offset": 97000,
+      "duration": 4000
+    },
+    {
+      "text": "has a bug. And we reported this",
+      "offset": 101000,
+      "duration": 2000
+    },
+    {
+      "text": "bug when we found it with our analyzer.",
+      "offset": 103000,
+      "duration": 2000
+    },
+    {
+      "text": "It has not been fixed yet. So you can",
+      "offset": 105000,
+      "duration": 2000
+    },
+    {
+      "text": "still take a look. But so",
+      "offset": 107000,
+      "duration": 3000
+    },
+    {
+      "text": "let me show you what is wrong with it.",
+      "offset": 110000,
+      "duration": 1000
+    },
+    {
+      "text": "And then we take a look at how our",
+      "offset": 111000,
+      "duration": 3000
+    },
+    {
+      "text": "analyzer did spot this problem. This",
+      "offset": 114000,
+      "duration": 2000
+    },
+    {
+      "text": "is part of the class SQL money which is",
+      "offset": 116000,
+      "duration": 4000
+    },
+    {
+      "text": "basically holding a money",
+      "offset": 120000,
+      "duration": 4000
+    },
+    {
+      "text": "value and this is stored in an",
+      "offset": 124000,
+      "duration": 2000
+    },
+    {
+      "text": "internal field called underscore",
+      "offset": 126000,
+      "duration": 3000
+    },
+    {
+      "text": "value and the method is ToInt64",
+      "offset": 129000,
+      "duration": 5000
+    },
+    {
+      "text": "which is basically supposed to",
+      "offset": 134000,
+      "duration": 1000
+    },
+    {
+      "text": "convert that value into a long, a",
+      "offset": 135000,
+      "duration": 3000
+    },
+    {
+      "text": "different format which means it needs to",
+      "offset": 138000,
+      "duration": 2000
+    },
+    {
+      "text": "do some math, needs to do some",
+      "offset": 140000,
+      "duration": 1000
+    },
+    {
+      "text": "calculation and then it needs to do",
+      "offset": 141000,
+      "duration": 2000
+    },
+    {
+      "text": "some rounding to get the correct result",
+      "offset": 143000,
+      "duration": 2000
+    },
+    {
+      "text": "and in the rounding there's a slight",
+      "offset": 145000,
+      "duration": 2000
+    },
+    {
+      "text": "problem as we will see in a moment. So",
+      "offset": 147000,
+      "duration": 4000
+    },
+    {
+      "text": "the first line is the calculation and",
+      "offset": 151000,
+      "duration": 5000
+    },
+    {
+      "text": "basically to simplify it let's just",
+      "offset": 156000,
+      "duration": 3000
+    },
+    {
+      "text": "assume it multiplies the value by 10.",
+      "offset": 159000,
+      "duration": 2000
+    },
+    {
+      "text": "It's not quite what is happening here but",
+      "offset": 161000,
+      "duration": 4000
+    },
+    {
+      "text": "for simplicity let's just assume it's",
+      "offset": 165000,
+      "duration": 1000
+    },
+    {
+      "text": "multiplying the value by 10 and",
+      "offset": 166000,
+      "duration": 2000
+    },
+    {
+      "text": "later it wants to divide that value by 10",
+      "offset": 168000,
+      "duration": 3000
+    },
+    {
+      "text": "again to get the correct",
+      "offset": 171000,
+      "duration": 2000
+    },
+    {
+      "text": "value, the correct size again and however",
+      "offset": 173000,
+      "duration": 3000
+    },
+    {
+      "text": "for that it needs to do some",
+      "offset": 179000,
+      "duration": 2000
+    },
+    {
+      "text": "rounding because these are integer",
+      "offset": 181000,
+      "duration": 2000
+    },
+    {
+      "text": "values so no comma and for the rounding",
+      "offset": 183000,
+      "duration": 5000
+    },
+    {
+      "text": "it needs to do some calculation. It",
+      "offset": 188000,
+      "duration": 1000
+    },
+    {
+      "text": "starts here by checking if the value is",
+      "offset": 192000,
+      "duration": 2000
+    },
+    {
+      "text": "positive or negative and storing the",
+      "offset": 194000,
+      "duration": 2000
+    },
+    {
+      "text": "result in this variable called fPositive",
+      "offset": 196000,
+      "duration": 4000
+    },
+    {
+      "text": "and then the next step is of course the",
+      "offset": 200000,
+      "duration": 2000
+    },
+    {
+      "text": "modulo operation which is basically we",
+      "offset": 202000,
+      "duration": 2000
+    },
+    {
+      "text": "take the value we divide by 10 we take the",
+      "offset": 204000,
+      "duration": 3000
+    },
+    {
+      "text": "remainder and store it in this variable",
+      "offset": 207000,
+      "duration": 2000
+    },
+    {
+      "text": "makes sense right then there's the",
+      "offset": 209000,
+      "duration": 2000
+    },
+    {
+      "text": "actual division by 10 and then there's",
+      "offset": 211000,
+      "duration": 2000
+    },
+    {
+      "text": "the rounding and the rounding is of",
+      "offset": 213000,
+      "duration": 1000
+    },
+    {
+      "text": "course based on the remainder. If the",
+      "offset": 214000,
+      "duration": 2000
+    },
+    {
+      "text": "remainder is equal or greater five we",
+      "offset": 216000,
+      "duration": 2000
+    },
+    {
+      "text": "need to round up and if not we",
+      "offset": 218000,
+      "duration": 3000
+    },
+    {
+      "text": "automatically already round it",
+      "offset": 221000,
+      "duration": 1000
+    },
+    {
+      "text": "down because of how integer calculation",
+      "offset": 222000,
+      "duration": 3000
+    },
+    {
+      "text": "works. Integer division works. So",
+      "offset": 225000,
+      "duration": 2000
+    },
+    {
+      "text": "of course we need an extra case for",
+      "offset": 231000,
+      "duration": 2000
+    },
+    {
+      "text": "negative numbers because negative",
+      "offset": 233000,
+      "duration": 2000
+    },
+    {
+      "text": "numbers need to be rounded down if the",
+      "offset": 235000,
+      "duration": 2000
+    },
+    {
+      "text": "remainder is bigger five and not up.",
+      "offset": 237000,
+      "duration": 3000
+    },
+    {
+      "text": "And this looks all perfectly normal",
+      "offset": 240000,
+      "duration": 2000
+    },
+    {
+      "text": "and reasonable except there's a slight",
+      "offset": 242000,
+      "duration": 2000
+    },
+    {
+      "text": "problem over here. And that is the",
+      "offset": 244000,
+      "duration": 2000
+    },
+    {
+      "text": "modulo operator because the modulo",
+      "offset": 246000,
+      "duration": 2000
+    },
+    {
+      "text": "operator in math is not actually",
+      "offset": 248000,
+      "duration": 3000
+    },
+    {
+      "text": "strictly defined. What is not",
+      "offset": 251000,
+      "duration": 2000
+    },
+    {
+      "text": "strictly defined about it is how it",
+      "offset": 253000,
+      "duration": 3000
+    },
+    {
+      "text": "operates on the negative values",
+      "offset": 256000,
+      "duration": 2000
+    },
+    {
+      "text": "and different programming languages",
+      "offset": 258000,
+      "duration": 2000
+    },
+    {
+      "text": "implement this differently. So in Python",
+      "offset": 260000,
+      "duration": 3000
+    },
+    {
+      "text": "a negative value modulo 10 would result",
+      "offset": 263000,
+      "duration": 4000
+    },
+    {
+      "text": "in a positive remainder. However in C#",
+      "offset": 267000,
+      "duration": 3000
+    },
+    {
+      "text": "it keeps the sign. So a negative number",
+      "offset": 270000,
+      "duration": 3000
+    },
+    {
+      "text": "modulo 10 will actually result in a",
+      "offset": 273000,
+      "duration": 3000
+    },
+    {
+      "text": "negative remainder. And this is what's",
+      "offset": 276000,
+      "duration": 2000
+    },
+    {
+      "text": "happening here. So if value is negative,",
+      "offset": 278000,
+      "duration": 2000
+    },
+    {
+      "text": "remainder will actually be negative and",
+      "offset": 280000,
+      "duration": 2000
+    },
+    {
+      "text": "therefore can never be equal or greater",
+      "offset": 282000,
+      "duration": 3000
+    },
+    {
+      "text": "five. Let's take a look at the concrete",
+      "offset": 285000,
+      "duration": 2000
+    },
+    {
+      "text": "number. So if we pass in -2.6 here and",
+      "offset": 287000,
+      "duration": 3000
+    },
+    {
+      "text": "as I said we simplify and say this just",
+      "offset": 290000,
+      "duration": 2000
+    },
+    {
+      "text": "multiplies by 10, then we get -26 for",
+      "offset": 292000,
+      "duration": 2000
+    },
+    {
+      "text": "value and now value is negative so this",
+      "offset": 299000,
+      "duration": 3000
+    },
+    {
+      "text": "is false and the remainder now is -6",
+      "offset": 302000,
+      "duration": 5000
+    },
+    {
+      "text": "not +6, -6 because of how C# treats the",
+      "offset": 307000,
+      "duration": 2000
+    },
+    {
+      "text": "modulo operator. Value gets divided by",
+      "offset": 309000,
+      "duration": 4000
+    },
+    {
+      "text": "10 so it becomes -2 and well remainder",
+      "offset": 313000,
+      "duration": 4000
+    },
+    {
+      "text": "is -6 now so it is definitely not",
+      "offset": 317000,
+      "duration": 2000
+    },
+    {
+      "text": "equal or greater than five. So it never",
+      "offset": 319000,
+      "duration": 2000
+    },
+    {
+      "text": "enters this if and therefore returns",
+      "offset": 321000,
+      "duration": 2000
+    },
+    {
+      "text": "-2 but well as you can see -2.6",
+      "offset": 323000,
+      "duration": 4000
+    },
+    {
+      "text": "should be rounded to -3 of course.",
+      "offset": 327000,
+      "duration": 3000
+    },
+    {
+      "text": "So this is a bug, very clearly, but",
+      "offset": 330000,
+      "duration": 4000
+    },
+    {
+      "text": "it's pretty tricky to spot because you",
+      "offset": 334000,
+      "duration": 2000
+    },
+    {
+      "text": "need to know the details of how the",
+      "offset": 336000,
+      "duration": 1000
+    },
+    {
+      "text": "modulo operator works and then look at",
+      "offset": 337000,
+      "duration": 2000
+    },
+    {
+      "text": "all of this code and what it actually",
+      "offset": 339000,
+      "duration": 1000
+    },
+    {
+      "text": "does. It's not very easy to spot. So I",
+      "offset": 340000,
+      "duration": 3000
+    },
+    {
+      "text": "don't blame the developer who",
+      "offset": 343000,
+      "duration": 1000
+    },
+    {
+      "text": "implemented this. But I find it very",
+      "offset": 344000,
+      "duration": 2000
+    },
+    {
+      "text": "interesting that our analyzer can",
+      "offset": 346000,
+      "duration": 2000
+    },
+    {
+      "text": "detect this and this is how the analyzer",
+      "offset": 348000,
+      "duration": 3000
+    },
+    {
+      "text": "reports the problem. So you can see it",
+      "offset": 351000,
+      "duration": 2000
+    },
+    {
+      "text": "underlines the fPositive check in",
+      "offset": 353000,
+      "duration": 3000
+    },
+    {
+      "text": "the inner if and says that it always",
+      "offset": 356000,
+      "duration": 3000
+    },
+    {
+      "text": "evaluates to true and that the else is",
+      "offset": 359000,
+      "duration": 3000
+    },
+    {
+      "text": "actually unreachable. It analyzes",
+      "offset": 362000,
+      "duration": 1000
+    },
+    {
+      "text": "like, there's something wrong here.",
+      "offset": 363000,
+      "duration": 2000
+    },
+    {
+      "text": "This part of the code is not reachable.",
+      "offset": 365000,
+      "duration": 2000
+    },
+    {
+      "text": "It of course doesn't really understand",
+      "offset": 367000,
+      "duration": 2000
+    },
+    {
+      "text": "the method. It doesn't know what the",
+      "offset": 369000,
+      "duration": 1000
+    },
+    {
+      "text": "method is or the intent of the method.",
+      "offset": 370000,
+      "duration": 2000
+    },
+    {
+      "text": "It doesn't know what it's supposed",
+      "offset": 372000,
+      "duration": 2000
+    },
+    {
+      "text": "to be like, it doesn't understand what",
+      "offset": 374000,
+      "duration": 2000
+    },
+    {
+      "text": "ToInt64 means and makes any",
+      "offset": 376000,
+      "duration": 2000
+    },
+    {
+      "text": "assumptions based on that but it takes a",
+      "offset": 378000,
+      "duration": 3000
+    },
+    {
+      "text": "look at the structure of the code and",
+      "offset": 381000,
+      "duration": 1000
+    },
+    {
+      "text": "figures out this code path is never",
+      "offset": 382000,
+      "duration": 3000
+    },
+    {
+      "text": "reachable. This is surely a problem,",
+      "offset": 385000,
+      "duration": 3000
+    },
+    {
+      "text": "right? Either it's a problem or we can",
+      "offset": 388000,
+      "duration": 1000
+    },
+    {
+      "text": "just get rid of it if this is intended",
+      "offset": 389000,
+      "duration": 2000
+    },
+    {
+      "text": "because then it's unneeded. So the",
+      "offset": 391000,
+      "duration": 2000
+    },
+    {
+      "text": "analyzer highlights this and this is",
+      "offset": 393000,
+      "duration": 3000
+    },
+    {
+      "text": "very powerful and I want to give you a",
+      "offset": 396000,
+      "duration": 3000
+    },
+    {
+      "text": "bit of insight on how the analyzer finds",
+      "offset": 399000,
+      "duration": 3000
+    },
+    {
+      "text": "this and how it detects this. So we",
+      "offset": 402000,
+      "duration": 2000
+    },
+    {
+      "text": "create together now the map of the",
+      "offset": 404000,
+      "duration": 2000
+    },
+    {
+      "text": "multiverse of this piece of code. As",
+      "offset": 406000,
+      "duration": 4000
+    },
+    {
+      "text": "said we use what is called a symbolic",
+      "offset": 410000,
+      "duration": 2000
+    },
+    {
+      "text": "execution. And what it means is that",
+      "offset": 412000,
+      "duration": 3000
+    },
+    {
+      "text": "basically we have an engine that",
+      "offset": 415000,
+      "duration": 3000
+    },
+    {
+      "text": "simulates the execution of your code.",
+      "offset": 418000,
+      "duration": 2000
+    },
+    {
+      "text": "But instead of using concrete values and",
+      "offset": 420000,
+      "duration": 2000
+    },
+    {
+      "text": "just trying different numbers like",
+      "offset": 422000,
+      "duration": 2000
+    },
+    {
+      "text": "let's throw two in here, 2.6 in here and",
+      "offset": 424000,
+      "duration": 2000
+    },
+    {
+      "text": "-2.6 and zero and five—that would",
+      "offset": 426000,
+      "duration": 3000
+    },
+    {
+      "text": "of course be madness. That would",
+      "offset": 429000,
+      "duration": 2000
+    },
+    {
+      "text": "just mean we need to execute your code.",
+      "offset": 431000,
+      "duration": 2000
+    },
+    {
+      "text": "We don't do that. But we use",
+      "offset": 433000,
+      "duration": 3000
+    },
+    {
+      "text": "instead of concrete values, we use",
+      "offset": 436000,
+      "duration": 2000
+    },
+    {
+      "text": "symbolic values. And symbolic values are",
+      "offset": 438000,
+      "duration": 3000
+    },
+    {
+      "text": "basically classes of values or",
+      "offset": 441000,
+      "duration": 2000
+    },
+    {
+      "text": "categories of values. So for example,",
+      "offset": 443000,
+      "duration": 4000
+    },
+    {
+      "text": "positive numbers or negative numbers or",
+      "offset": 447000,
+      "duration": 3000
+    },
+    {
+      "text": "like a range of numbers. For bools,",
+      "offset": 450000,
+      "duration": 3000
+    },
+    {
+      "text": "it's a bit easier because a bool only",
+      "offset": 453000,
+      "duration": 1000
+    },
+    {
+      "text": "has two possible values, true and false.",
+      "offset": 454000,
+      "duration": 3000
+    },
+    {
+      "text": "So there we actually use the concrete",
+      "offset": 457000,
+      "duration": 2000
+    },
+    {
+      "text": "values. But for numbers, we create",
+      "offset": 459000,
+      "duration": 2000
+    },
+    {
+      "text": "ranges and stuff like that. And we have",
+      "offset": 461000,
+      "duration": 2000
+    },
+    {
+      "text": "a few other things we do for symbolic",
+      "offset": 463000,
+      "duration": 3000
+    },
+    {
+      "text": "values, which are not relevant for",
+      "offset": 466000,
+      "duration": 2000
+    },
+    {
+      "text": "this example. So I'll skip over them.",
+      "offset": 468000,
+      "duration": 2000
+    },
+    {
+      "text": "But here we only need number",
+      "offset": 470000,
+      "duration": 2000
+    },
+    {
+      "text": "ranges and bools basically. So as",
+      "offset": 472000,
+      "duration": 4000
+    },
+    {
+      "text": "I said symbolic execution, our engine is",
+      "offset": 476000,
+      "duration": 3000
+    },
+    {
+      "text": "stepping through the code and is",
+      "offset": 479000,
+      "duration": 1000
+    },
+    {
+      "text": "simulating the execution. So it just",
+      "offset": 480000,
+      "duration": 3000
+    },
+    {
+      "text": "starts at the top as natural and it",
+      "offset": 483000,
+      "duration": 2000
+    },
+    {
+      "text": "takes a look at line three and says,",
+      "offset": 485000,
+      "duration": 3000
+    },
+    {
+      "text": "this doesn't tell me anything really.",
+      "offset": 491000,
+      "duration": 2000
+    },
+    {
+      "text": "I don't know what the value of",
+      "offset": 493000,
+      "duration": 2000
+    },
+    {
+      "text": "underscore value the field is. There's",
+      "offset": 495000,
+      "duration": 2000
+    },
+    {
+      "text": "some math happening but an unknown number,",
+      "offset": 497000,
+      "duration": 3000
+    },
+    {
+      "text": "some math, the result is still unknown.",
+      "offset": 500000,
+      "duration": 2000
+    },
+    {
+      "text": "I don't know what's going on. So it just",
+      "offset": 502000,
+      "duration": 3000
+    },
+    {
+      "text": "goes on to the next line and sees if it",
+      "offset": 505000,
+      "duration": 1000
+    },
+    {
+      "text": "can find something interesting here. And",
+      "offset": 506000,
+      "duration": 3000
+    },
+    {
+      "text": "it does because here we have a condition:",
+      "offset": 509000,
+      "duration": 4000
+    },
+    {
+      "text": "value equals or greater zero. And now the",
+      "offset": 513000,
+      "duration": 3000
+    },
+    {
+      "text": "engine is like, okay that's a condition.",
+      "offset": 516000,
+      "duration": 2000
+    },
+    {
+      "text": "There's only two possibilities here.",
+      "offset": 518000,
+      "duration": 2000
+    },
+    {
+      "text": "Either the condition is true or it's false.",
+      "offset": 520000,
+      "duration": 2000
+    },
+    {
+      "text": "There's no third state. So maybe that's",
+      "offset": 522000,
+      "duration": 3000
+    },
+    {
+      "text": "reasonable to analyze. Let's just take an",
+      "offset": 525000,
+      "duration": 2000
+    },
+    {
+      "text": "assumption for now. Let's just say the",
+      "offset": 529000,
+      "duration": 1000
+    },
+    {
+      "text": "condition is true and see what is the",
+      "offset": 530000,
+      "duration": 2000
+    },
+    {
+      "text": "consequence of that. What are the results?",
+      "offset": 532000,
+      "duration": 2000
+    },
+    {
+      "text": "What happens if this condition is true?",
+      "offset": 534000,
+      "duration": 2000
+    },
+    {
+      "text": "And so it creates a new state and that",
+      "offset": 536000,
+      "duration": 3000
+    },
+    {
+      "text": "state is basically: value is equal or",
+      "offset": 539000,
+      "duration": 3000
+    },
+    {
+      "text": "greater zero and all the consequences",
+      "offset": 542000,
+      "duration": 2000
+    },
+    {
+      "text": "that come from that. The first one of",
+      "offset": 544000,
+      "duration": 2000
+    },
+    {
+      "text": "course is that the variable fPositive",
+      "offset": 546000,
+      "duration": 2000
+    },
+    {
+      "text": "will have the value true because that's",
+      "offset": 548000,
+      "duration": 3000
+    },
+    {
+      "text": "what the code does here. If this",
+      "offset": 551000,
+      "duration": 2000
+    },
+    {
+      "text": "condition is true then fPositive is",
+      "offset": 553000,
+      "duration": 2000
+    },
+    {
+      "text": "true. Cool. Next line. Now,",
+      "offset": 555000,
+      "duration": 3000
+    },
+    {
+      "text": "interesting: under the assumption that",
+      "offset": 558000,
+      "duration": 3000
+    },
+    {
+      "text": "value is positive we actually can say",
+      "offset": 561000,
+      "duration": 3000
+    },
+    {
+      "text": "something about this line. We can",
+      "offset": 564000,
+      "duration": 2000
+    },
+    {
+      "text": "learn something here because if value is",
+      "offset": 566000,
+      "duration": 2000
+    },
+    {
+      "text": "positive and we modulo by 10 then the",
+      "offset": 570000,
+      "duration": 2000
+    },
+    {
+      "text": "result must be positive as well and it's",
+      "offset": 572000,
+      "duration": 3000
+    },
+    {
+      "text": "modulo 10 so it cannot be bigger than 9.",
+      "offset": 575000,
+      "duration": 3000
+    },
+    {
+      "text": "So the remainder must be in the range of",
+      "offset": 578000,
+      "duration": 2000
+    },
+    {
+      "text": "0 to 9. Hey cool that's actually fairly",
+      "offset": 580000,
+      "duration": 3000
+    },
+    {
+      "text": "concrete already. Maybe we can do",
+      "offset": 583000,
+      "duration": 3000
+    },
+    {
+      "text": "something interesting with that. Right?",
+      "offset": 586000,
+      "duration": 2000
+    },
+    {
+      "text": "And then the engine looks at the next",
+      "offset": 588000,
+      "duration": 2000
+    },
+    {
+      "text": "line and now it's okay, not really",
+      "offset": 590000,
+      "duration": 3000
+    },
+    {
+      "text": "telling you anything because we know",
+      "offset": 593000,
+      "duration": 1000
+    },
+    {
+      "text": "value is positive but we don't know the",
+      "offset": 594000,
+      "duration": 2000
+    },
+    {
+      "text": "concrete number. So it's divided by 10.",
+      "offset": 596000,
+      "duration": 4000
+    },
+    {
+      "text": "It's still positive, I guess. But",
+      "offset": 600000,
+      "duration": 2000
+    },
+    {
+      "text": "besides that, not much information has",
+      "offset": 602000,
+      "duration": 2000
+    },
+    {
+      "text": "been learned. And now the critical part.",
+      "offset": 604000,
+      "duration": 3000
+    },
+    {
+      "text": "We get to the first if statement I should",
+      "offset": 607000,
+      "duration": 3000
+    },
+    {
+      "text": "say. And that if statement checks",
+      "offset": 612000,
+      "duration": 2000
+    },
+    {
+      "text": "remainder. And now is remainder equal or",
+      "offset": 614000,
+      "duration": 3000
+    },
+    {
+      "text": "greater five. And in this universe that",
+      "offset": 619000,
+      "duration": 3000
+    },
+    {
+      "text": "the engine is looking at right now, the",
+      "offset": 622000,
+      "duration": 3000
+    },
+    {
+      "text": "assumption is that value is positive.",
+      "offset": 625000,
+      "duration": 2000
+    },
+    {
+      "text": "And therefore the remainder must be",
+      "offset": 627000,
+      "duration": 2000
+    },
+    {
+      "text": "between zero and nine, right? And",
+      "offset": 629000,
+      "duration": 4000
+    },
+    {
+      "text": "zero and nine can be greater than five",
+      "offset": 633000,
+      "duration": 3000
+    },
+    {
+      "text": "but doesn't have to be. So again the",
+      "offset": 636000,
+      "duration": 2000
+    },
+    {
+      "text": "engine is like, it's a condition it could",
+      "offset": 638000,
+      "duration": 2000
+    },
+    {
+      "text": "be true or false, let's just make an",
+      "offset": 640000,
+      "duration": 2000
+    },
+    {
+      "text": "assumption. Let's say it's false. Okay, if",
+      "offset": 642000,
+      "duration": 3000
+    },
+    {
+      "text": "it is false remainder is smaller five.",
+      "offset": 645000,
+      "duration": 2000
+    },
+    {
+      "text": "But it's still between 0 and 9. So it",
+      "offset": 647000,
+      "duration": 3000
+    },
+    {
+      "text": "must be between 0 and four. Okay. And",
+      "offset": 650000,
+      "duration": 2000
+    },
+    {
+      "text": "the if is of course not entered. So the",
+      "offset": 652000,
+      "duration": 4000
+    },
+    {
+      "text": "engine jumps to the end and sees, okay,",
+      "offset": 656000,
+      "duration": 2000
+    },
+    {
+      "text": "method is complete here. That's just a",
+      "offset": 658000,
+      "duration": 4000
+    },
+    {
+      "text": "state. Okay. Interesting. We have a final",
+      "offset": 662000,
+      "duration": 2000
+    },
+    {
+      "text": "state: remainder between 0 and four, we",
+      "offset": 664000,
+      "duration": 3000
+    },
+    {
+      "text": "return a positive number. And maybe",
+      "offset": 667000,
+      "duration": 2000
+    },
+    {
+      "text": "nothing too interesting if we only",
+      "offset": 669000,
+      "duration": 3000
+    },
+    {
+      "text": "look at this universe. But maybe there's",
+      "offset": 672000,
+      "duration": 2000
+    },
+    {
+      "text": "something else. So let's create an",
+      "offset": 674000,
+      "duration": 3000
+    },
+    {
+      "text": "alternative universe. And in this",
+      "offset": 677000,
+      "duration": 1000
+    },
+    {
+      "text": "alternative universe, we took a step",
+      "offset": 678000,
+      "duration": 3000
+    },
+    {
+      "text": "back and take a different branch and we",
+      "offset": 681000,
+      "duration": 2000
+    },
+    {
+      "text": "say, well, the condition in the first if",
+      "offset": 683000,
+      "duration": 3000
+    },
+    {
+      "text": "in line 98 is actually true this time.",
+      "offset": 686000,
+      "duration": 4000
+    },
+    {
+      "text": "The remainder is actually true this time.",
+      "offset": 690000,
+      "duration": 3000
+    },
+    {
+      "text": "The remainder is not smaller than five,",
+      "offset": 693000,
+      "duration": 1000
+    },
+    {
+      "text": "but equal or greater than five. But",
+      "offset": 694000,
+      "duration": 3000
+    },
+    {
+      "text": "we're still in the universe or under the",
+      "offset": 697000,
+      "duration": 1000
+    },
+    {
+      "text": "assumption that value itself is",
+      "offset": 698000,
+      "duration": 2000
+    },
+    {
+      "text": "positive. So the remainder must still be",
+      "offset": 700000,
+      "duration": 2000
+    },
+    {
+      "text": "between 0 and 9. So well if it is equal",
+      "offset": 702000,
+      "duration": 3000
+    },
+    {
+      "text": "or greater five it must be between five",
+      "offset": 705000,
+      "duration": 3000
+    },
+    {
+      "text": "and 9 right and this also means that we",
+      "offset": 708000,
+      "duration": 2000
+    },
+    {
+      "text": "enter the if and now we take a look at",
+      "offset": 710000,
+      "duration": 3000
+    },
+    {
+      "text": "the inner if and if we take a look back",
+      "offset": 713000,
+      "duration": 3000
+    },
+    {
+      "text": "we figured out that in this universe",
+      "offset": 716000,
+      "duration": 3000
+    },
+    {
+      "text": "fPositive is actually true. So we go",
+      "offset": 719000,
+      "duration": 3000
+    },
+    {
+      "text": "here, we increase value by one again.",
+      "offset": 722000,
+      "duration": 3000
+    },
+    {
+      "text": "That doesn't help the engine too much. It",
+      "offset": 725000,
+      "duration": 3000
+    },
+    {
+      "text": "knows value is positive. Now it's one",
+      "offset": 728000,
+      "duration": 2000
+    },
+    {
+      "text": "bigger, still a positive number. Not too",
+      "offset": 730000,
+      "duration": 2000
+    },
+    {
+      "text": "much interesting happening here. But,",
+      "offset": 732000,
+      "duration": 2000
+    },
+    {
+      "text": "okay, method is complete and returned a",
+      "offset": 734000,
+      "duration": 3000
+    },
+    {
+      "text": "value that is one bigger than what the",
+      "offset": 737000,
+      "duration": 3000
+    },
+    {
+      "text": "original value was or what the value was",
+      "offset": 740000,
+      "duration": 3000
+    },
+    {
+      "text": "before here. And the remainder must be",
+      "offset": 743000,
+      "duration": 2000
+    },
+    {
+      "text": "between five and 9. And again looking at",
+      "offset": 745000,
+      "duration": 2000
+    },
+    {
+      "text": "this, it looks fine. Nothing crazy to",
+      "offset": 747000,
+      "duration": 3000
+    },
+    {
+      "text": "find here. But we still have another",
+      "offset": 750000,
+      "duration": 3000
+    },
+    {
+      "text": "branch that we didn't explore, right? So",
+      "offset": 753000,
+      "duration": 3000
+    },
+    {
+      "text": "the engine takes a bigger step back and",
+      "offset": 756000,
+      "duration": 3000
+    },
+    {
+      "text": "says, okay, create another alternative",
+      "offset": 759000,
+      "duration": 2000
+    },
+    {
+      "text": "universe where value is actually negative",
+      "offset": 761000,
+      "duration": 2000
+    },
+    {
+      "text": "and then we do the same thing again. We",
+      "offset": 763000,
+      "duration": 3000
+    },
+    {
+      "text": "step through the code and try to figure",
+      "offset": 766000,
+      "duration": 2000
+    },
+    {
+      "text": "out what are the consequences of this",
+      "offset": 768000,
+      "duration": 2000
+    },
+    {
+      "text": "assumption. So the assumption is value",
+      "offset": 770000,
+      "duration": 2000
+    },
+    {
+      "text": "is smaller than zero. The first result",
+      "offset": 772000,
+      "duration": 4000
+    },
+    {
+      "text": "of course is this condition becomes",
+      "offset": 776000,
+      "duration": 3000
+    },
+    {
+      "text": "false and therefore fPositive gets the",
+      "offset": 779000,
+      "duration": 2000
+    },
+    {
+      "text": "value false. There we go. Clear. And now",
+      "offset": 781000,
+      "duration": 3000
+    },
+    {
+      "text": "the crux, right?",
+      "offset": 784000,
+      "duration": 3000
+    },
+    {
+      "text": "The engine of course knows how the",
+      "offset": 787000,
+      "duration": 4000
+    },
+    {
+      "text": "modulo operator works in C#. So it",
+      "offset": 791000,
+      "duration": 3000
+    },
+    {
+      "text": "knows value is negative here because",
+      "offset": 794000,
+      "duration": 1000
+    },
+    {
+      "text": "that was the assumption that was taken a",
+      "offset": 795000,
+      "duration": 3000
+    },
+    {
+      "text": "moment ago. And therefore the",
+      "offset": 798000,
+      "duration": 3000
+    },
+    {
+      "text": "remainder must become negative. So it",
+      "offset": 801000,
+      "duration": 2000
+    },
+    {
+      "text": "must be between -9 and zero because",
+      "offset": 803000,
+      "duration": 2000
+    },
+    {
+      "text": "we do modulo 10 and the input value",
+      "offset": 805000,
+      "duration": 3000
+    },
+    {
+      "text": "is negative. Okay, cool. Sure. Let's go",
+      "offset": 808000,
+      "duration": 4000
+    },
+    {
+      "text": "on next line. Again, not super",
+      "offset": 812000,
+      "duration": 3000
+    },
+    {
+      "text": "interesting. Value is negative. We",
+      "offset": 815000,
+      "duration": 3000
+    },
+    {
+      "text": "divide by 10. It's still negative. We",
+      "offset": 818000,
+      "duration": 2000
+    },
+    {
+      "text": "don't really learn anything. Let's",
+      "offset": 820000,
+      "duration": 3000
+    },
+    {
+      "text": "move on. Let's get to the if statement",
+      "offset": 823000,
+      "duration": 3000
+    },
+    {
+      "text": "again. And here the interesting thing",
+      "offset": 826000,
+      "duration": 2000
+    },
+    {
+      "text": "happens: remainder is between -9 and zero.",
+      "offset": 828000,
+      "duration": 2000
+    },
+    {
+      "text": "But the condition is remainder must be",
+      "offset": 832000,
+      "duration": 3000
+    },
+    {
+      "text": "equal or greater 5. Well, that's of",
+      "offset": 835000,
+      "duration": 3000
+    },
+    {
+      "text": "course always false. If the remainder is",
+      "offset": 838000,
+      "duration": 2000
+    },
+    {
+      "text": "negative, it cannot be equal or greater",
+      "offset": 840000,
+      "duration": 3000
+    },
+    {
+      "text": "five. So the engine is like, this is not",
+      "offset": 843000,
+      "duration": 3000
+    },
+    {
+      "text": "even a condition. Under the assumption",
+      "offset": 846000,
+      "duration": 2000
+    },
+    {
+      "text": "we've just took that value is negative,",
+      "offset": 848000,
+      "duration": 3000
+    },
+    {
+      "text": "this is always false. We just jump to",
+      "offset": 851000,
+      "duration": 2000
+    },
+    {
+      "text": "the end and we're good. Done.",
+      "offset": 853000,
+      "duration": 2000
+    },
+    {
+      "text": "And now you can see, and the engine will",
+      "offset": 855000,
+      "duration": 4000
+    },
+    {
+      "text": "figure this out as well, that there's",
+      "offset": 859000,
+      "duration": 3000
+    },
+    {
+      "text": "something missing. If you're looking at",
+      "offset": 862000,
+      "duration": 3000
+    },
+    {
+      "text": "the lines here which represent which path,",
+      "offset": 865000,
+      "duration": 2000
+    },
+    {
+      "text": "which universe covers which path of the",
+      "offset": 867000,
+      "duration": 2000
+    },
+    {
+      "text": "code, there's a gap here. And there's a",
+      "offset": 869000,
+      "duration": 2000
+    },
+    {
+      "text": "gap because this is never reached in any",
+      "offset": 871000,
+      "duration": 3000
+    },
+    {
+      "text": "of the universes. And that is because",
+      "offset": 874000,
+      "duration": 2000
+    },
+    {
+      "text": "there's a universe missing. The",
+      "offset": 876000,
+      "duration": 2000
+    },
+    {
+      "text": "developer who wrote this code intended",
+      "offset": 878000,
+      "duration": 3000
+    },
+    {
+      "text": "there to be another or fourth alternative",
+      "offset": 881000,
+      "duration": 3000
+    },
+    {
+      "text": "universe which is: value is negative but",
+      "offset": 884000,
+      "duration": 2000
+    },
+    {
+      "text": "remainder is equal or greater five. But",
+      "offset": 886000,
+      "duration": 3000
+    },
+    {
+      "text": "that is a contradiction because of how",
+      "offset": 889000,
+      "duration": 2000
+    },
+    {
+      "text": "the modulo operator works and returns a",
+      "offset": 891000,
+      "duration": 2000
+    },
+    {
+      "text": "negative remainder.",
+      "offset": 893000,
+      "duration": 2000
+    },
+    {
+      "text": "And therefore this is never reached and",
+      "offset": 895000,
+      "duration": 3000
+    },
+    {
+      "text": "this universe over here just doesn't",
+      "offset": 898000,
+      "duration": 3000
+    },
+    {
+      "text": "exist. The engine doesn't really know",
+      "offset": 901000,
+      "duration": 3000
+    },
+    {
+      "text": "which universes are supposed to be there,",
+      "offset": 904000,
+      "duration": 2000
+    },
+    {
+      "text": "of course, but it knows a few things and",
+      "offset": 906000,
+      "duration": 3000
+    },
+    {
+      "text": "it knows for example which part of the",
+      "offset": 909000,
+      "duration": 2000
+    },
+    {
+      "text": "code has been covered and it also knows",
+      "offset": 911000,
+      "duration": 2000
+    },
+    {
+      "text": "what were the results of all the",
+      "offset": 913000,
+      "duration": 2000
+    },
+    {
+      "text": "conditions. So what it does is it takes",
+      "offset": 915000,
+      "duration": 2000
+    },
+    {
+      "text": "a look at the condition at line 10 and",
+      "offset": 917000,
+      "duration": 3000
+    },
+    {
+      "text": "says in each of the universes where this",
+      "offset": 920000,
+      "duration": 3000
+    },
+    {
+      "text": "line was reached—which was only one—the",
+      "offset": 923000,
+      "duration": 3000
+    },
+    {
+      "text": "result was true. There is not actually a",
+      "offset": 926000,
+      "duration": 3000
+    },
+    {
+      "text": "point in having this condition in the",
+      "offset": 929000,
+      "duration": 3000
+    },
+    {
+      "text": "first place because it will never be",
+      "offset": 932000,
+      "duration": 2000
+    },
+    {
+      "text": "false. There's no point in having this.",
+      "offset": 934000,
+      "duration": 3000
+    },
+    {
+      "text": "And that's exactly what the analyzer is",
+      "offset": 937000,
+      "duration": 3000
+    },
+    {
+      "text": "pointing out. It's saying change this",
+      "offset": 940000,
+      "duration": 2000
+    },
+    {
+      "text": "condition so it does not always evaluate",
+      "offset": 942000,
+      "duration": 2000
+    },
+    {
+      "text": "to true. Some code paths are",
+      "offset": 944000,
+      "duration": 2000
+    },
+    {
+      "text": "unreachable. And this is of course more",
+      "offset": 946000,
+      "duration": 3000
+    },
+    {
+      "text": "a consequence of the root problem. But",
+      "offset": 949000,
+      "duration": 3000
+    },
+    {
+      "text": "it points you in the right direction.",
+      "offset": 952000,
+      "duration": 3000
+    },
+    {
+      "text": "Wait, why is this always positive? And",
+      "offset": 955000,
+      "duration": 2000
+    },
+    {
+      "text": "this is what the analyzer finds, right?",
+      "offset": 957000,
+      "duration": 3000
+    },
+    {
+      "text": "It says change this condition so that it",
+      "offset": 960000,
+      "duration": 2000
+    },
+    {
+      "text": "does not always evaluate to true. Some",
+      "offset": 962000,
+      "duration": 2000
+    },
+    {
+      "text": "code paths are unreachable and of course",
+      "offset": 964000,
+      "duration": 3000
+    },
+    {
+      "text": "this is more like a consequence of the",
+      "offset": 967000,
+      "duration": 3000
+    },
+    {
+      "text": "root cause of the problem. The root",
+      "offset": 970000,
+      "duration": 2000
+    },
+    {
+      "text": "cause being that the return modulo 10",
+      "offset": 972000,
+      "duration": 3000
+    },
+    {
+      "text": "for negative values is negative. But it",
+      "offset": 975000,
+      "duration": 2000
+    },
+    {
+      "text": "points you in the right direction",
+      "offset": 977000,
+      "duration": 2000
+    },
+    {
+      "text": "because it says, hey this code doesn't",
+      "offset": 979000,
+      "duration": 2000
+    },
+    {
+      "text": "really make sense. There's some",
+      "offset": 981000,
+      "duration": 2000
+    },
+    {
+      "text": "structural problem with it here. Take a",
+      "offset": 983000,
+      "duration": 2000
+    },
+    {
+      "text": "closer look and this will allow you to",
+      "offset": 985000,
+      "duration": 2000
+    },
+    {
+      "text": "find this bug. And it's not the only",
+      "offset": 987000,
+      "duration": 3000
+    },
+    {
+      "text": "kind of thing that the engine can",
+      "offset": 990000,
+      "duration": 2000
+    },
+    {
+      "text": "detect. There are multiple other things",
+      "offset": 992000,
+      "duration": 2000
+    },
+    {
+      "text": "it can find: it can find possible null",
+      "offset": 994000,
+      "duration": 2000
+    },
+    {
+      "text": "dereferences, all the pesky null",
+      "offset": 996000,
+      "duration": 2000
+    },
+    {
+      "text": "pointer exceptions you might have in",
+      "offset": 998000,
+      "duration": 2000
+    },
+    {
+      "text": "your code. It can take a look at index",
+      "offset": 1000000,
+      "duration": 2000
+    },
+    {
+      "text": "out of bounds problems and can take a",
+      "offset": 1002000,
+      "duration": 3000
+    },
+    {
+      "text": "look at integer overflows. All these",
+      "offset": 1005000,
+      "duration": 2000
+    },
+    {
+      "text": "things can be found and detected with",
+      "offset": 1007000,
+      "duration": 2000
+    },
+    {
+      "text": "symbolic execution. And this in my",
+      "offset": 1009000,
+      "duration": 2000
+    },
+    {
+      "text": "opinion is one of the most interesting",
+      "offset": 1011000,
+      "duration": 2000
+    },
+    {
+      "text": "and powerful analysis techniques that we",
+      "offset": 1013000,
+      "duration": 3000
+    },
+    {
+      "text": "use at Sonar. It found me a lot of—it",
+      "offset": 1016000,
+      "duration": 3000
+    },
+    {
+      "text": "doesn't trigger too many things usually,",
+      "offset": 1019000,
+      "duration": 3000
+    },
+    {
+      "text": "sometimes it taps you a bit like finding",
+      "offset": 1022000,
+      "duration": 2000
+    },
+    {
+      "text": "some unneeded code or something like",
+      "offset": 1024000,
+      "duration": 2000
+    },
+    {
+      "text": "that to simplify, but once in a while it",
+      "offset": 1026000,
+      "duration": 3000
+    },
+    {
+      "text": "finds these really really brutal bugs",
+      "offset": 1029000,
+      "duration": 2000
+    },
+    {
+      "text": "like this one and then it really",
+      "offset": 1031000,
+      "duration": 3000
+    },
+    {
+      "text": "shines and has a lot of value. I find",
+      "offset": 1034000,
+      "duration": 2000
+    },
+    {
+      "text": "this is really cool and it's my favorite",
+      "offset": 1036000,
+      "duration": 2000
+    },
+    {
+      "text": "analysis technique and I hope that was",
+      "offset": 1038000,
+      "duration": 3000
+    },
+    {
+      "text": "insightful for you. Of course a bit of a",
+      "offset": 1041000,
+      "duration": 2000
+    },
+    {
+      "text": "technical session but I hope you could",
+      "offset": 1043000,
+      "duration": 2000
+    },
+    {
+      "text": "follow along and learn something",
+      "offset": 1045000,
+      "duration": 2000
+    },
+    {
+      "text": "interesting. If you have any questions",
+      "offset": 1047000,
+      "duration": 2000
+    },
+    {
+      "text": "about symbolic execution feel free to",
+      "offset": 1049000,
+      "duration": 2000
+    },
+    {
+      "text": "shoot me an email at tim.pullman@sonarsource.com.",
+      "offset": 1051000,
+      "duration": 2000
+    },
+    {
+      "text": "Thanks a lot for watching.",
+      "offset": 1053000,
+      "duration": 3000
+    }
+  ],
+  "fullText": "Hey everyone, I'm Tim Pohlmann. I'm a software engineer at Sonar and today I want to show you how we map the multiverse of your codebase. Every time you write an if statement in your code, you basically create two alternative universes depending on which code path the execution takes. And things can look very different in these universes. And of course, every time you add another conditional, another condition to your code, you create another universe or two. And so it becomes this big pile of different alternative universes of what could happen in your code. Because we don't know what actually happens, right? We're doing static analysis. So we analyze your code before it runs. But we can make assumptions and we use a technique called symbolic execution to create a map of that multiverse of code paths and we take a look at that multiverse or at that map and try to spot if we find anything that looks a bit off or could be a problem. But let's make it concrete and take a look at an example. This piece of code is actual production code from Microsoft. This is part of the .NET runtime codebase. Very important codebase. And as I said, this is production code. This is live right now. You can check it out on GitHub if you want. So this code looks nice. But it has a bug. And we reported this bug when we found it with our analyzer. It has not been fixed yet. So you can still take a look. But so let me show you what is wrong with it. And then we take a look at how our analyzer did spot this problem. This is part of the class SQL money which is basically holding a money value and this is stored in an internal field called underscore value and the method is ToInt64 which is basically supposed to convert that value into a long, a different format which means it needs to do some math, needs to do some calculation and then it needs to do some rounding to get the correct result and in the rounding there's a slight problem as we will see in a moment. So the first line is the calculation and basically to simplify it let's just assume it multiplies the value by 10. It's not quite what is happening here but for simplicity let's just assume it's multiplying the value by 10 and later it wants to divide that value by 10 again to get the correct value, the correct size again and however for that it needs to do some rounding because these are integer values so no comma and for the rounding it needs to do some calculation. It starts here by checking if the value is positive or negative and storing the result in this variable called fPositive and then the next step is of course the modulo operation which is basically we take the value we divide by 10 we take the remainder and store it in this variable makes sense right then there's the actual division by 10 and then there's the rounding and the rounding is of course based on the remainder. If the remainder is equal or greater five we need to round up and if not we automatically already round it down because of how integer calculation works. Integer division works. So of course we need an extra case for negative numbers because negative numbers need to be rounded down if the remainder is bigger five and not up. And this looks all perfectly normal and reasonable except there's a slight problem over here. And that is the modulo operator because the modulo operator in math is not actually strictly defined. What is not strictly defined about it is how it operates on the negative values and different programming languages implement this differently. So in Python a negative value modulo 10 would result in a positive remainder. However in C# it keeps the sign. So a negative number modulo 10 will actually result in a negative remainder. And this is what's happening here. So if value is negative, remainder will actually be negative and therefore can never be equal or greater five. Let's take a look at the concrete number. So if we pass in -2.6 here and as I said we simplify and say this just multiplies by 10, then we get -26 for value and now value is negative so this is false and the remainder now is -6 not +6, -6 because of how C# treats the modulo operator. Value gets divided by 10 so it becomes -2 and well remainder is -6 now so it is definitely not equal or greater than five. So it never enters this if and therefore returns -2 but well as you can see -2.6 should be rounded to -3 of course. So this is a bug, very clearly, but it's pretty tricky to spot because you need to know the details of how the modulo operator works and then look at all of this code and what it actually does. It's not very easy to spot. So I don't blame the developer who implemented this. But I find it very interesting that our analyzer can detect this and this is how the analyzer reports the problem. So you can see it underlines the fPositive check in the inner if and says that it always evaluates to true and that the else is actually unreachable. It analyzes like, there's something wrong here. This part of the code is not reachable. It of course doesn't really understand the method. It doesn't know what the method is or the intent of the method. It doesn't know what it's supposed to be like, it doesn't understand what ToInt64 means and makes any assumptions based on that but it takes a look at the structure of the code and figures out this code path is never reachable. This is surely a problem, right? Either it's a problem or we can just get rid of it if this is intended because then it's unneeded. So the analyzer highlights this and this is very powerful and I want to give you a bit of insight on how the analyzer finds this and how it detects this. So we create together now the map of the multiverse of this piece of code. As said we use what is called a symbolic execution. And what it means is that basically we have an engine that simulates the execution of your code. But instead of using concrete values and just trying different numbers like let's throw two in here, 2.6 in here and -2.6 and zero and five—that would of course be madness. That would just mean we need to execute your code. We don't do that. But we use instead of concrete values, we use symbolic values. And symbolic values are basically classes of values or categories of values. So for example, positive numbers or negative numbers or like a range of numbers. For bools, it's a bit easier because a bool only has two possible values, true and false. So there we actually use the concrete values. But for numbers, we create ranges and stuff like that. And we have a few other things we do for symbolic values, which are not relevant for this example. So I'll skip over them. But here we only need number ranges and bools basically. So as I said symbolic execution, our engine is stepping through the code and is simulating the execution. So it just starts at the top as natural and it takes a look at line three and says, this doesn't tell me anything really. I don't know what the value of underscore value the field is. There's some math happening but an unknown number, some math, the result is still unknown. I don't know what's going on. So it just goes on to the next line and sees if it can find something interesting here. And it does because here we have a condition: value equals or greater zero. And now the engine is like, okay that's a condition. There's only two possibilities here. Either the condition is true or it's false. There's no third state. So maybe that's reasonable to analyze. Let's just take an assumption for now. Let's just say the condition is true and see what is the consequence of that. What are the results? What happens if this condition is true? And so it creates a new state and that state is basically: value is equal or greater zero and all the consequences that come from that. The first one of course is that the variable fPositive will have the value true because that's what the code does here. If this condition is true then fPositive is true. Cool. Next line. Now, interesting: under the assumption that value is positive we actually can say something about this line. We can learn something here because if value is positive and we modulo by 10 then the result must be positive as well and it's modulo 10 so it cannot be bigger than 9. So the remainder must be in the range of 0 to 9. Hey cool that's actually fairly concrete already. Maybe we can do something interesting with that. Right? And then the engine looks at the next line and now it's okay, not really telling you anything because we know value is positive but we don't know the concrete number. So it's divided by 10. It's still positive, I guess. But besides that, not much information has been learned. And now the critical part. We get to the first if statement I should say. And that if statement checks remainder. And now is remainder equal or greater five. And in this universe that the engine is looking at right now, the assumption is that value is positive. And therefore the remainder must be between zero and nine, right? And zero and nine can be greater than five but doesn't have to be. So again the engine is like, it's a condition it could be true or false, let's just make an assumption. Let's say it's false. Okay, if it is false remainder is smaller five. But it's still between 0 and 9. So it must be between 0 and four. Okay. And the if is of course not entered. So the engine jumps to the end and sees, okay, method is complete here. That's just a state. Okay. Interesting. We have a final state: remainder between 0 and four, we return a positive number. And maybe nothing too interesting if we only look at this universe. But maybe there's something else. So let's create an alternative universe. And in this alternative universe, we took a step back and take a different branch and we say, well, the condition in the first if in line 98 is actually true this time. The remainder is actually true this time. The remainder is not smaller than five, but equal or greater than five. But we're still in the universe or under the assumption that value itself is positive. So the remainder must still be between 0 and 9. So well if it is equal or greater five it must be between five and 9 right and this also means that we enter the if and now we take a look at the inner if and if we take a look back we figured out that in this universe fPositive is actually true. So we go here, we increase value by one again. That doesn't help the engine too much. It knows value is positive. Now it's one bigger, still a positive number. Not too much interesting happening here. But, okay, method is complete and returned a value that is one bigger than what the original value was or what the value was before here. And the remainder must be between five and 9. And again looking at this, it looks fine. Nothing crazy to find here. But we still have another branch that we didn't explore, right? So the engine takes a bigger step back and says, okay, create another alternative universe where value is actually negative and then we do the same thing again. We step through the code and try to figure out what are the consequences of this assumption. So the assumption is value is smaller than zero. The first result of course is this condition becomes false and therefore fPositive gets the value false. There we go. Clear. And now the crux, right? The engine of course knows how the modulo operator works in C#. So it knows value is negative here because that was the assumption that was taken a moment ago. And therefore the remainder must become negative. So it must be between -9 and zero because we do modulo 10 and the input value is negative. Okay, cool. Sure. Let's go on next line. Again, not super interesting. Value is negative. We divide by 10. It's still negative. We don't really learn anything. Let's move on. Let's get to the if statement again. And here the interesting thing happens: remainder is between -9 and zero. But the condition is remainder must be equal or greater 5. Well, that's of course always false. If the remainder is negative, it cannot be equal or greater five. So the engine is like, this is not even a condition. Under the assumption we've just took that value is negative, this is always false. We just jump to the end and we're good. Done. And now you can see, and the engine will figure this out as well, that there's something missing. If you're looking at the lines here which represent which path, which universe covers which path of the code, there's a gap here. And there's a gap because this is never reached in any of the universes. And that is because there's a universe missing. The developer who wrote this code intended there to be another or fourth alternative universe which is: value is negative but remainder is equal or greater five. But that is a contradiction because of how the modulo operator works and returns a negative remainder. And therefore this is never reached and this universe over here just doesn't exist. The engine doesn't really know which universes are supposed to be there, of course, but it knows a few things and it knows for example which part of the code has been covered and it also knows what were the results of all the conditions. So what it does is it takes a look at the condition at line 10 and says in each of the universes where this line was reached—which was only one—the result was true. There is not actually a point in having this condition in the first place because it will never be false. There's no point in having this. And that's exactly what the analyzer is pointing out. It's saying change this condition so it does not always evaluate to true. Some code paths are unreachable. And this is of course more a consequence of the root problem. But it points you in the right direction. Wait, why is this always positive? And this is what the analyzer finds, right? It says change this condition so that it does not always evaluate to true. Some code paths are unreachable and of course this is more like a consequence of the root cause of the problem. The root cause being that the return modulo 10 for negative values is negative. But it points you in the right direction because it says, hey this code doesn't really make sense. There's some structural problem with it here. Take a closer look and this will allow you to find this bug. And it's not the only kind of thing that the engine can detect. There are multiple other things it can find: it can find possible null dereferences, all the pesky null pointer exceptions you might have in your code. It can take a look at index out of bounds problems and can take a look at integer overflows. All these things can be found and detected with symbolic execution. And this in my opinion is one of the most interesting and powerful analysis techniques that we use at Sonar. It found me a lot of—it doesn't trigger too many things usually, sometimes it taps you a bit like finding some unneeded code or something like that to simplify, but once in a while it finds these really really brutal bugs like this one and then it really shines and has a lot of value. I find this is really cool and it's my favorite analysis technique and I hope that was insightful for you. Of course a bit of a technical session but I hope you could follow along and learn something interesting. If you have any questions about symbolic execution feel free to shoot me an email at tim.pullman@sonarsource.com. Thanks a lot for watching.",
+  "fetchedAt": "2026-03-14T09:22:00.932Z"
+}

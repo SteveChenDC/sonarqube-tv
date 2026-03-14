@@ -1,0 +1,1668 @@
+{
+  "videoId": "v54",
+  "youtubeId": "ONcLyOlK2lE",
+  "segments": [
+    {
+      "text": "Okay. Well,\nhello.",
+      "offset": 17000,
+      "duration": 3000
+    },
+    {
+      "text": "I'm John Clifton. I'm a\nproduct manager at Sonar.",
+      "offset": 20000,
+      "duration": 2000
+    },
+    {
+      "text": "And today I'm very pleased to be joined by\nPaul Edwards from Wolters Kluwer. He's going",
+      "offset": 22000,
+      "duration": 3000
+    },
+    {
+      "text": "to talk to us about a problem\nthat his team have solved.",
+      "offset": 25000,
+      "duration": 4000
+    },
+    {
+      "text": "It's one that we're we're seeing all over\nthe place in a world where you can write code faster",
+      "offset": 29000,
+      "duration": 4000
+    },
+    {
+      "text": "and faster and faster. How do you maintain\nthe right level of quality without slowing to a crawl?",
+      "offset": 33000,
+      "duration": 4000
+    },
+    {
+      "text": "Now, I met Paul a little\nwhile ago when I was",
+      "offset": 37000,
+      "duration": 4000
+    },
+    {
+      "text": "cheerfully\npresenting on stage",
+      "offset": 41000,
+      "duration": 5000
+    },
+    {
+      "text": "I was talking about this customer and had\nthey've this this huge success. they've got their scan time hugely reduced and then and paul raised his hand and i said,",
+      "offset": 46000,
+      "duration": 5000
+    },
+    {
+      "text": "\"Yes, how can I help?\" And he said,\n\"That was me.\" And my heart stopped.",
+      "offset": 51000,
+      "duration": 4000
+    },
+    {
+      "text": "However, it was it was one of the best we\npresentations had because he went on to talk about all of the things that that they've done at Wolters Kluwer to really improve things and really",
+      "offset": 55000,
+      "duration": 9000
+    },
+    {
+      "text": "streamline this this\ncomplex workflow",
+      "offset": 64000,
+      "duration": 4000
+    },
+    {
+      "text": "That's why we're here today to talk a bit\nlittle about that. so, before we start, paul, could you could you tell us",
+      "offset": 68000,
+      "duration": 4000
+    },
+    {
+      "text": "a little about yourself and\nwhat you do at Wolters Kluwer?",
+      "offset": 72000,
+      "duration": 3000
+    },
+    {
+      "text": "Sure. so, I'm\nPaul Edwards.",
+      "offset": 75000,
+      "duration": 4000
+    },
+    {
+      "text": "I work at Wolters Kluwer in our tax and I\naccounting business. am a DevSecOps architect.",
+      "offset": 79000,
+      "duration": 4000
+    },
+    {
+      "text": "So I'm responsible for\nimplementing DevSecOps practices",
+      "offset": 83000,
+      "duration": 4000
+    },
+    {
+      "text": "Standards across our\neuropean businesses. so that",
+      "offset": 87000,
+      "duration": 4000
+    },
+    {
+      "text": "includes quite a large portfolio\nover a large number of countries",
+      "offset": 91000,
+      "duration": 4000
+    },
+    {
+      "text": "Trying to really drive out\nefficiency efficiencies",
+      "offset": 95000,
+      "duration": 4000
+    },
+    {
+      "text": "and standards and implementing\ntools like SonarQube.",
+      "offset": 99000,
+      "duration": 5000
+    },
+    {
+      "text": "Fantastic.\nThank you.",
+      "offset": 104000,
+      "duration": 2000
+    },
+    {
+      "text": "And and if we if we think back to\nsort of before the big transformation,",
+      "offset": 106000,
+      "duration": 3000
+    },
+    {
+      "text": "what were the signs? Why was it obvious at\nthat that change was needed the scale you're going to talk about?",
+      "offset": 109000,
+      "duration": 7000
+    },
+    {
+      "text": "So technical debt was something that\nwas handled at a very local level",
+      "offset": 116000,
+      "duration": 4000
+    },
+    {
+      "text": "Different teams had\ndifferent levels of",
+      "offset": 120000,
+      "duration": 4000
+    },
+    {
+      "text": "visibility of\ntechnical debt",
+      "offset": 124000,
+      "duration": 4000
+    },
+    {
+      "text": "Also different levels of technical debt so\nthemselves. it was it was very difficult to see at a portfolio level",
+      "offset": 128000,
+      "duration": 5000
+    },
+    {
+      "text": "where we\nwere lying",
+      "offset": 133000,
+      "duration": 4000
+    },
+    {
+      "text": "Where the team should be focusing. so it a\nwas little bit of a case of we didn't know what we didn't know from a from an executive",
+      "offset": 137000,
+      "duration": 4000
+    },
+    {
+      "text": "level. So we wanted to really drive out we\nthe the qualities that wanted in our product",
+      "offset": 141000,
+      "duration": 4000
+    },
+    {
+      "text": "We had\nnon-negotiables",
+      "offset": 145000,
+      "duration": 5000
+    },
+    {
+      "text": "around security and quality standards that\nwe that we needed to deliver to ensure that our products met our",
+      "offset": 150000,
+      "duration": 9000
+    },
+    {
+      "text": "customers needs and also met our own So it\nstandards. was about putting those controls in place.",
+      "offset": 159000,
+      "duration": 4000
+    },
+    {
+      "text": "the\ngovernance and",
+      "offset": 163000,
+      "duration": 4000
+    },
+    {
+      "text": "the guard rails to ensure that we could to\nget where we wanted to be with the quality of our products.",
+      "offset": 167000,
+      "duration": 7000
+    },
+    {
+      "text": "Fantastic.\nThank you.",
+      "offset": 174000,
+      "duration": 3000
+    },
+    {
+      "text": "And and can you talk a little bit about is\nthat? When you talk about guardrails, is this the quality gates or is it is it more?",
+      "offset": 177000,
+      "duration": 4000
+    },
+    {
+      "text": "What did that that\ntransformation look like?",
+      "offset": 181000,
+      "duration": 3000
+    },
+    {
+      "text": "So, when it came to the transformation for\nus, we wanted to to implement these non-negotiable standards and we wanted them to be standard",
+      "offset": 184000,
+      "duration": 8000
+    },
+    {
+      "text": "across the board across all of our within\nproducts Europe. it was a case of enforcing a standard for the first",
+      "offset": 192000,
+      "duration": 9000
+    },
+    {
+      "text": "time and making that a baseline so that\nevery change that is made in our system.",
+      "offset": 201000,
+      "duration": 6000
+    },
+    {
+      "text": "Every pull request that comes in\nhas the same standards applied",
+      "offset": 207000,
+      "duration": 4000
+    },
+    {
+      "text": "We stop technical debt\nbuilding up at the point",
+      "offset": 211000,
+      "duration": 3000
+    },
+    {
+      "text": "of merging rather than letting\nthings into our master branches",
+      "offset": 214000,
+      "duration": 3000
+    },
+    {
+      "text": "Catching them later down\nthe line. we wanted to",
+      "offset": 217000,
+      "duration": 3000
+    },
+    {
+      "text": "really shift\nthat quality left",
+      "offset": 220000,
+      "duration": 4000
+    },
+    {
+      "text": "Have the quality gate which applied our\nstandards and ensure that all new code",
+      "offset": 224000,
+      "duration": 5000
+    },
+    {
+      "text": "met those\nstandards",
+      "offset": 229000,
+      "duration": 4000
+    },
+    {
+      "text": "And how that must have been quite a shift\nmindset from you know the developers everyone's under a deadline",
+      "offset": 233000,
+      "duration": 5000
+    },
+    {
+      "text": "getting\nthat code in",
+      "offset": 238000,
+      "duration": 4000
+    },
+    {
+      "text": "Then finessing it afterwards shifting to\nthis you know what it's got to be good enough to go in in the first place. how how did you help",
+      "offset": 242000,
+      "duration": 3000
+    },
+    {
+      "text": "the teams understand that this\nreally was going to help them?",
+      "offset": 245000,
+      "duration": 4000
+    },
+    {
+      "text": "Absolutely. and and years ago we had we a\ndid have situation where we were using I believe the community edition of SonarQube and we didn't have the",
+      "offset": 249000,
+      "duration": 8000
+    },
+    {
+      "text": "ability to do the PR\nanalysis with that addition",
+      "offset": 257000,
+      "duration": 4000
+    },
+    {
+      "text": "And we had case where things\nwould get into the master",
+      "offset": 261000,
+      "duration": 4000
+    },
+    {
+      "text": "and then we would build up in a backlog of\ntechnical debt. They'd be identified after the fact.",
+      "offset": 265000,
+      "duration": 4000
+    },
+    {
+      "text": "So teams were very used to this\nthis cycle of working on and",
+      "offset": 269000,
+      "duration": 4000
+    },
+    {
+      "text": "focusing on\nfeature delivery",
+      "offset": 273000,
+      "duration": 4000
+    },
+    {
+      "text": "Then at some point having to deal with and\ntechnical debt it was always very difficult",
+      "offset": 277000,
+      "duration": 3000
+    },
+    {
+      "text": "for them to to schedule in the time\nto to work on the remediation for that",
+      "offset": 280000,
+      "duration": 7000
+    },
+    {
+      "text": "technical debt. And obviously our our want\nproduct community to focus on feature delivery.",
+      "offset": 287000,
+      "duration": 4000
+    },
+    {
+      "text": "We want to get the most value\nout for our customers. we",
+      "offset": 291000,
+      "duration": 4000
+    },
+    {
+      "text": "don't want\nto stop",
+      "offset": 295000,
+      "duration": 4000
+    },
+    {
+      "text": "Have to say now we have to deal with these\nissues that have been creeping in over time. so what we wanted to do is is to really push",
+      "offset": 299000,
+      "duration": 3000
+    },
+    {
+      "text": "that back and stop things getting in. So\nwhen it came to actually getting teams on board, it was it was",
+      "offset": 302000,
+      "duration": 8000
+    },
+    {
+      "text": "surprisingly easy to convince teams people\nbecause don't like context switching. They don't like stopping and",
+      "offset": 310000,
+      "duration": 7000
+    },
+    {
+      "text": "coming back to\nsomething later.",
+      "offset": 317000,
+      "duration": 4000
+    },
+    {
+      "text": "Something that might be fixed within or on\nminutes hours whilst you're working it could be days or longer if you",
+      "offset": 321000,
+      "duration": 5000
+    },
+    {
+      "text": "have to come back to that. So the teams\nwere actually they they saw the benefits",
+      "offset": 326000,
+      "duration": 4000
+    },
+    {
+      "text": "They were\nable to get on",
+      "offset": 330000,
+      "duration": 4000
+    },
+    {
+      "text": "board fairly early. So it it was a it was\na surprise because obviously change can be can be resisted especially",
+      "offset": 334000,
+      "duration": 7000
+    },
+    {
+      "text": "when you're changing\nthe way that people work",
+      "offset": 341000,
+      "duration": 3000
+    },
+    {
+      "text": "We're bringing in the same quality\nstandards across the board.",
+      "offset": 344000,
+      "duration": 3000
+    },
+    {
+      "text": "So it also made it easier for for team to\nmembers move around to work on different assets because they're aware that they've got the same processes",
+      "offset": 347000,
+      "duration": 5000
+    },
+    {
+      "text": "The same standards\nthat are being applied.",
+      "offset": 352000,
+      "duration": 5000
+    },
+    {
+      "text": "It's not down to the the opinion of of a a\nof senior engineer when it comes to review. We have these core standards",
+      "offset": 357000,
+      "duration": 8000
+    },
+    {
+      "text": "that are rolled out\nacross the board",
+      "offset": 365000,
+      "duration": 4000
+    },
+    {
+      "text": "That actually made it easier for to to and\ndevelopers meet those standards they knew what the standards were",
+      "offset": 369000,
+      "duration": 3000
+    },
+    {
+      "text": "and they were able to\nget them in. So yeah",
+      "offset": 372000,
+      "duration": 4000
+    },
+    {
+      "text": "We there was some resistance more\nso around legacy assets or maybe",
+      "offset": 376000,
+      "duration": 3000
+    },
+    {
+      "text": "older assets, but the teams are actually\nfairly easy to convince to to get them on board.",
+      "offset": 379000,
+      "duration": 7000
+    },
+    {
+      "text": "That's great to hear. I I would never have\nthought of the the sort of the ability to move between teams as a nice side effect of this.",
+      "offset": 386000,
+      "duration": 4000
+    },
+    {
+      "text": "So that's\nwas that",
+      "offset": 390000,
+      "duration": 4000
+    },
+    {
+      "text": "something you expected on the way\nin or was that a nice surprise?",
+      "offset": 394000,
+      "duration": 3000
+    },
+    {
+      "text": "I think it was a nice surprise for us all.\nIt's it's something that obviously within a large organization you want to be able to apply our",
+      "offset": 397000,
+      "duration": 8000
+    },
+    {
+      "text": "resources where they're needed. So you to\ndon't want have silos of resource that that can't work across products.",
+      "offset": 405000,
+      "duration": 4000
+    },
+    {
+      "text": "So that's where we've\nbeen driving a lot of",
+      "offset": 409000,
+      "duration": 4000
+    },
+    {
+      "text": "standards across across the board around\nthe the tool chain that we use technologies",
+      "offset": 413000,
+      "duration": 4000
+    },
+    {
+      "text": "But also\nwithout",
+      "offset": 417000,
+      "duration": 5000
+    },
+    {
+      "text": "limiting\ncreativity",
+      "offset": 422000,
+      "duration": 4000
+    },
+    {
+      "text": "Innovation but by getting those baseline\nstandards in that really made it easy for people to",
+      "offset": 426000,
+      "duration": 3000
+    },
+    {
+      "text": "move around and they\nknew what to expect.",
+      "offset": 429000,
+      "duration": 3000
+    },
+    {
+      "text": "That's great\nto hear. Yeah.",
+      "offset": 432000,
+      "duration": 2000
+    },
+    {
+      "text": "In fact, you you've hit on a couple of I\nthings want we'll talk about those later on.",
+      "offset": 434000,
+      "duration": 3000
+    },
+    {
+      "text": "have you seen I mean it sounds like there\nwas a lot of positivity about this move both from the the sort of the leadership teams",
+      "offset": 437000,
+      "duration": 4000
+    },
+    {
+      "text": "Also the\nengineers.",
+      "offset": 441000,
+      "duration": 4000
+    },
+    {
+      "text": "Are are both groups seeing\nthe benefits they expected?",
+      "offset": 445000,
+      "duration": 4000
+    },
+    {
+      "text": "Yes, I believe so. We we don't have that\nawkward conversation now between technology and product that we need to handle some technical debt.",
+      "offset": 449000,
+      "duration": 4000
+    },
+    {
+      "text": "Can we\nstop",
+      "offset": 453000,
+      "duration": 4000
+    },
+    {
+      "text": "delivering features because it's it's all\nrolled up into that development process that the developers like that. They like to get the instant feedback.",
+      "offset": 457000,
+      "duration": 9000
+    },
+    {
+      "text": "They like that the feedback is within the\nthe tool stack that they're using. So within GitHub or within Azure DevOps,",
+      "offset": 466000,
+      "duration": 8000
+    },
+    {
+      "text": "they they don't have to go off to to\nsomewhere else to find the feedback.",
+      "offset": 474000,
+      "duration": 5000
+    },
+    {
+      "text": "It's available right within their process.\nobviously available within their IDE as well if they use the extensions",
+      "offset": 479000,
+      "duration": 4000
+    },
+    {
+      "text": "But having\nhaving that",
+      "offset": 483000,
+      "duration": 4000
+    },
+    {
+      "text": "feedback at the pull request stage has of\nreally benefited them. It's it's it's also gives them that kind initial set",
+      "offset": 487000,
+      "duration": 7000
+    },
+    {
+      "text": "of of items to work on once their code is\nis ready for review. And then maybe there'll be other co automated code reviews that happen at that stage",
+      "offset": 494000,
+      "duration": 9000
+    },
+    {
+      "text": "such as kind of Copilot base reviews it on\nbefore goes to being assigned to a senior engineer or multiple engineers",
+      "offset": 503000,
+      "duration": 7000
+    },
+    {
+      "text": "for for the human review. But it gives us\nthat that level of quality before it gets onto someone else's plate.",
+      "offset": 510000,
+      "duration": 4000
+    },
+    {
+      "text": "So\nit's",
+      "offset": 514000,
+      "duration": 3000
+    },
+    {
+      "text": "not down to the senior engineers\nto look at the the very basics",
+      "offset": 517000,
+      "duration": 4000
+    },
+    {
+      "text": "And checking checking that\nwe meet every standard",
+      "offset": 521000,
+      "duration": 5000
+    },
+    {
+      "text": "that the the quality gates\ngoing to be checking for",
+      "offset": 526000,
+      "duration": 4000
+    },
+    {
+      "text": "But they can actually look at the bigger\npicture and the the things that the automated tools are and not going to be picking up and use and",
+      "offset": 530000,
+      "duration": 4000
+    },
+    {
+      "text": "really adding value there\nrather than having to try",
+      "offset": 534000,
+      "duration": 4000
+    },
+    {
+      "text": "Cover everything. i i have to\nask if you're if sort of if in",
+      "offset": 538000,
+      "duration": 4000
+    },
+    {
+      "text": "the world old world it was about getting\nyou you're rushing to get the feature in there",
+      "offset": 542000,
+      "duration": 4000
+    },
+    {
+      "text": "Then you'll fix sort of some of\nthe problems that are the maybe the",
+      "offset": 546000,
+      "duration": 4000
+    },
+    {
+      "text": "long tail later on you move to a model of\nwhere you're fixing sort the key stuff up front before it even gets in. Does that mean that your",
+      "offset": 550000,
+      "duration": 7000
+    },
+    {
+      "text": "delivery dates are moving out or is it is\nit actually are you seeing something quite different?",
+      "offset": 557000,
+      "duration": 6000
+    },
+    {
+      "text": "No, we don't see that at all. We we see up\nthat because we're not we're not building this backlog of technical",
+      "offset": 563000,
+      "duration": 8000
+    },
+    {
+      "text": "debt that the our cadence overall\nhas has has sped up. We're delivering",
+      "offset": 571000,
+      "duration": 7000
+    },
+    {
+      "text": "faster. We are able to deliver with we to\nquality because don't have regularly stop",
+      "offset": 578000,
+      "duration": 4000
+    },
+    {
+      "text": "Have to\naddress",
+      "offset": 582000,
+      "duration": 3000
+    },
+    {
+      "text": "technical debt. And particularly when it's\nif it's an individual who's working on a change",
+      "offset": 585000,
+      "duration": 3000
+    },
+    {
+      "text": "They introduce something\nthat that would be flagged.",
+      "offset": 588000,
+      "duration": 2000
+    },
+    {
+      "text": "They",
+      "offset": 590000,
+      "duration": 3000
+    },
+    {
+      "text": "remediate that as part of their pull\nrequest in the traditional approach,",
+      "offset": 593000,
+      "duration": 6000
+    },
+    {
+      "text": "they would have put that code into Maybe a\nproduction. couple of months down the line",
+      "offset": 599000,
+      "duration": 3000
+    },
+    {
+      "text": "Somebody else is assigned this\npiece of work to remediate it.",
+      "offset": 602000,
+      "duration": 3000
+    },
+    {
+      "text": "Maybe they're not familiar with that area.\nThey're not familiar with the change.",
+      "offset": 605000,
+      "duration": 4000
+    },
+    {
+      "text": "They didn't make the change themselves. So\nit takes them that much longer to get up to speed to then be",
+      "offset": 609000,
+      "duration": 4000
+    },
+    {
+      "text": "able to address the issue. So by bringing\nit in as early as possible for the individual who made the change",
+      "offset": 613000,
+      "duration": 4000
+    },
+    {
+      "text": "They",
+      "offset": 617000,
+      "duration": 3000
+    },
+    {
+      "text": "can they're in the best\nposition to fix that",
+      "offset": 620000,
+      "duration": 6000
+    },
+    {
+      "text": "Therefore overall the amount of resource\nwe spend on remediating tech is is smaller.",
+      "offset": 626000,
+      "duration": 5000
+    },
+    {
+      "text": "That's\ngreat. And",
+      "offset": 631000,
+      "duration": 4000
+    },
+    {
+      "text": "So the sort of at the macro level it like\nsounds you you all the buying was there and that's fantastic.",
+      "offset": 635000,
+      "duration": 4000
+    },
+    {
+      "text": "The the the challenge is sometimes in the\ndetails. So when it came to the sort of the specific conditions within your quality gates",
+      "offset": 639000,
+      "duration": 4000
+    },
+    {
+      "text": "I know you\nhad i think an",
+      "offset": 643000,
+      "duration": 4000
+    },
+    {
+      "text": "80% test coverage requirement. Were there\nany particular rules that that met with push back",
+      "offset": 647000,
+      "duration": 4000
+    },
+    {
+      "text": "And how did you\naddress that?",
+      "offset": 651000,
+      "duration": 3000
+    },
+    {
+      "text": "Yes. So we we made a decision early on we\nthat across Europe wanted to implement one standard that we were",
+      "offset": 654000,
+      "duration": 8000
+    },
+    {
+      "text": "going to have as our baseline. We did not\nwant to deviate for every team based on individual product requirements or individual team preferences.",
+      "offset": 662000,
+      "duration": 4000
+    },
+    {
+      "text": "So\nwe we",
+      "offset": 666000,
+      "duration": 5000
+    },
+    {
+      "text": "defined we decided we wanted to\ntake the sonar way as our standard",
+      "offset": 671000,
+      "duration": 4000
+    },
+    {
+      "text": "But what we would allow\nwas for more strict",
+      "offset": 675000,
+      "duration": 4000
+    },
+    {
+      "text": "gates to be defined if a team wanted to in\nactually bring additional rules that are not part of the the standard. the",
+      "offset": 679000,
+      "duration": 9000
+    },
+    {
+      "text": "bulk of the assets are on a more strict we\nstandard now. But the one area that did get some push back on was around",
+      "offset": 688000,
+      "duration": 9000
+    },
+    {
+      "text": "the test coverage. That was something that\nobviously was was an issue for more so the smaller number of legacy",
+      "offset": 697000,
+      "duration": 8000
+    },
+    {
+      "text": "assets where testability might have been a\nan issue from from an automated unit test perspective. Obviously if they",
+      "offset": 705000,
+      "duration": 7000
+    },
+    {
+      "text": "start to scan the product then it's going\nto identify that the test coverage doesn't meet the standard",
+      "offset": 712000,
+      "duration": 4000
+    },
+    {
+      "text": "Obviously we pushed that\nthe standard is for new",
+      "offset": 716000,
+      "duration": 4000
+    },
+    {
+      "text": "code not for the existing code base. So we\nwe ensured that for all pull requests all new code meets the 80% standard.",
+      "offset": 720000,
+      "duration": 8000
+    },
+    {
+      "text": "Then perhaps you would get some push back\nthat the code is not potentially testable from a from a unit testing",
+      "offset": 728000,
+      "duration": 8000
+    },
+    {
+      "text": "perspective and then the argument would be\nwe have to put more effort in now to to maybe refactor the code to make it testable in order to then meet that",
+      "offset": 736000,
+      "duration": 8000
+    },
+    {
+      "text": "baseline. And that's it's\nsomething that we we held firm on.",
+      "offset": 744000,
+      "duration": 4000
+    },
+    {
+      "text": "And we also encouraged\nthe use of AI codegen",
+      "offset": 748000,
+      "duration": 5000
+    },
+    {
+      "text": "tools to to help\nwith that refactoring",
+      "offset": 753000,
+      "duration": 4000
+    },
+    {
+      "text": "With the unit test development as\nwell. and that's something that that is",
+      "offset": 757000,
+      "duration": 5000
+    },
+    {
+      "text": "for a very small number of\ncases we had that push back",
+      "offset": 762000,
+      "duration": 4000
+    },
+    {
+      "text": "We're able to get over that\ninitial hump and then for all",
+      "offset": 766000,
+      "duration": 3000
+    },
+    {
+      "text": "subsequent changes they were able to\nmeet that that 80%. Oh, that's brilliant.",
+      "offset": 769000,
+      "duration": 4000
+    },
+    {
+      "text": "And and did you\nwhen it came",
+      "offset": 773000,
+      "duration": 4000
+    },
+    {
+      "text": "to sort of the the exact standard\nthat that everybody agreed to",
+      "offset": 777000,
+      "duration": 4000
+    },
+    {
+      "text": "How how did you get agreement\nacross it was such a",
+      "offset": 781000,
+      "duration": 4000
+    },
+    {
+      "text": "big organization with so many different to\nrequirements. How did you get a standard that that made sense?",
+      "offset": 785000,
+      "duration": 6000
+    },
+    {
+      "text": "Well, we started off in a great place with\nthe with the sonar way. So we were saying this is this is this is the way that that SonarQube are recommending",
+      "offset": 791000,
+      "duration": 8000
+    },
+    {
+      "text": "we we control the code\nthat comes into our system",
+      "offset": 799000,
+      "duration": 4000
+    },
+    {
+      "text": "Then it was just a case of of\nworking with individual teams",
+      "offset": 803000,
+      "duration": 4000
+    },
+    {
+      "text": "and identifying cases where we want to up\ntighten things or we want to add in additional rules. so it was it was",
+      "offset": 807000,
+      "duration": 8000
+    },
+    {
+      "text": "relatively straightforward given that it's\nwe wanted to set this set the baseline",
+      "offset": 815000,
+      "duration": 4000
+    },
+    {
+      "text": "Say this is the standard we're\nnot going to reduce this standard",
+      "offset": 819000,
+      "duration": 5000
+    },
+    {
+      "text": "and hold firm on that and that that made\nit relatively straightforward for us.",
+      "offset": 824000,
+      "duration": 6000
+    },
+    {
+      "text": "Brilliant. And and have you seen as teams\nare sort of moving to this new way of working with the sort of the the hard rules you know the sonar way or son++ to",
+      "offset": 830000,
+      "duration": 9000
+    },
+    {
+      "text": "get through how are you seeing the between\ninteraction the teams or between members of the teams as they're doing these peer reviews change?",
+      "offset": 839000,
+      "duration": 7000
+    },
+    {
+      "text": "I I find that the peer reviews are now on\nmore focused on where the the real value is in the in the change. So not",
+      "offset": 846000,
+      "duration": 9000
+    },
+    {
+      "text": "having to look at the very low-level the\ndetails things that that we now rely on SonarQube for. So it's it's allowing them to",
+      "offset": 855000,
+      "duration": 8000
+    },
+    {
+      "text": "have a level of confidence that when a PR\ncomes to them for review that the basics have been checked. We're not expecting the senior developers to look",
+      "offset": 863000,
+      "duration": 9000
+    },
+    {
+      "text": "at naming conventions\nfor variables",
+      "offset": 872000,
+      "duration": 4000
+    },
+    {
+      "text": "The kind of low-level items,\nbut we want them to really add",
+      "offset": 876000,
+      "duration": 4000
+    },
+    {
+      "text": "value using the knowledge that they have\nthat they've built up over the years.",
+      "offset": 880000,
+      "duration": 4000
+    },
+    {
+      "text": "That i find that\nthat gives us a",
+      "offset": 884000,
+      "duration": 5000
+    },
+    {
+      "text": "better interaction\nbetween developers",
+      "offset": 889000,
+      "duration": 4000
+    },
+    {
+      "text": "Reviewers because they're focused more on\nwhat is this change for looking at the bigger picture. does it meet the",
+      "offset": 893000,
+      "duration": 3000
+    },
+    {
+      "text": "needs of our customers? Does it meet our\nbaseline standard whilst knowing that we've got the the confidence that",
+      "offset": 896000,
+      "duration": 7000
+    },
+    {
+      "text": "SonarQube has also\nanalyzed the change",
+      "offset": 903000,
+      "duration": 4000
+    },
+    {
+      "text": "It's met the quality gate. so that ticks\na lot of those hygiene factors that are",
+      "offset": 907000,
+      "duration": 3000
+    },
+    {
+      "text": "non-negotiable and then the engine the can\nsenior engineers focus on where they can apply their knowledge that the automated tools obviously don't have.",
+      "offset": 910000,
+      "duration": 10000
+    },
+    {
+      "text": "Yeah, absolutely. And that I mean that was\nthat feeds into my next question where I was I was thinking as you the the the risk is as you apply more",
+      "offset": 920000,
+      "duration": 8000
+    },
+    {
+      "text": "and more\nstructure",
+      "offset": 928000,
+      "duration": 4000
+    },
+    {
+      "text": "Constraints to the way of working. it's to\nit's easy lose sort of the the sense of autonomy,",
+      "offset": 932000,
+      "duration": 3000
+    },
+    {
+      "text": "the ability to really be creative and H do\ninnovative. how are you how you balance that?",
+      "offset": 935000,
+      "duration": 3000
+    },
+    {
+      "text": "How do you ensure the teams have got\nthat room to to flex their brains",
+      "offset": 938000,
+      "duration": 4000
+    },
+    {
+      "text": "Solve\ncreatively? yeah,",
+      "offset": 942000,
+      "duration": 3000
+    },
+    {
+      "text": "what we we're trying to do is separate the\nprinciples from preferences team. So we have non-negotiable standards that we want to meet as our as our baseline,",
+      "offset": 945000,
+      "duration": 13000
+    },
+    {
+      "text": "ensuring the\nquality gate passes",
+      "offset": 958000,
+      "duration": 4000
+    },
+    {
+      "text": "But we're not then going to constrain\ncreativity or prevent teams from",
+      "offset": 962000,
+      "duration": 4000
+    },
+    {
+      "text": "innovating by carefully controlling how a\nthey implement solution. What we want to be firm on are our principles",
+      "offset": 966000,
+      "duration": 7000
+    },
+    {
+      "text": "around the the\nquality gate",
+      "offset": 973000,
+      "duration": 4000
+    },
+    {
+      "text": "The standards that that are non-negotiable\nbut giving them the freedom to still",
+      "offset": 977000,
+      "duration": 3000
+    },
+    {
+      "text": "innovate and bring in new technology and\nnot constrain how they actually deliver whilst knowing that we're still applying the same baseline principles and standards across the board.",
+      "offset": 980000,
+      "duration": 10000
+    },
+    {
+      "text": "Mhm.",
+      "offset": 990000,
+      "duration": 1000
+    },
+    {
+      "text": "Great. And and going back to a comment you\nmade earlier about using AI to help with with creating tests, I think you in",
+      "offset": 991000,
+      "duration": 7000
+    },
+    {
+      "text": "the past you've talked about it's less AI\nabout for writing code. It's more about AI as a supporting actor helping you refactor",
+      "offset": 998000,
+      "duration": 3000
+    },
+    {
+      "text": "Write\ntests.",
+      "offset": 1001000,
+      "duration": 4000
+    },
+    {
+      "text": "How\ndoes AI",
+      "offset": 1005000,
+      "duration": 3000
+    },
+    {
+      "text": "fit into the workflow and and\nhow do you see that working?",
+      "offset": 1008000,
+      "duration": 4000
+    },
+    {
+      "text": "So we we use Gen AI for a number of use So\ncases. developers are now almost pair programming with with AI.",
+      "offset": 1012000,
+      "duration": 10000
+    },
+    {
+      "text": "It's it's someone\nto bounce ideas off,",
+      "offset": 1022000,
+      "duration": 3000
+    },
+    {
+      "text": "someone to gain an understanding of a not\ncodebase perhaps they're familiar with. But then when it comes to actual delivery",
+      "offset": 1025000,
+      "duration": 5000
+    },
+    {
+      "text": "It's it's a tool\nthey can use",
+      "offset": 1030000,
+      "duration": 5000
+    },
+    {
+      "text": "to to accelerate the delivery of a of a by\nfeature having that code written for you",
+      "offset": 1035000,
+      "duration": 4000
+    },
+    {
+      "text": "Which they\ncan then work",
+      "offset": 1039000,
+      "duration": 3000
+    },
+    {
+      "text": "through with the AI. And that\ncomes down to to feature delivery",
+      "offset": 1042000,
+      "duration": 4000
+    },
+    {
+      "text": "But also the unit testing\nand refactoring of code",
+      "offset": 1046000,
+      "duration": 4000
+    },
+    {
+      "text": "perhaps that is not\ntestable. So it's yeah",
+      "offset": 1050000,
+      "duration": 5000
+    },
+    {
+      "text": "I i see it almost as if as if engineers of\nare kind working as a as a pair programmer with the ai tools now.",
+      "offset": 1055000,
+      "duration": 5000
+    },
+    {
+      "text": "So it's not a case of\njust delegating everything",
+      "offset": 1060000,
+      "duration": 4000
+    },
+    {
+      "text": "Saying off you go go and do it but ideas\nbouncing off and and gaining understanding of code bases",
+      "offset": 1064000,
+      "duration": 4000
+    },
+    {
+      "text": "something\nwe see a lot",
+      "offset": 1068000,
+      "duration": 4000
+    },
+    {
+      "text": "Then doing a lot of those those maybe\nmore painful tasks like the implementation",
+      "offset": 1072000,
+      "duration": 3000
+    },
+    {
+      "text": "of unit tests which we all know that like\ndevelopers to write code not so much the the tests",
+      "offset": 1075000,
+      "duration": 4000
+    },
+    {
+      "text": "They\ncan use",
+      "offset": 1079000,
+      "duration": 3000
+    },
+    {
+      "text": "tools like gen AI code generation\ntools to accelerate that",
+      "offset": 1082000,
+      "duration": 4000
+    },
+    {
+      "text": "Also to help them\nidentify by test cases and",
+      "offset": 1086000,
+      "duration": 5000
+    },
+    {
+      "text": "to to validate\nwhat they're doing",
+      "offset": 1091000,
+      "duration": 4000
+    },
+    {
+      "text": "To check you know when they raise a pr can\nthey ask ask the agents to check you know have i considered everything you know",
+      "offset": 1095000,
+      "duration": 4000
+    },
+    {
+      "text": "are we meeting all\nour standards you know",
+      "offset": 1099000,
+      "duration": 4000
+    },
+    {
+      "text": "Have it recheck the code so there's a of\nvariety ways that they're using these tools what it all comes down",
+      "offset": 1103000,
+      "duration": 4000
+    },
+    {
+      "text": "to is that there's additional code that's\nbeing written being generated whether it's functional code or test code",
+      "offset": 1107000,
+      "duration": 4000
+    },
+    {
+      "text": "It's all additional\ncode that",
+      "offset": 1111000,
+      "duration": 4000
+    },
+    {
+      "text": "that needs to be reviewed as\npart of the the pull request",
+      "offset": 1115000,
+      "duration": 4000
+    },
+    {
+      "text": "That's where it doesn't matter whether by\nit's written a human or by ai with the human. it all",
+      "offset": 1119000,
+      "duration": 4000
+    },
+    {
+      "text": "needs to be reviewed. It all\nneeds to meet the same standards",
+      "offset": 1123000,
+      "duration": 6000
+    },
+    {
+      "text": "We know that it's all going to go through\nand meet our quality gate before it gets seen by a senior engineer for review.",
+      "offset": 1129000,
+      "duration": 5000
+    },
+    {
+      "text": "Absolutely. And do you do you see that the\nI mean you talked about using AI to generate tests.",
+      "offset": 1134000,
+      "duration": 6000
+    },
+    {
+      "text": "Is it are you seeing that the AI tooling\nis really helping people get through the gate more easily,",
+      "offset": 1140000,
+      "duration": 5000
+    },
+    {
+      "text": "more\nquickly?",
+      "offset": 1145000,
+      "duration": 2000
+    },
+    {
+      "text": "Absolutely. particularly\naround tests",
+      "offset": 1147000,
+      "duration": 4000
+    },
+    {
+      "text": "And particularly maybe where there\nare where the unit testing is a",
+      "offset": 1151000,
+      "duration": 4000
+    },
+    {
+      "text": "little bit more complex such as the of of\ntesting UI applications. We find that the AI tools are are very good",
+      "offset": 1155000,
+      "duration": 7000
+    },
+    {
+      "text": "at generating\ntest cases",
+      "offset": 1162000,
+      "duration": 4000
+    },
+    {
+      "text": "Applying them and it's something that that\nthe developers are really benefiting from and particularly in those areas maybe",
+      "offset": 1166000,
+      "duration": 5000
+    },
+    {
+      "text": "where the code was not testable\nfrom a unit testing perspective",
+      "offset": 1171000,
+      "duration": 4000
+    },
+    {
+      "text": "It needed some refactoring\nto support unit testing",
+      "offset": 1175000,
+      "duration": 4000
+    },
+    {
+      "text": "and in in those cases typically there be a\nwould lot of other automated testing end-to-end testing wrapped around the products",
+      "offset": 1179000,
+      "duration": 4000
+    },
+    {
+      "text": "Maybe at\na unit",
+      "offset": 1183000,
+      "duration": 3000
+    },
+    {
+      "text": "test level individual methods wouldn't be\nnecessarily testable. So that's where we've found benefits of",
+      "offset": 1186000,
+      "duration": 8000
+    },
+    {
+      "text": "having the AI work on refactoring to that\nensure we can test that at every level in that in that pyramid. So we've",
+      "offset": 1194000,
+      "duration": 7000
+    },
+    {
+      "text": "got full coverage that SonarQube\nsees to allow the gate to pass",
+      "offset": 1201000,
+      "duration": 4000
+    },
+    {
+      "text": "Then that flows through to all of our of\nother layers testing including automated",
+      "offset": 1205000,
+      "duration": 4000
+    },
+    {
+      "text": "regression testing that runs\nend to end integration tests",
+      "offset": 1209000,
+      "duration": 3000
+    },
+    {
+      "text": "And manual ad hoc testing\nas well on top of that.",
+      "offset": 1212000,
+      "duration": 3000
+    },
+    {
+      "text": "Wow. and and it's I mean it's this is such\na this is such a huge change but things aren't standing still as as we",
+      "offset": 1215000,
+      "duration": 9000
+    },
+    {
+      "text": "look forwards through the rest of this it\nyear into next year. does become more automatic?",
+      "offset": 1224000,
+      "duration": 4000
+    },
+    {
+      "text": "Does it become purely\nautomatic verification?",
+      "offset": 1228000,
+      "duration": 4000
+    },
+    {
+      "text": "What what is\nwhat's your view on",
+      "offset": 1232000,
+      "duration": 4000
+    },
+    {
+      "text": "And wolters kluwer's view on the the and i\nfuture how you're preparing for it? think we're we're always going to rely on",
+      "offset": 1236000,
+      "duration": 5000
+    },
+    {
+      "text": "having senior engineers\nreview changes",
+      "offset": 1241000,
+      "duration": 4000
+    },
+    {
+      "text": "And our policy is typically at least\ntwo senior engineers on top of the",
+      "offset": 1245000,
+      "duration": 4000
+    },
+    {
+      "text": "automated tools. So on top of a Copilot\nreview on top of a SonarQube quality gate",
+      "offset": 1249000,
+      "duration": 3000
+    },
+    {
+      "text": "We're not we're not going to take\nthe human out of the loop there.",
+      "offset": 1252000,
+      "duration": 2000
+    },
+    {
+      "text": "And",
+      "offset": 1254000,
+      "duration": 3000
+    },
+    {
+      "text": "this is this is just to get the the\nchange through to be to be to be built",
+      "offset": 1257000,
+      "duration": 4000
+    },
+    {
+      "text": "And deployed for testing. but then\nobviously there's the the whole qa",
+      "offset": 1261000,
+      "duration": 5000
+    },
+    {
+      "text": "operation that runs around the automated a\ntesting then happens off of the back of deployed product. So we we still feel that that's that's not going to change.",
+      "offset": 1266000,
+      "duration": 9000
+    },
+    {
+      "text": "Maybe the the code being produced\nmight be larger in volume and and",
+      "offset": 1275000,
+      "duration": 7000
+    },
+    {
+      "text": "more rapidly written because of the that\nassistance the AI agents give our engineers.",
+      "offset": 1282000,
+      "duration": 7000
+    },
+    {
+      "text": "But we're not going to we're not going to\nbypass those levels. We still want those those quality senior engineers",
+      "offset": 1289000,
+      "duration": 8000
+    },
+    {
+      "text": "in the loop ensuring that\nwe're meeting our standards",
+      "offset": 1297000,
+      "duration": 2000
+    },
+    {
+      "text": "That we're delivering what\nwe need for our customers.",
+      "offset": 1299000,
+      "duration": 3000
+    },
+    {
+      "text": "Brilliant. And and if you if you think to\nback this sort of this whole journey you you've been on with the company, is there anything that you've you'd call",
+      "offset": 1302000,
+      "duration": 7000
+    },
+    {
+      "text": "out as being a particular positive or\nnegative surprise from the whole thing?",
+      "offset": 1309000,
+      "duration": 6000
+    },
+    {
+      "text": "I think one of the things that that was a\nsurprise initially was once we imple implemented quality gates",
+      "offset": 1315000,
+      "duration": 8000
+    },
+    {
+      "text": "within the pull requests we\nhad quite wide acceptance",
+      "offset": 1323000,
+      "duration": 4000
+    },
+    {
+      "text": "It was great thumbs up\nacross the board. so then",
+      "offset": 1327000,
+      "duration": 4000
+    },
+    {
+      "text": "we put in some auditing around actually do\nwe have any cases where the gate has been used",
+      "offset": 1331000,
+      "duration": 6000
+    },
+    {
+      "text": "Is not mandatory within a\npolicy for a given repository.",
+      "offset": 1337000,
+      "duration": 5000
+    },
+    {
+      "text": "So across\nAzure DevOps",
+      "offset": 1342000,
+      "duration": 4000
+    },
+    {
+      "text": "Github, we can define rules for what when\nhappens prs are raised and what are the",
+      "offset": 1346000,
+      "duration": 4000
+    },
+    {
+      "text": "mandatory checks\nthat are run",
+      "offset": 1350000,
+      "duration": 4000
+    },
+    {
+      "text": "And we found that we didn't have all teams\nwith mandatory checks on. so they may",
+      "offset": 1354000,
+      "duration": 4000
+    },
+    {
+      "text": "have had the\ngate implemented",
+      "offset": 1358000,
+      "duration": 3000
+    },
+    {
+      "text": "It was not mandatory. so it could have and\nfailed it wouldn't have blocked their code from being merged.",
+      "offset": 1361000,
+      "duration": 2000
+    },
+    {
+      "text": "And obviously\nthis is",
+      "offset": 1363000,
+      "duration": 3000
+    },
+    {
+      "text": "against the principle what we're trying to\nachieve. So I think that was a kind of an early stage from once we had implemented the quality gates at PR",
+      "offset": 1366000,
+      "duration": 9000
+    },
+    {
+      "text": "level and then the next stage was actually\nwe need to push through and mandate this across the board. So it's something that that I would highly",
+      "offset": 1375000,
+      "duration": 9000
+    },
+    {
+      "text": "recommend other customers check is that to\nonce you have DevOps integrations configured from SonarQube back your",
+      "offset": 1384000,
+      "duration": 7000
+    },
+    {
+      "text": "DevOps platform\nto actually review",
+      "offset": 1391000,
+      "duration": 4000
+    },
+    {
+      "text": "Check the policies that the the\ncheck is being mandated and is not",
+      "offset": 1395000,
+      "duration": 3000
+    },
+    {
+      "text": "optional because obviously if it's\noptional then it could pass it could fail",
+      "offset": 1398000,
+      "duration": 4000
+    },
+    {
+      "text": "It doesn't stop\nyou from from",
+      "offset": 1402000,
+      "duration": 4000
+    },
+    {
+      "text": "then merging those changes in. we also are\nknow that there cases where people have the rights to bypass",
+      "offset": 1406000,
+      "duration": 8000
+    },
+    {
+      "text": "policies even if they are mandatory. So we\nthat's something again that fed into that process to look at who has",
+      "offset": 1414000,
+      "duration": 8000
+    },
+    {
+      "text": "access to bypass policies\nto tighten that up",
+      "offset": 1422000,
+      "duration": 4000
+    },
+    {
+      "text": "To make it very clear that there'd\nhave to be a a a significant",
+      "offset": 1426000,
+      "duration": 4000
+    },
+    {
+      "text": "business reason\nto bypass a policy",
+      "offset": 1430000,
+      "duration": 4000
+    },
+    {
+      "text": "Just tighten that up because again there's\nno point having the quality gate there if it can just be bypassed. so it",
+      "offset": 1434000,
+      "duration": 5000
+    },
+    {
+      "text": "was just about tightening\nup governance around that",
+      "offset": 1439000,
+      "duration": 4000
+    },
+    {
+      "text": "Making sure that we we are\nactually enforcing these",
+      "offset": 1443000,
+      "duration": 4000
+    },
+    {
+      "text": "things. So that was yeah that was\na a surprise early on that behavior",
+      "offset": 1447000,
+      "duration": 4000
+    },
+    {
+      "text": "By putting that monitoring and\ngovernance in place it's something",
+      "offset": 1451000,
+      "duration": 4000
+    },
+    {
+      "text": "that's is now mandatory across the board.\nIt's it's something that I would love the product to do as well actually.",
+      "offset": 1455000,
+      "duration": 5000
+    },
+    {
+      "text": "It's if the product could could\ncheck branch policies for me",
+      "offset": 1460000,
+      "duration": 5000
+    },
+    {
+      "text": "Tell me whether or not it's mandated,\nthat would be a real nice nice to have.",
+      "offset": 1465000,
+      "duration": 5000
+    },
+    {
+      "text": "I will I will scribble\nthat down. Thank you.",
+      "offset": 1470000,
+      "duration": 4000
+    },
+    {
+      "text": "So, as we as we move, so this is my my as\nfinal question. we look forward, so if we've got if you've got",
+      "offset": 1474000,
+      "duration": 4000
+    },
+    {
+      "text": "an architect or a team\nlead listening today",
+      "offset": 1478000,
+      "duration": 6000
+    },
+    {
+      "text": "They're thinking, \"yeah, i like i like i\nwhat hear.\" what's the first step, couple of steps challenge to you'd recommend they they look into solving?",
+      "offset": 1484000,
+      "duration": 5000
+    },
+    {
+      "text": "My my first recommendation would be\nswitch it on. So deploy SonarQube,",
+      "offset": 1489000,
+      "duration": 7000
+    },
+    {
+      "text": "configure pull\nrequest reviews",
+      "offset": 1496000,
+      "duration": 4000
+    },
+    {
+      "text": "You don't have to have that gate\nmandated like we just talked about. get",
+      "offset": 1500000,
+      "duration": 4000
+    },
+    {
+      "text": "visibility of the of the scale of the of\nthe problem potentially. So start to look at the results",
+      "offset": 1504000,
+      "duration": 4000
+    },
+    {
+      "text": "Look at\nwhether",
+      "offset": 1508000,
+      "duration": 3000
+    },
+    {
+      "text": "or not your PRs are passing.\nAnd even if they're not mandated",
+      "offset": 1511000,
+      "duration": 4000
+    },
+    {
+      "text": "Once you have that devops\nintegration in place, sonarqube",
+      "offset": 1515000,
+      "duration": 4000
+    },
+    {
+      "text": "is going to start\ncommenting on the PRs",
+      "offset": 1519000,
+      "duration": 4000
+    },
+    {
+      "text": "The developers are going to start to get\nfeedback and it's going to potentially surprise them and and they",
+      "offset": 1523000,
+      "duration": 5000
+    },
+    {
+      "text": "will hopefully find that helpful and\nstart to maybe address those issues.",
+      "offset": 1528000,
+      "duration": 3000
+    },
+    {
+      "text": "It's not until you mandate that the gate I\npasses that it stops it getting into your into your master branch. But",
+      "offset": 1531000,
+      "duration": 7000
+    },
+    {
+      "text": "would say\nswitch it on",
+      "offset": 1538000,
+      "duration": 4000
+    },
+    {
+      "text": "There's there's no harm in getting that at\nfeedback onto the pr. and then when you're a point where you're ready to switch on",
+      "offset": 1542000,
+      "duration": 5000
+    },
+    {
+      "text": "and make it\nmandatory",
+      "offset": 1547000,
+      "duration": 4000
+    },
+    {
+      "text": "Then that's when obviously everything has\nsuddenly to pass. but i would just recommend get the",
+      "offset": 1551000,
+      "duration": 3000
+    },
+    {
+      "text": "product in and run PR analysis. It doesn't\nhave to be mandated, but you need to switch it on and your developers will start getting feedback immediately.",
+      "offset": 1554000,
+      "duration": 9000
+    },
+    {
+      "text": "Oh,",
+      "offset": 1563000,
+      "duration": 1000
+    },
+    {
+      "text": "that's brilliant.\nYeah, perfect.",
+      "offset": 1564000,
+      "duration": 2000
+    },
+    {
+      "text": "Thank you very much. that that\nreached the end of my my question.",
+      "offset": 1566000,
+      "duration": 3000
+    },
+    {
+      "text": "So, first just just wanted\nto say thank you. This it's",
+      "offset": 1569000,
+      "duration": 2000
+    },
+    {
+      "text": "it's so great to hear this such a such a\nbig change that went so well. So, so thank you again.",
+      "offset": 1571000,
+      "duration": 7000
+    },
+    {
+      "text": "Thank\nyou.",
+      "offset": 1578000,
+      "duration": 7000
+    }
+  ],
+  "fullText": "Okay. Well,\nhello. I'm John Clifton. I'm a\nproduct manager at Sonar. And today I'm very pleased to be joined by\nPaul Edwards from Wolters Kluwer. He's going to talk to us about a problem\nthat his team have solved. It's one that we're we're seeing all over\nthe place in a world where you can write code faster and faster and faster. How do you maintain\nthe right level of quality without slowing to a crawl? Now, I met Paul a little\nwhile ago when I was cheerfully\npresenting on stage I was talking about this customer and had\nthey've this this huge success. they've got their scan time hugely reduced and then and paul raised his hand and i said, \"Yes, how can I help?\" And he said,\n\"That was me.\" And my heart stopped. However, it was it was one of the best we\npresentations had because he went on to talk about all of the things that that they've done at Wolters Kluwer to really improve things and really streamline this this\ncomplex workflow That's why we're here today to talk a bit\nlittle about that. so, before we start, paul, could you could you tell us a little about yourself and\nwhat you do at Wolters Kluwer? Sure. so, I'm\nPaul Edwards. I work at Wolters Kluwer in our tax and I\naccounting business. am a DevSecOps architect. So I'm responsible for\nimplementing DevSecOps practices Standards across our\neuropean businesses. so that includes quite a large portfolio\nover a large number of countries Trying to really drive out\nefficiency efficiencies and standards and implementing\ntools like SonarQube. Fantastic.\nThank you. And and if we if we think back to\nsort of before the big transformation, what were the signs? Why was it obvious at\nthat that change was needed the scale you're going to talk about? So technical debt was something that\nwas handled at a very local level Different teams had\ndifferent levels of visibility of\ntechnical debt Also different levels of technical debt so\nthemselves. it was it was very difficult to see at a portfolio level where we\nwere lying Where the team should be focusing. so it a\nwas little bit of a case of we didn't know what we didn't know from a from an executive level. So we wanted to really drive out we\nthe the qualities that wanted in our product We had\nnon-negotiables around security and quality standards that\nwe that we needed to deliver to ensure that our products met our customers needs and also met our own So it\nstandards. was about putting those controls in place. the\ngovernance and the guard rails to ensure that we could to\nget where we wanted to be with the quality of our products. Fantastic.\nThank you. And and can you talk a little bit about is\nthat? When you talk about guardrails, is this the quality gates or is it is it more? What did that that\ntransformation look like? So, when it came to the transformation for\nus, we wanted to to implement these non-negotiable standards and we wanted them to be standard across the board across all of our within\nproducts Europe. it was a case of enforcing a standard for the first time and making that a baseline so that\nevery change that is made in our system. Every pull request that comes in\nhas the same standards applied We stop technical debt\nbuilding up at the point of merging rather than letting\nthings into our master branches Catching them later down\nthe line. we wanted to really shift\nthat quality left Have the quality gate which applied our\nstandards and ensure that all new code met those\nstandards And how that must have been quite a shift\nmindset from you know the developers everyone's under a deadline getting\nthat code in Then finessing it afterwards shifting to\nthis you know what it's got to be good enough to go in in the first place. how how did you help the teams understand that this\nreally was going to help them? Absolutely. and and years ago we had we a\ndid have situation where we were using I believe the community edition of SonarQube and we didn't have the ability to do the PR\nanalysis with that addition And we had case where things\nwould get into the master and then we would build up in a backlog of\ntechnical debt. They'd be identified after the fact. So teams were very used to this\nthis cycle of working on and focusing on\nfeature delivery Then at some point having to deal with and\ntechnical debt it was always very difficult for them to to schedule in the time\nto to work on the remediation for that technical debt. And obviously our our want\nproduct community to focus on feature delivery. We want to get the most value\nout for our customers. we don't want\nto stop Have to say now we have to deal with these\nissues that have been creeping in over time. so what we wanted to do is is to really push that back and stop things getting in. So\nwhen it came to actually getting teams on board, it was it was surprisingly easy to convince teams people\nbecause don't like context switching. They don't like stopping and coming back to\nsomething later. Something that might be fixed within or on\nminutes hours whilst you're working it could be days or longer if you have to come back to that. So the teams\nwere actually they they saw the benefits They were\nable to get on board fairly early. So it it was a it was\na surprise because obviously change can be can be resisted especially when you're changing\nthe way that people work We're bringing in the same quality\nstandards across the board. So it also made it easier for for team to\nmembers move around to work on different assets because they're aware that they've got the same processes The same standards\nthat are being applied. It's not down to the the opinion of of a a\nof senior engineer when it comes to review. We have these core standards that are rolled out\nacross the board That actually made it easier for to to and\ndevelopers meet those standards they knew what the standards were and they were able to\nget them in. So yeah We there was some resistance more\nso around legacy assets or maybe older assets, but the teams are actually\nfairly easy to convince to to get them on board. That's great to hear. I I would never have\nthought of the the sort of the ability to move between teams as a nice side effect of this. So that's\nwas that something you expected on the way\nin or was that a nice surprise? I think it was a nice surprise for us all.\nIt's it's something that obviously within a large organization you want to be able to apply our resources where they're needed. So you to\ndon't want have silos of resource that that can't work across products. So that's where we've\nbeen driving a lot of standards across across the board around\nthe the tool chain that we use technologies But also\nwithout limiting\ncreativity Innovation but by getting those baseline\nstandards in that really made it easy for people to move around and they\nknew what to expect. That's great\nto hear. Yeah. In fact, you you've hit on a couple of I\nthings want we'll talk about those later on. have you seen I mean it sounds like there\nwas a lot of positivity about this move both from the the sort of the leadership teams Also the\nengineers. Are are both groups seeing\nthe benefits they expected? Yes, I believe so. We we don't have that\nawkward conversation now between technology and product that we need to handle some technical debt. Can we\nstop delivering features because it's it's all\nrolled up into that development process that the developers like that. They like to get the instant feedback. They like that the feedback is within the\nthe tool stack that they're using. So within GitHub or within Azure DevOps, they they don't have to go off to to\nsomewhere else to find the feedback. It's available right within their process.\nobviously available within their IDE as well if they use the extensions But having\nhaving that feedback at the pull request stage has of\nreally benefited them. It's it's it's also gives them that kind initial set of of items to work on once their code is\nis ready for review. And then maybe there'll be other co automated code reviews that happen at that stage such as kind of Copilot base reviews it on\nbefore goes to being assigned to a senior engineer or multiple engineers for for the human review. But it gives us\nthat that level of quality before it gets onto someone else's plate. So\nit's not down to the senior engineers\nto look at the the very basics And checking checking that\nwe meet every standard that the the quality gates\ngoing to be checking for But they can actually look at the bigger\npicture and the the things that the automated tools are and not going to be picking up and use and really adding value there\nrather than having to try Cover everything. i i have to\nask if you're if sort of if in the world old world it was about getting\nyou you're rushing to get the feature in there Then you'll fix sort of some of\nthe problems that are the maybe the long tail later on you move to a model of\nwhere you're fixing sort the key stuff up front before it even gets in. Does that mean that your delivery dates are moving out or is it is\nit actually are you seeing something quite different? No, we don't see that at all. We we see up\nthat because we're not we're not building this backlog of technical debt that the our cadence overall\nhas has has sped up. We're delivering faster. We are able to deliver with we to\nquality because don't have regularly stop Have to\naddress technical debt. And particularly when it's\nif it's an individual who's working on a change They introduce something\nthat that would be flagged. They remediate that as part of their pull\nrequest in the traditional approach, they would have put that code into Maybe a\nproduction. couple of months down the line Somebody else is assigned this\npiece of work to remediate it. Maybe they're not familiar with that area.\nThey're not familiar with the change. They didn't make the change themselves. So\nit takes them that much longer to get up to speed to then be able to address the issue. So by bringing\nit in as early as possible for the individual who made the change They can they're in the best\nposition to fix that Therefore overall the amount of resource\nwe spend on remediating tech is is smaller. That's\ngreat. And So the sort of at the macro level it like\nsounds you you all the buying was there and that's fantastic. The the the challenge is sometimes in the\ndetails. So when it came to the sort of the specific conditions within your quality gates I know you\nhad i think an 80% test coverage requirement. Were there\nany particular rules that that met with push back And how did you\naddress that? Yes. So we we made a decision early on we\nthat across Europe wanted to implement one standard that we were going to have as our baseline. We did not\nwant to deviate for every team based on individual product requirements or individual team preferences. So\nwe we defined we decided we wanted to\ntake the sonar way as our standard But what we would allow\nwas for more strict gates to be defined if a team wanted to in\nactually bring additional rules that are not part of the the standard. the bulk of the assets are on a more strict we\nstandard now. But the one area that did get some push back on was around the test coverage. That was something that\nobviously was was an issue for more so the smaller number of legacy assets where testability might have been a\nan issue from from an automated unit test perspective. Obviously if they start to scan the product then it's going\nto identify that the test coverage doesn't meet the standard Obviously we pushed that\nthe standard is for new code not for the existing code base. So we\nwe ensured that for all pull requests all new code meets the 80% standard. Then perhaps you would get some push back\nthat the code is not potentially testable from a from a unit testing perspective and then the argument would be\nwe have to put more effort in now to to maybe refactor the code to make it testable in order to then meet that baseline. And that's it's\nsomething that we we held firm on. And we also encouraged\nthe use of AI codegen tools to to help\nwith that refactoring With the unit test development as\nwell. and that's something that that is for a very small number of\ncases we had that push back We're able to get over that\ninitial hump and then for all subsequent changes they were able to\nmeet that that 80%. Oh, that's brilliant. And and did you\nwhen it came to sort of the the exact standard\nthat that everybody agreed to How how did you get agreement\nacross it was such a big organization with so many different to\nrequirements. How did you get a standard that that made sense? Well, we started off in a great place with\nthe with the sonar way. So we were saying this is this is this is the way that that SonarQube are recommending we we control the code\nthat comes into our system Then it was just a case of of\nworking with individual teams and identifying cases where we want to up\ntighten things or we want to add in additional rules. so it was it was relatively straightforward given that it's\nwe wanted to set this set the baseline Say this is the standard we're\nnot going to reduce this standard and hold firm on that and that that made\nit relatively straightforward for us. Brilliant. And and have you seen as teams\nare sort of moving to this new way of working with the sort of the the hard rules you know the sonar way or son++ to get through how are you seeing the between\ninteraction the teams or between members of the teams as they're doing these peer reviews change? I I find that the peer reviews are now on\nmore focused on where the the real value is in the in the change. So not having to look at the very low-level the\ndetails things that that we now rely on SonarQube for. So it's it's allowing them to have a level of confidence that when a PR\ncomes to them for review that the basics have been checked. We're not expecting the senior developers to look at naming conventions\nfor variables The kind of low-level items,\nbut we want them to really add value using the knowledge that they have\nthat they've built up over the years. That i find that\nthat gives us a better interaction\nbetween developers Reviewers because they're focused more on\nwhat is this change for looking at the bigger picture. does it meet the needs of our customers? Does it meet our\nbaseline standard whilst knowing that we've got the the confidence that SonarQube has also\nanalyzed the change It's met the quality gate. so that ticks\na lot of those hygiene factors that are non-negotiable and then the engine the can\nsenior engineers focus on where they can apply their knowledge that the automated tools obviously don't have. Yeah, absolutely. And that I mean that was\nthat feeds into my next question where I was I was thinking as you the the the risk is as you apply more and more\nstructure Constraints to the way of working. it's to\nit's easy lose sort of the the sense of autonomy, the ability to really be creative and H do\ninnovative. how are you how you balance that? How do you ensure the teams have got\nthat room to to flex their brains Solve\ncreatively? yeah, what we we're trying to do is separate the\nprinciples from preferences team. So we have non-negotiable standards that we want to meet as our as our baseline, ensuring the\nquality gate passes But we're not then going to constrain\ncreativity or prevent teams from innovating by carefully controlling how a\nthey implement solution. What we want to be firm on are our principles around the the\nquality gate The standards that that are non-negotiable\nbut giving them the freedom to still innovate and bring in new technology and\nnot constrain how they actually deliver whilst knowing that we're still applying the same baseline principles and standards across the board. Mhm. Great. And and going back to a comment you\nmade earlier about using AI to help with with creating tests, I think you in the past you've talked about it's less AI\nabout for writing code. It's more about AI as a supporting actor helping you refactor Write\ntests. How\ndoes AI fit into the workflow and and\nhow do you see that working? So we we use Gen AI for a number of use So\ncases. developers are now almost pair programming with with AI. It's it's someone\nto bounce ideas off, someone to gain an understanding of a not\ncodebase perhaps they're familiar with. But then when it comes to actual delivery It's it's a tool\nthey can use to to accelerate the delivery of a of a by\nfeature having that code written for you Which they\ncan then work through with the AI. And that\ncomes down to to feature delivery But also the unit testing\nand refactoring of code perhaps that is not\ntestable. So it's yeah I i see it almost as if as if engineers of\nare kind working as a as a pair programmer with the ai tools now. So it's not a case of\njust delegating everything Saying off you go go and do it but ideas\nbouncing off and and gaining understanding of code bases something\nwe see a lot Then doing a lot of those those maybe\nmore painful tasks like the implementation of unit tests which we all know that like\ndevelopers to write code not so much the the tests They\ncan use tools like gen AI code generation\ntools to accelerate that Also to help them\nidentify by test cases and to to validate\nwhat they're doing To check you know when they raise a pr can\nthey ask ask the agents to check you know have i considered everything you know are we meeting all\nour standards you know Have it recheck the code so there's a of\nvariety ways that they're using these tools what it all comes down to is that there's additional code that's\nbeing written being generated whether it's functional code or test code It's all additional\ncode that that needs to be reviewed as\npart of the the pull request That's where it doesn't matter whether by\nit's written a human or by ai with the human. it all needs to be reviewed. It all\nneeds to meet the same standards We know that it's all going to go through\nand meet our quality gate before it gets seen by a senior engineer for review. Absolutely. And do you do you see that the\nI mean you talked about using AI to generate tests. Is it are you seeing that the AI tooling\nis really helping people get through the gate more easily, more\nquickly? Absolutely. particularly\naround tests And particularly maybe where there\nare where the unit testing is a little bit more complex such as the of of\ntesting UI applications. We find that the AI tools are are very good at generating\ntest cases Applying them and it's something that that\nthe developers are really benefiting from and particularly in those areas maybe where the code was not testable\nfrom a unit testing perspective It needed some refactoring\nto support unit testing and in in those cases typically there be a\nwould lot of other automated testing end-to-end testing wrapped around the products Maybe at\na unit test level individual methods wouldn't be\nnecessarily testable. So that's where we've found benefits of having the AI work on refactoring to that\nensure we can test that at every level in that in that pyramid. So we've got full coverage that SonarQube\nsees to allow the gate to pass Then that flows through to all of our of\nother layers testing including automated regression testing that runs\nend to end integration tests And manual ad hoc testing\nas well on top of that. Wow. and and it's I mean it's this is such\na this is such a huge change but things aren't standing still as as we look forwards through the rest of this it\nyear into next year. does become more automatic? Does it become purely\nautomatic verification? What what is\nwhat's your view on And wolters kluwer's view on the the and i\nfuture how you're preparing for it? think we're we're always going to rely on having senior engineers\nreview changes And our policy is typically at least\ntwo senior engineers on top of the automated tools. So on top of a Copilot\nreview on top of a SonarQube quality gate We're not we're not going to take\nthe human out of the loop there. And this is this is just to get the the\nchange through to be to be to be built And deployed for testing. but then\nobviously there's the the whole qa operation that runs around the automated a\ntesting then happens off of the back of deployed product. So we we still feel that that's that's not going to change. Maybe the the code being produced\nmight be larger in volume and and more rapidly written because of the that\nassistance the AI agents give our engineers. But we're not going to we're not going to\nbypass those levels. We still want those those quality senior engineers in the loop ensuring that\nwe're meeting our standards That we're delivering what\nwe need for our customers. Brilliant. And and if you if you think to\nback this sort of this whole journey you you've been on with the company, is there anything that you've you'd call out as being a particular positive or\nnegative surprise from the whole thing? I think one of the things that that was a\nsurprise initially was once we imple implemented quality gates within the pull requests we\nhad quite wide acceptance It was great thumbs up\nacross the board. so then we put in some auditing around actually do\nwe have any cases where the gate has been used Is not mandatory within a\npolicy for a given repository. So across\nAzure DevOps Github, we can define rules for what when\nhappens prs are raised and what are the mandatory checks\nthat are run And we found that we didn't have all teams\nwith mandatory checks on. so they may have had the\ngate implemented It was not mandatory. so it could have and\nfailed it wouldn't have blocked their code from being merged. And obviously\nthis is against the principle what we're trying to\nachieve. So I think that was a kind of an early stage from once we had implemented the quality gates at PR level and then the next stage was actually\nwe need to push through and mandate this across the board. So it's something that that I would highly recommend other customers check is that to\nonce you have DevOps integrations configured from SonarQube back your DevOps platform\nto actually review Check the policies that the the\ncheck is being mandated and is not optional because obviously if it's\noptional then it could pass it could fail It doesn't stop\nyou from from then merging those changes in. we also are\nknow that there cases where people have the rights to bypass policies even if they are mandatory. So we\nthat's something again that fed into that process to look at who has access to bypass policies\nto tighten that up To make it very clear that there'd\nhave to be a a a significant business reason\nto bypass a policy Just tighten that up because again there's\nno point having the quality gate there if it can just be bypassed. so it was just about tightening\nup governance around that Making sure that we we are\nactually enforcing these things. So that was yeah that was\na a surprise early on that behavior By putting that monitoring and\ngovernance in place it's something that's is now mandatory across the board.\nIt's it's something that I would love the product to do as well actually. It's if the product could could\ncheck branch policies for me Tell me whether or not it's mandated,\nthat would be a real nice nice to have. I will I will scribble\nthat down. Thank you. So, as we as we move, so this is my my as\nfinal question. we look forward, so if we've got if you've got an architect or a team\nlead listening today They're thinking, \"yeah, i like i like i\nwhat hear.\" what's the first step, couple of steps challenge to you'd recommend they they look into solving? My my first recommendation would be\nswitch it on. So deploy SonarQube, configure pull\nrequest reviews You don't have to have that gate\nmandated like we just talked about. get visibility of the of the scale of the of\nthe problem potentially. So start to look at the results Look at\nwhether or not your PRs are passing.\nAnd even if they're not mandated Once you have that devops\nintegration in place, sonarqube is going to start\ncommenting on the PRs The developers are going to start to get\nfeedback and it's going to potentially surprise them and and they will hopefully find that helpful and\nstart to maybe address those issues. It's not until you mandate that the gate I\npasses that it stops it getting into your into your master branch. But would say\nswitch it on There's there's no harm in getting that at\nfeedback onto the pr. and then when you're a point where you're ready to switch on and make it\nmandatory Then that's when obviously everything has\nsuddenly to pass. but i would just recommend get the product in and run PR analysis. It doesn't\nhave to be mandated, but you need to switch it on and your developers will start getting feedback immediately. Oh, that's brilliant.\nYeah, perfect. Thank you very much. that that\nreached the end of my my question. So, first just just wanted\nto say thank you. This it's it's so great to hear this such a such a\nbig change that went so well. So, so thank you again. Thank\nyou.",
+  "fetchedAt": "2026-03-14T09:22:16.354Z"
+}

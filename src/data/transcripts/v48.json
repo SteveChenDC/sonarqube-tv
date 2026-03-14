@@ -1,0 +1,2378 @@
+{
+  "videoId": "v48",
+  "youtubeId": "6LyTT4ugtb4",
+  "segments": [
+    {
+      "text": "Hello and welcome to this Sonar Summit",
+      "offset": 17000,
+      "duration": 3000
+    },
+    {
+      "text": "session on securing the AI stack:",
+      "offset": 20000,
+      "duration": 3000
+    },
+    {
+      "text": "end-to-end protection from code to",
+      "offset": 23000,
+      "duration": 2000
+    },
+    {
+      "text": "runtime. I'm Donald Fischer, VP of",
+      "offset": 25000,
+      "duration": 3000
+    },
+    {
+      "text": "product partnerships and corporate",
+      "offset": 28000,
+      "duration": 2000
+    },
+    {
+      "text": "development at Sonar, and I'm joined",
+      "offset": 30000,
+      "duration": 2000
+    },
+    {
+      "text": "today by Oron Noah, vice president of",
+      "offset": 32000,
+      "duration": 3000
+    },
+    {
+      "text": "product extensibility and partnerships",
+      "offset": 35000,
+      "duration": 2000
+    },
+    {
+      "text": "at Wiz. So Aron, welcome. I'm really",
+      "offset": 37000,
+      "duration": 2000
+    },
+    {
+      "text": "excited to discuss this timely topic",
+      "offset": 39000,
+      "duration": 4000
+    },
+    {
+      "text": "Hi Donald, how are you? Thank you for\nwith you.",
+      "offset": 43000,
+      "duration": 2000
+    },
+    {
+      "text": "having me and we're super excited about",
+      "offset": 45000,
+      "duration": 1000
+    },
+    {
+      "text": "the opportunity to talk today with",
+      "offset": 46000,
+      "duration": 2000
+    },
+    {
+      "text": "you and with the customers.\nPerfect. Well, we're going to be talking",
+      "offset": 48000,
+      "duration": 4000
+    },
+    {
+      "text": "about some of the challenges",
+      "offset": 52000,
+      "duration": 2000
+    },
+    {
+      "text": "emerging with the emergence",
+      "offset": 54000,
+      "duration": 4000
+    },
+    {
+      "text": "of AI development into software",
+      "offset": 58000,
+      "duration": 3000
+    },
+    {
+      "text": "development and all of the",
+      "offset": 61000,
+      "duration": 2000
+    },
+    {
+      "text": "challenges that organizations face. And",
+      "offset": 63000,
+      "duration": 2000
+    },
+    {
+      "text": "along the way, we'll talk a little bit",
+      "offset": 65000,
+      "duration": 1000
+    },
+    {
+      "text": "also about some of the ways that Sonar",
+      "offset": 66000,
+      "duration": 2000
+    },
+    {
+      "text": "and Wiz have been collaborating, some",
+      "offset": 68000,
+      "duration": 2000
+    },
+    {
+      "text": "of the ways that we're bringing our",
+      "offset": 70000,
+      "duration": 1000
+    },
+    {
+      "text": "solutions together. Maybe just to",
+      "offset": 71000,
+      "duration": 4000
+    },
+    {
+      "text": "start off with, I'd love to set the",
+      "offset": 75000,
+      "duration": 1000
+    },
+    {
+      "text": "stage a little bit and hear your",
+      "offset": 76000,
+      "duration": 2000
+    },
+    {
+      "text": "perspective. At the high level,",
+      "offset": 78000,
+      "duration": 2000
+    },
+    {
+      "text": "how do you think about how the",
+      "offset": 80000,
+      "duration": 2000
+    },
+    {
+      "text": "security landscape is changing with the",
+      "offset": 82000,
+      "duration": 2000
+    },
+    {
+      "text": "adoption of all of these emerging AI",
+      "offset": 84000,
+      "duration": 2000
+    },
+    {
+      "text": "tools, agents for coding, coding",
+      "offset": 86000,
+      "duration": 2000
+    },
+    {
+      "text": "assistance, all of the amazing things",
+      "offset": 88000,
+      "duration": 2000
+    },
+    {
+      "text": "that are coming across the transom in",
+      "offset": 90000,
+      "duration": 2000
+    },
+    {
+      "text": "recent months and years?",
+      "offset": 92000,
+      "duration": 2000
+    },
+    {
+      "text": "So first of all I think it's an exciting era.",
+      "offset": 94000,
+      "duration": 2000
+    },
+    {
+      "text": "This entire time, what is happening right",
+      "offset": 96000,
+      "duration": 2000
+    },
+    {
+      "text": "now, I think we are facing new",
+      "offset": 98000,
+      "duration": 2000
+    },
+    {
+      "text": "technology, embracing of AI. I think even",
+      "offset": 100000,
+      "duration": 4000
+    },
+    {
+      "text": "going forward it's something very exciting.",
+      "offset": 104000,
+      "duration": 2000
+    },
+    {
+      "text": "It makes life much easier. Organizations",
+      "offset": 106000,
+      "duration": 2000
+    },
+    {
+      "text": "today are able to ship more code into",
+      "offset": 108000,
+      "duration": 4000
+    },
+    {
+      "text": "production much faster than they used to.",
+      "offset": 112000,
+      "duration": 3000
+    },
+    {
+      "text": "Like even developers: testing and a lot",
+      "offset": 119000,
+      "duration": 4000
+    },
+    {
+      "text": "of things they had to do by themselves,",
+      "offset": 123000,
+      "duration": 2000
+    },
+    {
+      "text": "now they can use agentic AI that writes",
+      "offset": 125000,
+      "duration": 3000
+    },
+    {
+      "text": "code for them. It makes the work much",
+      "offset": 128000,
+      "duration": 2000
+    },
+    {
+      "text": "more efficient.",
+      "offset": 130000,
+      "duration": 3000
+    },
+    {
+      "text": "So I think all of those kind of things",
+      "offset": 133000,
+      "duration": 2000
+    },
+    {
+      "text": "are extremely interesting, extremely",
+      "offset": 135000,
+      "duration": 3000
+    },
+    {
+      "text": "changing, but like any new technologies",
+      "offset": 138000,
+      "duration": 4000
+    },
+    {
+      "text": "it also has risks from the security",
+      "offset": 142000,
+      "duration": 2000
+    },
+    {
+      "text": "perspective that we need to be mindful",
+      "offset": 144000,
+      "duration": 2000
+    },
+    {
+      "text": "for.\nYeah, for sure. And how do you",
+      "offset": 146000,
+      "duration": 4000
+    },
+    {
+      "text": "assess that risk? What do you see as the",
+      "offset": 150000,
+      "duration": 2000
+    },
+    {
+      "text": "biggest areas of risk with the adoption",
+      "offset": 152000,
+      "duration": 1000
+    },
+    {
+      "text": "of these tools? The risk that's here today,",
+      "offset": 153000,
+      "duration": 2000
+    },
+    {
+      "text": "and do you see any risk coming over the",
+      "offset": 155000,
+      "duration": 2000
+    },
+    {
+      "text": "near-term horizon that we need to prepare",
+      "offset": 159000,
+      "duration": 1000
+    },
+    {
+      "text": "for?\nYeah. So, first of all, it's a great",
+      "offset": 160000,
+      "duration": 4000
+    },
+    {
+      "text": "question. It has multiple layers. I think",
+      "offset": 164000,
+      "duration": 2000
+    },
+    {
+      "text": "if you go back in time, it's literally",
+      "offset": 166000,
+      "duration": 3000
+    },
+    {
+      "text": "like the change when people moved from",
+      "offset": 169000,
+      "duration": 3000
+    },
+    {
+      "text": "on-prem to cloud, and cloud introduced",
+      "offset": 172000,
+      "duration": 2000
+    },
+    {
+      "text": "new risks. Also AI introduced new risks.",
+      "offset": 174000,
+      "duration": 3000
+    },
+    {
+      "text": "First of all, it starts with visibility.",
+      "offset": 180000,
+      "duration": 2000
+    },
+    {
+      "text": "Even today, when you look about new modern",
+      "offset": 182000,
+      "duration": 2000
+    },
+    {
+      "text": "applications, customers having challenges",
+      "offset": 184000,
+      "duration": 2000
+    },
+    {
+      "text": "even understanding the visibility: what",
+      "offset": 188000,
+      "duration": 1000
+    },
+    {
+      "text": "kind of AI services running? What is the",
+      "offset": 189000,
+      "duration": 3000
+    },
+    {
+      "text": "running MCP in my environment? What kind",
+      "offset": 192000,
+      "duration": 1000
+    },
+    {
+      "text": "of tools my agents are using if I'm using",
+      "offset": 193000,
+      "duration": 3000
+    },
+    {
+      "text": "any agents? My developer can literally",
+      "offset": 196000,
+      "duration": 3000
+    },
+    {
+      "text": "embrace new technologies and bring them",
+      "offset": 199000,
+      "duration": 3000
+    },
+    {
+      "text": "into the cloud. And as a security persona,",
+      "offset": 202000,
+      "duration": 2000
+    },
+    {
+      "text": "first of all, I need to have visibility.",
+      "offset": 204000,
+      "duration": 2000
+    },
+    {
+      "text": "This is one challenge that exists. The",
+      "offset": 206000,
+      "duration": 1000
+    },
+    {
+      "text": "other challenge is that more code is being",
+      "offset": 209000,
+      "duration": 3000
+    },
+    {
+      "text": "shipped into production much faster,",
+      "offset": 216000,
+      "duration": 2000
+    },
+    {
+      "text": "and your security organization is not",
+      "offset": 220000,
+      "duration": 2000
+    },
+    {
+      "text": "growing that fast as the amount of new code",
+      "offset": 222000,
+      "duration": 4000
+    },
+    {
+      "text": "being shipped into production. So the",
+      "offset": 226000,
+      "duration": 1000
+    },
+    {
+      "text": "security teams need to work in a much",
+      "offset": 227000,
+      "duration": 3000
+    },
+    {
+      "text": "more efficient way to handle those new",
+      "offset": 230000,
+      "duration": 2000
+    },
+    {
+      "text": "code that been shipped into production.",
+      "offset": 232000,
+      "duration": 3000
+    },
+    {
+      "text": "Obviously, the architecture of autonomous",
+      "offset": 238000,
+      "duration": 3000
+    },
+    {
+      "text": "agents, agents talk with agents within",
+      "offset": 241000,
+      "duration": 2000
+    },
+    {
+      "text": "your organization, outside of your",
+      "offset": 243000,
+      "duration": 2000
+    },
+    {
+      "text": "organization.\nAnd lastly, also the bad guys—attacker—can",
+      "offset": 245000,
+      "duration": 7000
+    },
+    {
+      "text": "actually leverage this very cool technology",
+      "offset": 252000,
+      "duration": 3000
+    },
+    {
+      "text": "to attack your environment. Let's take",
+      "offset": 255000,
+      "duration": 3000
+    },
+    {
+      "text": "for example zero day vulnerabilities or",
+      "offset": 258000,
+      "duration": 3000
+    },
+    {
+      "text": "any high-profile vulnerabilities. In the",
+      "offset": 261000,
+      "duration": 3000
+    },
+    {
+      "text": "past it can take weeks to write the code",
+      "offset": 264000,
+      "duration": 4000
+    },
+    {
+      "text": "that will exploit that. Today with AI,",
+      "offset": 268000,
+      "duration": 5000
+    },
+    {
+      "text": "basically attacker can create those and",
+      "offset": 273000,
+      "duration": 2000
+    },
+    {
+      "text": "to exploit those zero day vulnerability",
+      "offset": 275000,
+      "duration": 3000
+    },
+    {
+      "text": "in a matter of days, maybe hours.",
+      "offset": 278000,
+      "duration": 3000
+    },
+    {
+      "text": "So this is the last challenge that exists.",
+      "offset": 281000,
+      "duration": 2000
+    },
+    {
+      "text": "But I think the security tools and the",
+      "offset": 286000,
+      "duration": 4000
+    },
+    {
+      "text": "security organization has much better",
+      "offset": 290000,
+      "duration": 2000
+    },
+    {
+      "text": "way to handle those kind of threats if",
+      "offset": 292000,
+      "duration": 2000
+    },
+    {
+      "text": "they will use AI internally, if they will",
+      "offset": 294000,
+      "duration": 5000
+    },
+    {
+      "text": "actually have the better visibility. Because",
+      "offset": 299000,
+      "duration": 2000
+    },
+    {
+      "text": "the defender, the more they will embrace",
+      "offset": 301000,
+      "duration": 3000
+    },
+    {
+      "text": "AI in their technology, has a better chance",
+      "offset": 304000,
+      "duration": 2000
+    },
+    {
+      "text": "than the attacker because they see what",
+      "offset": 306000,
+      "duration": 2000
+    },
+    {
+      "text": "happening from the inside.",
+      "offset": 308000,
+      "duration": 2000
+    },
+    {
+      "text": "No, I think those are great points.",
+      "offset": 312000,
+      "duration": 1000
+    },
+    {
+      "text": "One of the things that makes me wonder",
+      "offset": 315000,
+      "duration": 2000
+    },
+    {
+      "text": "about is it seems like the stakeholders",
+      "offset": 317000,
+      "duration": 3000
+    },
+    {
+      "text": "are changing around who's involved in",
+      "offset": 320000,
+      "duration": 2000
+    },
+    {
+      "text": "owning security here as well. Because",
+      "offset": 322000,
+      "duration": 2000
+    },
+    {
+      "text": "you talked a lot about the security team,",
+      "offset": 324000,
+      "duration": 3000
+    },
+    {
+      "text": "the defender organization. Obviously",
+      "offset": 327000,
+      "duration": 2000
+    },
+    {
+      "text": "the traditional developers have an",
+      "offset": 329000,
+      "duration": 3000
+    },
+    {
+      "text": "essential role in code security at the",
+      "offset": 332000,
+      "duration": 2000
+    },
+    {
+      "text": "time of development. And then something",
+      "offset": 334000,
+      "duration": 3000
+    },
+    {
+      "text": "I'm experiencing in my day-to-day life",
+      "offset": 337000,
+      "duration": 2000
+    },
+    {
+      "text": "is now there's all these new kinds of",
+      "offset": 339000,
+      "duration": 2000
+    },
+    {
+      "text": "developers, right? Like every business",
+      "offset": 341000,
+      "duration": 2000
+    },
+    {
+      "text": "person I know is now using agentic",
+      "offset": 343000,
+      "duration": 2000
+    },
+    {
+      "text": "software development tools to build their",
+      "offset": 347000,
+      "duration": 3000
+    },
+    {
+      "text": "own tools and systems and so on. So there's",
+      "offset": 350000,
+      "duration": 2000
+    },
+    {
+      "text": "not just a lot more code, there's a lot",
+      "offset": 352000,
+      "duration": 2000
+    },
+    {
+      "text": "more developers. So how do you see that",
+      "offset": 354000,
+      "duration": 3000
+    },
+    {
+      "text": "integrating with this traditional notion",
+      "offset": 357000,
+      "duration": 3000
+    },
+    {
+      "text": "of runtime protection when there's a",
+      "offset": 360000,
+      "duration": 1000
+    },
+    {
+      "text": "clear delineation between the development",
+      "offset": 361000,
+      "duration": 2000
+    },
+    {
+      "text": "time and the production time? Now it's like",
+      "offset": 363000,
+      "duration": 2000
+    },
+    {
+      "text": "many things ship straight into production, right?",
+      "offset": 367000,
+      "duration": 2000
+    },
+    {
+      "text": "Yeah definitely. So first of all, even",
+      "offset": 374000,
+      "duration": 3000
+    },
+    {
+      "text": "before the new emerging of AI, from day",
+      "offset": 377000,
+      "duration": 2000
+    },
+    {
+      "text": "one we talked about democratized security—",
+      "offset": 379000,
+      "duration": 3000
+    },
+    {
+      "text": "think of security as a team sport. This",
+      "offset": 382000,
+      "duration": 3000
+    },
+    {
+      "text": "is why we truly believe everyone in the",
+      "offset": 385000,
+      "duration": 2000
+    },
+    {
+      "text": "organization needs to be engaged and have",
+      "offset": 387000,
+      "duration": 2000
+    },
+    {
+      "text": "access to the same security platform.",
+      "offset": 389000,
+      "duration": 1000
+    },
+    {
+      "text": "Because if you have an ongoing—let's",
+      "offset": 393000,
+      "duration": 2000
+    },
+    {
+      "text": "take hypothetically speaking now—assuming",
+      "offset": 395000,
+      "duration": 2000
+    },
+    {
+      "text": "that you have an ongoing attack right now",
+      "offset": 397000,
+      "duration": 2000
+    },
+    {
+      "text": "in your environment. Most of the time",
+      "offset": 399000,
+      "duration": 2000
+    },
+    {
+      "text": "your SOC team will identify a suspicious",
+      "offset": 401000,
+      "duration": 2000
+    },
+    {
+      "text": "activity and their job is to identify very",
+      "offset": 403000,
+      "duration": 4000
+    },
+    {
+      "text": "quickly if that's an ongoing attack, yes",
+      "offset": 407000,
+      "duration": 2000
+    },
+    {
+      "text": "or no, to come up with a verdict. And they",
+      "offset": 409000,
+      "duration": 3000
+    },
+    {
+      "text": "will try to stop the attack from happening,",
+      "offset": 412000,
+      "duration": 2000
+    },
+    {
+      "text": "which is like: isolate the VMs, isolate",
+      "offset": 417000,
+      "duration": 2000
+    },
+    {
+      "text": "the network, terminate the process. Great.",
+      "offset": 419000,
+      "duration": 2000
+    },
+    {
+      "text": "After that they will have to be engaged",
+      "offset": 424000,
+      "duration": 3000
+    },
+    {
+      "text": "with the cloud security teams to",
+      "offset": 427000,
+      "duration": 2000
+    },
+    {
+      "text": "understand: okay I saw this attack, but",
+      "offset": 429000,
+      "duration": 4000
+    },
+    {
+      "text": "what is wrong with our system? How did",
+      "offset": 433000,
+      "duration": 3000
+    },
+    {
+      "text": "the attacker get in? Is it a",
+      "offset": 436000,
+      "duration": 2000
+    },
+    {
+      "text": "misconfiguration? Do I have a secret? Do",
+      "offset": 438000,
+      "duration": 2000
+    },
+    {
+      "text": "I have a vulnerability? What is the toxic",
+      "offset": 440000,
+      "duration": 2000
+    },
+    {
+      "text": "combination that make this attack happen",
+      "offset": 442000,
+      "duration": 4000
+    },
+    {
+      "text": "from the beginning? And the cloud",
+      "offset": 446000,
+      "duration": 2000
+    },
+    {
+      "text": "security team will have to understand that.",
+      "offset": 448000,
+      "duration": 1000
+    },
+    {
+      "text": "The moment the cloud security team do",
+      "offset": 449000,
+      "duration": 2000
+    },
+    {
+      "text": "their investigation and they will find:",
+      "offset": 451000,
+      "duration": 3000
+    },
+    {
+      "text": "oh gosh, someone pushed a plaintext secret",
+      "offset": 454000,
+      "duration": 3000
+    },
+    {
+      "text": "into production. They would like to engage",
+      "offset": 457000,
+      "duration": 3000
+    },
+    {
+      "text": "with the DevSecOps or with the developer",
+      "offset": 460000,
+      "duration": 2000
+    },
+    {
+      "text": "to find out who is the owner that actually",
+      "offset": 462000,
+      "duration": 2000
+    },
+    {
+      "text": "pushed this code into production to open",
+      "offset": 464000,
+      "duration": 2000
+    },
+    {
+      "text": "a PR for them and do the remediation from",
+      "offset": 466000,
+      "duration": 3000
+    },
+    {
+      "text": "the get-go. So this is democratization.",
+      "offset": 469000,
+      "duration": 3000
+    },
+    {
+      "text": "Everyone needs to collaborate together",
+      "offset": 472000,
+      "duration": 3000
+    },
+    {
+      "text": "in order to fix that. Add that to the",
+      "offset": 475000,
+      "duration": 1000
+    },
+    {
+      "text": "area of AI. Now it's democratization on",
+      "offset": 479000,
+      "duration": 3000
+    },
+    {
+      "text": "steroids, right? Because as you mentioned,",
+      "offset": 482000,
+      "duration": 3000
+    },
+    {
+      "text": "more teams, more personas are being engaged.",
+      "offset": 485000,
+      "duration": 4000
+    },
+    {
+      "text": "Obviously I think first of all we have",
+      "offset": 489000,
+      "duration": 3000
+    },
+    {
+      "text": "to put a lot of guardrails in place.",
+      "offset": 492000,
+      "duration": 3000
+    },
+    {
+      "text": "Number one is security mindset. Security",
+      "offset": 495000,
+      "duration": 4000
+    },
+    {
+      "text": "mindset and security by design. Security",
+      "offset": 499000,
+      "duration": 4000
+    },
+    {
+      "text": "by design means it has a couple of",
+      "offset": 503000,
+      "duration": 2000
+    },
+    {
+      "text": "flavors. The first flavor is like: am I",
+      "offset": 505000,
+      "duration": 3000
+    },
+    {
+      "text": "ever shipping code to production or",
+      "offset": 511000,
+      "duration": 2000
+    },
+    {
+      "text": "building something before I even did a",
+      "offset": 513000,
+      "duration": 3000
+    },
+    {
+      "text": "security review? Many times when people",
+      "offset": 516000,
+      "duration": 3000
+    },
+    {
+      "text": "do security review it is later on in the",
+      "offset": 519000,
+      "duration": 3000
+    },
+    {
+      "text": "process, a moment before the code has",
+      "offset": 522000,
+      "duration": 2000
+    },
+    {
+      "text": "been shipped into production, after they",
+      "offset": 524000,
+      "duration": 1000
+    },
+    {
+      "text": "spent the time on building that. So",
+      "offset": 525000,
+      "duration": 1000
+    },
+    {
+      "text": "from security mind perspective, do your",
+      "offset": 528000,
+      "duration": 4000
+    },
+    {
+      "text": "security review earlier in the process",
+      "offset": 532000,
+      "duration": 3000
+    },
+    {
+      "text": "as you can, like you do your architecture",
+      "offset": 535000,
+      "duration": 2000
+    },
+    {
+      "text": "review. This is number one. Number two,",
+      "offset": 537000,
+      "duration": 4000
+    },
+    {
+      "text": "obviously put all the guardrails in",
+      "offset": 541000,
+      "duration": 3000
+    },
+    {
+      "text": "your CI/CD pipeline, your code scanners.",
+      "offset": 544000,
+      "duration": 2000
+    },
+    {
+      "text": "That's for sure. But there's also a very",
+      "offset": 548000,
+      "duration": 4000
+    },
+    {
+      "text": "interesting point that even the code",
+      "offset": 552000,
+      "duration": 3000
+    },
+    {
+      "text": "being shipped—or being generated by vibe",
+      "offset": 555000,
+      "duration": 3000
+    },
+    {
+      "text": "coding—needs the mindset of making sure",
+      "offset": 558000,
+      "duration": 3000
+    },
+    {
+      "text": "that the model created a built-in or a",
+      "offset": 561000,
+      "duration": 3000
+    },
+    {
+      "text": "secure by design code. So for example,",
+      "offset": 564000,
+      "duration": 6000
+    },
+    {
+      "text": "it will not generate—it will not allow",
+      "offset": 570000,
+      "duration": 2000
+    },
+    {
+      "text": "me to write a code or to tell the agents",
+      "offset": 572000,
+      "duration": 2000
+    },
+    {
+      "text": "\"write me something\" and it will",
+      "offset": 574000,
+      "duration": 3000
+    },
+    {
+      "text": "automatically put a plaintext secret in",
+      "offset": 577000,
+      "duration": 2000
+    },
+    {
+      "text": "the code. So also the vibe coding vendor",
+      "offset": 579000,
+      "duration": 2000
+    },
+    {
+      "text": "will have to have more attention to the",
+      "offset": 581000,
+      "duration": 3000
+    },
+    {
+      "text": "code being generated by AI. My personal",
+      "offset": 584000,
+      "duration": 3000
+    },
+    {
+      "text": "observation is the man-in-the-middle,",
+      "offset": 587000,
+      "duration": 3000
+    },
+    {
+      "text": "the man-in-the-loop: we always need to",
+      "offset": 590000,
+      "duration": 3000
+    },
+    {
+      "text": "have there. Like, AI generate code for",
+      "offset": 593000,
+      "duration": 2000
+    },
+    {
+      "text": "you, do your code review, use scanners",
+      "offset": 595000,
+      "duration": 3000
+    },
+    {
+      "text": "like Sonar, like Wiz. Scan your code",
+      "offset": 598000,
+      "duration": 2000
+    },
+    {
+      "text": "before it's been shipped into production",
+      "offset": 602000,
+      "duration": 4000
+    },
+    {
+      "text": "to prevent mistakes from happening.",
+      "offset": 606000,
+      "duration": 3000
+    },
+    {
+      "text": "No, it makes total sense. And I think it",
+      "offset": 611000,
+      "duration": 3000
+    },
+    {
+      "text": "maybe is a good time we could talk a",
+      "offset": 614000,
+      "duration": 2000
+    },
+    {
+      "text": "little bit about how we're bringing some",
+      "offset": 616000,
+      "duration": 2000
+    },
+    {
+      "text": "of the capabilities that Sonar is well",
+      "offset": 618000,
+      "duration": 2000
+    },
+    {
+      "text": "known for in our SonarQube family of",
+      "offset": 620000,
+      "duration": 2000
+    },
+    {
+      "text": "products, and bring those together,",
+      "offset": 622000,
+      "duration": 4000
+    },
+    {
+      "text": "connecting those to the moment of runtime",
+      "offset": 626000,
+      "duration": 3000
+    },
+    {
+      "text": "through our partnership with Wiz. A key",
+      "offset": 629000,
+      "duration": 2000
+    },
+    {
+      "text": "foundational part of that is ingesting",
+      "offset": 631000,
+      "duration": 2000
+    },
+    {
+      "text": "the security findings—code security and",
+      "offset": 633000,
+      "duration": 3000
+    },
+    {
+      "text": "code quality findings—that Sonar uncovers",
+      "offset": 636000,
+      "duration": 4000
+    },
+    {
+      "text": "using its static analysis techniques and",
+      "offset": 640000,
+      "duration": 2000
+    },
+    {
+      "text": "a broad array of code analysis and",
+      "offset": 642000,
+      "duration": 2000
+    },
+    {
+      "text": "program analysis techniques. It creates",
+      "offset": 644000,
+      "duration": 4000
+    },
+    {
+      "text": "those findings, but then surfaces those",
+      "offset": 648000,
+      "duration": 2000
+    },
+    {
+      "text": "findings directly in Wiz so that they",
+      "offset": 650000,
+      "duration": 3000
+    },
+    {
+      "text": "can be considered as part of the broader",
+      "offset": 653000,
+      "duration": 3000
+    },
+    {
+      "text": "landscape of runtime security and",
+      "offset": 656000,
+      "duration": 2000
+    },
+    {
+      "text": "application security. So how do you see",
+      "offset": 658000,
+      "duration": 2000
+    },
+    {
+      "text": "that new integration helping leaders",
+      "offset": 660000,
+      "duration": 3000
+    },
+    {
+      "text": "address this problem of trust with all",
+      "offset": 663000,
+      "duration": 2000
+    },
+    {
+      "text": "these new stakeholders, without",
+      "offset": 665000,
+      "duration": 3000
+    },
+    {
+      "text": "sacrificing the speed that AI otherwise",
+      "offset": 668000,
+      "duration": 2000
+    },
+    {
+      "text": "enables?\nSo first, again, it's a great question.",
+      "offset": 670000,
+      "duration": 5000
+    },
+    {
+      "text": "As you know, with Wiz we address all the",
+      "offset": 675000,
+      "duration": 3000
+    },
+    {
+      "text": "personas in the organization: the SecOps",
+      "offset": 684000,
+      "duration": 2000
+    },
+    {
+      "text": "team, the cloud security team, the DevOps",
+      "offset": 686000,
+      "duration": 3000
+    },
+    {
+      "text": "team and the developers. So we have Wiz",
+      "offset": 689000,
+      "duration": 2000
+    },
+    {
+      "text": "Cloud, Wiz Code, and Wiz Defend that",
+      "offset": 691000,
+      "duration": 2000
+    },
+    {
+      "text": "helps the runtime. Because we believe",
+      "offset": 693000,
+      "duration": 2000
+    },
+    {
+      "text": "in an open security platform, we allow",
+      "offset": 695000,
+      "duration": 3000
+    },
+    {
+      "text": "companies to ingest their own scanners.",
+      "offset": 698000,
+      "duration": 3000
+    },
+    {
+      "text": "A customer can bring their own scanner,",
+      "offset": 701000,
+      "duration": 2000
+    },
+    {
+      "text": "whether it's their code scanner, cloud",
+      "offset": 703000,
+      "duration": 1000
+    },
+    {
+      "text": "scanner, pipeline scanner, or runtime",
+      "offset": 704000,
+      "duration": 4000
+    },
+    {
+      "text": "scanner. In that specific case, assuming",
+      "offset": 708000,
+      "duration": 2000
+    },
+    {
+      "text": "that you're now using Sonar to scan your",
+      "offset": 710000,
+      "duration": 2000
+    },
+    {
+      "text": "code, your SAST findings: first of all,",
+      "offset": 712000,
+      "duration": 2000
+    },
+    {
+      "text": "with the Wiz Exposure Management and the",
+      "offset": 716000,
+      "duration": 2000
+    },
+    {
+      "text": "AppSec capabilities, they have a single",
+      "offset": 718000,
+      "duration": 3000
+    },
+    {
+      "text": "pane of glass to be able to aggregate",
+      "offset": 721000,
+      "duration": 2000
+    },
+    {
+      "text": "in one single place all of their",
+      "offset": 723000,
+      "duration": 3000
+    },
+    {
+      "text": "vulnerabilities from code, from runtime,",
+      "offset": 726000,
+      "duration": 2000
+    },
+    {
+      "text": "and from cloud. This is one thing—it's",
+      "offset": 728000,
+      "duration": 2000
+    },
+    {
+      "text": "very good to have the visibility in one",
+      "offset": 730000,
+      "duration": 2000
+    },
+    {
+      "text": "place.\nThe cool thing about ingesting the data",
+      "offset": 732000,
+      "duration": 6000
+    },
+    {
+      "text": "into Wiz is all the data flows into the",
+      "offset": 738000,
+      "duration": 3000
+    },
+    {
+      "text": "Wiz Security Graph. The Wiz Security",
+      "offset": 741000,
+      "duration": 3000
+    },
+    {
+      "text": "Graph is where the magic happens because",
+      "offset": 744000,
+      "duration": 2000
+    },
+    {
+      "text": "that allows the cloud security persona",
+      "offset": 746000,
+      "duration": 2000
+    },
+    {
+      "text": "to have the blast radius, the code-to-cloud",
+      "offset": 748000,
+      "duration": 2000
+    },
+    {
+      "text": "impact. Meaning, if I will ship this code",
+      "offset": 750000,
+      "duration": 3000
+    },
+    {
+      "text": "into production—I found a problem in a",
+      "offset": 753000,
+      "duration": 4000
+    },
+    {
+      "text": "repo—and if this code will be shipped",
+      "offset": 757000,
+      "duration": 3000
+    },
+    {
+      "text": "into production, that will be the blast",
+      "offset": 760000,
+      "duration": 5000
+    },
+    {
+      "text": "radius. That's the impact that is going",
+      "offset": 765000,
+      "duration": 3000
+    },
+    {
+      "text": "to happen in my environment. And having",
+      "offset": 768000,
+      "duration": 3000
+    },
+    {
+      "text": "the blast radius of the code-to-cloud",
+      "offset": 771000,
+      "duration": 3000
+    },
+    {
+      "text": "gives them the ability to understand and",
+      "offset": 774000,
+      "duration": 2000
+    },
+    {
+      "text": "put the guardrails in place. Remember",
+      "offset": 776000,
+      "duration": 2000
+    },
+    {
+      "text": "the example I brought in the beginning:",
+      "offset": 778000,
+      "duration": 3000
+    },
+    {
+      "text": "the SecOps need to engage with cloud",
+      "offset": 781000,
+      "duration": 3000
+    },
+    {
+      "text": "security, and cloud security needs to",
+      "offset": 784000,
+      "duration": 1000
+    },
+    {
+      "text": "contact the developer. Right now the",
+      "offset": 785000,
+      "duration": 2000
+    },
+    {
+      "text": "developer is enabled to understand the",
+      "offset": 787000,
+      "duration": 2000
+    },
+    {
+      "text": "blast radius by themselves before they",
+      "offset": 789000,
+      "duration": 2000
+    },
+    {
+      "text": "ship code in production. So it makes",
+      "offset": 791000,
+      "duration": 3000
+    },
+    {
+      "text": "life much easier from the other",
+      "offset": 794000,
+      "duration": 3000
+    },
+    {
+      "text": "direction because we also connect your",
+      "offset": 797000,
+      "duration": 2000
+    },
+    {
+      "text": "findings. Assuming that we find a problem",
+      "offset": 799000,
+      "duration": 3000
+    },
+    {
+      "text": "in the cloud, we are able also to do",
+      "offset": 802000,
+      "duration": 3000
+    },
+    {
+      "text": "the backward cloud-to-code analysis.",
+      "offset": 805000,
+      "duration": 2000
+    },
+    {
+      "text": "SecOps team finds something. Cloud",
+      "offset": 807000,
+      "duration": 4000
+    },
+    {
+      "text": "security team is engaged. Cloud security",
+      "offset": 811000,
+      "duration": 3000
+    },
+    {
+      "text": "teams, using the cloud-to-code capabilities,",
+      "offset": 814000,
+      "duration": 3000
+    },
+    {
+      "text": "are able to trace it back to the developer",
+      "offset": 817000,
+      "duration": 2000
+    },
+    {
+      "text": "that actually pushed this code into",
+      "offset": 819000,
+      "duration": 3000
+    },
+    {
+      "text": "production from the very beginning,",
+      "offset": 822000,
+      "duration": 2000
+    },
+    {
+      "text": "assign them, open a PR and remediate",
+      "offset": 824000,
+      "duration": 4000
+    },
+    {
+      "text": "very fast. This is the power when you're",
+      "offset": 828000,
+      "duration": 3000
+    },
+    {
+      "text": "bringing the insights from Sonar into",
+      "offset": 831000,
+      "duration": 3000
+    },
+    {
+      "text": "the Wiz Security Graph. This is all the",
+      "offset": 834000,
+      "duration": 3000
+    },
+    {
+      "text": "magic: code-to-cloud and cloud-to-code",
+      "offset": 837000,
+      "duration": 4000
+    },
+    {
+      "text": "analysis.\nNo, that's great. I think this is a",
+      "offset": 841000,
+      "duration": 5000
+    },
+    {
+      "text": "classic example of a productive industry",
+      "offset": 846000,
+      "duration": 2000
+    },
+    {
+      "text": "collaboration where we can bring our",
+      "offset": 848000,
+      "duration": 2000
+    },
+    {
+      "text": "mutually beneficial capabilities to our",
+      "offset": 850000,
+      "duration": 3000
+    },
+    {
+      "text": "many joint customers and future joint",
+      "offset": 853000,
+      "duration": 2000
+    },
+    {
+      "text": "customers as well. One thing I'd love to",
+      "offset": 855000,
+      "duration": 3000
+    },
+    {
+      "text": "dig in on: you talked about the role of",
+      "offset": 858000,
+      "duration": 3000
+    },
+    {
+      "text": "code scanning. There's traditional",
+      "offset": 861000,
+      "duration": 2000
+    },
+    {
+      "text": "approaches to doing that, and emergent",
+      "offset": 863000,
+      "duration": 3000
+    },
+    {
+      "text": "approaches to assessing code quality and",
+      "offset": 866000,
+      "duration": 2000
+    },
+    {
+      "text": "code security using LLM tools and so on.",
+      "offset": 868000,
+      "duration": 3000
+    },
+    {
+      "text": "One of the things that we have noted in",
+      "offset": 873000,
+      "duration": 3000
+    },
+    {
+      "text": "our conversation with leading organizations",
+      "offset": 876000,
+      "duration": 4000
+    },
+    {
+      "text": "around the world is that there's a",
+      "offset": 880000,
+      "duration": 3000
+    },
+    {
+      "text": "fundamental challenge in that AI, LLM-based",
+      "offset": 883000,
+      "duration": 3000
+    },
+    {
+      "text": "software development, is fundamentally",
+      "offset": 886000,
+      "duration": 4000
+    },
+    {
+      "text": "probabilistic.\nIt's a strength and a challenge, right?",
+      "offset": 890000,
+      "duration": 6000
+    },
+    {
+      "text": "The strength is it uncovers these",
+      "offset": 896000,
+      "duration": 2000
+    },
+    {
+      "text": "interesting, novel, creative approaches.",
+      "offset": 898000,
+      "duration": 3000
+    },
+    {
+      "text": "But also it's a little bit of a shifting",
+      "offset": 901000,
+      "duration": 2000
+    },
+    {
+      "text": "sands: the answers change from round to",
+      "offset": 903000,
+      "duration": 3000
+    },
+    {
+      "text": "round. That seems sometimes fundamentally",
+      "offset": 906000,
+      "duration": 5000
+    },
+    {
+      "text": "at odds with the challenges of security,",
+      "offset": 911000,
+      "duration": 3000
+    },
+    {
+      "text": "which really needs to be deterministic.",
+      "offset": 914000,
+      "duration": 2000
+    },
+    {
+      "text": "There cannot be a different answer if",
+      "offset": 916000,
+      "duration": 2000
+    },
+    {
+      "text": "the answer you were counting on missed",
+      "offset": 918000,
+      "duration": 5000
+    },
+    {
+      "text": "a vulnerability, missed a zero day",
+      "offset": 923000,
+      "duration": 2000
+    },
+    {
+      "text": "exposure that ends up compromising the",
+      "offset": 925000,
+      "duration": 2000
+    },
+    {
+      "text": "organization. They only have to be right",
+      "offset": 927000,
+      "duration": 3000
+    },
+    {
+      "text": "once; you have to be right every time.",
+      "offset": 930000,
+      "duration": 2000
+    },
+    {
+      "text": "And being right every time seems to",
+      "offset": 932000,
+      "duration": 2000
+    },
+    {
+      "text": "demand a deterministic approach.",
+      "offset": 934000,
+      "duration": 2000
+    },
+    {
+      "text": "One of the things we found that maps",
+      "offset": 939000,
+      "duration": 4000
+    },
+    {
+      "text": "well from Sonar's core capabilities is",
+      "offset": 943000,
+      "duration": 3000
+    },
+    {
+      "text": "this history and large corpus of",
+      "offset": 946000,
+      "duration": 4000
+    },
+    {
+      "text": "deterministic rules that we have applied",
+      "offset": 950000,
+      "duration": 3000
+    },
+    {
+      "text": "to code analysis and program analysis",
+      "offset": 953000,
+      "duration": 3000
+    },
+    {
+      "text": "for many years. While there are new",
+      "offset": 956000,
+      "duration": 3000
+    },
+    {
+      "text": "opportunities to enhance that with LLM-based",
+      "offset": 959000,
+      "duration": 4000
+    },
+    {
+      "text": "AI approaches—agentic security researchers",
+      "offset": 963000,
+      "duration": 3000
+    },
+    {
+      "text": "and things like that—there's still a value",
+      "offset": 968000,
+      "duration": 3000
+    },
+    {
+      "text": "to fundamental deterministic rules",
+      "offset": 971000,
+      "duration": 3000
+    },
+    {
+      "text": "analysis, verification gates, or quality",
+      "offset": 974000,
+      "duration": 3000
+    },
+    {
+      "text": "gates as we often call them. Do you agree",
+      "offset": 977000,
+      "duration": 4000
+    },
+    {
+      "text": "with that? How do you see the deterministic",
+      "offset": 981000,
+      "duration": 2000
+    },
+    {
+      "text": "and the probabilistic sides of AI-assisted",
+      "offset": 983000,
+      "duration": 2000
+    },
+    {
+      "text": "software development unfolding?",
+      "offset": 985000,
+      "duration": 3000
+    },
+    {
+      "text": "That's a very good one. I'll try to take",
+      "offset": 990000,
+      "duration": 3000
+    },
+    {
+      "text": "it from the risk perspective. Because you",
+      "offset": 993000,
+      "duration": 3000
+    },
+    {
+      "text": "can have deterministic rules. Deterministic",
+      "offset": 996000,
+      "duration": 4000
+    },
+    {
+      "text": "rules are great because they will catch",
+      "offset": 1000000,
+      "duration": 2000
+    },
+    {
+      "text": "classic things that are happening. That's",
+      "offset": 1002000,
+      "duration": 3000
+    },
+    {
+      "text": "for sure. But you can do the equivalent of:",
+      "offset": 1005000,
+      "duration": 2000
+    },
+    {
+      "text": "I have new developers that are building",
+      "offset": 1011000,
+      "duration": 3000
+    },
+    {
+      "text": "something, coming from different organizations",
+      "offset": 1014000,
+      "duration": 2000
+    },
+    {
+      "text": "with different coding styles, that is not",
+      "offset": 1016000,
+      "duration": 4000
+    },
+    {
+      "text": "purely deterministic based on how I'm",
+      "offset": 1020000,
+      "duration": 3000
+    },
+    {
+      "text": "writing code in my organization.",
+      "offset": 1023000,
+      "duration": 3000
+    },
+    {
+      "text": "I think having rules that assess your",
+      "offset": 1028000,
+      "duration": 3000
+    },
+    {
+      "text": "code deterministically is great, it's",
+      "offset": 1031000,
+      "duration": 3000
+    },
+    {
+      "text": "valuable. But I think the moment you add",
+      "offset": 1034000,
+      "duration": 2000
+    },
+    {
+      "text": "the code-to-cloud impact, it doesn't",
+      "offset": 1036000,
+      "duration": 3000
+    },
+    {
+      "text": "really matter if it's deterministic or",
+      "offset": 1041000,
+      "duration": 3000
+    },
+    {
+      "text": "not, because the risk is deterministic.",
+      "offset": 1044000,
+      "duration": 2000
+    },
+    {
+      "text": "What do I mean? You generate code, you",
+      "offset": 1046000,
+      "duration": 3000
+    },
+    {
+      "text": "run your analysis, and you are using",
+      "offset": 1051000,
+      "duration": 3000
+    },
+    {
+      "text": "tools like us to do code-to-cloud analysis.",
+      "offset": 1054000,
+      "duration": 4000
+    },
+    {
+      "text": "We tell you: okay, whoever wrote it—if",
+      "offset": 1058000,
+      "duration": 3000
+    },
+    {
+      "text": "it's a machine or a human—if this code",
+      "offset": 1061000,
+      "duration": 3000
+    },
+    {
+      "text": "will be shipped into production, that",
+      "offset": 1064000,
+      "duration": 4000
+    },
+    {
+      "text": "will be the blast radius. That is the",
+      "offset": 1068000,
+      "duration": 3000
+    },
+    {
+      "text": "impact that is going to happen in your",
+      "offset": 1071000,
+      "duration": 3000
+    },
+    {
+      "text": "environment.\nThat's deterministic, because this is",
+      "offset": 1074000,
+      "duration": 7000
+    },
+    {
+      "text": "the code, this is the impact. I think",
+      "offset": 1081000,
+      "duration": 2000
+    },
+    {
+      "text": "these are the real guardrails that you",
+      "offset": 1083000,
+      "duration": 3000
+    },
+    {
+      "text": "can put. Because in the end, if I'm",
+      "offset": 1086000,
+      "duration": 3000
+    },
+    {
+      "text": "pushing something into production and",
+      "offset": 1089000,
+      "duration": 2000
+    },
+    {
+      "text": "it won't cause any real security impact,",
+      "offset": 1091000,
+      "duration": 3000
+    },
+    {
+      "text": "it's fine. Tons of new code is being",
+      "offset": 1094000,
+      "duration": 3000
+    },
+    {
+      "text": "pushed into production; I need to chase",
+      "offset": 1097000,
+      "duration": 3000
+    },
+    {
+      "text": "it and find the ones that are actually",
+      "offset": 1100000,
+      "duration": 3000
+    },
+    {
+      "text": "causing a problem. I think there's room",
+      "offset": 1103000,
+      "duration": 2000
+    },
+    {
+      "text": "for both the deterministic approach and",
+      "offset": 1105000,
+      "duration": 2000
+    },
+    {
+      "text": "nondeterministic approach. Put the",
+      "offset": 1107000,
+      "duration": 3000
+    },
+    {
+      "text": "code-to-cloud concept and impact; it's",
+      "offset": 1112000,
+      "duration": 3000
+    },
+    {
+      "text": "crucial.\nI agree. I think it's the combination of",
+      "offset": 1115000,
+      "duration": 6000
+    },
+    {
+      "text": "these capabilities or these styles of",
+      "offset": 1121000,
+      "duration": 3000
+    },
+    {
+      "text": "verification that are the way to ensure",
+      "offset": 1124000,
+      "duration": 2000
+    },
+    {
+      "text": "comprehensive security, which is truly",
+      "offset": 1126000,
+      "duration": 3000
+    },
+    {
+      "text": "what's needed. That's the deterministic",
+      "offset": 1129000,
+      "duration": 2000
+    },
+    {
+      "text": "result that's needed. I agree with your",
+      "offset": 1131000,
+      "duration": 3000
+    },
+    {
+      "text": "framing there.\nWe're having this conversation in early",
+      "offset": 1134000,
+      "duration": 7000
+    },
+    {
+      "text": "2026. Right now the industry discussion",
+      "offset": 1141000,
+      "duration": 2000
+    },
+    {
+      "text": "is really the shift towards agents of",
+      "offset": 1143000,
+      "duration": 3000
+    },
+    {
+      "text": "all kinds: agentic development, agentic",
+      "offset": 1146000,
+      "duration": 3000
+    },
+    {
+      "text": "security response. I'm curious to dig in",
+      "offset": 1149000,
+      "duration": 3000
+    },
+    {
+      "text": "from your perspective and Wiz's perspective:",
+      "offset": 1152000,
+      "duration": 3000
+    },
+    {
+      "text": "how do you view what comes next as we",
+      "offset": 1155000,
+      "duration": 2000
+    },
+    {
+      "text": "apply more agentic patterns in this",
+      "offset": 1157000,
+      "duration": 3000
+    },
+    {
+      "text": "problem space of ensuring code quality",
+      "offset": 1160000,
+      "duration": 2000
+    },
+    {
+      "text": "and code security in our applications?",
+      "offset": 1162000,
+      "duration": 3000
+    },
+    {
+      "text": "Including—we've talked a lot about the",
+      "offset": 1168000,
+      "duration": 3000
+    },
+    {
+      "text": "analysis part of this—but there's also",
+      "offset": 1171000,
+      "duration": 2000
+    },
+    {
+      "text": "remediation or response, which seems to",
+      "offset": 1173000,
+      "duration": 3000
+    },
+    {
+      "text": "call for or invite an agentic approach.",
+      "offset": 1176000,
+      "duration": 2000
+    },
+    {
+      "text": "How do you see the agent-powered next",
+      "offset": 1178000,
+      "duration": 2000
+    },
+    {
+      "text": "phase of this space, and how might Wiz",
+      "offset": 1180000,
+      "duration": 3000
+    },
+    {
+      "text": "and Sonar collaborate, extending what",
+      "offset": 1183000,
+      "duration": 3000
+    },
+    {
+      "text": "we've already started, to help organizations",
+      "offset": 1186000,
+      "duration": 3000
+    },
+    {
+      "text": "manage that transition to come?\nI think it's fascinating. The point of",
+      "offset": 1189000,
+      "duration": 8000
+    },
+    {
+      "text": "time that we are right now, the future",
+      "offset": 1197000,
+      "duration": 2000
+    },
+    {
+      "text": "is actually changing as we speak, and",
+      "offset": 1199000,
+      "duration": 2000
+    },
+    {
+      "text": "that's truly exciting. Remember I told",
+      "offset": 1201000,
+      "duration": 2000
+    },
+    {
+      "text": "you: the attacker is using AI to try to",
+      "offset": 1203000,
+      "duration": 2000
+    },
+    {
+      "text": "compromise your environment. We truly",
+      "offset": 1205000,
+      "duration": 3000
+    },
+    {
+      "text": "believe—the Wiz vision—is winning AI",
+      "offset": 1208000,
+      "duration": 2000
+    },
+    {
+      "text": "using AI. The only way to win is by",
+      "offset": 1210000,
+      "duration": 4000
+    },
+    {
+      "text": "leveraging AI. In all security tools, you",
+      "offset": 1216000,
+      "duration": 4000
+    },
+    {
+      "text": "have to have agents running that help",
+      "offset": 1220000,
+      "duration": 4000
+    },
+    {
+      "text": "security teams: give them all the evidence",
+      "offset": 1224000,
+      "duration": 3000
+    },
+    {
+      "text": "they need to get the smart decision and",
+      "offset": 1227000,
+      "duration": 3000
+    },
+    {
+      "text": "to do remediation.",
+      "offset": 1230000,
+      "duration": 2000
+    },
+    {
+      "text": "Even right now at Wiz we have three",
+      "offset": 1232000,
+      "duration": 3000
+    },
+    {
+      "text": "agents we are building. One that helps",
+      "offset": 1235000,
+      "duration": 2000
+    },
+    {
+      "text": "you understand if you have an ongoing",
+      "offset": 1237000,
+      "duration": 2000
+    },
+    {
+      "text": "attack in your environment—the one that",
+      "offset": 1239000,
+      "duration": 2000
+    },
+    {
+      "text": "actually tells you the risk if something",
+      "offset": 1241000,
+      "duration": 2000
+    },
+    {
+      "text": "is happening. The other one is a remediation",
+      "offset": 1243000,
+      "duration": 2000
+    },
+    {
+      "text": "agent that helps you better fix and",
+      "offset": 1245000,
+      "duration": 3000
+    },
+    {
+      "text": "remediate and give you smart suggestions.",
+      "offset": 1248000,
+      "duration": 3000
+    },
+    {
+      "text": "I imagine the future is: I wake up in the",
+      "offset": 1251000,
+      "duration": 2000
+    },
+    {
+      "text": "morning, writing my code, and then code",
+      "offset": 1253000,
+      "duration": 4000
+    },
+    {
+      "text": "agents have already been run scanning my",
+      "offset": 1257000,
+      "duration": 3000
+    },
+    {
+      "text": "code, offering me fixes. I simply need to",
+      "offset": 1260000,
+      "duration": 2000
+    },
+    {
+      "text": "review them, automatically do PR for them.",
+      "offset": 1262000,
+      "duration": 3000
+    },
+    {
+      "text": "That's where the future goes.",
+      "offset": 1265000,
+      "duration": 2000
+    },
+    {
+      "text": "Another angle is how partners interact",
+      "offset": 1270000,
+      "duration": 3000
+    },
+    {
+      "text": "with each other. MCP was the first",
+      "offset": 1273000,
+      "duration": 3000
+    },
+    {
+      "text": "building block to how organizations are",
+      "offset": 1276000,
+      "duration": 4000
+    },
+    {
+      "text": "going to talk with each other. But even",
+      "offset": 1280000,
+      "duration": 2000
+    },
+    {
+      "text": "right now we see even companies that do",
+      "offset": 1282000,
+      "duration": 3000
+    },
+    {
+      "text": "integration is going to be agents to",
+      "offset": 1285000,
+      "duration": 2000
+    },
+    {
+      "text": "agents. And the more agents to agents",
+      "offset": 1287000,
+      "duration": 3000
+    },
+    {
+      "text": "will collaborate—again with us as human",
+      "offset": 1290000,
+      "duration": 3000
+    },
+    {
+      "text": "observing their results, making sure",
+      "offset": 1293000,
+      "duration": 2000
+    },
+    {
+      "text": "they're not going out of the guardrails,",
+      "offset": 1295000,
+      "duration": 3000
+    },
+    {
+      "text": "making sure that they are doing what",
+      "offset": 1298000,
+      "duration": 2000
+    },
+    {
+      "text": "they're supposed to do—I think that's",
+      "offset": 1300000,
+      "duration": 2000
+    },
+    {
+      "text": "the future. The future will be agentic-to-",
+      "offset": 1302000,
+      "duration": 3000
+    },
+    {
+      "text": "agentic integration, collaboration to",
+      "offset": 1308000,
+      "duration": 4000
+    },
+    {
+      "text": "detect fast, prioritize better, and",
+      "offset": 1312000,
+      "duration": 3000
+    },
+    {
+      "text": "respond fast. That's going to be the future.",
+      "offset": 1315000,
+      "duration": 1000
+    },
+    {
+      "text": "Well, I think we're in a great position",
+      "offset": 1319000,
+      "duration": 3000
+    },
+    {
+      "text": "to enter that future together, continue",
+      "offset": 1322000,
+      "duration": 2000
+    },
+    {
+      "text": "this collaboration that we've started.",
+      "offset": 1324000,
+      "duration": 3000
+    },
+    {
+      "text": "I encourage everybody to check out the",
+      "offset": 1331000,
+      "duration": 2000
+    },
+    {
+      "text": "details of the new Wiz and Sonar",
+      "offset": 1333000,
+      "duration": 3000
+    },
+    {
+      "text": "integration and track how that evolves",
+      "offset": 1336000,
+      "duration": 3000
+    },
+    {
+      "text": "as we continue into this agentic era. I'll",
+      "offset": 1339000,
+      "duration": 2000
+    },
+    {
+      "text": "co-sign on your vision of the agents",
+      "offset": 1341000,
+      "duration": 4000
+    },
+    {
+      "text": "sharing the burden while we have our",
+      "offset": 1345000,
+      "duration": 3000
+    },
+    {
+      "text": "coffee. Aron, next coffee's on me, and",
+      "offset": 1348000,
+      "duration": 2000
+    },
+    {
+      "text": "thank you—maybe an agent would create",
+      "offset": 1350000,
+      "duration": 4000
+    },
+    {
+      "text": "I could use a coffee agent, honestly.\nthat for us.",
+      "offset": 1354000,
+      "duration": 5000
+    },
+    {
+      "text": "Definitely. And by the way, partner can",
+      "offset": 1359000,
+      "duration": 3000
+    },
+    {
+      "text": "still check: we literally last week",
+      "offset": 1362000,
+      "duration": 3000
+    },
+    {
+      "text": "introduced our WIN MCP. WIN is the",
+      "offset": 1365000,
+      "duration": 3000
+    },
+    {
+      "text": "program that we build together; Sonar",
+      "offset": 1368000,
+      "duration": 2000
+    },
+    {
+      "text": "is part of WIN. We launched the WIN MCP",
+      "offset": 1370000,
+      "duration": 3000
+    },
+    {
+      "text": "that helps organizations build",
+      "offset": 1373000,
+      "duration": 3000
+    },
+    {
+      "text": "integrations very fast. Agent on top of",
+      "offset": 1376000,
+      "duration": 3000
+    },
+    {
+      "text": "that is simply the next phase.",
+      "offset": 1379000,
+      "duration": 2000
+    },
+    {
+      "text": "Perfect. I encourage everyone to check",
+      "offset": 1385000,
+      "duration": 3000
+    },
+    {
+      "text": "it out. I'll conclude by thanking you",
+      "offset": 1388000,
+      "duration": 2000
+    },
+    {
+      "text": "for this great partnership and for",
+      "offset": 1390000,
+      "duration": 2000
+    },
+    {
+      "text": "joining us here at the Sonar Summit",
+      "offset": 1392000,
+      "duration": 2000
+    },
+    {
+      "text": "today. Thank you so much.\nYeah, thank you for inviting us and",
+      "offset": 1394000,
+      "duration": 5000
+    },
+    {
+      "text": "thank the Sonar team for the great",
+      "offset": 1399000,
+      "duration": 2000
+    },
+    {
+      "text": "partnership. We're truly excited about",
+      "offset": 1401000,
+      "duration": 1000
+    },
+    {
+      "text": "that.\nTerrific.",
+      "offset": 1402000,
+      "duration": 22000
+    }
+  ],
+  "fullText": "Hello and welcome to this Sonar Summit session on securing the AI stack: end-to-end protection from code to runtime. I'm Donald Fischer, VP of product partnerships and corporate development at Sonar, and I'm joined today by Oron Noah, vice president of product extensibility and partnerships at Wiz. So Aron, welcome. I'm really excited to discuss this timely topic Hi Donald, how are you? Thank you for\nwith you. having me and we're super excited about the opportunity to talk today with you and with the customers.\nPerfect. Well, we're going to be talking about some of the challenges emerging with the emergence of AI development into software development and all of the challenges that organizations face. And along the way, we'll talk a little bit also about some of the ways that Sonar and Wiz have been collaborating, some of the ways that we're bringing our solutions together. Maybe just to start off with, I'd love to set the stage a little bit and hear your perspective. At the high level, how do you think about how the security landscape is changing with the adoption of all of these emerging AI tools, agents for coding, coding assistance, all of the amazing things that are coming across the transom in recent months and years? So first of all I think it's an exciting era. This entire time, what is happening right now, I think we are facing new technology, embracing of AI. I think even going forward it's something very exciting. It makes life much easier. Organizations today are able to ship more code into production much faster than they used to. Like even developers: testing and a lot of things they had to do by themselves, now they can use agentic AI that writes code for them. It makes the work much more efficient. So I think all of those kind of things are extremely interesting, extremely changing, but like any new technologies it also has risks from the security perspective that we need to be mindful for.\nYeah, for sure. And how do you assess that risk? What do you see as the biggest areas of risk with the adoption of these tools? The risk that's here today, and do you see any risk coming over the near-term horizon that we need to prepare for?\nYeah. So, first of all, it's a great question. It has multiple layers. I think if you go back in time, it's literally like the change when people moved from on-prem to cloud, and cloud introduced new risks. Also AI introduced new risks. First of all, it starts with visibility. Even today, when you look about new modern applications, customers having challenges even understanding the visibility: what kind of AI services running? What is the running MCP in my environment? What kind of tools my agents are using if I'm using any agents? My developer can literally embrace new technologies and bring them into the cloud. And as a security persona, first of all, I need to have visibility. This is one challenge that exists. The other challenge is that more code is being shipped into production much faster, and your security organization is not growing that fast as the amount of new code being shipped into production. So the security teams need to work in a much more efficient way to handle those new code that been shipped into production. Obviously, the architecture of autonomous agents, agents talk with agents within your organization, outside of your organization.\nAnd lastly, also the bad guys—attacker—can actually leverage this very cool technology to attack your environment. Let's take for example zero day vulnerabilities or any high-profile vulnerabilities. In the past it can take weeks to write the code that will exploit that. Today with AI, basically attacker can create those and to exploit those zero day vulnerability in a matter of days, maybe hours. So this is the last challenge that exists. But I think the security tools and the security organization has much better way to handle those kind of threats if they will use AI internally, if they will actually have the better visibility. Because the defender, the more they will embrace AI in their technology, has a better chance than the attacker because they see what happening from the inside. No, I think those are great points. One of the things that makes me wonder about is it seems like the stakeholders are changing around who's involved in owning security here as well. Because you talked a lot about the security team, the defender organization. Obviously the traditional developers have an essential role in code security at the time of development. And then something I'm experiencing in my day-to-day life is now there's all these new kinds of developers, right? Like every business person I know is now using agentic software development tools to build their own tools and systems and so on. So there's not just a lot more code, there's a lot more developers. So how do you see that integrating with this traditional notion of runtime protection when there's a clear delineation between the development time and the production time? Now it's like many things ship straight into production, right? Yeah definitely. So first of all, even before the new emerging of AI, from day one we talked about democratized security— think of security as a team sport. This is why we truly believe everyone in the organization needs to be engaged and have access to the same security platform. Because if you have an ongoing—let's take hypothetically speaking now—assuming that you have an ongoing attack right now in your environment. Most of the time your SOC team will identify a suspicious activity and their job is to identify very quickly if that's an ongoing attack, yes or no, to come up with a verdict. And they will try to stop the attack from happening, which is like: isolate the VMs, isolate the network, terminate the process. Great. After that they will have to be engaged with the cloud security teams to understand: okay I saw this attack, but what is wrong with our system? How did the attacker get in? Is it a misconfiguration? Do I have a secret? Do I have a vulnerability? What is the toxic combination that make this attack happen from the beginning? And the cloud security team will have to understand that. The moment the cloud security team do their investigation and they will find: oh gosh, someone pushed a plaintext secret into production. They would like to engage with the DevSecOps or with the developer to find out who is the owner that actually pushed this code into production to open a PR for them and do the remediation from the get-go. So this is democratization. Everyone needs to collaborate together in order to fix that. Add that to the area of AI. Now it's democratization on steroids, right? Because as you mentioned, more teams, more personas are being engaged. Obviously I think first of all we have to put a lot of guardrails in place. Number one is security mindset. Security mindset and security by design. Security by design means it has a couple of flavors. The first flavor is like: am I ever shipping code to production or building something before I even did a security review? Many times when people do security review it is later on in the process, a moment before the code has been shipped into production, after they spent the time on building that. So from security mind perspective, do your security review earlier in the process as you can, like you do your architecture review. This is number one. Number two, obviously put all the guardrails in your CI/CD pipeline, your code scanners. That's for sure. But there's also a very interesting point that even the code being shipped—or being generated by vibe coding—needs the mindset of making sure that the model created a built-in or a secure by design code. So for example, it will not generate—it will not allow me to write a code or to tell the agents \"write me something\" and it will automatically put a plaintext secret in the code. So also the vibe coding vendor will have to have more attention to the code being generated by AI. My personal observation is the man-in-the-middle, the man-in-the-loop: we always need to have there. Like, AI generate code for you, do your code review, use scanners like Sonar, like Wiz. Scan your code before it's been shipped into production to prevent mistakes from happening. No, it makes total sense. And I think it maybe is a good time we could talk a little bit about how we're bringing some of the capabilities that Sonar is well known for in our SonarQube family of products, and bring those together, connecting those to the moment of runtime through our partnership with Wiz. A key foundational part of that is ingesting the security findings—code security and code quality findings—that Sonar uncovers using its static analysis techniques and a broad array of code analysis and program analysis techniques. It creates those findings, but then surfaces those findings directly in Wiz so that they can be considered as part of the broader landscape of runtime security and application security. So how do you see that new integration helping leaders address this problem of trust with all these new stakeholders, without sacrificing the speed that AI otherwise enables?\nSo first, again, it's a great question. As you know, with Wiz we address all the personas in the organization: the SecOps team, the cloud security team, the DevOps team and the developers. So we have Wiz Cloud, Wiz Code, and Wiz Defend that helps the runtime. Because we believe in an open security platform, we allow companies to ingest their own scanners. A customer can bring their own scanner, whether it's their code scanner, cloud scanner, pipeline scanner, or runtime scanner. In that specific case, assuming that you're now using Sonar to scan your code, your SAST findings: first of all, with the Wiz Exposure Management and the AppSec capabilities, they have a single pane of glass to be able to aggregate in one single place all of their vulnerabilities from code, from runtime, and from cloud. This is one thing—it's very good to have the visibility in one place.\nThe cool thing about ingesting the data into Wiz is all the data flows into the Wiz Security Graph. The Wiz Security Graph is where the magic happens because that allows the cloud security persona to have the blast radius, the code-to-cloud impact. Meaning, if I will ship this code into production—I found a problem in a repo—and if this code will be shipped into production, that will be the blast radius. That's the impact that is going to happen in my environment. And having the blast radius of the code-to-cloud gives them the ability to understand and put the guardrails in place. Remember the example I brought in the beginning: the SecOps need to engage with cloud security, and cloud security needs to contact the developer. Right now the developer is enabled to understand the blast radius by themselves before they ship code in production. So it makes life much easier from the other direction because we also connect your findings. Assuming that we find a problem in the cloud, we are able also to do the backward cloud-to-code analysis. SecOps team finds something. Cloud security team is engaged. Cloud security teams, using the cloud-to-code capabilities, are able to trace it back to the developer that actually pushed this code into production from the very beginning, assign them, open a PR and remediate very fast. This is the power when you're bringing the insights from Sonar into the Wiz Security Graph. This is all the magic: code-to-cloud and cloud-to-code analysis.\nNo, that's great. I think this is a classic example of a productive industry collaboration where we can bring our mutually beneficial capabilities to our many joint customers and future joint customers as well. One thing I'd love to dig in on: you talked about the role of code scanning. There's traditional approaches to doing that, and emergent approaches to assessing code quality and code security using LLM tools and so on. One of the things that we have noted in our conversation with leading organizations around the world is that there's a fundamental challenge in that AI, LLM-based software development, is fundamentally probabilistic.\nIt's a strength and a challenge, right? The strength is it uncovers these interesting, novel, creative approaches. But also it's a little bit of a shifting sands: the answers change from round to round. That seems sometimes fundamentally at odds with the challenges of security, which really needs to be deterministic. There cannot be a different answer if the answer you were counting on missed a vulnerability, missed a zero day exposure that ends up compromising the organization. They only have to be right once; you have to be right every time. And being right every time seems to demand a deterministic approach. One of the things we found that maps well from Sonar's core capabilities is this history and large corpus of deterministic rules that we have applied to code analysis and program analysis for many years. While there are new opportunities to enhance that with LLM-based AI approaches—agentic security researchers and things like that—there's still a value to fundamental deterministic rules analysis, verification gates, or quality gates as we often call them. Do you agree with that? How do you see the deterministic and the probabilistic sides of AI-assisted software development unfolding? That's a very good one. I'll try to take it from the risk perspective. Because you can have deterministic rules. Deterministic rules are great because they will catch classic things that are happening. That's for sure. But you can do the equivalent of: I have new developers that are building something, coming from different organizations with different coding styles, that is not purely deterministic based on how I'm writing code in my organization. I think having rules that assess your code deterministically is great, it's valuable. But I think the moment you add the code-to-cloud impact, it doesn't really matter if it's deterministic or not, because the risk is deterministic. What do I mean? You generate code, you run your analysis, and you are using tools like us to do code-to-cloud analysis. We tell you: okay, whoever wrote it—if it's a machine or a human—if this code will be shipped into production, that will be the blast radius. That is the impact that is going to happen in your environment.\nThat's deterministic, because this is the code, this is the impact. I think these are the real guardrails that you can put. Because in the end, if I'm pushing something into production and it won't cause any real security impact, it's fine. Tons of new code is being pushed into production; I need to chase it and find the ones that are actually causing a problem. I think there's room for both the deterministic approach and nondeterministic approach. Put the code-to-cloud concept and impact; it's crucial.\nI agree. I think it's the combination of these capabilities or these styles of verification that are the way to ensure comprehensive security, which is truly what's needed. That's the deterministic result that's needed. I agree with your framing there.\nWe're having this conversation in early 2026. Right now the industry discussion is really the shift towards agents of all kinds: agentic development, agentic security response. I'm curious to dig in from your perspective and Wiz's perspective: how do you view what comes next as we apply more agentic patterns in this problem space of ensuring code quality and code security in our applications? Including—we've talked a lot about the analysis part of this—but there's also remediation or response, which seems to call for or invite an agentic approach. How do you see the agent-powered next phase of this space, and how might Wiz and Sonar collaborate, extending what we've already started, to help organizations manage that transition to come?\nI think it's fascinating. The point of time that we are right now, the future is actually changing as we speak, and that's truly exciting. Remember I told you: the attacker is using AI to try to compromise your environment. We truly believe—the Wiz vision—is winning AI using AI. The only way to win is by leveraging AI. In all security tools, you have to have agents running that help security teams: give them all the evidence they need to get the smart decision and to do remediation. Even right now at Wiz we have three agents we are building. One that helps you understand if you have an ongoing attack in your environment—the one that actually tells you the risk if something is happening. The other one is a remediation agent that helps you better fix and remediate and give you smart suggestions. I imagine the future is: I wake up in the morning, writing my code, and then code agents have already been run scanning my code, offering me fixes. I simply need to review them, automatically do PR for them. That's where the future goes. Another angle is how partners interact with each other. MCP was the first building block to how organizations are going to talk with each other. But even right now we see even companies that do integration is going to be agents to agents. And the more agents to agents will collaborate—again with us as human observing their results, making sure they're not going out of the guardrails, making sure that they are doing what they're supposed to do—I think that's the future. The future will be agentic-to- agentic integration, collaboration to detect fast, prioritize better, and respond fast. That's going to be the future. Well, I think we're in a great position to enter that future together, continue this collaboration that we've started. I encourage everybody to check out the details of the new Wiz and Sonar integration and track how that evolves as we continue into this agentic era. I'll co-sign on your vision of the agents sharing the burden while we have our coffee. Aron, next coffee's on me, and thank you—maybe an agent would create I could use a coffee agent, honestly.\nthat for us. Definitely. And by the way, partner can still check: we literally last week introduced our WIN MCP. WIN is the program that we build together; Sonar is part of WIN. We launched the WIN MCP that helps organizations build integrations very fast. Agent on top of that is simply the next phase. Perfect. I encourage everyone to check it out. I'll conclude by thanking you for this great partnership and for joining us here at the Sonar Summit today. Thank you so much.\nYeah, thank you for inviting us and thank the Sonar team for the great partnership. We're truly excited about that.\nTerrific.",
+  "fetchedAt": "2026-03-14T09:22:11.965Z"
+}

@@ -1,0 +1,1348 @@
+{
+  "videoId": "v123",
+  "youtubeId": "doEikRO9GF8",
+  "segments": [
+    {
+      "text": "Good morning, good afternoon, good evening. Depending on where in the world you are. Welcome to this webinar hosted by Sonar.",
+      "offset": 6476,
+      "duration": 8000
+    },
+    {
+      "text": "I'm gonna be your host for today. I'm Phil Nash. I develop advocate here at Sonar.",
+      "offset": 14476,
+      "duration": 6000
+    },
+    {
+      "text": "But if ready I'm just here to introduce Andreas Reese who's going to be taking us through is received plus past 23 and discovering what is new.",
+      "offset": 20476,
+      "duration": 9000
+    },
+    {
+      "text": "In this new standard. So I just have a. Little bit of housekeeping to get through before we do get started.",
+      "offset": 29476,
+      "duration": 8000
+    },
+    {
+      "text": "So this is gonna be a, 45, 40 to 45 min session, including Q&A, which will mostly be at the end, but do feel free to ask questions in the Q&A panel as we go.",
+      "offset": 37476,
+      "duration": 8000
+    },
+    {
+      "text": "We may answer some as we go. Or we may save them till the end. And some of them will be answered there as well.",
+      "offset": 45476,
+      "duration": 9000
+    },
+    {
+      "text": "So please use that Q&A box as part of the Zoom interface for asking your questions. But there will be a follow up email in a few days after this recording.",
+      "offset": 54476,
+      "duration": 5000
+    },
+    {
+      "text": "So any of the questions that we didn't get to live if there are any leftover they'll all be there plus all the ones that we did get to so don't feel that you have to take any notes of those.",
+      "offset": 59476,
+      "duration": 15000
+    },
+    {
+      "text": "We'll also be posting out a post webinar survey so you can you can tell us what you liked.",
+      "offset": 74476,
+      "duration": 7000
+    },
+    {
+      "text": "How we can improve in the future. We always want to improve and what topics we should be covering with future speakers.",
+      "offset": 81476,
+      "duration": 7000
+    },
+    {
+      "text": "So we've got a great speaker today. We want to keep that. Are happening. So let's get to Oh, great speaker today.",
+      "offset": 88476,
+      "duration": 8000
+    },
+    {
+      "text": "Dress is a misrece C plus plus working group member. So with these new set of guidelines who better than somebody who actually helped to form those guidelines to be here and talk to us about them.",
+      "offset": 96476,
+      "duration": 12000
+    },
+    {
+      "text": "So this is Discover What's New, Misery C plus Plus, 2023.",
+      "offset": 108476,
+      "duration": 6000
+    },
+    {
+      "text": "I'm going to stop sharing my screen to the Andreas takeover. Andres.",
+      "offset": 114476,
+      "duration": 7000
+    },
+    {
+      "text": "Alright, thank you, Phil. Yeah, so, today I'm going to show you a few of the things, that I knew in, the new Missouri C plus standard.",
+      "offset": 121476,
+      "duration": 10000
+    },
+    {
+      "text": "And, yeah, I'm happy to answer your question. So, yeah, as full said, please keep them coming.",
+      "offset": 131476,
+      "duration": 7000
+    },
+    {
+      "text": "This is more fun if it's interactive. So To start out, let's maybe talk a little bit about like what is Misra C plus for those of you who may not have used it before.",
+      "offset": 138476,
+      "duration": 14000
+    },
+    {
+      "text": "So, is a set of coding guidelines. And the aim here is specifically to define a subset of the C, language.",
+      "offset": 152476,
+      "duration": 12000
+    },
+    {
+      "text": "That makes it harder to, to make mistakes. So unlike other guidelines like the, the, core guidelines, for example.",
+      "offset": 164476,
+      "duration": 8000
+    },
+    {
+      "text": "The focus here is not necessarily on like best practices for coding like making your code especially pretty or elegant but the focus here is really, to, yeah, keep you away from the, dangerous parts of the language and avoid avoid making mistakes.",
+      "offset": 172476,
+      "duration": 24000
+    },
+    {
+      "text": "That's a really small substance.",
+      "offset": 196476,
+      "duration": 1000
+    },
+    {
+      "text": "Right, yeah, unfortunately. So Misra stands for a motor industry software reliability association.",
+      "offset": 197476,
+      "duration": 12000
+    },
+    {
+      "text": "So this was originally a UK based organization that was formed from representatives from the automotive industry. So this, this, the standard while today it goes a little bit beyond that it It's still, it has its roots in the, in the automotive domain and that is still one of its main uses until today.",
+      "offset": 209476,
+      "duration": 24000
+    },
+    {
+      "text": "But the, is our consortium, as we have it today, actually consists of a variety of experts.",
+      "offset": 233476,
+      "duration": 7000
+    },
+    {
+      "text": "So it's an international group. Now it's no longer just the UK. And is also not just automotive backgrounds but it's functional safety people, service security people, programming language experts and also representatives from software tooling.",
+      "offset": 240476,
+      "duration": 18000
+    },
+    {
+      "text": "Which is quite important because When writing a guidelines, you also want to make sure that it's, it's too checkable in the end.",
+      "offset": 258476,
+      "duration": 8000
+    },
+    {
+      "text": "So the, first version of, Mizra C was published in 2,008.",
+      "offset": 266476,
+      "duration": 6000
+    },
+    {
+      "text": "So it's quite old by now. And now this year just back in October the new 2023 version was published and now since a few weeks.",
+      "offset": 272476,
+      "duration": 12000
+    },
+    {
+      "text": "You can, buy it, either by the PDF of the, I mean, a homepage or you can also order a hard copy of Amazon.",
+      "offset": 284476,
+      "duration": 10000
+    },
+    {
+      "text": "So few words about the, the history of, of Mithra C, and where this comes from.",
+      "offset": 294476,
+      "duration": 7000
+    },
+    {
+      "text": "So the, very first edition of a Misra standard was targeting the C programming language and that one was published in 1998.",
+      "offset": 301476,
+      "duration": 11000
+    },
+    {
+      "text": "And back then, like C, was not really used in, in the embedded world.",
+      "offset": 312476,
+      "duration": 3000
+    },
+    {
+      "text": "So there was not really a strong demand for it. But, as, time went on, like people became more and more interested in using C.",
+      "offset": 315476,
+      "duration": 14000
+    },
+    {
+      "text": "Also for these kinds of projects. So finally in 2,000 2,008 a variant of the Missouri guidelines for C plus was published.",
+      "offset": 329476,
+      "duration": 6000
+    },
+    {
+      "text": "This was based on the C, 2,003 standard which was the latest C, standard at that time.",
+      "offset": 335476,
+      "duration": 9000
+    },
+    {
+      "text": "And if you if you know both documents, then you will probably see that there's a lot of overlap between the C standard and the C.",
+      "offset": 344476,
+      "duration": 14000
+    },
+    {
+      "text": "As time went on, C plus 11 eventually got released and that changed a lot about how we how we write code in C.",
+      "offset": 358476,
+      "duration": 7000
+    },
+    {
+      "text": "But Misra was still stuck in in 2,008 and that led to a lot of people seeing the need for a more modern set of guidelines that incorporates, some of these new language features.",
+      "offset": 365476,
+      "duration": 17000
+    },
+    {
+      "text": "And that culminated, in 2,017 when, the autos are organization, which is a standardization body for, automotive software platforms.",
+      "offset": 382476,
+      "duration": 13000
+    },
+    {
+      "text": "They published their own set of guidelines, targeting C, 14. And they used as a basis here not just miss for c plus but also a bunch of other guidelines that have been published in the meantime.",
+      "offset": 395476,
+      "duration": 13000
+    },
+    {
+      "text": "Such as like high integrity C, the Joint Strike Fighter guidelines or the search C plus plus, but also the C plus core guidelines for example.",
+      "offset": 408476,
+      "duration": 15000
+    },
+    {
+      "text": "And, Others are since like its core business is not publishing. Guidelines, right?",
+      "offset": 423476,
+      "duration": 9000
+    },
+    {
+      "text": "So, they weren't really that interested in, in, carrying this forward. So eventually, They approached Misra, and in 2,019 there was an announcement that, Misra would now take over what others are started would publish a new set of guidelines that would supersede the the autism C, 14 guidelines and that was now the document that was published this year.",
+      "offset": 432476,
+      "duration": 29000
+    },
+    {
+      "text": "Misra C plus, 2,023, which is targeting C, 17.",
+      "offset": 461476,
+      "duration": 5000
+    },
+    {
+      "text": "As the language standard. And, I'm going to show you now like some, examples like how those, those rules look like and what are some of the changes that we have in the new version.",
+      "offset": 466476,
+      "duration": 13000
+    },
+    {
+      "text": "Awesome. Sure. Yeah. Right.",
+      "offset": 479476,
+      "duration": 1000
+    },
+    {
+      "text": "Before you get into your examples, can I have a question on the on the history because it was 15 years between The original is received plus bus and the new one.",
+      "offset": 480476,
+      "duration": 8000
+    },
+    {
+      "text": "Yeah.",
+      "offset": 488476,
+      "duration": 1000
+    },
+    {
+      "text": "If you don't count, So the question is what took Salum.",
+      "offset": 489476,
+      "duration": 4000
+    },
+    {
+      "text": "Yeah, so, like in the beginning we saw C plus fell into sort of the same trap that the C.",
+      "offset": 493476,
+      "duration": 2000
+    },
+    {
+      "text": "Stanisation fell into when in 2,008 the feeling was that we are done right mr. C it's out there and we don't really need.",
+      "offset": 495476,
+      "duration": 14000
+    },
+    {
+      "text": "Need an update and then when c plus 11 was released and like people slowly realized that yeah, it might make sense to modernize these guidelines.",
+      "offset": 509476,
+      "duration": 10000
+    },
+    {
+      "text": "Now, it took a while to like get everybody back together. Reassemble the working group and actually, yeah, start working on, a new revision.",
+      "offset": 519476,
+      "duration": 13000
+    },
+    {
+      "text": "So that was the main reason here, right? They just lost momentum after 2,008 because they are, yeah, in 2,008, obviously there wasn't yet a need for, for a new vision.",
+      "offset": 532476,
+      "duration": 11000
+    },
+    {
+      "text": "S it's gonna be another 15 years before the next one.",
+      "offset": 543476,
+      "duration": 9000
+    },
+    {
+      "text": "Great.",
+      "offset": 552476,
+      "duration": 1000
+    },
+    {
+      "text": "Oh, well, that's the good thing now. We did not disband the working group after finishing 2,023 so we we keep working we still need every week.",
+      "offset": 553476,
+      "duration": 4000
+    },
+    {
+      "text": "To discuss what to do next and yeah the hope is that from now on we can publish a much more regular cadence.",
+      "offset": 557476,
+      "duration": 9000
+    },
+    {
+      "text": "And yeah give you much more frequent updates on those guidelines.",
+      "offset": 566476,
+      "duration": 5000
+    },
+    {
+      "text": "Great, good today. Thank you.",
+      "offset": 571476,
+      "duration": 2000
+    },
+    {
+      "text": "Yeah, of course. Then, yeah, let's, quickly, look at, like the, anatomy of a rule, like what What a typical, looks like.",
+      "offset": 573476,
+      "duration": 12000
+    },
+    {
+      "text": "So if you open the document, you will see a bunch of rules and they're all structured in sort of the same way.",
+      "offset": 585476,
+      "duration": 7000
+    },
+    {
+      "text": "So you will also have, you will always have a headline. At the beginning of a rule which gives you a brief summary of what the rule is about and these headlines they're probably the thing that most developers are familiar with because also when you are using a checker tool, then usually the warnings that you get from your checker tool, they will use the wording from those headlines.",
+      "offset": 592476,
+      "duration": 24000
+    },
+    {
+      "text": "Below the headline, we will give a category for, rule, which, is a measure for like how, how important the rule is or like how severe, the danger that is trying to protect you from.",
+      "offset": 616476,
+      "duration": 10000
+    },
+    {
+      "text": "So the, The most strict category that we have is mandatory that basically says you must always follow this rule like there's no you can't really not follow this rule this is typically reserve we only have very few rules with this category this is reserve collect really severe cases of like undefined behavior where it's absolutely clear if you write something like this then your program is broken and There's no discussions.",
+      "offset": 626476,
+      "duration": 30000
+    },
+    {
+      "text": "What is much more common is, the other 2 categories. So we have required, which says like this is, this is really like a potentially dangerous thing and in almost all cases you should not do this.",
+      "offset": 661476,
+      "duration": 14000
+    },
+    {
+      "text": "If you don't want to follow a required rule you have to deviate on a case by case basis and like give a formal.",
+      "offset": 675476,
+      "duration": 9000
+    },
+    {
+      "text": "Justification for why you can't get in trouble because of the the violation and then we have advisory, which is a little bit weaker.",
+      "offset": 684476,
+      "duration": 10000
+    },
+    {
+      "text": "So, Advisory. Has a little bit lower bar for, for deviation.",
+      "offset": 694476,
+      "duration": 7000
+    },
+    {
+      "text": "So we use it for rules where there might actually be legitimate uses where you might want to deviate from it more regularly and we want to make it easier for for you to not follow this one.",
+      "offset": 701476,
+      "duration": 16000
+    },
+    {
+      "text": "Then, the analysis section, classifies this rule, whether it's, decidable or undecidable.",
+      "offset": 717476,
+      "duration": 10000
+    },
+    {
+      "text": "So, decidable here means that like a rule can can always check this reliably.",
+      "offset": 727476,
+      "duration": 6000
+    },
+    {
+      "text": "And, whether the analysis, tool, needs to look at only a single translation unit.",
+      "offset": 733476,
+      "duration": 2000
+    },
+    {
+      "text": "So like a single CPP file, same as as the compiler sees the code or whether it needs to do system-wide analysis when it's to look at the entire cookies.",
+      "offset": 735476,
+      "duration": 16000
+    },
+    {
+      "text": "And of course we always try to keep the roads single translation unit and decidable because that means they're relatively cheap to check.",
+      "offset": 751476,
+      "duration": 10000
+    },
+    {
+      "text": "And you can get reliable diagnostics. So we, yeah, put a lot of emphasis on this.",
+      "offset": 761476,
+      "duration": 7000
+    },
+    {
+      "text": "Then the next section that we have is what is called the amplification. So this gives you a little bit more detail, about like what exactly the rule is trying to prevent.",
+      "offset": 768476,
+      "duration": 13000
+    },
+    {
+      "text": "Not all rules have have an amplification for some rules. We felt that it's obvious enough, what it is, but in, many rules, it's, like, there's like subtle corner cases where we give additional explanations like what it applies to and what it doesn't.",
+      "offset": 781476,
+      "duration": 17000
+    },
+    {
+      "text": "Then one of the most important sections is the rationale, because in the rationale we explain why the thing that we we ban is is bad.",
+      "offset": 798476,
+      "duration": 12000
+    },
+    {
+      "text": "And this is particularly important if you want to deviate from, like, right? Like if you get a violation and you feel that, I know, I think the tool is wrong here.",
+      "offset": 810476,
+      "duration": 12000
+    },
+    {
+      "text": "I really want to write what I just wrote there, then The rationale tells you like what is potentially bad about the thing that you wrote and you now have to argue why.",
+      "offset": 822476,
+      "duration": 12000
+    },
+    {
+      "text": "You cannot run into these problems that the rationale, is, afraid of. So, if you're writing DVDs, you should always look at the rationale and think really hard like yeah the the things that are being described the rationale and think really hard like yeah the things that are being described they are the things that are being described they are the things that the guidelines worry about is that the things that the guidelines worry about is that actually something that",
+      "offset": 834476,
+      "duration": 21000
+    },
+    {
+      "text": "can happen in this situation. That the guidelines worry about is that actually something that can happen in this situation and only if you're sure that no I actually don't, is that actually something that can happen in this situation?",
+      "offset": 855476,
+      "duration": 5000
+    },
+    {
+      "text": "And only if you're sure that no, I actually don't trigger any of those bad things, then it's fine to deviate.",
+      "offset": 860476,
+      "duration": 3000
+    },
+    {
+      "text": "And then finally we also always give a code example to illustrate the rule. Usually this includes like both compliant and and non-compliant example",
+      "offset": 863476,
+      "duration": 13000
+    },
+    {
+      "text": "Yeah, and then, I have a bunch of examples for some of the rules. That we have now in the new standard and we can look at some of the changes that we have in the new version.",
+      "offset": 876476,
+      "duration": 15000
+    },
+    {
+      "text": "Sounds great, cause so far you've made it sound like a bad thing.",
+      "offset": 891476,
+      "duration": 3000
+    },
+    {
+      "text": "Let's see. So, we have several kinds of changes that you will notice compared to the, to the old version.",
+      "offset": 894476,
+      "duration": 11000
+    },
+    {
+      "text": "So like, one example for, for what changed is what we modernized an existing rule. So for example, in C plus plus 11, we introduced the, the output, keyword.",
+      "offset": 905476,
+      "duration": 13000
+    },
+    {
+      "text": "And a classic problem in both C and C plus plus is the, the confusion between like the integer value 0 and the null pointer constant now.",
+      "offset": 918476,
+      "duration": 12000
+    },
+    {
+      "text": "And in Misra C, 2,008, we had a rule that addressed this and the goal there was to prevent the usage of the integer constant 0 in the context of pointers.",
+      "offset": 930476,
+      "duration": 6000
+    },
+    {
+      "text": "So if you had a function that takes a pointer parameter and you try to call this with the integer 0 that will be non-compliant and your tool would give you a warning about this and you would have to change this to instead use the null background.",
+      "offset": 936476,
+      "duration": 25000
+    },
+    {
+      "text": "Now of course in C plus plus 11 we introduced null pointer which is a better alternative.",
+      "offset": 961476,
+      "duration": 7000
+    },
+    {
+      "text": "To the the, macro in all cases. So we updated the rule, to, now require, now, now put her as the only allowed null pointer constant.",
+      "offset": 968476,
+      "duration": 14000
+    },
+    {
+      "text": "So, this call, which was compliant in, 2,008 now in, in, 2,023, it's no longer compliant.",
+      "offset": 982476,
+      "duration": 9000
+    },
+    {
+      "text": "You actually have to use.",
+      "offset": 991476,
+      "duration": 3000
+    },
+    {
+      "text": "Yeah. And we have a bunch of these rules where like, they're still based on, on a 2,008 rule and existing rule and we now just slightly modernized them based on what was added to the language in the meantime.",
+      "offset": 994476,
+      "duration": 15000
+    },
+    {
+      "text": "So we'd miss received plus plus 2023. Do you still consider 0 to be non-compliant?",
+      "offset": 1009476,
+      "duration": 6000
+    },
+    {
+      "text": "Yes, exactly. That did not change. So it's, it's everything that was non compliant in 2,008 is now also non compliant but now in addition this using the now macro which was compliant in 2,008 that is now also no longer",
+      "offset": 1015476,
+      "duration": 17000
+    },
+    {
+      "text": "Oh, not on Void. Right. Thank you.",
+      "offset": 1032476,
+      "duration": 6000
+    },
+    {
+      "text": "Then we also have a bunch of new rules. So this, these are mostly rules that are concerned with language features that are concerned with language features that did not exist back in 2,008.",
+      "offset": 1038476,
+      "duration": 11000
+    },
+    {
+      "text": "So one example here is, lambdas, which was, which were introduced with, C plus 11.",
+      "offset": 1049476,
+      "duration": 7000
+    },
+    {
+      "text": "So obviously there's no rules about lambdas in the old Mistra standard. But now, like for example, for 2023 1 one of the pitfalls that that we notice that that happened frequently with landers.",
+      "offset": 1056476,
+      "duration": 17000
+    },
+    {
+      "text": "Is when writing a lambda expression, you can, you can capture, values from the from the surrounding scope.",
+      "offset": 1073476,
+      "duration": 7000
+    },
+    {
+      "text": "To use in the lambda body and you can capture this either by value or by reference and if you're not careful then this and you capture my reference then that can be to like dangling pointer issues.",
+      "offset": 1080476,
+      "duration": 16000
+    },
+    {
+      "text": "So, 2023 introduced now a rule that. Advises to use explicit capture lists.",
+      "offset": 1096476,
+      "duration": 10000
+    },
+    {
+      "text": "In cases where. The lifetime of the, of the value that you captured. Could be shorter than the lifetime of the lambda.",
+      "offset": 1106476,
+      "duration": 11000
+    },
+    {
+      "text": "So, For example, as we see here, like we, capture the logger by reference and then inside the the lambda we we call the logger to lock some message but now we pass this lambda to like a set callback function, right?",
+      "offset": 1117476,
+      "duration": 20000
+    },
+    {
+      "text": "So this function will store the lambda in some place and then invoke it later when whenever something needs to be locked and then if the logger, whenever something needs to be locked.",
+      "offset": 1137476,
+      "duration": 11000
+    },
+    {
+      "text": "And then if the logger object is no longer live at that point. Then, that could, that could lead to problems here.",
+      "offset": 1148476,
+      "duration": 6000
+    },
+    {
+      "text": "However, on the other side, we have this example down here where, we do capture, by, by reference, the, the value that we, use in the, in the predicate for the find if down here.",
+      "offset": 1154476,
+      "duration": 20000
+    },
+    {
+      "text": "But for the find if we know it's not going to store the lambda, right? It's going to use the lambda to perform the find operation, but it's not going to store it away.",
+      "offset": 1174476,
+      "duration": 12000
+    },
+    {
+      "text": "So, therefore we see like for those simple cases where it's clear that the lambda is going to be used right then and there.",
+      "offset": 1186476,
+      "duration": 5000
+    },
+    {
+      "text": "It's okay to use this implicit capture. So you just need to say I'm percent. You don't need to say am percent.",
+      "offset": 1191476,
+      "duration": 10000
+    },
+    {
+      "text": "You do need to name the E. But in, these, cases up here where, it's likely that the, lander will be stored away and will live longer than this function call.",
+      "offset": 1201476,
+      "duration": 11000
+    },
+    {
+      "text": "You have to make the capture explicit. So you have to say in the capture list, I'm going to capture the logger by reference.",
+      "offset": 1212476,
+      "duration": 7000
+    },
+    {
+      "text": "And that is what what this rule does. So, As you can see here, like we, we could have just said we're going to ban the implicit captures everywhere, but we we tried very hard to make sure that the rules don't get in your way.",
+      "offset": 1219476,
+      "duration": 17000
+    },
+    {
+      "text": "So in cases where there's obviously no no real danger like down here for the for the find if we also try, to not have the rule get in your way and that is something that, that, we were very deliberate about throughout the rules.",
+      "offset": 1236476,
+      "duration": 15000
+    },
+    {
+      "text": "To be sure that like those cases where there is no danger and, that, that might be frequent, that might occur frequently.",
+      "offset": 1251476,
+      "duration": 7000
+    },
+    {
+      "text": "That, yeah, the rules take that into account.",
+      "offset": 1258476,
+      "duration": 10000
+    },
+    {
+      "text": "That's good to know.",
+      "offset": 1268476,
+      "duration": 3000
+    },
+    {
+      "text": "Then, Another, example in the context of Lambdas is that, there was this rule in C plus plus 11 that you could.",
+      "offset": 1271476,
+      "duration": 15000
+    },
+    {
+      "text": "Implicitly capture this pointer. By using this implicit capture with the with the equals sign.",
+      "offset": 1286476,
+      "duration": 9000
+    },
+    {
+      "text": "And you need to do this if you want to, access one of the one of the class members inside the, the lambda.",
+      "offset": 1295476,
+      "duration": 9000
+    },
+    {
+      "text": "However, what is often surprising to people that are not that familiar with Landers is that even though I'm using equal.",
+      "offset": 1304476,
+      "duration": 10000
+    },
+    {
+      "text": "2 to capture, which usually means I capture the objects by value, so there's no lifetime issues.",
+      "offset": 1314476,
+      "duration": 6000
+    },
+    {
+      "text": "In this case, the, the lander does not extend the lifetime of the surrounding class. So there is actually a similar similar problem here as with the with the reference captures.",
+      "offset": 1320476,
+      "duration": 13000
+    },
+    {
+      "text": "And the CEOs plus committee even acknowledged that this is a dangerous contract and actually changed the rules of the language.",
+      "offset": 1333476,
+      "duration": 7000
+    },
+    {
+      "text": "So this implicit, implicitly capturing that this pointer with this syntax was actually deprecated in C, 20.",
+      "offset": 1340476,
+      "duration": 9000
+    },
+    {
+      "text": "And, Hey, we therefore, decided to already, require this stricter model for C, 17.",
+      "offset": 1349476,
+      "duration": 9000
+    },
+    {
+      "text": "So if you try to use an implicit capture like this, it will be non-compliant. You actually have to explicitly spell out the this keyword inside the capture, to, to comply with this rule.",
+      "offset": 1358476,
+      "duration": 17000
+    },
+    {
+      "text": "To that apply to capture by reference as well. Because that will also capture this.",
+      "offset": 1375476,
+      "duration": 7000
+    },
+    {
+      "text": "I think, yeah, so you can, you can't explicitly capture. So this rule does not forbid explicitly capturing this by reference.",
+      "offset": 1382476,
+      "duration": 11000
+    },
+    {
+      "text": "I mean the implicit capture by reference.",
+      "offset": 1393476,
+      "duration": 4000
+    },
+    {
+      "text": "Right, right. Yeah, so that's that is also not forbidden. So then, you, for the, for the implicit capture by reference, you have to make sure that you don't violate the previous rule, right?",
+      "offset": 1397476,
+      "duration": 9000
+    },
+    {
+      "text": "So if you're in a lambda is could be stored away if it's not the simple case like with the find if down here then you have to be explicit here because of that.",
+      "offset": 1406476,
+      "duration": 13000
+    },
+    {
+      "text": "Sounds covered by that. Yeah.",
+      "offset": 1419476,
+      "duration": 1000
+    },
+    {
+      "text": "So these are actually like, yeah. So these are actually 2 separate rules. That, both restrict, what you can write in the capture.",
+      "offset": 1420476,
+      "duration": 10000
+    },
+    {
+      "text": "Got to get some closure on that.",
+      "offset": 1430476,
+      "duration": 2000
+    },
+    {
+      "text": "Yeah. Okay, then, another category, of rules that we have is where we try to simplify existing rules, right?",
+      "offset": 1432476,
+      "duration": 11000
+    },
+    {
+      "text": "So this is Unlike the first category where we were modernizing a rule because of a, a new language feature that came around, we also had a bunch of rules where we felt that, even though the language has not changed really that much in this area, the, the idioms surrounding this code might have changed.",
+      "offset": 1443476,
+      "duration": 23000
+    },
+    {
+      "text": "Or what we just had the impression that the existing rules were not working really well and and required some modernization.",
+      "offset": 1466476,
+      "duration": 9000
+    },
+    {
+      "text": "So one, prime example here is the restrictions on for loops. So in Vijay, plus plus 2,008, there was an entire section of the document that, contained, rules about for loops and how they should be structured.",
+      "offset": 1475476,
+      "duration": 18000
+    },
+    {
+      "text": "So they were in total 6 different rules. That together define what the desired form of a follow is and if you ever try to read this section then it was a little bit hard to, piece all of that information together because it was scattered around 6 rules and only once you understood all 6 of them you had the complete picture in your head what the loop was supposed to look like.",
+      "offset": 1493476,
+      "duration": 28000
+    },
+    {
+      "text": "So in for, for the new version of me source C, we cleaned that up and we now only have a single rule.",
+      "offset": 1521476,
+      "duration": 9000
+    },
+    {
+      "text": "Which clearly states what the desired structure of the loop is so you only have to read the one rule you only have to look at the examples there and then you know exactly what it is that, that is desired there.",
+      "offset": 1530476,
+      "duration": 14000
+    },
+    {
+      "text": "And it's, it's a lot easier than to fix violations of this. We also re-categorize the rule.",
+      "offset": 1544476,
+      "duration": 7000
+    },
+    {
+      "text": "So previously the, these, followup rules were required and we now we categorize it to advisory which makes it easier for you if you have a special case that does not fit this pattern, to deviate from the rule, because, I mean, for loops are a pretty fundamental construct and it's it was not that uncommon.",
+      "offset": 1551476,
+      "duration": 22000
+    },
+    {
+      "text": "That, you violated this rule and then in the old standard what people did a lot is they just wrote while loop instead.",
+      "offset": 1573476,
+      "duration": 8000
+    },
+    {
+      "text": "So that they wouldn't have to deviate the rule. And that, is of course not how you should do it.",
+      "offset": 1581476,
+      "duration": 5000
+    },
+    {
+      "text": "So now we said, okay, let's make an advisory. So, that people don't have to use this as an escape hatch.",
+      "offset": 1586476,
+      "duration": 6000
+    },
+    {
+      "text": "And, then, yeah, try, try a little bit harder to, to follow the rule and to play nice.",
+      "offset": 1592476,
+      "duration": 10000
+    },
+    {
+      "text": "Another way to work around having to write for loops is to not used raw loops at all, follow Shaun Parents advice and, and, and, and, so.",
+      "offset": 1602476,
+      "duration": 6000
+    },
+    {
+      "text": "Exactly. Yeah. We actually even discussed that. So for a while in the working document, we had a rule that just said, don't use loops, right?",
+      "offset": 1608476,
+      "duration": 11000
+    },
+    {
+      "text": "Just just use algorithms. The thing is that was very controversial during the review. So we decided to remove that now from, from the, version so that the rationale for the for rule actually mentions this that you should use algorithms, so it's still in there, but we don't actually have a rule that that enforces it at the moment simply because We couldn't find a good way",
+      "offset": 1619476,
+      "duration": 26000
+    },
+    {
+      "text": "to. Travel this in a rule so that it wouldn't get in the way all the time because loops are just so fundamental.",
+      "offset": 1645476,
+      "duration": 7000
+    },
+    {
+      "text": "So yeah. For the moment we don't have rule, we just have it in the rationale, but maybe if we find a good way of specifying it so that it hits the right balance, then you might see it in the future version.",
+      "offset": 1652476,
+      "duration": 13000
+    },
+    {
+      "text": "So it's aspirational.",
+      "offset": 1665476,
+      "duration": 1000
+    },
+    {
+      "text": "Exactly. Yeah.",
+      "offset": 1666476,
+      "duration": 4000
+    },
+    {
+      "text": "Then the last category of, rules that I have here is what we removed outdated votes. And, one, example that, I think, we're all particularly proud of is that we managed to get rid of the rule that restricted early return.",
+      "offset": 1670476,
+      "duration": 23000
+    },
+    {
+      "text": "So in Mr. C plus plus 2,008, there was a rule that required that there's only a single exit point at the end of a function.",
+      "offset": 1693476,
+      "duration": 10000
+    },
+    {
+      "text": "So if you had something like this where, like you checked some condition and then you had a return statement to like return at that point from the function with like an error condition.",
+      "offset": 1703476,
+      "duration": 7000
+    },
+    {
+      "text": "For example, that was not allowed in Mr. C plus 2,008 right so instead you had to Store that value way and then somehow reach the end of the function where like you're one allowed return statement was and then figure it all out from there, which, actually led to code that was not really nice to read.",
+      "offset": 1710476,
+      "duration": 27000
+    },
+    {
+      "text": "And this is a rule with a long history, right? This this is in most of the safety critical coding standards actually and it there was quite some resistance to not having this rule.",
+      "offset": 1737476,
+      "duration": 17000
+    },
+    {
+      "text": "So we had long discussions here. We actually, trace the, the entire history of the rule, try to figure out what the original rationale was.",
+      "offset": 1754476,
+      "duration": 10000
+    },
+    {
+      "text": "Still Otters did a lot of prior work here, but we, we actually like reiterate the whole discussion again.",
+      "offset": 1764476,
+      "duration": 7000
+    },
+    {
+      "text": "And, eventually after, like careful deliberation, we, came to the conclusion that it's, It's a it's not a reasonable rule today and we decided to remove it so it's no longer there in 2023.",
+      "offset": 1771476,
+      "duration": 18000
+    },
+    {
+      "text": "I think that the timing of this is perfect coming towards the end of the year. It's like a Christmas gift.",
+      "offset": 1789476,
+      "duration": 6000
+    },
+    {
+      "text": "So we could say many happy returns.",
+      "offset": 1795476,
+      "duration": 2000
+    },
+    {
+      "text": "Exactly, exactly. That's the spirit.",
+      "offset": 1797476,
+      "duration": 2000
+    },
+    {
+      "text": "Yeah, but more seriously, I really like the depth that you had in the committee have got into here to go back and do that.",
+      "offset": 1799476,
+      "duration": 3000
+    },
+    {
+      "text": "Detective work and see, actually, why does this? Why was this in there in the first place?",
+      "offset": 1802476,
+      "duration": 8000
+    },
+    {
+      "text": "Yeah. Yeah.",
+      "offset": 1810476,
+      "duration": 1000
+    },
+    {
+      "text": "Do we really need it? So wouldn't you not just carrying craft forward? But everything's been carefully reevaluated.",
+      "offset": 1811476,
+      "duration": 6000
+    },
+    {
+      "text": "I think that really shows through a lot of these rules.",
+      "offset": 1817476,
+      "duration": 1000
+    },
+    {
+      "text": "Yeah. Yeah, yeah, and it's really important also because I mean like for this rule in particular what was problematic here is that the the iso standard for functional safety for road vehicles mentions this in particular as one possible guideline.",
+      "offset": 1818476,
+      "duration": 18000
+    },
+    {
+      "text": "To, to follow for, source code. So, we have to be very careful there not to contradict what this, this, this other standard was saying.",
+      "offset": 1836476,
+      "duration": 13000
+    },
+    {
+      "text": "So we even had to. Had to sync like with this, other, standardization body that is responsible for the functional safety standard.",
+      "offset": 1849476,
+      "duration": 2000
+    },
+    {
+      "text": "And also convince them that this is a reasonable thing to do. So it's, yeah. If this, we really try to get like broad consensus on these guidelines.",
+      "offset": 1851476,
+      "duration": 17000
+    },
+    {
+      "text": "So it's not just like. A couple of people from, in the little room figuring this stuff out, but this really requires, yeah, taking a lot of different perspectives into a account.",
+      "offset": 1868476,
+      "duration": 12000
+    },
+    {
+      "text": "That's great.",
+      "offset": 1880476,
+      "duration": 4000
+    },
+    {
+      "text": "Okay, then short summary for what what the new standard looks like so we have over 170 rules in total and most of them are completely revised from from the ground up so even even the ones that look similar to, rules that we had before, we, we evaluated all of it.",
+      "offset": 1884476,
+      "duration": 19000
+    },
+    {
+      "text": "We, the wording again and yeah, most of the of the rules actually have significant changes. As a result of this.",
+      "offset": 1903476,
+      "duration": 8000
+    },
+    {
+      "text": "We took into account modern best practices for C, development. We had, a bunch of experts from the ISOC plus committee that contributed.",
+      "offset": 1911476,
+      "duration": 14000
+    },
+    {
+      "text": "To the discussions here that help with the working document. I think it's it really shows. I think it's, yeah, it's a good representation for, yeah what the common idioms are for the language today.",
+      "offset": 1925476,
+      "duration": 14000
+    },
+    {
+      "text": "As I said in the beginning, we try to, form a group of industry experts with very diverse backgrounds.",
+      "offset": 1939476,
+      "duration": 4000
+    },
+    {
+      "text": "Taking all of the different interests into account here. And Our goal was really like not just make your code safer and more reliable but also like not getting in your way when we don't have a good reason to right.",
+      "offset": 1943476,
+      "duration": 22000
+    },
+    {
+      "text": "So, as we saw in the, in the rule for the lambda, if there are like reasonable subsets where it doesn't make really sense to apply the rule.",
+      "offset": 1965476,
+      "duration": 8000
+    },
+    {
+      "text": "We tried very hard to carve an exception. And we hope that this document will, will now be, serve as a foundation for like future versions of guidelines and standards for writing reliable software.",
+      "offset": 1973476,
+      "duration": 19000
+    },
+    {
+      "text": "Both in and beyond the automotive industry.",
+      "offset": 1992476,
+      "duration": 8000
+    },
+    {
+      "text": "Well, thank you, Andreas. Thank you both for giving this presentation. But also for your work on the committee that made all of this possible and Thanks to the rest of the committee as well, included by my Polyke, like Joey who's actually in the background on this call answering some of the questions.",
+      "offset": 2000476,
+      "duration": 21000
+    },
+    {
+      "text": "Yeah.",
+      "offset": 2021476,
+      "duration": 1000
+    },
+    {
+      "text": "He was also on the committee. So, you're in good company. But do have more review as well.",
+      "offset": 2022476,
+      "duration": 3000
+    },
+    {
+      "text": "Excellent job, I think you've done there. Now don't go away because we're gonna.",
+      "offset": 2025476,
+      "duration": 2000
+    },
+    {
+      "text": "Thank you.",
+      "offset": 2027476,
+      "duration": 11000
+    },
+    {
+      "text": "Yes.",
+      "offset": 2038476,
+      "duration": 1000
+    },
+    {
+      "text": "Go over some Q&A. We've had quite a few questions come in. That we're going to get to but if you can drop your screen share just for a moment I've got one thing to get to first there we go.",
+      "offset": 2039476,
+      "duration": 7000
+    },
+    {
+      "text": "So yeah, before we get to the Q&A just to mention our next webinar, so if you enjoyed this one, maybe you'll enjoy the next one.",
+      "offset": 2046476,
+      "duration": 7000
+    },
+    {
+      "text": "Especially about Java, maybe that applies to some of you. Clean code in Java, story of monsters, heroes and victories.",
+      "offset": 2053476,
+      "duration": 8000
+    },
+    {
+      "text": "That's going to be given by, Jonathan. Vila, one of our developer advocates.",
+      "offset": 2061476,
+      "duration": 2000
+    },
+    {
+      "text": "It's going to be January the 20 fourth. And it's mostly for the APAC and, regions, so we've got, 9 8 MCT 4 pm m.",
+      "offset": 2063476,
+      "duration": 14000
+    },
+    {
+      "text": "So bear that one in mind. And now let's get to that Q&A. So.",
+      "offset": 2077476,
+      "duration": 8000
+    },
+    {
+      "text": "If I get to the list, there were some questions that were answered. Asked and then answered on the Q&A panel.",
+      "offset": 2085476,
+      "duration": 6000
+    },
+    {
+      "text": "That's so they've gone from the top now, but because we had so many people asking the same question, I think it's worth repeating.",
+      "offset": 2091476,
+      "duration": 5000
+    },
+    {
+      "text": "Yeah.",
+      "offset": 2096476,
+      "duration": 1000
+    },
+    {
+      "text": "Here, which is, well, it's Mithras C plus plus.",
+      "offset": 2097476,
+      "duration": 5000
+    },
+    {
+      "text": "2023 going to cover C plus plus 20. Because let's see C plus plus 17 is already 6 years behind 2023.",
+      "offset": 2102476,
+      "duration": 9000
+    },
+    {
+      "text": "So what's the story there?",
+      "offset": 2111476,
+      "duration": 1000
+    },
+    {
+      "text": "Yeah, yeah. Yeah, exactly. So, I mean, obviously like this, this has been a long while in the making, right?",
+      "offset": 2112476,
+      "duration": 9000
+    },
+    {
+      "text": "So at the at the point when, we, put the the working draft for mesos plus to the public revenue c plus 23 was not yet released.",
+      "offset": 2121476,
+      "duration": 17000
+    },
+    {
+      "text": "There were some discussions whether it would already make sense to base it on C. 20. But the problem there is that the.",
+      "offset": 2138476,
+      "duration": 9000
+    },
+    {
+      "text": "So these guidelines like we try not to make them up right like we try to standardize what the consensus is in the community, what the best practices are.",
+      "offset": 2147476,
+      "duration": 11000
+    },
+    {
+      "text": "And it takes a while to like, Figure this up, right, in particular for the more complex features.",
+      "offset": 2158476,
+      "duration": 7000
+    },
+    {
+      "text": "And with C plus 20 we now had the problem that we had. A lot of features that were quite complex.",
+      "offset": 2165476,
+      "duration": 4000
+    },
+    {
+      "text": "But not a lot of implementation experience. Like if you take, for example, modules, still the the implementation experience today is very limited and most people just have never used them, right?",
+      "offset": 2169476,
+      "duration": 17000
+    },
+    {
+      "text": "So we just did not feel comfortable to, to say like we have a standard that covers C plus 20 simply because we don't have the experience in the industry to claim that we know about all of the sharp corners for the language.",
+      "offset": 2186476,
+      "duration": 15000
+    },
+    {
+      "text": "The downside of that is of course that if you want to use C, 20 today and you need to do a you need to use a coding standard.",
+      "offset": 2201476,
+      "duration": 8000
+    },
+    {
+      "text": "That, You know, I have to find an argument why that is okay. But we hope to be able to address that through like, smaller documents, maybe in the future, so that you don't have to wait for the next revision of the the full MUSE response.",
+      "offset": 2209476,
+      "duration": 18000
+    },
+    {
+      "text": "Okay, that's interesting. And that sort of partially preempts the the next question, which is Now you have sort of brought it more or less up to date with C plus plus.",
+      "offset": 2227476,
+      "duration": 8000
+    },
+    {
+      "text": "Yeah.",
+      "offset": 2235476,
+      "duration": 2000
+    },
+    {
+      "text": "While C plus plus 17 support him. Miss received plus plus 2023 Are you planning to continue sort of matching the 3 year pace of new C plus plus standards and be at least only 6 years behind.",
+      "offset": 2237476,
+      "duration": 13000
+    },
+    {
+      "text": "Yeah, yeah. So that is very much the idea. So we, we have 2 things that, that we have plan now from this one.",
+      "offset": 2250476,
+      "duration": 8000
+    },
+    {
+      "text": "The one is to like have a more frequent cadence for the one is to like have a more frequent cadence for the main document.",
+      "offset": 2258476,
+      "duration": 5000
+    },
+    {
+      "text": "And the the other idea is to have like smaller documents that Target specific areas that.",
+      "offset": 2263476,
+      "duration": 9000
+    },
+    {
+      "text": "My not be interesting to to everyone who uses N and the first example that we have here is the. Guidelines for parallel and heterogeneous computing, which I have been working with together with Michael Wong and Ila Bulov and a bunch of other people.",
+      "offset": 2272476,
+      "duration": 21000
+    },
+    {
+      "text": "You can actually find a, like 2 talks from the 3 of us at the at cvpcom where, where we present those efforts.",
+      "offset": 2293476,
+      "duration": 10000
+    },
+    {
+      "text": "So the idea here is that like a lot of people that, write safety critical software don't care about multi-threatening, right?",
+      "offset": 2303476,
+      "duration": 7000
+    },
+    {
+      "text": "They just keep their stuff single-friended and they're happy with that. So we don't want to clutter up the main standard with a lot of rules regarding training.",
+      "offset": 2310476,
+      "duration": 8000
+    },
+    {
+      "text": "But if you need to use planning, then Of course you want some guidelines for this, right? So the idea is that then you just use the main guidelines which always apply and then you have like Specialized guidelines, for example, for threading.",
+      "offset": 2318476,
+      "duration": 13000
+    },
+    {
+      "text": "And then if you know, you need to write multi-threaded code, then you pull them in as well.",
+      "offset": 2331476,
+      "duration": 8000
+    },
+    {
+      "text": "And so in that way you can like sort of put together the ideal set of guidelines for your project.",
+      "offset": 2339476,
+      "duration": 7000
+    },
+    {
+      "text": "Okay, that makes a lot of sense. Thank you.",
+      "offset": 2346476,
+      "duration": 4000
+    },
+    {
+      "text": "That talked about what went into the guidelines because But when you're talking about auto, you said that it was.",
+      "offset": 2350476,
+      "duration": 7000
+    },
+    {
+      "text": "Yep.",
+      "offset": 2357476,
+      "duration": 1000
+    },
+    {
+      "text": "That was influenced by certain other standards. Somebody brought up the book in embracing modern C plus safely.",
+      "offset": 2358476,
+      "duration": 6000
+    },
+    {
+      "text": "Now what were those considered as part of this this effort?",
+      "offset": 2364476,
+      "duration": 8000
+    },
+    {
+      "text": "Okay.",
+      "offset": 2372476,
+      "duration": 1000
+    },
+    {
+      "text": "Oh yeah. We didn't look at that book in particular. It was published fairly late in the, in, the cycle of work here.",
+      "offset": 2373476,
+      "duration": 2000
+    },
+    {
+      "text": "But in principle, like, we take into account all the sources, right? So like we take into account like other safety guidelines.",
+      "offset": 2375476,
+      "duration": 10000
+    },
+    {
+      "text": "We Looked a lot at it's stuff like the core guidelines, but, but also I like, yeah, books that, that, are well established in the community.",
+      "offset": 2385476,
+      "duration": 11000
+    },
+    {
+      "text": "So we try to find a good mixture there. Again, what, is important to, keep in mind here is that Mesra has a specific focus like that we like our target audience is really people that need to ride.",
+      "offset": 2396476,
+      "duration": 15000
+    },
+    {
+      "text": "Code safety critical code. Typically like in, regulated industries. And there's a specific.",
+      "offset": 2411476,
+      "duration": 8000
+    },
+    {
+      "text": "Specific way that this is done, right? The specific areas that they worry about the most. So that is the the focus for M and that is slightly different than the focus that the authors of the embracing modern C plus plus safety, safely book hat.",
+      "offset": 2419476,
+      "duration": 20000
+    },
+    {
+      "text": "But, that does not mean that we don't look at it, right? Like we definitely.",
+      "offset": 2439476,
+      "duration": 5000
+    },
+    {
+      "text": "Take this as an input, we evaluate this, we might just get to the conclusion that, yeah, for other audience, we, we follow a different guideline.",
+      "offset": 2444476,
+      "duration": 8000
+    },
+    {
+      "text": "Right. Okay, thank you. Then there was one question about your, your last example with the, Early returns.",
+      "offset": 2452476,
+      "duration": 6000
+    },
+    {
+      "text": "Yeah.",
+      "offset": 2458476,
+      "duration": 3000
+    },
+    {
+      "text": "I think sort of question it maybe what the original rationale was. They're putting know maybe it was free debugging.",
+      "offset": 2461476,
+      "duration": 7000
+    },
+    {
+      "text": "I can debugging easier just having to put a break point on. One right time.",
+      "offset": 2468476,
+      "duration": 1000
+    },
+    {
+      "text": "Yeah. Yeah, so if you If you trace it all the, all the way back, this is a very old guideline and this has been around since the days where people were writing a lot of software and assembly.",
+      "offset": 2469476,
+      "duration": 16000
+    },
+    {
+      "text": "And That's actually where it makes sense, right? So the The original idea was really to.",
+      "offset": 2485476,
+      "duration": 29000
+    },
+    {
+      "text": "Yes.",
+      "offset": 2514476,
+      "duration": 1000
+    },
+    {
+      "text": "Encourage structured programming, right, so that you don't have like wild go to is that like jump all over the place and like you don't know where you enter the function and where you access the function right so this like the original rule it was not just like single exit it was single entry single accident right so they were also worried about you jumping into the middle of a function.",
+      "offset": 2515476,
+      "duration": 4000
+    },
+    {
+      "text": "And that's really where it came from, right? And then if you follow like structure programming paradigms as most people do today.",
+      "offset": 2519476,
+      "duration": 10000
+    },
+    {
+      "text": "Like a lot of these problems that people had back in the day with multiple returns they go away right and it's in some cases it's even like counterproductive where if you do want to enforce the single return You need to reintroduce Go to in a couple of places so that you can jump to your to your exit point without cluttering up the whole code with additional conditions.",
+      "offset": 2529476,
+      "duration": 26000
+    },
+    {
+      "text": "So yeah, it's it's a rule from a different from a different world. And yeah.",
+      "offset": 2555476,
+      "duration": 8000
+    },
+    {
+      "text": "Yeah, make sense. Thank you. Maybe one or 2 fun questions I think we have time for.",
+      "offset": 2563476,
+      "duration": 6000
+    },
+    {
+      "text": "Sure.",
+      "offset": 2569476,
+      "duration": 1000
+    },
+    {
+      "text": "What's your favourite improvement between Mr C plus plus 2,008 and 2023?",
+      "offset": 2570476,
+      "duration": 4000
+    },
+    {
+      "text": "Yeah, that's a good question. I really like what we did with, with the loops.",
+      "offset": 2574476,
+      "duration": 5000
+    },
+    {
+      "text": "I think that was like, especially for, people that have to use these rules and have to understand the warnings that the tool gives them and how to fix them.",
+      "offset": 2579476,
+      "duration": 14000
+    },
+    {
+      "text": "I think like that that was That was a big improvement. And that is really something that people feel every day simply because it's so, it's so, so common in the code.",
+      "offset": 2593476,
+      "duration": 12000
+    },
+    {
+      "text": "Right, thank you. And I think we do have to wrap up that maybe just. Inverse of that, what's your least favorite rule?",
+      "offset": 2605476,
+      "duration": 7000
+    },
+    {
+      "text": "In that C plus 23.",
+      "offset": 2612476,
+      "duration": 1000
+    },
+    {
+      "text": "Yeah. Everything that has to do with integer promotion, I just like, not because I think the rules are bad, but just like the integer promotion is so complicated in C and it just It breaks my heart every time that such a fundamental part of the language is associated with, yes, such difficult rules.",
+      "offset": 2613476,
+      "duration": 23000
+    },
+    {
+      "text": "Thanks a lot of sense. Well, I think that's all we have time for. So thanks again for staying for the Q&A.",
+      "offset": 2636476,
+      "duration": 6000
+    },
+    {
+      "text": "Thanks to everyone else for for attending, for asking your questions. As we said before, I will be sending out these, Complete answered set.",
+      "offset": 2642476,
+      "duration": 9000
+    },
+    {
+      "text": "In a follow-up email along with the with the survey. So thank you again. And goodbye.",
+      "offset": 2651476,
+      "duration": 7000
+    }
+  ],
+  "fullText": "Good morning, good afternoon, good evening. Depending on where in the world you are. Welcome to this webinar hosted by Sonar. I'm gonna be your host for today. I'm Phil Nash. I develop advocate here at Sonar. But if ready I'm just here to introduce Andreas Reese who's going to be taking us through is received plus past 23 and discovering what is new. In this new standard. So I just have a. Little bit of housekeeping to get through before we do get started. So this is gonna be a, 45, 40 to 45 min session, including Q&A, which will mostly be at the end, but do feel free to ask questions in the Q&A panel as we go. We may answer some as we go. Or we may save them till the end. And some of them will be answered there as well. So please use that Q&A box as part of the Zoom interface for asking your questions. But there will be a follow up email in a few days after this recording. So any of the questions that we didn't get to live if there are any leftover they'll all be there plus all the ones that we did get to so don't feel that you have to take any notes of those. We'll also be posting out a post webinar survey so you can you can tell us what you liked. How we can improve in the future. We always want to improve and what topics we should be covering with future speakers. So we've got a great speaker today. We want to keep that. Are happening. So let's get to Oh, great speaker today. Dress is a misrece C plus plus working group member. So with these new set of guidelines who better than somebody who actually helped to form those guidelines to be here and talk to us about them. So this is Discover What's New, Misery C plus Plus, 2023. I'm going to stop sharing my screen to the Andreas takeover. Andres. Alright, thank you, Phil. Yeah, so, today I'm going to show you a few of the things, that I knew in, the new Missouri C plus standard. And, yeah, I'm happy to answer your question. So, yeah, as full said, please keep them coming. This is more fun if it's interactive. So To start out, let's maybe talk a little bit about like what is Misra C plus for those of you who may not have used it before. So, is a set of coding guidelines. And the aim here is specifically to define a subset of the C, language. That makes it harder to, to make mistakes. So unlike other guidelines like the, the, core guidelines, for example. The focus here is not necessarily on like best practices for coding like making your code especially pretty or elegant but the focus here is really, to, yeah, keep you away from the, dangerous parts of the language and avoid avoid making mistakes. That's a really small substance. Right, yeah, unfortunately. So Misra stands for a motor industry software reliability association. So this was originally a UK based organization that was formed from representatives from the automotive industry. So this, this, the standard while today it goes a little bit beyond that it It's still, it has its roots in the, in the automotive domain and that is still one of its main uses until today. But the, is our consortium, as we have it today, actually consists of a variety of experts. So it's an international group. Now it's no longer just the UK. And is also not just automotive backgrounds but it's functional safety people, service security people, programming language experts and also representatives from software tooling. Which is quite important because When writing a guidelines, you also want to make sure that it's, it's too checkable in the end. So the, first version of, Mizra C was published in 2,008. So it's quite old by now. And now this year just back in October the new 2023 version was published and now since a few weeks. You can, buy it, either by the PDF of the, I mean, a homepage or you can also order a hard copy of Amazon. So few words about the, the history of, of Mithra C, and where this comes from. So the, very first edition of a Misra standard was targeting the C programming language and that one was published in 1998. And back then, like C, was not really used in, in the embedded world. So there was not really a strong demand for it. But, as, time went on, like people became more and more interested in using C. Also for these kinds of projects. So finally in 2,000 2,008 a variant of the Missouri guidelines for C plus was published. This was based on the C, 2,003 standard which was the latest C, standard at that time. And if you if you know both documents, then you will probably see that there's a lot of overlap between the C standard and the C. As time went on, C plus 11 eventually got released and that changed a lot about how we how we write code in C. But Misra was still stuck in in 2,008 and that led to a lot of people seeing the need for a more modern set of guidelines that incorporates, some of these new language features. And that culminated, in 2,017 when, the autos are organization, which is a standardization body for, automotive software platforms. They published their own set of guidelines, targeting C, 14. And they used as a basis here not just miss for c plus but also a bunch of other guidelines that have been published in the meantime. Such as like high integrity C, the Joint Strike Fighter guidelines or the search C plus plus, but also the C plus core guidelines for example. And, Others are since like its core business is not publishing. Guidelines, right? So, they weren't really that interested in, in, carrying this forward. So eventually, They approached Misra, and in 2,019 there was an announcement that, Misra would now take over what others are started would publish a new set of guidelines that would supersede the the autism C, 14 guidelines and that was now the document that was published this year. Misra C plus, 2,023, which is targeting C, 17. As the language standard. And, I'm going to show you now like some, examples like how those, those rules look like and what are some of the changes that we have in the new version. Awesome. Sure. Yeah. Right. Before you get into your examples, can I have a question on the on the history because it was 15 years between The original is received plus bus and the new one. Yeah. If you don't count, So the question is what took Salum. Yeah, so, like in the beginning we saw C plus fell into sort of the same trap that the C. Stanisation fell into when in 2,008 the feeling was that we are done right mr. C it's out there and we don't really need. Need an update and then when c plus 11 was released and like people slowly realized that yeah, it might make sense to modernize these guidelines. Now, it took a while to like get everybody back together. Reassemble the working group and actually, yeah, start working on, a new revision. So that was the main reason here, right? They just lost momentum after 2,008 because they are, yeah, in 2,008, obviously there wasn't yet a need for, for a new vision. S it's gonna be another 15 years before the next one. Great. Oh, well, that's the good thing now. We did not disband the working group after finishing 2,023 so we we keep working we still need every week. To discuss what to do next and yeah the hope is that from now on we can publish a much more regular cadence. And yeah give you much more frequent updates on those guidelines. Great, good today. Thank you. Yeah, of course. Then, yeah, let's, quickly, look at, like the, anatomy of a rule, like what What a typical, looks like. So if you open the document, you will see a bunch of rules and they're all structured in sort of the same way. So you will also have, you will always have a headline. At the beginning of a rule which gives you a brief summary of what the rule is about and these headlines they're probably the thing that most developers are familiar with because also when you are using a checker tool, then usually the warnings that you get from your checker tool, they will use the wording from those headlines. Below the headline, we will give a category for, rule, which, is a measure for like how, how important the rule is or like how severe, the danger that is trying to protect you from. So the, The most strict category that we have is mandatory that basically says you must always follow this rule like there's no you can't really not follow this rule this is typically reserve we only have very few rules with this category this is reserve collect really severe cases of like undefined behavior where it's absolutely clear if you write something like this then your program is broken and There's no discussions. What is much more common is, the other 2 categories. So we have required, which says like this is, this is really like a potentially dangerous thing and in almost all cases you should not do this. If you don't want to follow a required rule you have to deviate on a case by case basis and like give a formal. Justification for why you can't get in trouble because of the the violation and then we have advisory, which is a little bit weaker. So, Advisory. Has a little bit lower bar for, for deviation. So we use it for rules where there might actually be legitimate uses where you might want to deviate from it more regularly and we want to make it easier for for you to not follow this one. Then, the analysis section, classifies this rule, whether it's, decidable or undecidable. So, decidable here means that like a rule can can always check this reliably. And, whether the analysis, tool, needs to look at only a single translation unit. So like a single CPP file, same as as the compiler sees the code or whether it needs to do system-wide analysis when it's to look at the entire cookies. And of course we always try to keep the roads single translation unit and decidable because that means they're relatively cheap to check. And you can get reliable diagnostics. So we, yeah, put a lot of emphasis on this. Then the next section that we have is what is called the amplification. So this gives you a little bit more detail, about like what exactly the rule is trying to prevent. Not all rules have have an amplification for some rules. We felt that it's obvious enough, what it is, but in, many rules, it's, like, there's like subtle corner cases where we give additional explanations like what it applies to and what it doesn't. Then one of the most important sections is the rationale, because in the rationale we explain why the thing that we we ban is is bad. And this is particularly important if you want to deviate from, like, right? Like if you get a violation and you feel that, I know, I think the tool is wrong here. I really want to write what I just wrote there, then The rationale tells you like what is potentially bad about the thing that you wrote and you now have to argue why. You cannot run into these problems that the rationale, is, afraid of. So, if you're writing DVDs, you should always look at the rationale and think really hard like yeah the the things that are being described the rationale and think really hard like yeah the things that are being described they are the things that are being described they are the things that the guidelines worry about is that the things that the guidelines worry about is that actually something that can happen in this situation. That the guidelines worry about is that actually something that can happen in this situation and only if you're sure that no I actually don't, is that actually something that can happen in this situation? And only if you're sure that no, I actually don't trigger any of those bad things, then it's fine to deviate. And then finally we also always give a code example to illustrate the rule. Usually this includes like both compliant and and non-compliant example Yeah, and then, I have a bunch of examples for some of the rules. That we have now in the new standard and we can look at some of the changes that we have in the new version. Sounds great, cause so far you've made it sound like a bad thing. Let's see. So, we have several kinds of changes that you will notice compared to the, to the old version. So like, one example for, for what changed is what we modernized an existing rule. So for example, in C plus plus 11, we introduced the, the output, keyword. And a classic problem in both C and C plus plus is the, the confusion between like the integer value 0 and the null pointer constant now. And in Misra C, 2,008, we had a rule that addressed this and the goal there was to prevent the usage of the integer constant 0 in the context of pointers. So if you had a function that takes a pointer parameter and you try to call this with the integer 0 that will be non-compliant and your tool would give you a warning about this and you would have to change this to instead use the null background. Now of course in C plus plus 11 we introduced null pointer which is a better alternative. To the the, macro in all cases. So we updated the rule, to, now require, now, now put her as the only allowed null pointer constant. So, this call, which was compliant in, 2,008 now in, in, 2,023, it's no longer compliant. You actually have to use. Yeah. And we have a bunch of these rules where like, they're still based on, on a 2,008 rule and existing rule and we now just slightly modernized them based on what was added to the language in the meantime. So we'd miss received plus plus 2023. Do you still consider 0 to be non-compliant? Yes, exactly. That did not change. So it's, it's everything that was non compliant in 2,008 is now also non compliant but now in addition this using the now macro which was compliant in 2,008 that is now also no longer Oh, not on Void. Right. Thank you. Then we also have a bunch of new rules. So this, these are mostly rules that are concerned with language features that are concerned with language features that did not exist back in 2,008. So one example here is, lambdas, which was, which were introduced with, C plus 11. So obviously there's no rules about lambdas in the old Mistra standard. But now, like for example, for 2023 1 one of the pitfalls that that we notice that that happened frequently with landers. Is when writing a lambda expression, you can, you can capture, values from the from the surrounding scope. To use in the lambda body and you can capture this either by value or by reference and if you're not careful then this and you capture my reference then that can be to like dangling pointer issues. So, 2023 introduced now a rule that. Advises to use explicit capture lists. In cases where. The lifetime of the, of the value that you captured. Could be shorter than the lifetime of the lambda. So, For example, as we see here, like we, capture the logger by reference and then inside the the lambda we we call the logger to lock some message but now we pass this lambda to like a set callback function, right? So this function will store the lambda in some place and then invoke it later when whenever something needs to be locked and then if the logger, whenever something needs to be locked. And then if the logger object is no longer live at that point. Then, that could, that could lead to problems here. However, on the other side, we have this example down here where, we do capture, by, by reference, the, the value that we, use in the, in the predicate for the find if down here. But for the find if we know it's not going to store the lambda, right? It's going to use the lambda to perform the find operation, but it's not going to store it away. So, therefore we see like for those simple cases where it's clear that the lambda is going to be used right then and there. It's okay to use this implicit capture. So you just need to say I'm percent. You don't need to say am percent. You do need to name the E. But in, these, cases up here where, it's likely that the, lander will be stored away and will live longer than this function call. You have to make the capture explicit. So you have to say in the capture list, I'm going to capture the logger by reference. And that is what what this rule does. So, As you can see here, like we, we could have just said we're going to ban the implicit captures everywhere, but we we tried very hard to make sure that the rules don't get in your way. So in cases where there's obviously no no real danger like down here for the for the find if we also try, to not have the rule get in your way and that is something that, that, we were very deliberate about throughout the rules. To be sure that like those cases where there is no danger and, that, that might be frequent, that might occur frequently. That, yeah, the rules take that into account. That's good to know. Then, Another, example in the context of Lambdas is that, there was this rule in C plus plus 11 that you could. Implicitly capture this pointer. By using this implicit capture with the with the equals sign. And you need to do this if you want to, access one of the one of the class members inside the, the lambda. However, what is often surprising to people that are not that familiar with Landers is that even though I'm using equal. 2 to capture, which usually means I capture the objects by value, so there's no lifetime issues. In this case, the, the lander does not extend the lifetime of the surrounding class. So there is actually a similar similar problem here as with the with the reference captures. And the CEOs plus committee even acknowledged that this is a dangerous contract and actually changed the rules of the language. So this implicit, implicitly capturing that this pointer with this syntax was actually deprecated in C, 20. And, Hey, we therefore, decided to already, require this stricter model for C, 17. So if you try to use an implicit capture like this, it will be non-compliant. You actually have to explicitly spell out the this keyword inside the capture, to, to comply with this rule. To that apply to capture by reference as well. Because that will also capture this. I think, yeah, so you can, you can't explicitly capture. So this rule does not forbid explicitly capturing this by reference. I mean the implicit capture by reference. Right, right. Yeah, so that's that is also not forbidden. So then, you, for the, for the implicit capture by reference, you have to make sure that you don't violate the previous rule, right? So if you're in a lambda is could be stored away if it's not the simple case like with the find if down here then you have to be explicit here because of that. Sounds covered by that. Yeah. So these are actually like, yeah. So these are actually 2 separate rules. That, both restrict, what you can write in the capture. Got to get some closure on that. Yeah. Okay, then, another category, of rules that we have is where we try to simplify existing rules, right? So this is Unlike the first category where we were modernizing a rule because of a, a new language feature that came around, we also had a bunch of rules where we felt that, even though the language has not changed really that much in this area, the, the idioms surrounding this code might have changed. Or what we just had the impression that the existing rules were not working really well and and required some modernization. So one, prime example here is the restrictions on for loops. So in Vijay, plus plus 2,008, there was an entire section of the document that, contained, rules about for loops and how they should be structured. So they were in total 6 different rules. That together define what the desired form of a follow is and if you ever try to read this section then it was a little bit hard to, piece all of that information together because it was scattered around 6 rules and only once you understood all 6 of them you had the complete picture in your head what the loop was supposed to look like. So in for, for the new version of me source C, we cleaned that up and we now only have a single rule. Which clearly states what the desired structure of the loop is so you only have to read the one rule you only have to look at the examples there and then you know exactly what it is that, that is desired there. And it's, it's a lot easier than to fix violations of this. We also re-categorize the rule. So previously the, these, followup rules were required and we now we categorize it to advisory which makes it easier for you if you have a special case that does not fit this pattern, to deviate from the rule, because, I mean, for loops are a pretty fundamental construct and it's it was not that uncommon. That, you violated this rule and then in the old standard what people did a lot is they just wrote while loop instead. So that they wouldn't have to deviate the rule. And that, is of course not how you should do it. So now we said, okay, let's make an advisory. So, that people don't have to use this as an escape hatch. And, then, yeah, try, try a little bit harder to, to follow the rule and to play nice. Another way to work around having to write for loops is to not used raw loops at all, follow Shaun Parents advice and, and, and, and, so. Exactly. Yeah. We actually even discussed that. So for a while in the working document, we had a rule that just said, don't use loops, right? Just just use algorithms. The thing is that was very controversial during the review. So we decided to remove that now from, from the, version so that the rationale for the for rule actually mentions this that you should use algorithms, so it's still in there, but we don't actually have a rule that that enforces it at the moment simply because We couldn't find a good way to. Travel this in a rule so that it wouldn't get in the way all the time because loops are just so fundamental. So yeah. For the moment we don't have rule, we just have it in the rationale, but maybe if we find a good way of specifying it so that it hits the right balance, then you might see it in the future version. So it's aspirational. Exactly. Yeah. Then the last category of, rules that I have here is what we removed outdated votes. And, one, example that, I think, we're all particularly proud of is that we managed to get rid of the rule that restricted early return. So in Mr. C plus plus 2,008, there was a rule that required that there's only a single exit point at the end of a function. So if you had something like this where, like you checked some condition and then you had a return statement to like return at that point from the function with like an error condition. For example, that was not allowed in Mr. C plus 2,008 right so instead you had to Store that value way and then somehow reach the end of the function where like you're one allowed return statement was and then figure it all out from there, which, actually led to code that was not really nice to read. And this is a rule with a long history, right? This this is in most of the safety critical coding standards actually and it there was quite some resistance to not having this rule. So we had long discussions here. We actually, trace the, the entire history of the rule, try to figure out what the original rationale was. Still Otters did a lot of prior work here, but we, we actually like reiterate the whole discussion again. And, eventually after, like careful deliberation, we, came to the conclusion that it's, It's a it's not a reasonable rule today and we decided to remove it so it's no longer there in 2023. I think that the timing of this is perfect coming towards the end of the year. It's like a Christmas gift. So we could say many happy returns. Exactly, exactly. That's the spirit. Yeah, but more seriously, I really like the depth that you had in the committee have got into here to go back and do that. Detective work and see, actually, why does this? Why was this in there in the first place? Yeah. Yeah. Do we really need it? So wouldn't you not just carrying craft forward? But everything's been carefully reevaluated. I think that really shows through a lot of these rules. Yeah. Yeah, yeah, and it's really important also because I mean like for this rule in particular what was problematic here is that the the iso standard for functional safety for road vehicles mentions this in particular as one possible guideline. To, to follow for, source code. So, we have to be very careful there not to contradict what this, this, this other standard was saying. So we even had to. Had to sync like with this, other, standardization body that is responsible for the functional safety standard. And also convince them that this is a reasonable thing to do. So it's, yeah. If this, we really try to get like broad consensus on these guidelines. So it's not just like. A couple of people from, in the little room figuring this stuff out, but this really requires, yeah, taking a lot of different perspectives into a account. That's great. Okay, then short summary for what what the new standard looks like so we have over 170 rules in total and most of them are completely revised from from the ground up so even even the ones that look similar to, rules that we had before, we, we evaluated all of it. We, the wording again and yeah, most of the of the rules actually have significant changes. As a result of this. We took into account modern best practices for C, development. We had, a bunch of experts from the ISOC plus committee that contributed. To the discussions here that help with the working document. I think it's it really shows. I think it's, yeah, it's a good representation for, yeah what the common idioms are for the language today. As I said in the beginning, we try to, form a group of industry experts with very diverse backgrounds. Taking all of the different interests into account here. And Our goal was really like not just make your code safer and more reliable but also like not getting in your way when we don't have a good reason to right. So, as we saw in the, in the rule for the lambda, if there are like reasonable subsets where it doesn't make really sense to apply the rule. We tried very hard to carve an exception. And we hope that this document will, will now be, serve as a foundation for like future versions of guidelines and standards for writing reliable software. Both in and beyond the automotive industry. Well, thank you, Andreas. Thank you both for giving this presentation. But also for your work on the committee that made all of this possible and Thanks to the rest of the committee as well, included by my Polyke, like Joey who's actually in the background on this call answering some of the questions. Yeah. He was also on the committee. So, you're in good company. But do have more review as well. Excellent job, I think you've done there. Now don't go away because we're gonna. Thank you. Yes. Go over some Q&A. We've had quite a few questions come in. That we're going to get to but if you can drop your screen share just for a moment I've got one thing to get to first there we go. So yeah, before we get to the Q&A just to mention our next webinar, so if you enjoyed this one, maybe you'll enjoy the next one. Especially about Java, maybe that applies to some of you. Clean code in Java, story of monsters, heroes and victories. That's going to be given by, Jonathan. Vila, one of our developer advocates. It's going to be January the 20 fourth. And it's mostly for the APAC and, regions, so we've got, 9 8 MCT 4 pm m. So bear that one in mind. And now let's get to that Q&A. So. If I get to the list, there were some questions that were answered. Asked and then answered on the Q&A panel. That's so they've gone from the top now, but because we had so many people asking the same question, I think it's worth repeating. Yeah. Here, which is, well, it's Mithras C plus plus. 2023 going to cover C plus plus 20. Because let's see C plus plus 17 is already 6 years behind 2023. So what's the story there? Yeah, yeah. Yeah, exactly. So, I mean, obviously like this, this has been a long while in the making, right? So at the at the point when, we, put the the working draft for mesos plus to the public revenue c plus 23 was not yet released. There were some discussions whether it would already make sense to base it on C. 20. But the problem there is that the. So these guidelines like we try not to make them up right like we try to standardize what the consensus is in the community, what the best practices are. And it takes a while to like, Figure this up, right, in particular for the more complex features. And with C plus 20 we now had the problem that we had. A lot of features that were quite complex. But not a lot of implementation experience. Like if you take, for example, modules, still the the implementation experience today is very limited and most people just have never used them, right? So we just did not feel comfortable to, to say like we have a standard that covers C plus 20 simply because we don't have the experience in the industry to claim that we know about all of the sharp corners for the language. The downside of that is of course that if you want to use C, 20 today and you need to do a you need to use a coding standard. That, You know, I have to find an argument why that is okay. But we hope to be able to address that through like, smaller documents, maybe in the future, so that you don't have to wait for the next revision of the the full MUSE response. Okay, that's interesting. And that sort of partially preempts the the next question, which is Now you have sort of brought it more or less up to date with C plus plus. Yeah. While C plus plus 17 support him. Miss received plus plus 2023 Are you planning to continue sort of matching the 3 year pace of new C plus plus standards and be at least only 6 years behind. Yeah, yeah. So that is very much the idea. So we, we have 2 things that, that we have plan now from this one. The one is to like have a more frequent cadence for the one is to like have a more frequent cadence for the main document. And the the other idea is to have like smaller documents that Target specific areas that. My not be interesting to to everyone who uses N and the first example that we have here is the. Guidelines for parallel and heterogeneous computing, which I have been working with together with Michael Wong and Ila Bulov and a bunch of other people. You can actually find a, like 2 talks from the 3 of us at the at cvpcom where, where we present those efforts. So the idea here is that like a lot of people that, write safety critical software don't care about multi-threatening, right? They just keep their stuff single-friended and they're happy with that. So we don't want to clutter up the main standard with a lot of rules regarding training. But if you need to use planning, then Of course you want some guidelines for this, right? So the idea is that then you just use the main guidelines which always apply and then you have like Specialized guidelines, for example, for threading. And then if you know, you need to write multi-threaded code, then you pull them in as well. And so in that way you can like sort of put together the ideal set of guidelines for your project. Okay, that makes a lot of sense. Thank you. That talked about what went into the guidelines because But when you're talking about auto, you said that it was. Yep. That was influenced by certain other standards. Somebody brought up the book in embracing modern C plus safely. Now what were those considered as part of this this effort? Okay. Oh yeah. We didn't look at that book in particular. It was published fairly late in the, in, the cycle of work here. But in principle, like, we take into account all the sources, right? So like we take into account like other safety guidelines. We Looked a lot at it's stuff like the core guidelines, but, but also I like, yeah, books that, that, are well established in the community. So we try to find a good mixture there. Again, what, is important to, keep in mind here is that Mesra has a specific focus like that we like our target audience is really people that need to ride. Code safety critical code. Typically like in, regulated industries. And there's a specific. Specific way that this is done, right? The specific areas that they worry about the most. So that is the the focus for M and that is slightly different than the focus that the authors of the embracing modern C plus plus safety, safely book hat. But, that does not mean that we don't look at it, right? Like we definitely. Take this as an input, we evaluate this, we might just get to the conclusion that, yeah, for other audience, we, we follow a different guideline. Right. Okay, thank you. Then there was one question about your, your last example with the, Early returns. Yeah. I think sort of question it maybe what the original rationale was. They're putting know maybe it was free debugging. I can debugging easier just having to put a break point on. One right time. Yeah. Yeah, so if you If you trace it all the, all the way back, this is a very old guideline and this has been around since the days where people were writing a lot of software and assembly. And That's actually where it makes sense, right? So the The original idea was really to. Yes. Encourage structured programming, right, so that you don't have like wild go to is that like jump all over the place and like you don't know where you enter the function and where you access the function right so this like the original rule it was not just like single exit it was single entry single accident right so they were also worried about you jumping into the middle of a function. And that's really where it came from, right? And then if you follow like structure programming paradigms as most people do today. Like a lot of these problems that people had back in the day with multiple returns they go away right and it's in some cases it's even like counterproductive where if you do want to enforce the single return You need to reintroduce Go to in a couple of places so that you can jump to your to your exit point without cluttering up the whole code with additional conditions. So yeah, it's it's a rule from a different from a different world. And yeah. Yeah, make sense. Thank you. Maybe one or 2 fun questions I think we have time for. Sure. What's your favourite improvement between Mr C plus plus 2,008 and 2023? Yeah, that's a good question. I really like what we did with, with the loops. I think that was like, especially for, people that have to use these rules and have to understand the warnings that the tool gives them and how to fix them. I think like that that was That was a big improvement. And that is really something that people feel every day simply because it's so, it's so, so common in the code. Right, thank you. And I think we do have to wrap up that maybe just. Inverse of that, what's your least favorite rule? In that C plus 23. Yeah. Everything that has to do with integer promotion, I just like, not because I think the rules are bad, but just like the integer promotion is so complicated in C and it just It breaks my heart every time that such a fundamental part of the language is associated with, yes, such difficult rules. Thanks a lot of sense. Well, I think that's all we have time for. So thanks again for staying for the Q&A. Thanks to everyone else for for attending, for asking your questions. As we said before, I will be sending out these, Complete answered set. In a follow-up email along with the with the survey. So thank you again. And goodbye.",
+  "fetchedAt": "2026-03-14T09:23:38.292Z"
+}

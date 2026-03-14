@@ -1,0 +1,1648 @@
+{
+  "videoId": "v153",
+  "youtubeId": "cPxwIpV6VBI",
+  "segments": [
+    {
+      "text": "hi everybody Welcome Back to Black Cat",
+      "offset": 1140,
+      "duration": 4460
+    },
+    {
+      "text": "USA 2023 this is episode",
+      "offset": 2580,
+      "duration": 7260
+    },
+    {
+      "text": "2988 my next guests Mr Olivier gowden",
+      "offset": 5600,
+      "duration": 8079
+    },
+    {
+      "text": "he's the CEO and Jonas daza",
+      "offset": 9840,
+      "duration": 7100
+    },
+    {
+      "text": "the head of research and development for",
+      "offset": 13679,
+      "duration": 5401
+    },
+    {
+      "text": "sonarsource.com welcome gentlemen",
+      "offset": 16940,
+      "duration": 4599
+    },
+    {
+      "text": "welcome to the show thank you Chuck now",
+      "offset": 19080,
+      "duration": 4859
+    },
+    {
+      "text": "today's topic discoveried hidden",
+      "offset": 21539,
+      "duration": 4441
+    },
+    {
+      "text": "security issues in code with sonar",
+      "offset": 23939,
+      "duration": 6061
+    },
+    {
+      "text": "deeper static app security testing great",
+      "offset": 25980,
+      "duration": 6060
+    },
+    {
+      "text": "conversation a lot to learn about this",
+      "offset": 30000,
+      "duration": 4200
+    },
+    {
+      "text": "uh you guys recently announced a",
+      "offset": 32040,
+      "duration": 4800
+    },
+    {
+      "text": "powerful deep analysis to find hidden",
+      "offset": 34200,
+      "duration": 4680
+    },
+    {
+      "text": "security issues in code on August 2nd",
+      "offset": 36840,
+      "duration": 5940
+    },
+    {
+      "text": "it's referred to as deeper sast its new",
+      "offset": 38880,
+      "duration": 5820
+    },
+    {
+      "text": "Advanced detection and IT addresses the",
+      "offset": 42780,
+      "duration": 4080
+    },
+    {
+      "text": "issues of traditional sast tools Miss",
+      "offset": 44700,
+      "duration": 3960
+    },
+    {
+      "text": "we're going to talk about that today",
+      "offset": 46860,
+      "duration": 4260
+    },
+    {
+      "text": "let's start by uh by asking what is",
+      "offset": 48660,
+      "duration": 6300
+    },
+    {
+      "text": "unique about about the deeper sast we",
+      "offset": 51120,
+      "duration": 5939
+    },
+    {
+      "text": "find all kinds of issues in codes right",
+      "offset": 54960,
+      "duration": 4619
+    },
+    {
+      "text": "so that could make your your code base",
+      "offset": 57059,
+      "duration": 5701
+    },
+    {
+      "text": "unhealthy and security issues uh are one",
+      "offset": 59579,
+      "duration": 6001
+    },
+    {
+      "text": "important part of of the issues that we",
+      "offset": 62760,
+      "duration": 5039
+    },
+    {
+      "text": "detect and the challenge for security",
+      "offset": 65580,
+      "duration": 6300
+    },
+    {
+      "text": "issues is typically that they can be",
+      "offset": 67799,
+      "duration": 6360
+    },
+    {
+      "text": "everywhere in their code base and",
+      "offset": 71880,
+      "duration": 4080
+    },
+    {
+      "text": "when we mean everywhere on your code",
+      "offset": 74159,
+      "duration": 5820
+    },
+    {
+      "text": "base we are talking about issues that",
+      "offset": 75960,
+      "duration": 7019
+    },
+    {
+      "text": "um or can be a combination of multiple",
+      "offset": 79979,
+      "duration": 4621
+    },
+    {
+      "text": "code pieces",
+      "offset": 82979,
+      "duration": 4140
+    },
+    {
+      "text": "and those code pieces can be also",
+      "offset": 84600,
+      "duration": 4320
+    },
+    {
+      "text": "independency code and",
+      "offset": 87119,
+      "duration": 3721
+    },
+    {
+      "text": "traditionally what what happens in the",
+      "offset": 88920,
+      "duration": 4920
+    },
+    {
+      "text": "market is that we scan code only for",
+      "offset": 90840,
+      "duration": 6480
+    },
+    {
+      "text": "like the code base of the developers",
+      "offset": 93840,
+      "duration": 5819
+    },
+    {
+      "text": "what they coded but every software",
+      "offset": 97320,
+      "duration": 4920
+    },
+    {
+      "text": "project includes many many dependencies",
+      "offset": 99659,
+      "duration": 4441
+    },
+    {
+      "text": "and now we are able to also find",
+      "offset": 102240,
+      "duration": 5879
+    },
+    {
+      "text": "security issues that come from an",
+      "offset": 104100,
+      "duration": 6299
+    },
+    {
+      "text": "interaction with this dependency code",
+      "offset": 108119,
+      "duration": 5701
+    },
+    {
+      "text": "now this sounds a little different to me",
+      "offset": 110399,
+      "duration": 4921
+    },
+    {
+      "text": "so what does sonar doing differently",
+      "offset": 113820,
+      "duration": 3240
+    },
+    {
+      "text": "than others in the market for this space",
+      "offset": 115320,
+      "duration": 4500
+    },
+    {
+      "text": "yeah I think if you think about the the",
+      "offset": 117060,
+      "duration": 4460
+    },
+    {
+      "text": "where",
+      "offset": 119820,
+      "duration": 6119
+    },
+    {
+      "text": "does have looked at this so far is there",
+      "offset": 121520,
+      "duration": 7060
+    },
+    {
+      "text": "is a clear separation between",
+      "offset": 125939,
+      "duration": 4981
+    },
+    {
+      "text": "the code that you write",
+      "offset": 128580,
+      "duration": 4860
+    },
+    {
+      "text": "and the code that other people write and",
+      "offset": 130920,
+      "duration": 4399
+    },
+    {
+      "text": "the code that you've writes",
+      "offset": 133440,
+      "duration": 4920
+    },
+    {
+      "text": "traditionally have been okay we we must",
+      "offset": 135319,
+      "duration": 5140
+    },
+    {
+      "text": "Analyze This code to see whether there",
+      "offset": 138360,
+      "duration": 3360
+    },
+    {
+      "text": "are any",
+      "offset": 140459,
+      "duration": 4401
+    },
+    {
+      "text": "flow issue whether anybody can input",
+      "offset": 141720,
+      "duration": 6120
+    },
+    {
+      "text": "data in the in the in the in the",
+      "offset": 144860,
+      "duration": 5620
+    },
+    {
+      "text": "application and it wouldn't be sanitized",
+      "offset": 147840,
+      "duration": 5899
+    },
+    {
+      "text": "and when it comes to uh to dependency",
+      "offset": 150480,
+      "duration": 5700
+    },
+    {
+      "text": "the approach of the market has been to",
+      "offset": 153739,
+      "duration": 4901
+    },
+    {
+      "text": "kind of go through",
+      "offset": 156180,
+      "duration": 3960
+    },
+    {
+      "text": "um to go through the various",
+      "offset": 158640,
+      "duration": 3239
+    },
+    {
+      "text": "dependencies to the various libraries",
+      "offset": 160140,
+      "duration": 3920
+    },
+    {
+      "text": "and to to review manually",
+      "offset": 161879,
+      "duration": 5580
+    },
+    {
+      "text": "whether there is an issue or not on",
+      "offset": 164060,
+      "duration": 6759
+    },
+    {
+      "text": "these two worlds they exist but they",
+      "offset": 167459,
+      "duration": 6241
+    },
+    {
+      "text": "exist separately what what we think at",
+      "offset": 170819,
+      "duration": 4500
+    },
+    {
+      "text": "sonosource is that at the end of the day",
+      "offset": 173700,
+      "duration": 3539
+    },
+    {
+      "text": "whether you write code or whether",
+      "offset": 175319,
+      "duration": 3901
+    },
+    {
+      "text": "somebody else writes code this is code",
+      "offset": 177239,
+      "duration": 5401
+    },
+    {
+      "text": "and it should this it deserves to be",
+      "offset": 179220,
+      "duration": 6360
+    },
+    {
+      "text": "analyzed uh holistically",
+      "offset": 182640,
+      "duration": 6480
+    },
+    {
+      "text": "by a tool and this is really what we do",
+      "offset": 185580,
+      "duration": 5340
+    },
+    {
+      "text": "with what we call Deep assast which is",
+      "offset": 189120,
+      "duration": 4740
+    },
+    {
+      "text": "we actually look at the the code that",
+      "offset": 190920,
+      "duration": 5640
+    },
+    {
+      "text": "you write we add up to the code of",
+      "offset": 193860,
+      "duration": 5040
+    },
+    {
+      "text": "libraries and then we we analyze the",
+      "offset": 196560,
+      "duration": 6480
+    },
+    {
+      "text": "whole thing and we find issues that we",
+      "offset": 198900,
+      "duration": 7740
+    },
+    {
+      "text": "were not able to find by looking at our",
+      "offset": 203040,
+      "duration": 7279
+    },
+    {
+      "text": "own code or by looking at a database of",
+      "offset": 206640,
+      "duration": 6060
+    },
+    {
+      "text": "vulnerabilities does that does that",
+      "offset": 210319,
+      "duration": 3821
+    },
+    {
+      "text": "clarify",
+      "offset": 212700,
+      "duration": 3959
+    },
+    {
+      "text": "yeah it does it makes sense to me now I",
+      "offset": 214140,
+      "duration": 3900
+    },
+    {
+      "text": "started doing this a long time ago like",
+      "offset": 216659,
+      "duration": 3000
+    },
+    {
+      "text": "nine years ago and I was kind I'm really",
+      "offset": 218040,
+      "duration": 4619
+    },
+    {
+      "text": "self-educated in in cyber security and",
+      "offset": 219659,
+      "duration": 5401
+    },
+    {
+      "text": "what I learned was that most code is",
+      "offset": 222659,
+      "duration": 4321
+    },
+    {
+      "text": "open source I think back in the day it",
+      "offset": 225060,
+      "duration": 3780
+    },
+    {
+      "text": "was much as 80 of code was taken from",
+      "offset": 226980,
+      "duration": 4080
+    },
+    {
+      "text": "open source is that still the case are",
+      "offset": 228840,
+      "duration": 4319
+    },
+    {
+      "text": "we still at a high appearance of Open",
+      "offset": 231060,
+      "duration": 5160
+    },
+    {
+      "text": "Source coding and how do you or do you",
+      "offset": 233159,
+      "duration": 4860
+    },
+    {
+      "text": "address that the same way I mean like",
+      "offset": 236220,
+      "duration": 3239
+    },
+    {
+      "text": "you said code is code I think that's a",
+      "offset": 238019,
+      "duration": 2821
+    },
+    {
+      "text": "brilliant way to say it",
+      "offset": 239459,
+      "duration": 3721
+    },
+    {
+      "text": "so I think today it's over 90 of",
+      "offset": 240840,
+      "duration": 5340
+    },
+    {
+      "text": "software using dependencies uh",
+      "offset": 243180,
+      "duration": 4699
+    },
+    {
+      "text": "developers don't want to",
+      "offset": 246180,
+      "duration": 4500
+    },
+    {
+      "text": "write every code feature again they want",
+      "offset": 247879,
+      "duration": 5801
+    },
+    {
+      "text": "to spare the rework and then reuse this",
+      "offset": 250680,
+      "duration": 4139
+    },
+    {
+      "text": "excessive",
+      "offset": 253680,
+      "duration": 4679
+    },
+    {
+      "text": "existing open source code right and the",
+      "offset": 254819,
+      "duration": 4561
+    },
+    {
+      "text": "problem with that is really that",
+      "offset": 258359,
+      "duration": 3060
+    },
+    {
+      "text": "developers don't know what's in this",
+      "offset": 259380,
+      "duration": 3900
+    },
+    {
+      "text": "open source code they don't have the",
+      "offset": 261419,
+      "duration": 4321
+    },
+    {
+      "text": "time to verify the code that they're",
+      "offset": 263280,
+      "duration": 4620
+    },
+    {
+      "text": "using and whenever they use and interact",
+      "offset": 265740,
+      "duration": 3920
+    },
+    {
+      "text": "with a piece of code independency code",
+      "offset": 267900,
+      "duration": 3540
+    },
+    {
+      "text": "this can lead to a critical",
+      "offset": 269660,
+      "duration": 3280
+    },
+    {
+      "text": "vulnerability right that doesn't mean",
+      "offset": 271440,
+      "duration": 4080
+    },
+    {
+      "text": "that every dependency is vulnerable or",
+      "offset": 272940,
+      "duration": 4920
+    },
+    {
+      "text": "whenever you do that your code becomes",
+      "offset": 275520,
+      "duration": 4140
+    },
+    {
+      "text": "vulnerable but once in a while when you",
+      "offset": 277860,
+      "duration": 3899
+    },
+    {
+      "text": "combine your code in a unique",
+      "offset": 279660,
+      "duration": 3960
+    },
+    {
+      "text": "combination with a piece of code of a",
+      "offset": 281759,
+      "duration": 3481
+    },
+    {
+      "text": "dependency it can create a critical",
+      "offset": 283620,
+      "duration": 3480
+    },
+    {
+      "text": "security vulnerability and that's",
+      "offset": 285240,
+      "duration": 3780
+    },
+    {
+      "text": "exactly what we can detect now with deep",
+      "offset": 287100,
+      "duration": 5520
+    },
+    {
+      "text": "assessed now let's define clean code I",
+      "offset": 289020,
+      "duration": 5160
+    },
+    {
+      "text": "think that definition may have changed",
+      "offset": 292620,
+      "duration": 2940
+    },
+    {
+      "text": "over the years that's what it sounds",
+      "offset": 294180,
+      "duration": 3959
+    },
+    {
+      "text": "like to me is it remember how we used to",
+      "offset": 295560,
+      "duration": 5160
+    },
+    {
+      "text": "say this is in real time and 10 years",
+      "offset": 298139,
+      "duration": 5280
+    },
+    {
+      "text": "ago real time in a day right now real",
+      "offset": 300720,
+      "duration": 4440
+    },
+    {
+      "text": "time is close to real time does clean",
+      "offset": 303419,
+      "duration": 3000
+    },
+    {
+      "text": "code mean something different than it",
+      "offset": 305160,
+      "duration": 3539
+    },
+    {
+      "text": "did 10 years ago I don't think it does",
+      "offset": 306419,
+      "duration": 4741
+    },
+    {
+      "text": "but I think we have now come up with a",
+      "offset": 308699,
+      "duration": 5701
+    },
+    {
+      "text": "with a much better definition so the way",
+      "offset": 311160,
+      "duration": 6420
+    },
+    {
+      "text": "we Define in code is really",
+      "offset": 314400,
+      "duration": 6239
+    },
+    {
+      "text": "code that is consistent which is if you",
+      "offset": 317580,
+      "duration": 5820
+    },
+    {
+      "text": "want if you want a team to look after",
+      "offset": 320639,
+      "duration": 6081
+    },
+    {
+      "text": "the code not the angel you have to have",
+      "offset": 323400,
+      "duration": 6120
+    },
+    {
+      "text": "consistency in terms of style but also",
+      "offset": 326720,
+      "duration": 4479
+    },
+    {
+      "text": "in terms of how do we solve certain",
+      "offset": 329520,
+      "duration": 4860
+    },
+    {
+      "text": "problems about idiomatics about code",
+      "offset": 331199,
+      "duration": 5641
+    },
+    {
+      "text": "constructions so the whole code should",
+      "offset": 334380,
+      "duration": 5580
+    },
+    {
+      "text": "be consistent the second thing is",
+      "offset": 336840,
+      "duration": 5460
+    },
+    {
+      "text": "so code should be intentional which",
+      "offset": 339960,
+      "duration": 6420
+    },
+    {
+      "text": "means any logical error anything that is",
+      "offset": 342300,
+      "duration": 9060
+    },
+    {
+      "text": "not being used any uh any information",
+      "offset": 346380,
+      "duration": 6900
+    },
+    {
+      "text": "any user inputs",
+      "offset": 351360,
+      "duration": 4740
+    },
+    {
+      "text": "that is not sanitized any resource that",
+      "offset": 353280,
+      "duration": 5820
+    },
+    {
+      "text": "is not released after being used",
+      "offset": 356100,
+      "duration": 5280
+    },
+    {
+      "text": "is not considered as being",
+      "offset": 359100,
+      "duration": 4560
+    },
+    {
+      "text": "intentional and should be um should be",
+      "offset": 361380,
+      "duration": 3840
+    },
+    {
+      "text": "fixed",
+      "offset": 363660,
+      "duration": 3660
+    },
+    {
+      "text": "what we also need is a code to be",
+      "offset": 365220,
+      "duration": 4740
+    },
+    {
+      "text": "adaptable which is we need the code to",
+      "offset": 367320,
+      "duration": 5520
+    },
+    {
+      "text": "be changeable basically which is if you",
+      "offset": 369960,
+      "duration": 5480
+    },
+    {
+      "text": "if you if we cannot change code anymore",
+      "offset": 372840,
+      "duration": 5520
+    },
+    {
+      "text": "we can con we cannot consider that we",
+      "offset": 375440,
+      "duration": 5020
+    },
+    {
+      "text": "are writing software anymore it's",
+      "offset": 378360,
+      "duration": 3779
+    },
+    {
+      "text": "something else but you cannot call it",
+      "offset": 380460,
+      "duration": 2959
+    },
+    {
+      "text": "soft",
+      "offset": 382139,
+      "duration": 4321
+    },
+    {
+      "text": "so we need to make sure that the",
+      "offset": 383419,
+      "duration": 7060
+    },
+    {
+      "text": "so the code keeps the flexibility uh to",
+      "offset": 386460,
+      "duration": 6900
+    },
+    {
+      "text": "to to to be changed and finally the code",
+      "offset": 390479,
+      "duration": 7021
+    },
+    {
+      "text": "should be responsible which means",
+      "offset": 393360,
+      "duration": 7080
+    },
+    {
+      "text": "we shouldn't steal code to um to build",
+      "offset": 397500,
+      "duration": 5039
+    },
+    {
+      "text": "software we should not hard code",
+      "offset": 400440,
+      "duration": 4560
+    },
+    {
+      "text": "passwords Etc so there are a whole set",
+      "offset": 402539,
+      "duration": 4621
+    },
+    {
+      "text": "of things that needs to be looked after",
+      "offset": 405000,
+      "duration": 4800
+    },
+    {
+      "text": "to keep the code responsible and this is",
+      "offset": 407160,
+      "duration": 4620
+    },
+    {
+      "text": "how we Define clean code which is",
+      "offset": 409800,
+      "duration": 4860
+    },
+    {
+      "text": "consistent intentional adaptable and",
+      "offset": 411780,
+      "duration": 4620
+    },
+    {
+      "text": "responsible",
+      "offset": 414660,
+      "duration": 3900
+    },
+    {
+      "text": "so I come from a physical security",
+      "offset": 416400,
+      "duration": 3720
+    },
+    {
+      "text": "environment that's where I started I was",
+      "offset": 418560,
+      "duration": 3780
+    },
+    {
+      "text": "a police officer worked at the studios",
+      "offset": 420120,
+      "duration": 4380
+    },
+    {
+      "text": "and I had my first computer in 1984",
+      "offset": 422340,
+      "duration": 3900
+    },
+    {
+      "text": "maybe before both you guys were born",
+      "offset": 424500,
+      "duration": 5580
+    },
+    {
+      "text": "possibly so I see this progression of",
+      "offset": 426240,
+      "duration": 8280
+    },
+    {
+      "text": "cyber security is coming from here's the",
+      "offset": 430080,
+      "duration": 6600
+    },
+    {
+      "text": "internet with basically no passwords to",
+      "offset": 434520,
+      "duration": 3540
+    },
+    {
+      "text": "now we have all these security issues",
+      "offset": 436680,
+      "duration": 3239
+    },
+    {
+      "text": "right I've always thought of it as",
+      "offset": 438060,
+      "duration": 3600
+    },
+    {
+      "text": "basically",
+      "offset": 439919,
+      "duration": 3840
+    },
+    {
+      "text": "state of cyber hygiene we should do",
+      "offset": 441660,
+      "duration": 3659
+    },
+    {
+      "text": "better at that and I'm looking at what",
+      "offset": 443759,
+      "duration": 3720
+    },
+    {
+      "text": "you do as a state of cyber hygiene",
+      "offset": 445319,
+      "duration": 4500
+    },
+    {
+      "text": "keeping code clean that's kind of how I",
+      "offset": 447479,
+      "duration": 3961
+    },
+    {
+      "text": "picture it in my in my head if that",
+      "offset": 449819,
+      "duration": 2581
+    },
+    {
+      "text": "makes sense",
+      "offset": 451440,
+      "duration": 4199
+    },
+    {
+      "text": "so how does Deeper",
+      "offset": 452400,
+      "duration": 6239
+    },
+    {
+      "text": "sat how does it support organizations in",
+      "offset": 455639,
+      "duration": 5641
+    },
+    {
+      "text": "achieving this state of clean code and",
+      "offset": 458639,
+      "duration": 4441
+    },
+    {
+      "text": "it is a state right it's like a state of",
+      "offset": 461280,
+      "duration": 3780
+    },
+    {
+      "text": "Readiness you always have to be prepared",
+      "offset": 463080,
+      "duration": 3800
+    },
+    {
+      "text": "to have something launched into your",
+      "offset": 465060,
+      "duration": 4320
+    },
+    {
+      "text": "application or your time to Market and",
+      "offset": 466880,
+      "duration": 3759
+    },
+    {
+      "text": "if it's not clean you're not ready to go",
+      "offset": 469380,
+      "duration": 3300
+    },
+    {
+      "text": "you're you're not ready",
+      "offset": 470639,
+      "duration": 5881
+    },
+    {
+      "text": "no I think deep assessed is one part of",
+      "offset": 472680,
+      "duration": 6060
+    },
+    {
+      "text": "what it needs to have clean code right",
+      "offset": 476520,
+      "duration": 4980
+    },
+    {
+      "text": "so in the end we want to find all kinds",
+      "offset": 478740,
+      "duration": 6359
+    },
+    {
+      "text": "of issues that make your code unclean",
+      "offset": 481500,
+      "duration": 4919
+    },
+    {
+      "text": "you could say",
+      "offset": 485099,
+      "duration": 4801
+    },
+    {
+      "text": "and security is one important part we",
+      "offset": 486419,
+      "duration": 5581
+    },
+    {
+      "text": "find all kind of code courses but the",
+      "offset": 489900,
+      "duration": 4940
+    },
+    {
+      "text": "consequence for security issues is uh",
+      "offset": 492000,
+      "duration": 5699
+    },
+    {
+      "text": "dramatic sometimes for for organizations",
+      "offset": 494840,
+      "duration": 5079
+    },
+    {
+      "text": "right and so what Olivia mentioned is",
+      "offset": 497699,
+      "duration": 4801
+    },
+    {
+      "text": "these intentional part uh this is really",
+      "offset": 499919,
+      "duration": 6081
+    },
+    {
+      "text": "we where if you use code pieces of",
+      "offset": 502500,
+      "duration": 5639
+    },
+    {
+      "text": "dependencies you should be very",
+      "offset": 506000,
+      "duration": 4240
+    },
+    {
+      "text": "intentional about what you're doing and",
+      "offset": 508139,
+      "duration": 3900
+    },
+    {
+      "text": "often the developer doesn't have time to",
+      "offset": 510240,
+      "duration": 4020
+    },
+    {
+      "text": "really figure out what every piece of",
+      "offset": 512039,
+      "duration": 4081
+    },
+    {
+      "text": "code from a dependency is doing so we",
+      "offset": 514260,
+      "duration": 4019
+    },
+    {
+      "text": "make sure it is intentionally used and",
+      "offset": 516120,
+      "duration": 5279
+    },
+    {
+      "text": "securely used to achieve a state of",
+      "offset": 518279,
+      "duration": 5401
+    },
+    {
+      "text": "clean code in your code base",
+      "offset": 521399,
+      "duration": 4821
+    },
+    {
+      "text": "now you said something interesting to me",
+      "offset": 523680,
+      "duration": 5760
+    },
+    {
+      "text": "uh there's other issues with the code of",
+      "offset": 526220,
+      "duration": 4239
+    },
+    {
+      "text": "course you know just could be a",
+      "offset": 529440,
+      "duration": 3120
+    },
+    {
+      "text": "programming error or something do you",
+      "offset": 530459,
+      "duration": 4981
+    },
+    {
+      "text": "find that most of the issues are a",
+      "offset": 532560,
+      "duration": 4920
+    },
+    {
+      "text": "combination of regular programming",
+      "offset": 535440,
+      "duration": 4560
+    },
+    {
+      "text": "errors and and lack of security coding",
+      "offset": 537480,
+      "duration": 4799
+    },
+    {
+      "text": "so they lean one side or the other",
+      "offset": 540000,
+      "duration": 3680
+    },
+    {
+      "text": "um I think they can be all very",
+      "offset": 542279,
+      "duration": 3841
+    },
+    {
+      "text": "interconnected and that's why we also",
+      "offset": 543680,
+      "duration": 4540
+    },
+    {
+      "text": "believe that clean code is so important",
+      "offset": 546120,
+      "duration": 3839
+    },
+    {
+      "text": "right if you if you look at what Olivia",
+      "offset": 548220,
+      "duration": 4140
+    },
+    {
+      "text": "just mentioned the let's say consistent",
+      "offset": 549959,
+      "duration": 5461
+    },
+    {
+      "text": "or adaptable code you cannot really fix",
+      "offset": 552360,
+      "duration": 5940
+    },
+    {
+      "text": "your security problems what we keep on",
+      "offset": 555420,
+      "duration": 4919
+    },
+    {
+      "text": "talking about here in the security",
+      "offset": 558300,
+      "duration": 6300
+    },
+    {
+      "text": "industry and you cannot continue fixing",
+      "offset": 560339,
+      "duration": 6060
+    },
+    {
+      "text": "your problems if you have unmaintainable",
+      "offset": 564600,
+      "duration": 3900
+    },
+    {
+      "text": "code for example right or another",
+      "offset": 566399,
+      "duration": 4440
+    },
+    {
+      "text": "example is if you have buggy codes then",
+      "offset": 568500,
+      "duration": 4620
+    },
+    {
+      "text": "it can be two crashes but those crashes",
+      "offset": 570839,
+      "duration": 3841
+    },
+    {
+      "text": "can also lead to security problems and",
+      "offset": 573120,
+      "duration": 3420
+    },
+    {
+      "text": "that's why we believe that all those",
+      "offset": 574680,
+      "duration": 3900
+    },
+    {
+      "text": "different pillars of clean codes are",
+      "offset": 576540,
+      "duration": 4080
+    },
+    {
+      "text": "very interconnected and very important",
+      "offset": 578580,
+      "duration": 4379
+    },
+    {
+      "text": "to address collectively so you don't",
+      "offset": 580620,
+      "duration": 4080
+    },
+    {
+      "text": "have security problems",
+      "offset": 582959,
+      "duration": 3601
+    },
+    {
+      "text": "now I gotta say fellas I've done a lot",
+      "offset": 584700,
+      "duration": 4380
+    },
+    {
+      "text": "of shows over three thousand technically",
+      "offset": 586560,
+      "duration": 4680
+    },
+    {
+      "text": "uh",
+      "offset": 589080,
+      "duration": 5160
+    },
+    {
+      "text": "sonar sounds different to me am I am I",
+      "offset": 591240,
+      "duration": 4320
+    },
+    {
+      "text": "hearing that correctly it sounds like",
+      "offset": 594240,
+      "duration": 3480
+    },
+    {
+      "text": "you do something differently to most",
+      "offset": 595560,
+      "duration": 4200
+    },
+    {
+      "text": "people and to me frankly it sounds more",
+      "offset": 597720,
+      "duration": 4020
+    },
+    {
+      "text": "thorough is that a good way to describe",
+      "offset": 599760,
+      "duration": 3600
+    },
+    {
+      "text": "it we have been developing the product",
+      "offset": 601740,
+      "duration": 4200
+    },
+    {
+      "text": "based on engineering needs starting from",
+      "offset": 603360,
+      "duration": 5039
+    },
+    {
+      "text": "from our own needs but also we have a",
+      "offset": 605940,
+      "duration": 5220
+    },
+    {
+      "text": "super large community so I think one of",
+      "offset": 608399,
+      "duration": 5101
+    },
+    {
+      "text": "the things that is remarkable at Sonos",
+      "offset": 611160,
+      "duration": 4859
+    },
+    {
+      "text": "is how aligned we are with our Market",
+      "offset": 613500,
+      "duration": 4740
+    },
+    {
+      "text": "which is we it's not like sometimes we",
+      "offset": 616019,
+      "duration": 3721
+    },
+    {
+      "text": "are a little bit",
+      "offset": 618240,
+      "duration": 2099
+    },
+    {
+      "text": "um",
+      "offset": 619740,
+      "duration": 4560
+    },
+    {
+      "text": "early and and then the our community",
+      "offset": 620339,
+      "duration": 7201
+    },
+    {
+      "text": "catches up and then they they drive it",
+      "offset": 624300,
+      "duration": 6000
+    },
+    {
+      "text": "into a certain direction so if it if it",
+      "offset": 627540,
+      "duration": 6239
+    },
+    {
+      "text": "feels very authentic as a as a as a",
+      "offset": 630300,
+      "duration": 5640
+    },
+    {
+      "text": "product it's it's probably because of",
+      "offset": 633779,
+      "duration": 3661
+    },
+    {
+      "text": "this",
+      "offset": 635940,
+      "duration": 3120
+    },
+    {
+      "text": "um I just would like to come back on one",
+      "offset": 637440,
+      "duration": 3240
+    },
+    {
+      "text": "thing you said earlier which to me is",
+      "offset": 639060,
+      "duration": 4620
+    },
+    {
+      "text": "very very right you talked about hygiene",
+      "offset": 640680,
+      "duration": 6300
+    },
+    {
+      "text": "and I think this is really what it comes",
+      "offset": 643680,
+      "duration": 5159
+    },
+    {
+      "text": "down to which is",
+      "offset": 646980,
+      "duration": 5340
+    },
+    {
+      "text": "if you don't if you don't do if you",
+      "offset": 648839,
+      "duration": 5101
+    },
+    {
+      "text": "don't have a good hygiene with your code",
+      "offset": 652320,
+      "duration": 3900
+    },
+    {
+      "text": "at the end of the day your software is",
+      "offset": 653940,
+      "duration": 4019
+    },
+    {
+      "text": "not going to be an asset it's going to",
+      "offset": 656220,
+      "duration": 4619
+    },
+    {
+      "text": "be a liability because your code becomes",
+      "offset": 657959,
+      "duration": 5761
+    },
+    {
+      "text": "a liability your your software is going",
+      "offset": 660839,
+      "duration": 5041
+    },
+    {
+      "text": "to become a liability so",
+      "offset": 663720,
+      "duration": 4799
+    },
+    {
+      "text": "we are really we are really trying to",
+      "offset": 665880,
+      "duration": 5100
+    },
+    {
+      "text": "address this at the engineering level",
+      "offset": 668519,
+      "duration": 5521
+    },
+    {
+      "text": "which is this all this hygiene should",
+      "offset": 670980,
+      "duration": 4440
+    },
+    {
+      "text": "happen",
+      "offset": 674040,
+      "duration": 3060
+    },
+    {
+      "text": "during",
+      "offset": 675420,
+      "duration": 3539
+    },
+    {
+      "text": "um during the development phase it it",
+      "offset": 677100,
+      "duration": 4140
+    },
+    {
+      "text": "shouldn't happen afterwards afterwards",
+      "offset": 678959,
+      "duration": 5221
+    },
+    {
+      "text": "you want to really go for like",
+      "offset": 681240,
+      "duration": 6480
+    },
+    {
+      "text": "complex problems threat modeling Etc the",
+      "offset": 684180,
+      "duration": 6000
+    },
+    {
+      "text": "security team should focus all their",
+      "offset": 687720,
+      "duration": 3359
+    },
+    {
+      "text": "time",
+      "offset": 690180,
+      "duration": 3120
+    },
+    {
+      "text": "expertise on energy onto this more",
+      "offset": 691079,
+      "duration": 4081
+    },
+    {
+      "text": "complex problem not",
+      "offset": 693300,
+      "duration": 5400
+    },
+    {
+      "text": "not running analysis tools to see",
+      "offset": 695160,
+      "duration": 4560
+    },
+    {
+      "text": "whether",
+      "offset": 698700,
+      "duration": 3420
+    },
+    {
+      "text": "an okay job was done during the",
+      "offset": 699720,
+      "duration": 5220
+    },
+    {
+      "text": "development phase if that makes sense it",
+      "offset": 702120,
+      "duration": 4500
+    },
+    {
+      "text": "does make sense you know and our our new",
+      "offset": 704940,
+      "duration": 5100
+    },
+    {
+      "text": "challenge uh is uh AI chat GDP I'm not",
+      "offset": 706620,
+      "duration": 4860
+    },
+    {
+      "text": "picking on chat GDP people let's just",
+      "offset": 710040,
+      "duration": 4080
+    },
+    {
+      "text": "use that as an example do you find that",
+      "offset": 711480,
+      "duration": 4620
+    },
+    {
+      "text": "this Advanced AI now is going to is",
+      "offset": 714120,
+      "duration": 5040
+    },
+    {
+      "text": "going to cause uh new challenges in your",
+      "offset": 716100,
+      "duration": 4799
+    },
+    {
+      "text": "side of the industry is it going to help",
+      "offset": 719160,
+      "duration": 3960
+    },
+    {
+      "text": "is it going to hinder I mean I think for",
+      "offset": 720899,
+      "duration": 4620
+    },
+    {
+      "text": "Sonos I would say it's a it's a real",
+      "offset": 723120,
+      "duration": 4620
+    },
+    {
+      "text": "opportunity for the industry I think it",
+      "offset": 725519,
+      "duration": 4500
+    },
+    {
+      "text": "can be a it can be a challenge indeed",
+      "offset": 727740,
+      "duration": 4620
+    },
+    {
+      "text": "and",
+      "offset": 730019,
+      "duration": 4201
+    },
+    {
+      "text": "at the end of the day I think with with",
+      "offset": 732360,
+      "duration": 6360
+    },
+    {
+      "text": "the AI generative with generative AI",
+      "offset": 734220,
+      "duration": 7020
+    },
+    {
+      "text": "um what we are going to see is that more",
+      "offset": 738720,
+      "duration": 5220
+    },
+    {
+      "text": "code is being written",
+      "offset": 741240,
+      "duration": 4260
+    },
+    {
+      "text": "um whether it's because developer",
+      "offset": 743940,
+      "duration": 3720
+    },
+    {
+      "text": "becomes more productive or whether it's",
+      "offset": 745500,
+      "duration": 4019
+    },
+    {
+      "text": "because some people who are not",
+      "offset": 747660,
+      "duration": 3660
+    },
+    {
+      "text": "developers are able to write application",
+      "offset": 749519,
+      "duration": 3481
+    },
+    {
+      "text": "at the end of the day there will be more",
+      "offset": 751320,
+      "duration": 4320
+    },
+    {
+      "text": "code and that code",
+      "offset": 753000,
+      "duration": 7019
+    },
+    {
+      "text": "is not going to be clean for sure",
+      "offset": 755640,
+      "duration": 7560
+    },
+    {
+      "text": "um some of it may be locally clean but",
+      "offset": 760019,
+      "duration": 6241
+    },
+    {
+      "text": "overall this code is going to have to be",
+      "offset": 763200,
+      "duration": 5879
+    },
+    {
+      "text": "reviewed and I think this is where for",
+      "offset": 766260,
+      "duration": 5280
+    },
+    {
+      "text": "us it's um it's a it's a it's a great",
+      "offset": 769079,
+      "duration": 3781
+    },
+    {
+      "text": "opportunity",
+      "offset": 771540,
+      "duration": 2820
+    },
+    {
+      "text": "excellent conversation my friends I'm so",
+      "offset": 772860,
+      "duration": 3900
+    },
+    {
+      "text": "glad you came on the show Olivia Godden",
+      "offset": 774360,
+      "duration": 5300
+    },
+    {
+      "text": "and Johannes daza",
+      "offset": 776760,
+      "duration": 5900
+    },
+    {
+      "text": "sonosource.com",
+      "offset": 779660,
+      "duration": 3000
+    },
+    {
+      "text": "I'll see you in person next year we're",
+      "offset": 785600,
+      "duration": 3580
+    },
+    {
+      "text": "trying to make it back in person to the",
+      "offset": 787980,
+      "duration": 2820
+    },
+    {
+      "text": "show thanks for coming on security Guy",
+      "offset": 789180,
+      "duration": 3540
+    },
+    {
+      "text": "TV",
+      "offset": 790800,
+      "duration": 6200
+    },
+    {
+      "text": "thank you great thanks Chuck",
+      "offset": 792720,
+      "duration": 4280
+    }
+  ],
+  "fullText": "hi everybody Welcome Back to Black Cat USA 2023 this is episode 2988 my next guests Mr Olivier gowden he's the CEO and Jonas daza the head of research and development for sonarsource.com welcome gentlemen welcome to the show thank you Chuck now today's topic discoveried hidden security issues in code with sonar deeper static app security testing great conversation a lot to learn about this uh you guys recently announced a powerful deep analysis to find hidden security issues in code on August 2nd it's referred to as deeper sast its new Advanced detection and IT addresses the issues of traditional sast tools Miss we're going to talk about that today let's start by uh by asking what is unique about about the deeper sast we find all kinds of issues in codes right so that could make your your code base unhealthy and security issues uh are one important part of of the issues that we detect and the challenge for security issues is typically that they can be everywhere in their code base and when we mean everywhere on your code base we are talking about issues that um or can be a combination of multiple code pieces and those code pieces can be also independency code and traditionally what what happens in the market is that we scan code only for like the code base of the developers what they coded but every software project includes many many dependencies and now we are able to also find security issues that come from an interaction with this dependency code now this sounds a little different to me so what does sonar doing differently than others in the market for this space yeah I think if you think about the the where does have looked at this so far is there is a clear separation between the code that you write and the code that other people write and the code that you've writes traditionally have been okay we we must Analyze This code to see whether there are any flow issue whether anybody can input data in the in the in the in the application and it wouldn't be sanitized and when it comes to uh to dependency the approach of the market has been to kind of go through um to go through the various dependencies to the various libraries and to to review manually whether there is an issue or not on these two worlds they exist but they exist separately what what we think at sonosource is that at the end of the day whether you write code or whether somebody else writes code this is code and it should this it deserves to be analyzed uh holistically by a tool and this is really what we do with what we call Deep assast which is we actually look at the the code that you write we add up to the code of libraries and then we we analyze the whole thing and we find issues that we were not able to find by looking at our own code or by looking at a database of vulnerabilities does that does that clarify yeah it does it makes sense to me now I started doing this a long time ago like nine years ago and I was kind I'm really self-educated in in cyber security and what I learned was that most code is open source I think back in the day it was much as 80 of code was taken from open source is that still the case are we still at a high appearance of Open Source coding and how do you or do you address that the same way I mean like you said code is code I think that's a brilliant way to say it so I think today it's over 90 of software using dependencies uh developers don't want to write every code feature again they want to spare the rework and then reuse this excessive existing open source code right and the problem with that is really that developers don't know what's in this open source code they don't have the time to verify the code that they're using and whenever they use and interact with a piece of code independency code this can lead to a critical vulnerability right that doesn't mean that every dependency is vulnerable or whenever you do that your code becomes vulnerable but once in a while when you combine your code in a unique combination with a piece of code of a dependency it can create a critical security vulnerability and that's exactly what we can detect now with deep assessed now let's define clean code I think that definition may have changed over the years that's what it sounds like to me is it remember how we used to say this is in real time and 10 years ago real time in a day right now real time is close to real time does clean code mean something different than it did 10 years ago I don't think it does but I think we have now come up with a with a much better definition so the way we Define in code is really code that is consistent which is if you want if you want a team to look after the code not the angel you have to have consistency in terms of style but also in terms of how do we solve certain problems about idiomatics about code constructions so the whole code should be consistent the second thing is so code should be intentional which means any logical error anything that is not being used any uh any information any user inputs that is not sanitized any resource that is not released after being used is not considered as being intentional and should be um should be fixed what we also need is a code to be adaptable which is we need the code to be changeable basically which is if you if you if we cannot change code anymore we can con we cannot consider that we are writing software anymore it's something else but you cannot call it soft so we need to make sure that the so the code keeps the flexibility uh to to to to be changed and finally the code should be responsible which means we shouldn't steal code to um to build software we should not hard code passwords Etc so there are a whole set of things that needs to be looked after to keep the code responsible and this is how we Define clean code which is consistent intentional adaptable and responsible so I come from a physical security environment that's where I started I was a police officer worked at the studios and I had my first computer in 1984 maybe before both you guys were born possibly so I see this progression of cyber security is coming from here's the internet with basically no passwords to now we have all these security issues right I've always thought of it as basically state of cyber hygiene we should do better at that and I'm looking at what you do as a state of cyber hygiene keeping code clean that's kind of how I picture it in my in my head if that makes sense so how does Deeper sat how does it support organizations in achieving this state of clean code and it is a state right it's like a state of Readiness you always have to be prepared to have something launched into your application or your time to Market and if it's not clean you're not ready to go you're you're not ready no I think deep assessed is one part of what it needs to have clean code right so in the end we want to find all kinds of issues that make your code unclean you could say and security is one important part we find all kind of code courses but the consequence for security issues is uh dramatic sometimes for for organizations right and so what Olivia mentioned is these intentional part uh this is really we where if you use code pieces of dependencies you should be very intentional about what you're doing and often the developer doesn't have time to really figure out what every piece of code from a dependency is doing so we make sure it is intentionally used and securely used to achieve a state of clean code in your code base now you said something interesting to me uh there's other issues with the code of course you know just could be a programming error or something do you find that most of the issues are a combination of regular programming errors and and lack of security coding so they lean one side or the other um I think they can be all very interconnected and that's why we also believe that clean code is so important right if you if you look at what Olivia just mentioned the let's say consistent or adaptable code you cannot really fix your security problems what we keep on talking about here in the security industry and you cannot continue fixing your problems if you have unmaintainable code for example right or another example is if you have buggy codes then it can be two crashes but those crashes can also lead to security problems and that's why we believe that all those different pillars of clean codes are very interconnected and very important to address collectively so you don't have security problems now I gotta say fellas I've done a lot of shows over three thousand technically uh sonar sounds different to me am I am I hearing that correctly it sounds like you do something differently to most people and to me frankly it sounds more thorough is that a good way to describe it we have been developing the product based on engineering needs starting from from our own needs but also we have a super large community so I think one of the things that is remarkable at Sonos is how aligned we are with our Market which is we it's not like sometimes we are a little bit um early and and then the our community catches up and then they they drive it into a certain direction so if it if it feels very authentic as a as a as a product it's it's probably because of this um I just would like to come back on one thing you said earlier which to me is very very right you talked about hygiene and I think this is really what it comes down to which is if you don't if you don't do if you don't have a good hygiene with your code at the end of the day your software is not going to be an asset it's going to be a liability because your code becomes a liability your your software is going to become a liability so we are really we are really trying to address this at the engineering level which is this all this hygiene should happen during um during the development phase it it shouldn't happen afterwards afterwards you want to really go for like complex problems threat modeling Etc the security team should focus all their time expertise on energy onto this more complex problem not not running analysis tools to see whether an okay job was done during the development phase if that makes sense it does make sense you know and our our new challenge uh is uh AI chat GDP I'm not picking on chat GDP people let's just use that as an example do you find that this Advanced AI now is going to is going to cause uh new challenges in your side of the industry is it going to help is it going to hinder I mean I think for Sonos I would say it's a it's a real opportunity for the industry I think it can be a it can be a challenge indeed and at the end of the day I think with with the AI generative with generative AI um what we are going to see is that more code is being written um whether it's because developer becomes more productive or whether it's because some people who are not developers are able to write application at the end of the day there will be more code and that code is not going to be clean for sure um some of it may be locally clean but overall this code is going to have to be reviewed and I think this is where for us it's um it's a it's a it's a great opportunity excellent conversation my friends I'm so glad you came on the show Olivia Godden and Johannes daza sonosource.com I'll see you in person next year we're trying to make it back in person to the show thanks for coming on security Guy TV thank you great thanks Chuck",
+  "fetchedAt": "2026-03-14T09:24:22.336Z"
+}

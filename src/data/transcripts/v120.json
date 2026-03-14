@@ -1,0 +1,1843 @@
+{
+  "videoId": "v120",
+  "youtubeId": "Hgb8ubDwGic",
+  "segments": [
+    {
+      "text": "All right, thank you everyone. Hello everyone. Thank you for joining today. Welcome to the webinar.",
+      "offset": 679,
+      "duration": 8000
+    },
+    {
+      "text": "Today's webinar is on integrating sooner, in the AWS CI CD workflows.",
+      "offset": 8679,
+      "duration": 8000
+    },
+    {
+      "text": "Today you will learn how to leverage Sonar Q. AWS Cloud Services. And develop solutions to build modern CI CD workflows with clean code.",
+      "offset": 16679,
+      "duration": 12000
+    },
+    {
+      "text": "I am Manish Kapoor and this webinar will be co-presented by AWS and Sonar.",
+      "offset": 28679,
+      "duration": 6000
+    },
+    {
+      "text": "Thank you to AWS for collaborating with Sonar on creating and delivering this content. Please allow me to quickly go over some essential housekeeping points before we start.",
+      "offset": 34679,
+      "duration": 12000
+    },
+    {
+      "text": "The session will last about 60 min. And include a QMA at the end of this webinar. You got invited to submit your questions via the Q&A box in Zoom.",
+      "offset": 46679,
+      "duration": 12000
+    },
+    {
+      "text": "Please note it's a Q&A box and not the chat box. We have 2 panelists joining us today.",
+      "offset": 58679,
+      "duration": 8000
+    },
+    {
+      "text": "Thanks, Kevin. Nash from AWS. And, Emmanuel Kelosi from They will be here to help answer as many questions.",
+      "offset": 66679,
+      "duration": 9000
+    },
+    {
+      "text": "As they can live during the webinar. This session will be recorded. And we will share a link via email in the upcoming days.",
+      "offset": 75679,
+      "duration": 11000
+    },
+    {
+      "text": "Finally, at the end of this webinar, a short survey will pop up on your screen. We consider your feedback as a gift.",
+      "offset": 86679,
+      "duration": 9000
+    },
+    {
+      "text": "Thank you for in advance for participating in the survey.",
+      "offset": 95679,
+      "duration": 5000
+    },
+    {
+      "text": "So without further ado. Let me introduce you to today's speakers. And Ramon Lopez.",
+      "offset": 100679,
+      "duration": 9000
+    },
+    {
+      "text": "Selwyn is a former Java developer who has helped several architect. Positions in the last 15 years.",
+      "offset": 109679,
+      "duration": 8000
+    },
+    {
+      "text": "Hey, joins sonar sales engineering team as a senior consultant in 2022, 2,020.",
+      "offset": 117679,
+      "duration": 7000
+    },
+    {
+      "text": "And he has been providing technical support guidance and best practices advocacy to hundreds of customers using Solar Solutions around the world.",
+      "offset": 124679,
+      "duration": 10000
+    },
+    {
+      "text": "Good. Ramon is a senior solutions architect at AWS. Where he guides, educates and empowers customers of all sizes and industries.",
+      "offset": 134679,
+      "duration": 9000
+    },
+    {
+      "text": "To build successful businesses in AWS Cloud. He also has built web services for over millions of Amazon prime customers.",
+      "offset": 143679,
+      "duration": 10000
+    },
+    {
+      "text": "And led a team of software engineers in a fast-paced global environment. Thank you, Sylvain and Ramon.",
+      "offset": 153679,
+      "duration": 8000
+    },
+    {
+      "text": "For delivering this. Over to you.",
+      "offset": 161679,
+      "duration": 9000
+    },
+    {
+      "text": "Thank you. Thank you, Manish. Let's start with the webinar. Let's start with the content.",
+      "offset": 170679,
+      "duration": 4000
+    },
+    {
+      "text": "Let me first say thanks for the invitation and thanks for having the chance to collaborate with all of you.",
+      "offset": 174679,
+      "duration": 3000
+    },
+    {
+      "text": "And having the chance today to to talk about all of the things that we've built and share them with with audience.",
+      "offset": 177679,
+      "duration": 16000
+    },
+    {
+      "text": "So, the scenario of, of this. Use case, the scenario of today is that we want to talk about in general the integration between sonar and AWS and the scenario is that as a development team you have for example a Jab application but it could be you know a lot of other programming languages as well it could be you know a lot of other programming languages as well it could be a just as",
+      "offset": 193679,
+      "duration": 30000
+    },
+    {
+      "text": "well. In this case, we took the example of a Java Spring application that we want to deploy.",
+      "offset": 224679,
+      "duration": 8000
+    },
+    {
+      "text": "On EKS. So it's a Kubernetes, based application. Using Amazon EKS as the deployment target.",
+      "offset": 232679,
+      "duration": 10000
+    },
+    {
+      "text": "And we want to guide you through this whole approach, how to achieve a clean code state. With automation.",
+      "offset": 242679,
+      "duration": 12000
+    },
+    {
+      "text": "So with the CI CD pipeline and all of the DevOps tooling that AWS and so on our offer.",
+      "offset": 254679,
+      "duration": 5000
+    },
+    {
+      "text": "And of course we're also gonna cover what is essentially clean code. We'll talk about what are those different options you have in terms of.",
+      "offset": 259679,
+      "duration": 3000
+    },
+    {
+      "text": "Cicd tooling. And we'll talk about sonar cubes on our cloud and so on our And in the end, we'll have questions as well.",
+      "offset": 262679,
+      "duration": 15000
+    },
+    {
+      "text": "I will have time for questions. So. The scenario as as an architectural diagram is, what I just described, we have this application that is in this EKS cluster, you see it on the right hand side.",
+      "offset": 277679,
+      "duration": 17000
+    },
+    {
+      "text": "And, it's, essentially a Docker image. Yeah, you have your developer on the left hand side, the developer works on in a repository, a source repository, a Git based source repository, and uses AWS code commit for that purpose.",
+      "offset": 294679,
+      "duration": 20000
+    },
+    {
+      "text": "So we'll go into more detail of how this looks like, but I'll just quickly walk you through it.",
+      "offset": 314679,
+      "duration": 6000
+    },
+    {
+      "text": "As a developer you commit using a feature branch model using pull requests into this code commit repository and you have a AWS code pipeline that listens on the main branch of this repository and deploys.",
+      "offset": 320679,
+      "duration": 19000
+    },
+    {
+      "text": "Builds, deployers, tests. All of your changes and then at the same time you have and sonar analysis happening within this pipeline.",
+      "offset": 339679,
+      "duration": 10000
+    },
+    {
+      "text": "Additionally, what we will see in the webinar today is how to also use on our pull repress analysis.",
+      "offset": 349679,
+      "duration": 1000
+    },
+    {
+      "text": "And for that, we built a few things. And the supporting services that we will see are, Amazon Event Bridge and Secrets Manager.",
+      "offset": 350679,
+      "duration": 19000
+    },
+    {
+      "text": "Yeah. And so before we'll talk about the poll, we'll quickly, talk about 2 self learning resources.",
+      "offset": 369679,
+      "duration": 5000
+    },
+    {
+      "text": "We will send out those links in a follow-up email as well. But all of the content that we discussed today, so exactly this architecture, you will find it in AWS workshop studio.",
+      "offset": 374679,
+      "duration": 17000
+    },
+    {
+      "text": "So these are the instructions for the workshop. And you can see a step by step guide there. And then the other resource that we will send out is a GitHub repository as you can see it on the screen right now.",
+      "offset": 391679,
+      "duration": 14000
+    },
+    {
+      "text": "Which is, so to say the market, or version of this workshop with a lot of, automation so you can set up your environment, using, CDK.",
+      "offset": 405679,
+      "duration": 12000
+    },
+    {
+      "text": "So the AWS cloud development kit. And you can recreate what we have built and you can see how everything works and everything is is so to say connecting.",
+      "offset": 417679,
+      "duration": 11000
+    },
+    {
+      "text": "Okay. So when you will sign up for the webinar today, you filled out a poll and we have asked you For example, how many of you are using Sonar and AWS, DevOps solutions?",
+      "offset": 428679,
+      "duration": 14000
+    },
+    {
+      "text": "And, we've got a few really interesting results from that poll. So first of all, we saw that we have people joining from all over the world.",
+      "offset": 442679,
+      "duration": 2000
+    },
+    {
+      "text": "So really from all continents we have people joining in the webinar. We have about one quarter of you who are using both sonar and AWS solutions currently and this is great to hear of course we have.",
+      "offset": 444679,
+      "duration": 23000
+    },
+    {
+      "text": "Quite a few people who have not used AWS, they have solutions but are interested in knowing more and we're hoping that we can.",
+      "offset": 467679,
+      "duration": 7000
+    },
+    {
+      "text": "And we can shed some light on that today. And the vast majority of the registered audience is using either sonar cloud or sonar cube.",
+      "offset": 474679,
+      "duration": 4000
+    },
+    {
+      "text": "So your so many of you are already using either sonar cloud or sonar cube. So you're so many of you are already sonar",
+      "offset": 478679,
+      "duration": 16000
+    },
+    {
+      "text": "And so we'll go to the next poll. A quick live poll here. And the question is, are you looking at implementing solar analysis for the first time, or do you have it in your workflows already?",
+      "offset": 494679,
+      "duration": 14000
+    },
+    {
+      "text": "So, and the poll window should appear on your screen. And I would ask you to answer that question right now.",
+      "offset": 508679,
+      "duration": 30000
+    },
+    {
+      "text": "So.",
+      "offset": 548679,
+      "duration": 4000
+    },
+    {
+      "text": "What are the results? So the results that I'm seeing here. 70%. Say yes, they are looking to implement.",
+      "offset": 552679,
+      "duration": 9000
+    },
+    {
+      "text": "So the analysis for the first time. So it's a good split, so we have quite a few people who our first timers and quite a few people who have already done that.",
+      "offset": 561679,
+      "duration": 11000
+    },
+    {
+      "text": "And just as a reminder, you can close the, window with the close button as well.",
+      "offset": 572679,
+      "duration": 8000
+    },
+    {
+      "text": "Yeah, over to Silver.",
+      "offset": 580679,
+      "duration": 3000
+    },
+    {
+      "text": "Thank you, H. Just a few slides before we go into the the technicalities, let's say, so.",
+      "offset": 583679,
+      "duration": 9000
+    },
+    {
+      "text": "But could is a problem you I mean, that is common to every organization software is everywhere and the cost of And the, is enormous.",
+      "offset": 592679,
+      "duration": 12000
+    },
+    {
+      "text": "Some studies are where did this cost at billions not millions but billions or even trillions. And all of you know that Developers, they spend a great amount of their time.",
+      "offset": 604679,
+      "duration": 15000
+    },
+    {
+      "text": "Just maintaining the existing code. So the power of linker this in 3 areas so developers they can achieve more if they don't spend 40% of their time.",
+      "offset": 619679,
+      "duration": 12000
+    },
+    {
+      "text": "Permitting issues in the code that's All the more time that they can. Implement innovate. It would reduce the risks for your organization, of course.",
+      "offset": 631679,
+      "duration": 14000
+    },
+    {
+      "text": "And the 90% of the security incident that that caused by poor coding practices can be avoided. And of course software is an asset and you want to take care about this asset and I click increase its value over time.",
+      "offset": 645679,
+      "duration": 18000
+    },
+    {
+      "text": "So what is the selecting code? The code that can be statically analyzed as consistent and functional, adaptable responsible.",
+      "offset": 663679,
+      "duration": 9000
+    },
+    {
+      "text": "Those are qualities that can be measured automatically in your pipeline as we will see. And this will result in application that are.",
+      "offset": 672679,
+      "duration": 9000
+    },
+    {
+      "text": "Maintainable, Pable. And also secure and this applies to everything not only your source code but also scripts that that may be run this code and the test code and of course in which you are scored you have took your files you have Kubernetes configuration files You have got to deploy the application.",
+      "offset": 681679,
+      "duration": 19000
+    },
+    {
+      "text": "Discord must be secured and safe and also",
+      "offset": 700679,
+      "duration": 8000
+    },
+    {
+      "text": "You know, this is the one way to implement automatically in your workflows, hopefully. So that developers, they can smoothly.",
+      "offset": 708679,
+      "duration": 15000
+    },
+    {
+      "text": "Increase the quality and the security of the code base. No new vulnerability, no new book is introduced in the new code in any new commit.",
+      "offset": 723679,
+      "duration": 11000
+    },
+    {
+      "text": "The which is measured by SO. NAQUE. BOSSON ACLUDE.",
+      "offset": 734679,
+      "duration": 7000
+    },
+    {
+      "text": "Don't promote some code that is filling the qual and this methodology will progressively address issues everywhere in your code base.",
+      "offset": 741679,
+      "duration": 10000
+    },
+    {
+      "text": "And the any new increment in the code will be completely clean. And that will systematically improve the good quality and security of your anti-.",
+      "offset": 751679,
+      "duration": 12000
+    },
+    {
+      "text": "And that fits with your DevOps workflows. Of course, there are plenty of tools around, but there are main ones.",
+      "offset": 763679,
+      "duration": 8000
+    },
+    {
+      "text": "And they are well supported by Sunaku. We will see that with so, so, a bit later.",
+      "offset": 771679,
+      "duration": 6000
+    },
+    {
+      "text": "So, Sunn, it is the inter that we proposed to A. 3 developer, it's free open source.",
+      "offset": 777679,
+      "duration": 4000
+    },
+    {
+      "text": "But when you connect it to SO NAQUE, you have additional functionalities and already you can make sure that your new commits are teen or almost clean.",
+      "offset": 781679,
+      "duration": 15000
+    },
+    {
+      "text": "Even before you commit and also there are some some issues that you don't want to even push to a repository like secrets you don't want to expose secrets.",
+      "offset": 796679,
+      "duration": 13000
+    },
+    {
+      "text": "Even in a in a repository you have It's a very difficult to get rid of them once the commits are pushed.",
+      "offset": 809679,
+      "duration": 9000
+    },
+    {
+      "text": "And then you, ate within, DevOps. Of course, we saw that cube also, summer cloud, and that integrates with your DevOps student.",
+      "offset": 818679,
+      "duration": 10000
+    },
+    {
+      "text": "AWS could commute could be or K will be systematically computed on every analysis. And this is what validates the code and allows the developers to go to the next iteration.",
+      "offset": 828679,
+      "duration": 17000
+    },
+    {
+      "text": "The next ticket the next addition in the",
+      "offset": 845679,
+      "duration": 5000
+    },
+    {
+      "text": "Okay, so now it's not the time for the next question. Let me just illustrate. It's on a cube instance here that is running.",
+      "offset": 850679,
+      "duration": 10000
+    },
+    {
+      "text": "On AWS, on ECS, it has been deployed thanks to the instructions. That we are provided in and the 2 resources that were that were mentioned by Ramon.",
+      "offset": 860679,
+      "duration": 12000
+    },
+    {
+      "text": "So this, CRC tutorial on GitHub. And this, A, A, workshops to do resources.",
+      "offset": 872679,
+      "duration": 8000
+    },
+    {
+      "text": "So deploying Sunachube to AWS EKS is not difficult. It's not The only way to do it.",
+      "offset": 880679,
+      "duration": 7000
+    },
+    {
+      "text": "Yeah, we are on a sonar cube. 10 to 3, the last official release developer edition.",
+      "offset": 887679,
+      "duration": 6000
+    },
+    {
+      "text": "A commercial edition that will provide the necessary functionalities for 2 days. Dem. 2 of them are very important.",
+      "offset": 893679,
+      "duration": 6000
+    },
+    {
+      "text": "First, the first one would be branch and to request analysis, not only one. And the second one is tainted and this if you want to detect advanced vulnerabilities 20 data propagation within the code you need a Sunac Tube commercial edition or SO.",
+      "offset": 899679,
+      "duration": 27000
+    },
+    {
+      "text": "This is running in case in and the EU West 3 region because I'm French so I deployed it to Paris but of course you can deploy anywhere you want.",
+      "offset": 926679,
+      "duration": 7000
+    },
+    {
+      "text": "There are so many regions. And available for you on AWS. What is important is that most parts are running in the same region.",
+      "offset": 933679,
+      "duration": 14000
+    },
+    {
+      "text": "Of course, so that the performance is and the network performances are very good. In this cluster, we have very simple and small notes running.",
+      "offset": 947679,
+      "duration": 12000
+    },
+    {
+      "text": "CC 5 large. To the CPU, 4 GB of memory, you can start small on SOMA cube and you can scale when you need it.",
+      "offset": 959679,
+      "duration": 5000
+    },
+    {
+      "text": "Here we had only a simple application to run and as a small certain acute instance. So no need for a much hardware to do that.",
+      "offset": 964679,
+      "duration": 14000
+    },
+    {
+      "text": "That's, what we did here. Oh, you see deployed. It's deployed through and then short.",
+      "offset": 978679,
+      "duration": 6000
+    },
+    {
+      "text": "So N is the official way to deploy to Kubernetes for SO. And we provide a name chart and you of course On top of the values that we provide, you provide your own.",
+      "offset": 984679,
+      "duration": 17000
+    },
+    {
+      "text": "It's typically here. We have said the developer addition. Do you do a SNA cube, 10 bits we develop around the tag.",
+      "offset": 1001679,
+      "duration": 7000
+    },
+    {
+      "text": "That's for the version. We disabled a few things to as I mentioned the footprints the hardware footprint from this substance is very low.",
+      "offset": 1008679,
+      "duration": 13000
+    },
+    {
+      "text": "Here we attach to the VPC the network. On EKS. So for this, for this particular demonstration, there is no complex.",
+      "offset": 1021679,
+      "duration": 11000
+    },
+    {
+      "text": "Network setup, VPC, no HTTPS, but that is fine for a.",
+      "offset": 1032679,
+      "duration": 6000
+    },
+    {
+      "text": "We, don't give it code. Also, we use the default Pitname POST.",
+      "offset": 1038679,
+      "duration": 6000
+    },
+    {
+      "text": "SQL chart. Which is not really typical, it's convenient. You can learn some tests, but it's not typical for prediction setups.",
+      "offset": 1044679,
+      "duration": 13000
+    },
+    {
+      "text": "Most of our customers, they would use RGS, some of them also. Or they will host And they're also not keeping stance.",
+      "offset": 1057679,
+      "duration": 9000
+    },
+    {
+      "text": "In the pool of database on some user cluster. If you can't see. User on passwords in clear text in any end chart of course you would appreciate that as a secret we will show you a bit later all secrets are used it will can be leverage in workflows that should be the same.",
+      "offset": 1066679,
+      "duration": 23000
+    },
+    {
+      "text": "For",
+      "offset": 1089679,
+      "duration": 6000
+    },
+    {
+      "text": "Okay, so On this on a QUEUE instance, I already Add the first energies of the project.",
+      "offset": 1095679,
+      "duration": 8000
+    },
+    {
+      "text": "Many of you are already a bit familiar with So this is gathering the main indicators about the cleanliness of this code, the number of bugs with reliability, the number of vulnerabilities with a security rating, the number of hotspots that were reviewed or not.",
+      "offset": 1103679,
+      "duration": 18000
+    },
+    {
+      "text": "They cut smells, the cover, the test coverage and the duplication, which are the most important metrics.",
+      "offset": 1121679,
+      "duration": 7000
+    },
+    {
+      "text": "Misured by SO, now analysis.",
+      "offset": 1128679,
+      "duration": 3000
+    },
+    {
+      "text": "Okay, so that is for the Sunni part for the Sunni in part. So, Nalink is running.",
+      "offset": 1131679,
+      "duration": 6000
+    },
+    {
+      "text": "Within your ID can be any jet brain editor, so here and energy. For a Java development, very popular, but it could be VS code that's well for each other.",
+      "offset": 1137679,
+      "duration": 10000
+    },
+    {
+      "text": "It could be eclipse of course still used by many developers and we also support visual studio.",
+      "offset": 1147679,
+      "duration": 7000
+    },
+    {
+      "text": "So depending on the language you are using. You should for free, it's open source for your developments and already we can see that Sunni is facing some issues.",
+      "offset": 1154679,
+      "duration": 13000
+    },
+    {
+      "text": "On this code. And that is nice. I can see the documentation. I can apply some change and get real-time analysis.",
+      "offset": 1167679,
+      "duration": 3000
+    },
+    {
+      "text": "Of my own code.",
+      "offset": 1170679,
+      "duration": 10000
+    },
+    {
+      "text": "Okay, I mentioned that it gets additional functionalities when you connect it to Solarcube. So here it is connected to SO.",
+      "offset": 1180679,
+      "duration": 3000
+    },
+    {
+      "text": "So of course I have access to multiple instance but here I connected it to my AWS instance. With the project key.",
+      "offset": 1183679,
+      "duration": 14000
+    },
+    {
+      "text": "It was done very smoothly. And you generate a token, you can initiate that directly from your editor.",
+      "offset": 1197679,
+      "duration": 6000
+    },
+    {
+      "text": "And it will align the rules that run both sides. So what is measured on your they've also automation workflows is also measured within your editor so you align with what is said for Your team and if we issue status is also aligned so if you mark something as not needed any fix from center cube, it will not trace, it will not be raised to your attention again and again in your editor.",
+      "offset": 1203679,
+      "duration": 28000
+    },
+    {
+      "text": "And, I mean, also, functionalities that were added recently, like the possibility to mark issue as one fix even before.",
+      "offset": 1231679,
+      "duration": 9000
+    },
+    {
+      "text": "You can commit and the code. You can also, you find links, both sites, so really, they are working closely and in end.",
+      "offset": 1240679,
+      "duration": 22000
+    },
+    {
+      "text": "Yeah.",
+      "offset": 1262679,
+      "duration": 3000
+    },
+    {
+      "text": "Sure.",
+      "offset": 1265679,
+      "duration": 1000
+    },
+    {
+      "text": "Okay Hammond, I believe. Should take the lead back to speak about the rest of the pipeline.",
+      "offset": 1266679,
+      "duration": 10000
+    },
+    {
+      "text": "Yes.",
+      "offset": 1276679,
+      "duration": 1000
+    },
+    {
+      "text": "Maybe you can switch to the original diagram we had. In, in the slides and we can position ourselves back on the diagram to understand where we where we are when we're talking.",
+      "offset": 1277679,
+      "duration": 5000
+    },
+    {
+      "text": "Of course, this one.",
+      "offset": 1282679,
+      "duration": 1000
+    },
+    {
+      "text": "So exactly this one. So what you just saw is a sonar cube running within this DKS cluster.",
+      "offset": 1283679,
+      "duration": 8000
+    },
+    {
+      "text": "And this is just, let's say part of your, of your CICD, part of your development environment, you have an instance of sonar that is running.",
+      "offset": 1291679,
+      "duration": 10000
+    },
+    {
+      "text": "And ready to analyze your code. And what we will now zoom into is this pipeline. So this AWS code pipeline and all of the components.",
+      "offset": 1301679,
+      "duration": 10000
+    },
+    {
+      "text": "So this AWS code pipeline and all of the components that belong to the pipeline. And, essentially we want to understand how we can.",
+      "offset": 1311679,
+      "duration": 9000
+    },
+    {
+      "text": "Use this owner analysis within the main branch and all of your feature branches. So this is AWS.",
+      "offset": 1320679,
+      "duration": 6000
+    },
+    {
+      "text": "Code pipeline. So you have a top 2 bottom, pipeline, so to say. At the top is usually a source stage, meaning, this is a repository.",
+      "offset": 1326679,
+      "duration": 14000
+    },
+    {
+      "text": "It could be in this case called commit or could be a bit bucket or GitHub repository as well.",
+      "offset": 1340679,
+      "duration": 7000
+    },
+    {
+      "text": "And the pipeline is connected to one specific branch so in this case it's the main the main branch.",
+      "offset": 1347679,
+      "duration": 9000
+    },
+    {
+      "text": "Then just scrolling down, we would have. Other stages in this case, we just have one build stage and that build stage is not only building or compiling code, but it is also and as long as the sonar analysis was successful, the quality gate was green.",
+      "offset": 1356679,
+      "duration": 23000
+    },
+    {
+      "text": "It is also building a container image. And it is pushing to. To that Kubernetes cluster.",
+      "offset": 1379679,
+      "duration": 9000
+    },
+    {
+      "text": "So yeah, if we switch to to the code build project which plays a really crucial role. So this is the code build project that is referenced.",
+      "offset": 1388679,
+      "duration": 12000
+    },
+    {
+      "text": "In the pipeline and you can see for example that as a source provider you can look into every build that recently ran you can see the build logs for every build and it's a fully managed environment right so there is no build server for you to maintain there is no operating systems to update you essentially choose the image that you want to use for this build which are provided by the WS and you provide a so-called build spec which are all of the",
+      "offset": 1400679,
+      "duration": 30000
+    },
+    {
+      "text": "instructions for this build. If we stay on this page here 1 s, can you click on environment variables in the middle?",
+      "offset": 1432679,
+      "duration": 9000
+    },
+    {
+      "text": "Here, I'm just showing you this because this is something that we will encounter a few times in this in this workshop in this scenario.",
+      "offset": 1441679,
+      "duration": 8000
+    },
+    {
+      "text": "We leverage environment variables and we leverage this same code built project for both the bills in the pipeline, so the bills on main.",
+      "offset": 1449679,
+      "duration": 10000
+    },
+    {
+      "text": "And also the bills that are triggered by pull requests and the way we differentiate between those 2 types of bills.",
+      "offset": 1459679,
+      "duration": 6000
+    },
+    {
+      "text": "And is by using environment variables which are being passed in. From the outside so to say so you see the source branch for example being passed in.",
+      "offset": 1465679,
+      "duration": 16000
+    },
+    {
+      "text": "So maybe we can actually look at this build spec, this instruction and how the build job should, should look like.",
+      "offset": 1481679,
+      "duration": 9000
+    },
+    {
+      "text": "Yeah, you should see it in the repository. So this is the code commit repository where you have your Java application.",
+      "offset": 1490679,
+      "duration": 7000
+    },
+    {
+      "text": "And then one file is typically called Bill Spector, DMO. And this is the file that, code build is looking for.",
+      "offset": 1497679,
+      "duration": 9000
+    },
+    {
+      "text": "So typically it's, it's a YAMO script at the top you define things like your environment variables and here we also see 2 important lines, line 4 and 5, which are references to secrets manager.",
+      "offset": 1506679,
+      "duration": 17000
+    },
+    {
+      "text": "So AWS Secrets Manager is a service that helps us. To manage. All kinds of secrets.",
+      "offset": 1523679,
+      "duration": 7000
+    },
+    {
+      "text": "In this case, it's the sonar global analysis token and also the host, URL of your sonar installation.",
+      "offset": 1530679,
+      "duration": 7000
+    },
+    {
+      "text": "So this is the URL that points to sonar that is running. In the EKS cluster.",
+      "offset": 1537679,
+      "duration": 6000
+    },
+    {
+      "text": "And the reason this is nice is because you don't have to have any credentials or passwords.",
+      "offset": 1543679,
+      "duration": 8000
+    },
+    {
+      "text": "In YAML configuration or in source code, and you would just have this reference to sequence manager. And then code build, so your code build project.",
+      "offset": 1551679,
+      "duration": 10000
+    },
+    {
+      "text": "Is authenticated through IM. Roles to access those secrets. So if we quickly jump to Secret Manager, you will see how this works.",
+      "offset": 1561679,
+      "duration": 11000
+    },
+    {
+      "text": "This is Secrets Manager. This is the secret we're using and referencing. In the code build builds back.",
+      "offset": 1572679,
+      "duration": 7000
+    },
+    {
+      "text": "And essentially this is where you would define who or what can access the secrets and code build is nicely integrated with Secrets Manager.",
+      "offset": 1579679,
+      "duration": 11000
+    },
+    {
+      "text": "It has an IM role and that role is allowed to access the secret. And this happens, at wrong time, so the same.",
+      "offset": 1590679,
+      "duration": 7000
+    },
+    {
+      "text": "So then, going back into. The builds back. BC a few environment variables. That we that are defined.",
+      "offset": 1597679,
+      "duration": 11000
+    },
+    {
+      "text": "And then, starting online, 19, we have different phases. And so those phases correspond to, you know, for example, an installation phase where we would.",
+      "offset": 1608679,
+      "duration": 11000
+    },
+    {
+      "text": "Install the tools that are needed to compile and build and test your application. And then you have a phase to actually build.",
+      "offset": 1619679,
+      "duration": 10000
+    },
+    {
+      "text": "And in our case, we're building and on so the most important line was probably line 61 where we have this Maven command.",
+      "offset": 1629679,
+      "duration": 9000
+    },
+    {
+      "text": "That installs but it's also where we triggered the solar analysis. So this is where we leverage all of those environment variables.",
+      "offset": 1638679,
+      "duration": 11000
+    },
+    {
+      "text": "Saying that, you know, this is our source branch, this is our destination branch, if it's a pull request and this is our sonar token and the sonar host.",
+      "offset": 1649679,
+      "duration": 10000
+    },
+    {
+      "text": "And we trigger the Then, and only if that stage that, code build stage is successful, meaning the compilation was successful, the test were successful, and also sonar report that a successful analysis then this post build would start that we would actually deploy and to to the Tubernetes cluster.",
+      "offset": 1659679,
+      "duration": 28000
+    },
+    {
+      "text": "And I think it's clear how this works in code pipeline. Code pipeline triggers this code build job.",
+      "offset": 1687679,
+      "duration": 8000
+    },
+    {
+      "text": "But now the question is, how do we make this work for pull requests? And maybe we should even take one more step back and ask why is this interesting?",
+      "offset": 1695679,
+      "duration": 9000
+    },
+    {
+      "text": "You know, why is, SO, on our analysis, static code analysis, important in a pull request.",
+      "offset": 1704679,
+      "duration": 9000
+    },
+    {
+      "text": "As you see, as you've seen, we have information or we want information about our code quality.",
+      "offset": 1713679,
+      "duration": 7000
+    },
+    {
+      "text": "As early as possible in the development cycle. So we don't want code analysis only once we have merged things into our mainline branch.",
+      "offset": 1720679,
+      "duration": 10000
+    },
+    {
+      "text": "We want this to be available. At the stage of the pull repress. So for example, for the reviewer of the code, to also have a look.",
+      "offset": 1730679,
+      "duration": 10000
+    },
+    {
+      "text": "And this is where the pull the press analysis. Becomes really interesting. And then also we want Even earlier in the cycle, this information for the developer in their ID.",
+      "offset": 1740679,
+      "duration": 12000
+    },
+    {
+      "text": "So at every stage in this process, you have up to date, results from solar analysis and you can make adjustments.",
+      "offset": 1752679,
+      "duration": 9000
+    },
+    {
+      "text": "And this helps you in the long term because you can fix code smells and coverage issues much, much earlier.",
+      "offset": 1761679,
+      "duration": 7000
+    },
+    {
+      "text": "And, and the way we make these portal press analysis work is by using an event bridge. An event bridge, an event bridge plugin, we call it, and this is something that we provide to you, with all, it's also linked in the workshop.",
+      "offset": 1768679,
+      "duration": 15000
+    },
+    {
+      "text": "And it's a cloud formation template. You can simply deploy. And you just provide.",
+      "offset": 1783679,
+      "duration": 6000
+    },
+    {
+      "text": "The name of your repository and the name of your code build project and this confirmation template will set up this rule here.",
+      "offset": 1789679,
+      "duration": 10000
+    },
+    {
+      "text": "And so we don't have to dive into a lot of detail into how the rule actually looks like and how it works but essentially you need to know that you can deploy this, the event bridge rule will listen to pull requests on that code commit repository.",
+      "offset": 1799679,
+      "duration": 16000
+    },
+    {
+      "text": "And every time a pull request is opened or updated, It will trigger the same code build. Coquit project and it will trigger solar analysis.",
+      "offset": 1815679,
+      "duration": 13000
+    },
+    {
+      "text": "And later on you will see how the solar analysis, the pull request analysis looks like in the solar UI and you can compare let's say the code quality on that feature branch with the main branch.",
+      "offset": 1828679,
+      "duration": 18000
+    },
+    {
+      "text": "And Did they forget anything to mention, Silver? What else do you want to say here?",
+      "offset": 1846679,
+      "duration": 7000
+    },
+    {
+      "text": "Maybe you wanted to mention that you had this. Project on GitHub.",
+      "offset": 1853679,
+      "duration": 4000
+    },
+    {
+      "text": "Yes. Exactly. So this is this is the plugin. So this is, really just a cloud formation template.",
+      "offset": 1857679,
+      "duration": 8000
+    },
+    {
+      "text": "You can use in your own environment. So if you use code commit as a repository. And if you use code pipelines and code build and you want to leverage not only the analysis on the main branch but also on full requests you can simply deploy this this little cloud formation plug-in and use it.",
+      "offset": 1865679,
+      "duration": 23000
+    },
+    {
+      "text": "Great. So maybe we should just. Okay, to pull request and see what happens.",
+      "offset": 1888679,
+      "duration": 6000
+    },
+    {
+      "text": "Yeah, let's see how it works.",
+      "offset": 1894679,
+      "duration": 3000
+    },
+    {
+      "text": "Okay, so Of course, we don't want to create some code live, with you.",
+      "offset": 1897679,
+      "duration": 6000
+    },
+    {
+      "text": "So, and there is a branch that already exists. On this repository. Where we typically add some service.",
+      "offset": 1903679,
+      "duration": 9000
+    },
+    {
+      "text": "So those service is running. It's running in, in the cluster. It's having only one You have for a Chava application and the idea would be to add.",
+      "offset": 1912679,
+      "duration": 16000
+    },
+    {
+      "text": "And those are web service on top of that. And we have a branch ready for this year so I would just Try to promote, my changes through, put request, very simple.",
+      "offset": 1928679,
+      "duration": 14000
+    },
+    {
+      "text": "In. I select the main branch as the, branch. I select a new service branch as the source branch.",
+      "offset": 1942679,
+      "duration": 10000
+    },
+    {
+      "text": "And this is where I will collect, the review from my peers, but also. The results of test and static energies of course.",
+      "offset": 1952679,
+      "duration": 11000
+    },
+    {
+      "text": "Okay, so I can go ahead and.",
+      "offset": 1963679,
+      "duration": 5000
+    },
+    {
+      "text": "At the new service.",
+      "offset": 1968679,
+      "duration": 4000
+    },
+    {
+      "text": "At full request",
+      "offset": 1972679,
+      "duration": 3000
+    },
+    {
+      "text": "And automatically I expect that this put request question So. Could be So if I go to click build.",
+      "offset": 1975679,
+      "duration": 16000
+    },
+    {
+      "text": "Okay, it's already running.",
+      "offset": 1991679,
+      "duration": 6000
+    },
+    {
+      "text": "And it will take a minute or so. I can highlight the logs. I may comment on them where this is running.",
+      "offset": 1997679,
+      "duration": 8000
+    },
+    {
+      "text": "Waiting for the results to be available and the qualitative to be computed.",
+      "offset": 2005679,
+      "duration": 9000
+    },
+    {
+      "text": "And maybe just to explain what happened in the background. Whenever, you created that pull request, it's essentially an API call that, event bridge, would listen to.",
+      "offset": 2014679,
+      "duration": 11000
+    },
+    {
+      "text": "And we listen to this exact pattern so new pull requests or modifications of full requests and then it essentially goes and triggers the code build job that you have defined when setting up the confirmation template.",
+      "offset": 2025679,
+      "duration": 21000
+    },
+    {
+      "text": "So then we are in the previous step. The The Pita Chant is installing everything.",
+      "offset": 2046679,
+      "duration": 11000
+    },
+    {
+      "text": "Okay, That is common to any CI CD solution.",
+      "offset": 2057679,
+      "duration": 13000
+    },
+    {
+      "text": "This bike plan is not completely optimized. There are a few things that we could remove in the case of a put request.",
+      "offset": 2070679,
+      "duration": 6000
+    },
+    {
+      "text": "So we trigger. A build with different parameters so that so that you understand whether it's the main branch or a pull request that is analyzed.",
+      "offset": 2076679,
+      "duration": 9000
+    },
+    {
+      "text": "Which we could as well remove some of those. Of the",
+      "offset": 2085679,
+      "duration": 8000
+    },
+    {
+      "text": "Which is this is a docker image in fact. Okay, so yeah, we are running. Do, Maven, build and analysis?",
+      "offset": 2093679,
+      "duration": 11000
+    },
+    {
+      "text": "Depending on the language of your project you would. You would have a difference scanner but Did the idea is exactly the same?",
+      "offset": 2104679,
+      "duration": 9000
+    },
+    {
+      "text": "The project key is run and now we can see the sensors are running. So the is being done.",
+      "offset": 2113679,
+      "duration": 9000
+    },
+    {
+      "text": "We can see that the docker sensor. He's coming as well. You have CPD code duplication is being computed.",
+      "offset": 2122679,
+      "duration": 10000
+    },
+    {
+      "text": "And we also add some traces about tank technologies.",
+      "offset": 2132679,
+      "duration": 8000
+    },
+    {
+      "text": "Okay, so, If you see UCFG in the logs of your, sonar analysis, it's for a universal control flow graph.",
+      "offset": 2140679,
+      "duration": 11000
+    },
+    {
+      "text": "That's also, we'll check all the data propagates within your code and typically secure some critical endpoints in your message in your in your workflows in your in your code.",
+      "offset": 2151679,
+      "duration": 17000
+    },
+    {
+      "text": "Okay, so this has failed. And this has failed for a good reason. I would say we have this parameter here that we'll allow you to enforce the quality gates.",
+      "offset": 2168679,
+      "duration": 11000
+    },
+    {
+      "text": "So Sonar, Skinner is waiting for the qualitative status. From SO. NAQUE and the command will just fail.",
+      "offset": 2179679,
+      "duration": 7000
+    },
+    {
+      "text": "In case the and we should be able to see this result here. So. I go to the web service, the main one is okay.",
+      "offset": 2186679,
+      "duration": 9000
+    },
+    {
+      "text": "And I have a pull request that was analyzed. There is one condition for every issue. And this condition is mandating that.",
+      "offset": 2195679,
+      "duration": 11000
+    },
+    {
+      "text": "No problem should enter the code base. No new problem should enter the code base. So 2 5 issues require fix.",
+      "offset": 2206679,
+      "duration": 10000
+    },
+    {
+      "text": "To security experts require some review or maybe some change and everything is actionable of course. So let's see.",
+      "offset": 2216679,
+      "duration": 8000
+    },
+    {
+      "text": "What's, He's, remove the speed injection and use constrictor.",
+      "offset": 2224679,
+      "duration": 6000
+    },
+    {
+      "text": "So this is a good practice. For injection in a spring in Java Spring project.",
+      "offset": 2230679,
+      "duration": 7000
+    },
+    {
+      "text": "Yeah, we have the same problem for another class. We have a system out Look at your comment that is, and we maybe have something.",
+      "offset": 2237679,
+      "duration": 13000
+    },
+    {
+      "text": "Block here, yeah, so more important maybe. Which is the SQL injection, vulnerability.",
+      "offset": 2250679,
+      "duration": 7000
+    },
+    {
+      "text": "So we have one injection flow. I can see that. Okay, the request map to person slash address is reaching Yeah, I think so.",
+      "offset": 2257679,
+      "duration": 16000
+    },
+    {
+      "text": "Construction without sanitization. So it should be possible to escape. And the Bundes of a single SQL request.",
+      "offset": 2273679,
+      "duration": 11000
+    },
+    {
+      "text": "So let's maybe check that. So I have visual studio open. I am on the right patch.",
+      "offset": 2284679,
+      "duration": 8000
+    },
+    {
+      "text": "And I am able to Maybe, Bill, I will make sure that.",
+      "offset": 2292679,
+      "duration": 7000
+    },
+    {
+      "text": "I am on the right build. Then I can run this.",
+      "offset": 2299679,
+      "duration": 9000
+    },
+    {
+      "text": "Okay, so it's running locally as a developer. It's interesting to see. What's happening?",
+      "offset": 2308679,
+      "duration": 6000
+    },
+    {
+      "text": "There. And",
+      "offset": 2314679,
+      "duration": 5000
+    },
+    {
+      "text": "Okay, so",
+      "offset": 2319679,
+      "duration": 12000
+    },
+    {
+      "text": "I should be able to. Extract the data from all users to insert new data. So let me just Could be this.",
+      "offset": 2331679,
+      "duration": 11000
+    },
+    {
+      "text": "So, yeah. Special syntax. Thanks to the security researchers. Yeah, so now it's not that difficult, but if you are not familiar with this syntax.",
+      "offset": 2342679,
+      "duration": 10000
+    },
+    {
+      "text": "You don't know. Can be done. So this results in But now I can also extract all data.",
+      "offset": 2352679,
+      "duration": 10000
+    },
+    {
+      "text": "On the table where I would expect. So this was injected into the database. Well, I was originally only, having this.",
+      "offset": 2362679,
+      "duration": 14000
+    },
+    {
+      "text": "And I can also truncate the entire database. So this is the entire, enter your table table.",
+      "offset": 2376679,
+      "duration": 9000
+    },
+    {
+      "text": "So, Now I can go back to",
+      "offset": 2385679,
+      "duration": 7000
+    },
+    {
+      "text": "So the service is still running. And Okay, now I want to see everyone. But of course there is no one left because someone Control the database and removed all of the data.",
+      "offset": 2392679,
+      "duration": 13000
+    },
+    {
+      "text": "From the from the people table. Okay, so let's see. Oh, I should invest.",
+      "offset": 2405679,
+      "duration": 11000
+    },
+    {
+      "text": "To report from",
+      "offset": 2416679,
+      "duration": 5000
+    },
+    {
+      "text": "Okay, I can stop this.",
+      "offset": 2421679,
+      "duration": 5000
+    },
+    {
+      "text": "And go to S. So this is one of the issues that was raised. So here I need to.",
+      "offset": 2426679,
+      "duration": 11000
+    },
+    {
+      "text": "To declare this as private final. And then I will make the constructor. Alright, so this should be.",
+      "offset": 2437679,
+      "duration": 12000
+    },
+    {
+      "text": "I like it in the documentation, so it's not only clean as you could but also learn as you could.",
+      "offset": 2449679,
+      "duration": 6000
+    },
+    {
+      "text": "So, And you",
+      "offset": 2455679,
+      "duration": 8000
+    },
+    {
+      "text": "We You cheats.",
+      "offset": 2463679,
+      "duration": 15000
+    },
+    {
+      "text": "Go to you and obviously I won't auto wire the constructor and not",
+      "offset": 2478679,
+      "duration": 15000
+    },
+    {
+      "text": "Okay, so that one is salt I have the same problem with, data, yeah, I can also.",
+      "offset": 2493679,
+      "duration": 11000
+    },
+    {
+      "text": "Remove this leftover from the development phase. And semi shoe here so I will Be it, Make these private .",
+      "offset": 2504679,
+      "duration": 15000
+    },
+    {
+      "text": "I know",
+      "offset": 2519679,
+      "duration": 14000
+    },
+    {
+      "text": "Okay.",
+      "offset": 2533679,
+      "duration": 4000
+    },
+    {
+      "text": "And this dot. Okay.",
+      "offset": 2537679,
+      "duration": 7000
+    },
+    {
+      "text": "Complete so pay easy The documentation helps of course for me with former Java developer. I'm a bit trusty.",
+      "offset": 2544679,
+      "duration": 11000
+    },
+    {
+      "text": "Always I need the examples that are provided by sonar analysis. Let's get back to Sunaku and see.",
+      "offset": 2555679,
+      "duration": 8000
+    },
+    {
+      "text": "And the result here so why is an issue if I want to read about it plenty of documentation about why this is a problem.",
+      "offset": 2563679,
+      "duration": 9000
+    },
+    {
+      "text": "Of course we have proven and that this was a problem. How can I fix? Spring was detected on my project so I get examples that are really focused on spring example it's nice I can see here okay the code is assembled Okay, so I need to put some place over there.",
+      "offset": 2572679,
+      "duration": 18000
+    },
+    {
+      "text": "In a sling. And make sure that. To requests E cannot be escaped. So that would be in the file.",
+      "offset": 2590679,
+      "duration": 14000
+    },
+    {
+      "text": "Okay.",
+      "offset": 2604679,
+      "duration": 6000
+    },
+    {
+      "text": "It's here. So thanks to Kevin. Panelist today for this nice video. So",
+      "offset": 2610679,
+      "duration": 11000
+    },
+    {
+      "text": "So, it's no data, it's okay, data.",
+      "offset": 2621679,
+      "duration": 7000
+    },
+    {
+      "text": "At all. I will. Declare a query.",
+      "offset": 2628679,
+      "duration": 11000
+    },
+    {
+      "text": "Just taking difficulty from here.",
+      "offset": 2639679,
+      "duration": 6000
+    },
+    {
+      "text": "Okay, just need a place order for the parameter of course.",
+      "offset": 2645679,
+      "duration": 10000
+    },
+    {
+      "text": "Quickly, equal 4. Clean that less.",
+      "offset": 2655679,
+      "duration": 5000
+    },
+    {
+      "text": "And then.",
+      "offset": 2660679,
+      "duration": 4000
+    },
+    {
+      "text": "Name, which is the parameter that we acquire from The Whip.",
+      "offset": 2664679,
+      "duration": 9000
+    },
+    {
+      "text": "Okay, we should be good to go. Yeah, they are probably a few things that I need to address again.",
+      "offset": 2673679,
+      "duration": 7000
+    },
+    {
+      "text": "So let's get back. To the overview there was 5 issues I probably removed 2 of them 3 full and this periodic modifier oh yes I can learn also about base practices.",
+      "offset": 2680679,
+      "duration": 16000
+    },
+    {
+      "text": "Regarding, 2 unit. So here in January, I should not make. And the test methods public.",
+      "offset": 2696679,
+      "duration": 9000
+    },
+    {
+      "text": "So in the test code.",
+      "offset": 2705679,
+      "duration": 5000
+    },
+    {
+      "text": "Okay, I can address that globally. Willie and Yeah.",
+      "offset": 2710679,
+      "duration": 12000
+    },
+    {
+      "text": "Okay.",
+      "offset": 2722679,
+      "duration": 4000
+    },
+    {
+      "text": "Let's make sure I saved everything. Security output Okay, the request mapping here on person address It's not very good because it's a, gate post every kind of request.",
+      "offset": 2726679,
+      "duration": 14000
+    },
+    {
+      "text": "And obviously we should restrict the scope to GETS which are much Okay. As is highlighted in the documentation again.",
+      "offset": 2740679,
+      "duration": 11000
+    },
+    {
+      "text": "So let's go. Let's get to it. And use.",
+      "offset": 2751679,
+      "duration": 6000
+    },
+    {
+      "text": "I get my ping instead.",
+      "offset": 2757679,
+      "duration": 10000
+    },
+    {
+      "text": "Okay, okay",
+      "offset": 2767679,
+      "duration": 4000
+    },
+    {
+      "text": "Why did they open that?",
+      "offset": 2771679,
+      "duration": 4000
+    },
+    {
+      "text": "I'm wrong. And now I have this import which is not used anymore. Okay, and",
+      "offset": 2775679,
+      "duration": 11000
+    },
+    {
+      "text": "Don't know.",
+      "offset": 2786679,
+      "duration": 5000
+    },
+    {
+      "text": "It's commit.",
+      "offset": 2791679,
+      "duration": 9000
+    },
+    {
+      "text": "So three, 3 phase change, I play fixes. Commit and push.",
+      "offset": 2800679,
+      "duration": 8000
+    },
+    {
+      "text": "Okay, I can also find some. Some warnings home entity G but there we should be good here Okay commit and push.",
+      "offset": 2808679,
+      "duration": 22000
+    },
+    {
+      "text": "Of course, Regular, So now we'll be there.",
+      "offset": 2830679,
+      "duration": 10000
+    },
+    {
+      "text": "And I should people to",
+      "offset": 2840679,
+      "duration": 3000
+    },
+    {
+      "text": "See.",
+      "offset": 2843679,
+      "duration": 3000
+    },
+    {
+      "text": "The projects. Be the same pull request updated with a new commit. Tring a new pipeline, a new build and analysis and hopefully it is time to communicate which will be successful.",
+      "offset": 2846679,
+      "duration": 18000
+    },
+    {
+      "text": "And we'll have the opportunity to see this result. In a few more minutes but until then I guess we should go to the next step.",
+      "offset": 2864679,
+      "duration": 10000
+    },
+    {
+      "text": "We are almost there.",
+      "offset": 2874679,
+      "duration": 4000
+    },
+    {
+      "text": "And should we do the second poll? I mean, let's do it. It won't take much time.",
+      "offset": 2878679,
+      "duration": 4000
+    },
+    {
+      "text": "Let's do a second poll here and then we'll do a very quick recap and open it up for questions.",
+      "offset": 2882679,
+      "duration": 5000
+    },
+    {
+      "text": "Do we want to leverage any of their solutions in your DevOps workflow? DevOps workflows as well.",
+      "offset": 2887679,
+      "duration": 11000
+    },
+    {
+      "text": "Hi, be interested to know also now that you've seen how things work. Really interested to know how people think.",
+      "offset": 2898679,
+      "duration": 20000
+    },
+    {
+      "text": "And in the meantime, you can also think, should have already questions in mind. Both any of the content that you saw today.",
+      "offset": 2918679,
+      "duration": 12000
+    },
+    {
+      "text": "Good, so we look at the poll results.",
+      "offset": 2930679,
+      "duration": 6000
+    },
+    {
+      "text": "Okay, so we have about 50 50 split.",
+      "offset": 2936679,
+      "duration": 5000
+    },
+    {
+      "text": "Pretty much. Nice.",
+      "offset": 2941679,
+      "duration": 3000
+    },
+    {
+      "text": "Cool. So I'll do a quick recap of of everything that we saw. And essentially we talked about a complete end to end flow.",
+      "offset": 2944679,
+      "duration": 12000
+    },
+    {
+      "text": "Of. Deploying sonar in Amazon EKS, deploying a pipeline, configuring the pipeline and using the AWS on our event bridge plugin to also support full request analysis.",
+      "offset": 2956679,
+      "duration": 16000
+    },
+    {
+      "text": "And then we saw how we can use not only a sonar, but also, within the pipeline and within full requests.",
+      "offset": 2972679,
+      "duration": 12000
+    },
+    {
+      "text": "To shift left essentially in the spirit of shifting left. Allow the developers to have full insight into. Code quality from a very early stage and throughout the whole development process.",
+      "offset": 2984679,
+      "duration": 13000
+    },
+    {
+      "text": "And so in the end you saw an actually a real security vulnerability in this Java application that's on our, security vulnerability in this job application that's on our called out.",
+      "offset": 2997679,
+      "duration": 10000
+    },
+    {
+      "text": "And Silver was able to show you that this is, or this was really susceptible to a SQL injection.",
+      "offset": 3007679,
+      "duration": 8000
+    },
+    {
+      "text": "So I'm going to call it out and so on it also gave us really good hints on how to.",
+      "offset": 3015679,
+      "duration": 4000
+    },
+    {
+      "text": "How to fix those issues and and how now once we trigger this fix and we trigger an update on the pull request and we will then see in so on our how the analysis changed and how those security vulnerabilities hopefully disappear.",
+      "offset": 3019679,
+      "duration": 20000
+    },
+    {
+      "text": "Yes. As expected, they were fixed. The D.",
+      "offset": 3039679,
+      "duration": 7000
+    },
+    {
+      "text": "Amazing.",
+      "offset": 3046679,
+      "duration": 2000
+    },
+    {
+      "text": "Yes. So they would, they should remain, for a while in the database, but. As.",
+      "offset": 3048679,
+      "duration": 8000
+    },
+    {
+      "text": "Fixed attached to the code. So this is she's very nice, yes. And now I'm ready to manage this.",
+      "offset": 3056679,
+      "duration": 8000
+    },
+    {
+      "text": "Poor request. The could be pipeline project succeeded.",
+      "offset": 3064679,
+      "duration": 5000
+    },
+    {
+      "text": "Perfect. So let's open it up for questions from the audience.",
+      "offset": 3069679,
+      "duration": 8000
+    },
+    {
+      "text": "Alright. Thanks to both of you, Ramon and Sylvan. That was a great session.",
+      "offset": 3077679,
+      "duration": 7000
+    },
+    {
+      "text": "It was an end to end demo like you said, Vermont. Where a Java developer is using AWS.",
+      "offset": 3084679,
+      "duration": 8000
+    },
+    {
+      "text": "And has integrated SOONA cube into the CI pipeline. To deploy a bug free Java application.",
+      "offset": 3092679,
+      "duration": 7000
+    },
+    {
+      "text": "You found a security bug and Sylvan was brave enough to try and fix it. Then run the pull request analysis.",
+      "offset": 3099679,
+      "duration": 4000
+    },
+    {
+      "text": "Okay.",
+      "offset": 3103679,
+      "duration": 2000
+    },
+    {
+      "text": "I like again. And deploy the application into a AWS. As we move into the time of into the Q&A session.",
+      "offset": 3105679,
+      "duration": 11000
+    },
+    {
+      "text": "I will gather some questions for you. But I briefly wanted to talk, like you know about our upcoming webinar.",
+      "offset": 3116679,
+      "duration": 7000
+    },
+    {
+      "text": "It's on December Fourteenth it's on mesra c plus plus 2023 There should be a link which you'll share in the chat as well as it's available on our website.",
+      "offset": 3123679,
+      "duration": 13000
+    },
+    {
+      "text": "You should, I encourage you to attend this webinar. It's again a collaboration between Sonar and a Misra C plus industry expert.",
+      "offset": 3136679,
+      "duration": 9000
+    },
+    {
+      "text": "I'll be talk about how C, code can be made safer and you can adhere to the MISS.",
+      "offset": 3145679,
+      "duration": 9000
+    },
+    {
+      "text": "As a reminder, after the Q&A. Session we will have a short survey appear for you.",
+      "offset": 3154679,
+      "duration": 7000
+    },
+    {
+      "text": "And we'd greatly appreciate if you could fill that survey and send us a feedback so that we can improve a feature webinars.",
+      "offset": 3161679,
+      "duration": 7000
+    },
+    {
+      "text": "Alright, so let's get into the Q&A session.",
+      "offset": 3168679,
+      "duration": 9000
+    },
+    {
+      "text": "I do have some questions which are pending. So this one is probably for Ramon is code catalyst supported as well as is code catalyst supported as well with sonar analysis.",
+      "offset": 3177679,
+      "duration": 16000
+    },
+    {
+      "text": "Yeah, I think we can also look at, a resource that the owner team has, published recently about code catalyst and and sonar",
+      "offset": 3193679,
+      "duration": 13000
+    },
+    {
+      "text": "So where do you have that handy?",
+      "offset": 3206679,
+      "duration": 1000
+    },
+    {
+      "text": "Okay.",
+      "offset": 3207679,
+      "duration": 1000
+    },
+    {
+      "text": "I'm not sure I know what It is.",
+      "offset": 3208679,
+      "duration": 4000
+    },
+    {
+      "text": "Yeah, I think it's the code catalyst documentation is there in the SOONA cloud documentation.",
+      "offset": 3212679,
+      "duration": 5000
+    },
+    {
+      "text": "Yes.",
+      "offset": 3217679,
+      "duration": 1000
+    },
+    {
+      "text": "So if you go to so the cloud documentation and search for code cactus you should be able to find how to integrate code catalyst with Suna Cloud.",
+      "offset": 3218679,
+      "duration": 11000
+    },
+    {
+      "text": "Yes.",
+      "offset": 3229679,
+      "duration": 1000
+    },
+    {
+      "text": "Can I use Argo CD or some other? CB, CICD pipelines, you know, to instead of the ones that you showed you are demonstrated, can I use something else?",
+      "offset": 3230679,
+      "duration": 12000
+    },
+    {
+      "text": "Like, Argo CB instead of code pipeline.",
+      "offset": 3242679,
+      "duration": 2000
+    },
+    {
+      "text": "Sure. Yeah, yeah, absolutely. I think, we showed, one possibility, using code build as a build tool, but then also as a tool to deploy.",
+      "offset": 3244679,
+      "duration": 10000
+    },
+    {
+      "text": "And we can also point you to the AWS EKS workshop. So it's, AWS, KAYS workshop.",
+      "offset": 3254679,
+      "duration": 9000
+    },
+    {
+      "text": "Dot. Common and And essentially there is a good example of a EKS CICD workflow using Argo using Argo CD.",
+      "offset": 3263679,
+      "duration": 6000
+    },
+    {
+      "text": "And essentially you can combine tools however you see fit. So definitely Argo is a tool that we see a lot of customers using.",
+      "offset": 3269679,
+      "duration": 18000
+    },
+    {
+      "text": "And you can use it. In a combination with Amazon EKS as your community platform as well.",
+      "offset": 3287679,
+      "duration": 9000
+    },
+    {
+      "text": "Okay, thanks, Ramon. I will pick up some of the questions that are which came in through the Q&A chat which were which I think are probably appealing to most of the attendees.",
+      "offset": 3296679,
+      "duration": 11000
+    },
+    {
+      "text": "Is it possible to scan only the changes made by a PR? To improve the performance of the scan.",
+      "offset": 3307679,
+      "duration": 8000
+    },
+    {
+      "text": "I believe the answer is yes. Yes.",
+      "offset": 3315679,
+      "duration": 1000
+    },
+    {
+      "text": "Yes, I can answer this one. I should answer this one, yes. To request analysis is much faster.",
+      "offset": 3316679,
+      "duration": 5000
+    },
+    {
+      "text": "Than a full branch energies. And it also has any vulnerability that is sourced. And that takes it also is finalized outside of the .",
+      "offset": 3321679,
+      "duration": 12000
+    },
+    {
+      "text": "So It's very important. To highlight that the pull request analysis is faster and is also very good.",
+      "offset": 3333679,
+      "duration": 9000
+    },
+    {
+      "text": "You know very small project like we had we don't see a difference because the analysis time is so small.",
+      "offset": 3342679,
+      "duration": 8000
+    },
+    {
+      "text": "But usually Java application or any application can be pretty. Can they can be pretty big and if the analysis time for a branch is 20 min for example that can happen.",
+      "offset": 3350679,
+      "duration": 11000
+    },
+    {
+      "text": "If your project is big, full request can be done in minutes. A couple of.",
+      "offset": 3361679,
+      "duration": 6000
+    },
+    {
+      "text": "Alright. All right. Yeah, thanks, Selwyn. I think there was another question related question.",
+      "offset": 3367679,
+      "duration": 6000
+    },
+    {
+      "text": "This poor request built. Available in community edition of Sonar Cube. Pull request like I'm answered to that question is a commercial only feature so you would have to go to developer edition or hire to get that.",
+      "offset": 3373679,
+      "duration": 14000
+    },
+    {
+      "text": "You can do the full branch analysis in the community edition. So this feature you do need to have a commercial edition.",
+      "offset": 3387679,
+      "duration": 8000
+    },
+    {
+      "text": "Is it possible to get a similar integration that you you are not demonstrated today using GitHub enterprise?",
+      "offset": 3395679,
+      "duration": 8000
+    },
+    {
+      "text": "Yes, we can integrate with other CICD providers as well, like GitHub Enterprise.",
+      "offset": 3403679,
+      "duration": 5000
+    },
+    {
+      "text": "You can in particular you can imagine the whole demo with any other CICD provider. Such as GitHub Enterprise or Big Bucket or Azure DevOps or AWS services.",
+      "offset": 3408679,
+      "duration": 14000
+    },
+    {
+      "text": "You can plug in any of the CICD services for the demo. So yes, we integrate with almost all the CIDCD services.",
+      "offset": 3422679,
+      "duration": 7000
+    },
+    {
+      "text": "So our cube does indicate with all the CID services. Okay.",
+      "offset": 3429679,
+      "duration": 3000
+    },
+    {
+      "text": "And you can mix and match. There are many, GitHub reports that are built on AWS.",
+      "offset": 3432679,
+      "duration": 7000
+    },
+    {
+      "text": "And there is a good integration between GitHub and, Cot, if I remember correctly.",
+      "offset": 3439679,
+      "duration": 6000
+    },
+    {
+      "text": "Yes.",
+      "offset": 3445679,
+      "duration": 2000
+    },
+    {
+      "text": "There's one last question before we wrap it up. Can I set this up for bugs and vulnerabilities that will cause a build failure and not and skip the code spells right so only enforce the code quality for bugs and validity yes you can do that by creating a custom",
+      "offset": 3447679,
+      "duration": 18000
+    },
+    {
+      "text": "Yes, we recommend not to do it maybe because, over time the, the, the, problems, the customers will accumulate and make evolution of the code base a bit harder.",
+      "offset": 3465679,
+      "duration": 13000
+    },
+    {
+      "text": "But it's always up to you what you are. Applying as condition in the qual. So this new code has 0 issue.",
+      "offset": 3478679,
+      "duration": 7000
+    },
+    {
+      "text": "Is easy to implement and understand for every developer that you can. Definitely make that slightly different and target on even the.",
+      "offset": 3485679,
+      "duration": 12000
+    },
+    {
+      "text": "Alright, alright, we will wrap it up now. Thanks, Ramon, Sylvain and everyone else who help with this webinar.",
+      "offset": 3497679,
+      "duration": 9000
+    },
+    {
+      "text": "And thanks to all of you who posted questions. I think we got to almost all of the questions, but if we missed any, we will try to answer those.",
+      "offset": 3506679,
+      "duration": 5000
+    },
+    {
+      "text": "And post the recap on our community. Our community is a great place to pose any additional questions that you may have.",
+      "offset": 3511679,
+      "duration": 12000
+    },
+    {
+      "text": "So please do stay connected with us. And visit sonosource.com for anything that you want to learn about.",
+      "offset": 3523679,
+      "duration": 8000
+    },
+    {
+      "text": "Products such as sona cube or a clean energy code methodology. And also check out the information about the future webinar and events.",
+      "offset": 3531679,
+      "duration": 9000
+    },
+    {
+      "text": "Thanks again for participating in the survey that will show up. And I look forward to seeing you all in a future webinar.",
+      "offset": 3540679,
+      "duration": 7000
+    },
+    {
+      "text": "Thank you all.",
+      "offset": 3547679,
+      "duration": 4000
+    },
+    {
+      "text": "6 everybody by.",
+      "offset": 3551679,
+      "duration": 1000
+    }
+  ],
+  "fullText": "All right, thank you everyone. Hello everyone. Thank you for joining today. Welcome to the webinar. Today's webinar is on integrating sooner, in the AWS CI CD workflows. Today you will learn how to leverage Sonar Q. AWS Cloud Services. And develop solutions to build modern CI CD workflows with clean code. I am Manish Kapoor and this webinar will be co-presented by AWS and Sonar. Thank you to AWS for collaborating with Sonar on creating and delivering this content. Please allow me to quickly go over some essential housekeeping points before we start. The session will last about 60 min. And include a QMA at the end of this webinar. You got invited to submit your questions via the Q&A box in Zoom. Please note it's a Q&A box and not the chat box. We have 2 panelists joining us today. Thanks, Kevin. Nash from AWS. And, Emmanuel Kelosi from They will be here to help answer as many questions. As they can live during the webinar. This session will be recorded. And we will share a link via email in the upcoming days. Finally, at the end of this webinar, a short survey will pop up on your screen. We consider your feedback as a gift. Thank you for in advance for participating in the survey. So without further ado. Let me introduce you to today's speakers. And Ramon Lopez. Selwyn is a former Java developer who has helped several architect. Positions in the last 15 years. Hey, joins sonar sales engineering team as a senior consultant in 2022, 2,020. And he has been providing technical support guidance and best practices advocacy to hundreds of customers using Solar Solutions around the world. Good. Ramon is a senior solutions architect at AWS. Where he guides, educates and empowers customers of all sizes and industries. To build successful businesses in AWS Cloud. He also has built web services for over millions of Amazon prime customers. And led a team of software engineers in a fast-paced global environment. Thank you, Sylvain and Ramon. For delivering this. Over to you. Thank you. Thank you, Manish. Let's start with the webinar. Let's start with the content. Let me first say thanks for the invitation and thanks for having the chance to collaborate with all of you. And having the chance today to to talk about all of the things that we've built and share them with with audience. So, the scenario of, of this. Use case, the scenario of today is that we want to talk about in general the integration between sonar and AWS and the scenario is that as a development team you have for example a Jab application but it could be you know a lot of other programming languages as well it could be you know a lot of other programming languages as well it could be a just as well. In this case, we took the example of a Java Spring application that we want to deploy. On EKS. So it's a Kubernetes, based application. Using Amazon EKS as the deployment target. And we want to guide you through this whole approach, how to achieve a clean code state. With automation. So with the CI CD pipeline and all of the DevOps tooling that AWS and so on our offer. And of course we're also gonna cover what is essentially clean code. We'll talk about what are those different options you have in terms of. Cicd tooling. And we'll talk about sonar cubes on our cloud and so on our And in the end, we'll have questions as well. I will have time for questions. So. The scenario as as an architectural diagram is, what I just described, we have this application that is in this EKS cluster, you see it on the right hand side. And, it's, essentially a Docker image. Yeah, you have your developer on the left hand side, the developer works on in a repository, a source repository, a Git based source repository, and uses AWS code commit for that purpose. So we'll go into more detail of how this looks like, but I'll just quickly walk you through it. As a developer you commit using a feature branch model using pull requests into this code commit repository and you have a AWS code pipeline that listens on the main branch of this repository and deploys. Builds, deployers, tests. All of your changes and then at the same time you have and sonar analysis happening within this pipeline. Additionally, what we will see in the webinar today is how to also use on our pull repress analysis. And for that, we built a few things. And the supporting services that we will see are, Amazon Event Bridge and Secrets Manager. Yeah. And so before we'll talk about the poll, we'll quickly, talk about 2 self learning resources. We will send out those links in a follow-up email as well. But all of the content that we discussed today, so exactly this architecture, you will find it in AWS workshop studio. So these are the instructions for the workshop. And you can see a step by step guide there. And then the other resource that we will send out is a GitHub repository as you can see it on the screen right now. Which is, so to say the market, or version of this workshop with a lot of, automation so you can set up your environment, using, CDK. So the AWS cloud development kit. And you can recreate what we have built and you can see how everything works and everything is is so to say connecting. Okay. So when you will sign up for the webinar today, you filled out a poll and we have asked you For example, how many of you are using Sonar and AWS, DevOps solutions? And, we've got a few really interesting results from that poll. So first of all, we saw that we have people joining from all over the world. So really from all continents we have people joining in the webinar. We have about one quarter of you who are using both sonar and AWS solutions currently and this is great to hear of course we have. Quite a few people who have not used AWS, they have solutions but are interested in knowing more and we're hoping that we can. And we can shed some light on that today. And the vast majority of the registered audience is using either sonar cloud or sonar cube. So your so many of you are already using either sonar cloud or sonar cube. So you're so many of you are already sonar And so we'll go to the next poll. A quick live poll here. And the question is, are you looking at implementing solar analysis for the first time, or do you have it in your workflows already? So, and the poll window should appear on your screen. And I would ask you to answer that question right now. So. What are the results? So the results that I'm seeing here. 70%. Say yes, they are looking to implement. So the analysis for the first time. So it's a good split, so we have quite a few people who our first timers and quite a few people who have already done that. And just as a reminder, you can close the, window with the close button as well. Yeah, over to Silver. Thank you, H. Just a few slides before we go into the the technicalities, let's say, so. But could is a problem you I mean, that is common to every organization software is everywhere and the cost of And the, is enormous. Some studies are where did this cost at billions not millions but billions or even trillions. And all of you know that Developers, they spend a great amount of their time. Just maintaining the existing code. So the power of linker this in 3 areas so developers they can achieve more if they don't spend 40% of their time. Permitting issues in the code that's All the more time that they can. Implement innovate. It would reduce the risks for your organization, of course. And the 90% of the security incident that that caused by poor coding practices can be avoided. And of course software is an asset and you want to take care about this asset and I click increase its value over time. So what is the selecting code? The code that can be statically analyzed as consistent and functional, adaptable responsible. Those are qualities that can be measured automatically in your pipeline as we will see. And this will result in application that are. Maintainable, Pable. And also secure and this applies to everything not only your source code but also scripts that that may be run this code and the test code and of course in which you are scored you have took your files you have Kubernetes configuration files You have got to deploy the application. Discord must be secured and safe and also You know, this is the one way to implement automatically in your workflows, hopefully. So that developers, they can smoothly. Increase the quality and the security of the code base. No new vulnerability, no new book is introduced in the new code in any new commit. The which is measured by SO. NAQUE. BOSSON ACLUDE. Don't promote some code that is filling the qual and this methodology will progressively address issues everywhere in your code base. And the any new increment in the code will be completely clean. And that will systematically improve the good quality and security of your anti-. And that fits with your DevOps workflows. Of course, there are plenty of tools around, but there are main ones. And they are well supported by Sunaku. We will see that with so, so, a bit later. So, Sunn, it is the inter that we proposed to A. 3 developer, it's free open source. But when you connect it to SO NAQUE, you have additional functionalities and already you can make sure that your new commits are teen or almost clean. Even before you commit and also there are some some issues that you don't want to even push to a repository like secrets you don't want to expose secrets. Even in a in a repository you have It's a very difficult to get rid of them once the commits are pushed. And then you, ate within, DevOps. Of course, we saw that cube also, summer cloud, and that integrates with your DevOps student. AWS could commute could be or K will be systematically computed on every analysis. And this is what validates the code and allows the developers to go to the next iteration. The next ticket the next addition in the Okay, so now it's not the time for the next question. Let me just illustrate. It's on a cube instance here that is running. On AWS, on ECS, it has been deployed thanks to the instructions. That we are provided in and the 2 resources that were that were mentioned by Ramon. So this, CRC tutorial on GitHub. And this, A, A, workshops to do resources. So deploying Sunachube to AWS EKS is not difficult. It's not The only way to do it. Yeah, we are on a sonar cube. 10 to 3, the last official release developer edition. A commercial edition that will provide the necessary functionalities for 2 days. Dem. 2 of them are very important. First, the first one would be branch and to request analysis, not only one. And the second one is tainted and this if you want to detect advanced vulnerabilities 20 data propagation within the code you need a Sunac Tube commercial edition or SO. This is running in case in and the EU West 3 region because I'm French so I deployed it to Paris but of course you can deploy anywhere you want. There are so many regions. And available for you on AWS. What is important is that most parts are running in the same region. Of course, so that the performance is and the network performances are very good. In this cluster, we have very simple and small notes running. CC 5 large. To the CPU, 4 GB of memory, you can start small on SOMA cube and you can scale when you need it. Here we had only a simple application to run and as a small certain acute instance. So no need for a much hardware to do that. That's, what we did here. Oh, you see deployed. It's deployed through and then short. So N is the official way to deploy to Kubernetes for SO. And we provide a name chart and you of course On top of the values that we provide, you provide your own. It's typically here. We have said the developer addition. Do you do a SNA cube, 10 bits we develop around the tag. That's for the version. We disabled a few things to as I mentioned the footprints the hardware footprint from this substance is very low. Here we attach to the VPC the network. On EKS. So for this, for this particular demonstration, there is no complex. Network setup, VPC, no HTTPS, but that is fine for a. We, don't give it code. Also, we use the default Pitname POST. SQL chart. Which is not really typical, it's convenient. You can learn some tests, but it's not typical for prediction setups. Most of our customers, they would use RGS, some of them also. Or they will host And they're also not keeping stance. In the pool of database on some user cluster. If you can't see. User on passwords in clear text in any end chart of course you would appreciate that as a secret we will show you a bit later all secrets are used it will can be leverage in workflows that should be the same. For Okay, so On this on a QUEUE instance, I already Add the first energies of the project. Many of you are already a bit familiar with So this is gathering the main indicators about the cleanliness of this code, the number of bugs with reliability, the number of vulnerabilities with a security rating, the number of hotspots that were reviewed or not. They cut smells, the cover, the test coverage and the duplication, which are the most important metrics. Misured by SO, now analysis. Okay, so that is for the Sunni part for the Sunni in part. So, Nalink is running. Within your ID can be any jet brain editor, so here and energy. For a Java development, very popular, but it could be VS code that's well for each other. It could be eclipse of course still used by many developers and we also support visual studio. So depending on the language you are using. You should for free, it's open source for your developments and already we can see that Sunni is facing some issues. On this code. And that is nice. I can see the documentation. I can apply some change and get real-time analysis. Of my own code. Okay, I mentioned that it gets additional functionalities when you connect it to Solarcube. So here it is connected to SO. So of course I have access to multiple instance but here I connected it to my AWS instance. With the project key. It was done very smoothly. And you generate a token, you can initiate that directly from your editor. And it will align the rules that run both sides. So what is measured on your they've also automation workflows is also measured within your editor so you align with what is said for Your team and if we issue status is also aligned so if you mark something as not needed any fix from center cube, it will not trace, it will not be raised to your attention again and again in your editor. And, I mean, also, functionalities that were added recently, like the possibility to mark issue as one fix even before. You can commit and the code. You can also, you find links, both sites, so really, they are working closely and in end. Yeah. Sure. Okay Hammond, I believe. Should take the lead back to speak about the rest of the pipeline. Yes. Maybe you can switch to the original diagram we had. In, in the slides and we can position ourselves back on the diagram to understand where we where we are when we're talking. Of course, this one. So exactly this one. So what you just saw is a sonar cube running within this DKS cluster. And this is just, let's say part of your, of your CICD, part of your development environment, you have an instance of sonar that is running. And ready to analyze your code. And what we will now zoom into is this pipeline. So this AWS code pipeline and all of the components. So this AWS code pipeline and all of the components that belong to the pipeline. And, essentially we want to understand how we can. Use this owner analysis within the main branch and all of your feature branches. So this is AWS. Code pipeline. So you have a top 2 bottom, pipeline, so to say. At the top is usually a source stage, meaning, this is a repository. It could be in this case called commit or could be a bit bucket or GitHub repository as well. And the pipeline is connected to one specific branch so in this case it's the main the main branch. Then just scrolling down, we would have. Other stages in this case, we just have one build stage and that build stage is not only building or compiling code, but it is also and as long as the sonar analysis was successful, the quality gate was green. It is also building a container image. And it is pushing to. To that Kubernetes cluster. So yeah, if we switch to to the code build project which plays a really crucial role. So this is the code build project that is referenced. In the pipeline and you can see for example that as a source provider you can look into every build that recently ran you can see the build logs for every build and it's a fully managed environment right so there is no build server for you to maintain there is no operating systems to update you essentially choose the image that you want to use for this build which are provided by the WS and you provide a so-called build spec which are all of the instructions for this build. If we stay on this page here 1 s, can you click on environment variables in the middle? Here, I'm just showing you this because this is something that we will encounter a few times in this in this workshop in this scenario. We leverage environment variables and we leverage this same code built project for both the bills in the pipeline, so the bills on main. And also the bills that are triggered by pull requests and the way we differentiate between those 2 types of bills. And is by using environment variables which are being passed in. From the outside so to say so you see the source branch for example being passed in. So maybe we can actually look at this build spec, this instruction and how the build job should, should look like. Yeah, you should see it in the repository. So this is the code commit repository where you have your Java application. And then one file is typically called Bill Spector, DMO. And this is the file that, code build is looking for. So typically it's, it's a YAMO script at the top you define things like your environment variables and here we also see 2 important lines, line 4 and 5, which are references to secrets manager. So AWS Secrets Manager is a service that helps us. To manage. All kinds of secrets. In this case, it's the sonar global analysis token and also the host, URL of your sonar installation. So this is the URL that points to sonar that is running. In the EKS cluster. And the reason this is nice is because you don't have to have any credentials or passwords. In YAML configuration or in source code, and you would just have this reference to sequence manager. And then code build, so your code build project. Is authenticated through IM. Roles to access those secrets. So if we quickly jump to Secret Manager, you will see how this works. This is Secrets Manager. This is the secret we're using and referencing. In the code build builds back. And essentially this is where you would define who or what can access the secrets and code build is nicely integrated with Secrets Manager. It has an IM role and that role is allowed to access the secret. And this happens, at wrong time, so the same. So then, going back into. The builds back. BC a few environment variables. That we that are defined. And then, starting online, 19, we have different phases. And so those phases correspond to, you know, for example, an installation phase where we would. Install the tools that are needed to compile and build and test your application. And then you have a phase to actually build. And in our case, we're building and on so the most important line was probably line 61 where we have this Maven command. That installs but it's also where we triggered the solar analysis. So this is where we leverage all of those environment variables. Saying that, you know, this is our source branch, this is our destination branch, if it's a pull request and this is our sonar token and the sonar host. And we trigger the Then, and only if that stage that, code build stage is successful, meaning the compilation was successful, the test were successful, and also sonar report that a successful analysis then this post build would start that we would actually deploy and to to the Tubernetes cluster. And I think it's clear how this works in code pipeline. Code pipeline triggers this code build job. But now the question is, how do we make this work for pull requests? And maybe we should even take one more step back and ask why is this interesting? You know, why is, SO, on our analysis, static code analysis, important in a pull request. As you see, as you've seen, we have information or we want information about our code quality. As early as possible in the development cycle. So we don't want code analysis only once we have merged things into our mainline branch. We want this to be available. At the stage of the pull repress. So for example, for the reviewer of the code, to also have a look. And this is where the pull the press analysis. Becomes really interesting. And then also we want Even earlier in the cycle, this information for the developer in their ID. So at every stage in this process, you have up to date, results from solar analysis and you can make adjustments. And this helps you in the long term because you can fix code smells and coverage issues much, much earlier. And, and the way we make these portal press analysis work is by using an event bridge. An event bridge, an event bridge plugin, we call it, and this is something that we provide to you, with all, it's also linked in the workshop. And it's a cloud formation template. You can simply deploy. And you just provide. The name of your repository and the name of your code build project and this confirmation template will set up this rule here. And so we don't have to dive into a lot of detail into how the rule actually looks like and how it works but essentially you need to know that you can deploy this, the event bridge rule will listen to pull requests on that code commit repository. And every time a pull request is opened or updated, It will trigger the same code build. Coquit project and it will trigger solar analysis. And later on you will see how the solar analysis, the pull request analysis looks like in the solar UI and you can compare let's say the code quality on that feature branch with the main branch. And Did they forget anything to mention, Silver? What else do you want to say here? Maybe you wanted to mention that you had this. Project on GitHub. Yes. Exactly. So this is this is the plugin. So this is, really just a cloud formation template. You can use in your own environment. So if you use code commit as a repository. And if you use code pipelines and code build and you want to leverage not only the analysis on the main branch but also on full requests you can simply deploy this this little cloud formation plug-in and use it. Great. So maybe we should just. Okay, to pull request and see what happens. Yeah, let's see how it works. Okay, so Of course, we don't want to create some code live, with you. So, and there is a branch that already exists. On this repository. Where we typically add some service. So those service is running. It's running in, in the cluster. It's having only one You have for a Chava application and the idea would be to add. And those are web service on top of that. And we have a branch ready for this year so I would just Try to promote, my changes through, put request, very simple. In. I select the main branch as the, branch. I select a new service branch as the source branch. And this is where I will collect, the review from my peers, but also. The results of test and static energies of course. Okay, so I can go ahead and. At the new service. At full request And automatically I expect that this put request question So. Could be So if I go to click build. Okay, it's already running. And it will take a minute or so. I can highlight the logs. I may comment on them where this is running. Waiting for the results to be available and the qualitative to be computed. And maybe just to explain what happened in the background. Whenever, you created that pull request, it's essentially an API call that, event bridge, would listen to. And we listen to this exact pattern so new pull requests or modifications of full requests and then it essentially goes and triggers the code build job that you have defined when setting up the confirmation template. So then we are in the previous step. The The Pita Chant is installing everything. Okay, That is common to any CI CD solution. This bike plan is not completely optimized. There are a few things that we could remove in the case of a put request. So we trigger. A build with different parameters so that so that you understand whether it's the main branch or a pull request that is analyzed. Which we could as well remove some of those. Of the Which is this is a docker image in fact. Okay, so yeah, we are running. Do, Maven, build and analysis? Depending on the language of your project you would. You would have a difference scanner but Did the idea is exactly the same? The project key is run and now we can see the sensors are running. So the is being done. We can see that the docker sensor. He's coming as well. You have CPD code duplication is being computed. And we also add some traces about tank technologies. Okay, so, If you see UCFG in the logs of your, sonar analysis, it's for a universal control flow graph. That's also, we'll check all the data propagates within your code and typically secure some critical endpoints in your message in your in your workflows in your in your code. Okay, so this has failed. And this has failed for a good reason. I would say we have this parameter here that we'll allow you to enforce the quality gates. So Sonar, Skinner is waiting for the qualitative status. From SO. NAQUE and the command will just fail. In case the and we should be able to see this result here. So. I go to the web service, the main one is okay. And I have a pull request that was analyzed. There is one condition for every issue. And this condition is mandating that. No problem should enter the code base. No new problem should enter the code base. So 2 5 issues require fix. To security experts require some review or maybe some change and everything is actionable of course. So let's see. What's, He's, remove the speed injection and use constrictor. So this is a good practice. For injection in a spring in Java Spring project. Yeah, we have the same problem for another class. We have a system out Look at your comment that is, and we maybe have something. Block here, yeah, so more important maybe. Which is the SQL injection, vulnerability. So we have one injection flow. I can see that. Okay, the request map to person slash address is reaching Yeah, I think so. Construction without sanitization. So it should be possible to escape. And the Bundes of a single SQL request. So let's maybe check that. So I have visual studio open. I am on the right patch. And I am able to Maybe, Bill, I will make sure that. I am on the right build. Then I can run this. Okay, so it's running locally as a developer. It's interesting to see. What's happening? There. And Okay, so I should be able to. Extract the data from all users to insert new data. So let me just Could be this. So, yeah. Special syntax. Thanks to the security researchers. Yeah, so now it's not that difficult, but if you are not familiar with this syntax. You don't know. Can be done. So this results in But now I can also extract all data. On the table where I would expect. So this was injected into the database. Well, I was originally only, having this. And I can also truncate the entire database. So this is the entire, enter your table table. So, Now I can go back to So the service is still running. And Okay, now I want to see everyone. But of course there is no one left because someone Control the database and removed all of the data. From the from the people table. Okay, so let's see. Oh, I should invest. To report from Okay, I can stop this. And go to S. So this is one of the issues that was raised. So here I need to. To declare this as private final. And then I will make the constructor. Alright, so this should be. I like it in the documentation, so it's not only clean as you could but also learn as you could. So, And you We You cheats. Go to you and obviously I won't auto wire the constructor and not Okay, so that one is salt I have the same problem with, data, yeah, I can also. Remove this leftover from the development phase. And semi shoe here so I will Be it, Make these private . I know Okay. And this dot. Okay. Complete so pay easy The documentation helps of course for me with former Java developer. I'm a bit trusty. Always I need the examples that are provided by sonar analysis. Let's get back to Sunaku and see. And the result here so why is an issue if I want to read about it plenty of documentation about why this is a problem. Of course we have proven and that this was a problem. How can I fix? Spring was detected on my project so I get examples that are really focused on spring example it's nice I can see here okay the code is assembled Okay, so I need to put some place over there. In a sling. And make sure that. To requests E cannot be escaped. So that would be in the file. Okay. It's here. So thanks to Kevin. Panelist today for this nice video. So So, it's no data, it's okay, data. At all. I will. Declare a query. Just taking difficulty from here. Okay, just need a place order for the parameter of course. Quickly, equal 4. Clean that less. And then. Name, which is the parameter that we acquire from The Whip. Okay, we should be good to go. Yeah, they are probably a few things that I need to address again. So let's get back. To the overview there was 5 issues I probably removed 2 of them 3 full and this periodic modifier oh yes I can learn also about base practices. Regarding, 2 unit. So here in January, I should not make. And the test methods public. So in the test code. Okay, I can address that globally. Willie and Yeah. Okay. Let's make sure I saved everything. Security output Okay, the request mapping here on person address It's not very good because it's a, gate post every kind of request. And obviously we should restrict the scope to GETS which are much Okay. As is highlighted in the documentation again. So let's go. Let's get to it. And use. I get my ping instead. Okay, okay Why did they open that? I'm wrong. And now I have this import which is not used anymore. Okay, and Don't know. It's commit. So three, 3 phase change, I play fixes. Commit and push. Okay, I can also find some. Some warnings home entity G but there we should be good here Okay commit and push. Of course, Regular, So now we'll be there. And I should people to See. The projects. Be the same pull request updated with a new commit. Tring a new pipeline, a new build and analysis and hopefully it is time to communicate which will be successful. And we'll have the opportunity to see this result. In a few more minutes but until then I guess we should go to the next step. We are almost there. And should we do the second poll? I mean, let's do it. It won't take much time. Let's do a second poll here and then we'll do a very quick recap and open it up for questions. Do we want to leverage any of their solutions in your DevOps workflow? DevOps workflows as well. Hi, be interested to know also now that you've seen how things work. Really interested to know how people think. And in the meantime, you can also think, should have already questions in mind. Both any of the content that you saw today. Good, so we look at the poll results. Okay, so we have about 50 50 split. Pretty much. Nice. Cool. So I'll do a quick recap of of everything that we saw. And essentially we talked about a complete end to end flow. Of. Deploying sonar in Amazon EKS, deploying a pipeline, configuring the pipeline and using the AWS on our event bridge plugin to also support full request analysis. And then we saw how we can use not only a sonar, but also, within the pipeline and within full requests. To shift left essentially in the spirit of shifting left. Allow the developers to have full insight into. Code quality from a very early stage and throughout the whole development process. And so in the end you saw an actually a real security vulnerability in this Java application that's on our, security vulnerability in this job application that's on our called out. And Silver was able to show you that this is, or this was really susceptible to a SQL injection. So I'm going to call it out and so on it also gave us really good hints on how to. How to fix those issues and and how now once we trigger this fix and we trigger an update on the pull request and we will then see in so on our how the analysis changed and how those security vulnerabilities hopefully disappear. Yes. As expected, they were fixed. The D. Amazing. Yes. So they would, they should remain, for a while in the database, but. As. Fixed attached to the code. So this is she's very nice, yes. And now I'm ready to manage this. Poor request. The could be pipeline project succeeded. Perfect. So let's open it up for questions from the audience. Alright. Thanks to both of you, Ramon and Sylvan. That was a great session. It was an end to end demo like you said, Vermont. Where a Java developer is using AWS. And has integrated SOONA cube into the CI pipeline. To deploy a bug free Java application. You found a security bug and Sylvan was brave enough to try and fix it. Then run the pull request analysis. Okay. I like again. And deploy the application into a AWS. As we move into the time of into the Q&A session. I will gather some questions for you. But I briefly wanted to talk, like you know about our upcoming webinar. It's on December Fourteenth it's on mesra c plus plus 2023 There should be a link which you'll share in the chat as well as it's available on our website. You should, I encourage you to attend this webinar. It's again a collaboration between Sonar and a Misra C plus industry expert. I'll be talk about how C, code can be made safer and you can adhere to the MISS. As a reminder, after the Q&A. Session we will have a short survey appear for you. And we'd greatly appreciate if you could fill that survey and send us a feedback so that we can improve a feature webinars. Alright, so let's get into the Q&A session. I do have some questions which are pending. So this one is probably for Ramon is code catalyst supported as well as is code catalyst supported as well with sonar analysis. Yeah, I think we can also look at, a resource that the owner team has, published recently about code catalyst and and sonar So where do you have that handy? Okay. I'm not sure I know what It is. Yeah, I think it's the code catalyst documentation is there in the SOONA cloud documentation. Yes. So if you go to so the cloud documentation and search for code cactus you should be able to find how to integrate code catalyst with Suna Cloud. Yes. Can I use Argo CD or some other? CB, CICD pipelines, you know, to instead of the ones that you showed you are demonstrated, can I use something else? Like, Argo CB instead of code pipeline. Sure. Yeah, yeah, absolutely. I think, we showed, one possibility, using code build as a build tool, but then also as a tool to deploy. And we can also point you to the AWS EKS workshop. So it's, AWS, KAYS workshop. Dot. Common and And essentially there is a good example of a EKS CICD workflow using Argo using Argo CD. And essentially you can combine tools however you see fit. So definitely Argo is a tool that we see a lot of customers using. And you can use it. In a combination with Amazon EKS as your community platform as well. Okay, thanks, Ramon. I will pick up some of the questions that are which came in through the Q&A chat which were which I think are probably appealing to most of the attendees. Is it possible to scan only the changes made by a PR? To improve the performance of the scan. I believe the answer is yes. Yes. Yes, I can answer this one. I should answer this one, yes. To request analysis is much faster. Than a full branch energies. And it also has any vulnerability that is sourced. And that takes it also is finalized outside of the . So It's very important. To highlight that the pull request analysis is faster and is also very good. You know very small project like we had we don't see a difference because the analysis time is so small. But usually Java application or any application can be pretty. Can they can be pretty big and if the analysis time for a branch is 20 min for example that can happen. If your project is big, full request can be done in minutes. A couple of. Alright. All right. Yeah, thanks, Selwyn. I think there was another question related question. This poor request built. Available in community edition of Sonar Cube. Pull request like I'm answered to that question is a commercial only feature so you would have to go to developer edition or hire to get that. You can do the full branch analysis in the community edition. So this feature you do need to have a commercial edition. Is it possible to get a similar integration that you you are not demonstrated today using GitHub enterprise? Yes, we can integrate with other CICD providers as well, like GitHub Enterprise. You can in particular you can imagine the whole demo with any other CICD provider. Such as GitHub Enterprise or Big Bucket or Azure DevOps or AWS services. You can plug in any of the CICD services for the demo. So yes, we integrate with almost all the CIDCD services. So our cube does indicate with all the CID services. Okay. And you can mix and match. There are many, GitHub reports that are built on AWS. And there is a good integration between GitHub and, Cot, if I remember correctly. Yes. There's one last question before we wrap it up. Can I set this up for bugs and vulnerabilities that will cause a build failure and not and skip the code spells right so only enforce the code quality for bugs and validity yes you can do that by creating a custom Yes, we recommend not to do it maybe because, over time the, the, the, problems, the customers will accumulate and make evolution of the code base a bit harder. But it's always up to you what you are. Applying as condition in the qual. So this new code has 0 issue. Is easy to implement and understand for every developer that you can. Definitely make that slightly different and target on even the. Alright, alright, we will wrap it up now. Thanks, Ramon, Sylvain and everyone else who help with this webinar. And thanks to all of you who posted questions. I think we got to almost all of the questions, but if we missed any, we will try to answer those. And post the recap on our community. Our community is a great place to pose any additional questions that you may have. So please do stay connected with us. And visit sonosource.com for anything that you want to learn about. Products such as sona cube or a clean energy code methodology. And also check out the information about the future webinar and events. Thanks again for participating in the survey that will show up. And I look forward to seeing you all in a future webinar. Thank you all. 6 everybody by.",
+  "fetchedAt": "2026-03-14T09:23:36.027Z"
+}

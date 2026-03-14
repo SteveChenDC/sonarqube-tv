@@ -1,0 +1,898 @@
+{
+  "videoId": "v209",
+  "youtubeId": "Prlo_WiCPzc",
+  "segments": [
+    {
+      "text": "[Music]",
+      "offset": 4360,
+      "duration": 3299
+    },
+    {
+      "text": "[Music]",
+      "offset": 14310,
+      "duration": 5830
+    },
+    {
+      "text": "hello everyone my name is tigor blanchi",
+      "offset": 20240,
+      "duration": 5119
+    },
+    {
+      "text": "and i work on static analysis as sonar",
+      "offset": 22960,
+      "duration": 4079
+    },
+    {
+      "text": "source",
+      "offset": 25359,
+      "duration": 4000
+    },
+    {
+      "text": "and welcome to this talk",
+      "offset": 27039,
+      "duration": 4881
+    },
+    {
+      "text": "which is called who guards the guards",
+      "offset": 29359,
+      "duration": 4241
+    },
+    {
+      "text": "and i would like to show you three",
+      "offset": 31920,
+      "duration": 3840
+    },
+    {
+      "text": "common pitfalls of javascript unit",
+      "offset": 33600,
+      "duration": 4639
+    },
+    {
+      "text": "testing",
+      "offset": 35760,
+      "duration": 4000
+    },
+    {
+      "text": "so the first issue",
+      "offset": 38239,
+      "duration": 2721
+    },
+    {
+      "text": "i would like to show you is the",
+      "offset": 39760,
+      "duration": 3200
+    },
+    {
+      "text": "following one so imagine you have the",
+      "offset": 40960,
+      "duration": 3599
+    },
+    {
+      "text": "following test",
+      "offset": 42960,
+      "duration": 5520
+    },
+    {
+      "text": "and you write your expectations there",
+      "offset": 44559,
+      "duration": 6081
+    },
+    {
+      "text": "do you see the issue",
+      "offset": 48480,
+      "duration": 4640
+    },
+    {
+      "text": "whatever you do in the inside the",
+      "offset": 50640,
+      "duration": 5439
+    },
+    {
+      "text": "expectation this test actually never",
+      "offset": 53120,
+      "duration": 3919
+    },
+    {
+      "text": "fails",
+      "offset": 56079,
+      "duration": 3521
+    },
+    {
+      "text": "because what is missing is the assertion",
+      "offset": 57039,
+      "duration": 4160
+    },
+    {
+      "text": "after the expect",
+      "offset": 59600,
+      "duration": 3920
+    },
+    {
+      "text": "so to have any meaningful testing it has",
+      "offset": 61199,
+      "duration": 4801
+    },
+    {
+      "text": "to look like this",
+      "offset": 63520,
+      "duration": 4560
+    },
+    {
+      "text": "you might be surprised how common you",
+      "offset": 66000,
+      "duration": 4159
+    },
+    {
+      "text": "this issue is you can",
+      "offset": 68080,
+      "duration": 4399
+    },
+    {
+      "text": "i will just show you two examples so the",
+      "offset": 70159,
+      "duration": 6161
+    },
+    {
+      "text": "first one is in kibana project",
+      "offset": 72479,
+      "duration": 5921
+    },
+    {
+      "text": "and the second one",
+      "offset": 76320,
+      "duration": 4960
+    },
+    {
+      "text": "is in angular",
+      "offset": 78400,
+      "duration": 2880
+    },
+    {
+      "text": "the next issue i would like to show you",
+      "offset": 82880,
+      "duration": 6720
+    },
+    {
+      "text": "might be a bit cosmetic however",
+      "offset": 85360,
+      "duration": 4240
+    },
+    {
+      "text": "it it often",
+      "offset": 89759,
+      "duration": 3441
+    },
+    {
+      "text": "helps to have the",
+      "offset": 91520,
+      "duration": 4559
+    },
+    {
+      "text": "clear test to better understand the real",
+      "offset": 93200,
+      "duration": 4000
+    },
+    {
+      "text": "issue",
+      "offset": 96079,
+      "duration": 3360
+    },
+    {
+      "text": "so in the following test",
+      "offset": 97200,
+      "duration": 4400
+    },
+    {
+      "text": "the you need to when you write your",
+      "offset": 99439,
+      "duration": 4640
+    },
+    {
+      "text": "assertion you always need to provide",
+      "offset": 101600,
+      "duration": 4320
+    },
+    {
+      "text": "the actual value",
+      "offset": 104079,
+      "duration": 4241
+    },
+    {
+      "text": "which is the result of the test and your",
+      "offset": 105920,
+      "duration": 4879
+    },
+    {
+      "text": "expectation and the orders in which",
+      "offset": 108320,
+      "duration": 4520
+    },
+    {
+      "text": "these values are provided",
+      "offset": 110799,
+      "duration": 4241
+    },
+    {
+      "text": "matters so",
+      "offset": 112840,
+      "duration": 5639
+    },
+    {
+      "text": "to the expect you should provide the",
+      "offset": 115040,
+      "duration": 5759
+    },
+    {
+      "text": "result of the computation and when you",
+      "offset": 118479,
+      "duration": 4881
+    },
+    {
+      "text": "invoke some assertion like equal in this",
+      "offset": 120799,
+      "duration": 5121
+    },
+    {
+      "text": "case it should be the expected value if",
+      "offset": 123360,
+      "duration": 4800
+    },
+    {
+      "text": "you swap it around you will receive such",
+      "offset": 125920,
+      "duration": 4319
+    },
+    {
+      "text": "message as here",
+      "offset": 128160,
+      "duration": 3600
+    },
+    {
+      "text": "where expected",
+      "offset": 130239,
+      "duration": 4401
+    },
+    {
+      "text": "is 2 and it's supposed to equal to 3",
+      "offset": 131760,
+      "duration": 5440
+    },
+    {
+      "text": "which is wrong and it might be confusing",
+      "offset": 134640,
+      "duration": 4160
+    },
+    {
+      "text": "correctly it should look like this you",
+      "offset": 137200,
+      "duration": 3119
+    },
+    {
+      "text": "should have the addition in the extract",
+      "offset": 138800,
+      "duration": 5040
+    },
+    {
+      "text": "call and it should equal",
+      "offset": 140319,
+      "duration": 3521
+    },
+    {
+      "text": "to what you what your expectation is in",
+      "offset": 143920,
+      "duration": 6160
+    },
+    {
+      "text": "this case too which gives better message",
+      "offset": 147040,
+      "duration": 4080
+    },
+    {
+      "text": "where",
+      "offset": 150080,
+      "duration": 3680
+    },
+    {
+      "text": "three is expected to equal the two so",
+      "offset": 151120,
+      "duration": 5520
+    },
+    {
+      "text": "the result is what we computed is 3 and",
+      "offset": 153760,
+      "duration": 6160
+    },
+    {
+      "text": "our expectation was 2.",
+      "offset": 156640,
+      "duration": 4720
+    },
+    {
+      "text": "and here is the",
+      "offset": 159920,
+      "duration": 3840
+    },
+    {
+      "text": "actual correct test where you need to",
+      "offset": 161360,
+      "duration": 3519
+    },
+    {
+      "text": "correct",
+      "offset": 163760,
+      "duration": 5080
+    },
+    {
+      "text": "your computation to have the test to be",
+      "offset": 164879,
+      "duration": 6481
+    },
+    {
+      "text": "green so this is cosmetic but when you",
+      "offset": 168840,
+      "duration": 5240
+    },
+    {
+      "text": "are debugging more complex issue it",
+      "offset": 171360,
+      "duration": 4800
+    },
+    {
+      "text": "might be really helpful to have a good",
+      "offset": 174080,
+      "duration": 4720
+    },
+    {
+      "text": "error message",
+      "offset": 176160,
+      "duration": 5920
+    },
+    {
+      "text": "so here is the the real-life project uh",
+      "offset": 178800,
+      "duration": 6159
+    },
+    {
+      "text": "having this problem you see that the in",
+      "offset": 182080,
+      "duration": 6000
+    },
+    {
+      "text": "the expectation the test and data is",
+      "offset": 184959,
+      "duration": 5601
+    },
+    {
+      "text": "swapped",
+      "offset": 188080,
+      "duration": 2480
+    },
+    {
+      "text": "the third issue i would like to tell you",
+      "offset": 191519,
+      "duration": 4481
+    },
+    {
+      "text": "to show you in this lightning talk is",
+      "offset": 193280,
+      "duration": 4720
+    },
+    {
+      "text": "the following one imagine you have a",
+      "offset": 196000,
+      "duration": 3360
+    },
+    {
+      "text": "test",
+      "offset": 198000,
+      "duration": 3519
+    },
+    {
+      "text": "and this test is going to be always",
+      "offset": 199360,
+      "duration": 4080
+    },
+    {
+      "text": "green why",
+      "offset": 201519,
+      "duration": 3761
+    },
+    {
+      "text": "because there is actually no assertion",
+      "offset": 203440,
+      "duration": 2640
+    },
+    {
+      "text": "in it",
+      "offset": 205280,
+      "duration": 4400
+    },
+    {
+      "text": "so you are not testing anything",
+      "offset": 206080,
+      "duration": 5840
+    },
+    {
+      "text": "so to fix this test you should actually",
+      "offset": 209680,
+      "duration": 5440
+    },
+    {
+      "text": "assert something so for example",
+      "offset": 211920,
+      "duration": 6000
+    },
+    {
+      "text": "you want to assert that this string",
+      "offset": 215120,
+      "duration": 4960
+    },
+    {
+      "text": "is",
+      "offset": 217920,
+      "duration": 5920
+    },
+    {
+      "text": "has the value of string",
+      "offset": 220080,
+      "duration": 3760
+    },
+    {
+      "text": "and here is the real life example from",
+      "offset": 224640,
+      "duration": 4560
+    },
+    {
+      "text": "eslint project where you might have this",
+      "offset": 226799,
+      "duration": 4961
+    },
+    {
+      "text": "problem this often happens when you are",
+      "offset": 229200,
+      "duration": 4399
+    },
+    {
+      "text": "dealing with exceptions",
+      "offset": 231760,
+      "duration": 3759
+    },
+    {
+      "text": "so the following tests",
+      "offset": 233599,
+      "duration": 5200
+    },
+    {
+      "text": "will fail if the exception is thrown as",
+      "offset": 235519,
+      "duration": 5681
+    },
+    {
+      "text": "the comment suggests",
+      "offset": 238799,
+      "duration": 4080
+    },
+    {
+      "text": "however the message is not going to be",
+      "offset": 241200,
+      "duration": 2880
+    },
+    {
+      "text": "very nice",
+      "offset": 242879,
+      "duration": 4161
+    },
+    {
+      "text": "better way to do it is to wrap your call",
+      "offset": 244080,
+      "duration": 4560
+    },
+    {
+      "text": "in the expectation",
+      "offset": 247040,
+      "duration": 4559
+    },
+    {
+      "text": "and assert that either the exception is",
+      "offset": 248640,
+      "duration": 5599
+    },
+    {
+      "text": "thrown or in this case it would be to",
+      "offset": 251599,
+      "duration": 5521
+    },
+    {
+      "text": "assert that no exception is thrown so",
+      "offset": 254239,
+      "duration": 5280
+    },
+    {
+      "text": "this is the documentation from chai",
+      "offset": 257120,
+      "duration": 4639
+    },
+    {
+      "text": "assertion framework",
+      "offset": 259519,
+      "duration": 4960
+    },
+    {
+      "text": "how to do that",
+      "offset": 261759,
+      "duration": 2720
+    },
+    {
+      "text": "so you might wonder how you can avoid",
+      "offset": 267199,
+      "duration": 4161
+    },
+    {
+      "text": "having such issues in your code and i",
+      "offset": 268960,
+      "duration": 4080
+    },
+    {
+      "text": "will show you a small demo how you can",
+      "offset": 271360,
+      "duration": 3440
+    },
+    {
+      "text": "do that with",
+      "offset": 273040,
+      "duration": 3120
+    },
+    {
+      "text": "sonarland",
+      "offset": 274800,
+      "duration": 4480
+    },
+    {
+      "text": "or sonar cloud or sonar cube so first i",
+      "offset": 276160,
+      "duration": 5440
+    },
+    {
+      "text": "will start with sonarlin sonarlint is an",
+      "offset": 279280,
+      "duration": 5040
+    },
+    {
+      "text": "extension which you can install",
+      "offset": 281600,
+      "duration": 5920
+    },
+    {
+      "text": "in visual studio code",
+      "offset": 284320,
+      "duration": 4960
+    },
+    {
+      "text": "so here is the extension it's already",
+      "offset": 287520,
+      "duration": 3840
+    },
+    {
+      "text": "installed and here i have the three",
+      "offset": 289280,
+      "duration": 3919
+    },
+    {
+      "text": "examples i was showing you",
+      "offset": 291360,
+      "duration": 3600
+    },
+    {
+      "text": "so the first one here",
+      "offset": 293199,
+      "duration": 3601
+    },
+    {
+      "text": "is the",
+      "offset": 294960,
+      "duration": 3760
+    },
+    {
+      "text": "incomplete assertion where the",
+      "offset": 296800,
+      "duration": 3280
+    },
+    {
+      "text": "expectation",
+      "offset": 298720,
+      "duration": 3919
+    },
+    {
+      "text": "contains the the comparison between some",
+      "offset": 300080,
+      "duration": 4640
+    },
+    {
+      "text": "function and the result value and",
+      "offset": 302639,
+      "duration": 4161
+    },
+    {
+      "text": "actually to have",
+      "offset": 304720,
+      "duration": 3840
+    },
+    {
+      "text": "this test",
+      "offset": 306800,
+      "duration": 3920
+    },
+    {
+      "text": "to make it more mean meaningful",
+      "offset": 308560,
+      "duration": 3440
+    },
+    {
+      "text": "what you should do is to remove the",
+      "offset": 310720,
+      "duration": 3280
+    },
+    {
+      "text": "excitation for here and add the",
+      "offset": 312000,
+      "duration": 3600
+    },
+    {
+      "text": "assertion",
+      "offset": 314000,
+      "duration": 3759
+    },
+    {
+      "text": "like this",
+      "offset": 315600,
+      "duration": 5120
+    },
+    {
+      "text": "and the issues here disappears",
+      "offset": 317759,
+      "duration": 5081
+    },
+    {
+      "text": "the second problem i was showing",
+      "offset": 320720,
+      "duration": 3840
+    },
+    {
+      "text": "where",
+      "offset": 322840,
+      "duration": 4120
+    },
+    {
+      "text": "you can hover here to over the squiggly",
+      "offset": 324560,
+      "duration": 4639
+    },
+    {
+      "text": "line to see the description so it says",
+      "offset": 326960,
+      "duration": 4799
+    },
+    {
+      "text": "that the two arguments in the assertion",
+      "offset": 329199,
+      "duration": 3921
+    },
+    {
+      "text": "should be swept",
+      "offset": 331759,
+      "duration": 3521
+    },
+    {
+      "text": "and the correct order is the actual",
+      "offset": 333120,
+      "duration": 3600
+    },
+    {
+      "text": "value first",
+      "offset": 335280,
+      "duration": 3759
+    },
+    {
+      "text": "and then your expectation",
+      "offset": 336720,
+      "duration": 6319
+    },
+    {
+      "text": "so when i exchange the arguments",
+      "offset": 339039,
+      "duration": 4000
+    },
+    {
+      "text": "the issue disappears",
+      "offset": 343280,
+      "duration": 4639
+    },
+    {
+      "text": "and the last problem i was throwing was",
+      "offset": 346400,
+      "duration": 3280
+    },
+    {
+      "text": "the problem with the missing assertion",
+      "offset": 347919,
+      "duration": 3681
+    },
+    {
+      "text": "so you see here over this quickly when i",
+      "offset": 349680,
+      "duration": 4400
+    },
+    {
+      "text": "hover over this quickly line i see that",
+      "offset": 351600,
+      "duration": 4800
+    },
+    {
+      "text": "at least one assertion should be in this",
+      "offset": 354080,
+      "duration": 5200
+    },
+    {
+      "text": "test so let's add an assertion here",
+      "offset": 356400,
+      "duration": 4239
+    },
+    {
+      "text": "so let's say",
+      "offset": 359280,
+      "duration": 3359
+    },
+    {
+      "text": "we expect",
+      "offset": 360639,
+      "duration": 3120
+    },
+    {
+      "text": "the string",
+      "offset": 362639,
+      "duration": 4521
+    },
+    {
+      "text": "to be empty",
+      "offset": 363759,
+      "duration": 3401
+    },
+    {
+      "text": "like this",
+      "offset": 367840,
+      "duration": 2400
+    },
+    {
+      "text": "and the issue disappears so this is how",
+      "offset": 371039,
+      "duration": 6081
+    },
+    {
+      "text": "you can quickly fix it in your ide and i",
+      "offset": 373440,
+      "duration": 6240
+    },
+    {
+      "text": "your editor will",
+      "offset": 377120,
+      "duration": 6160
+    },
+    {
+      "text": "notify you when you have this problem",
+      "offset": 379680,
+      "duration": 5760
+    },
+    {
+      "text": "and also if you want to integrate this",
+      "offset": 383280,
+      "duration": 4479
+    },
+    {
+      "text": "sort of static analysis testing for your",
+      "offset": 385440,
+      "duration": 3680
+    },
+    {
+      "text": "unit test",
+      "offset": 387759,
+      "duration": 3601
+    },
+    {
+      "text": "in your continuous integration pipeline",
+      "offset": 389120,
+      "duration": 3680
+    },
+    {
+      "text": "you can use",
+      "offset": 391360,
+      "duration": 4240
+    },
+    {
+      "text": "sonar cube which you install on premise",
+      "offset": 392800,
+      "duration": 3519
+    },
+    {
+      "text": "or",
+      "offset": 395600,
+      "duration": 3120
+    },
+    {
+      "text": "if you prefer the cloud solution there",
+      "offset": 396319,
+      "duration": 4641
+    },
+    {
+      "text": "is sonar cloud so they will both look",
+      "offset": 398720,
+      "duration": 3280
+    },
+    {
+      "text": "the same",
+      "offset": 400960,
+      "duration": 2640
+    },
+    {
+      "text": "here i have the",
+      "offset": 402000,
+      "duration": 3120
+    },
+    {
+      "text": "sonar cube",
+      "offset": 403600,
+      "duration": 3680
+    },
+    {
+      "text": "and here is the the same file which was",
+      "offset": 405120,
+      "duration": 4880
+    },
+    {
+      "text": "analyzed in the continuous integration",
+      "offset": 407280,
+      "duration": 5440
+    },
+    {
+      "text": "pipeline so here you see again the this",
+      "offset": 410000,
+      "duration": 3919
+    },
+    {
+      "text": "quickly line",
+      "offset": 412720,
+      "duration": 4560
+    },
+    {
+      "text": "where the issues are located",
+      "offset": 413919,
+      "duration": 3361
+    },
+    {
+      "text": "so this is my my lighting talk thank you",
+      "offset": 419039,
+      "duration": 4641
+    },
+    {
+      "text": "for your attention",
+      "offset": 421919,
+      "duration": 3280
+    },
+    {
+      "text": "and",
+      "offset": 423680,
+      "duration": 4519
+    },
+    {
+      "text": "goodbye",
+      "offset": 425199,
+      "duration": 3000
+    },
+    {
+      "text": "[Music]",
+      "offset": 428350,
+      "duration": 5830
+    }
+  ],
+  "fullText": "[Music] [Music] hello everyone my name is tigor blanchi and i work on static analysis as sonar source and welcome to this talk which is called who guards the guards and i would like to show you three common pitfalls of javascript unit testing so the first issue i would like to show you is the following one so imagine you have the following test and you write your expectations there do you see the issue whatever you do in the inside the expectation this test actually never fails because what is missing is the assertion after the expect so to have any meaningful testing it has to look like this you might be surprised how common you this issue is you can i will just show you two examples so the first one is in kibana project and the second one is in angular the next issue i would like to show you might be a bit cosmetic however it it often helps to have the clear test to better understand the real issue so in the following test the you need to when you write your assertion you always need to provide the actual value which is the result of the test and your expectation and the orders in which these values are provided matters so to the expect you should provide the result of the computation and when you invoke some assertion like equal in this case it should be the expected value if you swap it around you will receive such message as here where expected is 2 and it's supposed to equal to 3 which is wrong and it might be confusing correctly it should look like this you should have the addition in the extract call and it should equal to what you what your expectation is in this case too which gives better message where three is expected to equal the two so the result is what we computed is 3 and our expectation was 2. and here is the actual correct test where you need to correct your computation to have the test to be green so this is cosmetic but when you are debugging more complex issue it might be really helpful to have a good error message so here is the the real-life project uh having this problem you see that the in the expectation the test and data is swapped the third issue i would like to tell you to show you in this lightning talk is the following one imagine you have a test and this test is going to be always green why because there is actually no assertion in it so you are not testing anything so to fix this test you should actually assert something so for example you want to assert that this string is has the value of string and here is the real life example from eslint project where you might have this problem this often happens when you are dealing with exceptions so the following tests will fail if the exception is thrown as the comment suggests however the message is not going to be very nice better way to do it is to wrap your call in the expectation and assert that either the exception is thrown or in this case it would be to assert that no exception is thrown so this is the documentation from chai assertion framework how to do that so you might wonder how you can avoid having such issues in your code and i will show you a small demo how you can do that with sonarland or sonar cloud or sonar cube so first i will start with sonarlin sonarlint is an extension which you can install in visual studio code so here is the extension it's already installed and here i have the three examples i was showing you so the first one here is the incomplete assertion where the expectation contains the the comparison between some function and the result value and actually to have this test to make it more mean meaningful what you should do is to remove the excitation for here and add the assertion like this and the issues here disappears the second problem i was showing where you can hover here to over the squiggly line to see the description so it says that the two arguments in the assertion should be swept and the correct order is the actual value first and then your expectation so when i exchange the arguments the issue disappears and the last problem i was throwing was the problem with the missing assertion so you see here over this quickly when i hover over this quickly line i see that at least one assertion should be in this test so let's add an assertion here so let's say we expect the string to be empty like this and the issue disappears so this is how you can quickly fix it in your ide and i your editor will notify you when you have this problem and also if you want to integrate this sort of static analysis testing for your unit test in your continuous integration pipeline you can use sonar cube which you install on premise or if you prefer the cloud solution there is sonar cloud so they will both look the same here i have the sonar cube and here is the the same file which was analyzed in the continuous integration pipeline so here you see again the this quickly line where the issues are located so this is my my lighting talk thank you for your attention and goodbye [Music]",
+  "fetchedAt": "2026-03-14T09:25:29.700Z"
+}

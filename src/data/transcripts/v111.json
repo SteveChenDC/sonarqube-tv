@@ -1,0 +1,1778 @@
+{
+  "videoId": "v111",
+  "youtubeId": "_8L1jTr1CFM",
+  "segments": [
+    {
+      "text": "Alright, hello everyone. Thanks again for joining. Welcome to today's webinar. Achieve clean blazer code with sonar cube and sona cloud.",
+      "offset": 1116,
+      "duration": 10000
+    },
+    {
+      "text": "Today you will learn how you can leverage on a cube and sona cloud to maintain clean code.",
+      "offset": 11116,
+      "duration": 6000
+    },
+    {
+      "text": "In your Blazor applications. Whether you are a.net developer considering adopting Blazor or already using it.",
+      "offset": 17116,
+      "duration": 8000
+    },
+    {
+      "text": "You'll find this webinar to be helpful in terms of learning about more about the My name is Manish Kapoor and I'm joining you from Austin, Texas.",
+      "offset": 25116,
+      "duration": 10000
+    },
+    {
+      "text": "This webinar will be represented by Microsoft and Sonar. A big thank you to Microsoft for collaborating with Sonar on creating this content and delivering this content.",
+      "offset": 35116,
+      "duration": 12000
+    },
+    {
+      "text": "Please allow me to. Go over some essential housekeeping points before we start. Denis, if you can move to the next slide.",
+      "offset": 47116,
+      "duration": 10000
+    },
+    {
+      "text": "Thank you. This session will last about 60 min and include a Q&A at the end. You are invited to submit all your questions via the Zoom Q&A box.",
+      "offset": 57116,
+      "duration": 11000
+    },
+    {
+      "text": "And not the chat box. We have one panelist joining us today. Thank you, Kostin.",
+      "offset": 68116,
+      "duration": 7000
+    },
+    {
+      "text": "Kostan Zahariya from Sonar's Languages Team. He's going to help us answer as many of your questions.",
+      "offset": 75116,
+      "duration": 3000
+    },
+    {
+      "text": "Live during this webinar. So as you put them into the Q&A box. Costin will help us answer some of those questions.",
+      "offset": 78116,
+      "duration": 11000
+    },
+    {
+      "text": "This session will be recorded. And we will send out a link to the recording in the upcoming days via email.",
+      "offset": 89116,
+      "duration": 8000
+    },
+    {
+      "text": "Finally, at the end of this webinar, a short survey will pop up on your screen. We appreciate your feedback.",
+      "offset": 97116,
+      "duration": 7000
+    },
+    {
+      "text": "It helps us improve our content and future webinars. Thank you. In advance for participation participating in the survey.",
+      "offset": 104116,
+      "duration": 9000
+    },
+    {
+      "text": "So without further ado. I would like to introduce you to today today today's presenters. Daniel Roth, And Dennis Troller.",
+      "offset": 113116,
+      "duration": 12000
+    },
+    {
+      "text": "The Daniel Roth is the principal product manager. Bob Blazer on the dotnet team at Microsoft.",
+      "offset": 125116,
+      "duration": 8000
+    },
+    {
+      "text": "He's joining us from Seattle, Washington. Andre is the engineering manager. Of dotnet squad.",
+      "offset": 133116,
+      "duration": 8000
+    },
+    {
+      "text": "That's sooner. He speaks at various developer conferences about tooling and best practices. In the Dotnet ecosystem.",
+      "offset": 141116,
+      "duration": 8000
+    },
+    {
+      "text": "Dennis is the product manager for the Dotnet ecosystem at Sonar. He spent 20 years.",
+      "offset": 149116,
+      "duration": 8000
+    },
+    {
+      "text": "Software development on dotnet before joining sooner. Dennis and Andrea are joining us from Geneva, Switzerland.",
+      "offset": 157116,
+      "duration": 10000
+    },
+    {
+      "text": "Alright, with that I will hand it over to you. I think Daniel you go first over to you.",
+      "offset": 167116,
+      "duration": 7000
+    },
+    {
+      "text": "Alright, thank you so much. Welcome everyone. It's great to be here with My friends at that sonar, it's super exciting to be talking about how Blazor and Sonars technologies can, can work better together.",
+      "offset": 174116,
+      "duration": 14000
+    },
+    {
+      "text": "Let me, go ahead and share my screen if that's all right.",
+      "offset": 188116,
+      "duration": 5000
+    },
+    {
+      "text": "Let's pop this up. What we're going to do is we're going to start out talking just a little bit.",
+      "offset": 193116,
+      "duration": 6000
+    },
+    {
+      "text": "About what is Blazor and how it can help you build your next great web application. So Blazers a modern front-end web framework for.net.",
+      "offset": 199116,
+      "duration": 10000
+    },
+    {
+      "text": "That helps you build web apps fast. With Blazor you can quickly build rich interactive web experiences entirely in.net using HTML and C sharp Blazor is part of A.",
+      "offset": 209116,
+      "duration": 12000
+    },
+    {
+      "text": "Speedonnet core, our umbrella web framework for.net and it ships as part of the.net platform.",
+      "offset": 221116,
+      "duration": 7000
+    },
+    {
+      "text": "You can get started with Blazor in minutes and then stay productive using one language, one framework, one build system, all integrated with.net, a supported platform that you can trust.",
+      "offset": 228116,
+      "duration": 13000
+    },
+    {
+      "text": "Now Blazor is based on a powerful reusable component model that you can use to easily handle UI events, render updates and set up 2 way data bindings.",
+      "offset": 241116,
+      "duration": 11000
+    },
+    {
+      "text": "Blazor comes with many built in components for forms and validation and displaying large virtualized datasets.",
+      "offset": 252116,
+      "duration": 1000
+    },
+    {
+      "text": "There are also many redily available blazer components from the Donnet community. You can use the latest open web standards with Blazor, to build web apps that are installable and that work offline.",
+      "offset": 253116,
+      "duration": 18000
+    },
+    {
+      "text": "We provide Microsoft a rich tooling for Blazor and Visual Studio and Visual Studio code including project templates, support for hot reload and AI powered code editing.",
+      "offset": 271116,
+      "duration": 12000
+    },
+    {
+      "text": "And while you typically write your Blazor apps in C sharp, you can also interoperate with JavaScript libraries if you need to.",
+      "offset": 283116,
+      "duration": 9000
+    },
+    {
+      "text": "Now Blazor's been around for a couple of, few years now. But we just shipped a really big update to Blazer in dotnet 8.",
+      "offset": 292116,
+      "duration": 8000
+    },
+    {
+      "text": "Blazor and Donate is no longer just a client. Web UI framework. It's now a full stack web UI framework.",
+      "offset": 300116,
+      "duration": 2000
+    },
+    {
+      "text": "In dotted 8, Blazer now has advanced service side rendering capabilities, including static server side rendering or SSR, enhanced navigation and form handling and streaming rendering.",
+      "offset": 302116,
+      "duration": 18000
+    },
+    {
+      "text": "These capabilities help you optimize page load time and really polish the user experience. You can then enable a rich interactivity for your components wherever needed, either from the server over a web socket connection or from the client via web assembly.",
+      "offset": 320116,
+      "duration": 16000
+    },
+    {
+      "text": "You can even use both of these interactive render modes together in the same Blazor app. And automatically shift users from the server to the client at runtime to improve upload time and scalability.",
+      "offset": 336116,
+      "duration": 14000
+    },
+    {
+      "text": "Let me show you really quick how easy it is to get started with Blazor and build your first Blazor web app.",
+      "offset": 350116,
+      "duration": 7000
+    },
+    {
+      "text": "So I'm gonna hop over here to Visual Studio. And in visual studio, I'm just gonna go ahead and create a new project and I'm gonna use the new Blazer web app template that we just shipped with. 8.",
+      "offset": 357116,
+      "duration": 8000
+    },
+    {
+      "text": "Go ahead and select that. Click next. I'll pick the default template name and all the default options will change any of those.",
+      "offset": 365116,
+      "duration": 10000
+    },
+    {
+      "text": "And then Visual Studio will generate our first Blazor web app for us. We can go ahead and run it.",
+      "offset": 375116,
+      "duration": 5000
+    },
+    {
+      "text": "Get that going so we can see what it looks like.",
+      "offset": 380116,
+      "duration": 5000
+    },
+    {
+      "text": "There it goes. And it looks like it popped over here on my other screen, but here's the the web application that Visual Studio just generated.",
+      "offset": 385116,
+      "duration": 8000
+    },
+    {
+      "text": "So it's pretty. It's just got a few pages. We have a homepage with just some static HTML content.",
+      "offset": 393116,
+      "duration": 6000
+    },
+    {
+      "text": "That's all being rendered from the server. Then we have this counter page with a button that we can click and the count goes up.",
+      "offset": 399116,
+      "duration": 7000
+    },
+    {
+      "text": "Listen to an example of an interactive component. It handles UI events like clicks on drag on change those types of things.",
+      "offset": 406116,
+      "duration": 7000
+    },
+    {
+      "text": "In this case, it's doing interactive server rendering. All the UI events are being handled over a web socket connection.",
+      "offset": 413116,
+      "duration": 6000
+    },
+    {
+      "text": "And then lastly, we have this weather page where we're rendering a table of weather forecast data again from the from the server.",
+      "offset": 419116,
+      "duration": 6000
+    },
+    {
+      "text": "Now if we go back to Visual Studio we can see the code for each of these pages.",
+      "offset": 425116,
+      "duration": 5000
+    },
+    {
+      "text": "In Home. Dot Razor, this is the component for the homepage. We've just got some, you know, basic static HTML, nothing too fancy here.",
+      "offset": 430116,
+      "duration": 7000
+    },
+    {
+      "text": "In counter dot razor that's our that interactive component and we can see up at the top that it's using an interactive render mode interactive server.",
+      "offset": 437116,
+      "duration": 9000
+    },
+    {
+      "text": "So it sets up that web socket connection and can handle UI events. And then down below we've got a button with an on click event handler that's then calling into our C sharp method every time the button gets clicked to then increment the the current count.",
+      "offset": 446116,
+      "duration": 14000
+    },
+    {
+      "text": "So that's an example of an interactive component. And then in weather dot razor, this is the weather page.",
+      "offset": 460116,
+      "duration": 6000
+    },
+    {
+      "text": "This is kind of interesting. It's like I'll do that. It's using streaming rendering.",
+      "offset": 466116,
+      "duration": 1000
+    },
+    {
+      "text": "What's streaming rendering? Well, that's a way that you can have a page render some initial placeholder content like this loading dot dot dot placeholder while long running async tasks are being run like doing an API call or or getting some data from a database.",
+      "offset": 467116,
+      "duration": 20000
+    },
+    {
+      "text": "So initially you see loading dot dot dot, but when the weather data is available down below, we can see that it's rendering a table and then it's using a normal C sharp for each loop to loop over all the weather forecasts and render the rows in that table.",
+      "offset": 487116,
+      "duration": 15000
+    },
+    {
+      "text": "Down at the bottom we can see how it's actually setting up the weather data. It's not actually doing an actual API call to a proper weather API.",
+      "offset": 502116,
+      "duration": 4000
+    },
+    {
+      "text": "It's simulating an API call with just a task. Delay. And in this case, all the weather data is being just randomly generated in a memory.",
+      "offset": 506116,
+      "duration": 11000
+    },
+    {
+      "text": "So don't plan your next vacation based off of this. This weather data is just just random data.",
+      "offset": 517116,
+      "duration": 6000
+    },
+    {
+      "text": "So that's a really basic Blazor web app, but with a lot of, you know, really powerful capabilities right out of the box.",
+      "offset": 523116,
+      "duration": 6000
+    },
+    {
+      "text": "But what if we want to do something a little bit more involved? Like, whatever you actually wanna, you know, connect to some data.",
+      "offset": 529116,
+      "duration": 6000
+    },
+    {
+      "text": "You know, display a grid of entities, be able to add data to your database. Can we do that too?",
+      "offset": 535116,
+      "duration": 3000
+    },
+    {
+      "text": "And the answer is yes, of course, and we can do it fast. So what I'm gonna do now is I'm gonna update this app to manage a list of movies.",
+      "offset": 538116,
+      "duration": 11000
+    },
+    {
+      "text": "And to do that, I've got a movie class that I've already created. I'm just going to add an existing item here.",
+      "offset": 549116,
+      "duration": 6000
+    },
+    {
+      "text": "This is just a C-sharp class for representing a movie. I'll show you what's in here.",
+      "offset": 555116,
+      "duration": 4000
+    },
+    {
+      "text": "This is a movie class and it's got you know an ID so it can be identified and it's got a title release date genre and price you know just represent a basic movie and I want to be able to start movies in a database and add movies to the database and you know edit them and all that type of stuff.",
+      "offset": 559116,
+      "duration": 15000
+    },
+    {
+      "text": "And in order to do that I'm just gonna right click on this pages folder say add new scaffolded item and we'll use the razor component scaffolder that hooks up to entity framework core and let visual studio do all the hard work for us.",
+      "offset": 574116,
+      "duration": 16000
+    },
+    {
+      "text": "So we've got a bunch of templates that we can pick from here for basic crud operations.",
+      "offset": 590116,
+      "duration": 5000
+    },
+    {
+      "text": "Create read, update, delete. We could pick individual templates, but I'm just gonna select crud so that we get them all.",
+      "offset": 595116,
+      "duration": 7000
+    },
+    {
+      "text": "And then we can select our model class and I'm gonna pick that movie class that we picked created earlier and then we can select our dB context.",
+      "offset": 602116,
+      "duration": 7000
+    },
+    {
+      "text": "I don't have one. So I'm gonna go ahead and create one. Click add and then we'll use SQL Server for our database.",
+      "offset": 609116,
+      "duration": 8000
+    },
+    {
+      "text": "Stop the app that was running previously. We'll go ahead and. Add that and then sit back and relax and let Visual Studio scaffold out a bunch of blazer component pages for us based off of that movie data model that we had it previously.",
+      "offset": 617116,
+      "duration": 15000
+    },
+    {
+      "text": "Alright, after it just takes a second to examine the code and figure out what it needs to do.",
+      "offset": 632116,
+      "duration": 6000
+    },
+    {
+      "text": "There we go. Okay, so now if we look over here in the solution explorer, we can see that we've got this movie page folder now with a whole bunch of razor components that were generated for us.",
+      "offset": 638116,
+      "duration": 6000
+    },
+    {
+      "text": "The one that's showing here on the screen, this is for creating movies. So we've got a form and it's got validation set up and a whole bunch of built-in blazer components for dealing with the various inputs.",
+      "offset": 644116,
+      "duration": 15000
+    },
+    {
+      "text": "If we look at input index that razor, this is where it's displaying all the movies and we can see this is using the new quick grid component that's included with Blazor.",
+      "offset": 659116,
+      "duration": 9000
+    },
+    {
+      "text": "It's a data grid that's fast and functional. So we can, you know, we do pagination and sorting and all those fancy things with our data set.",
+      "offset": 668116,
+      "duration": 8000
+    },
+    {
+      "text": "Speaking of data, we actually need some, movie data. So I'm gonna see the database with just a few movies so that we have something to play around with.",
+      "offset": 676116,
+      "duration": 7000
+    },
+    {
+      "text": "I've got a few here in We'll snip it that I'm just gonna add to my DV context.",
+      "offset": 683116,
+      "duration": 6000
+    },
+    {
+      "text": "And there we go. So I'm just adding this on model creating method that has a bunch of movies and then now we need to run an entity framework core migration to actually set up the database.",
+      "offset": 689116,
+      "duration": 4000
+    },
+    {
+      "text": "So I'm gonna bring up the visual studio terminal, the developer terminal. And then let's make sure we're in the right directory.",
+      "offset": 693116,
+      "duration": 12000
+    },
+    {
+      "text": "We are and I'm just gonna run. What did I save? Let me make sure I so forget to save my my C data so dotnet EF is the command we're gonna use and we're gonna run migrations, add, and then we just give it a name like initial or movies or whatever.",
+      "offset": 705116,
+      "duration": 13000
+    },
+    {
+      "text": "It doesn't really matter. You pick whatever name you'd like. And that will then examine the dB context and figure out what database schema needs to set up in the database and then to apply that we just run dotnet EF database.",
+      "offset": 718116,
+      "duration": 16000
+    },
+    {
+      "text": "Update and that should then run some SQL to set up the database for us and initialize it so that we can see our movies.",
+      "offset": 734116,
+      "duration": 8000
+    },
+    {
+      "text": "And there it goes. Okay, so let's rerun the app. And now we bring back up the browser.",
+      "offset": 742116,
+      "duration": 10000
+    },
+    {
+      "text": "There we go. Okay, and now instead of going to slash weather, we're gonna go to slash movies.",
+      "offset": 752116,
+      "duration": 5000
+    },
+    {
+      "text": "Everything worked practice properly. There we go. So not having to write any code. I can now see all my movies.",
+      "offset": 757116,
+      "duration": 6000
+    },
+    {
+      "text": "We've got this nice data grid control that we can use. I can add a new movie. Let's, ET.",
+      "offset": 763116,
+      "duration": 8000
+    },
+    {
+      "text": "Was June eleventh? Got the release date written down here at 1982. I think that was a sci-fi movie.",
+      "offset": 771116,
+      "duration": 8000
+    },
+    {
+      "text": "Great movies of the eighties and we'll create that and that shows up now in our data grid.",
+      "offset": 779116,
+      "duration": 1000
+    },
+    {
+      "text": "We can view it's details, we can edit it, like if I remove the title and just a try to save that.",
+      "offset": 780116,
+      "duration": 8000
+    },
+    {
+      "text": "It says, nope, that's not valid. So validation is working, add it back, and we're good to go.",
+      "offset": 788116,
+      "duration": 5000
+    },
+    {
+      "text": "We can delete that movie as as well. Okay, so basic crowd functionality without having to write any code.",
+      "offset": 793116,
+      "duration": 6000
+    },
+    {
+      "text": "We can then also tweak and improve this this UI experience. Like you might notice that this this release state column, the column header looks a little weird like it's just taking the property name doesn't have a space in it no problem we can fix that let's go back to index dot razor where we had our quick grid control and I'm gonna set the title on the release date column.",
+      "offset": 799116,
+      "duration": 16000
+    },
+    {
+      "text": "Let's set it to release date. And we should be able to just hot reload that into the app and there it goes.",
+      "offset": 815116,
+      "duration": 8000
+    },
+    {
+      "text": "Now it looks nice. And then, you know, the format of the date doesn't look too great.",
+      "offset": 823116,
+      "duration": 6000
+    },
+    {
+      "text": "Let's, let's tweak that, do format. We'll do month month day day, year year, like we do in the United States.",
+      "offset": 829116,
+      "duration": 7000
+    },
+    {
+      "text": "Like savages. I don't know why we put the month first, but we do. Let's save that and now it looks much nicer, the least state column is updated.",
+      "offset": 836116,
+      "duration": 9000
+    },
+    {
+      "text": "We can also make like the grid interactive like we can make one of the column sortable to make the grid interactive we need to make this page interactive so I'm going to add an interactive render mode like we saw earlier on the counter.",
+      "offset": 845116,
+      "duration": 14000
+    },
+    {
+      "text": "When we use interactive server. And then on the title column, let's add the sortable.",
+      "offset": 859116,
+      "duration": 7000
+    },
+    {
+      "text": "True property so that we can sort by call, but by clicking the column header. Let's go ahead and rerun that to apply the interactive render mode.",
+      "offset": 866116,
+      "duration": 11000
+    },
+    {
+      "text": "Right, there we go. And now you can see I can click on the title and now it's sorting the the title column, Easy Peasy.",
+      "offset": 877116,
+      "duration": 6000
+    },
+    {
+      "text": "We can even add a paginator. If we have like lots of data, we have a built in paganator control.",
+      "offset": 883116,
+      "duration": 5000
+    },
+    {
+      "text": "Let's add a paganator down here at the bottom. You can see the visual studios telling us that, we need to add a pagination state object.",
+      "offset": 888116,
+      "duration": 7000
+    },
+    {
+      "text": "That's so the paginator can coordinate with the quick grid. So let's add a code block.",
+      "offset": 895116,
+      "duration": 3000
+    },
+    {
+      "text": "A C sharp code block down here at the bottom and we'll add a pagination state. Field will move that up.",
+      "offset": 898116,
+      "duration": 10000
+    },
+    {
+      "text": "And we'll say items per page. I don't know, let's do 5, 5 items per page.",
+      "offset": 908116,
+      "duration": 1000
+    },
+    {
+      "text": "Then we just need to specify that state object on the paganator and then also on the quick grid.",
+      "offset": 909116,
+      "duration": 8000
+    },
+    {
+      "text": "It's like pagination is the property. All right, so we go ahead and save that.",
+      "offset": 917116,
+      "duration": 6000
+    },
+    {
+      "text": "And let's go ahead and run it.",
+      "offset": 923116,
+      "duration": 4000
+    },
+    {
+      "text": "Go back to the app. Okay, and now we've got a, ator so we can page through all of our data.",
+      "offset": 927116,
+      "duration": 4000
+    },
+    {
+      "text": "This quick grid supports virtualization as well. You can control the styling, fully customizable.",
+      "offset": 931116,
+      "duration": 3000
+    },
+    {
+      "text": "So just in a few minutes with Blazor you can quickly build a laser web application. You can use interactive features or advanced server-side rendering features.",
+      "offset": 934116,
+      "duration": 12000
+    },
+    {
+      "text": "You can connect to your data. Do forms and validation. With very little work and stay productive fast.",
+      "offset": 946116,
+      "duration": 2000
+    },
+    {
+      "text": "All with the power of dot. Yeah. So I think next what we're gonna see is how you can use sonar sources set of technologies to make your Blazor web apps even better.",
+      "offset": 948116,
+      "duration": 18000
+    },
+    {
+      "text": "Danny.",
+      "offset": 966116,
+      "duration": 2000
+    },
+    {
+      "text": "Thanks a lot. Thanks a lot, Daniel. So that's what I'm, going to present next.",
+      "offset": 968116,
+      "duration": 4000
+    },
+    {
+      "text": "For those of you who don't know what's another does we help developers and development teams write clean code and we offer a solution that does automatic code review and you'll see what that means in the demo that I'm gonna present.",
+      "offset": 972116,
+      "duration": 18000
+    },
+    {
+      "text": "And, I will show you what we have. So. We'll show you what we have.",
+      "offset": 990116,
+      "duration": 8000
+    },
+    {
+      "text": "Prepared and what is already released the support for Blazor in Sonnet tube. And also a sneak peek of what we're preparing, what we're working on, for Sonar L in the ID.",
+      "offset": 998116,
+      "duration": 14000
+    },
+    {
+      "text": "So this is a, Blazor app. It is a blazer app. It is from.net plazer app.",
+      "offset": 1012116,
+      "duration": 6000
+    },
+    {
+      "text": "It is from the.net plazer samples, GitHub repo, you can play with it if you want.",
+      "offset": 1018116,
+      "duration": 4000
+    },
+    {
+      "text": "So it has what, more as the crowd functionalities that, They have already presented life. You know, it has some, a list of contacts that it's queried from local Sqlite database.",
+      "offset": 1022116,
+      "duration": 15000
+    },
+    {
+      "text": "You can view them you can add the contact you can edit the contact or delete it and everything that works.",
+      "offset": 1037116,
+      "duration": 9000
+    },
+    {
+      "text": "What I'm gonna do, I'm gonna modify this, this app and I'm going to introduce some bugs and see what sonar can help developer.",
+      "offset": 1046116,
+      "duration": 7000
+    },
+    {
+      "text": "How, so I can help developers not introduce bugs. So I go to my visuals to instance.",
+      "offset": 1053116,
+      "duration": 7000
+    },
+    {
+      "text": "It was running at the background. I stopped it. I will go. So what before I go to this test dot laser file I'm gonna go to the view contact Raise her.",
+      "offset": 1060116,
+      "duration": 10000
+    },
+    {
+      "text": "So, what this, currently, What the layout is, it has some pages with add contact edit contact home and you contact.",
+      "offset": 1070116,
+      "duration": 13000
+    },
+    {
+      "text": "And those pages are using components in the background. So if you contact for example. Is it's",
+      "offset": 1083116,
+      "duration": 13000
+    },
+    {
+      "text": "He's using, it's, actually isn't using the component because it's a very simple, it's a very simple, it's a very simple page.",
+      "offset": 1096116,
+      "duration": 3000
+    },
+    {
+      "text": "It's a very simple page. And what I want to do is to change this contact ID from int to long because say it's a super successful app and I need to store the ID on 64 bits instead of 32 bits so I am running the app again you see it is loading locally.",
+      "offset": 1099116,
+      "duration": 30000
+    },
+    {
+      "text": "And. I'm now gonna Actually, I get an an exception, you see, and the exception says, okay, I'm able to cost.",
+      "offset": 1129116,
+      "duration": 10000
+    },
+    {
+      "text": "64 to 32 bits and if I go back to my IDE I actually see that actually Sonar was telling me about it.",
+      "offset": 1139116,
+      "duration": 13000
+    },
+    {
+      "text": "So if I go here. I see that actually there is this error from sonar that parameter type end does not match route parameters what we do and the support the rules that we've added for Plaza are complementary to what visual studio.",
+      "offset": 1152116,
+      "duration": 17000
+    },
+    {
+      "text": "Already presents for you. So, in a nutshell, this, This is what you will be able to.",
+      "offset": 1169116,
+      "duration": 9000
+    },
+    {
+      "text": "Get in in with sonar link in the ID and then sooner you is our our on-premise server that help development teams manage quality and it's the same here.",
+      "offset": 1178116,
+      "duration": 9000
+    },
+    {
+      "text": "You can see where is the where is the issue it doesn't match the parameter we educate developers we say What is the problem?",
+      "offset": 1187116,
+      "duration": 13000
+    },
+    {
+      "text": "How can you fix it? And then more information sending to the Microsoft website. Now if I'm gonna I'm gonna get this back to end and let's say I want to make this view contact page only show some of the data say I have a valid reason to pass a query parameter and say, hey, contact filter columns equals name.",
+      "offset": 1200116,
+      "duration": 25000
+    },
+    {
+      "text": "So I only show the name, right? And if I do that and, yeah, well, you already see here query parameter type contact filter forms is not supported, so sonar is already telling me, hey, this is not something that you should do.",
+      "offset": 1225116,
+      "duration": 20000
+    },
+    {
+      "text": "And what will happen if you do this is Well, you will get a similar crash. Basically.",
+      "offset": 1245116,
+      "duration": 12000
+    },
+    {
+      "text": "I click on it and then I get an invalid operation exception question that is gonna be par so you can and these sort of issues because the built application builds so there isn't any build error and if developers don't properly test their solutions they can easily Well, more or less easily depends, but sometimes, you know, you can have no reference exceptions, so you can have such.",
+      "offset": 1257116,
+      "duration": 27000
+    },
+    {
+      "text": "Such bugs as well if you don't test your code properly and for large applications. So this is some things that sonar can help some other bits that I'm not gonna live demo what happens is a rule that tells you hey if you want like Danielle said you can call C shop code from JavaScript but In order to do that, you need to annotate a method with JS in",
+      "offset": 1284116,
+      "duration": 23000
+    },
+    {
+      "text": "vocabul. And we added a root telling you that take method smart that's JS invokable should be public because if you don't make them public.",
+      "offset": 1307116,
+      "duration": 9000
+    },
+    {
+      "text": "It won't work basically the JavaScript. Won't be able to call the C shop code.",
+      "offset": 1316116,
+      "duration": 6000
+    },
+    {
+      "text": "And this is a rule that is actually relevant for NAT 6 and.net 7 component parameters can only receive quite a parameter values in routable components.",
+      "offset": 1322116,
+      "duration": 10000
+    },
+    {
+      "text": "What this means is, okay, view contact. You see it has here a route. And basically you can add such as supply, parameter credit from query.",
+      "offset": 1332116,
+      "duration": 11000
+    },
+    {
+      "text": "Into a routable component, but this component, test that razor does not have a route. So in.net 6 and.net 7 these value wouldn't be passed from where this component was used now they fixed it they actually made it a cascading a parameter which means that in.net 8 it it is a valid scenario.",
+      "offset": 1343116,
+      "duration": 23000
+    },
+    {
+      "text": "The last thing before I hand over to my colleague tennis to talk about sonar, cube is, is just to talk about SNAP Cloud, this showing you the experience inside.",
+      "offset": 1366116,
+      "duration": 14000
+    },
+    {
+      "text": "So. It's the, this is sonic, 10.4, which got released, last week.",
+      "offset": 1380116,
+      "duration": 7000
+    },
+    {
+      "text": "And as I already show you this issue, you can also, you get also normal on normal C sharp rules that we we raise here.",
+      "offset": 1387116,
+      "duration": 10000
+    },
+    {
+      "text": "Okay, it's a rule raising that hey you have a tool you should do something about it and not ship it like this.",
+      "offset": 1397116,
+      "duration": 9000
+    },
+    {
+      "text": "And then all of these issues are have. Comprehensive explanations so developers get educated and get sent to the official documentation from Microsoft.",
+      "offset": 1406116,
+      "duration": 11000
+    },
+    {
+      "text": "About each of these issues. Now, I also wanted to tell you to because I mentioned that for sonar link we are still working on on it And before doing that, maybe, Can you, open the poll to, people joining this okay so you have a poll here where you can share.",
+      "offset": 1417116,
+      "duration": 30000
+    },
+    {
+      "text": "What framework? What, what framework you use for web development in.net in your current, project.",
+      "offset": 1447116,
+      "duration": 1000
+    },
+    {
+      "text": "You use for web development in.net in your current project. So either. Either of these so I'm gonna wait for those.",
+      "offset": 1448116,
+      "duration": 13000
+    },
+    {
+      "text": "I'm gonna present those results later on and then. I just wanna share with you our current. State of what we support.",
+      "offset": 1461116,
+      "duration": 10000
+    },
+    {
+      "text": "For Blazor. So first of all, all our existing C shop rules that are on summer cloud and on YouTube they raise issues on razor templates so dot laser fathers dot CSHK, so dot razor fathers. Dot CSS, Gmail files.",
+      "offset": 1471116,
+      "duration": 9000
+    },
+    {
+      "text": "We don't mean blazer applications or in you know, other razor applications or in, you know, other razor pages or.",
+      "offset": 1480116,
+      "duration": 11000
+    },
+    {
+      "text": "SP NET, ASP, NBC, so only. In.net not in dotnet framework currently but we raise issues on both so summer cloud has not to 10.3 support this and the 5 rules that we've added.",
+      "offset": 1491116,
+      "duration": 15000
+    },
+    {
+      "text": "I showed 4 of them and Denny is my colleague. He's going to show the fifth one.",
+      "offset": 1506116,
+      "duration": 5000
+    },
+    {
+      "text": "They got shipped. In SOARA cube, 10.4 and they are part of the communic addition.",
+      "offset": 1511116,
+      "duration": 8000
+    },
+    {
+      "text": "So you can use them in case you are using the the community edition. And that's. What I wanted to share.",
+      "offset": 1519116,
+      "duration": 12000
+    },
+    {
+      "text": "Love that. I love that how the sonar uses these analyzers, design time analyzers to help you catch those issues.",
+      "offset": 1531116,
+      "duration": 8000
+    },
+    {
+      "text": "You know, before you go into production, before you're running. So you have that, that real time feedback from the, from the tooling while you're in development.",
+      "offset": 1539116,
+      "duration": 7000
+    },
+    {
+      "text": "That's great.",
+      "offset": 1546116,
+      "duration": 1000
+    },
+    {
+      "text": "Yeah, thanks a lot. Thanks a lot. And okay, I stopped sharing, but I want to share one last thing about Sun.",
+      "offset": 1547116,
+      "duration": 9000
+    },
+    {
+      "text": "So. I forgot to say about this. This is currently working progress. So,",
+      "offset": 1556116,
+      "duration": 9000
+    },
+    {
+      "text": "We are working on it and, to bring this the functionality that I demoed, I had the development version on my machine that I demoed in the ID with the boost and to give a quick explanation why we haven't shipped it yet for an installer link is because the source generators for the res, razor templates.",
+      "offset": 1565116,
+      "duration": 23000
+    },
+    {
+      "text": "So there are during the build some source generators generate C shop code for these rays or templates and they work differently at compile time versus design time.",
+      "offset": 1588116,
+      "duration": 6000
+    },
+    {
+      "text": "During the ID so they they have slightly different. Implementations and we need to support basically a different behavior and we will be able to support a blazer and razor analysis in sonar lint only on visual studio 17 dot 9 and newer so Daniels team, helped us.",
+      "offset": 1594116,
+      "duration": 30000
+    },
+    {
+      "text": "With implementing some changes that will get shipped. Today right visual studio 17 dot 9 will be shipped today if i'm not wrong",
+      "offset": 1626116,
+      "duration": 12000
+    },
+    {
+      "text": "17 9 is coming out today. It's just, I think in a couple of hours here.",
+      "offset": 1638116,
+      "duration": 4000
+    },
+    {
+      "text": "Well",
+      "offset": 1642116,
+      "duration": 1000
+    },
+    {
+      "text": "I mean, hopefully by the time if you're watching the recording, I'm guessing by that time, already will ship for people that are live.",
+      "offset": 1643116,
+      "duration": 6000
+    },
+    {
+      "text": "Well, you",
+      "offset": 1649116,
+      "duration": 1000
+    },
+    {
+      "text": "Yeah, we're Just moments away from, Vigil Studio, 17 9 being released as stable.",
+      "offset": 1650116,
+      "duration": 3000
+    },
+    {
+      "text": "He, you, you guys are awesome. I'm really impressed. Andre, Daniel, you are doing live demos and Andre doing it on a development version?",
+      "offset": 1653116,
+      "duration": 10000
+    },
+    {
+      "text": "Your brief soul, man.",
+      "offset": 1663116,
+      "duration": 1000
+    },
+    {
+      "text": "Yeah.",
+      "offset": 1664116,
+      "duration": 2000
+    },
+    {
+      "text": "Yeah.",
+      "offset": 1666116,
+      "duration": 1000
+    },
+    {
+      "text": "Yeah, yeah, it worked. It's worked, yeah?",
+      "offset": 1667116,
+      "duration": 1000
+    },
+    {
+      "text": "It look. The demo gods were good today. Alright, over to Dennis.",
+      "offset": 1668116,
+      "duration": 5000
+    },
+    {
+      "text": "Alright. So, Andre showed you. What happens in the IDE and on Sunna cube, which is the, on-premises version of the server we offering.",
+      "offset": 1673116,
+      "duration": 12000
+    },
+    {
+      "text": "I will show you with the blazer analysis can look like on solar clude cloud. Which is the software service offering.",
+      "offset": 1685116,
+      "duration": 11000
+    },
+    {
+      "text": "Sorry.",
+      "offset": 1696116,
+      "duration": 6000
+    },
+    {
+      "text": "This is actually a little example of what you can see if you analyze project. This project, it's actually the mud blazer library.",
+      "offset": 1702116,
+      "duration": 14000
+    },
+    {
+      "text": "It's a very popular place or component library, an open source one. So I just quickly forked the repository and I run an analysis on it.",
+      "offset": 1716116,
+      "duration": 5000
+    },
+    {
+      "text": "And this is a, a little sample of what you can find. You will see, for example, low impact issues.",
+      "offset": 1721116,
+      "duration": 13000
+    },
+    {
+      "text": "Like encapsulation problems or, Commented out code that's never been removed.",
+      "offset": 1734116,
+      "duration": 6000
+    },
+    {
+      "text": "So as you see here, that's very standard. Problem that you can hit. What's more interesting is, for example, the fixed rule that we added for, Blazer that Andre was talking about.",
+      "offset": 1740116,
+      "duration": 20000
+    },
+    {
+      "text": "You can see it here. For this one, it's about. How you declare even a handlers.",
+      "offset": 1760116,
+      "duration": 7000
+    },
+    {
+      "text": "In that case, we're using a lambda. And that's a very, very common way to handle events in JavaScript, for example.",
+      "offset": 1767116,
+      "duration": 9000
+    },
+    {
+      "text": "The problem is in blazer if you do that in a company that renders hundreds of thousands of items that can lead to performance problems.",
+      "offset": 1776116,
+      "duration": 11000
+    },
+    {
+      "text": "So we want you that you should not do that unless you've really carefully. Made sure that this is not gonna cause performance problems.",
+      "offset": 1787116,
+      "duration": 9000
+    },
+    {
+      "text": "We also tell you why this is an issue and, we also give you some guidance because there's a lot of get them some performance best practices coming from Microsoft.",
+      "offset": 1796116,
+      "duration": 9000
+    },
+    {
+      "text": "So you can follow the link to learn about it and we also have. Benchmarks to tell you exactly what the usage pattern looks like.",
+      "offset": 1805116,
+      "duration": 12000
+    },
+    {
+      "text": "Yeah. Another another one, that could be very interesting. This one is a reliability issue.",
+      "offset": 1817116,
+      "duration": 10000
+    },
+    {
+      "text": "Well, that's basically a runtime bug waiting to happen. Let's see if you go there.",
+      "offset": 1827116,
+      "duration": 5000
+    },
+    {
+      "text": "You will see that's, the analysis looked at this piece of code and the context Bible here in that if He's tested for being null.",
+      "offset": 1832116,
+      "duration": 13000
+    },
+    {
+      "text": "But in the case if it is no, will end up in the else case. And In this expression, we dereference it.",
+      "offset": 1845116,
+      "duration": 9000
+    },
+    {
+      "text": "So we could. Conceivably hit a no reference, which is not something you want to do at runtime.",
+      "offset": 1854116,
+      "duration": 7000
+    },
+    {
+      "text": "So thankfully, you will be once if you run an analysis. From SO. Okay. And the last example that I have is.",
+      "offset": 1861116,
+      "duration": 12000
+    },
+    {
+      "text": "This one. So this one is all about maintainability. This type of error, cognitive complexity, tells you that your method is Well, how to read.",
+      "offset": 1873116,
+      "duration": 13000
+    },
+    {
+      "text": "I'll give you a minute to pick that in.",
+      "offset": 1886116,
+      "duration": 4000
+    },
+    {
+      "text": "Alright, even if you wrote it, Daniel, if you come back in a month, what do you think?",
+      "offset": 1890116,
+      "duration": 6000
+    },
+    {
+      "text": "It's a little long. Little.",
+      "offset": 1896116,
+      "duration": 1000
+    },
+    {
+      "text": "Do you think you'll be able to? Yes, it is. So, you might be familiar with, cyclomatic complexity.",
+      "offset": 1897116,
+      "duration": 3000
+    },
+    {
+      "text": "We came up with a little bit of a different metric to really help find problems. And complex methods.",
+      "offset": 1900116,
+      "duration": 14000
+    },
+    {
+      "text": "Basically this one also counts. So it counts all the branches in your code. And usually, well, the way to sort a problem like that is to break your, your method into smaller methods.",
+      "offset": 1914116,
+      "duration": 15000
+    },
+    {
+      "text": "To be called because a name is much more descriptive than a bunch of code like that. Here when we're in a blazer context so probably the best thing to do would be actually to extract it into components.",
+      "offset": 1929116,
+      "duration": 14000
+    },
+    {
+      "text": "Which is what Blazor is made for. Okay. Right, so this is just a, as I said, this is just a few examples of the things you could find.",
+      "offset": 1943116,
+      "duration": 9000
+    },
+    {
+      "text": "In your Blazor market. And. This is actually an overall view of the code of this library.",
+      "offset": 1952116,
+      "duration": 15000
+    },
+    {
+      "text": "Okay, he tells you exactly how many, how many issues of each type we found in the code. Now, granted, that can be bit frightening.",
+      "offset": 1967116,
+      "duration": 9000
+    },
+    {
+      "text": "3.1,000 1,000 maintainability t-shirts but for 78 7 lines of code. It's not bad.",
+      "offset": 1976116,
+      "duration": 11000
+    },
+    {
+      "text": "I can tell you from experience I run this over one of my applications which had a 20 year old code base that was much more frightening that what this is.",
+      "offset": 1987116,
+      "duration": 12000
+    },
+    {
+      "text": "And in fact, we actually are in contact with the mud blazer maintainers to offer them access to summer cloud, show them how to use it because it's actually completely free for open source project.",
+      "offset": 1999116,
+      "duration": 8000
+    },
+    {
+      "text": "So they just have to, they just, start to sign in. And have them. We use.",
+      "offset": 2007116,
+      "duration": 10000
+    },
+    {
+      "text": "That technical that basically. But yeah, if you run this on your code basis, as I said, it could be a bit frightening.",
+      "offset": 2017116,
+      "duration": 9000
+    },
+    {
+      "text": "Because if you have thousands of issues, you might be wondering, okay, what am I going to do with that?",
+      "offset": 2026116,
+      "duration": 7000
+    },
+    {
+      "text": "And. The problem is you cannot like just stop development and spend month correcting the issues. You have to have some kind of method to deal with that amount of debt.",
+      "offset": 2033116,
+      "duration": 12000
+    },
+    {
+      "text": "And that's exactly what our products try to offer you. It's a way to deal with that debt over time.",
+      "offset": 2045116,
+      "duration": 10000
+    },
+    {
+      "text": "And this is called Clean as you could. So clean as you could, it's as I said it's a method.",
+      "offset": 2055116,
+      "duration": 10000
+    },
+    {
+      "text": "That allows you to gradually reduce your technical debt other time. And how does that work? Well, in a nutshell.",
+      "offset": 2065116,
+      "duration": 10000
+    },
+    {
+      "text": "The only thing you have to do is to ensure that each new piece of code that you introduce is clean.",
+      "offset": 2075116,
+      "duration": 2000
+    },
+    {
+      "text": "And when I say new piece of code, I mean code that you add because you're creating a new functionality so it's a new method, new class file.",
+      "offset": 2077116,
+      "duration": 13000
+    },
+    {
+      "text": "What have you? Oh, it's good that you modify. Because you came back to a specific method and you are trying to deal with a customer issue.",
+      "offset": 2090116,
+      "duration": 10000
+    },
+    {
+      "text": "So you're modifying the existing code. Okay. And why is that important? It's because when you are, modifying existing code or creating a new piece of code.",
+      "offset": 2100116,
+      "duration": 12000
+    },
+    {
+      "text": "It's in your head. Basically you own that piece of code. So it's pretty easy if you've been one that doesn't issue and we explain what the issue is, it's very easy to correct it.",
+      "offset": 2112116,
+      "duration": 10000
+    },
+    {
+      "text": "There's no there's no context switch. Okay, that that's what kills productivity.",
+      "offset": 2122116,
+      "duration": 5000
+    },
+    {
+      "text": "When you have to come back and deal with 16 problems. So it's important to deal with code.",
+      "offset": 2127116,
+      "duration": 6000
+    },
+    {
+      "text": "As it is produced. So why does it work? Well, let's imagine this is your code base before you start using clean as you go.",
+      "offset": 2133116,
+      "duration": 10000
+    },
+    {
+      "text": "This one is much, much worse than the blazer was, as you can see. If you imagine each square is a piece of code, so We could say a line of code, we could say a file.",
+      "offset": 2143116,
+      "duration": 11000
+    },
+    {
+      "text": "Doesn't really matter. When you start applying clean as you code, what's gonna happen is after a year This is what you could basically look like.",
+      "offset": 2154116,
+      "duration": 12000
+    },
+    {
+      "text": "On the right you have your new pieces of code and you made sure they were clean then you the brand new.",
+      "offset": 2166116,
+      "duration": 5000
+    },
+    {
+      "text": "They're perfect. And on the left, this is where you had to touch the code to correct issues or to introduce a new method, for example, because you had a new functionality support.",
+      "offset": 2171116,
+      "duration": 12000
+    },
+    {
+      "text": "So we can you can already see. That the code base is better than it was one year ago. And you should continue applying that concept after 2 years.",
+      "offset": 2183116,
+      "duration": 10000
+    },
+    {
+      "text": "This is what it will look like. And after 3 years. Well, it's even better.",
+      "offset": 2193116,
+      "duration": 8000
+    },
+    {
+      "text": "Granted, there are still problems here. But at the same time, this code has been running in production for 3 years already.",
+      "offset": 2201116,
+      "duration": 7000
+    },
+    {
+      "text": "So. Normally these are not major problems and they will build they will be dealt with over time when you get to it.",
+      "offset": 2208116,
+      "duration": 10000
+    },
+    {
+      "text": "Now, you might be wondering why. Why do we say that that works? Well, if you search on the internet for something called the Git of Theseus, someone ran a study on big open source projects on get And they showed that in those big open source projects on the average, any given line of code as a 50% chance of not being there.",
+      "offset": 2218116,
+      "duration": 30000
+    },
+    {
+      "text": "So from that kind of from that fact you can assume that if you apply this methods in 5 years, 50% of your code will be clean.",
+      "offset": 2249116,
+      "duration": 12000
+    },
+    {
+      "text": "And, we actually apply that every day up so now. And we can tell you it works.",
+      "offset": 2261116,
+      "duration": 8000
+    },
+    {
+      "text": "So how do you actually do that? Because, it's just Not enough to have a method.",
+      "offset": 2269116,
+      "duration": 7000
+    },
+    {
+      "text": "You need to have the tools that help you, pinpoint the problems and make sure you deal with an in good time.",
+      "offset": 2276116,
+      "duration": 7000
+    },
+    {
+      "text": "So it's actually pretty simple. The first thing you have to do. It's to decide what new code means. Okay.",
+      "offset": 2283116,
+      "duration": 10000
+    },
+    {
+      "text": "So it can be 2 things. You have new code in the PR that you're actually working on. Okay.",
+      "offset": 2293116,
+      "duration": 2000
+    },
+    {
+      "text": "But that's not enough. Maybe you have quick fixes that. Actually can be committed directly to master it's not the best policy but it can happen or for different reasons.",
+      "offset": 2295116,
+      "duration": 17000
+    },
+    {
+      "text": "So you have to define also what you could means in the context of your whole application. And we offer 2 options.",
+      "offset": 2312116,
+      "duration": 6000
+    },
+    {
+      "text": "One is, okay, new code is everything that has been written. Since we published the last version. That's if you if you ship once a year for example or every 3 months or otherwise if you if you do continuous delivery we suggest you use a number of days for example everything in the last 30 30 days is considered new and should be dealt with before you actually ship.",
+      "offset": 2318116,
+      "duration": 29000
+    },
+    {
+      "text": "Okay, the second thing you have to do is to define your standards. What do I mean by that?",
+      "offset": 2347116,
+      "duration": 7000
+    },
+    {
+      "text": "Well, It's the rules basically that you are gonna apply as a team. You decide. Which of the rules that we provide.",
+      "offset": 2354116,
+      "duration": 9000
+    },
+    {
+      "text": "You're gonna you're gonna abide by by default we have a what's called a quality profile that contains 313 rules that are active.",
+      "offset": 2363116,
+      "duration": 11000
+    },
+    {
+      "text": "But we actually have many more than that. Upwards of 500, I think. If I'm not mistaken, Andway.",
+      "offset": 2374116,
+      "duration": 11000
+    },
+    {
+      "text": "400, sorry.",
+      "offset": 2385116,
+      "duration": 1000
+    },
+    {
+      "text": "We have like 400. 5,450. So you can see here on Dennis's, screen that there are basically 313 active rules and 145 inactive rules.",
+      "offset": 2386116,
+      "duration": 14000
+    },
+    {
+      "text": "Thank you.",
+      "offset": 2400116,
+      "duration": 1000
+    },
+    {
+      "text": "So basically that adds up to roughly Yeah, 450. Okay.",
+      "offset": 2401116,
+      "duration": 2000
+    },
+    {
+      "text": "So you decide which one actually to actually make sense in your context. Okay, and then you enforce your standards on new code.",
+      "offset": 2403116,
+      "duration": 4000
+    },
+    {
+      "text": "By making sure that PRs cannot be merged. And software cannot be released if there is, is there are issues.",
+      "offset": 2407116,
+      "duration": 14000
+    },
+    {
+      "text": "So how do you do that when you define what we call a quality gate? Like qualitative is a way to prevent merging.",
+      "offset": 2421116,
+      "duration": 7000
+    },
+    {
+      "text": "For example, if you're using GitHub, you get a workflow, will I, your code and will fail the build if you don't, if you don't match the quality that you've set.",
+      "offset": 2428116,
+      "duration": 15000
+    },
+    {
+      "text": "Normally recommend that you go for no issues at all. And this actually works because that's what we what we do.",
+      "offset": 2443116,
+      "duration": 8000
+    },
+    {
+      "text": "But you're welcome to let go a little bit on the maintainability for example if you accept a little bit of technical debt over time.",
+      "offset": 2451116,
+      "duration": 10000
+    },
+    {
+      "text": "There's also of course,",
+      "offset": 2461116,
+      "duration": 3000
+    },
+    {
+      "text": "Quality gates. Verify that your coverage is sufficient.",
+      "offset": 2464116,
+      "duration": 7000
+    },
+    {
+      "text": "And of course this only works if you analyze regularly. So after each. Pull request push. And after each merge or push online.",
+      "offset": 2471116,
+      "duration": 10000
+    },
+    {
+      "text": "And the way you do that, well, that's what I explained. You go to your GitHub repository, for example.",
+      "offset": 2481116,
+      "duration": 6000
+    },
+    {
+      "text": "And you create a workflow that will invoke Just on your code base. Either on push, on main.",
+      "offset": 2487116,
+      "duration": 12000
+    },
+    {
+      "text": "Or on full requests.",
+      "offset": 2499116,
+      "duration": 6000
+    },
+    {
+      "text": "And hopefully to do that before you even get to PR or to the main branch. You have a third layer of difference.",
+      "offset": 2505116,
+      "duration": 7000
+    },
+    {
+      "text": "It's actually your first one. And Android touched on that is the IDE extension. It's called Sunderland.",
+      "offset": 2512116,
+      "duration": 9000
+    },
+    {
+      "text": "We provided for Vision Studio, V just studio code. Or jet brains IDs so you're covered whichever your idea of choice is for.",
+      "offset": 2521116,
+      "duration": 11000
+    },
+    {
+      "text": "And this will allow you to catch most of the issues live in the ID, thanks to Microsoft's Rosslyn technology, which is.",
+      "offset": 2532116,
+      "duration": 9000
+    },
+    {
+      "text": "Actually, really, really cool. Okay. And well, that's it in a shell. That's how you can reduce your deaths on.",
+      "offset": 2541116,
+      "duration": 10000
+    },
+    {
+      "text": "You're blazer apps or your everyday apps. Thanks to So in a cloud. And with that, I will give.",
+      "offset": 2551116,
+      "duration": 9000
+    },
+    {
+      "text": "The mic back to manage.",
+      "offset": 2560116,
+      "duration": 4000
+    },
+    {
+      "text": "Alright. Thank you, Daniel, Andre and Dennis for an insightful session. I was particularly impressed with all 3 of you.",
+      "offset": 2564116,
+      "duration": 7000
+    },
+    {
+      "text": "Doing a live demo. Pretty cool. Awesome. As we move into the next part of this webinar, which is Q&A, it's time for Q&A as I gather the questions for you.",
+      "offset": 2571116,
+      "duration": 12000
+    },
+    {
+      "text": "I briefly wanted to share information about our upcoming webinar. That's Sona will be hosting with you all on February, 20 s.",
+      "offset": 2583116,
+      "duration": 12000
+    },
+    {
+      "text": "The information is up there on the slide. There's a link also that we'll share in the chat.",
+      "offset": 2595116,
+      "duration": 6000
+    },
+    {
+      "text": "We would love to have you join the next webinar. And, You'll also see a brief poll to let us know if you'd like to be contacted.",
+      "offset": 2601116,
+      "duration": 10000
+    },
+    {
+      "text": "Yes.",
+      "offset": 2611116,
+      "duration": 1000
+    },
+    {
+      "text": "And you would, you know, so please do participate if you can. If you'd like to know more about the solutions.",
+      "offset": 2612116,
+      "duration": 7000
+    },
+    {
+      "text": "As a reminder, after the Q&A, a short survey will appear. And we greatly appreciate your feedback.",
+      "offset": 2619116,
+      "duration": 7000
+    },
+    {
+      "text": "And with that, I will start. Looking at some of the questions that have come up. And asked our speakers here to help me answer those questions.",
+      "offset": 2626116,
+      "duration": 9000
+    },
+    {
+      "text": "And And one thing I can quickly share the results of the survey while you're looking for the questions.",
+      "offset": 2635116,
+      "duration": 7000
+    },
+    {
+      "text": "Sure. Sure.",
+      "offset": 2642116,
+      "duration": 1000
+    },
+    {
+      "text": "So regarding that we have so 57 participants answered to the question around what framework they use for development.net and 51% are using blazer 5% is Pinet Quoraser pages.",
+      "offset": 2643116,
+      "duration": 17000
+    },
+    {
+      "text": "18% is peanut quarter VC, 4% is PINET framework. And let's see, MVC, 11% something else and 12% don't do web developments with thanks everyone for answering the initial poll.",
+      "offset": 2660116,
+      "duration": 19000
+    },
+    {
+      "text": "Alright. Thank you, Andre. Let's take a few questions.",
+      "offset": 2679116,
+      "duration": 5000
+    },
+    {
+      "text": "There are quite a few of them. I'm not sure if we'll be able to get to all of them.",
+      "offset": 2684116,
+      "duration": 3000
+    },
+    {
+      "text": "But let me start with the blazer questions first, if that's okay. So I think these are probably for Daniel, but feel free to jump in Andre or Dennis if you would like to add something.",
+      "offset": 2687116,
+      "duration": 13000
+    },
+    {
+      "text": "How does Blazor compare to other popular JavaScript frameworks?",
+      "offset": 2700116,
+      "duration": 6000
+    },
+    {
+      "text": "That's a great question. So, well, I mean, the first obvious difference is that with Blaser, you're writing C sharp instead of writing, writing JavaScript typically, which is what you use for most popular JavaScript frameworks like React or Hangular Review.",
+      "offset": 2706116,
+      "duration": 13000
+    },
+    {
+      "text": "Oh, so you get to have the productivity of a modern C sharp language, strong typing, and then access to the entire dotnet platform through C sharp.",
+      "offset": 2719116,
+      "duration": 11000
+    },
+    {
+      "text": "Blazor is similar if, if you were to kind of squint that blazer, it probably looks the most similar to React in terms of how its component model works and and functions.",
+      "offset": 2730116,
+      "duration": 10000
+    },
+    {
+      "text": "So if you're familiar with React and you do some blazer development, you might feel a little bit like, oh, this kind of feels like react but done with Donnet and C shark with some of the.net niceties.",
+      "offset": 2740116,
+      "duration": 10000
+    },
+    {
+      "text": "Blazer also is the server piece for Blazor will be based off of A. Smit core.",
+      "offset": 2750116,
+      "duration": 7000
+    },
+    {
+      "text": "So you're getting the power and performance of the dotnet runtime on the server. Like there's, I think there's very few developer frameworks on the planet that can beat A.",
+      "offset": 2757116,
+      "duration": 6000
+    },
+    {
+      "text": "Smit Corps when it comes to performance on the server in terms of throughputs and server use resource utilization.",
+      "offset": 2763116,
+      "duration": 11000
+    },
+    {
+      "text": "So all the static server side rendering support that we added in Blazor, the even the interactive server rendering is leveraging that A.",
+      "offset": 2774116,
+      "duration": 2000
+    },
+    {
+      "text": "Smith or back end. But from other perspectives, things are very similar. It's a component model.",
+      "offset": 2776116,
+      "duration": 10000
+    },
+    {
+      "text": "It's a diff based rendering engine like Blazor keeps track of what's in the DOM and what you're trying to render and only applies the the changes to the browser DOM that you've rendered in your components.",
+      "offset": 2786116,
+      "duration": 12000
+    },
+    {
+      "text": "And in some ways it's very similar. The big differences are that it's dot net, C sharp, powered by mic or on the back end.",
+      "offset": 2798116,
+      "duration": 10000
+    },
+    {
+      "text": "Alright, thank you, Daniel. Next question is. How does it look?",
+      "offset": 2808116,
+      "duration": 8000
+    },
+    {
+      "text": "Pleasers, Webassembly, Blizzard, Webasm.",
+      "offset": 2816116,
+      "duration": 3000
+    },
+    {
+      "text": "Yeah, yeah, I saw that question as well. I didn't I didn't demo that just because of a constraints of time.",
+      "offset": 2819116,
+      "duration": 4000
+    },
+    {
+      "text": "But when you're building a blazer web app like you have this choice like you can make your components interactive from either the server or from the client.",
+      "offset": 2823116,
+      "duration": 12000
+    },
+    {
+      "text": "And everything I showed, that was all done from the server because in many ways it's simpler like your codes already running on the server all your code runs on the server and so if you need to talk to the database or server-side resources, well you're already there and you can still do those interactive experiences like you normally think of doing with a client-side JavaScript code, you can handle all of that",
+      "offset": 2835116,
+      "duration": 21000
+    },
+    {
+      "text": "from the server by having that real-time connection with the browser. But you can also move code down to the browser too and run it client side on the user's machine using Webassembly.",
+      "offset": 2856116,
+      "duration": 9000
+    },
+    {
+      "text": "When you create your Blazor web app, there's an option that asks you at the beginning like well what interactivity modes do you want to enable and by default it will just enable the server one.",
+      "offset": 2865116,
+      "duration": 10000
+    },
+    {
+      "text": "If you want Webassembly to you just flip the option to do web assembly and that will set you up with not just one project for the server but also a client project.",
+      "offset": 2875116,
+      "duration": 11000
+    },
+    {
+      "text": "For the client, cause there'll be code that's being built. Not just for the server, but code that needs to now be transferred across the network to the client.",
+      "offset": 2886116,
+      "duration": 4000
+    },
+    {
+      "text": "So then that's where you would stick all your code that you want to run client side on the users machine, but you write your components the same.",
+      "offset": 2890116,
+      "duration": 8000
+    },
+    {
+      "text": "They're still dot razor files on click handlers, you know, component syntax for for defining the UI.",
+      "offset": 2898116,
+      "duration": 7000
+    },
+    {
+      "text": "It's just running on the the other side of the of the wire on the users device and you can pick how much code you want to run on Webassembly and how much you want to run on the server.",
+      "offset": 2905116,
+      "duration": 10000
+    },
+    {
+      "text": "You could say, you know, just a few pages I want to push down to the client or you might decide, you know what, the whole app should run client side on Webassembly.",
+      "offset": 2915116,
+      "duration": 7000
+    },
+    {
+      "text": "I don't want any of it running from from the server. That's possible too. There is also an additional template, which is the Blazer Webassembly standalone app template.",
+      "offset": 2922116,
+      "duration": 10000
+    },
+    {
+      "text": "It's different from the Blazor web app template and it's different because it's designed to run purely client-side like without any server piece at all.",
+      "offset": 2932116,
+      "duration": 8000
+    },
+    {
+      "text": "The Blazor web app template is optimized for leveraging the server to make experiences.",
+      "offset": 2940116,
+      "duration": 4000
+    },
+    {
+      "text": "You know, doing prerendering, adding server-side rendering where you want it. The Blazor Webassembly stand-alone template will only run on the client and it's for hosts that are like like static site hosts like GitHub pages or Azure has one of these like Azure static web apps where you just want to publish a bunch of",
+      "offset": 2944116,
+      "duration": 18000
+    },
+    {
+      "text": "static files and there's no server piece so you can use the Blazor Webassembly standalone app template for that particular case.",
+      "offset": 2962116,
+      "duration": 7000
+    },
+    {
+      "text": "Alright, thank you, Daniel. I have a couple of questions on the sonar side as well. Let me go over them and I think I know the answer to a couple of them but Andrea feel free to add to my answers or inputs.",
+      "offset": 2969116,
+      "duration": 12000
+    },
+    {
+      "text": "How does sooner cube developer addition automatically recognize or not how does does sonar cube developer addition automatically recognize blazer applications to or do we have to enable something specifically?",
+      "offset": 2981116,
+      "duration": 13000
+    },
+    {
+      "text": "And what version of the developer addition do we need for this? Yes, so yeah, you can automatically scan Blazor projects.",
+      "offset": 2994116,
+      "duration": 9000
+    },
+    {
+      "text": "You don't need any special configuration. The, you don't need any special configuration. The support starts with Suna cube, 10.4 onwards.",
+      "offset": 3003116,
+      "duration": 6000
+    },
+    {
+      "text": "It's available in community edition. The support starts with SOONA cube, 10.4 onwards.",
+      "offset": 3009116,
+      "duration": 2000
+    },
+    {
+      "text": "It's available in community addition and higher. And, Yeah, anything else you add there, Andre?",
+      "offset": 3011116,
+      "duration": 7000
+    },
+    {
+      "text": "It's also available in. It's also in Suna Club. Yeah.",
+      "offset": 3018116,
+      "duration": 1000
+    },
+    {
+      "text": "You said it also it. And it's and analysis. So data analysis is available also in.",
+      "offset": 3019116,
+      "duration": 8000
+    },
+    {
+      "text": "Community, which is free and open source and anybody can can use it can download it. So, sorry, I was answering a question in the Q&A and, you can, so it is enabled by default and in case you don't want it, you, you can disable it from the settings of the project, but it is enabled by default.",
+      "offset": 3027116,
+      "duration": 22000
+    },
+    {
+      "text": "Cool. There was a question about pricing. I think this keeps coming up again and again. So I'll just answer that.",
+      "offset": 3049116,
+      "duration": 6000
+    },
+    {
+      "text": "How about the prices of this great tool? Will there be a free version? So we have 2 products, 3 products actually.",
+      "offset": 3055116,
+      "duration": 2000
+    },
+    {
+      "text": "So, our link ID is always free. It's a free XID extension works with most of the IDs.",
+      "offset": 3057116,
+      "duration": 9000
+    },
+    {
+      "text": "So in a cube comes in both community addition and commercial additions. So community edition is open source based and is always free and does include.",
+      "offset": 3066116,
+      "duration": 3000
+    },
+    {
+      "text": "Visa support and 19 other languages if I'm not mistaken. If you want more than 19 languages, we go up to about 30 plus languages with Sonar cube.",
+      "offset": 3069116,
+      "duration": 17000
+    },
+    {
+      "text": "Enterprise edition and there's also the developer addition available and the data center edition available those the commercial editions of course come with the price based on lines of code.",
+      "offset": 3086116,
+      "duration": 11000
+    },
+    {
+      "text": "And then of course Sona Cloud. Is a cloud version cloud base offering we have 3 analysis for all.",
+      "offset": 3097116,
+      "duration": 9000
+    },
+    {
+      "text": "Open source projects, public projects. 48 projects for private projects there's a fee is again based on lines of code.",
+      "offset": 3106116,
+      "duration": 9000
+    },
+    {
+      "text": "So we have those 3 products. In the ID is sooner linked. On premises or self-managed sona cube.",
+      "offset": 3115116,
+      "duration": 8000
+    },
+    {
+      "text": "And Sunna Cloud is a SAS based offling. I hope that answers that question. There's one last question which I'll take and probably we can wrap it up after that.",
+      "offset": 3123116,
+      "duration": 11000
+    },
+    {
+      "text": "Is tanked analysis available for Blazor. I think that's a question for Andre or Dennis.",
+      "offset": 3134116,
+      "duration": 7000
+    },
+    {
+      "text": "So currently it's not yet. It is on the roadmap if I'm not wrong, Dennis.",
+      "offset": 3141116,
+      "duration": 7000
+    },
+    {
+      "text": "Yes, I believe it is.",
+      "offset": 3148116,
+      "duration": 1000
+    },
+    {
+      "text": "Yeah, so hopefully this year we're gonna have it for Blazor as well.",
+      "offset": 3149116,
+      "duration": 6000
+    },
+    {
+      "text": "Nice, excellent.",
+      "offset": 3155116,
+      "duration": 2000
+    },
+    {
+      "text": "Excellent. Excellent. I think we have covered most of the questions. If we have left any, we will.",
+      "offset": 3157116,
+      "duration": 8000
+    },
+    {
+      "text": "Answer them and you know share those results. On our community forum. And let me wrap this up. We are, almost, at the top of the are.",
+      "offset": 3165116,
+      "duration": 11000
+    },
+    {
+      "text": "So thank you again, Daniel, Andrea and Dennis and thanks to all of you who joined the webinar today and asked us questions.",
+      "offset": 3176116,
+      "duration": 8000
+    },
+    {
+      "text": "Sorry if we missed one of your questions, but we will get to it. We will answer those questions and our community is a great place.",
+      "offset": 3184116,
+      "duration": 7000
+    },
+    {
+      "text": "To pose any additional questions that you may have. You will also be able to find the replay and the Q&A of today's session being posted there.",
+      "offset": 3191116,
+      "duration": 11000
+    },
+    {
+      "text": "And do check out sonosource.com for additional information about. How you can use clean as you code and about our products.",
+      "offset": 3202116,
+      "duration": 8000
+    },
+    {
+      "text": "And thank you again in advance for providing your feedback for the survey today. That will shortly pop up on your screen.",
+      "offset": 3210116,
+      "duration": 8000
+    },
+    {
+      "text": "And we look forward to seeing you all in the next webinar. Thank you. Have a good one.",
+      "offset": 3218116,
+      "duration": 6000
+    }
+  ],
+  "fullText": "Alright, hello everyone. Thanks again for joining. Welcome to today's webinar. Achieve clean blazer code with sonar cube and sona cloud. Today you will learn how you can leverage on a cube and sona cloud to maintain clean code. In your Blazor applications. Whether you are a.net developer considering adopting Blazor or already using it. You'll find this webinar to be helpful in terms of learning about more about the My name is Manish Kapoor and I'm joining you from Austin, Texas. This webinar will be represented by Microsoft and Sonar. A big thank you to Microsoft for collaborating with Sonar on creating this content and delivering this content. Please allow me to. Go over some essential housekeeping points before we start. Denis, if you can move to the next slide. Thank you. This session will last about 60 min and include a Q&A at the end. You are invited to submit all your questions via the Zoom Q&A box. And not the chat box. We have one panelist joining us today. Thank you, Kostin. Kostan Zahariya from Sonar's Languages Team. He's going to help us answer as many of your questions. Live during this webinar. So as you put them into the Q&A box. Costin will help us answer some of those questions. This session will be recorded. And we will send out a link to the recording in the upcoming days via email. Finally, at the end of this webinar, a short survey will pop up on your screen. We appreciate your feedback. It helps us improve our content and future webinars. Thank you. In advance for participation participating in the survey. So without further ado. I would like to introduce you to today today today's presenters. Daniel Roth, And Dennis Troller. The Daniel Roth is the principal product manager. Bob Blazer on the dotnet team at Microsoft. He's joining us from Seattle, Washington. Andre is the engineering manager. Of dotnet squad. That's sooner. He speaks at various developer conferences about tooling and best practices. In the Dotnet ecosystem. Dennis is the product manager for the Dotnet ecosystem at Sonar. He spent 20 years. Software development on dotnet before joining sooner. Dennis and Andrea are joining us from Geneva, Switzerland. Alright, with that I will hand it over to you. I think Daniel you go first over to you. Alright, thank you so much. Welcome everyone. It's great to be here with My friends at that sonar, it's super exciting to be talking about how Blazor and Sonars technologies can, can work better together. Let me, go ahead and share my screen if that's all right. Let's pop this up. What we're going to do is we're going to start out talking just a little bit. About what is Blazor and how it can help you build your next great web application. So Blazers a modern front-end web framework for.net. That helps you build web apps fast. With Blazor you can quickly build rich interactive web experiences entirely in.net using HTML and C sharp Blazor is part of A. Speedonnet core, our umbrella web framework for.net and it ships as part of the.net platform. You can get started with Blazor in minutes and then stay productive using one language, one framework, one build system, all integrated with.net, a supported platform that you can trust. Now Blazor is based on a powerful reusable component model that you can use to easily handle UI events, render updates and set up 2 way data bindings. Blazor comes with many built in components for forms and validation and displaying large virtualized datasets. There are also many redily available blazer components from the Donnet community. You can use the latest open web standards with Blazor, to build web apps that are installable and that work offline. We provide Microsoft a rich tooling for Blazor and Visual Studio and Visual Studio code including project templates, support for hot reload and AI powered code editing. And while you typically write your Blazor apps in C sharp, you can also interoperate with JavaScript libraries if you need to. Now Blazor's been around for a couple of, few years now. But we just shipped a really big update to Blazer in dotnet 8. Blazor and Donate is no longer just a client. Web UI framework. It's now a full stack web UI framework. In dotted 8, Blazer now has advanced service side rendering capabilities, including static server side rendering or SSR, enhanced navigation and form handling and streaming rendering. These capabilities help you optimize page load time and really polish the user experience. You can then enable a rich interactivity for your components wherever needed, either from the server over a web socket connection or from the client via web assembly. You can even use both of these interactive render modes together in the same Blazor app. And automatically shift users from the server to the client at runtime to improve upload time and scalability. Let me show you really quick how easy it is to get started with Blazor and build your first Blazor web app. So I'm gonna hop over here to Visual Studio. And in visual studio, I'm just gonna go ahead and create a new project and I'm gonna use the new Blazer web app template that we just shipped with. 8. Go ahead and select that. Click next. I'll pick the default template name and all the default options will change any of those. And then Visual Studio will generate our first Blazor web app for us. We can go ahead and run it. Get that going so we can see what it looks like. There it goes. And it looks like it popped over here on my other screen, but here's the the web application that Visual Studio just generated. So it's pretty. It's just got a few pages. We have a homepage with just some static HTML content. That's all being rendered from the server. Then we have this counter page with a button that we can click and the count goes up. Listen to an example of an interactive component. It handles UI events like clicks on drag on change those types of things. In this case, it's doing interactive server rendering. All the UI events are being handled over a web socket connection. And then lastly, we have this weather page where we're rendering a table of weather forecast data again from the from the server. Now if we go back to Visual Studio we can see the code for each of these pages. In Home. Dot Razor, this is the component for the homepage. We've just got some, you know, basic static HTML, nothing too fancy here. In counter dot razor that's our that interactive component and we can see up at the top that it's using an interactive render mode interactive server. So it sets up that web socket connection and can handle UI events. And then down below we've got a button with an on click event handler that's then calling into our C sharp method every time the button gets clicked to then increment the the current count. So that's an example of an interactive component. And then in weather dot razor, this is the weather page. This is kind of interesting. It's like I'll do that. It's using streaming rendering. What's streaming rendering? Well, that's a way that you can have a page render some initial placeholder content like this loading dot dot dot placeholder while long running async tasks are being run like doing an API call or or getting some data from a database. So initially you see loading dot dot dot, but when the weather data is available down below, we can see that it's rendering a table and then it's using a normal C sharp for each loop to loop over all the weather forecasts and render the rows in that table. Down at the bottom we can see how it's actually setting up the weather data. It's not actually doing an actual API call to a proper weather API. It's simulating an API call with just a task. Delay. And in this case, all the weather data is being just randomly generated in a memory. So don't plan your next vacation based off of this. This weather data is just just random data. So that's a really basic Blazor web app, but with a lot of, you know, really powerful capabilities right out of the box. But what if we want to do something a little bit more involved? Like, whatever you actually wanna, you know, connect to some data. You know, display a grid of entities, be able to add data to your database. Can we do that too? And the answer is yes, of course, and we can do it fast. So what I'm gonna do now is I'm gonna update this app to manage a list of movies. And to do that, I've got a movie class that I've already created. I'm just going to add an existing item here. This is just a C-sharp class for representing a movie. I'll show you what's in here. This is a movie class and it's got you know an ID so it can be identified and it's got a title release date genre and price you know just represent a basic movie and I want to be able to start movies in a database and add movies to the database and you know edit them and all that type of stuff. And in order to do that I'm just gonna right click on this pages folder say add new scaffolded item and we'll use the razor component scaffolder that hooks up to entity framework core and let visual studio do all the hard work for us. So we've got a bunch of templates that we can pick from here for basic crud operations. Create read, update, delete. We could pick individual templates, but I'm just gonna select crud so that we get them all. And then we can select our model class and I'm gonna pick that movie class that we picked created earlier and then we can select our dB context. I don't have one. So I'm gonna go ahead and create one. Click add and then we'll use SQL Server for our database. Stop the app that was running previously. We'll go ahead and. Add that and then sit back and relax and let Visual Studio scaffold out a bunch of blazer component pages for us based off of that movie data model that we had it previously. Alright, after it just takes a second to examine the code and figure out what it needs to do. There we go. Okay, so now if we look over here in the solution explorer, we can see that we've got this movie page folder now with a whole bunch of razor components that were generated for us. The one that's showing here on the screen, this is for creating movies. So we've got a form and it's got validation set up and a whole bunch of built-in blazer components for dealing with the various inputs. If we look at input index that razor, this is where it's displaying all the movies and we can see this is using the new quick grid component that's included with Blazor. It's a data grid that's fast and functional. So we can, you know, we do pagination and sorting and all those fancy things with our data set. Speaking of data, we actually need some, movie data. So I'm gonna see the database with just a few movies so that we have something to play around with. I've got a few here in We'll snip it that I'm just gonna add to my DV context. And there we go. So I'm just adding this on model creating method that has a bunch of movies and then now we need to run an entity framework core migration to actually set up the database. So I'm gonna bring up the visual studio terminal, the developer terminal. And then let's make sure we're in the right directory. We are and I'm just gonna run. What did I save? Let me make sure I so forget to save my my C data so dotnet EF is the command we're gonna use and we're gonna run migrations, add, and then we just give it a name like initial or movies or whatever. It doesn't really matter. You pick whatever name you'd like. And that will then examine the dB context and figure out what database schema needs to set up in the database and then to apply that we just run dotnet EF database. Update and that should then run some SQL to set up the database for us and initialize it so that we can see our movies. And there it goes. Okay, so let's rerun the app. And now we bring back up the browser. There we go. Okay, and now instead of going to slash weather, we're gonna go to slash movies. Everything worked practice properly. There we go. So not having to write any code. I can now see all my movies. We've got this nice data grid control that we can use. I can add a new movie. Let's, ET. Was June eleventh? Got the release date written down here at 1982. I think that was a sci-fi movie. Great movies of the eighties and we'll create that and that shows up now in our data grid. We can view it's details, we can edit it, like if I remove the title and just a try to save that. It says, nope, that's not valid. So validation is working, add it back, and we're good to go. We can delete that movie as as well. Okay, so basic crowd functionality without having to write any code. We can then also tweak and improve this this UI experience. Like you might notice that this this release state column, the column header looks a little weird like it's just taking the property name doesn't have a space in it no problem we can fix that let's go back to index dot razor where we had our quick grid control and I'm gonna set the title on the release date column. Let's set it to release date. And we should be able to just hot reload that into the app and there it goes. Now it looks nice. And then, you know, the format of the date doesn't look too great. Let's, let's tweak that, do format. We'll do month month day day, year year, like we do in the United States. Like savages. I don't know why we put the month first, but we do. Let's save that and now it looks much nicer, the least state column is updated. We can also make like the grid interactive like we can make one of the column sortable to make the grid interactive we need to make this page interactive so I'm going to add an interactive render mode like we saw earlier on the counter. When we use interactive server. And then on the title column, let's add the sortable. True property so that we can sort by call, but by clicking the column header. Let's go ahead and rerun that to apply the interactive render mode. Right, there we go. And now you can see I can click on the title and now it's sorting the the title column, Easy Peasy. We can even add a paginator. If we have like lots of data, we have a built in paganator control. Let's add a paganator down here at the bottom. You can see the visual studios telling us that, we need to add a pagination state object. That's so the paginator can coordinate with the quick grid. So let's add a code block. A C sharp code block down here at the bottom and we'll add a pagination state. Field will move that up. And we'll say items per page. I don't know, let's do 5, 5 items per page. Then we just need to specify that state object on the paganator and then also on the quick grid. It's like pagination is the property. All right, so we go ahead and save that. And let's go ahead and run it. Go back to the app. Okay, and now we've got a, ator so we can page through all of our data. This quick grid supports virtualization as well. You can control the styling, fully customizable. So just in a few minutes with Blazor you can quickly build a laser web application. You can use interactive features or advanced server-side rendering features. You can connect to your data. Do forms and validation. With very little work and stay productive fast. All with the power of dot. Yeah. So I think next what we're gonna see is how you can use sonar sources set of technologies to make your Blazor web apps even better. Danny. Thanks a lot. Thanks a lot, Daniel. So that's what I'm, going to present next. For those of you who don't know what's another does we help developers and development teams write clean code and we offer a solution that does automatic code review and you'll see what that means in the demo that I'm gonna present. And, I will show you what we have. So. We'll show you what we have. Prepared and what is already released the support for Blazor in Sonnet tube. And also a sneak peek of what we're preparing, what we're working on, for Sonar L in the ID. So this is a, Blazor app. It is a blazer app. It is from.net plazer app. It is from the.net plazer samples, GitHub repo, you can play with it if you want. So it has what, more as the crowd functionalities that, They have already presented life. You know, it has some, a list of contacts that it's queried from local Sqlite database. You can view them you can add the contact you can edit the contact or delete it and everything that works. What I'm gonna do, I'm gonna modify this, this app and I'm going to introduce some bugs and see what sonar can help developer. How, so I can help developers not introduce bugs. So I go to my visuals to instance. It was running at the background. I stopped it. I will go. So what before I go to this test dot laser file I'm gonna go to the view contact Raise her. So, what this, currently, What the layout is, it has some pages with add contact edit contact home and you contact. And those pages are using components in the background. So if you contact for example. Is it's He's using, it's, actually isn't using the component because it's a very simple, it's a very simple, it's a very simple page. It's a very simple page. And what I want to do is to change this contact ID from int to long because say it's a super successful app and I need to store the ID on 64 bits instead of 32 bits so I am running the app again you see it is loading locally. And. I'm now gonna Actually, I get an an exception, you see, and the exception says, okay, I'm able to cost. 64 to 32 bits and if I go back to my IDE I actually see that actually Sonar was telling me about it. So if I go here. I see that actually there is this error from sonar that parameter type end does not match route parameters what we do and the support the rules that we've added for Plaza are complementary to what visual studio. Already presents for you. So, in a nutshell, this, This is what you will be able to. Get in in with sonar link in the ID and then sooner you is our our on-premise server that help development teams manage quality and it's the same here. You can see where is the where is the issue it doesn't match the parameter we educate developers we say What is the problem? How can you fix it? And then more information sending to the Microsoft website. Now if I'm gonna I'm gonna get this back to end and let's say I want to make this view contact page only show some of the data say I have a valid reason to pass a query parameter and say, hey, contact filter columns equals name. So I only show the name, right? And if I do that and, yeah, well, you already see here query parameter type contact filter forms is not supported, so sonar is already telling me, hey, this is not something that you should do. And what will happen if you do this is Well, you will get a similar crash. Basically. I click on it and then I get an invalid operation exception question that is gonna be par so you can and these sort of issues because the built application builds so there isn't any build error and if developers don't properly test their solutions they can easily Well, more or less easily depends, but sometimes, you know, you can have no reference exceptions, so you can have such. Such bugs as well if you don't test your code properly and for large applications. So this is some things that sonar can help some other bits that I'm not gonna live demo what happens is a rule that tells you hey if you want like Danielle said you can call C shop code from JavaScript but In order to do that, you need to annotate a method with JS in vocabul. And we added a root telling you that take method smart that's JS invokable should be public because if you don't make them public. It won't work basically the JavaScript. Won't be able to call the C shop code. And this is a rule that is actually relevant for NAT 6 and.net 7 component parameters can only receive quite a parameter values in routable components. What this means is, okay, view contact. You see it has here a route. And basically you can add such as supply, parameter credit from query. Into a routable component, but this component, test that razor does not have a route. So in.net 6 and.net 7 these value wouldn't be passed from where this component was used now they fixed it they actually made it a cascading a parameter which means that in.net 8 it it is a valid scenario. The last thing before I hand over to my colleague tennis to talk about sonar, cube is, is just to talk about SNAP Cloud, this showing you the experience inside. So. It's the, this is sonic, 10.4, which got released, last week. And as I already show you this issue, you can also, you get also normal on normal C sharp rules that we we raise here. Okay, it's a rule raising that hey you have a tool you should do something about it and not ship it like this. And then all of these issues are have. Comprehensive explanations so developers get educated and get sent to the official documentation from Microsoft. About each of these issues. Now, I also wanted to tell you to because I mentioned that for sonar link we are still working on on it And before doing that, maybe, Can you, open the poll to, people joining this okay so you have a poll here where you can share. What framework? What, what framework you use for web development in.net in your current, project. You use for web development in.net in your current project. So either. Either of these so I'm gonna wait for those. I'm gonna present those results later on and then. I just wanna share with you our current. State of what we support. For Blazor. So first of all, all our existing C shop rules that are on summer cloud and on YouTube they raise issues on razor templates so dot laser fathers dot CSHK, so dot razor fathers. Dot CSS, Gmail files. We don't mean blazer applications or in you know, other razor applications or in, you know, other razor pages or. SP NET, ASP, NBC, so only. In.net not in dotnet framework currently but we raise issues on both so summer cloud has not to 10.3 support this and the 5 rules that we've added. I showed 4 of them and Denny is my colleague. He's going to show the fifth one. They got shipped. In SOARA cube, 10.4 and they are part of the communic addition. So you can use them in case you are using the the community edition. And that's. What I wanted to share. Love that. I love that how the sonar uses these analyzers, design time analyzers to help you catch those issues. You know, before you go into production, before you're running. So you have that, that real time feedback from the, from the tooling while you're in development. That's great. Yeah, thanks a lot. Thanks a lot. And okay, I stopped sharing, but I want to share one last thing about Sun. So. I forgot to say about this. This is currently working progress. So, We are working on it and, to bring this the functionality that I demoed, I had the development version on my machine that I demoed in the ID with the boost and to give a quick explanation why we haven't shipped it yet for an installer link is because the source generators for the res, razor templates. So there are during the build some source generators generate C shop code for these rays or templates and they work differently at compile time versus design time. During the ID so they they have slightly different. Implementations and we need to support basically a different behavior and we will be able to support a blazer and razor analysis in sonar lint only on visual studio 17 dot 9 and newer so Daniels team, helped us. With implementing some changes that will get shipped. Today right visual studio 17 dot 9 will be shipped today if i'm not wrong 17 9 is coming out today. It's just, I think in a couple of hours here. Well I mean, hopefully by the time if you're watching the recording, I'm guessing by that time, already will ship for people that are live. Well, you Yeah, we're Just moments away from, Vigil Studio, 17 9 being released as stable. He, you, you guys are awesome. I'm really impressed. Andre, Daniel, you are doing live demos and Andre doing it on a development version? Your brief soul, man. Yeah. Yeah. Yeah, yeah, it worked. It's worked, yeah? It look. The demo gods were good today. Alright, over to Dennis. Alright. So, Andre showed you. What happens in the IDE and on Sunna cube, which is the, on-premises version of the server we offering. I will show you with the blazer analysis can look like on solar clude cloud. Which is the software service offering. Sorry. This is actually a little example of what you can see if you analyze project. This project, it's actually the mud blazer library. It's a very popular place or component library, an open source one. So I just quickly forked the repository and I run an analysis on it. And this is a, a little sample of what you can find. You will see, for example, low impact issues. Like encapsulation problems or, Commented out code that's never been removed. So as you see here, that's very standard. Problem that you can hit. What's more interesting is, for example, the fixed rule that we added for, Blazer that Andre was talking about. You can see it here. For this one, it's about. How you declare even a handlers. In that case, we're using a lambda. And that's a very, very common way to handle events in JavaScript, for example. The problem is in blazer if you do that in a company that renders hundreds of thousands of items that can lead to performance problems. So we want you that you should not do that unless you've really carefully. Made sure that this is not gonna cause performance problems. We also tell you why this is an issue and, we also give you some guidance because there's a lot of get them some performance best practices coming from Microsoft. So you can follow the link to learn about it and we also have. Benchmarks to tell you exactly what the usage pattern looks like. Yeah. Another another one, that could be very interesting. This one is a reliability issue. Well, that's basically a runtime bug waiting to happen. Let's see if you go there. You will see that's, the analysis looked at this piece of code and the context Bible here in that if He's tested for being null. But in the case if it is no, will end up in the else case. And In this expression, we dereference it. So we could. Conceivably hit a no reference, which is not something you want to do at runtime. So thankfully, you will be once if you run an analysis. From SO. Okay. And the last example that I have is. This one. So this one is all about maintainability. This type of error, cognitive complexity, tells you that your method is Well, how to read. I'll give you a minute to pick that in. Alright, even if you wrote it, Daniel, if you come back in a month, what do you think? It's a little long. Little. Do you think you'll be able to? Yes, it is. So, you might be familiar with, cyclomatic complexity. We came up with a little bit of a different metric to really help find problems. And complex methods. Basically this one also counts. So it counts all the branches in your code. And usually, well, the way to sort a problem like that is to break your, your method into smaller methods. To be called because a name is much more descriptive than a bunch of code like that. Here when we're in a blazer context so probably the best thing to do would be actually to extract it into components. Which is what Blazor is made for. Okay. Right, so this is just a, as I said, this is just a few examples of the things you could find. In your Blazor market. And. This is actually an overall view of the code of this library. Okay, he tells you exactly how many, how many issues of each type we found in the code. Now, granted, that can be bit frightening. 3.1,000 1,000 maintainability t-shirts but for 78 7 lines of code. It's not bad. I can tell you from experience I run this over one of my applications which had a 20 year old code base that was much more frightening that what this is. And in fact, we actually are in contact with the mud blazer maintainers to offer them access to summer cloud, show them how to use it because it's actually completely free for open source project. So they just have to, they just, start to sign in. And have them. We use. That technical that basically. But yeah, if you run this on your code basis, as I said, it could be a bit frightening. Because if you have thousands of issues, you might be wondering, okay, what am I going to do with that? And. The problem is you cannot like just stop development and spend month correcting the issues. You have to have some kind of method to deal with that amount of debt. And that's exactly what our products try to offer you. It's a way to deal with that debt over time. And this is called Clean as you could. So clean as you could, it's as I said it's a method. That allows you to gradually reduce your technical debt other time. And how does that work? Well, in a nutshell. The only thing you have to do is to ensure that each new piece of code that you introduce is clean. And when I say new piece of code, I mean code that you add because you're creating a new functionality so it's a new method, new class file. What have you? Oh, it's good that you modify. Because you came back to a specific method and you are trying to deal with a customer issue. So you're modifying the existing code. Okay. And why is that important? It's because when you are, modifying existing code or creating a new piece of code. It's in your head. Basically you own that piece of code. So it's pretty easy if you've been one that doesn't issue and we explain what the issue is, it's very easy to correct it. There's no there's no context switch. Okay, that that's what kills productivity. When you have to come back and deal with 16 problems. So it's important to deal with code. As it is produced. So why does it work? Well, let's imagine this is your code base before you start using clean as you go. This one is much, much worse than the blazer was, as you can see. If you imagine each square is a piece of code, so We could say a line of code, we could say a file. Doesn't really matter. When you start applying clean as you code, what's gonna happen is after a year This is what you could basically look like. On the right you have your new pieces of code and you made sure they were clean then you the brand new. They're perfect. And on the left, this is where you had to touch the code to correct issues or to introduce a new method, for example, because you had a new functionality support. So we can you can already see. That the code base is better than it was one year ago. And you should continue applying that concept after 2 years. This is what it will look like. And after 3 years. Well, it's even better. Granted, there are still problems here. But at the same time, this code has been running in production for 3 years already. So. Normally these are not major problems and they will build they will be dealt with over time when you get to it. Now, you might be wondering why. Why do we say that that works? Well, if you search on the internet for something called the Git of Theseus, someone ran a study on big open source projects on get And they showed that in those big open source projects on the average, any given line of code as a 50% chance of not being there. So from that kind of from that fact you can assume that if you apply this methods in 5 years, 50% of your code will be clean. And, we actually apply that every day up so now. And we can tell you it works. So how do you actually do that? Because, it's just Not enough to have a method. You need to have the tools that help you, pinpoint the problems and make sure you deal with an in good time. So it's actually pretty simple. The first thing you have to do. It's to decide what new code means. Okay. So it can be 2 things. You have new code in the PR that you're actually working on. Okay. But that's not enough. Maybe you have quick fixes that. Actually can be committed directly to master it's not the best policy but it can happen or for different reasons. So you have to define also what you could means in the context of your whole application. And we offer 2 options. One is, okay, new code is everything that has been written. Since we published the last version. That's if you if you ship once a year for example or every 3 months or otherwise if you if you do continuous delivery we suggest you use a number of days for example everything in the last 30 30 days is considered new and should be dealt with before you actually ship. Okay, the second thing you have to do is to define your standards. What do I mean by that? Well, It's the rules basically that you are gonna apply as a team. You decide. Which of the rules that we provide. You're gonna you're gonna abide by by default we have a what's called a quality profile that contains 313 rules that are active. But we actually have many more than that. Upwards of 500, I think. If I'm not mistaken, Andway. 400, sorry. We have like 400. 5,450. So you can see here on Dennis's, screen that there are basically 313 active rules and 145 inactive rules. Thank you. So basically that adds up to roughly Yeah, 450. Okay. So you decide which one actually to actually make sense in your context. Okay, and then you enforce your standards on new code. By making sure that PRs cannot be merged. And software cannot be released if there is, is there are issues. So how do you do that when you define what we call a quality gate? Like qualitative is a way to prevent merging. For example, if you're using GitHub, you get a workflow, will I, your code and will fail the build if you don't, if you don't match the quality that you've set. Normally recommend that you go for no issues at all. And this actually works because that's what we what we do. But you're welcome to let go a little bit on the maintainability for example if you accept a little bit of technical debt over time. There's also of course, Quality gates. Verify that your coverage is sufficient. And of course this only works if you analyze regularly. So after each. Pull request push. And after each merge or push online. And the way you do that, well, that's what I explained. You go to your GitHub repository, for example. And you create a workflow that will invoke Just on your code base. Either on push, on main. Or on full requests. And hopefully to do that before you even get to PR or to the main branch. You have a third layer of difference. It's actually your first one. And Android touched on that is the IDE extension. It's called Sunderland. We provided for Vision Studio, V just studio code. Or jet brains IDs so you're covered whichever your idea of choice is for. And this will allow you to catch most of the issues live in the ID, thanks to Microsoft's Rosslyn technology, which is. Actually, really, really cool. Okay. And well, that's it in a shell. That's how you can reduce your deaths on. You're blazer apps or your everyday apps. Thanks to So in a cloud. And with that, I will give. The mic back to manage. Alright. Thank you, Daniel, Andre and Dennis for an insightful session. I was particularly impressed with all 3 of you. Doing a live demo. Pretty cool. Awesome. As we move into the next part of this webinar, which is Q&A, it's time for Q&A as I gather the questions for you. I briefly wanted to share information about our upcoming webinar. That's Sona will be hosting with you all on February, 20 s. The information is up there on the slide. There's a link also that we'll share in the chat. We would love to have you join the next webinar. And, You'll also see a brief poll to let us know if you'd like to be contacted. Yes. And you would, you know, so please do participate if you can. If you'd like to know more about the solutions. As a reminder, after the Q&A, a short survey will appear. And we greatly appreciate your feedback. And with that, I will start. Looking at some of the questions that have come up. And asked our speakers here to help me answer those questions. And And one thing I can quickly share the results of the survey while you're looking for the questions. Sure. Sure. So regarding that we have so 57 participants answered to the question around what framework they use for development.net and 51% are using blazer 5% is Pinet Quoraser pages. 18% is peanut quarter VC, 4% is PINET framework. And let's see, MVC, 11% something else and 12% don't do web developments with thanks everyone for answering the initial poll. Alright. Thank you, Andre. Let's take a few questions. There are quite a few of them. I'm not sure if we'll be able to get to all of them. But let me start with the blazer questions first, if that's okay. So I think these are probably for Daniel, but feel free to jump in Andre or Dennis if you would like to add something. How does Blazor compare to other popular JavaScript frameworks? That's a great question. So, well, I mean, the first obvious difference is that with Blaser, you're writing C sharp instead of writing, writing JavaScript typically, which is what you use for most popular JavaScript frameworks like React or Hangular Review. Oh, so you get to have the productivity of a modern C sharp language, strong typing, and then access to the entire dotnet platform through C sharp. Blazor is similar if, if you were to kind of squint that blazer, it probably looks the most similar to React in terms of how its component model works and and functions. So if you're familiar with React and you do some blazer development, you might feel a little bit like, oh, this kind of feels like react but done with Donnet and C shark with some of the.net niceties. Blazer also is the server piece for Blazor will be based off of A. Smit core. So you're getting the power and performance of the dotnet runtime on the server. Like there's, I think there's very few developer frameworks on the planet that can beat A. Smit Corps when it comes to performance on the server in terms of throughputs and server use resource utilization. So all the static server side rendering support that we added in Blazor, the even the interactive server rendering is leveraging that A. Smith or back end. But from other perspectives, things are very similar. It's a component model. It's a diff based rendering engine like Blazor keeps track of what's in the DOM and what you're trying to render and only applies the the changes to the browser DOM that you've rendered in your components. And in some ways it's very similar. The big differences are that it's dot net, C sharp, powered by mic or on the back end. Alright, thank you, Daniel. Next question is. How does it look? Pleasers, Webassembly, Blizzard, Webasm. Yeah, yeah, I saw that question as well. I didn't I didn't demo that just because of a constraints of time. But when you're building a blazer web app like you have this choice like you can make your components interactive from either the server or from the client. And everything I showed, that was all done from the server because in many ways it's simpler like your codes already running on the server all your code runs on the server and so if you need to talk to the database or server-side resources, well you're already there and you can still do those interactive experiences like you normally think of doing with a client-side JavaScript code, you can handle all of that from the server by having that real-time connection with the browser. But you can also move code down to the browser too and run it client side on the user's machine using Webassembly. When you create your Blazor web app, there's an option that asks you at the beginning like well what interactivity modes do you want to enable and by default it will just enable the server one. If you want Webassembly to you just flip the option to do web assembly and that will set you up with not just one project for the server but also a client project. For the client, cause there'll be code that's being built. Not just for the server, but code that needs to now be transferred across the network to the client. So then that's where you would stick all your code that you want to run client side on the users machine, but you write your components the same. They're still dot razor files on click handlers, you know, component syntax for for defining the UI. It's just running on the the other side of the of the wire on the users device and you can pick how much code you want to run on Webassembly and how much you want to run on the server. You could say, you know, just a few pages I want to push down to the client or you might decide, you know what, the whole app should run client side on Webassembly. I don't want any of it running from from the server. That's possible too. There is also an additional template, which is the Blazer Webassembly standalone app template. It's different from the Blazor web app template and it's different because it's designed to run purely client-side like without any server piece at all. The Blazor web app template is optimized for leveraging the server to make experiences. You know, doing prerendering, adding server-side rendering where you want it. The Blazor Webassembly stand-alone template will only run on the client and it's for hosts that are like like static site hosts like GitHub pages or Azure has one of these like Azure static web apps where you just want to publish a bunch of static files and there's no server piece so you can use the Blazor Webassembly standalone app template for that particular case. Alright, thank you, Daniel. I have a couple of questions on the sonar side as well. Let me go over them and I think I know the answer to a couple of them but Andrea feel free to add to my answers or inputs. How does sooner cube developer addition automatically recognize or not how does does sonar cube developer addition automatically recognize blazer applications to or do we have to enable something specifically? And what version of the developer addition do we need for this? Yes, so yeah, you can automatically scan Blazor projects. You don't need any special configuration. The, you don't need any special configuration. The support starts with Suna cube, 10.4 onwards. It's available in community edition. The support starts with SOONA cube, 10.4 onwards. It's available in community addition and higher. And, Yeah, anything else you add there, Andre? It's also available in. It's also in Suna Club. Yeah. You said it also it. And it's and analysis. So data analysis is available also in. Community, which is free and open source and anybody can can use it can download it. So, sorry, I was answering a question in the Q&A and, you can, so it is enabled by default and in case you don't want it, you, you can disable it from the settings of the project, but it is enabled by default. Cool. There was a question about pricing. I think this keeps coming up again and again. So I'll just answer that. How about the prices of this great tool? Will there be a free version? So we have 2 products, 3 products actually. So, our link ID is always free. It's a free XID extension works with most of the IDs. So in a cube comes in both community addition and commercial additions. So community edition is open source based and is always free and does include. Visa support and 19 other languages if I'm not mistaken. If you want more than 19 languages, we go up to about 30 plus languages with Sonar cube. Enterprise edition and there's also the developer addition available and the data center edition available those the commercial editions of course come with the price based on lines of code. And then of course Sona Cloud. Is a cloud version cloud base offering we have 3 analysis for all. Open source projects, public projects. 48 projects for private projects there's a fee is again based on lines of code. So we have those 3 products. In the ID is sooner linked. On premises or self-managed sona cube. And Sunna Cloud is a SAS based offling. I hope that answers that question. There's one last question which I'll take and probably we can wrap it up after that. Is tanked analysis available for Blazor. I think that's a question for Andre or Dennis. So currently it's not yet. It is on the roadmap if I'm not wrong, Dennis. Yes, I believe it is. Yeah, so hopefully this year we're gonna have it for Blazor as well. Nice, excellent. Excellent. Excellent. I think we have covered most of the questions. If we have left any, we will. Answer them and you know share those results. On our community forum. And let me wrap this up. We are, almost, at the top of the are. So thank you again, Daniel, Andrea and Dennis and thanks to all of you who joined the webinar today and asked us questions. Sorry if we missed one of your questions, but we will get to it. We will answer those questions and our community is a great place. To pose any additional questions that you may have. You will also be able to find the replay and the Q&A of today's session being posted there. And do check out sonosource.com for additional information about. How you can use clean as you code and about our products. And thank you again in advance for providing your feedback for the survey today. That will shortly pop up on your screen. And we look forward to seeing you all in the next webinar. Thank you. Have a good one.",
+  "fetchedAt": "2026-03-14T09:23:21.594Z"
+}

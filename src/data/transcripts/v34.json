@@ -1,0 +1,3108 @@
+{
+  "videoId": "v34",
+  "youtubeId": "oEXWxZpi-_0",
+  "segments": [
+    {
+      "text": "Software development is changing at a",
+      "offset": 17000,
+      "duration": 2000
+    },
+    {
+      "text": "very very rapid pace. So today I want to",
+      "offset": 19000,
+      "duration": 4000
+    },
+    {
+      "text": "take a few minutes to take you through",
+      "offset": 23000,
+      "duration": 2000
+    },
+    {
+      "text": "some ideas, some techniques, give you",
+      "offset": 25000,
+      "duration": 2000
+    },
+    {
+      "text": "some tricks on how you can improve your",
+      "offset": 27000,
+      "duration": 4000
+    },
+    {
+      "text": "work as a software developer and how you",
+      "offset": 31000,
+      "duration": 3000
+    },
+    {
+      "text": "can keep up with AI. First, let me tell",
+      "offset": 34000,
+      "duration": 3000
+    },
+    {
+      "text": "you the way I see AI helping developers.",
+      "offset": 37000,
+      "duration": 4000
+    },
+    {
+      "text": "There are two groups. The first group is",
+      "offset": 41000,
+      "duration": 2000
+    },
+    {
+      "text": "when you use AI as a copilot. And most",
+      "offset": 43000,
+      "duration": 3000
+    },
+    {
+      "text": "of the people that I've been working",
+      "offset": 46000,
+      "duration": 2000
+    },
+    {
+      "text": "with, most of the people that I've met,",
+      "offset": 48000,
+      "duration": 2000
+    },
+    {
+      "text": "this is what they're doing where they",
+      "offset": 50000,
+      "duration": 2000
+    },
+    {
+      "text": "are driving, they are writing most of",
+      "offset": 52000,
+      "duration": 3000
+    },
+    {
+      "text": "the code, they are leading and then",
+      "offset": 55000,
+      "duration": 3000
+    },
+    {
+      "text": "they're using AI to help with their",
+      "offset": 58000,
+      "duration": 3000
+    },
+    {
+      "text": "work. They use AI as a copilot. Now more",
+      "offset": 61000,
+      "duration": 4000
+    },
+    {
+      "text": "and more right now that we have tools",
+      "offset": 65000,
+      "duration": 2000
+    },
+    {
+      "text": "like Codec, OpenAI Codec or Anthropic",
+      "offset": 67000,
+      "duration": 4000
+    },
+    {
+      "text": "Claude Code, more and more people,",
+      "offset": 71000,
+      "duration": 3000
+    },
+    {
+      "text": "developers, are transitioning to serve as",
+      "offset": 74000,
+      "duration": 3000
+    },
+    {
+      "text": "the copilot to AI where they are letting",
+      "offset": 77000,
+      "duration": 4000
+    },
+    {
+      "text": "AI drive. They're letting AI take the",
+      "offset": 81000,
+      "duration": 4000
+    },
+    {
+      "text": "lead and they are stepping back and",
+      "offset": 85000,
+      "duration": 3000
+    },
+    {
+      "text": "helping AI do the job. And these tricks",
+      "offset": 88000,
+      "duration": 4000
+    },
+    {
+      "text": "here, this mental shift is what I want",
+      "offset": 92000,
+      "duration": 3000
+    },
+    {
+      "text": "to cover today. Going from using AI as a",
+      "offset": 95000,
+      "duration": 3000
+    },
+    {
+      "text": "copilot to an AI-first development",
+      "offset": 98000,
+      "duration": 3000
+    },
+    {
+      "text": "workflow requires a fundamental mental",
+      "offset": 101000,
+      "duration": 3000
+    },
+    {
+      "text": "shift. You cannot just expect this to",
+      "offset": 104000,
+      "duration": 4000
+    },
+    {
+      "text": "just happen. You have to acquire the",
+      "offset": 108000,
+      "duration": 3000
+    },
+    {
+      "text": "skills that are going to help you make",
+      "offset": 111000,
+      "duration": 3000
+    },
+    {
+      "text": "this transition. Now, in order to do",
+      "offset": 114000,
+      "duration": 2000
+    },
+    {
+      "text": "that, I'm going to propose if you're",
+      "offset": 116000,
+      "duration": 2000
+    },
+    {
+      "text": "studying now a seven-step workflow. This",
+      "offset": 118000,
+      "duration": 3000
+    },
+    {
+      "text": "is the workflow that I use when building",
+      "offset": 121000,
+      "duration": 3000
+    },
+    {
+      "text": "together with AI, when letting AI lead.",
+      "offset": 124000,
+      "duration": 3000
+    },
+    {
+      "text": "Planning is the first step here. You",
+      "offset": 127000,
+      "duration": 2000
+    },
+    {
+      "text": "need to know what you're building before",
+      "offset": 129000,
+      "duration": 2000
+    },
+    {
+      "text": "you start. And before you even think",
+      "offset": 131000,
+      "duration": 3000
+    },
+    {
+      "text": "about AI, you have to understand the",
+      "offset": 134000,
+      "duration": 3000
+    },
+    {
+      "text": "area, the moment, the time where AI will",
+      "offset": 137000,
+      "duration": 5000
+    },
+    {
+      "text": "help you and where AI might not be that",
+      "offset": 142000,
+      "duration": 4000
+    },
+    {
+      "text": "useful. So for example, whenever you're",
+      "offset": 146000,
+      "duration": 2000
+    },
+    {
+      "text": "creating boilerplate or scaffolding,",
+      "offset": 148000,
+      "duration": 2000
+    },
+    {
+      "text": "AI is great for that. Obviously,",
+      "offset": 150000,
+      "duration": 2000
+    },
+    {
+      "text": "repetitive transformations when you're",
+      "offset": 152000,
+      "duration": 3000
+    },
+    {
+      "text": "creating or when you're building a",
+      "offset": 155000,
+      "duration": 1000
+    },
+    {
+      "text": "prototype, when you're generating test",
+      "offset": 156000,
+      "duration": 3000
+    },
+    {
+      "text": "cases, creating and reviewing",
+      "offset": 159000,
+      "duration": 2000
+    },
+    {
+      "text": "documentation,",
+      "offset": 161000,
+      "duration": 1000
+    },
+    {
+      "text": "refactoring, all of those are",
+      "offset": 162000,
+      "duration": 2000
+    },
+    {
+      "text": "opportunities for you to use AI to help",
+      "offset": 164000,
+      "duration": 4000
+    },
+    {
+      "text": "you. However, there are many many times",
+      "offset": 168000,
+      "duration": 3000
+    },
+    {
+      "text": "where AI might not be that helpful. If",
+      "offset": 171000,
+      "duration": 2000
+    },
+    {
+      "text": "you're working with logic that's not",
+      "offset": 173000,
+      "duration": 3000
+    },
+    {
+      "text": "properly documented or is too complex,",
+      "offset": 176000,
+      "duration": 3000
+    },
+    {
+      "text": "when you're working with security",
+      "offset": 179000,
+      "duration": 1000
+    },
+    {
+      "text": "critical code, when you're doing",
+      "offset": 180000,
+      "duration": 2000
+    },
+    {
+      "text": "performance optimizations, when you're",
+      "offset": 182000,
+      "duration": 2000
+    },
+    {
+      "text": "debugging bugs that are very subtle, very",
+      "offset": 184000,
+      "duration": 2000
+    },
+    {
+      "text": "hard to find, AI might not work as well.",
+      "offset": 186000,
+      "duration": 3000
+    },
+    {
+      "text": "Now assuming that you have gotten into",
+      "offset": 189000,
+      "duration": 4000
+    },
+    {
+      "text": "an area where you're actually you can",
+      "offset": 193000,
+      "duration": 2000
+    },
+    {
+      "text": "actually use AI. I want you to start",
+      "offset": 195000,
+      "duration": 3000
+    },
+    {
+      "text": "shifting from imperative prompting to",
+      "offset": 198000,
+      "duration": 3000
+    },
+    {
+      "text": "declarative prompting. So here is the",
+      "offset": 201000,
+      "duration": 1000
+    },
+    {
+      "text": "idea. So far people have been using AI",
+      "offset": 202000,
+      "duration": 4000
+    },
+    {
+      "text": "by asking models exactly what they need",
+      "offset": 206000,
+      "duration": 4000
+    },
+    {
+      "text": "to do. Basically you instruct the model,",
+      "offset": 210000,
+      "duration": 2000
+    },
+    {
+      "text": "hey create a page, add these components",
+      "offset": 212000,
+      "duration": 4000
+    },
+    {
+      "text": "to that page, make it work this way,",
+      "offset": 216000,
+      "duration": 2000
+    },
+    {
+      "text": "and I want you to start transitioning",
+      "offset": 218000,
+      "duration": 3000
+    },
+    {
+      "text": "to telling AI what you want to",
+      "offset": 221000,
+      "duration": 3000
+    },
+    {
+      "text": "accomplish, what your goals are.",
+      "offset": 224000,
+      "duration": 2000
+    },
+    {
+      "text": "That is declarative prompting. This is",
+      "offset": 226000,
+      "duration": 3000
+    },
+    {
+      "text": "an incredibly important shift especially",
+      "offset": 229000,
+      "duration": 4000
+    },
+    {
+      "text": "now with the current generation of",
+      "offset": 233000,
+      "duration": 2000
+    },
+    {
+      "text": "models. The latest models from",
+      "offset": 235000,
+      "duration": 2000
+    },
+    {
+      "text": "Anthropic, the latest set of open-source",
+      "offset": 237000,
+      "duration": 3000
+    },
+    {
+      "text": "models, models like Mini Max, the",
+      "offset": 240000,
+      "duration": 3000
+    },
+    {
+      "text": "latest version of DeepSeek Kimmy. These",
+      "offset": 243000,
+      "duration": 3000
+    },
+    {
+      "text": "models are every day more capable of",
+      "offset": 246000,
+      "duration": 4000
+    },
+    {
+      "text": "taking our requests and interpreting",
+      "offset": 250000,
+      "duration": 3000
+    },
+    {
+      "text": "those requests and creating their own",
+      "offset": 253000,
+      "duration": 3000
+    },
+    {
+      "text": "solutions. I don't want you to be that",
+      "offset": 256000,
+      "duration": 2000
+    },
+    {
+      "text": "solution-oriented. Instead, focus more on",
+      "offset": 258000,
+      "duration": 3000
+    },
+    {
+      "text": "goals. So, another trick here for you to",
+      "offset": 261000,
+      "duration": 3000
+    },
+    {
+      "text": "start combining exploratory sessions",
+      "offset": 264000,
+      "duration": 3000
+    },
+    {
+      "text": "with upfront planning. Upfront planning",
+      "offset": 267000,
+      "duration": 2000
+    },
+    {
+      "text": "is still very very important. If you",
+      "offset": 269000,
+      "duration": 3000
+    },
+    {
+      "text": "want to unlock longer sessions with AI",
+      "offset": 272000,
+      "duration": 3000
+    },
+    {
+      "text": "where you sit down, you give a bunch of",
+      "offset": 275000,
+      "duration": 3000
+    },
+    {
+      "text": "instructions and you can just leave and",
+      "offset": 278000,
+      "duration": 2000
+    },
+    {
+      "text": "let AI do stuff. Upfront planning is",
+      "offset": 280000,
+      "duration": 3000
+    },
+    {
+      "text": "very important. You're going to have to",
+      "offset": 283000,
+      "duration": 1000
+    },
+    {
+      "text": "provide a lot of requirements. But that",
+      "offset": 284000,
+      "duration": 3000
+    },
+    {
+      "text": "is not the only way to write code. You",
+      "offset": 287000,
+      "duration": 2000
+    },
+    {
+      "text": "should combine upfront planning with",
+      "offset": 289000,
+      "duration": 3000
+    },
+    {
+      "text": "exploratory sessions where you do not",
+      "offset": 292000,
+      "duration": 2000
+    },
+    {
+      "text": "give that many details. Instead, you let",
+      "offset": 294000,
+      "duration": 3000
+    },
+    {
+      "text": "AI figure things out. And the reason",
+      "offset": 297000,
+      "duration": 4000
+    },
+    {
+      "text": "this is so important, AI will start",
+      "offset": 301000,
+      "duration": 3000
+    },
+    {
+      "text": "surprising you. AI will start finding",
+      "offset": 304000,
+      "duration": 3000
+    },
+    {
+      "text": "solutions that maybe you didn't think",
+      "offset": 307000,
+      "duration": 3000
+    },
+    {
+      "text": "about. So it is a good idea to have for",
+      "offset": 310000,
+      "duration": 2000
+    },
+    {
+      "text": "example two sessions where you're doing",
+      "offset": 312000,
+      "duration": 3000
+    },
+    {
+      "text": "something here that you know exactly how",
+      "offset": 315000,
+      "duration": 2000
+    },
+    {
+      "text": "it needs to happen. So you did some",
+      "offset": 317000,
+      "duration": 2000
+    },
+    {
+      "text": "upfront planning and something here",
+      "offset": 319000,
+      "duration": 2000
+    },
+    {
+      "text": "where you're exploring and you can throw",
+      "offset": 321000,
+      "duration": 3000
+    },
+    {
+      "text": "that away if it doesn't work. You can",
+      "offset": 324000,
+      "duration": 2000
+    },
+    {
+      "text": "use GitHub Worktrees for example. So",
+      "offset": 326000,
+      "duration": 2000
+    },
+    {
+      "text": "if it doesn't work you throw it away but",
+      "offset": 328000,
+      "duration": 2000
+    },
+    {
+      "text": "AI will start surprising you. Upfront",
+      "offset": 330000,
+      "duration": 3000
+    },
+    {
+      "text": "planning requires you to frontload your",
+      "offset": 333000,
+      "duration": 3000
+    },
+    {
+      "text": "thinking. You're going to be putting",
+      "offset": 336000,
+      "duration": 2000
+    },
+    {
+      "text": "effort into specking out everything",
+      "offset": 338000,
+      "duration": 3000
+    },
+    {
+      "text": "that you need AI to do. The idea here",
+      "offset": 341000,
+      "duration": 1000
+    },
+    {
+      "text": "is for you to break down the problem,",
+      "offset": 342000,
+      "duration": 3000
+    },
+    {
+      "text": "define what done looks like, exactly",
+      "offset": 345000,
+      "duration": 3000
+    },
+    {
+      "text": "what you want to accomplish, what your",
+      "offset": 348000,
+      "duration": 2000
+    },
+    {
+      "text": "goals are, and you're going to try to",
+      "offset": 350000,
+      "duration": 2000
+    },
+    {
+      "text": "document constraints and edge cases to",
+      "offset": 352000,
+      "duration": 2000
+    },
+    {
+      "text": "show AI what it needs to do and the",
+      "offset": 354000,
+      "duration": 4000
+    },
+    {
+      "text": "things that it should not be doing.",
+      "offset": 358000,
+      "duration": 2000
+    },
+    {
+      "text": "The more clarity and context you provide",
+      "offset": 360000,
+      "duration": 3000
+    },
+    {
+      "text": "up front, the better the agent will be",
+      "offset": 363000,
+      "duration": 2000
+    },
+    {
+      "text": "able to execute that autonomously. The",
+      "offset": 365000,
+      "duration": 2000
+    },
+    {
+      "text": "autonomous word here is super important",
+      "offset": 367000,
+      "duration": 4000
+    },
+    {
+      "text": "because that's where leverage exists.",
+      "offset": 371000,
+      "duration": 2000
+    },
+    {
+      "text": "Whenever you can just basically give",
+      "offset": 373000,
+      "duration": 3000
+    },
+    {
+      "text": "something to the agent and unlock a very",
+      "offset": 376000,
+      "duration": 3000
+    },
+    {
+      "text": "long session of coding. You don't want",
+      "offset": 379000,
+      "duration": 2000
+    },
+    {
+      "text": "to constantly be going back and forth,",
+      "offset": 381000,
+      "duration": 2000
+    },
+    {
+      "text": "that's going to slow you down. So the",
+      "offset": 383000,
+      "duration": 2000
+    },
+    {
+      "text": "more you can provide up front, the",
+      "offset": 385000,
+      "duration": 2000
+    },
+    {
+      "text": "better chance you have for the agent to",
+      "offset": 387000,
+      "duration": 2000
+    },
+    {
+      "text": "have a long session. You want to reduce",
+      "offset": 389000,
+      "duration": 2000
+    },
+    {
+      "text": "the back and forth. Here is a tip for",
+      "offset": 391000,
+      "duration": 2000
+    },
+    {
+      "text": "those of you who use Claude Code. And",
+      "offset": 394000,
+      "duration": 2000
+    },
+    {
+      "text": "these tips even though I'm focusing on",
+      "offset": 396000,
+      "duration": 2000
+    },
+    {
+      "text": "Claude Code because that's what I'm",
+      "offset": 398000,
+      "duration": 2000
+    },
+    {
+      "text": "using. Most of these tips are going to",
+      "offset": 400000,
+      "duration": 2000
+    },
+    {
+      "text": "work with Cursor with the agent from",
+      "offset": 402000,
+      "duration": 3000
+    },
+    {
+      "text": "Cursor or with Codec. Ask Claude Code",
+      "offset": 405000,
+      "duration": 2000
+    },
+    {
+      "text": "to specify in your CLAUDE.md before",
+      "offset": 407000,
+      "duration": 4000
+    },
+    {
+      "text": "writing any code, describe the approach",
+      "offset": 411000,
+      "duration": 3000
+    },
+    {
+      "text": "and wait for approval. So if you are the",
+      "offset": 414000,
+      "duration": 2000
+    },
+    {
+      "text": "type of person who really likes to",
+      "offset": 416000,
+      "duration": 2000
+    },
+    {
+      "text": "ensure you're doing enough upfront",
+      "offset": 418000,
+      "duration": 2000
+    },
+    {
+      "text": "planning, make sure Claude does not write",
+      "offset": 420000,
+      "duration": 3000
+    },
+    {
+      "text": "a lot of code without asking for your",
+      "offset": 423000,
+      "duration": 3000
+    },
+    {
+      "text": "approval. After planning we get into",
+      "offset": 426000,
+      "duration": 3000
+    },
+    {
+      "text": "breaking things down. Very very",
+      "offset": 429000,
+      "duration": 1000
+    },
+    {
+      "text": "important, very related with planning. I",
+      "offset": 430000,
+      "duration": 3000
+    },
+    {
+      "text": "want you to start breaking the work you",
+      "offset": 433000,
+      "duration": 2000
+    },
+    {
+      "text": "give to these agents into single",
+      "offset": 435000,
+      "duration": 2000
+    },
+    {
+      "text": "responsibility tasks. Basically, one",
+      "offset": 437000,
+      "duration": 3000
+    },
+    {
+      "text": "trick. If whatever you're telling the",
+      "offset": 440000,
+      "duration": 1000
+    },
+    {
+      "text": "agent contains the word \"and,\" you're",
+      "offset": 441000,
+      "duration": 3000
+    },
+    {
+      "text": "probably asking for too much. So, break",
+      "offset": 444000,
+      "duration": 2000
+    },
+    {
+      "text": "that down. If you find your agent",
+      "offset": 446000,
+      "duration": 2000
+    },
+    {
+      "text": "struggling, probably your scope is too",
+      "offset": 448000,
+      "duration": 3000
+    },
+    {
+      "text": "big. You need to ask the agent to break",
+      "offset": 451000,
+      "duration": 2000
+    },
+    {
+      "text": "down whatever request you gave it into",
+      "offset": 453000,
+      "duration": 3000
+    },
+    {
+      "text": "individual features or into individual",
+      "offset": 456000,
+      "duration": 3000
+    },
+    {
+      "text": "smaller tasks that the agent can tackle",
+      "offset": 459000,
+      "duration": 3000
+    },
+    {
+      "text": "in a better way. From my experience, the",
+      "offset": 462000,
+      "duration": 2000
+    },
+    {
+      "text": "more contained these tasks are, the",
+      "offset": 464000,
+      "duration": 4000
+    },
+    {
+      "text": "smaller they are, the more focused they",
+      "offset": 468000,
+      "duration": 3000
+    },
+    {
+      "text": "are, the better quality is going to come",
+      "offset": 471000,
+      "duration": 2000
+    },
+    {
+      "text": "out of this model, the better chance",
+      "offset": 473000,
+      "duration": 2000
+    },
+    {
+      "text": "you're going to have of getting good",
+      "offset": 475000,
+      "duration": 2000
+    },
+    {
+      "text": "results. Here is another tip for those",
+      "offset": 477000,
+      "duration": 1000
+    },
+    {
+      "text": "using Claude Code, write down in",
+      "offset": 478000,
+      "duration": 3000
+    },
+    {
+      "text": "CLAUDE.md if a task requires changes in",
+      "offset": 481000,
+      "duration": 3000
+    },
+    {
+      "text": "more than three files, break it down",
+      "offset": 484000,
+      "duration": 2000
+    },
+    {
+      "text": "into smaller tasks first. So it's kind",
+      "offset": 486000,
+      "duration": 3000
+    },
+    {
+      "text": "of like giving it a clue that you don't",
+      "offset": 489000,
+      "duration": 2000
+    },
+    {
+      "text": "want to make changes that affect too",
+      "offset": 491000,
+      "duration": 3000
+    },
+    {
+      "text": "much in your code. Instead, you want to",
+      "offset": 494000,
+      "duration": 2000
+    },
+    {
+      "text": "get smaller changes one at a time. This",
+      "offset": 496000,
+      "duration": 2000
+    },
+    {
+      "text": "is going to help Claude realize that this",
+      "offset": 498000,
+      "duration": 2000
+    },
+    {
+      "text": "might be a big change. So before making",
+      "offset": 500000,
+      "duration": 3000
+    },
+    {
+      "text": "it, I actually need to break it down into",
+      "offset": 503000,
+      "duration": 3000
+    },
+    {
+      "text": "smaller tasks.",
+      "offset": 506000,
+      "duration": 1000
+    },
+    {
+      "text": "Another idea is to create a decompose",
+      "offset": 507000,
+      "duration": 3000
+    },
+    {
+      "text": "command. If you're using Claude Code, you",
+      "offset": 510000,
+      "duration": 3000
+    },
+    {
+      "text": "can create skills, you can create",
+      "offset": 513000,
+      "duration": 1000
+    },
+    {
+      "text": "commands as well, slash commands. So",
+      "offset": 514000,
+      "duration": 3000
+    },
+    {
+      "text": "create a decompose command where you can",
+      "offset": 517000,
+      "duration": 2000
+    },
+    {
+      "text": "just provide your plan. Very very simple",
+      "offset": 519000,
+      "duration": 3000
+    },
+    {
+      "text": "for you to do this quickly. The",
+      "offset": 522000,
+      "duration": 3000
+    },
+    {
+      "text": "description of the command is going to",
+      "offset": 525000,
+      "duration": 3000
+    },
+    {
+      "text": "tell Claude to break things down. Break",
+      "offset": 528000,
+      "duration": 2000
+    },
+    {
+      "text": "it into single responsibility tasks. So",
+      "offset": 530000,
+      "duration": 2000
+    },
+    {
+      "text": "you can quickly say decompose and this",
+      "offset": 532000,
+      "duration": 3000
+    },
+    {
+      "text": "is the feature that I want to build and",
+      "offset": 535000,
+      "duration": 1000
+    },
+    {
+      "text": "Claude will give you back a plan composed",
+      "offset": 536000,
+      "duration": 4000
+    },
+    {
+      "text": "of multiple single responsibility tasks",
+      "offset": 540000,
+      "duration": 2000
+    },
+    {
+      "text": "which is a great, faster way of",
+      "offset": 542000,
+      "duration": 3000
+    },
+    {
+      "text": "accomplishing this. Area number three",
+      "offset": 545000,
+      "duration": 2000
+    },
+    {
+      "text": "of our plan is to be specific. It's just",
+      "offset": 547000,
+      "duration": 3000
+    },
+    {
+      "text": "like having somebody working for you.",
+      "offset": 550000,
+      "duration": 2000
+    },
+    {
+      "text": "The more specific you are, the better",
+      "offset": 552000,
+      "duration": 2000
+    },
+    {
+      "text": "results you're going to get. The more",
+      "offset": 554000,
+      "duration": 2000
+    },
+    {
+      "text": "vague you are, the harder it is going to",
+      "offset": 556000,
+      "duration": 3000
+    },
+    {
+      "text": "be for agentic tools to provide the",
+      "offset": 559000,
+      "duration": 2000
+    },
+    {
+      "text": "results that you're looking for. So,",
+      "offset": 561000,
+      "duration": 2000
+    },
+    {
+      "text": "here is the anatomy or the way I think",
+      "offset": 563000,
+      "duration": 2000
+    },
+    {
+      "text": "about a good plan. How do I create a plan",
+      "offset": 565000,
+      "duration": 3000
+    },
+    {
+      "text": "that my agentic tool understands? Okay,",
+      "offset": 568000,
+      "duration": 3000
+    },
+    {
+      "text": "so I think about these four areas. You",
+      "offset": 571000,
+      "duration": 2000
+    },
+    {
+      "text": "want to specify the \"what\" you want to",
+      "offset": 573000,
+      "duration": 2000
+    },
+    {
+      "text": "accomplish. So for example, hey write a",
+      "offset": 575000,
+      "duration": 2000
+    },
+    {
+      "text": "function that receives two numbers and",
+      "offset": 577000,
+      "duration": 3000
+    },
+    {
+      "text": "outputs the result of this certain",
+      "offset": 580000,
+      "duration": 2000
+    },
+    {
+      "text": "formula. Now you need the \"how\" of the",
+      "offset": 582000,
+      "duration": 2000
+    },
+    {
+      "text": "plan. The how will contain for example",
+      "offset": 584000,
+      "duration": 2000
+    },
+    {
+      "text": "the approach you want the agent to",
+      "offset": 586000,
+      "duration": 3000
+    },
+    {
+      "text": "follow. Unless this is an exploratory",
+      "offset": 589000,
+      "duration": 2000
+    },
+    {
+      "text": "session or you're using declarative",
+      "offset": 591000,
+      "duration": 2000
+    },
+    {
+      "text": "prompting where you're going to let the",
+      "offset": 593000,
+      "duration": 2000
+    },
+    {
+      "text": "agent figure it out. If you're going to",
+      "offset": 595000,
+      "duration": 1000
+    },
+    {
+      "text": "do upfront planning, you want to specify",
+      "offset": 596000,
+      "duration": 3000
+    },
+    {
+      "text": "how exactly you want the agent to",
+      "offset": 599000,
+      "duration": 2000
+    },
+    {
+      "text": "accomplish something. So for example,",
+      "offset": 601000,
+      "duration": 1000
+    },
+    {
+      "text": "hey I want you to use recursion to solve",
+      "offset": 602000,
+      "duration": 3000
+    },
+    {
+      "text": "this specific problem. You need the",
+      "offset": 605000,
+      "duration": 2000
+    },
+    {
+      "text": "\"where\" and basically this will give the",
+      "offset": 607000,
+      "duration": 2000
+    },
+    {
+      "text": "agent the context in the code base that",
+      "offset": 609000,
+      "duration": 2000
+    },
+    {
+      "text": "you want the agent to touch, which files",
+      "offset": 611000,
+      "duration": 3000
+    },
+    {
+      "text": "you should be making changes to, which",
+      "offset": 614000,
+      "duration": 2000
+    },
+    {
+      "text": "files you should never touch. And",
+      "offset": 616000,
+      "duration": 3000
+    },
+    {
+      "text": "finally you want the \"not.\" And the \"not\"",
+      "offset": 619000,
+      "duration": 2000
+    },
+    {
+      "text": "is one of the most important things in a",
+      "offset": 621000,
+      "duration": 2000
+    },
+    {
+      "text": "plan. You want to specify the areas, the",
+      "offset": 623000,
+      "duration": 3000
+    },
+    {
+      "text": "things that are adjacent to your plan",
+      "offset": 626000,
+      "duration": 3000
+    },
+    {
+      "text": "that you want your agent to ignore. Do",
+      "offset": 629000,
+      "duration": 3000
+    },
+    {
+      "text": "not implement this. I do not care about",
+      "offset": 632000,
+      "duration": 3000
+    },
+    {
+      "text": "doing that. That will give a lot of",
+      "offset": 635000,
+      "duration": 3000
+    },
+    {
+      "text": "information to your agent. So, anytime",
+      "offset": 638000,
+      "duration": 2000
+    },
+    {
+      "text": "you're thinking about a plan and you",
+      "offset": 640000,
+      "duration": 2000
+    },
+    {
+      "text": "want to be very specific, think about",
+      "offset": 642000,
+      "duration": 1000
+    },
+    {
+      "text": "these four areas and make sure your plan",
+      "offset": 643000,
+      "duration": 4000
+    },
+    {
+      "text": "contains all four of them. Another good",
+      "offset": 647000,
+      "duration": 2000
+    },
+    {
+      "text": "trick is showing the agent what good",
+      "offset": 649000,
+      "duration": 3000
+    },
+    {
+      "text": "looks like. And this comes from",
+      "offset": 652000,
+      "duration": 2000
+    },
+    {
+      "text": "prompting. A couple years ago when we",
+      "offset": 654000,
+      "duration": 2000
+    },
+    {
+      "text": "started doing some prompt engineering, a",
+      "offset": 656000,
+      "duration": 2000
+    },
+    {
+      "text": "good idea is to always show as part of",
+      "offset": 658000,
+      "duration": 4000
+    },
+    {
+      "text": "your prompt examples of what you want to",
+      "offset": 662000,
+      "duration": 2000
+    },
+    {
+      "text": "accomplish. So that still applies here.",
+      "offset": 664000,
+      "duration": 3000
+    },
+    {
+      "text": "When you're trying to ask the agent to",
+      "offset": 667000,
+      "duration": 2000
+    },
+    {
+      "text": "accomplish something, show the agent",
+      "offset": 669000,
+      "duration": 2000
+    },
+    {
+      "text": "what good looks like. Give the agent",
+      "offset": 671000,
+      "duration": 3000
+    },
+    {
+      "text": "examples of the format that you're",
+      "offset": 674000,
+      "duration": 3000
+    },
+    {
+      "text": "expecting back, of the boundaries on",
+      "offset": 677000,
+      "duration": 2000
+    },
+    {
+      "text": "dependencies. Give specific examples so",
+      "offset": 679000,
+      "duration": 3000
+    },
+    {
+      "text": "the agent knows and has something to look",
+      "offset": 682000,
+      "duration": 2000
+    },
+    {
+      "text": "at in order to produce a better result.",
+      "offset": 684000,
+      "duration": 2000
+    },
+    {
+      "text": "Ask the agent to explain its approach.",
+      "offset": 686000,
+      "duration": 3000
+    },
+    {
+      "text": "Something that happens is that these",
+      "offset": 690000,
+      "duration": 1000
+    },
+    {
+      "text": "agents are going to make assumptions",
+      "offset": 691000,
+      "duration": 2000
+    },
+    {
+      "text": "because it doesn't matter how much time",
+      "offset": 693000,
+      "duration": 2000
+    },
+    {
+      "text": "you spend creating a plan. It's usually",
+      "offset": 695000,
+      "duration": 2000
+    },
+    {
+      "text": "very hard to specify everything. So",
+      "offset": 697000,
+      "duration": 3000
+    },
+    {
+      "text": "there's going to be some assumptions,",
+      "offset": 700000,
+      "duration": 2000
+    },
+    {
+      "text": "just like people. These agents are going",
+      "offset": 702000,
+      "duration": 2000
+    },
+    {
+      "text": "to make assumptions about things that",
+      "offset": 704000,
+      "duration": 2000
+    },
+    {
+      "text": "you might need and how you might want",
+      "offset": 706000,
+      "duration": 2000
+    },
+    {
+      "text": "them. So the agent is going to make some",
+      "offset": 708000,
+      "duration": 2000
+    },
+    {
+      "text": "assumptions. Some of those assumptions",
+      "offset": 710000,
+      "duration": 1000
+    },
+    {
+      "text": "are going to be great and that's when",
+      "offset": 711000,
+      "duration": 2000
+    },
+    {
+      "text": "you feel the magic from this agent.",
+      "offset": 713000,
+      "duration": 2000
+    },
+    {
+      "text": "Sometimes these assumptions are going to",
+      "offset": 715000,
+      "duration": 2000
+    },
+    {
+      "text": "be wrong. So ask the agent to explain",
+      "offset": 717000,
+      "duration": 3000
+    },
+    {
+      "text": "those assumptions and that way you can",
+      "offset": 720000,
+      "duration": 2000
+    },
+    {
+      "text": "check whether the agent is doing",
+      "offset": 722000,
+      "duration": 2000
+    },
+    {
+      "text": "something good or something that you",
+      "offset": 724000,
+      "duration": 2000
+    },
+    {
+      "text": "really really want to change. You can do",
+      "offset": 726000,
+      "duration": 2000
+    },
+    {
+      "text": "this early on. A tip for Claude Code,",
+      "offset": 728000,
+      "duration": 2000
+    },
+    {
+      "text": "always reference files directly. I've",
+      "offset": 730000,
+      "duration": 2000
+    },
+    {
+      "text": "seen many people using Claude Code and",
+      "offset": 732000,
+      "duration": 2000
+    },
+    {
+      "text": "they are vague in where the changes need",
+      "offset": 734000,
+      "duration": 3000
+    },
+    {
+      "text": "to happen. Try to specify files",
+      "offset": 737000,
+      "duration": 3000
+    },
+    {
+      "text": "directly. Instead of saying change my",
+      "offset": 740000,
+      "duration": 3000
+    },
+    {
+      "text": "sponsors that are in whatever section of",
+      "offset": 743000,
+      "duration": 3000
+    },
+    {
+      "text": "my website, tell the agent change my",
+      "offset": 746000,
+      "duration": 3000
+    },
+    {
+      "text": "sponsors and reference the specific file",
+      "offset": 749000,
+      "duration": 2000
+    },
+    {
+      "text": "and that will reduce the number of",
+      "offset": 751000,
+      "duration": 2000
+    },
+    {
+      "text": "mistakes considerably. Area number four",
+      "offset": 753000,
+      "duration": 2000
+    },
+    {
+      "text": "of our plan is about context, and context",
+      "offset": 755000,
+      "duration": 3000
+    },
+    {
+      "text": "here is everything. One of the most",
+      "offset": 759000,
+      "duration": 2000
+    },
+    {
+      "text": "important areas of modern AI is context",
+      "offset": 761000,
+      "duration": 4000
+    },
+    {
+      "text": "engineering and how you put together a",
+      "offset": 765000,
+      "duration": 3000
+    },
+    {
+      "text": "context. That's everything the agent",
+      "offset": 768000,
+      "duration": 2000
+    },
+    {
+      "text": "needs in order to do a good job. Same",
+      "offset": 770000,
+      "duration": 2000
+    },
+    {
+      "text": "plan, same prompt will have completely",
+      "offset": 772000,
+      "duration": 4000
+    },
+    {
+      "text": "different results, will give you",
+      "offset": 776000,
+      "duration": 2000
+    },
+    {
+      "text": "different code depending on what your",
+      "offset": 778000,
+      "duration": 2000
+    },
+    {
+      "text": "agent knows about your project,",
+      "offset": 780000,
+      "duration": 2000
+    },
+    {
+      "text": "depending on the context. So, make sure",
+      "offset": 782000,
+      "duration": 3000
+    },
+    {
+      "text": "you always provide assumptions",
+      "offset": 785000,
+      "duration": 2000
+    },
+    {
+      "text": "beforehand or ask the agent to list any",
+      "offset": 787000,
+      "duration": 4000
+    },
+    {
+      "text": "assumptions so you can correct them. Let",
+      "offset": 791000,
+      "duration": 2000
+    },
+    {
+      "text": "the agent read your plan and say, \"I'm",
+      "offset": 793000,
+      "duration": 2000
+    },
+    {
+      "text": "not sure if here you mean A or you mean",
+      "offset": 795000,
+      "duration": 4000
+    },
+    {
+      "text": "B.\" And that will help you clarify and",
+      "offset": 799000,
+      "duration": 3000
+    },
+    {
+      "text": "create better context for your",
+      "offset": 802000,
+      "duration": 3000
+    },
+    {
+      "text": "agent. A tip for Claude Code: Describe",
+      "offset": 805000,
+      "duration": 3000
+    },
+    {
+      "text": "your tech stack, your folder structure,",
+      "offset": 748000,
+      "duration": 62000
+    },
+    {
+      "text": "your coding conventions, and any anti-",
+      "offset": 810000,
+      "duration": 3000
+    },
+    {
+      "text": "patterns you like to avoid in your",
+      "offset": 813000,
+      "duration": 2000
+    },
+    {
+      "text": "CLAUDE.md file. In fact, if you ask",
+      "offset": 815000,
+      "duration": 3000
+    },
+    {
+      "text": "Claude to initialize your file, Claude",
+      "offset": 818000,
+      "duration": 3000
+    },
+    {
+      "text": "will add this information based on what",
+      "offset": 821000,
+      "duration": 3000
+    },
+    {
+      "text": "I've seen to your CLAUDE.md file. And the",
+      "offset": 824000,
+      "duration": 2000
+    },
+    {
+      "text": "reason this is important is because",
+      "offset": 826000,
+      "duration": 2000
+    },
+    {
+      "text": "Claude does not have to do that thinking",
+      "offset": 828000,
+      "duration": 3000
+    },
+    {
+      "text": "ever again. It can just read it from the",
+      "offset": 831000,
+      "duration": 2000
+    },
+    {
+      "text": "file and reuse it on subsequent",
+      "offset": 833000,
+      "duration": 3000
+    },
+    {
+      "text": "requests. If you don't add it, you're",
+      "offset": 836000,
+      "duration": 1000
+    },
+    {
+      "text": "forcing Claude to recheck the folder",
+      "offset": 837000,
+      "duration": 3000
+    },
+    {
+      "text": "structure every single time. There is a",
+      "offset": 840000,
+      "duration": 2000
+    },
+    {
+      "text": "Claude command that they recently added",
+      "offset": 842000,
+      "duration": 2000
+    },
+    {
+      "text": "that's called insight. And one of the",
+      "offset": 844000,
+      "duration": 2000
+    },
+    {
+      "text": "things if you run slash insights in your",
+      "offset": 846000,
+      "duration": 3000
+    },
+    {
+      "text": "Claude instance, Claude is going to",
+      "offset": 849000,
+      "duration": 2000
+    },
+    {
+      "text": "generate a report where it's going to",
+      "offset": 851000,
+      "duration": 2000
+    },
+    {
+      "text": "show you exactly areas where you can",
+      "offset": 853000,
+      "duration": 2000
+    },
+    {
+      "text": "improve your prompting for Claude Code,",
+      "offset": 855000,
+      "duration": 3000
+    },
+    {
+      "text": "your usage of Claude Code. And one of the",
+      "offset": 858000,
+      "duration": 2000
+    },
+    {
+      "text": "areas consistently that I keep getting",
+      "offset": 860000,
+      "duration": 3000
+    },
+    {
+      "text": "from different projects is improving the",
+      "offset": 863000,
+      "duration": 2000
+    },
+    {
+      "text": "context I'm giving Claude in my CLAUDE.md",
+      "offset": 865000,
+      "duration": 4000
+    },
+    {
+      "text": "file. Another idea in this area is to",
+      "offset": 869000,
+      "duration": 2000
+    },
+    {
+      "text": "use the memory to save any information",
+      "offset": 871000,
+      "duration": 4000
+    },
+    {
+      "text": "you want to make persistent. So anytime",
+      "offset": 875000,
+      "duration": 3000
+    },
+    {
+      "text": "you find something, any preferences that",
+      "offset": 878000,
+      "duration": 2000
+    },
+    {
+      "text": "you want to reuse, just use the memory",
+      "offset": 880000,
+      "duration": 3000
+    },
+    {
+      "text": "command and modify the memory file, add",
+      "offset": 883000,
+      "duration": 3000
+    },
+    {
+      "text": "it there so Claude always has access to",
+      "offset": 886000,
+      "duration": 2000
+    },
+    {
+      "text": "it. Another thing is to add a .claudeignore",
+      "offset": 888000,
+      "duration": 3000
+    },
+    {
+      "text": "file. Anything that you don't want",
+      "offset": 891000,
+      "duration": 2000
+    },
+    {
+      "text": "Claude to touch, add it here. It's very",
+      "offset": 893000,
+      "duration": 3000
+    },
+    {
+      "text": "easy to get bogged down your Claude Code,",
+      "offset": 896000,
+      "duration": 3000
+    },
+    {
+      "text": "your agent, by constantly checking files",
+      "offset": 899000,
+      "duration": 3000
+    },
+    {
+      "text": "that are temporary files or files that",
+      "offset": 902000,
+      "duration": 2000
+    },
+    {
+      "text": "you really don't want Claude to process",
+      "offset": 904000,
+      "duration": 3000
+    },
+    {
+      "text": "for some reason, security files, stuff",
+      "offset": 907000,
+      "duration": 2000
+    },
+    {
+      "text": "like that. Just add them to the file.",
+      "offset": 909000,
+      "duration": 2000
+    },
+    {
+      "text": "Claude will never read or modify those",
+      "offset": 911000,
+      "duration": 3000
+    },
+    {
+      "text": "files. Now from our plan we go now to",
+      "offset": 914000,
+      "duration": 2000
+    },
+    {
+      "text": "number five. Remember there are seven",
+      "offset": 916000,
+      "duration": 3000
+    },
+    {
+      "text": "steps. Number five, one of the most",
+      "offset": 919000,
+      "duration": 2000
+    },
+    {
+      "text": "important ones, the one that everyone is",
+      "offset": 921000,
+      "duration": 2000
+    },
+    {
+      "text": "talking about is review. Review",
+      "offset": 923000,
+      "duration": 2000
+    },
+    {
+      "text": "mercilessly. Agents make mistakes.",
+      "offset": 925000,
+      "duration": 4000
+    },
+    {
+      "text": "Period. Doesn't matter how much effort",
+      "offset": 929000,
+      "duration": 3000
+    },
+    {
+      "text": "you put in all of the previous steps. In",
+      "offset": 932000,
+      "duration": 3000
+    },
+    {
+      "text": "order to reduce those mistakes, agents",
+      "offset": 935000,
+      "duration": 2000
+    },
+    {
+      "text": "will still make mistakes. You have to",
+      "offset": 937000,
+      "duration": 3000
+    },
+    {
+      "text": "review. Remember that AI generated code",
+      "offset": 940000,
+      "duration": 2000
+    },
+    {
+      "text": "might look good in isolation when you",
+      "offset": 942000,
+      "duration": 4000
+    },
+    {
+      "text": "just look at it. When the code that",
+      "offset": 946000,
+      "duration": 2000
+    },
+    {
+      "text": "comes back from Claude, that code might",
+      "offset": 948000,
+      "duration": 2000
+    },
+    {
+      "text": "look perfect, but once you integrate it",
+      "offset": 950000,
+      "duration": 3000
+    },
+    {
+      "text": "with the rest of the solution, that code",
+      "offset": 953000,
+      "duration": 3000
+    },
+    {
+      "text": "might have unintended consequences,",
+      "offset": 956000,
+      "duration": 2000
+    },
+    {
+      "text": "might cause problems in other areas of",
+      "offset": 958000,
+      "duration": 3000
+    },
+    {
+      "text": "your system. Always verify your system",
+      "offset": 961000,
+      "duration": 3000
+    },
+    {
+      "text": "as a whole. Don't rely on just checking",
+      "offset": 964000,
+      "duration": 4000
+    },
+    {
+      "text": "the code that comes out of the agent.",
+      "offset": 968000,
+      "duration": 2000
+    },
+    {
+      "text": "Focus on changes that are unrelated to",
+      "offset": 970000,
+      "duration": 3000
+    },
+    {
+      "text": "the code and the comments that you're",
+      "offset": 973000,
+      "duration": 3000
+    },
+    {
+      "text": "changing right now. Pay special",
+      "offset": 976000,
+      "duration": 2000
+    },
+    {
+      "text": "attention to anything, any contracts",
+      "offset": 978000,
+      "duration": 2000
+    },
+    {
+      "text": "from your system that potentially break",
+      "offset": 980000,
+      "duration": 2000
+    },
+    {
+      "text": "because of modifications from the agent",
+      "offset": 982000,
+      "duration": 3000
+    },
+    {
+      "text": "because it's very very simple to get",
+      "offset": 985000,
+      "duration": 2000
+    },
+    {
+      "text": "into a situation where Claude is fixing",
+      "offset": 987000,
+      "duration": 3000
+    },
+    {
+      "text": "something but at the same time is",
+      "offset": 990000,
+      "duration": 2000
+    },
+    {
+      "text": "breaking something else that is hard to",
+      "offset": 992000,
+      "duration": 2000
+    },
+    {
+      "text": "realize just by looking at the code that",
+      "offset": 994000,
+      "duration": 2000
+    },
+    {
+      "text": "Claude is making. Breaking things down",
+      "offset": 996000,
+      "duration": 2000
+    },
+    {
+      "text": "into smaller tasks will help a lot in",
+      "offset": 998000,
+      "duration": 2000
+    },
+    {
+      "text": "this area because you are making sure",
+      "offset": 1000000,
+      "duration": 3000
+    },
+    {
+      "text": "that you're only working on a contained",
+      "offset": 1003000,
+      "duration": 3000
+    },
+    {
+      "text": "space. You're not letting Claude touch too",
+      "offset": 1006000,
+      "duration": 3000
+    },
+    {
+      "text": "many files at once. Here is something",
+      "offset": 1009000,
+      "duration": 3000
+    },
+    {
+      "text": "that helps me a lot, and this is a very",
+      "offset": 1012000,
+      "duration": 2000
+    },
+    {
+      "text": "good way that I found for me to keep my",
+      "offset": 1014000,
+      "duration": 3000
+    },
+    {
+      "text": "sanity and to keep ownership of my code",
+      "offset": 1017000,
+      "duration": 3000
+    },
+    {
+      "text": "base. Sometimes I write the test cases",
+      "offset": 1020000,
+      "duration": 3000
+    },
+    {
+      "text": "first and then I ask my coding agent, in",
+      "offset": 1023000,
+      "duration": 2000
+    },
+    {
+      "text": "this case Claude Code, to implement the",
+      "offset": 1025000,
+      "duration": 3000
+    },
+    {
+      "text": "code that will make that test pass. I",
+      "offset": 1028000,
+      "duration": 2000
+    },
+    {
+      "text": "don't do this all the time, but anytime",
+      "offset": 1030000,
+      "duration": 3000
+    },
+    {
+      "text": "I want to make sure certain",
+      "offset": 1033000,
+      "duration": 2000
+    },
+    {
+      "text": "functionality is correct, this is what I",
+      "offset": 1035000,
+      "duration": 2000
+    },
+    {
+      "text": "do. I'm not going to write the solution.",
+      "offset": 1037000,
+      "duration": 2000
+    },
+    {
+      "text": "I'm just going to write a test case and",
+      "offset": 1039000,
+      "duration": 2000
+    },
+    {
+      "text": "then I'm going to let Claude figure out",
+      "offset": 1041000,
+      "duration": 1000
+    },
+    {
+      "text": "what code is going to make pass that",
+      "offset": 1042000,
+      "duration": 2000
+    },
+    {
+      "text": "test. And guess what? Sometimes Claude",
+      "offset": 1044000,
+      "duration": 2000
+    },
+    {
+      "text": "Code is going to cheat. It's going to",
+      "offset": 1046000,
+      "duration": 3000
+    },
+    {
+      "text": "find a solution that makes my test pass,",
+      "offset": 1049000,
+      "duration": 1000
+    },
+    {
+      "text": "but it's not a proper solution. I'm",
+      "offset": 1050000,
+      "duration": 3000
+    },
+    {
+      "text": "going to write another test so it fails",
+      "offset": 1053000,
+      "duration": 2000
+    },
+    {
+      "text": "again. And I'm going to keep forcing",
+      "offset": 1055000,
+      "duration": 2000
+    },
+    {
+      "text": "Claude Code to find the proper solution",
+      "offset": 1057000,
+      "duration": 2000
+    },
+    {
+      "text": "to pass my test cases. I found that",
+      "offset": 1059000,
+      "duration": 2000
+    },
+    {
+      "text": "that way I get way stronger solutions",
+      "offset": 1061000,
+      "duration": 3000
+    },
+    {
+      "text": "by forcing Claude to do this.",
+      "offset": 1064000,
+      "duration": 3000
+    },
+    {
+      "text": "Write on your CLAUDE.md: \"When there is a",
+      "offset": 1067000,
+      "duration": 3000
+    },
+    {
+      "text": "bug, start by writing a test case that",
+      "offset": 1070000,
+      "duration": 2000
+    },
+    {
+      "text": "reproduces that bug and then write the",
+      "offset": 1072000,
+      "duration": 3000
+    },
+    {
+      "text": "code that makes that test case pass.\"",
+      "offset": 1075000,
+      "duration": 3000
+    },
+    {
+      "text": "Very good trick to make sure that Claude",
+      "offset": 1078000,
+      "duration": 2000
+    },
+    {
+      "text": "Code has some guidance, some guard rails",
+      "offset": 1080000,
+      "duration": 3000
+    },
+    {
+      "text": "on fixing bugs. The result of doing this",
+      "offset": 1083000,
+      "duration": 3000
+    },
+    {
+      "text": "is not only getting stronger code, but",
+      "offset": 1086000,
+      "duration": 3000
+    },
+    {
+      "text": "it's also getting a very very strong",
+      "offset": 1089000,
+      "duration": 3000
+    },
+    {
+      "text": "test suite that you can keep running",
+      "offset": 1092000,
+      "duration": 2000
+    },
+    {
+      "text": "over and over again and Claude Code can",
+      "offset": 1094000,
+      "duration": 2000
+    },
+    {
+      "text": "use to make future changes. Write a test",
+      "offset": 1096000,
+      "duration": 2000
+    },
+    {
+      "text": "case first to make the test pass. It's",
+      "offset": 1098000,
+      "duration": 3000
+    },
+    {
+      "text": "TDD for agentic coding. You can also",
+      "offset": 1101000,
+      "duration": 2000
+    },
+    {
+      "text": "write on your CLAUDE.md: \"After writing",
+      "offset": 1103000,
+      "duration": 3000
+    },
+    {
+      "text": "the code, list what could break and",
+      "offset": 1106000,
+      "duration": 2000
+    },
+    {
+      "text": "suggest tests to cover it.\" I've seen",
+      "offset": 1108000,
+      "duration": 3000
+    },
+    {
+      "text": "many many people do this already. They",
+      "offset": 1111000,
+      "duration": 3000
+    },
+    {
+      "text": "manually prompt the agent to write code",
+      "offset": 1114000,
+      "duration": 2000
+    },
+    {
+      "text": "or to propose test cases to solve",
+      "offset": 1116000,
+      "duration": 3000
+    },
+    {
+      "text": "problems that might occur. You can also",
+      "offset": 1119000,
+      "duration": 3000
+    },
+    {
+      "text": "codify this in your CLAUDE.md so Claude",
+      "offset": 1122000,
+      "duration": 3000
+    },
+    {
+      "text": "does this automatically. You can also",
+      "offset": 1125000,
+      "duration": 3000
+    },
+    {
+      "text": "create a review command. This is also",
+      "offset": 1128000,
+      "duration": 2000
+    },
+    {
+      "text": "something that I do on every one of my",
+      "offset": 1130000,
+      "duration": 2000
+    },
+    {
+      "text": "projects. I create a review command that",
+      "offset": 1132000,
+      "duration": 2000
+    },
+    {
+      "text": "is going to check my code for any",
+      "offset": 1134000,
+      "duration": 2000
+    },
+    {
+      "text": "mistakes, for any edge cases. It's going",
+      "offset": 1136000,
+      "duration": 3000
+    },
+    {
+      "text": "to make sure my code is consistent with",
+      "offset": 1139000,
+      "duration": 2000
+    },
+    {
+      "text": "the rest of the patterns in my codebase.",
+      "offset": 1141000,
+      "duration": 3000
+    },
+    {
+      "text": "I do this and I can just call that",
+      "offset": 1144000,
+      "duration": 2000
+    },
+    {
+      "text": "review command whenever. Very, very",
+      "offset": 1146000,
+      "duration": 2000
+    },
+    {
+      "text": "easy. And Claude is just going to go",
+      "offset": 1148000,
+      "duration": 3000
+    },
+    {
+      "text": "through all of that process without me",
+      "offset": 1151000,
+      "duration": 1000
+    },
+    {
+      "text": "having to reprompt the agent all the",
+      "offset": 1152000,
+      "duration": 3000
+    },
+    {
+      "text": "time. I usually create a sub agent. So I",
+      "offset": 1155000,
+      "duration": 2000
+    },
+    {
+      "text": "run that review as a sub agent so I",
+      "offset": 1157000,
+      "duration": 3000
+    },
+    {
+      "text": "keep my context clean from the results",
+      "offset": 1160000,
+      "duration": 3000
+    },
+    {
+      "text": "of this agent. Finally, create a test",
+      "offset": 1163000,
+      "duration": 3000
+    },
+    {
+      "text": "command. This is something very simple",
+      "offset": 1166000,
+      "duration": 2000
+    },
+    {
+      "text": "to do. Tell Claude how to run your test",
+      "offset": 1168000,
+      "duration": 1000
+    },
+    {
+      "text": "cases. That test command will basically",
+      "offset": 1169000,
+      "duration": 3000
+    },
+    {
+      "text": "spin off another sub agent and that will",
+      "offset": 1172000,
+      "duration": 2000
+    },
+    {
+      "text": "run all of your test cases using Claude",
+      "offset": 1174000,
+      "duration": 2000
+    },
+    {
+      "text": "Code over time. You can just tell Claude",
+      "offset": 1176000,
+      "duration": 2000
+    },
+    {
+      "text": "Code that it can run this command",
+      "offset": 1178000,
+      "duration": 4000
+    },
+    {
+      "text": "automatically whenever it makes a change",
+      "offset": 1182000,
+      "duration": 2000
+    },
+    {
+      "text": "and then check the results. Then we get",
+      "offset": 1184000,
+      "duration": 2000
+    },
+    {
+      "text": "into the sixth step which is iterate.",
+      "offset": 1186000,
+      "duration": 2000
+    },
+    {
+      "text": "And the point here of working with",
+      "offset": 1188000,
+      "duration": 3000
+    },
+    {
+      "text": "agentic coding is precisely this loop",
+      "offset": 1191000,
+      "duration": 3000
+    },
+    {
+      "text": "that we create where we have an agent",
+      "offset": 1194000,
+      "duration": 3000
+    },
+    {
+      "text": "writing the code. We have ourselves",
+      "offset": 1197000,
+      "duration": 1000
+    },
+    {
+      "text": "compiling here, reviewing that code.",
+      "offset": 1198000,
+      "duration": 3000
+    },
+    {
+      "text": "Then we're giving the agent feedback",
+      "offset": 1201000,
+      "duration": 2000
+    },
+    {
+      "text": "and the agent is rewriting that code by",
+      "offset": 1203000,
+      "duration": 3000
+    },
+    {
+      "text": "using that feedback. This is the",
+      "offset": 1206000,
+      "duration": 2000
+    },
+    {
+      "text": "iteration process that we're going to be",
+      "offset": 1208000,
+      "duration": 2000
+    },
+    {
+      "text": "doing while working with these agents.",
+      "offset": 1210000,
+      "duration": 3000
+    },
+    {
+      "text": "Agents like to over-complicate things.",
+      "offset": 1213000,
+      "duration": 2000
+    },
+    {
+      "text": "Many many times I've asked my agent to",
+      "offset": 1215000,
+      "duration": 3000
+    },
+    {
+      "text": "write a solution that I think it should",
+      "offset": 1218000,
+      "duration": 2000
+    },
+    {
+      "text": "be very simple and then I get code back",
+      "offset": 1220000,
+      "duration": 2000
+    },
+    {
+      "text": "that's way more complex than what I",
+      "offset": 1222000,
+      "duration": 3000
+    },
+    {
+      "text": "need. Sometimes the agent is checking",
+      "offset": 1225000,
+      "duration": 2000
+    },
+    {
+      "text": "for edge cases that are impossible to",
+      "offset": 1227000,
+      "duration": 3000
+    },
+    {
+      "text": "happen. So always challenge complex",
+      "offset": 1230000,
+      "duration": 2000
+    },
+    {
+      "text": "solutions that come back from these",
+      "offset": 1232000,
+      "duration": 3000
+    },
+    {
+      "text": "agents. Anytime you see code that you",
+      "offset": 1235000,
+      "duration": 1000
+    },
+    {
+      "text": "suspect shouldn't be that complex,",
+      "offset": 1236000,
+      "duration": 3000
+    },
+    {
+      "text": "tell the agent that and the agents are",
+      "offset": 1239000,
+      "duration": 2000
+    },
+    {
+      "text": "usually going to come back with a much",
+      "offset": 1241000,
+      "duration": 2000
+    },
+    {
+      "text": "simpler, better solution for you.",
+      "offset": 1243000,
+      "duration": 3000
+    },
+    {
+      "text": "Write in your CLAUDE.md file: \"When I say",
+      "offset": 1246000,
+      "duration": 2000
+    },
+    {
+      "text": "something is wrong, ask clarifying",
+      "offset": 1248000,
+      "duration": 2000
+    },
+    {
+      "text": "questions before rewriting.\" Something",
+      "offset": 1250000,
+      "duration": 3000
+    },
+    {
+      "text": "that you're going to find if you're",
+      "offset": 1253000,
+      "duration": 1000
+    },
+    {
+      "text": "using these agents is that sometimes",
+      "offset": 1254000,
+      "duration": 1000
+    },
+    {
+      "text": "they give you a solution and it's not",
+      "offset": 1255000,
+      "duration": 2000
+    },
+    {
+      "text": "correct. The only thing that you do is",
+      "offset": 1257000,
+      "duration": 2000
+    },
+    {
+      "text": "\"this is not correct,\" then the agent is",
+      "offset": 1259000,
+      "duration": 2000
+    },
+    {
+      "text": "going to try to reimplement that",
+      "offset": 1261000,
+      "duration": 2000
+    },
+    {
+      "text": "solution without necessarily knowing the",
+      "offset": 1263000,
+      "duration": 2000
+    },
+    {
+      "text": "assumptions that you're making or the",
+      "offset": 1265000,
+      "duration": 2000
+    },
+    {
+      "text": "reasons that you think the solution is",
+      "offset": 1267000,
+      "duration": 2000
+    },
+    {
+      "text": "not correct. So instead I told my",
+      "offset": 1269000,
+      "duration": 2000
+    },
+    {
+      "text": "agent: anytime I say that something is",
+      "offset": 1271000,
+      "duration": 2000
+    },
+    {
+      "text": "wrong, just make sure you ask clarifying",
+      "offset": 1273000,
+      "duration": 2000
+    },
+    {
+      "text": "questions so the answers to those are",
+      "offset": 1275000,
+      "duration": 2000
+    },
+    {
+      "text": "going to help the agent make better",
+      "offset": 1277000,
+      "duration": 2000
+    },
+    {
+      "text": "decisions. That's how you iterate. Use",
+      "offset": 1279000,
+      "duration": 2000
+    },
+    {
+      "text": "the rewind command. Claude Code provides",
+      "offset": 1281000,
+      "duration": 2000
+    },
+    {
+      "text": "a rewind command where you can always go",
+      "offset": 1283000,
+      "duration": 3000
+    },
+    {
+      "text": "back whenever a solution provided by",
+      "offset": 1286000,
+      "duration": 2000
+    },
+    {
+      "text": "Claude is not correct. I ask you to do",
+      "offset": 1288000,
+      "duration": 2000
+    },
+    {
+      "text": "something, it doesn't work, and instead",
+      "offset": 1290000,
+      "duration": 3000
+    },
+    {
+      "text": "of keeping the context going or keeping",
+      "offset": 1293000,
+      "duration": 2000
+    },
+    {
+      "text": "making changes on top of the changes, I",
+      "offset": 1295000,
+      "duration": 2000
+    },
+    {
+      "text": "don't want to do that. Instead I tell",
+      "offset": 1297000,
+      "duration": 2000
+    },
+    {
+      "text": "Claude, just go back, rewind to before",
+      "offset": 1299000,
+      "duration": 2000
+    },
+    {
+      "text": "you made the solution or you created the",
+      "offset": 1301000,
+      "duration": 3000
+    },
+    {
+      "text": "code. Let me tell you some clarifying",
+      "offset": 1304000,
+      "duration": 2000
+    },
+    {
+      "text": "notes. Very easy to just move forward",
+      "offset": 1306000,
+      "duration": 2000
+    },
+    {
+      "text": "without mistakes. Minimize the time you",
+      "offset": 1308000,
+      "duration": 3000
+    },
+    {
+      "text": "wait by using git worktrees. Git",
+      "offset": 1311000,
+      "duration": 3000
+    },
+    {
+      "text": "worktrees will help you have copies of",
+      "offset": 1314000,
+      "duration": 3000
+    },
+    {
+      "text": "your codebase and run parallel agents.",
+      "offset": 1317000,
+      "duration": 4000
+    },
+    {
+      "text": "So something that I do is I have several",
+      "offset": 1321000,
+      "duration": 3000
+    },
+    {
+      "text": "terminals running Claude Code on my",
+      "offset": 1324000,
+      "duration": 2000
+    },
+    {
+      "text": "codebase but they are on different work",
+      "offset": 1326000,
+      "duration": 2000
+    },
+    {
+      "text": "trees. So the changes from one agent are",
+      "offset": 1328000,
+      "duration": 2000
+    },
+    {
+      "text": "not interfering with the changes from",
+      "offset": 1330000,
+      "duration": 3000
+    },
+    {
+      "text": "another agent. Here's another tip and",
+      "offset": 1333000,
+      "duration": 2000
+    },
+    {
+      "text": "this is not for the faint of heart.",
+      "offset": 1335000,
+      "duration": 2000
+    },
+    {
+      "text": "Don't be afraid of running Claude by",
+      "offset": 1337000,
+      "duration": 2000
+    },
+    {
+      "text": "skipping permissions. Something that",
+      "offset": 1339000,
+      "duration": 3000
+    },
+    {
+      "text": "bothers me all the time is that Claude",
+      "offset": 1342000,
+      "duration": 1000
+    },
+    {
+      "text": "obviously every session is going to ask",
+      "offset": 1343000,
+      "duration": 3000
+    },
+    {
+      "text": "you for permissions to do certain",
+      "offset": 1346000,
+      "duration": 2000
+    },
+    {
+      "text": "things. Don't be afraid, especially when",
+      "offset": 1348000,
+      "duration": 2000
+    },
+    {
+      "text": "you're running exploratory sessions, to",
+      "offset": 1350000,
+      "duration": 3000
+    },
+    {
+      "text": "run Claude using this command and",
+      "offset": 1353000,
+      "duration": 2000
+    },
+    {
+      "text": "skipping permissions. This is going to",
+      "offset": 1355000,
+      "duration": 3000
+    },
+    {
+      "text": "make it feel incredibly fast. And this",
+      "offset": 1358000,
+      "duration": 2000
+    },
+    {
+      "text": "is the final step of your plan, but I'm",
+      "offset": 1360000,
+      "duration": 3000
+    },
+    {
+      "text": "going to argue it's one of the most",
+      "offset": 1363000,
+      "duration": 3000
+    },
+    {
+      "text": "important one. You need to teach your",
+      "offset": 1366000,
+      "duration": 2000
+    },
+    {
+      "text": "agents to do better next time. The real",
+      "offset": 1368000,
+      "duration": 2000
+    },
+    {
+      "text": "value here comes from compounding the",
+      "offset": 1370000,
+      "duration": 3000
+    },
+    {
+      "text": "knowledge of these agents over time.",
+      "offset": 1373000,
+      "duration": 2000
+    },
+    {
+      "text": "That's the real leverage of agentic",
+      "offset": 1375000,
+      "duration": 3000
+    },
+    {
+      "text": "coding. These tools are going to learn",
+      "offset": 1378000,
+      "duration": 3000
+    },
+    {
+      "text": "just like an intern would. Maybe not",
+      "offset": 1381000,
+      "duration": 4000
+    },
+    {
+      "text": "necessarily the same, but they can learn",
+      "offset": 1385000,
+      "duration": 3000
+    },
+    {
+      "text": "from the way you work and from mistakes",
+      "offset": 1388000,
+      "duration": 3000
+    },
+    {
+      "text": "that they make. But you need to make sure",
+      "offset": 1391000,
+      "duration": 2000
+    },
+    {
+      "text": "you are accumulating that knowledge",
+      "offset": 1393000,
+      "duration": 2000
+    },
+    {
+      "text": "appropriately so you can actually take",
+      "offset": 1395000,
+      "duration": 2000
+    },
+    {
+      "text": "advantage of that learning over time.",
+      "offset": 1397000,
+      "duration": 2000
+    },
+    {
+      "text": "Every iteration that you're using these",
+      "offset": 1399000,
+      "duration": 2000
+    },
+    {
+      "text": "agents, you're going to be getting two",
+      "offset": 1401000,
+      "duration": 3000
+    },
+    {
+      "text": "outputs. The first output is the",
+      "offset": 1404000,
+      "duration": 1000
+    },
+    {
+      "text": "solution that the agent gave you, some",
+      "offset": 1405000,
+      "duration": 3000
+    },
+    {
+      "text": "code maybe or some changes in the",
+      "offset": 1408000,
+      "duration": 2000
+    },
+    {
+      "text": "documentation. The second output that",
+      "offset": 1410000,
+      "duration": 2000
+    },
+    {
+      "text": "you're getting from the agent is",
+      "offset": 1412000,
+      "duration": 3000
+    },
+    {
+      "text": "reusable knowledge. That's one of the",
+      "offset": 1415000,
+      "duration": 2000
+    },
+    {
+      "text": "most important things that you can use.",
+      "offset": 1417000,
+      "duration": 2000
+    },
+    {
+      "text": "Here is how. Write in your CLAUDE.md",
+      "offset": 1419000,
+      "duration": 2000
+    },
+    {
+      "text": "file: \"Every time I correct you, add a",
+      "offset": 1421000,
+      "duration": 2000
+    },
+    {
+      "text": "new rule to the CLAUDE.md file so it",
+      "offset": 1423000,
+      "duration": 3000
+    },
+    {
+      "text": "never happens again.\" This also works if",
+      "offset": 1426000,
+      "duration": 3000
+    },
+    {
+      "text": "you are using a skill. So anytime I use",
+      "offset": 1429000,
+      "duration": 3000
+    },
+    {
+      "text": "a Claude skill and Claude makes a",
+      "offset": 1432000,
+      "duration": 3000
+    },
+    {
+      "text": "mistake, the first thing that I'm going",
+      "offset": 1435000,
+      "duration": 2000
+    },
+    {
+      "text": "to do after that session is over is",
+      "offset": 1437000,
+      "duration": 2000
+    },
+    {
+      "text": "asking Claude to update the skill with",
+      "offset": 1439000,
+      "duration": 3000
+    },
+    {
+      "text": "any new learnings from that session. And",
+      "offset": 1442000,
+      "duration": 3000
+    },
+    {
+      "text": "Claude can summarize the session, can",
+      "offset": 1445000,
+      "duration": 3000
+    },
+    {
+      "text": "realize the mistakes it made, and can go",
+      "offset": 1448000,
+      "duration": 2000
+    },
+    {
+      "text": "and correct the skills file so that",
+      "offset": 1450000,
+      "duration": 3000
+    },
+    {
+      "text": "mistake never happens again. And over",
+      "offset": 1453000,
+      "duration": 3000
+    },
+    {
+      "text": "time, you're going to start plugging all",
+      "offset": 1456000,
+      "duration": 2000
+    },
+    {
+      "text": "of the holes of your skill. Over time,",
+      "offset": 1458000,
+      "duration": 3000
+    },
+    {
+      "text": "the agent will learn to do things",
+      "offset": 1461000,
+      "duration": 3000
+    },
+    {
+      "text": "better. That's the important part. Never",
+      "offset": 1464000,
+      "duration": 3000
+    },
+    {
+      "text": "fix the same mistake twice. Convert any",
+      "offset": 1467000,
+      "duration": 3000
+    },
+    {
+      "text": "successful repeatable prompt into a",
+      "offset": 1470000,
+      "duration": 3000
+    },
+    {
+      "text": "workflow. Don't prompt your agent over",
+      "offset": 1473000,
+      "duration": 3000
+    },
+    {
+      "text": "and over and over again using the same",
+      "offset": 1476000,
+      "duration": 3000
+    },
+    {
+      "text": "process. Instead, anytime you're doing",
+      "offset": 1479000,
+      "duration": 4000
+    },
+    {
+      "text": "something and you find yourself asking",
+      "offset": 1483000,
+      "duration": 2000
+    },
+    {
+      "text": "for it over and over again, just create",
+      "offset": 1485000,
+      "duration": 2000
+    },
+    {
+      "text": "a skill. Automate that workflow so you",
+      "offset": 1487000,
+      "duration": 2000
+    },
+    {
+      "text": "don't have to repeat it again. Create a",
+      "offset": 1489000,
+      "duration": 3000
+    },
+    {
+      "text": "slash command or create a skill just to",
+      "offset": 1492000,
+      "duration": 2000
+    },
+    {
+      "text": "do that over and over again. Create sub",
+      "offset": 1494000,
+      "duration": 3000
+    },
+    {
+      "text": "agents. I mentioned that I had a review",
+      "offset": 1497000,
+      "duration": 2000
+    },
+    {
+      "text": "sub agent. I had a test sub agent. So",
+      "offset": 1499000,
+      "duration": 3000
+    },
+    {
+      "text": "these sub agents will work separately",
+      "offset": 1502000,
+      "duration": 3000
+    },
+    {
+      "text": "from the main context of your agent. So",
+      "offset": 1505000,
+      "duration": 3000
+    },
+    {
+      "text": "for example, for running all of the test",
+      "offset": 1508000,
+      "duration": 3000
+    },
+    {
+      "text": "cases, this is something repetitive",
+      "offset": 1511000,
+      "duration": 1000
+    },
+    {
+      "text": "that I do all the time. This is",
+      "offset": 1512000,
+      "duration": 3000
+    },
+    {
+      "text": "something that requires large context or",
+      "offset": 1515000,
+      "duration": 1000
+    },
+    {
+      "text": "specialized analysis and therefore I",
+      "offset": 1516000,
+      "duration": 2000
+    },
+    {
+      "text": "don't want to pollute my main context",
+      "offset": 1518000,
+      "duration": 3000
+    },
+    {
+      "text": "with all of the results from the test",
+      "offset": 1521000,
+      "duration": 2000
+    },
+    {
+      "text": "cases and from everything that the agent",
+      "offset": 1523000,
+      "duration": 2000
+    },
+    {
+      "text": "is doing. I'm going to create a sub",
+      "offset": 1525000,
+      "duration": 2000
+    },
+    {
+      "text": "agent—very simple to do—and they are",
+      "offset": 1527000,
+      "duration": 1000
+    },
+    {
+      "text": "reusable. Agentic coding right now in",
+      "offset": 1528000,
+      "duration": 2000
+    },
+    {
+      "text": "2026 is at the worst it will ever be.",
+      "offset": 1530000,
+      "duration": 3000
+    },
+    {
+      "text": "Even if we don't make any more progress,",
+      "offset": 1533000,
+      "duration": 3000
+    },
+    {
+      "text": "what we have right now is incredibly",
+      "offset": 1536000,
+      "duration": 2000
+    },
+    {
+      "text": "powerful. But keep in mind, it's at the",
+      "offset": 1538000,
+      "duration": 4000
+    },
+    {
+      "text": "worst it will ever be. So, the sooner",
+      "offset": 1542000,
+      "duration": 2000
+    },
+    {
+      "text": "you start, the bigger your leverage gets",
+      "offset": 1544000,
+      "duration": 3000
+    },
+    {
+      "text": "as we improve the way these agents work.",
+      "offset": 1547000,
+      "duration": 3000
+    },
+    {
+      "text": "So, hopefully you learned something",
+      "offset": 1550000,
+      "duration": 3000
+    },
+    {
+      "text": "today. Thank you for having me and I'll",
+      "offset": 1553000,
+      "duration": 2000
+    },
+    {
+      "text": "see you in the next one. Bye-bye.",
+      "offset": 1555000,
+      "duration": 2000
+    },
+    {
+      "text": "[End of Video]it's one of the most important ones.",
+      "offset": 1557000,
+      "duration": 22000
+    },
+    {
+      "text": "You need to teach your agents\nto do better next time.",
+      "offset": 1577000,
+      "duration": 2000
+    }
+  ],
+  "fullText": "Software development is changing at a very very rapid pace. So today I want to take a few minutes to take you through some ideas, some techniques, give you some tricks on how you can improve your work as a software developer and how you can keep up with AI. First, let me tell you the way I see AI helping developers. There are two groups. The first group is when you use AI as a copilot. And most of the people that I've been working with, most of the people that I've met, this is what they're doing where they are driving, they are writing most of the code, they are leading and then they're using AI to help with their work. They use AI as a copilot. Now more and more right now that we have tools like Codec, OpenAI Codec or Anthropic Claude Code, more and more people, developers, are transitioning to serve as the copilot to AI where they are letting AI drive. They're letting AI take the lead and they are stepping back and helping AI do the job. And these tricks here, this mental shift is what I want to cover today. Going from using AI as a copilot to an AI-first development workflow requires a fundamental mental shift. You cannot just expect this to just happen. You have to acquire the skills that are going to help you make this transition. Now, in order to do that, I'm going to propose if you're studying now a seven-step workflow. This is the workflow that I use when building together with AI, when letting AI lead. Planning is the first step here. You need to know what you're building before you start. And before you even think about AI, you have to understand the area, the moment, the time where AI will help you and where AI might not be that useful. So for example, whenever you're creating boilerplate or scaffolding, AI is great for that. Obviously, repetitive transformations when you're creating or when you're building a prototype, when you're generating test cases, creating and reviewing documentation, refactoring, all of those are opportunities for you to use AI to help you. However, there are many many times where AI might not be that helpful. If you're working with logic that's not properly documented or is too complex, when you're working with security critical code, when you're doing performance optimizations, when you're debugging bugs that are very subtle, very hard to find, AI might not work as well. Now assuming that you have gotten into an area where you're actually you can actually use AI. I want you to start shifting from imperative prompting to declarative prompting. So here is the idea. So far people have been using AI by asking models exactly what they need to do. Basically you instruct the model, hey create a page, add these components to that page, make it work this way, and I want you to start transitioning to telling AI what you want to accomplish, what your goals are. That is declarative prompting. This is an incredibly important shift especially now with the current generation of models. The latest models from Anthropic, the latest set of open-source models, models like Mini Max, the latest version of DeepSeek Kimmy. These models are every day more capable of taking our requests and interpreting those requests and creating their own solutions. I don't want you to be that solution-oriented. Instead, focus more on goals. So, another trick here for you to start combining exploratory sessions with upfront planning. Upfront planning is still very very important. If you want to unlock longer sessions with AI where you sit down, you give a bunch of instructions and you can just leave and let AI do stuff. Upfront planning is very important. You're going to have to provide a lot of requirements. But that is not the only way to write code. You should combine upfront planning with exploratory sessions where you do not give that many details. Instead, you let AI figure things out. And the reason this is so important, AI will start surprising you. AI will start finding solutions that maybe you didn't think about. So it is a good idea to have for example two sessions where you're doing something here that you know exactly how it needs to happen. So you did some upfront planning and something here where you're exploring and you can throw that away if it doesn't work. You can use GitHub Worktrees for example. So if it doesn't work you throw it away but AI will start surprising you. Upfront planning requires you to frontload your thinking. You're going to be putting effort into specking out everything that you need AI to do. The idea here is for you to break down the problem, define what done looks like, exactly what you want to accomplish, what your goals are, and you're going to try to document constraints and edge cases to show AI what it needs to do and the things that it should not be doing. The more clarity and context you provide up front, the better the agent will be able to execute that autonomously. The autonomous word here is super important because that's where leverage exists. Whenever you can just basically give something to the agent and unlock a very long session of coding. You don't want to constantly be going back and forth, that's going to slow you down. So the more you can provide up front, the better chance you have for the agent to have a long session. You want to reduce the back and forth. Here is a tip for those of you who use Claude Code. And these tips even though I'm focusing on Claude Code because that's what I'm using. Most of these tips are going to work with Cursor with the agent from Cursor or with Codec. Ask Claude Code to specify in your CLAUDE.md before writing any code, describe the approach and wait for approval. So if you are the type of person who really likes to ensure you're doing enough upfront planning, make sure Claude does not write a lot of code without asking for your approval. After planning we get into breaking things down. Very very important, very related with planning. I want you to start breaking the work you give to these agents into single responsibility tasks. Basically, one trick. If whatever you're telling the agent contains the word \"and,\" you're probably asking for too much. So, break that down. If you find your agent struggling, probably your scope is too big. You need to ask the agent to break down whatever request you gave it into individual features or into individual smaller tasks that the agent can tackle in a better way. From my experience, the more contained these tasks are, the smaller they are, the more focused they are, the better quality is going to come out of this model, the better chance you're going to have of getting good results. Here is another tip for those using Claude Code, write down in CLAUDE.md if a task requires changes in more than three files, break it down into smaller tasks first. So it's kind of like giving it a clue that you don't want to make changes that affect too much in your code. Instead, you want to get smaller changes one at a time. This is going to help Claude realize that this might be a big change. So before making it, I actually need to break it down into smaller tasks. Another idea is to create a decompose command. If you're using Claude Code, you can create skills, you can create commands as well, slash commands. So create a decompose command where you can just provide your plan. Very very simple for you to do this quickly. The description of the command is going to tell Claude to break things down. Break it into single responsibility tasks. So you can quickly say decompose and this is the feature that I want to build and Claude will give you back a plan composed of multiple single responsibility tasks which is a great, faster way of accomplishing this. Area number three of our plan is to be specific. It's just like having somebody working for you. The more specific you are, the better results you're going to get. The more vague you are, the harder it is going to be for agentic tools to provide the results that you're looking for. So, here is the anatomy or the way I think about a good plan. How do I create a plan that my agentic tool understands? Okay, so I think about these four areas. You want to specify the \"what\" you want to accomplish. So for example, hey write a function that receives two numbers and outputs the result of this certain formula. Now you need the \"how\" of the plan. The how will contain for example the approach you want the agent to follow. Unless this is an exploratory session or you're using declarative prompting where you're going to let the agent figure it out. If you're going to do upfront planning, you want to specify how exactly you want the agent to accomplish something. So for example, hey I want you to use recursion to solve this specific problem. You need the \"where\" and basically this will give the agent the context in the code base that you want the agent to touch, which files you should be making changes to, which files you should never touch. And finally you want the \"not.\" And the \"not\" is one of the most important things in a plan. You want to specify the areas, the things that are adjacent to your plan that you want your agent to ignore. Do not implement this. I do not care about doing that. That will give a lot of information to your agent. So, anytime you're thinking about a plan and you want to be very specific, think about these four areas and make sure your plan contains all four of them. Another good trick is showing the agent what good looks like. And this comes from prompting. A couple years ago when we started doing some prompt engineering, a good idea is to always show as part of your prompt examples of what you want to accomplish. So that still applies here. When you're trying to ask the agent to accomplish something, show the agent what good looks like. Give the agent examples of the format that you're expecting back, of the boundaries on dependencies. Give specific examples so the agent knows and has something to look at in order to produce a better result. Ask the agent to explain its approach. Something that happens is that these agents are going to make assumptions because it doesn't matter how much time you spend creating a plan. It's usually very hard to specify everything. So there's going to be some assumptions, just like people. These agents are going to make assumptions about things that you might need and how you might want them. So the agent is going to make some assumptions. Some of those assumptions are going to be great and that's when you feel the magic from this agent. Sometimes these assumptions are going to be wrong. So ask the agent to explain those assumptions and that way you can check whether the agent is doing something good or something that you really really want to change. You can do this early on. A tip for Claude Code, always reference files directly. I've seen many people using Claude Code and they are vague in where the changes need to happen. Try to specify files directly. Instead of saying change my sponsors that are in whatever section of my website, tell the agent change my sponsors and reference the specific file and that will reduce the number of mistakes considerably. Area number four of our plan is about context, and context here is everything. One of the most important areas of modern AI is context engineering and how you put together a context. That's everything the agent needs in order to do a good job. Same plan, same prompt will have completely different results, will give you different code depending on what your agent knows about your project, depending on the context. So, make sure you always provide assumptions beforehand or ask the agent to list any assumptions so you can correct them. Let the agent read your plan and say, \"I'm not sure if here you mean A or you mean B.\" And that will help you clarify and create better context for your agent. A tip for Claude Code: Describe your tech stack, your folder structure, your coding conventions, and any anti- patterns you like to avoid in your CLAUDE.md file. In fact, if you ask Claude to initialize your file, Claude will add this information based on what I've seen to your CLAUDE.md file. And the reason this is important is because Claude does not have to do that thinking ever again. It can just read it from the file and reuse it on subsequent requests. If you don't add it, you're forcing Claude to recheck the folder structure every single time. There is a Claude command that they recently added that's called insight. And one of the things if you run slash insights in your Claude instance, Claude is going to generate a report where it's going to show you exactly areas where you can improve your prompting for Claude Code, your usage of Claude Code. And one of the areas consistently that I keep getting from different projects is improving the context I'm giving Claude in my CLAUDE.md file. Another idea in this area is to use the memory to save any information you want to make persistent. So anytime you find something, any preferences that you want to reuse, just use the memory command and modify the memory file, add it there so Claude always has access to it. Another thing is to add a .claudeignore file. Anything that you don't want Claude to touch, add it here. It's very easy to get bogged down your Claude Code, your agent, by constantly checking files that are temporary files or files that you really don't want Claude to process for some reason, security files, stuff like that. Just add them to the file. Claude will never read or modify those files. Now from our plan we go now to number five. Remember there are seven steps. Number five, one of the most important ones, the one that everyone is talking about is review. Review mercilessly. Agents make mistakes. Period. Doesn't matter how much effort you put in all of the previous steps. In order to reduce those mistakes, agents will still make mistakes. You have to review. Remember that AI generated code might look good in isolation when you just look at it. When the code that comes back from Claude, that code might look perfect, but once you integrate it with the rest of the solution, that code might have unintended consequences, might cause problems in other areas of your system. Always verify your system as a whole. Don't rely on just checking the code that comes out of the agent. Focus on changes that are unrelated to the code and the comments that you're changing right now. Pay special attention to anything, any contracts from your system that potentially break because of modifications from the agent because it's very very simple to get into a situation where Claude is fixing something but at the same time is breaking something else that is hard to realize just by looking at the code that Claude is making. Breaking things down into smaller tasks will help a lot in this area because you are making sure that you're only working on a contained space. You're not letting Claude touch too many files at once. Here is something that helps me a lot, and this is a very good way that I found for me to keep my sanity and to keep ownership of my code base. Sometimes I write the test cases first and then I ask my coding agent, in this case Claude Code, to implement the code that will make that test pass. I don't do this all the time, but anytime I want to make sure certain functionality is correct, this is what I do. I'm not going to write the solution. I'm just going to write a test case and then I'm going to let Claude figure out what code is going to make pass that test. And guess what? Sometimes Claude Code is going to cheat. It's going to find a solution that makes my test pass, but it's not a proper solution. I'm going to write another test so it fails again. And I'm going to keep forcing Claude Code to find the proper solution to pass my test cases. I found that that way I get way stronger solutions by forcing Claude to do this. Write on your CLAUDE.md: \"When there is a bug, start by writing a test case that reproduces that bug and then write the code that makes that test case pass.\" Very good trick to make sure that Claude Code has some guidance, some guard rails on fixing bugs. The result of doing this is not only getting stronger code, but it's also getting a very very strong test suite that you can keep running over and over again and Claude Code can use to make future changes. Write a test case first to make the test pass. It's TDD for agentic coding. You can also write on your CLAUDE.md: \"After writing the code, list what could break and suggest tests to cover it.\" I've seen many many people do this already. They manually prompt the agent to write code or to propose test cases to solve problems that might occur. You can also codify this in your CLAUDE.md so Claude does this automatically. You can also create a review command. This is also something that I do on every one of my projects. I create a review command that is going to check my code for any mistakes, for any edge cases. It's going to make sure my code is consistent with the rest of the patterns in my codebase. I do this and I can just call that review command whenever. Very, very easy. And Claude is just going to go through all of that process without me having to reprompt the agent all the time. I usually create a sub agent. So I run that review as a sub agent so I keep my context clean from the results of this agent. Finally, create a test command. This is something very simple to do. Tell Claude how to run your test cases. That test command will basically spin off another sub agent and that will run all of your test cases using Claude Code over time. You can just tell Claude Code that it can run this command automatically whenever it makes a change and then check the results. Then we get into the sixth step which is iterate. And the point here of working with agentic coding is precisely this loop that we create where we have an agent writing the code. We have ourselves compiling here, reviewing that code. Then we're giving the agent feedback and the agent is rewriting that code by using that feedback. This is the iteration process that we're going to be doing while working with these agents. Agents like to over-complicate things. Many many times I've asked my agent to write a solution that I think it should be very simple and then I get code back that's way more complex than what I need. Sometimes the agent is checking for edge cases that are impossible to happen. So always challenge complex solutions that come back from these agents. Anytime you see code that you suspect shouldn't be that complex, tell the agent that and the agents are usually going to come back with a much simpler, better solution for you. Write in your CLAUDE.md file: \"When I say something is wrong, ask clarifying questions before rewriting.\" Something that you're going to find if you're using these agents is that sometimes they give you a solution and it's not correct. The only thing that you do is \"this is not correct,\" then the agent is going to try to reimplement that solution without necessarily knowing the assumptions that you're making or the reasons that you think the solution is not correct. So instead I told my agent: anytime I say that something is wrong, just make sure you ask clarifying questions so the answers to those are going to help the agent make better decisions. That's how you iterate. Use the rewind command. Claude Code provides a rewind command where you can always go back whenever a solution provided by Claude is not correct. I ask you to do something, it doesn't work, and instead of keeping the context going or keeping making changes on top of the changes, I don't want to do that. Instead I tell Claude, just go back, rewind to before you made the solution or you created the code. Let me tell you some clarifying notes. Very easy to just move forward without mistakes. Minimize the time you wait by using git worktrees. Git worktrees will help you have copies of your codebase and run parallel agents. So something that I do is I have several terminals running Claude Code on my codebase but they are on different work trees. So the changes from one agent are not interfering with the changes from another agent. Here's another tip and this is not for the faint of heart. Don't be afraid of running Claude by skipping permissions. Something that bothers me all the time is that Claude obviously every session is going to ask you for permissions to do certain things. Don't be afraid, especially when you're running exploratory sessions, to run Claude using this command and skipping permissions. This is going to make it feel incredibly fast. And this is the final step of your plan, but I'm going to argue it's one of the most important one. You need to teach your agents to do better next time. The real value here comes from compounding the knowledge of these agents over time. That's the real leverage of agentic coding. These tools are going to learn just like an intern would. Maybe not necessarily the same, but they can learn from the way you work and from mistakes that they make. But you need to make sure you are accumulating that knowledge appropriately so you can actually take advantage of that learning over time. Every iteration that you're using these agents, you're going to be getting two outputs. The first output is the solution that the agent gave you, some code maybe or some changes in the documentation. The second output that you're getting from the agent is reusable knowledge. That's one of the most important things that you can use. Here is how. Write in your CLAUDE.md file: \"Every time I correct you, add a new rule to the CLAUDE.md file so it never happens again.\" This also works if you are using a skill. So anytime I use a Claude skill and Claude makes a mistake, the first thing that I'm going to do after that session is over is asking Claude to update the skill with any new learnings from that session. And Claude can summarize the session, can realize the mistakes it made, and can go and correct the skills file so that mistake never happens again. And over time, you're going to start plugging all of the holes of your skill. Over time, the agent will learn to do things better. That's the important part. Never fix the same mistake twice. Convert any successful repeatable prompt into a workflow. Don't prompt your agent over and over and over again using the same process. Instead, anytime you're doing something and you find yourself asking for it over and over again, just create a skill. Automate that workflow so you don't have to repeat it again. Create a slash command or create a skill just to do that over and over again. Create sub agents. I mentioned that I had a review sub agent. I had a test sub agent. So these sub agents will work separately from the main context of your agent. So for example, for running all of the test cases, this is something repetitive that I do all the time. This is something that requires large context or specialized analysis and therefore I don't want to pollute my main context with all of the results from the test cases and from everything that the agent is doing. I'm going to create a sub agent—very simple to do—and they are reusable. Agentic coding right now in 2026 is at the worst it will ever be. Even if we don't make any more progress, what we have right now is incredibly powerful. But keep in mind, it's at the worst it will ever be. So, the sooner you start, the bigger your leverage gets as we improve the way these agents work. So, hopefully you learned something today. Thank you for having me and I'll see you in the next one. Bye-bye. [End of Video]it's one of the most important ones. You need to teach your agents\nto do better next time.",
+  "fetchedAt": "2026-03-14T09:22:01.815Z"
+}

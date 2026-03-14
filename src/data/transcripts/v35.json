@@ -1,0 +1,3093 @@
+{
+  "videoId": "v35",
+  "youtubeId": "oAGt7vJeOh4",
+  "segments": [
+    {
+      "text": "Hi everyone. Thank you so much for",
+      "offset": 17000,
+      "duration": 2000
+    },
+    {
+      "text": "coming. I'm so excited to be here at",
+      "offset": 19000,
+      "duration": 3000
+    },
+    {
+      "text": "Sonar Summit. We all had an LLM give us",
+      "offset": 22000,
+      "duration": 5000
+    },
+    {
+      "text": "confident, beautifully formatted answer",
+      "offset": 27000,
+      "duration": 2000
+    },
+    {
+      "text": "or code that was just wrong.",
+      "offset": 29000,
+      "duration": 3000
+    },
+    {
+      "text": "That happens. We have these powerful AI",
+      "offset": 32000,
+      "duration": 3000
+    },
+    {
+      "text": "systems that can process huge amounts of",
+      "offset": 35000,
+      "duration": 3000
+    },
+    {
+      "text": "information, search knowledge bases, and",
+      "offset": 38000,
+      "duration": 3000
+    },
+    {
+      "text": "generate some really great responses.",
+      "offset": 41000,
+      "duration": 2000
+    },
+    {
+      "text": "And still, we often don't get the",
+      "offset": 43000,
+      "duration": 3000
+    },
+    {
+      "text": "results that meet our expectations.",
+      "offset": 46000,
+      "duration": 2000
+    },
+    {
+      "text": "This happens not because the models",
+      "offset": 48000,
+      "duration": 2000
+    },
+    {
+      "text": "aren't smart enough, but because we need",
+      "offset": 50000,
+      "duration": 3000
+    },
+    {
+      "text": "to be much better at information design",
+      "offset": 53000,
+      "duration": 3000
+    },
+    {
+      "text": "and the infrastructure around it. AI has",
+      "offset": 56000,
+      "duration": 3000
+    },
+    {
+      "text": "given everyone speed. Code generation,",
+      "offset": 59000,
+      "duration": 3000
+    },
+    {
+      "text": "pipeline automation, agent",
+      "offset": 62000,
+      "duration": 2000
+    },
+    {
+      "text": "orchestration. What used to take weeks",
+      "offset": 64000,
+      "duration": 3000
+    },
+    {
+      "text": "now takes hours. But when everyone can",
+      "offset": 67000,
+      "duration": 4000
+    },
+    {
+      "text": "move fast, speed stops being an",
+      "offset": 71000,
+      "duration": 2000
+    },
+    {
+      "text": "advantage.",
+      "offset": 73000,
+      "duration": 2000
+    },
+    {
+      "text": "I'm Lena, senior director of developer",
+      "offset": 75000,
+      "duration": 2000
+    },
+    {
+      "text": "relations at Akamai. I help developers",
+      "offset": 77000,
+      "duration": 3000
+    },
+    {
+      "text": "and companies use AI to get effective",
+      "offset": 80000,
+      "duration": 3000
+    },
+    {
+      "text": "results through workflows they can",
+      "offset": 83000,
+      "duration": 2000
+    },
+    {
+      "text": "control. I'll be happy to connect with",
+      "offset": 85000,
+      "duration": 3000
+    },
+    {
+      "text": "you on LinkedIn.",
+      "offset": 88000,
+      "duration": 2000
+    },
+    {
+      "text": "We now live in a world of abundant AI",
+      "offset": 90000,
+      "duration": 3000
+    },
+    {
+      "text": "generated output and the question has",
+      "offset": 93000,
+      "duration": 3000
+    },
+    {
+      "text": "shifted. We're no longer asking can we",
+      "offset": 96000,
+      "duration": 3000
+    },
+    {
+      "text": "build it. We now need to ask, does what",
+      "offset": 99000,
+      "duration": 3000
+    },
+    {
+      "text": "we shipped actually do what we intended?",
+      "offset": 102000,
+      "duration": 4000
+    },
+    {
+      "text": "The companies that win the next decade",
+      "offset": 106000,
+      "duration": 2000
+    },
+    {
+      "text": "won't have the best models. They'll have",
+      "offset": 108000,
+      "duration": 3000
+    },
+    {
+      "text": "the best systems for ensuring that those",
+      "offset": 111000,
+      "duration": 2000
+    },
+    {
+      "text": "models produce reliable correct",
+      "offset": 113000,
+      "duration": 3000
+    },
+    {
+      "text": "outcomes. And today I will give you a",
+      "offset": 116000,
+      "duration": 2000
+    },
+    {
+      "text": "mental model and architectural patterns",
+      "offset": 118000,
+      "duration": 3000
+    },
+    {
+      "text": "to get there.",
+      "offset": 121000,
+      "duration": 2000
+    },
+    {
+      "text": "To understand the architectural guard",
+      "offset": 123000,
+      "duration": 2000
+    },
+    {
+      "text": "rails, we need let's take a deeper look",
+      "offset": 125000,
+      "duration": 3000
+    },
+    {
+      "text": "at philosophical and mathematical",
+      "offset": 128000,
+      "duration": 2000
+    },
+    {
+      "text": "foundation for this.",
+      "offset": 130000,
+      "duration": 2000
+    },
+    {
+      "text": "Anyone has heard of two generals",
+      "offset": 133000,
+      "duration": 2000
+    },
+    {
+      "text": "problem. Imagine two generals standing",
+      "offset": 135000,
+      "duration": 4000
+    },
+    {
+      "text": "on a hill to coordinate an attack at the",
+      "offset": 139000,
+      "duration": 3000
+    },
+    {
+      "text": "exact time or they will lose. They can",
+      "offset": 142000,
+      "duration": 4000
+    },
+    {
+      "text": "only communicate through messengers who",
+      "offset": 146000,
+      "duration": 2000
+    },
+    {
+      "text": "might get captured. Here's the dilemma.",
+      "offset": 148000,
+      "duration": 3000
+    },
+    {
+      "text": "If the first general sends attack at",
+      "offset": 151000,
+      "duration": 3000
+    },
+    {
+      "text": "5:00 a.m. message, how does he know that",
+      "offset": 154000,
+      "duration": 3000
+    },
+    {
+      "text": "the second general got the message? The",
+      "offset": 157000,
+      "duration": 3000
+    },
+    {
+      "text": "second general could send back a",
+      "offset": 160000,
+      "duration": 1000
+    },
+    {
+      "text": "messenger that he received a message.",
+      "offset": 161000,
+      "duration": 3000
+    },
+    {
+      "text": "And what if that messenger gets",
+      "offset": 164000,
+      "duration": 3000
+    },
+    {
+      "text": "captured? No matter how many messengers",
+      "offset": 167000,
+      "duration": 3000
+    },
+    {
+      "text": "they exchange, there's always one last",
+      "offset": 170000,
+      "duration": 4000
+    },
+    {
+      "text": "message that could be lost, leaving one",
+      "offset": 174000,
+      "duration": 2000
+    },
+    {
+      "text": "general uncertain.",
+      "offset": 176000,
+      "duration": 3000
+    },
+    {
+      "text": "So the two generals problem is about",
+      "offset": 179000,
+      "duration": 2000
+    },
+    {
+      "text": "uncertainty. We can't achieve 100%",
+      "offset": 181000,
+      "duration": 4000
+    },
+    {
+      "text": "alignment between human intent and AI",
+      "offset": 185000,
+      "duration": 3000
+    },
+    {
+      "text": "understanding. It's not really a bug.",
+      "offset": 188000,
+      "duration": 3000
+    },
+    {
+      "text": "It's not something that better models",
+      "offset": 191000,
+      "duration": 2000
+    },
+    {
+      "text": "will fix. It's a fundamental property of",
+      "offset": 193000,
+      "duration": 3000
+    },
+    {
+      "text": "communication itself. Your intent starts",
+      "offset": 196000,
+      "duration": 3000
+    },
+    {
+      "text": "at 100% clarity in your mind. You reduce",
+      "offset": 199000,
+      "duration": 4000
+    },
+    {
+      "text": "it to words and maybe 70% is preserved.",
+      "offset": 203000,
+      "duration": 4000
+    },
+    {
+      "text": "The AI interprets these words. Maybe 70%",
+      "offset": 207000,
+      "duration": 3000
+    },
+    {
+      "text": "of your 70% is preserved. It generates a",
+      "offset": 210000,
+      "duration": 4000
+    },
+    {
+      "text": "call with another 70% accuracy. At",
+      "offset": 214000,
+      "duration": 4000
+    },
+    {
+      "text": "every step, the translation between",
+      "offset": 218000,
+      "duration": 3000
+    },
+    {
+      "text": "internal state and external message and",
+      "offset": 221000,
+      "duration": 4000
+    },
+    {
+      "text": "interpretation of that message is an",
+      "offset": 225000,
+      "duration": 2000
+    },
+    {
+      "text": "unreliable step.",
+      "offset": 227000,
+      "duration": 2000
+    },
+    {
+      "text": "So while businesses are owned by people,",
+      "offset": 229000,
+      "duration": 3000
+    },
+    {
+      "text": "there will always be an astronomical",
+      "offset": 232000,
+      "duration": 2000
+    },
+    {
+      "text": "demand for people who can ensure the",
+      "offset": 234000,
+      "duration": 2000
+    },
+    {
+      "text": "correctness of AI results. And it's not",
+      "offset": 236000,
+      "duration": 3000
+    },
+    {
+      "text": "about whether AI can do the work. It's",
+      "offset": 239000,
+      "duration": 3000
+    },
+    {
+      "text": "about whether anyone can trust that the",
+      "offset": 242000,
+      "duration": 2000
+    },
+    {
+      "text": "work was done correctly.",
+      "offset": 244000,
+      "duration": 3000
+    },
+    {
+      "text": "Every LLM call is a non-deterministic",
+      "offset": 247000,
+      "duration": 3000
+    },
+    {
+      "text": "step. If we don't control it",
+      "offset": 250000,
+      "duration": 2000
+    },
+    {
+      "text": "structurally, it will break.",
+      "offset": 252000,
+      "duration": 3000
+    },
+    {
+      "text": "This is compounded across a system. So",
+      "offset": 255000,
+      "duration": 3000
+    },
+    {
+      "text": "agent orchestration, tool selection, RAG",
+      "offset": 258000,
+      "duration": 4000
+    },
+    {
+      "text": "retrieval, text SQL translation. Each",
+      "offset": 262000,
+      "duration": 3000
+    },
+    {
+      "text": "step introduces a failure mode. You",
+      "offset": 265000,
+      "duration": 3000
+    },
+    {
+      "text": "can't test your way into reliability",
+      "offset": 268000,
+      "duration": 3000
+    },
+    {
+      "text": "with non-deterministic systems the way",
+      "offset": 271000,
+      "duration": 2000
+    },
+    {
+      "text": "you can with deterministic code. You",
+      "offset": 273000,
+      "duration": 3000
+    },
+    {
+      "text": "actually need architectural guard rails.",
+      "offset": 276000,
+      "duration": 3000
+    },
+    {
+      "text": "So if perfect alignment is not really",
+      "offset": 279000,
+      "duration": 2000
+    },
+    {
+      "text": "possible and non-determinism is",
+      "offset": 281000,
+      "duration": 3000
+    },
+    {
+      "text": "imminent, what do we do? We don't try to",
+      "offset": 284000,
+      "duration": 4000
+    },
+    {
+      "text": "make the black box perfect. We can build",
+      "offset": 288000,
+      "duration": 3000
+    },
+    {
+      "text": "a glass box around it. And that starts",
+      "offset": 291000,
+      "duration": 3000
+    },
+    {
+      "text": "with understanding the patterns that",
+      "offset": 294000,
+      "duration": 2000
+    },
+    {
+      "text": "actually work. Whether you're coding",
+      "offset": 296000,
+      "duration": 2000
+    },
+    {
+      "text": "with AI agents or building AI into",
+      "offset": 298000,
+      "duration": 3000
+    },
+    {
+      "text": "products. The two generals problem",
+      "offset": 301000,
+      "duration": 3000
+    },
+    {
+      "text": "and non-determinism show us this",
+      "offset": 304000,
+      "duration": 3000
+    },
+    {
+      "text": "impossibility of full alignment. This is",
+      "offset": 307000,
+      "duration": 2000
+    },
+    {
+      "text": "not a bug in the model. It's a",
+      "offset": 309000,
+      "duration": 2000
+    },
+    {
+      "text": "fundamental property of communication",
+      "offset": 311000,
+      "duration": 2000
+    },
+    {
+      "text": "that shows up in real systems as a",
+      "offset": 313000,
+      "duration": 3000
+    },
+    {
+      "text": "context gap.",
+      "offset": 316000,
+      "duration": 2000
+    },
+    {
+      "text": "I worked with a team to help them fix",
+      "offset": 318000,
+      "duration": 3000
+    },
+    {
+      "text": "issues after they tried a VIP coding",
+      "offset": 321000,
+      "duration": 3000
+    },
+    {
+      "text": "strategy that went wrong. A team",
+      "offset": 324000,
+      "duration": 2000
+    },
+    {
+      "text": "replaced their ETL pipeline with AI",
+      "offset": 326000,
+      "duration": 3000
+    },
+    {
+      "text": "generated code. The transformation logic",
+      "offset": 329000,
+      "duration": 3000
+    },
+    {
+      "text": "looked elegant at first. The AI even",
+      "offset": 332000,
+      "duration": 3000
+    },
+    {
+      "text": "handled time zone conversions and null",
+      "offset": 335000,
+      "duration": 2000
+    },
+    {
+      "text": "values beautifully. What it didn't know",
+      "offset": 337000,
+      "duration": 3000
+    },
+    {
+      "text": "is that their source system APIs return",
+      "offset": 340000,
+      "duration": 3000
+    },
+    {
+      "text": "microseconds as milliseconds for records",
+      "offset": 343000,
+      "duration": 3000
+    },
+    {
+      "text": "created before a specific date. It's a",
+      "offset": 346000,
+      "duration": 2000
+    },
+    {
+      "text": "legacy quirk from some database",
+      "offset": 348000,
+      "duration": 2000
+    },
+    {
+      "text": "migration documented only in commit",
+      "offset": 350000,
+      "duration": 3000
+    },
+    {
+      "text": "messages. The senior engineer who",
+      "offset": 353000,
+      "duration": 2000
+    },
+    {
+      "text": "initially handled the edge case was",
+      "offset": 355000,
+      "duration": 3000
+    },
+    {
+      "text": "gone. Their inline comment about pre-2019",
+      "offset": 358000,
+      "duration": 4000
+    },
+    {
+      "text": "records needing a correction by a factor",
+      "offset": 362000,
+      "duration": 2000
+    },
+    {
+      "text": "of 1,000 was replaced by AI generated",
+      "offset": 364000,
+      "duration": 3000
+    },
+    {
+      "text": "documentation about timestamp",
+      "offset": 367000,
+      "duration": 3000
+    },
+    {
+      "text": "normalization.",
+      "offset": 370000,
+      "duration": 1000
+    },
+    {
+      "text": "So for 3 weeks all historical data was",
+      "offset": 371000,
+      "duration": 3000
+    },
+    {
+      "text": "imported with timestamps that were off.",
+      "offset": 374000,
+      "duration": 3000
+    },
+    {
+      "text": "The monitoring showed green because the",
+      "offset": 377000,
+      "duration": 2000
+    },
+    {
+      "text": "data was flowing and the row counts",
+      "offset": 379000,
+      "duration": 2000
+    },
+    {
+      "text": "matched. But every calculation was",
+      "offset": 381000,
+      "duration": 3000
+    },
+    {
+      "text": "corrupted. Here's what makes VIP coding",
+      "offset": 384000,
+      "duration": 3000
+    },
+    {
+      "text": "problematic. The AI generated code that",
+      "offset": 387000,
+      "duration": 4000
+    },
+    {
+      "text": "handled the happy path worked. It worked",
+      "offset": 391000,
+      "duration": 3000
+    },
+    {
+      "text": "fine in testing, but it failed in",
+      "offset": 394000,
+      "duration": 3000
+    },
+    {
+      "text": "production. Every system has",
+      "offset": 397000,
+      "duration": 3000
+    },
+    {
+      "text": "undocumented behaviors, implicit",
+      "offset": 400000,
+      "duration": 2000
+    },
+    {
+      "text": "assumptions, and edge cases that exist",
+      "offset": 402000,
+      "duration": 3000
+    },
+    {
+      "text": "nowhere in any training data. And these",
+      "offset": 405000,
+      "duration": 3000
+    },
+    {
+      "text": "aren't really bugs. They're just the",
+      "offset": 408000,
+      "duration": 2000
+    },
+    {
+      "text": "reality of systems that only engineers",
+      "offset": 410000,
+      "duration": 3000
+    },
+    {
+      "text": "who understand the full context can",
+      "offset": 413000,
+      "duration": 2000
+    },
+    {
+      "text": "handle correctly. And the context gap",
+      "offset": 415000,
+      "duration": 3000
+    },
+    {
+      "text": "shows that institutional knowledge is being lost.",
+      "offset": 418000,
+      "duration": 3000
+    },
+    {
+      "text": "So if perfect alignment is structurally",
+      "offset": 424000,
+      "duration": 3000
+    },
+    {
+      "text": "unbridgeable through prompting alone,",
+      "offset": 427000,
+      "duration": 3000
+    },
+    {
+      "text": "how do we fix it? It starts by",
+      "offset": 430000,
+      "duration": 3000
+    },
+    {
+      "text": "fundamentally changing the coding",
+      "offset": 433000,
+      "duration": 2000
+    },
+    {
+      "text": "workflow.",
+      "offset": 435000,
+      "duration": 2000
+    },
+    {
+      "text": "At the beginning, most people start with",
+      "offset": 437000,
+      "duration": 2000
+    },
+    {
+      "text": "standard prompting, Cursor VS Code,",
+      "offset": 439000,
+      "duration": 2000
+    },
+    {
+      "text": "their favorite editor. It works on",
+      "offset": 441000,
+      "duration": 2000
+    },
+    {
+      "text": "smallish tasks, but it breaks down as",
+      "offset": 443000,
+      "duration": 3000
+    },
+    {
+      "text": "complexity increases. We discovered that",
+      "offset": 446000,
+      "duration": 3000
+    },
+    {
+      "text": "endless context isn't useful. Even",
+      "offset": 449000,
+      "duration": 3000
+    },
+    {
+      "text": "million token context windows only have",
+      "offset": 452000,
+      "duration": 2000
+    },
+    {
+      "text": "a fraction of usable capacity, maybe 20",
+      "offset": 454000,
+      "duration": 3000
+    },
+    {
+      "text": "to 40% before the quality goes down. So,",
+      "offset": 457000,
+      "duration": 4000
+    },
+    {
+      "text": "you develop a pattern of starting over",
+      "offset": 461000,
+      "duration": 2000
+    },
+    {
+      "text": "when things derail. This helps, but we",
+      "offset": 463000,
+      "duration": 3000
+    },
+    {
+      "text": "need a more structured approach. We",
+      "offset": 466000,
+      "duration": 3000
+    },
+    {
+      "text": "notice that when we restart, there is no",
+      "offset": 469000,
+      "duration": 2000
+    },
+    {
+      "text": "persistent plan. We're rebuilding",
+      "offset": 471000,
+      "duration": 2000
+    },
+    {
+      "text": "context every single time. This means we",
+      "offset": 473000,
+      "duration": 3000
+    },
+    {
+      "text": "need some mechanism for continuity of",
+      "offset": 476000,
+      "duration": 2000
+    },
+    {
+      "text": "work for a structured memory. What we've",
+      "offset": 478000,
+      "duration": 3000
+    },
+    {
+      "text": "tried, what worked, and what didn't. So,",
+      "offset": 481000,
+      "duration": 3000
+    },
+    {
+      "text": "we try a slightly improved approach,",
+      "offset": 484000,
+      "duration": 2000
+    },
+    {
+      "text": "spec-driven development. We write",
+      "offset": 486000,
+      "duration": 2000
+    },
+    {
+      "text": "detailed requirement specifications and",
+      "offset": 488000,
+      "duration": 3000
+    },
+    {
+      "text": "rules and markdown files for to-do lists",
+      "offset": 491000,
+      "duration": 3000
+    },
+    {
+      "text": "and progress tracking. This is better.",
+      "offset": 494000,
+      "duration": 3000
+    },
+    {
+      "text": "You have a single source of truth",
+      "offset": 497000,
+      "duration": 1000
+    },
+    {
+      "text": "persisting across sessions. But specs",
+      "offset": 498000,
+      "duration": 4000
+    },
+    {
+      "text": "become monolithic and hard to manage at",
+      "offset": 502000,
+      "duration": 2000
+    },
+    {
+      "text": "scale, especially when we discover",
+      "offset": 504000,
+      "duration": 2000
+    },
+    {
+      "text": "incorrect functionality in the code. So",
+      "offset": 506000,
+      "duration": 3000
+    },
+    {
+      "text": "we try to chase down bugs in the code",
+      "offset": 509000,
+      "duration": 3000
+    },
+    {
+      "text": "but we discover we need a new workflow",
+      "offset": 512000,
+      "duration": 3000
+    },
+    {
+      "text": "for correcting the output. Think about",
+      "offset": 515000,
+      "duration": 3000
+    },
+    {
+      "text": "our traditional process. We write code,",
+      "offset": 518000,
+      "duration": 2000
+    },
+    {
+      "text": "it generates compiled artifacts. Those",
+      "offset": 520000,
+      "duration": 3000
+    },
+    {
+      "text": "artifacts execute. When we had a bug in",
+      "offset": 523000,
+      "duration": 3000
+    },
+    {
+      "text": "the code, we wouldn't fix compiled",
+      "offset": 526000,
+      "duration": 3000
+    },
+    {
+      "text": "binaries, right? We would fix the code",
+      "offset": 529000,
+      "duration": 3000
+    },
+    {
+      "text": "and rerun the app. In our new world, we",
+      "offset": 532000,
+      "duration": 4000
+    },
+    {
+      "text": "write specifications in English. AI",
+      "offset": 536000,
+      "duration": 2000
+    },
+    {
+      "text": "generates the code and the code becomes",
+      "offset": 538000,
+      "duration": 3000
+    },
+    {
+      "text": "our application. So now we shouldn't",
+      "offset": 541000,
+      "duration": 2000
+    },
+    {
+      "text": "always manually fix the AI code. We",
+      "offset": 543000,
+      "duration": 3000
+    },
+    {
+      "text": "should go back, fix our specification",
+      "offset": 546000,
+      "duration": 2000
+    },
+    {
+      "text": "and rerun it. This works. It works on",
+      "offset": 548000,
+      "duration": 3000
+    },
+    {
+      "text": "complex code bases. Works on solving",
+      "offset": 551000,
+      "duration": 3000
+    },
+    {
+      "text": "hard problems. But then we hit another",
+      "offset": 554000,
+      "duration": 2000
+    },
+    {
+      "text": "wall.",
+      "offset": 556000,
+      "duration": 2000
+    },
+    {
+      "text": "We discovered that reviewing AI",
+      "offset": 558000,
+      "duration": 2000
+    },
+    {
+      "text": "generated PRs, especially the huge ones,",
+      "offset": 560000,
+      "duration": 3000
+    },
+    {
+      "text": "is very hard. If productivity is so",
+      "offset": 563000,
+      "duration": 3000
+    },
+    {
+      "text": "high, you physically cannot review all",
+      "offset": 566000,
+      "duration": 2000
+    },
+    {
+      "text": "the code and when reviewing becomes the",
+      "offset": 568000,
+      "duration": 3000
+    },
+    {
+      "text": "bottleneck, it's time to rethink your",
+      "offset": 571000,
+      "duration": 2000
+    },
+    {
+      "text": "process. If we think about it, a",
+      "offset": 573000,
+      "duration": 3000
+    },
+    {
+      "text": "successful code review helps us uncover",
+      "offset": 576000,
+      "duration": 3000
+    },
+    {
+      "text": "any mental disconnects. We come to a",
+      "offset": 579000,
+      "duration": 3000
+    },
+    {
+      "text": "mental alignment and the technical",
+      "offset": 582000,
+      "duration": 2000
+    },
+    {
+      "text": "adjustment in the code follows.",
+      "offset": 584000,
+      "duration": 4000
+    },
+    {
+      "text": "This gives us our next big insight.",
+      "offset": 588000,
+      "duration": 3000
+    },
+    {
+      "text": "Plans are more reviewable than code.",
+      "offset": 591000,
+      "duration": 3000
+    },
+    {
+      "text": "With the speed of AI, we should move the",
+      "offset": 594000,
+      "duration": 3000
+    },
+    {
+      "text": "process of alignment to a higher level",
+      "offset": 597000,
+      "duration": 2000
+    },
+    {
+      "text": "to the spec and the plan. When we catch",
+      "offset": 599000,
+      "duration": 4000
+    },
+    {
+      "text": "errors at the planning level, we prevent",
+      "offset": 603000,
+      "duration": 2000
+    },
+    {
+      "text": "10 times more errors that we would",
+      "offset": 605000,
+      "duration": 3000
+    },
+    {
+      "text": "otherwise see at the implementation",
+      "offset": 608000,
+      "duration": 2000
+    },
+    {
+      "text": "level. And this leads us to two more",
+      "offset": 610000,
+      "duration": 3000
+    },
+    {
+      "text": "advanced patterns. The first one is",
+      "offset": 613000,
+      "duration": 2000
+    },
+    {
+      "text": "phased development.",
+      "offset": 615000,
+      "duration": 2000
+    },
+    {
+      "text": "We don't just write a requirements doc",
+      "offset": 617000,
+      "duration": 3000
+    },
+    {
+      "text": "and send our agent on a mission. We",
+      "offset": 620000,
+      "duration": 3000
+    },
+    {
+      "text": "start with a brainstorming doc, then a",
+      "offset": 623000,
+      "duration": 2000
+    },
+    {
+      "text": "structured plan, then split that plan",
+      "offset": 625000,
+      "duration": 2000
+    },
+    {
+      "text": "into bite-sized tasks, and finally",
+      "offset": 627000,
+      "duration": 3000
+    },
+    {
+      "text": "execute.",
+      "offset": 630000,
+      "duration": 2000
+    },
+    {
+      "text": "At each stage, we review the artifact",
+      "offset": 632000,
+      "duration": 3000
+    },
+    {
+      "text": "before giving it to the next stage. You",
+      "offset": 635000,
+      "duration": 3000
+    },
+    {
+      "text": "see here how a mistake in the research",
+      "offset": 638000,
+      "duration": 2000
+    },
+    {
+      "text": "state propagates with a much greater",
+      "offset": 640000,
+      "duration": 2000
+    },
+    {
+      "text": "impact to mistakes in the planning and",
+      "offset": 642000,
+      "duration": 3000
+    },
+    {
+      "text": "implementation.",
+      "offset": 645000,
+      "duration": 3000
+    },
+    {
+      "text": "We also use sub agents to parallelize",
+      "offset": 648000,
+      "duration": 3000
+    },
+    {
+      "text": "work. This keeps the context window for",
+      "offset": 651000,
+      "duration": 3000
+    },
+    {
+      "text": "each agent focused and helps the main",
+      "offset": 654000,
+      "duration": 3000
+    },
+    {
+      "text": "agent coordinate without polluting its",
+      "offset": 657000,
+      "duration": 2000
+    },
+    {
+      "text": "own context. But this too has a failure",
+      "offset": 659000,
+      "duration": 3000
+    },
+    {
+      "text": "point.",
+      "offset": 662000,
+      "duration": 1000
+    },
+    {
+      "text": "Keeping progress and coordination in",
+      "offset": 663000,
+      "duration": 2000
+    },
+    {
+      "text": "markdown works under light usage. We",
+      "offset": 665000,
+      "duration": 3000
+    },
+    {
+      "text": "scale it up. Markdown quickly becomes a",
+      "offset": 668000,
+      "duration": 2000
+    },
+    {
+      "text": "mess. Information gets stale.",
+      "offset": 670000,
+      "duration": 2000
+    },
+    {
+      "text": "Dependencies aren't tracked. The work",
+      "offset": 672000,
+      "duration": 3000
+    },
+    {
+      "text": "gets duplicated. So how do we actually",
+      "offset": 675000,
+      "duration": 3000
+    },
+    {
+      "text": "do this as humans? We coordinate, we",
+      "offset": 678000,
+      "duration": 4000
+    },
+    {
+      "text": "delegate, we track progress, we use",
+      "offset": 682000,
+      "duration": 2000
+    },
+    {
+      "text": "issue trackers, with dependency graphs,",
+      "offset": 684000,
+      "duration": 3000
+    },
+    {
+      "text": "with version control. Everything",
+      "offset": 687000,
+      "duration": 4000
+    },
+    {
+      "text": "AI agents kind of need the same. We're",
+      "offset": 691000,
+      "duration": 3000
+    },
+    {
+      "text": "starting to see new approaches for this.",
+      "offset": 694000,
+      "duration": 3000
+    },
+    {
+      "text": "One of them is graph-based issue",
+      "offset": 697000,
+      "duration": 2000
+    },
+    {
+      "text": "tracking. A new tool called Beads,",
+      "offset": 699000,
+      "duration": 4000
+    },
+    {
+      "text": "for example, it allows agents to manage",
+      "offset": 703000,
+      "duration": 2000
+    },
+    {
+      "text": "tasks on a graph while tracking",
+      "offset": 705000,
+      "duration": 3000
+    },
+    {
+      "text": "dependencies. So, it's a graph-based",
+      "offset": 708000,
+      "duration": 3000
+    },
+    {
+      "text": "Git-backed issue tracker database to let",
+      "offset": 711000,
+      "duration": 3000
+    },
+    {
+      "text": "coding agents track all your work.",
+      "offset": 714000,
+      "duration": 3000
+    },
+    {
+      "text": "Another one is MCP Agent Mail for multi-",
+      "offset": 717000,
+      "duration": 3000
+    },
+    {
+      "text": "agent coordination. Agents can send",
+      "offset": 720000,
+      "duration": 3000
+    },
+    {
+      "text": "messages and monitor the inbox for",
+      "offset": 723000,
+      "duration": 2000
+    },
+    {
+      "text": "updates from other agents and can",
+      "offset": 725000,
+      "duration": 3000
+    },
+    {
+      "text": "coordinate between each other on the",
+      "offset": 728000,
+      "duration": 2000
+    },
+    {
+      "text": "progress between tasks, dividing the",
+      "offset": 730000,
+      "duration": 2000
+    },
+    {
+      "text": "work and avoiding conflicts.",
+      "offset": 732000,
+      "duration": 3000
+    },
+    {
+      "text": "So, now let's get into the wild",
+      "offset": 735000,
+      "duration": 2000
+    },
+    {
+      "text": "territory.",
+      "offset": 737000,
+      "duration": 2000
+    },
+    {
+      "text": "This is Ralph Wiggum, the Simpsons",
+      "offset": 739000,
+      "duration": 3000
+    },
+    {
+      "text": "character, but also Ralph is the",
+      "offset": 742000,
+      "duration": 2000
+    },
+    {
+      "text": "autonomous AI coding loop that ships",
+      "offset": 744000,
+      "duration": 3000
+    },
+    {
+      "text": "features while you sleep. Each iteration",
+      "offset": 747000,
+      "duration": 3000
+    },
+    {
+      "text": "starts with a fresh context window and",
+      "offset": 750000,
+      "duration": 4000
+    },
+    {
+      "text": "memory persists through Git history and",
+      "offset": 754000,
+      "duration": 2000
+    },
+    {
+      "text": "text files.",
+      "offset": 756000,
+      "duration": 2000
+    },
+    {
+      "text": "It is literally a bash loop that pipes a",
+      "offset": 758000,
+      "duration": 4000
+    },
+    {
+      "text": "prompt into your agent. Agent picks the",
+      "offset": 762000,
+      "duration": 3000
+    },
+    {
+      "text": "next story from your PRD document. It",
+      "offset": 765000,
+      "duration": 3000
+    },
+    {
+      "text": "implements it. It runs type check plus",
+      "offset": 768000,
+      "duration": 2000
+    },
+    {
+      "text": "tests. It commits if everything is",
+      "offset": 770000,
+      "duration": 3000
+    },
+    {
+      "text": "passing and marks story as done. Also",
+      "offset": 773000,
+      "duration": 3000
+    },
+    {
+      "text": "logs learnings. And it loops on repeat",
+      "offset": 776000,
+      "duration": 3000
+    },
+    {
+      "text": "until it's done. It's great for",
+      "offset": 779000,
+      "duration": 3000
+    },
+    {
+      "text": "well-defined tasks, but not to be used",
+      "offset": 782000,
+      "duration": 3000
+    },
+    {
+      "text": "for ambiguous or exploratory work in",
+      "offset": 785000,
+      "duration": 3000
+    },
+    {
+      "text": "cases where you don't have clear",
+      "offset": 788000,
+      "duration": 3000
+    },
+    {
+      "text": "criteria, security critical code, and",
+      "offset": 791000,
+      "duration": 2000
+    },
+    {
+      "text": "anything that needs a human review. The",
+      "offset": 793000,
+      "duration": 3000
+    },
+    {
+      "text": "lesson from Ralph is that we use phased",
+      "offset": 796000,
+      "duration": 3000
+    },
+    {
+      "text": "implementation of a human reviewed plan",
+      "offset": 799000,
+      "duration": 4000
+    },
+    {
+      "text": "with a separate context window for",
+      "offset": 803000,
+      "duration": 2000
+    },
+    {
+      "text": "phase.",
+      "offset": 805000,
+      "duration": 2000
+    },
+    {
+      "text": "So Ralph gives you a single tireless",
+      "offset": 807000,
+      "duration": 3000
+    },
+    {
+      "text": "agent. But what if you need a whole",
+      "offset": 810000,
+      "duration": 2000
+    },
+    {
+      "text": "team?",
+      "offset": 812000,
+      "duration": 1000
+    },
+    {
+      "text": "This is the evolution of programmer in",
+      "offset": 813000,
+      "duration": 2000
+    },
+    {
+      "text": "2024 to 2026.",
+      "offset": 815000,
+      "duration": 3000
+    },
+    {
+      "text": "When you're not running three tiny",
+      "offset": 818000,
+      "duration": 2000
+    },
+    {
+      "text": "instances of Claude Code anymore. What if",
+      "offset": 820000,
+      "duration": 3000
+    },
+    {
+      "text": "you need 30?",
+      "offset": 823000,
+      "duration": 2000
+    },
+    {
+      "text": "Well, welcome to Gas Town, a new concept",
+      "offset": 825000,
+      "duration": 3000
+    },
+    {
+      "text": "by Steve Yegge. This is an example of",
+      "offset": 828000,
+      "duration": 3000
+    },
+    {
+      "text": "someone who isn't afraid to speculate on",
+      "offset": 831000,
+      "duration": 3000
+    },
+    {
+      "text": "what the future of software engineering",
+      "offset": 834000,
+      "duration": 2000
+    },
+    {
+      "text": "may look like. So, think of it as an",
+      "offset": 836000,
+      "duration": 2000
+    },
+    {
+      "text": "industrialized coding factory. You're",
+      "offset": 838000,
+      "duration": 2000
+    },
+    {
+      "text": "not managing agents, you're managing a",
+      "offset": 840000,
+      "duration": 3000
+    },
+    {
+      "text": "team. You describe features, you review",
+      "offset": 843000,
+      "duration": 2000
+    },
+    {
+      "text": "plans, you prioritize, you steer when",
+      "offset": 845000,
+      "duration": 3000
+    },
+    {
+      "text": "things go sideways, but you're not",
+      "offset": 848000,
+      "duration": 2000
+    },
+    {
+      "text": "writing code. You're not even reviewing",
+      "offset": 850000,
+      "duration": 3000
+    },
+    {
+      "text": "every line. 20 to 30 parallel agents,",
+      "offset": 853000,
+      "duration": 4000
+    },
+    {
+      "text": "that's impossible. So, Gas Town is a",
+      "offset": 857000,
+      "duration": 3000
+    },
+    {
+      "text": "take on coordinated teams of agents",
+      "offset": 860000,
+      "duration": 3000
+    },
+    {
+      "text": "with specialized roles.",
+      "offset": 863000,
+      "duration": 3000
+    },
+    {
+      "text": "And from Steve's post, huge disclaimer,",
+      "offset": 866000,
+      "duration": 3000
+    },
+    {
+      "text": "you probably shouldn't use it just yet.",
+      "offset": 869000,
+      "duration": 2000
+    },
+    {
+      "text": "And a few other valid reasons here.",
+      "offset": 871000,
+      "duration": 3000
+    },
+    {
+      "text": "However, it's a fascinating take on what",
+      "offset": 874000,
+      "duration": 3000
+    },
+    {
+      "text": "the future of agentic development may",
+      "offset": 877000,
+      "duration": 2000
+    },
+    {
+      "text": "look like.",
+      "offset": 879000,
+      "duration": 2000
+    },
+    {
+      "text": "So now I want to explore something that",
+      "offset": 881000,
+      "duration": 2000
+    },
+    {
+      "text": "many of us are processing.",
+      "offset": 883000,
+      "duration": 3000
+    },
+    {
+      "text": "How do we know if the agents are making",
+      "offset": 886000,
+      "duration": 3000
+    },
+    {
+      "text": "mistakes because if we have mistakes",
+      "offset": 889000,
+      "duration": 3000
+    },
+    {
+      "text": "we don't have reliable AI yet. You",
+      "offset": 892000,
+      "duration": 3000
+    },
+    {
+      "text": "might be thinking we do this by reading",
+      "offset": 895000,
+      "duration": 2000
+    },
+    {
+      "text": "code as code is the source of truth and",
+      "offset": 897000,
+      "duration": 3000
+    },
+    {
+      "text": "here is a great take from Charity",
+      "offset": 900000,
+      "duration": 3000
+    },
+    {
+      "text": "Majors.",
+      "offset": 903000,
+      "duration": 3000
+    },
+    {
+      "text": "You have never been able to know what",
+      "offset": 906000,
+      "duration": 2000
+    },
+    {
+      "text": "the code will do by reading the code.",
+      "offset": 908000,
+      "duration": 3000
+    },
+    {
+      "text": "You always needed to ask your",
+      "offset": 911000,
+      "duration": 2000
+    },
+    {
+      "text": "instrumentation to understand what your",
+      "offset": 913000,
+      "duration": 2000
+    },
+    {
+      "text": "code does in production.",
+      "offset": 915000,
+      "duration": 3000
+    },
+    {
+      "text": "When we give agents context, tools and",
+      "offset": 918000,
+      "duration": 4000
+    },
+    {
+      "text": "ability to check their own work, we will",
+      "offset": 922000,
+      "duration": 2000
+    },
+    {
+      "text": "have better results.",
+      "offset": 924000,
+      "duration": 4000
+    },
+    {
+      "text": "So when agents are generating code at",
+      "offset": 928000,
+      "duration": 3000
+    },
+    {
+      "text": "scale, static analysis and quality gates",
+      "offset": 931000,
+      "duration": 4000
+    },
+    {
+      "text": "like those from SonarQube become",
+      "offset": 935000,
+      "duration": 2000
+    },
+    {
+      "text": "essential guard rails in the phased",
+      "offset": 937000,
+      "duration": 3000
+    },
+    {
+      "text": "development workflow. Catching",
+      "offset": 940000,
+      "duration": 2000
+    },
+    {
+      "text": "structural issues before they compound.",
+      "offset": 942000,
+      "duration": 3000
+    },
+    {
+      "text": "So useful tools like this are great. And",
+      "offset": 945000,
+      "duration": 3000
+    },
+    {
+      "text": "notice that all of this requires a range",
+      "offset": 948000,
+      "duration": 4000
+    },
+    {
+      "text": "of things. Persistent task tracking,",
+      "offset": 952000,
+      "duration": 4000
+    },
+    {
+      "text": "coordination protocols, role",
+      "offset": 956000,
+      "duration": 4000
+    },
+    {
+      "text": "definitions, work order systems,",
+      "offset": 960000,
+      "duration": 2000
+    },
+    {
+      "text": "all the infrastructure we've been",
+      "offset": 962000,
+      "duration": 1000
+    },
+    {
+      "text": "talking about, externalized state,",
+      "offset": 963000,
+      "duration": 2000
+    },
+    {
+      "text": "explicit workflows. It's not optional at",
+      "offset": 965000,
+      "duration": 2000
+    },
+    {
+      "text": "this scale. It's the foundation.",
+      "offset": 967000,
+      "duration": 3000
+    },
+    {
+      "text": "And as you can see, it's a new",
+      "offset": 970000,
+      "duration": 2000
+    },
+    {
+      "text": "discipline. Without proper technique, we",
+      "offset": 972000,
+      "duration": 2000
+    },
+    {
+      "text": "can't blame AI for failing us. We just",
+      "offset": 974000,
+      "duration": 4000
+    },
+    {
+      "text": "need to learn it.",
+      "offset": 978000,
+      "duration": 1000
+    },
+    {
+      "text": "And the critical skill here is shaping",
+      "offset": 979000,
+      "duration": 3000
+    },
+    {
+      "text": "what goes into an agent to output",
+      "offset": 982000,
+      "duration": 3000
+    },
+    {
+      "text": "high-quality code. So context isn't just",
+      "offset": 985000,
+      "duration": 3000
+    },
+    {
+      "text": "our codebase. It's accumulated",
+      "offset": 988000,
+      "duration": 3000
+    },
+    {
+      "text": "architectural decisions, edge cases,",
+      "offset": 991000,
+      "duration": 3000
+    },
+    {
+      "text": "requirement clarifications, and",
+      "offset": 994000,
+      "duration": 2000
+    },
+    {
+      "text": "discovered constraints. It's also about",
+      "offset": 996000,
+      "duration": 3000
+    },
+    {
+      "text": "orchestration",
+      "offset": 999000,
+      "duration": 2000
+    },
+    {
+      "text": "in products or in businesses. Our domain",
+      "offset": 1001000,
+      "duration": 4000
+    },
+    {
+      "text": "isn't always software. It's marketing.",
+      "offset": 1005000,
+      "duration": 2000
+    },
+    {
+      "text": "It's finance. It's medicine and",
+      "offset": 1007000,
+      "duration": 3000
+    },
+    {
+      "text": "validating the work product here isn't",
+      "offset": 1010000,
+      "duration": 3000
+    },
+    {
+      "text": "as simple as reviewing the code. It",
+      "offset": 1013000,
+      "duration": 3000
+    },
+    {
+      "text": "really depends on understanding complex",
+      "offset": 1016000,
+      "duration": 2000
+    },
+    {
+      "text": "relationships between domain-specific",
+      "offset": 1018000,
+      "duration": 3000
+    },
+    {
+      "text": "data. Only domain experts know what's",
+      "offset": 1021000,
+      "duration": 3000
+    },
+    {
+      "text": "correct. And right now we're integrating",
+      "offset": 1024000,
+      "duration": 3000
+    },
+    {
+      "text": "AI into their workflows with the same",
+      "offset": 1027000,
+      "duration": 3000
+    },
+    {
+      "text": "approaches that barely work for coding.",
+      "offset": 1030000,
+      "duration": 3000
+    },
+    {
+      "text": "Here's what most teams do when",
+      "offset": 1033000,
+      "duration": 3000
+    },
+    {
+      "text": "integrating LLMs into products. They use",
+      "offset": 1036000,
+      "duration": 3000
+    },
+    {
+      "text": "multi-agent architectures, orchestrators,",
+      "offset": 1039000,
+      "duration": 4000
+    },
+    {
+      "text": "sub agents or role-based agents. These",
+      "offset": 1043000,
+      "duration": 3000
+    },
+    {
+      "text": "agents call LLM APIs. They do some form",
+      "offset": 1046000,
+      "duration": 3000
+    },
+    {
+      "text": "of RAG, maybe some convert text to SQL.",
+      "offset": 1049000,
+      "duration": 3000
+    },
+    {
+      "text": "We influence model selection, temperature,",
+      "offset": 1052000,
+      "duration": 3000
+    },
+    {
+      "text": "tool access, and then we do some kind of",
+      "offset": 1055000,
+      "duration": 3000
+    },
+    {
+      "text": "post-facto evals where we adjust the",
+      "offset": 1058000,
+      "duration": 2000
+    },
+    {
+      "text": "prompts. But let's be concrete about",
+      "offset": 1060000,
+      "duration": 2000
+    },
+    {
+      "text": "what can go wrong with this approach.",
+      "offset": 1062000,
+      "duration": 2000
+    },
+    {
+      "text": "First, the LLM call itself is a non-",
+      "offset": 1064000,
+      "duration": 3000
+    },
+    {
+      "text": "deterministic step. Second, we have RAG.",
+      "offset": 1067000,
+      "duration": 3000
+    },
+    {
+      "text": "And the naive RAG approach that people",
+      "offset": 1070000,
+      "duration": 3000
+    },
+    {
+      "text": "use in products is fundamentally flawed.",
+      "offset": 1073000,
+      "duration": 3000
+    },
+    {
+      "text": "It has no precision. If we ask it to",
+      "offset": 1076000,
+      "duration": 3000
+    },
+    {
+      "text": "calculate something like the average",
+      "offset": 1079000,
+      "duration": 2000
+    },
+    {
+      "text": "money spent on groceries per week or",
+      "offset": 1081000,
+      "duration": 4000
+    },
+    {
+      "text": "find the most recent transaction amount,",
+      "offset": 1085000,
+      "duration": 3000
+    },
+    {
+      "text": "semantic similarity fails here. It has",
+      "offset": 1088000,
+      "duration": 3000
+    },
+    {
+      "text": "no temporal awareness. It's lossy and",
+      "offset": 1091000,
+      "duration": 2000
+    },
+    {
+      "text": "it's prone to domain mismatch. Then we",
+      "offset": 1093000,
+      "duration": 3000
+    },
+    {
+      "text": "have tools. Tools are way better for",
+      "offset": 1096000,
+      "duration": 3000
+    },
+    {
+      "text": "deterministic calculations. But in",
+      "offset": 1099000,
+      "duration": 2000
+    },
+    {
+      "text": "reality with dozens of tools there's no",
+      "offset": 1101000,
+      "duration": 3000
+    },
+    {
+      "text": "guarantee that agent selects the right",
+      "offset": 1104000,
+      "duration": 2000
+    },
+    {
+      "text": "one or orchestrates the right path. Then",
+      "offset": 1106000,
+      "duration": 3000
+    },
+    {
+      "text": "we have text to SQL. It works for simple",
+      "offset": 1109000,
+      "duration": 3000
+    },
+    {
+      "text": "translations but it can break down with",
+      "offset": 1112000,
+      "duration": 3000
+    },
+    {
+      "text": "nuanced phrasing like \"find ice cream",
+      "offset": 1115000,
+      "duration": 3000
+    },
+    {
+      "text": "shops near my zip code with the names",
+      "offset": 1118000,
+      "duration": 2000
+    },
+    {
+      "text": "that remind me of superheroes.\" That",
+      "offset": 1120000,
+      "duration": 3000
+    },
+    {
+      "text": "logic can't directly translate to SQL.",
+      "offset": 1123000,
+      "duration": 3000
+    },
+    {
+      "text": "And finally we have evals. We discover",
+      "offset": 1126000,
+      "duration": 3000
+    },
+    {
+      "text": "opportunities after doing error analysis",
+      "offset": 1129000,
+      "duration": 3000
+    },
+    {
+      "text": "on data from real users. That's",
+      "offset": 1132000,
+      "duration": 2000
+    },
+    {
+      "text": "reactive.",
+      "offset": 1134000,
+      "duration": 2000
+    },
+    {
+      "text": "But if we analyze the biggest failure",
+      "offset": 1136000,
+      "duration": 2000
+    },
+    {
+      "text": "pattern across all production AI systems",
+      "offset": 1138000,
+      "duration": 2000
+    },
+    {
+      "text": "serving business users is the fact that",
+      "offset": 1140000,
+      "duration": 3000
+    },
+    {
+      "text": "success is determined by validation of",
+      "offset": 1143000,
+      "duration": 4000
+    },
+    {
+      "text": "domain experts. So with coding agents,",
+      "offset": 1147000,
+      "duration": 3000
+    },
+    {
+      "text": "we are the domain experts.",
+      "offset": 1150000,
+      "duration": 3000
+    },
+    {
+      "text": "What happens when we apply AI to our",
+      "offset": 1155000,
+      "duration": 2000
+    },
+    {
+      "text": "products? Our AI doesn't have",
+      "offset": 1157000,
+      "duration": 3000
+    },
+    {
+      "text": "deterministic code for all scenarios.",
+      "offset": 1160000,
+      "duration": 2000
+    },
+    {
+      "text": "There are exponentially more edge cases.",
+      "offset": 1162000,
+      "duration": 3000
+    },
+    {
+      "text": "So for business tasks, having domain",
+      "offset": 1165000,
+      "duration": 3000
+    },
+    {
+      "text": "expertise during logic formation is",
+      "offset": 1168000,
+      "duration": 4000
+    },
+    {
+      "text": "critical for correctness, not just",
+      "offset": 1172000,
+      "duration": 2000
+    },
+    {
+      "text": "evaluation afterwards. So how do we fix",
+      "offset": 1174000,
+      "duration": 3000
+    },
+    {
+      "text": "it? We need to go one step further. We",
+      "offset": 1177000,
+      "duration": 3000
+    },
+    {
+      "text": "can decouple planning from execution.",
+      "offset": 1180000,
+      "duration": 3000
+    },
+    {
+      "text": "And here is the new mental model. First,",
+      "offset": 1183000,
+      "duration": 3000
+    },
+    {
+      "text": "an LLM generates a comprehensive plan to",
+      "offset": 1186000,
+      "duration": 2000
+    },
+    {
+      "text": "accomplish a task. This plan knows",
+      "offset": 1188000,
+      "duration": 3000
+    },
+    {
+      "text": "everything about the underlying business",
+      "offset": 1191000,
+      "duration": 2000
+    },
+    {
+      "text": "entities. Second, and this is the",
+      "offset": 1193000,
+      "duration": 2000
+    },
+    {
+      "text": "critical step, domain experts can review",
+      "offset": 1195000,
+      "duration": 3000
+    },
+    {
+      "text": "and refine the plan. And third, only",
+      "offset": 1198000,
+      "duration": 3000
+    },
+    {
+      "text": "after the plan is approved, the system",
+      "offset": 1201000,
+      "duration": 3000
+    },
+    {
+      "text": "generates an executable deterministic",
+      "offset": 1204000,
+      "duration": 2000
+    },
+    {
+      "text": "artifact code that actually runs the",
+      "offset": 1206000,
+      "duration": 3000
+    },
+    {
+      "text": "logic. This is a three-tier",
+      "offset": 1209000,
+      "duration": 2000
+    },
+    {
+      "text": "architecture for context.",
+      "offset": 1211000,
+      "duration": 2000
+    },
+    {
+      "text": "Tier one is the core data layer. This is",
+      "offset": 1217000,
+      "duration": 3000
+    },
+    {
+      "text": "our semantic foundation and it is not",
+      "offset": 1220000,
+      "duration": 3000
+    },
+    {
+      "text": "just text chunks and embeddings. It's",
+      "offset": 1223000,
+      "duration": 3000
+    },
+    {
+      "text": "rich structural metadata. It includes",
+      "offset": 1226000,
+      "duration": 2000
+    },
+    {
+      "text": "the entities, their definitions, the",
+      "offset": 1228000,
+      "duration": 3000
+    },
+    {
+      "text": "temporal status of data, relationship",
+      "offset": 1231000,
+      "duration": 3000
+    },
+    {
+      "text": "graphs, authority level, dependencies.",
+      "offset": 1234000,
+      "duration": 3000
+    },
+    {
+      "text": "And this is how we close the gap between",
+      "offset": 1237000,
+      "duration": 3000
+    },
+    {
+      "text": "retrieval and true structural",
+      "offset": 1240000,
+      "duration": 2000
+    },
+    {
+      "text": "understanding. The Tier 2 is",
+      "offset": 1242000,
+      "duration": 3000
+    },
+    {
+      "text": "orchestration layer. This is our team",
+      "offset": 1245000,
+      "duration": 3000
+    },
+    {
+      "text": "collaboration zone. This is where your",
+      "offset": 1248000,
+      "duration": 2000
+    },
+    {
+      "text": "domain experts operate. When the LLM",
+      "offset": 1250000,
+      "duration": 3000
+    },
+    {
+      "text": "generates a plan, we can provide a way",
+      "offset": 1253000,
+      "duration": 2000
+    },
+    {
+      "text": "for an expert to see it and see the reasoning",
+      "offset": 1255000,
+      "duration": 3000
+    },
+    {
+      "text": "to refine it. They can say, \"No, that's",
+      "offset": 1258000,
+      "duration": 3000
+    },
+    {
+      "text": "wrong. The definition of a patient",
+      "offset": 1261000,
+      "duration": 3000
+    },
+    {
+      "text": "record isn't capturing the new update",
+      "offset": 1264000,
+      "duration": 2000
+    },
+    {
+      "text": "from the last month. Update the entity",
+      "offset": 1266000,
+      "duration": 3000
+    },
+    {
+      "text": "graph to note that this patient record",
+      "offset": 1269000,
+      "duration": 2000
+    },
+    {
+      "text": "is now inclusive of the new record",
+      "offset": 1271000,
+      "duration": 2000
+    },
+    {
+      "text": "keeping system.\" They iterate on this",
+      "offset": 1273000,
+      "duration": 3000
+    },
+    {
+      "text": "logic before any user sees it. And when",
+      "offset": 1276000,
+      "duration": 3000
+    },
+    {
+      "text": "they're happy with it, they approve it",
+      "offset": 1279000,
+      "duration": 3000
+    },
+    {
+      "text": "and it generates a deterministic",
+      "offset": 1282000,
+      "duration": 2000
+    },
+    {
+      "text": "reusable and versioned artifact that",
+      "offset": 1284000,
+      "duration": 2000
+    },
+    {
+      "text": "gets added to the product as an approved",
+      "offset": 1286000,
+      "duration": 3000
+    },
+    {
+      "text": "functionality.",
+      "offset": 1289000,
+      "duration": 2000
+    },
+    {
+      "text": "This is how the system can learn,",
+      "offset": 1291000,
+      "duration": 2000
+    },
+    {
+      "text": "capture institutional knowledge and",
+      "offset": 1293000,
+      "duration": 2000
+    },
+    {
+      "text": "scale the expert decisions, and SonarQube",
+      "offset": 1295000,
+      "duration": 3000
+    },
+    {
+      "text": "can serve as a quality gate within",
+      "offset": 1298000,
+      "duration": 3000
+    },
+    {
+      "text": "the orchestration layer validating",
+      "offset": 1301000,
+      "duration": 3000
+    },
+    {
+      "text": "generated code artifacts for",
+      "offset": 1304000,
+      "duration": 2000
+    },
+    {
+      "text": "reliability, security and",
+      "offset": 1306000,
+      "duration": 2000
+    },
+    {
+      "text": "maintainability before they become",
+      "offset": 1308000,
+      "duration": 2000
+    },
+    {
+      "text": "versioned deployed components.",
+      "offset": 1310000,
+      "duration": 3000
+    },
+    {
+      "text": "And the Tier 3 here is the user",
+      "offset": 1313000,
+      "duration": 2000
+    },
+    {
+      "text": "layer. This is how the results are",
+      "offset": 1315000,
+      "duration": 2000
+    },
+    {
+      "text": "surfaced to the user. Once the",
+      "offset": 1317000,
+      "duration": 4000
+    },
+    {
+      "text": "architecture beneath is solid, this part",
+      "offset": 1321000,
+      "duration": 2000
+    },
+    {
+      "text": "is really straightforward.",
+      "offset": 1323000,
+      "duration": 3000
+    },
+    {
+      "text": "This decoupled architecture changes the",
+      "offset": 1326000,
+      "duration": 3000
+    },
+    {
+      "text": "role of our experts. We're not asking",
+      "offset": 1329000,
+      "duration": 3000
+    },
+    {
+      "text": "them to be testers in a traditional",
+      "offset": 1332000,
+      "duration": 2000
+    },
+    {
+      "text": "sense. We're asking them to onboard AI",
+      "offset": 1334000,
+      "duration": 3000
+    },
+    {
+      "text": "properly with the right context,",
+      "offset": 1337000,
+      "duration": 3000
+    },
+    {
+      "text": "validate that it works, and approve it,",
+      "offset": 1340000,
+      "duration": 2000
+    },
+    {
+      "text": "making it shippable. So you give it",
+      "offset": 1342000,
+      "duration": 2000
+    },
+    {
+      "text": "structured context, explain why",
+      "offset": 1344000,
+      "duration": 2000
+    },
+    {
+      "text": "decisions are made, validate its",
+      "offset": 1346000,
+      "duration": 2000
+    },
+    {
+      "text": "understanding before we ship to",
+      "offset": 1348000,
+      "duration": 2000
+    },
+    {
+      "text": "production. You can choose the right",
+      "offset": 1350000,
+      "duration": 2000
+    },
+    {
+      "text": "architecture for the right job and stick",
+      "offset": 1352000,
+      "duration": 2000
+    },
+    {
+      "text": "to naive RAG for low stakes conceptual",
+      "offset": 1354000,
+      "duration": 3000
+    },
+    {
+      "text": "tasks. Use advanced agentic RAG for",
+      "offset": 1357000,
+      "duration": 4000
+    },
+    {
+      "text": "exploratory complex or ambiguous tasks.",
+      "offset": 1361000,
+      "duration": 4000
+    },
+    {
+      "text": "And for high stakes deterministic",
+      "offset": 1365000,
+      "duration": 3000
+    },
+    {
+      "text": "auditable tasks—finance, legal,",
+      "offset": 1368000,
+      "duration": 2000
+    },
+    {
+      "text": "medicine, core product features—you",
+      "offset": 1370000,
+      "duration": 2000
+    },
+    {
+      "text": "should really use the decoupled planning",
+      "offset": 1372000,
+      "duration": 3000
+    },
+    {
+      "text": "and execution architecture. Here the",
+      "offset": 1375000,
+      "duration": 2000
+    },
+    {
+      "text": "team validation is non-negotiable and",
+      "offset": 1377000,
+      "duration": 3000
+    },
+    {
+      "text": "the result must be correct.",
+      "offset": 1380000,
+      "duration": 3000
+    },
+    {
+      "text": "So let's bring it all together.",
+      "offset": 1383000,
+      "duration": 2000
+    },
+    {
+      "text": "Architecting context for reliable AI is",
+      "offset": 1385000,
+      "duration": 3000
+    },
+    {
+      "text": "a design problem with two core",
+      "offset": 1388000,
+      "duration": 3000
+    },
+    {
+      "text": "components. First we must architect our",
+      "offset": 1391000,
+      "duration": 3000
+    },
+    {
+      "text": "state. This is our persistent context",
+      "offset": 1394000,
+      "duration": 2000
+    },
+    {
+      "text": "layer. In our coding example, this was",
+      "offset": 1396000,
+      "duration": 3000
+    },
+    {
+      "text": "the evolution from simple chat history",
+      "offset": 1399000,
+      "duration": 2000
+    },
+    {
+      "text": "to structured specs and finally to",
+      "offset": 1401000,
+      "duration": 3000
+    },
+    {
+      "text": "graph-based issue tracking.",
+      "offset": 1404000,
+      "duration": 2000
+    },
+    {
+      "text": "We externalized context into a",
+      "offset": 1406000,
+      "duration": 3000
+    },
+    {
+      "text": "persistent version structure. In our",
+      "offset": 1409000,
+      "duration": 2000
+    },
+    {
+      "text": "product example, this is the tier one",
+      "offset": 1411000,
+      "duration": 2000
+    },
+    {
+      "text": "core data layer. We stopped using text",
+      "offset": 1413000,
+      "duration": 3000
+    },
+    {
+      "text": "chunks with embeddings and built a full",
+      "offset": 1416000,
+      "duration": 2000
+    },
+    {
+      "text": "persistent graph of rich structural",
+      "offset": 1418000,
+      "duration": 3000
+    },
+    {
+      "text": "metadata definitive temporal relational",
+      "offset": 1421000,
+      "duration": 4000
+    },
+    {
+      "text": "and descriptive enough to capture",
+      "offset": 1425000,
+      "duration": 2000
+    },
+    {
+      "text": "entities and relationships in addition",
+      "offset": 1427000,
+      "duration": 3000
+    },
+    {
+      "text": "to embeddings. And in both cases you",
+      "offset": 1430000,
+      "duration": 2000
+    },
+    {
+      "text": "externalize what AI knows into a",
+      "offset": 1432000,
+      "duration": 3000
+    },
+    {
+      "text": "versioned auditable system.",
+      "offset": 1435000,
+      "duration": 3000
+    },
+    {
+      "text": "Second we must architect our logic. This",
+      "offset": 1438000,
+      "duration": 3000
+    },
+    {
+      "text": "is our explicit orchestration layer. In",
+      "offset": 1441000,
+      "duration": 3000
+    },
+    {
+      "text": "our coding example, it was our phased",
+      "offset": 1444000,
+      "duration": 2000
+    },
+    {
+      "text": "development. We stopped reviewing",
+      "offset": 1446000,
+      "duration": 3000
+    },
+    {
+      "text": "massive unreadable PRs and started",
+      "offset": 1449000,
+      "duration": 2000
+    },
+    {
+      "text": "reviewing the plan before the code is",
+      "offset": 1451000,
+      "duration": 2000
+    },
+    {
+      "text": "ever written. In our product example,",
+      "offset": 1453000,
+      "duration": 3000
+    },
+    {
+      "text": "this was the Tier 2 team orchestration",
+      "offset": 1456000,
+      "duration": 3000
+    },
+    {
+      "text": "layer. We decoupled planning from",
+      "offset": 1459000,
+      "duration": 3000
+    },
+    {
+      "text": "execution and forced AI to produce",
+      "offset": 1462000,
+      "duration": 3000
+    },
+    {
+      "text": "viewable plan that our team validates",
+      "offset": 1465000,
+      "duration": 3000
+    },
+    {
+      "text": "before it becomes a deterministic",
+      "offset": 1468000,
+      "duration": 2000
+    },
+    {
+      "text": "artifact that then can be verified with",
+      "offset": 1470000,
+      "duration": 3000
+    },
+    {
+      "text": "tools like SonarQube. In both cases,",
+      "offset": 1473000,
+      "duration": 2000
+    },
+    {
+      "text": "you externalize what the AI does into",
+      "offset": 1475000,
+      "duration": 4000
+    },
+    {
+      "text": "reviewable auditable process.",
+      "offset": 1479000,
+      "duration": 3000
+    },
+    {
+      "text": "So engineers are evolving from",
+      "offset": 1482000,
+      "duration": 2000
+    },
+    {
+      "text": "individual contributors to something",
+      "offset": 1484000,
+      "duration": 2000
+    },
+    {
+      "text": "entirely new. CTOs of agents.",
+      "offset": 1486000,
+      "duration": 3000
+    },
+    {
+      "text": "Every engineer here is about to get",
+      "offset": 1490000,
+      "duration": 2000
+    },
+    {
+      "text": "something CEOs wait decades for: a team",
+      "offset": 1492000,
+      "duration": 4000
+    },
+    {
+      "text": "to lead. Not in 10 years, not after",
+      "offset": 1496000,
+      "duration": 3000
+    },
+    {
+      "text": "climbing a career ladder. We're all",
+      "offset": 1499000,
+      "duration": 2000
+    },
+    {
+      "text": "becoming technical executives with more",
+      "offset": 1501000,
+      "duration": 2000
+    },
+    {
+      "text": "leverage than any generation before us.",
+      "offset": 1503000,
+      "duration": 3000
+    },
+    {
+      "text": "So, if you think about it, from day one,",
+      "offset": 1506000,
+      "duration": 3000
+    },
+    {
+      "text": "you're managing a team of highly",
+      "offset": 1509000,
+      "duration": 2000
+    },
+    {
+      "text": "specialized, incredibly knowledgeable AI",
+      "offset": 1511000,
+      "duration": 3000
+    },
+    {
+      "text": "agents. They are simultaneously more",
+      "offset": 1514000,
+      "duration": 3000
+    },
+    {
+      "text": "capable and more flawed than any other",
+      "offset": 1517000,
+      "duration": 2000
+    },
+    {
+      "text": "human team. They need direction,",
+      "offset": 1519000,
+      "duration": 3000
+    },
+    {
+      "text": "validation, and most importantly,",
+      "offset": 1522000,
+      "duration": 2000
+    },
+    {
+      "text": "someone who understands when they are",
+      "offset": 1524000,
+      "duration": 2000
+    },
+    {
+      "text": "confidently wrong. You wake up in the",
+      "offset": 1526000,
+      "duration": 3000
+    },
+    {
+      "text": "morning. Your monitoring agent has",
+      "offset": 1529000,
+      "duration": 2000
+    },
+    {
+      "text": "flagged anomalies in last night's data",
+      "offset": 1531000,
+      "duration": 3000
+    },
+    {
+      "text": "pipeline. Your diagnostic agent has run",
+      "offset": 1534000,
+      "duration": 2000
+    },
+    {
+      "text": "the root cause and determined three",
+      "offset": 1536000,
+      "duration": 3000
+    },
+    {
+      "text": "potential issues. Your code generation",
+      "offset": 1539000,
+      "duration": 3000
+    },
+    {
+      "text": "agent prepared fixes for each scenario.",
+      "offset": 1542000,
+      "duration": 3000
+    },
+    {
+      "text": "But here's where you come in. You need",
+      "offset": 1545000,
+      "duration": 2000
+    },
+    {
+      "text": "to understand which fix aligns with",
+      "offset": 1547000,
+      "duration": 2000
+    },
+    {
+      "text": "technical and business requirements,",
+      "offset": 1549000,
+      "duration": 2000
+    },
+    {
+      "text": "which one maintains system integrity,",
+      "offset": 1551000,
+      "duration": 3000
+    },
+    {
+      "text": "and which one won't cause cascading",
+      "offset": 1554000,
+      "duration": 3000
+    },
+    {
+      "text": "failures",
+      "offset": 1557000,
+      "duration": 1000
+    },
+    {
+      "text": "months from now.",
+      "offset": 1558000,
+      "duration": 2000
+    },
+    {
+      "text": "So the career ladder is becoming a",
+      "offset": 1560000,
+      "duration": 2000
+    },
+    {
+      "text": "career elevator, and you need to be",
+      "offset": 1562000,
+      "duration": 3000
+    },
+    {
+      "text": "ready to jump to the floors that used to",
+      "offset": 1565000,
+      "duration": 2000
+    },
+    {
+      "text": "take years to reach. So here's what this",
+      "offset": 1567000,
+      "duration": 3000
+    },
+    {
+      "text": "means for you. The more capable AI",
+      "offset": 1571000,
+      "duration": 2000
+    },
+    {
+      "text": "becomes, the more valuable deep",
+      "offset": 1573000,
+      "duration": 3000
+    },
+    {
+      "text": "expertise becomes. It's",
+      "offset": 1576000,
+      "duration": 2000
+    },
+    {
+      "text": "counterintuitive, but it's true. When",
+      "offset": 1578000,
+      "duration": 2000
+    },
+    {
+      "text": "everyone can generate code, the person",
+      "offset": 1580000,
+      "duration": 3000
+    },
+    {
+      "text": "who knows which code is correct becomes",
+      "offset": 1583000,
+      "duration": 2000
+    },
+    {
+      "text": "most valuable. And the person who",
+      "offset": 1585000,
+      "duration": 2000
+    },
+    {
+      "text": "understands why one approach will fail",
+      "offset": 1587000,
+      "duration": 3000
+    },
+    {
+      "text": "at scale becomes the highest paid person",
+      "offset": 1590000,
+      "duration": 2000
+    },
+    {
+      "text": "in the room.",
+      "offset": 1592000,
+      "duration": 2000
+    },
+    {
+      "text": "Imagine walking into your work 5 years",
+      "offset": 1594000,
+      "duration": 4000
+    },
+    {
+      "text": "from now. You run a team of AI agents",
+      "offset": 1598000,
+      "duration": 2000
+    },
+    {
+      "text": "that amplify your capabilities 100x.",
+      "offset": 1600000,
+      "duration": 3000
+    },
+    {
+      "text": "Your salary has doubled because you're",
+      "offset": 1603000,
+      "duration": 3000
+    },
+    {
+      "text": "one of the few people who can guarantee",
+      "offset": 1606000,
+      "duration": 2000
+    },
+    {
+      "text": "correct outcomes. You're not worried",
+      "offset": 1608000,
+      "duration": 2000
+    },
+    {
+      "text": "about being replaced because you're the",
+      "offset": 1610000,
+      "duration": 3000
+    },
+    {
+      "text": "one that's doing the replacing. You're",
+      "offset": 1613000,
+      "duration": 2000
+    },
+    {
+      "text": "replacing chaos with control,",
+      "offset": 1615000,
+      "duration": 2000
+    },
+    {
+      "text": "uncertainty with confidence, and",
+      "offset": 1617000,
+      "duration": 3000
+    },
+    {
+      "text": "potential failures with proven success.",
+      "offset": 1620000,
+      "duration": 3000
+    },
+    {
+      "text": "You're the expert who makes sure systems",
+      "offset": 1623000,
+      "duration": 2000
+    },
+    {
+      "text": "work reliably, safely, profitably, and",
+      "offset": 1625000,
+      "duration": 4000
+    },
+    {
+      "text": "you're the quality control that makes AI",
+      "offset": 1629000,
+      "duration": 2000
+    },
+    {
+      "text": "trustworthy when companies deploy it at",
+      "offset": 1631000,
+      "duration": 3000
+    },
+    {
+      "text": "scale. And when things go wrong, it's",
+      "offset": 1634000,
+      "duration": 3000
+    },
+    {
+      "text": "not because AI is bad, but because",
+      "offset": 1637000,
+      "duration": 2000
+    },
+    {
+      "text": "perfection is impossible, the real world",
+      "offset": 1639000,
+      "duration": 3000
+    },
+    {
+      "text": "is messy and things change. We make",
+      "offset": 1642000,
+      "duration": 3000
+    },
+    {
+      "text": "different tradeoffs and edge cases are",
+      "offset": 1645000,
+      "duration": 2000
+    },
+    {
+      "text": "just infinite. So, you're here to make",
+      "offset": 1647000,
+      "duration": 3000
+    },
+    {
+      "text": "AI deliver correct outcomes.",
+      "offset": 1650000,
+      "duration": 3000
+    },
+    {
+      "text": "So, if we bring this full circle, don't",
+      "offset": 1653000,
+      "duration": 3000
+    },
+    {
+      "text": "get distracted by the chaos. While",
+      "offset": 1656000,
+      "duration": 3000
+    },
+    {
+      "text": "others may panic about AI replacing",
+      "offset": 1659000,
+      "duration": 2000
+    },
+    {
+      "text": "everyone, you need to focus on becoming",
+      "offset": 1661000,
+      "duration": 2000
+    },
+    {
+      "text": "the person in the room with the best",
+      "offset": 1663000,
+      "duration": 3000
+    },
+    {
+      "text": "judgment, expertise, and best frameworks",
+      "offset": 1666000,
+      "duration": 3000
+    },
+    {
+      "text": "for structural AI verification and",
+      "offset": 1669000,
+      "duration": 2000
+    },
+    {
+      "text": "validation. I would love to continue",
+      "offset": 1671000,
+      "duration": 3000
+    },
+    {
+      "text": "this conversation. Connect with me on",
+      "offset": 1674000,
+      "duration": 2000
+    },
+    {
+      "text": "LinkedIn and I will share my slides with",
+      "offset": 1676000,
+      "duration": 2000
+    },
+    {
+      "text": "you. Thank you.",
+      "offset": 1678000,
+      "duration": 5000
+    }
+  ],
+  "fullText": "Hi everyone. Thank you so much for coming. I'm so excited to be here at Sonar Summit. We all had an LLM give us confident, beautifully formatted answer or code that was just wrong. That happens. We have these powerful AI systems that can process huge amounts of information, search knowledge bases, and generate some really great responses. And still, we often don't get the results that meet our expectations. This happens not because the models aren't smart enough, but because we need to be much better at information design and the infrastructure around it. AI has given everyone speed. Code generation, pipeline automation, agent orchestration. What used to take weeks now takes hours. But when everyone can move fast, speed stops being an advantage. I'm Lena, senior director of developer relations at Akamai. I help developers and companies use AI to get effective results through workflows they can control. I'll be happy to connect with you on LinkedIn. We now live in a world of abundant AI generated output and the question has shifted. We're no longer asking can we build it. We now need to ask, does what we shipped actually do what we intended? The companies that win the next decade won't have the best models. They'll have the best systems for ensuring that those models produce reliable correct outcomes. And today I will give you a mental model and architectural patterns to get there. To understand the architectural guard rails, we need let's take a deeper look at philosophical and mathematical foundation for this. Anyone has heard of two generals problem. Imagine two generals standing on a hill to coordinate an attack at the exact time or they will lose. They can only communicate through messengers who might get captured. Here's the dilemma. If the first general sends attack at 5:00 a.m. message, how does he know that the second general got the message? The second general could send back a messenger that he received a message. And what if that messenger gets captured? No matter how many messengers they exchange, there's always one last message that could be lost, leaving one general uncertain. So the two generals problem is about uncertainty. We can't achieve 100% alignment between human intent and AI understanding. It's not really a bug. It's not something that better models will fix. It's a fundamental property of communication itself. Your intent starts at 100% clarity in your mind. You reduce it to words and maybe 70% is preserved. The AI interprets these words. Maybe 70% of your 70% is preserved. It generates a call with another 70% accuracy. At every step, the translation between internal state and external message and interpretation of that message is an unreliable step. So while businesses are owned by people, there will always be an astronomical demand for people who can ensure the correctness of AI results. And it's not about whether AI can do the work. It's about whether anyone can trust that the work was done correctly. Every LLM call is a non-deterministic step. If we don't control it structurally, it will break. This is compounded across a system. So agent orchestration, tool selection, RAG retrieval, text SQL translation. Each step introduces a failure mode. You can't test your way into reliability with non-deterministic systems the way you can with deterministic code. You actually need architectural guard rails. So if perfect alignment is not really possible and non-determinism is imminent, what do we do? We don't try to make the black box perfect. We can build a glass box around it. And that starts with understanding the patterns that actually work. Whether you're coding with AI agents or building AI into products. The two generals problem and non-determinism show us this impossibility of full alignment. This is not a bug in the model. It's a fundamental property of communication that shows up in real systems as a context gap. I worked with a team to help them fix issues after they tried a VIP coding strategy that went wrong. A team replaced their ETL pipeline with AI generated code. The transformation logic looked elegant at first. The AI even handled time zone conversions and null values beautifully. What it didn't know is that their source system APIs return microseconds as milliseconds for records created before a specific date. It's a legacy quirk from some database migration documented only in commit messages. The senior engineer who initially handled the edge case was gone. Their inline comment about pre-2019 records needing a correction by a factor of 1,000 was replaced by AI generated documentation about timestamp normalization. So for 3 weeks all historical data was imported with timestamps that were off. The monitoring showed green because the data was flowing and the row counts matched. But every calculation was corrupted. Here's what makes VIP coding problematic. The AI generated code that handled the happy path worked. It worked fine in testing, but it failed in production. Every system has undocumented behaviors, implicit assumptions, and edge cases that exist nowhere in any training data. And these aren't really bugs. They're just the reality of systems that only engineers who understand the full context can handle correctly. And the context gap shows that institutional knowledge is being lost. So if perfect alignment is structurally unbridgeable through prompting alone, how do we fix it? It starts by fundamentally changing the coding workflow. At the beginning, most people start with standard prompting, Cursor VS Code, their favorite editor. It works on smallish tasks, but it breaks down as complexity increases. We discovered that endless context isn't useful. Even million token context windows only have a fraction of usable capacity, maybe 20 to 40% before the quality goes down. So, you develop a pattern of starting over when things derail. This helps, but we need a more structured approach. We notice that when we restart, there is no persistent plan. We're rebuilding context every single time. This means we need some mechanism for continuity of work for a structured memory. What we've tried, what worked, and what didn't. So, we try a slightly improved approach, spec-driven development. We write detailed requirement specifications and rules and markdown files for to-do lists and progress tracking. This is better. You have a single source of truth persisting across sessions. But specs become monolithic and hard to manage at scale, especially when we discover incorrect functionality in the code. So we try to chase down bugs in the code but we discover we need a new workflow for correcting the output. Think about our traditional process. We write code, it generates compiled artifacts. Those artifacts execute. When we had a bug in the code, we wouldn't fix compiled binaries, right? We would fix the code and rerun the app. In our new world, we write specifications in English. AI generates the code and the code becomes our application. So now we shouldn't always manually fix the AI code. We should go back, fix our specification and rerun it. This works. It works on complex code bases. Works on solving hard problems. But then we hit another wall. We discovered that reviewing AI generated PRs, especially the huge ones, is very hard. If productivity is so high, you physically cannot review all the code and when reviewing becomes the bottleneck, it's time to rethink your process. If we think about it, a successful code review helps us uncover any mental disconnects. We come to a mental alignment and the technical adjustment in the code follows. This gives us our next big insight. Plans are more reviewable than code. With the speed of AI, we should move the process of alignment to a higher level to the spec and the plan. When we catch errors at the planning level, we prevent 10 times more errors that we would otherwise see at the implementation level. And this leads us to two more advanced patterns. The first one is phased development. We don't just write a requirements doc and send our agent on a mission. We start with a brainstorming doc, then a structured plan, then split that plan into bite-sized tasks, and finally execute. At each stage, we review the artifact before giving it to the next stage. You see here how a mistake in the research state propagates with a much greater impact to mistakes in the planning and implementation. We also use sub agents to parallelize work. This keeps the context window for each agent focused and helps the main agent coordinate without polluting its own context. But this too has a failure point. Keeping progress and coordination in markdown works under light usage. We scale it up. Markdown quickly becomes a mess. Information gets stale. Dependencies aren't tracked. The work gets duplicated. So how do we actually do this as humans? We coordinate, we delegate, we track progress, we use issue trackers, with dependency graphs, with version control. Everything AI agents kind of need the same. We're starting to see new approaches for this. One of them is graph-based issue tracking. A new tool called Beads, for example, it allows agents to manage tasks on a graph while tracking dependencies. So, it's a graph-based Git-backed issue tracker database to let coding agents track all your work. Another one is MCP Agent Mail for multi- agent coordination. Agents can send messages and monitor the inbox for updates from other agents and can coordinate between each other on the progress between tasks, dividing the work and avoiding conflicts. So, now let's get into the wild territory. This is Ralph Wiggum, the Simpsons character, but also Ralph is the autonomous AI coding loop that ships features while you sleep. Each iteration starts with a fresh context window and memory persists through Git history and text files. It is literally a bash loop that pipes a prompt into your agent. Agent picks the next story from your PRD document. It implements it. It runs type check plus tests. It commits if everything is passing and marks story as done. Also logs learnings. And it loops on repeat until it's done. It's great for well-defined tasks, but not to be used for ambiguous or exploratory work in cases where you don't have clear criteria, security critical code, and anything that needs a human review. The lesson from Ralph is that we use phased implementation of a human reviewed plan with a separate context window for phase. So Ralph gives you a single tireless agent. But what if you need a whole team? This is the evolution of programmer in 2024 to 2026. When you're not running three tiny instances of Claude Code anymore. What if you need 30? Well, welcome to Gas Town, a new concept by Steve Yegge. This is an example of someone who isn't afraid to speculate on what the future of software engineering may look like. So, think of it as an industrialized coding factory. You're not managing agents, you're managing a team. You describe features, you review plans, you prioritize, you steer when things go sideways, but you're not writing code. You're not even reviewing every line. 20 to 30 parallel agents, that's impossible. So, Gas Town is a take on coordinated teams of agents with specialized roles. And from Steve's post, huge disclaimer, you probably shouldn't use it just yet. And a few other valid reasons here. However, it's a fascinating take on what the future of agentic development may look like. So now I want to explore something that many of us are processing. How do we know if the agents are making mistakes because if we have mistakes we don't have reliable AI yet. You might be thinking we do this by reading code as code is the source of truth and here is a great take from Charity Majors. You have never been able to know what the code will do by reading the code. You always needed to ask your instrumentation to understand what your code does in production. When we give agents context, tools and ability to check their own work, we will have better results. So when agents are generating code at scale, static analysis and quality gates like those from SonarQube become essential guard rails in the phased development workflow. Catching structural issues before they compound. So useful tools like this are great. And notice that all of this requires a range of things. Persistent task tracking, coordination protocols, role definitions, work order systems, all the infrastructure we've been talking about, externalized state, explicit workflows. It's not optional at this scale. It's the foundation. And as you can see, it's a new discipline. Without proper technique, we can't blame AI for failing us. We just need to learn it. And the critical skill here is shaping what goes into an agent to output high-quality code. So context isn't just our codebase. It's accumulated architectural decisions, edge cases, requirement clarifications, and discovered constraints. It's also about orchestration in products or in businesses. Our domain isn't always software. It's marketing. It's finance. It's medicine and validating the work product here isn't as simple as reviewing the code. It really depends on understanding complex relationships between domain-specific data. Only domain experts know what's correct. And right now we're integrating AI into their workflows with the same approaches that barely work for coding. Here's what most teams do when integrating LLMs into products. They use multi-agent architectures, orchestrators, sub agents or role-based agents. These agents call LLM APIs. They do some form of RAG, maybe some convert text to SQL. We influence model selection, temperature, tool access, and then we do some kind of post-facto evals where we adjust the prompts. But let's be concrete about what can go wrong with this approach. First, the LLM call itself is a non- deterministic step. Second, we have RAG. And the naive RAG approach that people use in products is fundamentally flawed. It has no precision. If we ask it to calculate something like the average money spent on groceries per week or find the most recent transaction amount, semantic similarity fails here. It has no temporal awareness. It's lossy and it's prone to domain mismatch. Then we have tools. Tools are way better for deterministic calculations. But in reality with dozens of tools there's no guarantee that agent selects the right one or orchestrates the right path. Then we have text to SQL. It works for simple translations but it can break down with nuanced phrasing like \"find ice cream shops near my zip code with the names that remind me of superheroes.\" That logic can't directly translate to SQL. And finally we have evals. We discover opportunities after doing error analysis on data from real users. That's reactive. But if we analyze the biggest failure pattern across all production AI systems serving business users is the fact that success is determined by validation of domain experts. So with coding agents, we are the domain experts. What happens when we apply AI to our products? Our AI doesn't have deterministic code for all scenarios. There are exponentially more edge cases. So for business tasks, having domain expertise during logic formation is critical for correctness, not just evaluation afterwards. So how do we fix it? We need to go one step further. We can decouple planning from execution. And here is the new mental model. First, an LLM generates a comprehensive plan to accomplish a task. This plan knows everything about the underlying business entities. Second, and this is the critical step, domain experts can review and refine the plan. And third, only after the plan is approved, the system generates an executable deterministic artifact code that actually runs the logic. This is a three-tier architecture for context. Tier one is the core data layer. This is our semantic foundation and it is not just text chunks and embeddings. It's rich structural metadata. It includes the entities, their definitions, the temporal status of data, relationship graphs, authority level, dependencies. And this is how we close the gap between retrieval and true structural understanding. The Tier 2 is orchestration layer. This is our team collaboration zone. This is where your domain experts operate. When the LLM generates a plan, we can provide a way for an expert to see it and see the reasoning to refine it. They can say, \"No, that's wrong. The definition of a patient record isn't capturing the new update from the last month. Update the entity graph to note that this patient record is now inclusive of the new record keeping system.\" They iterate on this logic before any user sees it. And when they're happy with it, they approve it and it generates a deterministic reusable and versioned artifact that gets added to the product as an approved functionality. This is how the system can learn, capture institutional knowledge and scale the expert decisions, and SonarQube can serve as a quality gate within the orchestration layer validating generated code artifacts for reliability, security and maintainability before they become versioned deployed components. And the Tier 3 here is the user layer. This is how the results are surfaced to the user. Once the architecture beneath is solid, this part is really straightforward. This decoupled architecture changes the role of our experts. We're not asking them to be testers in a traditional sense. We're asking them to onboard AI properly with the right context, validate that it works, and approve it, making it shippable. So you give it structured context, explain why decisions are made, validate its understanding before we ship to production. You can choose the right architecture for the right job and stick to naive RAG for low stakes conceptual tasks. Use advanced agentic RAG for exploratory complex or ambiguous tasks. And for high stakes deterministic auditable tasks—finance, legal, medicine, core product features—you should really use the decoupled planning and execution architecture. Here the team validation is non-negotiable and the result must be correct. So let's bring it all together. Architecting context for reliable AI is a design problem with two core components. First we must architect our state. This is our persistent context layer. In our coding example, this was the evolution from simple chat history to structured specs and finally to graph-based issue tracking. We externalized context into a persistent version structure. In our product example, this is the tier one core data layer. We stopped using text chunks with embeddings and built a full persistent graph of rich structural metadata definitive temporal relational and descriptive enough to capture entities and relationships in addition to embeddings. And in both cases you externalize what AI knows into a versioned auditable system. Second we must architect our logic. This is our explicit orchestration layer. In our coding example, it was our phased development. We stopped reviewing massive unreadable PRs and started reviewing the plan before the code is ever written. In our product example, this was the Tier 2 team orchestration layer. We decoupled planning from execution and forced AI to produce viewable plan that our team validates before it becomes a deterministic artifact that then can be verified with tools like SonarQube. In both cases, you externalize what the AI does into reviewable auditable process. So engineers are evolving from individual contributors to something entirely new. CTOs of agents. Every engineer here is about to get something CEOs wait decades for: a team to lead. Not in 10 years, not after climbing a career ladder. We're all becoming technical executives with more leverage than any generation before us. So, if you think about it, from day one, you're managing a team of highly specialized, incredibly knowledgeable AI agents. They are simultaneously more capable and more flawed than any other human team. They need direction, validation, and most importantly, someone who understands when they are confidently wrong. You wake up in the morning. Your monitoring agent has flagged anomalies in last night's data pipeline. Your diagnostic agent has run the root cause and determined three potential issues. Your code generation agent prepared fixes for each scenario. But here's where you come in. You need to understand which fix aligns with technical and business requirements, which one maintains system integrity, and which one won't cause cascading failures months from now. So the career ladder is becoming a career elevator, and you need to be ready to jump to the floors that used to take years to reach. So here's what this means for you. The more capable AI becomes, the more valuable deep expertise becomes. It's counterintuitive, but it's true. When everyone can generate code, the person who knows which code is correct becomes most valuable. And the person who understands why one approach will fail at scale becomes the highest paid person in the room. Imagine walking into your work 5 years from now. You run a team of AI agents that amplify your capabilities 100x. Your salary has doubled because you're one of the few people who can guarantee correct outcomes. You're not worried about being replaced because you're the one that's doing the replacing. You're replacing chaos with control, uncertainty with confidence, and potential failures with proven success. You're the expert who makes sure systems work reliably, safely, profitably, and you're the quality control that makes AI trustworthy when companies deploy it at scale. And when things go wrong, it's not because AI is bad, but because perfection is impossible, the real world is messy and things change. We make different tradeoffs and edge cases are just infinite. So, you're here to make AI deliver correct outcomes. So, if we bring this full circle, don't get distracted by the chaos. While others may panic about AI replacing everyone, you need to focus on becoming the person in the room with the best judgment, expertise, and best frameworks for structural AI verification and validation. I would love to continue this conversation. Connect with me on LinkedIn and I will share my slides with you. Thank you.",
+  "fetchedAt": "2026-03-14T09:22:02.556Z"
+}

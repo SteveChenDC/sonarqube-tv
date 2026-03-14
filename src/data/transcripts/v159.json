@@ -1,0 +1,1158 @@
+{
+  "videoId": "v159",
+  "youtubeId": "O0yFLS30InY",
+  "segments": [
+    {
+      "text": "foreign",
+      "offset": 960,
+      "duration": 3000
+    },
+    {
+      "text": "[Music]",
+      "offset": 4810,
+      "duration": 6350
+    },
+    {
+      "text": "ER in this video I'm going to show you",
+      "offset": 8240,
+      "duration": 5680
+    },
+    {
+      "text": "how to install sonar Cube on Windows the",
+      "offset": 11160,
+      "duration": 4860
+    },
+    {
+      "text": "system I'm going to be using has Windows",
+      "offset": 13920,
+      "duration": 4920
+    },
+    {
+      "text": "10 but any 64-bit version of Windows",
+      "offset": 16020,
+      "duration": 4919
+    },
+    {
+      "text": "should work just fine before installing",
+      "offset": 18840,
+      "duration": 4439
+    },
+    {
+      "text": "sonar Cube there are some prerequisites",
+      "offset": 20939,
+      "duration": 4321
+    },
+    {
+      "text": "that need to be downloaded install and",
+      "offset": 23279,
+      "duration": 4141
+    },
+    {
+      "text": "set up if they're not the first is Java",
+      "offset": 25260,
+      "duration": 4740
+    },
+    {
+      "text": "you can always find the required version",
+      "offset": 27420,
+      "duration": 4979
+    },
+    {
+      "text": "of Java for the version of sonar Cube",
+      "offset": 30000,
+      "duration": 4980
+    },
+    {
+      "text": "that you're using from here with the",
+      "offset": 32399,
+      "duration": 5641
+    },
+    {
+      "text": "current long-term support version 9.9 as",
+      "offset": 34980,
+      "duration": 5640
+    },
+    {
+      "text": "well as any sonar key version 10.",
+      "offset": 38040,
+      "duration": 4560
+    },
+    {
+      "text": "you'll see that the required version of",
+      "offset": 40620,
+      "duration": 5700
+    },
+    {
+      "text": "java is jdk 17. you can use either",
+      "offset": 42600,
+      "duration": 6900
+    },
+    {
+      "text": "Oracle jdk or open jdk",
+      "offset": 46320,
+      "duration": 5840
+    },
+    {
+      "text": "I've already installed Oracle jdk 17",
+      "offset": 49500,
+      "duration": 5820
+    },
+    {
+      "text": "after installing you can verify that",
+      "offset": 52160,
+      "duration": 5739
+    },
+    {
+      "text": "Java is installed and it's the correct",
+      "offset": 55320,
+      "duration": 5520
+    },
+    {
+      "text": "version by opening up command prompt and",
+      "offset": 57899,
+      "duration": 5101
+    },
+    {
+      "text": "running Java Dash version you'll want to",
+      "offset": 60840,
+      "duration": 4260
+    },
+    {
+      "text": "make sure that the Java version shown is",
+      "offset": 63000,
+      "duration": 4619
+    },
+    {
+      "text": "in fact the version you are expecting in",
+      "offset": 65100,
+      "duration": 5760
+    },
+    {
+      "text": "this case Java 17. once Java is set up",
+      "offset": 67619,
+      "duration": 5641
+    },
+    {
+      "text": "you'll also need to make sure you have a",
+      "offset": 70860,
+      "duration": 3900
+    },
+    {
+      "text": "database set up",
+      "offset": 73260,
+      "duration": 4200
+    },
+    {
+      "text": "you can see the supported databases are",
+      "offset": 74760,
+      "duration": 5160
+    },
+    {
+      "text": "listed under the versions of java and",
+      "offset": 77460,
+      "duration": 4260
+    },
+    {
+      "text": "you can see that with this version we",
+      "offset": 79920,
+      "duration": 5820
+    },
+    {
+      "text": "support postgres Microsoft SQL Server",
+      "offset": 81720,
+      "duration": 6960
+    },
+    {
+      "text": "and Oracle for this installation I'm",
+      "offset": 85740,
+      "duration": 5940
+    },
+    {
+      "text": "going to be using SQL Server now I've",
+      "offset": 88680,
+      "duration": 5880
+    },
+    {
+      "text": "already gone in and configured my SQL",
+      "offset": 91680,
+      "duration": 5340
+    },
+    {
+      "text": "server but for each database you're",
+      "offset": 94560,
+      "duration": 5040
+    },
+    {
+      "text": "going to want to refer to the installing",
+      "offset": 97020,
+      "duration": 5880
+    },
+    {
+      "text": "the database section of the installation",
+      "offset": 99600,
+      "duration": 4860
+    },
+    {
+      "text": "instructions",
+      "offset": 102900,
+      "duration": 3480
+    },
+    {
+      "text": "for any database you're going to want to",
+      "offset": 104460,
+      "duration": 4019
+    },
+    {
+      "text": "create a schema and Son our Cube User",
+      "offset": 106380,
+      "duration": 4620
+    },
+    {
+      "text": "it's also recommended to create a sonar",
+      "offset": 108479,
+      "duration": 4561
+    },
+    {
+      "text": "Cube database within that specific",
+      "offset": 111000,
+      "duration": 3840
+    },
+    {
+      "text": "database platform you'll need to make",
+      "offset": 113040,
+      "duration": 3780
+    },
+    {
+      "text": "sure that the user you've created has",
+      "offset": 114840,
+      "duration": 3779
+    },
+    {
+      "text": "create update and delete permissions",
+      "offset": 116820,
+      "duration": 4380
+    },
+    {
+      "text": "within that schema and database",
+      "offset": 118619,
+      "duration": 4500
+    },
+    {
+      "text": "for each database there's Specific",
+      "offset": 121200,
+      "duration": 3840
+    },
+    {
+      "text": "Instructions that you'll also need to",
+      "offset": 123119,
+      "duration": 4201
+    },
+    {
+      "text": "make sure you follow as I said I'm using",
+      "offset": 125040,
+      "duration": 4980
+    },
+    {
+      "text": "SQL Server so that specifically says I",
+      "offset": 127320,
+      "duration": 4440
+    },
+    {
+      "text": "need to make sure I'm using a collation",
+      "offset": 130020,
+      "duration": 3420
+    },
+    {
+      "text": "that's case sensitive and accent",
+      "offset": 131760,
+      "duration": 4619
+    },
+    {
+      "text": "sensitive as well as setting the read",
+      "offset": 133440,
+      "duration": 5220
+    },
+    {
+      "text": "committed snapshot I can show you within",
+      "offset": 136379,
+      "duration": 4801
+    },
+    {
+      "text": "SQL Server management Studio that I've",
+      "offset": 138660,
+      "duration": 4740
+    },
+    {
+      "text": "created a sonar Cube database that I'm",
+      "offset": 141180,
+      "duration": 4800
+    },
+    {
+      "text": "going to be using as well as creating a",
+      "offset": 143400,
+      "duration": 5220
+    },
+    {
+      "text": "center Cube user within this that has",
+      "offset": 145980,
+      "duration": 5160
+    },
+    {
+      "text": "right permissions to this database as",
+      "offset": 148620,
+      "duration": 4380
+    },
+    {
+      "text": "well as creating a sonar Cube schema",
+      "offset": 151140,
+      "duration": 4800
+    },
+    {
+      "text": "within this database that again this",
+      "offset": 153000,
+      "duration": 5220
+    },
+    {
+      "text": "user has permission to write what once",
+      "offset": 155940,
+      "duration": 4260
+    },
+    {
+      "text": "that's all set up now you're ready to",
+      "offset": 158220,
+      "duration": 4739
+    },
+    {
+      "text": "download and set up sonar Cube",
+      "offset": 160200,
+      "duration": 5160
+    },
+    {
+      "text": "you can download sonar Cube by going",
+      "offset": 162959,
+      "duration": 4261
+    },
+    {
+      "text": "here this will always show you the",
+      "offset": 165360,
+      "duration": 3659
+    },
+    {
+      "text": "latest version of sonar Cube and you can",
+      "offset": 167220,
+      "duration": 3239
+    },
+    {
+      "text": "pick which Edition you would want to",
+      "offset": 169019,
+      "duration": 4381
+    },
+    {
+      "text": "download additionally if you prefer the",
+      "offset": 170459,
+      "duration": 4681
+    },
+    {
+      "text": "long term support version you can scroll",
+      "offset": 173400,
+      "duration": 4140
+    },
+    {
+      "text": "down on this page and you can see the",
+      "offset": 175140,
+      "duration": 4319
+    },
+    {
+      "text": "long-term support here you can pick",
+      "offset": 177540,
+      "duration": 4080
+    },
+    {
+      "text": "which Edition you would want and then",
+      "offset": 179459,
+      "duration": 3841
+    },
+    {
+      "text": "select download",
+      "offset": 181620,
+      "duration": 3960
+    },
+    {
+      "text": "for this download though we're going to",
+      "offset": 183300,
+      "duration": 5280
+    },
+    {
+      "text": "be using version 10.1 the current latest",
+      "offset": 185580,
+      "duration": 6420
+    },
+    {
+      "text": "release and the Developer Edition",
+      "offset": 188580,
+      "duration": 7519
+    },
+    {
+      "text": "so I can click here to download that",
+      "offset": 192000,
+      "duration": 4099
+    },
+    {
+      "text": "this is going to download the sonar Cube",
+      "offset": 197159,
+      "duration": 5580
+    },
+    {
+      "text": "installation zip file the zip file will",
+      "offset": 199860,
+      "duration": 4560
+    },
+    {
+      "text": "need to be extracted into whatever",
+      "offset": 202739,
+      "duration": 4801
+    },
+    {
+      "text": "directory you want sonar Cube installed",
+      "offset": 204420,
+      "duration": 6300
+    },
+    {
+      "text": "I'm going to pick the root C directory",
+      "offset": 207540,
+      "duration": 4979
+    },
+    {
+      "text": "you can pick whichever directory is",
+      "offset": 210720,
+      "duration": 5220
+    },
+    {
+      "text": "appropriate for your installation",
+      "offset": 212519,
+      "duration": 6440
+    },
+    {
+      "text": "and then extract",
+      "offset": 215940,
+      "duration": 3019
+    },
+    {
+      "text": "you can now see that I have sonar Cube",
+      "offset": 223860,
+      "duration": 4860
+    },
+    {
+      "text": "extracted into my root C directory",
+      "offset": 226019,
+      "duration": 5220
+    },
+    {
+      "text": "if I go in here this is my installation",
+      "offset": 228720,
+      "duration": 4739
+    },
+    {
+      "text": "directory this is where all of the files",
+      "offset": 231239,
+      "duration": 4261
+    },
+    {
+      "text": "for sonar key were located",
+      "offset": 233459,
+      "duration": 4081
+    },
+    {
+      "text": "before we start sonar Cube we're going",
+      "offset": 235500,
+      "duration": 3840
+    },
+    {
+      "text": "to need to go into the conf directory",
+      "offset": 237540,
+      "duration": 4500
+    },
+    {
+      "text": "and configure sonar Cube to use the",
+      "offset": 239340,
+      "duration": 4880
+    },
+    {
+      "text": "database that we've set up the",
+      "offset": 242040,
+      "duration": 3960
+    },
+    {
+      "text": "sonar.properties is where you would",
+      "offset": 244220,
+      "duration": 3939
+    },
+    {
+      "text": "configure any parameters that you want",
+      "offset": 246000,
+      "duration": 4739
+    },
+    {
+      "text": "to specific to your sonar Cube instance",
+      "offset": 248159,
+      "duration": 4741
+    },
+    {
+      "text": "all of the sonar Cube parameters are",
+      "offset": 250739,
+      "duration": 4200
+    },
+    {
+      "text": "available within here but most of them",
+      "offset": 252900,
+      "duration": 3959
+    },
+    {
+      "text": "are going to be commented out with the",
+      "offset": 254939,
+      "duration": 4621
+    },
+    {
+      "text": "pound sign so to use them we're going to",
+      "offset": 256859,
+      "duration": 4921
+    },
+    {
+      "text": "need to remove the pound sign as well as",
+      "offset": 259560,
+      "duration": 5160
+    },
+    {
+      "text": "setting the values appropriately",
+      "offset": 261780,
+      "duration": 4380
+    },
+    {
+      "text": "the first two that we're going to need",
+      "offset": 264720,
+      "duration": 4320
+    },
+    {
+      "text": "to use are the sonar jdbc username and",
+      "offset": 266160,
+      "duration": 4740
+    },
+    {
+      "text": "password and these are going to be set",
+      "offset": 269040,
+      "duration": 4620
+    },
+    {
+      "text": "up with the username and password that",
+      "offset": 270900,
+      "duration": 6359
+    },
+    {
+      "text": "is created for your specifics on our",
+      "offset": 273660,
+      "duration": 5580
+    },
+    {
+      "text": "Cube user and the database that you've",
+      "offset": 277259,
+      "duration": 2821
+    },
+    {
+      "text": "set up",
+      "offset": 279240,
+      "duration": 3000
+    },
+    {
+      "text": "now you can see that we have different",
+      "offset": 280080,
+      "duration": 4619
+    },
+    {
+      "text": "parameters available depending on which",
+      "offset": 282240,
+      "duration": 5519
+    },
+    {
+      "text": "database you're using",
+      "offset": 284699,
+      "duration": 5401
+    },
+    {
+      "text": "as I said I'm using SQL server and",
+      "offset": 287759,
+      "duration": 4141
+    },
+    {
+      "text": "specifically I'm using SQL server with",
+      "offset": 290100,
+      "duration": 5340
+    },
+    {
+      "text": "SQL authentication so I can use this URL",
+      "offset": 291900,
+      "duration": 7019
+    },
+    {
+      "text": "and I want to set this specific to my",
+      "offset": 295440,
+      "duration": 6600
+    },
+    {
+      "text": "host and my database now if you're using",
+      "offset": 298919,
+      "duration": 5881
+    },
+    {
+      "text": "SQL Server most of the new versions will",
+      "offset": 302040,
+      "duration": 5460
+    },
+    {
+      "text": "use SSL by default which means that",
+      "offset": 304800,
+      "duration": 4320
+    },
+    {
+      "text": "there's some additional parameters that",
+      "offset": 307500,
+      "duration": 3919
+    },
+    {
+      "text": "you'll need to set to connect via SSL",
+      "offset": 309120,
+      "duration": 5880
+    },
+    {
+      "text": "specifically the encrypt equals true",
+      "offset": 311419,
+      "duration": 6521
+    },
+    {
+      "text": "trust server certificate and host name",
+      "offset": 315000,
+      "duration": 5699
+    },
+    {
+      "text": "in certificate parameters as appropriate",
+      "offset": 317940,
+      "duration": 5160
+    },
+    {
+      "text": "once you've set all these you can save",
+      "offset": 320699,
+      "duration": 3541
+    },
+    {
+      "text": "this file",
+      "offset": 323100,
+      "duration": 3240
+    },
+    {
+      "text": "and now you're ready to start sonar Cube",
+      "offset": 324240,
+      "duration": 4739
+    },
+    {
+      "text": "to start sonar Cube you can open up a",
+      "offset": 326340,
+      "duration": 4380
+    },
+    {
+      "text": "command prompt",
+      "offset": 328979,
+      "duration": 5660
+    },
+    {
+      "text": "go to the installation directory",
+      "offset": 330720,
+      "duration": 3919
+    },
+    {
+      "text": "and in here you'll see there's a bin",
+      "offset": 335160,
+      "duration": 3420
+    },
+    {
+      "text": "directory",
+      "offset": 337080,
+      "duration": 3899
+    },
+    {
+      "text": "go into the bin directory and we can see",
+      "offset": 338580,
+      "duration": 4260
+    },
+    {
+      "text": "that there's specifically a directory",
+      "offset": 340979,
+      "duration": 3301
+    },
+    {
+      "text": "for Windows",
+      "offset": 342840,
+      "duration": 4380
+    },
+    {
+      "text": "so we go in there and we see the start",
+      "offset": 344280,
+      "duration": 5580
+    },
+    {
+      "text": "cylinder.bat this file is what we're",
+      "offset": 347220,
+      "duration": 4680
+    },
+    {
+      "text": "going to want to use to start selling",
+      "offset": 349860,
+      "duration": 4200
+    },
+    {
+      "text": "our Cube now the first time you run",
+      "offset": 351900,
+      "duration": 3299
+    },
+    {
+      "text": "sonar",
+      "offset": 354060,
+      "duration": 3359
+    },
+    {
+      "text": "it's going to connect to the database",
+      "offset": 355199,
+      "duration": 4321
+    },
+    {
+      "text": "and see that the appropriate tables have",
+      "offset": 357419,
+      "duration": 4261
+    },
+    {
+      "text": "not been created so it's going to need",
+      "offset": 359520,
+      "duration": 5580
+    },
+    {
+      "text": "to create those tables which will take a",
+      "offset": 361680,
+      "duration": 5459
+    },
+    {
+      "text": "little bit longer starting up then than",
+      "offset": 365100,
+      "duration": 4140
+    },
+    {
+      "text": "it will on subsequent startups of sonar",
+      "offset": 367139,
+      "duration": 4261
+    },
+    {
+      "text": "Cube you'll know that sonar cube is",
+      "offset": 369240,
+      "duration": 5340
+    },
+    {
+      "text": "ready once you see the line Center Key",
+      "offset": 371400,
+      "duration": 6359
+    },
+    {
+      "text": "was operational in your console",
+      "offset": 374580,
+      "duration": 6899
+    },
+    {
+      "text": "so with that we can now access the sonar",
+      "offset": 377759,
+      "duration": 6181
+    },
+    {
+      "text": "Cube to our browser",
+      "offset": 381479,
+      "duration": 5101
+    },
+    {
+      "text": "by default sonar cube is going to be",
+      "offset": 383940,
+      "duration": 5039
+    },
+    {
+      "text": "installed on Port 9000 so I can go to",
+      "offset": 386580,
+      "duration": 5459
+    },
+    {
+      "text": "localhost 9000",
+      "offset": 388979,
+      "duration": 5541
+    },
+    {
+      "text": "and we're presented with the login page",
+      "offset": 392039,
+      "duration": 5341
+    },
+    {
+      "text": "the default username and password you",
+      "offset": 394520,
+      "duration": 5260
+    },
+    {
+      "text": "can find in the installation guide the",
+      "offset": 397380,
+      "duration": 5220
+    },
+    {
+      "text": "default username is admin",
+      "offset": 399780,
+      "duration": 5220
+    },
+    {
+      "text": "I'll put in the password and the first",
+      "offset": 402600,
+      "duration": 4080
+    },
+    {
+      "text": "time we log in we're going to be",
+      "offset": 405000,
+      "duration": 4139
+    },
+    {
+      "text": "presented with the screen to change our",
+      "offset": 406680,
+      "duration": 4700
+    },
+    {
+      "text": "password",
+      "offset": 409139,
+      "duration": 2241
+    },
+    {
+      "text": "so I want to update the password",
+      "offset": 416100,
+      "duration": 3439
+    },
+    {
+      "text": "and now we're in the sonar Cube if you",
+      "offset": 421080,
+      "duration": 5399
+    },
+    {
+      "text": "are using the Community Edition then",
+      "offset": 424199,
+      "duration": 4560
+    },
+    {
+      "text": "that's it you've had sonar Cube set up",
+      "offset": 426479,
+      "duration": 4440
+    },
+    {
+      "text": "and you are ready to start scanning code",
+      "offset": 428759,
+      "duration": 4321
+    },
+    {
+      "text": "however if you're using a commercial",
+      "offset": 430919,
+      "duration": 4861
+    },
+    {
+      "text": "version like I am with the Developer",
+      "offset": 433080,
+      "duration": 5280
+    },
+    {
+      "text": "Edition it's going to need a license for",
+      "offset": 435780,
+      "duration": 5160
+    },
+    {
+      "text": "you to use this so it's going to provide",
+      "offset": 438360,
+      "duration": 5580
+    },
+    {
+      "text": "you the link how to install the license",
+      "offset": 440940,
+      "duration": 5340
+    },
+    {
+      "text": "you'll see here that there is a server",
+      "offset": 443940,
+      "duration": 4860
+    },
+    {
+      "text": "ID you'll need to copy this server ID",
+      "offset": 446280,
+      "duration": 4020
+    },
+    {
+      "text": "and send this to your account",
+      "offset": 448800,
+      "duration": 3959
+    },
+    {
+      "text": "representative with that they'll be able",
+      "offset": 450300,
+      "duration": 4440
+    },
+    {
+      "text": "to give you a license key once you have",
+      "offset": 452759,
+      "duration": 3901
+    },
+    {
+      "text": "your license key you can enter that here",
+      "offset": 454740,
+      "duration": 5519
+    },
+    {
+      "text": "and sonar Cube will be ready for use",
+      "offset": 456660,
+      "duration": 5640
+    },
+    {
+      "text": "there are some additional steps that you",
+      "offset": 460259,
+      "duration": 3301
+    },
+    {
+      "text": "should take if you're going to be using",
+      "offset": 462300,
+      "duration": 3299
+    },
+    {
+      "text": "Sonar cube in a production environment",
+      "offset": 463560,
+      "duration": 4079
+    },
+    {
+      "text": "you can see those in the installation",
+      "offset": 465599,
+      "duration": 4621
+    },
+    {
+      "text": "instructions under the operating the",
+      "offset": 467639,
+      "duration": 3601
+    },
+    {
+      "text": "server",
+      "offset": 470220,
+      "duration": 3419
+    },
+    {
+      "text": "the first step would be setting this up",
+      "offset": 471240,
+      "duration": 4620
+    },
+    {
+      "text": "as a service here you can see the",
+      "offset": 473639,
+      "duration": 4381
+    },
+    {
+      "text": "instructions for how to start this as a",
+      "offset": 475860,
+      "duration": 4739
+    },
+    {
+      "text": "service additionally if you wanted to",
+      "offset": 478020,
+      "duration": 7619
+    },
+    {
+      "text": "secure your server and use an HTTP proxy",
+      "offset": 480599,
+      "duration": 7561
+    },
+    {
+      "text": "there's instructions for that down here",
+      "offset": 485639,
+      "duration": 4261
+    },
+    {
+      "text": "under",
+      "offset": 488160,
+      "duration": 4259
+    },
+    {
+      "text": "securing the server This is highly",
+      "offset": 489900,
+      "duration": 4919
+    },
+    {
+      "text": "recommended if you're using a virtual",
+      "offset": 492419,
+      "duration": 4441
+    },
+    {
+      "text": "machine running on the cloud such as",
+      "offset": 494819,
+      "duration": 4320
+    },
+    {
+      "text": "through Azure or AWS",
+      "offset": 496860,
+      "duration": 4800
+    },
+    {
+      "text": "there's also additional instructions for",
+      "offset": 499139,
+      "duration": 4560
+    },
+    {
+      "text": "configuring other properties within",
+      "offset": 501660,
+      "duration": 4740
+    },
+    {
+      "text": "sonar Cube within the documentation",
+      "offset": 503699,
+      "duration": 5220
+    },
+    {
+      "text": "now if you have any problems while",
+      "offset": 506400,
+      "duration": 4799
+    },
+    {
+      "text": "running sonar Cube it would be advised",
+      "offset": 508919,
+      "duration": 4381
+    },
+    {
+      "text": "that you go to your installation",
+      "offset": 511199,
+      "duration": 4981
+    },
+    {
+      "text": "directory and go into the logs directory",
+      "offset": 513300,
+      "duration": 5159
+    },
+    {
+      "text": "and then here you'll see all of the logs",
+      "offset": 516180,
+      "duration": 4200
+    },
+    {
+      "text": "that sonar Cube generates while it's",
+      "offset": 518459,
+      "duration": 4140
+    },
+    {
+      "text": "running the first two places that you",
+      "offset": 520380,
+      "duration": 3779
+    },
+    {
+      "text": "should probably look would be the",
+      "offset": 522599,
+      "duration": 4321
+    },
+    {
+      "text": "sonar.log and the web.log most of the",
+      "offset": 524159,
+      "duration": 4680
+    },
+    {
+      "text": "issues that you'll run into you will see",
+      "offset": 526920,
+      "duration": 4380
+    },
+    {
+      "text": "logging for those here",
+      "offset": 528839,
+      "duration": 4261
+    },
+    {
+      "text": "now that you've finished setting up your",
+      "offset": 531300,
+      "duration": 3719
+    },
+    {
+      "text": "sonar Cube instance you're ready to",
+      "offset": 533100,
+      "duration": 3960
+    },
+    {
+      "text": "start scanning your code they're Wizards",
+      "offset": 535019,
+      "duration": 4260
+    },
+    {
+      "text": "available when you first log in to",
+      "offset": 537060,
+      "duration": 4860
+    },
+    {
+      "text": "configure sonar cube with a variety of",
+      "offset": 539279,
+      "duration": 5341
+    },
+    {
+      "text": "devops platforms or to scan code",
+      "offset": 541920,
+      "duration": 4919
+    },
+    {
+      "text": "manually these Wizards will take you",
+      "offset": 544620,
+      "duration": 4140
+    },
+    {
+      "text": "through the steps of how to scan and",
+      "offset": 546839,
+      "duration": 4081
+    },
+    {
+      "text": "analyze your code once you've created",
+      "offset": 548760,
+      "duration": 3840
+    },
+    {
+      "text": "your first project and you attempt to",
+      "offset": 550920,
+      "duration": 3900
+    },
+    {
+      "text": "create other projects these Wizards will",
+      "offset": 552600,
+      "duration": 4500
+    },
+    {
+      "text": "also be available to once again connect",
+      "offset": 554820,
+      "duration": 5400
+    },
+    {
+      "text": "to the code and allow you to scan that",
+      "offset": 557100,
+      "duration": 5220
+    },
+    {
+      "text": "thank you for taking the time to set up",
+      "offset": 560220,
+      "duration": 5119
+    },
+    {
+      "text": "sonar cube with me",
+      "offset": 562320,
+      "duration": 3019
+    },
+    {
+      "text": "foreign",
+      "offset": 566820,
+      "duration": 5209
+    },
+    {
+      "text": "[Music]",
+      "offset": 568150,
+      "duration": 3879
+    }
+  ],
+  "fullText": "foreign [Music] ER in this video I'm going to show you how to install sonar Cube on Windows the system I'm going to be using has Windows 10 but any 64-bit version of Windows should work just fine before installing sonar Cube there are some prerequisites that need to be downloaded install and set up if they're not the first is Java you can always find the required version of Java for the version of sonar Cube that you're using from here with the current long-term support version 9.9 as well as any sonar key version 10. you'll see that the required version of java is jdk 17. you can use either Oracle jdk or open jdk I've already installed Oracle jdk 17 after installing you can verify that Java is installed and it's the correct version by opening up command prompt and running Java Dash version you'll want to make sure that the Java version shown is in fact the version you are expecting in this case Java 17. once Java is set up you'll also need to make sure you have a database set up you can see the supported databases are listed under the versions of java and you can see that with this version we support postgres Microsoft SQL Server and Oracle for this installation I'm going to be using SQL Server now I've already gone in and configured my SQL server but for each database you're going to want to refer to the installing the database section of the installation instructions for any database you're going to want to create a schema and Son our Cube User it's also recommended to create a sonar Cube database within that specific database platform you'll need to make sure that the user you've created has create update and delete permissions within that schema and database for each database there's Specific Instructions that you'll also need to make sure you follow as I said I'm using SQL Server so that specifically says I need to make sure I'm using a collation that's case sensitive and accent sensitive as well as setting the read committed snapshot I can show you within SQL Server management Studio that I've created a sonar Cube database that I'm going to be using as well as creating a center Cube user within this that has right permissions to this database as well as creating a sonar Cube schema within this database that again this user has permission to write what once that's all set up now you're ready to download and set up sonar Cube you can download sonar Cube by going here this will always show you the latest version of sonar Cube and you can pick which Edition you would want to download additionally if you prefer the long term support version you can scroll down on this page and you can see the long-term support here you can pick which Edition you would want and then select download for this download though we're going to be using version 10.1 the current latest release and the Developer Edition so I can click here to download that this is going to download the sonar Cube installation zip file the zip file will need to be extracted into whatever directory you want sonar Cube installed I'm going to pick the root C directory you can pick whichever directory is appropriate for your installation and then extract you can now see that I have sonar Cube extracted into my root C directory if I go in here this is my installation directory this is where all of the files for sonar key were located before we start sonar Cube we're going to need to go into the conf directory and configure sonar Cube to use the database that we've set up the sonar.properties is where you would configure any parameters that you want to specific to your sonar Cube instance all of the sonar Cube parameters are available within here but most of them are going to be commented out with the pound sign so to use them we're going to need to remove the pound sign as well as setting the values appropriately the first two that we're going to need to use are the sonar jdbc username and password and these are going to be set up with the username and password that is created for your specifics on our Cube user and the database that you've set up now you can see that we have different parameters available depending on which database you're using as I said I'm using SQL server and specifically I'm using SQL server with SQL authentication so I can use this URL and I want to set this specific to my host and my database now if you're using SQL Server most of the new versions will use SSL by default which means that there's some additional parameters that you'll need to set to connect via SSL specifically the encrypt equals true trust server certificate and host name in certificate parameters as appropriate once you've set all these you can save this file and now you're ready to start sonar Cube to start sonar Cube you can open up a command prompt go to the installation directory and in here you'll see there's a bin directory go into the bin directory and we can see that there's specifically a directory for Windows so we go in there and we see the start cylinder.bat this file is what we're going to want to use to start selling our Cube now the first time you run sonar it's going to connect to the database and see that the appropriate tables have not been created so it's going to need to create those tables which will take a little bit longer starting up then than it will on subsequent startups of sonar Cube you'll know that sonar cube is ready once you see the line Center Key was operational in your console so with that we can now access the sonar Cube to our browser by default sonar cube is going to be installed on Port 9000 so I can go to localhost 9000 and we're presented with the login page the default username and password you can find in the installation guide the default username is admin I'll put in the password and the first time we log in we're going to be presented with the screen to change our password so I want to update the password and now we're in the sonar Cube if you are using the Community Edition then that's it you've had sonar Cube set up and you are ready to start scanning code however if you're using a commercial version like I am with the Developer Edition it's going to need a license for you to use this so it's going to provide you the link how to install the license you'll see here that there is a server ID you'll need to copy this server ID and send this to your account representative with that they'll be able to give you a license key once you have your license key you can enter that here and sonar Cube will be ready for use there are some additional steps that you should take if you're going to be using Sonar cube in a production environment you can see those in the installation instructions under the operating the server the first step would be setting this up as a service here you can see the instructions for how to start this as a service additionally if you wanted to secure your server and use an HTTP proxy there's instructions for that down here under securing the server This is highly recommended if you're using a virtual machine running on the cloud such as through Azure or AWS there's also additional instructions for configuring other properties within sonar Cube within the documentation now if you have any problems while running sonar Cube it would be advised that you go to your installation directory and go into the logs directory and then here you'll see all of the logs that sonar Cube generates while it's running the first two places that you should probably look would be the sonar.log and the web.log most of the issues that you'll run into you will see logging for those here now that you've finished setting up your sonar Cube instance you're ready to start scanning your code they're Wizards available when you first log in to configure sonar cube with a variety of devops platforms or to scan code manually these Wizards will take you through the steps of how to scan and analyze your code once you've created your first project and you attempt to create other projects these Wizards will also be available to once again connect to the code and allow you to scan that thank you for taking the time to set up sonar cube with me foreign [Music]",
+  "fetchedAt": "2026-03-14T09:24:37.391Z"
+}

@@ -1,0 +1,1488 @@
+{
+  "videoId": "v23",
+  "youtubeId": "Eq9L4xBthXc",
+  "segments": [
+    {
+      "text": "Hello everyone and welcome to Sonar",
+      "offset": 17000,
+      "duration": 2000
+    },
+    {
+      "text": "Summit. My name is Daniel and I'm an",
+      "offset": 19000,
+      "duration": 1000
+    },
+    {
+      "text": "onboarding engineer at Solar. Today",
+      "offset": 20000,
+      "duration": 3000
+    },
+    {
+      "text": "I'm going to be talking about Sonar",
+      "offset": 23000,
+      "duration": 2000
+    },
+    {
+      "text": "MCP server. I'm going to be showing",
+      "offset": 25000,
+      "duration": 3000
+    },
+    {
+      "text": "you how it can accelerate developer",
+      "offset": 28000,
+      "duration": 4000
+    },
+    {
+      "text": "workflow, how it can bridge the gap",
+      "offset": 32000,
+      "duration": 2000
+    },
+    {
+      "text": "between the developer and secure code in",
+      "offset": 34000,
+      "duration": 4000
+    },
+    {
+      "text": "AI era. So we're going to be talking",
+      "offset": 38000,
+      "duration": 3000
+    },
+    {
+      "text": "about the MCP protocol itself.",
+      "offset": 41000,
+      "duration": 4000
+    },
+    {
+      "text": "We're going to be just introducing the",
+      "offset": 45000,
+      "duration": 1000
+    },
+    {
+      "text": "protocol what it is and how it is",
+      "offset": 46000,
+      "duration": 3000
+    },
+    {
+      "text": "relevant for the developer that's",
+      "offset": 49000,
+      "duration": 4000
+    },
+    {
+      "text": "utilizing. We're going",
+      "offset": 53000,
+      "duration": 3000
+    },
+    {
+      "text": "to be talking about the deployment",
+      "offset": 56000,
+      "duration": 3000
+    },
+    {
+      "text": "options for MCP server.",
+      "offset": 59000,
+      "duration": 544000
+    },
+    {
+      "text": "We're going to be discussing few",
+      "offset": 63000,
+      "duration": 2000
+    },
+    {
+      "text": "example capabilities and tools that the",
+      "offset": 65000,
+      "duration": 3000
+    },
+    {
+      "text": "MCP server presents to you and we're",
+      "offset": 68000,
+      "duration": 2000
+    },
+    {
+      "text": "going to finish off with a live demo.",
+      "offset": 70000,
+      "duration": 5000
+    },
+    {
+      "text": "So moving on to the MCP protocol itself.",
+      "offset": 75000,
+      "duration": 3000
+    },
+    {
+      "text": "It's an open standard that was",
+      "offset": 78000,
+      "duration": 642000
+    },
+    {
+      "text": "introduced by anthropic. So there",
+      "offset": 80000,
+      "duration": 3000
+    },
+    {
+      "text": "are number of available MCP servers",
+      "offset": 83000,
+      "duration": 3000
+    },
+    {
+      "text": "with various capabilities.",
+      "offset": 86000,
+      "duration": 3000
+    },
+    {
+      "text": "Effectively it's it's a bridge. It's",
+      "offset": 89000,
+      "duration": 2000
+    },
+    {
+      "text": "an intermediary between a user and",
+      "offset": 91000,
+      "duration": 4000
+    },
+    {
+      "text": "some kind of external system that",
+      "offset": 95000,
+      "duration": 3000
+    },
+    {
+      "text": "could have some kind of data could have",
+      "offset": 98000,
+      "duration": 2000
+    },
+    {
+      "text": "API calls. It could be even a flat text",
+      "offset": 100000,
+      "duration": 3000
+    },
+    {
+      "text": "file. The idea is that a user that",
+      "offset": 103000,
+      "duration": 4000
+    },
+    {
+      "text": "needs some kind of help using their AI",
+      "offset": 107000,
+      "duration": 3000
+    },
+    {
+      "text": "agent using MCP host has the",
+      "offset": 110000,
+      "duration": 4000
+    },
+    {
+      "text": "capability to use natural language to",
+      "offset": 114000,
+      "duration": 3000
+    },
+    {
+      "text": "translate them into queries that end",
+      "offset": 117000,
+      "duration": 3000
+    },
+    {
+      "text": "up being sent to some kind of end",
+      "offset": 120000,
+      "duration": 3000
+    },
+    {
+      "text": "system. So for a developer that uses",
+      "offset": 123000,
+      "duration": 3000
+    },
+    {
+      "text": "sonar mcp server the developer will",
+      "offset": 126000,
+      "duration": 4000
+    },
+    {
+      "text": "be typically within working with",
+      "offset": 130000,
+      "duration": 3000
+    },
+    {
+      "text": "their IDE whether it's it's cursor",
+      "offset": 133000,
+      "duration": 4000
+    },
+    {
+      "text": "whether it's a VS code you could also",
+      "offset": 137000,
+      "duration": 3000
+    },
+    {
+      "text": "use CLI options like clo code you",
+      "offset": 140000,
+      "duration": 4000
+    },
+    {
+      "text": "could use Gemini CLI you plug it",
+      "offset": 144000,
+      "duration": 4000
+    },
+    {
+      "text": "into sonar MCP server and it allows you",
+      "offset": 148000,
+      "duration": 4000
+    },
+    {
+      "text": "to translate those natural language",
+      "offset": 152000,
+      "duration": 1000
+    },
+    {
+      "text": "queries into requests that are",
+      "offset": 153000,
+      "duration": 3000
+    },
+    {
+      "text": "then being passed to server.",
+      "offset": 156000,
+      "duration": 3000
+    },
+    {
+      "text": "Currently both cloud and",
+      "offset": 159000,
+      "duration": 3000
+    },
+    {
+      "text": "self-hosted solutions are supported.",
+      "offset": 162000,
+      "duration": 3000
+    },
+    {
+      "text": "So moving on to the deployment options.",
+      "offset": 165000,
+      "duration": 3000
+    },
+    {
+      "text": "So this is where you start before you're able",
+      "offset": 168000,
+      "duration": 3000
+    },
+    {
+      "text": "to run any kind of interactions.",
+      "offset": 171000,
+      "duration": 3000
+    },
+    {
+      "text": "Depending on your needs,",
+      "offset": 174000,
+      "duration": 2000
+    },
+    {
+      "text": "depending on how large your organization",
+      "offset": 176000,
+      "duration": 3000
+    },
+    {
+      "text": "is, depending on the scale, there are",
+      "offset": 179000,
+      "duration": 3000
+    },
+    {
+      "text": "a few deployment options available for",
+      "offset": 182000,
+      "duration": 3000
+    },
+    {
+      "text": "you. So first one probably the",
+      "offset": 185000,
+      "duration": 2000
+    },
+    {
+      "text": "easiest one is the local Docker",
+      "offset": 187000,
+      "duration": 3000
+    },
+    {
+      "text": "container. All you need is",
+      "offset": 190000,
+      "duration": 4000
+    },
+    {
+      "text": "to have a Docker installed on your",
+      "offset": 194000,
+      "duration": 3000
+    },
+    {
+      "text": "developer's laptop and you configure",
+      "offset": 197000,
+      "duration": 3000
+    },
+    {
+      "text": "the MCP itself or within your IDE.",
+      "offset": 200000,
+      "duration": 3000
+    },
+    {
+      "text": "You tell the IDE what is the command",
+      "offset": 203000,
+      "duration": 5000
+    },
+    {
+      "text": "to start your MCP server. In this case",
+      "offset": 208000,
+      "duration": 4000
+    },
+    {
+      "text": "it's a docker run command.",
+      "offset": 212000,
+      "duration": 3000
+    },
+    {
+      "text": "So when you do the configuration which",
+      "offset": 215000,
+      "duration": 3000
+    },
+    {
+      "text": "is a well doumented process it",
+      "offset": 218000,
+      "duration": 2000
+    },
+    {
+      "text": "starts a container with you on your",
+      "offset": 220000,
+      "duration": 3000
+    },
+    {
+      "text": "developer laptop and your IDE is ready",
+      "offset": 223000,
+      "duration": 2000
+    },
+    {
+      "text": "to communicate with the MCP",
+      "offset": 225000,
+      "duration": 3000
+    },
+    {
+      "text": "server. For a larger deployment. If",
+      "offset": 228000,
+      "duration": 3000
+    },
+    {
+      "text": "you are part of a larger organization,",
+      "offset": 231000,
+      "duration": 3000
+    },
+    {
+      "text": "part of a larger team, you might have",
+      "offset": 234000,
+      "duration": 2000
+    },
+    {
+      "text": "actually requirement to have a centrally",
+      "offset": 236000,
+      "duration": 3000
+    },
+    {
+      "text": "managed and governed solution in",
+      "offset": 239000,
+      "duration": 3000
+    },
+    {
+      "text": "which case there is an option for you",
+      "offset": 242000,
+      "duration": 3000
+    },
+    {
+      "text": "also to deploy MCP server",
+      "offset": 245000,
+      "duration": 2000
+    },
+    {
+      "text": "on a dedicated host that can start",
+      "offset": 247000,
+      "duration": 4000
+    },
+    {
+      "text": "the container for you. In this",
+      "offset": 251000,
+      "duration": 4000
+    },
+    {
+      "text": "situation, every developer in your",
+      "offset": 255000,
+      "duration": 2000
+    },
+    {
+      "text": "organization just points their IDE at a",
+      "offset": 257000,
+      "duration": 3000
+    },
+    {
+      "text": "Docker container that runs somewhere",
+      "offset": 260000,
+      "duration": 3000
+    },
+    {
+      "text": "else within your network. This",
+      "offset": 263000,
+      "duration": 3000
+    },
+    {
+      "text": "obviously has the benefits of central",
+      "offset": 266000,
+      "duration": 3000
+    },
+    {
+      "text": "management. And it's probably much",
+      "offset": 269000,
+      "duration": 3000
+    },
+    {
+      "text": "easier to deploy, manage, and",
+      "offset": 272000,
+      "duration": 2000
+    },
+    {
+      "text": "maintain within a large organization.",
+      "offset": 274000,
+      "duration": 3000
+    },
+    {
+      "text": "Third option for you if none of",
+      "offset": 277000,
+      "duration": 3000
+    },
+    {
+      "text": "these the Docker deployments work for",
+      "offset": 280000,
+      "duration": 4000
+    },
+    {
+      "text": "you. If you're not using Docker at all,",
+      "offset": 284000,
+      "duration": 2000
+    },
+    {
+      "text": "there is also an option to use",
+      "offset": 286000,
+      "duration": 3000
+    },
+    {
+      "text": "Java file itself. All you need to do",
+      "offset": 289000,
+      "duration": 3000
+    },
+    {
+      "text": "is you can download the JAR file from",
+      "offset": 292000,
+      "duration": 3000
+    },
+    {
+      "text": "the GitHub repository that host MCP",
+      "offset": 295000,
+      "duration": 3000
+    },
+    {
+      "text": "server. You can build one yourself as",
+      "offset": 298000,
+      "duration": 3000
+    },
+    {
+      "text": "well and then you're free to run it",
+      "offset": 301000,
+      "duration": 2000
+    },
+    {
+      "text": "anywhere you want. It could be on",
+      "offset": 303000,
+      "duration": 2000
+    },
+    {
+      "text": "virtual machine. It could be on",
+      "offset": 305000,
+      "duration": 2000
+    },
+    {
+      "text": "premises. It could be in the cloud. As",
+      "offset": 307000,
+      "duration": 2000
+    },
+    {
+      "text": "long as the network endpoint is",
+      "offset": 309000,
+      "duration": 3000
+    },
+    {
+      "text": "exposed to the user once you have",
+      "offset": 312000,
+      "duration": 2000
+    },
+    {
+      "text": "your MCP server installed, the MCP",
+      "offset": 314000,
+      "duration": 3000
+    },
+    {
+      "text": "server exposes some functionalities to",
+      "offset": 317000,
+      "duration": 5000
+    },
+    {
+      "text": "the users. We call those tools.",
+      "offset": 322000,
+      "duration": 4000
+    },
+    {
+      "text": "In the MCP world, in the MCP protocol,",
+      "offset": 326000,
+      "duration": 4000
+    },
+    {
+      "text": "they are called tools. The agent the",
+      "offset": 330000,
+      "duration": 2000
+    },
+    {
+      "text": "AI assistant so be it cloud code being",
+      "offset": 332000,
+      "duration": 3000
+    },
+    {
+      "text": "be it VS code copilot or cursor it",
+      "offset": 335000,
+      "duration": 4000
+    },
+    {
+      "text": "is able to understand what those key",
+      "offset": 339000,
+      "duration": 5000
+    },
+    {
+      "text": "capabilities what those tools actually",
+      "offset": 344000,
+      "duration": 2000
+    },
+    {
+      "text": "mean when you send your natural",
+      "offset": 346000,
+      "duration": 2000
+    },
+    {
+      "text": "language queries the agent is able to",
+      "offset": 348000,
+      "duration": 3000
+    },
+    {
+      "text": "tell okay in order to respond to this in",
+      "offset": 351000,
+      "duration": 3000
+    },
+    {
+      "text": "order to provide some information to the",
+      "offset": 354000,
+      "duration": 3000
+    },
+    {
+      "text": "user I need to use this specific tool",
+      "offset": 357000,
+      "duration": 2000
+    },
+    {
+      "text": "those tools for Solar NTP server. They",
+      "offset": 359000,
+      "duration": 4000
+    },
+    {
+      "text": "are actually documented in our GitHub",
+      "offset": 363000,
+      "duration": 3000
+    },
+    {
+      "text": "page where you can actually download",
+      "offset": 366000,
+      "duration": 3000
+    },
+    {
+      "text": "the server itself. And I just picked",
+      "offset": 369000,
+      "duration": 3000
+    },
+    {
+      "text": "a few that I'm going to be demoing",
+      "offset": 372000,
+      "duration": 3000
+    },
+    {
+      "text": "later on as well. And I want to focus",
+      "offset": 375000,
+      "duration": 3000
+    },
+    {
+      "text": "on those and just first of all",
+      "offset": 378000,
+      "duration": 2000
+    },
+    {
+      "text": "theoretically tell you what they",
+      "offset": 380000,
+      "duration": 3000
+    },
+    {
+      "text": "actually mean how they can be used by",
+      "offset": 383000,
+      "duration": 2000
+    },
+    {
+      "text": "MCP server. So one of the tools",
+      "offset": 385000,
+      "duration": 2000
+    },
+    {
+      "text": "is get project quality gate status.",
+      "offset": 387000,
+      "duration": 3000
+    },
+    {
+      "text": "In sonar we have",
+      "offset": 390000,
+      "duration": 3000
+    },
+    {
+      "text": "the concept of quality gates which",
+      "offset": 393000,
+      "duration": 3000
+    },
+    {
+      "text": "effectively is a check that's being made",
+      "offset": 396000,
+      "duration": 3000
+    },
+    {
+      "text": "every time you you push a commit",
+      "offset": 399000,
+      "duration": 3000
+    },
+    {
+      "text": "through you merge your branch you",
+      "offset": 402000,
+      "duration": 4000
+    },
+    {
+      "text": "push a pull request. We actually scan",
+      "offset": 406000,
+      "duration": 3000
+    },
+    {
+      "text": "this code for you and we tell you",
+      "offset": 409000,
+      "duration": 3000
+    },
+    {
+      "text": "whether this code meets your",
+      "offset": 412000,
+      "duration": 2000
+    },
+    {
+      "text": "organizational standards and quality",
+      "offset": 414000,
+      "duration": 2000
+    },
+    {
+      "text": "gates is a way to define those",
+      "offset": 416000,
+      "duration": 3000
+    },
+    {
+      "text": "standards. It's also a way to enforce",
+      "offset": 419000,
+      "duration": 2000
+    },
+    {
+      "text": "those. So it's a important",
+      "offset": 421000,
+      "duration": 2000
+    },
+    {
+      "text": "important concept within",
+      "offset": 423000,
+      "duration": 3000
+    },
+    {
+      "text": "and get project quality gate status",
+      "offset": 426000,
+      "duration": 2000
+    },
+    {
+      "text": "is effectively a way for developer to be",
+      "offset": 428000,
+      "duration": 3000
+    },
+    {
+      "text": "able to tell whether the last code that",
+      "offset": 431000,
+      "duration": 4000
+    },
+    {
+      "text": "they pushed actually meets the",
+      "offset": 435000,
+      "duration": 2000
+    },
+    {
+      "text": "organizational standards. They no",
+      "offset": 437000,
+      "duration": 3000
+    },
+    {
+      "text": "longer needs to go to the user interface",
+      "offset": 440000,
+      "duration": 2000
+    },
+    {
+      "text": "to figure out which is the project and",
+      "offset": 442000,
+      "duration": 3000
+    },
+    {
+      "text": "to figure out what was the quality gate,",
+      "offset": 445000,
+      "duration": 3000
+    },
+    {
+      "text": "what actually happened during the last",
+      "offset": 448000,
+      "duration": 2000
+    },
+    {
+      "text": "scan. they just send natural language",
+      "offset": 450000,
+      "duration": 2000
+    },
+    {
+      "text": "query. We'll see it in a demo and",
+      "offset": 452000,
+      "duration": 2000
+    },
+    {
+      "text": "then the information is extracted to",
+      "offset": 454000,
+      "duration": 3000
+    },
+    {
+      "text": "them. The AI agent knows itself that it",
+      "offset": 457000,
+      "duration": 3000
+    },
+    {
+      "text": "has to use this tool. Another one",
+      "offset": 460000,
+      "duration": 3000
+    },
+    {
+      "text": "of the tools is search sonar issues",
+      "offset": 463000,
+      "duration": 3000
+    },
+    {
+      "text": "in project. So this is where again a",
+      "offset": 466000,
+      "duration": 4000
+    },
+    {
+      "text": "developer works on their workstation.",
+      "offset": 470000,
+      "duration": 2000
+    },
+    {
+      "text": "They're working on their code. they have",
+      "offset": 472000,
+      "duration": 3000
+    },
+    {
+      "text": "maybe made some changes and they want to",
+      "offset": 475000,
+      "duration": 2000
+    },
+    {
+      "text": "understand whether those changes that",
+      "offset": 477000,
+      "duration": 3000
+    },
+    {
+      "text": "they submitted whether they generated",
+      "offset": 480000,
+      "duration": 2000
+    },
+    {
+      "text": "any issues in or it's the",
+      "offset": 482000,
+      "duration": 2000
+    },
+    {
+      "text": "start of their working day maybe and",
+      "offset": 484000,
+      "duration": 4000
+    },
+    {
+      "text": "they want to refactor some code and",
+      "offset": 488000,
+      "duration": 2000
+    },
+    {
+      "text": "they want to pull in some issues that",
+      "offset": 490000,
+      "duration": 2000
+    },
+    {
+      "text": "they need to work on they will ask",
+      "offset": 492000,
+      "duration": 2000
+    },
+    {
+      "text": "the coding agent again what are the",
+      "offset": 494000,
+      "duration": 3000
+    },
+    {
+      "text": "issues within my project and then",
+      "offset": 497000,
+      "duration": 2000
+    },
+    {
+      "text": "they can prioritize the work accordingly",
+      "offset": 499000,
+      "duration": 3000
+    },
+    {
+      "text": "focus on subsets metal all of them",
+      "offset": 502000,
+      "duration": 2000
+    },
+    {
+      "text": "and that is where the tool becomes",
+      "offset": 504000,
+      "duration": 4000
+    },
+    {
+      "text": "useful. Another one which",
+      "offset": 508000,
+      "duration": 3000
+    },
+    {
+      "text": "is hugely useful as well is analyze file",
+      "offset": 511000,
+      "duration": 3000
+    },
+    {
+      "text": "list. Typically in software developer",
+      "offset": 514000,
+      "duration": 2000
+    },
+    {
+      "text": "workflow the developer will submit",
+      "offset": 516000,
+      "duration": 3000
+    },
+    {
+      "text": "some kind of code. The code will be",
+      "offset": 519000,
+      "duration": 4000
+    },
+    {
+      "text": "scanned typically as part of CDCI",
+      "offset": 523000,
+      "duration": 2000
+    },
+    {
+      "text": "pipeline and then the results will be",
+      "offset": 525000,
+      "duration": 3000
+    },
+    {
+      "text": "submitted to and the quality",
+      "offset": 528000,
+      "duration": 4000
+    },
+    {
+      "text": "gate will make an assessment and it will",
+      "offset": 532000,
+      "duration": 3000
+    },
+    {
+      "text": "tell us whether quality standards have",
+      "offset": 535000,
+      "duration": 2000
+    },
+    {
+      "text": "been met. Now we can shorten this",
+      "offset": 537000,
+      "duration": 2000
+    },
+    {
+      "text": "whole journey by just asking",
+      "offset": 539000,
+      "duration": 4000
+    },
+    {
+      "text": "hey please scan this file for me.",
+      "offset": 543000,
+      "duration": 3000
+    },
+    {
+      "text": "Please scan this piece of code lines",
+      "offset": 546000,
+      "duration": 4000
+    },
+    {
+      "text": "from 200 to 400 because that's what I'm",
+      "offset": 550000,
+      "duration": 2000
+    },
+    {
+      "text": "interested in here rather than",
+      "offset": 552000,
+      "duration": 3000
+    },
+    {
+      "text": "triggering the whole process",
+      "offset": 555000,
+      "duration": 2000
+    },
+    {
+      "text": "itself. So quite a useful quite",
+      "offset": 557000,
+      "duration": 3000
+    },
+    {
+      "text": "a useful tool for a developer. So now",
+      "offset": 560000,
+      "duration": 4000
+    },
+    {
+      "text": "we're gonna move on to live demo",
+      "offset": 564000,
+      "duration": 4000
+    },
+    {
+      "text": "where I'm going to demonstrate the",
+      "offset": 568000,
+      "duration": 2000
+    },
+    {
+      "text": "tolling in use and we're going",
+      "offset": 570000,
+      "duration": 3000
+    },
+    {
+      "text": "to use cursor for that with an MCP server",
+      "offset": 573000,
+      "duration": 2000
+    },
+    {
+      "text": "and a project that's hosted on sonar",
+      "offset": 575000,
+      "duration": 4000
+    },
+    {
+      "text": "cloud. So here we are in cursor we",
+      "offset": 579000,
+      "duration": 2000
+    },
+    {
+      "text": "have a small python project that prints",
+      "offset": 581000,
+      "duration": 3000
+    },
+    {
+      "text": "the current position of the ISS and when",
+      "offset": 584000,
+      "duration": 3000
+    },
+    {
+      "text": "we are going to see it next time.",
+      "offset": 587000,
+      "duration": 3000
+    },
+    {
+      "text": "This project has been onboarded to sonar",
+      "offset": 590000,
+      "duration": 3000
+    },
+    {
+      "text": "cloud and we can see the current",
+      "offset": 593000,
+      "duration": 4000
+    },
+    {
+      "text": "quality gate status is failed. As a",
+      "offset": 597000,
+      "duration": 3000
+    },
+    {
+      "text": "developer we might however want to just",
+      "offset": 600000,
+      "duration": 4000
+    },
+    {
+      "text": "see it here and that's where the MCP",
+      "offset": 604000,
+      "duration": 3000
+    },
+    {
+      "text": "server becomes handy. So I'm going to",
+      "offset": 607000,
+      "duration": 3000
+    },
+    {
+      "text": "ask the MCP server what is the",
+      "offset": 610000,
+      "duration": 2000
+    },
+    {
+      "text": "current status of my quality gate and",
+      "offset": 612000,
+      "duration": 3000
+    },
+    {
+      "text": "of the quality gate",
+      "offset": 615000,
+      "duration": 5000
+    },
+    {
+      "text": "gate for this project.",
+      "offset": 620000,
+      "duration": 3000
+    },
+    {
+      "text": "So we're going to see the agent",
+      "offset": 623000,
+      "duration": 5000
+    },
+    {
+      "text": "working through its logic and at some",
+      "offset": 628000,
+      "duration": 2000
+    },
+    {
+      "text": "point we should see that the correct",
+      "offset": 630000,
+      "duration": 2000
+    },
+    {
+      "text": "tool has been picked up for the job.",
+      "offset": 632000,
+      "duration": 3000
+    },
+    {
+      "text": "So the agent is taking its time but it",
+      "offset": 635000,
+      "duration": 3000
+    },
+    {
+      "text": "will eventually succeed. So we can",
+      "offset": 638000,
+      "duration": 2000
+    },
+    {
+      "text": "see that it's using one of the tools",
+      "offset": 640000,
+      "duration": 5000
+    },
+    {
+      "text": "which is for searching the projects",
+      "offset": 645000,
+      "duration": 2000
+    },
+    {
+      "text": "within sonar. So it already",
+      "offset": 647000,
+      "duration": 2000
+    },
+    {
+      "text": "tells us that the agent is talking to",
+      "offset": 649000,
+      "duration": 3000
+    },
+    {
+      "text": "the MCP server. It tells us which tool",
+      "offset": 652000,
+      "duration": 3000
+    },
+    {
+      "text": "and which MCP server it's used. And here",
+      "offset": 655000,
+      "duration": 2000
+    },
+    {
+      "text": "we go. We have our response. It tells us",
+      "offset": 657000,
+      "duration": 3000
+    },
+    {
+      "text": "that the overall quality gate state is",
+      "offset": 660000,
+      "duration": 3000
+    },
+    {
+      "text": "in error. and it gives us some more",
+      "offset": 663000,
+      "duration": 2000
+    },
+    {
+      "text": "useful information. But we can be",
+      "offset": 665000,
+      "duration": 4000
+    },
+    {
+      "text": "obviously more inquisitive for",
+      "offset": 669000,
+      "duration": 2000
+    },
+    {
+      "text": "developer. What matters is what's",
+      "offset": 671000,
+      "duration": 1000
+    },
+    {
+      "text": "causing the problem. So, we're going to",
+      "offset": 672000,
+      "duration": 2000
+    },
+    {
+      "text": "ask the agent which exact issues",
+      "offset": 674000,
+      "duration": 1000
+    },
+    {
+      "text": "are causing the quality gates to fail.",
+      "offset": 675000,
+      "duration": 3000
+    },
+    {
+      "text": "So we are asking the the agent now",
+      "offset": 678000,
+      "duration": 20000
+    },
+    {
+      "text": "what issues are causing the quality",
+      "offset": 698000,
+      "duration": 3000
+    },
+    {
+      "text": "gate to fail. We are also asking hey",
+      "offset": 701000,
+      "duration": 3000
+    },
+    {
+      "text": "maybe you can help me fix those issues.",
+      "offset": 704000,
+      "duration": 2000
+    },
+    {
+      "text": "Don't make any change but suggest what",
+      "offset": 706000,
+      "duration": 2000
+    },
+    {
+      "text": "is it that I should be changing. So",
+      "offset": 708000,
+      "duration": 2000
+    },
+    {
+      "text": "as the agent is working I'm going to",
+      "offset": 710000,
+      "duration": 2000
+    },
+    {
+      "text": "show you some intentional errors that I",
+      "offset": 712000,
+      "duration": 3000
+    },
+    {
+      "text": "put in here. so that I can be sure",
+      "offset": 715000,
+      "duration": 2000
+    },
+    {
+      "text": "that actually they are picked up by",
+      "offset": 717000,
+      "duration": 4000
+    },
+    {
+      "text": "sonar scanner. We should be able to see",
+      "offset": 721000,
+      "duration": 1000
+    },
+    {
+      "text": "those in a moment. So",
+      "offset": 722000,
+      "duration": 3000
+    },
+    {
+      "text": "we can see the agent is working the agent is",
+      "offset": 725000,
+      "duration": 4000
+    },
+    {
+      "text": "picking up that these are the actual",
+      "offset": 729000,
+      "duration": 2000
+    },
+    {
+      "text": "issues and at some point we should be",
+      "offset": 731000,
+      "duration": 2000
+    },
+    {
+      "text": "actually able to see okay the issue in",
+      "offset": 733000,
+      "duration": 3000
+    },
+    {
+      "text": "line 136 and in issue in line 140 they",
+      "offset": 736000,
+      "duration": 2000
+    },
+    {
+      "text": "are actually being picked up by",
+      "offset": 738000,
+      "duration": 4000
+    },
+    {
+      "text": "and you can see there is this one",
+      "offset": 742000,
+      "duration": 2000
+    },
+    {
+      "text": "already scrolled past",
+      "offset": 744000,
+      "duration": 2000
+    },
+    {
+      "text": "so let's focus back on this one",
+      "offset": 746000,
+      "duration": 4000
+    },
+    {
+      "text": "it tells us that there is unreachable",
+      "offset": 750000,
+      "duration": 3000
+    },
+    {
+      "text": "code we are never going to reach this",
+      "offset": 753000,
+      "duration": 2000
+    },
+    {
+      "text": "code. So what we could do, we could",
+      "offset": 755000,
+      "duration": 3000
+    },
+    {
+      "text": "quickly fix that by just removing",
+      "offset": 758000,
+      "duration": 2000
+    },
+    {
+      "text": "that line of code. And we should",
+      "offset": 760000,
+      "duration": 2000
+    },
+    {
+      "text": "actually see that here as well that",
+      "offset": 762000,
+      "duration": 3000
+    },
+    {
+      "text": "there is this line of code. It's",
+      "offset": 765000,
+      "duration": 3000
+    },
+    {
+      "text": "unreachable code and we actually have",
+      "offset": 768000,
+      "duration": 2000
+    },
+    {
+      "text": "another one which is this one. So it's",
+      "offset": 770000,
+      "duration": 2000
+    },
+    {
+      "text": "936",
+      "offset": 772000,
+      "duration": 2000
+    },
+    {
+      "text": "where we have a condition that we",
+      "offset": 774000,
+      "duration": 2000
+    },
+    {
+      "text": "already checking. So we could simply",
+      "offset": 776000,
+      "duration": 3000
+    },
+    {
+      "text": "remove this and that should",
+      "offset": 779000,
+      "duration": 2000
+    },
+    {
+      "text": "actually get rid of the the",
+      "offset": 781000,
+      "duration": 5000
+    },
+    {
+      "text": "problem itself. So we did remove this",
+      "offset": 786000,
+      "duration": 2000
+    },
+    {
+      "text": "and we did remove this as well with",
+      "offset": 788000,
+      "duration": 4000
+    },
+    {
+      "text": "the command.",
+      "offset": 792000,
+      "duration": 4000
+    },
+    {
+      "text": "And what we can do now is just to",
+      "offset": 796000,
+      "duration": 2000
+    },
+    {
+      "text": "demonstrate the last",
+      "offset": 798000,
+      "duration": 3000
+    },
+    {
+      "text": "functionality that I did mention.",
+      "offset": 801000,
+      "duration": 5000
+    },
+    {
+      "text": "So we can see scan the current file",
+      "offset": 806000,
+      "duration": 2000
+    },
+    {
+      "text": "current file with",
+      "offset": 808000,
+      "duration": 4000
+    },
+    {
+      "text": "lines one to 140.",
+      "offset": 812000,
+      "duration": 5000
+    },
+    {
+      "text": "So again we should see that the agent is",
+      "offset": 817000,
+      "duration": 7000
+    },
+    {
+      "text": "calling the MCP server and again it",
+      "offset": 824000,
+      "duration": 2000
+    },
+    {
+      "text": "will print which actual tool it's",
+      "offset": 826000,
+      "duration": 3000
+    },
+    {
+      "text": "calling and that it is the",
+      "offset": 829000,
+      "duration": 3000
+    },
+    {
+      "text": "MCP server. So we can see analyze file",
+      "offset": 832000,
+      "duration": 4000
+    },
+    {
+      "text": "list and we can see as the",
+      "offset": 836000,
+      "duration": 3000
+    },
+    {
+      "text": "MCP server that the agent decided to",
+      "offset": 839000,
+      "duration": 3000
+    },
+    {
+      "text": "call to accomplish this task.",
+      "offset": 842000,
+      "duration": 3000
+    },
+    {
+      "text": "So we can see that there are still some",
+      "offset": 845000,
+      "duration": 5000
+    },
+    {
+      "text": "critical findings in this in this",
+      "offset": 850000,
+      "duration": 2000
+    },
+    {
+      "text": "file but what we have just fixed is no",
+      "offset": 852000,
+      "duration": 3000
+    },
+    {
+      "text": "longer there. So we have done a small",
+      "offset": 855000,
+      "duration": 4000
+    },
+    {
+      "text": "scan of the code without actually",
+      "offset": 859000,
+      "duration": 3000
+    },
+    {
+      "text": "invoking the full C CDCI pipeline",
+      "offset": 862000,
+      "duration": 2000
+    },
+    {
+      "text": "without invoking the full workflow.",
+      "offset": 864000,
+      "duration": 4000
+    },
+    {
+      "text": "This helps developer detect issues and",
+      "offset": 868000,
+      "duration": 3000
+    },
+    {
+      "text": "actually see whether the fixes that they",
+      "offset": 871000,
+      "duration": 3000
+    },
+    {
+      "text": "think or they used from the they",
+      "offset": 874000,
+      "duration": 3000
+    },
+    {
+      "text": "think are right or they used from the AI",
+      "offset": 877000,
+      "duration": 2000
+    },
+    {
+      "text": "agent actually solve the problems and",
+      "offset": 879000,
+      "duration": 3000
+    },
+    {
+      "text": "help with quality gates help build",
+      "offset": 882000,
+      "duration": 2000
+    },
+    {
+      "text": "better and more secure code. That was",
+      "offset": 884000,
+      "duration": 5000
+    },
+    {
+      "text": "it. Thank you very much for listening.",
+      "offset": 889000,
+      "duration": 2000
+    }
+  ],
+  "fullText": "Hello everyone and welcome to Sonar Summit. My name is Daniel and I'm an onboarding engineer at Solar. Today I'm going to be talking about Sonar MCP server. I'm going to be showing you how it can accelerate developer workflow, how it can bridge the gap between the developer and secure code in AI era. So we're going to be talking about the MCP protocol itself. We're going to be just introducing the protocol what it is and how it is relevant for the developer that's utilizing. We're going to be talking about the deployment options for MCP server. We're going to be discussing few example capabilities and tools that the MCP server presents to you and we're going to finish off with a live demo. So moving on to the MCP protocol itself. It's an open standard that was introduced by anthropic. So there are number of available MCP servers with various capabilities. Effectively it's it's a bridge. It's an intermediary between a user and some kind of external system that could have some kind of data could have API calls. It could be even a flat text file. The idea is that a user that needs some kind of help using their AI agent using MCP host has the capability to use natural language to translate them into queries that end up being sent to some kind of end system. So for a developer that uses sonar mcp server the developer will be typically within working with their IDE whether it's it's cursor whether it's a VS code you could also use CLI options like clo code you could use Gemini CLI you plug it into sonar MCP server and it allows you to translate those natural language queries into requests that are then being passed to server. Currently both cloud and self-hosted solutions are supported. So moving on to the deployment options. So this is where you start before you're able to run any kind of interactions. Depending on your needs, depending on how large your organization is, depending on the scale, there are a few deployment options available for you. So first one probably the easiest one is the local Docker container. All you need is to have a Docker installed on your developer's laptop and you configure the MCP itself or within your IDE. You tell the IDE what is the command to start your MCP server. In this case it's a docker run command. So when you do the configuration which is a well doumented process it starts a container with you on your developer laptop and your IDE is ready to communicate with the MCP server. For a larger deployment. If you are part of a larger organization, part of a larger team, you might have actually requirement to have a centrally managed and governed solution in which case there is an option for you also to deploy MCP server on a dedicated host that can start the container for you. In this situation, every developer in your organization just points their IDE at a Docker container that runs somewhere else within your network. This obviously has the benefits of central management. And it's probably much easier to deploy, manage, and maintain within a large organization. Third option for you if none of these the Docker deployments work for you. If you're not using Docker at all, there is also an option to use Java file itself. All you need to do is you can download the JAR file from the GitHub repository that host MCP server. You can build one yourself as well and then you're free to run it anywhere you want. It could be on virtual machine. It could be on premises. It could be in the cloud. As long as the network endpoint is exposed to the user once you have your MCP server installed, the MCP server exposes some functionalities to the users. We call those tools. In the MCP world, in the MCP protocol, they are called tools. The agent the AI assistant so be it cloud code being be it VS code copilot or cursor it is able to understand what those key capabilities what those tools actually mean when you send your natural language queries the agent is able to tell okay in order to respond to this in order to provide some information to the user I need to use this specific tool those tools for Solar NTP server. They are actually documented in our GitHub page where you can actually download the server itself. And I just picked a few that I'm going to be demoing later on as well. And I want to focus on those and just first of all theoretically tell you what they actually mean how they can be used by MCP server. So one of the tools is get project quality gate status. In sonar we have the concept of quality gates which effectively is a check that's being made every time you you push a commit through you merge your branch you push a pull request. We actually scan this code for you and we tell you whether this code meets your organizational standards and quality gates is a way to define those standards. It's also a way to enforce those. So it's a important important concept within and get project quality gate status is effectively a way for developer to be able to tell whether the last code that they pushed actually meets the organizational standards. They no longer needs to go to the user interface to figure out which is the project and to figure out what was the quality gate, what actually happened during the last scan. they just send natural language query. We'll see it in a demo and then the information is extracted to them. The AI agent knows itself that it has to use this tool. Another one of the tools is search sonar issues in project. So this is where again a developer works on their workstation. They're working on their code. they have maybe made some changes and they want to understand whether those changes that they submitted whether they generated any issues in or it's the start of their working day maybe and they want to refactor some code and they want to pull in some issues that they need to work on they will ask the coding agent again what are the issues within my project and then they can prioritize the work accordingly focus on subsets metal all of them and that is where the tool becomes useful. Another one which is hugely useful as well is analyze file list. Typically in software developer workflow the developer will submit some kind of code. The code will be scanned typically as part of CDCI pipeline and then the results will be submitted to and the quality gate will make an assessment and it will tell us whether quality standards have been met. Now we can shorten this whole journey by just asking hey please scan this file for me. Please scan this piece of code lines from 200 to 400 because that's what I'm interested in here rather than triggering the whole process itself. So quite a useful quite a useful tool for a developer. So now we're gonna move on to live demo where I'm going to demonstrate the tolling in use and we're going to use cursor for that with an MCP server and a project that's hosted on sonar cloud. So here we are in cursor we have a small python project that prints the current position of the ISS and when we are going to see it next time. This project has been onboarded to sonar cloud and we can see the current quality gate status is failed. As a developer we might however want to just see it here and that's where the MCP server becomes handy. So I'm going to ask the MCP server what is the current status of my quality gate and of the quality gate gate for this project. So we're going to see the agent working through its logic and at some point we should see that the correct tool has been picked up for the job. So the agent is taking its time but it will eventually succeed. So we can see that it's using one of the tools which is for searching the projects within sonar. So it already tells us that the agent is talking to the MCP server. It tells us which tool and which MCP server it's used. And here we go. We have our response. It tells us that the overall quality gate state is in error. and it gives us some more useful information. But we can be obviously more inquisitive for developer. What matters is what's causing the problem. So, we're going to ask the agent which exact issues are causing the quality gates to fail. So we are asking the the agent now what issues are causing the quality gate to fail. We are also asking hey maybe you can help me fix those issues. Don't make any change but suggest what is it that I should be changing. So as the agent is working I'm going to show you some intentional errors that I put in here. so that I can be sure that actually they are picked up by sonar scanner. We should be able to see those in a moment. So we can see the agent is working the agent is picking up that these are the actual issues and at some point we should be actually able to see okay the issue in line 136 and in issue in line 140 they are actually being picked up by and you can see there is this one already scrolled past so let's focus back on this one it tells us that there is unreachable code we are never going to reach this code. So what we could do, we could quickly fix that by just removing that line of code. And we should actually see that here as well that there is this line of code. It's unreachable code and we actually have another one which is this one. So it's 936 where we have a condition that we already checking. So we could simply remove this and that should actually get rid of the the problem itself. So we did remove this and we did remove this as well with the command. And what we can do now is just to demonstrate the last functionality that I did mention. So we can see scan the current file current file with lines one to 140. So again we should see that the agent is calling the MCP server and again it will print which actual tool it's calling and that it is the MCP server. So we can see analyze file list and we can see as the MCP server that the agent decided to call to accomplish this task. So we can see that there are still some critical findings in this in this file but what we have just fixed is no longer there. So we have done a small scan of the code without actually invoking the full C CDCI pipeline without invoking the full workflow. This helps developer detect issues and actually see whether the fixes that they think or they used from the they think are right or they used from the AI agent actually solve the problems and help with quality gates help build better and more secure code. That was it. Thank you very much for listening.",
+  "fetchedAt": "2026-03-14T09:21:53.835Z"
+}

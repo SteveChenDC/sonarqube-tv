@@ -1,0 +1,1633 @@
+{
+  "videoId": "v112",
+  "youtubeId": "YZ8oVV-7_M4",
+  "segments": [
+    {
+      "text": "Entitled the reality check who determines what clean code is anyway. I'm Liz Brian, your moderator for this webinar, which will be presented by Gabrielle Please allow me to quickly go over some essential housekeeping points before we get started.",
+      "offset": 594,
+      "duration": 9000
+    },
+    {
+      "text": "This session will approximately last 45 min including QA. You're invited to submit your questions via the QA box in Zoom, not in the chat box, but the Q&A box.",
+      "offset": 9594,
+      "duration": 15000
+    },
+    {
+      "text": "You're invited to submit your questions and we will gather those with our 2 panelists joining us today, John Clifton and Alexander Raid from our product team.",
+      "offset": 24594,
+      "duration": 4000
+    },
+    {
+      "text": "They're tasked with answering as many of your questions as possible live during the webinar. This session will be recorded and we will send out a link via email in the coming days.",
+      "offset": 28594,
+      "duration": 16000
+    },
+    {
+      "text": "Finally, at the end of this webinar, short survey will appear on your screen. We welcome your feedback.",
+      "offset": 44594,
+      "duration": 3000
+    },
+    {
+      "text": "Thank you in advance for your participation. So without further ado, I'd like to introduce you to today's presenter, Gabriel Leaves.",
+      "offset": 47594,
+      "duration": 8000
+    },
+    {
+      "text": "Gab is a product manager at Sonar. He's worked. As an engineer in cybersecurity and public safety for Airbus defense in space and VINTIE energies in France.",
+      "offset": 55594,
+      "duration": 7000
+    },
+    {
+      "text": "He started coding in the early 2 thousands with the emerging web platform and hasn't stopped ever since.",
+      "offset": 62594,
+      "duration": 8000
+    },
+    {
+      "text": "Gab, over to you.",
+      "offset": 70594,
+      "duration": 2000
+    },
+    {
+      "text": "Thank you, Liz. So I'd like to start with a poll. To get us going and also to introduce It's up to the topic of the tuck.",
+      "offset": 72594,
+      "duration": 12000
+    },
+    {
+      "text": "So the question is, what's your view on Clint code? And you should be able to see the question pop up on your screen.",
+      "offset": 84594,
+      "duration": 3000
+    },
+    {
+      "text": "I see you are already and swing.",
+      "offset": 87594,
+      "duration": 9000
+    },
+    {
+      "text": "And I'll just give you a few seconds to be able to answer.",
+      "offset": 96594,
+      "duration": 8000
+    },
+    {
+      "text": "So we have about half of you already answered. Not going to spoil which answer is Winning strongly.",
+      "offset": 104594,
+      "duration": 14000
+    },
+    {
+      "text": "Okay, so it seems it's stopping.",
+      "offset": 118594,
+      "duration": 5000
+    },
+    {
+      "text": "Okay, so The answer we have is the options where first it's only mostly opinion. And we got 5% of attendees answering that option.",
+      "offset": 123594,
+      "duration": 13000
+    },
+    {
+      "text": "The second option was one of multiple possible standards for code. And that got 21%? The third option was the sensible set of general principles.",
+      "offset": 136594,
+      "duration": 11000
+    },
+    {
+      "text": "And that one got 72%. And the last one was something that made me do and we did get 2% on that one.",
+      "offset": 147594,
+      "duration": 10000
+    },
+    {
+      "text": "So thank you for for that. And, okay, let's continue.",
+      "offset": 157594,
+      "duration": 9000
+    },
+    {
+      "text": "So in part of that poll was to introduce a side of how we look at clean code. And overall ideas of quality in code and it is about skepticism and a lot of hype sometimes.",
+      "offset": 166594,
+      "duration": 14000
+    },
+    {
+      "text": "You know, just people with different opinions at different times talking about code. And, would like to show you this Google Trends.",
+      "offset": 180594,
+      "duration": 11000
+    },
+    {
+      "text": "It spans from 2,024, 2,004 to I mean nowadays. And you can see it has been growing.",
+      "offset": 191594,
+      "duration": 7000
+    },
+    {
+      "text": "The search term is for clean code. And it apparently existed before, 2,004, but there's a small spike here.",
+      "offset": 198594,
+      "duration": 11000
+    },
+    {
+      "text": "Around the COVID time. So this is, mid, 20. And I think it's related to this blog post that was released at the time and it's called it's probably time to stop recommending clean code.",
+      "offset": 209594,
+      "duration": 16000
+    },
+    {
+      "text": "And it refers not to the general concept of clink code, but specifically to a book that was published in 2,008.",
+      "offset": 225594,
+      "duration": 7000
+    },
+    {
+      "text": "With this, title. And the blog post goes on to explain why the author believes it shouldn't be recommended anymore.",
+      "offset": 232594,
+      "duration": 10000
+    },
+    {
+      "text": "Basically, it comes down to a mix of time list advice and then some questionable or outdated advice.",
+      "offset": 242594,
+      "duration": 8000
+    },
+    {
+      "text": "And I do find it interesting that even if it's a criticism, it does sort of technologies that there is some time, less advice in there.",
+      "offset": 250594,
+      "duration": 11000
+    },
+    {
+      "text": "And then the point is that of the author is that new commerce to programming or developing won't be able to really tell the good from the bad advice.",
+      "offset": 261594,
+      "duration": 2000
+    },
+    {
+      "text": "So they sort of would be lost and then, why are we even recommending these people won't be able to tell one from the other?",
+      "offset": 263594,
+      "duration": 13000
+    },
+    {
+      "text": "And I think this boils down to perhaps the introduction of the blog post, which has We might never have empirical definitions of good code with clean code.",
+      "offset": 276594,
+      "duration": 10000
+    },
+    {
+      "text": "So basically, whatever we're talking about is opinions and people's opinions about other people's opinions.",
+      "offset": 286594,
+      "duration": 7000
+    },
+    {
+      "text": "So very subjective matter. And I think this really crystallises one view around code quality. And of course this one went wild on social media and this is some reddit post.",
+      "offset": 293594,
+      "duration": 14000
+    },
+    {
+      "text": "But he's saying, yeah, basically everybody can sell their personal preferences to software quality. Because at the end of the day, nobody's testing this empirically, so whatever.",
+      "offset": 307594,
+      "duration": 10000
+    },
+    {
+      "text": "Other people just propose different levels of maturity saying By default, you ignore everything. Which is the level 0, which is not even in the right place in the list.",
+      "offset": 317594,
+      "duration": 11000
+    },
+    {
+      "text": "But then you might get some sense of cleanliness. You might then obsessively adhere to some book standard.",
+      "offset": 328594,
+      "duration": 7000
+    },
+    {
+      "text": "But then you can relativize it and sort of apply it wisely. And you know, these are different points of different ways of saying it.",
+      "offset": 335594,
+      "duration": 10000
+    },
+    {
+      "text": "And then somebody saying, like, what's about all the clean code stuff lately? Somebody's trying to sell us something.",
+      "offset": 345594,
+      "duration": 6000
+    },
+    {
+      "text": "What I believe about is that, as Dirk Carlin used to say, if you scratch on the surface of any cynic.",
+      "offset": 351594,
+      "duration": 6000
+    },
+    {
+      "text": "Somebody that is very skeptical or very pessimistic. You will find below the surface that they're just disappointed idealists.",
+      "offset": 357594,
+      "duration": 5000
+    },
+    {
+      "text": "Meaning that In this case, and I speak also for myself. As being someone that believes in good code and then can become overly pessimistic sometimes.",
+      "offset": 362594,
+      "duration": 16000
+    },
+    {
+      "text": "And another side of it is, but Oscar Well said about a cynic is one who knows the price of everything.",
+      "offset": 378594,
+      "duration": 8000
+    },
+    {
+      "text": "And the value of nothing. So basically the other opposite. So you're just criticizing everything and not being able to enjoy it.",
+      "offset": 386594,
+      "duration": 7000
+    },
+    {
+      "text": "And I think this. Sort of summarizes 2 strong. Currents of attitudes towards code.",
+      "offset": 393594,
+      "duration": 8000
+    },
+    {
+      "text": "So the first one is cynicism, meaning I'm overly pessimistic and sceptical of everything.",
+      "offset": 401594,
+      "duration": 6000
+    },
+    {
+      "text": "Perhaps because I'm sort of brokenhearted, because I was originally an idealist and now I'm just super critical.",
+      "offset": 407594,
+      "duration": 7000
+    },
+    {
+      "text": "And the other side is really hedonism. Oh, which means seeking beauty of code for myself.",
+      "offset": 414594,
+      "duration": 7000
+    },
+    {
+      "text": "I don't know if you have a piece of code that you wrote that in a corner of your file system and it's just perfect, beautiful, and you sometimes look at it and cry.",
+      "offset": 421594,
+      "duration": 9000
+    },
+    {
+      "text": "This is a story from Maybe you know about it. But then there's another approach which is pragmatism, which is really you shouldn't go to extremes, perhaps there's some observable practical consequences and we should focus on that.",
+      "offset": 430594,
+      "duration": 16000
+    },
+    {
+      "text": "So that's sort of the part that I'm interested in. So this spike in 2020 around the COVID era was really about this blog post.",
+      "offset": 446594,
+      "duration": 7000
+    },
+    {
+      "text": "It made the social networks critics. But then the book that it was criticizing from 2,008, you see there is no real spike.",
+      "offset": 453594,
+      "duration": 13000
+    },
+    {
+      "text": "At least from this. Google Trans. But rather a clean code is this constantly going running thing.",
+      "offset": 466594,
+      "duration": 8000
+    },
+    {
+      "text": "And actually, I mean, it's like the highest it has ever been. And that sort of makes sense because there are more developers now than ever.",
+      "offset": 474594,
+      "duration": 9000
+    },
+    {
+      "text": "But also I'm intrigued about the fact that it came from before. There was already a search trend and it was arguably higher than what the book came out.",
+      "offset": 483594,
+      "duration": 9000
+    },
+    {
+      "text": "So we will dig into that later. But first, let's start with this book. So it came out in 2,008 and it's structured as some tips into how to write code.",
+      "offset": 492594,
+      "duration": 13000
+    },
+    {
+      "text": "About names, functions, comments, etc. And he probably introduced to you or too many people this acronyms like solid acronym.",
+      "offset": 505594,
+      "duration": 8000
+    },
+    {
+      "text": "And this concept of single responsibility opener closed this cup of substitution, interface aggregation, dependency inversion.",
+      "offset": 513594,
+      "duration": 8000
+    },
+    {
+      "text": "And, but really these are sort of reformulations of pre-existing concepts and we'll see about that.",
+      "offset": 521594,
+      "duration": 6000
+    },
+    {
+      "text": "Overall, I think it's very fair to say that it was well received at the time and I mean it continues to be recommended and that's why this blog post was somehow controversial.",
+      "offset": 527594,
+      "duration": 10000
+    },
+    {
+      "text": "The author went out to write a whole big series about this clean things. So clean code directly in architectural clean idol in craftsmanship.",
+      "offset": 537594,
+      "duration": 10000
+    },
+    {
+      "text": "And some of you know that Robert Martin, the author of a signature for the Edge of Manifesto.",
+      "offset": 547594,
+      "duration": 7000
+    },
+    {
+      "text": "I'm also interested in where were the influences that Robert Martin had for his book. I know he mentioned a few times that Kent Beck was really inspirational.",
+      "offset": 554594,
+      "duration": 12000
+    },
+    {
+      "text": "For the way back wrote a test-driven code. And stuff like that. So I will not dig into this particular books, but just so you know.",
+      "offset": 566594,
+      "duration": 11000
+    },
+    {
+      "text": "And perhaps what really strikes me is that at the start of the book, It says, you know, there might be as many definitions of clink code as our programmers.",
+      "offset": 577594,
+      "duration": 10000
+    },
+    {
+      "text": "And he goes, the author goes on to site a few of them. So maybe you recognize these names if it's readable on your screen.",
+      "offset": 587594,
+      "duration": 7000
+    },
+    {
+      "text": "So the creator of C, Michael Feathers, Ward Cunningham from extreme programming. Ready Brook from, Ron Jeffries again from extreme programming.",
+      "offset": 594594,
+      "duration": 11000
+    },
+    {
+      "text": "Leave to pragmatic series of books. So this really means that the concept existed before and it's not really new in the in the 2,008 book.",
+      "offset": 605594,
+      "duration": 12000
+    },
+    {
+      "text": "It came from before and this also is what we see in the Google Trans, right?",
+      "offset": 617594,
+      "duration": 6000
+    },
+    {
+      "text": "So let's do another quick poll. And I promise it will be the last one. But just to see how you look at this.",
+      "offset": 623594,
+      "duration": 9000
+    },
+    {
+      "text": "How old do you think? Clean code is. There are a few options.",
+      "offset": 632594,
+      "duration": 10000
+    },
+    {
+      "text": "And, okay, I can see you're ramping up within 30%.",
+      "offset": 642594,
+      "duration": 5000
+    },
+    {
+      "text": "50%? Oh, you're getting much faster. Thank you. We're in 70%.",
+      "offset": 647594,
+      "duration": 11000
+    },
+    {
+      "text": "75. It's stabilizing maybe. We're almost 80%.",
+      "offset": 658594,
+      "duration": 10000
+    },
+    {
+      "text": "81%. I think that's, that's, that's it.",
+      "offset": 668594,
+      "duration": 6000
+    },
+    {
+      "text": "Yes. Okay, so. Thank you all for answering. So the options were the first one was like, I had no idea.",
+      "offset": 674594,
+      "duration": 6000
+    },
+    {
+      "text": "And we get 9%. Another one was was it's about 20 years old, so from the 2,000 and we got 19% for that one Another one is like it's about 35 years old, like from the ninetys and we got 31%.",
+      "offset": 680594,
+      "duration": 15000
+    },
+    {
+      "text": "So that was the top answer you gave. Maybe I influenced a little bit with the book references.",
+      "offset": 695594,
+      "duration": 6000
+    },
+    {
+      "text": "There was another one which is now it's 50 years old from the seventys and that got 27%.",
+      "offset": 701594,
+      "duration": 6000
+    },
+    {
+      "text": "Somebody else saying it's 70 years old, so from the fifties we got 11% for that one.",
+      "offset": 707594,
+      "duration": 9000
+    },
+    {
+      "text": "And there's another option which was 100 years old and we got 3% of that. So thank you again for this and Let's continue.",
+      "offset": 716594,
+      "duration": 11000
+    },
+    {
+      "text": "So if it came from before the book and all of these influential programmers were already aware of clean code, then it must have come from before, it must have some history.",
+      "offset": 727594,
+      "duration": 12000
+    },
+    {
+      "text": "So clean code is probably older than you think. And based on the poll, it is definitely older than you think.",
+      "offset": 739594,
+      "duration": 8000
+    },
+    {
+      "text": "So I went out to the literature, you know, like Google's color to find early references to clean code.",
+      "offset": 747594,
+      "duration": 6000
+    },
+    {
+      "text": "For the strict keywords And I found these 2 papers already in 67 and 73.",
+      "offset": 753594,
+      "duration": 7000
+    },
+    {
+      "text": "So could those, to those of you that answered seventies or earlier? And just keep in mind the context at this time, the languages you might probably use today, like Typescript, T-sharp, Java, JavaScript Python, C, we're not even invented then.",
+      "offset": 760594,
+      "duration": 19000
+    },
+    {
+      "text": "At the time, most people were writing Fortran. Even though alcohol was already out there and Lisbon Kobel were starting to grow.",
+      "offset": 779594,
+      "duration": 9000
+    },
+    {
+      "text": "Okay, that place, even if we love Lisp. But cobalt indeed and eventually basic and pass code and see really taking over.",
+      "offset": 788594,
+      "duration": 8000
+    },
+    {
+      "text": "But these people were very likely writing fortune. And, indeed, they were working for Trent because I read the papers, so this one was about I mean, let's start with the coat.",
+      "offset": 796594,
+      "duration": 12000
+    },
+    {
+      "text": "Inefficiencies in monitoring, coding can be ignored. We are interested in the hardware capabilities, not the software performance.",
+      "offset": 808594,
+      "duration": 7000
+    },
+    {
+      "text": "So we will assume. The ability to write clean code. And I just love that code big quote because it means that at the time the expectation was already that code should be clean, especially when you're interested in optimizing for hardware.",
+      "offset": 815594,
+      "duration": 16000
+    },
+    {
+      "text": "And the whole purpose here was to add some core memory if you know about that stuff. To some IBM, 360 mainframes.",
+      "offset": 831594,
+      "duration": 11000
+    },
+    {
+      "text": "And the whole paper is just about connecting the memory basically because it was challenging, it was the start of virtual memory.",
+      "offset": 842594,
+      "duration": 6000
+    },
+    {
+      "text": "So it was not a trivial, work. But keep in mind they already assumed clean code with the thing and this was in 67.",
+      "offset": 848594,
+      "duration": 8000
+    },
+    {
+      "text": "Then this is another one a little bit later in the 73. And I just picked it up because I feel it's very representative.",
+      "offset": 856594,
+      "duration": 8000
+    },
+    {
+      "text": "I feel really, I see myself in this text. So it's they they were doing some calculation on math calculations on some mainframes in Fortran.",
+      "offset": 864594,
+      "duration": 9000
+    },
+    {
+      "text": "And the code goes, someday we hope to try. Some of the update ideas suggested by a colleague.",
+      "offset": 873594,
+      "duration": 7000
+    },
+    {
+      "text": "And also we hope to leave a clean code with documentation at the end of the summer. If it is not possible, we will just make our code with documentation available to the laboratory.",
+      "offset": 880594,
+      "duration": 10000
+    },
+    {
+      "text": "Which basically they're not clean just code. That already shows that clean code was already an ideal in this time well established.",
+      "offset": 890594,
+      "duration": 8000
+    },
+    {
+      "text": "And it also sort of shows the feelings that you might have today when you're working with code and wanting to do better and struggling to do it.",
+      "offset": 898594,
+      "duration": 10000
+    },
+    {
+      "text": "Keep in mind that at the time, this is what code looked like, at least Fortran. So you wrote this kind of thing.",
+      "offset": 908594,
+      "duration": 6000
+    },
+    {
+      "text": "And and then it was punched in cards and put into huge machines. So it was quite different to what we do today in a sense and also, I mean, quite similar.",
+      "offset": 914594,
+      "duration": 14000
+    },
+    {
+      "text": "But really when you look at the sort of references in literature, the ones we found we just discussed are just a tiny few.",
+      "offset": 928594,
+      "duration": 9000
+    },
+    {
+      "text": "There are many, many, many, many more. And it's really it really looks like I get a little bit lazy here so I stopped adding but there's so many I mean there's for every year and many many references.",
+      "offset": 937594,
+      "duration": 13000
+    },
+    {
+      "text": "So really It's it has been a continuous stream of people talking about code talking about clean code. And of course not all of them are you know the subject of the papers is not clean code.",
+      "offset": 950594,
+      "duration": 12000
+    },
+    {
+      "text": "They're just use it as if it is a normal thing that people understand. Which goes to show that it is an established concept at the time.",
+      "offset": 962594,
+      "duration": 9000
+    },
+    {
+      "text": "Again, keep in mind the languages that were at the time.",
+      "offset": 971594,
+      "duration": 5000
+    },
+    {
+      "text": "And what happened before, I think this might be a topic for a different webinar. Have been looking a little bit into it and I think this came even from before.",
+      "offset": 976594,
+      "duration": 13000
+    },
+    {
+      "text": "But let's not go into that. So one interesting paper that I'd like to highlight, and probably you've heard about it, it's the code to statement considered harmful.",
+      "offset": 989594,
+      "duration": 10000
+    },
+    {
+      "text": "It has made famous but maybe not many of you have read it. And what it's in this in 68 so before the 2 papers we saw And this one is really talking about how to write good code basically.",
+      "offset": 999594,
+      "duration": 15000
+    },
+    {
+      "text": "And it is criticising a programming language future that was used and abused at the time. And it is really advocating for favouring human understanding.",
+      "offset": 1014594,
+      "duration": 6000
+    },
+    {
+      "text": "You know, code that can be understood. The way Dijkstra famously refers to Go to statement is it is too much of an invitation to make a mess of one's program.",
+      "offset": 1020594,
+      "duration": 15000
+    },
+    {
+      "text": "And he sights ear, ear influences. So there's a famous theorem at the time.",
+      "offset": 1035594,
+      "duration": 8000
+    },
+    {
+      "text": "Around structural programming, which basically Explain that computation could be reduced to 3 operations. Basically order statements.",
+      "offset": 1043594,
+      "duration": 8000
+    },
+    {
+      "text": "Loops and if if else statements And this really was like a radical cultural change for people that would programming at the time.",
+      "offset": 1051594,
+      "duration": 12000
+    },
+    {
+      "text": "And he also cites influences from the fifties when late fiftys when they were working working in alcohol.",
+      "offset": 1063594,
+      "duration": 7000
+    },
+    {
+      "text": "Which was a super, super influential language. Particularly introducing recursion and stuff like that.",
+      "offset": 1070594,
+      "duration": 8000
+    },
+    {
+      "text": "Here's the obligatory XKCD comic where it says, oh, I could, oh, I could restctor my program flow or use this one little go-to instead.",
+      "offset": 1078594,
+      "duration": 12000
+    },
+    {
+      "text": "I mean, screw good practice what could go wrong. And then of course, Velocraptor comes in.",
+      "offset": 1090594,
+      "duration": 8000
+    },
+    {
+      "text": "Taxing. Naturally. Another super fundamental paper in the seventies was Parnas on the criteria to be used in decomposing systems into models.",
+      "offset": 1098594,
+      "duration": 11000
+    },
+    {
+      "text": "Again, maybe you've heard about this, but I don't know if you have read it. It's super interesting.",
+      "offset": 1109594,
+      "duration": 6000
+    },
+    {
+      "text": "It literally introduces the concept of information hiding. Bring up. Or you might know this as just abstraction or no hiding and implementation.",
+      "offset": 1115594,
+      "duration": 10000
+    },
+    {
+      "text": "And it advocates for clear and well-defined interfaces. And it provides very thoughtful criteria to decompose into models.",
+      "offset": 1125594,
+      "duration": 11000
+    },
+    {
+      "text": "Like your functional independence or logical cohesion. And he proposes this super interesting dependency structure matrix, which basically shows you in a single representation how different models related to each other.",
+      "offset": 1136594,
+      "duration": 13000
+    },
+    {
+      "text": "And a few years later, this was this book called Structured Design, which introduced the concepts of coupling and cohesion.",
+      "offset": 1149594,
+      "duration": 8000
+    },
+    {
+      "text": "That you might also have heard about. So coupling is about the degree of interdependence between modules.",
+      "offset": 1157594,
+      "duration": 6000
+    },
+    {
+      "text": "So, always better. And cohesion is the relationships, strong relationships internally in the model and high it's better.",
+      "offset": 1163594,
+      "duration": 8000
+    },
+    {
+      "text": "And it again goes into explaining how to decompose a system into subsystems. Sort of to be able to build systems at large.",
+      "offset": 1171594,
+      "duration": 12000
+    },
+    {
+      "text": "And, you know, I showed you before some books that influence the clean code book. And this is a book by Ken Beck released last year.",
+      "offset": 1183594,
+      "duration": 8000
+    },
+    {
+      "text": "It's called Tidy First. And on the on the introduction he says The book from Larry Constantine and the Europe really influenced me.",
+      "offset": 1191594,
+      "duration": 12000
+    },
+    {
+      "text": "And this is sort of the signature he had on the book, on his version of the book.",
+      "offset": 1203594,
+      "duration": 4000
+    },
+    {
+      "text": "Just so to show you that there's like really a continuous line of influences. But wait, But then again, We come now to the real heart of the topic because we have some sort of specific theoretical concepts.",
+      "offset": 1207594,
+      "duration": 18000
+    },
+    {
+      "text": "And then in 74, Karen and Ganon Plugger wrote this small paper called the programming styled examples and contra examples And I think it said the standard for what we expect of a book or paper or whatever about coding style and good code.",
+      "offset": 1225594,
+      "duration": 18000
+    },
+    {
+      "text": "By giving good examples and bad examples and until this day you can see like in solar products. Conforming and nonconforming code examples.",
+      "offset": 1243594,
+      "duration": 10000
+    },
+    {
+      "text": "So know that that has a very deep root in history. And the quotes. It took out, it's a little bit long, but you're with me.",
+      "offset": 1253594,
+      "duration": 7000
+    },
+    {
+      "text": "So computer. Centers are full of programs that we're reading for a short time use. Then were pressed or pushed, into years of service.",
+      "offset": 1260594,
+      "duration": 10000
+    },
+    {
+      "text": "Big programs operating systems, compilers, major applications are never written to be used once and discarded.",
+      "offset": 1270594,
+      "duration": 6000
+    },
+    {
+      "text": "They change and evolve. So most professional programmers spend much of their time changing their own and other people's code.",
+      "offset": 1276594,
+      "duration": 7000
+    },
+    {
+      "text": "So we'll set it once more, clean code is easier to maintain. And what they meant is even when you're thinking you're writing code that is throwaway code.",
+      "offset": 1283594,
+      "duration": 8000
+    },
+    {
+      "text": "It's very probably not for away code. It's going to end up in production. And I also pick this code because might feel very true today.",
+      "offset": 1291594,
+      "duration": 6000
+    },
+    {
+      "text": "It might have happened to you. It has happened to me. So, and this is from 74.",
+      "offset": 1297594,
+      "duration": 10000
+    },
+    {
+      "text": "Then they went on to write this super nice tiny book which is called the elements of programming style If you don't know them, know it really get it today.",
+      "offset": 1307594,
+      "duration": 10000
+    },
+    {
+      "text": "I think this is perhaps the most cohesive source of many of the advice we see today for clean code.",
+      "offset": 1317594,
+      "duration": 6000
+    },
+    {
+      "text": "So it talks about clean control flow, clean implementation, clean structure, clean ways of expressing conditionals.",
+      "offset": 1323594,
+      "duration": 5000
+    },
+    {
+      "text": "Cleanly, in eliminating errors, cleaning up the formatting. I mean everything that can be cleaned it's talked about and Basically, you can summarize it as keep keep code clean and straightforward and that is really the content of this book.",
+      "offset": 1328594,
+      "duration": 14000
+    },
+    {
+      "text": "Interestingly, the elements of style is another very, pre-existing book that writers might know about.",
+      "offset": 1342594,
+      "duration": 9000
+    },
+    {
+      "text": "About how to write. And that should give us, give us a hint of what Glink code is all about.",
+      "offset": 1351594,
+      "duration": 9000
+    },
+    {
+      "text": "Also this particular book is Perhaps the earliest source I could find from some of the most famous engineering lore.",
+      "offset": 1360594,
+      "duration": 8000
+    },
+    {
+      "text": "That we discuss in our teams like each model should do one thing well. Make it right before you make it faster.",
+      "offset": 1368594,
+      "duration": 7000
+    },
+    {
+      "text": "And many more. So you will find all of that in that old book.",
+      "offset": 1375594,
+      "duration": 4000
+    },
+    {
+      "text": "Basically what I'm trying to say is that yes, clean code is older than you think. Clink code is an old idea.",
+      "offset": 1379594,
+      "duration": 8000
+    },
+    {
+      "text": "And it endures since the late sixties at least. And it continues to be rediscovered and renewed by every overlapping generation of developers.",
+      "offset": 1387594,
+      "duration": 6000
+    },
+    {
+      "text": "So, and when you look carefully, it has an unbroken tradition. It has been going strong for a long while.",
+      "offset": 1393594,
+      "duration": 7000
+    },
+    {
+      "text": "And most of the general advice you hear today already existed in the seventys or before.",
+      "offset": 1400594,
+      "duration": 7000
+    },
+    {
+      "text": "So let's go to back to today. What do we do with this? I promise some survival kit and that's the reality check of the talk.",
+      "offset": 1407594,
+      "duration": 12000
+    },
+    {
+      "text": "So let's get into it. First, let's recap on the attitude part. I think we should be aware of idealists and cynics alike.",
+      "offset": 1419594,
+      "duration": 10000
+    },
+    {
+      "text": "That can be overly skeptical or overly pessimistic about code. About code quality about improving code.",
+      "offset": 1429594,
+      "duration": 3000
+    },
+    {
+      "text": "And but also beware of addonists that are coding for their own pleasure, their own perfectly beautiful treasured code.",
+      "offset": 1432594,
+      "duration": 12000
+    },
+    {
+      "text": "Rather, I think we should seek solid ground in engineering and practicality. Because that is probably the thing that will last through time.",
+      "offset": 1444594,
+      "duration": 8000
+    },
+    {
+      "text": "So also that we extend exemplified also. Get to the source. Programming has to reach tradition.",
+      "offset": 1452594,
+      "duration": 9000
+    },
+    {
+      "text": "And every storyteller even myself will add their own color. So look for the sources and you will get a more crisper, more stronger.",
+      "offset": 1461594,
+      "duration": 10000
+    },
+    {
+      "text": "Idea of what things are. So seek the principle behind the rules and check how they hold in time. And how they work in different contexts that might really, really help.",
+      "offset": 1471594,
+      "duration": 11000
+    },
+    {
+      "text": "And more deeply, you need to know why. What is the intention of clean code? It is basically writing code that is optimized for humans to read and change.",
+      "offset": 1482594,
+      "duration": 11000
+    },
+    {
+      "text": "Not only code that works, right? And this is based in a very basic and fundamental practical belief. That developers changing code is what drives the coast of software.",
+      "offset": 1493594,
+      "duration": 12000
+    },
+    {
+      "text": "So that is what is driving the coast, so we might as well optimize for it. And also we have a natural decide to improve our working conditions.",
+      "offset": 1505594,
+      "duration": 9000
+    },
+    {
+      "text": "Code is effectively our working environment. So this is also part of it and the Maybe that's too many words to say something very simple is that code that is more usable.",
+      "offset": 1514594,
+      "duration": 12000
+    },
+    {
+      "text": "Becomes more valuable. So of course we prefer it and of course it has been running as a strong idea for a long while.",
+      "offset": 1526594,
+      "duration": 7000
+    },
+    {
+      "text": "Finally, these are my own recommendations. Get some leverage. If you want to work with code to change it, you need some good practices engineering practices.",
+      "offset": 1533594,
+      "duration": 11000
+    },
+    {
+      "text": "Refactoring is still amazing book. This is the second edition. And it's just as relevant as it was today.",
+      "offset": 1544594,
+      "duration": 7000
+    },
+    {
+      "text": "It came out more than 20 years ago. And the other the second reference is a talk by the creator of Cucumber.",
+      "offset": 1551594,
+      "duration": 9000
+    },
+    {
+      "text": "And it has this sort of very strong idea that I think it was tied to the original definition of unit tests.",
+      "offset": 1560594,
+      "duration": 7000
+    },
+    {
+      "text": "They were about functional things and not parts of your code. So yeah, I really recommend that.",
+      "offset": 1567594,
+      "duration": 8000
+    },
+    {
+      "text": "Finally, get better. So we talk a lot, about clean as you code. So improve your code one bit at a time with the code you are putting into the code base.",
+      "offset": 1575594,
+      "duration": 9000
+    },
+    {
+      "text": "You need to worry about all the code base, but worry about what you're putting into it. And also learn as you code, you can improve as your as you're doing as you're working.",
+      "offset": 1584594,
+      "duration": 13000
+    },
+    {
+      "text": "And I really want to give you this sort of inspirational pep talk. Only developers can make a significant impact impact on code.",
+      "offset": 1597594,
+      "duration": 7000
+    },
+    {
+      "text": "If you don't do it, nobody will do it.",
+      "offset": 1604594,
+      "duration": 5000
+    },
+    {
+      "text": "So that was the survival kit and reality check. And we're more than halfway there, 2, over 3 there.",
+      "offset": 1609594,
+      "duration": 8000
+    },
+    {
+      "text": "And I have been holding back the answer to the title of the webinar. You know, the question was who, defines what clean code is.",
+      "offset": 1617594,
+      "duration": 9000
+    },
+    {
+      "text": "And perhaps you already got some hints. But I think this is the elephant in the room, the big thing and maybe it's a revelation for you hopefully it resounds.",
+      "offset": 1626594,
+      "duration": 10000
+    },
+    {
+      "text": "So after 50 years of clean code or more, Many of the things we were using at the time, we're not using anymore, right?",
+      "offset": 1636594,
+      "duration": 5000
+    },
+    {
+      "text": "Not all of you, hopefully you're writing Fortran. Some of you are, perhaps you're doing some machine learning stuff.",
+      "offset": 1641594,
+      "duration": 6000
+    },
+    {
+      "text": "That's still very used or you work in a bank? Most of you, I guess, are not using punch cards or IBM 360 or PPPs or CDC mainframes.",
+      "offset": 1647594,
+      "duration": 15000
+    },
+    {
+      "text": "So all of that has changed very drastically. And what has remained the same. And who came up with this timeless principles?",
+      "offset": 1662594,
+      "duration": 11000
+    },
+    {
+      "text": "Because they were not sort of they didn't appear from nowhere somebody put it with them there right So I think it's you.",
+      "offset": 1673594,
+      "duration": 8000
+    },
+    {
+      "text": "It's you in the sense that it's also me. It's up for engineers, software engineers to make sense of clean code.",
+      "offset": 1681594,
+      "duration": 9000
+    },
+    {
+      "text": "And really carry the torch. So There were generations that did some work, conceptual work and empirical work to try to Elevator profession and maybe it's our time to do it.",
+      "offset": 1690594,
+      "duration": 14000
+    },
+    {
+      "text": "We should be able to agree on some principles. And once we agree on the principle that are generally helpful, we can apply them to different specific situations, different languages, different domains, etc.",
+      "offset": 1704594,
+      "duration": 13000
+    },
+    {
+      "text": "But I guess the deeper question is how do we know if those principles are any good? And why not others, right?",
+      "offset": 1717594,
+      "duration": 7000
+    },
+    {
+      "text": "So it is less about 2. And more about how we ensure these are stable, strong principles.",
+      "offset": 1724594,
+      "duration": 6000
+    },
+    {
+      "text": "And I guess we should just use the engineering approach and the pragmatic approach. If we propose principles, they must be falsifiable.",
+      "offset": 1730594,
+      "duration": 11000
+    },
+    {
+      "text": "And you know, they should be based on world supported and well-known facts. And not contrary to things that we already know true.",
+      "offset": 1741594,
+      "duration": 7000
+    },
+    {
+      "text": "And they should really be, we should be able to prove them wrong. Shouldn't be like vague claims that we can never approve, right?",
+      "offset": 1748594,
+      "duration": 7000
+    },
+    {
+      "text": "So they ultimate test is if things, if principles work in the real world in the wild.",
+      "offset": 1755594,
+      "duration": 10000
+    },
+    {
+      "text": "So Sonar is trying to do a contribution to this. We have come up with what we call a taxonomy phone for clean code.",
+      "offset": 1765594,
+      "duration": 8000
+    },
+    {
+      "text": "And it has some principles for code to remain valuable. And, it is about code as a medium, really, and nothing else.",
+      "offset": 1773594,
+      "duration": 9000
+    },
+    {
+      "text": "So note about your processes or how it behaves afterwards. It's really focused on code. And we think it's generally enough to work across context for all languages for all code.",
+      "offset": 1782594,
+      "duration": 11000
+    },
+    {
+      "text": "And hopefully to stand the test of time. We will see. And we think it helped us reduce some rules that make sense, right?",
+      "offset": 1793594,
+      "duration": 10000
+    },
+    {
+      "text": "So we call this cling code taxonomy. I'm not really going to go deep into it that it's probably the topic of next webinar.",
+      "offset": 1803594,
+      "duration": 8000
+    },
+    {
+      "text": "I can tell you it is about consistent code, intentional code, adaptable code and responsible code.",
+      "offset": 1811594,
+      "duration": 6000
+    },
+    {
+      "text": "And you can read more about this in a blog post we put out there. Hopefully you get the link for it.",
+      "offset": 1817594,
+      "duration": 8000
+    },
+    {
+      "text": "And we're putting this internal product. So this is how we're classifying things we find in the code.",
+      "offset": 1825594,
+      "duration": 6000
+    },
+    {
+      "text": "So here you can see clean code attribute consistency. 90, And we're tagging very specific rules that this is something for React, Typescript code.",
+      "offset": 1831594,
+      "duration": 12000
+    },
+    {
+      "text": "But we think they are applyable to specific languages and specific domains. Please try them out and tell us.",
+      "offset": 1843594,
+      "duration": 8000
+    },
+    {
+      "text": "You know, how you how you feel about. So again, this is the blog post you can read about it.",
+      "offset": 1851594,
+      "duration": 4000
+    },
+    {
+      "text": "Please give us feedback share your own experiences. We have a lively community where you can post and discuss.",
+      "offset": 1855594,
+      "duration": 7000
+    },
+    {
+      "text": "And I guess my takeaway is that I feel it's our time, to take, you know, carry the torch.",
+      "offset": 1862594,
+      "duration": 8000
+    },
+    {
+      "text": "To make this idea of clean code real and elevator profession to more higher engineering standards.",
+      "offset": 1870594,
+      "duration": 10000
+    },
+    {
+      "text": "That's what I got.",
+      "offset": 1880594,
+      "duration": 1000
+    },
+    {
+      "text": "Thanks, Gab. That's a quite a challenge to ask people to carry the torch, huh?",
+      "offset": 1881594,
+      "duration": 6000
+    },
+    {
+      "text": "That was great as we move into our QA period. I'll gather the questions and I'll briefly share our upcoming webinars for our MEAN.",
+      "offset": 1887594,
+      "duration": 5000
+    },
+    {
+      "text": "APAC audiences. Join us for our next webinar. Conquering Complexity Refactoring JavaScript projects with Phil Nash on Thursday, March fourteenth.",
+      "offset": 1892594,
+      "duration": 12000
+    },
+    {
+      "text": "You can register today with the link that is now in the chat. We also have code faster, right cleaner using AI coding assistance and sonar, which is Wednesday, March twentieth, with our presenter, Manish Kapoor.",
+      "offset": 1904594,
+      "duration": 12000
+    },
+    {
+      "text": "You can also register today for this webinar with the link that's now in the chat. Now you'll see a brief poll to indicate if you'd like to learn more about our solutions.",
+      "offset": 1916594,
+      "duration": 8000
+    },
+    {
+      "text": "Please feel free to answer.",
+      "offset": 1924594,
+      "duration": 2000
+    },
+    {
+      "text": "And as a reminder, after the Q&A, a short survey will look here and we greatly appreciate your feedback on your experience.",
+      "offset": 1926594,
+      "duration": 9000
+    },
+    {
+      "text": "So we'll give this pull a little bit of time here and then we'll move on to.",
+      "offset": 1935594,
+      "duration": 5000
+    },
+    {
+      "text": "Yeah, yeah.",
+      "offset": 1940594,
+      "duration": 1000
+    },
+    {
+      "text": "I see a few raised hands, list is the way to go or should they? With the question.",
+      "offset": 1941594,
+      "duration": 6000
+    },
+    {
+      "text": "If there are more questions right now, please feel free to put them in the QA box.",
+      "offset": 1947594,
+      "duration": 3000
+    },
+    {
+      "text": "We do have a few that have already come through that we were going to answer but yes any any new questions please add them to the Q&A box.",
+      "offset": 1950594,
+      "duration": 12000
+    },
+    {
+      "text": "Okay. Go ahead and jump over to our question. So, Gabby, you ready?",
+      "offset": 1962594,
+      "duration": 10000
+    },
+    {
+      "text": "Yes, okay. So our first question is from Alex. Yes, am I right that Clean code is basically a set of recent practices and examples shared and accepted within a close community of developers.",
+      "offset": 1972594,
+      "duration": 6000
+    },
+    {
+      "text": "IEA development team.",
+      "offset": 1978594,
+      "duration": 1000
+    },
+    {
+      "text": "Yes, yes, that's really, Okay, so. I think, that's sometimes that's how it starts.",
+      "offset": 1979594,
+      "duration": 12000
+    },
+    {
+      "text": "So if you read some of the books, It starts often with our community of practitioners who are trying things out and through experience learning what works and doesn't work.",
+      "offset": 1991594,
+      "duration": 10000
+    },
+    {
+      "text": "Yet I think we have enough experience as an industry to to be able to be more general. You shouldn't be inventing your own best practices in a team.",
+      "offset": 2001594,
+      "duration": 9000
+    },
+    {
+      "text": "I think we know enough to have a world standards, a word principles. There are some very strong principles that like the ones I shared that I think Koot apply to most teams.",
+      "offset": 2010594,
+      "duration": 15000
+    },
+    {
+      "text": "Okay, alright, fair enough. Our next question, how do you think clean code is evolved over time?",
+      "offset": 2025594,
+      "duration": 7000
+    },
+    {
+      "text": "What changed and what hasn't changed?",
+      "offset": 2032594,
+      "duration": 3000
+    },
+    {
+      "text": "Well, I think I showed a bit that definitely the languages have changed and the machines have changed.",
+      "offset": 2035594,
+      "duration": 11000
+    },
+    {
+      "text": "However, I feel because I mean we're still human and we still need to read it and understand it and we haven't changed that much.",
+      "offset": 2046594,
+      "duration": 7000
+    },
+    {
+      "text": "Or at all I think it hasn't really changed when you look at the literature, we have the same problems as before, consistency, intentionality, adaptability.",
+      "offset": 2053594,
+      "duration": 12000
+    },
+    {
+      "text": "Responsibility. This have been running for a long time. So that's in part why we think we need to formalize them now and talk more about them.",
+      "offset": 2065594,
+      "duration": 9000
+    },
+    {
+      "text": "So I think it hasn't really changed that much, surprisingly.",
+      "offset": 2074594,
+      "duration": 4000
+    },
+    {
+      "text": "Okay, yeah, I mean, I guess humans are still human, right? Start to make mistakes and Right.",
+      "offset": 2078594,
+      "duration": 5000
+    },
+    {
+      "text": "Exactly here.",
+      "offset": 2083594,
+      "duration": 1000
+    },
+    {
+      "text": "And so I have a couple more coming through now from Michael. Could you recommend a book or website for the current clean code?",
+      "offset": 2084594,
+      "duration": 11000
+    },
+    {
+      "text": "Yeah.",
+      "offset": 2095594,
+      "duration": 4000
+    },
+    {
+      "text": "Hmm.",
+      "offset": 2099594,
+      "duration": 1000
+    },
+    {
+      "text": "So I will obviously recommend the blog post. I just shared, really look into it. There's some cool examples.",
+      "offset": 2100594,
+      "duration": 3000
+    },
+    {
+      "text": "With different languages and stuff. If you're completely new to the ideas of clean code, I think there's 74 book for Mc and is pretty cool.",
+      "offset": 2103594,
+      "duration": 9000
+    },
+    {
+      "text": "Even I mean if you can tolerate the ancient languages. And maybe if you want like a more recent version, try the recent K book that I showed that has a cat in the cover.",
+      "offset": 2112594,
+      "duration": 12000
+    },
+    {
+      "text": "It's pretty neat. This one. There's a cat. It's pretty good.",
+      "offset": 2124594,
+      "duration": 5000
+    },
+    {
+      "text": "Okay, good. Pretty noticeable for cat. Okay, okay, we've got one coming through from Sebastian.",
+      "offset": 2129594,
+      "duration": 8000
+    },
+    {
+      "text": "This is, this one looks like a little bit of a long one here. So you showed us different excerpts from books and thesis.",
+      "offset": 2137594,
+      "duration": 3000
+    },
+    {
+      "text": "Okay.",
+      "offset": 2140594,
+      "duration": 3000
+    },
+    {
+      "text": "You also mentioned about how things change over time like the book at the beginning for Martin. How are you ensuring that you as sonar are following the best path in the evolution of clean code and not becoming someone who is later on telling that your assumptions got outdated.",
+      "offset": 2143594,
+      "duration": 15000
+    },
+    {
+      "text": "Excellent question. I think, we're taking the pragmatic approach. So basically what we're recommending is what we see people use and it works for people.",
+      "offset": 2158594,
+      "duration": 13000
+    },
+    {
+      "text": "So as you know, we create rules and analyzers for many languages. And basically this is a synthesis for practical experience.",
+      "offset": 2171594,
+      "duration": 9000
+    },
+    {
+      "text": "So it's very empirical and We're I mean we're also looking into how that can be further proven by you know empirical research and stuff like that.",
+      "offset": 2180594,
+      "duration": 11000
+    },
+    {
+      "text": "But ultimately, I guess the proof is, I mean, take it, try it, certain products are free or open source, you can download them and use them.",
+      "offset": 2191594,
+      "duration": 7000
+    },
+    {
+      "text": "And see if it works for yourself. We feel it's really something sensible. Well, Will is the test of time.",
+      "offset": 2198594,
+      "duration": 9000
+    },
+    {
+      "text": "I guess we'll need to see.",
+      "offset": 2207594,
+      "duration": 1000
+    },
+    {
+      "text": "Yeah, well, and also the nice part is that Sonar was founded by developers. Right. So we are.",
+      "offset": 2208594,
+      "duration": 8000
+    },
+    {
+      "text": "Sounded by developers and written for developers. So I think we're pretty in tune with the community.",
+      "offset": 2216594,
+      "duration": 15000
+    },
+    {
+      "text": "Well, I mean, if you Okay, I'm wondering where you're coming from.",
+      "offset": 2231594,
+      "duration": 5000
+    },
+    {
+      "text": "Basically, you can use, in your ID, you have center length, which is free to use and open source.",
+      "offset": 2236594,
+      "duration": 8000
+    },
+    {
+      "text": "You can install it in Intel G or VS code or whatever you're using. And essentially it's really tight into your workflow.",
+      "offset": 2244594,
+      "duration": 9000
+    },
+    {
+      "text": "And then You can start with that if that's what you prefer. And at some point, you might want to have some sort of safety net shared by the team.",
+      "offset": 2253594,
+      "duration": 10000
+    },
+    {
+      "text": "And that's where you where you use sort of a server thing that you put into CI and everything.",
+      "offset": 2263594,
+      "duration": 3000
+    },
+    {
+      "text": "We recommend that you do all the things. You go all in. But i guess if you want to start with your team sort of lens is super easy there's no friction and you just start it and it looks like another lter in your ID.",
+      "offset": 2266594,
+      "duration": 14000
+    },
+    {
+      "text": "But of course it's doing some more deep work.",
+      "offset": 2280594,
+      "duration": 1000
+    },
+    {
+      "text": "We have another question. How can you convince some depth teams to use sonar when most of the IDEs now have built in code Great.",
+      "offset": 2281594,
+      "duration": 3000
+    },
+    {
+      "text": "Next we have Marco. Where does security fit in within sonars principles of clean code.",
+      "offset": 2284594,
+      "duration": 8000
+    },
+    {
+      "text": "Excellent question. So as I said, these principles are based on code and code loan, sort of as an artifact, as a medium.",
+      "offset": 2292594,
+      "duration": 10000
+    },
+    {
+      "text": "And security is about the impact or the effect that Clink code has. So basically, it could be to use a proper, algorithm.",
+      "offset": 2302594,
+      "duration": 12000
+    },
+    {
+      "text": "So ensure you're sanitizing things. So that that really in the in the Clink code taxonomy we're calling it being intentional because you should be intentional about this.",
+      "offset": 2314594,
+      "duration": 13000
+    },
+    {
+      "text": "You should sanitize input. You should use algorithms that are relevant to today's standards that are complete.",
+      "offset": 2327594,
+      "duration": 7000
+    },
+    {
+      "text": "So that's how we're looking at it. And if you look at summer products, you have these 2 sites of the coin.",
+      "offset": 2334594,
+      "duration": 5000
+    },
+    {
+      "text": "One side is what the code is and what the code needs and the other side is how that impacts the software.",
+      "offset": 2339594,
+      "duration": 6000
+    },
+    {
+      "text": "So security is obviously an important aspect of software. And just as reliability it is and maintainability.",
+      "offset": 2345594,
+      "duration": 3000
+    },
+    {
+      "text": "But we look at this aspects of the software and I mean more broadly securities even an aspect of the system right So, yeah.",
+      "offset": 2348594,
+      "duration": 14000
+    },
+    {
+      "text": "Okay, we've got a few more coming in here. We've got, from Pedro.",
+      "offset": 2362594,
+      "duration": 5000
+    },
+    {
+      "text": "Hello. Clean code is obviously the way to go, but I have experienced some reluctance from teammates and adopting clean code practices.",
+      "offset": 2367594,
+      "duration": 7000
+    },
+    {
+      "text": "How can one approach others and be effective in showing the advantages of clean code?",
+      "offset": 2374594,
+      "duration": 7000
+    },
+    {
+      "text": "Yeah, I guess this comes back a little bit to the attitude part. My advice would be to find out whether they're coming from.",
+      "offset": 2381594,
+      "duration": 8000
+    },
+    {
+      "text": "Maybe they really care about code but they have become sort of, you know, pessimistic.",
+      "offset": 2389594,
+      "duration": 6000
+    },
+    {
+      "text": "Or maybe they just care about their own code tonight to write it beautifully and they don't care about the team.",
+      "offset": 2395594,
+      "duration": 7000
+    },
+    {
+      "text": "So I think, look into them and maybe have some discussion with them, share different, there are many angles where you can come from and ultimately I, you can start with very low function.",
+      "offset": 2402594,
+      "duration": 11000
+    },
+    {
+      "text": "Again, going back to the previous question about S. You start sonar linton if they see that your PRs are always super clean at some point they will Start to say like how do you catch a bugs before they even land?",
+      "offset": 2413594,
+      "duration": 12000
+    },
+    {
+      "text": "How do you catch a formatting process? How do you catch everything before it lands in the PR?",
+      "offset": 2425594,
+      "duration": 4000
+    },
+    {
+      "text": "Maybe that they'll get more interested. So I guess shared tools, share stuff, share resources and You know, maybe they'll come through if ultimately I guess for a team if you are self organized you need to decide on what is right for the team and not only for one individual.",
+      "offset": 2429594,
+      "duration": 18000
+    },
+    {
+      "text": "Yeah, I'm probably understanding what their pains are with it, right? Like I think a common misconception is that clean code can slow you down when really ultimately it's speed you up because it helps you catch things before they hit production.",
+      "offset": 2447594,
+      "duration": 7000
+    },
+    {
+      "text": "Right. So let's see, what else do we have here?",
+      "offset": 2454594,
+      "duration": 11000
+    },
+    {
+      "text": "From James. Does the tool enforce a best practices?",
+      "offset": 2465594,
+      "duration": 6000
+    },
+    {
+      "text": "So again, we're looking at this from the point of the code and most OS practices are about security concerns.",
+      "offset": 2471594,
+      "duration": 11000
+    },
+    {
+      "text": "So the short answer is yes, and we do it sort of the clean code way, which means you should always sanitize your input.",
+      "offset": 2482594,
+      "duration": 7000
+    },
+    {
+      "text": "You should always ensure your ciphers are good. This kind of things you should always ensure there are no secrets leaking and all of this and that happens to correlate well to the OS standard.",
+      "offset": 2489594,
+      "duration": 11000
+    },
+    {
+      "text": "We have security reports and our products were tell you the coverage on this reports and stuff like this. And this again is part of the dual vision we have.",
+      "offset": 2500594,
+      "duration": 9000
+    },
+    {
+      "text": "One is the code side and the other is the impact on the software. So yes. The answer is yes.",
+      "offset": 2509594,
+      "duration": 8000
+    },
+    {
+      "text": "And we do have several pages on our website that, attest to this and you can one more information there on, what we cover.",
+      "offset": 2517594,
+      "duration": 8000
+    },
+    {
+      "text": "This is a good one. We from an anonymous person is clean code the next certification or proof for a developer to land an awesome job.",
+      "offset": 2525594,
+      "duration": 9000
+    },
+    {
+      "text": "Okay. Yeah.",
+      "offset": 2534594,
+      "duration": 1000
+    },
+    {
+      "text": "I don't know. I personally hope not. I feel I don't know it's politically difficult to answer but I think no I mean it shouldn't be politically difficult to answer but I think no I mean it shouldn't be I would rather have clean code be something that engineers own and not something that you know management takes over or a corporate world takes over.",
+      "offset": 2535594,
+      "duration": 22000
+    },
+    {
+      "text": "I think it is deeply rooted in our ethics in our desire to master or craft. So I think we should look at it that way.",
+      "offset": 2557594,
+      "duration": 9000
+    },
+    {
+      "text": "Hmm.",
+      "offset": 2566594,
+      "duration": 1000
+    },
+    {
+      "text": "That's that's my I speak.",
+      "offset": 2567594,
+      "duration": 4000
+    },
+    {
+      "text": "I see guys a little internal window for the audience at Sonar. Okay, we have just a couple more minutes, so we'll try to get a few more of these questions answered.",
+      "offset": 2571594,
+      "duration": 7000
+    },
+    {
+      "text": "A lot of our discussions get m down in discussions of individual pieces of syntax instead of higher level practices to keep things subjectively clean.",
+      "offset": 2578594,
+      "duration": 15000
+    },
+    {
+      "text": "This causes people to consider this partially bite shedding. Any tips for avoiding this?",
+      "offset": 2593594,
+      "duration": 5000
+    },
+    {
+      "text": "Yes. Yes, excellent question and I think that's you will read about it in the in the blog post I mean you can read about it in the blog post and That's really about the consistent part.",
+      "offset": 2598594,
+      "duration": 13000
+    },
+    {
+      "text": "What has happened for a very long time is that people have obsessed about individual choices of how to do things like should I put my curly brackets in the same line.",
+      "offset": 2611594,
+      "duration": 10000
+    },
+    {
+      "text": "Or could the braces or below? Should they be tabbed or not tapped and there are schools of thought about this depending on the language you have.",
+      "offset": 2621594,
+      "duration": 7000
+    },
+    {
+      "text": "And huge style gets about it and whatever. Would we feel its sonar is that that doesn't really matter and, eerily, in empirical research has shown that it might not matter, or at least not that much.",
+      "offset": 2628594,
+      "duration": 12000
+    },
+    {
+      "text": "Everything is roughly the same except it should be consistent. Meaning if you decide to go for something All of the code base would be like that.",
+      "offset": 2640594,
+      "duration": 9000
+    },
+    {
+      "text": "All of the authors of the code, this should be like that. And through time the code base needs to stay consistent.",
+      "offset": 2649594,
+      "duration": 6000
+    },
+    {
+      "text": "You get bonus points if that style is consistent with your language ecosystem. So if you're writing C sharp, you know, how to write it, where to put it, if you're writing whatever you're writing.",
+      "offset": 2655594,
+      "duration": 12000
+    },
+    {
+      "text": "So I think it is about consistency. And most engineers will immediately admit that, yeah, what is deeply matters for the team is consistency.",
+      "offset": 2667594,
+      "duration": 11000
+    },
+    {
+      "text": "And I think this is how you can approach the the argument and sort of It shouldn't matter. You know, it shouldn't matter where we put it as long as we all do it the same way.",
+      "offset": 2678594,
+      "duration": 10000
+    },
+    {
+      "text": "Great. So I think we've got one more question and then we'll see where we're at.",
+      "offset": 2688594,
+      "duration": 1000
+    },
+    {
+      "text": "I know we've got to let people go here. So this kind of wants to some of the discussion we've already had developers usually resolve to quick solutions fixes due to type deadlines.",
+      "offset": 2689594,
+      "duration": 15000
+    },
+    {
+      "text": "How can we continue delivering fast while maintaining clean code?",
+      "offset": 2704594,
+      "duration": 5000
+    },
+    {
+      "text": "That's an excellent point and I think the deeper understanding, you hint a little bit about it, this is that The way to go fast is to go clean.",
+      "offset": 2709594,
+      "duration": 14000
+    },
+    {
+      "text": "If you wanna, Maintains some basic level of speed to do it right. From the start, it's much much easier.",
+      "offset": 2723594,
+      "duration": 11000
+    },
+    {
+      "text": "It doesn't take much time if you focus on your code. The code you're contributing because it's usually just a few lines, just a few functions.",
+      "offset": 2734594,
+      "duration": 6000
+    },
+    {
+      "text": "Just a small piece. So another way to do it is anticipate. You don't need to do it later when it's already in the PR.",
+      "offset": 2740594,
+      "duration": 9000
+    },
+    {
+      "text": "You know it takes more effort people are pointing out things if you do it in your IDE, you know, you do it in your IDE, you already as you're writing it, you do it immediately.",
+      "offset": 2749594,
+      "duration": 10000
+    },
+    {
+      "text": "You're saving a lot of time and you're saving a lot of time for your team too because then somebody doesn't have to come after and rewrite it.",
+      "offset": 2759594,
+      "duration": 7000
+    },
+    {
+      "text": "Whatever so I think the way to go fast is to go clean from the start. Perhaps what scares people is to have a high standard, because, that means, oh no, that means I need to change all the code base.",
+      "offset": 2766594,
+      "duration": 17000
+    },
+    {
+      "text": "And not really, focus on new code. This is what we call that sonar cleaner as you code.",
+      "offset": 2783594,
+      "duration": 6000
+    },
+    {
+      "text": "And if you focus on that with time, you will improve the overall quality of the code base.",
+      "offset": 2789594,
+      "duration": 5000
+    },
+    {
+      "text": "Awesome. Okay, well, in the interest of time, I'm gonna wrap things up for us.",
+      "offset": 2794594,
+      "duration": 1000
+    },
+    {
+      "text": "So thank you to everyone who answered questions. We really appreciate it. And if you didn't cover your question today, our community is a great place to send those questions and we'll review them and certainly get to them after we close out the webinar, please feel free to visit sonar source.",
+      "offset": 2795594,
+      "duration": 16000
+    },
+    {
+      "text": "Dot com for more of those answers around the standards that we saw for as well as dig deeper into what Clean Code is.",
+      "offset": 2811594,
+      "duration": 10000
+    },
+    {
+      "text": "Is for us and what we think it can be for you. And please go there also to check out any information on our future webinars and events.",
+      "offset": 2821594,
+      "duration": 8000
+    },
+    {
+      "text": "Thank you again, Gab, for presenting today and thank you in advance for your feedback. Via the survey that will appear shortly at the end of the webinar.",
+      "offset": 2829594,
+      "duration": 10000
+    }
+  ],
+  "fullText": "Entitled the reality check who determines what clean code is anyway. I'm Liz Brian, your moderator for this webinar, which will be presented by Gabrielle Please allow me to quickly go over some essential housekeeping points before we get started. This session will approximately last 45 min including QA. You're invited to submit your questions via the QA box in Zoom, not in the chat box, but the Q&A box. You're invited to submit your questions and we will gather those with our 2 panelists joining us today, John Clifton and Alexander Raid from our product team. They're tasked with answering as many of your questions as possible live during the webinar. This session will be recorded and we will send out a link via email in the coming days. Finally, at the end of this webinar, short survey will appear on your screen. We welcome your feedback. Thank you in advance for your participation. So without further ado, I'd like to introduce you to today's presenter, Gabriel Leaves. Gab is a product manager at Sonar. He's worked. As an engineer in cybersecurity and public safety for Airbus defense in space and VINTIE energies in France. He started coding in the early 2 thousands with the emerging web platform and hasn't stopped ever since. Gab, over to you. Thank you, Liz. So I'd like to start with a poll. To get us going and also to introduce It's up to the topic of the tuck. So the question is, what's your view on Clint code? And you should be able to see the question pop up on your screen. I see you are already and swing. And I'll just give you a few seconds to be able to answer. So we have about half of you already answered. Not going to spoil which answer is Winning strongly. Okay, so it seems it's stopping. Okay, so The answer we have is the options where first it's only mostly opinion. And we got 5% of attendees answering that option. The second option was one of multiple possible standards for code. And that got 21%? The third option was the sensible set of general principles. And that one got 72%. And the last one was something that made me do and we did get 2% on that one. So thank you for for that. And, okay, let's continue. So in part of that poll was to introduce a side of how we look at clean code. And overall ideas of quality in code and it is about skepticism and a lot of hype sometimes. You know, just people with different opinions at different times talking about code. And, would like to show you this Google Trends. It spans from 2,024, 2,004 to I mean nowadays. And you can see it has been growing. The search term is for clean code. And it apparently existed before, 2,004, but there's a small spike here. Around the COVID time. So this is, mid, 20. And I think it's related to this blog post that was released at the time and it's called it's probably time to stop recommending clean code. And it refers not to the general concept of clink code, but specifically to a book that was published in 2,008. With this, title. And the blog post goes on to explain why the author believes it shouldn't be recommended anymore. Basically, it comes down to a mix of time list advice and then some questionable or outdated advice. And I do find it interesting that even if it's a criticism, it does sort of technologies that there is some time, less advice in there. And then the point is that of the author is that new commerce to programming or developing won't be able to really tell the good from the bad advice. So they sort of would be lost and then, why are we even recommending these people won't be able to tell one from the other? And I think this boils down to perhaps the introduction of the blog post, which has We might never have empirical definitions of good code with clean code. So basically, whatever we're talking about is opinions and people's opinions about other people's opinions. So very subjective matter. And I think this really crystallises one view around code quality. And of course this one went wild on social media and this is some reddit post. But he's saying, yeah, basically everybody can sell their personal preferences to software quality. Because at the end of the day, nobody's testing this empirically, so whatever. Other people just propose different levels of maturity saying By default, you ignore everything. Which is the level 0, which is not even in the right place in the list. But then you might get some sense of cleanliness. You might then obsessively adhere to some book standard. But then you can relativize it and sort of apply it wisely. And you know, these are different points of different ways of saying it. And then somebody saying, like, what's about all the clean code stuff lately? Somebody's trying to sell us something. What I believe about is that, as Dirk Carlin used to say, if you scratch on the surface of any cynic. Somebody that is very skeptical or very pessimistic. You will find below the surface that they're just disappointed idealists. Meaning that In this case, and I speak also for myself. As being someone that believes in good code and then can become overly pessimistic sometimes. And another side of it is, but Oscar Well said about a cynic is one who knows the price of everything. And the value of nothing. So basically the other opposite. So you're just criticizing everything and not being able to enjoy it. And I think this. Sort of summarizes 2 strong. Currents of attitudes towards code. So the first one is cynicism, meaning I'm overly pessimistic and sceptical of everything. Perhaps because I'm sort of brokenhearted, because I was originally an idealist and now I'm just super critical. And the other side is really hedonism. Oh, which means seeking beauty of code for myself. I don't know if you have a piece of code that you wrote that in a corner of your file system and it's just perfect, beautiful, and you sometimes look at it and cry. This is a story from Maybe you know about it. But then there's another approach which is pragmatism, which is really you shouldn't go to extremes, perhaps there's some observable practical consequences and we should focus on that. So that's sort of the part that I'm interested in. So this spike in 2020 around the COVID era was really about this blog post. It made the social networks critics. But then the book that it was criticizing from 2,008, you see there is no real spike. At least from this. Google Trans. But rather a clean code is this constantly going running thing. And actually, I mean, it's like the highest it has ever been. And that sort of makes sense because there are more developers now than ever. But also I'm intrigued about the fact that it came from before. There was already a search trend and it was arguably higher than what the book came out. So we will dig into that later. But first, let's start with this book. So it came out in 2,008 and it's structured as some tips into how to write code. About names, functions, comments, etc. And he probably introduced to you or too many people this acronyms like solid acronym. And this concept of single responsibility opener closed this cup of substitution, interface aggregation, dependency inversion. And, but really these are sort of reformulations of pre-existing concepts and we'll see about that. Overall, I think it's very fair to say that it was well received at the time and I mean it continues to be recommended and that's why this blog post was somehow controversial. The author went out to write a whole big series about this clean things. So clean code directly in architectural clean idol in craftsmanship. And some of you know that Robert Martin, the author of a signature for the Edge of Manifesto. I'm also interested in where were the influences that Robert Martin had for his book. I know he mentioned a few times that Kent Beck was really inspirational. For the way back wrote a test-driven code. And stuff like that. So I will not dig into this particular books, but just so you know. And perhaps what really strikes me is that at the start of the book, It says, you know, there might be as many definitions of clink code as our programmers. And he goes, the author goes on to site a few of them. So maybe you recognize these names if it's readable on your screen. So the creator of C, Michael Feathers, Ward Cunningham from extreme programming. Ready Brook from, Ron Jeffries again from extreme programming. Leave to pragmatic series of books. So this really means that the concept existed before and it's not really new in the in the 2,008 book. It came from before and this also is what we see in the Google Trans, right? So let's do another quick poll. And I promise it will be the last one. But just to see how you look at this. How old do you think? Clean code is. There are a few options. And, okay, I can see you're ramping up within 30%. 50%? Oh, you're getting much faster. Thank you. We're in 70%. 75. It's stabilizing maybe. We're almost 80%. 81%. I think that's, that's, that's it. Yes. Okay, so. Thank you all for answering. So the options were the first one was like, I had no idea. And we get 9%. Another one was was it's about 20 years old, so from the 2,000 and we got 19% for that one Another one is like it's about 35 years old, like from the ninetys and we got 31%. So that was the top answer you gave. Maybe I influenced a little bit with the book references. There was another one which is now it's 50 years old from the seventys and that got 27%. Somebody else saying it's 70 years old, so from the fifties we got 11% for that one. And there's another option which was 100 years old and we got 3% of that. So thank you again for this and Let's continue. So if it came from before the book and all of these influential programmers were already aware of clean code, then it must have come from before, it must have some history. So clean code is probably older than you think. And based on the poll, it is definitely older than you think. So I went out to the literature, you know, like Google's color to find early references to clean code. For the strict keywords And I found these 2 papers already in 67 and 73. So could those, to those of you that answered seventies or earlier? And just keep in mind the context at this time, the languages you might probably use today, like Typescript, T-sharp, Java, JavaScript Python, C, we're not even invented then. At the time, most people were writing Fortran. Even though alcohol was already out there and Lisbon Kobel were starting to grow. Okay, that place, even if we love Lisp. But cobalt indeed and eventually basic and pass code and see really taking over. But these people were very likely writing fortune. And, indeed, they were working for Trent because I read the papers, so this one was about I mean, let's start with the coat. Inefficiencies in monitoring, coding can be ignored. We are interested in the hardware capabilities, not the software performance. So we will assume. The ability to write clean code. And I just love that code big quote because it means that at the time the expectation was already that code should be clean, especially when you're interested in optimizing for hardware. And the whole purpose here was to add some core memory if you know about that stuff. To some IBM, 360 mainframes. And the whole paper is just about connecting the memory basically because it was challenging, it was the start of virtual memory. So it was not a trivial, work. But keep in mind they already assumed clean code with the thing and this was in 67. Then this is another one a little bit later in the 73. And I just picked it up because I feel it's very representative. I feel really, I see myself in this text. So it's they they were doing some calculation on math calculations on some mainframes in Fortran. And the code goes, someday we hope to try. Some of the update ideas suggested by a colleague. And also we hope to leave a clean code with documentation at the end of the summer. If it is not possible, we will just make our code with documentation available to the laboratory. Which basically they're not clean just code. That already shows that clean code was already an ideal in this time well established. And it also sort of shows the feelings that you might have today when you're working with code and wanting to do better and struggling to do it. Keep in mind that at the time, this is what code looked like, at least Fortran. So you wrote this kind of thing. And and then it was punched in cards and put into huge machines. So it was quite different to what we do today in a sense and also, I mean, quite similar. But really when you look at the sort of references in literature, the ones we found we just discussed are just a tiny few. There are many, many, many, many more. And it's really it really looks like I get a little bit lazy here so I stopped adding but there's so many I mean there's for every year and many many references. So really It's it has been a continuous stream of people talking about code talking about clean code. And of course not all of them are you know the subject of the papers is not clean code. They're just use it as if it is a normal thing that people understand. Which goes to show that it is an established concept at the time. Again, keep in mind the languages that were at the time. And what happened before, I think this might be a topic for a different webinar. Have been looking a little bit into it and I think this came even from before. But let's not go into that. So one interesting paper that I'd like to highlight, and probably you've heard about it, it's the code to statement considered harmful. It has made famous but maybe not many of you have read it. And what it's in this in 68 so before the 2 papers we saw And this one is really talking about how to write good code basically. And it is criticising a programming language future that was used and abused at the time. And it is really advocating for favouring human understanding. You know, code that can be understood. The way Dijkstra famously refers to Go to statement is it is too much of an invitation to make a mess of one's program. And he sights ear, ear influences. So there's a famous theorem at the time. Around structural programming, which basically Explain that computation could be reduced to 3 operations. Basically order statements. Loops and if if else statements And this really was like a radical cultural change for people that would programming at the time. And he also cites influences from the fifties when late fiftys when they were working working in alcohol. Which was a super, super influential language. Particularly introducing recursion and stuff like that. Here's the obligatory XKCD comic where it says, oh, I could, oh, I could restctor my program flow or use this one little go-to instead. I mean, screw good practice what could go wrong. And then of course, Velocraptor comes in. Taxing. Naturally. Another super fundamental paper in the seventies was Parnas on the criteria to be used in decomposing systems into models. Again, maybe you've heard about this, but I don't know if you have read it. It's super interesting. It literally introduces the concept of information hiding. Bring up. Or you might know this as just abstraction or no hiding and implementation. And it advocates for clear and well-defined interfaces. And it provides very thoughtful criteria to decompose into models. Like your functional independence or logical cohesion. And he proposes this super interesting dependency structure matrix, which basically shows you in a single representation how different models related to each other. And a few years later, this was this book called Structured Design, which introduced the concepts of coupling and cohesion. That you might also have heard about. So coupling is about the degree of interdependence between modules. So, always better. And cohesion is the relationships, strong relationships internally in the model and high it's better. And it again goes into explaining how to decompose a system into subsystems. Sort of to be able to build systems at large. And, you know, I showed you before some books that influence the clean code book. And this is a book by Ken Beck released last year. It's called Tidy First. And on the on the introduction he says The book from Larry Constantine and the Europe really influenced me. And this is sort of the signature he had on the book, on his version of the book. Just so to show you that there's like really a continuous line of influences. But wait, But then again, We come now to the real heart of the topic because we have some sort of specific theoretical concepts. And then in 74, Karen and Ganon Plugger wrote this small paper called the programming styled examples and contra examples And I think it said the standard for what we expect of a book or paper or whatever about coding style and good code. By giving good examples and bad examples and until this day you can see like in solar products. Conforming and nonconforming code examples. So know that that has a very deep root in history. And the quotes. It took out, it's a little bit long, but you're with me. So computer. Centers are full of programs that we're reading for a short time use. Then were pressed or pushed, into years of service. Big programs operating systems, compilers, major applications are never written to be used once and discarded. They change and evolve. So most professional programmers spend much of their time changing their own and other people's code. So we'll set it once more, clean code is easier to maintain. And what they meant is even when you're thinking you're writing code that is throwaway code. It's very probably not for away code. It's going to end up in production. And I also pick this code because might feel very true today. It might have happened to you. It has happened to me. So, and this is from 74. Then they went on to write this super nice tiny book which is called the elements of programming style If you don't know them, know it really get it today. I think this is perhaps the most cohesive source of many of the advice we see today for clean code. So it talks about clean control flow, clean implementation, clean structure, clean ways of expressing conditionals. Cleanly, in eliminating errors, cleaning up the formatting. I mean everything that can be cleaned it's talked about and Basically, you can summarize it as keep keep code clean and straightforward and that is really the content of this book. Interestingly, the elements of style is another very, pre-existing book that writers might know about. About how to write. And that should give us, give us a hint of what Glink code is all about. Also this particular book is Perhaps the earliest source I could find from some of the most famous engineering lore. That we discuss in our teams like each model should do one thing well. Make it right before you make it faster. And many more. So you will find all of that in that old book. Basically what I'm trying to say is that yes, clean code is older than you think. Clink code is an old idea. And it endures since the late sixties at least. And it continues to be rediscovered and renewed by every overlapping generation of developers. So, and when you look carefully, it has an unbroken tradition. It has been going strong for a long while. And most of the general advice you hear today already existed in the seventys or before. So let's go to back to today. What do we do with this? I promise some survival kit and that's the reality check of the talk. So let's get into it. First, let's recap on the attitude part. I think we should be aware of idealists and cynics alike. That can be overly skeptical or overly pessimistic about code. About code quality about improving code. And but also beware of addonists that are coding for their own pleasure, their own perfectly beautiful treasured code. Rather, I think we should seek solid ground in engineering and practicality. Because that is probably the thing that will last through time. So also that we extend exemplified also. Get to the source. Programming has to reach tradition. And every storyteller even myself will add their own color. So look for the sources and you will get a more crisper, more stronger. Idea of what things are. So seek the principle behind the rules and check how they hold in time. And how they work in different contexts that might really, really help. And more deeply, you need to know why. What is the intention of clean code? It is basically writing code that is optimized for humans to read and change. Not only code that works, right? And this is based in a very basic and fundamental practical belief. That developers changing code is what drives the coast of software. So that is what is driving the coast, so we might as well optimize for it. And also we have a natural decide to improve our working conditions. Code is effectively our working environment. So this is also part of it and the Maybe that's too many words to say something very simple is that code that is more usable. Becomes more valuable. So of course we prefer it and of course it has been running as a strong idea for a long while. Finally, these are my own recommendations. Get some leverage. If you want to work with code to change it, you need some good practices engineering practices. Refactoring is still amazing book. This is the second edition. And it's just as relevant as it was today. It came out more than 20 years ago. And the other the second reference is a talk by the creator of Cucumber. And it has this sort of very strong idea that I think it was tied to the original definition of unit tests. They were about functional things and not parts of your code. So yeah, I really recommend that. Finally, get better. So we talk a lot, about clean as you code. So improve your code one bit at a time with the code you are putting into the code base. You need to worry about all the code base, but worry about what you're putting into it. And also learn as you code, you can improve as your as you're doing as you're working. And I really want to give you this sort of inspirational pep talk. Only developers can make a significant impact impact on code. If you don't do it, nobody will do it. So that was the survival kit and reality check. And we're more than halfway there, 2, over 3 there. And I have been holding back the answer to the title of the webinar. You know, the question was who, defines what clean code is. And perhaps you already got some hints. But I think this is the elephant in the room, the big thing and maybe it's a revelation for you hopefully it resounds. So after 50 years of clean code or more, Many of the things we were using at the time, we're not using anymore, right? Not all of you, hopefully you're writing Fortran. Some of you are, perhaps you're doing some machine learning stuff. That's still very used or you work in a bank? Most of you, I guess, are not using punch cards or IBM 360 or PPPs or CDC mainframes. So all of that has changed very drastically. And what has remained the same. And who came up with this timeless principles? Because they were not sort of they didn't appear from nowhere somebody put it with them there right So I think it's you. It's you in the sense that it's also me. It's up for engineers, software engineers to make sense of clean code. And really carry the torch. So There were generations that did some work, conceptual work and empirical work to try to Elevator profession and maybe it's our time to do it. We should be able to agree on some principles. And once we agree on the principle that are generally helpful, we can apply them to different specific situations, different languages, different domains, etc. But I guess the deeper question is how do we know if those principles are any good? And why not others, right? So it is less about 2. And more about how we ensure these are stable, strong principles. And I guess we should just use the engineering approach and the pragmatic approach. If we propose principles, they must be falsifiable. And you know, they should be based on world supported and well-known facts. And not contrary to things that we already know true. And they should really be, we should be able to prove them wrong. Shouldn't be like vague claims that we can never approve, right? So they ultimate test is if things, if principles work in the real world in the wild. So Sonar is trying to do a contribution to this. We have come up with what we call a taxonomy phone for clean code. And it has some principles for code to remain valuable. And, it is about code as a medium, really, and nothing else. So note about your processes or how it behaves afterwards. It's really focused on code. And we think it's generally enough to work across context for all languages for all code. And hopefully to stand the test of time. We will see. And we think it helped us reduce some rules that make sense, right? So we call this cling code taxonomy. I'm not really going to go deep into it that it's probably the topic of next webinar. I can tell you it is about consistent code, intentional code, adaptable code and responsible code. And you can read more about this in a blog post we put out there. Hopefully you get the link for it. And we're putting this internal product. So this is how we're classifying things we find in the code. So here you can see clean code attribute consistency. 90, And we're tagging very specific rules that this is something for React, Typescript code. But we think they are applyable to specific languages and specific domains. Please try them out and tell us. You know, how you how you feel about. So again, this is the blog post you can read about it. Please give us feedback share your own experiences. We have a lively community where you can post and discuss. And I guess my takeaway is that I feel it's our time, to take, you know, carry the torch. To make this idea of clean code real and elevator profession to more higher engineering standards. That's what I got. Thanks, Gab. That's a quite a challenge to ask people to carry the torch, huh? That was great as we move into our QA period. I'll gather the questions and I'll briefly share our upcoming webinars for our MEAN. APAC audiences. Join us for our next webinar. Conquering Complexity Refactoring JavaScript projects with Phil Nash on Thursday, March fourteenth. You can register today with the link that is now in the chat. We also have code faster, right cleaner using AI coding assistance and sonar, which is Wednesday, March twentieth, with our presenter, Manish Kapoor. You can also register today for this webinar with the link that's now in the chat. Now you'll see a brief poll to indicate if you'd like to learn more about our solutions. Please feel free to answer. And as a reminder, after the Q&A, a short survey will look here and we greatly appreciate your feedback on your experience. So we'll give this pull a little bit of time here and then we'll move on to. Yeah, yeah. I see a few raised hands, list is the way to go or should they? With the question. If there are more questions right now, please feel free to put them in the QA box. We do have a few that have already come through that we were going to answer but yes any any new questions please add them to the Q&A box. Okay. Go ahead and jump over to our question. So, Gabby, you ready? Yes, okay. So our first question is from Alex. Yes, am I right that Clean code is basically a set of recent practices and examples shared and accepted within a close community of developers. IEA development team. Yes, yes, that's really, Okay, so. I think, that's sometimes that's how it starts. So if you read some of the books, It starts often with our community of practitioners who are trying things out and through experience learning what works and doesn't work. Yet I think we have enough experience as an industry to to be able to be more general. You shouldn't be inventing your own best practices in a team. I think we know enough to have a world standards, a word principles. There are some very strong principles that like the ones I shared that I think Koot apply to most teams. Okay, alright, fair enough. Our next question, how do you think clean code is evolved over time? What changed and what hasn't changed? Well, I think I showed a bit that definitely the languages have changed and the machines have changed. However, I feel because I mean we're still human and we still need to read it and understand it and we haven't changed that much. Or at all I think it hasn't really changed when you look at the literature, we have the same problems as before, consistency, intentionality, adaptability. Responsibility. This have been running for a long time. So that's in part why we think we need to formalize them now and talk more about them. So I think it hasn't really changed that much, surprisingly. Okay, yeah, I mean, I guess humans are still human, right? Start to make mistakes and Right. Exactly here. And so I have a couple more coming through now from Michael. Could you recommend a book or website for the current clean code? Yeah. Hmm. So I will obviously recommend the blog post. I just shared, really look into it. There's some cool examples. With different languages and stuff. If you're completely new to the ideas of clean code, I think there's 74 book for Mc and is pretty cool. Even I mean if you can tolerate the ancient languages. And maybe if you want like a more recent version, try the recent K book that I showed that has a cat in the cover. It's pretty neat. This one. There's a cat. It's pretty good. Okay, good. Pretty noticeable for cat. Okay, okay, we've got one coming through from Sebastian. This is, this one looks like a little bit of a long one here. So you showed us different excerpts from books and thesis. Okay. You also mentioned about how things change over time like the book at the beginning for Martin. How are you ensuring that you as sonar are following the best path in the evolution of clean code and not becoming someone who is later on telling that your assumptions got outdated. Excellent question. I think, we're taking the pragmatic approach. So basically what we're recommending is what we see people use and it works for people. So as you know, we create rules and analyzers for many languages. And basically this is a synthesis for practical experience. So it's very empirical and We're I mean we're also looking into how that can be further proven by you know empirical research and stuff like that. But ultimately, I guess the proof is, I mean, take it, try it, certain products are free or open source, you can download them and use them. And see if it works for yourself. We feel it's really something sensible. Well, Will is the test of time. I guess we'll need to see. Yeah, well, and also the nice part is that Sonar was founded by developers. Right. So we are. Sounded by developers and written for developers. So I think we're pretty in tune with the community. Well, I mean, if you Okay, I'm wondering where you're coming from. Basically, you can use, in your ID, you have center length, which is free to use and open source. You can install it in Intel G or VS code or whatever you're using. And essentially it's really tight into your workflow. And then You can start with that if that's what you prefer. And at some point, you might want to have some sort of safety net shared by the team. And that's where you where you use sort of a server thing that you put into CI and everything. We recommend that you do all the things. You go all in. But i guess if you want to start with your team sort of lens is super easy there's no friction and you just start it and it looks like another lter in your ID. But of course it's doing some more deep work. We have another question. How can you convince some depth teams to use sonar when most of the IDEs now have built in code Great. Next we have Marco. Where does security fit in within sonars principles of clean code. Excellent question. So as I said, these principles are based on code and code loan, sort of as an artifact, as a medium. And security is about the impact or the effect that Clink code has. So basically, it could be to use a proper, algorithm. So ensure you're sanitizing things. So that that really in the in the Clink code taxonomy we're calling it being intentional because you should be intentional about this. You should sanitize input. You should use algorithms that are relevant to today's standards that are complete. So that's how we're looking at it. And if you look at summer products, you have these 2 sites of the coin. One side is what the code is and what the code needs and the other side is how that impacts the software. So security is obviously an important aspect of software. And just as reliability it is and maintainability. But we look at this aspects of the software and I mean more broadly securities even an aspect of the system right So, yeah. Okay, we've got a few more coming in here. We've got, from Pedro. Hello. Clean code is obviously the way to go, but I have experienced some reluctance from teammates and adopting clean code practices. How can one approach others and be effective in showing the advantages of clean code? Yeah, I guess this comes back a little bit to the attitude part. My advice would be to find out whether they're coming from. Maybe they really care about code but they have become sort of, you know, pessimistic. Or maybe they just care about their own code tonight to write it beautifully and they don't care about the team. So I think, look into them and maybe have some discussion with them, share different, there are many angles where you can come from and ultimately I, you can start with very low function. Again, going back to the previous question about S. You start sonar linton if they see that your PRs are always super clean at some point they will Start to say like how do you catch a bugs before they even land? How do you catch a formatting process? How do you catch everything before it lands in the PR? Maybe that they'll get more interested. So I guess shared tools, share stuff, share resources and You know, maybe they'll come through if ultimately I guess for a team if you are self organized you need to decide on what is right for the team and not only for one individual. Yeah, I'm probably understanding what their pains are with it, right? Like I think a common misconception is that clean code can slow you down when really ultimately it's speed you up because it helps you catch things before they hit production. Right. So let's see, what else do we have here? From James. Does the tool enforce a best practices? So again, we're looking at this from the point of the code and most OS practices are about security concerns. So the short answer is yes, and we do it sort of the clean code way, which means you should always sanitize your input. You should always ensure your ciphers are good. This kind of things you should always ensure there are no secrets leaking and all of this and that happens to correlate well to the OS standard. We have security reports and our products were tell you the coverage on this reports and stuff like this. And this again is part of the dual vision we have. One is the code side and the other is the impact on the software. So yes. The answer is yes. And we do have several pages on our website that, attest to this and you can one more information there on, what we cover. This is a good one. We from an anonymous person is clean code the next certification or proof for a developer to land an awesome job. Okay. Yeah. I don't know. I personally hope not. I feel I don't know it's politically difficult to answer but I think no I mean it shouldn't be politically difficult to answer but I think no I mean it shouldn't be I would rather have clean code be something that engineers own and not something that you know management takes over or a corporate world takes over. I think it is deeply rooted in our ethics in our desire to master or craft. So I think we should look at it that way. Hmm. That's that's my I speak. I see guys a little internal window for the audience at Sonar. Okay, we have just a couple more minutes, so we'll try to get a few more of these questions answered. A lot of our discussions get m down in discussions of individual pieces of syntax instead of higher level practices to keep things subjectively clean. This causes people to consider this partially bite shedding. Any tips for avoiding this? Yes. Yes, excellent question and I think that's you will read about it in the in the blog post I mean you can read about it in the blog post and That's really about the consistent part. What has happened for a very long time is that people have obsessed about individual choices of how to do things like should I put my curly brackets in the same line. Or could the braces or below? Should they be tabbed or not tapped and there are schools of thought about this depending on the language you have. And huge style gets about it and whatever. Would we feel its sonar is that that doesn't really matter and, eerily, in empirical research has shown that it might not matter, or at least not that much. Everything is roughly the same except it should be consistent. Meaning if you decide to go for something All of the code base would be like that. All of the authors of the code, this should be like that. And through time the code base needs to stay consistent. You get bonus points if that style is consistent with your language ecosystem. So if you're writing C sharp, you know, how to write it, where to put it, if you're writing whatever you're writing. So I think it is about consistency. And most engineers will immediately admit that, yeah, what is deeply matters for the team is consistency. And I think this is how you can approach the the argument and sort of It shouldn't matter. You know, it shouldn't matter where we put it as long as we all do it the same way. Great. So I think we've got one more question and then we'll see where we're at. I know we've got to let people go here. So this kind of wants to some of the discussion we've already had developers usually resolve to quick solutions fixes due to type deadlines. How can we continue delivering fast while maintaining clean code? That's an excellent point and I think the deeper understanding, you hint a little bit about it, this is that The way to go fast is to go clean. If you wanna, Maintains some basic level of speed to do it right. From the start, it's much much easier. It doesn't take much time if you focus on your code. The code you're contributing because it's usually just a few lines, just a few functions. Just a small piece. So another way to do it is anticipate. You don't need to do it later when it's already in the PR. You know it takes more effort people are pointing out things if you do it in your IDE, you know, you do it in your IDE, you already as you're writing it, you do it immediately. You're saving a lot of time and you're saving a lot of time for your team too because then somebody doesn't have to come after and rewrite it. Whatever so I think the way to go fast is to go clean from the start. Perhaps what scares people is to have a high standard, because, that means, oh no, that means I need to change all the code base. And not really, focus on new code. This is what we call that sonar cleaner as you code. And if you focus on that with time, you will improve the overall quality of the code base. Awesome. Okay, well, in the interest of time, I'm gonna wrap things up for us. So thank you to everyone who answered questions. We really appreciate it. And if you didn't cover your question today, our community is a great place to send those questions and we'll review them and certainly get to them after we close out the webinar, please feel free to visit sonar source. Dot com for more of those answers around the standards that we saw for as well as dig deeper into what Clean Code is. Is for us and what we think it can be for you. And please go there also to check out any information on our future webinars and events. Thank you again, Gab, for presenting today and thank you in advance for your feedback. Via the survey that will appear shortly at the end of the webinar.",
+  "fetchedAt": "2026-03-14T09:23:22.311Z"
+}

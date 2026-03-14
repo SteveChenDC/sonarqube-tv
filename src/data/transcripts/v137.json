@@ -1,0 +1,1013 @@
+{
+  "videoId": "v137",
+  "youtubeId": "g6BqDORtdkE",
+  "segments": [
+    {
+      "text": "Hello everyone and welcome. We will get started in just a few minutes. Thank you for standing by.",
+      "offset": 42000,
+      "duration": 30000
+    },
+    {
+      "text": "If you just joined. Hello, welcome. We're gonna get started in just about 20 s.",
+      "offset": 92000,
+      "duration": 30000
+    },
+    {
+      "text": "All right, let's get started. Thank you for joining and welcome everyone. I'm Ky Joshi and I will be your moderator and host for today's session.",
+      "offset": 124000,
+      "duration": 12000
+    },
+    {
+      "text": "And I'm incredibly excited to have with us our guest speaker and a long time sonar customer, Andy Fisher.",
+      "offset": 136000,
+      "duration": 9000
+    },
+    {
+      "text": "Who is a software developer himself and who leads the DevOps. Centre of Excellence at Data.",
+      "offset": 145000,
+      "duration": 7000
+    },
+    {
+      "text": "Andy?",
+      "offset": 152000,
+      "duration": 2000
+    },
+    {
+      "text": "Hello everybody. I'm nice to have everybody here in the webinar and hope you interested what I'm talking about.",
+      "offset": 154000,
+      "duration": 8000
+    },
+    {
+      "text": "Yes, it's really cool to have you. And you will be joining me in this conversation to tell us more about his company.",
+      "offset": 162000,
+      "duration": 9000
+    },
+    {
+      "text": "And how they have leveraged clean-coding best practices. To head the development teams, not only improve velocity and productivity, but also for, data overall to accelerate their business growth.",
+      "offset": 171000,
+      "duration": 14000
+    },
+    {
+      "text": "And so through this conversation, you're gonna hear many facets, many nuggets. And strategies that Andy and team have used to improve the code health of hundreds of projects across their organization.",
+      "offset": 185000,
+      "duration": 19000
+    },
+    {
+      "text": "Alright, so before we deep dive, I'm just gonna spend just a few seconds here. Going over some housekeeping items.",
+      "offset": 204000,
+      "duration": 7000
+    },
+    {
+      "text": "This is a 30 min session that includes Q&A. Throughout the session, feel free to leave your questions in the Q&A box in Zoom, not the chat box, but the Q&A box.",
+      "offset": 211000,
+      "duration": 14000
+    },
+    {
+      "text": "We have our amazing panelist, Jeff Zapatashni and Lucas here who will help answer any questions that come in through the Q&A box.",
+      "offset": 225000,
+      "duration": 10000
+    },
+    {
+      "text": "This session is being recorded and so within a few days we will email you the recording of this presentation and the session.",
+      "offset": 235000,
+      "duration": 10000
+    },
+    {
+      "text": "After the webinar, we will post a short webinar survey. Do tell us what you liked, what we should improve.",
+      "offset": 245000,
+      "duration": 7000
+    },
+    {
+      "text": "And what topics you would like to see covered in future webinars.",
+      "offset": 252000,
+      "duration": 7000
+    },
+    {
+      "text": "All right, so and for our new listeners here today who may not know what we do, I'd like to give a very small introduction to the market problem.",
+      "offset": 259000,
+      "duration": 3000
+    },
+    {
+      "text": "That we see and solve today at Sonar. So as we all know that companies are actually going through, you know, this continue to go through this massive digital transformation.",
+      "offset": 262000,
+      "duration": 17000
+    },
+    {
+      "text": "And software has become the center of all business operations. But if you think about it at the core of all of this is the underlying code.",
+      "offset": 279000,
+      "duration": 10000
+    },
+    {
+      "text": "It's becoming actually even more and more evident that if that code is bad, the costs associated with that are enormous.",
+      "offset": 289000,
+      "duration": 8000
+    },
+    {
+      "text": "They are really monumented. These costs not only continue to increase every year, but they keep accumulating as well.",
+      "offset": 297000,
+      "duration": 8000
+    },
+    {
+      "text": "And today we've seen that those costs have kind of reached about trillions of dollars overall.",
+      "offset": 305000,
+      "duration": 8000
+    },
+    {
+      "text": "And so at sonar, our focus is on solving this big problem. By arming your developers and development teams with a solution that helps them achieve and sustain a state of clean code.",
+      "offset": 313000,
+      "duration": 16000
+    },
+    {
+      "text": "And what I really mean by that is helping them write and deliver code that is consistent, that is intentional.",
+      "offset": 329000,
+      "duration": 8000
+    },
+    {
+      "text": "Adaptable and responsible. So that the code that they are developing is fit for the purpose that it was really designed for.",
+      "offset": 337000,
+      "duration": 9000
+    },
+    {
+      "text": "So meaning making sure that it's easy to operate. It's easy to understand, easy to change.",
+      "offset": 346000,
+      "duration": 5000
+    },
+    {
+      "text": "And is collectively owned by the teams that are developing it now and also other teams that might take over that piece of code in the future.",
+      "offset": 351000,
+      "duration": 9000
+    },
+    {
+      "text": "And so we at Sonar enable organizations to do this as part of their existing workflow. Existing software development lifecycle.",
+      "offset": 360000,
+      "duration": 9000
+    },
+    {
+      "text": "With the products that cleanly and deeply integrate into the DevOps workflow. Alright, so with that said, I am going to hand it over to Andy, Andy, the floor is yours.",
+      "offset": 369000,
+      "duration": 13000
+    },
+    {
+      "text": "Yeah.",
+      "offset": 382000,
+      "duration": 1000
+    },
+    {
+      "text": "So tell us a little bit about that. And the type of products that you develop.",
+      "offset": 383000,
+      "duration": 5000
+    },
+    {
+      "text": "Yes, I will do that. Thank you very much for the invitation. Kerty and instead of preparing a lot of slides to explain you what DAF is and what we are doing.",
+      "offset": 388000,
+      "duration": 11000
+    },
+    {
+      "text": "I would like to show you a short video clip. Just to explain what we are really doing and it's much more better than having a lot of slides.",
+      "offset": 399000,
+      "duration": 8000
+    },
+    {
+      "text": "So could you please start the video?",
+      "offset": 407000,
+      "duration": 3000
+    },
+    {
+      "text": "All right, we'll do that.",
+      "offset": 410000,
+      "duration": 6000
+    },
+    {
+      "text": "Who exactly is Darted? First things first, Darth is not normal. This company is not all about profit, maximizing returns or shareholder value.",
+      "offset": 416000,
+      "duration": 10000
+    },
+    {
+      "text": "Because data is a cooperative. What? Not that kind of cooperative, but rather an IT cooperative.",
+      "offset": 426000,
+      "duration": 1000
+    },
+    {
+      "text": "What on earth is that? The IT cooperative DARTF works on behalf of more than 40,000 members in tax consulting, legal advice.",
+      "offset": 427000,
+      "duration": 13000
+    },
+    {
+      "text": "We develop software and IT services for their firms just like any other ordinary software company. Not this or, or like this, or this.",
+      "offset": 440000,
+      "duration": 10000
+    },
+    {
+      "text": "Unlike a regular IT developer, we create software for our members and their clients. For example, for him or for them, her, then, then, then, and for them, over 2.5 million companies in Germany benefit from Dartf software in payroll and accounting because it offers possibilities to go far beyond the normal because Dart of software connects all the important players in the economy into one ecosystem.",
+      "offset": 450000,
+      "duration": 25000
+    },
+    {
+      "text": "Tax consultants with their clients, with public authorities, institutions and with banks. All this business data comes together here.",
+      "offset": 475000,
+      "duration": 5000
+    },
+    {
+      "text": "In the Data of Cloud. And even that doesn't quite conform to the usual, because the DARTF servers are not here, here or here.",
+      "offset": 480000,
+      "duration": 12000
+    },
+    {
+      "text": "But here, cloud computing made in Germany. Also not normal, but highly sustainable. Adata, advice also goes beyond the normal.",
+      "offset": 492000,
+      "duration": 8000
+    },
+    {
+      "text": "Because for our more than 8,500 employees, their focus is on the satisfaction of more than 40,000 members.",
+      "offset": 500000,
+      "duration": 7000
+    },
+    {
+      "text": "Together we take the pressure off companies, guarantee up-to-date information and simplify lots of business processes.",
+      "offset": 507000,
+      "duration": 8000
+    },
+    {
+      "text": "More advice, more software, more partnership. For Reza Dartev, that is normal.",
+      "offset": 515000,
+      "duration": 11000
+    },
+    {
+      "text": "Thank you, Katie.",
+      "offset": 526000,
+      "duration": 1000
+    },
+    {
+      "text": "Very cool. That was a wonderful video.",
+      "offset": 527000,
+      "duration": 3000
+    },
+    {
+      "text": "Yes, it's just easier to explain than, some facts and editions, and we have around about 2, 1,200 software developers and we are working on around about 250 different products.",
+      "offset": 530000,
+      "duration": 13000
+    },
+    {
+      "text": "So that is, yeah, our, our business.",
+      "offset": 543000,
+      "duration": 4000
+    },
+    {
+      "text": "Yeah. And it's a very unique operating model. And very excited to hear that. So, Tell us a little bit about your software engineering background and particularly your role at.",
+      "offset": 547000,
+      "duration": 13000
+    },
+    {
+      "text": "Yes, I will do my first contact with Data was during the internship semester in 1987.",
+      "offset": 560000,
+      "duration": 7000
+    },
+    {
+      "text": "That's quite a long time ago and one year later I started as a software engineer at in the beginning writing software in in C and Very early due to an expensive error, I developed a fable for good code quality and In those times, we didn't have any tools.",
+      "offset": 567000,
+      "duration": 18000
+    },
+    {
+      "text": "Just to ensure code quality even. Debugging was quite a harder job in the beginning on MSOS if somebody knows this.",
+      "offset": 585000,
+      "duration": 5000
+    },
+    {
+      "text": "It was, there wasn't a debugger available at the beginning. And, all over the years I was writing software in the beginning.",
+      "offset": 590000,
+      "duration": 10000
+    },
+    {
+      "text": "In CC, later on in visual basic and C sharp and always did some basis software frameworks. And one of these frameworks, the one, the biggest framework we are still using to run our on-premise product.",
+      "offset": 600000,
+      "duration": 18000
+    },
+    {
+      "text": "Was written in C sharp. And so I got in contact with those static code analysis tools at the first one.",
+      "offset": 618000,
+      "duration": 13000
+    },
+    {
+      "text": "I was able to know was FX cop, I think somebody who's writing C sharp software remembers this tools.",
+      "offset": 631000,
+      "duration": 9000
+    },
+    {
+      "text": "And later on there was reshar. These tools were always helpful and because we were developing a basis framework for all the products we were asked to define the rules.",
+      "offset": 640000,
+      "duration": 12000
+    },
+    {
+      "text": "And to establish, a type of governance to ensure a good cold quality. And our approach in these times was just to enforce a 0 issue policy to say, well, there should not be any issue in the ethics clock.",
+      "offset": 652000,
+      "duration": 16000
+    },
+    {
+      "text": "So. We, had this policy and we thought everybody was obeying because we didn't, we didn't experience any issue in the build process.",
+      "offset": 668000,
+      "duration": 4000
+    },
+    {
+      "text": "So we said, oh, fine, we did it. But then when we take a look at the source code, we could find out that the people suppressed.",
+      "offset": 672000,
+      "duration": 15000
+    },
+    {
+      "text": "The issues. They just didn't spend efforts on making the code better. They just spent a lot of time in cheating the system.",
+      "offset": 687000,
+      "duration": 9000
+    },
+    {
+      "text": "I see.",
+      "offset": 696000,
+      "duration": 1000
+    },
+    {
+      "text": "So just suppress the the issue raising of ethics club. Then we discovered resharper and we thought that would be a better tool to monitor.",
+      "offset": 697000,
+      "duration": 10000
+    },
+    {
+      "text": "And that the people are suppressing. But the same happened. Long short, long story short, it was just the same result.",
+      "offset": 707000,
+      "duration": 8000
+    },
+    {
+      "text": "The people just press the issues. And then we discovered, SO, like you and at the beginning, when we, we investigate this tool, we thought that is a good idea because it's a server.",
+      "offset": 715000,
+      "duration": 14000
+    },
+    {
+      "text": "And we can forbid administration to everybody. So we as a governance unit, we just can control that everybody is making clean code.",
+      "offset": 729000,
+      "duration": 10000
+    },
+    {
+      "text": "And then we expected. That or we could see that Sunotube was raising the same issues of course.",
+      "offset": 739000,
+      "duration": 7000
+    },
+    {
+      "text": "And we could see the suppressions for FX Bob in the source code and the suppressions for resharper in the source code.",
+      "offset": 746000,
+      "duration": 7000
+    },
+    {
+      "text": "And that was the first time where I thought I think this these policy these rules will not help to to make what to get a better source code.",
+      "offset": 753000,
+      "duration": 11000
+    },
+    {
+      "text": "They will just force the people to spend time in cheating the system. And at that time, I was asked to develop a rule set for As I mentioned before, I wrote software in CC plus plus and official facing and everything else, but I never.",
+      "offset": 764000,
+      "duration": 18000
+    },
+    {
+      "text": "Never ever written a single line of code in codeboard. And I feel very uncomfortable to define a rule set.",
+      "offset": 782000,
+      "duration": 6000
+    },
+    {
+      "text": "For a programming language where which I didn't know. And over the Christmas holidays I would sit down and thought how can I solve that problem?",
+      "offset": 788000,
+      "duration": 4000
+    },
+    {
+      "text": "I don't want to govern and a rule set. For that language. And a couple of years before that, I found that in-house community, the software craft community at and I thought, why do we not give the process in the community?",
+      "offset": 792000,
+      "duration": 25000
+    },
+    {
+      "text": "And so I thought about the process and this process. Was. I activated every rule in the beginning, even the contradictory ones.",
+      "offset": 817000,
+      "duration": 11000
+    },
+    {
+      "text": "Just to enforce the people to get engaged in this root process. And then after that I said, well, everybody could claim for a rule change.",
+      "offset": 828000,
+      "duration": 10000
+    },
+    {
+      "text": "Okay.",
+      "offset": 838000,
+      "duration": 1000
+    },
+    {
+      "text": "Doing opening an issue in our Gitlab. And then, but there was only one, one rule because, you, you can only raise or claim.",
+      "offset": 839000,
+      "duration": 12000
+    },
+    {
+      "text": "For for a root change if there is a single issue. Because just to prevent academic discussions about rules. That will never raise an issue.",
+      "offset": 851000,
+      "duration": 10000
+    },
+    {
+      "text": "We said. There must be one issue raised and then we can discuss about this rule. And there was a 2 weeks discussion in the GitHub issue and after that there's an online voting.",
+      "offset": 861000,
+      "duration": 12000
+    },
+    {
+      "text": "And after the voting we as the Sonicube administrators We just implement the result without any ifso parts.",
+      "offset": 873000,
+      "duration": 9000
+    },
+    {
+      "text": "And, and when I showed this process to manager. He said to me, well, Andy, you will see the community will deactivate every single rule and so on a cube will be of no help.",
+      "offset": 882000,
+      "duration": 12000
+    },
+    {
+      "text": "Okay.",
+      "offset": 894000,
+      "duration": 1000
+    },
+    {
+      "text": "In the future. And just the opposite occurred. Implementing this process raised or increased the engagement of the of the people and even after a couple of months somebody was coming up to me and he said well we have this good process for the rules but we wanted to have a harder Quality gate.",
+      "offset": 895000,
+      "duration": 25000
+    },
+    {
+      "text": "Uhhuh.",
+      "offset": 920000,
+      "duration": 1000
+    },
+    {
+      "text": "This colored quality gate we call Data of Q. This is too weak for us. Can we use the process to get a harder quality, Of course.",
+      "offset": 921000,
+      "duration": 5000
+    },
+    {
+      "text": "And we just get a dot of gold quality gate. Some weeks later somebody came not enough for us. We wanted to have it more harder.",
+      "offset": 926000,
+      "duration": 16000
+    },
+    {
+      "text": "It's interesting.",
+      "offset": 942000,
+      "duration": 1000
+    },
+    {
+      "text": "And we get it out of platinum. Quality gate. And at the end there was there was a team coming up and said we wanted to have the maximum challenge.",
+      "offset": 943000,
+      "duration": 1000
+    },
+    {
+      "text": "We wanted to have the hardest quality gate available. And we, and they invented a artif insane quality gate.",
+      "offset": 944000,
+      "duration": 11000
+    },
+    {
+      "text": "Yeah.",
+      "offset": 955000,
+      "duration": 1000
+    },
+    {
+      "text": "So this is a good sign for. Getting a community engaged in this process and to and the people understand that quality.",
+      "offset": 956000,
+      "duration": 9000
+    },
+    {
+      "text": "What's this reason using a static code analysis and what is what is the benefit of code",
+      "offset": 965000,
+      "duration": 9000
+    },
+    {
+      "text": "Very cool. That's really cool to hear. Sonar source, that's how we started, right?",
+      "offset": 974000,
+      "duration": 8000
+    },
+    {
+      "text": "Hmm.",
+      "offset": 982000,
+      "duration": 1000
+    },
+    {
+      "text": "Our routes are in the open source and the communities, you know, why we are here today and the community is really pivotal to our success as well.",
+      "offset": 983000,
+      "duration": 2000
+    },
+    {
+      "text": "So I can completely understand the power of sourcing and the power of community. Really cool to hear.",
+      "offset": 985000,
+      "duration": 10000
+    },
+    {
+      "text": "So our audience, I think would be interested in knowing. What caused you to actually, you covered some part of it, but what caused you to investigate sonar?",
+      "offset": 995000,
+      "duration": 11000
+    },
+    {
+      "text": "And so what were some of the challenges, you know, that prevented you from achieving your goals prior to, you know, embarking on this, clean code journey.",
+      "offset": 1006000,
+      "duration": 11000
+    },
+    {
+      "text": "And the first thing I mentioned already was just we hope that we could, control everything because it is the server software.",
+      "offset": 1017000,
+      "duration": 8000
+    },
+    {
+      "text": "But At the second side, I saw this is the first chance to get one tool for all the languages we are using at because prior to that we have in every different language we have different tools for ensuring code quality or for to ensuring issue free software.",
+      "offset": 1025000,
+      "duration": 21000
+    },
+    {
+      "text": "And so that was a good chance to get the people used to to one quality tool and even if they're changing the the technology stake later on.",
+      "offset": 1046000,
+      "duration": 10000
+    },
+    {
+      "text": "And, This the third thing was that we hope that we could get a Get away or process to to have those people working on legacy software.",
+      "offset": 1056000,
+      "duration": 15000
+    },
+    {
+      "text": "I mean There's a lot of software running for a couple of years and it's doing a good job for our customers.",
+      "offset": 1071000,
+      "duration": 7000
+    },
+    {
+      "text": "But when you start, using a static source code analysis, then you will get a tremendous number of issues at the beginning.",
+      "offset": 1078000,
+      "duration": 10000
+    },
+    {
+      "text": "Yeah.",
+      "offset": 1088000,
+      "duration": 1000
+    },
+    {
+      "text": "And so we. Prior to, you're always, you always say as sonar, you say that we have a clean codes, strategy for working on these legacy software and we also said to the people.",
+      "offset": 1089000,
+      "duration": 14000
+    },
+    {
+      "text": "So, we're just use the first analysis as a baseline. And then ensure that you're not getting more issues.",
+      "offset": 1103000,
+      "duration": 6000
+    },
+    {
+      "text": "Even if this number is quite high, Just always take a look at the new code. And we also said it at times where the new code analysis wasn't wasn't available and so on. I give it a it's available for a couple of years now.",
+      "offset": 1109000,
+      "duration": 19000
+    },
+    {
+      "text": "And and it had a lot because this is the problem that we are facing. Because if you want to get people engaged or look at the code quality when they are running legacy software, it's hard for them.",
+      "offset": 1128000,
+      "duration": 16000
+    },
+    {
+      "text": "Because it you don't feel good in the beginning if if you have a source code basis off. Let's say one or 2 million lines of code and you get hundreds.",
+      "offset": 1144000,
+      "duration": 6000
+    },
+    {
+      "text": "And thousands of issues. You will not find the real one. So the the ones you should you should build out.",
+      "offset": 1150000,
+      "duration": 9000
+    },
+    {
+      "text": "At the beginning. So that is. The problem to get to get such a software into the company.",
+      "offset": 1159000,
+      "duration": 13000
+    },
+    {
+      "text": "Yeah, and we kind of, you know, truly believe in that, is that instead of getting inundated with you know everything to fix let's kind of help developers do a good job at the code that they are writing today.",
+      "offset": 1172000,
+      "duration": 12000
+    },
+    {
+      "text": "And once they do that, you know, progressively things will become better because they want to touch, you know, old code, make new changes to it.",
+      "offset": 1184000,
+      "duration": 7000
+    },
+    {
+      "text": "And so we even kind of use this ourselves and we've kind of finished this over time and we fine-tuned it for all of our customers overall.",
+      "offset": 1191000,
+      "duration": 11000
+    },
+    {
+      "text": "So that's great to hear.",
+      "offset": 1202000,
+      "duration": 1000
+    },
+    {
+      "text": "Otherwise you will spend a lot of time just to make all those old stuff. And sometimes if you, if you build out, or you, you correct old issues, maybe you do something bad to your source code.",
+      "offset": 1203000,
+      "duration": 16000
+    },
+    {
+      "text": "Yep, exactly.",
+      "offset": 1219000,
+      "duration": 1000
+    },
+    {
+      "text": "So it's running for years, so why do you, why should you change it just because of code quality?",
+      "offset": 1220000,
+      "duration": 7000
+    },
+    {
+      "text": "Yeah. And yeah, with this clean as you code methodology, as we kind of call it, you can help this, you can make this possible.",
+      "offset": 1227000,
+      "duration": 3000
+    },
+    {
+      "text": "Very easily. So Andy, in a few weeks when we kind of chatted a little bit more, you mentioned that, you know, Data is offering software in 3 technology stacks, you know, even starting with, you know, old school mainframe to the more a modern, you know, cloud native application.",
+      "offset": 1230000,
+      "duration": 22000
+    },
+    {
+      "text": "So when you started on this, you know, journey to, develop cloud native apps, what were some of the challenges that you anticipated more on the quality security side of things and how did you really mitigate those issues?",
+      "offset": 1252000,
+      "duration": 16000
+    },
+    {
+      "text": "We are offering software in 3 technology stakes, mainframe on premise and cloud native, not just because we want to.",
+      "offset": 1268000,
+      "duration": 8000
+    },
+    {
+      "text": "It's unfortunately we have to. We started with mainstream software a long time ago and then we in the 1980.",
+      "offset": 1276000,
+      "duration": 8000
+    },
+    {
+      "text": "Hey, is where I started at that if we begin writing on premise software and our customers.",
+      "offset": 1284000,
+      "duration": 9000
+    },
+    {
+      "text": "Need to have a correct software up to date with the latest techs, with the latest changes in tax law.",
+      "offset": 1293000,
+      "duration": 8000
+    },
+    {
+      "text": "And so we cannot stop. Writing software or inventing our software and writing it. Again in cloud native.",
+      "offset": 1301000,
+      "duration": 9000
+    },
+    {
+      "text": "So we also we have to keep and we have to maintain this software and that makes it difficult for us because we have to have teams that are still have the knowledge to run and change these these programs on mainframe or on premise.",
+      "offset": 1310000,
+      "duration": 17000
+    },
+    {
+      "text": "And we have to have people that are writing the new software. And as you know, it's a big challenge.",
+      "offset": 1327000,
+      "duration": 5000
+    },
+    {
+      "text": "We are living in rough times not only in software industry. And everything else, but if you focus on software industry, it's hard to get.",
+      "offset": 1332000,
+      "duration": 12000
+    },
+    {
+      "text": "A bunch of new talent. Just to make the software new or write the software new again in cloud native and the old ones.",
+      "offset": 1344000,
+      "duration": 8000
+    },
+    {
+      "text": "Maintain the old software. So our challenge is to Re stuff the teams to and to ensure that the old software is still maintained and to get the people to know the new technology.",
+      "offset": 1352000,
+      "duration": 18000
+    },
+    {
+      "text": "Stag and all those. Those changes challenges you have there meaning the security and everything else. Helpful, helpful tool is so like you because it stays the same even in which technology.",
+      "offset": 1370000,
+      "duration": 17000
+    },
+    {
+      "text": "Yep.",
+      "offset": 1387000,
+      "duration": 1000
+    },
+    {
+      "text": "No, no matter which technology you're working in. And, so that is our biggest challenge because we have We are dealing with complex software.",
+      "offset": 1388000,
+      "duration": 9000
+    },
+    {
+      "text": "That is The German tax system is I think the complex the complicated one of the world and we have hundreds and thousands of rules.",
+      "offset": 1397000,
+      "duration": 11000
+    },
+    {
+      "text": "In these in these law and. With for every rules there are dozens of exceptions. So this is not easy to implement.",
+      "offset": 1408000,
+      "duration": 8000
+    },
+    {
+      "text": "And so you have to have paper with the knowledge of this system. To write the software. But we have to have them in the old stack and we have to have a new stack.",
+      "offset": 1416000,
+      "duration": 12000
+    },
+    {
+      "text": "And to prevent when they are coming to the news they get I mean when you when you have to learn new programming languages, new tools and new environments where you have to to develop your software.",
+      "offset": 1428000,
+      "duration": 14000
+    },
+    {
+      "text": "It's always, you're not knowing all these traps. On the mouse traps at the beginning that you have a new technology stack.",
+      "offset": 1442000,
+      "duration": 8000
+    },
+    {
+      "text": "Hmm.",
+      "offset": 1450000,
+      "duration": 2000
+    },
+    {
+      "text": "And so these tools are helpful. These static coder analysis tools are helpful to to have those people to move over to the new technology.",
+      "offset": 1452000,
+      "duration": 10000
+    },
+    {
+      "text": "And that is our problem. We are facing. To get more people helping us and to keep these old people up to date and to keep the knowledge and to be an update to the text law.",
+      "offset": 1462000,
+      "duration": 13000
+    },
+    {
+      "text": "So this is a complicated, process. For 250 products.",
+      "offset": 1475000,
+      "duration": 4000
+    },
+    {
+      "text": "Yeah. Oh well. Yeah, as things get modernized, you know, infrastructure escort can be prone to the same kind of security issues that you know source code is and so you got to have it secure by design.",
+      "offset": 1479000,
+      "duration": 17000
+    },
+    {
+      "text": "Yes, of course.",
+      "offset": 1496000,
+      "duration": 1000
+    },
+    {
+      "text": "And so yeah. I think last year we started, you know, supporting infrastructure as code and, you know, cloud native application development.",
+      "offset": 1497000,
+      "duration": 1000
+    },
+    {
+      "text": "And so we support all of the, you know, cloud native, application development. And so we support all of the, you know, big cloud providers and all their underlying. And so we support all of the, you know, big cloud providers and all their underlying technologies.",
+      "offset": 1498000,
+      "duration": 13000
+    },
+    {
+      "text": "So it's cool that you have a mix of the, you know, big cloud providers and all their underlying technology.",
+      "offset": 1511000,
+      "duration": 2000
+    },
+    {
+      "text": "So it's cool that you have a mix of, you know, big cloud providers and all their underlying technologies.",
+      "offset": 1513000,
+      "duration": 2000
+    },
+    {
+      "text": "So it's cool that you have a mix of the old legacy things on moving everything now over to the cloud as well.",
+      "offset": 1515000,
+      "duration": 4000
+    },
+    {
+      "text": "Yes.",
+      "offset": 1519000,
+      "duration": 3000
+    },
+    {
+      "text": "Alright, so. Another question that I had is that as you are the driver for the center of excellence for the organization, so what strategies have you successfully used to keep the code base quality of the code based top of mind for all your development teams.",
+      "offset": 1522000,
+      "duration": 19000
+    },
+    {
+      "text": "Typically today they deal with, you know, organizations deal with managing the technical debt. And so what has your kind of approach and strategy been overall?",
+      "offset": 1541000,
+      "duration": 10000
+    },
+    {
+      "text": "I think the best the best strategy, was to engage the software developers in these, this process of defining.",
+      "offset": 1551000,
+      "duration": 13000
+    },
+    {
+      "text": "Summer cube rules because This let the teams to face the challenge to make this source code better and to talk about that.",
+      "offset": 1564000,
+      "duration": 12000
+    },
+    {
+      "text": "Because they they defined the roots that together with all the others developers and then after that they wanted to tell everybody hey we just We defined those rule set together with you and our software is now really clean and they are talking about that.",
+      "offset": 1576000,
+      "duration": 16000
+    },
+    {
+      "text": "And that is. The thing that you have to enforce to get the people on the stage. Showing the strategies they made in their software because This can help other teams facing the same problems.",
+      "offset": 1592000,
+      "duration": 14000
+    },
+    {
+      "text": "I mean, it's not rocket sign what we're doing. It's a complex system of rules that has to be implemented in software, but it's not rocket signed.",
+      "offset": 1606000,
+      "duration": 9000
+    },
+    {
+      "text": "We don't, we don't fly to the moon, even sometimes it feels so if you, if you're doing the text.",
+      "offset": 1615000,
+      "duration": 6000
+    },
+    {
+      "text": "Declaration but",
+      "offset": 1621000,
+      "duration": 4000
+    },
+    {
+      "text": "So this is very helpful when the Teams are talking about their challenges and when they are talking about their that the things they learned on this process.",
+      "offset": 1625000,
+      "duration": 14000
+    },
+    {
+      "text": "So this hit other teams and this keeps the topic called quality in mind and you should always in addition to that you should always say that this is a company.",
+      "offset": 1639000,
+      "duration": 15000
+    },
+    {
+      "text": "You have to you have to ensure that that people understand that. Good software is not just a thing that you want to have.",
+      "offset": 1654000,
+      "duration": 11000
+    },
+    {
+      "text": "So it helps you to to run better software to be. To get faster. Invention of your tools and and the implementation of all those changes in the tax system and in the text law.",
+      "offset": 1665000,
+      "duration": 12000
+    },
+    {
+      "text": "And so",
+      "offset": 1677000,
+      "duration": 9000
+    },
+    {
+      "text": "This is the thing that you have to and that you have to get in mind of the people. And then and if you in addition let them make mistakes and learn from that that's the best thing you can do and that is that was our strategy to to engage the people and to bring the teams, successful teams on stage.",
+      "offset": 1686000,
+      "duration": 29000
+    },
+    {
+      "text": "Just to show what they have done. And this keeps it in mind and not not when you're just saying, well, we have no, 0 issue.",
+      "offset": 1715000,
+      "duration": 9000
+    },
+    {
+      "text": "That's not a good advice.",
+      "offset": 1724000,
+      "duration": 1000
+    },
+    {
+      "text": "Yeah. And we just have a few more minutes, so I have one last question for you.",
+      "offset": 1725000,
+      "duration": 7000
+    },
+    {
+      "text": "So as you have with implemented these clean code practices in your organization, what positive impact are you seeing and what can other organizations that embark on this same journey on kind of improving their code-based",
+      "offset": 1732000,
+      "duration": 18000
+    },
+    {
+      "text": "I think implementing clean corporate practice is would just result in the common expectations. You would get a better code basis of course.",
+      "offset": 1750000,
+      "duration": 8000
+    },
+    {
+      "text": "If you're not then there's something wrong. You get more completed task of course and less time to market for new features.",
+      "offset": 1758000,
+      "duration": 8000
+    },
+    {
+      "text": "But, achieving this high level advantages is like it's like breaking down, and software department.",
+      "offset": 1766000,
+      "duration": 10000
+    },
+    {
+      "text": "Require some efforts in companion actions. You have to ensure that you get a good quality is the goal of every software developer.",
+      "offset": 1776000,
+      "duration": 10000
+    },
+    {
+      "text": "And they should understand why should they should do that and I think most of the software developers want to do that.",
+      "offset": 1786000,
+      "duration": 7000
+    },
+    {
+      "text": "They want just wanted to be treated like adults. And they know that they wanted to make good software and so give them all the tools they need, give them the the environment they need and let them do their job.",
+      "offset": 1793000,
+      "duration": 14000
+    },
+    {
+      "text": "And then you would take advantage of the benefits of clean code. At the end.",
+      "offset": 1807000,
+      "duration": 5000
+    },
+    {
+      "text": "Yeah, very good. I remember when we chatted few weeks ago, you mentioned to me that with tools like this, developers are paid to learn because you we have you know the right kind of guidance so no matter you know how experienced you are you always kind of learning, improving and writing better software.",
+      "offset": 1812000,
+      "duration": 17000
+    },
+    {
+      "text": "Yes, of course.",
+      "offset": 1829000,
+      "duration": 1000
+    },
+    {
+      "text": "That really resonated. I really like that. Alright, I know we are almost out of time.",
+      "offset": 1830000,
+      "duration": 3000
+    },
+    {
+      "text": "So I'm gonna see if we have, any questions here. If you have a question for Andy.",
+      "offset": 1833000,
+      "duration": 12000
+    },
+    {
+      "text": "Please leave that in the Q&A box. And while You are doing that. I just wanted to briefly if you're still standing by just you briefly talk about our upcoming webinar.",
+      "offset": 1845000,
+      "duration": 17000
+    },
+    {
+      "text": "Peter McKee who's the head of our developer relations is going to talk about how to master clean code, in a September webinar.",
+      "offset": 1862000,
+      "duration": 8000
+    },
+    {
+      "text": "So just if you are interested, please go ahead and do register.",
+      "offset": 1870000,
+      "duration": 9000
+    },
+    {
+      "text": "Alright, let's see if we have just any question here.",
+      "offset": 1879000,
+      "duration": 9000
+    },
+    {
+      "text": "There was one question, from the audience, Andy, they want to know how big is your code base?",
+      "offset": 1888000,
+      "duration": 7000
+    },
+    {
+      "text": "How many lines of code, do you have, based off, you know, all of your projects?",
+      "offset": 1895000,
+      "duration": 6000
+    },
+    {
+      "text": "Yes, right now they are around about 4,000 projects and summer cube. With around about 48 million lines of code.",
+      "offset": 1901000,
+      "duration": 11000
+    },
+    {
+      "text": "So, and in. Yeah, I can give you a short overview which languages we are using. Most of them, most of the software we are just, almost lines of code, we are just analyzing right now is.",
+      "offset": 1912000,
+      "duration": 13000
+    },
+    {
+      "text": "In C sharp, it's typescript, it's JavaScript, it's, HTML, of course, it's XML, it's Java and the.",
+      "offset": 1925000,
+      "duration": 9000
+    },
+    {
+      "text": "In the back end, yes, that's most JavaScript in the front end type script in the front end.",
+      "offset": 1934000,
+      "duration": 6000
+    },
+    {
+      "text": "So these are the most languages we are just analyzing right now.",
+      "offset": 1940000,
+      "duration": 6000
+    },
+    {
+      "text": "Alright. I think we are unfortunately over time but it was really really great to have you here. I really enjoyed my conversation with you and I hope the audience did the same.",
+      "offset": 1946000,
+      "duration": 10000
+    },
+    {
+      "text": "If we didn't get to your questions, we will address them in the community. In a few days.",
+      "offset": 1956000,
+      "duration": 9000
+    },
+    {
+      "text": "And of course, like I said before, we will send you a recording of this of this nice fireside chat.",
+      "offset": 1965000,
+      "duration": 8000
+    },
+    {
+      "text": "Thank you for the invitation. Was nice to be here.",
+      "offset": 1973000,
+      "duration": 2000
+    },
+    {
+      "text": "All right, it was wonderful, wonderful to have you and thank you for joining us. I have a good day and we'll see you again soon.",
+      "offset": 1975000,
+      "duration": 9000
+    },
+    {
+      "text": "Goodbye.",
+      "offset": 1984000,
+      "duration": 30000
+    }
+  ],
+  "fullText": "Hello everyone and welcome. We will get started in just a few minutes. Thank you for standing by. If you just joined. Hello, welcome. We're gonna get started in just about 20 s. All right, let's get started. Thank you for joining and welcome everyone. I'm Ky Joshi and I will be your moderator and host for today's session. And I'm incredibly excited to have with us our guest speaker and a long time sonar customer, Andy Fisher. Who is a software developer himself and who leads the DevOps. Centre of Excellence at Data. Andy? Hello everybody. I'm nice to have everybody here in the webinar and hope you interested what I'm talking about. Yes, it's really cool to have you. And you will be joining me in this conversation to tell us more about his company. And how they have leveraged clean-coding best practices. To head the development teams, not only improve velocity and productivity, but also for, data overall to accelerate their business growth. And so through this conversation, you're gonna hear many facets, many nuggets. And strategies that Andy and team have used to improve the code health of hundreds of projects across their organization. Alright, so before we deep dive, I'm just gonna spend just a few seconds here. Going over some housekeeping items. This is a 30 min session that includes Q&A. Throughout the session, feel free to leave your questions in the Q&A box in Zoom, not the chat box, but the Q&A box. We have our amazing panelist, Jeff Zapatashni and Lucas here who will help answer any questions that come in through the Q&A box. This session is being recorded and so within a few days we will email you the recording of this presentation and the session. After the webinar, we will post a short webinar survey. Do tell us what you liked, what we should improve. And what topics you would like to see covered in future webinars. All right, so and for our new listeners here today who may not know what we do, I'd like to give a very small introduction to the market problem. That we see and solve today at Sonar. So as we all know that companies are actually going through, you know, this continue to go through this massive digital transformation. And software has become the center of all business operations. But if you think about it at the core of all of this is the underlying code. It's becoming actually even more and more evident that if that code is bad, the costs associated with that are enormous. They are really monumented. These costs not only continue to increase every year, but they keep accumulating as well. And today we've seen that those costs have kind of reached about trillions of dollars overall. And so at sonar, our focus is on solving this big problem. By arming your developers and development teams with a solution that helps them achieve and sustain a state of clean code. And what I really mean by that is helping them write and deliver code that is consistent, that is intentional. Adaptable and responsible. So that the code that they are developing is fit for the purpose that it was really designed for. So meaning making sure that it's easy to operate. It's easy to understand, easy to change. And is collectively owned by the teams that are developing it now and also other teams that might take over that piece of code in the future. And so we at Sonar enable organizations to do this as part of their existing workflow. Existing software development lifecycle. With the products that cleanly and deeply integrate into the DevOps workflow. Alright, so with that said, I am going to hand it over to Andy, Andy, the floor is yours. Yeah. So tell us a little bit about that. And the type of products that you develop. Yes, I will do that. Thank you very much for the invitation. Kerty and instead of preparing a lot of slides to explain you what DAF is and what we are doing. I would like to show you a short video clip. Just to explain what we are really doing and it's much more better than having a lot of slides. So could you please start the video? All right, we'll do that. Who exactly is Darted? First things first, Darth is not normal. This company is not all about profit, maximizing returns or shareholder value. Because data is a cooperative. What? Not that kind of cooperative, but rather an IT cooperative. What on earth is that? The IT cooperative DARTF works on behalf of more than 40,000 members in tax consulting, legal advice. We develop software and IT services for their firms just like any other ordinary software company. Not this or, or like this, or this. Unlike a regular IT developer, we create software for our members and their clients. For example, for him or for them, her, then, then, then, and for them, over 2.5 million companies in Germany benefit from Dartf software in payroll and accounting because it offers possibilities to go far beyond the normal because Dart of software connects all the important players in the economy into one ecosystem. Tax consultants with their clients, with public authorities, institutions and with banks. All this business data comes together here. In the Data of Cloud. And even that doesn't quite conform to the usual, because the DARTF servers are not here, here or here. But here, cloud computing made in Germany. Also not normal, but highly sustainable. Adata, advice also goes beyond the normal. Because for our more than 8,500 employees, their focus is on the satisfaction of more than 40,000 members. Together we take the pressure off companies, guarantee up-to-date information and simplify lots of business processes. More advice, more software, more partnership. For Reza Dartev, that is normal. Thank you, Katie. Very cool. That was a wonderful video. Yes, it's just easier to explain than, some facts and editions, and we have around about 2, 1,200 software developers and we are working on around about 250 different products. So that is, yeah, our, our business. Yeah. And it's a very unique operating model. And very excited to hear that. So, Tell us a little bit about your software engineering background and particularly your role at. Yes, I will do my first contact with Data was during the internship semester in 1987. That's quite a long time ago and one year later I started as a software engineer at in the beginning writing software in in C and Very early due to an expensive error, I developed a fable for good code quality and In those times, we didn't have any tools. Just to ensure code quality even. Debugging was quite a harder job in the beginning on MSOS if somebody knows this. It was, there wasn't a debugger available at the beginning. And, all over the years I was writing software in the beginning. In CC, later on in visual basic and C sharp and always did some basis software frameworks. And one of these frameworks, the one, the biggest framework we are still using to run our on-premise product. Was written in C sharp. And so I got in contact with those static code analysis tools at the first one. I was able to know was FX cop, I think somebody who's writing C sharp software remembers this tools. And later on there was reshar. These tools were always helpful and because we were developing a basis framework for all the products we were asked to define the rules. And to establish, a type of governance to ensure a good cold quality. And our approach in these times was just to enforce a 0 issue policy to say, well, there should not be any issue in the ethics clock. So. We, had this policy and we thought everybody was obeying because we didn't, we didn't experience any issue in the build process. So we said, oh, fine, we did it. But then when we take a look at the source code, we could find out that the people suppressed. The issues. They just didn't spend efforts on making the code better. They just spent a lot of time in cheating the system. I see. So just suppress the the issue raising of ethics club. Then we discovered resharper and we thought that would be a better tool to monitor. And that the people are suppressing. But the same happened. Long short, long story short, it was just the same result. The people just press the issues. And then we discovered, SO, like you and at the beginning, when we, we investigate this tool, we thought that is a good idea because it's a server. And we can forbid administration to everybody. So we as a governance unit, we just can control that everybody is making clean code. And then we expected. That or we could see that Sunotube was raising the same issues of course. And we could see the suppressions for FX Bob in the source code and the suppressions for resharper in the source code. And that was the first time where I thought I think this these policy these rules will not help to to make what to get a better source code. They will just force the people to spend time in cheating the system. And at that time, I was asked to develop a rule set for As I mentioned before, I wrote software in CC plus plus and official facing and everything else, but I never. Never ever written a single line of code in codeboard. And I feel very uncomfortable to define a rule set. For a programming language where which I didn't know. And over the Christmas holidays I would sit down and thought how can I solve that problem? I don't want to govern and a rule set. For that language. And a couple of years before that, I found that in-house community, the software craft community at and I thought, why do we not give the process in the community? And so I thought about the process and this process. Was. I activated every rule in the beginning, even the contradictory ones. Just to enforce the people to get engaged in this root process. And then after that I said, well, everybody could claim for a rule change. Okay. Doing opening an issue in our Gitlab. And then, but there was only one, one rule because, you, you can only raise or claim. For for a root change if there is a single issue. Because just to prevent academic discussions about rules. That will never raise an issue. We said. There must be one issue raised and then we can discuss about this rule. And there was a 2 weeks discussion in the GitHub issue and after that there's an online voting. And after the voting we as the Sonicube administrators We just implement the result without any ifso parts. And, and when I showed this process to manager. He said to me, well, Andy, you will see the community will deactivate every single rule and so on a cube will be of no help. Okay. In the future. And just the opposite occurred. Implementing this process raised or increased the engagement of the of the people and even after a couple of months somebody was coming up to me and he said well we have this good process for the rules but we wanted to have a harder Quality gate. Uhhuh. This colored quality gate we call Data of Q. This is too weak for us. Can we use the process to get a harder quality, Of course. And we just get a dot of gold quality gate. Some weeks later somebody came not enough for us. We wanted to have it more harder. It's interesting. And we get it out of platinum. Quality gate. And at the end there was there was a team coming up and said we wanted to have the maximum challenge. We wanted to have the hardest quality gate available. And we, and they invented a artif insane quality gate. Yeah. So this is a good sign for. Getting a community engaged in this process and to and the people understand that quality. What's this reason using a static code analysis and what is what is the benefit of code Very cool. That's really cool to hear. Sonar source, that's how we started, right? Hmm. Our routes are in the open source and the communities, you know, why we are here today and the community is really pivotal to our success as well. So I can completely understand the power of sourcing and the power of community. Really cool to hear. So our audience, I think would be interested in knowing. What caused you to actually, you covered some part of it, but what caused you to investigate sonar? And so what were some of the challenges, you know, that prevented you from achieving your goals prior to, you know, embarking on this, clean code journey. And the first thing I mentioned already was just we hope that we could, control everything because it is the server software. But At the second side, I saw this is the first chance to get one tool for all the languages we are using at because prior to that we have in every different language we have different tools for ensuring code quality or for to ensuring issue free software. And so that was a good chance to get the people used to to one quality tool and even if they're changing the the technology stake later on. And, This the third thing was that we hope that we could get a Get away or process to to have those people working on legacy software. I mean There's a lot of software running for a couple of years and it's doing a good job for our customers. But when you start, using a static source code analysis, then you will get a tremendous number of issues at the beginning. Yeah. And so we. Prior to, you're always, you always say as sonar, you say that we have a clean codes, strategy for working on these legacy software and we also said to the people. So, we're just use the first analysis as a baseline. And then ensure that you're not getting more issues. Even if this number is quite high, Just always take a look at the new code. And we also said it at times where the new code analysis wasn't wasn't available and so on. I give it a it's available for a couple of years now. And and it had a lot because this is the problem that we are facing. Because if you want to get people engaged or look at the code quality when they are running legacy software, it's hard for them. Because it you don't feel good in the beginning if if you have a source code basis off. Let's say one or 2 million lines of code and you get hundreds. And thousands of issues. You will not find the real one. So the the ones you should you should build out. At the beginning. So that is. The problem to get to get such a software into the company. Yeah, and we kind of, you know, truly believe in that, is that instead of getting inundated with you know everything to fix let's kind of help developers do a good job at the code that they are writing today. And once they do that, you know, progressively things will become better because they want to touch, you know, old code, make new changes to it. And so we even kind of use this ourselves and we've kind of finished this over time and we fine-tuned it for all of our customers overall. So that's great to hear. Otherwise you will spend a lot of time just to make all those old stuff. And sometimes if you, if you build out, or you, you correct old issues, maybe you do something bad to your source code. Yep, exactly. So it's running for years, so why do you, why should you change it just because of code quality? Yeah. And yeah, with this clean as you code methodology, as we kind of call it, you can help this, you can make this possible. Very easily. So Andy, in a few weeks when we kind of chatted a little bit more, you mentioned that, you know, Data is offering software in 3 technology stacks, you know, even starting with, you know, old school mainframe to the more a modern, you know, cloud native application. So when you started on this, you know, journey to, develop cloud native apps, what were some of the challenges that you anticipated more on the quality security side of things and how did you really mitigate those issues? We are offering software in 3 technology stakes, mainframe on premise and cloud native, not just because we want to. It's unfortunately we have to. We started with mainstream software a long time ago and then we in the 1980. Hey, is where I started at that if we begin writing on premise software and our customers. Need to have a correct software up to date with the latest techs, with the latest changes in tax law. And so we cannot stop. Writing software or inventing our software and writing it. Again in cloud native. So we also we have to keep and we have to maintain this software and that makes it difficult for us because we have to have teams that are still have the knowledge to run and change these these programs on mainframe or on premise. And we have to have people that are writing the new software. And as you know, it's a big challenge. We are living in rough times not only in software industry. And everything else, but if you focus on software industry, it's hard to get. A bunch of new talent. Just to make the software new or write the software new again in cloud native and the old ones. Maintain the old software. So our challenge is to Re stuff the teams to and to ensure that the old software is still maintained and to get the people to know the new technology. Stag and all those. Those changes challenges you have there meaning the security and everything else. Helpful, helpful tool is so like you because it stays the same even in which technology. Yep. No, no matter which technology you're working in. And, so that is our biggest challenge because we have We are dealing with complex software. That is The German tax system is I think the complex the complicated one of the world and we have hundreds and thousands of rules. In these in these law and. With for every rules there are dozens of exceptions. So this is not easy to implement. And so you have to have paper with the knowledge of this system. To write the software. But we have to have them in the old stack and we have to have a new stack. And to prevent when they are coming to the news they get I mean when you when you have to learn new programming languages, new tools and new environments where you have to to develop your software. It's always, you're not knowing all these traps. On the mouse traps at the beginning that you have a new technology stack. Hmm. And so these tools are helpful. These static coder analysis tools are helpful to to have those people to move over to the new technology. And that is our problem. We are facing. To get more people helping us and to keep these old people up to date and to keep the knowledge and to be an update to the text law. So this is a complicated, process. For 250 products. Yeah. Oh well. Yeah, as things get modernized, you know, infrastructure escort can be prone to the same kind of security issues that you know source code is and so you got to have it secure by design. Yes, of course. And so yeah. I think last year we started, you know, supporting infrastructure as code and, you know, cloud native application development. And so we support all of the, you know, cloud native, application development. And so we support all of the, you know, big cloud providers and all their underlying. And so we support all of the, you know, big cloud providers and all their underlying technologies. So it's cool that you have a mix of the, you know, big cloud providers and all their underlying technology. So it's cool that you have a mix of, you know, big cloud providers and all their underlying technologies. So it's cool that you have a mix of the old legacy things on moving everything now over to the cloud as well. Yes. Alright, so. Another question that I had is that as you are the driver for the center of excellence for the organization, so what strategies have you successfully used to keep the code base quality of the code based top of mind for all your development teams. Typically today they deal with, you know, organizations deal with managing the technical debt. And so what has your kind of approach and strategy been overall? I think the best the best strategy, was to engage the software developers in these, this process of defining. Summer cube rules because This let the teams to face the challenge to make this source code better and to talk about that. Because they they defined the roots that together with all the others developers and then after that they wanted to tell everybody hey we just We defined those rule set together with you and our software is now really clean and they are talking about that. And that is. The thing that you have to enforce to get the people on the stage. Showing the strategies they made in their software because This can help other teams facing the same problems. I mean, it's not rocket sign what we're doing. It's a complex system of rules that has to be implemented in software, but it's not rocket signed. We don't, we don't fly to the moon, even sometimes it feels so if you, if you're doing the text. Declaration but So this is very helpful when the Teams are talking about their challenges and when they are talking about their that the things they learned on this process. So this hit other teams and this keeps the topic called quality in mind and you should always in addition to that you should always say that this is a company. You have to you have to ensure that that people understand that. Good software is not just a thing that you want to have. So it helps you to to run better software to be. To get faster. Invention of your tools and and the implementation of all those changes in the tax system and in the text law. And so This is the thing that you have to and that you have to get in mind of the people. And then and if you in addition let them make mistakes and learn from that that's the best thing you can do and that is that was our strategy to to engage the people and to bring the teams, successful teams on stage. Just to show what they have done. And this keeps it in mind and not not when you're just saying, well, we have no, 0 issue. That's not a good advice. Yeah. And we just have a few more minutes, so I have one last question for you. So as you have with implemented these clean code practices in your organization, what positive impact are you seeing and what can other organizations that embark on this same journey on kind of improving their code-based I think implementing clean corporate practice is would just result in the common expectations. You would get a better code basis of course. If you're not then there's something wrong. You get more completed task of course and less time to market for new features. But, achieving this high level advantages is like it's like breaking down, and software department. Require some efforts in companion actions. You have to ensure that you get a good quality is the goal of every software developer. And they should understand why should they should do that and I think most of the software developers want to do that. They want just wanted to be treated like adults. And they know that they wanted to make good software and so give them all the tools they need, give them the the environment they need and let them do their job. And then you would take advantage of the benefits of clean code. At the end. Yeah, very good. I remember when we chatted few weeks ago, you mentioned to me that with tools like this, developers are paid to learn because you we have you know the right kind of guidance so no matter you know how experienced you are you always kind of learning, improving and writing better software. Yes, of course. That really resonated. I really like that. Alright, I know we are almost out of time. So I'm gonna see if we have, any questions here. If you have a question for Andy. Please leave that in the Q&A box. And while You are doing that. I just wanted to briefly if you're still standing by just you briefly talk about our upcoming webinar. Peter McKee who's the head of our developer relations is going to talk about how to master clean code, in a September webinar. So just if you are interested, please go ahead and do register. Alright, let's see if we have just any question here. There was one question, from the audience, Andy, they want to know how big is your code base? How many lines of code, do you have, based off, you know, all of your projects? Yes, right now they are around about 4,000 projects and summer cube. With around about 48 million lines of code. So, and in. Yeah, I can give you a short overview which languages we are using. Most of them, most of the software we are just, almost lines of code, we are just analyzing right now is. In C sharp, it's typescript, it's JavaScript, it's, HTML, of course, it's XML, it's Java and the. In the back end, yes, that's most JavaScript in the front end type script in the front end. So these are the most languages we are just analyzing right now. Alright. I think we are unfortunately over time but it was really really great to have you here. I really enjoyed my conversation with you and I hope the audience did the same. If we didn't get to your questions, we will address them in the community. In a few days. And of course, like I said before, we will send you a recording of this of this nice fireside chat. Thank you for the invitation. Was nice to be here. All right, it was wonderful, wonderful to have you and thank you for joining us. I have a good day and we'll see you again soon. Goodbye.",
+  "fetchedAt": "2026-03-14T09:24:01.512Z"
+}

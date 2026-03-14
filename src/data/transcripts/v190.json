@@ -1,0 +1,568 @@
+{
+  "videoId": "v190",
+  "youtubeId": "X_7XWFXipI0",
+  "segments": [
+    {
+      "text": "foreign",
+      "offset": 359,
+      "duration": 3000
+    },
+    {
+      "text": "Campbell and today I'm going to talk",
+      "offset": 7400,
+      "duration": 5020
+    },
+    {
+      "text": "about the key features of sonar Cube 9.7",
+      "offset": 9300,
+      "duration": 5820
+    },
+    {
+      "text": "in 9.6 we brought you faster Java PR",
+      "offset": 12420,
+      "duration": 4560
+    },
+    {
+      "text": "analysis with the addition of an",
+      "offset": 15120,
+      "duration": 3600
+    },
+    {
+      "text": "analysis cache and I said at the time",
+      "offset": 16980,
+      "duration": 3120
+    },
+    {
+      "text": "that there would be more to come in",
+      "offset": 18720,
+      "duration": 4020
+    },
+    {
+      "text": "future versions well in 9.7 we've",
+      "offset": 20100,
+      "duration": 4439
+    },
+    {
+      "text": "delivered on that with faster JavaScript",
+      "offset": 22740,
+      "duration": 4440
+    },
+    {
+      "text": "and typescript Analysis of PRS and",
+      "offset": 24539,
+      "duration": 5160
+    },
+    {
+      "text": "faster Cobalt analysis again we did this",
+      "offset": 27180,
+      "duration": 4380
+    },
+    {
+      "text": "with the analysis cache which means that",
+      "offset": 29699,
+      "duration": 3601
+    },
+    {
+      "text": "unchanged files don't have to be",
+      "offset": 31560,
+      "duration": 3960
+    },
+    {
+      "text": "reanalyzed for large JavaScript",
+      "offset": 33300,
+      "duration": 4439
+    },
+    {
+      "text": "typescripts we see PR analysis",
+      "offset": 35520,
+      "duration": 5039
+    },
+    {
+      "text": "Improvement of up to 80 percent with an",
+      "offset": 37739,
+      "duration": 4921
+    },
+    {
+      "text": "average of 40 Improvement",
+      "offset": 40559,
+      "duration": 4741
+    },
+    {
+      "text": "for python we've added lots of rules for",
+      "offset": 42660,
+      "duration": 4200
+    },
+    {
+      "text": "you this time let's start with the test",
+      "offset": 45300,
+      "duration": 3660
+    },
+    {
+      "text": "rules so we've got three rules that are",
+      "offset": 46860,
+      "duration": 4500
+    },
+    {
+      "text": "fairly common and then five rules around",
+      "offset": 48960,
+      "duration": 4980
+    },
+    {
+      "text": "tests that are unique to sonar so we've",
+      "offset": 51360,
+      "duration": 5219
+    },
+    {
+      "text": "got someone test skipping test execution",
+      "offset": 53940,
+      "duration": 4860
+    },
+    {
+      "text": "and whether or not the assertions in",
+      "offset": 56579,
+      "duration": 5041
+    },
+    {
+      "text": "your tests are actually reachable",
+      "offset": 58800,
+      "duration": 5280
+    },
+    {
+      "text": "we've also added three New Path",
+      "offset": 61620,
+      "duration": 4620
+    },
+    {
+      "text": "sensitive bug detection rules in",
+      "offset": 64080,
+      "duration": 4680
+    },
+    {
+      "text": "commercial editions and for all users",
+      "offset": 66240,
+      "duration": 4320
+    },
+    {
+      "text": "we've added rules to help you use the",
+      "offset": 68760,
+      "duration": 5100
+    },
+    {
+      "text": "AWS cdk properly nine rules for",
+      "offset": 70560,
+      "duration": 5879
+    },
+    {
+      "text": "encryption at rest and in transit four",
+      "offset": 73860,
+      "duration": 4920
+    },
+    {
+      "text": "rules around Public Access Network and",
+      "offset": 76439,
+      "duration": 4500
+    },
+    {
+      "text": "firewalls and three rules for",
+      "offset": 78780,
+      "duration": 4800
+    },
+    {
+      "text": "permissions and access control and in",
+      "offset": 80939,
+      "duration": 4441
+    },
+    {
+      "text": "commercial editions we've added taint",
+      "offset": 83580,
+      "duration": 4140
+    },
+    {
+      "text": "analysis of inline JavaScript typescript",
+      "offset": 85380,
+      "duration": 5220
+    },
+    {
+      "text": "lambdas in yaml files",
+      "offset": 87720,
+      "duration": 5520
+    },
+    {
+      "text": "moving into the cloud let's go to GitHub",
+      "offset": 90600,
+      "duration": 5400
+    },
+    {
+      "text": "and look at this test project another",
+      "offset": 93240,
+      "duration": 4620
+    },
+    {
+      "text": "thing we've added is in the security",
+      "offset": 96000,
+      "duration": 4799
+    },
+    {
+      "text": "space if I go to code scanning you'll",
+      "offset": 97860,
+      "duration": 4140
+    },
+    {
+      "text": "see that we're now reporting",
+      "offset": 100799,
+      "duration": 3121
+    },
+    {
+      "text": "vulnerabilities on your projects",
+      "offset": 102000,
+      "duration": 5400
+    },
+    {
+      "text": "directly in GitHub if I click through",
+      "offset": 103920,
+      "duration": 5100
+    },
+    {
+      "text": "you'll see that we have the same",
+      "offset": 107400,
+      "duration": 4800
+    },
+    {
+      "text": "highlighting the same messaging and the",
+      "offset": 109020,
+      "duration": 5220
+    },
+    {
+      "text": "same rule description that's available",
+      "offset": 112200,
+      "duration": 3720
+    },
+    {
+      "text": "in the UI",
+      "offset": 114240,
+      "duration": 3780
+    },
+    {
+      "text": "but we're also working on improving the",
+      "offset": 115920,
+      "duration": 3120
+    },
+    {
+      "text": "UI",
+      "offset": 118020,
+      "duration": 5340
+    },
+    {
+      "text": "so in 9.7 for most Java and c-sharp",
+      "offset": 119040,
+      "duration": 6780
+    },
+    {
+      "text": "obtain analysis rules we have deeply",
+      "offset": 123360,
+      "duration": 4679
+    },
+    {
+      "text": "enhanced the rule descriptions to make",
+      "offset": 125820,
+      "duration": 4499
+    },
+    {
+      "text": "them more helpful more useful more",
+      "offset": 128039,
+      "duration": 3601
+    },
+    {
+      "text": "educational",
+      "offset": 130319,
+      "duration": 4441
+    },
+    {
+      "text": "and we've also enhanced the compliant",
+      "offset": 131640,
+      "duration": 5459
+    },
+    {
+      "text": "and non-compliant code examples to",
+      "offset": 134760,
+      "duration": 4020
+    },
+    {
+      "text": "highlight the differences between the",
+      "offset": 137099,
+      "duration": 3961
+    },
+    {
+      "text": "two so that you can more clearly tell",
+      "offset": 138780,
+      "duration": 4920
+    },
+    {
+      "text": "exactly what needs to change to make",
+      "offset": 141060,
+      "duration": 5480
+    },
+    {
+      "text": "your non-compliant code more compliant",
+      "offset": 143700,
+      "duration": 5640
+    },
+    {
+      "text": "staying with security we've added a",
+      "offset": 146540,
+      "duration": 4980
+    },
+    {
+      "text": "security report in this version for OAS",
+      "offset": 149340,
+      "duration": 5700
+    },
+    {
+      "text": "asvs there are three levels to the asvs",
+      "offset": 151520,
+      "duration": 7500
+    },
+    {
+      "text": "and we report against all three of them",
+      "offset": 155040,
+      "duration": 3980
+    },
+    {
+      "text": "now for admins we've added a number of",
+      "offset": 160920,
+      "duration": 5459
+    },
+    {
+      "text": "goodies this time first the long-awaited",
+      "offset": 163500,
+      "duration": 5459
+    },
+    {
+      "text": "announcement message so as a global",
+      "offset": 166379,
+      "duration": 5461
+    },
+    {
+      "text": "admin I can now broadcast a message to",
+      "offset": 168959,
+      "duration": 5401
+    },
+    {
+      "text": "all users I can set this up ahead of",
+      "offset": 171840,
+      "duration": 4759
+    },
+    {
+      "text": "time",
+      "offset": 174360,
+      "duration": 2239
+    },
+    {
+      "text": "so I've saved the message if I refresh",
+      "offset": 176760,
+      "duration": 4860
+    },
+    {
+      "text": "the page it doesn't display yet because",
+      "offset": 179340,
+      "duration": 5280
+    },
+    {
+      "text": "I haven't toggled it on once I do toggle",
+      "offset": 181620,
+      "duration": 4080
+    },
+    {
+      "text": "it on",
+      "offset": 184620,
+      "duration": 3660
+    },
+    {
+      "text": "then it displays to all users",
+      "offset": 185700,
+      "duration": 5700
+    },
+    {
+      "text": "and let's just turn this back off",
+      "offset": 188280,
+      "duration": 6480
+    },
+    {
+      "text": "and see that it goes away all right",
+      "offset": 191400,
+      "duration": 7500
+    },
+    {
+      "text": "moving on we've also made sample",
+      "offset": 194760,
+      "duration": 6960
+    },
+    {
+      "text": "integration easier to set up we've added",
+      "offset": 198900,
+      "duration": 6000
+    },
+    {
+      "text": "a test configuration button and we've",
+      "offset": 201720,
+      "duration": 5099
+    },
+    {
+      "text": "enhanced the documentation on saml",
+      "offset": 204900,
+      "duration": 4440
+    },
+    {
+      "text": "integration to make this much easier to",
+      "offset": 206819,
+      "duration": 4500
+    },
+    {
+      "text": "understand what you need to do and",
+      "offset": 209340,
+      "duration": 3899
+    },
+    {
+      "text": "what's going on",
+      "offset": 211319,
+      "duration": 3840
+    },
+    {
+      "text": "another thing we've changed in this",
+      "offset": 213239,
+      "duration": 3720
+    },
+    {
+      "text": "version is telemetry",
+      "offset": 215159,
+      "duration": 4800
+    },
+    {
+      "text": "previously it was sent once a week in an",
+      "offset": 216959,
+      "duration": 5821
+    },
+    {
+      "text": "aggregated fashion we've updated that to",
+      "offset": 219959,
+      "duration": 5581
+    },
+    {
+      "text": "send once every 24 hours with granular",
+      "offset": 222780,
+      "duration": 6060
+    },
+    {
+      "text": "data as you see we're sending anonymized",
+      "offset": 225540,
+      "duration": 7320
+    },
+    {
+      "text": "IDs and no identifiable information here",
+      "offset": 228840,
+      "duration": 6840
+    },
+    {
+      "text": "and speaking of anonymous let's talk",
+      "offset": 232860,
+      "duration": 4320
+    },
+    {
+      "text": "about personally identifiable",
+      "offset": 235680,
+      "duration": 4199
+    },
+    {
+      "text": "information so here I have some issues",
+      "offset": 237180,
+      "duration": 5880
+    },
+    {
+      "text": "assigned to Alex G",
+      "offset": 239879,
+      "duration": 5640
+    },
+    {
+      "text": "in this version we've added the ability",
+      "offset": 243060,
+      "duration": 6800
+    },
+    {
+      "text": "to anonymize user records so if I",
+      "offset": 245519,
+      "duration": 8220
+    },
+    {
+      "text": "deactivate Alex G I have the ability to",
+      "offset": 249860,
+      "duration": 7360
+    },
+    {
+      "text": "delete the user's personal information",
+      "offset": 253739,
+      "duration": 6120
+    },
+    {
+      "text": "so his record is retained in the",
+      "offset": 257220,
+      "duration": 6180
+    },
+    {
+      "text": "database but anonymized so that now if I",
+      "offset": 259859,
+      "duration": 6481
+    },
+    {
+      "text": "go back to those issues",
+      "offset": 263400,
+      "duration": 7260
+    },
+    {
+      "text": "I'll see an anonymized ID here now it's",
+      "offset": 266340,
+      "duration": 6840
+    },
+    {
+      "text": "worth noting that while we've anonymized",
+      "offset": 270660,
+      "duration": 5819
+    },
+    {
+      "text": "the user record we have not removed the",
+      "offset": 273180,
+      "duration": 6120
+    },
+    {
+      "text": "blame data that was retrieved from The",
+      "offset": 276479,
+      "duration": 5401
+    },
+    {
+      "text": "Source control management system so",
+      "offset": 279300,
+      "duration": 4920
+    },
+    {
+      "text": "there are some vestiges here",
+      "offset": 281880,
+      "duration": 4020
+    },
+    {
+      "text": "and that's what I wanted to show you",
+      "offset": 284220,
+      "duration": 3350
+    },
+    {
+      "text": "thanks for watching",
+      "offset": 285900,
+      "duration": 7179
+    },
+    {
+      "text": "[Music]",
+      "offset": 287570,
+      "duration": 5509
+    }
+  ],
+  "fullText": "foreign Campbell and today I'm going to talk about the key features of sonar Cube 9.7 in 9.6 we brought you faster Java PR analysis with the addition of an analysis cache and I said at the time that there would be more to come in future versions well in 9.7 we've delivered on that with faster JavaScript and typescript Analysis of PRS and faster Cobalt analysis again we did this with the analysis cache which means that unchanged files don't have to be reanalyzed for large JavaScript typescripts we see PR analysis Improvement of up to 80 percent with an average of 40 Improvement for python we've added lots of rules for you this time let's start with the test rules so we've got three rules that are fairly common and then five rules around tests that are unique to sonar so we've got someone test skipping test execution and whether or not the assertions in your tests are actually reachable we've also added three New Path sensitive bug detection rules in commercial editions and for all users we've added rules to help you use the AWS cdk properly nine rules for encryption at rest and in transit four rules around Public Access Network and firewalls and three rules for permissions and access control and in commercial editions we've added taint analysis of inline JavaScript typescript lambdas in yaml files moving into the cloud let's go to GitHub and look at this test project another thing we've added is in the security space if I go to code scanning you'll see that we're now reporting vulnerabilities on your projects directly in GitHub if I click through you'll see that we have the same highlighting the same messaging and the same rule description that's available in the UI but we're also working on improving the UI so in 9.7 for most Java and c-sharp obtain analysis rules we have deeply enhanced the rule descriptions to make them more helpful more useful more educational and we've also enhanced the compliant and non-compliant code examples to highlight the differences between the two so that you can more clearly tell exactly what needs to change to make your non-compliant code more compliant staying with security we've added a security report in this version for OAS asvs there are three levels to the asvs and we report against all three of them now for admins we've added a number of goodies this time first the long-awaited announcement message so as a global admin I can now broadcast a message to all users I can set this up ahead of time so I've saved the message if I refresh the page it doesn't display yet because I haven't toggled it on once I do toggle it on then it displays to all users and let's just turn this back off and see that it goes away all right moving on we've also made sample integration easier to set up we've added a test configuration button and we've enhanced the documentation on saml integration to make this much easier to understand what you need to do and what's going on another thing we've changed in this version is telemetry previously it was sent once a week in an aggregated fashion we've updated that to send once every 24 hours with granular data as you see we're sending anonymized IDs and no identifiable information here and speaking of anonymous let's talk about personally identifiable information so here I have some issues assigned to Alex G in this version we've added the ability to anonymize user records so if I deactivate Alex G I have the ability to delete the user's personal information so his record is retained in the database but anonymized so that now if I go back to those issues I'll see an anonymized ID here now it's worth noting that while we've anonymized the user record we have not removed the blame data that was retrieved from The Source control management system so there are some vestiges here and that's what I wanted to show you thanks for watching [Music]",
+  "fetchedAt": "2026-03-14T09:24:59.831Z"
+}

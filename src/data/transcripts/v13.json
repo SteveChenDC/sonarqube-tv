@@ -1,0 +1,1613 @@
+{
+  "videoId": "v13",
+  "youtubeId": "nX9ZleJMMyk",
+  "segments": [
+    {
+      "text": "Welcome everyone. I'm Anand Kulkarni, CEO",
+      "offset": 17000,
+      "duration": 3000
+    },
+    {
+      "text": "and founder of Core Story. Here's the",
+      "offset": 20000,
+      "duration": 3000
+    },
+    {
+      "text": "question that every engineering team",
+      "offset": 23000,
+      "duration": 2000
+    },
+    {
+      "text": "faces. Your static analysis tool is",
+      "offset": 25000,
+      "duration": 2000
+    },
+    {
+      "text": "doing a great job. It's finding",
+      "offset": 27000,
+      "duration": 3000
+    },
+    {
+      "text": "thousands of issues in your code base.",
+      "offset": 30000,
+      "duration": 2000
+    },
+    {
+      "text": "Bugs, vulnerabilities, code smells,",
+      "offset": 32000,
+      "duration": 4000
+    },
+    {
+      "text": "security hotspots.",
+      "offset": 36000,
+      "duration": 2000
+    },
+    {
+      "text": "But which issues actually need your",
+      "offset": 38000,
+      "duration": 2000
+    },
+    {
+      "text": "organization's attention right now? And",
+      "offset": 40000,
+      "duration": 3000
+    },
+    {
+      "text": "which ones are just noise? That's the",
+      "offset": 43000,
+      "duration": 3000
+    },
+    {
+      "text": "problem that we're going to show you how",
+      "offset": 46000,
+      "duration": 3000
+    },
+    {
+      "text": "to solve today. I'm going to show you",
+      "offset": 49000,
+      "duration": 3000
+    },
+    {
+      "text": "how Core Story and Sonar work",
+      "offset": 52000,
+      "duration": 3000
+    },
+    {
+      "text": "together to turn raw findings into",
+      "offset": 55000,
+      "duration": 6000
+    },
+    {
+      "text": "actionable impactbased decisions. Here's",
+      "offset": 61000,
+      "duration": 3000
+    },
+    {
+      "text": "the root of the issue. Sonar does a",
+      "offset": 64000,
+      "duration": 3000
+    },
+    {
+      "text": "great job surfacing every issue. That's",
+      "offset": 67000,
+      "duration": 2000
+    },
+    {
+      "text": "exactly what we want from our quality",
+      "offset": 69000,
+      "duration": 3000
+    },
+    {
+      "text": "platform. But severity of issues and",
+      "offset": 72000,
+      "duration": 2000
+    },
+    {
+      "text": "business impact of issues are two",
+      "offset": 74000,
+      "duration": 2000
+    },
+    {
+      "text": "different things. Take a look at these",
+      "offset": 76000,
+      "duration": 3000
+    },
+    {
+      "text": "three findings. We have two blockers and",
+      "offset": 79000,
+      "duration": 3000
+    },
+    {
+      "text": "a medium. The blockers are in a text",
+      "offset": 82000,
+      "duration": 2000
+    },
+    {
+      "text": "fixture and a date formatter.",
+      "offset": 84000,
+      "duration": 2000
+    },
+    {
+      "text": "Intentional patterns that are actually",
+      "offset": 86000,
+      "duration": 3000
+    },
+    {
+      "text": "correct code. The medium is an injection",
+      "offset": 89000,
+      "duration": 2000
+    },
+    {
+      "text": "vector in your payment module. That's",
+      "offset": 91000,
+      "duration": 2000
+    },
+    {
+      "text": "the one that needs immediate attention",
+      "offset": 93000,
+      "duration": 3000
+    },
+    {
+      "text": "from your engineering team. Without",
+      "offset": 96000,
+      "duration": 2000
+    },
+    {
+      "text": "architectural context, teams can't tell",
+      "offset": 98000,
+      "duration": 3000
+    },
+    {
+      "text": "the difference at a glance. As a result,",
+      "offset": 101000,
+      "duration": 2000
+    },
+    {
+      "text": "we end up ignoring findings,",
+      "offset": 103000,
+      "duration": 3000
+    },
+    {
+      "text": "accumulating security debt, or wasting",
+      "offset": 106000,
+      "duration": 2000
+    },
+    {
+      "text": "time investigating noise. This is a",
+      "offset": 108000,
+      "duration": 3000
+    },
+    {
+      "text": "problem known as the triage gap. The",
+      "offset": 111000,
+      "duration": 2000
+    },
+    {
+      "text": "difference between what our systems can",
+      "offset": 113000,
+      "duration": 2000
+    },
+    {
+      "text": "surface for us and what we understand to",
+      "offset": 115000,
+      "duration": 4000
+    },
+    {
+      "text": "be truly essential for ameliating real",
+      "offset": 119000,
+      "duration": 6000
+    },
+    {
+      "text": "issues.",
+      "offset": 125000,
+      "duration": 3000
+    },
+    {
+      "text": "Here's how the solution works. Both",
+      "offset": 128000,
+      "duration": 3000
+    },
+    {
+      "text": "Sonar and Core Story expose MCP",
+      "offset": 131000,
+      "duration": 4000
+    },
+    {
+      "text": "servers, the model context protocol.",
+      "offset": 135000,
+      "duration": 3000
+    },
+    {
+      "text": "That means that any MCP compatible AI",
+      "offset": 138000,
+      "duration": 2000
+    },
+    {
+      "text": "agent can talk to both systems",
+      "offset": 140000,
+      "duration": 2000
+    },
+    {
+      "text": "simultaneously.",
+      "offset": 142000,
+      "duration": 2000
+    },
+    {
+      "text": "The agent queries sonar for",
+      "offset": 144000,
+      "duration": 2000
+    },
+    {
+      "text": "findings, severity, and quality gate",
+      "offset": 146000,
+      "duration": 4000
+    },
+    {
+      "text": "status. It also queries core story for",
+      "offset": 150000,
+      "duration": 2000
+    },
+    {
+      "text": "architectural context, what each",
+      "offset": 152000,
+      "duration": 3000
+    },
+    {
+      "text": "component does, who depends on it, and",
+      "offset": 155000,
+      "duration": 3000
+    },
+    {
+      "text": "what the design intent of that feature",
+      "offset": 158000,
+      "duration": 3000
+    },
+    {
+      "text": "or behavior or line of code was. Then it",
+      "offset": 161000,
+      "duration": 2000
+    },
+    {
+      "text": "synthesizes both of these into",
+      "offset": 163000,
+      "duration": 3000
+    },
+    {
+      "text": "actionable decisions. There's no custom",
+      "offset": 166000,
+      "duration": 2000
+    },
+    {
+      "text": "integration and no middleware to",
+      "offset": 168000,
+      "duration": 4000
+    },
+    {
+      "text": "maintain. Both servers are free and easy",
+      "offset": 172000,
+      "duration": 2000
+    },
+    {
+      "text": "to set up.",
+      "offset": 174000,
+      "duration": 4000
+    },
+    {
+      "text": "This creates a continuous loop.",
+      "offset": 178000,
+      "duration": 3000
+    },
+    {
+      "text": "Step one, investigate. Sonar",
+      "offset": 181000,
+      "duration": 1000
+    },
+    {
+      "text": "surfaces findings with severity",
+      "offset": 182000,
+      "duration": 3000
+    },
+    {
+      "text": "rankings. Core stories knowledge graph",
+      "offset": 185000,
+      "duration": 2000
+    },
+    {
+      "text": "explains what the affected code actually",
+      "offset": 187000,
+      "duration": 3000
+    },
+    {
+      "text": "does. Is it a production API surface? A",
+      "offset": 190000,
+      "duration": 4000
+    },
+    {
+      "text": "test fixture, who depends on it?",
+      "offset": 194000,
+      "duration": 3000
+    },
+    {
+      "text": "Step two, triage. Core Story's",
+      "offset": 197000,
+      "duration": 2000
+    },
+    {
+      "text": "architectural context lets the agent",
+      "offset": 199000,
+      "duration": 3000
+    },
+    {
+      "text": "make real prioritization decisions at",
+      "offset": 202000,
+      "duration": 3000
+    },
+    {
+      "text": "machine speed. Real issues get escalated",
+      "offset": 205000,
+      "duration": 2000
+    },
+    {
+      "text": "with blast radius analysis, telling us",
+      "offset": 207000,
+      "duration": 3000
+    },
+    {
+      "text": "what is going to be affected by making a",
+      "offset": 210000,
+      "duration": 2000
+    },
+    {
+      "text": "change. Intentional patterns get",
+      "offset": 212000,
+      "duration": 4000
+    },
+    {
+      "text": "documented and closed. Step three is",
+      "offset": 216000,
+      "duration": 2000
+    },
+    {
+      "text": "build. When it's time to fix something",
+      "offset": 218000,
+      "duration": 2000
+    },
+    {
+      "text": "or write new code, core story provides",
+      "offset": 220000,
+      "duration": 3000
+    },
+    {
+      "text": "design patterns from your codebase, the",
+      "offset": 223000,
+      "duration": 2000
+    },
+    {
+      "text": "agent writes code that follows those",
+      "offset": 225000,
+      "duration": 3000
+    },
+    {
+      "text": "patterns to resolve the issue. Sonar",
+      "offset": 228000,
+      "duration": 2000
+    },
+    {
+      "text": "validates that against quality",
+      "offset": 230000,
+      "duration": 3000
+    },
+    {
+      "text": "rules. That means you get clean code on",
+      "offset": 233000,
+      "duration": 3000
+    },
+    {
+      "text": "your first try. This closed loop system",
+      "offset": 236000,
+      "duration": 2000
+    },
+    {
+      "text": "and closed loop approach means that",
+      "offset": 238000,
+      "duration": 3000
+    },
+    {
+      "text": "quality is built into every step of the",
+      "offset": 241000,
+      "duration": 3000
+    },
+    {
+      "text": "issue triage and resolution process, not",
+      "offset": 244000,
+      "duration": 2000
+    },
+    {
+      "text": "bolted on afterwards. It's a powerful",
+      "offset": 246000,
+      "duration": 4000
+    },
+    {
+      "text": "way to address the triage gap.",
+      "offset": 250000,
+      "duration": 1000
+    },
+    {
+      "text": "Now, let's take a look at how this looks",
+      "offset": 254000,
+      "duration": 3000
+    },
+    {
+      "text": "in practice. We're going to watch a live",
+      "offset": 257000,
+      "duration": 3000
+    },
+    {
+      "text": "demo of an AI agent using both the core",
+      "offset": 260000,
+      "duration": 3000
+    },
+    {
+      "text": "story and the Sonar MCP servers",
+      "offset": 263000,
+      "duration": 2000
+    },
+    {
+      "text": "together to investigate, triage, and",
+      "offset": 265000,
+      "duration": 3000
+    },
+    {
+      "text": "resolve findings in a real Django",
+      "offset": 268000,
+      "duration": 2000
+    },
+    {
+      "text": "codebase. This is not a simulation. This",
+      "offset": 270000,
+      "duration": 2000
+    },
+    {
+      "text": "is the actual agent running against",
+      "offset": 272000,
+      "duration": 3000
+    },
+    {
+      "text": "actual sonar findings informed by",
+      "offset": 275000,
+      "duration": 2000
+    },
+    {
+      "text": "an actual core story instance.",
+      "offset": 277000,
+      "duration": 4000
+    },
+    {
+      "text": "Watch how fast it moves and how it makes",
+      "offset": 282000,
+      "duration": 2000
+    },
+    {
+      "text": "decisions that would require normally",
+      "offset": 284000,
+      "duration": 3000
+    },
+    {
+      "text": "deep system knowledge from a human",
+      "offset": 287000,
+      "duration": 1000
+    },
+    {
+      "text": "architect.",
+      "offset": 288000,
+      "duration": 2000
+    },
+    {
+      "text": "The agent starts by pulling the project",
+      "offset": 290000,
+      "duration": 4000
+    },
+    {
+      "text": "metrics from Sonar. 132 security",
+      "offset": 294000,
+      "duration": 1000
+    },
+    {
+      "text": "vulnerabilities. Over 1,300 security",
+      "offset": 295000,
+      "duration": 3000
+    },
+    {
+      "text": "hotspots. Nearly 2,800 total issues.",
+      "offset": 298000,
+      "duration": 2000
+    },
+    {
+      "text": "Those are real numbers from a real Sonar",
+      "offset": 304000,
+      "duration": 3000
+    },
+    {
+      "text": "analysis. And if you're looking at a",
+      "offset": 307000,
+      "duration": 3000
+    },
+    {
+      "text": "dashboard like this for a project you",
+      "offset": 310000,
+      "duration": 3000
+    },
+    {
+      "text": "just inherited or a codebase you're",
+      "offset": 313000,
+      "duration": 1000
+    },
+    {
+      "text": "evaluating for acquisition or an",
+      "offset": 314000,
+      "duration": 3000
+    },
+    {
+      "text": "application your team is about to start",
+      "offset": 317000,
+      "duration": 2000
+    },
+    {
+      "text": "building on top of, that's a lot of",
+      "offset": 319000,
+      "duration": 3000
+    },
+    {
+      "text": "findings to work through. The agent goes",
+      "offset": 322000,
+      "duration": 2000
+    },
+    {
+      "text": "straight to the blockers, 158 of them, and",
+      "offset": 324000,
+      "duration": 2000
+    },
+    {
+      "text": "immediately there's a pattern, the same",
+      "offset": 326000,
+      "duration": 2000
+    },
+    {
+      "text": "rule over and over. Revoke and change",
+      "offset": 328000,
+      "duration": 2000
+    },
+    {
+      "text": "this password. It's compromised, all",
+      "offset": 330000,
+      "duration": 2000
+    },
+    {
+      "text": "concentrated in one file in Django's",
+      "offset": 332000,
+      "duration": 2000
+    },
+    {
+      "text": "authentication test suite. Sonar is",
+      "offset": 334000,
+      "duration": 1000
+    },
+    {
+      "text": "doing exactly what you'd want it to do.",
+      "offset": 335000,
+      "duration": 2000
+    },
+    {
+      "text": "It found strings that match credential",
+      "offset": 337000,
+      "duration": 3000
+    },
+    {
+      "text": "patterns hard-coded in source code.",
+      "offset": 340000,
+      "duration": 2000
+    },
+    {
+      "text": "That's a valid important finding in",
+      "offset": 342000,
+      "duration": 2000
+    },
+    {
+      "text": "almost any context. But the question",
+      "offset": 344000,
+      "duration": 2000
+    },
+    {
+      "text": "every developer asks next is, is this",
+      "offset": 346000,
+      "duration": 2000
+    },
+    {
+      "text": "one of those times where the context",
+      "offset": 348000,
+      "duration": 3000
+    },
+    {
+      "text": "changes the answer? So the agent asks",
+      "offset": 351000,
+      "duration": 2000
+    },
+    {
+      "text": "core story, what is this file, and why",
+      "offset": 353000,
+      "duration": 2000
+    },
+    {
+      "text": "would it contain dozens of hard-coded",
+      "offset": 355000,
+      "duration": 3000
+    },
+    {
+      "text": "passwords? And the answer comes back in",
+      "offset": 358000,
+      "duration": 2000
+    },
+    {
+      "text": "seconds. This is Django's test suite for",
+      "offset": 360000,
+      "duration": 1000
+    },
+    {
+      "text": "its password hashing framework. PBKDF2,",
+      "offset": 361000,
+      "duration": 2000
+    },
+    {
+      "text": "argon 2 script. The strings sonar",
+      "offset": 363000,
+      "duration": 3000
+    },
+    {
+      "text": "flagged are test vectors. Known inputs",
+      "offset": 366000,
+      "duration": 2000
+    },
+    {
+      "text": "paired with known expected outputs that",
+      "offset": 368000,
+      "duration": 3000
+    },
+    {
+      "text": "verify the hashing algorithms produce",
+      "offset": 371000,
+      "duration": 2000
+    },
+    {
+      "text": "correct deterministic results. Now, any",
+      "offset": 373000,
+      "duration": 2000
+    },
+    {
+      "text": "experienced developer would probably",
+      "offset": 375000,
+      "duration": 2000
+    },
+    {
+      "text": "reach the same conclusion. Test files",
+      "offset": 377000,
+      "duration": 3000
+    },
+    {
+      "text": "contain test data. That part isn't",
+      "offset": 380000,
+      "duration": 2000
+    },
+    {
+      "text": "surprising, but the agent just triaged",
+      "offset": 382000,
+      "duration": 3000
+    },
+    {
+      "text": "132 findings in 10 seconds and",
+      "offset": 385000,
+      "duration": 3000
+    },
+    {
+      "text": "documented the rationale. Multiply that",
+      "offset": 388000,
+      "duration": 2000
+    },
+    {
+      "text": "across a large organization with dozens",
+      "offset": 390000,
+      "duration": 3000
+    },
+    {
+      "text": "of projects and thousands of findings,",
+      "offset": 393000,
+      "duration": 2000
+    },
+    {
+      "text": "and that's where the value compounds.",
+      "offset": 395000,
+      "duration": 2000
+    },
+    {
+      "text": "You're not waiting for a senior",
+      "offset": 397000,
+      "duration": 3000
+    },
+    {
+      "text": "developer to be available for the",
+      "offset": 400000,
+      "duration": 2000
+    },
+    {
+      "text": "obvious calls. They're handled, which",
+      "offset": 402000,
+      "duration": 1000
+    },
+    {
+      "text": "frees people up for the findings that",
+      "offset": 403000,
+      "duration": 3000
+    },
+    {
+      "text": "actually require judgment, like this",
+      "offset": 406000,
+      "duration": 2000
+    },
+    {
+      "text": "one. The agent finds a maintainability",
+      "offset": 408000,
+      "duration": 2000
+    },
+    {
+      "text": "blocker in Django's date formatting",
+      "offset": 410000,
+      "duration": 2000
+    },
+    {
+      "text": "module. The rule says methods shouldn't",
+      "offset": 412000,
+      "duration": 2000
+    },
+    {
+      "text": "differ only by capitalization, and this",
+      "offset": 414000,
+      "duration": 3000
+    },
+    {
+      "text": "class has methods named capital Y and",
+      "offset": 417000,
+      "duration": 3000
+    },
+    {
+      "text": "lowercase Y, capital D and lowercase D.",
+      "offset": 420000,
+      "duration": 2000
+    },
+    {
+      "text": "In most code bases, renaming those to",
+      "offset": 422000,
+      "duration": 3000
+    },
+    {
+      "text": "something clearer would be the right",
+      "offset": 425000,
+      "duration": 3000
+    },
+    {
+      "text": "fix. Core story explains why this one is",
+      "offset": 428000,
+      "duration": 1000
+    },
+    {
+      "text": "different. Those method names are PHP",
+      "offset": 429000,
+      "duration": 2000
+    },
+    {
+      "text": "compatible date format specifiers.",
+      "offset": 431000,
+      "duration": 3000
+    },
+    {
+      "text": "Capital Y returns a four-digit year.",
+      "offset": 434000,
+      "duration": 3000
+    },
+    {
+      "text": "Lowercase Y returns a two-digit year.",
+      "offset": 437000,
+      "duration": 2000
+    },
+    {
+      "text": "Django's template engine looks up format",
+      "offset": 439000,
+      "duration": 3000
+    },
+    {
+      "text": "characters by calling the method with",
+      "offset": 442000,
+      "duration": 3000
+    },
+    {
+      "text": "that exact name. If you rename capital",
+      "offset": 445000,
+      "duration": 1000
+    },
+    {
+      "text": "Y, every Django template that displays a",
+      "offset": 446000,
+      "duration": 3000
+    },
+    {
+      "text": "four-digit year breaks. This is a",
+      "offset": 449000,
+      "duration": 2000
+    },
+    {
+      "text": "blocker that you must never fix. Sonar",
+      "offset": 451000,
+      "duration": 3000
+    },
+    {
+      "text": "correctly identified a pattern",
+      "offset": 454000,
+      "duration": 3000
+    },
+    {
+      "text": "that's risky in general, but the actual",
+      "offset": 457000,
+      "duration": 3000
+    },
+    {
+      "text": "impact of acting on this finding is a",
+      "offset": 460000,
+      "duration": 2000
+    },
+    {
+      "text": "breaking change across the Django",
+      "offset": 462000,
+      "duration": 2000
+    },
+    {
+      "text": "ecosystem. That's not something any",
+      "offset": 464000,
+      "duration": 3000
+    },
+    {
+      "text": "static analysis tool can know. It",
+      "offset": 467000,
+      "duration": 2000
+    },
+    {
+      "text": "requires understanding the architecture,",
+      "offset": 469000,
+      "duration": 2000
+    },
+    {
+      "text": "the API contract, and how the code gets",
+      "offset": 471000,
+      "duration": 3000
+    },
+    {
+      "text": "called at runtime. This is the kind of",
+      "offset": 474000,
+      "duration": 1000
+    },
+    {
+      "text": "finding that quietly sits in a backlog",
+      "offset": 475000,
+      "duration": 2000
+    },
+    {
+      "text": "for months because no one is confident",
+      "offset": 477000,
+      "duration": 2000
+    },
+    {
+      "text": "enough to close it out. With both tools",
+      "offset": 479000,
+      "duration": 3000
+    },
+    {
+      "text": "working together, the agent resolved it",
+      "offset": 482000,
+      "duration": 3000
+    },
+    {
+      "text": "in seconds and explained exactly why.",
+      "offset": 485000,
+      "duration": 2000
+    },
+    {
+      "text": "Finally, the agent shows the other",
+      "offset": 490000,
+      "duration": 1000
+    },
+    {
+      "text": "direction, writing new code with both",
+      "offset": 491000,
+      "duration": 3000
+    },
+    {
+      "text": "tools in the loop. It asks core story",
+      "offset": 494000,
+      "duration": 2000
+    },
+    {
+      "text": "how Django handles form validation, gets",
+      "offset": 496000,
+      "duration": 2000
+    },
+    {
+      "text": "back the design patterns, writes a",
+      "offset": 498000,
+      "duration": 3000
+    },
+    {
+      "text": "validator, and submits it to sonar for",
+      "offset": 501000,
+      "duration": 2000
+    },
+    {
+      "text": "analysis. The first version comes back",
+      "offset": 503000,
+      "duration": 2000
+    },
+    {
+      "text": "with a cognitive complexity score of 68",
+      "offset": 505000,
+      "duration": 2000
+    },
+    {
+      "text": "against a limit of 15. It rewrites",
+      "offset": 507000,
+      "duration": 4000
+    },
+    {
+      "text": "with early returns, resubmits, and",
+      "offset": 511000,
+      "duration": 2000
+    },
+    {
+      "text": "passes clean. Zero issues. That's the",
+      "offset": 513000,
+      "duration": 3000
+    },
+    {
+      "text": "full cycle. Core story provides the",
+      "offset": 516000,
+      "duration": 2000
+    },
+    {
+      "text": "design context, what patterns to follow,",
+      "offset": 518000,
+      "duration": 3000
+    },
+    {
+      "text": "what the code should do. Sonar",
+      "offset": 521000,
+      "duration": 2000
+    },
+    {
+      "text": "validates the output. Does it meet your",
+      "offset": 523000,
+      "duration": 3000
+    },
+    {
+      "text": "quality and security standards, and it",
+      "offset": 526000,
+      "duration": 2000
+    },
+    {
+      "text": "all happens before a single line is",
+      "offset": 528000,
+      "duration": 3000
+    },
+    {
+      "text": "Powerful stuff. Here's what just",
+      "offset": 533000,
+      "duration": 2000
+    },
+    {
+      "text": "happened. Sonar did its job",
+      "offset": 535000,
+      "duration": 2000
+    },
+    {
+      "text": "perfectly. It found all 158 blocker",
+      "offset": 537000,
+      "duration": 3000
+    },
+    {
+      "text": "findings in the Django codebase. That's",
+      "offset": 540000,
+      "duration": 2000
+    },
+    {
+      "text": "exactly what you want. Then core story",
+      "offset": 542000,
+      "duration": 3000
+    },
+    {
+      "text": "provided essential architectural context",
+      "offset": 545000,
+      "duration": 2000
+    },
+    {
+      "text": "for every single one of those findings.",
+      "offset": 547000,
+      "duration": 3000
+    },
+    {
+      "text": "What does this code do? Who depends on",
+      "offset": 550000,
+      "duration": 2000
+    },
+    {
+      "text": "it? Why was it written this way? The",
+      "offset": 552000,
+      "duration": 3000
+    },
+    {
+      "text": "result was that all 158 findings",
+      "offset": 555000,
+      "duration": 3000
+    },
+    {
+      "text": "immediately got an automated documented",
+      "offset": 558000,
+      "duration": 3000
+    },
+    {
+      "text": "decision. We found that 132 of those",
+      "offset": 561000,
+      "duration": 4000
+    },
+    {
+      "text": "were intentional patterns that could be",
+      "offset": 565000,
+      "duration": 3000
+    },
+    {
+      "text": "resolved or ignored without direct",
+      "offset": 568000,
+      "duration": 2000
+    },
+    {
+      "text": "intervention: test vectors in Django's",
+      "offset": 570000,
+      "duration": 3000
+    },
+    {
+      "text": "password hashing framework that sonar",
+      "offset": 573000,
+      "duration": 2000
+    },
+    {
+      "text": "correctly flagged as potential",
+      "offset": 575000,
+      "duration": 3000
+    },
+    {
+      "text": "credentials. However, core story",
+      "offset": 578000,
+      "duration": 2000
+    },
+    {
+      "text": "understood that these were deliberately",
+      "offset": 580000,
+      "duration": 2000
+    },
+    {
+      "text": "weak passwords just used for testing. 25",
+      "offset": 582000,
+      "duration": 2000
+    },
+    {
+      "text": "others were deprioritized with",
+      "offset": 584000,
+      "duration": 3000
+    },
+    {
+      "text": "justification and of course the one real",
+      "offset": 587000,
+      "duration": 2000
+    },
+    {
+      "text": "critical maintainability issue was",
+      "offset": 589000,
+      "duration": 2000
+    },
+    {
+      "text": "escalated with a full blast radius",
+      "offset": 591000,
+      "duration": 3000
+    },
+    {
+      "text": "analysis: a naming convention in Django's",
+      "offset": 594000,
+      "duration": 2000
+    },
+    {
+      "text": "date formatter that would require a",
+      "offset": 596000,
+      "duration": 3000
+    },
+    {
+      "text": "breaking API change. All of this was",
+      "offset": 599000,
+      "duration": 2000
+    },
+    {
+      "text": "done in under two minutes without the",
+      "offset": 601000,
+      "duration": 3000
+    },
+    {
+      "text": "need for a senior developer to get",
+      "offset": 604000,
+      "duration": 2000
+    },
+    {
+      "text": "Now, let's talk about the ROI. Now,",
+      "offset": 610000,
+      "duration": 3000
+    },
+    {
+      "text": "these numbers are based on a typical",
+      "offset": 613000,
+      "duration": 2000
+    },
+    {
+      "text": "project that might have as many as 5,000",
+      "offset": 615000,
+      "duration": 3000
+    },
+    {
+      "text": "open findings. That's conservative for",
+      "offset": 618000,
+      "duration": 2000
+    },
+    {
+      "text": "what we'd get running Sonar in an",
+      "offset": 620000,
+      "duration": 2000
+    },
+    {
+      "text": "enterprise codebase. You can estimate",
+      "offset": 622000,
+      "duration": 2000
+    },
+    {
+      "text": "that you're recovering over 850 hours",
+      "offset": 624000,
+      "duration": 3000
+    },
+    {
+      "text": "per year per project like this. That's",
+      "offset": 627000,
+      "duration": 3000
+    },
+    {
+      "text": "one to two months or more of a senior",
+      "offset": 630000,
+      "duration": 3000
+    },
+    {
+      "text": "developer's time that you're currently",
+      "offset": 633000,
+      "duration": 3000
+    },
+    {
+      "text": "spending on this kind of triage",
+      "offset": 636000,
+      "duration": 2000
+    },
+    {
+      "text": "activity. Over $64,000 in direct cost",
+      "offset": 638000,
+      "duration": 3000
+    },
+    {
+      "text": "savings per year, assuming a $75 per hour",
+      "offset": 641000,
+      "duration": 3000
+    },
+    {
+      "text": "fully loaded developer cost. And of",
+      "offset": 644000,
+      "duration": 3000
+    },
+    {
+      "text": "course, you get the benefit of having",
+      "offset": 647000,
+      "duration": 1000
+    },
+    {
+      "text": "100% backlog coverage, meaning every",
+      "offset": 648000,
+      "duration": 3000
+    },
+    {
+      "text": "finding that we produce now gets a",
+      "offset": 651000,
+      "duration": 2000
+    },
+    {
+      "text": "documented decision with a rationale",
+      "offset": 653000,
+      "duration": 3000
+    },
+    {
+      "text": "that explains why we were able to",
+      "offset": 656000,
+      "duration": 2000
+    },
+    {
+      "text": "address this. Many of our teams are",
+      "offset": 658000,
+      "duration": 3000
+    },
+    {
+      "text": "reviewing close to 0% of our hotspot",
+      "offset": 661000,
+      "duration": 2000
+    },
+    {
+      "text": "issues. And it's because of a lack of",
+      "offset": 663000,
+      "duration": 3000
+    },
+    {
+      "text": "resources to do so. And here, of course,",
+      "offset": 666000,
+      "duration": 2000
+    },
+    {
+      "text": "we're able to resolve these with an",
+      "offset": 668000,
+      "duration": 3000
+    },
+    {
+      "text": "increased triage speed. The first",
+      "offset": 671000,
+      "duration": 3000
+    },
+    {
+      "text": "thousand findings here were all handled",
+      "offset": 674000,
+      "duration": 2000
+    },
+    {
+      "text": "in under two hours. Imagine scaling this",
+      "offset": 676000,
+      "duration": 2000
+    },
+    {
+      "text": "up. At five projects, you're looking at",
+      "offset": 678000,
+      "duration": 3000
+    },
+    {
+      "text": "over 300K per year in recovered",
+      "offset": 681000,
+      "duration": 2000
+    },
+    {
+      "text": "capacity. And that's before accounting",
+      "offset": 683000,
+      "duration": 2000
+    },
+    {
+      "text": "for the risk reduction of actually being",
+      "offset": 685000,
+      "duration": 3000
+    },
+    {
+      "text": "able to review all of our security",
+      "offset": 688000,
+      "duration": 2000
+    },
+    {
+      "text": "hotspot backlog items at scale for the",
+      "offset": 690000,
+      "duration": 1000
+    },
+    {
+      "text": "first time. There's really tremendous",
+      "offset": 691000,
+      "duration": 3000
+    },
+    {
+      "text": "gains from being able to use these two",
+      "offset": 694000,
+      "duration": 3000
+    },
+    {
+      "text": "systems together to meaningfully power",
+      "offset": 697000,
+      "duration": 3000
+    },
+    {
+      "text": "through and eliminate our backlog of",
+      "offset": 700000,
+      "duration": 1000
+    },
+    {
+      "text": "issues.",
+      "offset": 701000,
+      "duration": 1000
+    },
+    {
+      "text": "There's three big reasons that we should",
+      "offset": 702000,
+      "duration": 3000
+    },
+    {
+      "text": "all care about this. First, inside all",
+      "offset": 705000,
+      "duration": 2000
+    },
+    {
+      "text": "of our organizations, whether we like it",
+      "offset": 707000,
+      "duration": 3000
+    },
+    {
+      "text": "or not, the amount of AI generated code",
+      "offset": 710000,
+      "duration": 2000
+    },
+    {
+      "text": "is accelerating. Agents are being able",
+      "offset": 712000,
+      "duration": 3000
+    },
+    {
+      "text": "and being tasked to produce code faster",
+      "offset": 715000,
+      "duration": 3000
+    },
+    {
+      "text": "than human beings in our organizations",
+      "offset": 718000,
+      "duration": 3000
+    },
+    {
+      "text": "can review it. The only way to keep pace",
+      "offset": 721000,
+      "duration": 1000
+    },
+    {
+      "text": "is with automated context and",
+      "offset": 722000,
+      "duration": 3000
+    },
+    {
+      "text": "validation. You have to keep that",
+      "offset": 725000,
+      "duration": 3000
+    },
+    {
+      "text": "velocity from turning into a liability.",
+      "offset": 728000,
+      "duration": 3000
+    },
+    {
+      "text": "We want to ship faster and maintain the",
+      "offset": 731000,
+      "duration": 2000
+    },
+    {
+      "text": "same high level of oversight that we",
+      "offset": 733000,
+      "duration": 3000
+    },
+    {
+      "text": "need to maintain. The only way to do so",
+      "offset": 736000,
+      "duration": 2000
+    },
+    {
+      "text": "is using teams of agents around core",
+      "offset": 738000,
+      "duration": 3000
+    },
+    {
+      "text": "story and sonar. Second, code bases",
+      "offset": 741000,
+      "duration": 3000
+    },
+    {
+      "text": "are getting larger. Modern applications",
+      "offset": 744000,
+      "duration": 3000
+    },
+    {
+      "text": "are spanning hundreds of microservices",
+      "offset": 747000,
+      "duration": 3000
+    },
+    {
+      "text": "and no one person in our organization",
+      "offset": 750000,
+      "duration": 3000
+    },
+    {
+      "text": "can hold the full architecture in",
+      "offset": 753000,
+      "duration": 2000
+    },
+    {
+      "text": "their head anymore. We need the context",
+      "offset": 755000,
+      "duration": 3000
+    },
+    {
+      "text": "to be machine ready and machine",
+      "offset": 758000,
+      "duration": 2000
+    },
+    {
+      "text": "accessible. And of course, the security",
+      "offset": 760000,
+      "duration": 3000
+    },
+    {
+      "text": "stakes have never been higher. Every",
+      "offset": 763000,
+      "duration": 2000
+    },
+    {
+      "text": "potentially unaddressed vulnerability",
+      "offset": 765000,
+      "duration": 2000
+    },
+    {
+      "text": "issue or item that's identified during",
+      "offset": 767000,
+      "duration": 4000
+    },
+    {
+      "text": "analysis is potential regulatory",
+      "offset": 771000,
+      "duration": 1000
+    },
+    {
+      "text": "exposure. We need to have confidence",
+      "offset": 772000,
+      "duration": 2000
+    },
+    {
+      "text": "that we're finding and fixing the right",
+      "offset": 774000,
+      "duration": 3000
+    },
+    {
+      "text": "issues first, not just the ones that",
+      "offset": 777000,
+      "duration": 2000
+    },
+    {
+      "text": "happen to be labeled as a blocker.",
+      "offset": 779000,
+      "duration": 3000
+    },
+    {
+      "text": "We'd love to show you this combination",
+      "offset": 786000,
+      "duration": 3000
+    },
+    {
+      "text": "working on your actual codebase directly",
+      "offset": 789000,
+      "duration": 3000
+    },
+    {
+      "text": "with core story and sonar pair",
+      "offset": 792000,
+      "duration": 2000
+    },
+    {
+      "text": "programming together to resolve issues.",
+      "offset": 794000,
+      "duration": 3000
+    },
+    {
+      "text": "There are three very easy steps to get",
+      "offset": 797000,
+      "duration": 3000
+    },
+    {
+      "text": "started. You can connect both of your",
+      "offset": 800000,
+      "duration": 3000
+    },
+    {
+      "text": "MCP servers. Point your preferred AI",
+      "offset": 803000,
+      "duration": 2000
+    },
+    {
+      "text": "coding agent at both of these and",
+      "offset": 805000,
+      "duration": 3000
+    },
+    {
+      "text": "immediately start triaging. Both servers",
+      "offset": 808000,
+      "duration": 2000
+    },
+    {
+      "text": "are free to set up. There's no",
+      "offset": 810000,
+      "duration": 2000
+    },
+    {
+      "text": "migration. There's no complex",
+      "offset": 812000,
+      "duration": 3000
+    },
+    {
+      "text": "integration needed. If you want to see a",
+      "offset": 815000,
+      "duration": 2000
+    },
+    {
+      "text": "proof of concept of this system running",
+      "offset": 817000,
+      "duration": 2000
+    },
+    {
+      "text": "on your code, we'd be excited to help",
+      "offset": 819000,
+      "duration": 2000
+    },
+    {
+      "text": "you get configured. You can also sign up",
+      "offset": 821000,
+      "duration": 2000
+    },
+    {
+      "text": "directly and try it out for yourself.",
+      "offset": 823000,
+      "duration": 2000
+    },
+    {
+      "text": "Come talk to us or visit corstory.ai.",
+      "offset": 825000,
+      "duration": 3000
+    },
+    {
+      "text": "If you scan that QR code right there in",
+      "offset": 828000,
+      "duration": 3000
+    },
+    {
+      "text": "the lower right hand side of the screen,",
+      "offset": 831000,
+      "duration": 3000
+    },
+    {
+      "text": "you can open up a link that'll take you",
+      "offset": 834000,
+      "duration": 2000
+    },
+    {
+      "text": "directly to sign up for the tool. We're",
+      "offset": 836000,
+      "duration": 2000
+    },
+    {
+      "text": "excited to support you and excited to",
+      "offset": 838000,
+      "duration": 3000
+    },
+    {
+      "text": "partner with Sonar. Thanks so much.",
+      "offset": 841000,
+      "duration": 2000
+    }
+  ],
+  "fullText": "Welcome everyone. I'm Anand Kulkarni, CEO and founder of Core Story. Here's the question that every engineering team faces. Your static analysis tool is doing a great job. It's finding thousands of issues in your code base. Bugs, vulnerabilities, code smells, security hotspots. But which issues actually need your organization's attention right now? And which ones are just noise? That's the problem that we're going to show you how to solve today. I'm going to show you how Core Story and Sonar work together to turn raw findings into actionable impactbased decisions. Here's the root of the issue. Sonar does a great job surfacing every issue. That's exactly what we want from our quality platform. But severity of issues and business impact of issues are two different things. Take a look at these three findings. We have two blockers and a medium. The blockers are in a text fixture and a date formatter. Intentional patterns that are actually correct code. The medium is an injection vector in your payment module. That's the one that needs immediate attention from your engineering team. Without architectural context, teams can't tell the difference at a glance. As a result, we end up ignoring findings, accumulating security debt, or wasting time investigating noise. This is a problem known as the triage gap. The difference between what our systems can surface for us and what we understand to be truly essential for ameliating real issues. Here's how the solution works. Both Sonar and Core Story expose MCP servers, the model context protocol. That means that any MCP compatible AI agent can talk to both systems simultaneously. The agent queries sonar for findings, severity, and quality gate status. It also queries core story for architectural context, what each component does, who depends on it, and what the design intent of that feature or behavior or line of code was. Then it synthesizes both of these into actionable decisions. There's no custom integration and no middleware to maintain. Both servers are free and easy to set up. This creates a continuous loop. Step one, investigate. Sonar surfaces findings with severity rankings. Core stories knowledge graph explains what the affected code actually does. Is it a production API surface? A test fixture, who depends on it? Step two, triage. Core Story's architectural context lets the agent make real prioritization decisions at machine speed. Real issues get escalated with blast radius analysis, telling us what is going to be affected by making a change. Intentional patterns get documented and closed. Step three is build. When it's time to fix something or write new code, core story provides design patterns from your codebase, the agent writes code that follows those patterns to resolve the issue. Sonar validates that against quality rules. That means you get clean code on your first try. This closed loop system and closed loop approach means that quality is built into every step of the issue triage and resolution process, not bolted on afterwards. It's a powerful way to address the triage gap. Now, let's take a look at how this looks in practice. We're going to watch a live demo of an AI agent using both the core story and the Sonar MCP servers together to investigate, triage, and resolve findings in a real Django codebase. This is not a simulation. This is the actual agent running against actual sonar findings informed by an actual core story instance. Watch how fast it moves and how it makes decisions that would require normally deep system knowledge from a human architect. The agent starts by pulling the project metrics from Sonar. 132 security vulnerabilities. Over 1,300 security hotspots. Nearly 2,800 total issues. Those are real numbers from a real Sonar analysis. And if you're looking at a dashboard like this for a project you just inherited or a codebase you're evaluating for acquisition or an application your team is about to start building on top of, that's a lot of findings to work through. The agent goes straight to the blockers, 158 of them, and immediately there's a pattern, the same rule over and over. Revoke and change this password. It's compromised, all concentrated in one file in Django's authentication test suite. Sonar is doing exactly what you'd want it to do. It found strings that match credential patterns hard-coded in source code. That's a valid important finding in almost any context. But the question every developer asks next is, is this one of those times where the context changes the answer? So the agent asks core story, what is this file, and why would it contain dozens of hard-coded passwords? And the answer comes back in seconds. This is Django's test suite for its password hashing framework. PBKDF2, argon 2 script. The strings sonar flagged are test vectors. Known inputs paired with known expected outputs that verify the hashing algorithms produce correct deterministic results. Now, any experienced developer would probably reach the same conclusion. Test files contain test data. That part isn't surprising, but the agent just triaged 132 findings in 10 seconds and documented the rationale. Multiply that across a large organization with dozens of projects and thousands of findings, and that's where the value compounds. You're not waiting for a senior developer to be available for the obvious calls. They're handled, which frees people up for the findings that actually require judgment, like this one. The agent finds a maintainability blocker in Django's date formatting module. The rule says methods shouldn't differ only by capitalization, and this class has methods named capital Y and lowercase Y, capital D and lowercase D. In most code bases, renaming those to something clearer would be the right fix. Core story explains why this one is different. Those method names are PHP compatible date format specifiers. Capital Y returns a four-digit year. Lowercase Y returns a two-digit year. Django's template engine looks up format characters by calling the method with that exact name. If you rename capital Y, every Django template that displays a four-digit year breaks. This is a blocker that you must never fix. Sonar correctly identified a pattern that's risky in general, but the actual impact of acting on this finding is a breaking change across the Django ecosystem. That's not something any static analysis tool can know. It requires understanding the architecture, the API contract, and how the code gets called at runtime. This is the kind of finding that quietly sits in a backlog for months because no one is confident enough to close it out. With both tools working together, the agent resolved it in seconds and explained exactly why. Finally, the agent shows the other direction, writing new code with both tools in the loop. It asks core story how Django handles form validation, gets back the design patterns, writes a validator, and submits it to sonar for analysis. The first version comes back with a cognitive complexity score of 68 against a limit of 15. It rewrites with early returns, resubmits, and passes clean. Zero issues. That's the full cycle. Core story provides the design context, what patterns to follow, what the code should do. Sonar validates the output. Does it meet your quality and security standards, and it all happens before a single line is Powerful stuff. Here's what just happened. Sonar did its job perfectly. It found all 158 blocker findings in the Django codebase. That's exactly what you want. Then core story provided essential architectural context for every single one of those findings. What does this code do? Who depends on it? Why was it written this way? The result was that all 158 findings immediately got an automated documented decision. We found that 132 of those were intentional patterns that could be resolved or ignored without direct intervention: test vectors in Django's password hashing framework that sonar correctly flagged as potential credentials. However, core story understood that these were deliberately weak passwords just used for testing. 25 others were deprioritized with justification and of course the one real critical maintainability issue was escalated with a full blast radius analysis: a naming convention in Django's date formatter that would require a breaking API change. All of this was done in under two minutes without the need for a senior developer to get Now, let's talk about the ROI. Now, these numbers are based on a typical project that might have as many as 5,000 open findings. That's conservative for what we'd get running Sonar in an enterprise codebase. You can estimate that you're recovering over 850 hours per year per project like this. That's one to two months or more of a senior developer's time that you're currently spending on this kind of triage activity. Over $64,000 in direct cost savings per year, assuming a $75 per hour fully loaded developer cost. And of course, you get the benefit of having 100% backlog coverage, meaning every finding that we produce now gets a documented decision with a rationale that explains why we were able to address this. Many of our teams are reviewing close to 0% of our hotspot issues. And it's because of a lack of resources to do so. And here, of course, we're able to resolve these with an increased triage speed. The first thousand findings here were all handled in under two hours. Imagine scaling this up. At five projects, you're looking at over 300K per year in recovered capacity. And that's before accounting for the risk reduction of actually being able to review all of our security hotspot backlog items at scale for the first time. There's really tremendous gains from being able to use these two systems together to meaningfully power through and eliminate our backlog of issues. There's three big reasons that we should all care about this. First, inside all of our organizations, whether we like it or not, the amount of AI generated code is accelerating. Agents are being able and being tasked to produce code faster than human beings in our organizations can review it. The only way to keep pace is with automated context and validation. You have to keep that velocity from turning into a liability. We want to ship faster and maintain the same high level of oversight that we need to maintain. The only way to do so is using teams of agents around core story and sonar. Second, code bases are getting larger. Modern applications are spanning hundreds of microservices and no one person in our organization can hold the full architecture in their head anymore. We need the context to be machine ready and machine accessible. And of course, the security stakes have never been higher. Every potentially unaddressed vulnerability issue or item that's identified during analysis is potential regulatory exposure. We need to have confidence that we're finding and fixing the right issues first, not just the ones that happen to be labeled as a blocker. We'd love to show you this combination working on your actual codebase directly with core story and sonar pair programming together to resolve issues. There are three very easy steps to get started. You can connect both of your MCP servers. Point your preferred AI coding agent at both of these and immediately start triaging. Both servers are free to set up. There's no migration. There's no complex integration needed. If you want to see a proof of concept of this system running on your code, we'd be excited to help you get configured. You can also sign up directly and try it out for yourself. Come talk to us or visit corstory.ai. If you scan that QR code right there in the lower right hand side of the screen, you can open up a link that'll take you directly to sign up for the tool. We're excited to support you and excited to partner with Sonar. Thanks so much.",
+  "fetchedAt": "2026-03-14T09:18:49.267Z"
+}

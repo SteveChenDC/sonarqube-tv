@@ -1,0 +1,5153 @@
+{
+  "videoId": "v90",
+  "youtubeId": "kZzQkq0pXSc",
+  "segments": [
+    {
+      "text": "Hello everyone. Thank you for joining",
+      "offset": 3200,
+      "duration": 4079
+    },
+    {
+      "text": "and welcome to our webinar transforming",
+      "offset": 4799,
+      "duration": 4321
+    },
+    {
+      "text": "code quality and code security with",
+      "offset": 7279,
+      "duration": 4921
+    },
+    {
+      "text": "sonar cube server the Walters cluer",
+      "offset": 9120,
+      "duration": 5519
+    },
+    {
+      "text": "story. Just as the name suggests today",
+      "offset": 12200,
+      "duration": 4760
+    },
+    {
+      "text": "we'll be talking with Paul Edwards dev",
+      "offset": 14639,
+      "duration": 4800
+    },
+    {
+      "text": "sec ops architect at Walters Cluer about",
+      "offset": 16960,
+      "duration": 4479
+    },
+    {
+      "text": "his experience with SonarCube server and",
+      "offset": 19439,
+      "duration": 4080
+    },
+    {
+      "text": "specifically about upgrading to the",
+      "offset": 21439,
+      "duration": 6000
+    },
+    {
+      "text": "latest 2025 release 1 LTA. Paul",
+      "offset": 23519,
+      "duration": 5760
+    },
+    {
+      "text": "expressed some exciting findings that",
+      "offset": 27439,
+      "duration": 4361
+    },
+    {
+      "text": "he's going to share with us today. As a",
+      "offset": 29279,
+      "duration": 5201
+    },
+    {
+      "text": "bonus, uh, Walter Clure is participating",
+      "offset": 31800,
+      "duration": 4439
+    },
+    {
+      "text": "in our Sonar Cube advanced security",
+      "offset": 34480,
+      "duration": 4399
+    },
+    {
+      "text": "early access program and hopefully I can",
+      "offset": 36239,
+      "duration": 4881
+    },
+    {
+      "text": "coax some cool tidbits out of him",
+      "offset": 38879,
+      "duration": 4360
+    },
+    {
+      "text": "regarding his experience with advanced",
+      "offset": 41120,
+      "duration": 4400
+    },
+    {
+      "text": "security. I'm Robert Curley, product",
+      "offset": 43239,
+      "duration": 3721
+    },
+    {
+      "text": "marketing manager for Sonar Group",
+      "offset": 45520,
+      "duration": 4320
+    },
+    {
+      "text": "Server. I'm hosting the webinar today.",
+      "offset": 46960,
+      "duration": 6400
+    },
+    {
+      "text": "Uh but before I officially introduce",
+      "offset": 49840,
+      "duration": 6160
+    },
+    {
+      "text": "Paul, uh please let me go over a few",
+      "offset": 53360,
+      "duration": 4519
+    },
+    {
+      "text": "housekeeping uh",
+      "offset": 56000,
+      "duration": 4480
+    },
+    {
+      "text": "essentials. This session will last",
+      "offset": 57879,
+      "duration": 4840
+    },
+    {
+      "text": "around 45 minutes, including time at the",
+      "offset": 60480,
+      "duration": 5760
+    },
+    {
+      "text": "end for Q&A. Uh sometimes we go over,",
+      "offset": 62719,
+      "duration": 6080
+    },
+    {
+      "text": "but we'll be sure to cut it um at least",
+      "offset": 66240,
+      "duration": 5680
+    },
+    {
+      "text": "before uh an hour is up. So um we'll",
+      "offset": 68799,
+      "duration": 5360
+    },
+    {
+      "text": "definitely be under the hour slot. Uh we",
+      "offset": 71920,
+      "duration": 3519
+    },
+    {
+      "text": "invite you to submit your questions",
+      "offset": 74159,
+      "duration": 3841
+    },
+    {
+      "text": "anytime during the webinar via the Q&A",
+      "offset": 75439,
+      "duration": 4801
+    },
+    {
+      "text": "box in Zoom. Please don't submit",
+      "offset": 78000,
+      "duration": 4880
+    },
+    {
+      "text": "questions in the Zoom chat. Uh this is",
+      "offset": 80240,
+      "duration": 4960
+    },
+    {
+      "text": "important because we don't monitor the",
+      "offset": 82880,
+      "duration": 5599
+    },
+    {
+      "text": "Zoom chat and we only want monitor the",
+      "offset": 85200,
+      "duration": 7040
+    },
+    {
+      "text": "Q&A area in Zoom. Um but there will be",
+      "offset": 88479,
+      "duration": 5761
+    },
+    {
+      "text": "some things in uh that we post",
+      "offset": 92240,
+      "duration": 4320
+    },
+    {
+      "text": "occasionally in the the Zoom chat. We",
+      "offset": 94240,
+      "duration": 6480
+    },
+    {
+      "text": "may have some um links or or uh stuff to",
+      "offset": 96560,
+      "duration": 6239
+    },
+    {
+      "text": "refer to there. Um so you can keep an",
+      "offset": 100720,
+      "duration": 3680
+    },
+    {
+      "text": "eye on that, but please don't ask",
+      "offset": 102799,
+      "duration": 4401
+    },
+    {
+      "text": "questions there. Um we have a panelist",
+      "offset": 104400,
+      "duration": 6560
+    },
+    {
+      "text": "joining us today uh Manish Kapoor. He is",
+      "offset": 107200,
+      "duration": 5760
+    },
+    {
+      "text": "a senior director of product marketing",
+      "offset": 110960,
+      "duration": 5040
+    },
+    {
+      "text": "here at Sonar and um he will be",
+      "offset": 112960,
+      "duration": 4720
+    },
+    {
+      "text": "answering your questions live during the",
+      "offset": 116000,
+      "duration": 4479
+    },
+    {
+      "text": "webinar in that Q&A area. So feel free",
+      "offset": 117680,
+      "duration": 5200
+    },
+    {
+      "text": "to uh ask questions anytime throughout",
+      "offset": 120479,
+      "duration": 4401
+    },
+    {
+      "text": "the webinar. Uh you don't have to wait",
+      "offset": 122880,
+      "duration": 5040
+    },
+    {
+      "text": "until the Q&A session at the end. Uh the",
+      "offset": 124880,
+      "duration": 5439
+    },
+    {
+      "text": "session is being recorded and we will",
+      "offset": 127920,
+      "duration": 4560
+    },
+    {
+      "text": "email you a link for the recording in a",
+      "offset": 130319,
+      "duration": 4640
+    },
+    {
+      "text": "few days. Um there are real no slides to",
+      "offset": 132480,
+      "duration": 5040
+    },
+    {
+      "text": "share. So um we don't have anything to",
+      "offset": 134959,
+      "duration": 4721
+    },
+    {
+      "text": "share other than the recording of the",
+      "offset": 137520,
+      "duration": 6160
+    },
+    {
+      "text": "webinar here. And then at the end uh",
+      "offset": 139680,
+      "duration": 5440
+    },
+    {
+      "text": "there there's going to be a short",
+      "offset": 143680,
+      "duration": 5120
+    },
+    {
+      "text": "survey. So um please answer that. We'd",
+      "offset": 145120,
+      "duration": 6320
+    },
+    {
+      "text": "love your feedback. It helps us u plan",
+      "offset": 148800,
+      "duration": 4560
+    },
+    {
+      "text": "on future webinars to make sure that",
+      "offset": 151440,
+      "duration": 4720
+    },
+    {
+      "text": "they suit your needs. And yeah, thank",
+      "offset": 153360,
+      "duration": 6159
+    },
+    {
+      "text": "you for your participation.",
+      "offset": 156160,
+      "duration": 5680
+    },
+    {
+      "text": "But uh before we get going uh there's a",
+      "offset": 159519,
+      "duration": 4681
+    },
+    {
+      "text": "quick poll that we would like to know",
+      "offset": 161840,
+      "duration": 3960
+    },
+    {
+      "text": "about",
+      "offset": 164200,
+      "duration": 5000
+    },
+    {
+      "text": "your upgrade process. Where are you when",
+      "offset": 165800,
+      "duration": 6120
+    },
+    {
+      "text": "in your upgrade? Have you started yet?",
+      "offset": 169200,
+      "duration": 6000
+    },
+    {
+      "text": "Have are you done? Are you planning to",
+      "offset": 171920,
+      "duration": 7280
+    },
+    {
+      "text": "um like to know where you",
+      "offset": 175200,
+      "duration": 4000
+    },
+    {
+      "text": "are? Look at",
+      "offset": 179239,
+      "duration": 4481
+    },
+    {
+      "text": "this. We",
+      "offset": 181159,
+      "duration": 7720
+    },
+    {
+      "text": "have pretty good participation so far.",
+      "offset": 183720,
+      "duration": 8680
+    },
+    {
+      "text": "getting there. Um, planning to upgrade",
+      "offset": 188879,
+      "duration": 6961
+    },
+    {
+      "text": "is certainly winning",
+      "offset": 192400,
+      "duration": 3440
+    },
+    {
+      "text": "out",
+      "offset": 196200,
+      "duration": 4520
+    },
+    {
+      "text": "and a few of you looks like you already",
+      "offset": 197879,
+      "duration": 5321
+    },
+    {
+      "text": "have",
+      "offset": 200720,
+      "duration": 2480
+    },
+    {
+      "text": "upgraded. Okay, thank you for the",
+      "offset": 204599,
+      "duration": 8481
+    },
+    {
+      "text": "poll. Do I share",
+      "offset": 209959,
+      "duration": 5161
+    },
+    {
+      "text": "it? I'm not sure. I'm not sure how to",
+      "offset": 213080,
+      "duration": 4360
+    },
+    {
+      "text": "get rid of this one. Here we go. Okay.",
+      "offset": 215120,
+      "duration": 3520
+    },
+    {
+      "text": "Sorry.",
+      "offset": 217440,
+      "duration": 4159
+    },
+    {
+      "text": "Um, let's move",
+      "offset": 218640,
+      "duration": 2959
+    },
+    {
+      "text": "on. I'm Robert Curley and I'm, as I",
+      "offset": 223480,
+      "duration": 7399
+    },
+    {
+      "text": "said, um, product marketing manager for",
+      "offset": 227920,
+      "duration": 7120
+    },
+    {
+      "text": "Sonar Cube. Uh, I've been with, uh,",
+      "offset": 230879,
+      "duration": 8241
+    },
+    {
+      "text": "Sonar for a year and a half and I have a",
+      "offset": 235040,
+      "duration": 6479
+    },
+    {
+      "text": "lot of background in software",
+      "offset": 239120,
+      "duration": 5000
+    },
+    {
+      "text": "engineering, um, software product",
+      "offset": 241519,
+      "duration": 5521
+    },
+    {
+      "text": "management. Um, I'm definitely a",
+      "offset": 244120,
+      "duration": 5960
+    },
+    {
+      "text": "software kind of guy. I love it and uh",
+      "offset": 247040,
+      "duration": 5919
+    },
+    {
+      "text": "I'm uh I'm addicted. So, there's a",
+      "offset": 250080,
+      "duration": 6320
+    },
+    {
+      "text": "little bit about me.",
+      "offset": 252959,
+      "duration": 3441
+    },
+    {
+      "text": "Paul Paul has over 20 years of",
+      "offset": 258199,
+      "duration": 4521
+    },
+    {
+      "text": "experience uh starting as a developer at",
+      "offset": 260720,
+      "duration": 4120
+    },
+    {
+      "text": "Logica before transitioning into",
+      "offset": 262720,
+      "duration": 4320
+    },
+    {
+      "text": "architecture. For the past eight years,",
+      "offset": 264840,
+      "duration": 4359
+    },
+    {
+      "text": "he has been an architect at Walters Cler",
+      "offset": 267040,
+      "duration": 3920
+    },
+    {
+      "text": "in the tax and accounting domain",
+      "offset": 269199,
+      "duration": 3841
+    },
+    {
+      "text": "specializing in product development and",
+      "offset": 270960,
+      "duration": 4799
+    },
+    {
+      "text": "dev sec ops. Paul is dedicated to",
+      "offset": 273040,
+      "duration": 4719
+    },
+    {
+      "text": "helping teams and stakeholders maximize",
+      "offset": 275759,
+      "duration": 5281
+    },
+    {
+      "text": "the value of sonar cube to ensure we",
+      "offset": 277759,
+      "duration": 5121
+    },
+    {
+      "text": "deliver the best they deliver the best",
+      "offset": 281040,
+      "duration": 4560
+    },
+    {
+      "text": "products to their customers. Okay, so",
+      "offset": 282880,
+      "duration": 3560
+    },
+    {
+      "text": "that's",
+      "offset": 285600,
+      "duration": 3240
+    },
+    {
+      "text": "appall",
+      "offset": 286440,
+      "duration": 5080
+    },
+    {
+      "text": "and I'm going to we don't have more",
+      "offset": 288840,
+      "duration": 5400
+    },
+    {
+      "text": "slides so I'm going to cut the slides",
+      "offset": 291520,
+      "duration": 6440
+    },
+    {
+      "text": "here and move on to",
+      "offset": 294240,
+      "duration": 9519
+    },
+    {
+      "text": "the discussion. Um, but Paul, I heard,",
+      "offset": 297960,
+      "duration": 8360
+    },
+    {
+      "text": "hi. That you're a hockey guy. I'm a",
+      "offset": 303759,
+      "duration": 4561
+    },
+    {
+      "text": "hockey guy. I play hockey. I've been a",
+      "offset": 306320,
+      "duration": 3680
+    },
+    {
+      "text": "hockey fan my whole life. I'm from San",
+      "offset": 308320,
+      "duration": 5159
+    },
+    {
+      "text": "Jose. I'm a San Jose Sharks fan.",
+      "offset": 310000,
+      "duration": 6400
+    },
+    {
+      "text": "Um, tell me what is your uh favorite",
+      "offset": 313479,
+      "duration": 6121
+    },
+    {
+      "text": "team? And also a fun one is what got you",
+      "offset": 316400,
+      "duration": 5040
+    },
+    {
+      "text": "into hockey?",
+      "offset": 319600,
+      "duration": 3680
+    },
+    {
+      "text": "Okay. Um, well, you'll hear from my",
+      "offset": 321440,
+      "duration": 4720
+    },
+    {
+      "text": "accent. Um, I'm from the UK. I live near",
+      "offset": 323280,
+      "duration": 4960
+    },
+    {
+      "text": "London. Um, so you might be surprised to",
+      "offset": 326160,
+      "duration": 3520
+    },
+    {
+      "text": "hear that I'm a hockey fan. And when I",
+      "offset": 328240,
+      "duration": 2959
+    },
+    {
+      "text": "say hockey, I'm talking about real",
+      "offset": 329680,
+      "duration": 3760
+    },
+    {
+      "text": "hockey. Ice hockey, not not field",
+      "offset": 331199,
+      "duration": 5121
+    },
+    {
+      "text": "hockey. Um um ice hockey is a is a bit",
+      "offset": 333440,
+      "duration": 5039
+    },
+    {
+      "text": "of a minority sport in the UK, but uh",
+      "offset": 336320,
+      "duration": 3520
+    },
+    {
+      "text": "there are a couple of tiers of",
+      "offset": 338479,
+      "duration": 3681
+    },
+    {
+      "text": "professional leagues. And um my favorite",
+      "offset": 339840,
+      "duration": 4960
+    },
+    {
+      "text": "team is called the Sheffield Steelers.",
+      "offset": 342160,
+      "duration": 4640
+    },
+    {
+      "text": "They are based in the north of England.",
+      "offset": 344800,
+      "duration": 4320
+    },
+    {
+      "text": "And I got into hockey because um I went",
+      "offset": 346800,
+      "duration": 5040
+    },
+    {
+      "text": "to university in Sheffield and hockey",
+      "offset": 349120,
+      "duration": 4880
+    },
+    {
+      "text": "was a great thing to do. got into the",
+      "offset": 351840,
+      "duration": 4400
+    },
+    {
+      "text": "sport, fell in love, started learning to",
+      "offset": 354000,
+      "duration": 4880
+    },
+    {
+      "text": "skate, learning to play, um, and I've",
+      "offset": 356240,
+      "duration": 5519
+    },
+    {
+      "text": "been following them ever since.",
+      "offset": 358880,
+      "duration": 5120
+    },
+    {
+      "text": "That's awesome. I I play hockey, too. I",
+      "offset": 361759,
+      "duration": 5280
+    },
+    {
+      "text": "love playing hockey. Uh, I started as an",
+      "offset": 364000,
+      "duration": 6800
+    },
+    {
+      "text": "as an adult, so uh I'm not very good,",
+      "offset": 367039,
+      "duration": 6401
+    },
+    {
+      "text": "but I try and stick with it. Uh, and I",
+      "offset": 370800,
+      "duration": 4880
+    },
+    {
+      "text": "have a lot of fun. Uh, so that's cool.",
+      "offset": 373440,
+      "duration": 3599
+    },
+    {
+      "text": "That's cool that you're a that you're a",
+      "offset": 375680,
+      "duration": 4160
+    },
+    {
+      "text": "hockey guy. Um, I was very excited to",
+      "offset": 377039,
+      "duration": 4880
+    },
+    {
+      "text": "hear that when uh when I discovered it.",
+      "offset": 379840,
+      "duration": 5440
+    },
+    {
+      "text": "Okay, let's get started. Um, tell us",
+      "offset": 381919,
+      "duration": 6641
+    },
+    {
+      "text": "about um, you know, a little bit about",
+      "offset": 385280,
+      "duration": 6479
+    },
+    {
+      "text": "Walter's Clue and uh, if you can and uh,",
+      "offset": 388560,
+      "duration": 5840
+    },
+    {
+      "text": "your role in the company.",
+      "offset": 391759,
+      "duration": 5041
+    },
+    {
+      "text": "Sure. So, we have operations in around",
+      "offset": 394400,
+      "duration": 4639
+    },
+    {
+      "text": "40 different countries. Um, we work",
+      "offset": 396800,
+      "duration": 3839
+    },
+    {
+      "text": "across a number of different domains.",
+      "offset": 399039,
+      "duration": 3361
+    },
+    {
+      "text": "So, I'm part of our tax and accounting",
+      "offset": 400639,
+      "duration": 7120
+    },
+    {
+      "text": "business. So we serve um a variety of",
+      "offset": 402400,
+      "duration": 8160
+    },
+    {
+      "text": "size tax and accountancy firms from the",
+      "offset": 407759,
+      "duration": 5841
+    },
+    {
+      "text": "small to the the big top four um across",
+      "offset": 410560,
+      "duration": 5120
+    },
+    {
+      "text": "the countries. Um we have other",
+      "offset": 413600,
+      "duration": 4319
+    },
+    {
+      "text": "divisions that work in healthcare in",
+      "offset": 415680,
+      "duration": 4239
+    },
+    {
+      "text": "corporate performance legal and",
+      "offset": 417919,
+      "duration": 5041
+    },
+    {
+      "text": "regulatory um but yeah I'm here today to",
+      "offset": 419919,
+      "duration": 5120
+    },
+    {
+      "text": "talk to you about our experience using",
+      "offset": 422960,
+      "duration": 4480
+    },
+    {
+      "text": "cube within tax and accounting. So I",
+      "offset": 425039,
+      "duration": 5041
+    },
+    {
+      "text": "joined Waters Clure in uh 2017, so eight",
+      "offset": 427440,
+      "duration": 4640
+    },
+    {
+      "text": "years ago as you mentioned in the intro.",
+      "offset": 430080,
+      "duration": 3920
+    },
+    {
+      "text": "Um I started working as part of UK",
+      "offset": 432080,
+      "duration": 4000
+    },
+    {
+      "text": "business, but then transitioned out to",
+      "offset": 434000,
+      "duration": 4560
+    },
+    {
+      "text": "to work kind of across Europe. And one",
+      "offset": 436080,
+      "duration": 3600
+    },
+    {
+      "text": "of the things that we were looking to do",
+      "offset": 438560,
+      "duration": 3759
+    },
+    {
+      "text": "there is to take all of the the nine or",
+      "offset": 439680,
+      "duration": 5280
+    },
+    {
+      "text": "so countries within Europe within mort",
+      "offset": 442319,
+      "duration": 4561
+    },
+    {
+      "text": "tax and accounting and start to look at",
+      "offset": 444960,
+      "duration": 4480
+    },
+    {
+      "text": "how we can um really build quality, how",
+      "offset": 446880,
+      "duration": 4960
+    },
+    {
+      "text": "we can standardize, how we can really",
+      "offset": 449440,
+      "duration": 4879
+    },
+    {
+      "text": "drive better results by ensuring that",
+      "offset": 451840,
+      "duration": 4240
+    },
+    {
+      "text": "we're that we're coding better and that",
+      "offset": 454319,
+      "duration": 5201
+    },
+    {
+      "text": "we're getting that consistency in.",
+      "offset": 456080,
+      "duration": 6239
+    },
+    {
+      "text": "What were some of the I'm curious about",
+      "offset": 459520,
+      "duration": 6399
+    },
+    {
+      "text": "your um implementation of Sonar Cube?",
+      "offset": 462319,
+      "duration": 5361
+    },
+    {
+      "text": "How is your company using it? and what",
+      "offset": 465919,
+      "duration": 3280
+    },
+    {
+      "text": "are some of the main challenges that",
+      "offset": 467680,
+      "duration": 4880
+    },
+    {
+      "text": "your dev teams were facing um that made",
+      "offset": 469199,
+      "duration": 7440
+    },
+    {
+      "text": "you choose Sonar Cube? Sure. So, so we",
+      "offset": 472560,
+      "duration": 6000
+    },
+    {
+      "text": "had um there were a number of different",
+      "offset": 476639,
+      "duration": 4240
+    },
+    {
+      "text": "areas that we wanted to address. So,",
+      "offset": 478560,
+      "duration": 4240
+    },
+    {
+      "text": "there was a lack of transparency around",
+      "offset": 480879,
+      "duration": 3841
+    },
+    {
+      "text": "technical debt, something that we wanted",
+      "offset": 482800,
+      "duration": 4320
+    },
+    {
+      "text": "to look at and we wanted to be able to",
+      "offset": 484720,
+      "duration": 5280
+    },
+    {
+      "text": "to really get a good uh view across the",
+      "offset": 487120,
+      "duration": 5120
+    },
+    {
+      "text": "portfolio of of where we were at and",
+      "offset": 490000,
+      "duration": 3919
+    },
+    {
+      "text": "particularly for senior management as",
+      "offset": 492240,
+      "duration": 3519
+    },
+    {
+      "text": "well. So there were teams that were",
+      "offset": 493919,
+      "duration": 4960
+    },
+    {
+      "text": "using community edition um independently",
+      "offset": 495759,
+      "duration": 5761
+    },
+    {
+      "text": "a number of years ago um talking kind of",
+      "offset": 498879,
+      "duration": 6401
+    },
+    {
+      "text": "the the late uh kind of 2018 around then",
+      "offset": 501520,
+      "duration": 6560
+    },
+    {
+      "text": "um and we we decided to invest in the",
+      "offset": 505280,
+      "duration": 5039
+    },
+    {
+      "text": "enterprise uh edition of Sono Cube",
+      "offset": 508080,
+      "duration": 4879
+    },
+    {
+      "text": "Server at the time. We wanted that um",
+      "offset": 510319,
+      "duration": 4561
+    },
+    {
+      "text": "portfolio visibility so we could start",
+      "offset": 512959,
+      "duration": 4481
+    },
+    {
+      "text": "to um group together projects within",
+      "offset": 514880,
+      "duration": 4880
+    },
+    {
+      "text": "Seno Cube under a single asset single",
+      "offset": 517440,
+      "duration": 4800
+    },
+    {
+      "text": "portfolio so that at a management level",
+      "offset": 519760,
+      "duration": 4240
+    },
+    {
+      "text": "you could very clearly see this is the",
+      "offset": 522240,
+      "duration": 3840
+    },
+    {
+      "text": "state of the projects within this",
+      "offset": 524000,
+      "duration": 4240
+    },
+    {
+      "text": "portfolio for a given asset as a an",
+      "offset": 526080,
+      "duration": 5439
+    },
+    {
+      "text": "individual product could comprise of 100",
+      "offset": 528240,
+      "duration": 5840
+    },
+    {
+      "text": "sub projects within sonar cube. So, we",
+      "offset": 531519,
+      "duration": 3880
+    },
+    {
+      "text": "wanted to have that transparency and",
+      "offset": 534080,
+      "duration": 6640
+    },
+    {
+      "text": "visibility, but really um the we had no",
+      "offset": 535399,
+      "duration": 6761
+    },
+    {
+      "text": "there was nothing really in place to",
+      "offset": 540720,
+      "duration": 3600
+    },
+    {
+      "text": "stop bad code getting in. And we wanted",
+      "offset": 542160,
+      "duration": 4799
+    },
+    {
+      "text": "to make sure that we had um beyond kind",
+      "offset": 544320,
+      "duration": 5040
+    },
+    {
+      "text": "of code reviews. We had um some",
+      "offset": 546959,
+      "duration": 5201
+    },
+    {
+      "text": "additional controls around what gets",
+      "offset": 549360,
+      "duration": 5120
+    },
+    {
+      "text": "into our master branches when we're",
+      "offset": 552160,
+      "duration": 3679
+    },
+    {
+      "text": "going through a pull request and we're",
+      "offset": 554480,
+      "duration": 3600
+    },
+    {
+      "text": "introducing new code. We wanted to to",
+      "offset": 555839,
+      "duration": 4641
+    },
+    {
+      "text": "implement the quality gates to have them",
+      "offset": 558080,
+      "duration": 4560
+    },
+    {
+      "text": "run as part of our pull request to",
+      "offset": 560480,
+      "duration": 3440
+    },
+    {
+      "text": "ensure that we're stopping things",
+      "offset": 562640,
+      "duration": 2879
+    },
+    {
+      "text": "getting in rather than letting",
+      "offset": 563920,
+      "duration": 3280
+    },
+    {
+      "text": "everything get in and then finding it",
+      "offset": 565519,
+      "duration": 4320
+    },
+    {
+      "text": "after the fact. So we we really wanted",
+      "offset": 567200,
+      "duration": 6240
+    },
+    {
+      "text": "to do that to also enforce um some other",
+      "offset": 569839,
+      "duration": 5841
+    },
+    {
+      "text": "um targets as well around the test",
+      "offset": 573440,
+      "duration": 4000
+    },
+    {
+      "text": "coverage for instance at the unit test",
+      "offset": 575680,
+      "duration": 4320
+    },
+    {
+      "text": "level. So we wanted to be stricter",
+      "offset": 577440,
+      "duration": 5120
+    },
+    {
+      "text": "around how much coverage we had of new",
+      "offset": 580000,
+      "duration": 4560
+    },
+    {
+      "text": "code and that was something that again",
+      "offset": 582560,
+      "duration": 4800
+    },
+    {
+      "text": "varied quite wildly across projects",
+      "offset": 584560,
+      "duration": 5200
+    },
+    {
+      "text": "across the the organization. So we",
+      "offset": 587360,
+      "duration": 4479
+    },
+    {
+      "text": "wanted to say this is our baseline. We",
+      "offset": 589760,
+      "duration": 4720
+    },
+    {
+      "text": "want to start enforcing for new code,",
+      "offset": 591839,
+      "duration": 6161
+    },
+    {
+      "text": "high standard, no issues, high level of",
+      "offset": 594480,
+      "duration": 5760
+    },
+    {
+      "text": "test coverage and get that in at the the",
+      "offset": 598000,
+      "duration": 4560
+    },
+    {
+      "text": "pull request level and then also have",
+      "offset": 600240,
+      "duration": 4560
+    },
+    {
+      "text": "the benefits of the transparency being",
+      "offset": 602560,
+      "duration": 4000
+    },
+    {
+      "text": "able to better measure technical debt",
+      "offset": 604800,
+      "duration": 3680
+    },
+    {
+      "text": "across the portfolio as well. So those",
+      "offset": 606560,
+      "duration": 3520
+    },
+    {
+      "text": "were some of the the challenges that we",
+      "offset": 608480,
+      "duration": 4320
+    },
+    {
+      "text": "were trying to address.",
+      "offset": 610080,
+      "duration": 6160
+    },
+    {
+      "text": "Yeah, I I I love that you're, you know,",
+      "offset": 612800,
+      "duration": 6159
+    },
+    {
+      "text": "you guys are fully in on using the",
+      "offset": 616240,
+      "duration": 5360
+    },
+    {
+      "text": "quality gates in your, you know, your",
+      "offset": 618959,
+      "duration": 5921
+    },
+    {
+      "text": "dev sec ops processes. Um, I love that",
+      "offset": 621600,
+      "duration": 5679
+    },
+    {
+      "text": "you're using the code coverage as part",
+      "offset": 624880,
+      "duration": 5280
+    },
+    {
+      "text": "of the, you know, quality gate. Tell me",
+      "offset": 627279,
+      "duration": 6240
+    },
+    {
+      "text": "how those changes uh impacted your",
+      "offset": 630160,
+      "duration": 5679
+    },
+    {
+      "text": "team's productivity or or your business",
+      "offset": 633519,
+      "duration": 4081
+    },
+    {
+      "text": "objectives.",
+      "offset": 635839,
+      "duration": 4161
+    },
+    {
+      "text": "So one of the things it it really helped",
+      "offset": 637600,
+      "duration": 5679
+    },
+    {
+      "text": "with is um ensuring we had that level of",
+      "offset": 640000,
+      "duration": 6560
+    },
+    {
+      "text": "test coverage meant that um there was",
+      "offset": 643279,
+      "duration": 5921
+    },
+    {
+      "text": "less investment required in the the",
+      "offset": 646560,
+      "duration": 5040
+    },
+    {
+      "text": "other areas of testing that we were um",
+      "offset": 649200,
+      "duration": 4960
+    },
+    {
+      "text": "that we were having to do more of. So,",
+      "offset": 651600,
+      "duration": 4640
+    },
+    {
+      "text": "we had to focus a lot more on regression",
+      "offset": 654160,
+      "duration": 4880
+    },
+    {
+      "text": "testing, um, functional testing because",
+      "offset": 656240,
+      "duration": 4960
+    },
+    {
+      "text": "we didn't have that level of automation",
+      "offset": 659040,
+      "duration": 3919
+    },
+    {
+      "text": "around the unit testing because there",
+      "offset": 661200,
+      "duration": 4000
+    },
+    {
+      "text": "was nothing stopping people putting new",
+      "offset": 662959,
+      "duration": 3601
+    },
+    {
+      "text": "code in that wasn't being tested",
+      "offset": 665200,
+      "duration": 3920
+    },
+    {
+      "text": "properly. So, by having that level of",
+      "offset": 666560,
+      "duration": 4160
+    },
+    {
+      "text": "unit testing there, that really helped",
+      "offset": 669120,
+      "duration": 4719
+    },
+    {
+      "text": "us to accelerate um, get our products to",
+      "offset": 670720,
+      "duration": 5520
+    },
+    {
+      "text": "market quicker, but also to ensure the",
+      "offset": 673839,
+      "duration": 5120
+    },
+    {
+      "text": "quality. We we've always ensured the",
+      "offset": 676240,
+      "duration": 4159
+    },
+    {
+      "text": "quality we deliver to our own end",
+      "offset": 678959,
+      "duration": 3120
+    },
+    {
+      "text": "customers was there. But it may have",
+      "offset": 680399,
+      "duration": 4000
+    },
+    {
+      "text": "required in the past more manual effort",
+      "offset": 682079,
+      "duration": 4401
+    },
+    {
+      "text": "after the fact, more testing around the",
+      "offset": 684399,
+      "duration": 5201
+    },
+    {
+      "text": "release rather than ensuring that we had",
+      "offset": 686480,
+      "duration": 5280
+    },
+    {
+      "text": "um that belt and braces approach getting",
+      "offset": 689600,
+      "duration": 3919
+    },
+    {
+      "text": "all of the automation in up front,",
+      "offset": 691760,
+      "duration": 3360
+    },
+    {
+      "text": "making sure that all new code is tested",
+      "offset": 693519,
+      "duration": 3681
+    },
+    {
+      "text": "at a unit test level. And then we still",
+      "offset": 695120,
+      "duration": 4000
+    },
+    {
+      "text": "have the automated functional tests and",
+      "offset": 697200,
+      "duration": 3280
+    },
+    {
+      "text": "everything that runs off of the back of",
+      "offset": 699120,
+      "duration": 3279
+    },
+    {
+      "text": "that. But it's just making sure that we",
+      "offset": 700480,
+      "duration": 3919
+    },
+    {
+      "text": "had that in and stopping issues getting",
+      "offset": 702399,
+      "duration": 4481
+    },
+    {
+      "text": "in at that point, stopping security",
+      "offset": 704399,
+      "duration": 4761
+    },
+    {
+      "text": "vulnerabilities being introduced um",
+      "offset": 706880,
+      "duration": 4320
+    },
+    {
+      "text": "unknowingly, stopping other bugs being",
+      "offset": 709160,
+      "duration": 3799
+    },
+    {
+      "text": "introduced. So adding that the extra",
+      "offset": 711200,
+      "duration": 3680
+    },
+    {
+      "text": "level of security that Sonar Cube gives",
+      "offset": 712959,
+      "duration": 5120
+    },
+    {
+      "text": "us where it spots things that a senior",
+      "offset": 714880,
+      "duration": 4800
+    },
+    {
+      "text": "developer might overlook potentially as",
+      "offset": 718079,
+      "duration": 3121
+    },
+    {
+      "text": "part of a code review. So it's adding",
+      "offset": 719680,
+      "duration": 4159
+    },
+    {
+      "text": "that that extra level of review and",
+      "offset": 721200,
+      "duration": 5439
+    },
+    {
+      "text": "making sure that we had that that extra",
+      "offset": 723839,
+      "duration": 5120
+    },
+    {
+      "text": "guarantee of quality at the point code",
+      "offset": 726639,
+      "duration": 4640
+    },
+    {
+      "text": "goes into master rather than finding",
+      "offset": 728959,
+      "duration": 5201
+    },
+    {
+      "text": "issues later down the line.",
+      "offset": 731279,
+      "duration": 5680
+    },
+    {
+      "text": "And what I I like that we we really",
+      "offset": 734160,
+      "duration": 6000
+    },
+    {
+      "text": "focus a lot uh here at Sonar about, you",
+      "offset": 736959,
+      "duration": 7281
+    },
+    {
+      "text": "know, trying to um this concept of",
+      "offset": 740160,
+      "duration": 6679
+    },
+    {
+      "text": "starting left, trying to get uh",
+      "offset": 744240,
+      "duration": 6159
+    },
+    {
+      "text": "developers as they're writing code to",
+      "offset": 746839,
+      "duration": 5721
+    },
+    {
+      "text": "see find the issues, see the issues,",
+      "offset": 750399,
+      "duration": 5120
+    },
+    {
+      "text": "resolve the issues because we feel that",
+      "offset": 752560,
+      "duration": 6240
+    },
+    {
+      "text": "the you know trying to find them later",
+      "offset": 755519,
+      "duration": 5921
+    },
+    {
+      "text": "in the you know the software development",
+      "offset": 758800,
+      "duration": 5039
+    },
+    {
+      "text": "life cycle is more challenging like",
+      "offset": 761440,
+      "duration": 4079
+    },
+    {
+      "text": "later you find them, the more",
+      "offset": 763839,
+      "duration": 4961
+    },
+    {
+      "text": "challenging they are to find, to fix,",
+      "offset": 765519,
+      "duration": 5601
+    },
+    {
+      "text": "you know, where they are, what they are.",
+      "offset": 768800,
+      "duration": 5760
+    },
+    {
+      "text": "Do you how did you do you think that is",
+      "offset": 771120,
+      "duration": 5120
+    },
+    {
+      "text": "something that your team saw? Do you did",
+      "offset": 774560,
+      "duration": 4399
+    },
+    {
+      "text": "you see any impact to the, you know,",
+      "offset": 776240,
+      "duration": 5599
+    },
+    {
+      "text": "bringing the resol the the discovery and",
+      "offset": 778959,
+      "duration": 5281
+    },
+    {
+      "text": "the resolution earlier in the",
+      "offset": 781839,
+      "duration": 4161
+    },
+    {
+      "text": "development life cycle? Did did you find",
+      "offset": 784240,
+      "duration": 3920
+    },
+    {
+      "text": "that was helpful?",
+      "offset": 786000,
+      "duration": 5200
+    },
+    {
+      "text": "Yeah, absolutely. We we also agree on",
+      "offset": 788160,
+      "duration": 6239
+    },
+    {
+      "text": "shifting left and and obviously dev sec",
+      "offset": 791200,
+      "duration": 4960
+    },
+    {
+      "text": "ops a lot of it's about shifting",
+      "offset": 794399,
+      "duration": 4961
+    },
+    {
+      "text": "processes and um and scans left and I",
+      "offset": 796160,
+      "duration": 4400
+    },
+    {
+      "text": "know that we'll talk a little bit about",
+      "offset": 799360,
+      "duration": 2800
+    },
+    {
+      "text": "sonar keep advanced security as well",
+      "offset": 800560,
+      "duration": 3200
+    },
+    {
+      "text": "where that's also helping us to shift",
+      "offset": 802160,
+      "duration": 4000
+    },
+    {
+      "text": "some of that left um getting it into the",
+      "offset": 803760,
+      "duration": 6720
+    },
+    {
+      "text": "PR process but having having that um",
+      "offset": 806160,
+      "duration": 6960
+    },
+    {
+      "text": "that extra assurance at the pull request",
+      "offset": 810480,
+      "duration": 4320
+    },
+    {
+      "text": "stage has really helped us to accelerate",
+      "offset": 813120,
+      "duration": 4320
+    },
+    {
+      "text": "and we've seen through our monitoring of",
+      "offset": 814800,
+      "duration": 5039
+    },
+    {
+      "text": "our of our metrics and door metrics and",
+      "offset": 817440,
+      "duration": 5280
+    },
+    {
+      "text": "things like that that we've seen um",
+      "offset": 819839,
+      "duration": 5120
+    },
+    {
+      "text": "increased productivity from the teams",
+      "offset": 822720,
+      "duration": 4400
+    },
+    {
+      "text": "after adopting when we've been with the",
+      "offset": 824959,
+      "duration": 5521
+    },
+    {
+      "text": "enterprise edition for um about 4 years",
+      "offset": 827120,
+      "duration": 6560
+    },
+    {
+      "text": "now I believe so we've been um uh",
+      "offset": 830480,
+      "duration": 5200
+    },
+    {
+      "text": "evangelizing it and and championing it",
+      "offset": 833680,
+      "duration": 4560
+    },
+    {
+      "text": "internally um getting to the point where",
+      "offset": 835680,
+      "duration": 4480
+    },
+    {
+      "text": "we start to mandate the use of it and we",
+      "offset": 838240,
+      "duration": 4240
+    },
+    {
+      "text": "started to to mandate the use of the",
+      "offset": 840160,
+      "duration": 3840
+    },
+    {
+      "text": "quality gate integration and DevOps",
+      "offset": 842480,
+      "duration": 3440
+    },
+    {
+      "text": "integration so we've been kind of",
+      "offset": 844000,
+      "duration": 4240
+    },
+    {
+      "text": "tightening up processes as we",
+      "offset": 845920,
+      "duration": 4000
+    },
+    {
+      "text": "And now we've got to the point where we",
+      "offset": 848240,
+      "duration": 3120
+    },
+    {
+      "text": "we go even further and we have",
+      "offset": 849920,
+      "duration": 4080
+    },
+    {
+      "text": "automation to check that people's branch",
+      "offset": 851360,
+      "duration": 5039
+    },
+    {
+      "text": "policy mandates the gate check as a",
+      "offset": 854000,
+      "duration": 3760
+    },
+    {
+      "text": "status check and it's not just there as",
+      "offset": 856399,
+      "duration": 3361
+    },
+    {
+      "text": "optional. So we're really pushing that",
+      "offset": 857760,
+      "duration": 3600
+    },
+    {
+      "text": "because we have seen the benefits and we",
+      "offset": 859760,
+      "duration": 4319
+    },
+    {
+      "text": "have seen in the metrics that we track.",
+      "offset": 861360,
+      "duration": 4640
+    },
+    {
+      "text": "We have seen uh the technical debt",
+      "offset": 864079,
+      "duration": 4081
+    },
+    {
+      "text": "calculation come down as we we we",
+      "offset": 866000,
+      "duration": 5199
+    },
+    {
+      "text": "calculate a a kind of uh percentage of",
+      "offset": 868160,
+      "duration": 4799
+    },
+    {
+      "text": "capacity for our teams that that we want",
+      "offset": 871199,
+      "duration": 3281
+    },
+    {
+      "text": "them to reserve to work on technical",
+      "offset": 872959,
+      "duration": 3841
+    },
+    {
+      "text": "debt. And we do see that coming down.",
+      "offset": 874480,
+      "duration": 4080
+    },
+    {
+      "text": "And when we started integrating the",
+      "offset": 876800,
+      "duration": 4159
+    },
+    {
+      "text": "mandatory gate checks, there was a clear",
+      "offset": 878560,
+      "duration": 4719
+    },
+    {
+      "text": "correlation between that and their",
+      "offset": 880959,
+      "duration": 3521
+    },
+    {
+      "text": "overall scores that were being",
+      "offset": 883279,
+      "duration": 3201
+    },
+    {
+      "text": "calculated. We could see the benefits",
+      "offset": 884480,
+      "duration": 4560
+    },
+    {
+      "text": "there from mandating those checks and",
+      "offset": 886480,
+      "duration": 4560
+    },
+    {
+      "text": "stopping those issues being introduced,",
+      "offset": 889040,
+      "duration": 4400
+    },
+    {
+      "text": "which was excellent. Oh, I love hearing",
+      "offset": 891040,
+      "duration": 4320
+    },
+    {
+      "text": "that. I love hearing about, you know,",
+      "offset": 893440,
+      "duration": 5759
+    },
+    {
+      "text": "we're we're Sonar is a a developer",
+      "offset": 895360,
+      "duration": 6080
+    },
+    {
+      "text": "built, developerled, developer focused",
+      "offset": 899199,
+      "duration": 4401
+    },
+    {
+      "text": "company. So, the fact that your",
+      "offset": 901440,
+      "duration": 4160
+    },
+    {
+      "text": "developers are embracing this, they're",
+      "offset": 903600,
+      "duration": 4640
+    },
+    {
+      "text": "seeing the productivity, um they're",
+      "offset": 905600,
+      "duration": 4640
+    },
+    {
+      "text": "seeing the benefits of it, that that",
+      "offset": 908240,
+      "duration": 4159
+    },
+    {
+      "text": "warms my heart. I love it. Absolutely.",
+      "offset": 910240,
+      "duration": 3520
+    },
+    {
+      "text": "And things like I could talk all day",
+      "offset": 912399,
+      "duration": 3961
+    },
+    {
+      "text": "long about this. Um, but we're here",
+      "offset": 913760,
+      "duration": 7120
+    },
+    {
+      "text": "because you posted this great um finding",
+      "offset": 916360,
+      "duration": 8440
+    },
+    {
+      "text": "about your upgrade journey from previous",
+      "offset": 920880,
+      "duration": 6399
+    },
+    {
+      "text": "uh you were on a previous version uh to",
+      "offset": 924800,
+      "duration": 5920
+    },
+    {
+      "text": "the current uh 2025 release one LTA to",
+      "offset": 927279,
+      "duration": 7521
+    },
+    {
+      "text": "the LTA. So, um what prompted you to",
+      "offset": 930720,
+      "duration": 5919
+    },
+    {
+      "text": "upgrade so early? You know, a lot of",
+      "offset": 934800,
+      "duration": 3200
+    },
+    {
+      "text": "people wait, a lot of customers wait,",
+      "offset": 936639,
+      "duration": 3521
+    },
+    {
+      "text": "which is which is great, which is fine.",
+      "offset": 938000,
+      "duration": 4320
+    },
+    {
+      "text": "you guys went in pretty quickly and",
+      "offset": 940160,
+      "duration": 4400
+    },
+    {
+      "text": "upgraded uh almost immediately when it",
+      "offset": 942320,
+      "duration": 4400
+    },
+    {
+      "text": "was released. Tell us about that. Yeah,",
+      "offset": 944560,
+      "duration": 4560
+    },
+    {
+      "text": "so I we like to keep on top of the new",
+      "offset": 946720,
+      "duration": 4080
+    },
+    {
+      "text": "releases. We tend to give it a couple of",
+      "offset": 949120,
+      "duration": 3760
+    },
+    {
+      "text": "weeks cooling off period before jumping",
+      "offset": 950800,
+      "duration": 4880
+    },
+    {
+      "text": "on it. So not quite on day one, but um",
+      "offset": 952880,
+      "duration": 4560
+    },
+    {
+      "text": "after a couple of weeks we like to to",
+      "offset": 955680,
+      "duration": 4079
+    },
+    {
+      "text": "upgrade and one of the reasons is it's",
+      "offset": 957440,
+      "duration": 6720
+    },
+    {
+      "text": "so easy. Um we also have we have the",
+      "offset": 959759,
+      "duration": 6880
+    },
+    {
+      "text": "teams coming to us also if there's a new",
+      "offset": 964160,
+      "duration": 4880
+    },
+    {
+      "text": "feature maybe there's a new um language",
+      "offset": 966639,
+      "duration": 5361
+    },
+    {
+      "text": "feature maybe there are new um features",
+      "offset": 969040,
+      "duration": 5760
+    },
+    {
+      "text": "in the product like the AI code fix it's",
+      "offset": 972000,
+      "duration": 3920
+    },
+    {
+      "text": "something that the teams have been",
+      "offset": 974800,
+      "duration": 3120
+    },
+    {
+      "text": "benefiting from they will come to me and",
+      "offset": 975920,
+      "duration": 3440
+    },
+    {
+      "text": "say you know when can we go to this",
+      "offset": 977920,
+      "duration": 3039
+    },
+    {
+      "text": "release and that will often be within",
+      "offset": 979360,
+      "duration": 3200
+    },
+    {
+      "text": "days of a new release coming out so",
+      "offset": 980959,
+      "duration": 4081
+    },
+    {
+      "text": "people are keeping their eye on on the",
+      "offset": 982560,
+      "duration": 4959
+    },
+    {
+      "text": "release notes seeing what's coming and",
+      "offset": 985040,
+      "duration": 4159
+    },
+    {
+      "text": "the fact that that process is so easy",
+      "offset": 987519,
+      "duration": 3841
+    },
+    {
+      "text": "it's it's a no-brainer something we can",
+      "offset": 989199,
+      "duration": 3921
+    },
+    {
+      "text": "easily jump on, something we could",
+      "offset": 991360,
+      "duration": 3599
+    },
+    {
+      "text": "easily go back as well if we needed to.",
+      "offset": 993120,
+      "duration": 3600
+    },
+    {
+      "text": "We've never had to do that, but we know",
+      "offset": 994959,
+      "duration": 3120
+    },
+    {
+      "text": "that the release process is so",
+      "offset": 996720,
+      "duration": 3280
+    },
+    {
+      "text": "straightforward that we could revert if",
+      "offset": 998079,
+      "duration": 4560
+    },
+    {
+      "text": "we had to. So, it's it's just been great",
+      "offset": 1000000,
+      "duration": 4160
+    },
+    {
+      "text": "for us to benefit from those new new",
+      "offset": 1002639,
+      "duration": 3521
+    },
+    {
+      "text": "features.",
+      "offset": 1004160,
+      "duration": 4560
+    },
+    {
+      "text": "Oh, that's awesome to hear. Um, and I",
+      "offset": 1006160,
+      "duration": 4000
+    },
+    {
+      "text": "feel like I almost feel like we're",
+      "offset": 1008720,
+      "duration": 2799
+    },
+    {
+      "text": "cheating and prompting you in some way,",
+      "offset": 1010160,
+      "duration": 3119
+    },
+    {
+      "text": "but I I know we're not. So, I love I",
+      "offset": 1011519,
+      "duration": 5401
+    },
+    {
+      "text": "love hearing what you have to say. Um,",
+      "offset": 1013279,
+      "duration": 6800
+    },
+    {
+      "text": "but yeah, it's easy, but you must have",
+      "offset": 1016920,
+      "duration": 5560
+    },
+    {
+      "text": "some kind of concerns about upgrading.",
+      "offset": 1020079,
+      "duration": 4880
+    },
+    {
+      "text": "You must have some uh be worried about",
+      "offset": 1022480,
+      "duration": 4319
+    },
+    {
+      "text": "some challenges. Did did you have any",
+      "offset": 1024959,
+      "duration": 5761
+    },
+    {
+      "text": "and what were they? So, I know that um I",
+      "offset": 1026799,
+      "duration": 5681
+    },
+    {
+      "text": "know that the process to go back is",
+      "offset": 1030720,
+      "duration": 3359
+    },
+    {
+      "text": "straightforward. So, that's that's",
+      "offset": 1032480,
+      "duration": 2959
+    },
+    {
+      "text": "always there. So, we know that if there",
+      "offset": 1034079,
+      "duration": 4480
+    },
+    {
+      "text": "are issues, then um it's something we",
+      "offset": 1035439,
+      "duration": 6000
+    },
+    {
+      "text": "can we can get get around go um and go",
+      "offset": 1038559,
+      "duration": 5760
+    },
+    {
+      "text": "back. Um, I also know that uh we've",
+      "offset": 1041439,
+      "duration": 4081
+    },
+    {
+      "text": "always had a great relationship with",
+      "offset": 1044319,
+      "duration": 2640
+    },
+    {
+      "text": "Sonic Keep support. They've always",
+      "offset": 1045520,
+      "duration": 3279
+    },
+    {
+      "text": "responded very efficiently. So I know",
+      "offset": 1046959,
+      "duration": 3201
+    },
+    {
+      "text": "that if there are issues that come out",
+      "offset": 1048799,
+      "duration": 3521
+    },
+    {
+      "text": "of a release um they're dealt with",
+      "offset": 1050160,
+      "duration": 4000
+    },
+    {
+      "text": "really well. So I've got that that",
+      "offset": 1052320,
+      "duration": 4719
+    },
+    {
+      "text": "confidence there as well. So really I we",
+      "offset": 1054160,
+      "duration": 5680
+    },
+    {
+      "text": "don't have doubts about upgrading. Um",
+      "offset": 1057039,
+      "duration": 5281
+    },
+    {
+      "text": "we're happy to go and yeah leave it a",
+      "offset": 1059840,
+      "duration": 3600
+    },
+    {
+      "text": "couple of weeks just in case there are",
+      "offset": 1062320,
+      "duration": 4800
+    },
+    {
+      "text": "any very early issues but um beyond that",
+      "offset": 1063440,
+      "duration": 5599
+    },
+    {
+      "text": "we're ready to jump on on those new",
+      "offset": 1067120,
+      "duration": 3919
+    },
+    {
+      "text": "releases.",
+      "offset": 1069039,
+      "duration": 4561
+    },
+    {
+      "text": "Uh I know uh well I know because I'm",
+      "offset": 1071039,
+      "duration": 5121
+    },
+    {
+      "text": "product marketing manager but uh you",
+      "offset": 1073600,
+      "duration": 6240
+    },
+    {
+      "text": "should also have uh access to have um um",
+      "offset": 1076160,
+      "duration": 5600
+    },
+    {
+      "text": "test instances like pre-production",
+      "offset": 1079840,
+      "duration": 3440
+    },
+    {
+      "text": "instances. Do you leverage that? Do you",
+      "offset": 1081760,
+      "duration": 3600
+    },
+    {
+      "text": "use that capability?",
+      "offset": 1083280,
+      "duration": 4320
+    },
+    {
+      "text": "Uh we actually don't. I know that we do",
+      "offset": 1085360,
+      "duration": 5360
+    },
+    {
+      "text": "have the ability to do that but um the",
+      "offset": 1087600,
+      "duration": 5280
+    },
+    {
+      "text": "system's been so reliable for us and the",
+      "offset": 1090720,
+      "duration": 4319
+    },
+    {
+      "text": "release process has been rock solid for",
+      "offset": 1092880,
+      "duration": 4799
+    },
+    {
+      "text": "the last four years. It's not um it's",
+      "offset": 1095039,
+      "duration": 5441
+    },
+    {
+      "text": "it's never been an issue for us.",
+      "offset": 1097679,
+      "duration": 5921
+    },
+    {
+      "text": "That's awesome to hear. Um, do you have",
+      "offset": 1100480,
+      "duration": 4960
+    },
+    {
+      "text": "what are your like when you're planning",
+      "offset": 1103600,
+      "duration": 4040
+    },
+    {
+      "text": "an upgrade, do you have specific",
+      "offset": 1105440,
+      "duration": 4400
+    },
+    {
+      "text": "expectations? Were those expectations",
+      "offset": 1107640,
+      "duration": 6200
+    },
+    {
+      "text": "met? Tell us about that. So, um, the",
+      "offset": 1109840,
+      "duration": 5520
+    },
+    {
+      "text": "upgrade process has always been quite",
+      "offset": 1113840,
+      "duration": 5040
+    },
+    {
+      "text": "quick for us. Um, it's we operate Sonar",
+      "offset": 1115360,
+      "duration": 6319
+    },
+    {
+      "text": "Cube Server as a container. So uh the",
+      "offset": 1118880,
+      "duration": 5200
+    },
+    {
+      "text": "process of upgrading is literally just",
+      "offset": 1121679,
+      "duration": 4000
+    },
+    {
+      "text": "specifying the new container version",
+      "offset": 1124080,
+      "duration": 4719
+    },
+    {
+      "text": "that we want, redeploying and then going",
+      "offset": 1125679,
+      "duration": 5921
+    },
+    {
+      "text": "through the um the the Sonic Cube UI to",
+      "offset": 1128799,
+      "duration": 4401
+    },
+    {
+      "text": "run the upgrade if there's a database",
+      "offset": 1131600,
+      "duration": 4319
+    },
+    {
+      "text": "upgrade that needs to happen. Um we",
+      "offset": 1133200,
+      "duration": 5599
+    },
+    {
+      "text": "normally will um coordinate with our",
+      "offset": 1135919,
+      "duration": 4321
+    },
+    {
+      "text": "teams and communicate that this upgrade",
+      "offset": 1138799,
+      "duration": 2721
+    },
+    {
+      "text": "is going to happen. There'll be a little",
+      "offset": 1140240,
+      "duration": 3360
+    },
+    {
+      "text": "bit of downtime that normally just",
+      "offset": 1141520,
+      "duration": 4159
+    },
+    {
+      "text": "happens out of hours on a on a workday.",
+      "offset": 1143600,
+      "duration": 3199
+    },
+    {
+      "text": "It's not something that has to happen at",
+      "offset": 1145679,
+      "duration": 4081
+    },
+    {
+      "text": "a weekend. the process is usually done",
+      "offset": 1146799,
+      "duration": 5841
+    },
+    {
+      "text": "and dusted within an hour or so. Um the",
+      "offset": 1149760,
+      "duration": 3960
+    },
+    {
+      "text": "release for",
+      "offset": 1152640,
+      "duration": 4880
+    },
+    {
+      "text": "2025.1 did take longer. Um that so there",
+      "offset": 1153720,
+      "duration": 6920
+    },
+    {
+      "text": "was uh that was slightly unexpected. We",
+      "offset": 1157520,
+      "duration": 5680
+    },
+    {
+      "text": "had um a much longer deployment process.",
+      "offset": 1160640,
+      "duration": 4720
+    },
+    {
+      "text": "It was still completed successfully",
+      "offset": 1163200,
+      "duration": 4800
+    },
+    {
+      "text": "within that evening. But it was a longer",
+      "offset": 1165360,
+      "duration": 4960
+    },
+    {
+      "text": "release. Um however, had I known the",
+      "offset": 1168000,
+      "duration": 4559
+    },
+    {
+      "text": "benefits that I was about to reap, I",
+      "offset": 1170320,
+      "duration": 4320
+    },
+    {
+      "text": "would have been much happier at the time",
+      "offset": 1172559,
+      "duration": 3281
+    },
+    {
+      "text": "uh knowing that it was taking a bit",
+      "offset": 1174640,
+      "duration": 4159
+    },
+    {
+      "text": "longer. Um but uh yeah the process has",
+      "offset": 1175840,
+      "duration": 4640
+    },
+    {
+      "text": "always been straightforward. So",
+      "offset": 1178799,
+      "duration": 2880
+    },
+    {
+      "text": "especially when you're operating as a",
+      "offset": 1180480,
+      "duration": 2400
+    },
+    {
+      "text": "container, you know, we don't have to",
+      "offset": 1181679,
+      "duration": 3601
+    },
+    {
+      "text": "worry about about installing on a VM or",
+      "offset": 1182880,
+      "duration": 4799
+    },
+    {
+      "text": "anything like that. It's just deploy a",
+      "offset": 1185280,
+      "duration": 4399
+    },
+    {
+      "text": "new container image, let the product",
+      "offset": 1187679,
+      "duration": 3761
+    },
+    {
+      "text": "upgrade its own database and then off",
+      "offset": 1189679,
+      "duration": 3921
+    },
+    {
+      "text": "you go.",
+      "offset": 1191440,
+      "duration": 7359
+    },
+    {
+      "text": "Awesome. Um so I know and and maybe some",
+      "offset": 1193600,
+      "duration": 7439
+    },
+    {
+      "text": "uh of the audience here today knows",
+      "offset": 1198799,
+      "duration": 6161
+    },
+    {
+      "text": "about the the your your post uh that we",
+      "offset": 1201039,
+      "duration": 7681
+    },
+    {
+      "text": "have shared in some of our u um content",
+      "offset": 1204960,
+      "duration": 6000
+    },
+    {
+      "text": "about the the release. So the the",
+      "offset": 1208720,
+      "duration": 4079
+    },
+    {
+      "text": "benefit what was this surprise benefit",
+      "offset": 1210960,
+      "duration": 4480
+    },
+    {
+      "text": "tell us tell us about this uh these",
+      "offset": 1212799,
+      "duration": 5441
+    },
+    {
+      "text": "benefits that you saw. Sure. So we we",
+      "offset": 1215440,
+      "duration": 5400
+    },
+    {
+      "text": "run around um",
+      "offset": 1218240,
+      "duration": 5920
+    },
+    {
+      "text": "1,200,400 projects or so on our instance",
+      "offset": 1220840,
+      "duration": 6040
+    },
+    {
+      "text": "um around 28 million lines of code in",
+      "offset": 1224160,
+      "duration": 5800
+    },
+    {
+      "text": "total. Um some of those projects are",
+      "offset": 1226880,
+      "duration": 5520
+    },
+    {
+      "text": "fairly significant in size. So one of",
+      "offset": 1229960,
+      "duration": 4839
+    },
+    {
+      "text": "them was um a Java based project around",
+      "offset": 1232400,
+      "duration": 6360
+    },
+    {
+      "text": "3 million lines of code. Um that um",
+      "offset": 1234799,
+      "duration": 6721
+    },
+    {
+      "text": "typically would take around anywhere",
+      "offset": 1238760,
+      "duration": 5640
+    },
+    {
+      "text": "between 3 and 5 hours to do a full scan",
+      "offset": 1241520,
+      "duration": 4720
+    },
+    {
+      "text": "of the the full master branch. pull",
+      "offset": 1244400,
+      "duration": 4240
+    },
+    {
+      "text": "request scans were down to kind of the",
+      "offset": 1246240,
+      "duration": 5520
+    },
+    {
+      "text": "25 minute or so level, but still enough",
+      "offset": 1248640,
+      "duration": 5919
+    },
+    {
+      "text": "to to annoy developers who are waiting",
+      "offset": 1251760,
+      "duration": 5680
+    },
+    {
+      "text": "to to get their work through. Um, so on",
+      "offset": 1254559,
+      "duration": 5681
+    },
+    {
+      "text": "upgrade, you're anticipating a a long",
+      "offset": 1257440,
+      "duration": 4000
+    },
+    {
+      "text": "rescan, right? Because part of the",
+      "offset": 1260240,
+      "duration": 2960
+    },
+    {
+      "text": "upgrade is often like re-triggering",
+      "offset": 1261440,
+      "duration": 6160
+    },
+    {
+      "text": "another full scan, right? Yeah, we we as",
+      "offset": 1263200,
+      "duration": 6400
+    },
+    {
+      "text": "part of every upgrade, it would um it",
+      "offset": 1267600,
+      "duration": 3439
+    },
+    {
+      "text": "would go through and reindex all the",
+      "offset": 1269600,
+      "duration": 2720
+    },
+    {
+      "text": "projects and and that's something that",
+      "offset": 1271039,
+      "duration": 3841
+    },
+    {
+      "text": "also has has improved greatly over the",
+      "offset": 1272320,
+      "duration": 5040
+    },
+    {
+      "text": "years. uh that used to take much longer.",
+      "offset": 1274880,
+      "duration": 6799
+    },
+    {
+      "text": "Um so we we came to 2025.1 and we ran a",
+      "offset": 1277360,
+      "duration": 6799
+    },
+    {
+      "text": "scan for the the full the full scan of",
+      "offset": 1281679,
+      "duration": 4961
+    },
+    {
+      "text": "this large project and the execution",
+      "offset": 1284159,
+      "duration": 5601
+    },
+    {
+      "text": "dropped to 15 minutes. So I immediately",
+      "offset": 1286640,
+      "duration": 5519
+    },
+    {
+      "text": "thought what's gone wrong like that's",
+      "offset": 1289760,
+      "duration": 5120
+    },
+    {
+      "text": "that's significant. But um everything",
+      "offset": 1292159,
+      "duration": 4321
+    },
+    {
+      "text": "checked out. The results were there as",
+      "offset": 1294880,
+      "duration": 4560
+    },
+    {
+      "text": "expected and the um the pull request",
+      "offset": 1296480,
+      "duration": 5679
+    },
+    {
+      "text": "scans themselves were also down to um to",
+      "offset": 1299440,
+      "duration": 4640
+    },
+    {
+      "text": "less than a minute kind of 30 seconds or",
+      "offset": 1302159,
+      "duration": 4400
+    },
+    {
+      "text": "so. Um which was absolutely uh",
+      "offset": 1304080,
+      "duration": 5360
+    },
+    {
+      "text": "unbelievable for us and that also made a",
+      "offset": 1306559,
+      "duration": 5120
+    },
+    {
+      "text": "massive difference to that team because",
+      "offset": 1309440,
+      "duration": 3680
+    },
+    {
+      "text": "if you imagine previously we'd been",
+      "offset": 1311679,
+      "duration": 2961
+    },
+    {
+      "text": "mandating that they have these quality",
+      "offset": 1313120,
+      "duration": 3039
+    },
+    {
+      "text": "gate checks and that they can't pass",
+      "offset": 1314640,
+      "duration": 4080
+    },
+    {
+      "text": "their PRs until they've completed. Well,",
+      "offset": 1316159,
+      "duration": 4241
+    },
+    {
+      "text": "all of a sudden they're completing",
+      "offset": 1318720,
+      "duration": 4800
+    },
+    {
+      "text": "within a minute instead of 25. So they",
+      "offset": 1320400,
+      "duration": 4480
+    },
+    {
+      "text": "can go ahead and they can complete their",
+      "offset": 1323520,
+      "duration": 2960
+    },
+    {
+      "text": "work and and the system is not stopping",
+      "offset": 1324880,
+      "duration": 2960
+    },
+    {
+      "text": "them anymore. It's not blocking them or",
+      "offset": 1326480,
+      "duration": 3360
+    },
+    {
+      "text": "slowing them down. So we saw a massive",
+      "offset": 1327840,
+      "duration": 3360
+    },
+    {
+      "text": "benefit there as they could they could",
+      "offset": 1329840,
+      "duration": 3680
+    },
+    {
+      "text": "turn around work much quicker and then",
+      "offset": 1331200,
+      "duration": 4400
+    },
+    {
+      "text": "those overall master branch scans down",
+      "offset": 1333520,
+      "duration": 4480
+    },
+    {
+      "text": "to 15 minutes and since then it's",
+      "offset": 1335600,
+      "duration": 4040
+    },
+    {
+      "text": "dropped even further to around 5",
+      "offset": 1338000,
+      "duration": 4720
+    },
+    {
+      "text": "minutes. So it's a significant",
+      "offset": 1339640,
+      "duration": 5240
+    },
+    {
+      "text": "improvement in performance and we've",
+      "offset": 1342720,
+      "duration": 4480
+    },
+    {
+      "text": "seen that across the board for projects",
+      "offset": 1344880,
+      "duration": 6080
+    },
+    {
+      "text": "as well. Um so that that wasn't the only",
+      "offset": 1347200,
+      "duration": 6400
+    },
+    {
+      "text": "uh benefit we saw. So we had um I",
+      "offset": 1350960,
+      "duration": 4240
+    },
+    {
+      "text": "mentioned that we had a lengthy upgrade",
+      "offset": 1353600,
+      "duration": 5040
+    },
+    {
+      "text": "process as it as Sonoku did stuff to its",
+      "offset": 1355200,
+      "duration": 5920
+    },
+    {
+      "text": "database. Um it was it was migrating",
+      "offset": 1358640,
+      "duration": 4640
+    },
+    {
+      "text": "data. It was doing stuff. Um at the end",
+      "offset": 1361120,
+      "duration": 4799
+    },
+    {
+      "text": "of this um the database had dropped in",
+      "offset": 1363280,
+      "duration": 3800
+    },
+    {
+      "text": "size by",
+      "offset": 1365919,
+      "duration": 4880
+    },
+    {
+      "text": "50%. So we've gone down by 50%. And this",
+      "offset": 1367080,
+      "duration": 6520
+    },
+    {
+      "text": "is a a cloud hosted database. Obviously",
+      "offset": 1370799,
+      "duration": 5201
+    },
+    {
+      "text": "we pay for the resources that we use. So",
+      "offset": 1373600,
+      "duration": 5600
+    },
+    {
+      "text": "that was a a direct saving for us there.",
+      "offset": 1376000,
+      "duration": 5919
+    },
+    {
+      "text": "And because of the improved performance",
+      "offset": 1379200,
+      "duration": 4479
+    },
+    {
+      "text": "um we we were able to reduce the",
+      "offset": 1381919,
+      "duration": 4240
+    },
+    {
+      "text": "resources that we uh assigned to that",
+      "offset": 1383679,
+      "duration": 4201
+    },
+    {
+      "text": "database as well from a compute",
+      "offset": 1386159,
+      "duration": 4000
+    },
+    {
+      "text": "perspective. We're able to reduce reduce",
+      "offset": 1387880,
+      "duration": 5840
+    },
+    {
+      "text": "the resources for the container as well.",
+      "offset": 1390159,
+      "duration": 6400
+    },
+    {
+      "text": "So the the improved performance of the",
+      "offset": 1393720,
+      "duration": 5480
+    },
+    {
+      "text": "product let us then scale back the",
+      "offset": 1396559,
+      "duration": 5201
+    },
+    {
+      "text": "resources that we' assigned give us a",
+      "offset": 1399200,
+      "duration": 4640
+    },
+    {
+      "text": "direct cost saving as well in storage",
+      "offset": 1401760,
+      "duration": 4000
+    },
+    {
+      "text": "and compute. That's fantastic. And the",
+      "offset": 1403840,
+      "duration": 3760
+    },
+    {
+      "text": "teams and the teams benefit. They get",
+      "offset": 1405760,
+      "duration": 3919
+    },
+    {
+      "text": "much better performance. Their",
+      "offset": 1407600,
+      "duration": 3439
+    },
+    {
+      "text": "productivity is not affected. They're",
+      "offset": 1409679,
+      "duration": 3681
+    },
+    {
+      "text": "not sitting around waiting juggling PRs",
+      "offset": 1411039,
+      "duration": 4241
+    },
+    {
+      "text": "to try and keep productive whilst they",
+      "offset": 1413360,
+      "duration": 4000
+    },
+    {
+      "text": "wait for others to come back. And that",
+      "offset": 1415280,
+      "duration": 4000
+    },
+    {
+      "text": "avoids that context switching that kills",
+      "offset": 1417360,
+      "duration": 4000
+    },
+    {
+      "text": "kills all of our productivity. They",
+      "offset": 1419280,
+      "duration": 4320
+    },
+    {
+      "text": "could just go in, do their PR, get their",
+      "offset": 1421360,
+      "duration": 5280
+    },
+    {
+      "text": "scan done, all good. Code review happens",
+      "offset": 1423600,
+      "duration": 5520
+    },
+    {
+      "text": "and then it goes in.",
+      "offset": 1426640,
+      "duration": 5320
+    },
+    {
+      "text": "That's that's fantastic to I love it.",
+      "offset": 1429120,
+      "duration": 5840
+    },
+    {
+      "text": "Um, are there are there any other I know",
+      "offset": 1431960,
+      "duration": 5560
+    },
+    {
+      "text": "this was kind of the big message that",
+      "offset": 1434960,
+      "duration": 4719
+    },
+    {
+      "text": "that we heard from you and it's great to",
+      "offset": 1437520,
+      "duration": 4240
+    },
+    {
+      "text": "hear the details and that you're still",
+      "offset": 1439679,
+      "duration": 5601
+    },
+    {
+      "text": "continuing to see uh improvements. Um,",
+      "offset": 1441760,
+      "duration": 6560
+    },
+    {
+      "text": "are there any other things in the the",
+      "offset": 1445280,
+      "duration": 7040
+    },
+    {
+      "text": "LTA in in the 2025.1 release that uh",
+      "offset": 1448320,
+      "duration": 6560
+    },
+    {
+      "text": "helped you with your uh code health",
+      "offset": 1452320,
+      "duration": 6800
+    },
+    {
+      "text": "strategy or your teams or um any",
+      "offset": 1454880,
+      "duration": 7320
+    },
+    {
+      "text": "anything to help identify and resolve",
+      "offset": 1459120,
+      "duration": 6480
+    },
+    {
+      "text": "critical issues faster?",
+      "offset": 1462200,
+      "duration": 6200
+    },
+    {
+      "text": "Um I think that the performance was the",
+      "offset": 1465600,
+      "duration": 4720
+    },
+    {
+      "text": "big deal there. That's what's unblocked",
+      "offset": 1468400,
+      "duration": 5440
+    },
+    {
+      "text": "our teams. Um I know that the AI um",
+      "offset": 1470320,
+      "duration": 5520
+    },
+    {
+      "text": "codegen fixes that I know that's not new",
+      "offset": 1473840,
+      "duration": 4640
+    },
+    {
+      "text": "in 2025.1 but that's something that we",
+      "offset": 1475840,
+      "duration": 4240
+    },
+    {
+      "text": "have newly adopted and and the teams",
+      "offset": 1478480,
+      "duration": 2960
+    },
+    {
+      "text": "have been really liking that. So not",
+      "offset": 1480080,
+      "duration": 3440
+    },
+    {
+      "text": "only getting issues raised by Senaki but",
+      "offset": 1481440,
+      "duration": 4119
+    },
+    {
+      "text": "having it suggest a fix which is",
+      "offset": 1483520,
+      "duration": 5279
+    },
+    {
+      "text": "fantastic. Um and I know that we we've",
+      "offset": 1485559,
+      "duration": 5961
+    },
+    {
+      "text": "also moved on to 2025.2 now in order to",
+      "offset": 1488799,
+      "duration": 5841
+    },
+    {
+      "text": "benefit and be part of the um the early",
+      "offset": 1491520,
+      "duration": 5080
+    },
+    {
+      "text": "access preview for the advanced",
+      "offset": 1494640,
+      "duration": 5120
+    },
+    {
+      "text": "security. So that's again another reason",
+      "offset": 1496600,
+      "duration": 5000
+    },
+    {
+      "text": "why we we keep on top of these latest",
+      "offset": 1499760,
+      "duration": 3680
+    },
+    {
+      "text": "releases is that they bring the good",
+      "offset": 1501600,
+      "duration": 4959
+    },
+    {
+      "text": "stuff, you know. So we we we like to to",
+      "offset": 1503440,
+      "duration": 4960
+    },
+    {
+      "text": "keep moving and um and benefit from",
+      "offset": 1506559,
+      "duration": 3600
+    },
+    {
+      "text": "those features.",
+      "offset": 1508400,
+      "duration": 6159
+    },
+    {
+      "text": "I want to get to your your um how you've",
+      "offset": 1510159,
+      "duration": 7201
+    },
+    {
+      "text": "been uh using advanced security and I",
+      "offset": 1514559,
+      "duration": 4161
+    },
+    {
+      "text": "want to get to ask you that. But before",
+      "offset": 1517360,
+      "duration": 4240
+    },
+    {
+      "text": "I do, just one last thing. Do you have",
+      "offset": 1518720,
+      "duration": 6319
+    },
+    {
+      "text": "any advice for any of the people is",
+      "offset": 1521600,
+      "duration": 5600
+    },
+    {
+      "text": "listening today or watching today that",
+      "offset": 1525039,
+      "duration": 3921
+    },
+    {
+      "text": "uh about like you know if they're",
+      "offset": 1527200,
+      "duration": 3839
+    },
+    {
+      "text": "getting ready to upgrade any advice to",
+      "offset": 1528960,
+      "duration": 6000
+    },
+    {
+      "text": "them about uh the upgrade process and um",
+      "offset": 1531039,
+      "duration": 6640
+    },
+    {
+      "text": "maybe the top benefits.",
+      "offset": 1534960,
+      "duration": 4800
+    },
+    {
+      "text": "Yeah, I I think I would just be aware",
+      "offset": 1537679,
+      "duration": 4801
+    },
+    {
+      "text": "that this release may potentially take a",
+      "offset": 1539760,
+      "duration": 4240
+    },
+    {
+      "text": "little bit longer because it it seems",
+      "offset": 1542480,
+      "duration": 2960
+    },
+    {
+      "text": "that there were some significant changes",
+      "offset": 1544000,
+      "duration": 4559
+    },
+    {
+      "text": "happening on the database size. Um but",
+      "offset": 1545440,
+      "duration": 5280
+    },
+    {
+      "text": "you are going to to reap those benefits.",
+      "offset": 1548559,
+      "duration": 4641
+    },
+    {
+      "text": "So have a look at your um the current",
+      "offset": 1550720,
+      "duration": 3439
+    },
+    {
+      "text": "performance that you're getting out of",
+      "offset": 1553200,
+      "duration": 2240
+    },
+    {
+      "text": "your projects. Maybe if you have some",
+      "offset": 1554159,
+      "duration": 2640
+    },
+    {
+      "text": "particularly long running projects",
+      "offset": 1555440,
+      "duration": 3520
+    },
+    {
+      "text": "there. Um like I say, we've seen the",
+      "offset": 1556799,
+      "duration": 5360
+    },
+    {
+      "text": "benefits on not only the the master full",
+      "offset": 1558960,
+      "duration": 5120
+    },
+    {
+      "text": "scans but also on the pool request scans",
+      "offset": 1562159,
+      "duration": 4961
+    },
+    {
+      "text": "as well. Um so there may be may be areas",
+      "offset": 1564080,
+      "duration": 5360
+    },
+    {
+      "text": "there and particularly if like with us",
+      "offset": 1567120,
+      "duration": 4720
+    },
+    {
+      "text": "with those larger projects we had we did",
+      "offset": 1569440,
+      "duration": 5520
+    },
+    {
+      "text": "have some resistance to for mandating",
+      "offset": 1571840,
+      "duration": 5120
+    },
+    {
+      "text": "quality gate checks in progress because",
+      "offset": 1574960,
+      "duration": 4400
+    },
+    {
+      "text": "it took a little while to run. that's",
+      "offset": 1576960,
+      "duration": 3440
+    },
+    {
+      "text": "not going to be a blocker for you",
+      "offset": 1579360,
+      "duration": 4160
+    },
+    {
+      "text": "anymore. So, um yeah, I'd say look at",
+      "offset": 1580400,
+      "duration": 6480
+    },
+    {
+      "text": "the upgrade. Um be wary of planning",
+      "offset": 1583520,
+      "duration": 5840
+    },
+    {
+      "text": "enough time to to take your system down",
+      "offset": 1586880,
+      "duration": 5360
+    },
+    {
+      "text": "and do the upgrade as it if if it's the",
+      "offset": 1589360,
+      "duration": 4720
+    },
+    {
+      "text": "same as my experience. Then you may see",
+      "offset": 1592240,
+      "duration": 3280
+    },
+    {
+      "text": "it takes a bit longer than previous",
+      "offset": 1594080,
+      "duration": 4440
+    },
+    {
+      "text": "upgrades, particularly the um is it the",
+      "offset": 1595520,
+      "duration": 5920
+    },
+    {
+      "text": "10x uh version line that we had",
+      "offset": 1598520,
+      "duration": 6200
+    },
+    {
+      "text": "previously, those upgrades were um were",
+      "offset": 1601440,
+      "duration": 4920
+    },
+    {
+      "text": "much quicker for me. But yeah, the",
+      "offset": 1604720,
+      "duration": 5040
+    },
+    {
+      "text": "2025.1 and the new versioning system did",
+      "offset": 1606360,
+      "duration": 5960
+    },
+    {
+      "text": "take a little while. But um yeah, just",
+      "offset": 1609760,
+      "duration": 4480
+    },
+    {
+      "text": "monitor the the database size before and",
+      "offset": 1612320,
+      "duration": 3920
+    },
+    {
+      "text": "after as well and see what what",
+      "offset": 1614240,
+      "duration": 4640
+    },
+    {
+      "text": "difference you can get there. And yeah,",
+      "offset": 1616240,
+      "duration": 4000
+    },
+    {
+      "text": "just take into account that it might",
+      "offset": 1618880,
+      "duration": 3120
+    },
+    {
+      "text": "take a little while. And for us, it was",
+      "offset": 1620240,
+      "duration": 4240
+    },
+    {
+      "text": "around end taking about 6 hours or so,",
+      "offset": 1622000,
+      "duration": 4720
+    },
+    {
+      "text": "which is quite a bit longer than than",
+      "offset": 1624480,
+      "duration": 6000
+    },
+    {
+      "text": "previous upgrades, but um yeah, but well",
+      "offset": 1626720,
+      "duration": 5520
+    },
+    {
+      "text": "well within the window that we we'd",
+      "offset": 1630480,
+      "duration": 5280
+    },
+    {
+      "text": "allowed anyway. That's great. So be",
+      "offset": 1632240,
+      "duration": 6480
+    },
+    {
+      "text": "ready, but reap the benefits, huh?",
+      "offset": 1635760,
+      "duration": 5360
+    },
+    {
+      "text": "Absolutely. Yeah. All right. Advanced",
+      "offset": 1638720,
+      "duration": 3920
+    },
+    {
+      "text": "Securities, tell us about that. You're",
+      "offset": 1641120,
+      "duration": 3520
+    },
+    {
+      "text": "in the advanced security early access",
+      "offset": 1642640,
+      "duration": 5600
+    },
+    {
+      "text": "program. Um what why did you want to",
+      "offset": 1644640,
+      "duration": 5519
+    },
+    {
+      "text": "join that and and what are you looking",
+      "offset": 1648240,
+      "duration": 5679
+    },
+    {
+      "text": "for um with it that that uh you found uh",
+      "offset": 1650159,
+      "duration": 5841
+    },
+    {
+      "text": "useful and what and and how has it been",
+      "offset": 1653919,
+      "duration": 3521
+    },
+    {
+      "text": "for you?",
+      "offset": 1656000,
+      "duration": 4320
+    },
+    {
+      "text": "Yeah. So we use um a number of tools um",
+      "offset": 1657440,
+      "duration": 5839
+    },
+    {
+      "text": "for our um software composition analysis",
+      "offset": 1660320,
+      "duration": 5839
+    },
+    {
+      "text": "and um dependency vulnerability checking",
+      "offset": 1663279,
+      "duration": 5841
+    },
+    {
+      "text": "and um a number of these tools um have",
+      "offset": 1666159,
+      "duration": 6321
+    },
+    {
+      "text": "their issues. Um they they tend not to",
+      "offset": 1669120,
+      "duration": 5520
+    },
+    {
+      "text": "be very user friendly. Um we find our",
+      "offset": 1672480,
+      "duration": 5679
+    },
+    {
+      "text": "developers really like Sonocube. Um you",
+      "offset": 1674640,
+      "duration": 5600
+    },
+    {
+      "text": "say you're a you're a developer built",
+      "offset": 1678159,
+      "duration": 5041
+    },
+    {
+      "text": "product for developers. Um our",
+      "offset": 1680240,
+      "duration": 4640
+    },
+    {
+      "text": "developers really like to use Sonar",
+      "offset": 1683200,
+      "duration": 4079
+    },
+    {
+      "text": "Cube. Um so when we found out that that",
+      "offset": 1684880,
+      "duration": 3760
+    },
+    {
+      "text": "you were bringing in some of these",
+      "offset": 1687279,
+      "duration": 2961
+    },
+    {
+      "text": "features into the product, we were very",
+      "offset": 1688640,
+      "duration": 4480
+    },
+    {
+      "text": "excited as we currently have um other",
+      "offset": 1690240,
+      "duration": 5120
+    },
+    {
+      "text": "products which which which going back to",
+      "offset": 1693120,
+      "duration": 4480
+    },
+    {
+      "text": "the shift left point don't integrate",
+      "offset": 1695360,
+      "duration": 4960
+    },
+    {
+      "text": "very well um on the left hand side. So",
+      "offset": 1697600,
+      "duration": 4240
+    },
+    {
+      "text": "they they tend to be products that are",
+      "offset": 1700320,
+      "duration": 5920
+    },
+    {
+      "text": "run on a schedule um after the fact. So",
+      "offset": 1701840,
+      "duration": 6480
+    },
+    {
+      "text": "you might go and add a dependency to a",
+      "offset": 1706240,
+      "duration": 3919
+    },
+    {
+      "text": "product and then a couple of weeks later",
+      "offset": 1708320,
+      "duration": 3920
+    },
+    {
+      "text": "you'll do a scheduled security scan",
+      "offset": 1710159,
+      "duration": 3760
+    },
+    {
+      "text": "which might find that that dependency",
+      "offset": 1712240,
+      "duration": 4159
+    },
+    {
+      "text": "has a known vulnerability or maybe that",
+      "offset": 1713919,
+      "duration": 4601
+    },
+    {
+      "text": "dependency is using a prohibited",
+      "offset": 1716399,
+      "duration": 6561
+    },
+    {
+      "text": "license. So we to catch it later. Does",
+      "offset": 1718520,
+      "duration": 6920
+    },
+    {
+      "text": "that does that mean that that couple of",
+      "offset": 1722960,
+      "duration": 5920
+    },
+    {
+      "text": "weeks work is lost or there's now",
+      "offset": 1725440,
+      "duration": 5599
+    },
+    {
+      "text": "another whole cycle of work to recover",
+      "offset": 1728880,
+      "duration": 4159
+    },
+    {
+      "text": "from having to having found that that",
+      "offset": 1731039,
+      "duration": 3921
+    },
+    {
+      "text": "had vulnerabilities?",
+      "offset": 1733039,
+      "duration": 3841
+    },
+    {
+      "text": "Yeah, it's it's then you've got rework",
+      "offset": 1734960,
+      "duration": 4079
+    },
+    {
+      "text": "that needs to be done which and if it's",
+      "offset": 1736880,
+      "duration": 4880
+    },
+    {
+      "text": "a maybe it's um maybe you need to",
+      "offset": 1739039,
+      "duration": 4000
+    },
+    {
+      "text": "completely swap that component out",
+      "offset": 1741760,
+      "duration": 2880
+    },
+    {
+      "text": "entirely and go to and go to an",
+      "offset": 1743039,
+      "duration": 3760
+    },
+    {
+      "text": "alternative and that's going to affect",
+      "offset": 1744640,
+      "duration": 4240
+    },
+    {
+      "text": "the the development for that for that",
+      "offset": 1746799,
+      "duration": 4880
+    },
+    {
+      "text": "product. M worst case scenario, you put",
+      "offset": 1748880,
+      "duration": 4320
+    },
+    {
+      "text": "something live that has a vulnerability",
+      "offset": 1751679,
+      "duration": 3521
+    },
+    {
+      "text": "that you don't yet know about, but",
+      "offset": 1753200,
+      "duration": 3520
+    },
+    {
+      "text": "that's that's something that we would",
+      "offset": 1755200,
+      "duration": 4000
+    },
+    {
+      "text": "avoid anyway, but if you were to to",
+      "offset": 1756720,
+      "duration": 4160
+    },
+    {
+      "text": "build and release if you had a very",
+      "offset": 1759200,
+      "duration": 3920
+    },
+    {
+      "text": "rapid cycle could that could potentially",
+      "offset": 1760880,
+      "duration": 4799
+    },
+    {
+      "text": "happen. So, we wanted to avoid that by",
+      "offset": 1763120,
+      "duration": 4159
+    },
+    {
+      "text": "shifting left as much as possible with",
+      "offset": 1765679,
+      "duration": 4401
+    },
+    {
+      "text": "the security scans and also um the",
+      "offset": 1767279,
+      "duration": 4481
+    },
+    {
+      "text": "license checking as well. So, checking",
+      "offset": 1770080,
+      "duration": 5199
+    },
+    {
+      "text": "for prohibited licenses. So we um were",
+      "offset": 1771760,
+      "duration": 4639
+    },
+    {
+      "text": "very happy to see that you were bringing",
+      "offset": 1775279,
+      "duration": 3921
+    },
+    {
+      "text": "this into son cube and uh the way it",
+      "offset": 1776399,
+      "duration": 5601
+    },
+    {
+      "text": "works is that there is a new tab that",
+      "offset": 1779200,
+      "duration": 4560
+    },
+    {
+      "text": "you see on your son project that shows",
+      "offset": 1782000,
+      "duration": 4159
+    },
+    {
+      "text": "your dependencies. There's another tab",
+      "offset": 1783760,
+      "duration": 5919
+    },
+    {
+      "text": "that shows um any vulnerabilities there.",
+      "offset": 1786159,
+      "duration": 8161
+    },
+    {
+      "text": "So I can see the full um uh sbomb of my",
+      "offset": 1789679,
+      "duration": 6641
+    },
+    {
+      "text": "product. I can see all of the the",
+      "offset": 1794320,
+      "duration": 3920
+    },
+    {
+      "text": "dependencies that are being used. I can",
+      "offset": 1796320,
+      "duration": 3280
+    },
+    {
+      "text": "see if there are any vulnerabilities in",
+      "offset": 1798240,
+      "duration": 4400
+    },
+    {
+      "text": "it. It tells me um and our developers",
+      "offset": 1799600,
+      "duration": 5360
+    },
+    {
+      "text": "which is very good which version of",
+      "offset": 1802640,
+      "duration": 4639
+    },
+    {
+      "text": "packages that we need to upgrade to to",
+      "offset": 1804960,
+      "duration": 4400
+    },
+    {
+      "text": "get to a fixed version and gives them a",
+      "offset": 1807279,
+      "duration": 3841
+    },
+    {
+      "text": "lot of guidance around exactly what they",
+      "offset": 1809360,
+      "duration": 4960
+    },
+    {
+      "text": "need to do and it does this at the point",
+      "offset": 1811120,
+      "duration": 5919
+    },
+    {
+      "text": "of uh a pool crest scan. So as a",
+      "offset": 1814320,
+      "duration": 4000
+    },
+    {
+      "text": "developer let's say I introduce a",
+      "offset": 1817039,
+      "duration": 2441
+    },
+    {
+      "text": "package with a",
+      "offset": 1818320,
+      "duration": 3920
+    },
+    {
+      "text": "vulnerability it runs as part of my PR",
+      "offset": 1819480,
+      "duration": 4600
+    },
+    {
+      "text": "scan the quality gate that we talked",
+      "offset": 1822240,
+      "duration": 4080
+    },
+    {
+      "text": "about and then that's raised and that",
+      "offset": 1824080,
+      "duration": 4800
+    },
+    {
+      "text": "blocks that PR from being merged. So all",
+      "offset": 1826320,
+      "duration": 5359
+    },
+    {
+      "text": "of a sudden we've got that security scan",
+      "offset": 1828880,
+      "duration": 4799
+    },
+    {
+      "text": "really shifted left to stop that getting",
+      "offset": 1831679,
+      "duration": 5841
+    },
+    {
+      "text": "in to avoid that um wasted effort of any",
+      "offset": 1833679,
+      "duration": 5761
+    },
+    {
+      "text": "rework or of any retesting that has to",
+      "offset": 1837520,
+      "duration": 4480
+    },
+    {
+      "text": "happen. and and also that's very",
+      "offset": 1839440,
+      "duration": 4000
+    },
+    {
+      "text": "important for us from a licensing",
+      "offset": 1842000,
+      "duration": 3520
+    },
+    {
+      "text": "perspective as well to make sure that",
+      "offset": 1843440,
+      "duration": 6000
+    },
+    {
+      "text": "the licensing um of those components",
+      "offset": 1845520,
+      "duration": 6159
+    },
+    {
+      "text": "doesn't breach our license policy and I",
+      "offset": 1849440,
+      "duration": 5200
+    },
+    {
+      "text": "know that I think in the future um SonoQ",
+      "offset": 1851679,
+      "duration": 4961
+    },
+    {
+      "text": "advanced security is going to be a bit",
+      "offset": 1854640,
+      "duration": 4320
+    },
+    {
+      "text": "more flexible around h how the license",
+      "offset": 1856640,
+      "duration": 4480
+    },
+    {
+      "text": "policy can be configured so that we",
+      "offset": 1858960,
+      "duration": 4160
+    },
+    {
+      "text": "could tailor that to to really reflect",
+      "offset": 1861120,
+      "duration": 3919
+    },
+    {
+      "text": "our own license policy for open source",
+      "offset": 1863120,
+      "duration": 4320
+    },
+    {
+      "text": "software um and so that's something that",
+      "offset": 1865039,
+      "duration": 3921
+    },
+    {
+      "text": "we that we really like the look of as",
+      "offset": 1867440,
+      "duration": 2719
+    },
+    {
+      "text": "well so",
+      "offset": 1868960,
+      "duration": 3120
+    },
+    {
+      "text": "being able to define our policy to say",
+      "offset": 1870159,
+      "duration": 4081
+    },
+    {
+      "text": "we don't want these licenses to be used",
+      "offset": 1872080,
+      "duration": 4160
+    },
+    {
+      "text": "and then we can stop those being",
+      "offset": 1874240,
+      "duration": 4799
+    },
+    {
+      "text": "introduced at the PR level rather than",
+      "offset": 1876240,
+      "duration": 4080
+    },
+    {
+      "text": "finding them after the fact and then",
+      "offset": 1879039,
+      "duration": 3681
+    },
+    {
+      "text": "having to deal with it.",
+      "offset": 1880320,
+      "duration": 4560
+    },
+    {
+      "text": "That's great. I'm I'm excited that",
+      "offset": 1882720,
+      "duration": 5040
+    },
+    {
+      "text": "you're seeing all these things. Um, I I",
+      "offset": 1884880,
+      "duration": 6640
+    },
+    {
+      "text": "love that you uh are you appreciate the,",
+      "offset": 1887760,
+      "duration": 6639
+    },
+    {
+      "text": "you know, this being in the the workflow",
+      "offset": 1891520,
+      "duration": 4800
+    },
+    {
+      "text": "that your developers are used to, you",
+      "offset": 1894399,
+      "duration": 4640
+    },
+    {
+      "text": "know, with with within SonarCube server",
+      "offset": 1896320,
+      "duration": 4800
+    },
+    {
+      "text": "in in the UI and they can see it right",
+      "offset": 1899039,
+      "duration": 4401
+    },
+    {
+      "text": "there all together and kind of one one",
+      "offset": 1901120,
+      "duration": 4159
+    },
+    {
+      "text": "window pane if you will. Yeah, that's",
+      "offset": 1903440,
+      "duration": 4320
+    },
+    {
+      "text": "that's great. Um, yeah, absolutely. And",
+      "offset": 1905279,
+      "duration": 3841
+    },
+    {
+      "text": "it looks just like the rest of Senna",
+      "offset": 1907760,
+      "duration": 2880
+    },
+    {
+      "text": "Cube. It's, you know, behaves in exactly",
+      "offset": 1909120,
+      "duration": 2640
+    },
+    {
+      "text": "the same way. They know what they're",
+      "offset": 1910640,
+      "duration": 2879
+    },
+    {
+      "text": "getting. It's very intuitive. So, it's",
+      "offset": 1911760,
+      "duration": 4240
+    },
+    {
+      "text": "Yeah, that's what we want.",
+      "offset": 1913519,
+      "duration": 6241
+    },
+    {
+      "text": "That's that's perfect. Uh thank you so",
+      "offset": 1916000,
+      "duration": 6159
+    },
+    {
+      "text": "much for sharing your story. Um I do",
+      "offset": 1919760,
+      "duration": 4880
+    },
+    {
+      "text": "want to get to a few questions. I I see",
+      "offset": 1922159,
+      "duration": 5041
+    },
+    {
+      "text": "that we have a few. Um but before we do",
+      "offset": 1924640,
+      "duration": 3680
+    },
+    {
+      "text": "that, is there anything else? Do you",
+      "offset": 1927200,
+      "duration": 2319
+    },
+    {
+      "text": "have any final thoughts that you'd like",
+      "offset": 1928320,
+      "duration": 3800
+    },
+    {
+      "text": "to share with people?",
+      "offset": 1929519,
+      "duration": 5201
+    },
+    {
+      "text": "Um nothing major. I think um I would",
+      "offset": 1932120,
+      "duration": 3880
+    },
+    {
+      "text": "encourage people to stay on top of the",
+      "offset": 1934720,
+      "duration": 3600
+    },
+    {
+      "text": "new releases. I think it's um we're",
+      "offset": 1936000,
+      "duration": 3919
+    },
+    {
+      "text": "seeing a lot of new functionality come,",
+      "offset": 1938320,
+      "duration": 3920
+    },
+    {
+      "text": "some great features and then these yeah",
+      "offset": 1939919,
+      "duration": 3760
+    },
+    {
+      "text": "the benefits like the performance.",
+      "offset": 1942240,
+      "duration": 3039
+    },
+    {
+      "text": "That's something that I would I would",
+      "offset": 1943679,
+      "duration": 4000
+    },
+    {
+      "text": "recommend everybody upgrades for um",
+      "offset": 1945279,
+      "duration": 3760
+    },
+    {
+      "text": "particularly if you have large projects",
+      "offset": 1947679,
+      "duration": 3041
+    },
+    {
+      "text": "as well. You're really going to see the",
+      "offset": 1949039,
+      "duration": 3841
+    },
+    {
+      "text": "benefits there.",
+      "offset": 1950720,
+      "duration": 4480
+    },
+    {
+      "text": "Perfect. Um okay, we're going to get to",
+      "offset": 1952880,
+      "duration": 4320
+    },
+    {
+      "text": "a few questions. Thank you. Thank you",
+      "offset": 1955200,
+      "duration": 5199
+    },
+    {
+      "text": "again. This this has been great. Um it's",
+      "offset": 1957200,
+      "duration": 6560
+    },
+    {
+      "text": "your story has been uh I mean I like I",
+      "offset": 1960399,
+      "duration": 5120
+    },
+    {
+      "text": "I've told you this before when we've",
+      "offset": 1963760,
+      "duration": 4200
+    },
+    {
+      "text": "talked, you know, it's music to my ears,",
+      "offset": 1965519,
+      "duration": 4880
+    },
+    {
+      "text": "right? This is exactly what we work so",
+      "offset": 1967960,
+      "duration": 4559
+    },
+    {
+      "text": "hard to uh to achieve.",
+      "offset": 1970399,
+      "duration": 6000
+    },
+    {
+      "text": "Um, we do have a quick poll before I",
+      "offset": 1972519,
+      "duration": 6121
+    },
+    {
+      "text": "switch to Q&A and I think Manish is",
+      "offset": 1976399,
+      "duration": 6481
+    },
+    {
+      "text": "going to join us for the Q&A. Yeah, I'm",
+      "offset": 1978640,
+      "duration": 6240
+    },
+    {
+      "text": "here. Thanks. Thanks, Robert. Thanks,",
+      "offset": 1982880,
+      "duration": 4320
+    },
+    {
+      "text": "Paul. Uh, I appreciate you taking the",
+      "offset": 1984880,
+      "duration": 5519
+    },
+    {
+      "text": "time and joining us today. Uh, I was I",
+      "offset": 1987200,
+      "duration": 5199
+    },
+    {
+      "text": "had not listened to the story in details",
+      "offset": 1990399,
+      "duration": 5280
+    },
+    {
+      "text": "that you shared today. So uh it it was",
+      "offset": 1992399,
+      "duration": 6000
+    },
+    {
+      "text": "very very uh you know detailed as to",
+      "offset": 1995679,
+      "duration": 4401
+    },
+    {
+      "text": "what you were what you experienced how",
+      "offset": 1998399,
+      "duration": 3681
+    },
+    {
+      "text": "you uh what are this good suggestions",
+      "offset": 2000080,
+      "duration": 3760
+    },
+    {
+      "text": "you have for our cu uh customers other",
+      "offset": 2002080,
+      "duration": 3439
+    },
+    {
+      "text": "customers who are looking to upgrade. So",
+      "offset": 2003840,
+      "duration": 3280
+    },
+    {
+      "text": "really appreciate you taking the time",
+      "offset": 2005519,
+      "duration": 3280
+    },
+    {
+      "text": "today. There's one question from the",
+      "offset": 2007120,
+      "duration": 3679
+    },
+    {
+      "text": "audience uh that I would like to start",
+      "offset": 2008799,
+      "duration": 5000
+    },
+    {
+      "text": "with uh and that",
+      "offset": 2010799,
+      "duration": 6641
+    },
+    {
+      "text": "is are you considering the sonube cloud",
+      "offset": 2013799,
+      "duration": 6521
+    },
+    {
+      "text": "sometime in future and what are the",
+      "offset": 2017440,
+      "duration": 5040
+    },
+    {
+      "text": "prerequisites for migrating to sonube",
+      "offset": 2020320,
+      "duration": 3599
+    },
+    {
+      "text": "cloud? I think the second part we can",
+      "offset": 2022480,
+      "duration": 4880
+    },
+    {
+      "text": "answer it. Uh but are you uh one of the",
+      "offset": 2023919,
+      "duration": 5760
+    },
+    {
+      "text": "customers here or attendees here wants",
+      "offset": 2027360,
+      "duration": 4080
+    },
+    {
+      "text": "to know whether you're looking at moving",
+      "offset": 2029679,
+      "duration": 4000
+    },
+    {
+      "text": "from server to cloud?",
+      "offset": 2031440,
+      "duration": 3920
+    },
+    {
+      "text": "Uh we're not looking to move to cloud.",
+      "offset": 2033679,
+      "duration": 3761
+    },
+    {
+      "text": "No, we've we've always liked to operate",
+      "offset": 2035360,
+      "duration": 4480
+    },
+    {
+      "text": "um our own instance and keep keep all of",
+      "offset": 2037440,
+      "duration": 5839
+    },
+    {
+      "text": "our source code inhouse. Um it also",
+      "offset": 2039840,
+      "duration": 6319
+    },
+    {
+      "text": "gives us full flexibility over over that",
+      "offset": 2043279,
+      "duration": 4481
+    },
+    {
+      "text": "product. the operation of that and when",
+      "offset": 2046159,
+      "duration": 4641
+    },
+    {
+      "text": "you run as a container it becomes very",
+      "offset": 2047760,
+      "duration": 6480
+    },
+    {
+      "text": "easy to to operate locally. Um we we do",
+      "offset": 2050800,
+      "duration": 6240
+    },
+    {
+      "text": "run out of the um Azure cloud so it's",
+      "offset": 2054240,
+      "duration": 4879
+    },
+    {
+      "text": "yeah it's very easy for us but we we're",
+      "offset": 2057040,
+      "duration": 4079
+    },
+    {
+      "text": "not um we're not currently looking at",
+      "offset": 2059119,
+      "duration": 5841
+    },
+    {
+      "text": "Sonar cloud. Yeah I think as you run",
+      "offset": 2061119,
+      "duration": 6800
+    },
+    {
+      "text": "your Sonar Cube and Docker containers",
+      "offset": 2064960,
+      "duration": 4959
+    },
+    {
+      "text": "it's fairly lightweight. you don't like",
+      "offset": 2067919,
+      "duration": 3521
+    },
+    {
+      "text": "you said you just have to point to the",
+      "offset": 2069919,
+      "duration": 3601
+    },
+    {
+      "text": "new image pull the new image instantiate",
+      "offset": 2071440,
+      "duration": 3600
+    },
+    {
+      "text": "it and you're up and running your",
+      "offset": 2073520,
+      "duration": 4000
+    },
+    {
+      "text": "databases in the cloud already so uh",
+      "offset": 2075040,
+      "duration": 5119
+    },
+    {
+      "text": "it's fairly straightforward uh thing",
+      "offset": 2077520,
+      "duration": 4879
+    },
+    {
+      "text": "yeah so I I I you know there are certain",
+      "offset": 2080159,
+      "duration": 4321
+    },
+    {
+      "text": "customers who want to get out of",
+      "offset": 2082399,
+      "duration": 4000
+    },
+    {
+      "text": "managing infrastructure and they're uh",
+      "offset": 2084480,
+      "duration": 3919
+    },
+    {
+      "text": "probably looking for cloud in terms of",
+      "offset": 2086399,
+      "duration": 3440
+    },
+    {
+      "text": "uh prerequisites for migrating to",
+      "offset": 2088399,
+      "duration": 4321
+    },
+    {
+      "text": "SonaCube cloud I can uh probably answer",
+      "offset": 2089839,
+      "duration": 5921
+    },
+    {
+      "text": "that uh there is actually not really any",
+      "offset": 2092720,
+      "duration": 5440
+    },
+    {
+      "text": "prerequisite uh there are however we do",
+      "offset": 2095760,
+      "duration": 5280
+    },
+    {
+      "text": "not have a direct you know uh migration",
+      "offset": 2098160,
+      "duration": 5919
+    },
+    {
+      "text": "path from uh from server to cloud but it",
+      "offset": 2101040,
+      "duration": 5280
+    },
+    {
+      "text": "it is it is doable. It's basically you",
+      "offset": 2104079,
+      "duration": 4321
+    },
+    {
+      "text": "know both the products have the same set",
+      "offset": 2106320,
+      "duration": 4640
+    },
+    {
+      "text": "of capabilities. Uh they do an support",
+      "offset": 2108400,
+      "duration": 4480
+    },
+    {
+      "text": "all the languages that are available in",
+      "offset": 2110960,
+      "duration": 3200
+    },
+    {
+      "text": "server. They do support all the",
+      "offset": 2112880,
+      "duration": 3400
+    },
+    {
+      "text": "languages in the uh same languages in",
+      "offset": 2114160,
+      "duration": 5600
+    },
+    {
+      "text": "cloud. You can uh import configurations",
+      "offset": 2116280,
+      "duration": 5559
+    },
+    {
+      "text": "uh from your server environment into the",
+      "offset": 2119760,
+      "duration": 5359
+    },
+    {
+      "text": "cloud. And uh the database migration is",
+      "offset": 2121839,
+      "duration": 5121
+    },
+    {
+      "text": "where uh you know it can get it can the",
+      "offset": 2125119,
+      "duration": 3841
+    },
+    {
+      "text": "answer can vary a little bit depending",
+      "offset": 2126960,
+      "duration": 3920
+    },
+    {
+      "text": "on what database you're using on prem",
+      "offset": 2128960,
+      "duration": 4240
+    },
+    {
+      "text": "versus uh when you move it to cloud what",
+      "offset": 2130880,
+      "duration": 4560
+    },
+    {
+      "text": "needs to happen there. So uh if you're",
+      "offset": 2133200,
+      "duration": 5040
+    },
+    {
+      "text": "not too worried about uh migrating your",
+      "offset": 2135440,
+      "duration": 5919
+    },
+    {
+      "text": "old database and old analysis it is a",
+      "offset": 2138240,
+      "duration": 5359
+    },
+    {
+      "text": "relatively straightforward uh uh move",
+      "offset": 2141359,
+      "duration": 4801
+    },
+    {
+      "text": "from uh server to cl cloud. Uh I I don't",
+      "offset": 2143599,
+      "duration": 4240
+    },
+    {
+      "text": "think we have quite a few customers who",
+      "offset": 2146160,
+      "duration": 4400
+    },
+    {
+      "text": "are actually uh doing this as we speak.",
+      "offset": 2147839,
+      "duration": 4961
+    },
+    {
+      "text": "Uh we we also have our solution",
+      "offset": 2150560,
+      "duration": 4640
+    },
+    {
+      "text": "engineering team who can work with you",
+      "offset": 2152800,
+      "duration": 4720
+    },
+    {
+      "text": "and guide you through the exact process",
+      "offset": 2155200,
+      "duration": 3919
+    },
+    {
+      "text": "based on your exact requirements and",
+      "offset": 2157520,
+      "duration": 3200
+    },
+    {
+      "text": "what you have in terms of your unique",
+      "offset": 2159119,
+      "duration": 4641
+    },
+    {
+      "text": "environments. Uh so it we can we can",
+      "offset": 2160720,
+      "duration": 5440
+    },
+    {
+      "text": "work with you. So reach out to uh your",
+      "offset": 2163760,
+      "duration": 4079
+    },
+    {
+      "text": "sales rep and ask for a solution",
+      "offset": 2166160,
+      "duration": 4320
+    },
+    {
+      "text": "engineering assessment and we can handle",
+      "offset": 2167839,
+      "duration": 5361
+    },
+    {
+      "text": "that on a case to case basis. Uh there's",
+      "offset": 2170480,
+      "duration": 5520
+    },
+    {
+      "text": "another question that came up and I'm",
+      "offset": 2173200,
+      "duration": 4480
+    },
+    {
+      "text": "not sure if I understand it correctly.",
+      "offset": 2176000,
+      "duration": 3760
+    },
+    {
+      "text": "Maybe Robert you do. Is there a way to",
+      "offset": 2177680,
+      "duration": 4640
+    },
+    {
+      "text": "see users who have signed up for email",
+      "offset": 2179760,
+      "duration": 7680
+    },
+    {
+      "text": "notifications in SonaCube server?",
+      "offset": 2182320,
+      "duration": 5120
+    },
+    {
+      "text": "Uh you do get if you're asking about",
+      "offset": 2187480,
+      "duration": 5879
+    },
+    {
+      "text": "email notifications for reports, you do",
+      "offset": 2190320,
+      "duration": 4880
+    },
+    {
+      "text": "get email notifications for reports. You",
+      "offset": 2193359,
+      "duration": 5601
+    },
+    {
+      "text": "can subscribe to reports. Uh or are you",
+      "offset": 2195200,
+      "duration": 5600
+    },
+    {
+      "text": "asking about notifications about new",
+      "offset": 2198960,
+      "duration": 3680
+    },
+    {
+      "text": "server releases? In that case, you can",
+      "offset": 2200800,
+      "duration": 4720
+    },
+    {
+      "text": "sign up for uh you know the Sono Cube",
+      "offset": 2202640,
+      "duration": 4959
+    },
+    {
+      "text": "updates on our SonoQ product web page.",
+      "offset": 2205520,
+      "duration": 3680
+    },
+    {
+      "text": "We have towards the bottom of it, we",
+      "offset": 2207599,
+      "duration": 2801
+    },
+    {
+      "text": "have a newsletter which you can",
+      "offset": 2209200,
+      "duration": 3600
+    },
+    {
+      "text": "subscribe to to be aware of what is",
+      "offset": 2210400,
+      "duration": 5280
+    },
+    {
+      "text": "coming and what is new in the product.",
+      "offset": 2212800,
+      "duration": 4720
+    },
+    {
+      "text": "Uh if there's we have a monthly",
+      "offset": 2215680,
+      "duration": 4960
+    },
+    {
+      "text": "newsletter that we send out. Um yeah, I",
+      "offset": 2217520,
+      "duration": 5280
+    },
+    {
+      "text": "don't I don't I'm not aware of any way",
+      "offset": 2220640,
+      "duration": 4000
+    },
+    {
+      "text": "to to see that if you've signed up for",
+      "offset": 2222800,
+      "duration": 4080
+    },
+    {
+      "text": "it. Um but if you haven't and you want",
+      "offset": 2224640,
+      "duration": 4880
+    },
+    {
+      "text": "to, you can. Uh and there's a way I",
+      "offset": 2226880,
+      "duration": 4080
+    },
+    {
+      "text": "believe to opt out if you don't want to",
+      "offset": 2229520,
+      "duration": 4720
+    },
+    {
+      "text": "receive the newsletter anymore. Yep. And",
+      "offset": 2230960,
+      "duration": 6159
+    },
+    {
+      "text": "uh for uh uh Blake who asked this",
+      "offset": 2234240,
+      "duration": 4800
+    },
+    {
+      "text": "question, if you have a follow-up uh do",
+      "offset": 2237119,
+      "duration": 3921
+    },
+    {
+      "text": "reach out to us directly uh we and we",
+      "offset": 2239040,
+      "duration": 4079
+    },
+    {
+      "text": "can uh answer your question if you have",
+      "offset": 2241040,
+      "duration": 4319
+    },
+    {
+      "text": "not answered it correctly. Uh there's",
+      "offset": 2243119,
+      "duration": 4561
+    },
+    {
+      "text": "another question which just came up for",
+      "offset": 2245359,
+      "duration": 4720
+    },
+    {
+      "text": "the container version. Is it free",
+      "offset": 2247680,
+      "duration": 4800
+    },
+    {
+      "text": "version of Sona cube? So we have uh",
+      "offset": 2250079,
+      "duration": 4161
+    },
+    {
+      "text": "docker contain docker images available",
+      "offset": 2252480,
+      "duration": 3599
+    },
+    {
+      "text": "for sonar cube community build which is",
+      "offset": 2254240,
+      "duration": 3359
+    },
+    {
+      "text": "a free build which is a open source",
+      "offset": 2256079,
+      "duration": 3921
+    },
+    {
+      "text": "build and then we have the commercial",
+      "offset": 2257599,
+      "duration": 5121
+    },
+    {
+      "text": "editions uh which are basically licensed",
+      "offset": 2260000,
+      "duration": 5520
+    },
+    {
+      "text": "so you can get the images but you will",
+      "offset": 2262720,
+      "duration": 4800
+    },
+    {
+      "text": "need a license to run the commercial",
+      "offset": 2265520,
+      "duration": 5120
+    },
+    {
+      "text": "editions. Uh we do have trial licenses",
+      "offset": 2267520,
+      "duration": 5599
+    },
+    {
+      "text": "available for our commercial plans. So",
+      "offset": 2270640,
+      "duration": 4240
+    },
+    {
+      "text": "you could request a trial license and",
+      "offset": 2273119,
+      "duration": 4561
+    },
+    {
+      "text": "run a Sonocube image as a container to",
+      "offset": 2274880,
+      "duration": 6920
+    },
+    {
+      "text": "see for yourself how it works.",
+      "offset": 2277680,
+      "duration": 4120
+    },
+    {
+      "text": "Um, here's one. When is advanced",
+      "offset": 2282960,
+      "duration": 5840
+    },
+    {
+      "text": "security releasing? When can I get it?",
+      "offset": 2285200,
+      "duration": 5480
+    },
+    {
+      "text": "Yeah. So,",
+      "offset": 2288800,
+      "duration": 4480
+    },
+    {
+      "text": "uh, we are really excited to come out",
+      "offset": 2290680,
+      "duration": 4679
+    },
+    {
+      "text": "with advanced security and thanks Paul.",
+      "offset": 2293280,
+      "duration": 3600
+    },
+    {
+      "text": "It was good to hear that, uh, it's",
+      "offset": 2295359,
+      "duration": 4240
+    },
+    {
+      "text": "enabling you to shift left or start left",
+      "offset": 2296880,
+      "duration": 5760
+    },
+    {
+      "text": "as we call it in Soner. uh and I think",
+      "offset": 2299599,
+      "duration": 5281
+    },
+    {
+      "text": "uh yeah the beauty of that solution is",
+      "offset": 2302640,
+      "duration": 4600
+    },
+    {
+      "text": "basically you get integrated code",
+      "offset": 2304880,
+      "duration": 5760
+    },
+    {
+      "text": "analysis for both quality and security",
+      "offset": 2307240,
+      "duration": 5400
+    },
+    {
+      "text": "uh including firstparty code AI",
+      "offset": 2310640,
+      "duration": 4640
+    },
+    {
+      "text": "generated code and open source libraries",
+      "offset": 2312640,
+      "duration": 4880
+    },
+    {
+      "text": "in the same unified single tool right so",
+      "offset": 2315280,
+      "duration": 4000
+    },
+    {
+      "text": "you don't have to set up multiple tools",
+      "offset": 2317520,
+      "duration": 3440
+    },
+    {
+      "text": "and you it runs as part of the PR",
+      "offset": 2319280,
+      "duration": 4240
+    },
+    {
+      "text": "analysis as you said so it is coming out",
+      "offset": 2320960,
+      "duration": 4240
+    },
+    {
+      "text": "uh it is becoming uh going to be",
+      "offset": 2323520,
+      "duration": 3680
+    },
+    {
+      "text": "generally available in the May release",
+      "offset": 2325200,
+      "duration": 3879
+    },
+    {
+      "text": "of sonar cube server",
+      "offset": 2327200,
+      "duration": 4080
+    },
+    {
+      "text": "2025.3 it should come out towards the",
+      "offset": 2329079,
+      "duration": 5241
+    },
+    {
+      "text": "end of May uh is when we we it will",
+      "offset": 2331280,
+      "duration": 4640
+    },
+    {
+      "text": "become generally available. Right now it",
+      "offset": 2334320,
+      "duration": 3600
+    },
+    {
+      "text": "is in early access and shortly after",
+      "offset": 2335920,
+      "duration": 4240
+    },
+    {
+      "text": "that we'll also make it available in our",
+      "offset": 2337920,
+      "duration": 5960
+    },
+    {
+      "text": "cloud uh offering.",
+      "offset": 2340160,
+      "duration": 3720
+    },
+    {
+      "text": "Okay, I think we have time for maybe one",
+      "offset": 2345079,
+      "duration": 6201
+    },
+    {
+      "text": "more or two. Let's see. Will upgrading",
+      "offset": 2348320,
+      "duration": 4720
+    },
+    {
+      "text": "be different or more difficult if we're",
+      "offset": 2351280,
+      "duration": 6360
+    },
+    {
+      "text": "on a version older or earlier than",
+      "offset": 2353040,
+      "duration": 7280
+    },
+    {
+      "text": "9.9? And I don't I don't think so. So, I",
+      "offset": 2357640,
+      "duration": 4280
+    },
+    {
+      "text": "mean, if you're used to the upgrade",
+      "offset": 2360320,
+      "duration": 5519
+    },
+    {
+      "text": "process, if uh whatever uh dot version",
+      "offset": 2361920,
+      "duration": 7679
+    },
+    {
+      "text": "you're on, so if you're on a 8.1, then",
+      "offset": 2365839,
+      "duration": 7520
+    },
+    {
+      "text": "you would upgrade to 9.9 and then so we",
+      "offset": 2369599,
+      "duration": 6000
+    },
+    {
+      "text": "call it step upgrading. Then from 9.9,",
+      "offset": 2373359,
+      "duration": 4240
+    },
+    {
+      "text": "you would go to the LTA. So, you",
+      "offset": 2375599,
+      "duration": 5601
+    },
+    {
+      "text": "basically do step upgrading to the LTA",
+      "offset": 2377599,
+      "duration": 8000
+    },
+    {
+      "text": "of your major version and then you step",
+      "offset": 2381200,
+      "duration": 6960
+    },
+    {
+      "text": "upgrade LTA to LTA. And the purpose of",
+      "offset": 2385599,
+      "duration": 6401
+    },
+    {
+      "text": "that is because each LTA to LTA upgrade",
+      "offset": 2388160,
+      "duration": 6480
+    },
+    {
+      "text": "uh adjusts your database uh",
+      "offset": 2392000,
+      "duration": 5880
+    },
+    {
+      "text": "appropriately uh so you can't",
+      "offset": 2394640,
+      "duration": 6800
+    },
+    {
+      "text": "skip. I hope that answered the question.",
+      "offset": 2397880,
+      "duration": 5080
+    },
+    {
+      "text": "Yep, I think I think it did. So yeah,",
+      "offset": 2401440,
+      "duration": 3520
+    },
+    {
+      "text": "it's important to make sure your schema",
+      "offset": 2402960,
+      "duration": 4639
+    },
+    {
+      "text": "is uh correct uh for the database and",
+      "offset": 2404960,
+      "duration": 4240
+    },
+    {
+      "text": "for the version of Sona Cube that you're",
+      "offset": 2407599,
+      "duration": 5041
+    },
+    {
+      "text": "running. So uh yeah, so I think uh we",
+      "offset": 2409200,
+      "duration": 5280
+    },
+    {
+      "text": "don't have any other questions uh as far",
+      "offset": 2412640,
+      "duration": 3920
+    },
+    {
+      "text": "as I can tell, but if we left anything",
+      "offset": 2414480,
+      "duration": 4800
+    },
+    {
+      "text": "unanswered, we will respond to them uh",
+      "offset": 2416560,
+      "duration": 4640
+    },
+    {
+      "text": "later after this webinar and make the",
+      "offset": 2419280,
+      "duration": 4559
+    },
+    {
+      "text": "Q&A available to you. Uh do you want to",
+      "offset": 2421200,
+      "duration": 5280
+    },
+    {
+      "text": "wrap it up, Robert? Yep. Thank you",
+      "offset": 2423839,
+      "duration": 6441
+    },
+    {
+      "text": "everyone. Um it's been a great",
+      "offset": 2426480,
+      "duration": 8080
+    },
+    {
+      "text": "session and uh I really really really",
+      "offset": 2430280,
+      "duration": 6360
+    },
+    {
+      "text": "enjoyed talking with you Paul. Thank you",
+      "offset": 2434560,
+      "duration": 5120
+    },
+    {
+      "text": "so much for uh meeting with us and",
+      "offset": 2436640,
+      "duration": 5760
+    },
+    {
+      "text": "sharing your story. Uh I know you came",
+      "offset": 2439680,
+      "duration": 6640
+    },
+    {
+      "text": "to our uh London uh event, city event.",
+      "offset": 2442400,
+      "duration": 6320
+    },
+    {
+      "text": "Uh we're doing city tours around the",
+      "offset": 2446320,
+      "duration": 5440
+    },
+    {
+      "text": "country, around the globe, sorry. And uh",
+      "offset": 2448720,
+      "duration": 5119
+    },
+    {
+      "text": "Paul came to the London event and stood",
+      "offset": 2451760,
+      "duration": 4559
+    },
+    {
+      "text": "up there. Um we didn't prompt them or",
+      "offset": 2453839,
+      "duration": 5041
+    },
+    {
+      "text": "ask him. I think you just decided to to",
+      "offset": 2456319,
+      "duration": 4161
+    },
+    {
+      "text": "say, \"Hey, I think this is great.\" So",
+      "offset": 2458880,
+      "duration": 3920
+    },
+    {
+      "text": "thank you so much for being vocal about",
+      "offset": 2460480,
+      "duration": 5879
+    },
+    {
+      "text": "your experience. Um we love it.",
+      "offset": 2462800,
+      "duration": 7120
+    },
+    {
+      "text": "um and and you've been fantastic. So, uh",
+      "offset": 2466359,
+      "duration": 7000
+    },
+    {
+      "text": "it's great to hear your story and and I",
+      "offset": 2469920,
+      "duration": 6080
+    },
+    {
+      "text": "hope it encourages everybody to to",
+      "offset": 2473359,
+      "duration": 5201
+    },
+    {
+      "text": "upgrade",
+      "offset": 2476000,
+      "duration": 4720
+    },
+    {
+      "text": "and we don't have info on the next uh",
+      "offset": 2478560,
+      "duration": 3840
+    },
+    {
+      "text": "webinar. I think some info is coming",
+      "offset": 2480720,
+      "duration": 4000
+    },
+    {
+      "text": "out. Uh don't forget uh we will be",
+      "offset": 2482400,
+      "duration": 4800
+    },
+    {
+      "text": "posting we will send you the video uh",
+      "offset": 2484720,
+      "duration": 4800
+    },
+    {
+      "text": "recording of this webinar and we will be",
+      "offset": 2487200,
+      "duration": 4800
+    },
+    {
+      "text": "posting the questions and answers in our",
+      "offset": 2489520,
+      "duration": 5040
+    },
+    {
+      "text": "community. So, if you still have more",
+      "offset": 2492000,
+      "duration": 4240
+    },
+    {
+      "text": "questions or you didn't see your",
+      "offset": 2494560,
+      "duration": 4080
+    },
+    {
+      "text": "question answered, go to our community.",
+      "offset": 2496240,
+      "duration": 4720
+    },
+    {
+      "text": "That's where you'll see uh all the",
+      "offset": 2498640,
+      "duration": 4640
+    },
+    {
+      "text": "responses. Thanks everyone and we'll see",
+      "offset": 2500960,
+      "duration": 4639
+    },
+    {
+      "text": "you next",
+      "offset": 2503280,
+      "duration": 2319
+    }
+  ],
+  "fullText": "Hello everyone. Thank you for joining and welcome to our webinar transforming code quality and code security with sonar cube server the Walters cluer story. Just as the name suggests today we'll be talking with Paul Edwards dev sec ops architect at Walters Cluer about his experience with SonarCube server and specifically about upgrading to the latest 2025 release 1 LTA. Paul expressed some exciting findings that he's going to share with us today. As a bonus, uh, Walter Clure is participating in our Sonar Cube advanced security early access program and hopefully I can coax some cool tidbits out of him regarding his experience with advanced security. I'm Robert Curley, product marketing manager for Sonar Group Server. I'm hosting the webinar today. Uh but before I officially introduce Paul, uh please let me go over a few housekeeping uh essentials. This session will last around 45 minutes, including time at the end for Q&A. Uh sometimes we go over, but we'll be sure to cut it um at least before uh an hour is up. So um we'll definitely be under the hour slot. Uh we invite you to submit your questions anytime during the webinar via the Q&A box in Zoom. Please don't submit questions in the Zoom chat. Uh this is important because we don't monitor the Zoom chat and we only want monitor the Q&A area in Zoom. Um but there will be some things in uh that we post occasionally in the the Zoom chat. We may have some um links or or uh stuff to refer to there. Um so you can keep an eye on that, but please don't ask questions there. Um we have a panelist joining us today uh Manish Kapoor. He is a senior director of product marketing here at Sonar and um he will be answering your questions live during the webinar in that Q&A area. So feel free to uh ask questions anytime throughout the webinar. Uh you don't have to wait until the Q&A session at the end. Uh the session is being recorded and we will email you a link for the recording in a few days. Um there are real no slides to share. So um we don't have anything to share other than the recording of the webinar here. And then at the end uh there there's going to be a short survey. So um please answer that. We'd love your feedback. It helps us u plan on future webinars to make sure that they suit your needs. And yeah, thank you for your participation. But uh before we get going uh there's a quick poll that we would like to know about your upgrade process. Where are you when in your upgrade? Have you started yet? Have are you done? Are you planning to um like to know where you are? Look at this. We have pretty good participation so far. getting there. Um, planning to upgrade is certainly winning out and a few of you looks like you already have upgraded. Okay, thank you for the poll. Do I share it? I'm not sure. I'm not sure how to get rid of this one. Here we go. Okay. Sorry. Um, let's move on. I'm Robert Curley and I'm, as I said, um, product marketing manager for Sonar Cube. Uh, I've been with, uh, Sonar for a year and a half and I have a lot of background in software engineering, um, software product management. Um, I'm definitely a software kind of guy. I love it and uh I'm uh I'm addicted. So, there's a little bit about me. Paul Paul has over 20 years of experience uh starting as a developer at Logica before transitioning into architecture. For the past eight years, he has been an architect at Walters Cler in the tax and accounting domain specializing in product development and dev sec ops. Paul is dedicated to helping teams and stakeholders maximize the value of sonar cube to ensure we deliver the best they deliver the best products to their customers. Okay, so that's appall and I'm going to we don't have more slides so I'm going to cut the slides here and move on to the discussion. Um, but Paul, I heard, hi. That you're a hockey guy. I'm a hockey guy. I play hockey. I've been a hockey fan my whole life. I'm from San Jose. I'm a San Jose Sharks fan. Um, tell me what is your uh favorite team? And also a fun one is what got you into hockey? Okay. Um, well, you'll hear from my accent. Um, I'm from the UK. I live near London. Um, so you might be surprised to hear that I'm a hockey fan. And when I say hockey, I'm talking about real hockey. Ice hockey, not not field hockey. Um um ice hockey is a is a bit of a minority sport in the UK, but uh there are a couple of tiers of professional leagues. And um my favorite team is called the Sheffield Steelers. They are based in the north of England. And I got into hockey because um I went to university in Sheffield and hockey was a great thing to do. got into the sport, fell in love, started learning to skate, learning to play, um, and I've been following them ever since. That's awesome. I I play hockey, too. I love playing hockey. Uh, I started as an as an adult, so uh I'm not very good, but I try and stick with it. Uh, and I have a lot of fun. Uh, so that's cool. That's cool that you're a that you're a hockey guy. Um, I was very excited to hear that when uh when I discovered it. Okay, let's get started. Um, tell us about um, you know, a little bit about Walter's Clue and uh, if you can and uh, your role in the company. Sure. So, we have operations in around 40 different countries. Um, we work across a number of different domains. So, I'm part of our tax and accounting business. So we serve um a variety of size tax and accountancy firms from the small to the the big top four um across the countries. Um we have other divisions that work in healthcare in corporate performance legal and regulatory um but yeah I'm here today to talk to you about our experience using cube within tax and accounting. So I joined Waters Clure in uh 2017, so eight years ago as you mentioned in the intro. Um I started working as part of UK business, but then transitioned out to to work kind of across Europe. And one of the things that we were looking to do there is to take all of the the nine or so countries within Europe within mort tax and accounting and start to look at how we can um really build quality, how we can standardize, how we can really drive better results by ensuring that we're that we're coding better and that we're getting that consistency in. What were some of the I'm curious about your um implementation of Sonar Cube? How is your company using it? and what are some of the main challenges that your dev teams were facing um that made you choose Sonar Cube? Sure. So, so we had um there were a number of different areas that we wanted to address. So, there was a lack of transparency around technical debt, something that we wanted to look at and we wanted to be able to to really get a good uh view across the portfolio of of where we were at and particularly for senior management as well. So there were teams that were using community edition um independently a number of years ago um talking kind of the the late uh kind of 2018 around then um and we we decided to invest in the enterprise uh edition of Sono Cube Server at the time. We wanted that um portfolio visibility so we could start to um group together projects within Seno Cube under a single asset single portfolio so that at a management level you could very clearly see this is the state of the projects within this portfolio for a given asset as a an individual product could comprise of 100 sub projects within sonar cube. So, we wanted to have that transparency and visibility, but really um the we had no there was nothing really in place to stop bad code getting in. And we wanted to make sure that we had um beyond kind of code reviews. We had um some additional controls around what gets into our master branches when we're going through a pull request and we're introducing new code. We wanted to to implement the quality gates to have them run as part of our pull request to ensure that we're stopping things getting in rather than letting everything get in and then finding it after the fact. So we we really wanted to do that to also enforce um some other um targets as well around the test coverage for instance at the unit test level. So we wanted to be stricter around how much coverage we had of new code and that was something that again varied quite wildly across projects across the the organization. So we wanted to say this is our baseline. We want to start enforcing for new code, high standard, no issues, high level of test coverage and get that in at the the pull request level and then also have the benefits of the transparency being able to better measure technical debt across the portfolio as well. So those were some of the the challenges that we were trying to address. Yeah, I I I love that you're, you know, you guys are fully in on using the quality gates in your, you know, your dev sec ops processes. Um, I love that you're using the code coverage as part of the, you know, quality gate. Tell me how those changes uh impacted your team's productivity or or your business objectives. So one of the things it it really helped with is um ensuring we had that level of test coverage meant that um there was less investment required in the the other areas of testing that we were um that we were having to do more of. So, we had to focus a lot more on regression testing, um, functional testing because we didn't have that level of automation around the unit testing because there was nothing stopping people putting new code in that wasn't being tested properly. So, by having that level of unit testing there, that really helped us to accelerate um, get our products to market quicker, but also to ensure the quality. We we've always ensured the quality we deliver to our own end customers was there. But it may have required in the past more manual effort after the fact, more testing around the release rather than ensuring that we had um that belt and braces approach getting all of the automation in up front, making sure that all new code is tested at a unit test level. And then we still have the automated functional tests and everything that runs off of the back of that. But it's just making sure that we had that in and stopping issues getting in at that point, stopping security vulnerabilities being introduced um unknowingly, stopping other bugs being introduced. So adding that the extra level of security that Sonar Cube gives us where it spots things that a senior developer might overlook potentially as part of a code review. So it's adding that that extra level of review and making sure that we had that that extra guarantee of quality at the point code goes into master rather than finding issues later down the line. And what I I like that we we really focus a lot uh here at Sonar about, you know, trying to um this concept of starting left, trying to get uh developers as they're writing code to see find the issues, see the issues, resolve the issues because we feel that the you know trying to find them later in the you know the software development life cycle is more challenging like later you find them, the more challenging they are to find, to fix, you know, where they are, what they are. Do you how did you do you think that is something that your team saw? Do you did you see any impact to the, you know, bringing the resol the the discovery and the resolution earlier in the development life cycle? Did did you find that was helpful? Yeah, absolutely. We we also agree on shifting left and and obviously dev sec ops a lot of it's about shifting processes and um and scans left and I know that we'll talk a little bit about sonar keep advanced security as well where that's also helping us to shift some of that left um getting it into the PR process but having having that um that extra assurance at the pull request stage has really helped us to accelerate and we've seen through our monitoring of our of our metrics and door metrics and things like that that we've seen um increased productivity from the teams after adopting when we've been with the enterprise edition for um about 4 years now I believe so we've been um uh evangelizing it and and championing it internally um getting to the point where we start to mandate the use of it and we started to to mandate the use of the quality gate integration and DevOps integration so we've been kind of tightening up processes as we And now we've got to the point where we we go even further and we have automation to check that people's branch policy mandates the gate check as a status check and it's not just there as optional. So we're really pushing that because we have seen the benefits and we have seen in the metrics that we track. We have seen uh the technical debt calculation come down as we we we calculate a a kind of uh percentage of capacity for our teams that that we want them to reserve to work on technical debt. And we do see that coming down. And when we started integrating the mandatory gate checks, there was a clear correlation between that and their overall scores that were being calculated. We could see the benefits there from mandating those checks and stopping those issues being introduced, which was excellent. Oh, I love hearing that. I love hearing about, you know, we're we're Sonar is a a developer built, developerled, developer focused company. So, the fact that your developers are embracing this, they're seeing the productivity, um they're seeing the benefits of it, that that warms my heart. I love it. Absolutely. And things like I could talk all day long about this. Um, but we're here because you posted this great um finding about your upgrade journey from previous uh you were on a previous version uh to the current uh 2025 release one LTA to the LTA. So, um what prompted you to upgrade so early? You know, a lot of people wait, a lot of customers wait, which is which is great, which is fine. you guys went in pretty quickly and upgraded uh almost immediately when it was released. Tell us about that. Yeah, so I we like to keep on top of the new releases. We tend to give it a couple of weeks cooling off period before jumping on it. So not quite on day one, but um after a couple of weeks we like to to upgrade and one of the reasons is it's so easy. Um we also have we have the teams coming to us also if there's a new feature maybe there's a new um language feature maybe there are new um features in the product like the AI code fix it's something that the teams have been benefiting from they will come to me and say you know when can we go to this release and that will often be within days of a new release coming out so people are keeping their eye on on the release notes seeing what's coming and the fact that that process is so easy it's it's a no-brainer something we can easily jump on, something we could easily go back as well if we needed to. We've never had to do that, but we know that the release process is so straightforward that we could revert if we had to. So, it's it's just been great for us to benefit from those new new features. Oh, that's awesome to hear. Um, and I feel like I almost feel like we're cheating and prompting you in some way, but I I know we're not. So, I love I love hearing what you have to say. Um, but yeah, it's easy, but you must have some kind of concerns about upgrading. You must have some uh be worried about some challenges. Did did you have any and what were they? So, I know that um I know that the process to go back is straightforward. So, that's that's always there. So, we know that if there are issues, then um it's something we can we can get get around go um and go back. Um, I also know that uh we've always had a great relationship with Sonic Keep support. They've always responded very efficiently. So I know that if there are issues that come out of a release um they're dealt with really well. So I've got that that confidence there as well. So really I we don't have doubts about upgrading. Um we're happy to go and yeah leave it a couple of weeks just in case there are any very early issues but um beyond that we're ready to jump on on those new releases. Uh I know uh well I know because I'm product marketing manager but uh you should also have uh access to have um um test instances like pre-production instances. Do you leverage that? Do you use that capability? Uh we actually don't. I know that we do have the ability to do that but um the system's been so reliable for us and the release process has been rock solid for the last four years. It's not um it's it's never been an issue for us. That's awesome to hear. Um, do you have what are your like when you're planning an upgrade, do you have specific expectations? Were those expectations met? Tell us about that. So, um, the upgrade process has always been quite quick for us. Um, it's we operate Sonar Cube Server as a container. So uh the process of upgrading is literally just specifying the new container version that we want, redeploying and then going through the um the the Sonic Cube UI to run the upgrade if there's a database upgrade that needs to happen. Um we normally will um coordinate with our teams and communicate that this upgrade is going to happen. There'll be a little bit of downtime that normally just happens out of hours on a on a workday. It's not something that has to happen at a weekend. the process is usually done and dusted within an hour or so. Um the release for 2025.1 did take longer. Um that so there was uh that was slightly unexpected. We had um a much longer deployment process. It was still completed successfully within that evening. But it was a longer release. Um however, had I known the benefits that I was about to reap, I would have been much happier at the time uh knowing that it was taking a bit longer. Um but uh yeah the process has always been straightforward. So especially when you're operating as a container, you know, we don't have to worry about about installing on a VM or anything like that. It's just deploy a new container image, let the product upgrade its own database and then off you go. Awesome. Um so I know and and maybe some uh of the audience here today knows about the the your your post uh that we have shared in some of our u um content about the the release. So the the benefit what was this surprise benefit tell us tell us about this uh these benefits that you saw. Sure. So we we run around um 1,200,400 projects or so on our instance um around 28 million lines of code in total. Um some of those projects are fairly significant in size. So one of them was um a Java based project around 3 million lines of code. Um that um typically would take around anywhere between 3 and 5 hours to do a full scan of the the full master branch. pull request scans were down to kind of the 25 minute or so level, but still enough to to annoy developers who are waiting to to get their work through. Um, so on upgrade, you're anticipating a a long rescan, right? Because part of the upgrade is often like re-triggering another full scan, right? Yeah, we we as part of every upgrade, it would um it would go through and reindex all the projects and and that's something that also has has improved greatly over the years. uh that used to take much longer. Um so we we came to 2025.1 and we ran a scan for the the full the full scan of this large project and the execution dropped to 15 minutes. So I immediately thought what's gone wrong like that's that's significant. But um everything checked out. The results were there as expected and the um the pull request scans themselves were also down to um to less than a minute kind of 30 seconds or so. Um which was absolutely uh unbelievable for us and that also made a massive difference to that team because if you imagine previously we'd been mandating that they have these quality gate checks and that they can't pass their PRs until they've completed. Well, all of a sudden they're completing within a minute instead of 25. So they can go ahead and they can complete their work and and the system is not stopping them anymore. It's not blocking them or slowing them down. So we saw a massive benefit there as they could they could turn around work much quicker and then those overall master branch scans down to 15 minutes and since then it's dropped even further to around 5 minutes. So it's a significant improvement in performance and we've seen that across the board for projects as well. Um so that that wasn't the only uh benefit we saw. So we had um I mentioned that we had a lengthy upgrade process as it as Sonoku did stuff to its database. Um it was it was migrating data. It was doing stuff. Um at the end of this um the database had dropped in size by 50%. So we've gone down by 50%. And this is a a cloud hosted database. Obviously we pay for the resources that we use. So that was a a direct saving for us there. And because of the improved performance um we we were able to reduce the resources that we uh assigned to that database as well from a compute perspective. We're able to reduce reduce the resources for the container as well. So the the improved performance of the product let us then scale back the resources that we' assigned give us a direct cost saving as well in storage and compute. That's fantastic. And the teams and the teams benefit. They get much better performance. Their productivity is not affected. They're not sitting around waiting juggling PRs to try and keep productive whilst they wait for others to come back. And that avoids that context switching that kills kills all of our productivity. They could just go in, do their PR, get their scan done, all good. Code review happens and then it goes in. That's that's fantastic to I love it. Um, are there are there any other I know this was kind of the big message that that we heard from you and it's great to hear the details and that you're still continuing to see uh improvements. Um, are there any other things in the the LTA in in the 2025.1 release that uh helped you with your uh code health strategy or your teams or um any anything to help identify and resolve critical issues faster? Um I think that the performance was the big deal there. That's what's unblocked our teams. Um I know that the AI um codegen fixes that I know that's not new in 2025.1 but that's something that we have newly adopted and and the teams have been really liking that. So not only getting issues raised by Senaki but having it suggest a fix which is fantastic. Um and I know that we we've also moved on to 2025.2 now in order to benefit and be part of the um the early access preview for the advanced security. So that's again another reason why we we keep on top of these latest releases is that they bring the good stuff, you know. So we we we like to to keep moving and um and benefit from those features. I want to get to your your um how you've been uh using advanced security and I want to get to ask you that. But before I do, just one last thing. Do you have any advice for any of the people is listening today or watching today that uh about like you know if they're getting ready to upgrade any advice to them about uh the upgrade process and um maybe the top benefits. Yeah, I I think I would just be aware that this release may potentially take a little bit longer because it it seems that there were some significant changes happening on the database size. Um but you are going to to reap those benefits. So have a look at your um the current performance that you're getting out of your projects. Maybe if you have some particularly long running projects there. Um like I say, we've seen the benefits on not only the the master full scans but also on the pool request scans as well. Um so there may be may be areas there and particularly if like with us with those larger projects we had we did have some resistance to for mandating quality gate checks in progress because it took a little while to run. that's not going to be a blocker for you anymore. So, um yeah, I'd say look at the upgrade. Um be wary of planning enough time to to take your system down and do the upgrade as it if if it's the same as my experience. Then you may see it takes a bit longer than previous upgrades, particularly the um is it the 10x uh version line that we had previously, those upgrades were um were much quicker for me. But yeah, the 2025.1 and the new versioning system did take a little while. But um yeah, just monitor the the database size before and after as well and see what what difference you can get there. And yeah, just take into account that it might take a little while. And for us, it was around end taking about 6 hours or so, which is quite a bit longer than than previous upgrades, but um yeah, but well well within the window that we we'd allowed anyway. That's great. So be ready, but reap the benefits, huh? Absolutely. Yeah. All right. Advanced Securities, tell us about that. You're in the advanced security early access program. Um what why did you want to join that and and what are you looking for um with it that that uh you found uh useful and what and and how has it been for you? Yeah. So we use um a number of tools um for our um software composition analysis and um dependency vulnerability checking and um a number of these tools um have their issues. Um they they tend not to be very user friendly. Um we find our developers really like Sonocube. Um you say you're a you're a developer built product for developers. Um our developers really like to use Sonar Cube. Um so when we found out that that you were bringing in some of these features into the product, we were very excited as we currently have um other products which which which going back to the shift left point don't integrate very well um on the left hand side. So they they tend to be products that are run on a schedule um after the fact. So you might go and add a dependency to a product and then a couple of weeks later you'll do a scheduled security scan which might find that that dependency has a known vulnerability or maybe that dependency is using a prohibited license. So we to catch it later. Does that does that mean that that couple of weeks work is lost or there's now another whole cycle of work to recover from having to having found that that had vulnerabilities? Yeah, it's it's then you've got rework that needs to be done which and if it's a maybe it's um maybe you need to completely swap that component out entirely and go to and go to an alternative and that's going to affect the the development for that for that product. M worst case scenario, you put something live that has a vulnerability that you don't yet know about, but that's that's something that we would avoid anyway, but if you were to to build and release if you had a very rapid cycle could that could potentially happen. So, we wanted to avoid that by shifting left as much as possible with the security scans and also um the license checking as well. So, checking for prohibited licenses. So we um were very happy to see that you were bringing this into son cube and uh the way it works is that there is a new tab that you see on your son project that shows your dependencies. There's another tab that shows um any vulnerabilities there. So I can see the full um uh sbomb of my product. I can see all of the the dependencies that are being used. I can see if there are any vulnerabilities in it. It tells me um and our developers which is very good which version of packages that we need to upgrade to to get to a fixed version and gives them a lot of guidance around exactly what they need to do and it does this at the point of uh a pool crest scan. So as a developer let's say I introduce a package with a vulnerability it runs as part of my PR scan the quality gate that we talked about and then that's raised and that blocks that PR from being merged. So all of a sudden we've got that security scan really shifted left to stop that getting in to avoid that um wasted effort of any rework or of any retesting that has to happen. and and also that's very important for us from a licensing perspective as well to make sure that the licensing um of those components doesn't breach our license policy and I know that I think in the future um SonoQ advanced security is going to be a bit more flexible around h how the license policy can be configured so that we could tailor that to to really reflect our own license policy for open source software um and so that's something that we that we really like the look of as well so being able to define our policy to say we don't want these licenses to be used and then we can stop those being introduced at the PR level rather than finding them after the fact and then having to deal with it. That's great. I'm I'm excited that you're seeing all these things. Um, I I love that you uh are you appreciate the, you know, this being in the the workflow that your developers are used to, you know, with with within SonarCube server in in the UI and they can see it right there all together and kind of one one window pane if you will. Yeah, that's that's great. Um, yeah, absolutely. And it looks just like the rest of Senna Cube. It's, you know, behaves in exactly the same way. They know what they're getting. It's very intuitive. So, it's Yeah, that's what we want. That's that's perfect. Uh thank you so much for sharing your story. Um I do want to get to a few questions. I I see that we have a few. Um but before we do that, is there anything else? Do you have any final thoughts that you'd like to share with people? Um nothing major. I think um I would encourage people to stay on top of the new releases. I think it's um we're seeing a lot of new functionality come, some great features and then these yeah the benefits like the performance. That's something that I would I would recommend everybody upgrades for um particularly if you have large projects as well. You're really going to see the benefits there. Perfect. Um okay, we're going to get to a few questions. Thank you. Thank you again. This this has been great. Um it's your story has been uh I mean I like I I've told you this before when we've talked, you know, it's music to my ears, right? This is exactly what we work so hard to uh to achieve. Um, we do have a quick poll before I switch to Q&A and I think Manish is going to join us for the Q&A. Yeah, I'm here. Thanks. Thanks, Robert. Thanks, Paul. Uh, I appreciate you taking the time and joining us today. Uh, I was I had not listened to the story in details that you shared today. So uh it it was very very uh you know detailed as to what you were what you experienced how you uh what are this good suggestions you have for our cu uh customers other customers who are looking to upgrade. So really appreciate you taking the time today. There's one question from the audience uh that I would like to start with uh and that is are you considering the sonube cloud sometime in future and what are the prerequisites for migrating to sonube cloud? I think the second part we can answer it. Uh but are you uh one of the customers here or attendees here wants to know whether you're looking at moving from server to cloud? Uh we're not looking to move to cloud. No, we've we've always liked to operate um our own instance and keep keep all of our source code inhouse. Um it also gives us full flexibility over over that product. the operation of that and when you run as a container it becomes very easy to to operate locally. Um we we do run out of the um Azure cloud so it's yeah it's very easy for us but we we're not um we're not currently looking at Sonar cloud. Yeah I think as you run your Sonar Cube and Docker containers it's fairly lightweight. you don't like you said you just have to point to the new image pull the new image instantiate it and you're up and running your databases in the cloud already so uh it's fairly straightforward uh thing yeah so I I I you know there are certain customers who want to get out of managing infrastructure and they're uh probably looking for cloud in terms of uh prerequisites for migrating to SonaCube cloud I can uh probably answer that uh there is actually not really any prerequisite uh there are however we do not have a direct you know uh migration path from uh from server to cloud but it it is it is doable. It's basically you know both the products have the same set of capabilities. Uh they do an support all the languages that are available in server. They do support all the languages in the uh same languages in cloud. You can uh import configurations uh from your server environment into the cloud. And uh the database migration is where uh you know it can get it can the answer can vary a little bit depending on what database you're using on prem versus uh when you move it to cloud what needs to happen there. So uh if you're not too worried about uh migrating your old database and old analysis it is a relatively straightforward uh uh move from uh server to cl cloud. Uh I I don't think we have quite a few customers who are actually uh doing this as we speak. Uh we we also have our solution engineering team who can work with you and guide you through the exact process based on your exact requirements and what you have in terms of your unique environments. Uh so it we can we can work with you. So reach out to uh your sales rep and ask for a solution engineering assessment and we can handle that on a case to case basis. Uh there's another question that came up and I'm not sure if I understand it correctly. Maybe Robert you do. Is there a way to see users who have signed up for email notifications in SonaCube server? Uh you do get if you're asking about email notifications for reports, you do get email notifications for reports. You can subscribe to reports. Uh or are you asking about notifications about new server releases? In that case, you can sign up for uh you know the Sono Cube updates on our SonoQ product web page. We have towards the bottom of it, we have a newsletter which you can subscribe to to be aware of what is coming and what is new in the product. Uh if there's we have a monthly newsletter that we send out. Um yeah, I don't I don't I'm not aware of any way to to see that if you've signed up for it. Um but if you haven't and you want to, you can. Uh and there's a way I believe to opt out if you don't want to receive the newsletter anymore. Yep. And uh for uh uh Blake who asked this question, if you have a follow-up uh do reach out to us directly uh we and we can uh answer your question if you have not answered it correctly. Uh there's another question which just came up for the container version. Is it free version of Sona cube? So we have uh docker contain docker images available for sonar cube community build which is a free build which is a open source build and then we have the commercial editions uh which are basically licensed so you can get the images but you will need a license to run the commercial editions. Uh we do have trial licenses available for our commercial plans. So you could request a trial license and run a Sonocube image as a container to see for yourself how it works. Um, here's one. When is advanced security releasing? When can I get it? Yeah. So, uh, we are really excited to come out with advanced security and thanks Paul. It was good to hear that, uh, it's enabling you to shift left or start left as we call it in Soner. uh and I think uh yeah the beauty of that solution is basically you get integrated code analysis for both quality and security uh including firstparty code AI generated code and open source libraries in the same unified single tool right so you don't have to set up multiple tools and you it runs as part of the PR analysis as you said so it is coming out uh it is becoming uh going to be generally available in the May release of sonar cube server 2025.3 it should come out towards the end of May uh is when we we it will become generally available. Right now it is in early access and shortly after that we'll also make it available in our cloud uh offering. Okay, I think we have time for maybe one more or two. Let's see. Will upgrading be different or more difficult if we're on a version older or earlier than 9.9? And I don't I don't think so. So, I mean, if you're used to the upgrade process, if uh whatever uh dot version you're on, so if you're on a 8.1, then you would upgrade to 9.9 and then so we call it step upgrading. Then from 9.9, you would go to the LTA. So, you basically do step upgrading to the LTA of your major version and then you step upgrade LTA to LTA. And the purpose of that is because each LTA to LTA upgrade uh adjusts your database uh appropriately uh so you can't skip. I hope that answered the question. Yep, I think I think it did. So yeah, it's important to make sure your schema is uh correct uh for the database and for the version of Sona Cube that you're running. So uh yeah, so I think uh we don't have any other questions uh as far as I can tell, but if we left anything unanswered, we will respond to them uh later after this webinar and make the Q&A available to you. Uh do you want to wrap it up, Robert? Yep. Thank you everyone. Um it's been a great session and uh I really really really enjoyed talking with you Paul. Thank you so much for uh meeting with us and sharing your story. Uh I know you came to our uh London uh event, city event. Uh we're doing city tours around the country, around the globe, sorry. And uh Paul came to the London event and stood up there. Um we didn't prompt them or ask him. I think you just decided to to say, \"Hey, I think this is great.\" So thank you so much for being vocal about your experience. Um we love it. um and and you've been fantastic. So, uh it's great to hear your story and and I hope it encourages everybody to to upgrade and we don't have info on the next uh webinar. I think some info is coming out. Uh don't forget uh we will be posting we will send you the video uh recording of this webinar and we will be posting the questions and answers in our community. So, if you still have more questions or you didn't see your question answered, go to our community. That's where you'll see uh all the responses. Thanks everyone and we'll see you next",
+  "fetchedAt": "2026-03-14T09:22:51.666Z"
+}

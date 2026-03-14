@@ -1,0 +1,713 @@
+{
+  "videoId": "v68",
+  "youtubeId": "_-oYSf8qoUY",
+  "segments": [
+    {
+      "text": "[music]",
+      "offset": 1309,
+      "duration": 2020
+    },
+    {
+      "text": "Let's explore audit logs now available",
+      "offset": 7520,
+      "duration": 4720
+    },
+    {
+      "text": "on sonarcubecloud. We made this",
+      "offset": 9920,
+      "duration": 4240
+    },
+    {
+      "text": "announcement back on October 1st in our",
+      "offset": 12240,
+      "duration": 3920
+    },
+    {
+      "text": "sonar community forum available at",
+      "offset": 14160,
+      "duration": 4080
+    },
+    {
+      "text": "community.source.com.",
+      "offset": 16160,
+      "duration": 4320
+    },
+    {
+      "text": "I highly recommend you log in and click",
+      "offset": 18240,
+      "duration": 4799
+    },
+    {
+      "text": "on the bell icon to be notified of any",
+      "offset": 20480,
+      "duration": 4400
+    },
+    {
+      "text": "new announcements",
+      "offset": 23039,
+      "duration": 3761
+    },
+    {
+      "text": "and features.",
+      "offset": 24880,
+      "duration": 3680
+    },
+    {
+      "text": "In the audit logs documentation",
+      "offset": 26800,
+      "duration": 4719
+    },
+    {
+      "text": "available at docs.sonsource.com,",
+      "offset": 28560,
+      "duration": 4960
+    },
+    {
+      "text": "you'll find a list of the logged events",
+      "offset": 31519,
+      "duration": 4481
+    },
+    {
+      "text": "which are necessary for",
+      "offset": 33520,
+      "duration": 5199
+    },
+    {
+      "text": "compliance or security needs. This is",
+      "offset": 36000,
+      "duration": 4559
+    },
+    {
+      "text": "accessed only through the audit logs",
+      "offset": 38719,
+      "duration": 4481
+    },
+    {
+      "text": "API, not through the UI, at least not",
+      "offset": 40559,
+      "duration": 4721
+    },
+    {
+      "text": "yet.",
+      "offset": 43200,
+      "duration": 3920
+    },
+    {
+      "text": "To access these logs, you'll first need",
+      "offset": 45280,
+      "duration": 4080
+    },
+    {
+      "text": "to authenticate with web API and then go",
+      "offset": 47120,
+      "duration": 6079
+    },
+    {
+      "text": "to the audit logs API.",
+      "offset": 49360,
+      "duration": 6000
+    },
+    {
+      "text": "Here on this documentation page, you'll",
+      "offset": 53199,
+      "duration": 3680
+    },
+    {
+      "text": "see that you need the authorization",
+      "offset": 55360,
+      "duration": 5199
+    },
+    {
+      "text": "bearer token header.",
+      "offset": 56879,
+      "duration": 6000
+    },
+    {
+      "text": "So once you click the audit logs API, it",
+      "offset": 60559,
+      "duration": 7081
+    },
+    {
+      "text": "will take you to our swagger docs.",
+      "offset": 62879,
+      "duration": 4761
+    },
+    {
+      "text": "Initially, it'll look like this.",
+      "offset": 68720,
+      "duration": 4280
+    },
+    {
+      "text": "and select download. Notice that the",
+      "offset": 73600,
+      "duration": 4800
+    },
+    {
+      "text": "first parameter necessary is the",
+      "offset": 76640,
+      "duration": 4720
+    },
+    {
+      "text": "enterprise UID. If you don't know that,",
+      "offset": 78400,
+      "duration": 4560
+    },
+    {
+      "text": "you'll need to access it through this",
+      "offset": 81360,
+      "duration": 4799
+    },
+    {
+      "text": "other API list enterprises.",
+      "offset": 82960,
+      "duration": 6720
+    },
+    {
+      "text": "Select your server",
+      "offset": 86159,
+      "duration": 5681
+    },
+    {
+      "text": "and select a domain. I'll choose",
+      "offset": 89680,
+      "duration": 4880
+    },
+    {
+      "text": "ThunderCloud.io",
+      "offset": 91840,
+      "duration": 4800
+    },
+    {
+      "text": "and select the first API to get your",
+      "offset": 94560,
+      "duration": 4480
+    },
+    {
+      "text": "enterprises.",
+      "offset": 96640,
+      "duration": 4080
+    },
+    {
+      "text": "We'll click try it out and type the",
+      "offset": 99040,
+      "duration": 3119
+    },
+    {
+      "text": "enterprise key. If you don't know your",
+      "offset": 100720,
+      "duration": 4480
+    },
+    {
+      "text": "enterprise key, go to your enterprise",
+      "offset": 102159,
+      "duration": 7081
+    },
+    {
+      "text": "and sonar cloud io",
+      "offset": 105200,
+      "duration": 4040
+    },
+    {
+      "text": "and you'll see it in the URL. In my",
+      "offset": 109840,
+      "duration": 6559
+    },
+    {
+      "text": "case, it's sonar support team-sqc.",
+      "offset": 112000,
+      "duration": 6320
+    },
+    {
+      "text": "I'll copy that and go back to the",
+      "offset": 116399,
+      "duration": 5680
+    },
+    {
+      "text": "swagger docs, paste it, and execute.",
+      "offset": 118320,
+      "duration": 6000
+    },
+    {
+      "text": "Here I see an example of the API I need",
+      "offset": 122079,
+      "duration": 7600
+    },
+    {
+      "text": "to submit to get my enterprise UU ID.",
+      "offset": 124320,
+      "duration": 8639
+    },
+    {
+      "text": "I'll use Postman as an example of how to",
+      "offset": 129679,
+      "duration": 6481
+    },
+    {
+      "text": "get that information.",
+      "offset": 132959,
+      "duration": 6401
+    },
+    {
+      "text": "First, I'll set my user token obtained",
+      "offset": 136160,
+      "duration": 6520
+    },
+    {
+      "text": "from SonarCloud.io",
+      "offset": 139360,
+      "duration": 3320
+    },
+    {
+      "text": "bear token off type enterprise key param",
+      "offset": 142879,
+      "duration": 6881
+    },
+    {
+      "text": "with my enterprise key",
+      "offset": 146720,
+      "duration": 5040
+    },
+    {
+      "text": "and send",
+      "offset": 149760,
+      "duration": 4400
+    },
+    {
+      "text": "here. This ID is the UU ID of your",
+      "offset": 151760,
+      "duration": 5199
+    },
+    {
+      "text": "enterprise.",
+      "offset": 154160,
+      "duration": 6640
+    },
+    {
+      "text": "Let's go back to Swagger docs.",
+      "offset": 156959,
+      "duration": 7201
+    },
+    {
+      "text": "Now we can download the audit logs.",
+      "offset": 160800,
+      "duration": 5280
+    },
+    {
+      "text": "Again, make sure you've chosen the right",
+      "offset": 164160,
+      "duration": 5840
+    },
+    {
+      "text": "domain. Son, sonocloud.io.",
+      "offset": 166080,
+      "duration": 6720
+    },
+    {
+      "text": "Choose /d download. We're going to try",
+      "offset": 170000,
+      "duration": 5519
+    },
+    {
+      "text": "it out. Let's paste in that UU ID we got",
+      "offset": 172800,
+      "duration": 5719
+    },
+    {
+      "text": "here.",
+      "offset": 175519,
+      "duration": 3000
+    },
+    {
+      "text": "Let's choose a start date",
+      "offset": 180800,
+      "duration": 3880
+    },
+    {
+      "text": "October 11th with the end date of",
+      "offset": 185840,
+      "duration": 5960
+    },
+    {
+      "text": "November 10th.",
+      "offset": 193280,
+      "duration": 3920
+    },
+    {
+      "text": "Notice that the date range cannot exceed",
+      "offset": 195360,
+      "duration": 5200
+    },
+    {
+      "text": "30 days. You can optionally provide a",
+      "offset": 197200,
+      "duration": 5679
+    },
+    {
+      "text": "page number or a maximum number of",
+      "offset": 200560,
+      "duration": 5440
+    },
+    {
+      "text": "records per page size or rather per",
+      "offset": 202879,
+      "duration": 5681
+    },
+    {
+      "text": "page. execute.",
+      "offset": 206000,
+      "duration": 4319
+    },
+    {
+      "text": "And here's an example of the API you",
+      "offset": 208560,
+      "duration": 5360
+    },
+    {
+      "text": "need to submit to get the audit logs.",
+      "offset": 210319,
+      "duration": 7761
+    },
+    {
+      "text": "I'm going to use Postman once again.",
+      "offset": 213920,
+      "duration": 6160
+    },
+    {
+      "text": "Here's the URL that Swagger has given",
+      "offset": 218080,
+      "duration": 4400
+    },
+    {
+      "text": "me.",
+      "offset": 220080,
+      "duration": 6000
+    },
+    {
+      "text": "I have set my bearer token off type with",
+      "offset": 222480,
+      "duration": 7679
+    },
+    {
+      "text": "my token. I'll click send",
+      "offset": 226080,
+      "duration": 6719
+    },
+    {
+      "text": "here. Postman neatly formats it into",
+      "offset": 230159,
+      "duration": 4961
+    },
+    {
+      "text": "JSON",
+      "offset": 232799,
+      "duration": 5041
+    },
+    {
+      "text": "as pretty print.",
+      "offset": 235120,
+      "duration": 4800
+    },
+    {
+      "text": "You can then save the response to a file",
+      "offset": 237840,
+      "duration": 6240
+    },
+    {
+      "text": "or save the response within Postman",
+      "offset": 239920,
+      "duration": 6319
+    },
+    {
+      "text": "and then you have a JSON file of your",
+      "offset": 244080,
+      "duration": 4400
+    },
+    {
+      "text": "audit logs. Now, how would you use this",
+      "offset": 246239,
+      "duration": 6161
+    },
+    {
+      "text": "in a SIM tool like Splunk or Data Dog?",
+      "offset": 248480,
+      "duration": 6800
+    },
+    {
+      "text": "Let's do an example with Splunk Cloud.",
+      "offset": 252400,
+      "duration": 4720
+    },
+    {
+      "text": "Let's upload that JSON file we just",
+      "offset": 255280,
+      "duration": 5120
+    },
+    {
+      "text": "created. So, we'll go to settings, add",
+      "offset": 257120,
+      "duration": 5280
+    },
+    {
+      "text": "data,",
+      "offset": 260400,
+      "duration": 5359
+    },
+    {
+      "text": "upload files from my computer,",
+      "offset": 262400,
+      "duration": 7320
+    },
+    {
+      "text": "and I'll select my file.",
+      "offset": 265759,
+      "duration": 3961
+    },
+    {
+      "text": "We'll click next.",
+      "offset": 277440,
+      "duration": 3840
+    },
+    {
+      "text": "You can optionally change the source",
+      "offset": 279440,
+      "duration": 5720
+    },
+    {
+      "text": "type and other factors.",
+      "offset": 281280,
+      "duration": 3880
+    },
+    {
+      "text": "input settings and review. Click submit",
+      "offset": 285360,
+      "duration": 6000
+    },
+    {
+      "text": "to finish and start searching.",
+      "offset": 288320,
+      "duration": 5680
+    },
+    {
+      "text": "And there you have your results in a",
+      "offset": 291360,
+      "duration": 5839
+    },
+    {
+      "text": "singular JSON file.",
+      "offset": 294000,
+      "duration": 4880
+    },
+    {
+      "text": "Now, this isn't necessarily the",
+      "offset": 297199,
+      "duration": 6081
+    },
+    {
+      "text": "prettiest method to see the data.",
+      "offset": 298880,
+      "duration": 7400
+    },
+    {
+      "text": "Instead,",
+      "offset": 303280,
+      "duration": 3000
+    },
+    {
+      "text": "let's clean this data up,",
+      "offset": 306639,
+      "duration": 5521
+    },
+    {
+      "text": "remove it from our search.",
+      "offset": 309360,
+      "duration": 5119
+    },
+    {
+      "text": "Let's try uploading a formatted version",
+      "offset": 312160,
+      "duration": 4720
+    },
+    {
+      "text": "of our audit logs.",
+      "offset": 314479,
+      "duration": 4720
+    },
+    {
+      "text": "So going back to this, I've downloaded",
+      "offset": 316880,
+      "duration": 4560
+    },
+    {
+      "text": "my logs and I have prepared a formatted",
+      "offset": 319199,
+      "duration": 5041
+    },
+    {
+      "text": "version using a Python script that will",
+      "offset": 321440,
+      "duration": 6560
+    },
+    {
+      "text": "set the event host",
+      "offset": 324240,
+      "duration": 5920
+    },
+    {
+      "text": "source type and source fields that",
+      "offset": 328000,
+      "duration": 5520
+    },
+    {
+      "text": "Splunk typically uses with HTTP event",
+      "offset": 330160,
+      "duration": 6560
+    },
+    {
+      "text": "collector. First,",
+      "offset": 333520,
+      "duration": 7679
+    },
+    {
+      "text": "let's get an HTTP event collector token.",
+      "offset": 336720,
+      "duration": 8160
+    },
+    {
+      "text": "We'll go to settings, add data, and",
+      "offset": 341199,
+      "duration": 5681
+    },
+    {
+      "text": "select monitor.",
+      "offset": 344880,
+      "duration": 4960
+    },
+    {
+      "text": "We'll choose HTTP event collector and",
+      "offset": 346880,
+      "duration": 6360
+    },
+    {
+      "text": "give a name.",
+      "offset": 349840,
+      "duration": 3400
+    },
+    {
+      "text": "I leave the defaults.",
+      "offset": 357039,
+      "duration": 6000
+    },
+    {
+      "text": "Submit. Done. So here, notice the token",
+      "offset": 359360,
+      "duration": 6160
+    },
+    {
+      "text": "value. This token is necessary so that",
+      "offset": 363039,
+      "duration": 4321
+    },
+    {
+      "text": "Splunk understands where that data is",
+      "offset": 365520,
+      "duration": 4880
+    },
+    {
+      "text": "coming from and what for what purpose.",
+      "offset": 367360,
+      "duration": 5440
+    },
+    {
+      "text": "You can then use curl to submit that",
+      "offset": 370400,
+      "duration": 5040
+    },
+    {
+      "text": "data. Here's an example of me uploading",
+      "offset": 372800,
+      "duration": 5839
+    },
+    {
+      "text": "that data using curl to the services",
+      "offset": 375440,
+      "duration": 5759
+    },
+    {
+      "text": "collector event endpoint using my Splunk",
+      "offset": 378639,
+      "duration": 5560
+    },
+    {
+      "text": "token.",
+      "offset": 381199,
+      "duration": 3000
+    },
+    {
+      "text": "Success.",
+      "offset": 384560,
+      "duration": 6280
+    },
+    {
+      "text": "I'll go back and start searching.",
+      "offset": 386240,
+      "duration": 4600
+    },
+    {
+      "text": "My source type was called audit JSON.",
+      "offset": 394639,
+      "duration": 4680
+    },
+    {
+      "text": "date range was back between October and",
+      "offset": 399360,
+      "duration": 4920
+    },
+    {
+      "text": "November.",
+      "offset": 401280,
+      "duration": 3000
+    },
+    {
+      "text": "Search and here we are.",
+      "offset": 406400,
+      "duration": 8680
+    },
+    {
+      "text": "This is a bit better at formatting.",
+      "offset": 410560,
+      "duration": 4520
+    },
+    {
+      "text": "Now that makes searching for your audit",
+      "offset": 417360,
+      "duration": 6000
+    },
+    {
+      "text": "logs much easier and prettier. For more",
+      "offset": 419440,
+      "duration": 5440
+    },
+    {
+      "text": "information, make sure to check out the",
+      "offset": 423360,
+      "duration": 3679
+    },
+    {
+      "text": "audit logs portion of our documentation",
+      "offset": 424880,
+      "duration": 4080
+    },
+    {
+      "text": "in the Suncube Cloud product",
+      "offset": 427039,
+      "duration": 4921
+    },
+    {
+      "text": "documentation.",
+      "offset": 428960,
+      "duration": 3000
+    }
+  ],
+  "fullText": "[music] Let's explore audit logs now available on sonarcubecloud. We made this announcement back on October 1st in our sonar community forum available at community.source.com. I highly recommend you log in and click on the bell icon to be notified of any new announcements and features. In the audit logs documentation available at docs.sonsource.com, you'll find a list of the logged events which are necessary for compliance or security needs. This is accessed only through the audit logs API, not through the UI, at least not yet. To access these logs, you'll first need to authenticate with web API and then go to the audit logs API. Here on this documentation page, you'll see that you need the authorization bearer token header. So once you click the audit logs API, it will take you to our swagger docs. Initially, it'll look like this. and select download. Notice that the first parameter necessary is the enterprise UID. If you don't know that, you'll need to access it through this other API list enterprises. Select your server and select a domain. I'll choose ThunderCloud.io and select the first API to get your enterprises. We'll click try it out and type the enterprise key. If you don't know your enterprise key, go to your enterprise and sonar cloud io and you'll see it in the URL. In my case, it's sonar support team-sqc. I'll copy that and go back to the swagger docs, paste it, and execute. Here I see an example of the API I need to submit to get my enterprise UU ID. I'll use Postman as an example of how to get that information. First, I'll set my user token obtained from SonarCloud.io bear token off type enterprise key param with my enterprise key and send here. This ID is the UU ID of your enterprise. Let's go back to Swagger docs. Now we can download the audit logs. Again, make sure you've chosen the right domain. Son, sonocloud.io. Choose /d download. We're going to try it out. Let's paste in that UU ID we got here. Let's choose a start date October 11th with the end date of November 10th. Notice that the date range cannot exceed 30 days. You can optionally provide a page number or a maximum number of records per page size or rather per page. execute. And here's an example of the API you need to submit to get the audit logs. I'm going to use Postman once again. Here's the URL that Swagger has given me. I have set my bearer token off type with my token. I'll click send here. Postman neatly formats it into JSON as pretty print. You can then save the response to a file or save the response within Postman and then you have a JSON file of your audit logs. Now, how would you use this in a SIM tool like Splunk or Data Dog? Let's do an example with Splunk Cloud. Let's upload that JSON file we just created. So, we'll go to settings, add data, upload files from my computer, and I'll select my file. We'll click next. You can optionally change the source type and other factors. input settings and review. Click submit to finish and start searching. And there you have your results in a singular JSON file. Now, this isn't necessarily the prettiest method to see the data. Instead, let's clean this data up, remove it from our search. Let's try uploading a formatted version of our audit logs. So going back to this, I've downloaded my logs and I have prepared a formatted version using a Python script that will set the event host source type and source fields that Splunk typically uses with HTTP event collector. First, let's get an HTTP event collector token. We'll go to settings, add data, and select monitor. We'll choose HTTP event collector and give a name. I leave the defaults. Submit. Done. So here, notice the token value. This token is necessary so that Splunk understands where that data is coming from and what for what purpose. You can then use curl to submit that data. Here's an example of me uploading that data using curl to the services collector event endpoint using my Splunk token. Success. I'll go back and start searching. My source type was called audit JSON. date range was back between October and November. Search and here we are. This is a bit better at formatting. Now that makes searching for your audit logs much easier and prettier. For more information, make sure to check out the audit logs portion of our documentation in the Suncube Cloud product documentation.",
+  "fetchedAt": "2026-03-14T09:22:31.072Z"
+}

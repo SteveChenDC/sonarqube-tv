@@ -1,0 +1,2753 @@
+{
+  "videoId": "v21",
+  "youtubeId": "P-y8kBGxO9M",
+  "segments": [
+    {
+      "text": "Hello, I'm Johannes, a VP of code",
+      "offset": 17000,
+      "duration": 2000
+    },
+    {
+      "text": "security at Sonar and I'm going to talk",
+      "offset": 19000,
+      "duration": 2000
+    },
+    {
+      "text": "about code security in the AI area. We",
+      "offset": 21000,
+      "duration": 3000
+    },
+    {
+      "text": "will be covering the state of code",
+      "offset": 24000,
+      "duration": 2000
+    },
+    {
+      "text": "security where we are at then we look at",
+      "offset": 26000,
+      "duration": 2000
+    },
+    {
+      "text": "how Sona is approaching this challenge",
+      "offset": 28000,
+      "duration": 2000
+    },
+    {
+      "text": "today and then what are the capabilities",
+      "offset": 30000,
+      "duration": 3000
+    },
+    {
+      "text": "in to support this I will",
+      "offset": 33000,
+      "duration": 2000
+    },
+    {
+      "text": "show some demos and also give you a",
+      "offset": 35000,
+      "duration": 2000
+    },
+    {
+      "text": "sneak peek on what else we're working",
+      "offset": 37000,
+      "duration": 2000
+    },
+    {
+      "text": "on before I jump to a summary let's dive",
+      "offset": 39000,
+      "duration": 4000
+    },
+    {
+      "text": "into the state of code security so we",
+      "offset": 43000,
+      "duration": 3000
+    },
+    {
+      "text": "released a report here a research",
+      "offset": 46000,
+      "duration": 3000
+    },
+    {
+      "text": "study where we covered almost 8",
+      "offset": 49000,
+      "duration": 2000
+    },
+    {
+      "text": "billion lines of code from 1 million",
+      "offset": 51000,
+      "duration": 3000
+    },
+    {
+      "text": "developers that wrote code in 40,000",
+      "offset": 54000,
+      "duration": 3000
+    },
+    {
+      "text": "different organizations, right? So quite",
+      "offset": 57000,
+      "duration": 2000
+    },
+    {
+      "text": "a diverse set of code in different",
+      "offset": 59000,
+      "duration": 2000
+    },
+    {
+      "text": "programming languages and with 400",
+      "offset": 61000,
+      "duration": 2000
+    },
+    {
+      "text": "million code issues that we studied",
+      "offset": 63000,
+      "duration": 2000
+    },
+    {
+      "text": "here. And one finding was that almost",
+      "offset": 65000,
+      "duration": 4000
+    },
+    {
+      "text": "one issue every 800 lines of code",
+      "offset": 69000,
+      "duration": 3000
+    },
+    {
+      "text": "appears, right? That accounts to one to",
+      "offset": 72000,
+      "duration": 2000
+    },
+    {
+      "text": "two security issues per developer per",
+      "offset": 74000,
+      "duration": 1000
+    },
+    {
+      "text": "month. And you can see that still quite",
+      "offset": 75000,
+      "duration": 3000
+    },
+    {
+      "text": "a lot of security issues. When we study",
+      "offset": 78000,
+      "duration": 3000
+    },
+    {
+      "text": "the top security issue categories,",
+      "offset": 81000,
+      "duration": 2000
+    },
+    {
+      "text": "you can see that still the issue types",
+      "offset": 83000,
+      "duration": 3000
+    },
+    {
+      "text": "that you have been seeing in the last",
+      "offset": 86000,
+      "duration": 1000
+    },
+    {
+      "text": "decade are are fully present. Log",
+      "offset": 87000,
+      "duration": 3000
+    },
+    {
+      "text": "injections, cross-site scripting, SQL",
+      "offset": 90000,
+      "duration": 1000
+    },
+    {
+      "text": "injections, hard-coded secrets are",
+      "offset": 91000,
+      "duration": 3000
+    },
+    {
+      "text": "among those security issue types.",
+      "offset": 94000,
+      "duration": 4000
+    },
+    {
+      "text": "And now as we talked",
+      "offset": 98000,
+      "duration": 2000
+    },
+    {
+      "text": "about previously, right, the AI",
+      "offset": 100000,
+      "duration": 1000
+    },
+    {
+      "text": "accelerates this challenge. With AI,",
+      "offset": 101000,
+      "duration": 3000
+    },
+    {
+      "text": "we are writing more code, we are writing",
+      "offset": 104000,
+      "duration": 2000
+    },
+    {
+      "text": "code faster. And so if you extrapolate",
+      "offset": 106000,
+      "duration": 3000
+    },
+    {
+      "text": "the statistics now for all this code",
+      "offset": 109000,
+      "duration": 3000
+    },
+    {
+      "text": "that is written on top of that and",
+      "offset": 112000,
+      "duration": 2000
+    },
+    {
+      "text": "written faster we will see much more",
+      "offset": 114000,
+      "duration": 2000
+    },
+    {
+      "text": "issues and we have a higher need to make",
+      "offset": 116000,
+      "duration": 3000
+    },
+    {
+      "text": "sure that this code is actually safe and",
+      "offset": 119000,
+      "duration": 2000
+    },
+    {
+      "text": "can be trusted.",
+      "offset": 121000,
+      "duration": 3000
+    },
+    {
+      "text": "So why is adding AI adding additional",
+      "offset": 124000,
+      "duration": 4000
+    },
+    {
+      "text": "gasoline to the fire here? It's because",
+      "offset": 128000,
+      "duration": 2000
+    },
+    {
+      "text": "AI is not free of security",
+      "offset": 130000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerabilities, right? LLMs are getting",
+      "offset": 132000,
+      "duration": 2000
+    },
+    {
+      "text": "better but still we are seeing that",
+      "offset": 134000,
+      "duration": 2000
+    },
+    {
+      "text": "hard to find risks like security",
+      "offset": 136000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerabilities are added by genai to",
+      "offset": 138000,
+      "duration": 3000
+    },
+    {
+      "text": "code. We also see hallucinations",
+      "offset": 141000,
+      "duration": 3000
+    },
+    {
+      "text": "right good examples here are these slop",
+      "offset": 144000,
+      "duration": 2000
+    },
+    {
+      "text": "squatting bugs where AI introduces",
+      "offset": 146000,
+      "duration": 3000
+    },
+    {
+      "text": "references to libraries and dependencies",
+      "offset": 149000,
+      "duration": 2000
+    },
+    {
+      "text": "that you use that actually don't exist",
+      "offset": 151000,
+      "duration": 2000
+    },
+    {
+      "text": "and then attackers can register them",
+      "offset": 153000,
+      "duration": 2000
+    },
+    {
+      "text": "and take over your code. And then we",
+      "offset": 155000,
+      "duration": 3000
+    },
+    {
+      "text": "also see that code is less efficient.",
+      "offset": 158000,
+      "duration": 2000
+    },
+    {
+      "text": "That means the leading LLMs are",
+      "offset": 160000,
+      "duration": 3000
+    },
+    {
+      "text": "solving programming tasks very well but",
+      "offset": 163000,
+      "duration": 2000
+    },
+    {
+      "text": "they are writing more verbose lines and",
+      "offset": 165000,
+      "duration": 2000
+    },
+    {
+      "text": "more complex code and that is a security",
+      "offset": 167000,
+      "duration": 2000
+    },
+    {
+      "text": "problem because now this code is harder",
+      "offset": 169000,
+      "duration": 2000
+    },
+    {
+      "text": "to maintain. More lines of code means",
+      "offset": 171000,
+      "duration": 3000
+    },
+    {
+      "text": "potentially more issues. And also if",
+      "offset": 174000,
+      "duration": 3000
+    },
+    {
+      "text": "you want to fix a security issue it will",
+      "offset": 177000,
+      "duration": 2000
+    },
+    {
+      "text": "be harder if this is more complex",
+      "offset": 179000,
+      "duration": 2000
+    },
+    {
+      "text": "code.",
+      "offset": 181000,
+      "duration": 2000
+    },
+    {
+      "text": "And on top of this the challenge",
+      "offset": 183000,
+      "duration": 3000
+    },
+    {
+      "text": "for organizations now is that you have",
+      "offset": 186000,
+      "duration": 2000
+    },
+    {
+      "text": "security compliance regulations that",
+      "offset": 188000,
+      "duration": 2000
+    },
+    {
+      "text": "you have to comply with right we have",
+      "offset": 190000,
+      "duration": 3000
+    },
+    {
+      "text": "the cyber resilience act in the",
+      "offset": 193000,
+      "duration": 2000
+    },
+    {
+      "text": "European Union where it's mandatory for",
+      "offset": 195000,
+      "duration": 2000
+    },
+    {
+      "text": "all software that is produced",
+      "offset": 197000,
+      "duration": 2000
+    },
+    {
+      "text": "basically that secure by design",
+      "offset": 199000,
+      "duration": 3000
+    },
+    {
+      "text": "development principles are applied that",
+      "offset": 202000,
+      "duration": 2000
+    },
+    {
+      "text": "you do continuous vulnerability handling",
+      "offset": 204000,
+      "duration": 3000
+    },
+    {
+      "text": "and that you show transparently what",
+      "offset": 207000,
+      "duration": 2000
+    },
+    {
+      "text": "are the components that you're using so",
+      "offset": 209000,
+      "duration": 2000
+    },
+    {
+      "text": "thinking of an SBOM here in the first",
+      "offset": 211000,
+      "duration": 2000
+    },
+    {
+      "text": "deadline lines are coming fast this year",
+      "offset": 213000,
+      "duration": 2000
+    },
+    {
+      "text": "in September 2026. The same applies",
+      "offset": 215000,
+      "duration": 3000
+    },
+    {
+      "text": "for example if you are building",
+      "offset": 218000,
+      "duration": 2000
+    },
+    {
+      "text": "high-risk AI systems right in the",
+      "offset": 220000,
+      "duration": 2000
+    },
+    {
+      "text": "European AI act there are different",
+      "offset": 222000,
+      "duration": 2000
+    },
+    {
+      "text": "levels of AI systems of different",
+      "offset": 224000,
+      "duration": 3000
+    },
+    {
+      "text": "levels of risk but depending on what",
+      "offset": 227000,
+      "duration": 3000
+    },
+    {
+      "text": "level of of AI systems you are building",
+      "offset": 230000,
+      "duration": 2000
+    },
+    {
+      "text": "you also have to comply to use",
+      "offset": 232000,
+      "duration": 2000
+    },
+    {
+      "text": "continuous security risk assessment",
+      "offset": 234000,
+      "duration": 2000
+    },
+    {
+      "text": "thinking of the over top 10 LLM here or",
+      "offset": 236000,
+      "duration": 3000
+    },
+    {
+      "text": "to apply secure development best",
+      "offset": 239000,
+      "duration": 1000
+    },
+    {
+      "text": "practices that include secure code",
+      "offset": 240000,
+      "duration": 2000
+    },
+    {
+      "text": "review and dependency management and",
+      "offset": 242000,
+      "duration": 2000
+    },
+    {
+      "text": "also here the deadlines are approaching",
+      "offset": 244000,
+      "duration": 2000
+    },
+    {
+      "text": "fast and there other regulations like",
+      "offset": 246000,
+      "duration": 3000
+    },
+    {
+      "text": "NIST SSDF when you're selling to the to",
+      "offset": 249000,
+      "duration": 2000
+    },
+    {
+      "text": "the government software. Here the CEO",
+      "offset": 251000,
+      "duration": 5000
+    },
+    {
+      "text": "or CISO had to sign self attestation",
+      "offset": 256000,
+      "duration": 2000
+    },
+    {
+      "text": "that they're using the SSDF standards",
+      "offset": 258000,
+      "duration": 2000
+    },
+    {
+      "text": "around secure software development and",
+      "offset": 260000,
+      "duration": 2000
+    },
+    {
+      "text": "producing well secured software. This",
+      "offset": 262000,
+      "duration": 3000
+    },
+    {
+      "text": "legislation was pulled a bit back but",
+      "offset": 265000,
+      "duration": 2000
+    },
+    {
+      "text": "still we will see more of those",
+      "offset": 267000,
+      "duration": 2000
+    },
+    {
+      "text": "regulations that are adding to the",
+      "offset": 269000,
+      "duration": 3000
+    },
+    {
+      "text": "challenge of code security.",
+      "offset": 272000,
+      "duration": 3000
+    },
+    {
+      "text": "So what is Sona's approach to this code",
+      "offset": 275000,
+      "duration": 2000
+    },
+    {
+      "text": "security challenge?",
+      "offset": 277000,
+      "duration": 2000
+    },
+    {
+      "text": "Sonar is adding a unified verification",
+      "offset": 279000,
+      "duration": 3000
+    },
+    {
+      "text": "layer on top of the code development.",
+      "offset": 282000,
+      "duration": 3000
+    },
+    {
+      "text": "Right? On the bottom of the slide here,",
+      "offset": 285000,
+      "duration": 1000
+    },
+    {
+      "text": "you see the development teams that are",
+      "offset": 286000,
+      "duration": 2000
+    },
+    {
+      "text": "producing code today much much",
+      "offset": 288000,
+      "duration": 2000
+    },
+    {
+      "text": "faster, right? Either by using their IDE",
+      "offset": 290000,
+      "duration": 4000
+    },
+    {
+      "text": "together with Genai, Windsurf plugins,",
+      "offset": 294000,
+      "duration": 2000
+    },
+    {
+      "text": "etc. or agents writing code fully",
+      "offset": 296000,
+      "duration": 2000
+    },
+    {
+      "text": "autonomously and are producing code.",
+      "offset": 298000,
+      "duration": 3000
+    },
+    {
+      "text": "And now on top of this we are adding",
+      "offset": 301000,
+      "duration": 3000
+    },
+    {
+      "text": "this layer where we want to quickly",
+      "offset": 304000,
+      "duration": 1000
+    },
+    {
+      "text": "identify and fix issues whenever they",
+      "offset": 305000,
+      "duration": 3000
+    },
+    {
+      "text": "are produced. Right? So that's the",
+      "offset": 308000,
+      "duration": 2000
+    },
+    {
+      "text": "security verification layer on top of",
+      "offset": 310000,
+      "duration": 2000
+    },
+    {
+      "text": "the code when it's developed. And this",
+      "offset": 312000,
+      "duration": 3000
+    },
+    {
+      "text": "is influenced and defined and of course",
+      "offset": 315000,
+      "duration": 1000
+    },
+    {
+      "text": "by the tech leadership compliance and",
+      "offset": 316000,
+      "duration": 2000
+    },
+    {
+      "text": "platform engineering teams who want",
+      "offset": 318000,
+      "duration": 3000
+    },
+    {
+      "text": "to make sure that the same level of",
+      "offset": 321000,
+      "duration": 2000
+    },
+    {
+      "text": "quality for code is applied across the",
+      "offset": 323000,
+      "duration": 2000
+    },
+    {
+      "text": "whole organization for every team the",
+      "offset": 325000,
+      "duration": 2000
+    },
+    {
+      "text": "same quality level. And so they can",
+      "offset": 327000,
+      "duration": 3000
+    },
+    {
+      "text": "define the standards. What does it mean",
+      "offset": 330000,
+      "duration": 2000
+    },
+    {
+      "text": "to have secure code? What are the rules",
+      "offset": 332000,
+      "duration": 2000
+    },
+    {
+      "text": "that we should scan for? What are the",
+      "offset": 334000,
+      "duration": 1000
+    },
+    {
+      "text": "compliance",
+      "offset": 335000,
+      "duration": 2000
+    },
+    {
+      "text": "challenges that we want to address",
+      "offset": 338000,
+      "duration": 3000
+    },
+    {
+      "text": "etc.",
+      "offset": 341000,
+      "duration": 2000
+    },
+    {
+      "text": "And that means we are proactively",
+      "offset": 343000,
+      "duration": 3000
+    },
+    {
+      "text": "addressing code security right. We",
+      "offset": 346000,
+      "duration": 2000
+    },
+    {
+      "text": "are scanning when code is written in the",
+      "offset": 348000,
+      "duration": 2000
+    },
+    {
+      "text": "IDE whether with genai or not or is",
+      "offset": 350000,
+      "duration": 2000
+    },
+    {
+      "text": "written by agents we are",
+      "offset": 352000,
+      "duration": 3000
+    },
+    {
+      "text": "connecting to an MCP server here to",
+      "offset": 355000,
+      "duration": 3000
+    },
+    {
+      "text": "be in the workflow when code is produced",
+      "offset": 358000,
+      "duration": 2000
+    },
+    {
+      "text": "and that we fix issues fast. And we",
+      "offset": 360000,
+      "duration": 3000
+    },
+    {
+      "text": "can also catch issues at CI/CD stage",
+      "offset": 363000,
+      "duration": 2000
+    },
+    {
+      "text": "before code is merged. The most",
+      "offset": 365000,
+      "duration": 2000
+    },
+    {
+      "text": "important thing is that code is",
+      "offset": 367000,
+      "duration": 3000
+    },
+    {
+      "text": "secured and verified here at this stage",
+      "offset": 370000,
+      "duration": 2000
+    },
+    {
+      "text": "because it gets very costly when we",
+      "offset": 372000,
+      "duration": 2000
+    },
+    {
+      "text": "get to testing stage or of course even",
+      "offset": 374000,
+      "duration": 2000
+    },
+    {
+      "text": "to production stage later when security",
+      "offset": 376000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerabilities are discovered by",
+      "offset": 378000,
+      "duration": 2000
+    },
+    {
+      "text": "attackers and data breaches and",
+      "offset": 380000,
+      "duration": 2000
+    },
+    {
+      "text": "reputation is at risk.",
+      "offset": 382000,
+      "duration": 4000
+    },
+    {
+      "text": "So one core product philosophy we need",
+      "offset": 386000,
+      "duration": 3000
+    },
+    {
+      "text": "for this approach is to have a",
+      "offset": 389000,
+      "duration": 3000
+    },
+    {
+      "text": "high accuracy. Right? What you see here",
+      "offset": 392000,
+      "duration": 2000
+    },
+    {
+      "text": "is a table of the industryleading",
+      "offset": 394000,
+      "duration": 2000
+    },
+    {
+      "text": "benchmarks that we use to challenge",
+      "offset": 396000,
+      "duration": 2000
+    },
+    {
+      "text": "our own solution here for Java and",
+      "offset": 398000,
+      "duration": 2000
+    },
+    {
+      "text": "Python. So we have the overs",
+      "offset": 400000,
+      "duration": 2000
+    },
+    {
+      "text": "benchmark for example and we look at",
+      "offset": 402000,
+      "duration": 2000
+    },
+    {
+      "text": "what is the issues that we find in",
+      "offset": 404000,
+      "duration": 4000
+    },
+    {
+      "text": "this benchmark that are expected and",
+      "offset": 408000,
+      "duration": 2000
+    },
+    {
+      "text": "what are the wrong finding the false",
+      "offset": 410000,
+      "duration": 2000
+    },
+    {
+      "text": "positives that we find right and one key",
+      "offset": 412000,
+      "duration": 2000
+    },
+    {
+      "text": "thing here to note is that we have an",
+      "offset": 414000,
+      "duration": 2000
+    },
+    {
+      "text": "exceptionally low false positive rate",
+      "offset": 416000,
+      "duration": 2000
+    },
+    {
+      "text": "right which is here at 2% on average for",
+      "offset": 418000,
+      "duration": 3000
+    },
+    {
+      "text": "those benchmarks while if you look at",
+      "offset": 421000,
+      "duration": 2000
+    },
+    {
+      "text": "major competitors in the market even",
+      "offset": 423000,
+      "duration": 3000
+    },
+    {
+      "text": "every second finding almost here is a",
+      "offset": 426000,
+      "duration": 2000
+    },
+    {
+      "text": "false positive and this",
+      "offset": 428000,
+      "duration": 2000
+    },
+    {
+      "text": "so critical because if you think",
+      "offset": 430000,
+      "duration": 3000
+    },
+    {
+      "text": "of developers",
+      "offset": 433000,
+      "duration": 2000
+    },
+    {
+      "text": "using a security solution they",
+      "offset": 435000,
+      "duration": 3000
+    },
+    {
+      "text": "cannot be interrupted in their workflow",
+      "offset": 438000,
+      "duration": 2000
+    },
+    {
+      "text": "otherwise they lose trust in their",
+      "offset": 440000,
+      "duration": 2000
+    },
+    {
+      "text": "in this tool and also agents",
+      "offset": 442000,
+      "duration": 3000
+    },
+    {
+      "text": "shouldn't be misled by false positives",
+      "offset": 445000,
+      "duration": 2000
+    },
+    {
+      "text": "otherwise they spend time and tokens on",
+      "offset": 447000,
+      "duration": 3000
+    },
+    {
+      "text": "investigating problems that actually",
+      "offset": 450000,
+      "duration": 2000
+    },
+    {
+      "text": "don't exist and can get very confused",
+      "offset": 452000,
+      "duration": 2000
+    },
+    {
+      "text": "about this. The second point here is",
+      "offset": 454000,
+      "duration": 3000
+    },
+    {
+      "text": "when we are building an industryleading",
+      "offset": 457000,
+      "duration": 2000
+    },
+    {
+      "text": "accuracy it doesn't mean we are falling",
+      "offset": 459000,
+      "duration": 2000
+    },
+    {
+      "text": "short on discovery. You see here our",
+      "offset": 461000,
+      "duration": 3000
+    },
+    {
+      "text": "detection of 95% for Java and 87 for",
+      "offset": 464000,
+      "duration": 3000
+    },
+    {
+      "text": "Python finds more security",
+      "offset": 467000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerabilities in those benchmarks than",
+      "offset": 469000,
+      "duration": 1000
+    },
+    {
+      "text": "all the other competitors here. You can",
+      "offset": 470000,
+      "duration": 3000
+    },
+    {
+      "text": "find more of this online. We're very",
+      "offset": 473000,
+      "duration": 1000
+    },
+    {
+      "text": "transparent and are sharing those",
+      "offset": 474000,
+      "duration": 2000
+    },
+    {
+      "text": "findings also online.",
+      "offset": 476000,
+      "duration": 3000
+    },
+    {
+      "text": "So next I want to show you a bit of the",
+      "offset": 479000,
+      "duration": 3000
+    },
+    {
+      "text": "capabilities that we run inside of",
+      "offset": 482000,
+      "duration": 2000
+    },
+    {
+      "text": "our security analysis that",
+      "offset": 484000,
+      "duration": 3000
+    },
+    {
+      "text": "leads to this impressive benchmark",
+      "offset": 487000,
+      "duration": 2000
+    },
+    {
+      "text": "results.",
+      "offset": 489000,
+      "duration": 2000
+    },
+    {
+      "text": "So our core technology that we use is",
+      "offset": 491000,
+      "duration": 3000
+    },
+    {
+      "text": "static application security testing,",
+      "offset": 494000,
+      "duration": 2000
+    },
+    {
+      "text": "right? Static analysis that means we are",
+      "offset": 496000,
+      "duration": 2000
+    },
+    {
+      "text": "not executing your code but we are",
+      "offset": 498000,
+      "duration": 2000
+    },
+    {
+      "text": "analyzing your source code for all types",
+      "offset": 500000,
+      "duration": 2000
+    },
+    {
+      "text": "of security issues. Over 700 here and",
+      "offset": 502000,
+      "duration": 3000
+    },
+    {
+      "text": "additionally over 1,500 types of",
+      "offset": 505000,
+      "duration": 2000
+    },
+    {
+      "text": "reliability issues. Why is reliability",
+      "offset": 507000,
+      "duration": 3000
+    },
+    {
+      "text": "important here? because reliability",
+      "offset": 510000,
+      "duration": 3000
+    },
+    {
+      "text": "is closely connected to security. If you",
+      "offset": 513000,
+      "duration": 2000
+    },
+    {
+      "text": "look at the null pointer exception here",
+      "offset": 515000,
+      "duration": 2000
+    },
+    {
+      "text": "in the screenshot you will note that",
+      "offset": 517000,
+      "duration": 3000
+    },
+    {
+      "text": "first of all we do symbolic execution",
+      "offset": 520000,
+      "duration": 3000
+    },
+    {
+      "text": "that means we don't find just like a",
+      "offset": 523000,
+      "duration": 1000
+    },
+    {
+      "text": "single issue in in one line of code",
+      "offset": 524000,
+      "duration": 3000
+    },
+    {
+      "text": "but we simulate the interaction of code",
+      "offset": 527000,
+      "duration": 3000
+    },
+    {
+      "text": "snippets and the runtime behavior what",
+      "offset": 530000,
+      "duration": 2000
+    },
+    {
+      "text": "would happen if you execute the code",
+      "offset": 532000,
+      "duration": 2000
+    },
+    {
+      "text": "without actually executing it. And",
+      "offset": 534000,
+      "duration": 2000
+    },
+    {
+      "text": "secondly, a null pointer exception can",
+      "offset": 536000,
+      "duration": 3000
+    },
+    {
+      "text": "leave the application in an unintended",
+      "offset": 539000,
+      "duration": 1000
+    },
+    {
+      "text": "state and that means it can be a",
+      "offset": 540000,
+      "duration": 2000
+    },
+    {
+      "text": "security problem. Right? In the CC++",
+      "offset": 542000,
+      "duration": 3000
+    },
+    {
+      "text": "world, a buffer overflow is a more",
+      "offset": 545000,
+      "duration": 2000
+    },
+    {
+      "text": "obvious example maybe where you have a",
+      "offset": 547000,
+      "duration": 1000
+    },
+    {
+      "text": "crash and at the same time a security",
+      "offset": 548000,
+      "duration": 3000
+    },
+    {
+      "text": "problem. Also, regular expressions if",
+      "offset": 551000,
+      "duration": 2000
+    },
+    {
+      "text": "they run slow, they can be a reliability",
+      "offset": 553000,
+      "duration": 2000
+    },
+    {
+      "text": "problem. If you have a denial of",
+      "offset": 555000,
+      "duration": 2000
+    },
+    {
+      "text": "service, you have a security problem. So",
+      "offset": 557000,
+      "duration": 2000
+    },
+    {
+      "text": "those are closely connected and we cover",
+      "offset": 559000,
+      "duration": 2000
+    },
+    {
+      "text": "all ecosystems and language here in all",
+      "offset": 561000,
+      "duration": 2000
+    },
+    {
+      "text": "types of issues.",
+      "offset": 563000,
+      "duration": 2000
+    },
+    {
+      "text": "So next to this broad coverage we go",
+      "offset": 565000,
+      "duration": 2000
+    },
+    {
+      "text": "very deep right we have our taint",
+      "offset": 567000,
+      "duration": 2000
+    },
+    {
+      "text": "analysis where we transform your code",
+      "offset": 569000,
+      "duration": 2000
+    },
+    {
+      "text": "base into a graph model and then we are",
+      "offset": 571000,
+      "duration": 3000
+    },
+    {
+      "text": "connecting the dots we are finding out",
+      "offset": 574000,
+      "duration": 2000
+    },
+    {
+      "text": "where are sources user inputs that an",
+      "offset": 576000,
+      "duration": 2000
+    },
+    {
+      "text": "attacker could modify and where is data",
+      "offset": 578000,
+      "duration": 4000
+    },
+    {
+      "text": "that could be modified by an attacker",
+      "offset": 582000,
+      "duration": 2000
+    },
+    {
+      "text": "ending up in something security",
+      "offset": 584000,
+      "duration": 1000
+    },
+    {
+      "text": "sensitive. So if you think of user",
+      "offset": 585000,
+      "duration": 3000
+    },
+    {
+      "text": "input ends up in a SQL query, it can",
+      "offset": 588000,
+      "duration": 2000
+    },
+    {
+      "text": "lead to a SQL injection, right? If if",
+      "offset": 590000,
+      "duration": 2000
+    },
+    {
+      "text": "user input can modify a file pass, you",
+      "offset": 592000,
+      "duration": 3000
+    },
+    {
+      "text": "have a file disclosure or pass traversal",
+      "offset": 595000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerability. If it leads into an OS",
+      "offset": 597000,
+      "duration": 3000
+    },
+    {
+      "text": "command, you have a command injection",
+      "offset": 600000,
+      "duration": 1000
+    },
+    {
+      "text": "vulnerability, etc., etc. And so we are",
+      "offset": 601000,
+      "duration": 2000
+    },
+    {
+      "text": "scanning those code bases across",
+      "offset": 603000,
+      "duration": 2000
+    },
+    {
+      "text": "functions and across files to find those",
+      "offset": 605000,
+      "duration": 2000
+    },
+    {
+      "text": "deeply hidden issues for all kinds of",
+      "offset": 607000,
+      "duration": 2000
+    },
+    {
+      "text": "programming languages. And of course,",
+      "offset": 609000,
+      "duration": 2000
+    },
+    {
+      "text": "this is very framework aware. That means",
+      "offset": 611000,
+      "duration": 2000
+    },
+    {
+      "text": "we understand the routing of the most",
+      "offset": 613000,
+      "duration": 3000
+    },
+    {
+      "text": "popular frameworks. So we can handle",
+      "offset": 616000,
+      "duration": 2000
+    },
+    {
+      "text": "those and simulate those interactions.",
+      "offset": 618000,
+      "duration": 3000
+    },
+    {
+      "text": "I want to give you a little demo here",
+      "offset": 621000,
+      "duration": 2000
+    },
+    {
+      "text": "of a prompt injection vulnerability.",
+      "offset": 624000,
+      "duration": 3000
+    },
+    {
+      "text": "So I have some code here in my IDE VS",
+      "offset": 627000,
+      "duration": 2000
+    },
+    {
+      "text": "code. found an issue and",
+      "offset": 629000,
+      "duration": 3000
+    },
+    {
+      "text": "now we can see those flow steps here",
+      "offset": 632000,
+      "duration": 3000
+    },
+    {
+      "text": "that basically visualize what our engine",
+      "offset": 635000,
+      "duration": 4000
+    },
+    {
+      "text": "is doing in the background. I can",
+      "offset": 639000,
+      "duration": 2000
+    },
+    {
+      "text": "open this issue directly in the IDE with",
+      "offset": 641000,
+      "duration": 2000
+    },
+    {
+      "text": "a click which is nice because it then",
+      "offset": 643000,
+      "duration": 2000
+    },
+    {
+      "text": "highlights also those flow steps in the",
+      "offset": 645000,
+      "duration": 2000
+    },
+    {
+      "text": "IDE so I can better comprehend what's",
+      "offset": 647000,
+      "duration": 2000
+    },
+    {
+      "text": "going on here I can read about prompt",
+      "offset": 649000,
+      "duration": 2000
+    },
+    {
+      "text": "injection and why this is an issue",
+      "offset": 651000,
+      "duration": 2000
+    },
+    {
+      "text": "and a problem and should be fixed and",
+      "offset": 653000,
+      "duration": 4000
+    },
+    {
+      "text": "then can I here I can follow the flow",
+      "offset": 657000,
+      "duration": 2000
+    },
+    {
+      "text": "right what is the user input it jumps to",
+      "offset": 659000,
+      "duration": 2000
+    },
+    {
+      "text": "the get quote from AI function I can",
+      "offset": 661000,
+      "duration": 3000
+    },
+    {
+      "text": "jump into the next step where I see this",
+      "offset": 664000,
+      "duration": 2000
+    },
+    {
+      "text": "parameter is received user input",
+      "offset": 666000,
+      "duration": 3000
+    },
+    {
+      "text": "concatenated in the prompt",
+      "offset": 669000,
+      "duration": 1000
+    },
+    {
+      "text": "And then this prompt gets into the get",
+      "offset": 670000,
+      "duration": 3000
+    },
+    {
+      "text": "llm response function where it's",
+      "offset": 673000,
+      "duration": 3000
+    },
+    {
+      "text": "executed",
+      "offset": 676000,
+      "duration": 2000
+    },
+    {
+      "text": "with a system instruction. So I have",
+      "offset": 678000,
+      "duration": 2000
+    },
+    {
+      "text": "a prompt injection vulnerability here",
+      "offset": 680000,
+      "duration": 3000
+    },
+    {
+      "text": "and I can you can nicely see what the",
+      "offset": 683000,
+      "duration": 2000
+    },
+    {
+      "text": "simulation steps were here of our engine",
+      "offset": 685000,
+      "duration": 3000
+    },
+    {
+      "text": "and then you can fix those issues",
+      "offset": 688000,
+      "duration": 2000
+    },
+    {
+      "text": "like all the other issues with an AI",
+      "offset": 690000,
+      "duration": 2000
+    },
+    {
+      "text": "code fix generated and patch it. Okay.",
+      "offset": 692000,
+      "duration": 3000
+    },
+    {
+      "text": "Okay. So we have SAS right? We have",
+      "offset": 695000,
+      "duration": 2000
+    },
+    {
+      "text": "taint analysis to go deep and then we",
+      "offset": 697000,
+      "duration": 2000
+    },
+    {
+      "text": "also have secrets detection to",
+      "offset": 699000,
+      "duration": 2000
+    },
+    {
+      "text": "prevent secret leaks. Secret leaks",
+      "offset": 701000,
+      "duration": 2000
+    },
+    {
+      "text": "basically means your developers or",
+      "offset": 703000,
+      "duration": 3000
+    },
+    {
+      "text": "your agent hardcoded a password an API",
+      "offset": 706000,
+      "duration": 3000
+    },
+    {
+      "text": "key a crypto key access token into",
+      "offset": 709000,
+      "duration": 4000
+    },
+    {
+      "text": "the code. And now this code should never",
+      "offset": 713000,
+      "duration": 1000
+    },
+    {
+      "text": "leave the developer machine, right?",
+      "offset": 714000,
+      "duration": 2000
+    },
+    {
+      "text": "Because once it's in the repository like",
+      "offset": 716000,
+      "duration": 3000
+    },
+    {
+      "text": "a public GitHub repository, attackers",
+      "offset": 719000,
+      "duration": 2000
+    },
+    {
+      "text": "can find it and exploit the secret if",
+      "offset": 721000,
+      "duration": 3000
+    },
+    {
+      "text": "it's still valid. So what we also have",
+      "offset": 724000,
+      "duration": 2000
+    },
+    {
+      "text": "here next to secret detection is",
+      "offset": 726000,
+      "duration": 2000
+    },
+    {
+      "text": "actually secret prevention. And we do",
+      "offset": 728000,
+      "duration": 2000
+    },
+    {
+      "text": "that by offering a CLI tool that you can",
+      "offset": 730000,
+      "duration": 2000
+    },
+    {
+      "text": "hook into your git commit hooks for",
+      "offset": 732000,
+      "duration": 3000
+    },
+    {
+      "text": "example and then prevent that secrets",
+      "offset": 735000,
+      "duration": 3000
+    },
+    {
+      "text": "actually get leaked because the whole",
+      "offset": 738000,
+      "duration": 2000
+    },
+    {
+      "text": "commit is blocked. And you can use",
+      "offset": 740000,
+      "duration": 2000
+    },
+    {
+      "text": "secret detection in the IDE, of course.",
+      "offset": 742000,
+      "duration": 2000
+    },
+    {
+      "text": "And we do this for over 450 secret",
+      "offset": 744000,
+      "duration": 2000
+    },
+    {
+      "text": "patterns covering over 10,000 APIs. Very",
+      "offset": 746000,
+      "duration": 2000
+    },
+    {
+      "text": "fast analysis important for the agentic",
+      "offset": 748000,
+      "duration": 3000
+    },
+    {
+      "text": "workflow and very low false positive",
+      "offset": 751000,
+      "duration": 2000
+    },
+    {
+      "text": "rate. I'm also going to show you a",
+      "offset": 753000,
+      "duration": 3000
+    },
+    {
+      "text": "little demo here with something cool new",
+      "offset": 756000,
+      "duration": 2000
+    },
+    {
+      "text": "that we did. We actually build an AI",
+      "offset": 758000,
+      "duration": 3000
+    },
+    {
+      "text": "native secret protection. So we are",
+      "offset": 761000,
+      "duration": 1000
+    },
+    {
+      "text": "hooking this into claw code. I'm going",
+      "offset": 762000,
+      "duration": 2000
+    },
+    {
+      "text": "to show you here how quickly this is",
+      "offset": 764000,
+      "duration": 2000
+    },
+    {
+      "text": "to install. I'm just running a",
+      "offset": 766000,
+      "duration": 4000
+    },
+    {
+      "text": "marketplace command and then install the",
+      "offset": 770000,
+      "duration": 2000
+    },
+    {
+      "text": "plugin for sonar secret detection and",
+      "offset": 772000,
+      "duration": 3000
+    },
+    {
+      "text": "then I'm restarting cloud code and then",
+      "offset": 775000,
+      "duration": 3000
+    },
+    {
+      "text": "whenever I'm interacting here with my",
+      "offset": 778000,
+      "duration": 4000
+    },
+    {
+      "text": "agent for example I copy paste",
+      "offset": 782000,
+      "duration": 3000
+    },
+    {
+      "text": "something into my prompt",
+      "offset": 785000,
+      "duration": 3000
+    },
+    {
+      "text": "we are making sure with that hook",
+      "offset": 788000,
+      "duration": 1000
+    },
+    {
+      "text": "that the prompt is blocked should it",
+      "offset": 789000,
+      "duration": 2000
+    },
+    {
+      "text": "have any secret inside. Why? because if",
+      "offset": 791000,
+      "duration": 2000
+    },
+    {
+      "text": "that secret gets leaked to your LLM",
+      "offset": 793000,
+      "duration": 2000
+    },
+    {
+      "text": "provider it is basically a same",
+      "offset": 795000,
+      "duration": 3000
+    },
+    {
+      "text": "leak then it would end up in a public",
+      "offset": 798000,
+      "duration": 2000
+    },
+    {
+      "text": "repository. Another example here is if",
+      "offset": 800000,
+      "duration": 3000
+    },
+    {
+      "text": "you ask your agent to access files right",
+      "offset": 803000,
+      "duration": 3000
+    },
+    {
+      "text": "it would typically read the files and",
+      "offset": 806000,
+      "duration": 1000
+    },
+    {
+      "text": "send the information to your LLM",
+      "offset": 807000,
+      "duration": 2000
+    },
+    {
+      "text": "provider. But here we're blocking",
+      "offset": 809000,
+      "duration": 2000
+    },
+    {
+      "text": "this to make sure also that those",
+      "offset": 811000,
+      "duration": 2000
+    },
+    {
+      "text": "secrets don't get leaked.",
+      "offset": 813000,
+      "duration": 3000
+    },
+    {
+      "text": "Okay. After secret detection we also",
+      "offset": 816000,
+      "duration": 2000
+    },
+    {
+      "text": "have scanning infrastructure is code",
+      "offset": 818000,
+      "duration": 2000
+    },
+    {
+      "text": "scanning. So basically here we make sure",
+      "offset": 820000,
+      "duration": 2000
+    },
+    {
+      "text": "your cloud native apps are protected by",
+      "offset": 822000,
+      "duration": 2000
+    },
+    {
+      "text": "scanning ensible code docker",
+      "offset": 824000,
+      "duration": 3000
+    },
+    {
+      "text": "helmcharts github actions code bash",
+      "offset": 827000,
+      "duration": 3000
+    },
+    {
+      "text": "sales shell scripts as well. So finding",
+      "offset": 830000,
+      "duration": 3000
+    },
+    {
+      "text": "all kind of misconfigurations in those",
+      "offset": 833000,
+      "duration": 3000
+    },
+    {
+      "text": "scripts right that could lead for",
+      "offset": 836000,
+      "duration": 2000
+    },
+    {
+      "text": "example that your cloud resources are",
+      "offset": 838000,
+      "duration": 2000
+    },
+    {
+      "text": "publicly accessible or maybe you use",
+      "offset": 840000,
+      "duration": 2000
+    },
+    {
+      "text": "weak encryption or your access",
+      "offset": 842000,
+      "duration": 3000
+    },
+    {
+      "text": "privileges are permissive those",
+      "offset": 845000,
+      "duration": 3000
+    },
+    {
+      "text": "kind of things.",
+      "offset": 848000,
+      "duration": 3000
+    },
+    {
+      "text": "And then of course",
+      "offset": 851000,
+      "duration": 2000
+    },
+    {
+      "text": "when we detect all those findings we",
+      "offset": 853000,
+      "duration": 1000
+    },
+    {
+      "text": "aggregate them in cool reports and",
+      "offset": 854000,
+      "duration": 2000
+    },
+    {
+      "text": "dashboards. So those are security",
+      "offset": 856000,
+      "duration": 2000
+    },
+    {
+      "text": "reports you can download interactive",
+      "offset": 858000,
+      "duration": 3000
+    },
+    {
+      "text": "dashboards portfolios. So you can",
+      "offset": 861000,
+      "duration": 2000
+    },
+    {
+      "text": "hopefully see that over time your trends",
+      "offset": 863000,
+      "duration": 3000
+    },
+    {
+      "text": "you're improving your security and",
+      "offset": 866000,
+      "duration": 3000
+    },
+    {
+      "text": "that you're complying to PCIDSS for",
+      "offset": 869000,
+      "duration": 3000
+    },
+    {
+      "text": "example or the Misra standard or you're",
+      "offset": 872000,
+      "duration": 2000
+    },
+    {
+      "text": "applying the guidelines according to",
+      "offset": 874000,
+      "duration": 2000
+    },
+    {
+      "text": "Owasp top 10 for mobile for LLM etc.",
+      "offset": 876000,
+      "duration": 3000
+    },
+    {
+      "text": "So what I've showed you so far is in our",
+      "offset": 883000,
+      "duration": 3000
+    },
+    {
+      "text": "core offering of right",
+      "offset": 886000,
+      "duration": 2000
+    },
+    {
+      "text": "if you're running you will have",
+      "offset": 888000,
+      "duration": 1000
+    },
+    {
+      "text": "already sust taint analysis secret",
+      "offset": 889000,
+      "duration": 3000
+    },
+    {
+      "text": "detection and and scanning what we are",
+      "offset": 892000,
+      "duration": 3000
+    },
+    {
+      "text": "offering on top of this is advanced",
+      "offset": 895000,
+      "duration": 2000
+    },
+    {
+      "text": "security and advanced security goes a",
+      "offset": 897000,
+      "duration": 2000
+    },
+    {
+      "text": "step further to also secure not only",
+      "offset": 899000,
+      "duration": 2000
+    },
+    {
+      "text": "your first party code but then also the",
+      "offset": 901000,
+      "duration": 3000
+    },
+    {
+      "text": "open-source code right the bottom of the",
+      "offset": 904000,
+      "duration": 2000
+    },
+    {
+      "text": "iceberg if you will of your application",
+      "offset": 906000,
+      "duration": 2000
+    },
+    {
+      "text": "because you're pulling in a lot of",
+      "offset": 908000,
+      "duration": 1000
+    },
+    {
+      "text": "dependencies and we can also help you to",
+      "offset": 909000,
+      "duration": 3000
+    },
+    {
+      "text": "make sure those are secure",
+      "offset": 912000,
+      "duration": 2000
+    },
+    {
+      "text": "So in order to do this we do software",
+      "offset": 914000,
+      "duration": 2000
+    },
+    {
+      "text": "composition analysis. So at the package",
+      "offset": 916000,
+      "duration": 2000
+    },
+    {
+      "text": "level we are identifying are there any",
+      "offset": 918000,
+      "duration": 3000
+    },
+    {
+      "text": "known vulnerabilities? Are there",
+      "offset": 921000,
+      "duration": 1000
+    },
+    {
+      "text": "dependencies violating your",
+      "offset": 922000,
+      "duration": 4000
+    },
+    {
+      "text": "policies for for the right software",
+      "offset": 926000,
+      "duration": 4000
+    },
+    {
+      "text": "licenses and we also just added",
+      "offset": 930000,
+      "duration": 2000
+    },
+    {
+      "text": "malicious code detection if there's any",
+      "offset": 932000,
+      "duration": 2000
+    },
+    {
+      "text": "malicious package inside your codebase.",
+      "offset": 934000,
+      "duration": 3000
+    },
+    {
+      "text": "And we support this for all kind of",
+      "offset": 937000,
+      "duration": 1000
+    },
+    {
+      "text": "ecosystems. Of course, you can download",
+      "offset": 938000,
+      "duration": 2000
+    },
+    {
+      "text": "an SBOM report and get a nice summary",
+      "offset": 940000,
+      "duration": 3000
+    },
+    {
+      "text": "for this as well. And this is also fed",
+      "offset": 943000,
+      "duration": 1000
+    },
+    {
+      "text": "into your security dashboards. Of",
+      "offset": 944000,
+      "duration": 2000
+    },
+    {
+      "text": "course, if you haven't seen this yet,",
+      "offset": 946000,
+      "duration": 2000
+    },
+    {
+      "text": "here's a little demo how this looks",
+      "offset": 948000,
+      "duration": 2000
+    },
+    {
+      "text": "like. So, you have a new dependency",
+      "offset": 950000,
+      "duration": 1000
+    },
+    {
+      "text": "risks overview. You see the issues",
+      "offset": 951000,
+      "duration": 4000
+    },
+    {
+      "text": "like here the CVE vulnerability and then",
+      "offset": 955000,
+      "duration": 2000
+    },
+    {
+      "text": "you can read about what's going on. You",
+      "offset": 957000,
+      "duration": 2000
+    },
+    {
+      "text": "have different scoring. How exploitable",
+      "offset": 959000,
+      "duration": 2000
+    },
+    {
+      "text": "is this in the real world? What is the",
+      "offset": 961000,
+      "duration": 2000
+    },
+    {
+      "text": "severity? How can I fix it? What should",
+      "offset": 963000,
+      "duration": 3000
+    },
+    {
+      "text": "be the version I upgrade to next? Right?",
+      "offset": 966000,
+      "duration": 3000
+    },
+    {
+      "text": "what is a partial fix offering of the",
+      "offset": 969000,
+      "duration": 2000
+    },
+    {
+      "text": "dependency? What offers a complete fix?",
+      "offset": 971000,
+      "duration": 3000
+    },
+    {
+      "text": "And then also how does this",
+      "offset": 974000,
+      "duration": 2000
+    },
+    {
+      "text": "dependency that is vulnerable actually",
+      "offset": 976000,
+      "duration": 2000
+    },
+    {
+      "text": "ended up in my codebase? Was it a direct",
+      "offset": 978000,
+      "duration": 2000
+    },
+    {
+      "text": "chain or transitive chain or both? And",
+      "offset": 980000,
+      "duration": 2000
+    },
+    {
+      "text": "what other vulnerabilities are",
+      "offset": 982000,
+      "duration": 2000
+    },
+    {
+      "text": "associated here? So you get a good",
+      "offset": 984000,
+      "duration": 2000
+    },
+    {
+      "text": "view of those vulnerabilities.",
+      "offset": 986000,
+      "duration": 2000
+    },
+    {
+      "text": "Then we also have malicious package",
+      "offset": 988000,
+      "duration": 2000
+    },
+    {
+      "text": "detection I mentioned. So in December we",
+      "offset": 990000,
+      "duration": 2000
+    },
+    {
+      "text": "had shy halloot, right? We see an",
+      "offset": 992000,
+      "duration": 2000
+    },
+    {
+      "text": "example here of an package that is",
+      "offset": 994000,
+      "duration": 2000
+    },
+    {
+      "text": "infected and that you then should get",
+      "offset": 996000,
+      "duration": 2000
+    },
+    {
+      "text": "rid of in your codebase.",
+      "offset": 998000,
+      "duration": 4000
+    },
+    {
+      "text": "And you can configure your license",
+      "offset": 1002000,
+      "duration": 1000
+    },
+    {
+      "text": "profiles. That means you can configure",
+      "offset": 1003000,
+      "duration": 3000
+    },
+    {
+      "text": "what is the policy in my organization",
+      "offset": 1006000,
+      "duration": 2000
+    },
+    {
+      "text": "for software licenses. Am I allowing",
+      "offset": 1008000,
+      "duration": 3000
+    },
+    {
+      "text": "copy left, copy right? We have",
+      "offset": 1011000,
+      "duration": 3000
+    },
+    {
+      "text": "extensive presets that you can use, but",
+      "offset": 1014000,
+      "duration": 2000
+    },
+    {
+      "text": "you can also on a fine grain level",
+      "offset": 1016000,
+      "duration": 2000
+    },
+    {
+      "text": "configure the licenses that are allowed",
+      "offset": 1018000,
+      "duration": 2000
+    },
+    {
+      "text": "or not allowed. And then you will see in",
+      "offset": 1020000,
+      "duration": 3000
+    },
+    {
+      "text": "your projects once you configured",
+      "offset": 1023000,
+      "duration": 2000
+    },
+    {
+      "text": "those policies",
+      "offset": 1025000,
+      "duration": 3000
+    },
+    {
+      "text": "also findings around around license",
+      "offset": 1028000,
+      "duration": 2000
+    },
+    {
+      "text": "violations. So where dependencies use",
+      "offset": 1030000,
+      "duration": 2000
+    },
+    {
+      "text": "for GPL license in this case for",
+      "offset": 1032000,
+      "duration": 2000
+    },
+    {
+      "text": "example. Okay. And then we will get",
+      "offset": 1034000,
+      "duration": 3000
+    },
+    {
+      "text": "into a little sneak peek on what else",
+      "offset": 1037000,
+      "duration": 2000
+    },
+    {
+      "text": "we're working on.",
+      "offset": 1039000,
+      "duration": 2000
+    },
+    {
+      "text": "There is for SCAR for example",
+      "offset": 1041000,
+      "duration": 3000
+    },
+    {
+      "text": "reachability analysis. that is",
+      "offset": 1044000,
+      "duration": 2000
+    },
+    {
+      "text": "important and coming next and we will",
+      "offset": 1046000,
+      "duration": 2000
+    },
+    {
+      "text": "also work on remediation and obviously",
+      "offset": 1048000,
+      "duration": 2000
+    },
+    {
+      "text": "in the AI area we are using here also AI",
+      "offset": 1050000,
+      "duration": 3000
+    },
+    {
+      "text": "internally to support those features. So",
+      "offset": 1053000,
+      "duration": 2000
+    },
+    {
+      "text": "I give you a little preview on",
+      "offset": 1055000,
+      "duration": 2000
+    },
+    {
+      "text": "reachability you will then see",
+      "offset": 1057000,
+      "duration": 3000
+    },
+    {
+      "text": "dependency risks with a little",
+      "offset": 1060000,
+      "duration": 1000
+    },
+    {
+      "text": "reachability label here. You can sort",
+      "offset": 1061000,
+      "duration": 3000
+    },
+    {
+      "text": "them by what is reachable and find out",
+      "offset": 1064000,
+      "duration": 3000
+    },
+    {
+      "text": "that this vulnerability here for",
+      "offset": 1067000,
+      "duration": 2000
+    },
+    {
+      "text": "example can be reached. That means the",
+      "offset": 1069000,
+      "duration": 3000
+    },
+    {
+      "text": "at function level we are identifying",
+      "offset": 1072000,
+      "duration": 2000
+    },
+    {
+      "text": "that in combination with our static",
+      "offset": 1074000,
+      "duration": 2000
+    },
+    {
+      "text": "analysis that you can reach this",
+      "offset": 1076000,
+      "duration": 3000
+    },
+    {
+      "text": "dependency that means the vulnerable",
+      "offset": 1079000,
+      "duration": 2000
+    },
+    {
+      "text": "function is actually called in your",
+      "offset": 1081000,
+      "duration": 1000
+    },
+    {
+      "text": "codebase and this allows you to better",
+      "offset": 1082000,
+      "duration": 2000
+    },
+    {
+      "text": "prioritize scar findings and then we're",
+      "offset": 1084000,
+      "duration": 3000
+    },
+    {
+      "text": "also working on agentic analysis right",
+      "offset": 1087000,
+      "duration": 2000
+    },
+    {
+      "text": "so far we looked at sustain analysis",
+      "offset": 1089000,
+      "duration": 2000
+    },
+    {
+      "text": "scar secrets that run in your pull",
+      "offset": 1091000,
+      "duration": 3000
+    },
+    {
+      "text": "request branch analysis etc but we're",
+      "offset": 1094000,
+      "duration": 3000
+    },
+    {
+      "text": "also working on leveraging AI to detect",
+      "offset": 1097000,
+      "duration": 3000
+    },
+    {
+      "text": "code issues for example, logical flaws,",
+      "offset": 1100000,
+      "duration": 2000
+    },
+    {
+      "text": "right? Logical flaws are interesting",
+      "offset": 1102000,
+      "duration": 2000
+    },
+    {
+      "text": "because AI is doing a very good job in",
+      "offset": 1104000,
+      "duration": 2000
+    },
+    {
+      "text": "understanding the intention of",
+      "offset": 1106000,
+      "duration": 1000
+    },
+    {
+      "text": "developers, right? It's something where",
+      "offset": 1107000,
+      "duration": 2000
+    },
+    {
+      "text": "static analysis is weaker in and so",
+      "offset": 1109000,
+      "duration": 2000
+    },
+    {
+      "text": "we are leveraging this technology of",
+      "offset": 1111000,
+      "duration": 2000
+    },
+    {
+      "text": "course to find various logical flaws.",
+      "offset": 1113000,
+      "duration": 2000
+    },
+    {
+      "text": "One example is here IDOR vulnerabilities,",
+      "offset": 1116000,
+      "duration": 2000
+    },
+    {
+      "text": "right? insecure direct object",
+      "offset": 1118000,
+      "duration": 3000
+    },
+    {
+      "text": "references where attackers can iterate",
+      "offset": 1121000,
+      "duration": 3000
+    },
+    {
+      "text": "and enumerate throughout a number of",
+      "offset": 1124000,
+      "duration": 2000
+    },
+    {
+      "text": "objects because of missing access",
+      "offset": 1126000,
+      "duration": 2000
+    },
+    {
+      "text": "privileges and leak information from",
+      "offset": 1128000,
+      "duration": 2000
+    },
+    {
+      "text": "your application. And I'm going to show",
+      "offset": 1130000,
+      "duration": 3000
+    },
+    {
+      "text": "you a little preview of this.",
+      "offset": 1133000,
+      "duration": 3000
+    },
+    {
+      "text": "So we are running here our agent",
+      "offset": 1138000,
+      "duration": 4000
+    },
+    {
+      "text": "and the agent uses various contexts from",
+      "offset": 1142000,
+      "duration": 2000
+    },
+    {
+      "text": "our static analysis architecture etc.",
+      "offset": 1144000,
+      "duration": 3000
+    },
+    {
+      "text": "and is looking in the in the example",
+      "offset": 1147000,
+      "duration": 2000
+    },
+    {
+      "text": "code base here and trying to understand",
+      "offset": 1149000,
+      "duration": 3000
+    },
+    {
+      "text": "what is the authorization model right",
+      "offset": 1152000,
+      "duration": 2000
+    },
+    {
+      "text": "what are all the different controllers",
+      "offset": 1154000,
+      "duration": 3000
+    },
+    {
+      "text": "that are present what I could access as",
+      "offset": 1157000,
+      "duration": 1000
+    },
+    {
+      "text": "an attacker and then it checks what is",
+      "offset": 1158000,
+      "duration": 3000
+    },
+    {
+      "text": "the ownership for those controllers and",
+      "offset": 1161000,
+      "duration": 2000
+    },
+    {
+      "text": "are those implemented in the right way",
+      "offset": 1163000,
+      "duration": 5000
+    },
+    {
+      "text": "and once it found some specific examples",
+      "offset": 1168000,
+      "duration": 3000
+    },
+    {
+      "text": "where it investigates further it's",
+      "offset": 1171000,
+      "duration": 3000
+    },
+    {
+      "text": "doing extensive analysis addition",
+      "offset": 1174000,
+      "duration": 2000
+    },
+    {
+      "text": "ally to check is it actually really an",
+      "offset": 1176000,
+      "duration": 3000
+    },
+    {
+      "text": "idOR vulnerability or is it secure",
+      "offset": 1179000,
+      "duration": 3000
+    },
+    {
+      "text": "and then we will see here it found for",
+      "offset": 1182000,
+      "duration": 2000
+    },
+    {
+      "text": "this example",
+      "offset": 1184000,
+      "duration": 2000
+    },
+    {
+      "text": "seven of those vulnerabilities and",
+      "offset": 1186000,
+      "duration": 4000
+    },
+    {
+      "text": "is then producing and confirming those",
+      "offset": 1190000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerabilities and presenting the",
+      "offset": 1192000,
+      "duration": 2000
+    },
+    {
+      "text": "results and this is how it could look",
+      "offset": 1194000,
+      "duration": 2000
+    },
+    {
+      "text": "like then in our UI right you have those",
+      "offset": 1196000,
+      "duration": 3000
+    },
+    {
+      "text": "IDOR vulnerabilities where you can",
+      "offset": 1199000,
+      "duration": 2000
+    },
+    {
+      "text": "then see a logical flaw that we detected",
+      "offset": 1201000,
+      "duration": 3000
+    },
+    {
+      "text": "with agents so that's something we're",
+      "offset": 1204000,
+      "duration": 1000
+    },
+    {
+      "text": "working on I think this is super cool.",
+      "offset": 1205000,
+      "duration": 2000
+    },
+    {
+      "text": "And we have already detected several",
+      "offset": 1207000,
+      "duration": 2000
+    },
+    {
+      "text": "zero day vulnerabilities in open source",
+      "offset": 1209000,
+      "duration": 2000
+    },
+    {
+      "text": "code. So this is super promising.",
+      "offset": 1211000,
+      "duration": 5000
+    },
+    {
+      "text": "So as a summary where do we stand",
+      "offset": 1216000,
+      "duration": 2000
+    },
+    {
+      "text": "here with code security in the AI area.",
+      "offset": 1218000,
+      "duration": 3000
+    },
+    {
+      "text": "So if you run you have one",
+      "offset": 1221000,
+      "duration": 2000
+    },
+    {
+      "text": "integrated platform that means you get",
+      "offset": 1223000,
+      "duration": 2000
+    },
+    {
+      "text": "comprehensive coverage for all kinds of",
+      "offset": 1225000,
+      "duration": 2000
+    },
+    {
+      "text": "issues quality issues security issues",
+      "offset": 1227000,
+      "duration": 2000
+    },
+    {
+      "text": "for all kinds of programming languages",
+      "offset": 1229000,
+      "duration": 2000
+    },
+    {
+      "text": "and code right that's all in one",
+      "offset": 1231000,
+      "duration": 2000
+    },
+    {
+      "text": "platform all the technologies that",
+      "offset": 1233000,
+      "duration": 2000
+    },
+    {
+      "text": "cover everything then the most important",
+      "offset": 1235000,
+      "duration": 3000
+    },
+    {
+      "text": "thing is we are starting left right we",
+      "offset": 1238000,
+      "duration": 1000
+    },
+    {
+      "text": "are verifying code where and when code",
+      "offset": 1239000,
+      "duration": 2000
+    },
+    {
+      "text": "is written be it a developer be it an",
+      "offset": 1241000,
+      "duration": 2000
+    },
+    {
+      "text": "agent autonomously and then we have the",
+      "offset": 1243000,
+      "duration": 3000
+    },
+    {
+      "text": "sophisticated analysis techniques that I",
+      "offset": 1246000,
+      "duration": 2000
+    },
+    {
+      "text": "showed you some of them today where",
+      "offset": 1248000,
+      "duration": 2000
+    },
+    {
+      "text": "we detect complex and critical issues at",
+      "offset": 1250000,
+      "duration": 3000
+    },
+    {
+      "text": "a very high accuracy and at a very high",
+      "offset": 1253000,
+      "duration": 2000
+    },
+    {
+      "text": "speed that is super important in the",
+      "offset": 1255000,
+      "duration": 2000
+    },
+    {
+      "text": "modern and agentic software",
+      "offset": 1257000,
+      "duration": 3000
+    },
+    {
+      "text": "development life cycle. And lastly, of",
+      "offset": 1260000,
+      "duration": 2000
+    },
+    {
+      "text": "course, we have actionable results. So,",
+      "offset": 1262000,
+      "duration": 2000
+    },
+    {
+      "text": "we give guidance to fix those issues and",
+      "offset": 1264000,
+      "duration": 2000
+    },
+    {
+      "text": "to meet compliance needs that then",
+      "offset": 1266000,
+      "duration": 2000
+    },
+    {
+      "text": "can be consumed by the agent again to",
+      "offset": 1268000,
+      "duration": 3000
+    },
+    {
+      "text": "fix things, by the developer to fix",
+      "offset": 1271000,
+      "duration": 1000
+    },
+    {
+      "text": "things or by tech leadership to look",
+      "offset": 1272000,
+      "duration": 3000
+    },
+    {
+      "text": "at the compliance requirements. All",
+      "offset": 1275000,
+      "duration": 3000
+    },
+    {
+      "text": "of this bottom line to me is that",
+      "offset": 1278000,
+      "duration": 4000
+    },
+    {
+      "text": "actually you increase your application",
+      "offset": 1282000,
+      "duration": 2000
+    },
+    {
+      "text": "security by getting issues fixed, right?",
+      "offset": 1284000,
+      "duration": 2000
+    },
+    {
+      "text": "It's not about just knowing about them",
+      "offset": 1286000,
+      "duration": 2000
+    },
+    {
+      "text": "or getting everything into a PDF",
+      "offset": 1288000,
+      "duration": 2000
+    },
+    {
+      "text": "report. It's about sitting in the",
+      "offset": 1290000,
+      "duration": 2000
+    },
+    {
+      "text": "workflows and making sure issues get",
+      "offset": 1292000,
+      "duration": 2000
+    },
+    {
+      "text": "engaged on and actually fixed. And I",
+      "offset": 1294000,
+      "duration": 2000
+    },
+    {
+      "text": "think that's the only thing that",
+      "offset": 1296000,
+      "duration": 1000
+    },
+    {
+      "text": "actually improves your application",
+      "offset": 1297000,
+      "duration": 2000
+    },
+    {
+      "text": "security. So helps you with",
+      "offset": 1299000,
+      "duration": 2000
+    },
+    {
+      "text": "that.",
+      "offset": 1301000,
+      "duration": 2000
+    },
+    {
+      "text": "Thank you for attention and enjoy the",
+      "offset": 1303000,
+      "duration": 1000
+    },
+    {
+      "text": "rest of the presentations.",
+      "offset": 1304000,
+      "duration": 2000
+    }
+  ],
+  "fullText": "Hello, I'm Johannes, a VP of code security at Sonar and I'm going to talk about code security in the AI area. We will be covering the state of code security where we are at then we look at how Sona is approaching this challenge today and then what are the capabilities in to support this I will show some demos and also give you a sneak peek on what else we're working on before I jump to a summary let's dive into the state of code security so we released a report here a research study where we covered almost 8 billion lines of code from 1 million developers that wrote code in 40,000 different organizations, right? So quite a diverse set of code in different programming languages and with 400 million code issues that we studied here. And one finding was that almost one issue every 800 lines of code appears, right? That accounts to one to two security issues per developer per month. And you can see that still quite a lot of security issues. When we study the top security issue categories, you can see that still the issue types that you have been seeing in the last decade are are fully present. Log injections, cross-site scripting, SQL injections, hard-coded secrets are among those security issue types. And now as we talked about previously, right, the AI accelerates this challenge. With AI, we are writing more code, we are writing code faster. And so if you extrapolate the statistics now for all this code that is written on top of that and written faster we will see much more issues and we have a higher need to make sure that this code is actually safe and can be trusted. So why is adding AI adding additional gasoline to the fire here? It's because AI is not free of security vulnerabilities, right? LLMs are getting better but still we are seeing that hard to find risks like security vulnerabilities are added by genai to code. We also see hallucinations right good examples here are these slop squatting bugs where AI introduces references to libraries and dependencies that you use that actually don't exist and then attackers can register them and take over your code. And then we also see that code is less efficient. That means the leading LLMs are solving programming tasks very well but they are writing more verbose lines and more complex code and that is a security problem because now this code is harder to maintain. More lines of code means potentially more issues. And also if you want to fix a security issue it will be harder if this is more complex code. And on top of this the challenge for organizations now is that you have security compliance regulations that you have to comply with right we have the cyber resilience act in the European Union where it's mandatory for all software that is produced basically that secure by design development principles are applied that you do continuous vulnerability handling and that you show transparently what are the components that you're using so thinking of an SBOM here in the first deadline lines are coming fast this year in September 2026. The same applies for example if you are building high-risk AI systems right in the European AI act there are different levels of AI systems of different levels of risk but depending on what level of of AI systems you are building you also have to comply to use continuous security risk assessment thinking of the over top 10 LLM here or to apply secure development best practices that include secure code review and dependency management and also here the deadlines are approaching fast and there other regulations like NIST SSDF when you're selling to the to the government software. Here the CEO or CISO had to sign self attestation that they're using the SSDF standards around secure software development and producing well secured software. This legislation was pulled a bit back but still we will see more of those regulations that are adding to the challenge of code security. So what is Sona's approach to this code security challenge? Sonar is adding a unified verification layer on top of the code development. Right? On the bottom of the slide here, you see the development teams that are producing code today much much faster, right? Either by using their IDE together with Genai, Windsurf plugins, etc. or agents writing code fully autonomously and are producing code. And now on top of this we are adding this layer where we want to quickly identify and fix issues whenever they are produced. Right? So that's the security verification layer on top of the code when it's developed. And this is influenced and defined and of course by the tech leadership compliance and platform engineering teams who want to make sure that the same level of quality for code is applied across the whole organization for every team the same quality level. And so they can define the standards. What does it mean to have secure code? What are the rules that we should scan for? What are the compliance challenges that we want to address etc. And that means we are proactively addressing code security right. We are scanning when code is written in the IDE whether with genai or not or is written by agents we are connecting to an MCP server here to be in the workflow when code is produced and that we fix issues fast. And we can also catch issues at CI/CD stage before code is merged. The most important thing is that code is secured and verified here at this stage because it gets very costly when we get to testing stage or of course even to production stage later when security vulnerabilities are discovered by attackers and data breaches and reputation is at risk. So one core product philosophy we need for this approach is to have a high accuracy. Right? What you see here is a table of the industryleading benchmarks that we use to challenge our own solution here for Java and Python. So we have the overs benchmark for example and we look at what is the issues that we find in this benchmark that are expected and what are the wrong finding the false positives that we find right and one key thing here to note is that we have an exceptionally low false positive rate right which is here at 2% on average for those benchmarks while if you look at major competitors in the market even every second finding almost here is a false positive and this so critical because if you think of developers using a security solution they cannot be interrupted in their workflow otherwise they lose trust in their in this tool and also agents shouldn't be misled by false positives otherwise they spend time and tokens on investigating problems that actually don't exist and can get very confused about this. The second point here is when we are building an industryleading accuracy it doesn't mean we are falling short on discovery. You see here our detection of 95% for Java and 87 for Python finds more security vulnerabilities in those benchmarks than all the other competitors here. You can find more of this online. We're very transparent and are sharing those findings also online. So next I want to show you a bit of the capabilities that we run inside of our security analysis that leads to this impressive benchmark results. So our core technology that we use is static application security testing, right? Static analysis that means we are not executing your code but we are analyzing your source code for all types of security issues. Over 700 here and additionally over 1,500 types of reliability issues. Why is reliability important here? because reliability is closely connected to security. If you look at the null pointer exception here in the screenshot you will note that first of all we do symbolic execution that means we don't find just like a single issue in in one line of code but we simulate the interaction of code snippets and the runtime behavior what would happen if you execute the code without actually executing it. And secondly, a null pointer exception can leave the application in an unintended state and that means it can be a security problem. Right? In the CC++ world, a buffer overflow is a more obvious example maybe where you have a crash and at the same time a security problem. Also, regular expressions if they run slow, they can be a reliability problem. If you have a denial of service, you have a security problem. So those are closely connected and we cover all ecosystems and language here in all types of issues. So next to this broad coverage we go very deep right we have our taint analysis where we transform your code base into a graph model and then we are connecting the dots we are finding out where are sources user inputs that an attacker could modify and where is data that could be modified by an attacker ending up in something security sensitive. So if you think of user input ends up in a SQL query, it can lead to a SQL injection, right? If if user input can modify a file pass, you have a file disclosure or pass traversal vulnerability. If it leads into an OS command, you have a command injection vulnerability, etc., etc. And so we are scanning those code bases across functions and across files to find those deeply hidden issues for all kinds of programming languages. And of course, this is very framework aware. That means we understand the routing of the most popular frameworks. So we can handle those and simulate those interactions. I want to give you a little demo here of a prompt injection vulnerability. So I have some code here in my IDE VS code. found an issue and now we can see those flow steps here that basically visualize what our engine is doing in the background. I can open this issue directly in the IDE with a click which is nice because it then highlights also those flow steps in the IDE so I can better comprehend what's going on here I can read about prompt injection and why this is an issue and a problem and should be fixed and then can I here I can follow the flow right what is the user input it jumps to the get quote from AI function I can jump into the next step where I see this parameter is received user input concatenated in the prompt And then this prompt gets into the get llm response function where it's executed with a system instruction. So I have a prompt injection vulnerability here and I can you can nicely see what the simulation steps were here of our engine and then you can fix those issues like all the other issues with an AI code fix generated and patch it. Okay. Okay. So we have SAS right? We have taint analysis to go deep and then we also have secrets detection to prevent secret leaks. Secret leaks basically means your developers or your agent hardcoded a password an API key a crypto key access token into the code. And now this code should never leave the developer machine, right? Because once it's in the repository like a public GitHub repository, attackers can find it and exploit the secret if it's still valid. So what we also have here next to secret detection is actually secret prevention. And we do that by offering a CLI tool that you can hook into your git commit hooks for example and then prevent that secrets actually get leaked because the whole commit is blocked. And you can use secret detection in the IDE, of course. And we do this for over 450 secret patterns covering over 10,000 APIs. Very fast analysis important for the agentic workflow and very low false positive rate. I'm also going to show you a little demo here with something cool new that we did. We actually build an AI native secret protection. So we are hooking this into claw code. I'm going to show you here how quickly this is to install. I'm just running a marketplace command and then install the plugin for sonar secret detection and then I'm restarting cloud code and then whenever I'm interacting here with my agent for example I copy paste something into my prompt we are making sure with that hook that the prompt is blocked should it have any secret inside. Why? because if that secret gets leaked to your LLM provider it is basically a same leak then it would end up in a public repository. Another example here is if you ask your agent to access files right it would typically read the files and send the information to your LLM provider. But here we're blocking this to make sure also that those secrets don't get leaked. Okay. After secret detection we also have scanning infrastructure is code scanning. So basically here we make sure your cloud native apps are protected by scanning ensible code docker helmcharts github actions code bash sales shell scripts as well. So finding all kind of misconfigurations in those scripts right that could lead for example that your cloud resources are publicly accessible or maybe you use weak encryption or your access privileges are permissive those kind of things. And then of course when we detect all those findings we aggregate them in cool reports and dashboards. So those are security reports you can download interactive dashboards portfolios. So you can hopefully see that over time your trends you're improving your security and that you're complying to PCIDSS for example or the Misra standard or you're applying the guidelines according to Owasp top 10 for mobile for LLM etc. So what I've showed you so far is in our core offering of right if you're running you will have already sust taint analysis secret detection and and scanning what we are offering on top of this is advanced security and advanced security goes a step further to also secure not only your first party code but then also the open-source code right the bottom of the iceberg if you will of your application because you're pulling in a lot of dependencies and we can also help you to make sure those are secure So in order to do this we do software composition analysis. So at the package level we are identifying are there any known vulnerabilities? Are there dependencies violating your policies for for the right software licenses and we also just added malicious code detection if there's any malicious package inside your codebase. And we support this for all kind of ecosystems. Of course, you can download an SBOM report and get a nice summary for this as well. And this is also fed into your security dashboards. Of course, if you haven't seen this yet, here's a little demo how this looks like. So, you have a new dependency risks overview. You see the issues like here the CVE vulnerability and then you can read about what's going on. You have different scoring. How exploitable is this in the real world? What is the severity? How can I fix it? What should be the version I upgrade to next? Right? what is a partial fix offering of the dependency? What offers a complete fix? And then also how does this dependency that is vulnerable actually ended up in my codebase? Was it a direct chain or transitive chain or both? And what other vulnerabilities are associated here? So you get a good view of those vulnerabilities. Then we also have malicious package detection I mentioned. So in December we had shy halloot, right? We see an example here of an package that is infected and that you then should get rid of in your codebase. And you can configure your license profiles. That means you can configure what is the policy in my organization for software licenses. Am I allowing copy left, copy right? We have extensive presets that you can use, but you can also on a fine grain level configure the licenses that are allowed or not allowed. And then you will see in your projects once you configured those policies also findings around around license violations. So where dependencies use for GPL license in this case for example. Okay. And then we will get into a little sneak peek on what else we're working on. There is for SCAR for example reachability analysis. that is important and coming next and we will also work on remediation and obviously in the AI area we are using here also AI internally to support those features. So I give you a little preview on reachability you will then see dependency risks with a little reachability label here. You can sort them by what is reachable and find out that this vulnerability here for example can be reached. That means the at function level we are identifying that in combination with our static analysis that you can reach this dependency that means the vulnerable function is actually called in your codebase and this allows you to better prioritize scar findings and then we're also working on agentic analysis right so far we looked at sustain analysis scar secrets that run in your pull request branch analysis etc but we're also working on leveraging AI to detect code issues for example, logical flaws, right? Logical flaws are interesting because AI is doing a very good job in understanding the intention of developers, right? It's something where static analysis is weaker in and so we are leveraging this technology of course to find various logical flaws. One example is here IDOR vulnerabilities, right? insecure direct object references where attackers can iterate and enumerate throughout a number of objects because of missing access privileges and leak information from your application. And I'm going to show you a little preview of this. So we are running here our agent and the agent uses various contexts from our static analysis architecture etc. and is looking in the in the example code base here and trying to understand what is the authorization model right what are all the different controllers that are present what I could access as an attacker and then it checks what is the ownership for those controllers and are those implemented in the right way and once it found some specific examples where it investigates further it's doing extensive analysis addition ally to check is it actually really an idOR vulnerability or is it secure and then we will see here it found for this example seven of those vulnerabilities and is then producing and confirming those vulnerabilities and presenting the results and this is how it could look like then in our UI right you have those IDOR vulnerabilities where you can then see a logical flaw that we detected with agents so that's something we're working on I think this is super cool. And we have already detected several zero day vulnerabilities in open source code. So this is super promising. So as a summary where do we stand here with code security in the AI area. So if you run you have one integrated platform that means you get comprehensive coverage for all kinds of issues quality issues security issues for all kinds of programming languages and code right that's all in one platform all the technologies that cover everything then the most important thing is we are starting left right we are verifying code where and when code is written be it a developer be it an agent autonomously and then we have the sophisticated analysis techniques that I showed you some of them today where we detect complex and critical issues at a very high accuracy and at a very high speed that is super important in the modern and agentic software development life cycle. And lastly, of course, we have actionable results. So, we give guidance to fix those issues and to meet compliance needs that then can be consumed by the agent again to fix things, by the developer to fix things or by tech leadership to look at the compliance requirements. All of this bottom line to me is that actually you increase your application security by getting issues fixed, right? It's not about just knowing about them or getting everything into a PDF report. It's about sitting in the workflows and making sure issues get engaged on and actually fixed. And I think that's the only thing that actually improves your application security. So helps you with that. Thank you for attention and enjoy the rest of the presentations.",
+  "fetchedAt": "2026-03-14T09:21:52.311Z"
+}

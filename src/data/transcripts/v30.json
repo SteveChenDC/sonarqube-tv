@@ -1,0 +1,373 @@
+{
+  "videoId": "v30",
+  "youtubeId": "zi-ujR4FxJ0",
+  "segments": [
+    {
+      "text": "Hello everyone. Thank you for joining the session today.",
+      "offset": 17000,
+      "duration": 4000
+    },
+    {
+      "text": "My name is Sanjit Paikaray and I am a DevSecOps engineering manager at TD Bank Group.",
+      "offset": 21000,
+      "duration": 7000
+    },
+    {
+      "text": "Today I'm going to share our journey of scaling SonarQube across a large enterprise and how we transformed it from a",
+      "offset": 28000,
+      "duration": 8000
+    },
+    {
+      "text": "developer tool into an enterprise governance platform.",
+      "offset": 36000,
+      "duration": 6000
+    },
+    {
+      "text": "This talk is not just about the Sonar features.",
+      "offset": 42000,
+      "duration": 5000
+    },
+    {
+      "text": "It is about culture, automation, risk management, and how the quality gates become business gates for us.",
+      "offset": 47000,
+      "duration": 11000
+    },
+    {
+      "text": "I'll walk through why code quality matters at the enterprise level,",
+      "offset": 58000,
+      "duration": 5000
+    },
+    {
+      "text": "how we enforce it, what are the challenges we faced, and what exactly the future looks like with AI generated code and supply chain security.",
+      "offset": 63000,
+      "duration": 10000
+    },
+    {
+      "text": "TD is the sixth largest bank in North America by assets, which is $2.1 trillion,",
+      "offset": 73000,
+      "duration": 8000
+    },
+    {
+      "text": "and serves nearly 28 million customers around the globe. What does it mean?",
+      "offset": 81000,
+      "duration": 7000
+    },
+    {
+      "text": "It means software is not just supporting the business, it is the business.",
+      "offset": 88000,
+      "duration": 7000
+    },
+    {
+      "text": "And with the TD strategy of remarkable human and refreshingly simple software, it powers every customer transaction,",
+      "offset": 95000,
+      "duration": 10000
+    },
+    {
+      "text": "internal process, and the regulatory report across the bank.",
+      "offset": 105000,
+      "duration": 7000
+    },
+    {
+      "text": "In banking, a bug is not just a bug. A defect can stop transactions,",
+      "offset": 112000,
+      "duration": 8000
+    },
+    {
+      "text": "trigger regulatory escalations, or impact millions of customers.",
+      "offset": 120000,
+      "duration": 5000
+    },
+    {
+      "text": "So for us, code quality is not just a developer preference.",
+      "offset": 125000,
+      "duration": 7000
+    },
+    {
+      "text": "It is operational risk management, and we work all in the bank and,",
+      "offset": 132000,
+      "duration": 7000
+    },
+    {
+      "text": "of course, it is a very highly regulated industry.",
+      "offset": 139000,
+      "duration": 5000
+    },
+    {
+      "text": "So often auditors and regulators come and they ask for traceability,",
+      "offset": 144000,
+      "duration": 6000
+    },
+    {
+      "text": "governance, and the proof that our software lifecycle is controlled,",
+      "offset": 150000,
+      "duration": 6000
+    },
+    {
+      "text": "and believe me, SonarQube plays a functional role in providing this assurance. So scaling SonarQube wasn't just a technical",
+      "offset": 156000,
+      "duration": 9000
+    },
+    {
+      "text": "challenge; it was a cultural transformation.",
+      "offset": 165000,
+      "duration": 5000
+    },
+    {
+      "text": "Some legacy applications had thousands of issues, and developers might be feeling that \"oh no, my pipeline may fail,\" but we did not stop there.",
+      "offset": 170000,
+      "duration": 12000
+    },
+    {
+      "text": "We invested a lot of time in pipeline performance tuning, conducting office hours, and built",
+      "offset": 182000,
+      "duration": 7000
+    },
+    {
+      "text": "some automation tools to change that mindset of the developers.",
+      "offset": 189000,
+      "duration": 7000
+    },
+    {
+      "text": "So we had to move from the mindset saying that \"okay, SonarQube is blocking me\" to \"SonarQube is protecting me and my customer.\"",
+      "offset": 196000,
+      "duration": 13000
+    },
+    {
+      "text": "Every pull request, every build, and every release must pass the quality gates before it can move forward.",
+      "offset": 209000,
+      "duration": 9000
+    },
+    {
+      "text": "We integrated the quality gates directly into our CI/CD pipeline so developers cannot bypass them.",
+      "offset": 218000,
+      "duration": 10000
+    },
+    {
+      "text": "This gives us policy as code; instead of documenting and manual",
+      "offset": 228000,
+      "duration": 7000
+    },
+    {
+      "text": "reviews, policies are enforced automatically.",
+      "offset": 235000,
+      "duration": 6000
+    },
+    {
+      "text": "This also gives us a fully traceable and auditable software lifecycle. So now when auditors ask for evidence,",
+      "offset": 241000,
+      "duration": 9000
+    },
+    {
+      "text": "we can show that our commit was analyzed, the build was compliant, and every",
+      "offset": 250000,
+      "duration": 7000
+    },
+    {
+      "text": "release met policy standards. At TD, we implemented SonarQube in two layers.",
+      "offset": 257000,
+      "duration": 9000
+    },
+    {
+      "text": "First is SonarQube for IDE. This gives developers instant feedback while coding. It is just a kind of",
+      "offset": 266000,
+      "duration": 9000
+    },
+    {
+      "text": "spell check for the code, and of course, production systems depend on it.",
+      "offset": 275000,
+      "duration": 7000
+    },
+    {
+      "text": "And then the second thing is the SonarQube server which analyzes every commit and pull request in CI,",
+      "offset": 282000,
+      "duration": 10000
+    },
+    {
+      "text": "and some of several business units enforce zero tolerance for any bugs or vulnerabilities.",
+      "offset": 292000,
+      "duration": 8000
+    },
+    {
+      "text": "And of course, these things help us because when you're detecting those vulnerabilities at an early stage, definitely it is helping us to",
+      "offset": 300000,
+      "duration": 9000
+    },
+    {
+      "text": "face any bigger issue or any outage in production.",
+      "offset": 309000,
+      "duration": 6000
+    },
+    {
+      "text": "Initially, developers saw SonarQube as a blocker, but once this IDE integration was in place, they thought, \"no, it's a coding assistant.\"",
+      "offset": 315000,
+      "duration": 9000
+    },
+    {
+      "text": "So now the developers fix issues before pushing the code, which exactly reduces",
+      "offset": 324000,
+      "duration": 7000
+    },
+    {
+      "text": "the pipeline failures and any surprises; and this is exactly the essence of shifting left.",
+      "offset": 331000,
+      "duration": 7000
+    },
+    {
+      "text": "High quality code delivers real business value; catching defects early reduces rework, which saves",
+      "offset": 338000,
+      "duration": 9000
+    },
+    {
+      "text": "thousands of engineering hours. Reliability improves because fewer defects reach production.",
+      "offset": 347000,
+      "duration": 10000
+    },
+    {
+      "text": "Security vulnerabilities are detected before deployment, reducing risk exposure.",
+      "offset": 357000,
+      "duration": 10000
+    },
+    {
+      "text": "Maintainable code environment allows for faster future delivery because now teams spend less time fixing their defects.",
+      "offset": 367000,
+      "duration": 10000
+    },
+    {
+      "text": "So we normally follow a quote internal to the bank; it's called",
+      "offset": 377000,
+      "duration": 6000
+    },
+    {
+      "text": "\"quality is speed in disguise.\" Investing in quality upfront",
+      "offset": 383000,
+      "duration": 7000
+    },
+    {
+      "text": "accelerates delivery in the long run. We track repository-level metrics such as code coverage, bugs, vulnerabilities, and",
+      "offset": 390000,
+      "duration": 10000
+    },
+    {
+      "text": "technical debt; and these metrics roll up to business units and also CI-level scorecards.",
+      "offset": 400000,
+      "duration": 10000
+    },
+    {
+      "text": "We have built a couple of PowerBI dashboards which visualize our engineering health metrics across the enterprise,",
+      "offset": 410000,
+      "duration": 9000
+    },
+    {
+      "text": "and believe me, this changed the whole conversation.",
+      "offset": 419000,
+      "duration": 6000
+    },
+    {
+      "text": "Now instead of giving a subjective opinion, now we have objective, data-driven engineering governance.",
+      "offset": 425000,
+      "duration": 10000
+    },
+    {
+      "text": "So now the leadership can see where the trend is, where the issue is, if there is any opportunity, or if there is any",
+      "offset": 435000,
+      "duration": 9000
+    },
+    {
+      "text": "kind of demand required, and then accordingly they will prioritize investments. This was not limited to cloud-native",
+      "offset": 444000,
+      "duration": 8000
+    },
+    {
+      "text": "applications; we did not stop there. We extended into mainframe modernization using GitHub Actions and Zowe, and this",
+      "offset": 452000,
+      "duration": 8000
+    },
+    {
+      "text": "allowed us to bring modern DevSec practices to legacy systems like mainframe.",
+      "offset": 460000,
+      "duration": 8000
+    },
+    {
+      "text": "We integrated quality checks into COBOL and enterprise workloads as part of modernization initiatives.",
+      "offset": 468000,
+      "duration": 7000
+    },
+    {
+      "text": "Now this is exactly telling us: quality governance is everywhere—we have it in cloud, distributed, and in",
+      "offset": 475000,
+      "duration": 9000
+    },
+    {
+      "text": "mainframe. The future of code quality is continuous verification.",
+      "offset": 484000,
+      "duration": 5000
+    },
+    {
+      "text": "AI is generating the code, pipelines are generating the artifacts, and automation is everywhere.",
+      "offset": 489000,
+      "duration": 9000
+    },
+    {
+      "text": "So the question is: who is verifying this trust?",
+      "offset": 498000,
+      "duration": 4000
+    },
+    {
+      "text": "We are defining a governance process standard for AI-generated code, attaching scan results to build",
+      "offset": 502000,
+      "duration": 8000
+    },
+    {
+      "text": "artifacts, and expanding SonarQube analysis to pipelines and scripting languages.",
+      "offset": 510000,
+      "duration": 8000
+    },
+    {
+      "text": "Now SonarQube is evolving into a policy engine for the software chain. To summarize: quality must be automated and enforced.",
+      "offset": 518000,
+      "duration": 11000
+    },
+    {
+      "text": "Shift left to catch issues early.",
+      "offset": 529000,
+      "duration": 4000
+    },
+    {
+      "text": "Make engineering metrics visible to the leadership.",
+      "offset": 533000,
+      "duration": 4000
+    },
+    {
+      "text": "And remember: tools alone don't transform organizations.",
+      "offset": 537000,
+      "duration": 6000
+    },
+    {
+      "text": "It is both culture and automation together that drive transformation. Quality gates are business gates.",
+      "offset": 543000,
+      "duration": 9000
+    },
+    {
+      "text": "Code quality is risk management, and SonarQube is a strategic platform for modern engineering governance. Thank you",
+      "offset": 552000,
+      "duration": 7000
+    },
+    {
+      "text": "for your time and attention, and I would like to give special thanks to the whole Sonar team for giving",
+      "offset": 559000,
+      "duration": 9000
+    },
+    {
+      "text": "me this opportunity and having me, and also thanks to my colleagues and my leadership who drive this journey with me.",
+      "offset": 568000,
+      "duration": 11000
+    },
+    {
+      "text": "Thank you.",
+      "offset": 579000,
+      "duration": 6000
+    }
+  ],
+  "fullText": "Hello everyone. Thank you for joining the session today. My name is Sanjit Paikaray and I am a DevSecOps engineering manager at TD Bank Group. Today I'm going to share our journey of scaling SonarQube across a large enterprise and how we transformed it from a developer tool into an enterprise governance platform. This talk is not just about the Sonar features. It is about culture, automation, risk management, and how the quality gates become business gates for us. I'll walk through why code quality matters at the enterprise level, how we enforce it, what are the challenges we faced, and what exactly the future looks like with AI generated code and supply chain security. TD is the sixth largest bank in North America by assets, which is $2.1 trillion, and serves nearly 28 million customers around the globe. What does it mean? It means software is not just supporting the business, it is the business. And with the TD strategy of remarkable human and refreshingly simple software, it powers every customer transaction, internal process, and the regulatory report across the bank. In banking, a bug is not just a bug. A defect can stop transactions, trigger regulatory escalations, or impact millions of customers. So for us, code quality is not just a developer preference. It is operational risk management, and we work all in the bank and, of course, it is a very highly regulated industry. So often auditors and regulators come and they ask for traceability, governance, and the proof that our software lifecycle is controlled, and believe me, SonarQube plays a functional role in providing this assurance. So scaling SonarQube wasn't just a technical challenge; it was a cultural transformation. Some legacy applications had thousands of issues, and developers might be feeling that \"oh no, my pipeline may fail,\" but we did not stop there. We invested a lot of time in pipeline performance tuning, conducting office hours, and built some automation tools to change that mindset of the developers. So we had to move from the mindset saying that \"okay, SonarQube is blocking me\" to \"SonarQube is protecting me and my customer.\" Every pull request, every build, and every release must pass the quality gates before it can move forward. We integrated the quality gates directly into our CI/CD pipeline so developers cannot bypass them. This gives us policy as code; instead of documenting and manual reviews, policies are enforced automatically. This also gives us a fully traceable and auditable software lifecycle. So now when auditors ask for evidence, we can show that our commit was analyzed, the build was compliant, and every release met policy standards. At TD, we implemented SonarQube in two layers. First is SonarQube for IDE. This gives developers instant feedback while coding. It is just a kind of spell check for the code, and of course, production systems depend on it. And then the second thing is the SonarQube server which analyzes every commit and pull request in CI, and some of several business units enforce zero tolerance for any bugs or vulnerabilities. And of course, these things help us because when you're detecting those vulnerabilities at an early stage, definitely it is helping us to face any bigger issue or any outage in production. Initially, developers saw SonarQube as a blocker, but once this IDE integration was in place, they thought, \"no, it's a coding assistant.\" So now the developers fix issues before pushing the code, which exactly reduces the pipeline failures and any surprises; and this is exactly the essence of shifting left. High quality code delivers real business value; catching defects early reduces rework, which saves thousands of engineering hours. Reliability improves because fewer defects reach production. Security vulnerabilities are detected before deployment, reducing risk exposure. Maintainable code environment allows for faster future delivery because now teams spend less time fixing their defects. So we normally follow a quote internal to the bank; it's called \"quality is speed in disguise.\" Investing in quality upfront accelerates delivery in the long run. We track repository-level metrics such as code coverage, bugs, vulnerabilities, and technical debt; and these metrics roll up to business units and also CI-level scorecards. We have built a couple of PowerBI dashboards which visualize our engineering health metrics across the enterprise, and believe me, this changed the whole conversation. Now instead of giving a subjective opinion, now we have objective, data-driven engineering governance. So now the leadership can see where the trend is, where the issue is, if there is any opportunity, or if there is any kind of demand required, and then accordingly they will prioritize investments. This was not limited to cloud-native applications; we did not stop there. We extended into mainframe modernization using GitHub Actions and Zowe, and this allowed us to bring modern DevSec practices to legacy systems like mainframe. We integrated quality checks into COBOL and enterprise workloads as part of modernization initiatives. Now this is exactly telling us: quality governance is everywhere—we have it in cloud, distributed, and in mainframe. The future of code quality is continuous verification. AI is generating the code, pipelines are generating the artifacts, and automation is everywhere. So the question is: who is verifying this trust? We are defining a governance process standard for AI-generated code, attaching scan results to build artifacts, and expanding SonarQube analysis to pipelines and scripting languages. Now SonarQube is evolving into a policy engine for the software chain. To summarize: quality must be automated and enforced. Shift left to catch issues early. Make engineering metrics visible to the leadership. And remember: tools alone don't transform organizations. It is both culture and automation together that drive transformation. Quality gates are business gates. Code quality is risk management, and SonarQube is a strategic platform for modern engineering governance. Thank you for your time and attention, and I would like to give special thanks to the whole Sonar team for giving me this opportunity and having me, and also thanks to my colleagues and my leadership who drive this journey with me. Thank you.",
+  "fetchedAt": "2026-03-14T09:21:58.807Z"
+}

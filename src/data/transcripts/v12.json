@@ -1,0 +1,968 @@
+{
+  "videoId": "v12",
+  "youtubeId": "Y9nPB0FCIe0",
+  "segments": [
+    {
+      "text": "Welcome, welcome all to this session of Sonar Summit. I'm thrilled to have",
+      "offset": 17000,
+      "duration": 7000
+    },
+    {
+      "text": "fantastic guests with us today from our partners over at GitLab. We're going to do a deep dive into how we are making",
+      "offset": 24000,
+      "duration": 8000
+    },
+    {
+      "text": "the developer experience both faster and more secure. But first, let's get to know our guests.",
+      "offset": 32000,
+      "duration": 9000
+    },
+    {
+      "text": "George, welcome. Let's start with a round of introductions.",
+      "offset": 41000,
+      "duration": 6000
+    },
+    {
+      "text": "Yeah, Manish, thank you so much for having us on the session today. Very excited for the partnership between GitLab and Sonar. I'm George Kitikov.",
+      "offset": 47000,
+      "duration": 10000
+    },
+    {
+      "text": "I'm a part of the field CTO team here at GitLab. I've been with GitLab coming up on two years. Prior to that, I spent a",
+      "offset": 57000,
+      "duration": 7000
+    },
+    {
+      "text": "lot of time in industry and financial services working with the developer community in a large organization and",
+      "offset": 64000,
+      "duration": 7000
+    },
+    {
+      "text": "really have spent my career working with developers for the last 20 25 years. always focused on developer",
+      "offset": 71000,
+      "duration": 8000
+    },
+    {
+      "text": "experience, software supply chain security, code quality, and most recently with everything that's happening, AI across the software delivery life cycle.",
+      "offset": 79000,
+      "duration": 11000
+    },
+    {
+      "text": "Excellent. Okay, thanks Joel and George.",
+      "offset": 90000,
+      "duration": 4000
+    },
+    {
+      "text": "Let's start with an icebreaker question and the question is same for you Joel as well as George. outside of",
+      "offset": 94000,
+      "duration": 8000
+    },
+    {
+      "text": "software, what is one thing or hobby that you have spent too much time on lately?",
+      "offset": 102000,
+      "duration": 7000
+    },
+    {
+      "text": "Yeah, I can get us started on that. So, I live just outside of New York City in suburban New Jersey and",
+      "offset": 109000,
+      "duration": 7000
+    },
+    {
+      "text": "we've gotten an unusual amount of snow this last few months. A lot of snow, including just yesterday,",
+      "offset": 116000,
+      "duration": 8000
+    },
+    {
+      "text": "almost 2 ft of snow. So, I love skiing,",
+      "offset": 124000,
+      "duration": 4000
+    },
+    {
+      "text": "so I can't complain. spent a lot of time skiing the last few weekends and going just driving up to Vermont and skiing for the weekend and it's been great.",
+      "offset": 128000,
+      "duration": 10000
+    },
+    {
+      "text": "Conditions have been awesome. I know not everybody can say that out west where sometimes conditions are much better,",
+      "offset": 138000,
+      "duration": 6000
+    },
+    {
+      "text": "but certainly being outdoors in the mountains skiing is what I like to do on in the winter.",
+      "offset": 144000,
+      "duration": 7000
+    },
+    {
+      "text": "Nice. All right, let's get started with our conversation. so for those George for those who are listening",
+      "offset": 151000,
+      "duration": 8000
+    },
+    {
+      "text": "to us today and who may not know GitLab very well or they may know GitLab as a source code repository management",
+      "offset": 159000,
+      "duration": 8000
+    },
+    {
+      "text": "system. Can you tell us a little bit more about the broader mission of GitLab and what you're working on?",
+      "offset": 167000,
+      "duration": 8000
+    },
+    {
+      "text": "Yeah, definitely. So GitLab's been around since 2011. We're over 2,000 people worldwide. out of 65 countries",
+      "offset": 175000,
+      "duration": 8000
+    },
+    {
+      "text": "we've done 180 plus consecutive monthly monthly releases. So very strong engineering culture all about",
+      "offset": 183000,
+      "duration": 9000
+    },
+    {
+      "text": "opensource and open core and many of you know GitLab as the source code management system but it's really a",
+      "offset": 192000,
+      "duration": 8000
+    },
+    {
+      "text": "full developer system intelligent orchestration platform for dev secups.",
+      "offset": 200000,
+      "duration": 6000
+    },
+    {
+      "text": "You start with everything from idea to production. So you have full planning capabilities like issue management,",
+      "offset": 206000,
+      "duration": 8000
+    },
+    {
+      "text": "epics, sprint boards and so forth.",
+      "offset": 214000,
+      "duration": 4000
+    },
+    {
+      "text": "Source code management, CI continuous integration capabilities and runner management, runner fleet management. We",
+      "offset": 218000,
+      "duration": 7000
+    },
+    {
+      "text": "also have a variety of security scanning offerings. We will talk a little bit more about that. They have artifact management and container",
+      "offset": 225000,
+      "duration": 9000
+    },
+    {
+      "text": "registry, full continuous deployment and GitHubs capability, a set of analytics and Dora metrics and value stream",
+      "offset": 234000,
+      "duration": 8000
+    },
+    {
+      "text": "analytics and a number of features around controls and governance across our large enterprise. All of this and",
+      "offset": 242000,
+      "duration": 8000
+    },
+    {
+      "text": "what we like to say finally with AI across the entire software delivery life cycle. We've got the dual agent platform",
+      "offset": 250000,
+      "duration": 9000
+    },
+    {
+      "text": "which is in inserted and part of all the various capabilities. If it's the planner agent that helps you sort",
+      "offset": 259000,
+      "duration": 9000
+    },
+    {
+      "text": "through your backlog or the security agent that helps you triage security",
+      "offset": 268000,
+      "duration": 6000
+    },
+    {
+      "text": "findings and remediate security findings and so forth. So really full agentic AI capabilities for AI native development",
+      "offset": 274000,
+      "duration": 8000
+    },
+    {
+      "text": "across the full software delivery life cycle. I do want to spend a couple of seconds also to talk about our security",
+      "offset": 282000,
+      "duration": 8000
+    },
+    {
+      "text": "vulnerabilities. We have eight native security scanners. SAS, DAS, dependency scanning, infrastructure, code scanning,",
+      "offset": 290000,
+      "duration": 9000
+    },
+    {
+      "text": "secret detection, API security, container scanning, and fast testing.",
+      "offset": 299000,
+      "duration": 5000
+    },
+    {
+      "text": "But we also are happy for customers to bring their own favorite tools and scanners to the ecosystem. And then from",
+      "offset": 304000,
+      "duration": 7000
+    },
+    {
+      "text": "that point on we really focus on governance and orchestration across the security landscape. So I we talked",
+      "offset": 311000,
+      "duration": 9000
+    },
+    {
+      "text": "a little bit about the security agent. I want to spend a few more minutes on that people with AI really",
+      "offset": 320000,
+      "duration": 9000
+    },
+    {
+      "text": "impacting how fast people do their coding other phases of the SDOC sometimes become the bottleneck. So",
+      "offset": 329000,
+      "duration": 8000
+    },
+    {
+      "text": "security teams are overwhelmed with the amount of potential vulnerabilities or security reviews they need to do and",
+      "offset": 337000,
+      "duration": 7000
+    },
+    {
+      "text": "that's where the security agent part of the GitLab Duo agent platform comes into the picture. It reviews findings if it's",
+      "offset": 344000,
+      "duration": 9000
+    },
+    {
+      "text": "from the GitLab native scanners or third party scanning tools like Sonar. It helps reduce false positives. It helps",
+      "offset": 353000,
+      "duration": 9000
+    },
+    {
+      "text": "automate remediation. It really gives you that additional help to the security teams. And lastly, I do want to",
+      "offset": 362000,
+      "duration": 9000
+    },
+    {
+      "text": "spend a couple of minutes on the governance and compliance. We work a lot with government organizations,",
+      "offset": 371000,
+      "duration": 7000
+    },
+    {
+      "text": "regulated entities, financial services,",
+      "offset": 378000,
+      "duration": 2000
+    },
+    {
+      "text": "and many others. And what's important there is that we're able to apply the right guard rails",
+      "offset": 380000,
+      "duration": 8000
+    },
+    {
+      "text": "security policy management security approvals various compliance management aspects like inserting policies",
+      "offset": 388000,
+      "duration": 8000
+    },
+    {
+      "text": "compliance reports and frameworks vulnerability management at scale across your entire portfolio. Software bill",
+      "offset": 396000,
+      "duration": 8000
+    },
+    {
+      "text": "of materials bill of materials and audit management. All of this really across the various stages of the software",
+      "offset": 404000,
+      "duration": 7000
+    },
+    {
+      "text": "delivery. So the main takeaway is GitLab is the complete software delivery platform. Everything from code to deploy, unified developer experience,",
+      "offset": 411000,
+      "duration": 10000
+    },
+    {
+      "text": "very robust software supply chain security and AI across the full software delivery life cycle.",
+      "offset": 421000,
+      "duration": 9000
+    },
+    {
+      "text": "Thank you. That was awesome. I learned some new things. I was not aware of a couple of things that you shared",
+      "offset": 430000,
+      "duration": 6000
+    },
+    {
+      "text": "George. So we do have some synergies between GitLab and Sonar.",
+      "offset": 436000,
+      "duration": 6000
+    },
+    {
+      "text": "Sonar integrates tightly with GitLab CI pipelines as well as your security",
+      "offset": 442000,
+      "duration": 7000
+    },
+    {
+      "text": "dashboards and I think we might see a demo about that. but it's it's good to see that a joint customers are using",
+      "offset": 449000,
+      "duration": 8000
+    },
+    {
+      "text": "GitLab and Sonar together to help improve the code health and to improve their pipelines and make sure the software is that they're",
+      "offset": 457000,
+      "duration": 8000
+    },
+    {
+      "text": "developing is production ready.\nSo at Sonar we also believe in a developer first security approach. So bringing security policies and guidelines to",
+      "offset": 465000,
+      "duration": 9000
+    },
+    {
+      "text": "the developers and enforcing them to as as they start coding is something we both agree on and encourage our",
+      "offset": 474000,
+      "duration": 8000
+    },
+    {
+      "text": "customers to adopt. So thanks Joel for that. In terms of a partnership George how",
+      "offset": 482000,
+      "duration": 7000
+    },
+    {
+      "text": "do you see Sonar and GitLab working together to help our joint customers and what else do you think we can do here?",
+      "offset": 489000,
+      "duration": 8000
+    },
+    {
+      "text": "Yeah great question. So first of all you you said it well right both sonar and gitlab focus on the developer experience",
+      "offset": 497000,
+      "duration": 9000
+    },
+    {
+      "text": "and want to be the right tools for the developers. We have a number of customers who are who use sonar the",
+      "offset": 506000,
+      "duration": 8000
+    },
+    {
+      "text": "sonar products and sonar in particular and it comes down to several different areas. Sonar is very good with code quality for example.",
+      "offset": 514000,
+      "duration": 12000
+    },
+    {
+      "text": "It's I'd say often times considered the standard for code quality across a number of different languages and",
+      "offset": 526000,
+      "duration": 7000
+    },
+    {
+      "text": "it's really an ecosystem right we talk about the software delivery platform but at the end of the day it's an ecosystem sonar is big part of",
+      "offset": 533000,
+      "duration": 9000
+    },
+    {
+      "text": "the ecosystem we're very happy to support our customers who are using sonar we have great integrations and I want to talk a little bit about",
+      "offset": 542000,
+      "duration": 8000
+    },
+    {
+      "text": "the integration specifics so one of the first things that you think about and we talk about is code quality and security",
+      "offset": 550000,
+      "duration": 7000
+    },
+    {
+      "text": "right in the developer workflow. A lot of what we do in GitLab lives in the merge request. That's kind of the",
+      "offset": 557000,
+      "duration": 7000
+    },
+    {
+      "text": "standard developer workflow. You work off of a feature branch. You submit a merge request into the main codebase.",
+      "offset": 564000,
+      "duration": 7000
+    },
+    {
+      "text": "That merge request is where results from sonar can get inserted right in the developer workflow available for review",
+      "offset": 571000,
+      "duration": 8000
+    },
+    {
+      "text": "before code gets merged into the main branch. So that's one aspect. Then really when you go to build and release",
+      "offset": 579000,
+      "duration": 7000
+    },
+    {
+      "text": "right in the CI pipeline you do the sonar analysis very very quick integration you link up the two projects",
+      "offset": 586000,
+      "duration": 8000
+    },
+    {
+      "text": "you get the results back right into GitLab we've got the security dashboard the security vulnerability",
+      "offset": 594000,
+      "duration": 8000
+    },
+    {
+      "text": "management across GitLab native tools as well as external tools like sonar and you can really do your triaging",
+      "offset": 602000,
+      "duration": 7000
+    },
+    {
+      "text": "analysis portfolio level view of security vulnerabilities code quality findings and we're going to see that",
+      "offset": 609000,
+      "duration": 7000
+    },
+    {
+      "text": "through the demo and you can use the GitLab native AI capabilities with dual agent platform across all these stages",
+      "offset": 616000,
+      "duration": 8000
+    },
+    {
+      "text": "both in terms of the merge request approval for assistance and remediation in real time as well as the security",
+      "offset": 624000,
+      "duration": 8000
+    },
+    {
+      "text": "agent that can look at the results determine if there might be any false positives that can be triaged off and",
+      "offset": 632000,
+      "duration": 7000
+    },
+    {
+      "text": "then help with quick remediation further down the pipeline. We're happy to support to provide really good",
+      "offset": 639000,
+      "duration": 7000
+    },
+    {
+      "text": "integration. They have tons of customers that are using it, really good partnership. And with this world where",
+      "offset": 646000,
+      "duration": 7000
+    },
+    {
+      "text": "AI is heading, I think tools like Sonar and Sonar will play an even bigger role when it comes to the quality of the code coming out of the AI agents.",
+      "offset": 653000,
+      "duration": 10000
+    },
+    {
+      "text": "Yep, exactly. Thanks. Do you want to call Sid for the demo? Yes. So, let's go right to a demo now.",
+      "offset": 663000,
+      "duration": 9000
+    },
+    {
+      "text": "And what we'll see in the demo is what I described a few seconds ago, the integration between GitLab and Sonar, especially when it comes to integrating in the developer workflow,",
+      "offset": 672000,
+      "duration": 10000
+    },
+    {
+      "text": "integrating in the pipeline, getting the results back into GitLab and being able to do both analytics and",
+      "offset": 682000,
+      "duration": 7000
+    },
+    {
+      "text": "vulnerability reporting on top of the results as well as remediation and triaging. So over to you Sid for the demo.",
+      "offset": 689000,
+      "duration": 8000
+    },
+    {
+      "text": "Let's take a look at the Sonar and GitLab integration in action. With GitLab Ultimate and GitLab Duo Agent",
+      "offset": 697000,
+      "duration": 8000
+    },
+    {
+      "text": "platform, we're able to take the sonar scanning that you're already doing and enforce it within the merge requests in pre-production as well as in production.",
+      "offset": 705000,
+      "duration": 10000
+    },
+    {
+      "text": "And we're able to surface those results to developers right where they are.",
+      "offset": 715000,
+      "duration": 5000
+    },
+    {
+      "text": "We're also able to use dual agent platform to help us remediate vulnerabilities and quickly troubleshoot triage and prioritize across all our vulnerability findings.",
+      "offset": 720000,
+      "duration": 12000
+    },
+    {
+      "text": "So I have this merge request here for example where we can see that as part of our security policy which we'll show in a little bit we have sonar",
+      "offset": 732000,
+      "duration": 9000
+    },
+    {
+      "text": "scanning enforced into my pipeline and this surfaced a bunch of new vulnerability findings that we can see",
+      "offset": 741000,
+      "duration": 7000
+    },
+    {
+      "text": "right here directly in the merge request where I already am as a developer. I can then quickly compare this to the exact file changes that I've made in this",
+      "offset": 748000,
+      "duration": 9000
+    },
+    {
+      "text": "merge request. And if I want to triage this, I can directly click into these vulnerabilities and take a look at the details there.",
+      "offset": 757000,
+      "duration": 9000
+    },
+    {
+      "text": "I can also if I want to get approval to just merge this into production get the required approval as you can see",
+      "offset": 766000,
+      "duration": 8000
+    },
+    {
+      "text": "here based on the policy that has also been applied to this from an approval perspective.",
+      "offset": 774000,
+      "duration": 6000
+    },
+    {
+      "text": "So, we're able to use GitLab Ultimate to enforce this sonar scanning within this merge request as well as surface the",
+      "offset": 780000,
+      "duration": 7000
+    },
+    {
+      "text": "findings here as you can see as well as require approvals right there for production vulnerabilities that scan against our main branch for example.",
+      "offset": 787000,
+      "duration": 9000
+    },
+    {
+      "text": "We're also surfacing those results into a security dashboard which you can see right here where we're able to quickly get an analysis of our security posture",
+      "offset": 796000,
+      "duration": 9000
+    },
+    {
+      "text": "across our entire environment or with specific projects. And we can see how many vulnerabilities at each severity level we have, our overall risk score",
+      "offset": 805000,
+      "duration": 8000
+    },
+    {
+      "text": "and vulnerabilities over time to see how we're trending.",
+      "offset": 813000,
+      "duration": 5000
+    },
+    {
+      "text": "We can also dig a little deeper into the vulnerability report where I'm able to then go through a full triage process.",
+      "offset": 818000,
+      "duration": 7000
+    },
+    {
+      "text": "Filter on vulnerabilities that are actually important to me. Group by things like OASP top 10 for example.",
+      "offset": 825000,
+      "duration": 7000
+    },
+    {
+      "text": "And then of course click in to these vulnerabilities and start triaging there. We're also able to use duo agent platform to help us with this by",
+      "offset": 832000,
+      "duration": 9000
+    },
+    {
+      "text": "leveraging for example the security analyst agent which is able to give us a quick analysis and breakdown and prioritization of all the vulnerabilities that exist in our",
+      "offset": 841000,
+      "duration": 8000
+    },
+    {
+      "text": "vulnerability report. GitLab 2 agent platform is built on top of GitLab and able to pull in all the context that exists including all the findings that",
+      "offset": 849000,
+      "duration": 9000
+    },
+    {
+      "text": "we're pulling in and ingesting from Sonar directly into into GitLab.",
+      "offset": 858000,
+      "duration": 7000
+    },
+    {
+      "text": "Taking a look at a specific vulnerability here, for example, I can see that we have an AI vulnerability management section on top here in",
+      "offset": 865000,
+      "duration": 8000
+    },
+    {
+      "text": "addition to all the description and other details that you might see about the vulnerabilities. And we're able to then click into an explanation of",
+      "offset": 873000,
+      "duration": 8000
+    },
+    {
+      "text": "this vulnerability, remediate this vulnerability using AI, which then creates a merge request. In this case,",
+      "offset": 881000,
+      "duration": 6000
+    },
+    {
+      "text": "I've already done that, so we can view that. And we're also able to check for false positives.",
+      "offset": 887000,
+      "duration": 6000
+    },
+    {
+      "text": "Speaking of false positives, this is also something that's surfaced in the vulnerability report. So if I scroll down here, you can see that GitLab Duo agent platform automatically looks",
+      "offset": 893000,
+      "duration": 8000
+    },
+    {
+      "text": "at our critical and high severity vulnerabilities and identifies if it's not a false positive or if it might be likely a false positive.",
+      "offset": 901000,
+      "duration": 10000
+    },
+    {
+      "text": "Taking a look at the merge request that do automatically generated to remediate this vulnerability, we can see here that it's generated a fix. We can of course",
+      "offset": 911000,
+      "duration": 9000
+    },
+    {
+      "text": "inspect the exact code changes that it made and then again as part of the policies that we have in place and force a rescan with sonar of the code",
+      "offset": 920000,
+      "duration": 9000
+    },
+    {
+      "text": "changes that do agent platform made to verify did we actually remediate the vulnerability and did we potentially",
+      "offset": 929000,
+      "duration": 7000
+    },
+    {
+      "text": "introduce any new vulnerabilities in the process.",
+      "offset": 936000,
+      "duration": 4000
+    },
+    {
+      "text": "So with GitLab Ultimate, we're able to get this centralized view of vulnerabilities within the merge request as well as the vulnerability",
+      "offset": 940000,
+      "duration": 9000
+    },
+    {
+      "text": "report and security dashboard. And we're able to use duent platform to help us remediate and triage these vulnerabilities. But how is this all set",
+      "offset": 949000,
+      "duration": 8000
+    },
+    {
+      "text": "up? Well, we're able to leverage GitLab Ultimate policies to define exactly what scans should be run",
+      "offset": 957000,
+      "duration": 8000
+    },
+    {
+      "text": "for which projects and what approval policies should be in place. based on the findings. So we can see here I've got a few different types of policies.",
+      "offset": 965000,
+      "duration": 10000
+    },
+    {
+      "text": "We go and click new policy. Here we have the ability to run GitLab's built-in scans. So we have SAS inference code",
+      "offset": 975000,
+      "duration": 7000
+    },
+    {
+      "text": "Dash secret detection container scanning and SCA that we can enforce directly from within GitLab. We're also able to enforce specific pipeline",
+      "offset": 982000,
+      "duration": 9000
+    },
+    {
+      "text": "configurations. For example, a sonar scan pipeline configuration.",
+      "offset": 991000,
+      "duration": 5000
+    },
+    {
+      "text": "And we're also able to configure merge request approvals to say for example when x number of vulnerabilities are",
+      "offset": 996000,
+      "duration": 8000
+    },
+    {
+      "text": "found for a specific type of scanner then we want to require approvals from x number of users.",
+      "offset": 1004000,
+      "duration": 9000
+    },
+    {
+      "text": "We can get really granular with this because this is all managed and configured within the UI but also then",
+      "offset": 1013000,
+      "duration": 7000
+    },
+    {
+      "text": "saved as a YAML file in our security policy project. And so that allows us to maintain separation of duties by",
+      "offset": 1020000,
+      "duration": 9000
+    },
+    {
+      "text": "leveraging the security policy project where all the policies get saved and we're able to set boundaries as to who's actually able to modify the security",
+      "offset": 1029000,
+      "duration": 9000
+    },
+    {
+      "text": "policy project. And all the changes to these these policies are version controlled. So we have that full audit trail of when changes were made by whom and why.",
+      "offset": 1038000,
+      "duration": 12000
+    },
+    {
+      "text": "Finally, we're able to apply these policies for enforcing sonar scanning and enforcing merge request approvals via the compliance center. So, we can",
+      "offset": 1050000,
+      "duration": 9000
+    },
+    {
+      "text": "set up frameworks that say XYZ projects should be associated with XYZ policies. For example, I was using",
+      "offset": 1059000,
+      "duration": 8000
+    },
+    {
+      "text": "sonar integration framework here to say that my demo project is leveraging the sonar scanning policy for",
+      "offset": 1067000,
+      "duration": 8000
+    },
+    {
+      "text": "enforcing sonar scans and the merge request approval policy for requiring approval when any vulnerabilities are found.",
+      "offset": 1075000,
+      "duration": 9000
+    },
+    {
+      "text": "In the compliance center, we're also able to get a broader view of our entire organization and how we're standing in terms of security coverage and",
+      "offset": 1084000,
+      "duration": 8000
+    },
+    {
+      "text": "compliance framework coverage. So you can see here for example the sonar integration has very low coverage doesn't really apply to a lot of my",
+      "offset": 1092000,
+      "duration": 8000
+    },
+    {
+      "text": "projects yet. So this is something I should probably fix and roll out at a at a higher scale. And we're also able to implement specific requirements",
+      "offset": 1100000,
+      "duration": 8000
+    },
+    {
+      "text": "and controls that we want to enforce for example Fred Fed ramp high and make sure that we're following that across all our projects.",
+      "offset": 1108000,
+      "duration": 9000
+    },
+    {
+      "text": "So with GitLab Ultimate, we're not only able to integrate with Sonar and enforce sonar scans but also help",
+      "offset": 1117000,
+      "duration": 8000
+    },
+    {
+      "text": "triage vulnerabilities and get a centralized view in one single pane of class right where your developers are all while maintaining separation of",
+      "offset": 1125000,
+      "duration": 8000
+    },
+    {
+      "text": "duties and making sure that our policies are being enforced and can't simply be turned off by any unauthorized users.",
+      "offset": 1133000,
+      "duration": 9000
+    },
+    {
+      "text": "All right, thank you S. That was a wonderful demo. it looked pretty good. Let's wrap up and talk about",
+      "offset": 1142000,
+      "duration": 9000
+    },
+    {
+      "text": "let's wrap it up now. Looking ahead what do you think is the real",
+      "offset": 1151000,
+      "duration": 8000
+    },
+    {
+      "text": "long-term impact of AI on this dev sec ops world?",
+      "offset": 1159000,
+      "duration": 6000
+    },
+    {
+      "text": "Yeah, AI is really changing the software delivery life cycle and the developer significantly. We're seeing so many",
+      "offset": 1165000,
+      "duration": 7000
+    },
+    {
+      "text": "dramatic changes over the last few years and there is a new tool every quarter you know it started with copilot then it",
+      "offset": 1172000,
+      "duration": 8000
+    },
+    {
+      "text": "went into cursor then we know most recently we're getting a lot of traction with tools like cloud code so it's",
+      "offset": 1180000,
+      "duration": 6000
+    },
+    {
+      "text": "really there is a new AI tool every day there is new capabilities that we're seeing with AI one of the main things I",
+      "offset": 1186000,
+      "duration": 8000
+    },
+    {
+      "text": "want to talk about though is the so-called AI paradox this is where as an individual developer or you might be",
+      "offset": 1194000,
+      "duration": 7000
+    },
+    {
+      "text": "up to 10 times faster with producing code. Well, when you look across your team or your entire enterprise, the",
+      "offset": 1201000,
+      "duration": 8000
+    },
+    {
+      "text": "bottleneck is not necessarily in the code production phase. That may just be about 20% of the overall time spent. The",
+      "offset": 1209000,
+      "duration": 8000
+    },
+    {
+      "text": "bottleneck might be in other parts of the software delivery life cycle. So when you think about moving writing code",
+      "offset": 1217000,
+      "duration": 8000
+    },
+    {
+      "text": "at 10x speed you also require 10x the planning knowing the exact things you need to build collaborating across your",
+      "offset": 1225000,
+      "duration": 8000
+    },
+    {
+      "text": "team if it's product management or business analyst or engineers about what you need to build and how it needs to",
+      "offset": 1233000,
+      "duration": 7000
+    },
+    {
+      "text": "work. So 10x the planning. Then once you've coded the specific feature and functionality, then you need to really go into that verification phase.",
+      "offset": 1240000,
+      "duration": 9000
+    },
+    {
+      "text": "Continuous integration, continuous delivery, continuous testing, continuous security. So all of a sudden you've got",
+      "offset": 1249000,
+      "duration": 7000
+    },
+    {
+      "text": "10x the volume of merge requests to review, 10x the volume of CI jobs to run, 10x deployment and test to run, 10x security findings to review and triage.",
+      "offset": 1256000,
+      "duration": 10000
+    },
+    {
+      "text": "So really what we are seeing is that if you only focus on AI for coding at the individual level, you're really",
+      "offset": 1270000,
+      "duration": 8000
+    },
+    {
+      "text": "missing out on exponential velocity increases once you apply AI to",
+      "offset": 1278000,
+      "duration": 7000
+    },
+    {
+      "text": "other phases of the SDLC. We also seeing some of the other challenges with AI being related to the quality of the",
+      "offset": 1285000,
+      "duration": 8000
+    },
+    {
+      "text": "code coming back, right? The agents are really good. They can do a lot of amazing things. they have vast knowledge and most of the time they come up with",
+      "offset": 1293000,
+      "duration": 9000
+    },
+    {
+      "text": "pretty good results. But you also have to think about the architecture of of your system. You have to think about the",
+      "offset": 1302000,
+      "duration": 7000
+    },
+    {
+      "text": "quality of the code, the duplication of the code and so forth. So there's really a lot of open question. How do you",
+      "offset": 1309000,
+      "duration": 7000
+    },
+    {
+      "text": "really leverage and orchestrate the results of AI across all the various phases of the life cycle to see not just",
+      "offset": 1316000,
+      "duration": 8000
+    },
+    {
+      "text": "incremental gains from AI encoding but exponential gains in velocity across the full software delivery life cycle not",
+      "offset": 1324000,
+      "duration": 9000
+    },
+    {
+      "text": "just at individual but also at the team level at the entire portfolio and enterprise level. What do you see Manish",
+      "offset": 1333000,
+      "duration": 7000
+    },
+    {
+      "text": "from your point of view and working with your customers and users?",
+      "offset": 1340000,
+      "duration": 5000
+    },
+    {
+      "text": "Yeah, I think we see something very similar to what you explained George. We all know the volume of code being produced is explosive, right?",
+      "offset": 1345000,
+      "duration": 10000
+    },
+    {
+      "text": "There's a ton of code being produced and writing code is no longer a challenge.",
+      "offset": 1355000,
+      "duration": 5000
+    },
+    {
+      "text": "It's a solved problem as far as I can say. What is happening now is what happens after that code is produced and",
+      "offset": 1360000,
+      "duration": 7000
+    },
+    {
+      "text": "the things that you talked about. How do you verify that code at the speed at which it was produced? How do you ensure that it's production ready? How do you",
+      "offset": 1367000,
+      "duration": 8000
+    },
+    {
+      "text": "the rest of the pieces of the software engineering puzzle those need to be solved? So I think that's what we are also seeing with our",
+      "offset": 1375000,
+      "duration": 8000
+    },
+    {
+      "text": "customers and at Sonar we believe that Sonar is essential verification layer for verifying all of",
+      "offset": 1383000,
+      "duration": 7000
+    },
+    {
+      "text": "the AI generated code. We provide a verification we help you trust that code. We provide a governance solution like what you described. We have a",
+      "offset": 1390000,
+      "duration": 9000
+    },
+    {
+      "text": "little bit of a overlap there. So we do we are thinking along the same lines to help the customers realize the benefit of the fast coding that they're",
+      "offset": 1399000,
+      "duration": 8000
+    },
+    {
+      "text": "doing. as as it as it's generating more code, it becomes even more important and crucial that you have",
+      "offset": 1407000,
+      "duration": 9000
+    },
+    {
+      "text": "guardrails in place, guardrails for security checking, guardrails for code quality checking, guardrails for checking the architecture of your code",
+      "offset": 1416000,
+      "duration": 9000
+    },
+    {
+      "text": "base. And I I'm not sure if you got a chance George and Joel but at Sonar Summit we are announcing the general",
+      "offset": 1425000,
+      "duration": 9000
+    },
+    {
+      "text": "availability of our architecture management capability which is basically helps you visualize the codebased architecture and helps you manage it and",
+      "offset": 1434000,
+      "duration": 9000
+    },
+    {
+      "text": "prevent it from drifting as the volume of code is being produced is super fast.",
+      "offset": 1443000,
+      "duration": 9000
+    },
+    {
+      "text": "The speed at which the code is being produced is super fast. the chances of code drifting architecture of the codebase drifting is much higher. So we",
+      "offset": 1452000,
+      "duration": 5000
+    },
+    {
+      "text": "are helping you provide some guardrails there in terms of monitoring your architecture and making sure it doesn't deviate from from a good architecture.",
+      "offset": 1457000,
+      "duration": 7000
+    },
+    {
+      "text": "software architecture is so foundational. So I'm really glad to hear that and that's that's well needed in the industry.",
+      "offset": 1464000,
+      "duration": 8000
+    },
+    {
+      "text": "Exactly. So I think if we don't take care of these things that we talked about together, Joel and in this talk today, we'll be letting our",
+      "offset": 1472000,
+      "duration": 9000
+    },
+    {
+      "text": "customers face the brunt of technical debt and security vulnerabilities and all kinds of issues if we don't handle them right now. It's a very",
+      "offset": 1481000,
+      "duration": 9000
+    },
+    {
+      "text": "exciting time to be part of this AI development world that's happening around us, changing around us so rapidly.",
+      "offset": 1490000,
+      "duration": 9000
+    },
+    {
+      "text": "All right, I will wrap up this call today, this session today. George,",
+      "offset": 1499000,
+      "duration": 7000
+    },
+    {
+      "text": "thank you so much for joining us today and for the incredible partnership that we have going. thank you to everyone",
+      "offset": 1506000,
+      "duration": 8000
+    },
+    {
+      "text": "for tuning in for the Sonar Summit session. We welcome your feedback and do check us out on gitlab.com as well as sonar.com. Thank you.",
+      "offset": 1514000,
+      "duration": 10000
+    },
+    {
+      "text": "Thank you for having us Manish. Really appreciate it.",
+      "offset": 1524000,
+      "duration": 11000
+    }
+  ],
+  "fullText": "Welcome, welcome all to this session of Sonar Summit. I'm thrilled to have fantastic guests with us today from our partners over at GitLab. We're going to do a deep dive into how we are making the developer experience both faster and more secure. But first, let's get to know our guests. George, welcome. Let's start with a round of introductions. Yeah, Manish, thank you so much for having us on the session today. Very excited for the partnership between GitLab and Sonar. I'm George Kitikov. I'm a part of the field CTO team here at GitLab. I've been with GitLab coming up on two years. Prior to that, I spent a lot of time in industry and financial services working with the developer community in a large organization and really have spent my career working with developers for the last 20 25 years. always focused on developer experience, software supply chain security, code quality, and most recently with everything that's happening, AI across the software delivery life cycle. Excellent. Okay, thanks Joel and George. Let's start with an icebreaker question and the question is same for you Joel as well as George. outside of software, what is one thing or hobby that you have spent too much time on lately? Yeah, I can get us started on that. So, I live just outside of New York City in suburban New Jersey and we've gotten an unusual amount of snow this last few months. A lot of snow, including just yesterday, almost 2 ft of snow. So, I love skiing, so I can't complain. spent a lot of time skiing the last few weekends and going just driving up to Vermont and skiing for the weekend and it's been great. Conditions have been awesome. I know not everybody can say that out west where sometimes conditions are much better, but certainly being outdoors in the mountains skiing is what I like to do on in the winter. Nice. All right, let's get started with our conversation. so for those George for those who are listening to us today and who may not know GitLab very well or they may know GitLab as a source code repository management system. Can you tell us a little bit more about the broader mission of GitLab and what you're working on? Yeah, definitely. So GitLab's been around since 2011. We're over 2,000 people worldwide. out of 65 countries we've done 180 plus consecutive monthly monthly releases. So very strong engineering culture all about opensource and open core and many of you know GitLab as the source code management system but it's really a full developer system intelligent orchestration platform for dev secups. You start with everything from idea to production. So you have full planning capabilities like issue management, epics, sprint boards and so forth. Source code management, CI continuous integration capabilities and runner management, runner fleet management. We also have a variety of security scanning offerings. We will talk a little bit more about that. They have artifact management and container registry, full continuous deployment and GitHubs capability, a set of analytics and Dora metrics and value stream analytics and a number of features around controls and governance across our large enterprise. All of this and what we like to say finally with AI across the entire software delivery life cycle. We've got the dual agent platform which is in inserted and part of all the various capabilities. If it's the planner agent that helps you sort through your backlog or the security agent that helps you triage security findings and remediate security findings and so forth. So really full agentic AI capabilities for AI native development across the full software delivery life cycle. I do want to spend a couple of seconds also to talk about our security vulnerabilities. We have eight native security scanners. SAS, DAS, dependency scanning, infrastructure, code scanning, secret detection, API security, container scanning, and fast testing. But we also are happy for customers to bring their own favorite tools and scanners to the ecosystem. And then from that point on we really focus on governance and orchestration across the security landscape. So I we talked a little bit about the security agent. I want to spend a few more minutes on that people with AI really impacting how fast people do their coding other phases of the SDOC sometimes become the bottleneck. So security teams are overwhelmed with the amount of potential vulnerabilities or security reviews they need to do and that's where the security agent part of the GitLab Duo agent platform comes into the picture. It reviews findings if it's from the GitLab native scanners or third party scanning tools like Sonar. It helps reduce false positives. It helps automate remediation. It really gives you that additional help to the security teams. And lastly, I do want to spend a couple of minutes on the governance and compliance. We work a lot with government organizations, regulated entities, financial services, and many others. And what's important there is that we're able to apply the right guard rails security policy management security approvals various compliance management aspects like inserting policies compliance reports and frameworks vulnerability management at scale across your entire portfolio. Software bill of materials bill of materials and audit management. All of this really across the various stages of the software delivery. So the main takeaway is GitLab is the complete software delivery platform. Everything from code to deploy, unified developer experience, very robust software supply chain security and AI across the full software delivery life cycle. Thank you. That was awesome. I learned some new things. I was not aware of a couple of things that you shared George. So we do have some synergies between GitLab and Sonar. Sonar integrates tightly with GitLab CI pipelines as well as your security dashboards and I think we might see a demo about that. but it's it's good to see that a joint customers are using GitLab and Sonar together to help improve the code health and to improve their pipelines and make sure the software is that they're developing is production ready.\nSo at Sonar we also believe in a developer first security approach. So bringing security policies and guidelines to the developers and enforcing them to as as they start coding is something we both agree on and encourage our customers to adopt. So thanks Joel for that. In terms of a partnership George how do you see Sonar and GitLab working together to help our joint customers and what else do you think we can do here? Yeah great question. So first of all you you said it well right both sonar and gitlab focus on the developer experience and want to be the right tools for the developers. We have a number of customers who are who use sonar the sonar products and sonar in particular and it comes down to several different areas. Sonar is very good with code quality for example. It's I'd say often times considered the standard for code quality across a number of different languages and it's really an ecosystem right we talk about the software delivery platform but at the end of the day it's an ecosystem sonar is big part of the ecosystem we're very happy to support our customers who are using sonar we have great integrations and I want to talk a little bit about the integration specifics so one of the first things that you think about and we talk about is code quality and security right in the developer workflow. A lot of what we do in GitLab lives in the merge request. That's kind of the standard developer workflow. You work off of a feature branch. You submit a merge request into the main codebase. That merge request is where results from sonar can get inserted right in the developer workflow available for review before code gets merged into the main branch. So that's one aspect. Then really when you go to build and release right in the CI pipeline you do the sonar analysis very very quick integration you link up the two projects you get the results back right into GitLab we've got the security dashboard the security vulnerability management across GitLab native tools as well as external tools like sonar and you can really do your triaging analysis portfolio level view of security vulnerabilities code quality findings and we're going to see that through the demo and you can use the GitLab native AI capabilities with dual agent platform across all these stages both in terms of the merge request approval for assistance and remediation in real time as well as the security agent that can look at the results determine if there might be any false positives that can be triaged off and then help with quick remediation further down the pipeline. We're happy to support to provide really good integration. They have tons of customers that are using it, really good partnership. And with this world where AI is heading, I think tools like Sonar and Sonar will play an even bigger role when it comes to the quality of the code coming out of the AI agents. Yep, exactly. Thanks. Do you want to call Sid for the demo? Yes. So, let's go right to a demo now. And what we'll see in the demo is what I described a few seconds ago, the integration between GitLab and Sonar, especially when it comes to integrating in the developer workflow, integrating in the pipeline, getting the results back into GitLab and being able to do both analytics and vulnerability reporting on top of the results as well as remediation and triaging. So over to you Sid for the demo. Let's take a look at the Sonar and GitLab integration in action. With GitLab Ultimate and GitLab Duo Agent platform, we're able to take the sonar scanning that you're already doing and enforce it within the merge requests in pre-production as well as in production. And we're able to surface those results to developers right where they are. We're also able to use dual agent platform to help us remediate vulnerabilities and quickly troubleshoot triage and prioritize across all our vulnerability findings. So I have this merge request here for example where we can see that as part of our security policy which we'll show in a little bit we have sonar scanning enforced into my pipeline and this surfaced a bunch of new vulnerability findings that we can see right here directly in the merge request where I already am as a developer. I can then quickly compare this to the exact file changes that I've made in this merge request. And if I want to triage this, I can directly click into these vulnerabilities and take a look at the details there. I can also if I want to get approval to just merge this into production get the required approval as you can see here based on the policy that has also been applied to this from an approval perspective. So, we're able to use GitLab Ultimate to enforce this sonar scanning within this merge request as well as surface the findings here as you can see as well as require approvals right there for production vulnerabilities that scan against our main branch for example. We're also surfacing those results into a security dashboard which you can see right here where we're able to quickly get an analysis of our security posture across our entire environment or with specific projects. And we can see how many vulnerabilities at each severity level we have, our overall risk score and vulnerabilities over time to see how we're trending. We can also dig a little deeper into the vulnerability report where I'm able to then go through a full triage process. Filter on vulnerabilities that are actually important to me. Group by things like OASP top 10 for example. And then of course click in to these vulnerabilities and start triaging there. We're also able to use duo agent platform to help us with this by leveraging for example the security analyst agent which is able to give us a quick analysis and breakdown and prioritization of all the vulnerabilities that exist in our vulnerability report. GitLab 2 agent platform is built on top of GitLab and able to pull in all the context that exists including all the findings that we're pulling in and ingesting from Sonar directly into into GitLab. Taking a look at a specific vulnerability here, for example, I can see that we have an AI vulnerability management section on top here in addition to all the description and other details that you might see about the vulnerabilities. And we're able to then click into an explanation of this vulnerability, remediate this vulnerability using AI, which then creates a merge request. In this case, I've already done that, so we can view that. And we're also able to check for false positives. Speaking of false positives, this is also something that's surfaced in the vulnerability report. So if I scroll down here, you can see that GitLab Duo agent platform automatically looks at our critical and high severity vulnerabilities and identifies if it's not a false positive or if it might be likely a false positive. Taking a look at the merge request that do automatically generated to remediate this vulnerability, we can see here that it's generated a fix. We can of course inspect the exact code changes that it made and then again as part of the policies that we have in place and force a rescan with sonar of the code changes that do agent platform made to verify did we actually remediate the vulnerability and did we potentially introduce any new vulnerabilities in the process. So with GitLab Ultimate, we're able to get this centralized view of vulnerabilities within the merge request as well as the vulnerability report and security dashboard. And we're able to use duent platform to help us remediate and triage these vulnerabilities. But how is this all set up? Well, we're able to leverage GitLab Ultimate policies to define exactly what scans should be run for which projects and what approval policies should be in place. based on the findings. So we can see here I've got a few different types of policies. We go and click new policy. Here we have the ability to run GitLab's built-in scans. So we have SAS inference code Dash secret detection container scanning and SCA that we can enforce directly from within GitLab. We're also able to enforce specific pipeline configurations. For example, a sonar scan pipeline configuration. And we're also able to configure merge request approvals to say for example when x number of vulnerabilities are found for a specific type of scanner then we want to require approvals from x number of users. We can get really granular with this because this is all managed and configured within the UI but also then saved as a YAML file in our security policy project. And so that allows us to maintain separation of duties by leveraging the security policy project where all the policies get saved and we're able to set boundaries as to who's actually able to modify the security policy project. And all the changes to these these policies are version controlled. So we have that full audit trail of when changes were made by whom and why. Finally, we're able to apply these policies for enforcing sonar scanning and enforcing merge request approvals via the compliance center. So, we can set up frameworks that say XYZ projects should be associated with XYZ policies. For example, I was using sonar integration framework here to say that my demo project is leveraging the sonar scanning policy for enforcing sonar scans and the merge request approval policy for requiring approval when any vulnerabilities are found. In the compliance center, we're also able to get a broader view of our entire organization and how we're standing in terms of security coverage and compliance framework coverage. So you can see here for example the sonar integration has very low coverage doesn't really apply to a lot of my projects yet. So this is something I should probably fix and roll out at a at a higher scale. And we're also able to implement specific requirements and controls that we want to enforce for example Fred Fed ramp high and make sure that we're following that across all our projects. So with GitLab Ultimate, we're not only able to integrate with Sonar and enforce sonar scans but also help triage vulnerabilities and get a centralized view in one single pane of class right where your developers are all while maintaining separation of duties and making sure that our policies are being enforced and can't simply be turned off by any unauthorized users. All right, thank you S. That was a wonderful demo. it looked pretty good. Let's wrap up and talk about let's wrap it up now. Looking ahead what do you think is the real long-term impact of AI on this dev sec ops world? Yeah, AI is really changing the software delivery life cycle and the developer significantly. We're seeing so many dramatic changes over the last few years and there is a new tool every quarter you know it started with copilot then it went into cursor then we know most recently we're getting a lot of traction with tools like cloud code so it's really there is a new AI tool every day there is new capabilities that we're seeing with AI one of the main things I want to talk about though is the so-called AI paradox this is where as an individual developer or you might be up to 10 times faster with producing code. Well, when you look across your team or your entire enterprise, the bottleneck is not necessarily in the code production phase. That may just be about 20% of the overall time spent. The bottleneck might be in other parts of the software delivery life cycle. So when you think about moving writing code at 10x speed you also require 10x the planning knowing the exact things you need to build collaborating across your team if it's product management or business analyst or engineers about what you need to build and how it needs to work. So 10x the planning. Then once you've coded the specific feature and functionality, then you need to really go into that verification phase. Continuous integration, continuous delivery, continuous testing, continuous security. So all of a sudden you've got 10x the volume of merge requests to review, 10x the volume of CI jobs to run, 10x deployment and test to run, 10x security findings to review and triage. So really what we are seeing is that if you only focus on AI for coding at the individual level, you're really missing out on exponential velocity increases once you apply AI to other phases of the SDLC. We also seeing some of the other challenges with AI being related to the quality of the code coming back, right? The agents are really good. They can do a lot of amazing things. they have vast knowledge and most of the time they come up with pretty good results. But you also have to think about the architecture of of your system. You have to think about the quality of the code, the duplication of the code and so forth. So there's really a lot of open question. How do you really leverage and orchestrate the results of AI across all the various phases of the life cycle to see not just incremental gains from AI encoding but exponential gains in velocity across the full software delivery life cycle not just at individual but also at the team level at the entire portfolio and enterprise level. What do you see Manish from your point of view and working with your customers and users? Yeah, I think we see something very similar to what you explained George. We all know the volume of code being produced is explosive, right? There's a ton of code being produced and writing code is no longer a challenge. It's a solved problem as far as I can say. What is happening now is what happens after that code is produced and the things that you talked about. How do you verify that code at the speed at which it was produced? How do you ensure that it's production ready? How do you the rest of the pieces of the software engineering puzzle those need to be solved? So I think that's what we are also seeing with our customers and at Sonar we believe that Sonar is essential verification layer for verifying all of the AI generated code. We provide a verification we help you trust that code. We provide a governance solution like what you described. We have a little bit of a overlap there. So we do we are thinking along the same lines to help the customers realize the benefit of the fast coding that they're doing. as as it as it's generating more code, it becomes even more important and crucial that you have guardrails in place, guardrails for security checking, guardrails for code quality checking, guardrails for checking the architecture of your code base. And I I'm not sure if you got a chance George and Joel but at Sonar Summit we are announcing the general availability of our architecture management capability which is basically helps you visualize the codebased architecture and helps you manage it and prevent it from drifting as the volume of code is being produced is super fast. The speed at which the code is being produced is super fast. the chances of code drifting architecture of the codebase drifting is much higher. So we are helping you provide some guardrails there in terms of monitoring your architecture and making sure it doesn't deviate from from a good architecture. software architecture is so foundational. So I'm really glad to hear that and that's that's well needed in the industry. Exactly. So I think if we don't take care of these things that we talked about together, Joel and in this talk today, we'll be letting our customers face the brunt of technical debt and security vulnerabilities and all kinds of issues if we don't handle them right now. It's a very exciting time to be part of this AI development world that's happening around us, changing around us so rapidly. All right, I will wrap up this call today, this session today. George, thank you so much for joining us today and for the incredible partnership that we have going. thank you to everyone for tuning in for the Sonar Summit session. We welcome your feedback and do check us out on gitlab.com as well as sonar.com. Thank you. Thank you for having us Manish. Really appreciate it.",
+  "fetchedAt": "2026-03-14T09:18:48.513Z"
+}

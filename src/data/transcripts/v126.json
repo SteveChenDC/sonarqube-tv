@@ -1,0 +1,293 @@
+{
+  "videoId": "v126",
+  "youtubeId": "4HmGMSWry_c",
+  "segments": [
+    {
+      "text": "[Music]",
+      "offset": 360,
+      "duration": 5510
+    },
+    {
+      "text": "jumla multiple xss vulnerabilities jumla",
+      "offset": 6200,
+      "duration": 5200
+    },
+    {
+      "text": "is a free and open source content",
+      "offset": 9639,
+      "duration": 3441
+    },
+    {
+      "text": "management system used for building",
+      "offset": 11400,
+      "duration": 4080
+    },
+    {
+      "text": "websites and online applications sonar's",
+      "offset": 13080,
+      "duration": 4240
+    },
+    {
+      "text": "vulnerability research team recently",
+      "offset": 15480,
+      "duration": 3320
+    },
+    {
+      "text": "discovered an issue that led to multiple",
+      "offset": 17320,
+      "duration": 4760
+    },
+    {
+      "text": "xss vulnerabilities in the popular CMS",
+      "offset": 18800,
+      "duration": 5120
+    },
+    {
+      "text": "here we set up jumla and Center cloud",
+      "offset": 22080,
+      "duration": 4359
+    },
+    {
+      "text": "and start",
+      "offset": 23920,
+      "duration": 2519
+    },
+    {
+      "text": "analyzing",
+      "offset": 28960,
+      "duration": 3000
+    },
+    {
+      "text": "and done we immediately see the xss",
+      "offset": 32559,
+      "duration": 4961
+    },
+    {
+      "text": "issuing the",
+      "offset": 34960,
+      "duration": 2560
+    },
+    {
+      "text": "report with connected mode with Center",
+      "offset": 38920,
+      "duration": 4080
+    },
+    {
+      "text": "lint we see the issue in the IDE and can",
+      "offset": 41120,
+      "duration": 3200
+    },
+    {
+      "text": "navigate deep into the actual",
+      "offset": 43000,
+      "duration": 4079
+    },
+    {
+      "text": "vulnerability",
+      "offset": 44320,
+      "duration": 2759
+    },
+    {
+      "text": "itself Jess clean tags method sanitizes",
+      "offset": 56359,
+      "duration": 4401
+    },
+    {
+      "text": "potentially malicious input by",
+      "offset": 59399,
+      "duration": 3081
+    },
+    {
+      "text": "determining the position of any opening",
+      "offset": 60760,
+      "duration": 3759
+    },
+    {
+      "text": "angle bracket and then removing all data",
+      "offset": 62480,
+      "duration": 3520
+    },
+    {
+      "text": "following until and including the",
+      "offset": 64519,
+      "duration": 3041
+    },
+    {
+      "text": "corresponding closing bracket the",
+      "offset": 66000,
+      "duration": 3840
+    },
+    {
+      "text": "removal of potentially malicious data is",
+      "offset": 67560,
+      "duration": 4400
+    },
+    {
+      "text": "done via two different methods the first",
+      "offset": 69840,
+      "duration": 3520
+    },
+    {
+      "text": "method determines the index of an",
+      "offset": 71960,
+      "duration": 3720
+    },
+    {
+      "text": "opening angle bracket this index is then",
+      "offset": 73360,
+      "duration": 3720
+    },
+    {
+      "text": "passed to the second method which",
+      "offset": 75680,
+      "duration": 2720
+    },
+    {
+      "text": "extracts the corresponding part of the",
+      "offset": 77080,
+      "duration": 3880
+    },
+    {
+      "text": "input string both of these methods are",
+      "offset": 78400,
+      "duration": 4480
+    },
+    {
+      "text": "just Trappers around the respective PHP",
+      "offset": 80960,
+      "duration": 4119
+    },
+    {
+      "text": "and B string functions when determining",
+      "offset": 82880,
+      "duration": 4239
+    },
+    {
+      "text": "if the sanitization is safe we notice",
+      "offset": 85079,
+      "duration": 4121
+    },
+    {
+      "text": "that both PHP functions handle invalid",
+      "offset": 87119,
+      "duration": 6320
+    },
+    {
+      "text": "utf8 sequences differently when mbst",
+      "offset": 89200,
+      "duration": 7440
+    },
+    {
+      "text": "posos encounters a utf8 leading bite it",
+      "offset": 93439,
+      "duration": 4601
+    },
+    {
+      "text": "tries to parse the following",
+      "offset": 96640,
+      "duration": 3000
+    },
+    {
+      "text": "continuation bites until the full bite",
+      "offset": 98040,
+      "duration": 3719
+    },
+    {
+      "text": "sequence is read if an invalid bite is",
+      "offset": 99640,
+      "duration": 3839
+    },
+    {
+      "text": "encountered all consumed bites are",
+      "offset": 101759,
+      "duration": 3441
+    },
+    {
+      "text": "considered one character and parsing is",
+      "offset": 103479,
+      "duration": 5240
+    },
+    {
+      "text": "started over again MB suub Sr on the",
+      "offset": 105200,
+      "duration": 5480
+    },
+    {
+      "text": "other hand skips over continuation bites",
+      "offset": 108719,
+      "duration": 3641
+    },
+    {
+      "text": "when encountering a leading bite",
+      "offset": 110680,
+      "duration": 3520
+    },
+    {
+      "text": "attackers can leverage this difference",
+      "offset": 112360,
+      "duration": 4039
+    },
+    {
+      "text": "to offset the index Beyond an opening",
+      "offset": 114200,
+      "duration": 4360
+    },
+    {
+      "text": "angle bracket and fully bypass juness",
+      "offset": 116399,
+      "duration": 4360
+    },
+    {
+      "text": "standardization here is a demonstration",
+      "offset": 118560,
+      "duration": 3640
+    },
+    {
+      "text": "from the perspective of both the",
+      "offset": 120759,
+      "duration": 3280
+    },
+    {
+      "text": "attacker and the victim which shows the",
+      "offset": 122200,
+      "duration": 4680
+    },
+    {
+      "text": "full impact of the",
+      "offset": 124039,
+      "duration": 2841
+    },
+    {
+      "text": "vulnerability jumer released a security",
+      "offset": 136000,
+      "duration": 4280
+    },
+    {
+      "text": "announcement and published version 503",
+      "offset": 138200,
+      "duration": 4440
+    },
+    {
+      "text": "which mitigates the vulnerability you",
+      "offset": 140280,
+      "duration": 4120
+    },
+    {
+      "text": "can read all the full technical details",
+      "offset": 142640,
+      "duration": 4920
+    },
+    {
+      "text": "on Sonar source.com",
+      "offset": 144400,
+      "duration": 3160
+    },
+    {
+      "text": "blog",
+      "offset": 148760,
+      "duration": 3000
+    }
+  ],
+  "fullText": "[Music] jumla multiple xss vulnerabilities jumla is a free and open source content management system used for building websites and online applications sonar's vulnerability research team recently discovered an issue that led to multiple xss vulnerabilities in the popular CMS here we set up jumla and Center cloud and start analyzing and done we immediately see the xss issuing the report with connected mode with Center lint we see the issue in the IDE and can navigate deep into the actual vulnerability itself Jess clean tags method sanitizes potentially malicious input by determining the position of any opening angle bracket and then removing all data following until and including the corresponding closing bracket the removal of potentially malicious data is done via two different methods the first method determines the index of an opening angle bracket this index is then passed to the second method which extracts the corresponding part of the input string both of these methods are just Trappers around the respective PHP and B string functions when determining if the sanitization is safe we notice that both PHP functions handle invalid utf8 sequences differently when mbst posos encounters a utf8 leading bite it tries to parse the following continuation bites until the full bite sequence is read if an invalid bite is encountered all consumed bites are considered one character and parsing is started over again MB suub Sr on the other hand skips over continuation bites when encountering a leading bite attackers can leverage this difference to offset the index Beyond an opening angle bracket and fully bypass juness standardization here is a demonstration from the perspective of both the attacker and the victim which shows the full impact of the vulnerability jumer released a security announcement and published version 503 which mitigates the vulnerability you can read all the full technical details on Sonar source.com blog",
+  "fetchedAt": "2026-03-14T09:23:40.351Z"
+}

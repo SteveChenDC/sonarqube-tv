@@ -1,0 +1,1533 @@
+{
+  "videoId": "v116",
+  "youtubeId": "qkyD7-Y6AYs",
+  "segments": [
+    {
+      "text": "Before",
+      "offset": 0,
+      "duration": 3000
+    },
+    {
+      "text": "I dive into using GitHub Copilot, one of",
+      "offset": 9040,
+      "duration": 3040
+    },
+    {
+      "text": "the things that I also want to",
+      "offset": 11120,
+      "duration": 2960
+    },
+    {
+      "text": "emphasize, so I'm using VS Code as my",
+      "offset": 12080,
+      "duration": 5920
+    },
+    {
+      "text": "example IDE for today. You can find uh",
+      "offset": 14080,
+      "duration": 6080
+    },
+    {
+      "text": "you can find within the VS Code uh",
+      "offset": 18000,
+      "duration": 4480
+    },
+    {
+      "text": "marketplace for extensions. Uh we're",
+      "offset": 20160,
+      "duration": 4400
+    },
+    {
+      "text": "listed uh Sonar Lint, you'll find us",
+      "offset": 22480,
+      "duration": 4240
+    },
+    {
+      "text": "right here. And once sonar lin is",
+      "offset": 24560,
+      "duration": 4879
+    },
+    {
+      "text": "installed in the IDE uh you'll also find",
+      "offset": 26720,
+      "duration": 4959
+    },
+    {
+      "text": "uh sonarlin available in the sidebar on",
+      "offset": 29439,
+      "duration": 5201
+    },
+    {
+      "text": "your IDE in other flavors of IDE. So for",
+      "offset": 31679,
+      "duration": 5361
+    },
+    {
+      "text": "example like jet brains intelligj vs",
+      "offset": 34640,
+      "duration": 5280
+    },
+    {
+      "text": "code uh visual studio eclipse those are",
+      "offset": 37040,
+      "duration": 4720
+    },
+    {
+      "text": "the major families that we support",
+      "offset": 39920,
+      "duration": 5040
+    },
+    {
+      "text": "you'll find uh variations on each IDE",
+      "offset": 41760,
+      "duration": 5119
+    },
+    {
+      "text": "has a marketplace and of course each IDE",
+      "offset": 44960,
+      "duration": 4800
+    },
+    {
+      "text": "has uh usability conventions as far as",
+      "offset": 46879,
+      "duration": 6241
+    },
+    {
+      "text": "how exactly our tools show up. Um but so",
+      "offset": 49760,
+      "duration": 4479
+    },
+    {
+      "text": "one of the things that I want to",
+      "offset": 53120,
+      "duration": 3439
+    },
+    {
+      "text": "highlight is of course the interaction",
+      "offset": 54239,
+      "duration": 5361
+    },
+    {
+      "text": "that we'll see uh between GitHub Copilot",
+      "offset": 56559,
+      "duration": 6081
+    },
+    {
+      "text": "and the IDE uh as well as the interplay",
+      "offset": 59600,
+      "duration": 8160
+    },
+    {
+      "text": "with Sonar Lint. Um so I have a a just",
+      "offset": 62640,
+      "duration": 7200
+    },
+    {
+      "text": "the beginning framework of a project",
+      "offset": 67760,
+      "duration": 4000
+    },
+    {
+      "text": "that's intended to have some some",
+      "offset": 69840,
+      "duration": 4400
+    },
+    {
+      "text": "JavaScript code added to it here. Uh",
+      "offset": 71760,
+      "duration": 4240
+    },
+    {
+      "text": "there's really nothing that exists yet.",
+      "offset": 74240,
+      "duration": 3680
+    },
+    {
+      "text": "Uh so really what this represents is a",
+      "offset": 76000,
+      "duration": 4240
+    },
+    {
+      "text": "state where I'm about to add some code.",
+      "offset": 77920,
+      "duration": 3760
+    },
+    {
+      "text": "And let's say that one of the things",
+      "offset": 80240,
+      "duration": 3040
+    },
+    {
+      "text": "that I want to implement within this",
+      "offset": 81680,
+      "duration": 3840
+    },
+    {
+      "text": "project is going to be uh some kind of",
+      "offset": 83280,
+      "duration": 5680
+    },
+    {
+      "text": "web API. So I'd like to use a restful uh",
+      "offset": 85520,
+      "duration": 5599
+    },
+    {
+      "text": "web API. And I'm going to pick a",
+      "offset": 88960,
+      "duration": 5920
+    },
+    {
+      "text": "subject. Um let's say uh dogs. Uh I love",
+      "offset": 91119,
+      "duration": 8161
+    },
+    {
+      "text": "dogs. Uh so let's ask GitHub Copilot to",
+      "offset": 94880,
+      "duration": 7919
+    },
+    {
+      "text": "uh for example generate uh a restful API",
+      "offset": 99280,
+      "duration": 8479
+    },
+    {
+      "text": "in uh JavaScript for dogs. Uh, and let's",
+      "offset": 102799,
+      "duration": 10201
+    },
+    {
+      "text": "say each dog should have uh",
+      "offset": 107759,
+      "duration": 5241
+    },
+    {
+      "text": "uh a name,",
+      "offset": 113759,
+      "duration": 7360
+    },
+    {
+      "text": "a breed, and a date of birth.",
+      "offset": 116000,
+      "duration": 8880
+    },
+    {
+      "text": "Great. So, GitHub Copilot uh will go",
+      "offset": 121119,
+      "duration": 6241
+    },
+    {
+      "text": "along and think about that, and it's",
+      "offset": 124880,
+      "duration": 4079
+    },
+    {
+      "text": "going to give us uh a nice",
+      "offset": 127360,
+      "duration": 3119
+    },
+    {
+      "text": "implementation.",
+      "offset": 128959,
+      "duration": 3761
+    },
+    {
+      "text": "We'll see how nice it is. Uh this is",
+      "offset": 130479,
+      "duration": 4321
+    },
+    {
+      "text": "looking pretty promising. So, it looks",
+      "offset": 132720,
+      "duration": 3680
+    },
+    {
+      "text": "like it's decided to use the Express",
+      "offset": 134800,
+      "duration": 4000
+    },
+    {
+      "text": "JavaScript framework. Uh, there's some",
+      "offset": 136400,
+      "duration": 3839
+    },
+    {
+      "text": "other things going on here. I can see",
+      "offset": 138800,
+      "duration": 4560
+    },
+    {
+      "text": "some pretty standard RESTful API uh",
+      "offset": 140239,
+      "duration": 5360
+    },
+    {
+      "text": "operations",
+      "offset": 143360,
+      "duration": 4239
+    },
+    {
+      "text": "and it's even going to helpfully explain",
+      "offset": 145599,
+      "duration": 3521
+    },
+    {
+      "text": "to us what exactly it is that it",
+      "offset": 147599,
+      "duration": 4881
+    },
+    {
+      "text": "generated. Uh, this is all great. So, if",
+      "offset": 149120,
+      "duration": 5520
+    },
+    {
+      "text": "we want to go ahead and try to make use",
+      "offset": 152480,
+      "duration": 5759
+    },
+    {
+      "text": "of this code, uh, we can just go ahead",
+      "offset": 154640,
+      "duration": 7520
+    },
+    {
+      "text": "and insert this into a new file.",
+      "offset": 158239,
+      "duration": 6241
+    },
+    {
+      "text": "And what we'll see here is I'll go ahead",
+      "offset": 162160,
+      "duration": 4960
+    },
+    {
+      "text": "and save this for example into a file",
+      "offset": 164480,
+      "duration": 5920
+    },
+    {
+      "text": "like uh dogs.js.",
+      "offset": 167120,
+      "duration": 6160
+    },
+    {
+      "text": "And so uh as soon as the file is added",
+      "offset": 170400,
+      "duration": 6720
+    },
+    {
+      "text": "into uh the IDE now we're going to uh",
+      "offset": 173280,
+      "duration": 6000
+    },
+    {
+      "text": "see some code. And so as an example",
+      "offset": 177120,
+      "duration": 5680
+    },
+    {
+      "text": "here, um, when",
+      "offset": 179280,
+      "duration": 5599
+    },
+    {
+      "text": "when Sonar Lint interacts with code",
+      "offset": 182800,
+      "duration": 5680
+    },
+    {
+      "text": "within an IDE, what's happening here is",
+      "offset": 184879,
+      "duration": 5681
+    },
+    {
+      "text": "there's not necessarily a direct",
+      "offset": 188480,
+      "duration": 4880
+    },
+    {
+      "text": "integration between Sonar Lint and",
+      "offset": 190560,
+      "duration": 4800
+    },
+    {
+      "text": "GitHub Copilot. And in fact, there",
+      "offset": 193360,
+      "duration": 3840
+    },
+    {
+      "text": "doesn't need to be. Uh, we'll certainly",
+      "offset": 195360,
+      "duration": 4159
+    },
+    {
+      "text": "explore uh in the future whether there",
+      "offset": 197200,
+      "duration": 4319
+    },
+    {
+      "text": "are direct integrations that we can uh",
+      "offset": 199519,
+      "duration": 4321
+    },
+    {
+      "text": "that we can put in place uh that would",
+      "offset": 201519,
+      "duration": 4161
+    },
+    {
+      "text": "make uh what I'm about to show even",
+      "offset": 203840,
+      "duration": 3679
+    },
+    {
+      "text": "easier. But even without a direct",
+      "offset": 205680,
+      "duration": 4160
+    },
+    {
+      "text": "integration, the really cool thing about",
+      "offset": 207519,
+      "duration": 3681
+    },
+    {
+      "text": "these tools is that they're very",
+      "offset": 209840,
+      "duration": 3440
+    },
+    {
+      "text": "complimentary to each other in the sense",
+      "offset": 211200,
+      "duration": 4160
+    },
+    {
+      "text": "that Sonarlin is going to analyze the",
+      "offset": 213280,
+      "duration": 4640
+    },
+    {
+      "text": "contents of the file. Copilot or even",
+      "offset": 215360,
+      "duration": 5040
+    },
+    {
+      "text": "chat GPT or something that you may copy",
+      "offset": 217920,
+      "duration": 4800
+    },
+    {
+      "text": "and paste into the IDE is going to add",
+      "offset": 220400,
+      "duration": 5600
+    },
+    {
+      "text": "contents into your code buffer and even",
+      "offset": 222720,
+      "duration": 4799
+    },
+    {
+      "text": "without a direct integration, you have",
+      "offset": 226000,
+      "duration": 3120
+    },
+    {
+      "text": "the advantage of these tools working",
+      "offset": 227519,
+      "duration": 4561
+    },
+    {
+      "text": "complimentary together within uh within",
+      "offset": 229120,
+      "duration": 6080
+    },
+    {
+      "text": "the IDE and giving you some feedback. So",
+      "offset": 232080,
+      "duration": 6320
+    },
+    {
+      "text": "when you interact with code within the",
+      "offset": 235200,
+      "duration": 6880
+    },
+    {
+      "text": "IDE, the problems that would be found by",
+      "offset": 238400,
+      "duration": 6559
+    },
+    {
+      "text": "uh sonar lint or other static analysis",
+      "offset": 242080,
+      "duration": 4400
+    },
+    {
+      "text": "uh llinters that you may have added in",
+      "offset": 244959,
+      "duration": 3441
+    },
+    {
+      "text": "your IDE are going to show up down in",
+      "offset": 246480,
+      "duration": 3920
+    },
+    {
+      "text": "the problems pane. We don't happen to",
+      "offset": 248400,
+      "duration": 4800
+    },
+    {
+      "text": "have any problems uh because the code uh",
+      "offset": 250400,
+      "duration": 4559
+    },
+    {
+      "text": "honestly that's generated by copilot",
+      "offset": 253200,
+      "duration": 3279
+    },
+    {
+      "text": "when you're specific about what you're",
+      "offset": 254959,
+      "duration": 3120
+    },
+    {
+      "text": "looking for, it actually happens to be",
+      "offset": 256479,
+      "duration": 3681
+    },
+    {
+      "text": "pretty clean for the most part. So we've",
+      "offset": 258079,
+      "duration": 4161
+    },
+    {
+      "text": "got a nice uh implementation of a of a",
+      "offset": 260160,
+      "duration": 5680
+    },
+    {
+      "text": "restful API here. This is great. We do",
+      "offset": 262240,
+      "duration": 5600
+    },
+    {
+      "text": "see on the side uh sonar lint is",
+      "offset": 265840,
+      "duration": 3359
+    },
+    {
+      "text": "actually giving us a notification",
+      "offset": 267840,
+      "duration": 4799
+    },
+    {
+      "text": "though. So even though there's not uh",
+      "offset": 269199,
+      "duration": 6321
+    },
+    {
+      "text": "any immediate problems, we do also have",
+      "offset": 272639,
+      "duration": 5041
+    },
+    {
+      "text": "this other notion within sonar lint that",
+      "offset": 275520,
+      "duration": 5200
+    },
+    {
+      "text": "we refer to as a security hotspot. And",
+      "offset": 277680,
+      "duration": 5200
+    },
+    {
+      "text": "so a security hotspot was raised on this",
+      "offset": 280720,
+      "duration": 5280
+    },
+    {
+      "text": "particular code over the fact that the",
+      "offset": 282880,
+      "duration": 5200
+    },
+    {
+      "text": "generated code is using the express",
+      "offset": 286000,
+      "duration": 4639
+    },
+    {
+      "text": "framework in JavaScript. That in and of",
+      "offset": 288080,
+      "duration": 5280
+    },
+    {
+      "text": "itself is not necessarily uh that's not",
+      "offset": 290639,
+      "duration": 4401
+    },
+    {
+      "text": "a bad thing. Express is a super popular",
+      "offset": 293360,
+      "duration": 5680
+    },
+    {
+      "text": "framework. Uh however, we're uh just",
+      "offset": 295040,
+      "duration": 6640
+    },
+    {
+      "text": "openly a as as written this code would",
+      "offset": 299040,
+      "duration": 4400
+    },
+    {
+      "text": "just openly disclose uh what the",
+      "offset": 301680,
+      "duration": 4160
+    },
+    {
+      "text": "framework is that's being used. And so",
+      "offset": 303440,
+      "duration": 4560
+    },
+    {
+      "text": "Sonar Lint will when it raises a hot",
+      "offset": 305840,
+      "duration": 4480
+    },
+    {
+      "text": "spot or an actual problem finding in the",
+      "offset": 308000,
+      "duration": 4960
+    },
+    {
+      "text": "code walk you through uh an",
+      "offset": 310320,
+      "duration": 5599
+    },
+    {
+      "text": "understanding of uh a risk like this and",
+      "offset": 312960,
+      "duration": 5600
+    },
+    {
+      "text": "also give you feedback on what would you",
+      "offset": 315919,
+      "duration": 4961
+    },
+    {
+      "text": "do uh if you wanted to make a",
+      "offset": 318560,
+      "duration": 5600
+    },
+    {
+      "text": "modification to the code in order to uh",
+      "offset": 320880,
+      "duration": 5599
+    },
+    {
+      "text": "in order to address it. So like in this",
+      "offset": 324160,
+      "duration": 5120
+    },
+    {
+      "text": "particular example uh we can take the",
+      "offset": 326479,
+      "duration": 5041
+    },
+    {
+      "text": "gist of the suggested compliance",
+      "offset": 329280,
+      "duration": 5199
+    },
+    {
+      "text": "solution here uh and go ahead where",
+      "offset": 331520,
+      "duration": 6239
+    },
+    {
+      "text": "we're making use of this framework uh",
+      "offset": 334479,
+      "duration": 5361
+    },
+    {
+      "text": "and go ahead",
+      "offset": 337759,
+      "duration": 4641
+    },
+    {
+      "text": "and address that. And so we can see now",
+      "offset": 339840,
+      "duration": 5359
+    },
+    {
+      "text": "the security hotspot uh has gone away",
+      "offset": 342400,
+      "duration": 6720
+    },
+    {
+      "text": "and this is and this is fantastic. So we",
+      "offset": 345199,
+      "duration": 6161
+    },
+    {
+      "text": "might also want to continue uh as a",
+      "offset": 349120,
+      "duration": 4880
+    },
+    {
+      "text": "developer working with this. Maybe one",
+      "offset": 351360,
+      "duration": 4160
+    },
+    {
+      "text": "of the things that I wanted to add to",
+      "offset": 354000,
+      "duration": 4080
+    },
+    {
+      "text": "this implementation of my of my restful",
+      "offset": 355520,
+      "duration": 5119
+    },
+    {
+      "text": "API is something like we've gone ahead",
+      "offset": 358080,
+      "duration": 5119
+    },
+    {
+      "text": "and given the dogs a date of birth.",
+      "offset": 360639,
+      "duration": 4560
+    },
+    {
+      "text": "Maybe we should go ahead and also add",
+      "offset": 363199,
+      "duration": 3921
+    },
+    {
+      "text": "some affordance in here to be able to do",
+      "offset": 365199,
+      "duration": 4000
+    },
+    {
+      "text": "something like generate the age uh of a",
+      "offset": 367120,
+      "duration": 5199
+    },
+    {
+      "text": "dog. So uh what we can do when we're",
+      "offset": 369199,
+      "duration": 4321
+    },
+    {
+      "text": "interacting with the code, you can ask",
+      "offset": 372319,
+      "duration": 2801
+    },
+    {
+      "text": "copilot to go ahead and generate",
+      "offset": 373520,
+      "duration": 5119
+    },
+    {
+      "text": "something. So let's say uh generate a",
+      "offset": 375120,
+      "duration": 6000
+    },
+    {
+      "text": "function to",
+      "offset": 378639,
+      "duration": 6241
+    },
+    {
+      "text": "calculate the age of a dog.",
+      "offset": 381120,
+      "duration": 8280
+    },
+    {
+      "text": "Let's ask it to go ahead and do that.",
+      "offset": 384880,
+      "duration": 4520
+    },
+    {
+      "text": "And what this will actually do,",
+      "offset": 389919,
+      "duration": 6400
+    },
+    {
+      "text": "which is pretty cool,",
+      "offset": 393440,
+      "duration": 5920
+    },
+    {
+      "text": "is uh go ahead and generate something.",
+      "offset": 396319,
+      "duration": 5681
+    },
+    {
+      "text": "uh and it's actually gone ahead and and",
+      "offset": 399360,
+      "duration": 5440
+    },
+    {
+      "text": "added it as a",
+      "offset": 402000,
+      "duration": 6479
+    },
+    {
+      "text": "uh as an inline uh as an inline method.",
+      "offset": 404800,
+      "duration": 7360
+    },
+    {
+      "text": "If we uh in addition to this, you know,",
+      "offset": 408479,
+      "duration": 6081
+    },
+    {
+      "text": "let's say we wanted to do something like",
+      "offset": 412160,
+      "duration": 5200
+    },
+    {
+      "text": "uh take this code out and uh you know,",
+      "offset": 414560,
+      "duration": 5440
+    },
+    {
+      "text": "consider externalizing it into another",
+      "offset": 417360,
+      "duration": 5520
+    },
+    {
+      "text": "function. We could do something like you",
+      "offset": 420000,
+      "duration": 6319
+    },
+    {
+      "text": "know function calculate age. Uh it takes",
+      "offset": 422880,
+      "duration": 7200
+    },
+    {
+      "text": "a date of birth and",
+      "offset": 426319,
+      "duration": 5841
+    },
+    {
+      "text": "you know in this particular case uh",
+      "offset": 430080,
+      "duration": 3760
+    },
+    {
+      "text": "maybe we want to start adding some of",
+      "offset": 432160,
+      "duration": 4400
+    },
+    {
+      "text": "the of the code in here. And so you can",
+      "offset": 433840,
+      "duration": 5440
+    },
+    {
+      "text": "see sonar lint as we start to work with",
+      "offset": 436560,
+      "duration": 4639
+    },
+    {
+      "text": "the code that copilot is giving us is",
+      "offset": 439280,
+      "duration": 5039
+    },
+    {
+      "text": "giving us some feedback in here. Um one",
+      "offset": 441199,
+      "duration": 5201
+    },
+    {
+      "text": "of the things that we see here is it's",
+      "offset": 444319,
+      "duration": 4481
+    },
+    {
+      "text": "actually suggesting that we rename uh",
+      "offset": 446400,
+      "duration": 4160
+    },
+    {
+      "text": "the function. And you might wonder well",
+      "offset": 448800,
+      "duration": 3519
+    },
+    {
+      "text": "why why why would it be asking us to do",
+      "offset": 450560,
+      "duration": 5359
+    },
+    {
+      "text": "that? Uh especially it's asking us to",
+      "offset": 452319,
+      "duration": 5921
+    },
+    {
+      "text": "uh rewrite it in terms of a of a",
+      "offset": 455919,
+      "duration": 4881
+    },
+    {
+      "text": "particular regular expression. This is",
+      "offset": 458240,
+      "duration": 4320
+    },
+    {
+      "text": "actually an example of enforcing a",
+      "offset": 460800,
+      "duration": 4080
+    },
+    {
+      "text": "naming convention on the code which we",
+      "offset": 462560,
+      "duration": 4400
+    },
+    {
+      "text": "saw in response to the poll earlier. A",
+      "offset": 464880,
+      "duration": 4480
+    },
+    {
+      "text": "lot of you have an almost equal amount",
+      "offset": 466960,
+      "duration": 5040
+    },
+    {
+      "text": "of concern between code security and the",
+      "offset": 469360,
+      "duration": 5040
+    },
+    {
+      "text": "the maintainability uh and the standards",
+      "offset": 472000,
+      "duration": 4400
+    },
+    {
+      "text": "compliance uh of the code that's being",
+      "offset": 474400,
+      "duration": 5040
+    },
+    {
+      "text": "generated. So this is an example here.",
+      "offset": 476400,
+      "duration": 5600
+    },
+    {
+      "text": "It might be an almost silly uh naming",
+      "offset": 479440,
+      "duration": 5199
+    },
+    {
+      "text": "convention, but this is an example of",
+      "offset": 482000,
+      "duration": 4240
+    },
+    {
+      "text": "the type of convention that you can",
+      "offset": 484639,
+      "duration": 4240
+    },
+    {
+      "text": "enforce with sonar. And how did the IDE",
+      "offset": 486240,
+      "duration": 4160
+    },
+    {
+      "text": "know about this? If this is a coding",
+      "offset": 488879,
+      "duration": 4081
+    },
+    {
+      "text": "convention that's specific to you, it's",
+      "offset": 490400,
+      "duration": 4639
+    },
+    {
+      "text": "through the magic of what we refer to as",
+      "offset": 492960,
+      "duration": 4880
+    },
+    {
+      "text": "connected mode. So within sonar lint you",
+      "offset": 495039,
+      "duration": 6401
+    },
+    {
+      "text": "can set up a connection between the the",
+      "offset": 497840,
+      "duration": 5359
+    },
+    {
+      "text": "sonar process sonar lint running within",
+      "offset": 501440,
+      "duration": 3920
+    },
+    {
+      "text": "the IDE that's giving you live feedback",
+      "offset": 503199,
+      "duration": 5680
+    },
+    {
+      "text": "on the code that you're composing and in",
+      "offset": 505360,
+      "duration": 5600
+    },
+    {
+      "text": "fact your upstream sonar server. So",
+      "offset": 508879,
+      "duration": 3520
+    },
+    {
+      "text": "whether this is a sonar cloud",
+      "offset": 510960,
+      "duration": 3920
+    },
+    {
+      "text": "subscription uh or you've got a sonar",
+      "offset": 512399,
+      "duration": 5681
+    },
+    {
+      "text": "cube uh onrem or self-managed server",
+      "offset": 514880,
+      "duration": 6320
+    },
+    {
+      "text": "that you're using for your teams you can",
+      "offset": 518080,
+      "duration": 5519
+    },
+    {
+      "text": "uh use that to manage your coding",
+      "offset": 521200,
+      "duration": 5120
+    },
+    {
+      "text": "standards. So if you have within your",
+      "offset": 523599,
+      "duration": 5281
+    },
+    {
+      "text": "organization uh defines what we refer to",
+      "offset": 526320,
+      "duration": 4720
+    },
+    {
+      "text": "as a quality profile and maybe you've",
+      "offset": 528880,
+      "duration": 4639
+    },
+    {
+      "text": "gone ahead and added on top of what we",
+      "offset": 531040,
+      "duration": 4960
+    },
+    {
+      "text": "already have in place as far as the uh",
+      "offset": 533519,
+      "duration": 5521
+    },
+    {
+      "text": "the sonar way uh quality profile, you",
+      "offset": 536000,
+      "duration": 5600
+    },
+    {
+      "text": "can go ahead and add to your quality",
+      "offset": 539040,
+      "duration": 5359
+    },
+    {
+      "text": "profile rules to enforce uh some of",
+      "offset": 541600,
+      "duration": 4799
+    },
+    {
+      "text": "these uh conventions. So whether it's",
+      "offset": 544399,
+      "duration": 3841
+    },
+    {
+      "text": "naming conventions for functions,",
+      "offset": 546399,
+      "duration": 5120
+    },
+    {
+      "text": "methods, uh you know, even trivial",
+      "offset": 548240,
+      "duration": 5840
+    },
+    {
+      "text": "things like brace placement, naming for",
+      "offset": 551519,
+      "duration": 5601
+    },
+    {
+      "text": "variables, uh other standards you'll",
+      "offset": 554080,
+      "duration": 5600
+    },
+    {
+      "text": "find within uh all of our supported",
+      "offset": 557120,
+      "duration": 4399
+    },
+    {
+      "text": "languages, if you look for rules that",
+      "offset": 559680,
+      "duration": 4320
+    },
+    {
+      "text": "have the tag uh convention, there are",
+      "offset": 561519,
+      "duration": 4241
+    },
+    {
+      "text": "lots of things like this that you can",
+      "offset": 564000,
+      "duration": 3680
+    },
+    {
+      "text": "enable. Uh and hopefully for those of",
+      "offset": 565760,
+      "duration": 3759
+    },
+    {
+      "text": "you who are already Sonar users, you've",
+      "offset": 567680,
+      "duration": 4640
+    },
+    {
+      "text": "gone ahead and enabled those things. Now",
+      "offset": 569519,
+      "duration": 5201
+    },
+    {
+      "text": "when it comes to uh enforcing a rule",
+      "offset": 572320,
+      "duration": 4560
+    },
+    {
+      "text": "like this, what we can actually see is",
+      "offset": 574720,
+      "duration": 5119
+    },
+    {
+      "text": "when we look at the code,",
+      "offset": 576880,
+      "duration": 6079
+    },
+    {
+      "text": "the IDE's option to generate a quick fix",
+      "offset": 579839,
+      "duration": 5841
+    },
+    {
+      "text": "will give us uh some options here. In",
+      "offset": 582959,
+      "duration": 4481
+    },
+    {
+      "text": "many cases, Sonar Lint has a built-in",
+      "offset": 585680,
+      "duration": 4480
+    },
+    {
+      "text": "quick fix. The really cool thing again",
+      "offset": 587440,
+      "duration": 4959
+    },
+    {
+      "text": "about the interplay through the IDE of",
+      "offset": 590160,
+      "duration": 5040
+    },
+    {
+      "text": "these tools is you can even ask C-pilot",
+      "offset": 592399,
+      "duration": 5281
+    },
+    {
+      "text": "to fix this. And because the description",
+      "offset": 595200,
+      "duration": 6800
+    },
+    {
+      "text": "of Sonar's rule is uh is accurate",
+      "offset": 597680,
+      "duration": 6480
+    },
+    {
+      "text": "enough, you can in fact have it",
+      "offset": 602000,
+      "duration": 5680
+    },
+    {
+      "text": "implement the uh the suggestion of the",
+      "offset": 604160,
+      "duration": 5920
+    },
+    {
+      "text": "uh of the naming convention for you. So",
+      "offset": 607680,
+      "duration": 4400
+    },
+    {
+      "text": "there's a really nice uh interplay that",
+      "offset": 610080,
+      "duration": 5600
+    },
+    {
+      "text": "we see uh between these tools.",
+      "offset": 612080,
+      "duration": 5920
+    },
+    {
+      "text": "I'd like to move on to another example",
+      "offset": 615680,
+      "duration": 5040
+    },
+    {
+      "text": "uh quickly. So, you know, above and",
+      "offset": 618000,
+      "duration": 5839
+    },
+    {
+      "text": "beyond this, you might also uh wonder",
+      "offset": 620720,
+      "duration": 5920
+    },
+    {
+      "text": "what would happen if we had some some",
+      "offset": 623839,
+      "duration": 4481
+    },
+    {
+      "text": "maybe more serious issues that might",
+      "offset": 626640,
+      "duration": 4560
+    },
+    {
+      "text": "come along. So, a variation on, you",
+      "offset": 628320,
+      "duration": 4880
+    },
+    {
+      "text": "know, I was rather specific when we",
+      "offset": 631200,
+      "duration": 4000
+    },
+    {
+      "text": "asked for this implementation of a of a",
+      "offset": 633200,
+      "duration": 4400
+    },
+    {
+      "text": "restful API. In a in a previous",
+      "offset": 635200,
+      "duration": 4480
+    },
+    {
+      "text": "iteration, I was wondering what would",
+      "offset": 637600,
+      "duration": 3520
+    },
+    {
+      "text": "happen if a developer who really kind of",
+      "offset": 639680,
+      "duration": 3440
+    },
+    {
+      "text": "didn't know what they were asking for",
+      "offset": 641120,
+      "duration": 5200
+    },
+    {
+      "text": "asked Copilot for some questions.",
+      "offset": 643120,
+      "duration": 7120
+    },
+    {
+      "text": "And uh an example here is if I asked it",
+      "offset": 646320,
+      "duration": 6400
+    },
+    {
+      "text": "simply to generate some abstract code",
+      "offset": 650240,
+      "duration": 5520
+    },
+    {
+      "text": "for a restful API. What in fact happened",
+      "offset": 652720,
+      "duration": 6000
+    },
+    {
+      "text": "in this particular case is it generated",
+      "offset": 655760,
+      "duration": 6079
+    },
+    {
+      "text": "very similar code uh to my my REST API",
+      "offset": 658720,
+      "duration": 6160
+    },
+    {
+      "text": "for uh for dogs. But this code was",
+      "offset": 661839,
+      "duration": 4801
+    },
+    {
+      "text": "actually so generic that it was doing",
+      "offset": 664880,
+      "duration": 3840
+    },
+    {
+      "text": "things like for lack of any kind of",
+      "offset": 666640,
+      "duration": 4480
+    },
+    {
+      "text": "specific object model that we might want",
+      "offset": 668720,
+      "duration": 4160
+    },
+    {
+      "text": "to be talking about like a dog, a",
+      "offset": 671120,
+      "duration": 4240
+    },
+    {
+      "text": "person, a customer. Uh it was simply",
+      "offset": 672880,
+      "duration": 4240
+    },
+    {
+      "text": "reflecting the body of the request back",
+      "offset": 675360,
+      "duration": 3919
+    },
+    {
+      "text": "in the response which might be a helpful",
+      "offset": 677120,
+      "duration": 3920
+    },
+    {
+      "text": "thing to do as you're getting started.",
+      "offset": 679279,
+      "duration": 4560
+    },
+    {
+      "text": "If a naive developer actually used a",
+      "offset": 681040,
+      "duration": 4239
+    },
+    {
+      "text": "code example like this and tried to",
+      "offset": 683839,
+      "duration": 3680
+    },
+    {
+      "text": "extend it into something specific, they",
+      "offset": 685279,
+      "duration": 3680
+    },
+    {
+      "text": "could actually wind up getting into a",
+      "offset": 687519,
+      "duration": 4401
+    },
+    {
+      "text": "bit of trouble. uh because in fact this",
+      "offset": 688959,
+      "duration": 5601
+    },
+    {
+      "text": "is uh a very basic example of a",
+      "offset": 691920,
+      "duration": 6000
+    },
+    {
+      "text": "cross-ite scripting uh error. So uh a",
+      "offset": 694560,
+      "duration": 5040
+    },
+    {
+      "text": "cross-sight scripting vulnerability if",
+      "offset": 697920,
+      "duration": 3440
+    },
+    {
+      "text": "left in the code would actually be able",
+      "offset": 699600,
+      "duration": 5440
+    },
+    {
+      "text": "to let a potential attacker uh access",
+      "offset": 701360,
+      "duration": 7039
+    },
+    {
+      "text": "the the web uh interface for uh what",
+      "offset": 705040,
+      "duration": 6160
+    },
+    {
+      "text": "this API would result in and redirect",
+      "offset": 708399,
+      "duration": 5361
+    },
+    {
+      "text": "requests to the API to maybe another",
+      "offset": 711200,
+      "duration": 4160
+    },
+    {
+      "text": "endpoint where they could then",
+      "offset": 713760,
+      "duration": 3519
+    },
+    {
+      "text": "potentially do something malicious. So",
+      "offset": 715360,
+      "duration": 3200
+    },
+    {
+      "text": "there's there's definitely something to",
+      "offset": 717279,
+      "duration": 3601
+    },
+    {
+      "text": "watch out for. Uh and if you encounter",
+      "offset": 718560,
+      "duration": 4160
+    },
+    {
+      "text": "it, you would hopefully not just get",
+      "offset": 720880,
+      "duration": 4639
+    },
+    {
+      "text": "this feedback uh within the IDE, but you",
+      "offset": 722720,
+      "duration": 6239
+    },
+    {
+      "text": "would also see within your project uh in",
+      "offset": 725519,
+      "duration": 5760
+    },
+    {
+      "text": "uh Sonar Cube or Sonar Cloud. Such a",
+      "offset": 728959,
+      "duration": 3761
+    },
+    {
+      "text": "thing would result in a quality gate",
+      "offset": 731279,
+      "duration": 4481
+    },
+    {
+      "text": "failure. when you have integration with",
+      "offset": 732720,
+      "duration": 5600
+    },
+    {
+      "text": "your CI uh pipelines as I have an",
+      "offset": 735760,
+      "duration": 5199
+    },
+    {
+      "text": "example here uh for this project in",
+      "offset": 738320,
+      "duration": 4800
+    },
+    {
+      "text": "GitHub you can actually have the",
+      "offset": 740959,
+      "duration": 4801
+    },
+    {
+      "text": "pipeline fail uh based on the quality",
+      "offset": 743120,
+      "duration": 4480
+    },
+    {
+      "text": "gate failure uh as I've shown in an",
+      "offset": 745760,
+      "duration": 4400
+    },
+    {
+      "text": "example here and I would also like to",
+      "offset": 747600,
+      "duration": 6320
+    },
+    {
+      "text": "show that uh of course uh for those of",
+      "offset": 750160,
+      "duration": 5600
+    },
+    {
+      "text": "you who are using commercial versions of",
+      "offset": 753920,
+      "duration": 3680
+    },
+    {
+      "text": "sonar which would be necessary to find",
+      "offset": 755760,
+      "duration": 4000
+    },
+    {
+      "text": "the vulnerability in the first place you",
+      "offset": 757600,
+      "duration": 4560
+    },
+    {
+      "text": "can also get nice feedback directly",
+      "offset": 759760,
+      "duration": 4319
+    },
+    {
+      "text": "within your pull request so if we were",
+      "offset": 762160,
+      "duration": 4560
+    },
+    {
+      "text": "interacting with a tool like Copilot,",
+      "offset": 764079,
+      "duration": 5681
+    },
+    {
+      "text": "pasting stuff in from chat GBT, uh you",
+      "offset": 766720,
+      "duration": 5840
+    },
+    {
+      "text": "would get some really great feedback uh",
+      "offset": 769760,
+      "duration": 4720
+    },
+    {
+      "text": "directly within your pull requests that",
+      "offset": 772560,
+      "duration": 7399
+    },
+    {
+      "text": "you could also use to uh to act upon",
+      "offset": 774480,
+      "duration": 5479
+    }
+  ],
+  "fullText": "Before I dive into using GitHub Copilot, one of the things that I also want to emphasize, so I'm using VS Code as my example IDE for today. You can find uh you can find within the VS Code uh marketplace for extensions. Uh we're listed uh Sonar Lint, you'll find us right here. And once sonar lin is installed in the IDE uh you'll also find uh sonarlin available in the sidebar on your IDE in other flavors of IDE. So for example like jet brains intelligj vs code uh visual studio eclipse those are the major families that we support you'll find uh variations on each IDE has a marketplace and of course each IDE has uh usability conventions as far as how exactly our tools show up. Um but so one of the things that I want to highlight is of course the interaction that we'll see uh between GitHub Copilot and the IDE uh as well as the interplay with Sonar Lint. Um so I have a a just the beginning framework of a project that's intended to have some some JavaScript code added to it here. Uh there's really nothing that exists yet. Uh so really what this represents is a state where I'm about to add some code. And let's say that one of the things that I want to implement within this project is going to be uh some kind of web API. So I'd like to use a restful uh web API. And I'm going to pick a subject. Um let's say uh dogs. Uh I love dogs. Uh so let's ask GitHub Copilot to uh for example generate uh a restful API in uh JavaScript for dogs. Uh, and let's say each dog should have uh uh a name, a breed, and a date of birth. Great. So, GitHub Copilot uh will go along and think about that, and it's going to give us uh a nice implementation. We'll see how nice it is. Uh this is looking pretty promising. So, it looks like it's decided to use the Express JavaScript framework. Uh, there's some other things going on here. I can see some pretty standard RESTful API uh operations and it's even going to helpfully explain to us what exactly it is that it generated. Uh, this is all great. So, if we want to go ahead and try to make use of this code, uh, we can just go ahead and insert this into a new file. And what we'll see here is I'll go ahead and save this for example into a file like uh dogs.js. And so uh as soon as the file is added into uh the IDE now we're going to uh see some code. And so as an example here, um, when when Sonar Lint interacts with code within an IDE, what's happening here is there's not necessarily a direct integration between Sonar Lint and GitHub Copilot. And in fact, there doesn't need to be. Uh, we'll certainly explore uh in the future whether there are direct integrations that we can uh that we can put in place uh that would make uh what I'm about to show even easier. But even without a direct integration, the really cool thing about these tools is that they're very complimentary to each other in the sense that Sonarlin is going to analyze the contents of the file. Copilot or even chat GPT or something that you may copy and paste into the IDE is going to add contents into your code buffer and even without a direct integration, you have the advantage of these tools working complimentary together within uh within the IDE and giving you some feedback. So when you interact with code within the IDE, the problems that would be found by uh sonar lint or other static analysis uh llinters that you may have added in your IDE are going to show up down in the problems pane. We don't happen to have any problems uh because the code uh honestly that's generated by copilot when you're specific about what you're looking for, it actually happens to be pretty clean for the most part. So we've got a nice uh implementation of a of a restful API here. This is great. We do see on the side uh sonar lint is actually giving us a notification though. So even though there's not uh any immediate problems, we do also have this other notion within sonar lint that we refer to as a security hotspot. And so a security hotspot was raised on this particular code over the fact that the generated code is using the express framework in JavaScript. That in and of itself is not necessarily uh that's not a bad thing. Express is a super popular framework. Uh however, we're uh just openly a as as written this code would just openly disclose uh what the framework is that's being used. And so Sonar Lint will when it raises a hot spot or an actual problem finding in the code walk you through uh an understanding of uh a risk like this and also give you feedback on what would you do uh if you wanted to make a modification to the code in order to uh in order to address it. So like in this particular example uh we can take the gist of the suggested compliance solution here uh and go ahead where we're making use of this framework uh and go ahead and address that. And so we can see now the security hotspot uh has gone away and this is and this is fantastic. So we might also want to continue uh as a developer working with this. Maybe one of the things that I wanted to add to this implementation of my of my restful API is something like we've gone ahead and given the dogs a date of birth. Maybe we should go ahead and also add some affordance in here to be able to do something like generate the age uh of a dog. So uh what we can do when we're interacting with the code, you can ask copilot to go ahead and generate something. So let's say uh generate a function to calculate the age of a dog. Let's ask it to go ahead and do that. And what this will actually do, which is pretty cool, is uh go ahead and generate something. uh and it's actually gone ahead and and added it as a uh as an inline uh as an inline method. If we uh in addition to this, you know, let's say we wanted to do something like uh take this code out and uh you know, consider externalizing it into another function. We could do something like you know function calculate age. Uh it takes a date of birth and you know in this particular case uh maybe we want to start adding some of the of the code in here. And so you can see sonar lint as we start to work with the code that copilot is giving us is giving us some feedback in here. Um one of the things that we see here is it's actually suggesting that we rename uh the function. And you might wonder well why why why would it be asking us to do that? Uh especially it's asking us to uh rewrite it in terms of a of a particular regular expression. This is actually an example of enforcing a naming convention on the code which we saw in response to the poll earlier. A lot of you have an almost equal amount of concern between code security and the the maintainability uh and the standards compliance uh of the code that's being generated. So this is an example here. It might be an almost silly uh naming convention, but this is an example of the type of convention that you can enforce with sonar. And how did the IDE know about this? If this is a coding convention that's specific to you, it's through the magic of what we refer to as connected mode. So within sonar lint you can set up a connection between the the sonar process sonar lint running within the IDE that's giving you live feedback on the code that you're composing and in fact your upstream sonar server. So whether this is a sonar cloud subscription uh or you've got a sonar cube uh onrem or self-managed server that you're using for your teams you can uh use that to manage your coding standards. So if you have within your organization uh defines what we refer to as a quality profile and maybe you've gone ahead and added on top of what we already have in place as far as the uh the sonar way uh quality profile, you can go ahead and add to your quality profile rules to enforce uh some of these uh conventions. So whether it's naming conventions for functions, methods, uh you know, even trivial things like brace placement, naming for variables, uh other standards you'll find within uh all of our supported languages, if you look for rules that have the tag uh convention, there are lots of things like this that you can enable. Uh and hopefully for those of you who are already Sonar users, you've gone ahead and enabled those things. Now when it comes to uh enforcing a rule like this, what we can actually see is when we look at the code, the IDE's option to generate a quick fix will give us uh some options here. In many cases, Sonar Lint has a built-in quick fix. The really cool thing again about the interplay through the IDE of these tools is you can even ask C-pilot to fix this. And because the description of Sonar's rule is uh is accurate enough, you can in fact have it implement the uh the suggestion of the uh of the naming convention for you. So there's a really nice uh interplay that we see uh between these tools. I'd like to move on to another example uh quickly. So, you know, above and beyond this, you might also uh wonder what would happen if we had some some maybe more serious issues that might come along. So, a variation on, you know, I was rather specific when we asked for this implementation of a of a restful API. In a in a previous iteration, I was wondering what would happen if a developer who really kind of didn't know what they were asking for asked Copilot for some questions. And uh an example here is if I asked it simply to generate some abstract code for a restful API. What in fact happened in this particular case is it generated very similar code uh to my my REST API for uh for dogs. But this code was actually so generic that it was doing things like for lack of any kind of specific object model that we might want to be talking about like a dog, a person, a customer. Uh it was simply reflecting the body of the request back in the response which might be a helpful thing to do as you're getting started. If a naive developer actually used a code example like this and tried to extend it into something specific, they could actually wind up getting into a bit of trouble. uh because in fact this is uh a very basic example of a cross-ite scripting uh error. So uh a cross-sight scripting vulnerability if left in the code would actually be able to let a potential attacker uh access the the web uh interface for uh what this API would result in and redirect requests to the API to maybe another endpoint where they could then potentially do something malicious. So there's there's definitely something to watch out for. Uh and if you encounter it, you would hopefully not just get this feedback uh within the IDE, but you would also see within your project uh in uh Sonar Cube or Sonar Cloud. Such a thing would result in a quality gate failure. when you have integration with your CI uh pipelines as I have an example here uh for this project in GitHub you can actually have the pipeline fail uh based on the quality gate failure uh as I've shown in an example here and I would also like to show that uh of course uh for those of you who are using commercial versions of sonar which would be necessary to find the vulnerability in the first place you can also get nice feedback directly within your pull request so if we were interacting with a tool like Copilot, pasting stuff in from chat GBT, uh you would get some really great feedback uh directly within your pull requests that you could also use to uh to act upon",
+  "fetchedAt": "2026-03-14T09:23:33.223Z"
+}

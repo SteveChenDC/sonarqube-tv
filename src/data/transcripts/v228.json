@@ -1,0 +1,2433 @@
+{
+  "videoId": "v228",
+  "youtubeId": "je7rSt3QcQc",
+  "segments": [
+    {
+      "text": "thanks everyone for joining today we're",
+      "offset": 80,
+      "duration": 4560
+    },
+    {
+      "text": "going to talk about how sonar cube",
+      "offset": 3120,
+      "duration": 2800
+    },
+    {
+      "text": "integrates into your development",
+      "offset": 4640,
+      "duration": 2960
+    },
+    {
+      "text": "workflow",
+      "offset": 5920,
+      "duration": 5200
+    },
+    {
+      "text": "and how that's valuable for your team",
+      "offset": 7600,
+      "duration": 3520
+    },
+    {
+      "text": "now for those not familiar with sonar",
+      "offset": 11679,
+      "duration": 3681
+    },
+    {
+      "text": "source or sonar cube let me briefly",
+      "offset": 13280,
+      "duration": 2479
+    },
+    {
+      "text": "touch",
+      "offset": 15360,
+      "duration": 2560
+    },
+    {
+      "text": "on our mission and that is that every",
+      "offset": 15759,
+      "duration": 4241
+    },
+    {
+      "text": "developer and development team",
+      "offset": 17920,
+      "duration": 4000
+    },
+    {
+      "text": "uses sonar source products for their",
+      "offset": 20000,
+      "duration": 3039
+    },
+    {
+      "text": "code quality",
+      "offset": 21920,
+      "duration": 3920
+    },
+    {
+      "text": "and security",
+      "offset": 23039,
+      "duration": 2801
+    },
+    {
+      "text": "since the beginning our products have",
+      "offset": 26320,
+      "duration": 4480
+    },
+    {
+      "text": "been made by developers for developers",
+      "offset": 28160,
+      "duration": 4399
+    },
+    {
+      "text": "we want every developer to be able to",
+      "offset": 30800,
+      "duration": 4240
+    },
+    {
+      "text": "use them and we want them to be a part",
+      "offset": 32559,
+      "duration": 4401
+    },
+    {
+      "text": "of that development process",
+      "offset": 35040,
+      "duration": 3359
+    },
+    {
+      "text": "we want things to be simple and",
+      "offset": 36960,
+      "duration": 4240
+    },
+    {
+      "text": "transparent and we want accuracy",
+      "offset": 38399,
+      "duration": 4561
+    },
+    {
+      "text": "in what we provide and to always be",
+      "offset": 41200,
+      "duration": 3920
+    },
+    {
+      "text": "helpful and so the end goal is that",
+      "offset": 42960,
+      "duration": 4000
+    },
+    {
+      "text": "every developer writes clean",
+      "offset": 45120,
+      "duration": 6240
+    },
+    {
+      "text": "safe quality code every day",
+      "offset": 46960,
+      "duration": 4400
+    },
+    {
+      "text": "okay if we talk about coding practices",
+      "offset": 51520,
+      "duration": 4320
+    },
+    {
+      "text": "today developers love to write better",
+      "offset": 53680,
+      "duration": 2719
+    },
+    {
+      "text": "code",
+      "offset": 55840,
+      "duration": 2399
+    },
+    {
+      "text": "and today they want to get feedback",
+      "offset": 56399,
+      "duration": 3441
+    },
+    {
+      "text": "during code review",
+      "offset": 58239,
+      "duration": 3120
+    },
+    {
+      "text": "and there are some standard tooling and",
+      "offset": 59840,
+      "duration": 3680
+    },
+    {
+      "text": "processes that developers nowadays use",
+      "offset": 61359,
+      "duration": 3361
+    },
+    {
+      "text": "for that code review",
+      "offset": 63520,
+      "duration": 2720
+    },
+    {
+      "text": "they're creating branches for new",
+      "offset": 64720,
+      "duration": 3439
+    },
+    {
+      "text": "features and for bug fixes",
+      "offset": 66240,
+      "duration": 3120
+    },
+    {
+      "text": "they ask for feedback from their",
+      "offset": 68159,
+      "duration": 2960
+    },
+    {
+      "text": "teammates to find problems and to",
+      "offset": 69360,
+      "duration": 3680
+    },
+    {
+      "text": "improve their code",
+      "offset": 71119,
+      "duration": 3521
+    },
+    {
+      "text": "and they're doing that in their alm",
+      "offset": 73040,
+      "duration": 4160
+    },
+    {
+      "text": "tools github azure devops",
+      "offset": 74640,
+      "duration": 5680
+    },
+    {
+      "text": "bitbucket and gitlab",
+      "offset": 77200,
+      "duration": 3120
+    },
+    {
+      "text": "now where's the right place to deliver",
+      "offset": 81360,
+      "duration": 3920
+    },
+    {
+      "text": "value well we believe that is the alm",
+      "offset": 82880,
+      "duration": 4400
+    },
+    {
+      "text": "and it's the standard expectation here",
+      "offset": 85280,
+      "duration": 3600
+    },
+    {
+      "text": "this is where developers are tracking",
+      "offset": 87280,
+      "duration": 3040
+    },
+    {
+      "text": "code and where they're submitting",
+      "offset": 88880,
+      "duration": 3199
+    },
+    {
+      "text": "changes for review",
+      "offset": 90320,
+      "duration": 3360
+    },
+    {
+      "text": "so there's no doubt developers spend a",
+      "offset": 92079,
+      "duration": 3121
+    },
+    {
+      "text": "lot of time in their alm and they're",
+      "offset": 93680,
+      "duration": 3439
+    },
+    {
+      "text": "using pull requests",
+      "offset": 95200,
+      "duration": 4080
+    },
+    {
+      "text": "full requests are where developers are",
+      "offset": 97119,
+      "duration": 3521
+    },
+    {
+      "text": "already discussing about",
+      "offset": 99280,
+      "duration": 3680
+    },
+    {
+      "text": "code quality and the validity of a code",
+      "offset": 100640,
+      "duration": 4159
+    },
+    {
+      "text": "change",
+      "offset": 102960,
+      "duration": 3839
+    },
+    {
+      "text": "and so it's only natural for sonar cube",
+      "offset": 104799,
+      "duration": 4081
+    },
+    {
+      "text": "to provide feedback there and for some",
+      "offset": 106799,
+      "duration": 2960
+    },
+    {
+      "text": "time now",
+      "offset": 108880,
+      "duration": 2480
+    },
+    {
+      "text": "that's exactly where we focused our",
+      "offset": 109759,
+      "duration": 3201
+    },
+    {
+      "text": "development efforts",
+      "offset": 111360,
+      "duration": 3759
+    },
+    {
+      "text": "we started back in sonarcube version 7",
+      "offset": 112960,
+      "duration": 3439
+    },
+    {
+      "text": "with branch analysis",
+      "offset": 115119,
+      "duration": 2721
+    },
+    {
+      "text": "and from there we improved our",
+      "offset": 116399,
+      "duration": 3921
+    },
+    {
+      "text": "integration to include pr decoration for",
+      "offset": 117840,
+      "duration": 4080
+    },
+    {
+      "text": "all four of the alms that you saw",
+      "offset": 120320,
+      "duration": 2799
+    },
+    {
+      "text": "earlier",
+      "offset": 121920,
+      "duration": 4320
+    },
+    {
+      "text": "we're on version 8.3 now and this",
+      "offset": 123119,
+      "duration": 4881
+    },
+    {
+      "text": "latest release is where you can find the",
+      "offset": 126240,
+      "duration": 3680
+    },
+    {
+      "text": "complete set of functionality",
+      "offset": 128000,
+      "duration": 5280
+    },
+    {
+      "text": "that we're discussing here today",
+      "offset": 129920,
+      "duration": 3360
+    },
+    {
+      "text": "so it's important to add value in the",
+      "offset": 134560,
+      "duration": 3840
+    },
+    {
+      "text": "right place and that's the pull request",
+      "offset": 135920,
+      "duration": 5520
+    },
+    {
+      "text": "now the right data is just as important",
+      "offset": 138400,
+      "duration": 4720
+    },
+    {
+      "text": "and that's where we leverage the value",
+      "offset": 141440,
+      "duration": 3760
+    },
+    {
+      "text": "of the sonar cube static analysis and",
+      "offset": 143120,
+      "duration": 3520
+    },
+    {
+      "text": "its ability to detect",
+      "offset": 145200,
+      "duration": 5200
+    },
+    {
+      "text": "issues and vulnerability in your code",
+      "offset": 146640,
+      "duration": 3760
+    },
+    {
+      "text": "and does it make sense to stop there",
+      "offset": 150640,
+      "duration": 3200
+    },
+    {
+      "text": "let's make the analysis",
+      "offset": 152400,
+      "duration": 5440
+    },
+    {
+      "text": "integral to the workflow",
+      "offset": 153840,
+      "duration": 4000
+    },
+    {
+      "text": "now we didn't develop this in a vacuum",
+      "offset": 158239,
+      "duration": 4080
+    },
+    {
+      "text": "we knew we knew value could only come",
+      "offset": 160000,
+      "duration": 4160
+    },
+    {
+      "text": "from strong relationships",
+      "offset": 162319,
+      "duration": 3601
+    },
+    {
+      "text": "and we leveraged strong partnerships to",
+      "offset": 164160,
+      "duration": 3280
+    },
+    {
+      "text": "build tight integrations",
+      "offset": 165920,
+      "duration": 4000
+    },
+    {
+      "text": "as i mentioned previously sonar source",
+      "offset": 167440,
+      "duration": 4000
+    },
+    {
+      "text": "is a product first company",
+      "offset": 169920,
+      "duration": 3760
+    },
+    {
+      "text": "and so that means we also focused on",
+      "offset": 171440,
+      "duration": 5519
+    },
+    {
+      "text": "product first partnerships",
+      "offset": 173680,
+      "duration": 5199
+    },
+    {
+      "text": "now let's stop here i'd love to find out",
+      "offset": 176959,
+      "duration": 3041
+    },
+    {
+      "text": "what tools",
+      "offset": 178879,
+      "duration": 3121
+    },
+    {
+      "text": "alm tools folks are using so we're going",
+      "offset": 180000,
+      "duration": 4640
+    },
+    {
+      "text": "to actually launch a second poll",
+      "offset": 182000,
+      "duration": 6640
+    },
+    {
+      "text": "let me get that to you folks okay",
+      "offset": 184640,
+      "duration": 4000
+    },
+    {
+      "text": "so if you could let us know the tools",
+      "offset": 189599,
+      "duration": 3121
+    },
+    {
+      "text": "that you're using",
+      "offset": 191840,
+      "duration": 2800
+    },
+    {
+      "text": "i guess it would be the predominant tool",
+      "offset": 192720,
+      "duration": 7120
+    },
+    {
+      "text": "if you're using more than one",
+      "offset": 194640,
+      "duration": 5200
+    },
+    {
+      "text": "lots of votes coming in so we'll give",
+      "offset": 203840,
+      "duration": 4319
+    },
+    {
+      "text": "this a few more seconds",
+      "offset": 205440,
+      "duration": 8400
+    },
+    {
+      "text": "then we can all take a look",
+      "offset": 208159,
+      "duration": 5681
+    },
+    {
+      "text": "all right just a couple more seconds",
+      "offset": 214560,
+      "duration": 5360
+    },
+    {
+      "text": "if you uh if you'd like to vote please",
+      "offset": 218239,
+      "duration": 4321
+    },
+    {
+      "text": "do so now",
+      "offset": 219920,
+      "duration": 2640
+    },
+    {
+      "text": "okay i think things have trickled off so",
+      "offset": 223519,
+      "duration": 4321
+    },
+    {
+      "text": "here we go",
+      "offset": 225440,
+      "duration": 2400
+    },
+    {
+      "text": "we actually have a pretty even",
+      "offset": 230799,
+      "duration": 3440
+    },
+    {
+      "text": "distribution looks like github is is",
+      "offset": 232080,
+      "duration": 4400
+    },
+    {
+      "text": "a bit ahead of the other folks in uh",
+      "offset": 234239,
+      "duration": 4881
+    },
+    {
+      "text": "popularity at 38 percent but",
+      "offset": 236480,
+      "duration": 5839
+    },
+    {
+      "text": "great representation really for all four",
+      "offset": 239120,
+      "duration": 6800
+    },
+    {
+      "text": "so thanks for voting appreciate that",
+      "offset": 242319,
+      "duration": 3601
+    },
+    {
+      "text": "all right so let's get back to things",
+      "offset": 247280,
+      "duration": 4959
+    },
+    {
+      "text": "here",
+      "offset": 252840,
+      "duration": 3959
+    },
+    {
+      "text": "so we talked about the product first",
+      "offset": 255200,
+      "duration": 3920
+    },
+    {
+      "text": "partnerships um what we wanted to do was",
+      "offset": 256799,
+      "duration": 4560
+    },
+    {
+      "text": "build what makes sense for the user",
+      "offset": 259120,
+      "duration": 4880
+    },
+    {
+      "text": "and of course unlock the great ux that",
+      "offset": 261359,
+      "duration": 4161
+    },
+    {
+      "text": "our partners had already built into",
+      "offset": 264000,
+      "duration": 2479
+    },
+    {
+      "text": "their tools",
+      "offset": 265520,
+      "duration": 3040
+    },
+    {
+      "text": "and in doing that we could combine the",
+      "offset": 266479,
+      "duration": 5121
+    },
+    {
+      "text": "best of both worlds",
+      "offset": 268560,
+      "duration": 5120
+    },
+    {
+      "text": "so a little bit about our partners they",
+      "offset": 271600,
+      "duration": 4240
+    },
+    {
+      "text": "even come and ask us to participate",
+      "offset": 273680,
+      "duration": 4959
+    },
+    {
+      "text": "in feature launches like github actions",
+      "offset": 275840,
+      "duration": 5000
+    },
+    {
+      "text": "and they talk about us in their",
+      "offset": 278639,
+      "duration": 3441
+    },
+    {
+      "text": "communities",
+      "offset": 280840,
+      "duration": 3240
+    },
+    {
+      "text": "these companies know us well and they're",
+      "offset": 282080,
+      "duration": 5760
+    },
+    {
+      "text": "talking about us during their keynotes",
+      "offset": 284080,
+      "duration": 3760
+    },
+    {
+      "text": "we collaborate with them on code quality",
+      "offset": 288320,
+      "duration": 3920
+    },
+    {
+      "text": "and security best practices",
+      "offset": 290400,
+      "duration": 4440
+    },
+    {
+      "text": "and we even get recognized as a top",
+      "offset": 292240,
+      "duration": 4640
+    },
+    {
+      "text": "publisher and of course",
+      "offset": 294840,
+      "duration": 4040
+    },
+    {
+      "text": "we're happy to receive good vibes from",
+      "offset": 296880,
+      "duration": 3280
+    },
+    {
+      "text": "our newest integration",
+      "offset": 298880,
+      "duration": 4000
+    },
+    {
+      "text": "with gitlab",
+      "offset": 300160,
+      "duration": 2720
+    },
+    {
+      "text": "so let's see firsthand how sonarcube",
+      "offset": 303680,
+      "duration": 3440
+    },
+    {
+      "text": "integrates with the alms and what it can",
+      "offset": 305360,
+      "duration": 3360
+    },
+    {
+      "text": "do for your prs",
+      "offset": 307120,
+      "duration": 3600
+    },
+    {
+      "text": "i'd like to mention that this feature is",
+      "offset": 308720,
+      "duration": 3680
+    },
+    {
+      "text": "available starting with developer",
+      "offset": 310720,
+      "duration": 2319
+    },
+    {
+      "text": "edition",
+      "offset": 312400,
+      "duration": 2799
+    },
+    {
+      "text": "and it's easy to request a free trial",
+      "offset": 313039,
+      "duration": 3121
+    },
+    {
+      "text": "online",
+      "offset": 315199,
+      "duration": 4321
+    },
+    {
+      "text": "at sonarcube.org",
+      "offset": 316160,
+      "duration": 3360
+    },
+    {
+      "text": "now before we see that live demo let's",
+      "offset": 320560,
+      "duration": 3600
+    },
+    {
+      "text": "take a quick look at a typical",
+      "offset": 322320,
+      "duration": 5040
+    },
+    {
+      "text": "workflow elsa mentioned earlier sonarlin",
+      "offset": 324160,
+      "duration": 3680
+    },
+    {
+      "text": "when we",
+      "offset": 327360,
+      "duration": 2960
+    },
+    {
+      "text": "started and it's a free and open source",
+      "offset": 327840,
+      "duration": 3120
+    },
+    {
+      "text": "ide",
+      "offset": 330320,
+      "duration": 3280
+    },
+    {
+      "text": "extension that finds issues on the fly",
+      "offset": 330960,
+      "duration": 4720
+    },
+    {
+      "text": "while you're coding",
+      "offset": 333600,
+      "duration": 4080
+    },
+    {
+      "text": "okay so let's say we're done with",
+      "offset": 335680,
+      "duration": 3920
+    },
+    {
+      "text": "writing our code so we're ready to open",
+      "offset": 337680,
+      "duration": 2400
+    },
+    {
+      "text": "up",
+      "offset": 339600,
+      "duration": 3520
+    },
+    {
+      "text": "our pr so we do that that kicks off our",
+      "offset": 340080,
+      "duration": 6000
+    },
+    {
+      "text": "ci systems to check out and build code",
+      "offset": 343120,
+      "duration": 4639
+    },
+    {
+      "text": "and that in turn is going to kick off an",
+      "offset": 346080,
+      "duration": 4399
+    },
+    {
+      "text": "automatic sonar cube analysis",
+      "offset": 347759,
+      "duration": 5681
+    },
+    {
+      "text": "and when that analysis is complete any",
+      "offset": 350479,
+      "duration": 5280
+    },
+    {
+      "text": "bugs and vulnerabilities detected",
+      "offset": 353440,
+      "duration": 6400
+    },
+    {
+      "text": "are decorated right back into your pr",
+      "offset": 355759,
+      "duration": 4081
+    },
+    {
+      "text": "okay let's take a closer look",
+      "offset": 360720,
+      "duration": 3680
+    },
+    {
+      "text": "here we have an open pull request in",
+      "offset": 365039,
+      "duration": 4081
+    },
+    {
+      "text": "github",
+      "offset": 368000,
+      "duration": 2720
+    },
+    {
+      "text": "and you can see that we natively support",
+      "offset": 369120,
+      "duration": 3840
+    },
+    {
+      "text": "github checks and depending upon the",
+      "offset": 370720,
+      "duration": 4800
+    },
+    {
+      "text": "policies configured",
+      "offset": 372960,
+      "duration": 4400
+    },
+    {
+      "text": "we can even prevent emerge when you have",
+      "offset": 375520,
+      "duration": 3600
+    },
+    {
+      "text": "a failing quality gate",
+      "offset": 377360,
+      "duration": 4640
+    },
+    {
+      "text": "and that's exactly what we have here the",
+      "offset": 379120,
+      "duration": 4320
+    },
+    {
+      "text": "particular quality",
+      "offset": 382000,
+      "duration": 3280
+    },
+    {
+      "text": "gate profile that we have set up",
+      "offset": 383440,
+      "duration": 3360
+    },
+    {
+      "text": "requires 100",
+      "offset": 385280,
+      "duration": 4400
+    },
+    {
+      "text": "review of security hotspots and we have",
+      "offset": 386800,
+      "duration": 3600
+    },
+    {
+      "text": "a single",
+      "offset": 389680,
+      "duration": 3760
+    },
+    {
+      "text": "security hotspot that's unreviewed",
+      "offset": 390400,
+      "duration": 4560
+    },
+    {
+      "text": "okay so we've got some work to do to",
+      "offset": 393440,
+      "duration": 3920
+    },
+    {
+      "text": "investigate this so let's drill down",
+      "offset": 394960,
+      "duration": 4079
+    },
+    {
+      "text": "and get more details on this and that's",
+      "offset": 397360,
+      "duration": 5279
+    },
+    {
+      "text": "easy to do by clicking right here",
+      "offset": 399039,
+      "duration": 3600
+    },
+    {
+      "text": "which will open up sonar cube",
+      "offset": 403039,
+      "duration": 5121
+    },
+    {
+      "text": "notice that you see the same code",
+      "offset": 406240,
+      "duration": 3120
+    },
+    {
+      "text": "quality",
+      "offset": 408160,
+      "duration": 4720
+    },
+    {
+      "text": "metrics in sonar cube as what you saw",
+      "offset": 409360,
+      "duration": 6080
+    },
+    {
+      "text": "in the github decoration and so here's",
+      "offset": 412880,
+      "duration": 4159
+    },
+    {
+      "text": "that security hotspot that we need to",
+      "offset": 415440,
+      "duration": 3520
+    },
+    {
+      "text": "take a look at",
+      "offset": 417039,
+      "duration": 4801
+    },
+    {
+      "text": "so we click on that it takes us into a",
+      "offset": 418960,
+      "duration": 4799
+    },
+    {
+      "text": "dedicated security hotspot",
+      "offset": 421840,
+      "duration": 4639
+    },
+    {
+      "text": "view a security hotspot is a snippet of",
+      "offset": 423759,
+      "duration": 3201
+    },
+    {
+      "text": "code",
+      "offset": 426479,
+      "duration": 2401
+    },
+    {
+      "text": "that may or may not be a vulnerability",
+      "offset": 426960,
+      "duration": 3600
+    },
+    {
+      "text": "it needs a little bit of investigation",
+      "offset": 428880,
+      "duration": 2719
+    },
+    {
+      "text": "to determine",
+      "offset": 430560,
+      "duration": 4079
+    },
+    {
+      "text": "whether or not it is a vulnerability so",
+      "offset": 431599,
+      "duration": 4481
+    },
+    {
+      "text": "in this case we have a potential",
+      "offset": 434639,
+      "duration": 4321
+    },
+    {
+      "text": "vulnerability in a cross site request",
+      "offset": 436080,
+      "duration": 4160
+    },
+    {
+      "text": "forgery",
+      "offset": 438960,
+      "duration": 4959
+    },
+    {
+      "text": "okay so as a developer i would review my",
+      "offset": 440240,
+      "duration": 4640
+    },
+    {
+      "text": "code with the pier",
+      "offset": 443919,
+      "duration": 2641
+    },
+    {
+      "text": "and i would triage the hotspot",
+      "offset": 444880,
+      "duration": 3439
+    },
+    {
+      "text": "accordingly",
+      "offset": 446560,
+      "duration": 3199
+    },
+    {
+      "text": "now for this demo we're going to go",
+      "offset": 448319,
+      "duration": 3600
+    },
+    {
+      "text": "ahead and mark that as safe",
+      "offset": 449759,
+      "duration": 5440
+    },
+    {
+      "text": "we'll change that status and boom there",
+      "offset": 451919,
+      "duration": 4081
+    },
+    {
+      "text": "you go",
+      "offset": 455199,
+      "duration": 4560
+    },
+    {
+      "text": "no more security hotspots to review",
+      "offset": 456000,
+      "duration": 5360
+    },
+    {
+      "text": "and in fact if we go back and take a",
+      "offset": 459759,
+      "duration": 3761
+    },
+    {
+      "text": "look at that pr that we opened",
+      "offset": 461360,
+      "duration": 4239
+    },
+    {
+      "text": "we can now see that we've dynamically",
+      "offset": 463520,
+      "duration": 3280
+    },
+    {
+      "text": "updated",
+      "offset": 465599,
+      "duration": 3761
+    },
+    {
+      "text": "we have a passing quality gate that's",
+      "offset": 466800,
+      "duration": 4560
+    },
+    {
+      "text": "great that's fantastic because now",
+      "offset": 469360,
+      "duration": 5600
+    },
+    {
+      "text": "we can merge this code with confidence",
+      "offset": 471360,
+      "duration": 7279
+    },
+    {
+      "text": "okay now before i leave the confines of",
+      "offset": 474960,
+      "duration": 6880
+    },
+    {
+      "text": "github and sonar cube i'd like to show",
+      "offset": 478639,
+      "duration": 5761
+    },
+    {
+      "text": "you a couple more things",
+      "offset": 481840,
+      "duration": 5199
+    },
+    {
+      "text": "this is the project page on next and",
+      "offset": 484400,
+      "duration": 3040
+    },
+    {
+      "text": "next",
+      "offset": 487039,
+      "duration": 2481
+    },
+    {
+      "text": "is our dog food instance of sonar cube",
+      "offset": 487440,
+      "duration": 4080
+    },
+    {
+      "text": "that's running the latest build",
+      "offset": 489520,
+      "duration": 4560
+    },
+    {
+      "text": "so let's find a project an interesting",
+      "offset": 491520,
+      "duration": 5040
+    },
+    {
+      "text": "project",
+      "offset": 494080,
+      "duration": 6000
+    },
+    {
+      "text": "how about the python analyzer",
+      "offset": 496560,
+      "duration": 3520
+    },
+    {
+      "text": "for those familiar with solar cube",
+      "offset": 500240,
+      "duration": 3760
+    },
+    {
+      "text": "you'll recognize this as the issues on",
+      "offset": 501599,
+      "duration": 4801
+    },
+    {
+      "text": "new code on the master branch",
+      "offset": 504000,
+      "duration": 4080
+    },
+    {
+      "text": "this new code period started three days",
+      "offset": 506400,
+      "duration": 3919
+    },
+    {
+      "text": "ago and it's tracking the code quality",
+      "offset": 508080,
+      "duration": 4720
+    },
+    {
+      "text": "on new or changed code coming in from",
+      "offset": 510319,
+      "duration": 3361
+    },
+    {
+      "text": "those pr's",
+      "offset": 512800,
+      "duration": 3039
+    },
+    {
+      "text": "since the period started and this is a",
+      "offset": 513680,
+      "duration": 4479
+    },
+    {
+      "text": "key concept to tracking a clean master",
+      "offset": 515839,
+      "duration": 4560
+    },
+    {
+      "text": "and what we at sonar source call",
+      "offset": 518159,
+      "duration": 4560
+    },
+    {
+      "text": "clean as you code now starting with",
+      "offset": 520399,
+      "duration": 4641
+    },
+    {
+      "text": "developer edition",
+      "offset": 522719,
+      "duration": 4001
+    },
+    {
+      "text": "we have this drop down that gives you",
+      "offset": 525040,
+      "duration": 3680
+    },
+    {
+      "text": "access to all the poll requests and",
+      "offset": 526720,
+      "duration": 2640
+    },
+    {
+      "text": "branches",
+      "offset": 528720,
+      "duration": 2400
+    },
+    {
+      "text": "that are currently relevant for this",
+      "offset": 529360,
+      "duration": 3599
+    },
+    {
+      "text": "project so in the spirit of write",
+      "offset": 531120,
+      "duration": 2880
+    },
+    {
+      "text": "information right",
+      "offset": 532959,
+      "duration": 3361
+    },
+    {
+      "text": "time in right place this gives you easy",
+      "offset": 534000,
+      "duration": 4320
+    },
+    {
+      "text": "access to the analysis against",
+      "offset": 536320,
+      "duration": 3840
+    },
+    {
+      "text": "all the prs and branches that are",
+      "offset": 538320,
+      "duration": 3519
+    },
+    {
+      "text": "occurring in this project",
+      "offset": 540160,
+      "duration": 5200
+    },
+    {
+      "text": "now if we open one of these prs",
+      "offset": 541839,
+      "duration": 3521
+    },
+    {
+      "text": "you'll notice we give you a clean narrow",
+      "offset": 545440,
+      "duration": 5360
+    },
+    {
+      "text": "down focused view on what really matters",
+      "offset": 547920,
+      "duration": 5359
+    },
+    {
+      "text": "and one last thing to show you if we",
+      "offset": 550800,
+      "duration": 6000
+    },
+    {
+      "text": "click up here where it says see the pr",
+      "offset": 553279,
+      "duration": 3521
+    },
+    {
+      "text": "we can open up that pr back in github",
+      "offset": 557440,
+      "duration": 4880
+    },
+    {
+      "text": "and so here you can see",
+      "offset": 560399,
+      "duration": 3841
+    },
+    {
+      "text": "if we scroll down that we're on the",
+      "offset": 562320,
+      "duration": 4959
+    },
+    {
+      "text": "conversations tab",
+      "offset": 564240,
+      "duration": 3039
+    },
+    {
+      "text": "and we've decorated from sonar source",
+      "offset": 570000,
+      "duration": 5040
+    },
+    {
+      "text": "next kudos passing quality gate",
+      "offset": 572000,
+      "duration": 5279
+    },
+    {
+      "text": "we added this feature of commenting and",
+      "offset": 575040,
+      "duration": 4640
+    },
+    {
+      "text": "the conversation tab on github",
+      "offset": 577279,
+      "duration": 6081
+    },
+    {
+      "text": "and version sonarcube 8.3",
+      "offset": 579680,
+      "duration": 5599
+    },
+    {
+      "text": "and if we go back and navigate over to",
+      "offset": 583360,
+      "duration": 4320
+    },
+    {
+      "text": "checks",
+      "offset": 585279,
+      "duration": 2401
+    },
+    {
+      "text": "you'll see that we've come full circle",
+      "offset": 589440,
+      "duration": 3600
+    },
+    {
+      "text": "we're back to the view that we started",
+      "offset": 591600,
+      "duration": 2080
+    },
+    {
+      "text": "with",
+      "offset": 593040,
+      "duration": 2720
+    },
+    {
+      "text": "and how easy it is to navigate issues",
+      "offset": 593680,
+      "duration": 4960
+    },
+    {
+      "text": "and see all the relative",
+      "offset": 595760,
+      "duration": 4960
+    },
+    {
+      "text": "relative information based on the links",
+      "offset": 598640,
+      "duration": 3680
+    },
+    {
+      "text": "that are available to you",
+      "offset": 600720,
+      "duration": 5119
+    },
+    {
+      "text": "so let's continue with the presentation",
+      "offset": 602320,
+      "duration": 3519
+    },
+    {
+      "text": "now i'm not going to show you this",
+      "offset": 608000,
+      "duration": 4160
+    },
+    {
+      "text": "functionality in all four alms",
+      "offset": 609680,
+      "duration": 4480
+    },
+    {
+      "text": "as the functionality is similar across",
+      "offset": 612160,
+      "duration": 4160
+    },
+    {
+      "text": "all four however i can show you some",
+      "offset": 614160,
+      "duration": 4880
+    },
+    {
+      "text": "quick screenshots so here we see",
+      "offset": 616320,
+      "duration": 5519
+    },
+    {
+      "text": "what we just viewed in github here we",
+      "offset": 619040,
+      "duration": 4960
+    },
+    {
+      "text": "see a decoration in azure dev ops we can",
+      "offset": 621839,
+      "duration": 3841
+    },
+    {
+      "text": "see on the right hand side here we have",
+      "offset": 624000,
+      "duration": 2320
+    },
+    {
+      "text": "a failed",
+      "offset": 625680,
+      "duration": 4159
+    },
+    {
+      "text": "quality gate if we move on we can see",
+      "offset": 626320,
+      "duration": 5120
+    },
+    {
+      "text": "the same thing in bitbucket",
+      "offset": 629839,
+      "duration": 3841
+    },
+    {
+      "text": "here the qualitygate is on the left also",
+      "offset": 631440,
+      "duration": 3040
+    },
+    {
+      "text": "a failure",
+      "offset": 633680,
+      "duration": 2399
+    },
+    {
+      "text": "we also have the code quality metrics",
+      "offset": 634480,
+      "duration": 4240
+    },
+    {
+      "text": "included and then finally",
+      "offset": 636079,
+      "duration": 5921
+    },
+    {
+      "text": "in gitlab failed qualitygate and that's",
+      "offset": 638720,
+      "duration": 4000
+    },
+    {
+      "text": "due to five",
+      "offset": 642000,
+      "duration": 5600
+    },
+    {
+      "text": "unreviewed security hotspots",
+      "offset": 642720,
+      "duration": 6559
+    },
+    {
+      "text": "so you can see we're bringing a",
+      "offset": 647600,
+      "duration": 3040
+    },
+    {
+      "text": "consistent",
+      "offset": 649279,
+      "duration": 4000
+    },
+    {
+      "text": "valuable feature set for all of the alms",
+      "offset": 650640,
+      "duration": 3439
+    },
+    {
+      "text": "with every",
+      "offset": 653279,
+      "duration": 4721
+    },
+    {
+      "text": "pull request we're giving you a clear",
+      "offset": 654079,
+      "duration": 4961
+    },
+    {
+      "text": "quality gate",
+      "offset": 658000,
+      "duration": 4320
+    },
+    {
+      "text": "in the pull request as well as detection",
+      "offset": 659040,
+      "duration": 6720
+    },
+    {
+      "text": "of bugs code smells and vulnerabilities",
+      "offset": 662320,
+      "duration": 5440
+    },
+    {
+      "text": "you saw that we're able to drill down on",
+      "offset": 665760,
+      "duration": 3040
+    },
+    {
+      "text": "an issue",
+      "offset": 667760,
+      "duration": 4400
+    },
+    {
+      "text": "in sonar cube and in fact",
+      "offset": 668800,
+      "duration": 4880
+    },
+    {
+      "text": "then when we change the status of an",
+      "offset": 672160,
+      "duration": 3359
+    },
+    {
+      "text": "issue that gave us a live update",
+      "offset": 673680,
+      "duration": 4399
+    },
+    {
+      "text": "back into our pull request in github you",
+      "offset": 675519,
+      "duration": 4801
+    },
+    {
+      "text": "also saw the ability to block a merge",
+      "offset": 678079,
+      "duration": 4401
+    },
+    {
+      "text": "based on your quality gate profile in",
+      "offset": 680320,
+      "duration": 3759
+    },
+    {
+      "text": "this case we blocked because we had an",
+      "offset": 682480,
+      "duration": 2640
+    },
+    {
+      "text": "unreviewed",
+      "offset": 684079,
+      "duration": 4161
+    },
+    {
+      "text": "security hotspot and of course you saw",
+      "offset": 685120,
+      "duration": 6560
+    },
+    {
+      "text": "the multiple alm support",
+      "offset": 688240,
+      "duration": 3440
+    },
+    {
+      "text": "okay we have we have four additions to",
+      "offset": 692079,
+      "duration": 3681
+    },
+    {
+      "text": "fit every use case",
+      "offset": 694399,
+      "duration": 4321
+    },
+    {
+      "text": "starting with community edition",
+      "offset": 695760,
+      "duration": 4160
+    },
+    {
+      "text": "community edition",
+      "offset": 698720,
+      "duration": 3760
+    },
+    {
+      "text": "is free and open source it's used by",
+      "offset": 699920,
+      "duration": 5039
+    },
+    {
+      "text": "thousands of companies and organizations",
+      "offset": 702480,
+      "duration": 5520
+    },
+    {
+      "text": "and it supports 15 languages",
+      "offset": 704959,
+      "duration": 5680
+    },
+    {
+      "text": "branch analysis and the pr decoration",
+      "offset": 708000,
+      "duration": 4240
+    },
+    {
+      "text": "feature that we've been looking at here",
+      "offset": 710639,
+      "duration": 2081
+    },
+    {
+      "text": "today",
+      "offset": 712240,
+      "duration": 3920
+    },
+    {
+      "text": "starts with developer edition we also",
+      "offset": 712720,
+      "duration": 3919
+    },
+    {
+      "text": "have",
+      "offset": 716160,
+      "duration": 2960
+    },
+    {
+      "text": "enterprise and data center editions for",
+      "offset": 716639,
+      "duration": 5841
+    },
+    {
+      "text": "more advanced use cases",
+      "offset": 719120,
+      "duration": 3360
+    },
+    {
+      "text": "so let's summarize what we covered",
+      "offset": 722800,
+      "duration": 6039
+    },
+    {
+      "text": "built for developers and development",
+      "offset": 726160,
+      "duration": 4000
+    },
+    {
+      "text": "teams",
+      "offset": 728839,
+      "duration": 2680
+    },
+    {
+      "text": "it's all about giving you the right",
+      "offset": 730160,
+      "duration": 3359
+    },
+    {
+      "text": "information at the right place",
+      "offset": 731519,
+      "duration": 6081
+    },
+    {
+      "text": "and in the right time at the right time",
+      "offset": 733519,
+      "duration": 4081
+    },
+    {
+      "text": "we definitely are all about keeping",
+      "offset": 737920,
+      "duration": 4919
+    },
+    {
+      "text": "noise down and minimizing the context",
+      "offset": 739920,
+      "duration": 5680
+    },
+    {
+      "text": "switching",
+      "offset": 742839,
+      "duration": 4841
+    },
+    {
+      "text": "it's giving you a clear quality gate",
+      "offset": 745600,
+      "duration": 4239
+    },
+    {
+      "text": "status so you know whether or not you",
+      "offset": 747680,
+      "duration": 5920
+    },
+    {
+      "text": "can merge that code with confidence",
+      "offset": 749839,
+      "duration": 3761
+    },
+    {
+      "text": "and then finally this is all possible",
+      "offset": 754720,
+      "duration": 3840
+    },
+    {
+      "text": "because of a tight integration with our",
+      "offset": 756959,
+      "duration": 4081
+    },
+    {
+      "text": "partners",
+      "offset": 758560,
+      "duration": 2480
+    },
+    {
+      "text": "now we're not done adding value future",
+      "offset": 763680,
+      "duration": 3839
+    },
+    {
+      "text": "sonar cue versions will add even more",
+      "offset": 765680,
+      "duration": 4000
+    },
+    {
+      "text": "good vibes and keep you writing clean",
+      "offset": 767519,
+      "duration": 4721
+    },
+    {
+      "text": "code now there's more to discover on the",
+      "offset": 769680,
+      "duration": 3440
+    },
+    {
+      "text": "home page",
+      "offset": 772240,
+      "duration": 3440
+    },
+    {
+      "text": "at sonarcube.org and we also have an",
+      "offset": 773120,
+      "duration": 4159
+    },
+    {
+      "text": "active community forum where you can get",
+      "offset": 775680,
+      "duration": 2640
+    },
+    {
+      "text": "product updates",
+      "offset": 777279,
+      "duration": 5360
+    },
+    {
+      "text": "request help and even offer feature",
+      "offset": 778320,
+      "duration": 4319
+    },
+    {
+      "text": "suggestions",
+      "offset": 784839,
+      "duration": 4761
+    },
+    {
+      "text": "okay looks like we have some time uh for",
+      "offset": 786560,
+      "duration": 4800
+    },
+    {
+      "text": "a couple questions so i'm going to turn",
+      "offset": 789600,
+      "duration": 3760
+    },
+    {
+      "text": "things back over to elsa",
+      "offset": 791360,
+      "duration": 3520
+    },
+    {
+      "text": "while i look over the questions coming",
+      "offset": 793360,
+      "duration": 3120
+    },
+    {
+      "text": "in yeah",
+      "offset": 794880,
+      "duration": 4320
+    },
+    {
+      "text": "absolutely thanks clint check out our uh",
+      "offset": 796480,
+      "duration": 3840
+    },
+    {
+      "text": "community uh",
+      "offset": 799200,
+      "duration": 3600
+    },
+    {
+      "text": "there we'll also put the uh recording",
+      "offset": 800320,
+      "duration": 4000
+    },
+    {
+      "text": "and the questions there",
+      "offset": 802800,
+      "duration": 3440
+    },
+    {
+      "text": "um and also it's just a great place to",
+      "offset": 804320,
+      "duration": 3519
+    },
+    {
+      "text": "ask some of these questions",
+      "offset": 806240,
+      "duration": 3760
+    },
+    {
+      "text": "uh and communicate with other developers",
+      "offset": 807839,
+      "duration": 3680
+    },
+    {
+      "text": "and sonar source",
+      "offset": 810000,
+      "duration": 4240
+    },
+    {
+      "text": "employees and finally for more",
+      "offset": 811519,
+      "duration": 4401
+    },
+    {
+      "text": "information on what clint just covered",
+      "offset": 814240,
+      "duration": 4560
+    },
+    {
+      "text": "check out centercube.sonarcube.org",
+      "offset": 815920,
+      "duration": 5120
+    },
+    {
+      "text": "for dedicated information on all of the",
+      "offset": 818800,
+      "duration": 4000
+    },
+    {
+      "text": "integrations for each alm",
+      "offset": 821040,
+      "duration": 3520
+    },
+    {
+      "text": "um as well as our downloads page that",
+      "offset": 822800,
+      "duration": 3520
+    },
+    {
+      "text": "features all the additions that clint",
+      "offset": 824560,
+      "duration": 2719
+    },
+    {
+      "text": "just covered",
+      "offset": 826320,
+      "duration": 2879
+    },
+    {
+      "text": "um you can easily request a free trial",
+      "offset": 827279,
+      "duration": 3761
+    },
+    {
+      "text": "of developer enterprise edition to get",
+      "offset": 829199,
+      "duration": 3440
+    },
+    {
+      "text": "started today",
+      "offset": 831040,
+      "duration": 4080
+    },
+    {
+      "text": "okay clint uh we do definitely have a",
+      "offset": 832639,
+      "duration": 4000
+    },
+    {
+      "text": "few more minutes any questions you want",
+      "offset": 835120,
+      "duration": 2000
+    },
+    {
+      "text": "to cover",
+      "offset": 836639,
+      "duration": 3760
+    },
+    {
+      "text": "live here on the call",
+      "offset": 837120,
+      "duration": 3279
+    },
+    {
+      "text": "yeah i'm just taking a look here at",
+      "offset": 841600,
+      "duration": 3919
+    },
+    {
+      "text": "things coming in um",
+      "offset": 843279,
+      "duration": 5360
+    },
+    {
+      "text": "it's a question about using uh",
+      "offset": 845519,
+      "duration": 5601
+    },
+    {
+      "text": "analysis for c application and standards",
+      "offset": 848639,
+      "duration": 3121
+    },
+    {
+      "text": "like uh",
+      "offset": 851120,
+      "duration": 4399
+    },
+    {
+      "text": "misra and so yes we do we do have a c",
+      "offset": 851760,
+      "duration": 6319
+    },
+    {
+      "text": "c plus plus analyzer that actually",
+      "offset": 855519,
+      "duration": 3120
+    },
+    {
+      "text": "starts",
+      "offset": 858079,
+      "duration": 4161
+    },
+    {
+      "text": "that comes with developer edition um",
+      "offset": 858639,
+      "duration": 6281
+    },
+    {
+      "text": "we have a website called",
+      "offset": 862240,
+      "duration": 4320
+    },
+    {
+      "text": "rules.sonarsource.com",
+      "offset": 864920,
+      "duration": 4359
+    },
+    {
+      "text": "and there you can see all of the is",
+      "offset": 866560,
+      "duration": 3440
+    },
+    {
+      "text": "supported for",
+      "offset": 869279,
+      "duration": 4000
+    },
+    {
+      "text": "sonar cube it's 27 languages and so",
+      "offset": 870000,
+      "duration": 5600
+    },
+    {
+      "text": "there's uh 15 languages that come with",
+      "offset": 873279,
+      "duration": 3360
+    },
+    {
+      "text": "community",
+      "offset": 875600,
+      "duration": 2160
+    },
+    {
+      "text": "there's a few more that come with",
+      "offset": 876639,
+      "duration": 3361
+    },
+    {
+      "text": "developer and then enterprise",
+      "offset": 877760,
+      "duration": 4079
+    },
+    {
+      "text": "as just a few more beyond that but you",
+      "offset": 880000,
+      "duration": 3720
+    },
+    {
+      "text": "can get all the information at",
+      "offset": 881839,
+      "duration": 3281
+    },
+    {
+      "text": "rules.sonarsource.com",
+      "offset": 883720,
+      "duration": 3479
+    },
+    {
+      "text": "and yes we definitely can analyze c and",
+      "offset": 885120,
+      "duration": 3120
+    },
+    {
+      "text": "c plus",
+      "offset": 887199,
+      "duration": 4801
+    },
+    {
+      "text": "and we do support mr standards",
+      "offset": 888240,
+      "duration": 3760
+    },
+    {
+      "text": "okay let's see here",
+      "offset": 892480,
+      "duration": 3440
+    },
+    {
+      "text": "question about integrating a single",
+      "offset": 896560,
+      "duration": 4800
+    },
+    {
+      "text": "instance of sonar cube to multiple alms",
+      "offset": 898000,
+      "duration": 6639
+    },
+    {
+      "text": "uh yes we can support multiple alms um",
+      "offset": 901360,
+      "duration": 5839
+    },
+    {
+      "text": "question about is git lab supported on",
+      "offset": 904639,
+      "duration": 4880
+    },
+    {
+      "text": "both on-prem and cloud",
+      "offset": 907199,
+      "duration": 4801
+    },
+    {
+      "text": "and so for git lab in fact it is you can",
+      "offset": 909519,
+      "duration": 4641
+    },
+    {
+      "text": "connect sonarq",
+      "offset": 912000,
+      "duration": 4560
+    },
+    {
+      "text": "to your gitlab on-premises or your git",
+      "offset": 914160,
+      "duration": 4960
+    },
+    {
+      "text": "lab cloud version",
+      "offset": 916560,
+      "duration": 5120
+    },
+    {
+      "text": "there's a question about cost involved",
+      "offset": 919120,
+      "duration": 4480
+    },
+    {
+      "text": "with this feature and so yes",
+      "offset": 921680,
+      "duration": 3920
+    },
+    {
+      "text": "community edition is free it's open",
+      "offset": 923600,
+      "duration": 3120
+    },
+    {
+      "text": "source",
+      "offset": 925600,
+      "duration": 3679
+    },
+    {
+      "text": "developer enterprise and the data center",
+      "offset": 926720,
+      "duration": 3760
+    },
+    {
+      "text": "editions",
+      "offset": 929279,
+      "duration": 3441
+    },
+    {
+      "text": "are commercial uh products they do have",
+      "offset": 930480,
+      "duration": 4000
+    },
+    {
+      "text": "a licensing charge you can get all that",
+      "offset": 932720,
+      "duration": 2640
+    },
+    {
+      "text": "information",
+      "offset": 934480,
+      "duration": 4159
+    },
+    {
+      "text": "online and see our pricing",
+      "offset": 935360,
+      "duration": 4640
+    },
+    {
+      "text": "and get further further information",
+      "offset": 938639,
+      "duration": 2640
+    },
+    {
+      "text": "there and again i want to i'm going to",
+      "offset": 940000,
+      "duration": 3920
+    },
+    {
+      "text": "stress that you can get a free trial",
+      "offset": 941279,
+      "duration": 5521
+    },
+    {
+      "text": "online at sonarcube.org it's easy to",
+      "offset": 943920,
+      "duration": 4000
+    },
+    {
+      "text": "request that",
+      "offset": 946800,
+      "duration": 3599
+    },
+    {
+      "text": "i believe the trial is two weeks so",
+      "offset": 947920,
+      "duration": 4320
+    },
+    {
+      "text": "plenty of time to take a look at things",
+      "offset": 950399,
+      "duration": 3680
+    },
+    {
+      "text": "and",
+      "offset": 952240,
+      "duration": 4560
+    },
+    {
+      "text": "check it out okay i think there's a",
+      "offset": 954079,
+      "duration": 3601
+    },
+    {
+      "text": "question about",
+      "offset": 956800,
+      "duration": 4560
+    },
+    {
+      "text": "should um should every pr be analyzed",
+      "offset": 957680,
+      "duration": 6480
+    },
+    {
+      "text": "yes that's the recommendation so if you",
+      "offset": 961360,
+      "duration": 4640
+    },
+    {
+      "text": "if you recall my mentioning of what we",
+      "offset": 964160,
+      "duration": 4400
+    },
+    {
+      "text": "call clean as you code essentially that",
+      "offset": 966000,
+      "duration": 3360
+    },
+    {
+      "text": "means that",
+      "offset": 968560,
+      "duration": 3120
+    },
+    {
+      "text": "you establish a new code period meaning",
+      "offset": 969360,
+      "duration": 3520
+    },
+    {
+      "text": "that",
+      "offset": 971680,
+      "duration": 4320
+    },
+    {
+      "text": "we're going to track new or changed code",
+      "offset": 972880,
+      "duration": 4800
+    },
+    {
+      "text": "over a period of time and typically that",
+      "offset": 976000,
+      "duration": 3120
+    },
+    {
+      "text": "new code period is",
+      "offset": 977680,
+      "duration": 3519
+    },
+    {
+      "text": "maybe since the last version or maybe",
+      "offset": 979120,
+      "duration": 3040
+    },
+    {
+      "text": "that's",
+      "offset": 981199,
+      "duration": 3601
+    },
+    {
+      "text": "your your next sprint and if we don't",
+      "offset": 982160,
+      "duration": 4640
+    },
+    {
+      "text": "introduce any code issues",
+      "offset": 984800,
+      "duration": 3680
+    },
+    {
+      "text": "over this new code period then we're",
+      "offset": 986800,
+      "duration": 4080
+    },
+    {
+      "text": "keeping and if not only keeping things",
+      "offset": 988480,
+      "duration": 3599
+    },
+    {
+      "text": "clean but really we're going to be",
+      "offset": 990880,
+      "duration": 3199
+    },
+    {
+      "text": "improving things in the master and if we",
+      "offset": 992079,
+      "duration": 3281
+    },
+    {
+      "text": "always do that",
+      "offset": 994079,
+      "duration": 3041
+    },
+    {
+      "text": "then we're always improving things and",
+      "offset": 995360,
+      "duration": 3360
+    },
+    {
+      "text": "so that starts with",
+      "offset": 997120,
+      "duration": 3920
+    },
+    {
+      "text": "you know in your ide finding things with",
+      "offset": 998720,
+      "duration": 4239
+    },
+    {
+      "text": "sonarland in your ide and then when you",
+      "offset": 1001040,
+      "duration": 3760
+    },
+    {
+      "text": "open that pull request",
+      "offset": 1002959,
+      "duration": 3281
+    },
+    {
+      "text": "we're going to want to analyze that",
+      "offset": 1004800,
+      "duration": 3520
+    },
+    {
+      "text": "because then that is going to find",
+      "offset": 1006240,
+      "duration": 3200
+    },
+    {
+      "text": "you're going to merge that back into",
+      "offset": 1008320,
+      "duration": 2800
+    },
+    {
+      "text": "master and so the only way to keep your",
+      "offset": 1009440,
+      "duration": 3199
+    },
+    {
+      "text": "master",
+      "offset": 1011120,
+      "duration": 3760
+    },
+    {
+      "text": "super clean and tidy is is checking out",
+      "offset": 1012639,
+      "duration": 4880
+    },
+    {
+      "text": "those pr's",
+      "offset": 1014880,
+      "duration": 2639
+    },
+    {
+      "text": "okay let's see if we have another",
+      "offset": 1018959,
+      "duration": 6880
+    },
+    {
+      "text": "question or two here",
+      "offset": 1020320,
+      "duration": 5519
+    },
+    {
+      "text": "question about bitbucket cloud support",
+      "offset": 1028000,
+      "duration": 3679
+    },
+    {
+      "text": "oh",
+      "offset": 1030400,
+      "duration": 4880
+    },
+    {
+      "text": "i should definitely know this um",
+      "offset": 1031679,
+      "duration": 5601
+    },
+    {
+      "text": "i gotta tell you i can't recall right",
+      "offset": 1035280,
+      "duration": 3600
+    },
+    {
+      "text": "offhand",
+      "offset": 1037280,
+      "duration": 4480
+    },
+    {
+      "text": "but i don't think it is so uh bitbucket",
+      "offset": 1038880,
+      "duration": 3679
+    },
+    {
+      "text": "cloud",
+      "offset": 1041760,
+      "duration": 4000
+    },
+    {
+      "text": "no for now it is on our roadmap",
+      "offset": 1042559,
+      "duration": 4880
+    },
+    {
+      "text": "i don't have a time frame for when we",
+      "offset": 1045760,
+      "duration": 3440
+    },
+    {
+      "text": "would support bitbucket cloud",
+      "offset": 1047439,
+      "duration": 7120
+    },
+    {
+      "text": "but we are it is on a road map",
+      "offset": 1049200,
+      "duration": 5359
+    },
+    {
+      "text": "okay i think that that wraps it up for",
+      "offset": 1059919,
+      "duration": 3921
+    },
+    {
+      "text": "the questions",
+      "offset": 1062880,
+      "duration": 3440
+    },
+    {
+      "text": "um as elsa mentioned we'll we'll take a",
+      "offset": 1063840,
+      "duration": 4480
+    },
+    {
+      "text": "look um if there's any that we missed",
+      "offset": 1066320,
+      "duration": 4880
+    },
+    {
+      "text": "and if there's any um we'll provide",
+      "offset": 1068320,
+      "duration": 6160
+    },
+    {
+      "text": "those answers to you folks",
+      "offset": 1071200,
+      "duration": 3280
+    },
+    {
+      "text": "and so i think that's uh that's that's",
+      "offset": 1075360,
+      "duration": 3120
+    },
+    {
+      "text": "it for us",
+      "offset": 1077600,
+      "duration": 2880
+    },
+    {
+      "text": "thank you for joining we appreciate it",
+      "offset": 1078480,
+      "duration": 4480
+    },
+    {
+      "text": "look for more webinars in the future",
+      "offset": 1080480,
+      "duration": 5760
+    },
+    {
+      "text": "from sonarsource and",
+      "offset": 1082960,
+      "duration": 9040
+    },
+    {
+      "text": "thank you very much thanks everyone",
+      "offset": 1086240,
+      "duration": 5760
+    }
+  ],
+  "fullText": "thanks everyone for joining today we're going to talk about how sonar cube integrates into your development workflow and how that's valuable for your team now for those not familiar with sonar source or sonar cube let me briefly touch on our mission and that is that every developer and development team uses sonar source products for their code quality and security since the beginning our products have been made by developers for developers we want every developer to be able to use them and we want them to be a part of that development process we want things to be simple and transparent and we want accuracy in what we provide and to always be helpful and so the end goal is that every developer writes clean safe quality code every day okay if we talk about coding practices today developers love to write better code and today they want to get feedback during code review and there are some standard tooling and processes that developers nowadays use for that code review they're creating branches for new features and for bug fixes they ask for feedback from their teammates to find problems and to improve their code and they're doing that in their alm tools github azure devops bitbucket and gitlab now where's the right place to deliver value well we believe that is the alm and it's the standard expectation here this is where developers are tracking code and where they're submitting changes for review so there's no doubt developers spend a lot of time in their alm and they're using pull requests full requests are where developers are already discussing about code quality and the validity of a code change and so it's only natural for sonar cube to provide feedback there and for some time now that's exactly where we focused our development efforts we started back in sonarcube version 7 with branch analysis and from there we improved our integration to include pr decoration for all four of the alms that you saw earlier we're on version 8.3 now and this latest release is where you can find the complete set of functionality that we're discussing here today so it's important to add value in the right place and that's the pull request now the right data is just as important and that's where we leverage the value of the sonar cube static analysis and its ability to detect issues and vulnerability in your code and does it make sense to stop there let's make the analysis integral to the workflow now we didn't develop this in a vacuum we knew we knew value could only come from strong relationships and we leveraged strong partnerships to build tight integrations as i mentioned previously sonar source is a product first company and so that means we also focused on product first partnerships now let's stop here i'd love to find out what tools alm tools folks are using so we're going to actually launch a second poll let me get that to you folks okay so if you could let us know the tools that you're using i guess it would be the predominant tool if you're using more than one lots of votes coming in so we'll give this a few more seconds then we can all take a look all right just a couple more seconds if you uh if you'd like to vote please do so now okay i think things have trickled off so here we go we actually have a pretty even distribution looks like github is is a bit ahead of the other folks in uh popularity at 38 percent but great representation really for all four so thanks for voting appreciate that all right so let's get back to things here so we talked about the product first partnerships um what we wanted to do was build what makes sense for the user and of course unlock the great ux that our partners had already built into their tools and in doing that we could combine the best of both worlds so a little bit about our partners they even come and ask us to participate in feature launches like github actions and they talk about us in their communities these companies know us well and they're talking about us during their keynotes we collaborate with them on code quality and security best practices and we even get recognized as a top publisher and of course we're happy to receive good vibes from our newest integration with gitlab so let's see firsthand how sonarcube integrates with the alms and what it can do for your prs i'd like to mention that this feature is available starting with developer edition and it's easy to request a free trial online at sonarcube.org now before we see that live demo let's take a quick look at a typical workflow elsa mentioned earlier sonarlin when we started and it's a free and open source ide extension that finds issues on the fly while you're coding okay so let's say we're done with writing our code so we're ready to open up our pr so we do that that kicks off our ci systems to check out and build code and that in turn is going to kick off an automatic sonar cube analysis and when that analysis is complete any bugs and vulnerabilities detected are decorated right back into your pr okay let's take a closer look here we have an open pull request in github and you can see that we natively support github checks and depending upon the policies configured we can even prevent emerge when you have a failing quality gate and that's exactly what we have here the particular quality gate profile that we have set up requires 100 review of security hotspots and we have a single security hotspot that's unreviewed okay so we've got some work to do to investigate this so let's drill down and get more details on this and that's easy to do by clicking right here which will open up sonar cube notice that you see the same code quality metrics in sonar cube as what you saw in the github decoration and so here's that security hotspot that we need to take a look at so we click on that it takes us into a dedicated security hotspot view a security hotspot is a snippet of code that may or may not be a vulnerability it needs a little bit of investigation to determine whether or not it is a vulnerability so in this case we have a potential vulnerability in a cross site request forgery okay so as a developer i would review my code with the pier and i would triage the hotspot accordingly now for this demo we're going to go ahead and mark that as safe we'll change that status and boom there you go no more security hotspots to review and in fact if we go back and take a look at that pr that we opened we can now see that we've dynamically updated we have a passing quality gate that's great that's fantastic because now we can merge this code with confidence okay now before i leave the confines of github and sonar cube i'd like to show you a couple more things this is the project page on next and next is our dog food instance of sonar cube that's running the latest build so let's find a project an interesting project how about the python analyzer for those familiar with solar cube you'll recognize this as the issues on new code on the master branch this new code period started three days ago and it's tracking the code quality on new or changed code coming in from those pr's since the period started and this is a key concept to tracking a clean master and what we at sonar source call clean as you code now starting with developer edition we have this drop down that gives you access to all the poll requests and branches that are currently relevant for this project so in the spirit of write information right time in right place this gives you easy access to the analysis against all the prs and branches that are occurring in this project now if we open one of these prs you'll notice we give you a clean narrow down focused view on what really matters and one last thing to show you if we click up here where it says see the pr we can open up that pr back in github and so here you can see if we scroll down that we're on the conversations tab and we've decorated from sonar source next kudos passing quality gate we added this feature of commenting and the conversation tab on github and version sonarcube 8.3 and if we go back and navigate over to checks you'll see that we've come full circle we're back to the view that we started with and how easy it is to navigate issues and see all the relative relative information based on the links that are available to you so let's continue with the presentation now i'm not going to show you this functionality in all four alms as the functionality is similar across all four however i can show you some quick screenshots so here we see what we just viewed in github here we see a decoration in azure dev ops we can see on the right hand side here we have a failed quality gate if we move on we can see the same thing in bitbucket here the qualitygate is on the left also a failure we also have the code quality metrics included and then finally in gitlab failed qualitygate and that's due to five unreviewed security hotspots so you can see we're bringing a consistent valuable feature set for all of the alms with every pull request we're giving you a clear quality gate in the pull request as well as detection of bugs code smells and vulnerabilities you saw that we're able to drill down on an issue in sonar cube and in fact then when we change the status of an issue that gave us a live update back into our pull request in github you also saw the ability to block a merge based on your quality gate profile in this case we blocked because we had an unreviewed security hotspot and of course you saw the multiple alm support okay we have we have four additions to fit every use case starting with community edition community edition is free and open source it's used by thousands of companies and organizations and it supports 15 languages branch analysis and the pr decoration feature that we've been looking at here today starts with developer edition we also have enterprise and data center editions for more advanced use cases so let's summarize what we covered built for developers and development teams it's all about giving you the right information at the right place and in the right time at the right time we definitely are all about keeping noise down and minimizing the context switching it's giving you a clear quality gate status so you know whether or not you can merge that code with confidence and then finally this is all possible because of a tight integration with our partners now we're not done adding value future sonar cue versions will add even more good vibes and keep you writing clean code now there's more to discover on the home page at sonarcube.org and we also have an active community forum where you can get product updates request help and even offer feature suggestions okay looks like we have some time uh for a couple questions so i'm going to turn things back over to elsa while i look over the questions coming in yeah absolutely thanks clint check out our uh community uh there we'll also put the uh recording and the questions there um and also it's just a great place to ask some of these questions uh and communicate with other developers and sonar source employees and finally for more information on what clint just covered check out centercube.sonarcube.org for dedicated information on all of the integrations for each alm um as well as our downloads page that features all the additions that clint just covered um you can easily request a free trial of developer enterprise edition to get started today okay clint uh we do definitely have a few more minutes any questions you want to cover live here on the call yeah i'm just taking a look here at things coming in um it's a question about using uh analysis for c application and standards like uh misra and so yes we do we do have a c c plus plus analyzer that actually starts that comes with developer edition um we have a website called rules.sonarsource.com and there you can see all of the is supported for sonar cube it's 27 languages and so there's uh 15 languages that come with community there's a few more that come with developer and then enterprise as just a few more beyond that but you can get all the information at rules.sonarsource.com and yes we definitely can analyze c and c plus and we do support mr standards okay let's see here question about integrating a single instance of sonar cube to multiple alms uh yes we can support multiple alms um question about is git lab supported on both on-prem and cloud and so for git lab in fact it is you can connect sonarq to your gitlab on-premises or your git lab cloud version there's a question about cost involved with this feature and so yes community edition is free it's open source developer enterprise and the data center editions are commercial uh products they do have a licensing charge you can get all that information online and see our pricing and get further further information there and again i want to i'm going to stress that you can get a free trial online at sonarcube.org it's easy to request that i believe the trial is two weeks so plenty of time to take a look at things and check it out okay i think there's a question about should um should every pr be analyzed yes that's the recommendation so if you if you recall my mentioning of what we call clean as you code essentially that means that you establish a new code period meaning that we're going to track new or changed code over a period of time and typically that new code period is maybe since the last version or maybe that's your your next sprint and if we don't introduce any code issues over this new code period then we're keeping and if not only keeping things clean but really we're going to be improving things in the master and if we always do that then we're always improving things and so that starts with you know in your ide finding things with sonarland in your ide and then when you open that pull request we're going to want to analyze that because then that is going to find you're going to merge that back into master and so the only way to keep your master super clean and tidy is is checking out those pr's okay let's see if we have another question or two here question about bitbucket cloud support oh i should definitely know this um i gotta tell you i can't recall right offhand but i don't think it is so uh bitbucket cloud no for now it is on our roadmap i don't have a time frame for when we would support bitbucket cloud but we are it is on a road map okay i think that that wraps it up for the questions um as elsa mentioned we'll we'll take a look um if there's any that we missed and if there's any um we'll provide those answers to you folks and so i think that's uh that's that's it for us thank you for joining we appreciate it look for more webinars in the future from sonarsource and thank you very much thanks everyone",
+  "fetchedAt": "2026-03-14T09:25:51.661Z"
+}

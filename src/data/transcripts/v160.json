@@ -1,0 +1,3563 @@
+{
+  "videoId": "v160",
+  "youtubeId": "CZKvnTv0-a0",
+  "segments": [
+    {
+      "text": "so let's put that",
+      "offset": 0,
+      "duration": 5220
+    },
+    {
+      "text": "welcome screen up and let me say thank",
+      "offset": 2879,
+      "duration": 4801
+    },
+    {
+      "text": "you and welcome to the clean code for",
+      "offset": 5220,
+      "duration": 4980
+    },
+    {
+      "text": "python webinar or how python can be",
+      "offset": 7680,
+      "duration": 4379
+    },
+    {
+      "text": "really weird",
+      "offset": 10200,
+      "duration": 2519
+    },
+    {
+      "text": "um",
+      "offset": 12059,
+      "duration": 4021
+    },
+    {
+      "text": "we are so excited to have a great",
+      "offset": 12719,
+      "duration": 4741
+    },
+    {
+      "text": "speaker today",
+      "offset": 16080,
+      "duration": 4020
+    },
+    {
+      "text": "um and we will demonstrate to you the",
+      "offset": 17460,
+      "duration": 4200
+    },
+    {
+      "text": "importance",
+      "offset": 20100,
+      "duration": 4980
+    },
+    {
+      "text": "clean code demonstrates and help you",
+      "offset": 21660,
+      "duration": 6060
+    },
+    {
+      "text": "discover how python can behave",
+      "offset": 25080,
+      "duration": 4560
+    },
+    {
+      "text": "unintuitively",
+      "offset": 27720,
+      "duration": 4920
+    },
+    {
+      "text": "and also understand how sonar lint and",
+      "offset": 29640,
+      "duration": 7040
+    },
+    {
+      "text": "sonar Cloud fit into the picture",
+      "offset": 32640,
+      "duration": 7140
+    },
+    {
+      "text": "so I would like to introduce myself my",
+      "offset": 36680,
+      "duration": 4899
+    },
+    {
+      "text": "name is Andrew and I'll be the moderator",
+      "offset": 39780,
+      "duration": 4200
+    },
+    {
+      "text": "for this webinar which will be presented",
+      "offset": 41579,
+      "duration": 4681
+    },
+    {
+      "text": "by nafiel Islam",
+      "offset": 43980,
+      "duration": 3960
+    },
+    {
+      "text": "um before we start just a couple of",
+      "offset": 46260,
+      "duration": 3900
+    },
+    {
+      "text": "quick housekeeping points so the session",
+      "offset": 47940,
+      "duration": 4340
+    },
+    {
+      "text": "will last 30 minutes there'll be a q a",
+      "offset": 50160,
+      "duration": 5399
+    },
+    {
+      "text": "at the end and you are invited to submit",
+      "offset": 52280,
+      "duration": 5619
+    },
+    {
+      "text": "your questions throughout the webinar",
+      "offset": 55559,
+      "duration": 5401
+    },
+    {
+      "text": "using the Q a box in Zoom so not the",
+      "offset": 57899,
+      "duration": 6120
+    },
+    {
+      "text": "chat box the Q a box we have two",
+      "offset": 60960,
+      "duration": 5699
+    },
+    {
+      "text": "panelists who will be attempting to",
+      "offset": 64019,
+      "duration": 4981
+    },
+    {
+      "text": "answer your questions live during the",
+      "offset": 66659,
+      "duration": 4201
+    },
+    {
+      "text": "webinar they are Stevan Van Der Verve",
+      "offset": 69000,
+      "duration": 3020
+    },
+    {
+      "text": "and Michael",
+      "offset": 70860,
+      "duration": 3780
+    },
+    {
+      "text": "bubli from our support engineering team",
+      "offset": 72020,
+      "duration": 4540
+    },
+    {
+      "text": "so they will get to as many of your",
+      "offset": 74640,
+      "duration": 4860
+    },
+    {
+      "text": "questions as we can we will record the",
+      "offset": 76560,
+      "duration": 4860
+    },
+    {
+      "text": "session and we will send out a link to",
+      "offset": 79500,
+      "duration": 4979
+    },
+    {
+      "text": "the recording afterwards finally at the",
+      "offset": 81420,
+      "duration": 6059
+    },
+    {
+      "text": "end of the webinar a short survey survey",
+      "offset": 84479,
+      "duration": 5761
+    },
+    {
+      "text": "will pop up your feedback is a gift so",
+      "offset": 87479,
+      "duration": 5041
+    },
+    {
+      "text": "thank you for helping us improve so",
+      "offset": 90240,
+      "duration": 3780
+    },
+    {
+      "text": "without further ado",
+      "offset": 92520,
+      "duration": 5520
+    },
+    {
+      "text": "nafiel Islam nephew has been programming",
+      "offset": 94020,
+      "duration": 7380
+    },
+    {
+      "text": "since he was 14. he has a decade of",
+      "offset": 98040,
+      "duration": 5399
+    },
+    {
+      "text": "software experience and is adept in",
+      "offset": 101400,
+      "duration": 5100
+    },
+    {
+      "text": "Python and exploring rust he authored",
+      "offset": 103439,
+      "duration": 4860
+    },
+    {
+      "text": "mastering pycharm",
+      "offset": 106500,
+      "duration": 4140
+    },
+    {
+      "text": "now Fiola spoken at Global python",
+      "offset": 108299,
+      "duration": 4621
+    },
+    {
+      "text": "conferences and held positions your jet",
+      "offset": 110640,
+      "duration": 4979
+    },
+    {
+      "text": "brains and Microsoft and in his free",
+      "offset": 112920,
+      "duration": 5879
+    },
+    {
+      "text": "time he loves reading fantasy novels and",
+      "offset": 115619,
+      "duration": 4801
+    },
+    {
+      "text": "you can see where you can follow him",
+      "offset": 118799,
+      "duration": 4500
+    },
+    {
+      "text": "there on Twitter nafiel",
+      "offset": 120420,
+      "duration": 5720
+    },
+    {
+      "text": "over to you",
+      "offset": 123299,
+      "duration": 2841
+    },
+    {
+      "text": "hey everybody",
+      "offset": 126540,
+      "duration": 3779
+    },
+    {
+      "text": "um thank you very much for coming to",
+      "offset": 127920,
+      "duration": 4020
+    },
+    {
+      "text": "this webinar this webinar is really",
+      "offset": 130319,
+      "duration": 4140
+    },
+    {
+      "text": "about clean code for Python and how",
+      "offset": 131940,
+      "duration": 6480
+    },
+    {
+      "text": "python can behave in unexpected ways",
+      "offset": 134459,
+      "duration": 6541
+    },
+    {
+      "text": "um so before we we get into that let's",
+      "offset": 138420,
+      "duration": 4980
+    },
+    {
+      "text": "talk a little bit about what is clean",
+      "offset": 141000,
+      "duration": 3900
+    },
+    {
+      "text": "code so",
+      "offset": 143400,
+      "duration": 4380
+    },
+    {
+      "text": "in a nutshell uh for me at least clean",
+      "offset": 144900,
+      "duration": 5220
+    },
+    {
+      "text": "code is about having a sustainable code",
+      "offset": 147780,
+      "duration": 4920
+    },
+    {
+      "text": "base it is a code base that you can get",
+      "offset": 150120,
+      "duration": 4979
+    },
+    {
+      "text": "a lot of mileage out of if your code",
+      "offset": 152700,
+      "duration": 4140
+    },
+    {
+      "text": "base is something that you're afraid of",
+      "offset": 155099,
+      "duration": 4021
+    },
+    {
+      "text": "using or constantly goes down or you",
+      "offset": 156840,
+      "duration": 4560
+    },
+    {
+      "text": "need a lot of time to understand what is",
+      "offset": 159120,
+      "duration": 4740
+    },
+    {
+      "text": "going on that isn't very sustainable for",
+      "offset": 161400,
+      "duration": 4740
+    },
+    {
+      "text": "your developers so it can get very very",
+      "offset": 163860,
+      "duration": 4440
+    },
+    {
+      "text": "difficult",
+      "offset": 166140,
+      "duration": 4319
+    },
+    {
+      "text": "um to work on non-sustainable code bases",
+      "offset": 168300,
+      "duration": 4799
+    },
+    {
+      "text": "especially with Echo places that are not",
+      "offset": 170459,
+      "duration": 4201
+    },
+    {
+      "text": "clean",
+      "offset": 173099,
+      "duration": 4140
+    },
+    {
+      "text": "clear coat is also explicit",
+      "offset": 174660,
+      "duration": 4439
+    },
+    {
+      "text": "um I think one of the maxims in Python",
+      "offset": 177239,
+      "duration": 3241
+    },
+    {
+      "text": "is you know explicit is better than",
+      "offset": 179099,
+      "duration": 4741
+    },
+    {
+      "text": "implicit and uh clear code",
+      "offset": 180480,
+      "duration": 6240
+    },
+    {
+      "text": "um is about making sure that there isn't",
+      "offset": 183840,
+      "duration": 5220
+    },
+    {
+      "text": "a lot of ambiguity in what you're",
+      "offset": 186720,
+      "duration": 4680
+    },
+    {
+      "text": "writing it does what it says and says",
+      "offset": 189060,
+      "duration": 4020
+    },
+    {
+      "text": "what it does",
+      "offset": 191400,
+      "duration": 4680
+    },
+    {
+      "text": "and consistent in terms of conventions",
+      "offset": 193080,
+      "duration": 5640
+    },
+    {
+      "text": "so you know not mixing your snake case",
+      "offset": 196080,
+      "duration": 4200
+    },
+    {
+      "text": "and your camel case just being",
+      "offset": 198720,
+      "duration": 3480
+    },
+    {
+      "text": "consistent about variable names concerns",
+      "offset": 200280,
+      "duration": 3420
+    },
+    {
+      "text": "about class names consistent about",
+      "offset": 202200,
+      "duration": 3360
+    },
+    {
+      "text": "function names Etc",
+      "offset": 203700,
+      "duration": 4860
+    },
+    {
+      "text": "and also how you deal with modules in",
+      "offset": 205560,
+      "duration": 4200
+    },
+    {
+      "text": "Python",
+      "offset": 208560,
+      "duration": 4080
+    },
+    {
+      "text": "lastly it is fit for production and that",
+      "offset": 209760,
+      "duration": 5399
+    },
+    {
+      "text": "means your code runs and there aren't a",
+      "offset": 212640,
+      "duration": 3959
+    },
+    {
+      "text": "lot of bugs in it",
+      "offset": 215159,
+      "duration": 3421
+    },
+    {
+      "text": "um you're not going to get lots of",
+      "offset": 216599,
+      "duration": 4981
+    },
+    {
+      "text": "memory leaks as well things like that",
+      "offset": 218580,
+      "duration": 5100
+    },
+    {
+      "text": "so what does clean code exactly mean in",
+      "offset": 221580,
+      "duration": 3239
+    },
+    {
+      "text": "Python well",
+      "offset": 223680,
+      "duration": 3660
+    },
+    {
+      "text": "um we've been python has been famous for",
+      "offset": 224819,
+      "duration": 4621
+    },
+    {
+      "text": "you know having very clean and",
+      "offset": 227340,
+      "duration": 3420
+    },
+    {
+      "text": "consistent",
+      "offset": 229440,
+      "duration": 1980
+    },
+    {
+      "text": "um",
+      "offset": 230760,
+      "duration": 3479
+    },
+    {
+      "text": "syntax so it is about what we call",
+      "offset": 231420,
+      "duration": 6120
+    },
+    {
+      "text": "idiomatic python it is about following",
+      "offset": 234239,
+      "duration": 5941
+    },
+    {
+      "text": "pep 8 which is the style guide",
+      "offset": 237540,
+      "duration": 5520
+    },
+    {
+      "text": "and you know avoiding bad coding",
+      "offset": 240180,
+      "duration": 5760
+    },
+    {
+      "text": "patterns that can cause bugs",
+      "offset": 243060,
+      "duration": 4440
+    },
+    {
+      "text": "and of course last but not least",
+      "offset": 245940,
+      "duration": 5340
+    },
+    {
+      "text": "following security best practices",
+      "offset": 247500,
+      "duration": 6599
+    },
+    {
+      "text": "but you know why would you want this um",
+      "offset": 251280,
+      "duration": 4440
+    },
+    {
+      "text": "because if you don't have clean code",
+      "offset": 254099,
+      "duration": 4021
+    },
+    {
+      "text": "what you're building up is technical",
+      "offset": 255720,
+      "duration": 4859
+    },
+    {
+      "text": "debt and Technical debt isn't good for",
+      "offset": 258120,
+      "duration": 4680
+    },
+    {
+      "text": "you this is an example of a function",
+      "offset": 260579,
+      "duration": 4081
+    },
+    {
+      "text": "that is importing things within the",
+      "offset": 262800,
+      "duration": 4260
+    },
+    {
+      "text": "function definition and ultimately the",
+      "offset": 264660,
+      "duration": 5400
+    },
+    {
+      "text": "only thing that this does is uh give you",
+      "offset": 267060,
+      "duration": 4620
+    },
+    {
+      "text": "a product of a bunch of numbers so this",
+      "offset": 270060,
+      "duration": 3180
+    },
+    {
+      "text": "is confusing there are so many easier",
+      "offset": 271680,
+      "duration": 3480
+    },
+    {
+      "text": "ways to do this now I know this example",
+      "offset": 273240,
+      "duration": 4200
+    },
+    {
+      "text": "is contrived but you'll find a lot of",
+      "offset": 275160,
+      "duration": 3360
+    },
+    {
+      "text": "places",
+      "offset": 277440,
+      "duration": 3360
+    },
+    {
+      "text": "um a lot of popular projects",
+      "offset": 278520,
+      "duration": 5100
+    },
+    {
+      "text": "um is very complicated code they use",
+      "offset": 280800,
+      "duration": 5040
+    },
+    {
+      "text": "locals and globals everywhere so it's",
+      "offset": 283620,
+      "duration": 4799
+    },
+    {
+      "text": "quite difficult to understand",
+      "offset": 285840,
+      "duration": 4500
+    },
+    {
+      "text": "so technical that slows you down because",
+      "offset": 288419,
+      "duration": 5280
+    },
+    {
+      "text": "it takes longer to understand what say a",
+      "offset": 290340,
+      "duration": 4799
+    },
+    {
+      "text": "particular piece of code does even",
+      "offset": 293699,
+      "duration": 3841
+    },
+    {
+      "text": "sometimes this can be your own code",
+      "offset": 295139,
+      "duration": 4500
+    },
+    {
+      "text": "and Technical that is expensive you need",
+      "offset": 297540,
+      "duration": 4020
+    },
+    {
+      "text": "a lot of man hours so",
+      "offset": 299639,
+      "duration": 4681
+    },
+    {
+      "text": "ultimately uh it's not good for you so",
+      "offset": 301560,
+      "duration": 6660
+    },
+    {
+      "text": "how do we get clink at sonar we have",
+      "offset": 304320,
+      "duration": 5159
+    },
+    {
+      "text": "um",
+      "offset": 308220,
+      "duration": 5580
+    },
+    {
+      "text": "a way of of of a methodology if you will",
+      "offset": 309479,
+      "duration": 7801
+    },
+    {
+      "text": "that is about is called clean as you",
+      "offset": 313800,
+      "duration": 5940
+    },
+    {
+      "text": "code what that means is that instead of",
+      "offset": 317280,
+      "duration": 4859
+    },
+    {
+      "text": "handling the entirety of your technical",
+      "offset": 319740,
+      "duration": 4799
+    },
+    {
+      "text": "debt in one go because that's difficult",
+      "offset": 322139,
+      "duration": 6060
+    },
+    {
+      "text": "and some parts of your code base uh you",
+      "offset": 324539,
+      "duration": 6061
+    },
+    {
+      "text": "know it's it's esoteric for a reason and",
+      "offset": 328199,
+      "duration": 4861
+    },
+    {
+      "text": "you're you know sub-processing very old",
+      "offset": 330600,
+      "duration": 4740
+    },
+    {
+      "text": "Shell scripts or something like that and",
+      "offset": 333060,
+      "duration": 4620
+    },
+    {
+      "text": "it can often be difficult to",
+      "offset": 335340,
+      "duration": 5280
+    },
+    {
+      "text": "uh refactor that so we have this",
+      "offset": 337680,
+      "duration": 5340
+    },
+    {
+      "text": "methodology clean as you code",
+      "offset": 340620,
+      "duration": 4680
+    },
+    {
+      "text": "and that basically means that as you",
+      "offset": 343020,
+      "duration": 5600
+    },
+    {
+      "text": "change uh the files uh in your code base",
+      "offset": 345300,
+      "duration": 7380
+    },
+    {
+      "text": "you also use tools to help you prevent",
+      "offset": 348620,
+      "duration": 5919
+    },
+    {
+      "text": "writing a bad code in the first place",
+      "offset": 352680,
+      "duration": 5340
+    },
+    {
+      "text": "but also fixing any bad code that you",
+      "offset": 354539,
+      "duration": 5100
+    },
+    {
+      "text": "might have to look at or that is a part",
+      "offset": 358020,
+      "duration": 3420
+    },
+    {
+      "text": "of your commit",
+      "offset": 359639,
+      "duration": 3181
+    },
+    {
+      "text": "so",
+      "offset": 361440,
+      "duration": 3479
+    },
+    {
+      "text": "you might say at this point in time and",
+      "offset": 362820,
+      "duration": 4620
+    },
+    {
+      "text": "you know going back to the title is how",
+      "offset": 364919,
+      "duration": 3840
+    },
+    {
+      "text": "python can be read you might say like",
+      "offset": 367440,
+      "duration": 2460
+    },
+    {
+      "text": "well you know I follow all the",
+      "offset": 368759,
+      "duration": 2581
+    },
+    {
+      "text": "conventions",
+      "offset": 369900,
+      "duration": 4320
+    },
+    {
+      "text": "um my code is great well at times python",
+      "offset": 371340,
+      "duration": 5400
+    },
+    {
+      "text": "can behave a little weird",
+      "offset": 374220,
+      "duration": 6360
+    },
+    {
+      "text": "um there might be some unintentional",
+      "offset": 376740,
+      "duration": 5760
+    },
+    {
+      "text": "um ways in which python behaves that",
+      "offset": 380580,
+      "duration": 4380
+    },
+    {
+      "text": "makes it very confusing for people to",
+      "offset": 382500,
+      "duration": 3600
+    },
+    {
+      "text": "understand and sometimes it doesn't",
+      "offset": 384960,
+      "duration": 3900
+    },
+    {
+      "text": "behave the way that you expect hopefully",
+      "offset": 386100,
+      "duration": 4740
+    },
+    {
+      "text": "that is what I'm going to be showing you",
+      "offset": 388860,
+      "duration": 4860
+    },
+    {
+      "text": "now going back to this this was a study",
+      "offset": 390840,
+      "duration": 6079
+    },
+    {
+      "text": "uh done by The",
+      "offset": 393720,
+      "duration": 5340
+    },
+    {
+      "text": "s-i-e-s-e-i Institute so the software",
+      "offset": 396919,
+      "duration": 4000
+    },
+    {
+      "text": "engineering Institute at Carnegie Mellon",
+      "offset": 399060,
+      "duration": 2880
+    },
+    {
+      "text": "and",
+      "offset": 400919,
+      "duration": 3780
+    },
+    {
+      "text": "they actually pointed out that a lot of",
+      "offset": 401940,
+      "duration": 4440
+    },
+    {
+      "text": "the code a lot of the reasons for",
+      "offset": 404699,
+      "duration": 4021
+    },
+    {
+      "text": "technical debt is code so overly complex",
+      "offset": 406380,
+      "duration": 4980
+    },
+    {
+      "text": "code code duplication",
+      "offset": 408720,
+      "duration": 5880
+    },
+    {
+      "text": "um dependencies on external peoples code",
+      "offset": 411360,
+      "duration": 6360
+    },
+    {
+      "text": "and of course obsolete code",
+      "offset": 414600,
+      "duration": 6780
+    },
+    {
+      "text": "so before I jump into",
+      "offset": 417720,
+      "duration": 6479
+    },
+    {
+      "text": "um explaining how our methodology Works",
+      "offset": 421380,
+      "duration": 4140
+    },
+    {
+      "text": "how the clean as you code methodology",
+      "offset": 424199,
+      "duration": 3500
+    },
+    {
+      "text": "works I just like to ask you a question",
+      "offset": 425520,
+      "duration": 5519
+    },
+    {
+      "text": "you have you have code that you're",
+      "offset": 427699,
+      "duration": 4961
+    },
+    {
+      "text": "dealing with",
+      "offset": 431039,
+      "duration": 4681
+    },
+    {
+      "text": "what do you use to analyze your code as",
+      "offset": 432660,
+      "duration": 5420
+    },
+    {
+      "text": "you like",
+      "offset": 435720,
+      "duration": 2360
+    },
+    {
+      "text": "so the poll is up it gives you a little",
+      "offset": 438240,
+      "duration": 5940
+    },
+    {
+      "text": "bit of time then we're going to see uh",
+      "offset": 440880,
+      "duration": 6020
+    },
+    {
+      "text": "what people use",
+      "offset": 444180,
+      "duration": 2720
+    },
+    {
+      "text": "okay so the vast majority of you use",
+      "offset": 478860,
+      "duration": 5760
+    },
+    {
+      "text": "pilot and a lot of you use sonarlint",
+      "offset": 482340,
+      "duration": 4500
+    },
+    {
+      "text": "some of you use rough and as a style",
+      "offset": 484620,
+      "duration": 4320
+    },
+    {
+      "text": "Checker some of you use black that's",
+      "offset": 486840,
+      "duration": 4380
+    },
+    {
+      "text": "great a lot of people use different",
+      "offset": 488940,
+      "duration": 4800
+    },
+    {
+      "text": "things so I'm going to show you",
+      "offset": 491220,
+      "duration": 3960
+    },
+    {
+      "text": "um house owner lint Works in this",
+      "offset": 493740,
+      "duration": 3660
+    },
+    {
+      "text": "example and more than sonar I'm going to",
+      "offset": 495180,
+      "duration": 5280
+    },
+    {
+      "text": "show you how python can behave in very",
+      "offset": 497400,
+      "duration": 6720
+    },
+    {
+      "text": "unintuitive ways so I'm going to fire up",
+      "offset": 500460,
+      "duration": 6299
+    },
+    {
+      "text": "I charm over here I hope everybody can",
+      "offset": 504120,
+      "duration": 3840
+    },
+    {
+      "text": "see",
+      "offset": 506759,
+      "duration": 3301
+    },
+    {
+      "text": "um my code base and",
+      "offset": 507960,
+      "duration": 4499
+    },
+    {
+      "text": "I just want to point your direction uh",
+      "offset": 510060,
+      "duration": 3599
+    },
+    {
+      "text": "Point your attention to a couple of",
+      "offset": 512459,
+      "duration": 3661
+    },
+    {
+      "text": "things first of all I do have sonar lint",
+      "offset": 513659,
+      "duration": 4861
+    },
+    {
+      "text": "installed and if you don't have sonar",
+      "offset": 516120,
+      "duration": 6299
+    },
+    {
+      "text": "lint installed you can go to uh plugins",
+      "offset": 518520,
+      "duration": 5519
+    },
+    {
+      "text": "over here",
+      "offset": 522419,
+      "duration": 3241
+    },
+    {
+      "text": "and you can see that I have sonar link",
+      "offset": 524039,
+      "duration": 3001
+    },
+    {
+      "text": "installed but if you don't have it",
+      "offset": 525660,
+      "duration": 4380
+    },
+    {
+      "text": "installed you can type in sonar",
+      "offset": 527040,
+      "duration": 5340
+    },
+    {
+      "text": "you'll see sonar lint it's the one with",
+      "offset": 530040,
+      "duration": 5700
+    },
+    {
+      "text": "a 5.6 million download so it's uh it's",
+      "offset": 532380,
+      "duration": 4440
+    },
+    {
+      "text": "well used",
+      "offset": 535740,
+      "duration": 3840
+    },
+    {
+      "text": "and we're going to be using that in",
+      "offset": 536820,
+      "duration": 4500
+    },
+    {
+      "text": "these examples",
+      "offset": 539580,
+      "duration": 4980
+    },
+    {
+      "text": "so okay without much further Ado",
+      "offset": 541320,
+      "duration": 6240
+    },
+    {
+      "text": "um no weird python talk or no gotcha",
+      "offset": 544560,
+      "duration": 6899
+    },
+    {
+      "text": "talk in Python can start without",
+      "offset": 547560,
+      "duration": 6240
+    },
+    {
+      "text": "um mutable arguments",
+      "offset": 551459,
+      "duration": 6421
+    },
+    {
+      "text": "so here we have a function",
+      "offset": 553800,
+      "duration": 6360
+    },
+    {
+      "text": "that takes an item",
+      "offset": 557880,
+      "duration": 5579
+    },
+    {
+      "text": "adds it to a new list and then returns",
+      "offset": 560160,
+      "duration": 5700
+    },
+    {
+      "text": "uh puts that item in the list and then",
+      "offset": 563459,
+      "duration": 5101
+    },
+    {
+      "text": "returns that list so here we have V",
+      "offset": 565860,
+      "duration": 5880
+    },
+    {
+      "text": "which is just a uh a variable over here",
+      "offset": 568560,
+      "duration": 5100
+    },
+    {
+      "text": "we're going to say we're going to add",
+      "offset": 571740,
+      "duration": 6360
+    },
+    {
+      "text": "this to V and then we're going to add a",
+      "offset": 573660,
+      "duration": 6840
+    },
+    {
+      "text": "couple of items along the way",
+      "offset": 578100,
+      "duration": 5520
+    },
+    {
+      "text": "now here's the thing this is a different",
+      "offset": 580500,
+      "duration": 4980
+    },
+    {
+      "text": "function call this is another function",
+      "offset": 583620,
+      "duration": 2640
+    },
+    {
+      "text": "called",
+      "offset": 585480,
+      "duration": 2880
+    },
+    {
+      "text": "and this is another function called",
+      "offset": 586260,
+      "duration": 3420
+    },
+    {
+      "text": "these are all different function calls",
+      "offset": 588360,
+      "duration": 4320
+    },
+    {
+      "text": "so they should be creating new lists",
+      "offset": 589680,
+      "duration": 5219
+    },
+    {
+      "text": "um for us but if we were to run this",
+      "offset": 592680,
+      "duration": 5659
+    },
+    {
+      "text": "you're going to see",
+      "offset": 594899,
+      "duration": 3440
+    },
+    {
+      "text": "that V has a lot of interesting things",
+      "offset": 598680,
+      "duration": 5099
+    },
+    {
+      "text": "happening to it",
+      "offset": 601920,
+      "duration": 4680
+    },
+    {
+      "text": "because over time more and more items",
+      "offset": 603779,
+      "duration": 5881
+    },
+    {
+      "text": "are being added to the same list",
+      "offset": 606600,
+      "duration": 5640
+    },
+    {
+      "text": "so if we go up over here we can see",
+      "offset": 609660,
+      "duration": 6359
+    },
+    {
+      "text": "what's going on you want to change the",
+      "offset": 612240,
+      "duration": 5820
+    },
+    {
+      "text": "default value to none and initialize",
+      "offset": 616019,
+      "duration": 3961
+    },
+    {
+      "text": "this parameter inside the function or",
+      "offset": 618060,
+      "duration": 5459
+    },
+    {
+      "text": "method why because every single time we",
+      "offset": 619980,
+      "duration": 6960
+    },
+    {
+      "text": "aren't giving it a new list it is using",
+      "offset": 623519,
+      "duration": 6301
+    },
+    {
+      "text": "a reference to the same list that we put",
+      "offset": 626940,
+      "duration": 4200
+    },
+    {
+      "text": "here",
+      "offset": 629820,
+      "duration": 3560
+    },
+    {
+      "text": "this is why you're constantly getting",
+      "offset": 631140,
+      "duration": 5040
+    },
+    {
+      "text": "things added to the same list over and",
+      "offset": 633380,
+      "duration": 4480
+    },
+    {
+      "text": "over again",
+      "offset": 636180,
+      "duration": 3300
+    },
+    {
+      "text": "so let's do that",
+      "offset": 637860,
+      "duration": 3300
+    },
+    {
+      "text": "if",
+      "offset": 639480,
+      "duration": 5060
+    },
+    {
+      "text": "let's just set this to none",
+      "offset": 641160,
+      "duration": 3380
+    },
+    {
+      "text": "if items is none",
+      "offset": 645180,
+      "duration": 7140
+    },
+    {
+      "text": "items is equal to a new list",
+      "offset": 649260,
+      "duration": 5100
+    },
+    {
+      "text": "and let's see if that works the way that",
+      "offset": 652320,
+      "duration": 3959
+    },
+    {
+      "text": "we expected it to",
+      "offset": 654360,
+      "duration": 5039
+    },
+    {
+      "text": "so there we go V has one item added to",
+      "offset": 656279,
+      "duration": 6180
+    },
+    {
+      "text": "it and these all have their own separate",
+      "offset": 659399,
+      "duration": 6301
+    },
+    {
+      "text": "lists so this way you know you can",
+      "offset": 662459,
+      "duration": 4741
+    },
+    {
+      "text": "prevent yourself from shooting yourself",
+      "offset": 665700,
+      "duration": 3120
+    },
+    {
+      "text": "in the foot and this isn't just about",
+      "offset": 667200,
+      "duration": 4800
+    },
+    {
+      "text": "lists it can it can also be if we get",
+      "offset": 668820,
+      "duration": 4560
+    },
+    {
+      "text": "rid of this",
+      "offset": 672000,
+      "duration": 3360
+    },
+    {
+      "text": "can also be a dictionary",
+      "offset": 673380,
+      "duration": 3899
+    },
+    {
+      "text": "it can also be a set",
+      "offset": 675360,
+      "duration": 4620
+    },
+    {
+      "text": "so anything that is essentially kind of",
+      "offset": 677279,
+      "duration": 5701
+    },
+    {
+      "text": "like a reference to a container type is",
+      "offset": 679980,
+      "duration": 5220
+    },
+    {
+      "text": "susceptible to this problem",
+      "offset": 682980,
+      "duration": 5700
+    },
+    {
+      "text": "now another thing sonar lint does for",
+      "offset": 685200,
+      "duration": 5699
+    },
+    {
+      "text": "you is that when you have these kinds of",
+      "offset": 688680,
+      "duration": 4080
+    },
+    {
+      "text": "common problems of course it highlights",
+      "offset": 690899,
+      "duration": 3000
+    },
+    {
+      "text": "it right",
+      "offset": 692760,
+      "duration": 3540
+    },
+    {
+      "text": "and you can of course see what your",
+      "offset": 693899,
+      "duration": 4560
+    },
+    {
+      "text": "problems are so here change the default",
+      "offset": 696300,
+      "duration": 3840
+    },
+    {
+      "text": "to none and this gives you the exact",
+      "offset": 698459,
+      "duration": 5721
+    },
+    {
+      "text": "rule that you want to be talking about",
+      "offset": 700140,
+      "duration": 4040
+    },
+    {
+      "text": "um so if you take a look at these are",
+      "offset": 704579,
+      "duration": 4861
+    },
+    {
+      "text": "these are very exhaustive documentation",
+      "offset": 706860,
+      "duration": 5820
+    },
+    {
+      "text": "on the different rules that we have you",
+      "offset": 709440,
+      "duration": 6019
+    },
+    {
+      "text": "can see like it says you know",
+      "offset": 712680,
+      "duration": 5760
+    },
+    {
+      "text": "list are susceptible to this but also",
+      "offset": 715459,
+      "duration": 6341
+    },
+    {
+      "text": "collection module EQ chain map counter I",
+      "offset": 718440,
+      "duration": 6180
+    },
+    {
+      "text": "love this uh I love this object uh and",
+      "offset": 721800,
+      "duration": 4020
+    },
+    {
+      "text": "default dict as well which is something",
+      "offset": 724620,
+      "duration": 5700
+    },
+    {
+      "text": "I use quite a lot so it gives it it not",
+      "offset": 725820,
+      "duration": 9120
+    },
+    {
+      "text": "only tells you hey you might not want uh",
+      "offset": 730320,
+      "duration": 6660
+    },
+    {
+      "text": "what is actually going to happen in this",
+      "offset": 734940,
+      "duration": 3959
+    },
+    {
+      "text": "code to happen",
+      "offset": 736980,
+      "duration": 4620
+    },
+    {
+      "text": "um and this is why but sometimes it",
+      "offset": 738899,
+      "duration": 4380
+    },
+    {
+      "text": "actually goes a step further which is",
+      "offset": 741600,
+      "duration": 5400
+    },
+    {
+      "text": "that it can give you a way to fix this",
+      "offset": 743279,
+      "duration": 4981
+    },
+    {
+      "text": "for you so",
+      "offset": 747000,
+      "duration": 2940
+    },
+    {
+      "text": "if you're using pycharm or if you're",
+      "offset": 748260,
+      "duration": 3960
+    },
+    {
+      "text": "using vs code this works as well",
+      "offset": 749940,
+      "duration": 4620
+    },
+    {
+      "text": "but you can hit Alt Enter or whatever",
+      "offset": 752220,
+      "duration": 4799
+    },
+    {
+      "text": "you use to invoke your quick fix",
+      "offset": 754560,
+      "duration": 4800
+    },
+    {
+      "text": "and you can say",
+      "offset": 757019,
+      "duration": 5281
+    },
+    {
+      "text": "hey fix that code for me please I I",
+      "offset": 759360,
+      "duration": 5159
+    },
+    {
+      "text": "don't want to do it myself I'd like use",
+      "offset": 762300,
+      "duration": 4979
+    },
+    {
+      "text": "sonarlint to do it for me and this goes",
+      "offset": 764519,
+      "duration": 4921
+    },
+    {
+      "text": "and does it which is great",
+      "offset": 767279,
+      "duration": 4740
+    },
+    {
+      "text": "so that's one of the ways in which",
+      "offset": 769440,
+      "duration": 6000
+    },
+    {
+      "text": "um sonar lint can really help you",
+      "offset": 772019,
+      "duration": 5461
+    },
+    {
+      "text": "another way and and these things are not",
+      "offset": 775440,
+      "duration": 3720
+    },
+    {
+      "text": "intuitive so a lot of the times when",
+      "offset": 777480,
+      "duration": 4020
+    },
+    {
+      "text": "you're um working with code you might",
+      "offset": 779160,
+      "duration": 4799
+    },
+    {
+      "text": "say like look I don't write bad code I",
+      "offset": 781500,
+      "duration": 3240
+    },
+    {
+      "text": "don't",
+      "offset": 783959,
+      "duration": 2581
+    },
+    {
+      "text": "um do this a lot of the things that",
+      "offset": 784740,
+      "duration": 3300
+    },
+    {
+      "text": "we're going to discuss you know aren't",
+      "offset": 786540,
+      "duration": 3180
+    },
+    {
+      "text": "exactly intuitive",
+      "offset": 788040,
+      "duration": 4140
+    },
+    {
+      "text": "um and and they they might be you might",
+      "offset": 789720,
+      "duration": 4440
+    },
+    {
+      "text": "be like wow I didn't I didn't notice or",
+      "offset": 792180,
+      "duration": 3659
+    },
+    {
+      "text": "I didn't expect that",
+      "offset": 794160,
+      "duration": 4619
+    },
+    {
+      "text": "another one example another one that",
+      "offset": 795839,
+      "duration": 5041
+    },
+    {
+      "text": "people often talk about is called",
+      "offset": 798779,
+      "duration": 4381
+    },
+    {
+      "text": "integer caching and what that",
+      "offset": 800880,
+      "duration": 5699
+    },
+    {
+      "text": "essentially is is that python caches the",
+      "offset": 803160,
+      "duration": 5280
+    },
+    {
+      "text": "integers",
+      "offset": 806579,
+      "duration": 5521
+    },
+    {
+      "text": "um between negative five and 256",
+      "offset": 808440,
+      "duration": 6839
+    },
+    {
+      "text": "positive 256. so what that means is that",
+      "offset": 812100,
+      "duration": 6840
+    },
+    {
+      "text": "when you say a is equal to uh one or a",
+      "offset": 815279,
+      "duration": 7261
+    },
+    {
+      "text": "is equal to two or whatever",
+      "offset": 818940,
+      "duration": 5940
+    },
+    {
+      "text": "um that number because it's small it",
+      "offset": 822540,
+      "duration": 4080
+    },
+    {
+      "text": "always refers to the same object a new",
+      "offset": 824880,
+      "duration": 3600
+    },
+    {
+      "text": "object is not created",
+      "offset": 826620,
+      "duration": 3600
+    },
+    {
+      "text": "that's that's what everybody knows",
+      "offset": 828480,
+      "duration": 3960
+    },
+    {
+      "text": "that's common knowledge but we're going",
+      "offset": 830220,
+      "duration": 3780
+    },
+    {
+      "text": "to see something interesting here so",
+      "offset": 832440,
+      "duration": 4740
+    },
+    {
+      "text": "here I have a bad idea uh this is I just",
+      "offset": 834000,
+      "duration": 5399
+    },
+    {
+      "text": "named it that it's it's not a good idea",
+      "offset": 837180,
+      "duration": 5339
+    },
+    {
+      "text": "and you print we want to see the value",
+      "offset": 839399,
+      "duration": 4981
+    },
+    {
+      "text": "of this",
+      "offset": 842519,
+      "duration": 5041
+    },
+    {
+      "text": "and the 999. we also want to see the",
+      "offset": 844380,
+      "duration": 5280
+    },
+    {
+      "text": "value of this",
+      "offset": 847560,
+      "duration": 5579
+    },
+    {
+      "text": "so if you take a look at this you know",
+      "offset": 849660,
+      "duration": 5880
+    },
+    {
+      "text": "but this should be true",
+      "offset": 853139,
+      "duration": 5041
+    },
+    {
+      "text": "and this should be false right because",
+      "offset": 855540,
+      "duration": 4020
+    },
+    {
+      "text": "of the integer cache but see what",
+      "offset": 858180,
+      "duration": 2520
+    },
+    {
+      "text": "happens",
+      "offset": 859560,
+      "duration": 3600
+    },
+    {
+      "text": "both are true",
+      "offset": 860700,
+      "duration": 3960
+    },
+    {
+      "text": "both are true",
+      "offset": 863160,
+      "duration": 5520
+    },
+    {
+      "text": "because the is operator is comparing",
+      "offset": 864660,
+      "duration": 6960
+    },
+    {
+      "text": "um uh the reference to A to B so it is",
+      "offset": 868680,
+      "duration": 4260
+    },
+    {
+      "text": "always the same object it's always the",
+      "offset": 871620,
+      "duration": 4800
+    },
+    {
+      "text": "same object but you know the integer",
+      "offset": 872940,
+      "duration": 5399
+    },
+    {
+      "text": "cache is from",
+      "offset": 876420,
+      "duration": 4740
+    },
+    {
+      "text": "um negative 5 to 256. so why is this",
+      "offset": 878339,
+      "duration": 5701
+    },
+    {
+      "text": "happening well what happens is when you",
+      "offset": 881160,
+      "duration": 5400
+    },
+    {
+      "text": "have declarations within the same python",
+      "offset": 884040,
+      "duration": 4799
+    },
+    {
+      "text": "file this doesn't count because it's",
+      "offset": 886560,
+      "duration": 4260
+    },
+    {
+      "text": "part of the same compilation unit so",
+      "offset": 888839,
+      "duration": 3661
+    },
+    {
+      "text": "ultimately it just goes into the same",
+      "offset": 890820,
+      "duration": 4259
+    },
+    {
+      "text": "pyc file and therefore these objects",
+      "offset": 892500,
+      "duration": 5160
+    },
+    {
+      "text": "point to the same thing",
+      "offset": 895079,
+      "duration": 5700
+    },
+    {
+      "text": "so you might say the only places that",
+      "offset": 897660,
+      "duration": 4679
+    },
+    {
+      "text": "you can see this",
+      "offset": 900779,
+      "duration": 5541
+    },
+    {
+      "text": "um is different is in the console",
+      "offset": 902339,
+      "duration": 3981
+    },
+    {
+      "text": "um",
+      "offset": 906959,
+      "duration": 4500
+    },
+    {
+      "text": "over here if you do a is equal to 10 B",
+      "offset": 908459,
+      "duration": 6601
+    },
+    {
+      "text": "is equal to 10. and if you do a is B",
+      "offset": 911459,
+      "duration": 7021
+    },
+    {
+      "text": "you get true if you do c is equal to 999",
+      "offset": 915060,
+      "duration": 8399
+    },
+    {
+      "text": "D is equal to 999. you do c is d",
+      "offset": 918480,
+      "duration": 7580
+    },
+    {
+      "text": "oops",
+      "offset": 923459,
+      "duration": 2601
+    },
+    {
+      "text": "uh sorry C is D you're going to get",
+      "offset": 926519,
+      "duration": 6301
+    },
+    {
+      "text": "false but you might say you know I I",
+      "offset": 930420,
+      "duration": 4500
+    },
+    {
+      "text": "don't this is fine",
+      "offset": 932820,
+      "duration": 4920
+    },
+    {
+      "text": "um I don't really use the console to",
+      "offset": 934920,
+      "duration": 5700
+    },
+    {
+      "text": "write production code why should I care",
+      "offset": 937740,
+      "duration": 5940
+    },
+    {
+      "text": "well if we were to",
+      "offset": 940620,
+      "duration": 7800
+    },
+    {
+      "text": "import CND so from util's import c and d",
+      "offset": 943680,
+      "duration": 9000
+    },
+    {
+      "text": "and of course these are also values 999",
+      "offset": 948420,
+      "duration": 6539
+    },
+    {
+      "text": "I can just go over there you can see ABC",
+      "offset": 952680,
+      "duration": 6719
+    },
+    {
+      "text": "and B they're 999. if I come back",
+      "offset": 954959,
+      "duration": 8781
+    },
+    {
+      "text": "and if I comment these out",
+      "offset": 959399,
+      "duration": 4341
+    },
+    {
+      "text": "if I were to run it oops sorry",
+      "offset": 965100,
+      "duration": 6560
+    },
+    {
+      "text": "this will be fine",
+      "offset": 968639,
+      "duration": 3021
+    },
+    {
+      "text": "if I were to comment these out",
+      "offset": 974940,
+      "duration": 5300
+    },
+    {
+      "text": "see what happens",
+      "offset": 977459,
+      "duration": 2781
+    },
+    {
+      "text": "well I guess it's a it's a part of the",
+      "offset": 994740,
+      "duration": 5519
+    },
+    {
+      "text": "same compilation unit but in general",
+      "offset": 996839,
+      "duration": 7581
+    },
+    {
+      "text": "um when you have a situation like this",
+      "offset": 1000259,
+      "duration": 4161
+    },
+    {
+      "text": "uh let me just",
+      "offset": 1009560,
+      "duration": 3500
+    },
+    {
+      "text": "well this is interesting",
+      "offset": 1031100,
+      "duration": 4440
+    },
+    {
+      "text": "um I think the pi cache file isn't",
+      "offset": 1032839,
+      "duration": 3541
+    },
+    {
+      "text": "um",
+      "offset": 1035540,
+      "duration": 3180
+    },
+    {
+      "text": "uh hasn't been cleared and that's why",
+      "offset": 1036380,
+      "duration": 4439
+    },
+    {
+      "text": "you're getting a situation like this but",
+      "offset": 1038720,
+      "duration": 4079
+    },
+    {
+      "text": "in general",
+      "offset": 1040819,
+      "duration": 5341
+    },
+    {
+      "text": "what you don't want to do is use the is",
+      "offset": 1042799,
+      "duration": 5520
+    },
+    {
+      "text": "operator",
+      "offset": 1046160,
+      "duration": 6060
+    },
+    {
+      "text": "because it doesn't actually compare",
+      "offset": 1048319,
+      "duration": 5701
+    },
+    {
+      "text": "um the identities",
+      "offset": 1052220,
+      "duration": 4500
+    },
+    {
+      "text": "they actually compared the reference so",
+      "offset": 1054020,
+      "duration": 5340
+    },
+    {
+      "text": "you always want to replace this with a",
+      "offset": 1056720,
+      "duration": 5459
+    },
+    {
+      "text": "double equals so if you were to run this",
+      "offset": 1059360,
+      "duration": 5040
+    },
+    {
+      "text": "that would be true you're just going to",
+      "offset": 1062179,
+      "duration": 5541
+    },
+    {
+      "text": "try this again",
+      "offset": 1064400,
+      "duration": 3320
+    },
+    {
+      "text": "import a b c and d",
+      "offset": 1067940,
+      "duration": 8900
+    },
+    {
+      "text": "and to comment this out",
+      "offset": 1072559,
+      "duration": 4281
+    },
+    {
+      "text": "see if that works yes that is true if I",
+      "offset": 1078200,
+      "duration": 5580
+    },
+    {
+      "text": "do an is over here",
+      "offset": 1081020,
+      "duration": 5899
+    },
+    {
+      "text": "is over here",
+      "offset": 1083780,
+      "duration": 3139
+    },
+    {
+      "text": "I I don't know why this is uh working",
+      "offset": 1087980,
+      "duration": 6360
+    },
+    {
+      "text": "the way it is but essentially this is",
+      "offset": 1090799,
+      "duration": 6120
+    },
+    {
+      "text": "not reliable if you're copying",
+      "offset": 1094340,
+      "duration": 4260
+    },
+    {
+      "text": "um from if you're if you're importing",
+      "offset": 1096919,
+      "duration": 4321
+    },
+    {
+      "text": "something from a module",
+      "offset": 1098600,
+      "duration": 4800
+    },
+    {
+      "text": "um so that is integer caching in a",
+      "offset": 1101240,
+      "duration": 3600
+    },
+    {
+      "text": "nutshell",
+      "offset": 1103400,
+      "duration": 3000
+    },
+    {
+      "text": "another thing",
+      "offset": 1104840,
+      "duration": 3839
+    },
+    {
+      "text": "um that that I think sums a lot of",
+      "offset": 1106400,
+      "duration": 5100
+    },
+    {
+      "text": "people is something called blade binding",
+      "offset": 1108679,
+      "duration": 6481
+    },
+    {
+      "text": "closures now late binding closures are",
+      "offset": 1111500,
+      "duration": 7340
+    },
+    {
+      "text": "uh basically things where",
+      "offset": 1115160,
+      "duration": 7620
+    },
+    {
+      "text": "the final value of something outside the",
+      "offset": 1118840,
+      "duration": 6820
+    },
+    {
+      "text": "scope of your function uh Remains the",
+      "offset": 1122780,
+      "duration": 4019
+    },
+    {
+      "text": "Same",
+      "offset": 1125660,
+      "duration": 4080
+    },
+    {
+      "text": "so here we're trying to generate the",
+      "offset": 1126799,
+      "duration": 4801
+    },
+    {
+      "text": "three times table",
+      "offset": 1129740,
+      "duration": 5100
+    },
+    {
+      "text": "and if you were to run this we get",
+      "offset": 1131600,
+      "duration": 7439
+    },
+    {
+      "text": "nothing but 27. which is uh kind of odd",
+      "offset": 1134840,
+      "duration": 6540
+    },
+    {
+      "text": "if you ask me because ultimately what",
+      "offset": 1139039,
+      "duration": 4801
+    },
+    {
+      "text": "we're trying to do is generate the three",
+      "offset": 1141380,
+      "duration": 6679
+    },
+    {
+      "text": "times table or four if we run this again",
+      "offset": 1143840,
+      "duration": 4219
+    },
+    {
+      "text": "five",
+      "offset": 1148880,
+      "duration": 2840
+    },
+    {
+      "text": "so so that's pretty weird",
+      "offset": 1153559,
+      "duration": 5281
+    },
+    {
+      "text": "but",
+      "offset": 1157100,
+      "duration": 4980
+    },
+    {
+      "text": "if we wanted to make sure that this",
+      "offset": 1158840,
+      "duration": 7500
+    },
+    {
+      "text": "value the value of I is what uh ranges",
+      "offset": 1162080,
+      "duration": 7020
+    },
+    {
+      "text": "if we take a look here",
+      "offset": 1166340,
+      "duration": 4140
+    },
+    {
+      "text": "add a parameter of the function",
+      "offset": 1169100,
+      "duration": 3720
+    },
+    {
+      "text": "multiplier and use variable I as the",
+      "offset": 1170480,
+      "duration": 3540
+    },
+    {
+      "text": "default value",
+      "offset": 1172820,
+      "duration": 3900
+    },
+    {
+      "text": "so if we were to change this and say I",
+      "offset": 1174020,
+      "duration": 5340
+    },
+    {
+      "text": "is equal to I",
+      "offset": 1176720,
+      "duration": 4680
+    },
+    {
+      "text": "you're going to see sonar lint no longer",
+      "offset": 1179360,
+      "duration": 4199
+    },
+    {
+      "text": "complains about that",
+      "offset": 1181400,
+      "duration": 4200
+    },
+    {
+      "text": "and we get the correct time stable for",
+      "offset": 1183559,
+      "duration": 3781
+    },
+    {
+      "text": "this",
+      "offset": 1185600,
+      "duration": 4920
+    },
+    {
+      "text": "so what was previously happening is that",
+      "offset": 1187340,
+      "duration": 5880
+    },
+    {
+      "text": "the last value for this for Loop was",
+      "offset": 1190520,
+      "duration": 4800
+    },
+    {
+      "text": "getting plugged into the value of I",
+      "offset": 1193220,
+      "duration": 3780
+    },
+    {
+      "text": "because it's from the outer scope and it",
+      "offset": 1195320,
+      "duration": 3960
+    },
+    {
+      "text": "wasn't changing",
+      "offset": 1197000,
+      "duration": 4380
+    },
+    {
+      "text": "so that that is a problem and this this",
+      "offset": 1199280,
+      "duration": 5279
+    },
+    {
+      "text": "uh problem extends",
+      "offset": 1201380,
+      "duration": 9080
+    },
+    {
+      "text": "um to lambdas as well so if you were to",
+      "offset": 1204559,
+      "duration": 5901
+    },
+    {
+      "text": "take this out",
+      "offset": 1210500,
+      "duration": 4620
+    },
+    {
+      "text": "and say",
+      "offset": 1213080,
+      "duration": 4500
+    },
+    {
+      "text": "for I in range",
+      "offset": 1215120,
+      "duration": 4200
+    },
+    {
+      "text": "and",
+      "offset": 1217580,
+      "duration": 4320
+    },
+    {
+      "text": "when you say Lambda",
+      "offset": 1219320,
+      "duration": 4280
+    },
+    {
+      "text": "X",
+      "offset": 1221900,
+      "duration": 5420
+    },
+    {
+      "text": "I times x",
+      "offset": 1223600,
+      "duration": 7020
+    },
+    {
+      "text": "there we go",
+      "offset": 1227320,
+      "duration": 3300
+    },
+    {
+      "text": "you're going to run into the same",
+      "offset": 1231620,
+      "duration": 2520
+    },
+    {
+      "text": "problem",
+      "offset": 1233059,
+      "duration": 4201
+    },
+    {
+      "text": "but if you were to set the default",
+      "offset": 1234140,
+      "duration": 5820
+    },
+    {
+      "text": "um answer I is equal to I",
+      "offset": 1237260,
+      "duration": 5779
+    },
+    {
+      "text": "which you can also do in Atlanta",
+      "offset": 1239960,
+      "duration": 3079
+    },
+    {
+      "text": "you see that this is no longer the way",
+      "offset": 1243620,
+      "duration": 6419
+    },
+    {
+      "text": "this is what we expect it goes from five",
+      "offset": 1247400,
+      "duration": 6899
+    },
+    {
+      "text": "times zero all the way to um",
+      "offset": 1250039,
+      "duration": 6181
+    },
+    {
+      "text": "5 times 9.",
+      "offset": 1254299,
+      "duration": 4441
+    },
+    {
+      "text": "so that's another thing that that I",
+      "offset": 1256220,
+      "duration": 4380
+    },
+    {
+      "text": "don't think is intuitive uh in most",
+      "offset": 1258740,
+      "duration": 3179
+    },
+    {
+      "text": "cases",
+      "offset": 1260600,
+      "duration": 3780
+    },
+    {
+      "text": "um because it's very easy to step into",
+      "offset": 1261919,
+      "duration": 4441
+    },
+    {
+      "text": "this mistake",
+      "offset": 1264380,
+      "duration": 4440
+    },
+    {
+      "text": "and if you take a look here",
+      "offset": 1266360,
+      "duration": 5220
+    },
+    {
+      "text": "if we didn't have this we have sonar",
+      "offset": 1268820,
+      "duration": 5219
+    },
+    {
+      "text": "lint reminding us",
+      "offset": 1271580,
+      "duration": 5099
+    },
+    {
+      "text": "that hey you might want to make this a",
+      "offset": 1274039,
+      "duration": 5361
+    },
+    {
+      "text": "default argument",
+      "offset": 1276679,
+      "duration": 2721
+    },
+    {
+      "text": "so",
+      "offset": 1279799,
+      "duration": 4321
+    },
+    {
+      "text": "um these might all be uh things that",
+      "offset": 1281539,
+      "duration": 4140
+    },
+    {
+      "text": "you've already been accustomed to things",
+      "offset": 1284120,
+      "duration": 3660
+    },
+    {
+      "text": "that you're used to",
+      "offset": 1285679,
+      "duration": 4980
+    },
+    {
+      "text": "um but here's another one and this is",
+      "offset": 1287780,
+      "duration": 4980
+    },
+    {
+      "text": "not something that we catch exactly",
+      "offset": 1290659,
+      "duration": 4020
+    },
+    {
+      "text": "right now",
+      "offset": 1292760,
+      "duration": 4620
+    },
+    {
+      "text": "which is that which is the new match",
+      "offset": 1294679,
+      "duration": 6661
+    },
+    {
+      "text": "case statement so here we have",
+      "offset": 1297380,
+      "duration": 5880
+    },
+    {
+      "text": "A Match test",
+      "offset": 1301340,
+      "duration": 4680
+    },
+    {
+      "text": "which basically is trying to see if",
+      "offset": 1303260,
+      "duration": 6360
+    },
+    {
+      "text": "they're is an empty list if there is one",
+      "offset": 1306020,
+      "duration": 5880
+    },
+    {
+      "text": "item in a list two items in a list or if",
+      "offset": 1309620,
+      "duration": 4020
+    },
+    {
+      "text": "it's something else",
+      "offset": 1311900,
+      "duration": 4080
+    },
+    {
+      "text": "now I want you to to look at this so",
+      "offset": 1313640,
+      "duration": 4680
+    },
+    {
+      "text": "here we have we match the sequence we",
+      "offset": 1315980,
+      "duration": 5819
+    },
+    {
+      "text": "can pass in a list we can pass in",
+      "offset": 1318320,
+      "duration": 5820
+    },
+    {
+      "text": "um a set oh sorry we can pass on a list",
+      "offset": 1321799,
+      "duration": 4141
+    },
+    {
+      "text": "we can pass in a um",
+      "offset": 1324140,
+      "duration": 3539
+    },
+    {
+      "text": "uh",
+      "offset": 1325940,
+      "duration": 3540
+    },
+    {
+      "text": "or the dictionary or anything any kind",
+      "offset": 1327679,
+      "duration": 3721
+    },
+    {
+      "text": "of sequence really but in this in this",
+      "offset": 1329480,
+      "duration": 4140
+    },
+    {
+      "text": "uh particular case where we're going to",
+      "offset": 1331400,
+      "duration": 5100
+    },
+    {
+      "text": "be using a list or Tuple actually we're",
+      "offset": 1333620,
+      "duration": 4140
+    },
+    {
+      "text": "using a tuple",
+      "offset": 1336500,
+      "duration": 4799
+    },
+    {
+      "text": "so here if you take a look if it's empty",
+      "offset": 1337760,
+      "duration": 5159
+    },
+    {
+      "text": "we get something",
+      "offset": 1341299,
+      "duration": 4681
+    },
+    {
+      "text": "if there's one item in the last we bind",
+      "offset": 1342919,
+      "duration": 5521
+    },
+    {
+      "text": "one of the values the first value",
+      "offset": 1345980,
+      "duration": 4679
+    },
+    {
+      "text": "if there's something else in the list we",
+      "offset": 1348440,
+      "duration": 5580
+    },
+    {
+      "text": "have we bind it to X and to y",
+      "offset": 1350659,
+      "duration": 5341
+    },
+    {
+      "text": "and if nothing you know we just use the",
+      "offset": 1354020,
+      "duration": 3840
+    },
+    {
+      "text": "underscore which is kind of like a",
+      "offset": 1356000,
+      "duration": 3659
+    },
+    {
+      "text": "throwaway variable",
+      "offset": 1357860,
+      "duration": 3840
+    },
+    {
+      "text": "now over here",
+      "offset": 1359659,
+      "duration": 5101
+    },
+    {
+      "text": "I have X and Y to clear now when I first",
+      "offset": 1361700,
+      "duration": 6120
+    },
+    {
+      "text": "look at the um",
+      "offset": 1364760,
+      "duration": 6180
+    },
+    {
+      "text": "match in case statements what I didn't",
+      "offset": 1367820,
+      "duration": 6300
+    },
+    {
+      "text": "know is that a lot of the uh when you're",
+      "offset": 1370940,
+      "duration": 5400
+    },
+    {
+      "text": "when you're capturing variables in your",
+      "offset": 1374120,
+      "duration": 6120
+    },
+    {
+      "text": "case statements that variable is not uh",
+      "offset": 1376340,
+      "duration": 7440
+    },
+    {
+      "text": "limited only to the match block",
+      "offset": 1380240,
+      "duration": 6480
+    },
+    {
+      "text": "it actually changes uh outside of the",
+      "offset": 1383780,
+      "duration": 5399
+    },
+    {
+      "text": "block as well so if we were to run this",
+      "offset": 1386720,
+      "duration": 4380
+    },
+    {
+      "text": "we're going to see of course it's a list",
+      "offset": 1389179,
+      "duration": 3421
+    },
+    {
+      "text": "with two items",
+      "offset": 1391100,
+      "duration": 6600
+    },
+    {
+      "text": "and over here there is one and two",
+      "offset": 1392600,
+      "duration": 8100
+    },
+    {
+      "text": "if we were to change this to three and",
+      "offset": 1397700,
+      "duration": 5240
+    },
+    {
+      "text": "four",
+      "offset": 1400700,
+      "duration": 2240
+    },
+    {
+      "text": "we'd get the same thing",
+      "offset": 1403100,
+      "duration": 6420
+    },
+    {
+      "text": "um but this this would get overwritten",
+      "offset": 1406220,
+      "duration": 6000
+    },
+    {
+      "text": "by the match in case statements so",
+      "offset": 1409520,
+      "duration": 4500
+    },
+    {
+      "text": "that's another weird thing in Python",
+      "offset": 1412220,
+      "duration": 4860
+    },
+    {
+      "text": "that you might want to be wary of and of",
+      "offset": 1414020,
+      "duration": 4980
+    },
+    {
+      "text": "course we don't cover this right yet but",
+      "offset": 1417080,
+      "duration": 3900
+    },
+    {
+      "text": "we will we do plan to add this rule",
+      "offset": 1419000,
+      "duration": 4200
+    },
+    {
+      "text": "eventually to solar",
+      "offset": 1420980,
+      "duration": 4860
+    },
+    {
+      "text": "so you might say well that's all great",
+      "offset": 1423200,
+      "duration": 5280
+    },
+    {
+      "text": "and good you're writing code but what if",
+      "offset": 1425840,
+      "duration": 5900
+    },
+    {
+      "text": "uh I wanted to",
+      "offset": 1428480,
+      "duration": 6240
+    },
+    {
+      "text": "have this integrated uh somewhere else",
+      "offset": 1431740,
+      "duration": 5020
+    },
+    {
+      "text": "if I wanted to have this integrated in",
+      "offset": 1434720,
+      "duration": 4920
+    },
+    {
+      "text": "my build process so over here if we go",
+      "offset": 1436760,
+      "duration": 5460
+    },
+    {
+      "text": "back and we just set all these things",
+      "offset": 1439640,
+      "duration": 5960
+    },
+    {
+      "text": "back to what they were",
+      "offset": 1442220,
+      "duration": 3380
+    },
+    {
+      "text": "I'm really sorry for the second example",
+      "offset": 1446360,
+      "duration": 4260
+    },
+    {
+      "text": "I tried it a couple of times that it was",
+      "offset": 1448159,
+      "duration": 5341
+    },
+    {
+      "text": "working working as expected",
+      "offset": 1450620,
+      "duration": 5000
+    },
+    {
+      "text": "um",
+      "offset": 1453500,
+      "duration": 2120
+    },
+    {
+      "text": "so over here",
+      "offset": 1455720,
+      "duration": 3900
+    },
+    {
+      "text": "um",
+      "offset": 1458299,
+      "duration": 3360
+    },
+    {
+      "text": "we are not going to fix this and we're",
+      "offset": 1459620,
+      "duration": 3660
+    },
+    {
+      "text": "not going to fix this either",
+      "offset": 1461659,
+      "duration": 3601
+    },
+    {
+      "text": "so what I'm going to do is I'm going to",
+      "offset": 1463280,
+      "duration": 3720
+    },
+    {
+      "text": "commit this code",
+      "offset": 1465260,
+      "duration": 4320
+    },
+    {
+      "text": "and I'm going to commit and push it to",
+      "offset": 1467000,
+      "duration": 5360
+    },
+    {
+      "text": "my Repository",
+      "offset": 1469580,
+      "duration": 2780
+    },
+    {
+      "text": "if I go back to",
+      "offset": 1476000,
+      "duration": 5039
+    },
+    {
+      "text": "uh Chrome over here I have something",
+      "offset": 1478159,
+      "duration": 6000
+    },
+    {
+      "text": "called sonar Cloud opened up",
+      "offset": 1481039,
+      "duration": 5661
+    },
+    {
+      "text": "and what sonarcloud does is basically it",
+      "offset": 1484159,
+      "duration": 4981
+    },
+    {
+      "text": "integrates all the rules that you can",
+      "offset": 1486700,
+      "duration": 5920
+    },
+    {
+      "text": "find in sonar lint as well as some other",
+      "offset": 1489140,
+      "duration": 6659
+    },
+    {
+      "text": "rules that aren't really that haven't",
+      "offset": 1492620,
+      "duration": 5220
+    },
+    {
+      "text": "been implemented on a lyncher level so",
+      "offset": 1495799,
+      "duration": 4500
+    },
+    {
+      "text": "you need we have something called the",
+      "offset": 1497840,
+      "duration": 4740
+    },
+    {
+      "text": "data flow bug detention with which goes",
+      "offset": 1500299,
+      "duration": 4981
+    },
+    {
+      "text": "into your code a little deeper and tries",
+      "offset": 1502580,
+      "duration": 5719
+    },
+    {
+      "text": "to understand what it does",
+      "offset": 1505280,
+      "duration": 3019
+    },
+    {
+      "text": "um so what sonar cloud is going to do is",
+      "offset": 1508940,
+      "duration": 4500
+    },
+    {
+      "text": "tell you what kind of bugs you're having",
+      "offset": 1511460,
+      "duration": 3540
+    },
+    {
+      "text": "the kind of code smells the",
+      "offset": 1513440,
+      "duration": 3000
+    },
+    {
+      "text": "vulnerabilities and the security",
+      "offset": 1515000,
+      "duration": 3179
+    },
+    {
+      "text": "hotspots",
+      "offset": 1516440,
+      "duration": 4320
+    },
+    {
+      "text": "and so if we take uh if we take an",
+      "offset": 1518179,
+      "duration": 4740
+    },
+    {
+      "text": "overview of this we can actually head",
+      "offset": 1520760,
+      "duration": 4740
+    },
+    {
+      "text": "over to the main branch we can see what",
+      "offset": 1522919,
+      "duration": 4561
+    },
+    {
+      "text": "kind of bugs are here",
+      "offset": 1525500,
+      "duration": 6020
+    },
+    {
+      "text": "uh sorry this is a wrong one",
+      "offset": 1527480,
+      "duration": 4040
+    },
+    {
+      "text": "this is a wrong one two",
+      "offset": 1531860,
+      "duration": 5699
+    },
+    {
+      "text": "oh here we are",
+      "offset": 1535039,
+      "duration": 4020
+    },
+    {
+      "text": "so over here",
+      "offset": 1537559,
+      "duration": 3600
+    },
+    {
+      "text": "you want to change this default value To",
+      "offset": 1539059,
+      "duration": 4141
+    },
+    {
+      "text": "None So if you integrate sonar Cloud",
+      "offset": 1541159,
+      "duration": 4500
+    },
+    {
+      "text": "into your QA process",
+      "offset": 1543200,
+      "duration": 4979
+    },
+    {
+      "text": "it can help you detect a lot of the code",
+      "offset": 1545659,
+      "duration": 5880
+    },
+    {
+      "text": "smells uh before you get",
+      "offset": 1548179,
+      "duration": 5100
+    },
+    {
+      "text": "over here as well",
+      "offset": 1551539,
+      "duration": 6240
+    },
+    {
+      "text": "we can see uh the the issue that we",
+      "offset": 1553279,
+      "duration": 5640
+    },
+    {
+      "text": "talked about when you're having",
+      "offset": 1557779,
+      "duration": 4161
+    },
+    {
+      "text": "something out of scope",
+      "offset": 1558919,
+      "duration": 3021
+    },
+    {
+      "text": "um",
+      "offset": 1562940,
+      "duration": 2400
+    },
+    {
+      "text": "and of course there are some other",
+      "offset": 1564020,
+      "duration": 4200
+    },
+    {
+      "text": "issues in the code as well so",
+      "offset": 1565340,
+      "duration": 5040
+    },
+    {
+      "text": "over here",
+      "offset": 1568220,
+      "duration": 5959
+    },
+    {
+      "text": "you can see that there's a Code smell",
+      "offset": 1570380,
+      "duration": 3799
+    },
+    {
+      "text": "and this is the code smell that you have",
+      "offset": 1574279,
+      "duration": 5821
+    },
+    {
+      "text": "um let's see if my latest push changed",
+      "offset": 1576919,
+      "duration": 5521
+    },
+    {
+      "text": "anything so as you push your code into",
+      "offset": 1580100,
+      "duration": 5220
+    },
+    {
+      "text": "sonar Cloud this gets automatically",
+      "offset": 1582440,
+      "duration": 5700
+    },
+    {
+      "text": "scanned and checked so",
+      "offset": 1585320,
+      "duration": 5459
+    },
+    {
+      "text": "and of course it's free for for all open",
+      "offset": 1588140,
+      "duration": 5760
+    },
+    {
+      "text": "source code uh so if you want to add a",
+      "offset": 1590779,
+      "duration": 4081
+    },
+    {
+      "text": "new project",
+      "offset": 1593900,
+      "duration": 4019
+    },
+    {
+      "text": "right now my uh current organization my",
+      "offset": 1594860,
+      "duration": 4980
+    },
+    {
+      "text": "personal account is",
+      "offset": 1597919,
+      "duration": 3360
+    },
+    {
+      "text": "um linked with sonarcloud and of course",
+      "offset": 1599840,
+      "duration": 3420
+    },
+    {
+      "text": "I can add anything and add any",
+      "offset": 1601279,
+      "duration": 3661
+    },
+    {
+      "text": "particular project and I can say setup",
+      "offset": 1603260,
+      "duration": 4260
+    },
+    {
+      "text": "and then I will have the same situation",
+      "offset": 1604940,
+      "duration": 6800
+    },
+    {
+      "text": "that I have here with sonarcloud",
+      "offset": 1607520,
+      "duration": 4220
+    },
+    {
+      "text": "okay so",
+      "offset": 1620419,
+      "duration": 5601
+    },
+    {
+      "text": "um what I wanted to say last uh secondly",
+      "offset": 1622279,
+      "duration": 6900
+    },
+    {
+      "text": "is a lot of our rules",
+      "offset": 1626020,
+      "duration": 5560
+    },
+    {
+      "text": "um are actually completely available for",
+      "offset": 1629179,
+      "duration": 4261
+    },
+    {
+      "text": "free and you can see what these rules",
+      "offset": 1631580,
+      "duration": 5099
+    },
+    {
+      "text": "are on our rules.sonarstars.com website",
+      "offset": 1633440,
+      "duration": 5820
+    },
+    {
+      "text": "you can see what's going on here",
+      "offset": 1636679,
+      "duration": 4980
+    },
+    {
+      "text": "um so the first example that I showed",
+      "offset": 1639260,
+      "duration": 5460
+    },
+    {
+      "text": "you folks we have a default list being",
+      "offset": 1641659,
+      "duration": 4380
+    },
+    {
+      "text": "created here",
+      "offset": 1644720,
+      "duration": 4079
+    },
+    {
+      "text": "why this is non-compliant what compliant",
+      "offset": 1646039,
+      "duration": 5221
+    },
+    {
+      "text": "solution would look like and what a",
+      "offset": 1648799,
+      "duration": 3901
+    },
+    {
+      "text": "compliant class would look like so it",
+      "offset": 1651260,
+      "duration": 3539
+    },
+    {
+      "text": "goes into more depth and you can see",
+      "offset": 1652700,
+      "duration": 3479
+    },
+    {
+      "text": "where it's available whether it's in",
+      "offset": 1654799,
+      "duration": 5360
+    },
+    {
+      "text": "sonar lens on our cloud or sonar Cube",
+      "offset": 1656179,
+      "duration": 3980
+    },
+    {
+      "text": "um",
+      "offset": 1660679,
+      "duration": 3541
+    },
+    {
+      "text": "that's great and I feel I know we're",
+      "offset": 1662480,
+      "duration": 3480
+    },
+    {
+      "text": "coming up close up to time",
+      "offset": 1664220,
+      "duration": 3300
+    },
+    {
+      "text": "um okay",
+      "offset": 1665960,
+      "duration": 4319
+    },
+    {
+      "text": "so essentially that's uh that's what I",
+      "offset": 1667520,
+      "duration": 4320
+    },
+    {
+      "text": "wanted to show you um if you want to",
+      "offset": 1670279,
+      "duration": 2821
+    },
+    {
+      "text": "learn more about the different rules",
+      "offset": 1671840,
+      "duration": 3000
+    },
+    {
+      "text": "that I talked about you can take a look",
+      "offset": 1673100,
+      "duration": 3720
+    },
+    {
+      "text": "at this blog post",
+      "offset": 1674840,
+      "duration": 4980
+    },
+    {
+      "text": "um please take a look at our rules and",
+      "offset": 1676820,
+      "duration": 4979
+    },
+    {
+      "text": "uh eventually this video will be",
+      "offset": 1679820,
+      "duration": 4680
+    },
+    {
+      "text": "available on our YouTube uh site as well",
+      "offset": 1681799,
+      "duration": 5360
+    },
+    {
+      "text": "so thank you thank you for attending",
+      "offset": 1684500,
+      "duration": 7200
+    },
+    {
+      "text": "and going back uh I wanted to show I",
+      "offset": 1687159,
+      "duration": 6760
+    },
+    {
+      "text": "wanted to ask you folks",
+      "offset": 1691700,
+      "duration": 3839
+    },
+    {
+      "text": "um",
+      "offset": 1693919,
+      "duration": 4201
+    },
+    {
+      "text": "which sonar lint or Cloud feature did",
+      "offset": 1695539,
+      "duration": 5061
+    },
+    {
+      "text": "you like most",
+      "offset": 1698120,
+      "duration": 2480
+    },
+    {
+      "text": "cool thanks nephilis people fill out",
+      "offset": 1701240,
+      "duration": 5039
+    },
+    {
+      "text": "that poll I'm just gonna",
+      "offset": 1703580,
+      "duration": 5880
+    },
+    {
+      "text": "um remind everybody that we're open for",
+      "offset": 1706279,
+      "duration": 4981
+    },
+    {
+      "text": "questions I know we've been receiving a",
+      "offset": 1709460,
+      "duration": 4140
+    },
+    {
+      "text": "few and as we're getting close to time",
+      "offset": 1711260,
+      "duration": 4440
+    },
+    {
+      "text": "we will send out the questions and the",
+      "offset": 1713600,
+      "duration": 4559
+    },
+    {
+      "text": "answers afterwards",
+      "offset": 1715700,
+      "duration": 5219
+    },
+    {
+      "text": "um and I know nafiel once the poll is",
+      "offset": 1718159,
+      "duration": 4020
+    },
+    {
+      "text": "closed",
+      "offset": 1720919,
+      "duration": 3841
+    },
+    {
+      "text": "um I'll put up a just a quick note about",
+      "offset": 1722179,
+      "duration": 4801
+    },
+    {
+      "text": "what's coming up next but if I may just",
+      "offset": 1724760,
+      "duration": 3899
+    },
+    {
+      "text": "quickly fire a couple of questions to",
+      "offset": 1726980,
+      "duration": 4199
+    },
+    {
+      "text": "you real quick",
+      "offset": 1728659,
+      "duration": 4500
+    },
+    {
+      "text": "um so how does sonar lint sort of cloud",
+      "offset": 1731179,
+      "duration": 4141
+    },
+    {
+      "text": "compare to rough",
+      "offset": 1733159,
+      "duration": 3421
+    },
+    {
+      "text": "so",
+      "offset": 1735320,
+      "duration": 3359
+    },
+    {
+      "text": "um rough is a very fast linter what's",
+      "offset": 1736580,
+      "duration": 4740
+    },
+    {
+      "text": "sonar lint and and Cloud does is that it",
+      "offset": 1738679,
+      "duration": 5641
+    },
+    {
+      "text": "does a deeper analysis so if you think",
+      "offset": 1741320,
+      "duration": 5459
+    },
+    {
+      "text": "um in what rough has over say sonar",
+      "offset": 1744320,
+      "duration": 4859
+    },
+    {
+      "text": "LinkedIn cloud is speed but but what um",
+      "offset": 1746779,
+      "duration": 4921
+    },
+    {
+      "text": "sonar lint has is basically depth in",
+      "offset": 1749179,
+      "duration": 4021
+    },
+    {
+      "text": "terms of rules and also the",
+      "offset": 1751700,
+      "duration": 4380
+    },
+    {
+      "text": "documentation around them",
+      "offset": 1753200,
+      "duration": 4620
+    },
+    {
+      "text": "next Quest thank you next question I'm",
+      "offset": 1756080,
+      "duration": 3000
+    },
+    {
+      "text": "going to go real quick so I'm coming up",
+      "offset": 1757820,
+      "duration": 3000
+    },
+    {
+      "text": "on time so the sonar link work with",
+      "offset": 1759080,
+      "duration": 3719
+    },
+    {
+      "text": "types",
+      "offset": 1760820,
+      "duration": 5219
+    },
+    {
+      "text": "yes it does it does work with types um",
+      "offset": 1762799,
+      "duration": 6541
+    },
+    {
+      "text": "and I think you'd probably get better uh",
+      "offset": 1766039,
+      "duration": 5041
+    },
+    {
+      "text": "performance and understanding out of",
+      "offset": 1769340,
+      "duration": 4319
+    },
+    {
+      "text": "types in sonar Cloud because that has",
+      "offset": 1771080,
+      "duration": 4860
+    },
+    {
+      "text": "something called the bdb uh sorry the",
+      "offset": 1773659,
+      "duration": 5221
+    },
+    {
+      "text": "DVD and that actually tracks the",
+      "offset": 1775940,
+      "duration": 4920
+    },
+    {
+      "text": "different types and things like that",
+      "offset": 1778880,
+      "duration": 4260
+    },
+    {
+      "text": "try squeezing one more question the Sona",
+      "offset": 1780860,
+      "duration": 4199
+    },
+    {
+      "text": "Cube support the latest version of",
+      "offset": 1783140,
+      "duration": 6620
+    },
+    {
+      "text": "python yes yes it does absolutely",
+      "offset": 1785059,
+      "duration": 4701
+    },
+    {
+      "text": "find security issues related to not",
+      "offset": 1790600,
+      "duration": 5079
+    },
+    {
+      "text": "sanitized user input",
+      "offset": 1793580,
+      "duration": 5459
+    },
+    {
+      "text": "yes it absolutely can so I think I have",
+      "offset": 1795679,
+      "duration": 6860
+    },
+    {
+      "text": "uh an example here",
+      "offset": 1799039,
+      "duration": 6601
+    },
+    {
+      "text": "uh over here you can see this is",
+      "offset": 1802539,
+      "duration": 6640
+    },
+    {
+      "text": "actually one of the vulnerability issues",
+      "offset": 1805640,
+      "duration": 5940
+    },
+    {
+      "text": "so you can see here we're trying to get",
+      "offset": 1809179,
+      "duration": 4021
+    },
+    {
+      "text": "a uh",
+      "offset": 1811580,
+      "duration": 3780
+    },
+    {
+      "text": "um an argument directly from the request",
+      "offset": 1813200,
+      "duration": 4320
+    },
+    {
+      "text": "and this will be uh triggered as",
+      "offset": 1815360,
+      "duration": 5760
+    },
+    {
+      "text": "non-compliant code in sonar lint",
+      "offset": 1817520,
+      "duration": 5519
+    },
+    {
+      "text": "um and no actually it will be triggered",
+      "offset": 1821120,
+      "duration": 3900
+    },
+    {
+      "text": "as non-compliant code in sonar Cloud so",
+      "offset": 1823039,
+      "duration": 3360
+    },
+    {
+      "text": "that's one of the things sonarcloud",
+      "offset": 1825020,
+      "duration": 3000
+    },
+    {
+      "text": "offers over Summerlin",
+      "offset": 1826399,
+      "duration": 4201
+    },
+    {
+      "text": "cool I feel thank you so much I'm sorry",
+      "offset": 1828020,
+      "duration": 4320
+    },
+    {
+      "text": "to make the question so fast there were",
+      "offset": 1830600,
+      "duration": 3120
+    },
+    {
+      "text": "many more",
+      "offset": 1832340,
+      "duration": 3780
+    },
+    {
+      "text": "um but we want to respect the time so um",
+      "offset": 1833720,
+      "duration": 4559
+    },
+    {
+      "text": "thank you to everybody who's posed who",
+      "offset": 1836120,
+      "duration": 4380
+    },
+    {
+      "text": "have posed questions",
+      "offset": 1838279,
+      "duration": 4981
+    },
+    {
+      "text": "um and we also encourage you to pose",
+      "offset": 1840500,
+      "duration": 5940
+    },
+    {
+      "text": "those in our community but we will send",
+      "offset": 1843260,
+      "duration": 4620
+    },
+    {
+      "text": "out the answers to the ones that we've",
+      "offset": 1846440,
+      "duration": 3719
+    },
+    {
+      "text": "received please do visit sonosource.com",
+      "offset": 1847880,
+      "duration": 4799
+    },
+    {
+      "text": "for further information about clean as",
+      "offset": 1850159,
+      "duration": 5281
+    },
+    {
+      "text": "you code and just a reminder that there",
+      "offset": 1852679,
+      "duration": 4681
+    },
+    {
+      "text": "will be a survey popping up at the very",
+      "offset": 1855440,
+      "duration": 3180
+    },
+    {
+      "text": "end",
+      "offset": 1857360,
+      "duration": 5039
+    },
+    {
+      "text": "um to help us improve our next webinar",
+      "offset": 1858620,
+      "duration": 5939
+    },
+    {
+      "text": "um thank you nafiel thank you everybody",
+      "offset": 1862399,
+      "duration": 6801
+    },
+    {
+      "text": "for attending and see you all soon",
+      "offset": 1864559,
+      "duration": 4641
+    }
+  ],
+  "fullText": "so let's put that welcome screen up and let me say thank you and welcome to the clean code for python webinar or how python can be really weird um we are so excited to have a great speaker today um and we will demonstrate to you the importance clean code demonstrates and help you discover how python can behave unintuitively and also understand how sonar lint and sonar Cloud fit into the picture so I would like to introduce myself my name is Andrew and I'll be the moderator for this webinar which will be presented by nafiel Islam um before we start just a couple of quick housekeeping points so the session will last 30 minutes there'll be a q a at the end and you are invited to submit your questions throughout the webinar using the Q a box in Zoom so not the chat box the Q a box we have two panelists who will be attempting to answer your questions live during the webinar they are Stevan Van Der Verve and Michael bubli from our support engineering team so they will get to as many of your questions as we can we will record the session and we will send out a link to the recording afterwards finally at the end of the webinar a short survey survey will pop up your feedback is a gift so thank you for helping us improve so without further ado nafiel Islam nephew has been programming since he was 14. he has a decade of software experience and is adept in Python and exploring rust he authored mastering pycharm now Fiola spoken at Global python conferences and held positions your jet brains and Microsoft and in his free time he loves reading fantasy novels and you can see where you can follow him there on Twitter nafiel over to you hey everybody um thank you very much for coming to this webinar this webinar is really about clean code for Python and how python can behave in unexpected ways um so before we we get into that let's talk a little bit about what is clean code so in a nutshell uh for me at least clean code is about having a sustainable code base it is a code base that you can get a lot of mileage out of if your code base is something that you're afraid of using or constantly goes down or you need a lot of time to understand what is going on that isn't very sustainable for your developers so it can get very very difficult um to work on non-sustainable code bases especially with Echo places that are not clean clear coat is also explicit um I think one of the maxims in Python is you know explicit is better than implicit and uh clear code um is about making sure that there isn't a lot of ambiguity in what you're writing it does what it says and says what it does and consistent in terms of conventions so you know not mixing your snake case and your camel case just being consistent about variable names concerns about class names consistent about function names Etc and also how you deal with modules in Python lastly it is fit for production and that means your code runs and there aren't a lot of bugs in it um you're not going to get lots of memory leaks as well things like that so what does clean code exactly mean in Python well um we've been python has been famous for you know having very clean and consistent um syntax so it is about what we call idiomatic python it is about following pep 8 which is the style guide and you know avoiding bad coding patterns that can cause bugs and of course last but not least following security best practices but you know why would you want this um because if you don't have clean code what you're building up is technical debt and Technical debt isn't good for you this is an example of a function that is importing things within the function definition and ultimately the only thing that this does is uh give you a product of a bunch of numbers so this is confusing there are so many easier ways to do this now I know this example is contrived but you'll find a lot of places um a lot of popular projects um is very complicated code they use locals and globals everywhere so it's quite difficult to understand so technical that slows you down because it takes longer to understand what say a particular piece of code does even sometimes this can be your own code and Technical that is expensive you need a lot of man hours so ultimately uh it's not good for you so how do we get clink at sonar we have um a way of of of a methodology if you will that is about is called clean as you code what that means is that instead of handling the entirety of your technical debt in one go because that's difficult and some parts of your code base uh you know it's it's esoteric for a reason and you're you know sub-processing very old Shell scripts or something like that and it can often be difficult to uh refactor that so we have this methodology clean as you code and that basically means that as you change uh the files uh in your code base you also use tools to help you prevent writing a bad code in the first place but also fixing any bad code that you might have to look at or that is a part of your commit so you might say at this point in time and you know going back to the title is how python can be read you might say like well you know I follow all the conventions um my code is great well at times python can behave a little weird um there might be some unintentional um ways in which python behaves that makes it very confusing for people to understand and sometimes it doesn't behave the way that you expect hopefully that is what I'm going to be showing you now going back to this this was a study uh done by The s-i-e-s-e-i Institute so the software engineering Institute at Carnegie Mellon and they actually pointed out that a lot of the code a lot of the reasons for technical debt is code so overly complex code code duplication um dependencies on external peoples code and of course obsolete code so before I jump into um explaining how our methodology Works how the clean as you code methodology works I just like to ask you a question you have you have code that you're dealing with what do you use to analyze your code as you like so the poll is up it gives you a little bit of time then we're going to see uh what people use okay so the vast majority of you use pilot and a lot of you use sonarlint some of you use rough and as a style Checker some of you use black that's great a lot of people use different things so I'm going to show you um house owner lint Works in this example and more than sonar I'm going to show you how python can behave in very unintuitive ways so I'm going to fire up I charm over here I hope everybody can see um my code base and I just want to point your direction uh Point your attention to a couple of things first of all I do have sonar lint installed and if you don't have sonar lint installed you can go to uh plugins over here and you can see that I have sonar link installed but if you don't have it installed you can type in sonar you'll see sonar lint it's the one with a 5.6 million download so it's uh it's well used and we're going to be using that in these examples so okay without much further Ado um no weird python talk or no gotcha talk in Python can start without um mutable arguments so here we have a function that takes an item adds it to a new list and then returns uh puts that item in the list and then returns that list so here we have V which is just a uh a variable over here we're going to say we're going to add this to V and then we're going to add a couple of items along the way now here's the thing this is a different function call this is another function called and this is another function called these are all different function calls so they should be creating new lists um for us but if we were to run this you're going to see that V has a lot of interesting things happening to it because over time more and more items are being added to the same list so if we go up over here we can see what's going on you want to change the default value to none and initialize this parameter inside the function or method why because every single time we aren't giving it a new list it is using a reference to the same list that we put here this is why you're constantly getting things added to the same list over and over again so let's do that if let's just set this to none if items is none items is equal to a new list and let's see if that works the way that we expected it to so there we go V has one item added to it and these all have their own separate lists so this way you know you can prevent yourself from shooting yourself in the foot and this isn't just about lists it can it can also be if we get rid of this can also be a dictionary it can also be a set so anything that is essentially kind of like a reference to a container type is susceptible to this problem now another thing sonar lint does for you is that when you have these kinds of common problems of course it highlights it right and you can of course see what your problems are so here change the default to none and this gives you the exact rule that you want to be talking about um so if you take a look at these are these are very exhaustive documentation on the different rules that we have you can see like it says you know list are susceptible to this but also collection module EQ chain map counter I love this uh I love this object uh and default dict as well which is something I use quite a lot so it gives it it not only tells you hey you might not want uh what is actually going to happen in this code to happen um and this is why but sometimes it actually goes a step further which is that it can give you a way to fix this for you so if you're using pycharm or if you're using vs code this works as well but you can hit Alt Enter or whatever you use to invoke your quick fix and you can say hey fix that code for me please I I don't want to do it myself I'd like use sonarlint to do it for me and this goes and does it which is great so that's one of the ways in which um sonar lint can really help you another way and and these things are not intuitive so a lot of the times when you're um working with code you might say like look I don't write bad code I don't um do this a lot of the things that we're going to discuss you know aren't exactly intuitive um and and they they might be you might be like wow I didn't I didn't notice or I didn't expect that another one example another one that people often talk about is called integer caching and what that essentially is is that python caches the integers um between negative five and 256 positive 256. so what that means is that when you say a is equal to uh one or a is equal to two or whatever um that number because it's small it always refers to the same object a new object is not created that's that's what everybody knows that's common knowledge but we're going to see something interesting here so here I have a bad idea uh this is I just named it that it's it's not a good idea and you print we want to see the value of this and the 999. we also want to see the value of this so if you take a look at this you know but this should be true and this should be false right because of the integer cache but see what happens both are true both are true because the is operator is comparing um uh the reference to A to B so it is always the same object it's always the same object but you know the integer cache is from um negative 5 to 256. so why is this happening well what happens is when you have declarations within the same python file this doesn't count because it's part of the same compilation unit so ultimately it just goes into the same pyc file and therefore these objects point to the same thing so you might say the only places that you can see this um is different is in the console um over here if you do a is equal to 10 B is equal to 10. and if you do a is B you get true if you do c is equal to 999 D is equal to 999. you do c is d oops uh sorry C is D you're going to get false but you might say you know I I don't this is fine um I don't really use the console to write production code why should I care well if we were to import CND so from util's import c and d and of course these are also values 999 I can just go over there you can see ABC and B they're 999. if I come back and if I comment these out if I were to run it oops sorry this will be fine if I were to comment these out see what happens well I guess it's a it's a part of the same compilation unit but in general um when you have a situation like this uh let me just well this is interesting um I think the pi cache file isn't um uh hasn't been cleared and that's why you're getting a situation like this but in general what you don't want to do is use the is operator because it doesn't actually compare um the identities they actually compared the reference so you always want to replace this with a double equals so if you were to run this that would be true you're just going to try this again import a b c and d and to comment this out see if that works yes that is true if I do an is over here is over here I I don't know why this is uh working the way it is but essentially this is not reliable if you're copying um from if you're if you're importing something from a module um so that is integer caching in a nutshell another thing um that that I think sums a lot of people is something called blade binding closures now late binding closures are uh basically things where the final value of something outside the scope of your function uh Remains the Same so here we're trying to generate the three times table and if you were to run this we get nothing but 27. which is uh kind of odd if you ask me because ultimately what we're trying to do is generate the three times table or four if we run this again five so so that's pretty weird but if we wanted to make sure that this value the value of I is what uh ranges if we take a look here add a parameter of the function multiplier and use variable I as the default value so if we were to change this and say I is equal to I you're going to see sonar lint no longer complains about that and we get the correct time stable for this so what was previously happening is that the last value for this for Loop was getting plugged into the value of I because it's from the outer scope and it wasn't changing so that that is a problem and this this uh problem extends um to lambdas as well so if you were to take this out and say for I in range and when you say Lambda X I times x there we go you're going to run into the same problem but if you were to set the default um answer I is equal to I which you can also do in Atlanta you see that this is no longer the way this is what we expect it goes from five times zero all the way to um 5 times 9. so that's another thing that that I don't think is intuitive uh in most cases um because it's very easy to step into this mistake and if you take a look here if we didn't have this we have sonar lint reminding us that hey you might want to make this a default argument so um these might all be uh things that you've already been accustomed to things that you're used to um but here's another one and this is not something that we catch exactly right now which is that which is the new match case statement so here we have A Match test which basically is trying to see if they're is an empty list if there is one item in a list two items in a list or if it's something else now I want you to to look at this so here we have we match the sequence we can pass in a list we can pass in um a set oh sorry we can pass on a list we can pass in a um uh or the dictionary or anything any kind of sequence really but in this in this uh particular case where we're going to be using a list or Tuple actually we're using a tuple so here if you take a look if it's empty we get something if there's one item in the last we bind one of the values the first value if there's something else in the list we have we bind it to X and to y and if nothing you know we just use the underscore which is kind of like a throwaway variable now over here I have X and Y to clear now when I first look at the um match in case statements what I didn't know is that a lot of the uh when you're when you're capturing variables in your case statements that variable is not uh limited only to the match block it actually changes uh outside of the block as well so if we were to run this we're going to see of course it's a list with two items and over here there is one and two if we were to change this to three and four we'd get the same thing um but this this would get overwritten by the match in case statements so that's another weird thing in Python that you might want to be wary of and of course we don't cover this right yet but we will we do plan to add this rule eventually to solar so you might say well that's all great and good you're writing code but what if uh I wanted to have this integrated uh somewhere else if I wanted to have this integrated in my build process so over here if we go back and we just set all these things back to what they were I'm really sorry for the second example I tried it a couple of times that it was working working as expected um so over here um we are not going to fix this and we're not going to fix this either so what I'm going to do is I'm going to commit this code and I'm going to commit and push it to my Repository if I go back to uh Chrome over here I have something called sonar Cloud opened up and what sonarcloud does is basically it integrates all the rules that you can find in sonar lint as well as some other rules that aren't really that haven't been implemented on a lyncher level so you need we have something called the data flow bug detention with which goes into your code a little deeper and tries to understand what it does um so what sonar cloud is going to do is tell you what kind of bugs you're having the kind of code smells the vulnerabilities and the security hotspots and so if we take uh if we take an overview of this we can actually head over to the main branch we can see what kind of bugs are here uh sorry this is a wrong one this is a wrong one two oh here we are so over here you want to change this default value To None So if you integrate sonar Cloud into your QA process it can help you detect a lot of the code smells uh before you get over here as well we can see uh the the issue that we talked about when you're having something out of scope um and of course there are some other issues in the code as well so over here you can see that there's a Code smell and this is the code smell that you have um let's see if my latest push changed anything so as you push your code into sonar Cloud this gets automatically scanned and checked so and of course it's free for for all open source code uh so if you want to add a new project right now my uh current organization my personal account is um linked with sonarcloud and of course I can add anything and add any particular project and I can say setup and then I will have the same situation that I have here with sonarcloud okay so um what I wanted to say last uh secondly is a lot of our rules um are actually completely available for free and you can see what these rules are on our rules.sonarstars.com website you can see what's going on here um so the first example that I showed you folks we have a default list being created here why this is non-compliant what compliant solution would look like and what a compliant class would look like so it goes into more depth and you can see where it's available whether it's in sonar lens on our cloud or sonar Cube um that's great and I feel I know we're coming up close up to time um okay so essentially that's uh that's what I wanted to show you um if you want to learn more about the different rules that I talked about you can take a look at this blog post um please take a look at our rules and uh eventually this video will be available on our YouTube uh site as well so thank you thank you for attending and going back uh I wanted to show I wanted to ask you folks um which sonar lint or Cloud feature did you like most cool thanks nephilis people fill out that poll I'm just gonna um remind everybody that we're open for questions I know we've been receiving a few and as we're getting close to time we will send out the questions and the answers afterwards um and I know nafiel once the poll is closed um I'll put up a just a quick note about what's coming up next but if I may just quickly fire a couple of questions to you real quick um so how does sonar lint sort of cloud compare to rough so um rough is a very fast linter what's sonar lint and and Cloud does is that it does a deeper analysis so if you think um in what rough has over say sonar LinkedIn cloud is speed but but what um sonar lint has is basically depth in terms of rules and also the documentation around them next Quest thank you next question I'm going to go real quick so I'm coming up on time so the sonar link work with types yes it does it does work with types um and I think you'd probably get better uh performance and understanding out of types in sonar Cloud because that has something called the bdb uh sorry the DVD and that actually tracks the different types and things like that try squeezing one more question the Sona Cube support the latest version of python yes yes it does absolutely find security issues related to not sanitized user input yes it absolutely can so I think I have uh an example here uh over here you can see this is actually one of the vulnerability issues so you can see here we're trying to get a uh um an argument directly from the request and this will be uh triggered as non-compliant code in sonar lint um and no actually it will be triggered as non-compliant code in sonar Cloud so that's one of the things sonarcloud offers over Summerlin cool I feel thank you so much I'm sorry to make the question so fast there were many more um but we want to respect the time so um thank you to everybody who's posed who have posed questions um and we also encourage you to pose those in our community but we will send out the answers to the ones that we've received please do visit sonosource.com for further information about clean as you code and just a reminder that there will be a survey popping up at the very end um to help us improve our next webinar um thank you nafiel thank you everybody for attending and see you all soon",
+  "fetchedAt": "2026-03-14T09:24:38.121Z"
+}

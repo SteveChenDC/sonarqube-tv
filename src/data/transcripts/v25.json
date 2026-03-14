@@ -1,0 +1,1923 @@
+{
+  "videoId": "v25",
+  "youtubeId": "6mpmaOOYIYo",
+  "segments": [
+    {
+      "text": "Hi. Um, I'm Chris Chedy. I'm a product",
+      "offset": 17039,
+      "duration": 6160
+    },
+    {
+      "text": "manager at Sonar. There was a talk by",
+      "offset": 20480,
+      "duration": 5840
+    },
+    {
+      "text": "Olivier where he described uh Sonar's",
+      "offset": 23199,
+      "duration": 5361
+    },
+    {
+      "text": "approach to architecture, a new feature",
+      "offset": 26320,
+      "duration": 4400
+    },
+    {
+      "text": "in the product. What I'm going to show",
+      "offset": 28560,
+      "duration": 4880
+    },
+    {
+      "text": "you now is the the product itself in",
+      "offset": 30720,
+      "duration": 5720
+    },
+    {
+      "text": "action.",
+      "offset": 33440,
+      "duration": 3000
+    },
+    {
+      "text": "Uh solar architecture comprises",
+      "offset": 37120,
+      "duration": 5439
+    },
+    {
+      "text": "basically three main capabilities.",
+      "offset": 39920,
+      "duration": 4959
+    },
+    {
+      "text": "The current architecture is extracted",
+      "offset": 42559,
+      "duration": 4641
+    },
+    {
+      "text": "automatically from your source code uh",
+      "offset": 44879,
+      "duration": 4321
+    },
+    {
+      "text": "with every scan. So it's always up to",
+      "offset": 47200,
+      "duration": 4720
+    },
+    {
+      "text": "date and it shows you uh a",
+      "offset": 49200,
+      "duration": 6560
+    },
+    {
+      "text": "representation of the uh the containment",
+      "offset": 51920,
+      "duration": 5680
+    },
+    {
+      "text": "structure and relationships in your",
+      "offset": 55760,
+      "duration": 4400
+    },
+    {
+      "text": "code.",
+      "offset": 57600,
+      "duration": 4880
+    },
+    {
+      "text": "Intended architecture",
+      "offset": 60160,
+      "duration": 5600
+    },
+    {
+      "text": "um is something that you create. So uh",
+      "offset": 62480,
+      "duration": 5440
+    },
+    {
+      "text": "what it lets you do is put some of your",
+      "offset": 65760,
+      "duration": 5120
+    },
+    {
+      "text": "your containers uh within your code",
+      "offset": 67920,
+      "duration": 6320
+    },
+    {
+      "text": "under control and define their allowed",
+      "offset": 70880,
+      "duration": 7360
+    },
+    {
+      "text": "relationships with other containers.",
+      "offset": 74240,
+      "duration": 8239
+    },
+    {
+      "text": "Deviations are detected and reported as",
+      "offset": 78240,
+      "duration": 6480
+    },
+    {
+      "text": "anywhere where the current architecture",
+      "offset": 82479,
+      "duration": 6241
+    },
+    {
+      "text": "deviates from your intended architecture",
+      "offset": 84720,
+      "duration": 6960
+    },
+    {
+      "text": "and uh they will be listed in the uh",
+      "offset": 88720,
+      "duration": 6480
+    },
+    {
+      "text": "sonar architecture dashboard and they",
+      "offset": 91680,
+      "duration": 6079
+    },
+    {
+      "text": "will generate sonar cube issues for the",
+      "offset": 95200,
+      "duration": 4640
+    },
+    {
+      "text": "developers. uh bring the developers to",
+      "offset": 97759,
+      "duration": 4801
+    },
+    {
+      "text": "the exact lines of code where uh there",
+      "offset": 99840,
+      "duration": 6239
+    },
+    {
+      "text": "are references that are inaccurate that",
+      "offset": 102560,
+      "duration": 5599
+    },
+    {
+      "text": "are not conformant with the intended",
+      "offset": 106079,
+      "duration": 4561
+    },
+    {
+      "text": "architecture. So they'll be in they will",
+      "offset": 108159,
+      "duration": 4481
+    },
+    {
+      "text": "be have the information they need in",
+      "offset": 110640,
+      "duration": 4640
+    },
+    {
+      "text": "order to repair the code and bring the",
+      "offset": 112640,
+      "duration": 4720
+    },
+    {
+      "text": "current architecture in line with the",
+      "offset": 115280,
+      "duration": 4560
+    },
+    {
+      "text": "intended architecture. Uh this is",
+      "offset": 117360,
+      "duration": 4799
+    },
+    {
+      "text": "intended to be an iterative continuous",
+      "offset": 119840,
+      "duration": 5760
+    },
+    {
+      "text": "process. So uh you can start with your",
+      "offset": 122159,
+      "duration": 5761
+    },
+    {
+      "text": "intended architecture uh put in your",
+      "offset": 125600,
+      "duration": 3920
+    },
+    {
+      "text": "priorities",
+      "offset": 127920,
+      "duration": 4399
+    },
+    {
+      "text": "and then when those any deviations from",
+      "offset": 129520,
+      "duration": 4799
+    },
+    {
+      "text": "that are addressed you can extend the",
+      "offset": 132319,
+      "duration": 4401
+    },
+    {
+      "text": "intended architecture and uh continue",
+      "offset": 134319,
+      "duration": 5121
+    },
+    {
+      "text": "that process",
+      "offset": 136720,
+      "duration": 5440
+    },
+    {
+      "text": "intent the architecture uh within sonar",
+      "offset": 139440,
+      "duration": 4720
+    },
+    {
+      "text": "has its own dashboard",
+      "offset": 142160,
+      "duration": 3760
+    },
+    {
+      "text": "uh you can see it here and the three",
+      "offset": 144160,
+      "duration": 3920
+    },
+    {
+      "text": "main capabilities uh that I just",
+      "offset": 145920,
+      "duration": 3920
+    },
+    {
+      "text": "mentioned are current architecture",
+      "offset": 148080,
+      "duration": 5280
+    },
+    {
+      "text": "intended architecture and deviations S",
+      "offset": 149840,
+      "duration": 5520
+    },
+    {
+      "text": "uh I'm going to show you uh what these",
+      "offset": 153360,
+      "duration": 4239
+    },
+    {
+      "text": "look like for a Java project. So I'll be",
+      "offset": 155360,
+      "duration": 4560
+    },
+    {
+      "text": "using terms like classes, packages,",
+      "offset": 157599,
+      "duration": 6321
+    },
+    {
+      "text": "modules. Uh you can translate those to",
+      "offset": 159920,
+      "duration": 7840
+    },
+    {
+      "text": "uh your own ecosystem as files, folders,",
+      "offset": 163920,
+      "duration": 8200
+    },
+    {
+      "text": "namespaces and so forth.",
+      "offset": 167760,
+      "duration": 4360
+    },
+    {
+      "text": "The current architecture then is this.",
+      "offset": 172319,
+      "duration": 4241
+    },
+    {
+      "text": "It's basically a map of your whole",
+      "offset": 174800,
+      "duration": 4159
+    },
+    {
+      "text": "codebase.",
+      "offset": 176560,
+      "duration": 6399
+    },
+    {
+      "text": "um whereby the containment the the",
+      "offset": 178959,
+      "duration": 6081
+    },
+    {
+      "text": "structural containment is represented by",
+      "offset": 182959,
+      "duration": 4881
+    },
+    {
+      "text": "containment. So classes here these are",
+      "offset": 185040,
+      "duration": 5440
+    },
+    {
+      "text": "classes at the deepest level are",
+      "offset": 187840,
+      "duration": 4640
+    },
+    {
+      "text": "contained within their packages within",
+      "offset": 190480,
+      "duration": 4640
+    },
+    {
+      "text": "highle packages and ultimately within",
+      "offset": 192480,
+      "duration": 4399
+    },
+    {
+      "text": "modules.",
+      "offset": 195120,
+      "duration": 5520
+    },
+    {
+      "text": "The relationships drive the layout. Um",
+      "offset": 196879,
+      "duration": 6321
+    },
+    {
+      "text": "so what uh what that basically means is",
+      "offset": 200640,
+      "duration": 5360
+    },
+    {
+      "text": "that for the most part dependencies will",
+      "offset": 203200,
+      "duration": 5280
+    },
+    {
+      "text": "flow from left to right. Uh so for",
+      "offset": 206000,
+      "duration": 6319
+    },
+    {
+      "text": "instance here within the scope here um",
+      "offset": 208480,
+      "duration": 6080
+    },
+    {
+      "text": "the this item on the far right hand side",
+      "offset": 212319,
+      "duration": 4801
+    },
+    {
+      "text": "here probably has no relationship and no",
+      "offset": 214560,
+      "duration": 4880
+    },
+    {
+      "text": "dependencies on any of the other things",
+      "offset": 217120,
+      "duration": 4399
+    },
+    {
+      "text": "in this package.",
+      "offset": 219440,
+      "duration": 6000
+    },
+    {
+      "text": "And any of the uh classes in each uh",
+      "offset": 221519,
+      "duration": 5841
+    },
+    {
+      "text": "each of the other classes depends on at",
+      "offset": 225440,
+      "duration": 5680
+    },
+    {
+      "text": "least one class in the row to its right.",
+      "offset": 227360,
+      "duration": 7760
+    },
+    {
+      "text": "and any any uh classes here um that are",
+      "offset": 231120,
+      "duration": 6399
+    },
+    {
+      "text": "in the same column have no dependencies",
+      "offset": 235120,
+      "duration": 4880
+    },
+    {
+      "text": "on each other at all.",
+      "offset": 237519,
+      "duration": 4561
+    },
+    {
+      "text": "And this is applied at every level. So",
+      "offset": 240000,
+      "duration": 4640
+    },
+    {
+      "text": "you can say the same thing about these",
+      "offset": 242080,
+      "duration": 4560
+    },
+    {
+      "text": "uh packages here. This package has no",
+      "offset": 244640,
+      "duration": 4000
+    },
+    {
+      "text": "relationship on either any of these",
+      "offset": 246640,
+      "duration": 4480
+    },
+    {
+      "text": "packages and all of these classes in",
+      "offset": 248640,
+      "duration": 5599
+    },
+    {
+      "text": "this uh column here have no dependencies",
+      "offset": 251120,
+      "duration": 5359
+    },
+    {
+      "text": "uh between them.",
+      "offset": 254239,
+      "duration": 5441
+    },
+    {
+      "text": "You'll also spot wide areas here where",
+      "offset": 256479,
+      "duration": 5681
+    },
+    {
+      "text": "you have chains of dependencies. You can",
+      "offset": 259680,
+      "duration": 5200
+    },
+    {
+      "text": "recognize this quite clearly that this",
+      "offset": 262160,
+      "duration": 5120
+    },
+    {
+      "text": "package depends on code in this package",
+      "offset": 264880,
+      "duration": 5039
+    },
+    {
+      "text": "depends on code in this package etc. So",
+      "offset": 267280,
+      "duration": 5120
+    },
+    {
+      "text": "you already get a good feel for the",
+      "offset": 269919,
+      "duration": 6481
+    },
+    {
+      "text": "overall um uh relationships and",
+      "offset": 272400,
+      "duration": 5920
+    },
+    {
+      "text": "containment structure of your codebase",
+      "offset": 276400,
+      "duration": 3519
+    },
+    {
+      "text": "and the size sort of more or less",
+      "offset": 278320,
+      "duration": 3920
+    },
+    {
+      "text": "represents the amount of code ultimately",
+      "offset": 279919,
+      "duration": 5201
+    },
+    {
+      "text": "contained by any container.",
+      "offset": 282240,
+      "duration": 5200
+    },
+    {
+      "text": "You can see specific dependencies by",
+      "offset": 285120,
+      "duration": 5359
+    },
+    {
+      "text": "clicking anything in the map. So in this",
+      "offset": 287440,
+      "duration": 5840
+    },
+    {
+      "text": "case, I'm looking at the classes a class",
+      "offset": 290479,
+      "duration": 4321
+    },
+    {
+      "text": "here I clicked and it shows me all the",
+      "offset": 293280,
+      "duration": 4880
+    },
+    {
+      "text": "other classes that it uses or is used by",
+      "offset": 294800,
+      "duration": 6480
+    },
+    {
+      "text": "or packages",
+      "offset": 298160,
+      "duration": 6960
+    },
+    {
+      "text": "or indeed uh modules. Now when you start",
+      "offset": 301280,
+      "duration": 6960
+    },
+    {
+      "text": "uh clicking on highlevel components or",
+      "offset": 305120,
+      "duration": 5840
+    },
+    {
+      "text": "containers like modules it'll cause a",
+      "offset": 308240,
+      "duration": 4880
+    },
+    {
+      "text": "lot of dependencies uh to be displayed",
+      "offset": 310960,
+      "duration": 3840
+    },
+    {
+      "text": "and it can be pretty hard to see what",
+      "offset": 313120,
+      "duration": 4320
+    },
+    {
+      "text": "exactly is being used there.",
+      "offset": 314800,
+      "duration": 5920
+    },
+    {
+      "text": "You can switch to highle mode here which",
+      "offset": 317440,
+      "duration": 5599
+    },
+    {
+      "text": "gives you this view. Basically those",
+      "offset": 320720,
+      "duration": 5039
+    },
+    {
+      "text": "lines are replaced by highlighting the",
+      "offset": 323039,
+      "duration": 4801
+    },
+    {
+      "text": "the nodes that are involved in the",
+      "offset": 325759,
+      "duration": 4961
+    },
+    {
+      "text": "relationship with the selected item.",
+      "offset": 327840,
+      "duration": 7680
+    },
+    {
+      "text": "Um also anything inside this module that",
+      "offset": 330720,
+      "duration": 7840
+    },
+    {
+      "text": "uh uses something or is used by",
+      "offset": 335520,
+      "duration": 5440
+    },
+    {
+      "text": "something external to the module are",
+      "offset": 338560,
+      "duration": 4880
+    },
+    {
+      "text": "also highlighted. And you can narrow the",
+      "offset": 340960,
+      "duration": 6079
+    },
+    {
+      "text": "scope uh by um uh by clicking on for",
+      "offset": 343440,
+      "duration": 5599
+    },
+    {
+      "text": "example in this case a package. What",
+      "offset": 347039,
+      "duration": 4401
+    },
+    {
+      "text": "does this package use that is external",
+      "offset": 349039,
+      "duration": 4880
+    },
+    {
+      "text": "to this module here? Well here they all",
+      "offset": 351440,
+      "duration": 4640
+    },
+    {
+      "text": "are here.",
+      "offset": 353919,
+      "duration": 4560
+    },
+    {
+      "text": "Okay.",
+      "offset": 356080,
+      "duration": 3920
+    },
+    {
+      "text": "Final thing I just want to show you is",
+      "offset": 358479,
+      "duration": 4160
+    },
+    {
+      "text": "you can pan and zoom uh on the on the",
+      "offset": 360000,
+      "duration": 5039
+    },
+    {
+      "text": "model here. Now, obviously when you zoom",
+      "offset": 362639,
+      "duration": 5201
+    },
+    {
+      "text": "in, you're starting to see more details.",
+      "offset": 365039,
+      "duration": 4241
+    },
+    {
+      "text": "You're seeing the names of all the",
+      "offset": 367840,
+      "duration": 3919
+    },
+    {
+      "text": "classes and uh and that type of thing,",
+      "offset": 369280,
+      "duration": 5039
+    },
+    {
+      "text": "but your screen is only so big, so",
+      "offset": 371759,
+      "duration": 4961
+    },
+    {
+      "text": "you're going to see a narrower uh field",
+      "offset": 374319,
+      "duration": 5921
+    },
+    {
+      "text": "of vision. Where uh dependencies go off",
+      "offset": 376720,
+      "duration": 7759
+    },
+    {
+      "text": "screen, you can pan to go find those. or",
+      "offset": 380240,
+      "duration": 6640
+    },
+    {
+      "text": "more often more useful is you can zoom",
+      "offset": 384479,
+      "duration": 4961
+    },
+    {
+      "text": "out, see where they go and zoom in if",
+      "offset": 386880,
+      "duration": 5439
+    },
+    {
+      "text": "you want the names. This let you kind of",
+      "offset": 389440,
+      "duration": 5199
+    },
+    {
+      "text": "basically follow dependencies across",
+      "offset": 392319,
+      "duration": 4561
+    },
+    {
+      "text": "your whole codebase uh very easily and",
+      "offset": 394639,
+      "duration": 4721
+    },
+    {
+      "text": "very quickly.",
+      "offset": 396880,
+      "duration": 5280
+    },
+    {
+      "text": "So basically uh the intended",
+      "offset": 399360,
+      "duration": 5040
+    },
+    {
+      "text": "architecture, it's a map. It's very easy",
+      "offset": 402160,
+      "duration": 4800
+    },
+    {
+      "text": "to browse. You just pan, zoom, and",
+      "offset": 404400,
+      "duration": 4880
+    },
+    {
+      "text": "click. So now let's take a look at the",
+      "offset": 406960,
+      "duration": 4079
+    },
+    {
+      "text": "intended architecture where we're going",
+      "offset": 409280,
+      "duration": 3840
+    },
+    {
+      "text": "to start putting some of our code under",
+      "offset": 411039,
+      "duration": 4561
+    },
+    {
+      "text": "under control and defining some",
+      "offset": 413120,
+      "duration": 5040
+    },
+    {
+      "text": "relationships.",
+      "offset": 415600,
+      "duration": 5599
+    },
+    {
+      "text": "When you first go into intended",
+      "offset": 418160,
+      "duration": 4720
+    },
+    {
+      "text": "architecture, you're seeing this is the",
+      "offset": 421199,
+      "duration": 3840
+    },
+    {
+      "text": "model. It's basically an empty model,",
+      "offset": 422880,
+      "duration": 4719
+    },
+    {
+      "text": "but there is one box in the model for",
+      "offset": 425039,
+      "duration": 5681
+    },
+    {
+      "text": "each language uh that is uh found in",
+      "offset": 427599,
+      "duration": 5121
+    },
+    {
+      "text": "your codebase. This is a pure Java",
+      "offset": 430720,
+      "duration": 5199
+    },
+    {
+      "text": "project, so we just got one box here.",
+      "offset": 432720,
+      "duration": 5280
+    },
+    {
+      "text": "And what I'm going to do is start adding",
+      "offset": 435919,
+      "duration": 4801
+    },
+    {
+      "text": "in a subset of my uh my top level",
+      "offset": 438000,
+      "duration": 8599
+    },
+    {
+      "text": "components first into my model.",
+      "offset": 440720,
+      "duration": 5879
+    },
+    {
+      "text": "Uh as I'm going, I'm just clearing a few",
+      "offset": 447280,
+      "duration": 4160
+    },
+    {
+      "text": "check boxes. You don't need to worry",
+      "offset": 449599,
+      "duration": 4481
+    },
+    {
+      "text": "about uh why exactly I'm doing that.",
+      "offset": 451440,
+      "duration": 6000
+    },
+    {
+      "text": "It's just to uh make the demo uh go a",
+      "offset": 454080,
+      "duration": 5280
+    },
+    {
+      "text": "bit smoother.",
+      "offset": 457440,
+      "duration": 4640
+    },
+    {
+      "text": "So I've added in three of my top level",
+      "offset": 459360,
+      "duration": 5520
+    },
+    {
+      "text": "modules here. And now uh I need to",
+      "offset": 462080,
+      "duration": 5200
+    },
+    {
+      "text": "define the relationships uh between",
+      "offset": 464880,
+      "duration": 4640
+    },
+    {
+      "text": "these modules. And what I want to say is",
+      "offset": 467280,
+      "duration": 5680
+    },
+    {
+      "text": "basically uh parser and integration can",
+      "offset": 469520,
+      "duration": 6640
+    },
+    {
+      "text": "both use the API.",
+      "offset": 472960,
+      "duration": 5359
+    },
+    {
+      "text": "But by inference I'm also saying that",
+      "offset": 476160,
+      "duration": 4080
+    },
+    {
+      "text": "API shouldn't use either of the other",
+      "offset": 478319,
+      "duration": 5681
+    },
+    {
+      "text": "two. And uh integration for example if",
+      "offset": 480240,
+      "duration": 5760
+    },
+    {
+      "text": "there was some code found in integration",
+      "offset": 484000,
+      "duration": 4240
+    },
+    {
+      "text": "that used some of the code in parser",
+      "offset": 486000,
+      "duration": 4879
+    },
+    {
+      "text": "that would be uh a deviation from my",
+      "offset": 488240,
+      "duration": 5120
+    },
+    {
+      "text": "intent here because there is no intended",
+      "offset": 490879,
+      "duration": 5040
+    },
+    {
+      "text": "relationship shown in my model between",
+      "offset": 493360,
+      "duration": 4880
+    },
+    {
+      "text": "those two modules.",
+      "offset": 495919,
+      "duration": 5840
+    },
+    {
+      "text": "I can also go deeper into the structure.",
+      "offset": 498240,
+      "duration": 6239
+    },
+    {
+      "text": "Um, again, I just continuously click",
+      "offset": 501759,
+      "duration": 5681
+    },
+    {
+      "text": "deeper in. And I'm going to add a few",
+      "offset": 504479,
+      "duration": 5840
+    },
+    {
+      "text": "packages here that are uh all at the",
+      "offset": 507440,
+      "duration": 5200
+    },
+    {
+      "text": "same level",
+      "offset": 510319,
+      "duration": 6001
+    },
+    {
+      "text": "uh into my model. Uh, I want to three of",
+      "offset": 512640,
+      "duration": 6680
+    },
+    {
+      "text": "them.",
+      "offset": 516320,
+      "duration": 3000
+    },
+    {
+      "text": "And just one more",
+      "offset": 520880,
+      "duration": 7519
+    },
+    {
+      "text": "is VMOPS. Okay.",
+      "offset": 524240,
+      "duration": 6080
+    },
+    {
+      "text": "And again I need to define the",
+      "offset": 528399,
+      "duration": 4321
+    },
+    {
+      "text": "relationships between these packages",
+      "offset": 530320,
+      "duration": 5680
+    },
+    {
+      "text": "here. So what I want to say is well JVM",
+      "offset": 532720,
+      "duration": 6640
+    },
+    {
+      "text": "can use unified and that's it. I want VM",
+      "offset": 536000,
+      "duration": 6000
+    },
+    {
+      "text": "ops to have no relationships at all with",
+      "offset": 539360,
+      "duration": 6159
+    },
+    {
+      "text": "either JVM or unified.",
+      "offset": 542000,
+      "duration": 5920
+    },
+    {
+      "text": "You'll notice as you're adding uh",
+      "offset": 545519,
+      "duration": 4961
+    },
+    {
+      "text": "relationships",
+      "offset": 547920,
+      "duration": 4240
+    },
+    {
+      "text": "uh you can only add relationships",
+      "offset": 550480,
+      "duration": 5280
+    },
+    {
+      "text": "between siblings within your model.",
+      "offset": 552160,
+      "duration": 6480
+    },
+    {
+      "text": "Basically any more distant relationships",
+      "offset": 555760,
+      "duration": 5840
+    },
+    {
+      "text": "are already covered by the intended",
+      "offset": 558640,
+      "duration": 7440
+    },
+    {
+      "text": "relationships uh at the parent level.",
+      "offset": 561600,
+      "duration": 7600
+    },
+    {
+      "text": "Okay. Before uh you finish here and in",
+      "offset": 566080,
+      "duration": 5439
+    },
+    {
+      "text": "order for this to be picked up um by",
+      "offset": 569200,
+      "duration": 4480
+    },
+    {
+      "text": "your scanner to check for deviations,",
+      "offset": 571519,
+      "duration": 5601
+    },
+    {
+      "text": "you do need to save. So I'll do that.",
+      "offset": 573680,
+      "duration": 7760
+    },
+    {
+      "text": "And then once you've run your next scan,",
+      "offset": 577120,
+      "duration": 6480
+    },
+    {
+      "text": "uh, you'll see potentially some",
+      "offset": 581440,
+      "duration": 5360
+    },
+    {
+      "text": "deviations being reported here. The ones",
+      "offset": 583600,
+      "duration": 5520
+    },
+    {
+      "text": "I've just added are calling causing this",
+      "offset": 586800,
+      "duration": 5680
+    },
+    {
+      "text": "relationships deviations to be created.",
+      "offset": 589120,
+      "duration": 5360
+    },
+    {
+      "text": "And I can see here what they look like.",
+      "offset": 592480,
+      "duration": 4160
+    },
+    {
+      "text": "Um, I've got one here from the",
+      "offset": 594480,
+      "duration": 4560
+    },
+    {
+      "text": "integration module to the parser module.",
+      "offset": 596640,
+      "duration": 4400
+    },
+    {
+      "text": "Something in there uses something in",
+      "offset": 599040,
+      "duration": 4960
+    },
+    {
+      "text": "there. And likewise here I've got",
+      "offset": 601040,
+      "duration": 5919
+    },
+    {
+      "text": "something from the VM ops uh package to",
+      "offset": 604000,
+      "duration": 5920
+    },
+    {
+      "text": "the uh unified package. And you can",
+      "offset": 606959,
+      "duration": 6880
+    },
+    {
+      "text": "always click through here to see the um",
+      "offset": 609920,
+      "duration": 7760
+    },
+    {
+      "text": "any of any um sonar issues that are",
+      "offset": 613839,
+      "duration": 7361
+    },
+    {
+      "text": "created there. These are the code level",
+      "offset": 617680,
+      "duration": 5839
+    },
+    {
+      "text": "uh these are the code level um",
+      "offset": 621200,
+      "duration": 6160
+    },
+    {
+      "text": "references that are causing that or",
+      "offset": 623519,
+      "duration": 9760
+    },
+    {
+      "text": "unintended um reference in the code.",
+      "offset": 627360,
+      "duration": 5919
+    },
+    {
+      "text": "Now going back to architecture here I'm",
+      "offset": 633360,
+      "duration": 7280
+    },
+    {
+      "text": "going to extend my um my my model now I",
+      "offset": 636320,
+      "duration": 6480
+    },
+    {
+      "text": "want to show you another category if you",
+      "offset": 640640,
+      "duration": 7439
+    },
+    {
+      "text": "like of um of uh structural control that",
+      "offset": 642800,
+      "duration": 7599
+    },
+    {
+      "text": "you can that you can express using the",
+      "offset": 648079,
+      "duration": 4481
+    },
+    {
+      "text": "intended architecture and this is",
+      "offset": 650399,
+      "duration": 6641
+    },
+    {
+      "text": "basically um uh structural changes we've",
+      "offset": 652560,
+      "duration": 6160
+    },
+    {
+      "text": "done sort of relationship changes",
+      "offset": 657040,
+      "duration": 4080
+    },
+    {
+      "text": "structural changes where you're you're",
+      "offset": 658720,
+      "duration": 4400
+    },
+    {
+      "text": "you want to create new items in your",
+      "offset": 661120,
+      "duration": 4640
+    },
+    {
+      "text": "code or and or you want to rename things",
+      "offset": 663120,
+      "duration": 5839
+    },
+    {
+      "text": "or you want to move things around",
+      "offset": 665760,
+      "duration": 5440
+    },
+    {
+      "text": "and they're all available on the context",
+      "offset": 668959,
+      "duration": 5281
+    },
+    {
+      "text": "menu for any of your uh for any of the",
+      "offset": 671200,
+      "duration": 5440
+    },
+    {
+      "text": "components in the model.",
+      "offset": 674240,
+      "duration": 4800
+    },
+    {
+      "text": "What I'm going to do is create a first",
+      "offset": 676640,
+      "duration": 5520
+    },
+    {
+      "text": "of all a placeholder. So this basically",
+      "offset": 679040,
+      "duration": 5520
+    },
+    {
+      "text": "is a situation where I want to create a",
+      "offset": 682160,
+      "duration": 5520
+    },
+    {
+      "text": "new module in my codebase. It doesn't",
+      "offset": 684560,
+      "duration": 6519
+    },
+    {
+      "text": "exist yet.",
+      "offset": 687680,
+      "duration": 3399
+    },
+    {
+      "text": "And I'm going to call it GC toolkit",
+      "offset": 691440,
+      "duration": 5079
+    },
+    {
+      "text": "extension.",
+      "offset": 693519,
+      "duration": 3000
+    },
+    {
+      "text": "Um, and the advantage of doing this is",
+      "offset": 697600,
+      "duration": 7359
+    },
+    {
+      "text": "um maybe there's a new module that we",
+      "offset": 702800,
+      "duration": 4240
+    },
+    {
+      "text": "have decided that we're we're going to",
+      "offset": 704959,
+      "duration": 4320
+    },
+    {
+      "text": "create. So rather than just continuously",
+      "offset": 707040,
+      "duration": 4000
+    },
+    {
+      "text": "growing the existing modules, you're",
+      "offset": 709279,
+      "duration": 3041
+    },
+    {
+      "text": "occasionally going to want to add new",
+      "offset": 711040,
+      "duration": 4239
+    },
+    {
+      "text": "modules, but I can by adding it to my",
+      "offset": 712320,
+      "duration": 5440
+    },
+    {
+      "text": "model. Now as soon as any code is added",
+      "offset": 715279,
+      "duration": 5120
+    },
+    {
+      "text": "to my new module",
+      "offset": 717760,
+      "duration": 4880
+    },
+    {
+      "text": "um it will its relationships will be",
+      "offset": 720399,
+      "duration": 4161
+    },
+    {
+      "text": "checked here and what I've basically",
+      "offset": 722640,
+      "duration": 3920
+    },
+    {
+      "text": "done here is I've hidden it behind the",
+      "offset": 724560,
+      "duration": 4560
+    },
+    {
+      "text": "API module. So I'm saying that these",
+      "offset": 726560,
+      "duration": 5360
+    },
+    {
+      "text": "modules here should not directly use the",
+      "offset": 729120,
+      "duration": 5040
+    },
+    {
+      "text": "extension. They should go through the",
+      "offset": 731920,
+      "duration": 5680
+    },
+    {
+      "text": "API and uh this will kind of force the",
+      "offset": 734160,
+      "duration": 5280
+    },
+    {
+      "text": "situation where if some of the",
+      "offset": 737600,
+      "duration": 4960
+    },
+    {
+      "text": "functionality is required in the new",
+      "offset": 739440,
+      "duration": 5040
+    },
+    {
+      "text": "functionality that's being added to",
+      "offset": 742560,
+      "duration": 3760
+    },
+    {
+      "text": "extension is required by something",
+      "offset": 744480,
+      "duration": 3919
+    },
+    {
+      "text": "inside parser.",
+      "offset": 746320,
+      "duration": 4400
+    },
+    {
+      "text": "uh the inclination may be to directly",
+      "offset": 748399,
+      "duration": 6081
+    },
+    {
+      "text": "use it but that'll be prevented and the",
+      "offset": 750720,
+      "duration": 6559
+    },
+    {
+      "text": "you uh the developers will be thereby",
+      "offset": 754480,
+      "duration": 4960
+    },
+    {
+      "text": "encouraged if you like to maybe extend",
+      "offset": 757279,
+      "duration": 5201
+    },
+    {
+      "text": "the API so that the to allow access to",
+      "offset": 759440,
+      "duration": 5920
+    },
+    {
+      "text": "the new the new features.",
+      "offset": 762480,
+      "duration": 4799
+    },
+    {
+      "text": "Uh now I'm going to show how you can",
+      "offset": 765360,
+      "duration": 4479
+    },
+    {
+      "text": "move stuff around. So go from the",
+      "offset": 767279,
+      "duration": 4481
+    },
+    {
+      "text": "current location let's say I want to",
+      "offset": 769839,
+      "duration": 5601
+    },
+    {
+      "text": "move this IO this new this this existing",
+      "offset": 771760,
+      "duration": 6160
+    },
+    {
+      "text": "IO package",
+      "offset": 775440,
+      "duration": 5120
+    },
+    {
+      "text": "um which uh contains just if I look here",
+      "offset": 777920,
+      "duration": 5280
+    },
+    {
+      "text": "it just contains a single class but this",
+      "offset": 780560,
+      "duration": 5680
+    },
+    {
+      "text": "actually um we've decided this needs to",
+      "offset": 783200,
+      "duration": 5759
+    },
+    {
+      "text": "this should really go into this new uh",
+      "offset": 786240,
+      "duration": 5200
+    },
+    {
+      "text": "component here that we just added. I can",
+      "offset": 788959,
+      "duration": 4880
+    },
+    {
+      "text": "just go ahead and move it. Uh, select",
+      "offset": 791440,
+      "duration": 5920
+    },
+    {
+      "text": "the extension and do a move.",
+      "offset": 793839,
+      "duration": 5601
+    },
+    {
+      "text": "And that expresses what I want. I want a",
+      "offset": 797360,
+      "duration": 3840
+    },
+    {
+      "text": "new module called extension. There's",
+      "offset": 799440,
+      "duration": 4000
+    },
+    {
+      "text": "going to be an IO package in there. And",
+      "offset": 801200,
+      "duration": 5040
+    },
+    {
+      "text": "by the way, the code in there should be",
+      "offset": 803440,
+      "duration": 4880
+    },
+    {
+      "text": "moved from its current location in",
+      "offset": 806240,
+      "duration": 4960
+    },
+    {
+      "text": "parser. I've just said all of that. And",
+      "offset": 808320,
+      "duration": 5600
+    },
+    {
+      "text": "the sonar cube issues will drive the",
+      "offset": 811200,
+      "duration": 5920
+    },
+    {
+      "text": "users uh to make that change. Let's see",
+      "offset": 813920,
+      "duration": 5680
+    },
+    {
+      "text": "what these structural changes look like",
+      "offset": 817120,
+      "duration": 5600
+    },
+    {
+      "text": "in the dashboard.",
+      "offset": 819600,
+      "duration": 5520
+    },
+    {
+      "text": "And here they are here. Um you can see",
+      "offset": 822720,
+      "duration": 5200
+    },
+    {
+      "text": "that IO is there. Um this is one where",
+      "offset": 825120,
+      "duration": 6560
+    },
+    {
+      "text": "actually I did a renames of JVM utils.",
+      "offset": 827920,
+      "duration": 7039
+    },
+    {
+      "text": "And you can always click through to uh",
+      "offset": 831680,
+      "duration": 6000
+    },
+    {
+      "text": "see the list the issues that are raised",
+      "offset": 834959,
+      "duration": 5120
+    },
+    {
+      "text": "that will cause that rename to happen in",
+      "offset": 837680,
+      "duration": 5040
+    },
+    {
+      "text": "the code and bring it in line uh with",
+      "offset": 840079,
+      "duration": 6841
+    },
+    {
+      "text": "with uh what we specified.",
+      "offset": 842720,
+      "duration": 4200
+    },
+    {
+      "text": "So finally I'm going to talk about the",
+      "offset": 846959,
+      "duration": 6320
+    },
+    {
+      "text": "flaws here. Um so flaws kind of lie in",
+      "offset": 848959,
+      "duration": 6721
+    },
+    {
+      "text": "between the current architecture and the",
+      "offset": 853279,
+      "duration": 6721
+    },
+    {
+      "text": "intended architecture. Um",
+      "offset": 855680,
+      "duration": 6240
+    },
+    {
+      "text": "they look at the current architecture",
+      "offset": 860000,
+      "duration": 4720
+    },
+    {
+      "text": "and spot certain patterns uh that could",
+      "offset": 861920,
+      "duration": 4960
+    },
+    {
+      "text": "be considered problems",
+      "offset": 864720,
+      "duration": 4720
+    },
+    {
+      "text": "and they list them down below. At the",
+      "offset": 866880,
+      "duration": 5040
+    },
+    {
+      "text": "moment we only detect one type of flaw",
+      "offset": 869440,
+      "duration": 5440
+    },
+    {
+      "text": "which we call tangles. You can expect uh",
+      "offset": 871920,
+      "duration": 6560
+    },
+    {
+      "text": "this to grow in the future. Uh tangles",
+      "offset": 874880,
+      "duration": 7440
+    },
+    {
+      "text": "are basically um a group of classes or",
+      "offset": 878480,
+      "duration": 7599
+    },
+    {
+      "text": "files that are cyclically um dependent",
+      "offset": 882320,
+      "duration": 5600
+    },
+    {
+      "text": "on each other. That is they either",
+      "offset": 886079,
+      "duration": 5361
+    },
+    {
+      "text": "directly depend or indirectly depend on",
+      "offset": 887920,
+      "duration": 6960
+    },
+    {
+      "text": "all of the other classes within the",
+      "offset": 891440,
+      "duration": 5680
+    },
+    {
+      "text": "tangle. Let's take a look at what one of",
+      "offset": 894880,
+      "duration": 4880
+    },
+    {
+      "text": "those looks like. So here you're seeing",
+      "offset": 897120,
+      "duration": 4880
+    },
+    {
+      "text": "the five classes that comprise this",
+      "offset": 899760,
+      "duration": 4000
+    },
+    {
+      "text": "tangle.",
+      "offset": 902000,
+      "duration": 4800
+    },
+    {
+      "text": "um here with their dependencies grouped",
+      "offset": 903760,
+      "duration": 4879
+    },
+    {
+      "text": "by the packages that contain the",
+      "offset": 906800,
+      "duration": 4080
+    },
+    {
+      "text": "classes.",
+      "offset": 908639,
+      "duration": 5281
+    },
+    {
+      "text": "Um and you can see for example there is",
+      "offset": 910880,
+      "duration": 7680
+    },
+    {
+      "text": "uh a path from every uh class here to",
+      "offset": 913920,
+      "duration": 7200
+    },
+    {
+      "text": "here to here to here and back to itself",
+      "offset": 918560,
+      "duration": 4399
+    },
+    {
+      "text": "there. All of these are cyclically",
+      "offset": 921120,
+      "duration": 4079
+    },
+    {
+      "text": "dependent. We're just going to take a",
+      "offset": 922959,
+      "duration": 5921
+    },
+    {
+      "text": "look at one um",
+      "offset": 925199,
+      "duration": 7200
+    },
+    {
+      "text": "slightly uh simpler uh tangle here. This",
+      "offset": 928880,
+      "duration": 4959
+    },
+    {
+      "text": "one here, you can see all of the",
+      "offset": 932399,
+      "duration": 3521
+    },
+    {
+      "text": "relationships flow from left to right",
+      "offset": 933839,
+      "duration": 4161
+    },
+    {
+      "text": "except this one that flows from right to",
+      "offset": 935920,
+      "duration": 5279
+    },
+    {
+      "text": "left. Uh if you just if this one was to",
+      "offset": 938000,
+      "duration": 5040
+    },
+    {
+      "text": "be removed, what would be remaining",
+      "offset": 941199,
+      "duration": 3760
+    },
+    {
+      "text": "would not be a tangle anymore. There",
+      "offset": 943040,
+      "duration": 4159
+    },
+    {
+      "text": "would be no more cyclic dependency. And",
+      "offset": 944959,
+      "duration": 4240
+    },
+    {
+      "text": "I can go ahead actually and directly",
+      "offset": 947199,
+      "duration": 5041
+    },
+    {
+      "text": "request that that be removed. Uh we call",
+      "offset": 949199,
+      "duration": 7521
+    },
+    {
+      "text": "that um a directive which will be",
+      "offset": 952240,
+      "duration": 7839
+    },
+    {
+      "text": "surfaced uh as a sonar issue where the",
+      "offset": 956720,
+      "duration": 5359
+    },
+    {
+      "text": "developers are taking to each uh",
+      "offset": 960079,
+      "duration": 4721
+    },
+    {
+      "text": "reference within the within that file",
+      "offset": 962079,
+      "duration": 5120
+    },
+    {
+      "text": "that caused that classtoclass dependency",
+      "offset": 964800,
+      "duration": 6440
+    },
+    {
+      "text": "that we've asked to be removed.",
+      "offset": 967199,
+      "duration": 4041
+    },
+    {
+      "text": "Okay. Uh that's it. Um I think we've",
+      "offset": 971360,
+      "duration": 5279
+    },
+    {
+      "text": "covered all of these now. Uh please go",
+      "offset": 974320,
+      "duration": 5360
+    },
+    {
+      "text": "ahead and uh take a look at it. Uh you",
+      "offset": 976639,
+      "duration": 4640
+    },
+    {
+      "text": "may want to take a look at your current",
+      "offset": 979680,
+      "duration": 3519
+    },
+    {
+      "text": "architecture",
+      "offset": 981279,
+      "duration": 5441
+    },
+    {
+      "text": "um explore the map um and get a good",
+      "offset": 983199,
+      "duration": 5681
+    },
+    {
+      "text": "feel for how your code really is",
+      "offset": 986720,
+      "duration": 4239
+    },
+    {
+      "text": "structured today.",
+      "offset": 988880,
+      "duration": 6000
+    },
+    {
+      "text": "Um it'll be very convenient for",
+      "offset": 990959,
+      "duration": 6401
+    },
+    {
+      "text": "onboarders and that type of thing to to",
+      "offset": 994880,
+      "duration": 5280
+    },
+    {
+      "text": "help them understand how the code is",
+      "offset": 997360,
+      "duration": 6000
+    },
+    {
+      "text": "organized and how the relationships um",
+      "offset": 1000160,
+      "duration": 6400
+    },
+    {
+      "text": "are within the code uh and that type of",
+      "offset": 1003360,
+      "duration": 6000
+    },
+    {
+      "text": "thing. um the intended architecture. You",
+      "offset": 1006560,
+      "duration": 4000
+    },
+    {
+      "text": "probably want to start with a few",
+      "offset": 1009360,
+      "duration": 3839
+    },
+    {
+      "text": "highlevel components. Uh put them into",
+      "offset": 1010560,
+      "duration": 4639
+    },
+    {
+      "text": "your intended architecture to find the",
+      "offset": 1013199,
+      "duration": 4880
+    },
+    {
+      "text": "relationships, see what deviations are",
+      "offset": 1015199,
+      "duration": 7521
+    },
+    {
+      "text": "reported. Um tidy those up uh until your",
+      "offset": 1018079,
+      "duration": 7041
+    },
+    {
+      "text": "code and thereby the current",
+      "offset": 1022720,
+      "duration": 5280
+    },
+    {
+      "text": "architecture is in line with your uh",
+      "offset": 1025120,
+      "duration": 5439
+    },
+    {
+      "text": "today's intended architecture. And then",
+      "offset": 1028000,
+      "duration": 4480
+    },
+    {
+      "text": "you can go ahead and extend that",
+      "offset": 1030559,
+      "duration": 3921
+    },
+    {
+      "text": "intended architecture. perhaps add some",
+      "offset": 1032480,
+      "duration": 4800
+    },
+    {
+      "text": "more highlevel components or selectively",
+      "offset": 1034480,
+      "duration": 4400
+    },
+    {
+      "text": "go deeper depending where your",
+      "offset": 1037280,
+      "duration": 4080
+    },
+    {
+      "text": "priorities are.",
+      "offset": 1038880,
+      "duration": 7120
+    },
+    {
+      "text": "Um, and yeah, do please try it. Um, let",
+      "offset": 1041360,
+      "duration": 7040
+    },
+    {
+      "text": "us know if you have uh any feedback at",
+      "offset": 1046000,
+      "duration": 5120
+    },
+    {
+      "text": "all. Very welcome. Uh, help us improve",
+      "offset": 1048400,
+      "duration": 4480
+    },
+    {
+      "text": "the product. Let us know what you find",
+      "offset": 1051120,
+      "duration": 3760
+    },
+    {
+      "text": "most useful. Uh, what you find most",
+      "offset": 1052880,
+      "duration": 4320
+    },
+    {
+      "text": "frustrating and we'll see what we can do",
+      "offset": 1054880,
+      "duration": 7320
+    },
+    {
+      "text": "about that. Thanks very much. Bye-bye.",
+      "offset": 1057200,
+      "duration": 5000
+    }
+  ],
+  "fullText": "Hi. Um, I'm Chris Chedy. I'm a product manager at Sonar. There was a talk by Olivier where he described uh Sonar's approach to architecture, a new feature in the product. What I'm going to show you now is the the product itself in action. Uh solar architecture comprises basically three main capabilities. The current architecture is extracted automatically from your source code uh with every scan. So it's always up to date and it shows you uh a representation of the uh the containment structure and relationships in your code. Intended architecture um is something that you create. So uh what it lets you do is put some of your your containers uh within your code under control and define their allowed relationships with other containers. Deviations are detected and reported as anywhere where the current architecture deviates from your intended architecture and uh they will be listed in the uh sonar architecture dashboard and they will generate sonar cube issues for the developers. uh bring the developers to the exact lines of code where uh there are references that are inaccurate that are not conformant with the intended architecture. So they'll be in they will be have the information they need in order to repair the code and bring the current architecture in line with the intended architecture. Uh this is intended to be an iterative continuous process. So uh you can start with your intended architecture uh put in your priorities and then when those any deviations from that are addressed you can extend the intended architecture and uh continue that process intent the architecture uh within sonar has its own dashboard uh you can see it here and the three main capabilities uh that I just mentioned are current architecture intended architecture and deviations S uh I'm going to show you uh what these look like for a Java project. So I'll be using terms like classes, packages, modules. Uh you can translate those to uh your own ecosystem as files, folders, namespaces and so forth. The current architecture then is this. It's basically a map of your whole codebase. um whereby the containment the the structural containment is represented by containment. So classes here these are classes at the deepest level are contained within their packages within highle packages and ultimately within modules. The relationships drive the layout. Um so what uh what that basically means is that for the most part dependencies will flow from left to right. Uh so for instance here within the scope here um the this item on the far right hand side here probably has no relationship and no dependencies on any of the other things in this package. And any of the uh classes in each uh each of the other classes depends on at least one class in the row to its right. and any any uh classes here um that are in the same column have no dependencies on each other at all. And this is applied at every level. So you can say the same thing about these uh packages here. This package has no relationship on either any of these packages and all of these classes in this uh column here have no dependencies uh between them. You'll also spot wide areas here where you have chains of dependencies. You can recognize this quite clearly that this package depends on code in this package depends on code in this package etc. So you already get a good feel for the overall um uh relationships and containment structure of your codebase and the size sort of more or less represents the amount of code ultimately contained by any container. You can see specific dependencies by clicking anything in the map. So in this case, I'm looking at the classes a class here I clicked and it shows me all the other classes that it uses or is used by or packages or indeed uh modules. Now when you start uh clicking on highlevel components or containers like modules it'll cause a lot of dependencies uh to be displayed and it can be pretty hard to see what exactly is being used there. You can switch to highle mode here which gives you this view. Basically those lines are replaced by highlighting the the nodes that are involved in the relationship with the selected item. Um also anything inside this module that uh uses something or is used by something external to the module are also highlighted. And you can narrow the scope uh by um uh by clicking on for example in this case a package. What does this package use that is external to this module here? Well here they all are here. Okay. Final thing I just want to show you is you can pan and zoom uh on the on the model here. Now, obviously when you zoom in, you're starting to see more details. You're seeing the names of all the classes and uh and that type of thing, but your screen is only so big, so you're going to see a narrower uh field of vision. Where uh dependencies go off screen, you can pan to go find those. or more often more useful is you can zoom out, see where they go and zoom in if you want the names. This let you kind of basically follow dependencies across your whole codebase uh very easily and very quickly. So basically uh the intended architecture, it's a map. It's very easy to browse. You just pan, zoom, and click. So now let's take a look at the intended architecture where we're going to start putting some of our code under under control and defining some relationships. When you first go into intended architecture, you're seeing this is the model. It's basically an empty model, but there is one box in the model for each language uh that is uh found in your codebase. This is a pure Java project, so we just got one box here. And what I'm going to do is start adding in a subset of my uh my top level components first into my model. Uh as I'm going, I'm just clearing a few check boxes. You don't need to worry about uh why exactly I'm doing that. It's just to uh make the demo uh go a bit smoother. So I've added in three of my top level modules here. And now uh I need to define the relationships uh between these modules. And what I want to say is basically uh parser and integration can both use the API. But by inference I'm also saying that API shouldn't use either of the other two. And uh integration for example if there was some code found in integration that used some of the code in parser that would be uh a deviation from my intent here because there is no intended relationship shown in my model between those two modules. I can also go deeper into the structure. Um, again, I just continuously click deeper in. And I'm going to add a few packages here that are uh all at the same level uh into my model. Uh, I want to three of them. And just one more is VMOPS. Okay. And again I need to define the relationships between these packages here. So what I want to say is well JVM can use unified and that's it. I want VM ops to have no relationships at all with either JVM or unified. You'll notice as you're adding uh relationships uh you can only add relationships between siblings within your model. Basically any more distant relationships are already covered by the intended relationships uh at the parent level. Okay. Before uh you finish here and in order for this to be picked up um by your scanner to check for deviations, you do need to save. So I'll do that. And then once you've run your next scan, uh, you'll see potentially some deviations being reported here. The ones I've just added are calling causing this relationships deviations to be created. And I can see here what they look like. Um, I've got one here from the integration module to the parser module. Something in there uses something in there. And likewise here I've got something from the VM ops uh package to the uh unified package. And you can always click through here to see the um any of any um sonar issues that are created there. These are the code level uh these are the code level um references that are causing that or unintended um reference in the code. Now going back to architecture here I'm going to extend my um my my model now I want to show you another category if you like of um of uh structural control that you can that you can express using the intended architecture and this is basically um uh structural changes we've done sort of relationship changes structural changes where you're you're you want to create new items in your code or and or you want to rename things or you want to move things around and they're all available on the context menu for any of your uh for any of the components in the model. What I'm going to do is create a first of all a placeholder. So this basically is a situation where I want to create a new module in my codebase. It doesn't exist yet. And I'm going to call it GC toolkit extension. Um, and the advantage of doing this is um maybe there's a new module that we have decided that we're we're going to create. So rather than just continuously growing the existing modules, you're occasionally going to want to add new modules, but I can by adding it to my model. Now as soon as any code is added to my new module um it will its relationships will be checked here and what I've basically done here is I've hidden it behind the API module. So I'm saying that these modules here should not directly use the extension. They should go through the API and uh this will kind of force the situation where if some of the functionality is required in the new functionality that's being added to extension is required by something inside parser. uh the inclination may be to directly use it but that'll be prevented and the you uh the developers will be thereby encouraged if you like to maybe extend the API so that the to allow access to the new the new features. Uh now I'm going to show how you can move stuff around. So go from the current location let's say I want to move this IO this new this this existing IO package um which uh contains just if I look here it just contains a single class but this actually um we've decided this needs to this should really go into this new uh component here that we just added. I can just go ahead and move it. Uh, select the extension and do a move. And that expresses what I want. I want a new module called extension. There's going to be an IO package in there. And by the way, the code in there should be moved from its current location in parser. I've just said all of that. And the sonar cube issues will drive the users uh to make that change. Let's see what these structural changes look like in the dashboard. And here they are here. Um you can see that IO is there. Um this is one where actually I did a renames of JVM utils. And you can always click through to uh see the list the issues that are raised that will cause that rename to happen in the code and bring it in line uh with with uh what we specified. So finally I'm going to talk about the flaws here. Um so flaws kind of lie in between the current architecture and the intended architecture. Um they look at the current architecture and spot certain patterns uh that could be considered problems and they list them down below. At the moment we only detect one type of flaw which we call tangles. You can expect uh this to grow in the future. Uh tangles are basically um a group of classes or files that are cyclically um dependent on each other. That is they either directly depend or indirectly depend on all of the other classes within the tangle. Let's take a look at what one of those looks like. So here you're seeing the five classes that comprise this tangle. um here with their dependencies grouped by the packages that contain the classes. Um and you can see for example there is uh a path from every uh class here to here to here to here and back to itself there. All of these are cyclically dependent. We're just going to take a look at one um slightly uh simpler uh tangle here. This one here, you can see all of the relationships flow from left to right except this one that flows from right to left. Uh if you just if this one was to be removed, what would be remaining would not be a tangle anymore. There would be no more cyclic dependency. And I can go ahead actually and directly request that that be removed. Uh we call that um a directive which will be surfaced uh as a sonar issue where the developers are taking to each uh reference within the within that file that caused that classtoclass dependency that we've asked to be removed. Okay. Uh that's it. Um I think we've covered all of these now. Uh please go ahead and uh take a look at it. Uh you may want to take a look at your current architecture um explore the map um and get a good feel for how your code really is structured today. Um it'll be very convenient for onboarders and that type of thing to to help them understand how the code is organized and how the relationships um are within the code uh and that type of thing. um the intended architecture. You probably want to start with a few highlevel components. Uh put them into your intended architecture to find the relationships, see what deviations are reported. Um tidy those up uh until your code and thereby the current architecture is in line with your uh today's intended architecture. And then you can go ahead and extend that intended architecture. perhaps add some more highlevel components or selectively go deeper depending where your priorities are. Um, and yeah, do please try it. Um, let us know if you have uh any feedback at all. Very welcome. Uh, help us improve the product. Let us know what you find most useful. Uh, what you find most frustrating and we'll see what we can do about that. Thanks very much. Bye-bye.",
+  "fetchedAt": "2026-03-14T09:21:55.268Z"
+}

@@ -1,0 +1,998 @@
+{
+  "videoId": "v202",
+  "youtubeId": "shfNPc4RxS4",
+  "segments": [
+    {
+      "text": "[Music]",
+      "offset": 930,
+      "duration": 3109
+    },
+    {
+      "text": "[Music]",
+      "offset": 7400,
+      "duration": 10119
+    },
+    {
+      "text": "hi everyone i'm clint cameron product",
+      "offset": 18000,
+      "duration": 3520
+    },
+    {
+      "text": "marketing manager at sonarsource and",
+      "offset": 19840,
+      "duration": 3279
+    },
+    {
+      "text": "today i'm going to demonstrate how easy",
+      "offset": 21520,
+      "duration": 3999
+    },
+    {
+      "text": "it is to code smarter and harness the",
+      "offset": 23119,
+      "duration": 4160
+    },
+    {
+      "text": "power of clean code in your devops",
+      "offset": 25519,
+      "duration": 3520
+    },
+    {
+      "text": "workflows",
+      "offset": 27279,
+      "duration": 3201
+    },
+    {
+      "text": "now let me first start with a",
+      "offset": 29039,
+      "duration": 3761
+    },
+    {
+      "text": "traditional workflow and show how it can",
+      "offset": 30480,
+      "duration": 4079
+    },
+    {
+      "text": "waste a tremendous amount of developer",
+      "offset": 32800,
+      "duration": 3599
+    },
+    {
+      "text": "time code is written and pushed to the",
+      "offset": 34559,
+      "duration": 3121
+    },
+    {
+      "text": "main branch",
+      "offset": 36399,
+      "duration": 3361
+    },
+    {
+      "text": "auditors flag potential issues and then",
+      "offset": 37680,
+      "duration": 4160
+    },
+    {
+      "text": "devs return to the code to triage and",
+      "offset": 39760,
+      "duration": 3680
+    },
+    {
+      "text": "separate real issues from false",
+      "offset": 41840,
+      "duration": 2640
+    },
+    {
+      "text": "positives",
+      "offset": 43440,
+      "duration": 2880
+    },
+    {
+      "text": "the end result is that up to 42 percent",
+      "offset": 44480,
+      "duration": 3840
+    },
+    {
+      "text": "of developer time can be spent on rework",
+      "offset": 46320,
+      "duration": 4320
+    },
+    {
+      "text": "and remediating bad code",
+      "offset": 48320,
+      "duration": 4000
+    },
+    {
+      "text": "at solar source we have a better way to",
+      "offset": 50640,
+      "duration": 4079
+    },
+    {
+      "text": "app development a clean code approach we",
+      "offset": 52320,
+      "duration": 4000
+    },
+    {
+      "text": "put the developer in charge of the code",
+      "offset": 54719,
+      "duration": 3201
+    },
+    {
+      "text": "quality and gives them the tools to",
+      "offset": 56320,
+      "duration": 3840
+    },
+    {
+      "text": "write only clean code",
+      "offset": 57920,
+      "duration": 4080
+    },
+    {
+      "text": "it's inefficient to push issues to your",
+      "offset": 60160,
+      "duration": 4319
+    },
+    {
+      "text": "main branch or a feature branch only to",
+      "offset": 62000,
+      "duration": 5520
+    },
+    {
+      "text": "revisit those issues later instead let's",
+      "offset": 64479,
+      "duration": 4721
+    },
+    {
+      "text": "find those issues as soon as they occur",
+      "offset": 67520,
+      "duration": 3200
+    },
+    {
+      "text": "and eliminate them from even getting",
+      "offset": 69200,
+      "duration": 4160
+    },
+    {
+      "text": "committed in the first place",
+      "offset": 70720,
+      "duration": 4240
+    },
+    {
+      "text": "okay we can see that the clean code",
+      "offset": 73360,
+      "duration": 3280
+    },
+    {
+      "text": "approach is more efficient what exactly",
+      "offset": 74960,
+      "duration": 3199
+    },
+    {
+      "text": "does that mean for you and your team",
+      "offset": 76640,
+      "duration": 2240
+    },
+    {
+      "text": "well",
+      "offset": 78159,
+      "duration": 2401
+    },
+    {
+      "text": "direct ownership of the code by the",
+      "offset": 78880,
+      "duration": 3760
+    },
+    {
+      "text": "developer and the team it means",
+      "offset": 80560,
+      "duration": 4480
+    },
+    {
+      "text": "efficient and maintainable code",
+      "offset": 82640,
+      "duration": 4240
+    },
+    {
+      "text": "code that's robust and reliable when",
+      "offset": 85040,
+      "duration": 3360
+    },
+    {
+      "text": "executed",
+      "offset": 86880,
+      "duration": 3599
+    },
+    {
+      "text": "it means of course code that's safe for",
+      "offset": 88400,
+      "duration": 4240
+    },
+    {
+      "text": "your users and for your organization and",
+      "offset": 90479,
+      "duration": 3921
+    },
+    {
+      "text": "then finally code that fosters",
+      "offset": 92640,
+      "duration": 4720
+    },
+    {
+      "text": "innovation and keeps developers happy",
+      "offset": 94400,
+      "duration": 4240
+    },
+    {
+      "text": "okay in a minute i'm going to",
+      "offset": 97360,
+      "duration": 2960
+    },
+    {
+      "text": "demonstrate how you can add clean code",
+      "offset": 98640,
+      "duration": 3360
+    },
+    {
+      "text": "to your workflow using sonar cloud and",
+      "offset": 100320,
+      "duration": 4400
+    },
+    {
+      "text": "the sonar solution it's 100 free for",
+      "offset": 102000,
+      "duration": 4560
+    },
+    {
+      "text": "public projects and you can analyze your",
+      "offset": 104720,
+      "duration": 3120
+    },
+    {
+      "text": "code in minutes",
+      "offset": 106560,
+      "duration": 3280
+    },
+    {
+      "text": "now before i demonstrate let me quickly",
+      "offset": 107840,
+      "duration": 3919
+    },
+    {
+      "text": "walk you through the solution in my demo",
+      "offset": 109840,
+      "duration": 4080
+    },
+    {
+      "text": "my project is housed in github we also",
+      "offset": 111759,
+      "duration": 4241
+    },
+    {
+      "text": "have a tight integration with azure",
+      "offset": 113920,
+      "duration": 3920
+    },
+    {
+      "text": "bitbucket and gitlab",
+      "offset": 116000,
+      "duration": 3680
+    },
+    {
+      "text": "it all starts with a pull request which",
+      "offset": 117840,
+      "duration": 4639
+    },
+    {
+      "text": "kicks off an auto scan of your code now",
+      "offset": 119680,
+      "duration": 4479
+    },
+    {
+      "text": "this autocad can be easily integrated",
+      "offset": 122479,
+      "duration": 4401
+    },
+    {
+      "text": "with your existing ci cd system",
+      "offset": 124159,
+      "duration": 5201
+    },
+    {
+      "text": "now from the analysis we get back a set",
+      "offset": 126880,
+      "duration": 4400
+    },
+    {
+      "text": "of code quality metrics and a clear",
+      "offset": 129360,
+      "duration": 4720
+    },
+    {
+      "text": "indication of any issues the analysis",
+      "offset": 131280,
+      "duration": 4560
+    },
+    {
+      "text": "analysis results are automatically",
+      "offset": 134080,
+      "duration": 3840
+    },
+    {
+      "text": "synced back to github so you get",
+      "offset": 135840,
+      "duration": 4800
+    },
+    {
+      "text": "valuable insights right where your team",
+      "offset": 137920,
+      "duration": 4560
+    },
+    {
+      "text": "lives eats and breathes",
+      "offset": 140640,
+      "duration": 3760
+    },
+    {
+      "text": "now onto the demo",
+      "offset": 142480,
+      "duration": 3920
+    },
+    {
+      "text": "all right y'all here's our code for our",
+      "offset": 144400,
+      "duration": 3919
+    },
+    {
+      "text": "demonstration",
+      "offset": 146400,
+      "duration": 5440
+    },
+    {
+      "text": "first thing is to go ahead and",
+      "offset": 148319,
+      "duration": 7521
+    },
+    {
+      "text": "kick off an analysis in sonarcloud.io",
+      "offset": 151840,
+      "duration": 6880
+    },
+    {
+      "text": "so we'll authenticate using our github",
+      "offset": 155840,
+      "duration": 5520
+    },
+    {
+      "text": "credentials",
+      "offset": 158720,
+      "duration": 2640
+    },
+    {
+      "text": "navigate to create a new organization",
+      "offset": 161920,
+      "duration": 4160
+    },
+    {
+      "text": "that automatically gets pulled over and",
+      "offset": 166640,
+      "duration": 4800
+    },
+    {
+      "text": "we'll import that",
+      "offset": 169120,
+      "duration": 4560
+    },
+    {
+      "text": "we're going to go ahead and select a",
+      "offset": 171440,
+      "duration": 4879
+    },
+    {
+      "text": "free plan",
+      "offset": 173680,
+      "duration": 2639
+    },
+    {
+      "text": "and get that project pulled in",
+      "offset": 176879,
+      "duration": 3761
+    },
+    {
+      "text": "and that's it",
+      "offset": 181680,
+      "duration": 2960
+    },
+    {
+      "text": "sonar cloud will take care of the rest",
+      "offset": 183200,
+      "duration": 4080
+    },
+    {
+      "text": "it's going to prep for an analysis and",
+      "offset": 184640,
+      "duration": 5760
+    },
+    {
+      "text": "then fully run that analysis",
+      "offset": 187280,
+      "duration": 4879
+    },
+    {
+      "text": "now depending upon the size of your",
+      "offset": 190400,
+      "duration": 3680
+    },
+    {
+      "text": "project the number of lines of code",
+      "offset": 192159,
+      "duration": 3601
+    },
+    {
+      "text": "containing your project it could take a",
+      "offset": 194080,
+      "duration": 4320
+    },
+    {
+      "text": "few minutes for that to run i only have",
+      "offset": 195760,
+      "duration": 4720
+    },
+    {
+      "text": "about seven minutes with you all so in",
+      "offset": 198400,
+      "duration": 4320
+    },
+    {
+      "text": "the interest of time let's pause and",
+      "offset": 200480,
+      "duration": 4560
+    },
+    {
+      "text": "pick things back up once the analysis is",
+      "offset": 202720,
+      "duration": 4560
+    },
+    {
+      "text": "done",
+      "offset": 205040,
+      "duration": 2240
+    },
+    {
+      "text": "all right analysis completed let's take",
+      "offset": 207760,
+      "duration": 5600
+    },
+    {
+      "text": "a look at it we navigate to the main",
+      "offset": 210640,
+      "duration": 4560
+    },
+    {
+      "text": "branch and see that we've got some",
+      "offset": 213360,
+      "duration": 4720
+    },
+    {
+      "text": "reliability security and maintainability",
+      "offset": 215200,
+      "duration": 5360
+    },
+    {
+      "text": "issues and so that's great to get a",
+      "offset": 218080,
+      "duration": 4480
+    },
+    {
+      "text": "baseline understanding of what's going",
+      "offset": 220560,
+      "duration": 3599
+    },
+    {
+      "text": "on in your main branch",
+      "offset": 222560,
+      "duration": 4000
+    },
+    {
+      "text": "now other than those vulnerabilities",
+      "offset": 224159,
+      "duration": 5121
+    },
+    {
+      "text": "uh those should get fixed but everything",
+      "offset": 226560,
+      "duration": 4399
+    },
+    {
+      "text": "else um it's kind of water under the",
+      "offset": 229280,
+      "duration": 3920
+    },
+    {
+      "text": "bridge what's important is let's start",
+      "offset": 230959,
+      "duration": 5360
+    },
+    {
+      "text": "catching things from now let's instigate",
+      "offset": 233200,
+      "duration": 6399
+    },
+    {
+      "text": "a clean code process from now so that",
+      "offset": 236319,
+      "duration": 4881
+    },
+    {
+      "text": "we're shifting less",
+      "offset": 239599,
+      "duration": 3920
+    },
+    {
+      "text": "sorry shifting left when things happen",
+      "offset": 241200,
+      "duration": 4160
+    },
+    {
+      "text": "let's catch them as soon as possible and",
+      "offset": 243519,
+      "duration": 4000
+    },
+    {
+      "text": "prevent things from ever even getting",
+      "offset": 245360,
+      "duration": 4239
+    },
+    {
+      "text": "close to reaching the main branch let's",
+      "offset": 247519,
+      "duration": 4080
+    },
+    {
+      "text": "catch them before they even reach a",
+      "offset": 249599,
+      "duration": 4801
+    },
+    {
+      "text": "feature branch so to that end i'd like",
+      "offset": 251599,
+      "duration": 4880
+    },
+    {
+      "text": "to do an analysis against the pull",
+      "offset": 254400,
+      "duration": 3839
+    },
+    {
+      "text": "request so i have a branch set up",
+      "offset": 256479,
+      "duration": 3521
+    },
+    {
+      "text": "already in github",
+      "offset": 258239,
+      "duration": 3840
+    },
+    {
+      "text": "we'll kick off a new pull request",
+      "offset": 260000,
+      "duration": 4800
+    },
+    {
+      "text": "against that",
+      "offset": 262079,
+      "duration": 2721
+    },
+    {
+      "text": "and that's all it takes that's going to",
+      "offset": 266080,
+      "duration": 4399
+    },
+    {
+      "text": "go ahead and kick off automatically and",
+      "offset": 268240,
+      "duration": 4320
+    },
+    {
+      "text": "scan our pull request",
+      "offset": 270479,
+      "duration": 3201
+    },
+    {
+      "text": "just like",
+      "offset": 272560,
+      "duration": 3520
+    },
+    {
+      "text": "the main branch depending upon the size",
+      "offset": 273680,
+      "duration": 4560
+    },
+    {
+      "text": "of the pull request the number of lines",
+      "offset": 276080,
+      "duration": 4399
+    },
+    {
+      "text": "of code included it could take a few",
+      "offset": 278240,
+      "duration": 4239
+    },
+    {
+      "text": "seconds could take a few minutes",
+      "offset": 280479,
+      "duration": 4481
+    },
+    {
+      "text": "for the analysis to complete and fully",
+      "offset": 282479,
+      "duration": 3921
+    },
+    {
+      "text": "run",
+      "offset": 284960,
+      "duration": 2239
+    },
+    {
+      "text": "so",
+      "offset": 286400,
+      "duration": 2480
+    },
+    {
+      "text": "it's running right now",
+      "offset": 287199,
+      "duration": 3921
+    },
+    {
+      "text": "i expect it to finish there it goes",
+      "offset": 288880,
+      "duration": 5039
+    },
+    {
+      "text": "right there it's finished okay",
+      "offset": 291120,
+      "duration": 5120
+    },
+    {
+      "text": "so there we can see that we have a",
+      "offset": 293919,
+      "duration": 4481
+    },
+    {
+      "text": "failed quality gate due to a",
+      "offset": 296240,
+      "duration": 4480
+    },
+    {
+      "text": "vulnerability in our pull requests",
+      "offset": 298400,
+      "duration": 5120
+    },
+    {
+      "text": "all right well we don't want that so let",
+      "offset": 300720,
+      "duration": 4560
+    },
+    {
+      "text": "me show you something uh super cool",
+      "offset": 303520,
+      "duration": 2959
+    },
+    {
+      "text": "right now",
+      "offset": 305280,
+      "duration": 2880
+    },
+    {
+      "text": "right here you can see that uh if i were",
+      "offset": 306479,
+      "duration": 3681
+    },
+    {
+      "text": "to try to merge this pull request it's",
+      "offset": 308160,
+      "duration": 4000
+    },
+    {
+      "text": "red i click on it",
+      "offset": 310160,
+      "duration": 3200
+    },
+    {
+      "text": "it's blocked",
+      "offset": 312160,
+      "duration": 3520
+    },
+    {
+      "text": "unless i have administrator privileges",
+      "offset": 313360,
+      "duration": 4559
+    },
+    {
+      "text": "so you can set it up so that if you get",
+      "offset": 315680,
+      "duration": 4480
+    },
+    {
+      "text": "a red quality gate on a pull request no",
+      "offset": 317919,
+      "duration": 6161
+    },
+    {
+      "text": "merging unless it is cleaned up okay",
+      "offset": 320160,
+      "duration": 5440
+    },
+    {
+      "text": "we'll cancel that",
+      "offset": 324080,
+      "duration": 3200
+    },
+    {
+      "text": "now let me go ahead we're in the",
+      "offset": 325600,
+      "duration": 3920
+    },
+    {
+      "text": "conversations tab let me take you over",
+      "offset": 327280,
+      "duration": 4000
+    },
+    {
+      "text": "to the checks tab you can see we have a",
+      "offset": 329520,
+      "duration": 4399
+    },
+    {
+      "text": "nice integration there as well i also",
+      "offset": 331280,
+      "duration": 4080
+    },
+    {
+      "text": "want to show you something cool here",
+      "offset": 333919,
+      "duration": 3681
+    },
+    {
+      "text": "that is our integration with the code",
+      "offset": 335360,
+      "duration": 5360
+    },
+    {
+      "text": "scanning capabilities of github github",
+      "offset": 337600,
+      "duration": 4879
+    },
+    {
+      "text": "and you can see there you get even more",
+      "offset": 340720,
+      "duration": 3600
+    },
+    {
+      "text": "information about this vulnerability and",
+      "offset": 342479,
+      "duration": 3361
+    },
+    {
+      "text": "if we go to the bottom here we can see",
+      "offset": 344320,
+      "duration": 4080
+    },
+    {
+      "text": "that it looks like we could have uh that",
+      "offset": 345840,
+      "duration": 5359
+    },
+    {
+      "text": "we have an injection flaw so if we click",
+      "offset": 348400,
+      "duration": 4400
+    },
+    {
+      "text": "on show paths",
+      "offset": 351199,
+      "duration": 3840
+    },
+    {
+      "text": "we can see that we have a source right",
+      "offset": 352800,
+      "duration": 4560
+    },
+    {
+      "text": "here in app.js",
+      "offset": 355039,
+      "duration": 4561
+    },
+    {
+      "text": "and we can see it traverses",
+      "offset": 357360,
+      "duration": 4000
+    },
+    {
+      "text": "through five different steps actually",
+      "offset": 359600,
+      "duration": 4080
+    },
+    {
+      "text": "crosses over into another file called",
+      "offset": 361360,
+      "duration": 5119
+    },
+    {
+      "text": "app handler js and that's our sync the",
+      "offset": 363680,
+      "duration": 4720
+    },
+    {
+      "text": "point being that we want to provide as",
+      "offset": 366479,
+      "duration": 4481
+    },
+    {
+      "text": "much information in github as possible",
+      "offset": 368400,
+      "duration": 4480
+    },
+    {
+      "text": "it's where you work so let's get the",
+      "offset": 370960,
+      "duration": 3920
+    },
+    {
+      "text": "right information at the right time to",
+      "offset": 372880,
+      "duration": 4000
+    },
+    {
+      "text": "you so you can make decisions and to",
+      "offset": 374880,
+      "duration": 4080
+    },
+    {
+      "text": "that end we have this little click box",
+      "offset": 376880,
+      "duration": 4480
+    },
+    {
+      "text": "here we can we can go ahead and triage",
+      "offset": 378960,
+      "duration": 4320
+    },
+    {
+      "text": "things as maybe that's a false positive",
+      "offset": 381360,
+      "duration": 4640
+    },
+    {
+      "text": "maybe it's just used in testing or for a",
+      "offset": 383280,
+      "duration": 4800
+    },
+    {
+      "text": "reason uh we say we're not going to fix",
+      "offset": 386000,
+      "duration": 4000
+    },
+    {
+      "text": "that okay",
+      "offset": 388080,
+      "duration": 5520
+    },
+    {
+      "text": "let me finish off by taking you back to",
+      "offset": 390000,
+      "duration": 5759
+    },
+    {
+      "text": "the checks tab here",
+      "offset": 393600,
+      "duration": 4719
+    },
+    {
+      "text": "and showing you uh there we go",
+      "offset": 395759,
+      "duration": 5201
+    },
+    {
+      "text": "one last feature if i click right here i",
+      "offset": 398319,
+      "duration": 3761
+    },
+    {
+      "text": "can actually",
+      "offset": 400960,
+      "duration": 4480
+    },
+    {
+      "text": "then open up this pull request get those",
+      "offset": 402080,
+      "duration": 4959
+    },
+    {
+      "text": "same set of metrics that we saw in the",
+      "offset": 405440,
+      "duration": 4720
+    },
+    {
+      "text": "main branch but now it's against rpr",
+      "offset": 407039,
+      "duration": 4641
+    },
+    {
+      "text": "there's our vulnerability i can click",
+      "offset": 410160,
+      "duration": 3039
+    },
+    {
+      "text": "right there",
+      "offset": 411680,
+      "duration": 3519
+    },
+    {
+      "text": "and dig into it a little more and find",
+      "offset": 413199,
+      "duration": 4161
+    },
+    {
+      "text": "out exactly we see that same path here",
+      "offset": 415199,
+      "duration": 5120
+    },
+    {
+      "text": "so we have app.js down to app handler js",
+      "offset": 417360,
+      "duration": 5040
+    },
+    {
+      "text": "with three steps in between same",
+      "offset": 420319,
+      "duration": 4481
+    },
+    {
+      "text": "information just a little more uh",
+      "offset": 422400,
+      "duration": 4560
+    },
+    {
+      "text": "ability to dig in deeper and find out",
+      "offset": 424800,
+      "duration": 4640
+    },
+    {
+      "text": "exactly what's going on on with that",
+      "offset": 426960,
+      "duration": 5120
+    },
+    {
+      "text": "vulnerability as well as some tips to go",
+      "offset": 429440,
+      "duration": 4240
+    },
+    {
+      "text": "ahead and correct it because that's the",
+      "offset": 432080,
+      "duration": 2800
+    },
+    {
+      "text": "name of the game",
+      "offset": 433680,
+      "duration": 3600
+    },
+    {
+      "text": "all right thank you happy clean coding",
+      "offset": 434880,
+      "duration": 5400
+    },
+    {
+      "text": "and we'll talk to you later see you",
+      "offset": 437280,
+      "duration": 10400
+    },
+    {
+      "text": "[Music]",
+      "offset": 440280,
+      "duration": 7400
+    }
+  ],
+  "fullText": "[Music] [Music] hi everyone i'm clint cameron product marketing manager at sonarsource and today i'm going to demonstrate how easy it is to code smarter and harness the power of clean code in your devops workflows now let me first start with a traditional workflow and show how it can waste a tremendous amount of developer time code is written and pushed to the main branch auditors flag potential issues and then devs return to the code to triage and separate real issues from false positives the end result is that up to 42 percent of developer time can be spent on rework and remediating bad code at solar source we have a better way to app development a clean code approach we put the developer in charge of the code quality and gives them the tools to write only clean code it's inefficient to push issues to your main branch or a feature branch only to revisit those issues later instead let's find those issues as soon as they occur and eliminate them from even getting committed in the first place okay we can see that the clean code approach is more efficient what exactly does that mean for you and your team well direct ownership of the code by the developer and the team it means efficient and maintainable code code that's robust and reliable when executed it means of course code that's safe for your users and for your organization and then finally code that fosters innovation and keeps developers happy okay in a minute i'm going to demonstrate how you can add clean code to your workflow using sonar cloud and the sonar solution it's 100 free for public projects and you can analyze your code in minutes now before i demonstrate let me quickly walk you through the solution in my demo my project is housed in github we also have a tight integration with azure bitbucket and gitlab it all starts with a pull request which kicks off an auto scan of your code now this autocad can be easily integrated with your existing ci cd system now from the analysis we get back a set of code quality metrics and a clear indication of any issues the analysis analysis results are automatically synced back to github so you get valuable insights right where your team lives eats and breathes now onto the demo all right y'all here's our code for our demonstration first thing is to go ahead and kick off an analysis in sonarcloud.io so we'll authenticate using our github credentials navigate to create a new organization that automatically gets pulled over and we'll import that we're going to go ahead and select a free plan and get that project pulled in and that's it sonar cloud will take care of the rest it's going to prep for an analysis and then fully run that analysis now depending upon the size of your project the number of lines of code containing your project it could take a few minutes for that to run i only have about seven minutes with you all so in the interest of time let's pause and pick things back up once the analysis is done all right analysis completed let's take a look at it we navigate to the main branch and see that we've got some reliability security and maintainability issues and so that's great to get a baseline understanding of what's going on in your main branch now other than those vulnerabilities uh those should get fixed but everything else um it's kind of water under the bridge what's important is let's start catching things from now let's instigate a clean code process from now so that we're shifting less sorry shifting left when things happen let's catch them as soon as possible and prevent things from ever even getting close to reaching the main branch let's catch them before they even reach a feature branch so to that end i'd like to do an analysis against the pull request so i have a branch set up already in github we'll kick off a new pull request against that and that's all it takes that's going to go ahead and kick off automatically and scan our pull request just like the main branch depending upon the size of the pull request the number of lines of code included it could take a few seconds could take a few minutes for the analysis to complete and fully run so it's running right now i expect it to finish there it goes right there it's finished okay so there we can see that we have a failed quality gate due to a vulnerability in our pull requests all right well we don't want that so let me show you something uh super cool right now right here you can see that uh if i were to try to merge this pull request it's red i click on it it's blocked unless i have administrator privileges so you can set it up so that if you get a red quality gate on a pull request no merging unless it is cleaned up okay we'll cancel that now let me go ahead we're in the conversations tab let me take you over to the checks tab you can see we have a nice integration there as well i also want to show you something cool here that is our integration with the code scanning capabilities of github github and you can see there you get even more information about this vulnerability and if we go to the bottom here we can see that it looks like we could have uh that we have an injection flaw so if we click on show paths we can see that we have a source right here in app.js and we can see it traverses through five different steps actually crosses over into another file called app handler js and that's our sync the point being that we want to provide as much information in github as possible it's where you work so let's get the right information at the right time to you so you can make decisions and to that end we have this little click box here we can we can go ahead and triage things as maybe that's a false positive maybe it's just used in testing or for a reason uh we say we're not going to fix that okay let me finish off by taking you back to the checks tab here and showing you uh there we go one last feature if i click right here i can actually then open up this pull request get those same set of metrics that we saw in the main branch but now it's against rpr there's our vulnerability i can click right there and dig into it a little more and find out exactly we see that same path here so we have app.js down to app handler js with three steps in between same information just a little more uh ability to dig in deeper and find out exactly what's going on on with that vulnerability as well as some tips to go ahead and correct it because that's the name of the game all right thank you happy clean coding and we'll talk to you later see you [Music]",
+  "fetchedAt": "2026-03-14T09:25:13.147Z"
+}

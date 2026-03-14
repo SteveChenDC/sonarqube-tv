@@ -1,0 +1,1863 @@
+{
+  "videoId": "v32",
+  "youtubeId": "rtmBZJLmbSg",
+  "segments": [
+    {
+      "text": "Hi everyone, welcome to the Sonar",
+      "offset": 17000,
+      "duration": 1000
+    },
+    {
+      "text": "Summit. My name is Kunal Kushwaha. I'm a",
+      "offset": 18000,
+      "duration": 2000
+    },
+    {
+      "text": "senior developer advocate at CAST AI and",
+      "offset": 20000,
+      "duration": 2000
+    },
+    {
+      "text": "I'm so excited to be here. Look at this",
+      "offset": 22000,
+      "duration": 3000
+    },
+    {
+      "text": "title by the way: Humans plus AI, not",
+      "offset": 25000,
+      "duration": 2000
+    },
+    {
+      "text": "humans versus AI. Because you know, right",
+      "offset": 27000,
+      "duration": 2000
+    },
+    {
+      "text": "now there's a lot of conversation around",
+      "offset": 29000,
+      "duration": 1000
+    },
+    {
+      "text": "AI replacing developers and what that",
+      "offset": 30000,
+      "duration": 3000
+    },
+    {
+      "text": "means for engineering teams and for",
+      "offset": 33000,
+      "duration": 3000
+    },
+    {
+      "text": "individuals as well. Today we're going",
+      "offset": 36000,
+      "duration": 2000
+    },
+    {
+      "text": "to cut through that hype. We're going to",
+      "offset": 38000,
+      "duration": 2000
+    },
+    {
+      "text": "look at some of the practical realities",
+      "offset": 40000,
+      "duration": 1000
+    },
+    {
+      "text": "of how engineering teams are actually",
+      "offset": 41000,
+      "duration": 3000
+    },
+    {
+      "text": "collaborating today. And I'm going to",
+      "offset": 44000,
+      "duration": 1000
+    },
+    {
+      "text": "show you what the data really says and",
+      "offset": 45000,
+      "duration": 3000
+    },
+    {
+      "text": "where the friction is hiding and also",
+      "offset": 48000,
+      "duration": 3000
+    },
+    {
+      "text": "how you can build a team that wins in",
+      "offset": 51000,
+      "duration": 3000
+    },
+    {
+      "text": "this era of AI. So no doom and no gloom.",
+      "offset": 54000,
+      "duration": 4000
+    },
+    {
+      "text": "Just some real talk. I'm very very",
+      "offset": 58000,
+      "duration": 2000
+    },
+    {
+      "text": "happy to be here. Let's get started. So",
+      "offset": 60000,
+      "duration": 3000
+    },
+    {
+      "text": "here's a road map for the next few",
+      "offset": 63000,
+      "duration": 1000
+    },
+    {
+      "text": "minutes. I have broken this down into",
+      "offset": 64000,
+      "duration": 2000
+    },
+    {
+      "text": "five key areas. The first one being the",
+      "offset": 66000,
+      "duration": 3000
+    },
+    {
+      "text": "reality gap. We're going to look at the",
+      "offset": 69000,
+      "duration": 2000
+    },
+    {
+      "text": "massive chasm between the AI hype and",
+      "offset": 71000,
+      "duration": 3000
+    },
+    {
+      "text": "what actually engineering data is",
+      "offset": 74000,
+      "duration": 2000
+    },
+    {
+      "text": "telling us. Spoiler alert, it's not",
+      "offset": 76000,
+      "duration": 3000
+    },
+    {
+      "text": "what the marketing brochures are saying.",
+      "offset": 79000,
+      "duration": 3000
+    },
+    {
+      "text": "So we're going to figure that out.",
+      "offset": 82000,
+      "duration": 2000
+    },
+    {
+      "text": "Next, we have to talk about human",
+      "offset": 84000,
+      "duration": 1000
+    },
+    {
+      "text": "responsibilities because what is the",
+      "offset": 85000,
+      "duration": 3000
+    },
+    {
+      "text": "unwavering core? The stuff",
+      "offset": 88000,
+      "duration": 2000
+    },
+    {
+      "text": "that no LLM, no matter how many",
+      "offset": 90000,
+      "duration": 2000
+    },
+    {
+      "text": "parameters it has, billions and",
+      "offset": 92000,
+      "duration": 1000
+    },
+    {
+      "text": "trillions of parameters, can actually",
+      "offset": 93000,
+      "duration": 3000
+    },
+    {
+      "text": "replace, there's always going to be that",
+      "offset": 96000,
+      "duration": 2000
+    },
+    {
+      "text": "human touch. Third is the friction",
+      "offset": 98000,
+      "duration": 2000
+    },
+    {
+      "text": "points. This is my favorite part because",
+      "offset": 100000,
+      "duration": 2000
+    },
+    {
+      "text": "we're going to talk about the 10-hour",
+      "offset": 102000,
+      "duration": 2000
+    },
+    {
+      "text": "paradox and the",
+      "offset": 104000,
+      "duration": 3000
+    },
+    {
+      "text": "junior developers scenario for them\nlike what they are facing and if you",
+      "offset": 107000,
+      "duration": 5000
+    },
+    {
+      "text": "felt like this whole AI thing",
+      "offset": 112000,
+      "duration": 3000
+    },
+    {
+      "text": "is sometimes making your job a little",
+      "offset": 115000,
+      "duration": 2000
+    },
+    {
+      "text": "bit harder this is for you.",
+      "offset": 117000,
+      "duration": 4000
+    },
+    {
+      "text": "Fourth we're going to learn how to adopt",
+      "offset": 121000,
+      "duration": 1000
+    },
+    {
+      "text": "strategies. So I'm going to give you",
+      "offset": 122000,
+      "duration": 2000
+    },
+    {
+      "text": "some actual frameworks, the dos and the",
+      "offset": 124000,
+      "duration": 2000
+    },
+    {
+      "text": "don'ts. So things to keep in mind, green",
+      "offset": 126000,
+      "duration": 2000
+    },
+    {
+      "text": "flags, red flags, and please for the",
+      "offset": 128000,
+      "duration": 2000
+    },
+    {
+      "text": "love of God, \"don't\" flags of AI",
+      "offset": 130000,
+      "duration": 4000
+    },
+    {
+      "text": "governance as well. And finally, the",
+      "offset": 134000,
+      "duration": 1000
+    },
+    {
+      "text": "hybrid intelligence. So what does the",
+      "offset": 135000,
+      "duration": 2000
+    },
+    {
+      "text": "dream team of the future look like? And",
+      "offset": 137000,
+      "duration": 3000
+    },
+    {
+      "text": "there's a lot to pack in. So let's",
+      "offset": 140000,
+      "duration": 3000
+    },
+    {
+      "text": "dive straight into the data. Let's start",
+      "offset": 143000,
+      "duration": 2000
+    },
+    {
+      "text": "with that first. So let's get real for a",
+      "offset": 145000,
+      "duration": 3000
+    },
+    {
+      "text": "second. You know, we have all seen",
+      "offset": 148000,
+      "duration": 1000
+    },
+    {
+      "text": "LinkedIn posts. I love LinkedIn,",
+      "offset": 149000,
+      "duration": 3000
+    },
+    {
+      "text": "it says that AI was supposed to turn",
+      "offset": 154000,
+      "duration": 3000
+    },
+    {
+      "text": "us all into like 10x engineers",
+      "offset": 157000,
+      "duration": 2000
+    },
+    {
+      "text": "overnight, but the narrative promised",
+      "offset": 159000,
+      "duration": 2000
+    },
+    {
+      "text": "this massive instant productivity",
+      "offset": 161000,
+      "duration": 2000
+    },
+    {
+      "text": "explosion, basically magic",
+      "offset": 163000,
+      "duration": 2000
+    },
+    {
+      "text": "transformation. But look at what is",
+      "offset": 165000,
+      "duration": 3000
+    },
+    {
+      "text": "actually happening in the trenches.",
+      "offset": 168000,
+      "duration": 2000
+    },
+    {
+      "text": "Organizations, as you can see on my",
+      "offset": 170000,
+      "duration": 2000
+    },
+    {
+      "text": "slides, using AI coding tools are seeing",
+      "offset": 172000,
+      "duration": 3000
+    },
+    {
+      "text": "roughly around 15% productivity",
+      "offset": 175000,
+      "duration": 2000
+    },
+    {
+      "text": "improvement. Don't get me wrong, 15% is",
+      "offset": 177000,
+      "duration": 4000
+    },
+    {
+      "text": "meaningful. I'm not saying that it's",
+      "offset": 181000,
+      "duration": 2000
+    },
+    {
+      "text": "not, but it's definitely not",
+      "offset": 183000,
+      "duration": 2000
+    },
+    {
+      "text": "revolutionary. Let me know what you",
+      "offset": 185000,
+      "duration": 2000
+    },
+    {
+      "text": "think in the live chat. Developers",
+      "offset": 187000,
+      "duration": 3000
+    },
+    {
+      "text": "themselves are rating the actual speed",
+      "offset": 190000,
+      "duration": 2000
+    },
+    {
+      "text": "boost at around 2.23",
+      "offset": 192000,
+      "duration": 4000
+    },
+    {
+      "text": "out of five and the overall cycle",
+      "offset": 196000,
+      "duration": 2000
+    },
+    {
+      "text": "times, how fast we actually",
+      "offset": 198000,
+      "duration": 4000
+    },
+    {
+      "text": "ship are staying pretty much flat.",
+      "offset": 202000,
+      "duration": 3000
+    },
+    {
+      "text": "So what is the vital takeaway from this?",
+      "offset": 205000,
+      "duration": 3000
+    },
+    {
+      "text": "We didn't get 10x engineers. We unlocked",
+      "offset": 208000,
+      "duration": 3000
+    },
+    {
+      "text": "like a 1.15x",
+      "offset": 211000,
+      "duration": 3000
+    },
+    {
+      "text": "engineering organization.",
+      "offset": 214000,
+      "duration": 2000
+    },
+    {
+      "text": "A little bit of progress. But that",
+      "offset": 216000,
+      "duration": 3000
+    },
+    {
+      "text": "distinction changes everything about how",
+      "offset": 219000,
+      "duration": 2000
+    },
+    {
+      "text": "we approach AI because if you try to",
+      "offset": 221000,
+      "duration": 2000
+    },
+    {
+      "text": "manage a team expecting 10x output,",
+      "offset": 223000,
+      "duration": 4000
+    },
+    {
+      "text": "you're going to burn them out and that's",
+      "offset": 227000,
+      "duration": 2000
+    },
+    {
+      "text": "not cool. You shouldn't do that.",
+      "offset": 229000,
+      "duration": 2000
+    },
+    {
+      "text": "But if you focus on how that 1.15x",
+      "offset": 231000,
+      "duration": 5000
+    },
+    {
+      "text": "gain scales across an entire",
+      "offset": 236000,
+      "duration": 1000
+    },
+    {
+      "text": "organization, that is where you actually",
+      "offset": 237000,
+      "duration": 3000
+    },
+    {
+      "text": "start to win. Now, I know I just burst",
+      "offset": 240000,
+      "duration": 4000
+    },
+    {
+      "text": "the bubble of 10x engineers. You",
+      "offset": 244000,
+      "duration": 3000
+    },
+    {
+      "text": "know, a 10x engineer isn't the one who",
+      "offset": 247000,
+      "duration": 2000
+    },
+    {
+      "text": "does 10x amount of work. It's the",
+      "offset": 249000,
+      "duration": 2000
+    },
+    {
+      "text": "engineer who makes other 10 people",
+      "offset": 251000,
+      "duration": 3000
+    },
+    {
+      "text": "better. Like that's the quote by Kelsey",
+      "offset": 254000,
+      "duration": 2000
+    },
+    {
+      "text": "Hightower. He said it better than me.",
+      "offset": 256000,
+      "duration": 2000
+    },
+    {
+      "text": "So, you can find it on one of his talks.",
+      "offset": 258000,
+      "duration": 2000
+    },
+    {
+      "text": "But don't go delete",
+      "offset": 260000,
+      "duration": 3000
+    },
+    {
+      "text": "your copilot subscriptions. I'm not",
+      "offset": 263000,
+      "duration": 3000
+    },
+    {
+      "text": "trying to demotivate you. So don't",
+      "offset": 266000,
+      "duration": 4000
+    },
+    {
+      "text": "do that yet. While this total",
+      "offset": 270000,
+      "duration": 2000
+    },
+    {
+      "text": "transformation hasn't happened, the",
+      "offset": 272000,
+      "duration": 1000
+    },
+    {
+      "text": "specific wins are actually kind of",
+      "offset": 273000,
+      "duration": 2000
+    },
+    {
+      "text": "mind-blowing when you look at the data",
+      "offset": 275000,
+      "duration": 1000
+    },
+    {
+      "text": "from places like Microsoft and",
+      "offset": 276000,
+      "duration": 3000
+    },
+    {
+      "text": "Azure. Check these numbers out. As you",
+      "offset": 279000,
+      "duration": 3000
+    },
+    {
+      "text": "can see, we are seeing like a 26%",
+      "offset": 282000,
+      "duration": 2000
+    },
+    {
+      "text": "increase in completed tasks. So that is",
+      "offset": 284000,
+      "duration": 2000
+    },
+    {
+      "text": "basically like So what is 26%? It's like",
+      "offset": 286000,
+      "duration": 4000
+    },
+    {
+      "text": "you get your Friday back, every single",
+      "offset": 290000,
+      "duration": 2000
+    },
+    {
+      "text": "week. And look at that 6x jump in",
+      "offset": 292000,
+      "duration": 4000
+    },
+    {
+      "text": "test generation. Nobody wakes up hyped up",
+      "offset": 296000,
+      "duration": 3000
+    },
+    {
+      "text": "to write boilerplate unit tests. If that's",
+      "offset": 299000,
+      "duration": 3000
+    },
+    {
+      "text": "you, then please reach out to me. I might",
+      "offset": 302000,
+      "duration": 3000
+    },
+    {
+      "text": "have some roles for you. AI",
+      "offset": 305000,
+      "duration": 2000
+    },
+    {
+      "text": "taking that off your plate is a massive",
+      "offset": 307000,
+      "duration": 3000
+    },
+    {
+      "text": "win for your own sanity because the",
+      "offset": 310000,
+      "duration": 2000
+    },
+    {
+      "text": "whole point is about giving developers",
+      "offset": 312000,
+      "duration": 2000
+    },
+    {
+      "text": "the time back to solve more problems.",
+      "offset": 314000,
+      "duration": 4000
+    },
+    {
+      "text": "There's so many problems in this world and",
+      "offset": 318000,
+      "duration": 2000
+    },
+    {
+      "text": "if AI can do these mundane tasks",
+      "offset": 320000,
+      "duration": 3000
+    },
+    {
+      "text": "for me then why not? But the real kicker",
+      "offset": 323000,
+      "duration": 2000
+    },
+    {
+      "text": "is that look at the far right: three",
+      "offset": 325000,
+      "duration": 2000
+    },
+    {
+      "text": "times more likely to generate top-tier",
+      "offset": 330000,
+      "duration": 2000
+    },
+    {
+      "text": "ideas.",
+      "offset": 332000,
+      "duration": 2000
+    },
+    {
+      "text": "There was a P&G study that found an",
+      "offset": 334000,
+      "duration": 2000
+    },
+    {
+      "text": "individual with AI could match the",
+      "offset": 338000,
+      "duration": 3000
+    },
+    {
+      "text": "creative output of a two-person human",
+      "offset": 341000,
+      "duration": 3000
+    },
+    {
+      "text": "team during ideation.",
+      "offset": 344000,
+      "duration": 2000
+    },
+    {
+      "text": "So this basically tells us something",
+      "offset": 346000,
+      "duration": 3000
+    },
+    {
+      "text": "significant: that AI is not just like",
+      "offset": 349000,
+      "duration": 2000
+    },
+    {
+      "text": "a typewriter. It's a brainstorming partner.",
+      "offset": 351000,
+      "duration": 2000
+    },
+    {
+      "text": "I am very with this statement because I use",
+      "offset": 353000,
+      "duration": 4000
+    },
+    {
+      "text": "AI for brainstorming quite a lot. So it's",
+      "offset": 357000,
+      "duration": 2000
+    },
+    {
+      "text": "not like replacing the engineer. It's",
+      "offset": 359000,
+      "duration": 2000
+    },
+    {
+      "text": "replacing drudgery.",
+      "offset": 364000,
+      "duration": 1000
+    },
+    {
+      "text": "So it's clearly cleaning up the busy work",
+      "offset": 368000,
+      "duration": 3000
+    },
+    {
+      "text": "out of the way so you can actually focus on",
+      "offset": 371000,
+      "duration": 4000
+    },
+    {
+      "text": "high-level design, creativity, and",
+      "offset": 375000,
+      "duration": 1000
+    },
+    {
+      "text": "problem solving that human beings",
+      "offset": 379000,
+      "duration": 4000
+    },
+    {
+      "text": "are pretty good at. So if you just",
+      "offset": 383000,
+      "duration": 4000
+    },
+    {
+      "text": "take away one thing from this talk",
+      "offset": 387000,
+      "duration": 2000
+    },
+    {
+      "text": "today, let it be this: the 10-hour",
+      "offset": 389000,
+      "duration": 2000
+    },
+    {
+      "text": "paradox. On the left side of the graph,",
+      "offset": 391000,
+      "duration": 3000
+    },
+    {
+      "text": "you can see that AI is doing exactly",
+      "offset": 394000,
+      "duration": 2000
+    },
+    {
+      "text": "what it promised. It's writing your",
+      "offset": 396000,
+      "duration": 1000
+    },
+    {
+      "text": "boilerplate. It's generating those unit",
+      "offset": 397000,
+      "duration": 3000
+    },
+    {
+      "text": "tests and it's basically handling and",
+      "offset": 400000,
+      "duration": 4000
+    },
+    {
+      "text": "giving you 10 hours of your life",
+      "offset": 404000,
+      "duration": 3000
+    },
+    {
+      "text": "back every single week. So you are coding",
+      "offset": 407000,
+      "duration": 3000
+    },
+    {
+      "text": "faster than ever. You are a rock star.",
+      "offset": 410000,
+      "duration": 2000
+    },
+    {
+      "text": "Life is good and everything is perfect.",
+      "offset": 412000,
+      "duration": 3000
+    },
+    {
+      "text": "But then the right side happens. You save",
+      "offset": 415000,
+      "duration": 1000
+    },
+    {
+      "text": "10 hours in the IDE. Very cool stuff.",
+      "offset": 416000,
+      "duration": 3000
+    },
+    {
+      "text": "But you are losing them immediately to",
+      "offset": 419000,
+      "duration": 3000
+    },
+    {
+      "text": "organizational friction. So you lose",
+      "offset": 422000,
+      "duration": 2000
+    },
+    {
+      "text": "them to Slack notifications and that",
+      "offset": 424000,
+      "duration": 3000
+    },
+    {
+      "text": "whole death loop. You lose them",
+      "offset": 429000,
+      "duration": 2000
+    },
+    {
+      "text": "because the requirements for a ticket",
+      "offset": 431000,
+      "duration": 3000
+    },
+    {
+      "text": "were so vague that you spent 2 hours",
+      "offset": 434000,
+      "duration": 1000
+    },
+    {
+      "text": "prompting an AI for something that",
+      "offset": 435000,
+      "duration": 2000
+    },
+    {
+      "text": "the business didn't even want. I have",
+      "offset": 437000,
+      "duration": 3000
+    },
+    {
+      "text": "done that. You lose them to tool",
+      "offset": 440000,
+      "duration": 2000
+    },
+    {
+      "text": "switching and broken CI/CD pipelines.",
+      "offset": 442000,
+      "duration": 3000
+    },
+    {
+      "text": "I've done that too. What is the hard",
+      "offset": 445000,
+      "duration": 2000
+    },
+    {
+      "text": "truth here? AI is just a faster way to",
+      "offset": 447000,
+      "duration": 3000
+    },
+    {
+      "text": "reach a bottleneck. So if your",
+      "offset": 450000,
+      "duration": 3000
+    },
+    {
+      "text": "process is broken, AI is not going to",
+      "offset": 453000,
+      "duration": 3000
+    },
+    {
+      "text": "fix it. It's just going to make the",
+      "offset": 456000,
+      "duration": 3000
+    },
+    {
+      "text": "crack in the foundation more obvious. Improving",
+      "offset": 459000,
+      "duration": 3000
+    },
+    {
+      "text": "the developer experience isn't just about",
+      "offset": 462000,
+      "duration": 2000
+    },
+    {
+      "text": "giving everyone a better LLM.",
+      "offset": 464000,
+      "duration": 4000
+    },
+    {
+      "text": "It's about cleaning up that friction so",
+      "offset": 468000,
+      "duration": 3000
+    },
+    {
+      "text": "we actually get to keep the time that AI",
+      "offset": 471000,
+      "duration": 2000
+    },
+    {
+      "text": "is saving us. Because you save 10 hours,",
+      "offset": 473000,
+      "duration": 3000
+    },
+    {
+      "text": "you spend 10 hours doing stuff that",
+      "offset": 476000,
+      "duration": 3000
+    },
+    {
+      "text": "shouldn't be requiring 10 hours.",
+      "offset": 479000,
+      "duration": 2000
+    },
+    {
+      "text": "Net gain is zero, sometimes negative. So",
+      "offset": 481000,
+      "duration": 4000
+    },
+    {
+      "text": "that is the 10-hour paradox which is",
+      "offset": 485000,
+      "duration": 3000
+    },
+    {
+      "text": "something I want you to think about",
+      "offset": 488000,
+      "duration": 2000
+    },
+    {
+      "text": "deeply. So AI is writing the code and",
+      "offset": 490000,
+      "duration": 3000
+    },
+    {
+      "text": "generating test cases. What do I do now?",
+      "offset": 493000,
+      "duration": 1000
+    },
+    {
+      "text": "Do I retire? I can't retire. I'm 27",
+      "offset": 494000,
+      "duration": 3000
+    },
+    {
+      "text": "years old. Am I just a prompt",
+      "offset": 497000,
+      "duration": 3000
+    },
+    {
+      "text": "engineer now? No. There is a set of core",
+      "offset": 500000,
+      "duration": 2000
+    },
+    {
+      "text": "responsibilities that AI simply cannot",
+      "offset": 502000,
+      "duration": 2000
+    },
+    {
+      "text": "touch because these responsibilities",
+      "offset": 504000,
+      "duration": 3000
+    },
+    {
+      "text": "require a soul and they are not just an",
+      "offset": 507000,
+      "duration": 3000
+    },
+    {
+      "text": "algorithm. So for example, intent and",
+      "offset": 510000,
+      "duration": 3000
+    },
+    {
+      "text": "context. AI can tell you how to build a",
+      "offset": 513000,
+      "duration": 2000
+    },
+    {
+      "text": "bridge but it has no idea why you are",
+      "offset": 515000,
+      "duration": 2000
+    },
+    {
+      "text": "building it. There are some trade-offs",
+      "offset": 517000,
+      "duration": 3000
+    },
+    {
+      "text": "as well. Every engineering decision is a",
+      "offset": 520000,
+      "duration": 2000
+    },
+    {
+      "text": "balancing act. Performance versus",
+      "offset": 522000,
+      "duration": 2000
+    },
+    {
+      "text": "readability, speed versus security.",
+      "offset": 524000,
+      "duration": 2000
+    },
+    {
+      "text": "Those aren't math problems; they are",
+      "offset": 526000,
+      "duration": 3000
+    },
+    {
+      "text": "value judgments. Also accountability:",
+      "offset": 529000,
+      "duration": 3000
+    },
+    {
+      "text": "when the site is going down at 3:00 a.m.",
+      "offset": 532000,
+      "duration": 2000
+    },
+    {
+      "text": "ChatGPT is not the one getting paged.",
+      "offset": 534000,
+      "duration": 3000
+    },
+    {
+      "text": "You are. So you own the legal, ethical,",
+      "offset": 537000,
+      "duration": 2000
+    },
+    {
+      "text": "professional consequences of that code.",
+      "offset": 539000,
+      "duration": 2000
+    },
+    {
+      "text": "Also, around 27 to 33% of AI generated",
+      "offset": 541000,
+      "duration": 2000
+    },
+    {
+      "text": "code has security vulnerabilities. That",
+      "offset": 546000,
+      "duration": 2000
+    },
+    {
+      "text": "is almost like one line in every three",
+      "offset": 548000,
+      "duration": 4000
+    },
+    {
+      "text": "lines of code. But if you're not being",
+      "offset": 552000,
+      "duration": 1000
+    },
+    {
+      "text": "replaced, then how is our day-to-day",
+      "offset": 553000,
+      "duration": 3000
+    },
+    {
+      "text": "actually changing? We are seeing three",
+      "offset": 556000,
+      "duration": 2000
+    },
+    {
+      "text": "major new roles emerge that I like to",
+      "offset": 558000,
+      "duration": 2000
+    },
+    {
+      "text": "call the human AI bridge. The first one:",
+      "offset": 560000,
+      "duration": 3000
+    },
+    {
+      "text": "we have the AI trainers. Think of these",
+      "offset": 563000,
+      "duration": 2000
+    },
+    {
+      "text": "folks like the mentors. They're not just",
+      "offset": 565000,
+      "duration": 2000
+    },
+    {
+      "text": "writing code. They are basically",
+      "offset": 567000,
+      "duration": 2000
+    },
+    {
+      "text": "curating the data and fine-tuning models",
+      "offset": 569000,
+      "duration": 2000
+    },
+    {
+      "text": "so that the AI actually understands your",
+      "offset": 572000,
+      "duration": 2000
+    },
+    {
+      "text": "specific domain and not just generic",
+      "offset": 574000,
+      "duration": 2000
+    },
+    {
+      "text": "patterns. Next, the AI explainers. This is",
+      "offset": 576000,
+      "duration": 4000
+    },
+    {
+      "text": "basically like a universal translator",
+      "offset": 580000,
+      "duration": 3000
+    },
+    {
+      "text": "role. You are bridging the gap between",
+      "offset": 583000,
+      "duration": 2000
+    },
+    {
+      "text": "a black box model and a stakeholder who",
+      "offset": 585000,
+      "duration": 2000
+    },
+    {
+      "text": "needs to know why they should trust a",
+      "offset": 587000,
+      "duration": 2000
+    },
+    {
+      "text": "specific output. It's about building",
+      "offset": 589000,
+      "duration": 2000
+    },
+    {
+      "text": "confidence through that context. And",
+      "offset": 591000,
+      "duration": 2000
+    },
+    {
+      "text": "finally, the AI sustainers. These are the",
+      "offset": 593000,
+      "duration": 2000
+    },
+    {
+      "text": "guardians. They are monitoring for drift,",
+      "offset": 595000,
+      "duration": 2000
+    },
+    {
+      "text": "bias, and making sure that the AI doesn't",
+      "offset": 599000,
+      "duration": 2000
+    },
+    {
+      "text": "go rogue on the organization's values.",
+      "offset": 601000,
+      "duration": 3000
+    },
+    {
+      "text": "Keeping things in check. The interesting",
+      "offset": 604000,
+      "duration": 3000
+    },
+    {
+      "text": "part is that these are not future sci-fi",
+      "offset": 607000,
+      "duration": 2000
+    },
+    {
+      "text": "roles. These are extensions of engineering",
+      "offset": 610000,
+      "duration": 3000
+    },
+    {
+      "text": "work that you are doing right now. It's",
+      "offset": 613000,
+      "duration": 1000
+    },
+    {
+      "text": "part of human-centered AI design, keeping",
+      "offset": 614000,
+      "duration": 3000
+    },
+    {
+      "text": "the person in the driver's seat while the",
+      "offset": 617000,
+      "duration": 2000
+    },
+    {
+      "text": "machines handle the heavy lifting. Let's",
+      "offset": 619000,
+      "duration": 2000
+    },
+    {
+      "text": "get into some stuff that people don't",
+      "offset": 621000,
+      "duration": 2000
+    },
+    {
+      "text": "usually mention in sales pitches. We",
+      "offset": 623000,
+      "duration": 2000
+    },
+    {
+      "text": "have four major hurdles here. The first",
+      "offset": 625000,
+      "duration": 2000
+    },
+    {
+      "text": "one is the trust gap. 60% of us don't",
+      "offset": 627000,
+      "duration": 3000
+    },
+    {
+      "text": "trust AI generated tests enough to ship",
+      "offset": 630000,
+      "duration": 3000
+    },
+    {
+      "text": "them and we end up double-checking every",
+      "offset": 633000,
+      "duration": 2000
+    },
+    {
+      "text": "line. So you're actually not saving any",
+      "offset": 635000,
+      "duration": 2000
+    },
+    {
+      "text": "time; you're just changing your bio to",
+      "offset": 637000,
+      "duration": 3000
+    },
+    {
+      "text": "\"code auditor.\" There's the learning curve",
+      "offset": 642000,
+      "duration": 4000
+    },
+    {
+      "text": "tax. Management loves to skip that part.",
+      "offset": 646000,
+      "duration": 1000
+    },
+    {
+      "text": "But experienced developers slow down",
+      "offset": 647000,
+      "duration": 3000
+    },
+    {
+      "text": "by nearly 20% when they first start",
+      "offset": 652000,
+      "duration": 3000
+    },
+    {
+      "text": "using these tools. It's a short-term hit",
+      "offset": 655000,
+      "duration": 2000
+    },
+    {
+      "text": "that leadership must account for or they",
+      "offset": 657000,
+      "duration": 2000
+    },
+    {
+      "text": "just think the team is getting lazier,",
+      "offset": 659000,
+      "duration": 4000
+    },
+    {
+      "text": "which is not true. And let's be real, AI",
+      "offset": 663000,
+      "duration": 3000
+    },
+    {
+      "text": "was trained on beautiful modern GitHub",
+      "offset": 666000,
+      "duration": 3000
+    },
+    {
+      "text": "repositories. It absolutely freaks out",
+      "offset": 669000,
+      "duration": 4000
+    },
+    {
+      "text": "when it sees your 12-year-old legacy",
+      "offset": 673000,
+      "duration": 3000
+    },
+    {
+      "text": "monolith. That legacy mismatch is",
+      "offset": 676000,
+      "duration": 3000
+    },
+    {
+      "text": "actually quite real. But the biggest one",
+      "offset": 683000,
+      "duration": 2000
+    },
+    {
+      "text": "is the empathy gap. 63% of developers",
+      "offset": 685000,
+      "duration": 3000
+    },
+    {
+      "text": "feel like their leaders are just throwing",
+      "offset": 688000,
+      "duration": 2000
+    },
+    {
+      "text": "tools without understanding the actual",
+      "offset": 690000,
+      "duration": 2000
+    },
+    {
+      "text": "day-to-day grind. You can't just install",
+      "offset": 692000,
+      "duration": 2000
+    },
+    {
+      "text": "productivity from the top down. You have",
+      "offset": 698000,
+      "duration": 4000
+    },
+    {
+      "text": "to listen to people who are actually",
+      "offset": 702000,
+      "duration": 1000
+    },
+    {
+      "text": "writing the code. We need to talk about",
+      "offset": 703000,
+      "duration": 2000
+    },
+    {
+      "text": "the elephant in the room: I call it the",
+      "offset": 705000,
+      "duration": 3000
+    },
+    {
+      "text": "senior developer factory problem. Every",
+      "offset": 708000,
+      "duration": 2000
+    },
+    {
+      "text": "hiring manager wants a senior developer",
+      "offset": 710000,
+      "duration": 2000
+    },
+    {
+      "text": "with 10 years of experience. But here's",
+      "offset": 712000,
+      "duration": 2000
+    },
+    {
+      "text": "the paradox: seniors don't just spawn",
+      "offset": 714000,
+      "duration": 3000
+    },
+    {
+      "text": "into existence at level 50. They come",
+      "offset": 717000,
+      "duration": 2000
+    },
+    {
+      "text": "from junior developers, who come from",
+      "offset": 719000,
+      "duration": 3000
+    },
+    {
+      "text": "interns, who come from students. But",
+      "offset": 723000,
+      "duration": 2000
+    },
+    {
+      "text": "if you let AI do all the junior work, we",
+      "offset": 725000,
+      "duration": 3000
+    },
+    {
+      "text": "are cutting off that ladder. Look at the",
+      "offset": 729000,
+      "duration": 3000
+    },
+    {
+      "text": "choice a new developer faces today. On",
+      "offset": 732000,
+      "duration": 2000
+    },
+    {
+      "text": "one hand, they can lean on AI. They ship",
+      "offset": 734000,
+      "duration": 3000
+    },
+    {
+      "text": "fast. They hit their targets. But they",
+      "offset": 737000,
+      "duration": 3000
+    },
+    {
+      "text": "develop a shallow understanding; they",
+      "offset": 740000,
+      "duration": 1000
+    },
+    {
+      "text": "are shipping code they can't actually",
+      "offset": 741000,
+      "duration": 2000
+    },
+    {
+      "text": "explain or debug when things go sideways.",
+      "offset": 743000,
+      "duration": 2000
+    },
+    {
+      "text": "On the other hand, if they write manually",
+      "offset": 745000,
+      "duration": 2000
+    },
+    {
+      "text": "to actually learn the foundations, they",
+      "offset": 747000,
+      "duration": 2000
+    },
+    {
+      "text": "look slow compared to the AI augmented",
+      "offset": 749000,
+      "duration": 2000
+    },
+    {
+      "text": "developer. So the pressure to just use",
+      "offset": 751000,
+      "duration": 2000
+    },
+    {
+      "text": "the tool is massive. This is the most",
+      "offset": 753000,
+      "duration": 3000
+    },
+    {
+      "text": "underappreciated skill in AI adoption: if",
+      "offset": 758000,
+      "duration": 3000
+    },
+    {
+      "text": "we only optimize for today's productivity,",
+      "offset": 761000,
+      "duration": 1000
+    },
+    {
+      "text": "we are quietly dismantling tomorrow's",
+      "offset": 762000,
+      "duration": 3000
+    },
+    {
+      "text": "talent pipeline. We have to be intentional;",
+      "offset": 765000,
+      "duration": 3000
+    },
+    {
+      "text": "we need to create protected spaces",
+      "offset": 770000,
+      "duration": 2000
+    },
+    {
+      "text": "where juniors are allowed to be slow,",
+      "offset": 772000,
+      "duration": 1000
+    },
+    {
+      "text": "allowed to fail, and learn the \"why\"",
+      "offset": 773000,
+      "duration": 2000
+    },
+    {
+      "text": "and not just the \"how.\" Allow me to",
+      "offset": 775000,
+      "duration": 3000
+    },
+    {
+      "text": "introduce you to GIST: GenAI Induced",
+      "offset": 778000,
+      "duration": 2000
+    },
+    {
+      "text": "Self-Admitted Technical Debt. Look at",
+      "offset": 780000,
+      "duration": 2000
+    },
+    {
+      "text": "this chart: we are seeing a massive spike",
+      "offset": 782000,
+      "duration": 2000
+    },
+    {
+      "text": "in debt where the developer knows that",
+      "offset": 784000,
+      "duration": 2000
+    },
+    {
+      "text": "the code is shaky but they ship it anyway.",
+      "offset": 786000,
+      "duration": 3000
+    },
+    {
+      "text": "This is not because developers have suddenly",
+      "offset": 789000,
+      "duration": 3000
+    },
+    {
+      "text": "become lazy. It is a signal that our",
+      "offset": 794000,
+      "duration": 2000
+    },
+    {
+      "text": "AI adoption is outpacing our comprehension",
+      "offset": 798000,
+      "duration": 2000
+    },
+    {
+      "text": "culture. We are so focused on getting",
+      "offset": 800000,
+      "duration": 3000
+    },
+    {
+      "text": "green check marks in the CI/CD pipeline",
+      "offset": 803000,
+      "duration": 1000
+    },
+    {
+      "text": "that we are forgetting a fundamental rule",
+      "offset": 804000,
+      "duration": 3000
+    },
+    {
+      "text": "of engineering: if you can't explain it,",
+      "offset": 807000,
+      "duration": 2000
+    },
+    {
+      "text": "you don't own it. We are essentially",
+      "offset": 809000,
+      "duration": 4000
+    },
+    {
+      "text": "trading long-term system health for a",
+      "offset": 813000,
+      "duration": 3000
+    },
+    {
+      "text": "5-minute quick win. If we want to win",
+      "offset": 816000,
+      "duration": 2000
+    },
+    {
+      "text": "with AI, we have to make sure that our",
+      "offset": 818000,
+      "duration": 2000
+    },
+    {
+      "text": "ability to understand code stays",
+      "offset": 820000,
+      "duration": 2000
+    },
+    {
+      "text": "faster than our ability to generate it.",
+      "offset": 822000,
+      "duration": 3000
+    },
+    {
+      "text": "So how do we actually do this without it",
+      "offset": 825000,
+      "duration": 3000
+    },
+    {
+      "text": "becoming a total mess? You can't just",
+      "offset": 828000,
+      "duration": 2000
+    },
+    {
+      "text": "flip a switch. You need a road map. I",
+      "offset": 830000,
+      "duration": 2000
+    },
+    {
+      "text": "have broken this down into three phases",
+      "offset": 832000,
+      "duration": 2000
+    },
+    {
+      "text": "that actually work in the real world.",
+      "offset": 834000,
+      "duration": 2000
+    },
+    {
+      "text": "Phase one is about the vibe check.",
+      "offset": 836000,
+      "duration": 2000
+    },
+    {
+      "text": "Don't force it on everyone at once. Find",
+      "offset": 838000,
+      "duration": 2000
+    },
+    {
+      "text": "those AI champions in your squad and",
+      "offset": 840000,
+      "duration": 2000
+    },
+    {
+      "text": "let them lead. Get your managers on",
+      "offset": 842000,
+      "duration": 5000
+    },
+    {
+      "text": "board so they are not surprised by the",
+      "offset": 847000,
+      "duration": 3000
+    },
+    {
+      "text": "20% learning tax and celebrate the small",
+      "offset": 850000,
+      "duration": 4000
+    },
+    {
+      "text": "wins early. Phase number two is the",
+      "offset": 854000,
+      "duration": 3000
+    },
+    {
+      "text": "cleanup. Get serious about quality. Use",
+      "offset": 857000,
+      "duration": 4000
+    },
+    {
+      "text": "custom lint rules to catch AI",
+      "offset": 861000,
+      "duration": 2000
+    },
+    {
+      "text": "hallucinations before they reach a pull",
+      "offset": 863000,
+      "duration": 3000
+    },
+    {
+      "text": "request. Standardize your context with",
+      "offset": 866000,
+      "duration": 2000
+    },
+    {
+      "text": "things like Cursor rules so the AI",
+      "offset": 868000,
+      "duration": 2000
+    },
+    {
+      "text": "actually knows what it's looking at. More",
+      "offset": 870000,
+      "duration": 2000
+    },
+    {
+      "text": "importantly, run surveys to see if",
+      "offset": 872000,
+      "duration": 3000
+    },
+    {
+      "text": "developers are actually trusting the tool",
+      "offset": 875000,
+      "duration": 5000
+    },
+    {
+      "text": "or just fighting with it. Phase three is",
+      "offset": 880000,
+      "duration": 4000
+    },
+    {
+      "text": "scaling. Stop doing guesswork; look at",
+      "offset": 884000,
+      "duration": 8000
+    },
+    {
+      "text": "the data, usage, activity, and sentiment.",
+      "offset": 892000,
+      "duration": 2000
+    },
+    {
+      "text": "Build context infrastructure so that",
+      "offset": 894000,
+      "duration": 2000
+    },
+    {
+      "text": "the AI is not just a generic chatbot,",
+      "offset": 896000,
+      "duration": 2000
+    },
+    {
+      "text": "but a partner that understands your",
+      "offset": 898000,
+      "duration": 2000
+    },
+    {
+      "text": "specific architecture. Remember that AI",
+      "offset": 900000,
+      "duration": 2000
+    },
+    {
+      "text": "adoption is not a sprint; it's a marathon.",
+      "offset": 902000,
+      "duration": 2000
+    },
+    {
+      "text": "If you're looking for a TL;DR for Monday,",
+      "offset": 904000,
+      "duration": 3000
+    },
+    {
+      "text": "this is it. On the \"Do\" slide: think of",
+      "offset": 910000,
+      "duration": 11000
+    },
+    {
+      "text": "AI as a very fast, very confident intern.",
+      "offset": 921000,
+      "duration": 3000
+    },
+    {
+      "text": "You must understand before you ship.",
+      "offset": 924000,
+      "duration": 3000
+    },
+    {
+      "text": "Scrutinize AI code more, not less. AI is",
+      "offset": 927000,
+      "duration": 3000
+    },
+    {
+      "text": "great at being mostly right, which is the",
+      "offset": 930000,
+      "duration": 3000
+    },
+    {
+      "text": "most dangerous kind of wrong. Keep your",
+      "offset": 933000,
+      "duration": 1000
+    },
+    {
+      "text": "manual coding skills sharp so your muscles",
+      "offset": 934000,
+      "duration": 3000
+    },
+    {
+      "text": "don't get rusty. For the \"Avoid\" list:",
+      "offset": 939000,
+      "duration": 3000
+    },
+    {
+      "text": "do not treat AI as a silver bullet. If",
+      "offset": 942000,
+      "duration": 3000
+    },
+    {
+      "text": "your processes were a mess before, AI",
+      "offset": 945000,
+      "duration": 2000
+    },
+    {
+      "text": "just helps you make a mess at 10 times",
+      "offset": 947000,
+      "duration": 3000
+    },
+    {
+      "text": "the speed. 88% of teams are using AI,",
+      "offset": 950000,
+      "duration": 2000
+    },
+    {
+      "text": "but only around 30% have a policy. We",
+      "offset": 952000,
+      "duration": 4000
+    },
+    {
+      "text": "have to move past vibe-based adoption.",
+      "offset": 956000,
+      "duration": 5000
+    },
+    {
+      "text": "Talk to your developers, listen to their",
+      "offset": 961000,
+      "duration": 3000
+    },
+    {
+      "text": "friction, and build a culture of",
+      "offset": 964000,
+      "duration": 2000
+    },
+    {
+      "text": "comprehension, not consumption.",
+      "offset": 966000,
+      "duration": 2000
+    },
+    {
+      "text": "Hybrid intelligence is about a division",
+      "offset": 968000,
+      "duration": 3000
+    },
+    {
+      "text": "of labor that makes sense. Let AI handle",
+      "offset": 971000,
+      "duration": 2000
+    },
+    {
+      "text": "scale, volume, repetition, and soul-crushing",
+      "offset": 973000,
+      "duration": 3000
+    },
+    {
+      "text": "boilerplate. Reclaim that space for",
+      "offset": 976000,
+      "duration": 2000
+    },
+    {
+      "text": "ambiguity, ethics, and architectural",
+      "offset": 978000,
+      "duration": 3000
+    },
+    {
+      "text": "vision. The winners are not the ones",
+      "offset": 981000,
+      "duration": 3000
+    },
+    {
+      "text": "who fire developers to save money, but",
+      "offset": 984000,
+      "duration": 2000
+    },
+    {
+      "text": "the ones who figure out how humans and",
+      "offset": 986000,
+      "duration": 2000
+    },
+    {
+      "text": "AI work together. When you get this",
+      "offset": 988000,
+      "duration": 3000
+    },
+    {
+      "text": "right, you don't just work faster; you",
+      "offset": 991000,
+      "duration": 3000
+    },
+    {
+      "text": "work on things that were literally",
+      "offset": 994000,
+      "duration": 2000
+    },
+    {
+      "text": "impossible 2 years ago. The code might",
+      "offset": 996000,
+      "duration": 2000
+    },
+    {
+      "text": "be generated, but the intent is yours.",
+      "offset": 998000,
+      "duration": 3000
+    },
+    {
+      "text": "Thank you for your time. Let's build",
+      "offset": 1001000,
+      "duration": 3000
+    },
+    {
+      "text": "something great together. See you.",
+      "offset": 1004000,
+      "duration": 2000
+    }
+  ],
+  "fullText": "Hi everyone, welcome to the Sonar Summit. My name is Kunal Kushwaha. I'm a senior developer advocate at CAST AI and I'm so excited to be here. Look at this title by the way: Humans plus AI, not humans versus AI. Because you know, right now there's a lot of conversation around AI replacing developers and what that means for engineering teams and for individuals as well. Today we're going to cut through that hype. We're going to look at some of the practical realities of how engineering teams are actually collaborating today. And I'm going to show you what the data really says and where the friction is hiding and also how you can build a team that wins in this era of AI. So no doom and no gloom. Just some real talk. I'm very very happy to be here. Let's get started. So here's a road map for the next few minutes. I have broken this down into five key areas. The first one being the reality gap. We're going to look at the massive chasm between the AI hype and what actually engineering data is telling us. Spoiler alert, it's not what the marketing brochures are saying. So we're going to figure that out. Next, we have to talk about human responsibilities because what is the unwavering core? The stuff that no LLM, no matter how many parameters it has, billions and trillions of parameters, can actually replace, there's always going to be that human touch. Third is the friction points. This is my favorite part because we're going to talk about the 10-hour paradox and the junior developers scenario for them\nlike what they are facing and if you felt like this whole AI thing is sometimes making your job a little bit harder this is for you. Fourth we're going to learn how to adopt strategies. So I'm going to give you some actual frameworks, the dos and the don'ts. So things to keep in mind, green flags, red flags, and please for the love of God, \"don't\" flags of AI governance as well. And finally, the hybrid intelligence. So what does the dream team of the future look like? And there's a lot to pack in. So let's dive straight into the data. Let's start with that first. So let's get real for a second. You know, we have all seen LinkedIn posts. I love LinkedIn, it says that AI was supposed to turn us all into like 10x engineers overnight, but the narrative promised this massive instant productivity explosion, basically magic transformation. But look at what is actually happening in the trenches. Organizations, as you can see on my slides, using AI coding tools are seeing roughly around 15% productivity improvement. Don't get me wrong, 15% is meaningful. I'm not saying that it's not, but it's definitely not revolutionary. Let me know what you think in the live chat. Developers themselves are rating the actual speed boost at around 2.23 out of five and the overall cycle times, how fast we actually ship are staying pretty much flat. So what is the vital takeaway from this? We didn't get 10x engineers. We unlocked like a 1.15x engineering organization. A little bit of progress. But that distinction changes everything about how we approach AI because if you try to manage a team expecting 10x output, you're going to burn them out and that's not cool. You shouldn't do that. But if you focus on how that 1.15x gain scales across an entire organization, that is where you actually start to win. Now, I know I just burst the bubble of 10x engineers. You know, a 10x engineer isn't the one who does 10x amount of work. It's the engineer who makes other 10 people better. Like that's the quote by Kelsey Hightower. He said it better than me. So, you can find it on one of his talks. But don't go delete your copilot subscriptions. I'm not trying to demotivate you. So don't do that yet. While this total transformation hasn't happened, the specific wins are actually kind of mind-blowing when you look at the data from places like Microsoft and Azure. Check these numbers out. As you can see, we are seeing like a 26% increase in completed tasks. So that is basically like So what is 26%? It's like you get your Friday back, every single week. And look at that 6x jump in test generation. Nobody wakes up hyped up to write boilerplate unit tests. If that's you, then please reach out to me. I might have some roles for you. AI taking that off your plate is a massive win for your own sanity because the whole point is about giving developers the time back to solve more problems. There's so many problems in this world and if AI can do these mundane tasks for me then why not? But the real kicker is that look at the far right: three times more likely to generate top-tier ideas. There was a P&G study that found an individual with AI could match the creative output of a two-person human team during ideation. So this basically tells us something significant: that AI is not just like a typewriter. It's a brainstorming partner. I am very with this statement because I use AI for brainstorming quite a lot. So it's not like replacing the engineer. It's replacing drudgery. So it's clearly cleaning up the busy work out of the way so you can actually focus on high-level design, creativity, and problem solving that human beings are pretty good at. So if you just take away one thing from this talk today, let it be this: the 10-hour paradox. On the left side of the graph, you can see that AI is doing exactly what it promised. It's writing your boilerplate. It's generating those unit tests and it's basically handling and giving you 10 hours of your life back every single week. So you are coding faster than ever. You are a rock star. Life is good and everything is perfect. But then the right side happens. You save 10 hours in the IDE. Very cool stuff. But you are losing them immediately to organizational friction. So you lose them to Slack notifications and that whole death loop. You lose them because the requirements for a ticket were so vague that you spent 2 hours prompting an AI for something that the business didn't even want. I have done that. You lose them to tool switching and broken CI/CD pipelines. I've done that too. What is the hard truth here? AI is just a faster way to reach a bottleneck. So if your process is broken, AI is not going to fix it. It's just going to make the crack in the foundation more obvious. Improving the developer experience isn't just about giving everyone a better LLM. It's about cleaning up that friction so we actually get to keep the time that AI is saving us. Because you save 10 hours, you spend 10 hours doing stuff that shouldn't be requiring 10 hours. Net gain is zero, sometimes negative. So that is the 10-hour paradox which is something I want you to think about deeply. So AI is writing the code and generating test cases. What do I do now? Do I retire? I can't retire. I'm 27 years old. Am I just a prompt engineer now? No. There is a set of core responsibilities that AI simply cannot touch because these responsibilities require a soul and they are not just an algorithm. So for example, intent and context. AI can tell you how to build a bridge but it has no idea why you are building it. There are some trade-offs as well. Every engineering decision is a balancing act. Performance versus readability, speed versus security. Those aren't math problems; they are value judgments. Also accountability: when the site is going down at 3:00 a.m. ChatGPT is not the one getting paged. You are. So you own the legal, ethical, professional consequences of that code. Also, around 27 to 33% of AI generated code has security vulnerabilities. That is almost like one line in every three lines of code. But if you're not being replaced, then how is our day-to-day actually changing? We are seeing three major new roles emerge that I like to call the human AI bridge. The first one: we have the AI trainers. Think of these folks like the mentors. They're not just writing code. They are basically curating the data and fine-tuning models so that the AI actually understands your specific domain and not just generic patterns. Next, the AI explainers. This is basically like a universal translator role. You are bridging the gap between a black box model and a stakeholder who needs to know why they should trust a specific output. It's about building confidence through that context. And finally, the AI sustainers. These are the guardians. They are monitoring for drift, bias, and making sure that the AI doesn't go rogue on the organization's values. Keeping things in check. The interesting part is that these are not future sci-fi roles. These are extensions of engineering work that you are doing right now. It's part of human-centered AI design, keeping the person in the driver's seat while the machines handle the heavy lifting. Let's get into some stuff that people don't usually mention in sales pitches. We have four major hurdles here. The first one is the trust gap. 60% of us don't trust AI generated tests enough to ship them and we end up double-checking every line. So you're actually not saving any time; you're just changing your bio to \"code auditor.\" There's the learning curve tax. Management loves to skip that part. But experienced developers slow down by nearly 20% when they first start using these tools. It's a short-term hit that leadership must account for or they just think the team is getting lazier, which is not true. And let's be real, AI was trained on beautiful modern GitHub repositories. It absolutely freaks out when it sees your 12-year-old legacy monolith. That legacy mismatch is actually quite real. But the biggest one is the empathy gap. 63% of developers feel like their leaders are just throwing tools without understanding the actual day-to-day grind. You can't just install productivity from the top down. You have to listen to people who are actually writing the code. We need to talk about the elephant in the room: I call it the senior developer factory problem. Every hiring manager wants a senior developer with 10 years of experience. But here's the paradox: seniors don't just spawn into existence at level 50. They come from junior developers, who come from interns, who come from students. But if you let AI do all the junior work, we are cutting off that ladder. Look at the choice a new developer faces today. On one hand, they can lean on AI. They ship fast. They hit their targets. But they develop a shallow understanding; they are shipping code they can't actually explain or debug when things go sideways. On the other hand, if they write manually to actually learn the foundations, they look slow compared to the AI augmented developer. So the pressure to just use the tool is massive. This is the most underappreciated skill in AI adoption: if we only optimize for today's productivity, we are quietly dismantling tomorrow's talent pipeline. We have to be intentional; we need to create protected spaces where juniors are allowed to be slow, allowed to fail, and learn the \"why\" and not just the \"how.\" Allow me to introduce you to GIST: GenAI Induced Self-Admitted Technical Debt. Look at this chart: we are seeing a massive spike in debt where the developer knows that the code is shaky but they ship it anyway. This is not because developers have suddenly become lazy. It is a signal that our AI adoption is outpacing our comprehension culture. We are so focused on getting green check marks in the CI/CD pipeline that we are forgetting a fundamental rule of engineering: if you can't explain it, you don't own it. We are essentially trading long-term system health for a 5-minute quick win. If we want to win with AI, we have to make sure that our ability to understand code stays faster than our ability to generate it. So how do we actually do this without it becoming a total mess? You can't just flip a switch. You need a road map. I have broken this down into three phases that actually work in the real world. Phase one is about the vibe check. Don't force it on everyone at once. Find those AI champions in your squad and let them lead. Get your managers on board so they are not surprised by the 20% learning tax and celebrate the small wins early. Phase number two is the cleanup. Get serious about quality. Use custom lint rules to catch AI hallucinations before they reach a pull request. Standardize your context with things like Cursor rules so the AI actually knows what it's looking at. More importantly, run surveys to see if developers are actually trusting the tool or just fighting with it. Phase three is scaling. Stop doing guesswork; look at the data, usage, activity, and sentiment. Build context infrastructure so that the AI is not just a generic chatbot, but a partner that understands your specific architecture. Remember that AI adoption is not a sprint; it's a marathon. If you're looking for a TL;DR for Monday, this is it. On the \"Do\" slide: think of AI as a very fast, very confident intern. You must understand before you ship. Scrutinize AI code more, not less. AI is great at being mostly right, which is the most dangerous kind of wrong. Keep your manual coding skills sharp so your muscles don't get rusty. For the \"Avoid\" list: do not treat AI as a silver bullet. If your processes were a mess before, AI just helps you make a mess at 10 times the speed. 88% of teams are using AI, but only around 30% have a policy. We have to move past vibe-based adoption. Talk to your developers, listen to their friction, and build a culture of comprehension, not consumption. Hybrid intelligence is about a division of labor that makes sense. Let AI handle scale, volume, repetition, and soul-crushing boilerplate. Reclaim that space for ambiguity, ethics, and architectural vision. The winners are not the ones who fire developers to save money, but the ones who figure out how humans and AI work together. When you get this right, you don't just work faster; you work on things that were literally impossible 2 years ago. The code might be generated, but the intent is yours. Thank you for your time. Let's build something great together. See you.",
+  "fetchedAt": "2026-03-14T09:22:00.159Z"
+}

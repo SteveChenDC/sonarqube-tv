@@ -1,0 +1,193 @@
+{
+  "videoId": "v55",
+  "youtubeId": "Mc05XFKewWM",
+  "segments": [
+    {
+      "text": "Hi everyone, my name is Sarah Burgess and I'm here today to talk about scaling software quality at Xero as we move from on‑premise to cloud.",
+      "offset": 17000,
+      "duration": 13000
+    },
+    {
+      "text": "Xero is a cloud‑based platform for small businesses and their accountants and bookkeepers.",
+      "offset": 30000,
+      "duration": 10000
+    },
+    {
+      "text": "It runs as a software‑as‑a‑service model where customers pay a subscription to access the platform.",
+      "offset": 40000,
+      "duration": 10000
+    },
+    {
+      "text": "This automates a lot of tedious financial work and gives customers more confidence in their numbers.",
+      "offset": 50000,
+      "duration": 7000
+    },
+    {
+      "text": "It also gives them time back to focus on what they enjoy.",
+      "offset": 57000,
+      "duration": 7000
+    },
+    {
+      "text": "We have offices globally, and our headquarters is in Wellington, where I'm based.",
+      "offset": 64000,
+      "duration": 9000
+    },
+    {
+      "text": "I'm the Lead Product Manager in the security team at Xero and a Sonar Champion in 2025.",
+      "offset": 73000,
+      "duration": 11000
+    },
+    {
+      "text": "Today I'll share the history of SonarQube at Xero and our move from server to SonarQube Cloud.",
+      "offset": 84000,
+      "duration": 16000
+    },
+    {
+      "text": "We'll also look at how we planned the rollout, the benefits we saw, and what comes next.",
+      "offset": 100000,
+      "duration": 20000
+    },
+    {
+      "text": "Around seven years ago Xero started using SonarQube Server as an on‑premise solution.",
+      "offset": 120000,
+      "duration": 21000
+    },
+    {
+      "text": "Teams used it for code reliability, maintainability and coverage reporting in their pipelines.",
+      "offset": 141000,
+      "duration": 21000
+    },
+    {
+      "text": "In 2024 the Sonar product moved to the security team and we took over maintenance.",
+      "offset": 162000,
+      "duration": 28000
+    },
+    {
+      "text": "Managing the infrastructure was complex and knowledge was concentrated among a few engineers.",
+      "offset": 190000,
+      "duration": 28000
+    },
+    {
+      "text": "Not all teams used it because onboarding required additional pipeline work.",
+      "offset": 218000,
+      "duration": 29000
+    },
+    {
+      "text": "The platform also had configuration sprawl and limited documentation.",
+      "offset": 247000,
+      "duration": 31000
+    },
+    {
+      "text": "Maintenance overhead was high and visibility into code security was limited.",
+      "offset": 278000,
+      "duration": 20000
+    },
+    {
+      "text": "So we evaluated moving to SonarQube Cloud to reduce that burden.",
+      "offset": 298000,
+      "duration": 31000
+    },
+    {
+      "text": "After discussions with engineers we confirmed the cloud version met most needs.",
+      "offset": 329000,
+      "duration": 16000
+    },
+    {
+      "text": "In 2025 we gained access to SonarQube Cloud and created a cross‑functional migration team.",
+      "offset": 345000,
+      "duration": 33000
+    },
+    {
+      "text": "Experienced teams helped test the migration and provided feedback.",
+      "offset": 378000,
+      "duration": 38000
+    },
+    {
+      "text": "We also communicated the upcoming change across engineering teams.",
+      "offset": 416000,
+      "duration": 33000
+    },
+    {
+      "text": "After some early confusion with auto analysis, teams quickly adapted.",
+      "offset": 449000,
+      "duration": 26000
+    },
+    {
+      "text": "In February 2025 we rolled out SonarQube Cloud to thousands of repositories.",
+      "offset": 475000,
+      "duration": 24000
+    },
+    {
+      "text": "Teams then had about nine months to migrate from the server instance.",
+      "offset": 499000,
+      "duration": 22000
+    },
+    {
+      "text": "On November 17, 2025 we shut down SonarQube Server.",
+      "offset": 521000,
+      "duration": 16000
+    },
+    {
+      "text": "The migration removed a major maintenance burden for the security team.",
+      "offset": 537000,
+      "duration": 27000
+    },
+    {
+      "text": "One key benefit is being AI‑ready as developers increasingly use AI tools to generate code.",
+      "offset": 564000,
+      "duration": 33000
+    },
+    {
+      "text": "SonarQube Cloud provides coverage across repositories and ensures generated code is checked.",
+      "offset": 597000,
+      "duration": 38000
+    },
+    {
+      "text": "Automatic analysis also allows faster onboarding for teams without pipeline changes.",
+      "offset": 635000,
+      "duration": 32000
+    },
+    {
+      "text": "GitHub integration provides immediate feedback directly in pull requests.",
+      "offset": 667000,
+      "duration": 32000
+    },
+    {
+      "text": "We also improved permissions and aligned quality gates across product teams.",
+      "offset": 699000,
+      "duration": 32000
+    },
+    {
+      "text": "The biggest benefit is the reduced maintenance workload for the security team.",
+      "offset": 731000,
+      "duration": 25000
+    },
+    {
+      "text": "Looking ahead we're tuning rule sets and improving dashboards for leadership visibility.",
+      "offset": 756000,
+      "duration": 33000
+    },
+    {
+      "text": "We're also refining onboarding documentation and access management.",
+      "offset": 789000,
+      "duration": 33000
+    },
+    {
+      "text": "Today more than 3,500 repositories across Xero use SonarQube Cloud.",
+      "offset": 822000,
+      "duration": 38000
+    },
+    {
+      "text": "We actively triage security issues and have greater confidence in the code reaching production.",
+      "offset": 860000,
+      "duration": 49000
+    },
+    {
+      "text": "Thanks for listening and I hope you enjoyed this overview of Xero's journey to the cloud.",
+      "offset": 909000,
+      "duration": 22000
+    }
+  ],
+  "fullText": "Hi everyone, my name is Sarah Burgess and I'm here today to talk about scaling software quality at Xero as we move from on‑premise to cloud. Xero is a cloud‑based platform for small businesses and their accountants and bookkeepers. It runs as a software‑as‑a‑service model where customers pay a subscription to access the platform. This automates a lot of tedious financial work and gives customers more confidence in their numbers. It also gives them time back to focus on what they enjoy. We have offices globally, and our headquarters is in Wellington, where I'm based. I'm the Lead Product Manager in the security team at Xero and a Sonar Champion in 2025. Today I'll share the history of SonarQube at Xero and our move from server to SonarQube Cloud. We'll also look at how we planned the rollout, the benefits we saw, and what comes next. Around seven years ago Xero started using SonarQube Server as an on‑premise solution. Teams used it for code reliability, maintainability and coverage reporting in their pipelines. In 2024 the Sonar product moved to the security team and we took over maintenance. Managing the infrastructure was complex and knowledge was concentrated among a few engineers. Not all teams used it because onboarding required additional pipeline work. The platform also had configuration sprawl and limited documentation. Maintenance overhead was high and visibility into code security was limited. So we evaluated moving to SonarQube Cloud to reduce that burden. After discussions with engineers we confirmed the cloud version met most needs. In 2025 we gained access to SonarQube Cloud and created a cross‑functional migration team. Experienced teams helped test the migration and provided feedback. We also communicated the upcoming change across engineering teams. After some early confusion with auto analysis, teams quickly adapted. In February 2025 we rolled out SonarQube Cloud to thousands of repositories. Teams then had about nine months to migrate from the server instance. On November 17, 2025 we shut down SonarQube Server. The migration removed a major maintenance burden for the security team. One key benefit is being AI‑ready as developers increasingly use AI tools to generate code. SonarQube Cloud provides coverage across repositories and ensures generated code is checked. Automatic analysis also allows faster onboarding for teams without pipeline changes. GitHub integration provides immediate feedback directly in pull requests. We also improved permissions and aligned quality gates across product teams. The biggest benefit is the reduced maintenance workload for the security team. Looking ahead we're tuning rule sets and improving dashboards for leadership visibility. We're also refining onboarding documentation and access management. Today more than 3,500 repositories across Xero use SonarQube Cloud. We actively triage security issues and have greater confidence in the code reaching production. Thanks for listening and I hope you enjoyed this overview of Xero's journey to the cloud.",
+  "fetchedAt": "2026-03-14T09:22:17.015Z"
+}

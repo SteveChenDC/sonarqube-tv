@@ -1,0 +1,488 @@
+{
+  "videoId": "v99",
+  "youtubeId": "k2xUyPcBxag",
+  "segments": [
+    {
+      "text": "[Music]",
+      "offset": 290,
+      "duration": 9990
+    },
+    {
+      "text": "hi this is Robbie from sonar in this",
+      "offset": 8120,
+      "duration": 3399
+    },
+    {
+      "text": "video I'm going to be walking you",
+      "offset": 10280,
+      "duration": 3800
+    },
+    {
+      "text": "through running an analysis on a C++",
+      "offset": 11519,
+      "duration": 4721
+    },
+    {
+      "text": "project with sonar Cube using the new",
+      "offset": 14080,
+      "duration": 4039
+    },
+    {
+      "text": "autoc config feature that we introduced",
+      "offset": 16240,
+      "duration": 3720
+    },
+    {
+      "text": "with the 10.6",
+      "offset": 18119,
+      "duration": 4641
+    },
+    {
+      "text": "release autoc config eliminates all of",
+      "offset": 19960,
+      "duration": 5360
+    },
+    {
+      "text": "the usual prerequisites so there's no",
+      "offset": 22760,
+      "duration": 5080
+    },
+    {
+      "text": "more specific compiler Allegiance no",
+      "offset": 25320,
+      "duration": 5080
+    },
+    {
+      "text": "more elaborate setup rituals and no",
+      "offset": 27840,
+      "duration": 4640
+    },
+    {
+      "text": "dependencies on your Project's build",
+      "offset": 30400,
+      "duration": 4319
+    },
+    {
+      "text": "environment the result is that sonar",
+      "offset": 32480,
+      "duration": 5079
+    },
+    {
+      "text": "Cube now supports the analysis of CN C++",
+      "offset": 34719,
+      "duration": 5121
+    },
+    {
+      "text": "projects that use many more compilers",
+      "offset": 37559,
+      "duration": 4361
+    },
+    {
+      "text": "and build tools than were previously",
+      "offset": 39840,
+      "duration": 4559
+    },
+    {
+      "text": "supported in addition the use of the",
+      "offset": 41920,
+      "duration": 4840
+    },
+    {
+      "text": "build wrapper or compilation datab base",
+      "offset": 44399,
+      "duration": 4361
+    },
+    {
+      "text": "is no longer a requirement to analyze",
+      "offset": 46760,
+      "duration": 4119
+    },
+    {
+      "text": "your",
+      "offset": 48760,
+      "duration": 4799
+    },
+    {
+      "text": "project for this demonstration I'm going",
+      "offset": 50879,
+      "duration": 5041
+    },
+    {
+      "text": "to be running analysis on a test C++",
+      "offset": 53559,
+      "duration": 3921
+    },
+    {
+      "text": "project that I have downloaded here on",
+      "offset": 55920,
+      "duration": 2680
+    },
+    {
+      "text": "my",
+      "offset": 57480,
+      "duration": 4320
+    },
+    {
+      "text": "Mac so I'm start over here in the UI I'm",
+      "offset": 58600,
+      "duration": 5000
+    },
+    {
+      "text": "going to come over and click create",
+      "offset": 61800,
+      "duration": 3600
+    },
+    {
+      "text": "project and because I'm running",
+      "offset": 63600,
+      "duration": 3080
+    },
+    {
+      "text": "everything locally I'm just going to",
+      "offset": 65400,
+      "duration": 4719
+    },
+    {
+      "text": "click local project",
+      "offset": 66680,
+      "duration": 3439
+    },
+    {
+      "text": "here going to give my project a name",
+      "offset": 71960,
+      "duration": 5760
+    },
+    {
+      "text": "select a new code",
+      "offset": 75360,
+      "duration": 4200
+    },
+    {
+      "text": "setting and then I'm going to be taken",
+      "offset": 77720,
+      "duration": 4880
+    },
+    {
+      "text": "to the wizard selection now I'm not",
+      "offset": 79560,
+      "duration": 4960
+    },
+    {
+      "text": "running my project as a part of a CI",
+      "offset": 82600,
+      "duration": 3720
+    },
+    {
+      "text": "everything's going to be local uh",
+      "offset": 84520,
+      "duration": 3760
+    },
+    {
+      "text": "however if you are running analysis from",
+      "offset": 86320,
+      "duration": 4040
+    },
+    {
+      "text": "a CI please see our documentation for",
+      "offset": 88280,
+      "duration": 5400
+    },
+    {
+      "text": "details on how to get these set",
+      "offset": 90360,
+      "duration": 3320
+    },
+    {
+      "text": "up in my case I'm going to go ahead and",
+      "offset": 94640,
+      "duration": 3920
+    },
+    {
+      "text": "generate a token here and then I'm going",
+      "offset": 96759,
+      "duration": 3441
+    },
+    {
+      "text": "to click CR",
+      "offset": 98560,
+      "duration": 3839
+    },
+    {
+      "text": "C++ now you notice what's different here",
+      "offset": 100200,
+      "duration": 4279
+    },
+    {
+      "text": "from what we had before um we have this",
+      "offset": 102399,
+      "duration": 4000
+    },
+    {
+      "text": "new tab that says automatic and this",
+      "offset": 104479,
+      "duration": 4161
+    },
+    {
+      "text": "corresponds to that auto config feature",
+      "offset": 106399,
+      "duration": 4040
+    },
+    {
+      "text": "that we're going to be testing out",
+      "offset": 108640,
+      "duration": 4360
+    },
+    {
+      "text": "today if we come over and look at the",
+      "offset": 110439,
+      "duration": 4280
+    },
+    {
+      "text": "steps that used to be required here",
+      "offset": 113000,
+      "duration": 3719
+    },
+    {
+      "text": "you'll see that uh we used to need to",
+      "offset": 114719,
+      "duration": 4601
+    },
+    {
+      "text": "come in and download a build wrapper and",
+      "offset": 116719,
+      "duration": 4801
+    },
+    {
+      "text": "run that as a part of our build command",
+      "offset": 119320,
+      "duration": 5119
+    },
+    {
+      "text": "before actually executing the",
+      "offset": 121520,
+      "duration": 5279
+    },
+    {
+      "text": "scanner with autoc config we no longer",
+      "offset": 124439,
+      "duration": 4160
+    },
+    {
+      "text": "need to do this we just need to select",
+      "offset": 126799,
+      "duration": 4321
+    },
+    {
+      "text": "our operating system and then copy the",
+      "offset": 128599,
+      "duration": 6601
+    },
+    {
+      "text": "scan command over to our",
+      "offset": 131120,
+      "duration": 4080
+    },
+    {
+      "text": "terminal in the rare instance you don't",
+      "offset": 142879,
+      "duration": 4440
+    },
+    {
+      "text": "see the proper analysis results You're",
+      "offset": 145519,
+      "duration": 4080
+    },
+    {
+      "text": "Expecting from this scan and you want to",
+      "offset": 147319,
+      "duration": 4241
+    },
+    {
+      "text": "have finer control over the analysis",
+      "offset": 149599,
+      "duration": 3720
+    },
+    {
+      "text": "configuration maybe because of a",
+      "offset": 151560,
+      "duration": 4200
+    },
+    {
+      "text": "specialized build configuration you can",
+      "offset": 153319,
+      "duration": 4640
+    },
+    {
+      "text": "actually fall back on that compilation",
+      "offset": 155760,
+      "duration": 4280
+    },
+    {
+      "text": "database method to configure your",
+      "offset": 157959,
+      "duration": 5321
+    },
+    {
+      "text": "analysis uh see our other how-to video",
+      "offset": 160040,
+      "duration": 5520
+    },
+    {
+      "text": "on configuring CN C++ analysis for",
+      "offset": 163280,
+      "duration": 3959
+    },
+    {
+      "text": "details on either using the build",
+      "offset": 165560,
+      "duration": 4840
+    },
+    {
+      "text": "wrapper or compilation",
+      "offset": 167239,
+      "duration": 5801
+    },
+    {
+      "text": "database all right looks like our scan",
+      "offset": 170400,
+      "duration": 4440
+    },
+    {
+      "text": "completed so I'm going to go back over",
+      "offset": 173040,
+      "duration": 2960
+    },
+    {
+      "text": "to sonar",
+      "offset": 174840,
+      "duration": 3399
+    },
+    {
+      "text": "Cube and looks like we have some results",
+      "offset": 176000,
+      "duration": 4319
+    },
+    {
+      "text": "there put in uh actually you see we",
+      "offset": 178239,
+      "duration": 4201
+    },
+    {
+      "text": "didn't need any additional configuration",
+      "offset": 180319,
+      "duration": 4241
+    },
+    {
+      "text": "here we didn't need to uh set up a",
+      "offset": 182440,
+      "duration": 4560
+    },
+    {
+      "text": "compilation database everything was able",
+      "offset": 184560,
+      "duration": 4239
+    },
+    {
+      "text": "to be passed over to sonar Cube just",
+      "offset": 187000,
+      "duration": 3200
+    },
+    {
+      "text": "through one",
+      "offset": 188799,
+      "duration": 4561
+    },
+    {
+      "text": "command if you run into issues with your",
+      "offset": 190200,
+      "duration": 6800
+    },
+    {
+      "text": "C++ scan be sure to enable the debug",
+      "offset": 193360,
+      "duration": 6480
+    },
+    {
+      "text": "logs by putting a-x at the end of your",
+      "offset": 197000,
+      "duration": 5200
+    },
+    {
+      "text": "scan",
+      "offset": 199840,
+      "duration": 2360
+    },
+    {
+      "text": "command this will spit out a lot more",
+      "offset": 202640,
+      "duration": 4800
+    },
+    {
+      "text": "verbos logs so you can copy these and",
+      "offset": 204879,
+      "duration": 4920
+    },
+    {
+      "text": "take them over to our community form to",
+      "offset": 207440,
+      "duration": 5159
+    },
+    {
+      "text": "ask for help on your",
+      "offset": 209799,
+      "duration": 2800
+    },
+    {
+      "text": "analysis you can detect coding issues",
+      "offset": 216080,
+      "duration": 4120
+    },
+    {
+      "text": "earlier on in the development workflow",
+      "offset": 218360,
+      "duration": 4519
+    },
+    {
+      "text": "by using our free IDE plugin sonarlint",
+      "offset": 220200,
+      "duration": 4720
+    },
+    {
+      "text": "which is available for VSS code Visual",
+      "offset": 222879,
+      "duration": 5241
+    },
+    {
+      "text": "Studio jet brains products and",
+      "offset": 224920,
+      "duration": 5640
+    },
+    {
+      "text": "Eclipse also by using a commercial",
+      "offset": 228120,
+      "duration": 4319
+    },
+    {
+      "text": "edition of sonar Cube you'll have access",
+      "offset": 230560,
+      "duration": 4120
+    },
+    {
+      "text": "to our incremental poll request analysis",
+      "offset": 232439,
+      "duration": 4561
+    },
+    {
+      "text": "to get sonar Cube scan results commented",
+      "offset": 234680,
+      "duration": 6160
+    },
+    {
+      "text": "directly onto your PRS",
+      "offset": 237000,
+      "duration": 3840
+    }
+  ],
+  "fullText": "[Music] hi this is Robbie from sonar in this video I'm going to be walking you through running an analysis on a C++ project with sonar Cube using the new autoc config feature that we introduced with the 10.6 release autoc config eliminates all of the usual prerequisites so there's no more specific compiler Allegiance no more elaborate setup rituals and no dependencies on your Project's build environment the result is that sonar Cube now supports the analysis of CN C++ projects that use many more compilers and build tools than were previously supported in addition the use of the build wrapper or compilation datab base is no longer a requirement to analyze your project for this demonstration I'm going to be running analysis on a test C++ project that I have downloaded here on my Mac so I'm start over here in the UI I'm going to come over and click create project and because I'm running everything locally I'm just going to click local project here going to give my project a name select a new code setting and then I'm going to be taken to the wizard selection now I'm not running my project as a part of a CI everything's going to be local uh however if you are running analysis from a CI please see our documentation for details on how to get these set up in my case I'm going to go ahead and generate a token here and then I'm going to click CR C++ now you notice what's different here from what we had before um we have this new tab that says automatic and this corresponds to that auto config feature that we're going to be testing out today if we come over and look at the steps that used to be required here you'll see that uh we used to need to come in and download a build wrapper and run that as a part of our build command before actually executing the scanner with autoc config we no longer need to do this we just need to select our operating system and then copy the scan command over to our terminal in the rare instance you don't see the proper analysis results You're Expecting from this scan and you want to have finer control over the analysis configuration maybe because of a specialized build configuration you can actually fall back on that compilation database method to configure your analysis uh see our other how-to video on configuring CN C++ analysis for details on either using the build wrapper or compilation database all right looks like our scan completed so I'm going to go back over to sonar Cube and looks like we have some results there put in uh actually you see we didn't need any additional configuration here we didn't need to uh set up a compilation database everything was able to be passed over to sonar Cube just through one command if you run into issues with your C++ scan be sure to enable the debug logs by putting a-x at the end of your scan command this will spit out a lot more verbos logs so you can copy these and take them over to our community form to ask for help on your analysis you can detect coding issues earlier on in the development workflow by using our free IDE plugin sonarlint which is available for VSS code Visual Studio jet brains products and Eclipse also by using a commercial edition of sonar Cube you'll have access to our incremental poll request analysis to get sonar Cube scan results commented directly onto your PRS",
+  "fetchedAt": "2026-03-14T09:23:07.963Z"
+}

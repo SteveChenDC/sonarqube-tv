@@ -1,0 +1,923 @@
+{
+  "videoId": "v172",
+  "youtubeId": "6zvBuZr8CeI",
+  "segments": [
+    {
+      "text": "foreign",
+      "offset": 960,
+      "duration": 5719
+    },
+    {
+      "text": "[Music]",
+      "offset": 3610,
+      "duration": 3069
+    },
+    {
+      "text": "we'll show you how to map your GitHub",
+      "offset": 8240,
+      "duration": 4779
+    },
+    {
+      "text": "organization into sonar Cube including",
+      "offset": 10620,
+      "duration": 3660
+    },
+    {
+      "text": "setting up the initial integration",
+      "offset": 13019,
+      "duration": 3441
+    },
+    {
+      "text": "getting your users authenticated",
+      "offset": 14280,
+      "duration": 5520
+    },
+    {
+      "text": "onboarding a project for analysis as",
+      "offset": 16460,
+      "duration": 6280
+    },
+    {
+      "text": "well as decorating pull requests of that",
+      "offset": 19800,
+      "duration": 5219
+    },
+    {
+      "text": "project with analysis results so",
+      "offset": 22740,
+      "duration": 3959
+    },
+    {
+      "text": "developers know whether the code they've",
+      "offset": 25019,
+      "duration": 3901
+    },
+    {
+      "text": "added is clean",
+      "offset": 26699,
+      "duration": 4201
+    },
+    {
+      "text": "we'll be creating a configuration for",
+      "offset": 28920,
+      "duration": 3720
+    },
+    {
+      "text": "this organization as well as setting up",
+      "offset": 30900,
+      "duration": 4020
+    },
+    {
+      "text": "this project up for analysis",
+      "offset": 32640,
+      "duration": 4500
+    },
+    {
+      "text": "in sonar Cube login as a local",
+      "offset": 34920,
+      "duration": 4380
+    },
+    {
+      "text": "administrator in order to create your",
+      "offset": 37140,
+      "duration": 3960
+    },
+    {
+      "text": "GitHub configuration",
+      "offset": 39300,
+      "duration": 3480
+    },
+    {
+      "text": "if you've never created a devops",
+      "offset": 41100,
+      "duration": 3720
+    },
+    {
+      "text": "platform configuration before you'll be",
+      "offset": 42780,
+      "duration": 4459
+    },
+    {
+      "text": "prompted to do so on the landing screen",
+      "offset": 44820,
+      "duration": 5820
+    },
+    {
+      "text": "you can simply click from GitHub to",
+      "offset": 47239,
+      "duration": 5441
+    },
+    {
+      "text": "begin creating your configuration",
+      "offset": 50640,
+      "duration": 3840
+    },
+    {
+      "text": "you can also access the same",
+      "offset": 52680,
+      "duration": 3180
+    },
+    {
+      "text": "functionality from the top level",
+      "offset": 54480,
+      "duration": 3840
+    },
+    {
+      "text": "Administration menu under devops",
+      "offset": 55860,
+      "duration": 4379
+    },
+    {
+      "text": "platform Integrations and then create",
+      "offset": 58320,
+      "duration": 4500
+    },
+    {
+      "text": "your configuration from here",
+      "offset": 60239,
+      "duration": 6320
+    },
+    {
+      "text": "give your configuration a name",
+      "offset": 62820,
+      "duration": 3739
+    },
+    {
+      "text": "and specify the appropriate API URL for",
+      "offset": 67619,
+      "duration": 6180
+    },
+    {
+      "text": "use with your instance for GitHub",
+      "offset": 71159,
+      "duration": 6361
+    },
+    {
+      "text": "Enterprise you'll want to choose a URL",
+      "offset": 73799,
+      "duration": 6360
+    },
+    {
+      "text": "that corresponds to your internal domain",
+      "offset": 77520,
+      "duration": 6660
+    },
+    {
+      "text": "otherwise if you're using github.com you",
+      "offset": 80159,
+      "duration": 7140
+    },
+    {
+      "text": "can paste the URL supplied",
+      "offset": 84180,
+      "duration": 5700
+    },
+    {
+      "text": "after this note that you'll need to",
+      "offset": 87299,
+      "duration": 5041
+    },
+    {
+      "text": "install a GitHub app within your",
+      "offset": 89880,
+      "duration": 4739
+    },
+    {
+      "text": "organization and you can do this",
+      "offset": 92340,
+      "duration": 5520
+    },
+    {
+      "text": "following the guidance that's in the",
+      "offset": 94619,
+      "duration": 6000
+    },
+    {
+      "text": "sonar Cube documentation",
+      "offset": 97860,
+      "duration": 5700
+    },
+    {
+      "text": "once the GitHub app has been created you",
+      "offset": 100619,
+      "duration": 4320
+    },
+    {
+      "text": "can begin copying the relevant",
+      "offset": 103560,
+      "duration": 3599
+    },
+    {
+      "text": "information across to the sonar Cube",
+      "offset": 104939,
+      "duration": 4941
+    },
+    {
+      "text": "user interface",
+      "offset": 107159,
+      "duration": 2721
+    },
+    {
+      "text": "once you've saved the configuration",
+      "offset": 113640,
+      "duration": 3240
+    },
+    {
+      "text": "you'll note that Center Cube will also",
+      "offset": 115200,
+      "duration": 5459
+    },
+    {
+      "text": "check to confirm that it is valid",
+      "offset": 116880,
+      "duration": 6059
+    },
+    {
+      "text": "as prompted in the center Cube UI you",
+      "offset": 120659,
+      "duration": 4861
+    },
+    {
+      "text": "can also set up authentication to your",
+      "offset": 122939,
+      "duration": 6121
+    },
+    {
+      "text": "GitHub platform using the same app that",
+      "offset": 125520,
+      "duration": 5939
+    },
+    {
+      "text": "we've just set up for project analysis",
+      "offset": 129060,
+      "duration": 3480
+    },
+    {
+      "text": "purposes",
+      "offset": 131459,
+      "duration": 2461
+    },
+    {
+      "text": "we'll follow the link to the",
+      "offset": 132540,
+      "duration": 3600
+    },
+    {
+      "text": "authentication section enable the",
+      "offset": 133920,
+      "duration": 4560
+    },
+    {
+      "text": "integration and we just have to copy a",
+      "offset": 136140,
+      "duration": 4440
+    },
+    {
+      "text": "few additional details including the",
+      "offset": 138480,
+      "duration": 5160
+    },
+    {
+      "text": "client ID as well as a client secret",
+      "offset": 140580,
+      "duration": 6299
+    },
+    {
+      "text": "over into sonar cube in order to get",
+      "offset": 143640,
+      "duration": 5780
+    },
+    {
+      "text": "this set up",
+      "offset": 146879,
+      "duration": 2541
+    },
+    {
+      "text": "also note that you can synchronize your",
+      "offset": 158400,
+      "duration": 5220
+    },
+    {
+      "text": "teams from GitHub as groups in sonar",
+      "offset": 161459,
+      "duration": 4560
+    },
+    {
+      "text": "Cube so as long as the same named group",
+      "offset": 163620,
+      "duration": 5280
+    },
+    {
+      "text": "exists on the sonar Cube side it will be",
+      "offset": 166019,
+      "duration": 6561
+    },
+    {
+      "text": "mapped from your GitHub organization",
+      "offset": 168900,
+      "duration": 3680
+    },
+    {
+      "text": "you can confirm the authentication",
+      "offset": 173280,
+      "duration": 4140
+    },
+    {
+      "text": "integration is working by logging out of",
+      "offset": 175080,
+      "duration": 4200
+    },
+    {
+      "text": "your Center Cube instance where you'll",
+      "offset": 177420,
+      "duration": 3899
+    },
+    {
+      "text": "now see that you're presented with an",
+      "offset": 179280,
+      "duration": 4440
+    },
+    {
+      "text": "option to log in with GitHub",
+      "offset": 181319,
+      "duration": 5341
+    },
+    {
+      "text": "if you proceed you may have to authorize",
+      "offset": 183720,
+      "duration": 5099
+    },
+    {
+      "text": "the integration from the sonar Cube sign",
+      "offset": 186660,
+      "duration": 4859
+    },
+    {
+      "text": "as that individual user and you will",
+      "offset": 188819,
+      "duration": 5640
+    },
+    {
+      "text": "then be redirected into sonar Cube and",
+      "offset": 191519,
+      "duration": 5341
+    },
+    {
+      "text": "now you're logged in as your GitHub",
+      "offset": 194459,
+      "duration": 4860
+    },
+    {
+      "text": "identity so each of the developers in",
+      "offset": 196860,
+      "duration": 4379
+    },
+    {
+      "text": "your organization will now have this as",
+      "offset": 199319,
+      "duration": 5000
+    },
+    {
+      "text": "their login experience",
+      "offset": 201239,
+      "duration": 3080
+    },
+    {
+      "text": "note that creating a project from the",
+      "offset": 204540,
+      "duration": 4740
+    },
+    {
+      "text": "sonar Cube UI is not your only choice",
+      "offset": 207180,
+      "duration": 5520
+    },
+    {
+      "text": "other options available include creating",
+      "offset": 209280,
+      "duration": 5879
+    },
+    {
+      "text": "a project programmatically using calls",
+      "offset": 212700,
+      "duration": 6119
+    },
+    {
+      "text": "to the sonar Cube web API as well as",
+      "offset": 215159,
+      "duration": 5521
+    },
+    {
+      "text": "having a project automatically",
+      "offset": 218819,
+      "duration": 4081
+    },
+    {
+      "text": "provisions and created via its first",
+      "offset": 220680,
+      "duration": 6059
+    },
+    {
+      "text": "analysis this can be accomplished as",
+      "offset": 222900,
+      "duration": 5640
+    },
+    {
+      "text": "long as the sonar scanner is running",
+      "offset": 226739,
+      "duration": 5341
+    },
+    {
+      "text": "using a token whose corresponding user",
+      "offset": 228540,
+      "duration": 7400
+    },
+    {
+      "text": "has the create Project's permission",
+      "offset": 232080,
+      "duration": 3860
+    },
+    {
+      "text": "now let's proceed and set up our",
+      "offset": 236400,
+      "duration": 4080
+    },
+    {
+      "text": "projects for analysis we can choose to",
+      "offset": 238140,
+      "duration": 4019
+    },
+    {
+      "text": "create the project directly from within",
+      "offset": 240480,
+      "duration": 4140
+    },
+    {
+      "text": "the sonar qby from GitHub",
+      "offset": 242159,
+      "duration": 5160
+    },
+    {
+      "text": "where we'll be presented with the",
+      "offset": 244620,
+      "duration": 4860
+    },
+    {
+      "text": "organization that we've configured this",
+      "offset": 247319,
+      "duration": 3721
+    },
+    {
+      "text": "is the organization organization that",
+      "offset": 249480,
+      "duration": 4080
+    },
+    {
+      "text": "was bound to our GitHub app we can",
+      "offset": 251040,
+      "duration": 5580
+    },
+    {
+      "text": "choose our project and choose to set up",
+      "offset": 253560,
+      "duration": 6359
+    },
+    {
+      "text": "this repository from here we'll get some",
+      "offset": 256620,
+      "duration": 5579
+    },
+    {
+      "text": "guidance depending on how the project is",
+      "offset": 259919,
+      "duration": 6060
+    },
+    {
+      "text": "built we'll choose to use GitHub actions",
+      "offset": 262199,
+      "duration": 6000
+    },
+    {
+      "text": "since that's our intention for this",
+      "offset": 265979,
+      "duration": 6000
+    },
+    {
+      "text": "project and now we can follow the guide",
+      "offset": 268199,
+      "duration": 5881
+    },
+    {
+      "text": "on screen to create everything else",
+      "offset": 271979,
+      "duration": 5720
+    },
+    {
+      "text": "that's necessary for analysis",
+      "offset": 274080,
+      "duration": 3619
+    },
+    {
+      "text": "as we proceed to set up secrets that",
+      "offset": 278759,
+      "duration": 5461
+    },
+    {
+      "text": "will allow GitHub to authenticate to our",
+      "offset": 281699,
+      "duration": 4861
+    },
+    {
+      "text": "sonar Cube server in order to have",
+      "offset": 284220,
+      "duration": 5039
+    },
+    {
+      "text": "analysis results processed heed the",
+      "offset": 286560,
+      "duration": 4040
+    },
+    {
+      "text": "guidance in the sonar Cube UI",
+      "offset": 289259,
+      "duration": 3660
+    },
+    {
+      "text": "particularly when it comes to generating",
+      "offset": 290600,
+      "duration": 6039
+    },
+    {
+      "text": "a token if you have an existing token as",
+      "offset": 292919,
+      "duration": 6481
+    },
+    {
+      "text": "you may if several of your projects will",
+      "offset": 296639,
+      "duration": 6301
+    },
+    {
+      "text": "utilize the same authentication token to",
+      "offset": 299400,
+      "duration": 5700
+    },
+    {
+      "text": "allow their CI pipelines to run please",
+      "offset": 302940,
+      "duration": 5039
+    },
+    {
+      "text": "use that token instead of creating a new",
+      "offset": 305100,
+      "duration": 5099
+    },
+    {
+      "text": "unique token for every user that sets up",
+      "offset": 307979,
+      "duration": 3901
+    },
+    {
+      "text": "a project",
+      "offset": 310199,
+      "duration": 3481
+    },
+    {
+      "text": "for the purposes of this demo I'll",
+      "offset": 311880,
+      "duration": 5160
+    },
+    {
+      "text": "simply generate a token and we'll use",
+      "offset": 313680,
+      "duration": 7280
+    },
+    {
+      "text": "this one for the demonstration",
+      "offset": 317040,
+      "duration": 3920
+    },
+    {
+      "text": "as we continue we'll move on to create",
+      "offset": 329940,
+      "duration": 6960
+    },
+    {
+      "text": "the workflow yaml file that we'll use to",
+      "offset": 333800,
+      "duration": 5080
+    },
+    {
+      "text": "run the GitHub action that will include",
+      "offset": 336900,
+      "duration": 5040
+    },
+    {
+      "text": "triggering sonar analysis choose the",
+      "offset": 338880,
+      "duration": 4620
+    },
+    {
+      "text": "appropriate option for the type of",
+      "offset": 341940,
+      "duration": 3560
+    },
+    {
+      "text": "project that you're going to create",
+      "offset": 343500,
+      "duration": 4860
+    },
+    {
+      "text": "and now you'll be able to follow the",
+      "offset": 345500,
+      "duration": 5800
+    },
+    {
+      "text": "on-screen instructions to create a sonar",
+      "offset": 348360,
+      "duration": 6839
+    },
+    {
+      "text": "project properties file as well as the",
+      "offset": 351300,
+      "duration": 6720
+    },
+    {
+      "text": "yaml for running the actual pipeline",
+      "offset": 355199,
+      "duration": 5121
+    },
+    {
+      "text": "itself",
+      "offset": 358020,
+      "duration": 2300
+    },
+    {
+      "text": "once you click to finish the tutorial",
+      "offset": 381020,
+      "duration": 4360
+    },
+    {
+      "text": "Center Cube will let you know that",
+      "offset": 383639,
+      "duration": 3241
+    },
+    {
+      "text": "you're all set and will await the",
+      "offset": 385380,
+      "duration": 3360
+    },
+    {
+      "text": "running of your GitHub actions pipeline",
+      "offset": 386880,
+      "duration": 3900
+    },
+    {
+      "text": "for analysis results to make it into the",
+      "offset": 388740,
+      "duration": 4440
+    },
+    {
+      "text": "UI you can trigger this pipeline either",
+      "offset": 390780,
+      "duration": 4859
+    },
+    {
+      "text": "manually or by committing changes to a",
+      "offset": 393180,
+      "duration": 4380
+    },
+    {
+      "text": "branch within the Repository",
+      "offset": 395639,
+      "duration": 4201
+    },
+    {
+      "text": "a GitHub action will kick off in",
+      "offset": 397560,
+      "duration": 5040
+    },
+    {
+      "text": "response to any change that you push and",
+      "offset": 399840,
+      "duration": 5579
+    },
+    {
+      "text": "when this action is run successfully you",
+      "offset": 402600,
+      "duration": 4980
+    },
+    {
+      "text": "will be able to see that there are now",
+      "offset": 405419,
+      "duration": 4741
+    },
+    {
+      "text": "results published as the Baseline",
+      "offset": 407580,
+      "duration": 6239
+    },
+    {
+      "text": "overall code analysis of this Branch as",
+      "offset": 410160,
+      "duration": 6240
+    },
+    {
+      "text": "the sonar qbui will tell you results for",
+      "offset": 413819,
+      "duration": 5281
+    },
+    {
+      "text": "new code will begin to appear after any",
+      "offset": 416400,
+      "duration": 5100
+    },
+    {
+      "text": "successive analyzes which will be",
+      "offset": 419100,
+      "duration": 4080
+    },
+    {
+      "text": "triggered by successive pushes of",
+      "offset": 421500,
+      "duration": 4020
+    },
+    {
+      "text": "changes to this branch",
+      "offset": 423180,
+      "duration": 5760
+    },
+    {
+      "text": "you are now set up to analyze additional",
+      "offset": 425520,
+      "duration": 6560
+    },
+    {
+      "text": "branches of this project",
+      "offset": 428940,
+      "duration": 3140
+    },
+    {
+      "text": "as well as pull requests",
+      "offset": 433800,
+      "duration": 3739
+    },
+    {
+      "text": "note that the pull requests will be",
+      "offset": 441300,
+      "duration": 4560
+    },
+    {
+      "text": "automatically decorated with information",
+      "offset": 443819,
+      "duration": 3981
+    },
+    {
+      "text": "about the sonar Cube quality gate result",
+      "offset": 445860,
+      "duration": 5779
+    },
+    {
+      "text": "stemming from the analysis",
+      "offset": 447800,
+      "duration": 3839
+    },
+    {
+      "text": "once other branches or pull requests",
+      "offset": 452639,
+      "duration": 3601
+    },
+    {
+      "text": "have been analyzed you can also see",
+      "offset": 454440,
+      "duration": 4020
+    },
+    {
+      "text": "these reflected in the project dashboard",
+      "offset": 456240,
+      "duration": 5299
+    },
+    {
+      "text": "within sonar Cube",
+      "offset": 458460,
+      "duration": 5579
+    },
+    {
+      "text": "finally we would strongly recommend that",
+      "offset": 461539,
+      "duration": 7301
+    },
+    {
+      "text": "you add a protection policy so that any",
+      "offset": 464039,
+      "duration": 7741
+    },
+    {
+      "text": "main or release branches are protected",
+      "offset": 468840,
+      "duration": 6960
+    },
+    {
+      "text": "from having unclean code merged in you",
+      "offset": 471780,
+      "duration": 6720
+    },
+    {
+      "text": "can do this by creating a branch",
+      "offset": 475800,
+      "duration": 4940
+    },
+    {
+      "text": "protection rule in GitHub",
+      "offset": 478500,
+      "duration": 4680
+    },
+    {
+      "text": "for example requiring pull requests",
+      "offset": 480740,
+      "duration": 5980
+    },
+    {
+      "text": "before merging and requiring the sonar",
+      "offset": 483180,
+      "duration": 6440
+    },
+    {
+      "text": "status check",
+      "offset": 486720,
+      "duration": 2900
+    },
+    {
+      "text": "once you've set this up",
+      "offset": 489660,
+      "duration": 6420
+    },
+    {
+      "text": "you can now rest easy and assured that",
+      "offset": 492780,
+      "duration": 5520
+    },
+    {
+      "text": "you're only going to have new clean code",
+      "offset": 496080,
+      "duration": 5420
+    },
+    {
+      "text": "added to your branches",
+      "offset": 498300,
+      "duration": 3200
+    },
+    {
+      "text": "if you require any further assistance",
+      "offset": 502440,
+      "duration": 3780
+    },
+    {
+      "text": "we'd recommend that you go to",
+      "offset": 504479,
+      "duration": 4560
+    },
+    {
+      "text": "sonarsource.com support where you can",
+      "offset": 506220,
+      "duration": 5780
+    },
+    {
+      "text": "review your support options including",
+      "offset": 509039,
+      "duration": 6360
+    },
+    {
+      "text": "our free community-based support as well",
+      "offset": 512000,
+      "duration": 4959
+    },
+    {
+      "text": "as commercial support if you've got a",
+      "offset": 515399,
+      "duration": 3961
+    },
+    {
+      "text": "commercial support contract with us and",
+      "offset": 516959,
+      "duration": 6140
+    },
+    {
+      "text": "so in our sources we'll be happy to help",
+      "offset": 519360,
+      "duration": 3739
+    },
+    {
+      "text": "[Music]",
+      "offset": 524480,
+      "duration": 7680
+    },
+    {
+      "text": "thank you",
+      "offset": 529040,
+      "duration": 3120
+    }
+  ],
+  "fullText": "foreign [Music] we'll show you how to map your GitHub organization into sonar Cube including setting up the initial integration getting your users authenticated onboarding a project for analysis as well as decorating pull requests of that project with analysis results so developers know whether the code they've added is clean we'll be creating a configuration for this organization as well as setting up this project up for analysis in sonar Cube login as a local administrator in order to create your GitHub configuration if you've never created a devops platform configuration before you'll be prompted to do so on the landing screen you can simply click from GitHub to begin creating your configuration you can also access the same functionality from the top level Administration menu under devops platform Integrations and then create your configuration from here give your configuration a name and specify the appropriate API URL for use with your instance for GitHub Enterprise you'll want to choose a URL that corresponds to your internal domain otherwise if you're using github.com you can paste the URL supplied after this note that you'll need to install a GitHub app within your organization and you can do this following the guidance that's in the sonar Cube documentation once the GitHub app has been created you can begin copying the relevant information across to the sonar Cube user interface once you've saved the configuration you'll note that Center Cube will also check to confirm that it is valid as prompted in the center Cube UI you can also set up authentication to your GitHub platform using the same app that we've just set up for project analysis purposes we'll follow the link to the authentication section enable the integration and we just have to copy a few additional details including the client ID as well as a client secret over into sonar cube in order to get this set up also note that you can synchronize your teams from GitHub as groups in sonar Cube so as long as the same named group exists on the sonar Cube side it will be mapped from your GitHub organization you can confirm the authentication integration is working by logging out of your Center Cube instance where you'll now see that you're presented with an option to log in with GitHub if you proceed you may have to authorize the integration from the sonar Cube sign as that individual user and you will then be redirected into sonar Cube and now you're logged in as your GitHub identity so each of the developers in your organization will now have this as their login experience note that creating a project from the sonar Cube UI is not your only choice other options available include creating a project programmatically using calls to the sonar Cube web API as well as having a project automatically provisions and created via its first analysis this can be accomplished as long as the sonar scanner is running using a token whose corresponding user has the create Project's permission now let's proceed and set up our projects for analysis we can choose to create the project directly from within the sonar qby from GitHub where we'll be presented with the organization that we've configured this is the organization organization that was bound to our GitHub app we can choose our project and choose to set up this repository from here we'll get some guidance depending on how the project is built we'll choose to use GitHub actions since that's our intention for this project and now we can follow the guide on screen to create everything else that's necessary for analysis as we proceed to set up secrets that will allow GitHub to authenticate to our sonar Cube server in order to have analysis results processed heed the guidance in the sonar Cube UI particularly when it comes to generating a token if you have an existing token as you may if several of your projects will utilize the same authentication token to allow their CI pipelines to run please use that token instead of creating a new unique token for every user that sets up a project for the purposes of this demo I'll simply generate a token and we'll use this one for the demonstration as we continue we'll move on to create the workflow yaml file that we'll use to run the GitHub action that will include triggering sonar analysis choose the appropriate option for the type of project that you're going to create and now you'll be able to follow the on-screen instructions to create a sonar project properties file as well as the yaml for running the actual pipeline itself once you click to finish the tutorial Center Cube will let you know that you're all set and will await the running of your GitHub actions pipeline for analysis results to make it into the UI you can trigger this pipeline either manually or by committing changes to a branch within the Repository a GitHub action will kick off in response to any change that you push and when this action is run successfully you will be able to see that there are now results published as the Baseline overall code analysis of this Branch as the sonar qbui will tell you results for new code will begin to appear after any successive analyzes which will be triggered by successive pushes of changes to this branch you are now set up to analyze additional branches of this project as well as pull requests note that the pull requests will be automatically decorated with information about the sonar Cube quality gate result stemming from the analysis once other branches or pull requests have been analyzed you can also see these reflected in the project dashboard within sonar Cube finally we would strongly recommend that you add a protection policy so that any main or release branches are protected from having unclean code merged in you can do this by creating a branch protection rule in GitHub for example requiring pull requests before merging and requiring the sonar status check once you've set this up you can now rest easy and assured that you're only going to have new clean code added to your branches if you require any further assistance we'd recommend that you go to sonarsource.com support where you can review your support options including our free community-based support as well as commercial support if you've got a commercial support contract with us and so in our sources we'll be happy to help [Music] thank you",
+  "fetchedAt": "2026-03-14T09:24:46.990Z"
+}

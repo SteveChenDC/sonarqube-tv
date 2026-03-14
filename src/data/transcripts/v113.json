@@ -1,0 +1,813 @@
+{
+  "videoId": "v113",
+  "youtubeId": "RTJIwz84o74",
+  "segments": [
+    {
+      "text": "hey everybody welcome to this video on a",
+      "offset": 120,
+      "duration": 3960
+    },
+    {
+      "text": "short introduction to Django ninja I'm",
+      "offset": 2000,
+      "duration": 4279
+    },
+    {
+      "text": "your host nafal Islam a developer",
+      "offset": 4080,
+      "duration": 5880
+    },
+    {
+      "text": "Advocate at Sona so you might be asking",
+      "offset": 6279,
+      "duration": 5961
+    },
+    {
+      "text": "what is Django ninja well D Jango ninja",
+      "offset": 9960,
+      "duration": 5919
+    },
+    {
+      "text": "is a framework built on top of D Jango",
+      "offset": 12240,
+      "duration": 5760
+    },
+    {
+      "text": "that allows you to get a lot of the",
+      "offset": 15879,
+      "duration": 4201
+    },
+    {
+      "text": "goodies that you expect from something",
+      "offset": 18000,
+      "duration": 5080
+    },
+    {
+      "text": "like Fast API and what do I mean by this",
+      "offset": 20080,
+      "duration": 6240
+    },
+    {
+      "text": "well in fast API you have the ability to",
+      "offset": 23080,
+      "duration": 6279
+    },
+    {
+      "text": "set schemas and to use normal python",
+      "offset": 26320,
+      "duration": 6840
+    },
+    {
+      "text": "type anot ations to determine your data",
+      "offset": 29359,
+      "duration": 7520
+    },
+    {
+      "text": "types when you're receiving requests and",
+      "offset": 33160,
+      "duration": 5600
+    },
+    {
+      "text": "what Django ninja does just like Fast",
+      "offset": 36879,
+      "duration": 4840
+    },
+    {
+      "text": "API is also verify that those types are",
+      "offset": 38760,
+      "duration": 6000
+    },
+    {
+      "text": "correct it also gives you an open API",
+      "offset": 41719,
+      "duration": 5881
+    },
+    {
+      "text": "Explorer so you can see exactly what is",
+      "offset": 44760,
+      "duration": 7360
+    },
+    {
+      "text": "expected of a particular rep so instead",
+      "offset": 47600,
+      "duration": 7680
+    },
+    {
+      "text": "of talking about all of this let's dive",
+      "offset": 52120,
+      "duration": 5239
+    },
+    {
+      "text": "in the first thing that we're going to",
+      "offset": 55280,
+      "duration": 3959
+    },
+    {
+      "text": "do is effectively create a virtual",
+      "offset": 57359,
+      "duration": 3921
+    },
+    {
+      "text": "environment and once we've activated our",
+      "offset": 59239,
+      "duration": 3921
+    },
+    {
+      "text": "virtual environment we are going to",
+      "offset": 61280,
+      "duration": 4239
+    },
+    {
+      "text": "install Jango ninja with a simple pip",
+      "offset": 63160,
+      "duration": 5120
+    },
+    {
+      "text": "install now this doesn't really get any",
+      "offset": 65519,
+      "duration": 4441
+    },
+    {
+      "text": "simpler just like you would install",
+      "offset": 68280,
+      "duration": 3960
+    },
+    {
+      "text": "Django you can install Dango ninja and",
+      "offset": 69960,
+      "duration": 4120
+    },
+    {
+      "text": "it automatically installs Django in the",
+      "offset": 72240,
+      "duration": 4800
+    },
+    {
+      "text": "background now you can start a project",
+      "offset": 74080,
+      "duration": 5320
+    },
+    {
+      "text": "using Django admin just like you would",
+      "offset": 77040,
+      "duration": 5160
+    },
+    {
+      "text": "do a normal Django project and in this",
+      "offset": 79400,
+      "duration": 6160
+    },
+    {
+      "text": "case we are going to call it API demo",
+      "offset": 82200,
+      "duration": 4720
+    },
+    {
+      "text": "now that this is created let's just take",
+      "offset": 85560,
+      "duration": 2800
+    },
+    {
+      "text": "a look at what we have with a simple",
+      "offset": 86920,
+      "duration": 3839
+    },
+    {
+      "text": "tree and we can see that everything that",
+      "offset": 88360,
+      "duration": 4799
+    },
+    {
+      "text": "we expect to be there is there now",
+      "offset": 90759,
+      "duration": 5000
+    },
+    {
+      "text": "before we show you how to do everything",
+      "offset": 93159,
+      "duration": 6161
+    },
+    {
+      "text": "in a proper Django ninja structure let's",
+      "offset": 95759,
+      "duration": 6441
+    },
+    {
+      "text": "just do this the simplest way we can",
+      "offset": 99320,
+      "duration": 5839
+    },
+    {
+      "text": "where we add a path we import the ninja",
+      "offset": 102200,
+      "duration": 6000
+    },
+    {
+      "text": "API class and we declare an",
+      "offset": 105159,
+      "duration": 6401
+    },
+    {
+      "text": "API and once we do this we should be",
+      "offset": 108200,
+      "duration": 6919
+    },
+    {
+      "text": "able to get our API running so we will",
+      "offset": 111560,
+      "duration": 5440
+    },
+    {
+      "text": "just add a simple route to the whole",
+      "offset": 115119,
+      "duration": 4161
+    },
+    {
+      "text": "thing we're going to call it add it's",
+      "offset": 117000,
+      "duration": 3640
+    },
+    {
+      "text": "basically going to take in two",
+      "offset": 119280,
+      "duration": 5600
+    },
+    {
+      "text": "parameters A and B and it's going to add",
+      "offset": 120640,
+      "duration": 7599
+    },
+    {
+      "text": "a and b together the result is going to",
+      "offset": 124880,
+      "duration": 5320
+    },
+    {
+      "text": "be a dictionary which will get",
+      "offset": 128239,
+      "duration": 4441
+    },
+    {
+      "text": "serialized into Json so we don't have to",
+      "offset": 130200,
+      "duration": 4600
+    },
+    {
+      "text": "worry about stuff like that okay now",
+      "offset": 132680,
+      "duration": 5000
+    },
+    {
+      "text": "that we have our might API almost ready",
+      "offset": 134800,
+      "duration": 6200
+    },
+    {
+      "text": "to go what we're going to do is just use",
+      "offset": 137680,
+      "duration": 5800
+    },
+    {
+      "text": "Python manage.py run server to run this",
+      "offset": 141000,
+      "duration": 5480
+    },
+    {
+      "text": "thing and we should be able to go into",
+      "offset": 143480,
+      "duration": 6880
+    },
+    {
+      "text": "apidocs and we should be able to execute",
+      "offset": 146480,
+      "duration": 6320
+    },
+    {
+      "text": "this query and we should be able to get",
+      "offset": 150360,
+      "duration": 4879
+    },
+    {
+      "text": "the right result all of this is provided",
+      "offset": 152800,
+      "duration": 4920
+    },
+    {
+      "text": "for you out of the box in Django ninja",
+      "offset": 155239,
+      "duration": 4161
+    },
+    {
+      "text": "but this really isn't how you're",
+      "offset": 157720,
+      "duration": 3799
+    },
+    {
+      "text": "supposed to structure your D Jango ninja",
+      "offset": 159400,
+      "duration": 4520
+    },
+    {
+      "text": "project so we're going to create an api.",
+      "offset": 161519,
+      "duration": 4720
+    },
+    {
+      "text": "py file and just put in all the stuff",
+      "offset": 163920,
+      "duration": 5239
+    },
+    {
+      "text": "that we have in our urls.py in a more",
+      "offset": 166239,
+      "duration": 5640
+    },
+    {
+      "text": "structured Manner and once we have what",
+      "offset": 169159,
+      "duration": 5440
+    },
+    {
+      "text": "we can do is just do a relative import",
+      "offset": 171879,
+      "duration": 5241
+    },
+    {
+      "text": "import all the URLs that we care about",
+      "offset": 174599,
+      "duration": 4841
+    },
+    {
+      "text": "and then we should be able to run it",
+      "offset": 177120,
+      "duration": 4119
+    },
+    {
+      "text": "just the the same but it's not going to",
+      "offset": 179440,
+      "duration": 4519
+    },
+    {
+      "text": "work because I haven't really added",
+      "offset": 181239,
+      "duration": 7481
+    },
+    {
+      "text": "anything into API dopy so let's do that",
+      "offset": 183959,
+      "duration": 7200
+    },
+    {
+      "text": "now and what is interesting to notice",
+      "offset": 188720,
+      "duration": 6280
+    },
+    {
+      "text": "here is that as I complete this route",
+      "offset": 191159,
+      "duration": 6720
+    },
+    {
+      "text": "when we refresh the API dogs we should",
+      "offset": 195000,
+      "duration": 6200
+    },
+    {
+      "text": "be able to run it as we did before so",
+      "offset": 197879,
+      "duration": 5561
+    },
+    {
+      "text": "everything that you do is reflected in",
+      "offset": 201200,
+      "duration": 4880
+    },
+    {
+      "text": "the dogs in real time even if we were to",
+      "offset": 203440,
+      "duration": 5640
+    },
+    {
+      "text": "add something like name and we wanted it",
+      "offset": 206080,
+      "duration": 4760
+    },
+    {
+      "text": "to be a string and we had it as a",
+      "offset": 209080,
+      "duration": 5040
+    },
+    {
+      "text": "default argument when we do a return",
+      "offset": 210840,
+      "duration": 6560
+    },
+    {
+      "text": "message in a string and we have that you",
+      "offset": 214120,
+      "duration": 5520
+    },
+    {
+      "text": "are going to see this reflected inside",
+      "offset": 217400,
+      "duration": 5960
+    },
+    {
+      "text": "of the documentation",
+      "offset": 219640,
+      "duration": 3720
+    },
+    {
+      "text": "ASAP we can even go ahead and try it out",
+      "offset": 226200,
+      "duration": 4840
+    },
+    {
+      "text": "so we can change the name and I can",
+      "offset": 229080,
+      "duration": 3280
+    },
+    {
+      "text": "change it to my own name add an",
+      "offset": 231040,
+      "duration": 3199
+    },
+    {
+      "text": "exclamation mark and we're going to see",
+      "offset": 232360,
+      "duration": 4159
+    },
+    {
+      "text": "a different response body we can do",
+      "offset": 234239,
+      "duration": 4360
+    },
+    {
+      "text": "something slightly a bit more involved",
+      "offset": 236519,
+      "duration": 3800
+    },
+    {
+      "text": "we can do some math",
+      "offset": 238599,
+      "duration": 4640
+    },
+    {
+      "text": "and we can create a function that takes",
+      "offset": 240319,
+      "duration": 7681
+    },
+    {
+      "text": "in two parameters and we can make sure",
+      "offset": 243239,
+      "duration": 6280
+    },
+    {
+      "text": "that these are",
+      "offset": 248000,
+      "duration": 4760
+    },
+    {
+      "text": "integers and of course when",
+      "offset": 249519,
+      "duration": 7801
+    },
+    {
+      "text": "we return their addition subtraction and",
+      "offset": 252760,
+      "duration": 7120
+    },
+    {
+      "text": "multiplication what's going to happen is",
+      "offset": 257320,
+      "duration": 4800
+    },
+    {
+      "text": "that this two will be reflected in the",
+      "offset": 259880,
+      "duration": 6200
+    },
+    {
+      "text": "docs immediately after we finish writing",
+      "offset": 262120,
+      "duration": 5960
+    },
+    {
+      "text": "the",
+      "offset": 266080,
+      "duration": 4920
+    },
+    {
+      "text": "function and once we run this and try",
+      "offset": 268080,
+      "duration": 6040
+    },
+    {
+      "text": "this out we can see that this works just",
+      "offset": 271000,
+      "duration": 5240
+    },
+    {
+      "text": "as you would expect and it's already",
+      "offset": 274120,
+      "duration": 6000
+    },
+    {
+      "text": "inside our API / dos route now let's do",
+      "offset": 276240,
+      "duration": 5640
+    },
+    {
+      "text": "something a little bit more involved",
+      "offset": 280120,
+      "duration": 4840
+    },
+    {
+      "text": "let's actually declare a proper schema",
+      "offset": 281880,
+      "duration": 5520
+    },
+    {
+      "text": "which is going to be taken in as a Json",
+      "offset": 284960,
+      "duration": 4160
+    },
+    {
+      "text": "object and we're going to inherit from",
+      "offset": 287400,
+      "duration": 3720
+    },
+    {
+      "text": "screa and we're going to give it a",
+      "offset": 289120,
+      "duration": 3840
+    },
+    {
+      "text": "couple of attributes now some attributes",
+      "offset": 291120,
+      "duration": 4320
+    },
+    {
+      "text": "are going to be simple like your first",
+      "offset": 292960,
+      "duration": 4840
+    },
+    {
+      "text": "name and your last name these things are",
+      "offset": 295440,
+      "duration": 4880
+    },
+    {
+      "text": "going to be pretty simple however we can",
+      "offset": 297800,
+      "duration": 5280
+    },
+    {
+      "text": "also have more complex attributes so",
+      "offset": 300320,
+      "duration": 4840
+    },
+    {
+      "text": "first name last name and age which is",
+      "offset": 303080,
+      "duration": 3959
+    },
+    {
+      "text": "going to be an integer is going to be",
+      "offset": 305160,
+      "duration": 6680
+    },
+    {
+      "text": "simple but we can set location as a",
+      "offset": 307039,
+      "duration": 7041
+    },
+    {
+      "text": "geographic coordinate which is going to",
+      "offset": 311840,
+      "duration": 5760
+    },
+    {
+      "text": "be a tupal that has two floats in it so",
+      "offset": 314080,
+      "duration": 5800
+    },
+    {
+      "text": "we can actually set that pretty easily",
+      "offset": 317600,
+      "duration": 5080
+    },
+    {
+      "text": "by using tupal and we're going to use",
+      "offset": 319880,
+      "duration": 4560
+    },
+    {
+      "text": "Tuple with a capital T here because",
+      "offset": 322680,
+      "duration": 3760
+    },
+    {
+      "text": "we're going to use the type and we're",
+      "offset": 324440,
+      "duration": 4520
+    },
+    {
+      "text": "going to say we want a float and a float",
+      "offset": 326440,
+      "duration": 4039
+    },
+    {
+      "text": "and of course I'm I'm going to have to",
+      "offset": 328960,
+      "duration": 3760
+    },
+    {
+      "text": "import this from typing.",
+      "offset": 330479,
+      "duration": 4521
+    },
+    {
+      "text": "Tuple of course I'm going to set the",
+      "offset": 332720,
+      "duration": 4560
+    },
+    {
+      "text": "default at 0.0 and",
+      "offset": 335000,
+      "duration": 4880
+    },
+    {
+      "text": "0.0 all",
+      "offset": 337280,
+      "duration": 6199
+    },
+    {
+      "text": "good now let's try this out when we",
+      "offset": 339880,
+      "duration": 7159
+    },
+    {
+      "text": "actually want to register this person so",
+      "offset": 343479,
+      "duration": 5440
+    },
+    {
+      "text": "we are going to take in the person",
+      "offset": 347039,
+      "duration": 5041
+    },
+    {
+      "text": "schema as the input of course I'm going",
+      "offset": 348919,
+      "duration": 6681
+    },
+    {
+      "text": "to have to put in the request as well so",
+      "offset": 352080,
+      "duration": 5320
+    },
+    {
+      "text": "what we're going to do is we're going to",
+      "offset": 355600,
+      "duration": 3719
+    },
+    {
+      "text": "put in request the person schema and",
+      "offset": 357400,
+      "duration": 3880
+    },
+    {
+      "text": "then we're we going to say hey this",
+      "offset": 359319,
+      "duration": 4801
+    },
+    {
+      "text": "person has been",
+      "offset": 361280,
+      "duration": 2840
+    },
+    {
+      "text": "registered and lastly I'm going to add",
+      "offset": 370639,
+      "duration": 6280
+    },
+    {
+      "text": "this to my",
+      "offset": 373280,
+      "duration": 3639
+    },
+    {
+      "text": "API and all the errors should be gone",
+      "offset": 384240,
+      "duration": 5079
+    },
+    {
+      "text": "now and once I refresh this I should be",
+      "offset": 386800,
+      "duration": 7040
+    },
+    {
+      "text": "able to see API SL register corpers it",
+      "offset": 389319,
+      "duration": 7600
+    },
+    {
+      "text": "gives me an example of what schema is",
+      "offset": 393840,
+      "duration": 6280
+    },
+    {
+      "text": "expected and I can even try it out so I",
+      "offset": 396919,
+      "duration": 6321
+    },
+    {
+      "text": "can put in my",
+      "offset": 400120,
+      "duration": 3120
+    },
+    {
+      "text": "name and I can set my age and of course",
+      "offset": 403960,
+      "duration": 8880
+    },
+    {
+      "text": "I can set my location to where it",
+      "offset": 407880,
+      "duration": 4960
+    },
+    {
+      "text": "is and that should do it everything was",
+      "offset": 413400,
+      "duration": 5120
+    },
+    {
+      "text": "successful subject nafal registered with",
+      "offset": 416360,
+      "duration": 4600
+    },
+    {
+      "text": "the API everything is is good but let's",
+      "offset": 418520,
+      "duration": 4519
+    },
+    {
+      "text": "see if we can play around a little bit",
+      "offset": 420960,
+      "duration": 4239
+    },
+    {
+      "text": "so let's change something in",
+      "offset": 423039,
+      "duration": 4081
+    },
+    {
+      "text": "location and we are going to put the",
+      "offset": 425199,
+      "duration": 4161
+    },
+    {
+      "text": "second argument as a string and we're",
+      "offset": 427120,
+      "duration": 5479
+    },
+    {
+      "text": "going to see that that has been captured",
+      "offset": 429360,
+      "duration": 6360
+    },
+    {
+      "text": "as an error all right folks thank you so",
+      "offset": 432599,
+      "duration": 5040
+    },
+    {
+      "text": "much for watching this was a lot of fun",
+      "offset": 435720,
+      "duration": 4080
+    },
+    {
+      "text": "to do and if you want more videos on",
+      "offset": 437639,
+      "duration": 4000
+    },
+    {
+      "text": "Django ninja please let us know in the",
+      "offset": 439800,
+      "duration": 3480
+    },
+    {
+      "text": "comments I'll see you again in the next",
+      "offset": 441639,
+      "duration": 4641
+    },
+    {
+      "text": "one",
+      "offset": 443280,
+      "duration": 3000
+    }
+  ],
+  "fullText": "hey everybody welcome to this video on a short introduction to Django ninja I'm your host nafal Islam a developer Advocate at Sona so you might be asking what is Django ninja well D Jango ninja is a framework built on top of D Jango that allows you to get a lot of the goodies that you expect from something like Fast API and what do I mean by this well in fast API you have the ability to set schemas and to use normal python type anot ations to determine your data types when you're receiving requests and what Django ninja does just like Fast API is also verify that those types are correct it also gives you an open API Explorer so you can see exactly what is expected of a particular rep so instead of talking about all of this let's dive in the first thing that we're going to do is effectively create a virtual environment and once we've activated our virtual environment we are going to install Jango ninja with a simple pip install now this doesn't really get any simpler just like you would install Django you can install Dango ninja and it automatically installs Django in the background now you can start a project using Django admin just like you would do a normal Django project and in this case we are going to call it API demo now that this is created let's just take a look at what we have with a simple tree and we can see that everything that we expect to be there is there now before we show you how to do everything in a proper Django ninja structure let's just do this the simplest way we can where we add a path we import the ninja API class and we declare an API and once we do this we should be able to get our API running so we will just add a simple route to the whole thing we're going to call it add it's basically going to take in two parameters A and B and it's going to add a and b together the result is going to be a dictionary which will get serialized into Json so we don't have to worry about stuff like that okay now that we have our might API almost ready to go what we're going to do is just use Python manage.py run server to run this thing and we should be able to go into apidocs and we should be able to execute this query and we should be able to get the right result all of this is provided for you out of the box in Django ninja but this really isn't how you're supposed to structure your D Jango ninja project so we're going to create an api. py file and just put in all the stuff that we have in our urls.py in a more structured Manner and once we have what we can do is just do a relative import import all the URLs that we care about and then we should be able to run it just the the same but it's not going to work because I haven't really added anything into API dopy so let's do that now and what is interesting to notice here is that as I complete this route when we refresh the API dogs we should be able to run it as we did before so everything that you do is reflected in the dogs in real time even if we were to add something like name and we wanted it to be a string and we had it as a default argument when we do a return message in a string and we have that you are going to see this reflected inside of the documentation ASAP we can even go ahead and try it out so we can change the name and I can change it to my own name add an exclamation mark and we're going to see a different response body we can do something slightly a bit more involved we can do some math and we can create a function that takes in two parameters and we can make sure that these are integers and of course when we return their addition subtraction and multiplication what's going to happen is that this two will be reflected in the docs immediately after we finish writing the function and once we run this and try this out we can see that this works just as you would expect and it's already inside our API / dos route now let's do something a little bit more involved let's actually declare a proper schema which is going to be taken in as a Json object and we're going to inherit from screa and we're going to give it a couple of attributes now some attributes are going to be simple like your first name and your last name these things are going to be pretty simple however we can also have more complex attributes so first name last name and age which is going to be an integer is going to be simple but we can set location as a geographic coordinate which is going to be a tupal that has two floats in it so we can actually set that pretty easily by using tupal and we're going to use Tuple with a capital T here because we're going to use the type and we're going to say we want a float and a float and of course I'm I'm going to have to import this from typing. Tuple of course I'm going to set the default at 0.0 and 0.0 all good now let's try this out when we actually want to register this person so we are going to take in the person schema as the input of course I'm going to have to put in the request as well so what we're going to do is we're going to put in request the person schema and then we're we going to say hey this person has been registered and lastly I'm going to add this to my API and all the errors should be gone now and once I refresh this I should be able to see API SL register corpers it gives me an example of what schema is expected and I can even try it out so I can put in my name and I can set my age and of course I can set my location to where it is and that should do it everything was successful subject nafal registered with the API everything is is good but let's see if we can play around a little bit so let's change something in location and we are going to put the second argument as a string and we're going to see that that has been captured as an error all right folks thank you so much for watching this was a lot of fun to do and if you want more videos on Django ninja please let us know in the comments I'll see you again in the next one",
+  "fetchedAt": "2026-03-14T09:23:23.106Z"
+}

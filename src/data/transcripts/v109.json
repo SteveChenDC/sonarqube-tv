@@ -1,0 +1,5633 @@
+{
+  "videoId": "v109",
+  "youtubeId": "TUc77cOs9S0",
+  "segments": [
+    {
+      "text": "[Music]",
+      "offset": 3270,
+      "duration": 5460
+    },
+    {
+      "text": "hello everybody thanks for joining this",
+      "offset": 10519,
+      "duration": 4921
+    },
+    {
+      "text": "session about clean",
+      "offset": 13400,
+      "duration": 5440
+    },
+    {
+      "text": "code and before I really talk about",
+      "offset": 15440,
+      "duration": 4999
+    },
+    {
+      "text": "clean code I'm going to do just a quick",
+      "offset": 18840,
+      "duration": 5359
+    },
+    {
+      "text": "introduction so I'm Olivier uh CEO on",
+      "offset": 20439,
+      "duration": 7401
+    },
+    {
+      "text": "the co-founder of sonar source so I",
+      "offset": 24199,
+      "duration": 6441
+    },
+    {
+      "text": "started this a long time ago",
+      "offset": 27840,
+      "duration": 6360
+    },
+    {
+      "text": "uh basically 15 years ago and uh sonar",
+      "offset": 30640,
+      "duration": 5599
+    },
+    {
+      "text": "source is a company based in Switzerland",
+      "offset": 34200,
+      "duration": 5760
+    },
+    {
+      "text": "in Geneva uh and sonar Source develops",
+      "offset": 36239,
+      "duration": 4681
+    },
+    {
+      "text": "and",
+      "offset": 39960,
+      "duration": 4040
+    },
+    {
+      "text": "promotes uh three products sonar lint",
+      "offset": 40920,
+      "duration": 5240
+    },
+    {
+      "text": "sonar Cube and sonar",
+      "offset": 44000,
+      "duration": 5399
+    },
+    {
+      "text": "cloud and we have a boost downstairs if",
+      "offset": 46160,
+      "duration": 5239
+    },
+    {
+      "text": "you want to talk more about the",
+      "offset": 49399,
+      "duration": 5041
+    },
+    {
+      "text": "product otherwise this is probably the",
+      "offset": 51399,
+      "duration": 5081
+    },
+    {
+      "text": "last time you're going to hear about",
+      "offset": 54440,
+      "duration": 6520
+    },
+    {
+      "text": "Sona in this talk before I go uh on on I",
+      "offset": 56480,
+      "duration": 6999
+    },
+    {
+      "text": "start can I ask",
+      "offset": 60960,
+      "duration": 6880
+    },
+    {
+      "text": "who knows Sona who uses",
+      "offset": 63479,
+      "duration": 8801
+    },
+    {
+      "text": "Sona very good very good who doesn't no",
+      "offset": 67840,
+      "duration": 9200
+    },
+    {
+      "text": "son okay okay that's okay always risky",
+      "offset": 72280,
+      "duration": 6720
+    },
+    {
+      "text": "uh as a question to start",
+      "offset": 77040,
+      "duration": 6439
+    },
+    {
+      "text": "with anyway so um what I'm going to do",
+      "offset": 79000,
+      "duration": 7000
+    },
+    {
+      "text": "today is I'm mostly going to talk about",
+      "offset": 83479,
+      "duration": 6081
+    },
+    {
+      "text": "code uh I feel uh as a software engineer",
+      "offset": 86000,
+      "duration": 4799
+    },
+    {
+      "text": "that",
+      "offset": 89560,
+      "duration": 5239
+    },
+    {
+      "text": "we always forget how code how important",
+      "offset": 90799,
+      "duration": 7881
+    },
+    {
+      "text": "code is uh we always tend to spend a lot",
+      "offset": 94799,
+      "duration": 6561
+    },
+    {
+      "text": "of time a lot of energy a lot of focus",
+      "offset": 98680,
+      "duration": 5719
+    },
+    {
+      "text": "talking about many other things and we I",
+      "offset": 101360,
+      "duration": 7359
+    },
+    {
+      "text": "would say neglect uh code when actually",
+      "offset": 104399,
+      "duration": 7521
+    },
+    {
+      "text": "um I would I would argue that this is",
+      "offset": 108719,
+      "duration": 5921
+    },
+    {
+      "text": "one of the most important thing when you",
+      "offset": 111920,
+      "duration": 4839
+    },
+    {
+      "text": "build on operate software and I would",
+      "offset": 114640,
+      "duration": 4920
+    },
+    {
+      "text": "say that in my view there are three",
+      "offset": 116759,
+      "duration": 4841
+    },
+    {
+      "text": "really important thing when you build",
+      "offset": 119560,
+      "duration": 5479
+    },
+    {
+      "text": "software one is a team uh this is super",
+      "offset": 121600,
+      "duration": 5760
+    },
+    {
+      "text": "important unless you have a",
+      "offset": 125039,
+      "duration": 6361
+    },
+    {
+      "text": "team uh it's going to be hard I do not",
+      "offset": 127360,
+      "duration": 8519
+    },
+    {
+      "text": "think that uh copilot will run operate",
+      "offset": 131400,
+      "duration": 7520
+    },
+    {
+      "text": "maintain adapt Etc software it will be",
+      "offset": 135879,
+      "duration": 6281
+    },
+    {
+      "text": "helpful AI can certainly help many other",
+      "offset": 138920,
+      "duration": 6679
+    },
+    {
+      "text": "things can help Frameworks can help but",
+      "offset": 142160,
+      "duration": 5760
+    },
+    {
+      "text": "at the end of the day uh software is",
+      "offset": 145599,
+      "duration": 5041
+    },
+    {
+      "text": "going to be built by a team the second",
+      "offset": 147920,
+      "duration": 5039
+    },
+    {
+      "text": "thing is and there is no priority order",
+      "offset": 150640,
+      "duration": 4920
+    },
+    {
+      "text": "here but these are the three most",
+      "offset": 152959,
+      "duration": 4721
+    },
+    {
+      "text": "important thing in my opinion the second",
+      "offset": 155560,
+      "duration": 5720
+    },
+    {
+      "text": "thing is code the code is super",
+      "offset": 157680,
+      "duration": 5800
+    },
+    {
+      "text": "important and I will come in a minute to",
+      "offset": 161280,
+      "duration": 4400
+    },
+    {
+      "text": "it and the last one of course is the",
+      "offset": 163480,
+      "duration": 5560
+    },
+    {
+      "text": "software itself which is what does it do",
+      "offset": 165680,
+      "duration": 5279
+    },
+    {
+      "text": "is it is it doing what it's supposed to",
+      "offset": 169040,
+      "duration": 3520
+    },
+    {
+      "text": "do does it behave the way it's supposed",
+      "offset": 170959,
+      "duration": 4721
+    },
+    {
+      "text": "to behave etc etc it's extremely",
+      "offset": 172560,
+      "duration": 5000
+    },
+    {
+      "text": "important of",
+      "offset": 175680,
+      "duration": 5279
+    },
+    {
+      "text": "course um moving a little bit",
+      "offset": 177560,
+      "duration": 8039
+    },
+    {
+      "text": "in how do we at sonar see the world so",
+      "offset": 180959,
+      "duration": 7920
+    },
+    {
+      "text": "in case you didn't recognize this is a",
+      "offset": 185599,
+      "duration": 7241
+    },
+    {
+      "text": "tree it's a very modern uh tree actually",
+      "offset": 188879,
+      "duration": 7481
+    },
+    {
+      "text": "and we feel that software uh is a little",
+      "offset": 192840,
+      "duration": 6679
+    },
+    {
+      "text": "bit like uh like a tree which is there",
+      "offset": 196360,
+      "duration": 5760
+    },
+    {
+      "text": "are two parts uh one is the part which",
+      "offset": 199519,
+      "duration": 5121
+    },
+    {
+      "text": "is above the ground the part that you",
+      "offset": 202120,
+      "duration": 5119
+    },
+    {
+      "text": "see what you really aim for when you do",
+      "offset": 204640,
+      "duration": 4480
+    },
+    {
+      "text": "a software which is this is basically",
+      "offset": 207239,
+      "duration": 4441
+    },
+    {
+      "text": "the functional part what your",
+      "offset": 209120,
+      "duration": 6960
+    },
+    {
+      "text": "software uh is going to do um how it's",
+      "offset": 211680,
+      "duration": 6320
+    },
+    {
+      "text": "going to behave what service it's going",
+      "offset": 216080,
+      "duration": 6079
+    },
+    {
+      "text": "to R to the business and that part in uh",
+      "offset": 218000,
+      "duration": 6959
+    },
+    {
+      "text": "at at sonar this is really the part we",
+      "offset": 222159,
+      "duration": 5681
+    },
+    {
+      "text": "we don't take care of we take care of",
+      "offset": 224959,
+      "duration": 6000
+    },
+    {
+      "text": "all the rest which is the part which is",
+      "offset": 227840,
+      "duration": 5640
+    },
+    {
+      "text": "below the ground the root basically to",
+      "offset": 230959,
+      "duration": 4321
+    },
+    {
+      "text": "make sure that the root of the software",
+      "offset": 233480,
+      "duration": 5200
+    },
+    {
+      "text": "are solid and this part is extremely",
+      "offset": 235280,
+      "duration": 5920
+    },
+    {
+      "text": "important uh it's called it's quite",
+      "offset": 238680,
+      "duration": 4279
+    },
+    {
+      "text": "funny it's called non-functional",
+      "offset": 241200,
+      "duration": 4920
+    },
+    {
+      "text": "requirements all the thing around",
+      "offset": 242959,
+      "duration": 4761
+    },
+    {
+      "text": "stability",
+      "offset": 246120,
+      "duration": 3560
+    },
+    {
+      "text": "security",
+      "offset": 247720,
+      "duration": 5400
+    },
+    {
+      "text": "um sometimes performance also sometimes",
+      "offset": 249680,
+      "duration": 6119
+    },
+    {
+      "text": "performance can also be uh functional",
+      "offset": 253120,
+      "duration": 6079
+    },
+    {
+      "text": "requirement for certain domains and",
+      "offset": 255799,
+      "duration": 5521
+    },
+    {
+      "text": "these parts are very often the part that",
+      "offset": 259199,
+      "duration": 4681
+    },
+    {
+      "text": "we forget to specify when we do a",
+      "offset": 261320,
+      "duration": 4439
+    },
+    {
+      "text": "software specification you know like if",
+      "offset": 263880,
+      "duration": 4280
+    },
+    {
+      "text": "you ask people and you say do you want",
+      "offset": 265759,
+      "duration": 5160
+    },
+    {
+      "text": "the software to be",
+      "offset": 268160,
+      "duration": 6840
+    },
+    {
+      "text": "stable fast secure Etc the answer is",
+      "offset": 270919,
+      "duration": 6881
+    },
+    {
+      "text": "going to be of course but this is not",
+      "offset": 275000,
+      "duration": 6919
+    },
+    {
+      "text": "written anywhere and this is what so the",
+      "offset": 277800,
+      "duration": 6040
+    },
+    {
+      "text": "top part we call it this is how the",
+      "offset": 281919,
+      "duration": 4560
+    },
+    {
+      "text": "software perform uh sorry behaves on the",
+      "offset": 283840,
+      "duration": 6440
+    },
+    {
+      "text": "bottom part is how the software performs",
+      "offset": 286479,
+      "duration": 8361
+    },
+    {
+      "text": "and we really focus on the second part",
+      "offset": 290280,
+      "duration": 6759
+    },
+    {
+      "text": "but if you think about it when you talk",
+      "offset": 294840,
+      "duration": 5000
+    },
+    {
+      "text": "about code code is going to dictate both",
+      "offset": 297039,
+      "duration": 4720
+    },
+    {
+      "text": "code is going to dictate how the",
+      "offset": 299840,
+      "duration": 4240
+    },
+    {
+      "text": "software behaves and it's going to",
+      "offset": 301759,
+      "duration": 5440
+    },
+    {
+      "text": "dictate how the software performs code I",
+      "offset": 304080,
+      "duration": 7559
+    },
+    {
+      "text": "would argue is the only real asset that",
+      "offset": 307199,
+      "duration": 7241
+    },
+    {
+      "text": "you have as a as a software engineering",
+      "offset": 311639,
+      "duration": 6721
+    },
+    {
+      "text": "team to build your software everything",
+      "offset": 314440,
+      "duration": 7520
+    },
+    {
+      "text": "else everything else is either a",
+      "offset": 318360,
+      "duration": 7080
+    },
+    {
+      "text": "commodity which you can replace or a",
+      "offset": 321960,
+      "duration": 6440
+    },
+    {
+      "text": "disposable something that you can throw",
+      "offset": 325440,
+      "duration": 6039
+    },
+    {
+      "text": "away when you don't need it anymore um",
+      "offset": 328400,
+      "duration": 6040
+    },
+    {
+      "text": "code is the one thing you cannot replace",
+      "offset": 331479,
+      "duration": 5840
+    },
+    {
+      "text": "you cannot uh which is not a commodity",
+      "offset": 334440,
+      "duration": 6080
+    },
+    {
+      "text": "it's going to really dictate these two",
+      "offset": 337319,
+      "duration": 6720
+    },
+    {
+      "text": "things right I forgot to say I will make",
+      "offset": 340520,
+      "duration": 5560
+    },
+    {
+      "text": "sure there are uh there is time for",
+      "offset": 344039,
+      "duration": 3961
+    },
+    {
+      "text": "questions uh at the end I will try to",
+      "offset": 346080,
+      "duration": 6920
+    },
+    {
+      "text": "have 10 minutes so very very important",
+      "offset": 348000,
+      "duration": 7880
+    },
+    {
+      "text": "and it is super important to do clean",
+      "offset": 353000,
+      "duration": 7680
+    },
+    {
+      "text": "code and the thing which is uh I me this",
+      "offset": 355880,
+      "duration": 7640
+    },
+    {
+      "text": "this is uh kind of difficult to talk",
+      "offset": 360680,
+      "duration": 5000
+    },
+    {
+      "text": "about clean code because people ask what",
+      "offset": 363520,
+      "duration": 4720
+    },
+    {
+      "text": "is clean code and very often what you",
+      "offset": 365680,
+      "duration": 5040
+    },
+    {
+      "text": "see in your software is when the code is",
+      "offset": 368240,
+      "duration": 4920
+    },
+    {
+      "text": "not clean so we tend to to talk about",
+      "offset": 370720,
+      "duration": 4319
+    },
+    {
+      "text": "Bad Code junk",
+      "offset": 373160,
+      "duration": 4840
+    },
+    {
+      "text": "code sometimes dirty code but not too",
+      "offset": 375039,
+      "duration": 5761
+    },
+    {
+      "text": "much so I'm going to talk a little bit",
+      "offset": 378000,
+      "duration": 6680
+    },
+    {
+      "text": "about not so clean code on what happens",
+      "offset": 380800,
+      "duration": 6440
+    },
+    {
+      "text": "um when your code is not clean so what",
+      "offset": 384680,
+      "duration": 5079
+    },
+    {
+      "text": "happens is you get what we call",
+      "offset": 387240,
+      "duration": 5560
+    },
+    {
+      "text": "technical debt which is you get small",
+      "offset": 389759,
+      "duration": 5681
+    },
+    {
+      "text": "problems here and there and if you are a",
+      "offset": 392800,
+      "duration": 4760
+    },
+    {
+      "text": "little bit of technical debt if you have",
+      "offset": 395440,
+      "duration": 5920
+    },
+    {
+      "text": "a few issues in the code it's okay um",
+      "offset": 397560,
+      "duration": 6560
+    },
+    {
+      "text": "it's it's actually not bad to have a few",
+      "offset": 401360,
+      "duration": 5200
+    },
+    {
+      "text": "problems what's really bad is when you",
+      "offset": 404120,
+      "duration": 4680
+    },
+    {
+      "text": "have so many problems that you only deal",
+      "offset": 406560,
+      "duration": 4120
+    },
+    {
+      "text": "with these problems and you do not you",
+      "offset": 408800,
+      "duration": 4200
+    },
+    {
+      "text": "cannot basically improve the software",
+      "offset": 410680,
+      "duration": 4639
+    },
+    {
+      "text": "anymore you cannot add more value to the",
+      "offset": 413000,
+      "duration": 6039
+    },
+    {
+      "text": "business you keep spending all your time",
+      "offset": 415319,
+      "duration": 6280
+    },
+    {
+      "text": "trying just to uh basically survive this",
+      "offset": 419039,
+      "duration": 6201
+    },
+    {
+      "text": "is security problems stability problems",
+      "offset": 421599,
+      "duration": 5320
+    },
+    {
+      "text": "you want to change something and you",
+      "offset": 425240,
+      "duration": 3959
+    },
+    {
+      "text": "break something else etc",
+      "offset": 426919,
+      "duration": 5361
+    },
+    {
+      "text": "etc who has never seen that happening",
+      "offset": 429199,
+      "duration": 5201
+    },
+    {
+      "text": "around",
+      "offset": 432280,
+      "duration": 5919
+    },
+    {
+      "text": "them okay good I'm glad to see that uh I",
+      "offset": 434400,
+      "duration": 6799
+    },
+    {
+      "text": "got a room of fans here so we call that",
+      "offset": 438199,
+      "duration": 5000
+    },
+    {
+      "text": "technical debt a little bit of technical",
+      "offset": 441199,
+      "duration": 4521
+    },
+    {
+      "text": "debt okay a lot of technical debt you",
+      "offset": 443199,
+      "duration": 5041
+    },
+    {
+      "text": "basically spend your entire life uh",
+      "offset": 445720,
+      "duration": 4879
+    },
+    {
+      "text": "working on this on honest ly this is not",
+      "offset": 448240,
+      "duration": 5079
+    },
+    {
+      "text": "fun this is not much value to the",
+      "offset": 450599,
+      "duration": 5121
+    },
+    {
+      "text": "business um there is also an argument",
+      "offset": 453319,
+      "duration": 4401
+    },
+    {
+      "text": "that the only way to really measure",
+      "offset": 455720,
+      "duration": 5680
+    },
+    {
+      "text": "technical debt is this way uh I actually",
+      "offset": 457720,
+      "duration": 5159
+    },
+    {
+      "text": "do not think this is true I think we",
+      "offset": 461400,
+      "duration": 3759
+    },
+    {
+      "text": "have AOL there are now tools and",
+      "offset": 462879,
+      "duration": 4320
+    },
+    {
+      "text": "products to do this and I will talk a",
+      "offset": 465159,
+      "duration": 4880
+    },
+    {
+      "text": "little bit later about this",
+      "offset": 467199,
+      "duration": 5720
+    },
+    {
+      "text": "now so what back to the question what is",
+      "offset": 470039,
+      "duration": 7160
+    },
+    {
+      "text": "clean code um we believe that clean code",
+      "offset": 472919,
+      "duration": 6161
+    },
+    {
+      "text": "and I'm going to spend a little bit of",
+      "offset": 477199,
+      "duration": 3720
+    },
+    {
+      "text": "time on this is to explain clean code is",
+      "offset": 479080,
+      "duration": 5799
+    },
+    {
+      "text": "codee which is consistent intentional",
+      "offset": 480919,
+      "duration": 5601
+    },
+    {
+      "text": "responsible and",
+      "offset": 484879,
+      "duration": 4440
+    },
+    {
+      "text": "adaptable why is it important to uh to",
+      "offset": 486520,
+      "duration": 5519
+    },
+    {
+      "text": "formalize this it's important because I",
+      "offset": 489319,
+      "duration": 5641
+    },
+    {
+      "text": "want to map this to actually the",
+      "offset": 492039,
+      "duration": 6361
+    },
+    {
+      "text": "consequences of not having clean code a",
+      "offset": 494960,
+      "duration": 5760
+    },
+    {
+      "text": "bit a bit later on so why is it",
+      "offset": 498400,
+      "duration": 4880
+    },
+    {
+      "text": "important that code is",
+      "offset": 500720,
+      "duration": 5360
+    },
+    {
+      "text": "consistent because many people are going",
+      "offset": 503280,
+      "duration": 7000
+    },
+    {
+      "text": "to interact with that code and you do",
+      "offset": 506080,
+      "duration": 7519
+    },
+    {
+      "text": "not want each and everyone to Define",
+      "offset": 510280,
+      "duration": 8480
+    },
+    {
+      "text": "their own um styles or ways of doing",
+      "offset": 513599,
+      "duration": 9440
+    },
+    {
+      "text": "things you want to the code to be as um",
+      "offset": 518760,
+      "duration": 6759
+    },
+    {
+      "text": "consistent as possible in order to be",
+      "offset": 523039,
+      "duration": 5321
+    },
+    {
+      "text": "for the team to to Really own it and for",
+      "offset": 525519,
+      "duration": 5841
+    },
+    {
+      "text": "anyone to be able to change something",
+      "offset": 528360,
+      "duration": 4800
+    },
+    {
+      "text": "that's one the second thing is if you",
+      "offset": 531360,
+      "duration": 4919
+    },
+    {
+      "text": "think about it who who had issues about",
+      "offset": 533160,
+      "duration": 6960
+    },
+    {
+      "text": "debates about left curly brace braces or",
+      "offset": 536279,
+      "duration": 8441
+    },
+    {
+      "text": "right curly braces okay only two I mean",
+      "offset": 540120,
+      "duration": 7640
+    },
+    {
+      "text": "you guys are too shy I'm sure many more",
+      "offset": 544720,
+      "duration": 5640
+    },
+    {
+      "text": "um",
+      "offset": 547760,
+      "duration": 2600
+    },
+    {
+      "text": "honestly should the curly brace be on",
+      "offset": 550480,
+      "duration": 5479
+    },
+    {
+      "text": "the right or on the left to",
+      "offset": 552720,
+      "duration": 6119
+    },
+    {
+      "text": "me doesn't matter I've got a preference",
+      "offset": 555959,
+      "duration": 4721
+    },
+    {
+      "text": "I've got a personal preference but what",
+      "offset": 558839,
+      "duration": 4201
+    },
+    {
+      "text": "really matters is that we agree one way",
+      "offset": 560680,
+      "duration": 4680
+    },
+    {
+      "text": "or the other and then the whole code is",
+      "offset": 563040,
+      "duration": 5200
+    },
+    {
+      "text": "consistent why because if we don't do",
+      "offset": 565360,
+      "duration": 5760
+    },
+    {
+      "text": "that every time you're going to hit one",
+      "offset": 568240,
+      "duration": 4640
+    },
+    {
+      "text": "every time you are going to read some",
+      "offset": 571120,
+      "duration": 3279
+    },
+    {
+      "text": "lines of code you are going to wonder",
+      "offset": 572880,
+      "duration": 3000
+    },
+    {
+      "text": "okay is it on the left is it on the",
+      "offset": 574399,
+      "duration": 4721
+    },
+    {
+      "text": "right this two seconds you are spending",
+      "offset": 575880,
+      "duration": 6320
+    },
+    {
+      "text": "there is just a waste of time a waste of",
+      "offset": 579120,
+      "duration": 5920
+    },
+    {
+      "text": "energy if you multiply it by",
+      "offset": 582200,
+      "duration": 5360
+    },
+    {
+      "text": "whatever 10 people in your",
+      "offset": 585040,
+      "duration": 5520
+    },
+    {
+      "text": "team uh whatever 100 team in your",
+      "offset": 587560,
+      "duration": 5000
+    },
+    {
+      "text": "organization at the end of the day it's",
+      "offset": 590560,
+      "duration": 4880
+    },
+    {
+      "text": "a massive waste of time what value do",
+      "offset": 592560,
+      "duration": 6279
+    },
+    {
+      "text": "you get for this you just won the ego",
+      "offset": 595440,
+      "duration": 6880
+    },
+    {
+      "text": "battle around okay we won I mean I win",
+      "offset": 598839,
+      "duration": 5680
+    },
+    {
+      "text": "every time I put a curly brace and but",
+      "offset": 602320,
+      "duration": 4440
+    },
+    {
+      "text": "everybody wins but at the end of the day",
+      "offset": 604519,
+      "duration": 4921
+    },
+    {
+      "text": "the team uh loses so consistency is",
+      "offset": 606760,
+      "duration": 4040
+    },
+    {
+      "text": "super important and here I'm talking",
+      "offset": 609440,
+      "duration": 5000
+    },
+    {
+      "text": "about style but I'm also talking about",
+      "offset": 610800,
+      "duration": 6680
+    },
+    {
+      "text": "um constructions which is to solve a",
+      "offset": 614440,
+      "duration": 5839
+    },
+    {
+      "text": "certain problem we should try to always",
+      "offset": 617480,
+      "duration": 5440
+    },
+    {
+      "text": "use uh the same approach and that needs",
+      "offset": 620279,
+      "duration": 6281
+    },
+    {
+      "text": "to be agreed with a team so that's one",
+      "offset": 622920,
+      "duration": 6159
+    },
+    {
+      "text": "the second thing is intentionality this",
+      "offset": 626560,
+      "duration": 5680
+    },
+    {
+      "text": "is is all about logical",
+      "offset": 629079,
+      "duration": 6121
+    },
+    {
+      "text": "errors code that can never be reach so",
+      "offset": 632240,
+      "duration": 5960
+    },
+    {
+      "text": "that code would you really intentionally",
+      "offset": 635200,
+      "duration": 5639
+    },
+    {
+      "text": "leave code that is dead uh in your",
+      "offset": 638200,
+      "duration": 6280
+    },
+    {
+      "text": "program um apart from confusing other",
+      "offset": 640839,
+      "duration": 6680
+    },
+    {
+      "text": "people uh you don't want to do this but",
+      "offset": 644480,
+      "duration": 8560
+    },
+    {
+      "text": "it's also about um memory leaks if if if",
+      "offset": 647519,
+      "duration": 7601
+    },
+    {
+      "text": "a leak uh if there is a leak in your",
+      "offset": 653040,
+      "duration": 4720
+    },
+    {
+      "text": "code it means your code is incomplete if",
+      "offset": 655120,
+      "duration": 4320
+    },
+    {
+      "text": "there is a security vulnerability in",
+      "offset": 657760,
+      "duration": 3600
+    },
+    {
+      "text": "your code which means if somebody can",
+      "offset": 659440,
+      "duration": 4600
+    },
+    {
+      "text": "inject data which is going to reach a",
+      "offset": 661360,
+      "duration": 5039
+    },
+    {
+      "text": "critical component of your application",
+      "offset": 664040,
+      "duration": 4919
+    },
+    {
+      "text": "something is missing in in that case a",
+      "offset": 666399,
+      "duration": 5481
+    },
+    {
+      "text": "sanitizer is missing in your code so",
+      "offset": 668959,
+      "duration": 5281
+    },
+    {
+      "text": "these are all the kind of problems that",
+      "offset": 671880,
+      "duration": 5120
+    },
+    {
+      "text": "we classify about",
+      "offset": 674240,
+      "duration": 6599
+    },
+    {
+      "text": "intentional adaptable is about you need",
+      "offset": 677000,
+      "duration": 7000
+    },
+    {
+      "text": "to be able to change your",
+      "offset": 680839,
+      "duration": 5761
+    },
+    {
+      "text": "application uh in in you you need to be",
+      "offset": 684000,
+      "duration": 4760
+    },
+    {
+      "text": "able to make changes to your application",
+      "offset": 686600,
+      "duration": 3720
+    },
+    {
+      "text": "in a way which",
+      "offset": 688760,
+      "duration": 5360
+    },
+    {
+      "text": "is um reasonable fairly cost effective",
+      "offset": 690320,
+      "duration": 6160
+    },
+    {
+      "text": "and without breaking everything so",
+      "offset": 694120,
+      "duration": 5519
+    },
+    {
+      "text": "anything which has to do with complexity",
+      "offset": 696480,
+      "duration": 4880
+    },
+    {
+      "text": "of code anything which has to do with",
+      "offset": 699639,
+      "duration": 3440
+    },
+    {
+      "text": "duplication anything which has to do",
+      "offset": 701360,
+      "duration": 5960
+    },
+    {
+      "text": "with design will fall under that part",
+      "offset": 703079,
+      "duration": 5320
+    },
+    {
+      "text": "and this",
+      "offset": 707320,
+      "duration": 4720
+    },
+    {
+      "text": "is obviously extremely important um when",
+      "offset": 708399,
+      "duration": 7120
+    },
+    {
+      "text": "people refer to technical Deb um very",
+      "offset": 712040,
+      "duration": 6200
+    },
+    {
+      "text": "often it's because they cannot change uh",
+      "offset": 715519,
+      "duration": 5601
+    },
+    {
+      "text": "the software anymore at all and",
+      "offset": 718240,
+      "duration": 5080
+    },
+    {
+      "text": "generally this is because they have a",
+      "offset": 721120,
+      "duration": 5480
+    },
+    {
+      "text": "major problem in that category on the",
+      "offset": 723320,
+      "duration": 5920
+    },
+    {
+      "text": "last one is about the code has to be",
+      "offset": 726600,
+      "duration": 6080
+    },
+    {
+      "text": "responsible which is it has to be",
+      "offset": 729240,
+      "duration": 6800
+    },
+    {
+      "text": "inclusive you cannot uh you you cannot",
+      "offset": 732680,
+      "duration": 5399
+    },
+    {
+      "text": "uh you cannot just steal code somewhere",
+      "offset": 736040,
+      "duration": 5760
+    },
+    {
+      "text": "on use it in your application etc etc so",
+      "offset": 738079,
+      "duration": 7880
+    },
+    {
+      "text": "the last part will not really have an",
+      "offset": 741800,
+      "duration": 6800
+    },
+    {
+      "text": "impact on your software or on your team",
+      "offset": 745959,
+      "duration": 4961
+    },
+    {
+      "text": "but it's more more like uh it's it's",
+      "offset": 748600,
+      "duration": 4880
+    },
+    {
+      "text": "more about",
+      "offset": 750920,
+      "duration": 2560
+    },
+    {
+      "text": "compliance so why does this matter um",
+      "offset": 758399,
+      "duration": 6361
+    },
+    {
+      "text": "this matter because specifically the",
+      "offset": 762240,
+      "duration": 6120
+    },
+    {
+      "text": "first three categories here will have",
+      "offset": 764760,
+      "duration": 5960
+    },
+    {
+      "text": "two impacts one it will have an impact",
+      "offset": 768360,
+      "duration": 6080
+    },
+    {
+      "text": "on your Dev team I uh already mentioned",
+      "offset": 770720,
+      "duration": 5559
+    },
+    {
+      "text": "if you if the code is not consistent",
+      "offset": 774440,
+      "duration": 4280
+    },
+    {
+      "text": "every line you're are going to wonder is",
+      "offset": 776279,
+      "duration": 4680
+    },
+    {
+      "text": "this more this more that try to read an",
+      "offset": 778720,
+      "duration": 5440
+    },
+    {
+      "text": "email which is written in many fonts or",
+      "offset": 780959,
+      "duration": 5921
+    },
+    {
+      "text": "many size of font",
+      "offset": 784160,
+      "duration": 6080
+    },
+    {
+      "text": "or which is larger as a screen when you",
+      "offset": 786880,
+      "duration": 5280
+    },
+    {
+      "text": "start to have to uh to scroll",
+      "offset": 790240,
+      "duration": 5159
+    },
+    {
+      "text": "horizontally that becomes uh very uh",
+      "offset": 792160,
+      "duration": 5880
+    },
+    {
+      "text": "painful so will have an impact on your",
+      "offset": 795399,
+      "duration": 5680
+    },
+    {
+      "text": "team it will also have an impact on the",
+      "offset": 798040,
+      "duration": 6200
+    },
+    {
+      "text": "software uh if the software is not if",
+      "offset": 801079,
+      "duration": 4641
+    },
+    {
+      "text": "you don't use",
+      "offset": 804240,
+      "duration": 4000
+    },
+    {
+      "text": "sanitizer uh to sanitize data which is",
+      "offset": 805720,
+      "duration": 4359
+    },
+    {
+      "text": "injected by user",
+      "offset": 808240,
+      "duration": 4520
+    },
+    {
+      "text": "uh at the end of the day somebody will",
+      "offset": 810079,
+      "duration": 4641
+    },
+    {
+      "text": "catch it it's just a matter of time",
+      "offset": 812760,
+      "duration": 3720
+    },
+    {
+      "text": "somebody from Security will catch it and",
+      "offset": 814720,
+      "duration": 4000
+    },
+    {
+      "text": "they will come back and they will ask to",
+      "offset": 816480,
+      "duration": 5479
+    },
+    {
+      "text": "fix it which is fair enough which means",
+      "offset": 818720,
+      "duration": 5840
+    },
+    {
+      "text": "rework you have to reload the whole",
+      "offset": 821959,
+      "duration": 5761
+    },
+    {
+      "text": "programm in memory and all of that to to",
+      "offset": 824560,
+      "duration": 6160
+    },
+    {
+      "text": "add no value to the business the only",
+      "offset": 827720,
+      "duration": 5359
+    },
+    {
+      "text": "thing you do is you avoid to destroy",
+      "offset": 830720,
+      "duration": 4320
+    },
+    {
+      "text": "value for the business that's the only",
+      "offset": 833079,
+      "duration": 3521
+    },
+    {
+      "text": "thing you do when you when you fix such",
+      "offset": 835040,
+      "duration": 2520
+    },
+    {
+      "text": "an",
+      "offset": 836600,
+      "duration": 4760
+    },
+    {
+      "text": "issue um so my three pillars team",
+      "offset": 837560,
+      "duration": 7760
+    },
+    {
+      "text": "software codes uh",
+      "offset": 841360,
+      "duration": 3960
+    },
+    {
+      "text": "oops",
+      "offset": 847440,
+      "duration": 5800
+    },
+    {
+      "text": "uhuh here we are okay so now what I",
+      "offset": 849079,
+      "duration": 6320
+    },
+    {
+      "text": "would like to do is I would like to do",
+      "offset": 853240,
+      "duration": 6760
+    },
+    {
+      "text": "pretty uh quickly a mapping here between",
+      "offset": 855399,
+      "duration": 8041
+    },
+    {
+      "text": "the categories that I mentioned and what",
+      "offset": 860000,
+      "duration": 6720
+    },
+    {
+      "text": "happens to the team and to the software",
+      "offset": 863440,
+      "duration": 6519
+    },
+    {
+      "text": "so the responsible part mentioned it",
+      "offset": 866720,
+      "duration": 6559
+    },
+    {
+      "text": "already this is mostly about compliance",
+      "offset": 869959,
+      "duration": 6601
+    },
+    {
+      "text": "um this is for the people in the team to",
+      "offset": 873279,
+      "duration": 7441
+    },
+    {
+      "text": "comply to company mostly to to to",
+      "offset": 876560,
+      "duration": 7719
+    },
+    {
+      "text": "company rules and for the software to",
+      "offset": 880720,
+      "duration": 8600
+    },
+    {
+      "text": "comply to Industry standards like you",
+      "offset": 884279,
+      "duration": 8161
+    },
+    {
+      "text": "shall not steal code that's kind of a I",
+      "offset": 889320,
+      "duration": 6079
+    },
+    {
+      "text": "would say that's a legal requirement but",
+      "offset": 892440,
+      "duration": 6720
+    },
+    {
+      "text": "also uh to certain industry standards um",
+      "offset": 895399,
+      "duration": 5721
+    },
+    {
+      "text": "if if you guys I don't some of you work",
+      "offset": 899160,
+      "duration": 4919
+    },
+    {
+      "text": "in U automotive industry in automotive",
+      "offset": 901120,
+      "duration": 6680
+    },
+    {
+      "text": "industry you have certain um s certain",
+      "offset": 904079,
+      "duration": 8440
+    },
+    {
+      "text": "standards that needs to be followed and",
+      "offset": 907800,
+      "duration": 6760
+    },
+    {
+      "text": "here your code being responsible means",
+      "offset": 912519,
+      "duration": 4281
+    },
+    {
+      "text": "you're going to follow these",
+      "offset": 914560,
+      "duration": 4120
+    },
+    {
+      "text": "standards",
+      "offset": 916800,
+      "duration": 5920
+    },
+    {
+      "text": "um so first so the rest is a kind of a",
+      "offset": 918680,
+      "duration": 6839
+    },
+    {
+      "text": "pyramid which is everything is built on",
+      "offset": 922720,
+      "duration": 6479
+    },
+    {
+      "text": "top of uh previous level so",
+      "offset": 925519,
+      "duration": 6081
+    },
+    {
+      "text": "if the code is not consistent we always",
+      "offset": 929199,
+      "duration": 6241
+    },
+    {
+      "text": "have say not in our world um this is",
+      "offset": 931600,
+      "duration": 5960
+    },
+    {
+      "text": "going to be super difficult for your",
+      "offset": 935440,
+      "duration": 6839
+    },
+    {
+      "text": "team to be accountable for for that code",
+      "offset": 937560,
+      "duration": 6920
+    },
+    {
+      "text": "basically which is very difficult to",
+      "offset": 942279,
+      "duration": 5281
+    },
+    {
+      "text": "have Collective ownership uh very it's",
+      "offset": 944480,
+      "duration": 5599
+    },
+    {
+      "text": "going to be mostly each and everyone",
+      "offset": 947560,
+      "duration": 4440
+    },
+    {
+      "text": "owns a little a little part of the",
+      "offset": 950079,
+      "duration": 3641
+    },
+    {
+      "text": "software and it's difficult to get all",
+      "offset": 952000,
+      "duration": 3319
+    },
+    {
+      "text": "of that",
+      "offset": 953720,
+      "duration": 6160
+    },
+    {
+      "text": "together if the code is not consistent",
+      "offset": 955319,
+      "duration": 6361
+    },
+    {
+      "text": "it's going to be very difficult to",
+      "offset": 959880,
+      "duration": 4600
+    },
+    {
+      "text": "maintain the software which is every",
+      "offset": 961680,
+      "duration": 5000
+    },
+    {
+      "text": "change you want to make is going to take",
+      "offset": 964480,
+      "duration": 4960
+    },
+    {
+      "text": "a bit longer it's going to be a bit more",
+      "offset": 966680,
+      "duration": 6279
+    },
+    {
+      "text": "risky on and maybe before I um I I go up",
+      "offset": 969440,
+      "duration": 6680
+    },
+    {
+      "text": "here I just should just summarize how we",
+      "offset": 972959,
+      "duration": 6560
+    },
+    {
+      "text": "see software uh it's a very simple way",
+      "offset": 976120,
+      "duration": 7240
+    },
+    {
+      "text": "software is being run uh so basically",
+      "offset": 979519,
+      "duration": 6320
+    },
+    {
+      "text": "you run it in production and you need to",
+      "offset": 983360,
+      "duration": 4560
+    },
+    {
+      "text": "be able to maintain it maintaining just",
+      "offset": 985839,
+      "duration": 5240
+    },
+    {
+      "text": "means make sure it runs smoothly if",
+      "offset": 987920,
+      "duration": 4719
+    },
+    {
+      "text": "there is a bug you fix it if there is a",
+      "offset": 991079,
+      "duration": 4601
+    },
+    {
+      "text": "security vulnerability you uh you fix it",
+      "offset": 992639,
+      "duration": 6961
+    },
+    {
+      "text": "if there is I don't know like a button",
+      "offset": 995680,
+      "duration": 6360
+    },
+    {
+      "text": "needs to be changed slightly you can",
+      "offset": 999600,
+      "duration": 4479
+    },
+    {
+      "text": "change it but this is the kind of um",
+      "offset": 1002040,
+      "duration": 3400
+    },
+    {
+      "text": "changes you are talking about when you",
+      "offset": 1004079,
+      "duration": 4521
+    },
+    {
+      "text": "talk about maintenance which is things",
+      "offset": 1005440,
+      "duration": 6480
+    },
+    {
+      "text": "which will not impact the behavior of",
+      "offset": 1008600,
+      "duration": 5520
+    },
+    {
+      "text": "the software IE the functionality of the",
+      "offset": 1011920,
+      "duration": 5760
+    },
+    {
+      "text": "software evolving means you are actually",
+      "offset": 1014120,
+      "duration": 6399
+    },
+    {
+      "text": "changing uh um the functionality of the",
+      "offset": 1017680,
+      "duration": 5000
+    },
+    {
+      "text": "software you are changing the behavior",
+      "offset": 1020519,
+      "duration": 4881
+    },
+    {
+      "text": "it's something totally different I mean",
+      "offset": 1022680,
+      "duration": 4999
+    },
+    {
+      "text": "in both cases you are you are changing",
+      "offset": 1025400,
+      "duration": 4519
+    },
+    {
+      "text": "the code but it's the kind of code",
+      "offset": 1027679,
+      "duration": 4601
+    },
+    {
+      "text": "change is totally different so if the",
+      "offset": 1029919,
+      "duration": 4241
+    },
+    {
+      "text": "code is not consistent it's going to be",
+      "offset": 1032280,
+      "duration": 4639
+    },
+    {
+      "text": "hard it's going to be harder to",
+      "offset": 1034160,
+      "duration": 5279
+    },
+    {
+      "text": "maintain so this is really the first",
+      "offset": 1036919,
+      "duration": 4561
+    },
+    {
+      "text": "thing you need to obtain the second",
+      "offset": 1039439,
+      "duration": 3041
+    },
+    {
+      "text": "thing",
+      "offset": 1041480,
+      "duration": 4520
+    },
+    {
+      "text": "is intentional the code has to be",
+      "offset": 1042480,
+      "duration": 6439
+    },
+    {
+      "text": "intentional um it mean if it is in",
+      "offset": 1046000,
+      "duration": 5559
+    },
+    {
+      "text": "ntional it means it's going to be much",
+      "offset": 1048919,
+      "duration": 5801
+    },
+    {
+      "text": "easier for the team to be predictable",
+      "offset": 1051559,
+      "duration": 6561
+    },
+    {
+      "text": "any surprise in your code like I'm going",
+      "offset": 1054720,
+      "duration": 6079
+    },
+    {
+      "text": "to just pick random examples here but",
+      "offset": 1058120,
+      "duration": 6799
+    },
+    {
+      "text": "things like always true always uh false",
+      "offset": 1060799,
+      "duration": 8961
+    },
+    {
+      "text": "conditions are leading to confusion and",
+      "offset": 1064919,
+      "duration": 7961
+    },
+    {
+      "text": "potentially to bugs why would you have",
+      "offset": 1069760,
+      "duration": 7000
+    },
+    {
+      "text": "an always false condition in a",
+      "offset": 1072880,
+      "duration": 6840
+    },
+    {
+      "text": "loop because you felt it was super smart",
+      "offset": 1076760,
+      "duration": 4880
+    },
+    {
+      "text": "to actually keep that piece of code but",
+      "offset": 1079720,
+      "duration": 5079
+    },
+    {
+      "text": "that nobody nothing can reach it sure",
+      "offset": 1081640,
+      "duration": 5039
+    },
+    {
+      "text": "there are other ways um there are other",
+      "offset": 1084799,
+      "duration": 4961
+    },
+    {
+      "text": "ways to do this so anything",
+      "offset": 1086679,
+      "duration": 6120
+    },
+    {
+      "text": "here which um if your code is very",
+      "offset": 1089760,
+      "duration": 5240
+    },
+    {
+      "text": "intentional your team is going to be",
+      "offset": 1092799,
+      "duration": 4681
+    },
+    {
+      "text": "more predictable why",
+      "offset": 1095000,
+      "duration": 5520
+    },
+    {
+      "text": "because when you make a change you will",
+      "offset": 1097480,
+      "duration": 4600
+    },
+    {
+      "text": "not have to",
+      "offset": 1100520,
+      "duration": 5240
+    },
+    {
+      "text": "spend minutes days or minutes hours days",
+      "offset": 1102080,
+      "duration": 5599
+    },
+    {
+      "text": "to understand what the code does that's",
+      "offset": 1105760,
+      "duration": 5720
+    },
+    {
+      "text": "for one plus all the problems that you",
+      "offset": 1107679,
+      "duration": 6880
+    },
+    {
+      "text": "are not sending to production you are",
+      "offset": 1111480,
+      "duration": 6240
+    },
+    {
+      "text": "not going to have to fix them uh to have",
+      "offset": 1114559,
+      "duration": 5480
+    },
+    {
+      "text": "the software running",
+      "offset": 1117720,
+      "duration": 6280
+    },
+    {
+      "text": "smoothly and obviously um to run the",
+      "offset": 1120039,
+      "duration": 5880
+    },
+    {
+      "text": "software it's it's going to have a",
+      "offset": 1124000,
+      "duration": 4320
+    },
+    {
+      "text": "direct impact on this running the",
+      "offset": 1125919,
+      "duration": 5841
+    },
+    {
+      "text": "software the last part is",
+      "offset": 1128320,
+      "duration": 6719
+    },
+    {
+      "text": "adaptability which is it's really",
+      "offset": 1131760,
+      "duration": 6520
+    },
+    {
+      "text": "about as I mentioned earlier design",
+      "offset": 1135039,
+      "duration": 6120
+    },
+    {
+      "text": "architecture picture but also things",
+      "offset": 1138280,
+      "duration": 6879
+    },
+    {
+      "text": "like uh copy paste in the code which uh",
+      "offset": 1141159,
+      "duration": 6361
+    },
+    {
+      "text": "eventually lead back to a design uh to a",
+      "offset": 1145159,
+      "duration": 5601
+    },
+    {
+      "text": "design problem unless your code is",
+      "offset": 1147520,
+      "duration": 6120
+    },
+    {
+      "text": "adaptable at some stage it will be hard",
+      "offset": 1150760,
+      "duration": 6080
+    },
+    {
+      "text": "to make it evolve which is this software",
+      "offset": 1153640,
+      "duration": 6320
+    },
+    {
+      "text": "which you see that are paralyzed at some",
+      "offset": 1156840,
+      "duration": 5680
+    },
+    {
+      "text": "stage um most of the time this is",
+      "offset": 1159960,
+      "duration": 6240
+    },
+    {
+      "text": "because uh code is not adaptable and if",
+      "offset": 1162520,
+      "duration": 7120
+    },
+    {
+      "text": "the code is adaptable your team will",
+      "offset": 1166200,
+      "duration": 7560
+    },
+    {
+      "text": "really become effective because when you",
+      "offset": 1169640,
+      "duration": 6760
+    },
+    {
+      "text": "say this is going to take me a day it",
+      "offset": 1173760,
+      "duration": 6919
+    },
+    {
+      "text": "will really take you a day to change",
+      "offset": 1176400,
+      "duration": 7920
+    },
+    {
+      "text": "there is a very interesting uh diagram",
+      "offset": 1180679,
+      "duration": 4801
+    },
+    {
+      "text": "which",
+      "offset": 1184320,
+      "duration": 4719
+    },
+    {
+      "text": "um uh which represent actually the real",
+      "offset": 1185480,
+      "duration": 8040
+    },
+    {
+      "text": "work that is done uh by teams um I don't",
+      "offset": 1189039,
+      "duration": 6241
+    },
+    {
+      "text": "have it in this presentation but I'm I'm",
+      "offset": 1193520,
+      "duration": 5519
+    },
+    {
+      "text": "going to describe it which is",
+      "offset": 1195280,
+      "duration": 6279
+    },
+    {
+      "text": "if you think as a developer that you are",
+      "offset": 1199039,
+      "duration": 5760
+    },
+    {
+      "text": "spending 30 hours to do development so",
+      "offset": 1201559,
+      "duration": 5120
+    },
+    {
+      "text": "let's say you do 10 hours of other",
+      "offset": 1204799,
+      "duration": 3880
+    },
+    {
+      "text": "things not development not direct",
+      "offset": 1206679,
+      "duration": 4360
+    },
+    {
+      "text": "development the reality is probably that",
+      "offset": 1208679,
+      "duration": 4401
+    },
+    {
+      "text": "you are spending half of this really in",
+      "offset": 1211039,
+      "duration": 4841
+    },
+    {
+      "text": "doing uh effective development you're",
+      "offset": 1213080,
+      "duration": 4560
+    },
+    {
+      "text": "probably going to you are probably",
+      "offset": 1215880,
+      "duration": 4200
+    },
+    {
+      "text": "spending out of the non-effective",
+      "offset": 1217640,
+      "duration": 4080
+    },
+    {
+      "text": "development you're probably",
+      "offset": 1220080,
+      "duration": 3760
+    },
+    {
+      "text": "spending a",
+      "offset": 1221720,
+      "duration": 6199
+    },
+    {
+      "text": "third in extra time because the code was",
+      "offset": 1223840,
+      "duration": 6240
+    },
+    {
+      "text": "not really consistent intentional this",
+      "offset": 1227919,
+      "duration": 4401
+    },
+    {
+      "text": "is what we call the",
+      "offset": 1230080,
+      "duration": 4920
+    },
+    {
+      "text": "lowlevel um the the code level sorry",
+      "offset": 1232320,
+      "duration": 5400
+    },
+    {
+      "text": "technical Deb which is basically all",
+      "offset": 1235000,
+      "duration": 4520
+    },
+    {
+      "text": "these little things that make you waste",
+      "offset": 1237720,
+      "duration": 3720
+    },
+    {
+      "text": "a little bit of time and you are",
+      "offset": 1239520,
+      "duration": 5880
+    },
+    {
+      "text": "spending another uh 70% of that time is",
+      "offset": 1241440,
+      "duration": 7000
+    },
+    {
+      "text": "spent actually to fix is this existing",
+      "offset": 1245400,
+      "duration": 4600
+    },
+    {
+      "text": "problem that you have in the code which",
+      "offset": 1248440,
+      "duration": 5160
+    },
+    {
+      "text": "is basically reworking this um I don't",
+      "offset": 1250000,
+      "duration": 5679
+    },
+    {
+      "text": "know if it explains directly why every",
+      "offset": 1253600,
+      "duration": 4079
+    },
+    {
+      "text": "time we say it's going to take a week it",
+      "offset": 1255679,
+      "duration": 4000
+    },
+    {
+      "text": "actually takes two",
+      "offset": 1257679,
+      "duration": 4480
+    },
+    {
+      "text": "uh but but probably that's one of the",
+      "offset": 1259679,
+      "duration": 4401
+    },
+    {
+      "text": "one of the",
+      "offset": 1262159,
+      "duration": 4091
+    },
+    {
+      "text": "reason okay",
+      "offset": 1264080,
+      "duration": 5040
+    },
+    {
+      "text": "[Music]",
+      "offset": 1266250,
+      "duration": 7630
+    },
+    {
+      "text": "um okay so what",
+      "offset": 1269120,
+      "duration": 7640
+    },
+    {
+      "text": "um I'm not I'm not going to go into how",
+      "offset": 1273880,
+      "duration": 5919
+    },
+    {
+      "text": "to measure what you can do etc etc there",
+      "offset": 1276760,
+      "duration": 6560
+    },
+    {
+      "text": "are quite a few tools um out there to do",
+      "offset": 1279799,
+      "duration": 8921
+    },
+    {
+      "text": "this um and most of these Tool uh unable",
+      "offset": 1283320,
+      "duration": 9080
+    },
+    {
+      "text": "to find problems so Sona finds problem",
+      "offset": 1288720,
+      "duration": 7040
+    },
+    {
+      "text": "but you also have tools like on each",
+      "offset": 1292400,
+      "duration": 7120
+    },
+    {
+      "text": "language things like CPP check fine bugs",
+      "offset": 1295760,
+      "duration": 6039
+    },
+    {
+      "text": "check style etc etc there are a lot of",
+      "offset": 1299520,
+      "duration": 5279
+    },
+    {
+      "text": "tools out there that can help you find",
+      "offset": 1301799,
+      "duration": 5240
+    },
+    {
+      "text": "problems on problems of different",
+      "offset": 1304799,
+      "duration": 5360
+    },
+    {
+      "text": "Natures uh a lot of tools um look at",
+      "offset": 1307039,
+      "duration": 6321
+    },
+    {
+      "text": "security problems today uh security is",
+      "offset": 1310159,
+      "duration": 5640
+    },
+    {
+      "text": "important don't get me wrong but I think",
+      "offset": 1313360,
+      "duration": 5600
+    },
+    {
+      "text": "only looking at security is a big",
+      "offset": 1315799,
+      "duration": 7201
+    },
+    {
+      "text": "mistake which is you are solving one um",
+      "offset": 1318960,
+      "duration": 5560
+    },
+    {
+      "text": "one side of the equation which is the",
+      "offset": 1323000,
+      "duration": 3679
+    },
+    {
+      "text": "security side but there are many other",
+      "offset": 1324520,
+      "duration": 4560
+    },
+    {
+      "text": "aspect which in my opinion impact much",
+      "offset": 1326679,
+      "duration": 3961
+    },
+    {
+      "text": "more engineering",
+      "offset": 1329080,
+      "duration": 4520
+    },
+    {
+      "text": "team um so all these tools they can",
+      "offset": 1330640,
+      "duration": 5880
+    },
+    {
+      "text": "measure on then you are presented with",
+      "offset": 1333600,
+      "duration": 4400
+    },
+    {
+      "text": "uh with",
+      "offset": 1336520,
+      "duration": 4200
+    },
+    {
+      "text": "results and then what do you do that's",
+      "offset": 1338000,
+      "duration": 6320
+    },
+    {
+      "text": "that's always a big question um I I",
+      "offset": 1340720,
+      "duration": 5640
+    },
+    {
+      "text": "summarize it with um I don't know if you",
+      "offset": 1344320,
+      "duration": 6160
+    },
+    {
+      "text": "guys know uh a product called Snak so",
+      "offset": 1346360,
+      "duration": 7040
+    },
+    {
+      "text": "Snak finds very um security",
+      "offset": 1350480,
+      "duration": 5400
+    },
+    {
+      "text": "vulnerabilities on Snak actually stands",
+      "offset": 1353400,
+      "duration": 6360
+    },
+    {
+      "text": "for so now you know which is exactly",
+      "offset": 1355880,
+      "duration": 5720
+    },
+    {
+      "text": "what what the tools does which is to",
+      "offset": 1359760,
+      "duration": 3279
+    },
+    {
+      "text": "show you the",
+      "offset": 1361600,
+      "duration": 4559
+    },
+    {
+      "text": "thing each on every company Z each and",
+      "offset": 1363039,
+      "duration": 5841
+    },
+    {
+      "text": "every team within a company Z has their",
+      "offset": 1366159,
+      "duration": 8520
+    },
+    {
+      "text": "own policy or rule or process to solve",
+      "offset": 1368880,
+      "duration": 7960
+    },
+    {
+      "text": "problems in most",
+      "offset": 1374679,
+      "duration": 5761
+    },
+    {
+      "text": "cases the policy",
+      "offset": 1376840,
+      "duration": 3600
+    },
+    {
+      "text": "is there is actually the policy",
+      "offset": 1381279,
+      "duration": 7201
+    },
+    {
+      "text": "is we leave it each to every individual",
+      "offset": 1385000,
+      "duration": 5919
+    },
+    {
+      "text": "to do whatever they want on the pro on",
+      "offset": 1388480,
+      "duration": 5319
+    },
+    {
+      "text": "the problem that's roughly the policy",
+      "offset": 1390919,
+      "duration": 5401
+    },
+    {
+      "text": "unless this is something which crashes",
+      "offset": 1393799,
+      "duration": 4321
+    },
+    {
+      "text": "the production or this is something",
+      "offset": 1396320,
+      "duration": 4719
+    },
+    {
+      "text": "which creates a real vulnerability we",
+      "offset": 1398120,
+      "duration": 6840
+    },
+    {
+      "text": "leave it up to Engineers to decide what",
+      "offset": 1401039,
+      "duration": 6401
+    },
+    {
+      "text": "they are going to do with a problem in",
+      "offset": 1404960,
+      "duration": 6040
+    },
+    {
+      "text": "some cases people block they stop you",
+      "offset": 1407440,
+      "duration": 8160
+    },
+    {
+      "text": "pushing more and very often it uh it",
+      "offset": 1411000,
+      "duration": 5559
+    },
+    {
+      "text": "gets",
+      "offset": 1415600,
+      "duration": 3920
+    },
+    {
+      "text": "escalated and after a while uh this",
+      "offset": 1416559,
+      "duration": 5641
+    },
+    {
+      "text": "becomes impossible to continue to block",
+      "offset": 1419520,
+      "duration": 5320
+    },
+    {
+      "text": "so people have to just uh let",
+      "offset": 1422200,
+      "duration": 6719
+    },
+    {
+      "text": "go um by the way if you ask I think if",
+      "offset": 1424840,
+      "duration": 7680
+    },
+    {
+      "text": "you ask most",
+      "offset": 1428919,
+      "duration": 7801
+    },
+    {
+      "text": "um engineering managers or CIO CTO or",
+      "offset": 1432520,
+      "duration": 6399
+    },
+    {
+      "text": "head of engineering if you if you ask",
+      "offset": 1436720,
+      "duration": 4559
+    },
+    {
+      "text": "them do you think the quality of the",
+      "offset": 1438919,
+      "duration": 4281
+    },
+    {
+      "text": "code today",
+      "offset": 1441279,
+      "duration": 4801
+    },
+    {
+      "text": "is better that what it will be in one",
+      "offset": 1443200,
+      "duration": 5280
+    },
+    {
+      "text": "year or worse at what it will be in one",
+      "offset": 1446080,
+      "duration": 5240
+    },
+    {
+      "text": "year the general answer you get is it is",
+      "offset": 1448480,
+      "duration": 5559
+    },
+    {
+      "text": "better which mean people expect that the",
+      "offset": 1451320,
+      "duration": 5200
+    },
+    {
+      "text": "quality of the code is going to decrease",
+      "offset": 1454039,
+      "duration": 5361
+    },
+    {
+      "text": "throughout time and I think overall we",
+      "offset": 1456520,
+      "duration": 5519
+    },
+    {
+      "text": "have come to a point where we feel this",
+      "offset": 1459400,
+      "duration": 5639
+    },
+    {
+      "text": "is a we are how do we say it's it's a",
+      "offset": 1462039,
+      "duration": 5401
+    },
+    {
+      "text": "little bit like a fatalism which is",
+      "offset": 1465039,
+      "duration": 5520
+    },
+    {
+      "text": "there is nothing um we can do about it",
+      "offset": 1467440,
+      "duration": 5719
+    },
+    {
+      "text": "had a very good conversation earlier",
+      "offset": 1470559,
+      "duration": 4641
+    },
+    {
+      "text": "about this which is hey we don't really",
+      "offset": 1473159,
+      "duration": 4321
+    },
+    {
+      "text": "have time for this or we try to block",
+      "offset": 1475200,
+      "duration": 5479
+    },
+    {
+      "text": "sometime to fix it etc etc it doesn't",
+      "offset": 1477480,
+      "duration": 8040
+    },
+    {
+      "text": "work that that these approaches do not",
+      "offset": 1480679,
+      "duration": 8921
+    },
+    {
+      "text": "work okay so how can we impact so most",
+      "offset": 1485520,
+      "duration": 8000
+    },
+    {
+      "text": "important thing is when you think about",
+      "offset": 1489600,
+      "duration": 5840
+    },
+    {
+      "text": "this problem you should think about it",
+      "offset": 1493520,
+      "duration": 5279
+    },
+    {
+      "text": "as a water leak that's a big big leak",
+      "offset": 1495440,
+      "duration": 6479
+    },
+    {
+      "text": "but I would uh I would argue that the",
+      "offset": 1498799,
+      "duration": 5120
+    },
+    {
+      "text": "leak is probably the same in your",
+      "offset": 1501919,
+      "duration": 4441
+    },
+    {
+      "text": "organization when it comes to clean coat",
+      "offset": 1503919,
+      "duration": 5041
+    },
+    {
+      "text": "so super easy question when you have a",
+      "offset": 1506360,
+      "duration": 6439
+    },
+    {
+      "text": "water leak at home what do you do",
+      "offset": 1508960,
+      "duration": 8400
+    },
+    {
+      "text": "first shut off the water fix the leak",
+      "offset": 1512799,
+      "duration": 7521
+    },
+    {
+      "text": "right why do you not start to mob the",
+      "offset": 1517360,
+      "duration": 7039
+    },
+    {
+      "text": "floor before shutting the water no",
+      "offset": 1520320,
+      "duration": 6520
+    },
+    {
+      "text": "trap tell",
+      "offset": 1524399,
+      "duration": 4561
+    },
+    {
+      "text": "me what's that",
+      "offset": 1526840,
+      "duration": 4079
+    },
+    {
+      "text": "more water will come exactly it's",
+      "offset": 1528960,
+      "duration": 5280
+    },
+    {
+      "text": "useless right you are you mopping more",
+      "offset": 1530919,
+      "duration": 4480
+    },
+    {
+      "text": "water is",
+      "offset": 1534240,
+      "duration": 7520
+    },
+    {
+      "text": "coming so totally useless think about",
+      "offset": 1535399,
+      "duration": 6361
+    },
+    {
+      "text": "code let's say that after this session",
+      "offset": 1541799,
+      "duration": 4641
+    },
+    {
+      "text": "you liked it so much you decide to",
+      "offset": 1544679,
+      "duration": 5201
+    },
+    {
+      "text": "install Sona immediately you run it you",
+      "offset": 1546440,
+      "duration": 6320
+    },
+    {
+      "text": "have 10,000",
+      "offset": 1549880,
+      "duration": 2880
+    },
+    {
+      "text": "issues what what do you do stop",
+      "offset": 1553520,
+      "duration": 7680
+    },
+    {
+      "text": "start to Mo the",
+      "offset": 1558360,
+      "duration": 2840
+    },
+    {
+      "text": "floor exactly I mean I don't know why",
+      "offset": 1563799,
+      "duration": 5721
+    },
+    {
+      "text": "when it's about water this is very",
+      "offset": 1567080,
+      "duration": 6240
+    },
+    {
+      "text": "intutive there is no point to mop the",
+      "offset": 1569520,
+      "duration": 6800
+    },
+    {
+      "text": "floor unless until we have fixed the",
+      "offset": 1573320,
+      "duration": 5800
+    },
+    {
+      "text": "leak super intuitive we we would all",
+      "offset": 1576320,
+      "duration": 5800
+    },
+    {
+      "text": "react the same when it's about code for",
+      "offset": 1579120,
+      "duration": 5480
+    },
+    {
+      "text": "some reasons the first thing we want to",
+      "offset": 1582120,
+      "duration": 4679
+    },
+    {
+      "text": "do is we were like I've got this issue",
+      "offset": 1584600,
+      "duration": 4920
+    },
+    {
+      "text": "and that issue Etc I have to fix them I",
+      "offset": 1586799,
+      "duration": 5120
+    },
+    {
+      "text": "have to fix them immediately and if you",
+      "offset": 1589520,
+      "duration": 5720
+    },
+    {
+      "text": "think about it there is a big water leak",
+      "offset": 1591919,
+      "duration": 6801
+    },
+    {
+      "text": "uh in the meantime which is people keep",
+      "offset": 1595240,
+      "duration": 5840
+    },
+    {
+      "text": "developing the same way they have always",
+      "offset": 1598720,
+      "duration": 6000
+    },
+    {
+      "text": "developed and you are basically fighting",
+      "offset": 1601080,
+      "duration": 5920
+    },
+    {
+      "text": "against the you're you're climbing a",
+      "offset": 1604720,
+      "duration": 5079
+    },
+    {
+      "text": "mountain you will never have an impact",
+      "offset": 1607000,
+      "duration": 4480
+    },
+    {
+      "text": "by having this approach and to me this",
+      "offset": 1609799,
+      "duration": 5880
+    },
+    {
+      "text": "is when it comes to our domain this is",
+      "offset": 1611480,
+      "duration": 8079
+    },
+    {
+      "text": "this thing which is stopping us to solve",
+      "offset": 1615679,
+      "duration": 6321
+    },
+    {
+      "text": "um the clean code problem which is super",
+      "offset": 1619559,
+      "duration": 5321
+    },
+    {
+      "text": "obvious problem since 10 years ago I",
+      "offset": 1622000,
+      "duration": 5399
+    },
+    {
+      "text": "said 50 years so now it must be since 60",
+      "offset": 1624880,
+      "duration": 4960
+    },
+    {
+      "text": "years we know about this we know the",
+      "offset": 1627399,
+      "duration": 4801
+    },
+    {
+      "text": "impact we know we shouldn't do that and",
+      "offset": 1629840,
+      "duration": 4760
+    },
+    {
+      "text": "we don't really do something about it",
+      "offset": 1632200,
+      "duration": 4079
+    },
+    {
+      "text": "and I think this is simply because we",
+      "offset": 1634600,
+      "duration": 3520
+    },
+    {
+      "text": "look at the wrong problem we are looking",
+      "offset": 1636279,
+      "duration": 5321
+    },
+    {
+      "text": "at making the software totally clean",
+      "offset": 1638120,
+      "duration": 9080
+    },
+    {
+      "text": "before uh we fix basically the link so",
+      "offset": 1641600,
+      "duration": 8040
+    },
+    {
+      "text": "in order to",
+      "offset": 1647200,
+      "duration": 5400
+    },
+    {
+      "text": "solve that problem we think that there",
+      "offset": 1649640,
+      "duration": 5960
+    },
+    {
+      "text": "is a much better approach which is super",
+      "offset": 1652600,
+      "duration": 5520
+    },
+    {
+      "text": "simple and super effective which is to",
+      "offset": 1655600,
+      "duration": 5760
+    },
+    {
+      "text": "do what we call clean as you code it",
+      "offset": 1658120,
+      "duration": 4679
+    },
+    {
+      "text": "used to be uh",
+      "offset": 1661360,
+      "duration": 4799
+    },
+    {
+      "text": "called fix the leak but apparently clean",
+      "offset": 1662799,
+      "duration": 6000
+    },
+    {
+      "text": "as you coulde is better for engineering",
+      "offset": 1666159,
+      "duration": 4841
+    },
+    {
+      "text": "organizations where basically what you",
+      "offset": 1668799,
+      "duration": 5841
+    },
+    {
+      "text": "are saying is every developer own their",
+      "offset": 1671000,
+      "duration": 7640
+    },
+    {
+      "text": "code and as such to do a good job",
+      "offset": 1674640,
+      "duration": 7080
+    },
+    {
+      "text": "you should not introduce new problems so",
+      "offset": 1678640,
+      "duration": 4759
+    },
+    {
+      "text": "every time you change code every time",
+      "offset": 1681720,
+      "duration": 3760
+    },
+    {
+      "text": "you add code you don't introduce",
+      "offset": 1683399,
+      "duration": 5160
+    },
+    {
+      "text": "problems we are asking nobody to solve",
+      "offset": 1685480,
+      "duration": 6000
+    },
+    {
+      "text": "problem that were introduced 10 15 years",
+      "offset": 1688559,
+      "duration": 5321
+    },
+    {
+      "text": "ago not not the goal that belongs to",
+      "offset": 1691480,
+      "duration": 4760
+    },
+    {
+      "text": "someone else and maybe we should do",
+      "offset": 1693880,
+      "duration": 4960
+    },
+    {
+      "text": "something about this but this is not",
+      "offset": 1696240,
+      "duration": 4960
+    },
+    {
+      "text": "developers responsibility to actually",
+      "offset": 1698840,
+      "duration": 5559
+    },
+    {
+      "text": "fix that while they are developing so",
+      "offset": 1701200,
+      "duration": 6000
+    },
+    {
+      "text": "the only thing we are saying is as a",
+      "offset": 1704399,
+      "duration": 4681
+    },
+    {
+      "text": "developer you should be be developing",
+      "offset": 1707200,
+      "duration": 3560
+    },
+    {
+      "text": "new features or changing existing",
+      "offset": 1709080,
+      "duration": 3920
+    },
+    {
+      "text": "features on as part of this the code",
+      "offset": 1710760,
+      "duration": 4600
+    },
+    {
+      "text": "that you deliver should be",
+      "offset": 1713000,
+      "duration": 5399
+    },
+    {
+      "text": "clear um if you think about",
+      "offset": 1715360,
+      "duration": 6600
+    },
+    {
+      "text": "it this is kind of just very basic on",
+      "offset": 1718399,
+      "duration": 5120
+    },
+    {
+      "text": "standard right what else would you",
+      "offset": 1721960,
+      "duration": 5480
+    },
+    {
+      "text": "expect from any good developer um you",
+      "offset": 1723519,
+      "duration": 6640
+    },
+    {
+      "text": "also get a chance to uh learn as you",
+      "offset": 1727440,
+      "duration": 6599
+    },
+    {
+      "text": "could and one big big",
+      "offset": 1730159,
+      "duration": 6961
+    },
+    {
+      "text": "big upside of this approach is it's a",
+      "offset": 1734039,
+      "duration": 5401
+    },
+    {
+      "text": "forward looking approach what do I mean",
+      "offset": 1737120,
+      "duration": 6080
+    },
+    {
+      "text": "by this I mean it doesn't matter what",
+      "offset": 1739440,
+      "duration": 7560
+    },
+    {
+      "text": "your standard is today you can always",
+      "offset": 1743200,
+      "duration": 6640
+    },
+    {
+      "text": "increase it later on and you have built",
+      "offset": 1747000,
+      "duration": 6559
+    },
+    {
+      "text": "no backlog I'm going to take uh a very",
+      "offset": 1749840,
+      "duration": 5640
+    },
+    {
+      "text": "simple example about this which is if",
+      "offset": 1753559,
+      "duration": 4600
+    },
+    {
+      "text": "you think about cut coverage so if you",
+      "offset": 1755480,
+      "duration": 4840
+    },
+    {
+      "text": "start to do unit test in your",
+      "offset": 1758159,
+      "duration": 5400
+    },
+    {
+      "text": "organization and you want to",
+      "offset": 1760320,
+      "duration": 5800
+    },
+    {
+      "text": "have uh if you want to to monitor",
+      "offset": 1763559,
+      "duration": 5000
+    },
+    {
+      "text": "coverage which by the way you should",
+      "offset": 1766120,
+      "duration": 3460
+    },
+    {
+      "text": "do",
+      "offset": 1768559,
+      "duration": 2401
+    },
+    {
+      "text": "[Music]",
+      "offset": 1769580,
+      "duration": 3699
+    },
+    {
+      "text": "um what you would do is rather than",
+      "offset": 1770960,
+      "duration": 3920
+    },
+    {
+      "text": "looking at the overall coverage you",
+      "offset": 1773279,
+      "duration": 3481
+    },
+    {
+      "text": "would look at the new code coverage",
+      "offset": 1774880,
+      "duration": 3480
+    },
+    {
+      "text": "which is every time you change a line",
+      "offset": 1776760,
+      "duration": 3399
+    },
+    {
+      "text": "every time you add a line of code it",
+      "offset": 1778360,
+      "duration": 4760
+    },
+    {
+      "text": "should be covered you may have a pretty",
+      "offset": 1780159,
+      "duration": 5201
+    },
+    {
+      "text": "junior team which is not really used to",
+      "offset": 1783120,
+      "duration": 4919
+    },
+    {
+      "text": "to write unit test in that case you want",
+      "offset": 1785360,
+      "duration": 6880
+    },
+    {
+      "text": "to start with maybe like okay 50% of the",
+      "offset": 1788039,
+      "duration": 8000
+    },
+    {
+      "text": "uh I should have 50% of coverage on uh",
+      "offset": 1792240,
+      "duration": 6080
+    },
+    {
+      "text": "the new lines it's okay if if you want",
+      "offset": 1796039,
+      "duration": 5120
+    },
+    {
+      "text": "to raise it to 80% later on it's okay",
+      "offset": 1798320,
+      "duration": 5400
+    },
+    {
+      "text": "because the new bar will be on the",
+      "offset": 1801159,
+      "duration": 5000
+    },
+    {
+      "text": "future code not on the past so you are",
+      "offset": 1803720,
+      "duration": 5400
+    },
+    {
+      "text": "totally fine to progressively increase",
+      "offset": 1806159,
+      "duration": 6640
+    },
+    {
+      "text": "this which also makes it much easier to",
+      "offset": 1809120,
+      "duration": 7200
+    },
+    {
+      "text": "onboard people on the",
+      "offset": 1812799,
+      "duration": 3521
+    },
+    {
+      "text": "approach",
+      "offset": 1819519,
+      "duration": 5561
+    },
+    {
+      "text": "okay as we say in French the second key",
+      "offset": 1822000,
+      "duration": 4840
+    },
+    {
+      "text": "School effect which probably doesn't",
+      "offset": 1825080,
+      "duration": 5959
+    },
+    {
+      "text": "resonate here so there is another upside",
+      "offset": 1826840,
+      "duration": 8079
+    },
+    {
+      "text": "uh to this which is so F first big thing",
+      "offset": 1831039,
+      "duration": 7201
+    },
+    {
+      "text": "is developers will do a good job which",
+      "offset": 1834919,
+      "duration": 6081
+    },
+    {
+      "text": "is all the codes that they deliver will",
+      "offset": 1838240,
+      "duration": 6960
+    },
+    {
+      "text": "be clean the second impact that it has",
+      "offset": 1841000,
+      "duration": 7559
+    },
+    {
+      "text": "is that because by Nature we keep",
+      "offset": 1845200,
+      "duration": 6440
+    },
+    {
+      "text": "changing software I mean software is a",
+      "offset": 1848559,
+      "duration": 8281
+    },
+    {
+      "text": "never ending um uh it's it's a it's a",
+      "offset": 1851640,
+      "duration": 6919
+    },
+    {
+      "text": "it's a moving uh",
+      "offset": 1856840,
+      "duration": 4839
+    },
+    {
+      "text": "um how do we say it's a moving asset you",
+      "offset": 1858559,
+      "duration": 4921
+    },
+    {
+      "text": "you always change software you need new",
+      "offset": 1861679,
+      "duration": 3081
+    },
+    {
+      "text": "features you need to comply to",
+      "offset": 1863480,
+      "duration": 3319
+    },
+    {
+      "text": "regulation there is a new version of",
+      "offset": 1864760,
+      "duration": 5600
+    },
+    {
+      "text": "java etc etc so because we keep changing",
+      "offset": 1866799,
+      "duration": 6321
+    },
+    {
+      "text": "software every time we change a code it",
+      "offset": 1870360,
+      "duration": 6520
+    },
+    {
+      "text": "act its quality will increase at least",
+      "offset": 1873120,
+      "duration": 5960
+    },
+    {
+      "text": "not decrease but in general it will",
+      "offset": 1876880,
+      "duration": 3519
+    },
+    {
+      "text": "increase because you will change lines",
+      "offset": 1879080,
+      "duration": 6240
+    },
+    {
+      "text": "of code so industry standard is that 20",
+      "offset": 1880399,
+      "duration": 7681
+    },
+    {
+      "text": "in average 20% of a code based get",
+      "offset": 1885320,
+      "duration": 5000
+    },
+    {
+      "text": "change every year so it means if you",
+      "offset": 1888080,
+      "duration": 6559
+    },
+    {
+      "text": "follow this after one year 20% of the",
+      "offset": 1890320,
+      "duration": 8280
+    },
+    {
+      "text": "lines of code will be clean think about",
+      "offset": 1894639,
+      "duration": 7841
+    },
+    {
+      "text": "it after five years that might be",
+      "offset": 1898600,
+      "duration": 7880
+    },
+    {
+      "text": "50% uh because there there is overlap so",
+      "offset": 1902480,
+      "duration": 7079
+    },
+    {
+      "text": "it's not going to be 100% of course um",
+      "offset": 1906480,
+      "duration": 5520
+    },
+    {
+      "text": "if you thought about cleaning up 50% of",
+      "offset": 1909559,
+      "duration": 3480
+    },
+    {
+      "text": "your",
+      "offset": 1912000,
+      "duration": 4320
+    },
+    {
+      "text": "software um that would be probably an",
+      "offset": 1913039,
+      "duration": 6441
+    },
+    {
+      "text": "impossible job here you do it as you",
+      "offset": 1916320,
+      "duration": 5560
+    },
+    {
+      "text": "develop",
+      "offset": 1919480,
+      "duration": 2400
+    },
+    {
+      "text": "code and of course all of this has to be",
+      "offset": 1922120,
+      "duration": 5240
+    },
+    {
+      "text": "super integrated to",
+      "offset": 1925320,
+      "duration": 5839
+    },
+    {
+      "text": "the to the development pipeline which is",
+      "offset": 1927360,
+      "duration": 6919
+    },
+    {
+      "text": "you cannot you cannot do clean as you",
+      "offset": 1931159,
+      "duration": 5640
+    },
+    {
+      "text": "could by looking at what's going to go",
+      "offset": 1934279,
+      "duration": 4961
+    },
+    {
+      "text": "to production it's too late when it's",
+      "offset": 1936799,
+      "duration": 3720
+    },
+    {
+      "text": "about to go to",
+      "offset": 1939240,
+      "duration": 4640
+    },
+    {
+      "text": "production um I mean you won't be able",
+      "offset": 1940519,
+      "duration": 6880
+    },
+    {
+      "text": "to stand and push uh on on and push back",
+      "offset": 1943880,
+      "duration": 6480
+    },
+    {
+      "text": "on this so it really has to start in the",
+      "offset": 1947399,
+      "duration": 7081
+    },
+    {
+      "text": "ID it has to happen at the change",
+      "offset": 1950360,
+      "duration": 6760
+    },
+    {
+      "text": "request merge request pull request you",
+      "offset": 1954480,
+      "duration": 6039
+    },
+    {
+      "text": "you you you name it uh level um which is",
+      "offset": 1957120,
+      "duration": 6880
+    },
+    {
+      "text": "this is where between the ID and the",
+      "offset": 1960519,
+      "duration": 5801
+    },
+    {
+      "text": "pool request this is where most of the",
+      "offset": 1964000,
+      "duration": 5559
+    },
+    {
+      "text": "issues are going to be CAU anything that",
+      "offset": 1966320,
+      "duration": 6800
+    },
+    {
+      "text": "passes a pull request should be like an",
+      "offset": 1969559,
+      "duration": 5521
+    },
+    {
+      "text": "exception it should be a oneoff but",
+      "offset": 1973120,
+      "duration": 3960
+    },
+    {
+      "text": "there shouldn't be many things to uh to",
+      "offset": 1975080,
+      "duration": 4760
+    },
+    {
+      "text": "catch after that",
+      "offset": 1977080,
+      "duration": 2760
+    },
+    {
+      "text": "oops crap doesn't want to",
+      "offset": 1983120,
+      "duration": 4600
+    },
+    {
+      "text": "come okay here we go so couple of uh",
+      "offset": 1988000,
+      "duration": 7679
+    },
+    {
+      "text": "couple of takeaways about this",
+      "offset": 1993919,
+      "duration": 5120
+    },
+    {
+      "text": "presentation so one is bad code will",
+      "offset": 1995679,
+      "duration": 7880
+    },
+    {
+      "text": "impact code of course but um also it",
+      "offset": 1999039,
+      "duration": 7161
+    },
+    {
+      "text": "will have a big impact on the team code",
+      "offset": 2003559,
+      "duration": 4681
+    },
+    {
+      "text": "is a this is a work on environment of",
+      "offset": 2006200,
+      "duration": 4079
+    },
+    {
+      "text": "developers if the code is bad it's a bad",
+      "offset": 2008240,
+      "duration": 4039
+    },
+    {
+      "text": "work environment for developers and it",
+      "offset": 2010279,
+      "duration": 5081
+    },
+    {
+      "text": "will impact the software bad code is not",
+      "offset": 2012279,
+      "duration": 5520
+    },
+    {
+      "text": "fun because after a while you you're",
+      "offset": 2015360,
+      "duration": 5120
+    },
+    {
+      "text": "going to spend most of your time to",
+      "offset": 2017799,
+      "duration": 5801
+    },
+    {
+      "text": "actually deal with the",
+      "offset": 2020480,
+      "duration": 5520
+    },
+    {
+      "text": "consequences uh of the bad code and with",
+      "offset": 2023600,
+      "duration": 6000
+    },
+    {
+      "text": "the bad code itself knowing is not good",
+      "offset": 2026000,
+      "duration": 6240
+    },
+    {
+      "text": "enough um sorry I said I wouldn't speak",
+      "offset": 2029600,
+      "duration": 4280
+    },
+    {
+      "text": "to about sonar anymore in this",
+      "offset": 2032240,
+      "duration": 3880
+    },
+    {
+      "text": "presentation I will speak about sonar",
+      "offset": 2033880,
+      "duration": 6759
+    },
+    {
+      "text": "again um I hear people saying it's okay",
+      "offset": 2036120,
+      "duration": 7279
+    },
+    {
+      "text": "we do our static analysis with",
+      "offset": 2040639,
+      "duration": 6321
+    },
+    {
+      "text": "sonor okay uh it's not okay actually",
+      "offset": 2043399,
+      "duration": 5680
+    },
+    {
+      "text": "what do you do with it is the real",
+      "offset": 2046960,
+      "duration": 4520
+    },
+    {
+      "text": "question which is knowing sure better",
+      "offset": 2049079,
+      "duration": 5881
+    },
+    {
+      "text": "than not knowing but hey guess what uh",
+      "offset": 2051480,
+      "duration": 5119
+    },
+    {
+      "text": "if you don't know about the quality of",
+      "offset": 2054960,
+      "duration": 5879
+    },
+    {
+      "text": "your code I can tell you it's crap okay",
+      "offset": 2056599,
+      "duration": 5721
+    },
+    {
+      "text": "no no if you don't have if you don't",
+      "offset": 2060839,
+      "duration": 5201
+    },
+    {
+      "text": "have a product uh whatever son or",
+      "offset": 2062320,
+      "duration": 5920
+    },
+    {
+      "text": "another you you you",
+      "offset": 2066040,
+      "duration": 6720
+    },
+    {
+      "text": "you bet the code is bad um we this is",
+      "offset": 2068240,
+      "duration": 6879
+    },
+    {
+      "text": "code is too complex that we can really",
+      "offset": 2072760,
+      "duration": 5040
+    },
+    {
+      "text": "have it clean without uh some external",
+      "offset": 2075119,
+      "duration": 5161
+    },
+    {
+      "text": "help and the last point is the clean as",
+      "offset": 2077800,
+      "duration": 5119
+    },
+    {
+      "text": "you code will help to close this",
+      "offset": 2080280,
+      "duration": 5440
+    },
+    {
+      "text": "Gap I know it sounds",
+      "offset": 2082919,
+      "duration": 5841
+    },
+    {
+      "text": "simplistic we started to use it at sonar",
+      "offset": 2085720,
+      "duration": 5399
+    },
+    {
+      "text": "Source we actually build that approach",
+      "offset": 2088760,
+      "duration": 5480
+    },
+    {
+      "text": "for ourselves because we we were",
+      "offset": 2091119,
+      "duration": 6201
+    },
+    {
+      "text": "struggling at every release uh we wanted",
+      "offset": 2094240,
+      "duration": 3920
+    },
+    {
+      "text": "to have",
+      "offset": 2097320,
+      "duration": 4000
+    },
+    {
+      "text": "at the time 70% of cut coverage and",
+      "offset": 2098160,
+      "duration": 6840
+    },
+    {
+      "text": "every single time we released guess what",
+      "offset": 2101320,
+      "duration": 8039
+    },
+    {
+      "text": "we had 65 67 68 which which was good",
+      "offset": 2105000,
+      "duration": 9240
+    },
+    {
+      "text": "which was okay uh not too bad but we",
+      "offset": 2109359,
+      "duration": 8161
+    },
+    {
+      "text": "couldn't get naturally at 70 to uh to to",
+      "offset": 2114240,
+      "duration": 6640
+    },
+    {
+      "text": "make the 70 we were adding unit test uh",
+      "offset": 2117520,
+      "duration": 6599
+    },
+    {
+      "text": "classes that uh unit test that actually",
+      "offset": 2120880,
+      "duration": 5880
+    },
+    {
+      "text": "cover big classes Etc we were playing",
+      "offset": 2124119,
+      "duration": 5000
+    },
+    {
+      "text": "with the numbers to to feel good in our",
+      "offset": 2126760,
+      "duration": 4640
+    },
+    {
+      "text": "mind and at some stage we were like okay",
+      "offset": 2129119,
+      "duration": 3281
+    },
+    {
+      "text": "three",
+      "offset": 2131400,
+      "duration": 4160
+    },
+    {
+      "text": "founders of this company software",
+      "offset": 2132400,
+      "duration": 5400
+    },
+    {
+      "text": "engineer we totally believe in the value",
+      "offset": 2135560,
+      "duration": 4799
+    },
+    {
+      "text": "of this if we",
+      "offset": 2137800,
+      "duration": 6440
+    },
+    {
+      "text": "cannot achieve our goals who can I mean",
+      "offset": 2140359,
+      "duration": 6401
+    },
+    {
+      "text": "our goals on code quality who who can we",
+      "offset": 2144240,
+      "duration": 4960
+    },
+    {
+      "text": "need to come up with something that will",
+      "offset": 2146760,
+      "duration": 5160
+    },
+    {
+      "text": "work and will be simple to use we",
+      "offset": 2149200,
+      "duration": 5600
+    },
+    {
+      "text": "started to use it so it's very difficult",
+      "offset": 2151920,
+      "duration": 5760
+    },
+    {
+      "text": "U mentally to uh to to stop looking at",
+      "offset": 2154800,
+      "duration": 4920
+    },
+    {
+      "text": "at the overall coverage very difficult",
+      "offset": 2157680,
+      "duration": 3880
+    },
+    {
+      "text": "because you are at like 65 and suddenly",
+      "offset": 2159720,
+      "duration": 5399
+    },
+    {
+      "text": "you say we will not look at the overall",
+      "offset": 2161560,
+      "duration": 6200
+    },
+    {
+      "text": "coverage of the product anymore we will",
+      "offset": 2165119,
+      "duration": 5521
+    },
+    {
+      "text": "only look at the coverage on the new",
+      "offset": 2167760,
+      "duration": 6480
+    },
+    {
+      "text": "code and then we decided our minimum",
+      "offset": 2170640,
+      "duration": 5280
+    },
+    {
+      "text": "should be",
+      "offset": 2174240,
+      "duration": 4599
+    },
+    {
+      "text": "80% and after a while we made it we made",
+      "offset": 2175920,
+      "duration": 6679
+    },
+    {
+      "text": "it 85 because the team said 80 or 85 is",
+      "offset": 2178839,
+      "duration": 7201
+    },
+    {
+      "text": "actually the same and SE them we have",
+      "offset": 2182599,
+      "duration": 6121
+    },
+    {
+      "text": "seen the whole uh grp graph of overall",
+      "offset": 2186040,
+      "duration": 4079
+    },
+    {
+      "text": "code coverage you know this thing we",
+      "offset": 2188720,
+      "duration": 3560
+    },
+    {
+      "text": "don't look at anymore but we still have",
+      "offset": 2190119,
+      "duration": 7601
+    },
+    {
+      "text": "a graph uh we saw it um increasing uh",
+      "offset": 2192280,
+      "duration": 10720
+    },
+    {
+      "text": "slowly and it was very steady um no spec",
+      "offset": 2197720,
+      "duration": 7840
+    },
+    {
+      "text": "no specific effort but at the same time",
+      "offset": 2203000,
+      "duration": 5599
+    },
+    {
+      "text": "a big a big reward so sounds very",
+      "offset": 2205560,
+      "duration": 5519
+    },
+    {
+      "text": "simplistic but it's really impactful it",
+      "offset": 2208599,
+      "duration": 4201
+    },
+    {
+      "text": "is",
+      "offset": 2211079,
+      "duration": 5201
+    },
+    {
+      "text": "simple and this is it and I'm happy to",
+      "offset": 2212800,
+      "duration": 5400
+    },
+    {
+      "text": "take questions on I I think there will",
+      "offset": 2216280,
+      "duration": 5280
+    },
+    {
+      "text": "be a microphone for",
+      "offset": 2218200,
+      "duration": 3360
+    },
+    {
+      "text": "questions and if there are no questions",
+      "offset": 2224319,
+      "duration": 6121
+    },
+    {
+      "text": "I can I can keep asking you",
+      "offset": 2226480,
+      "duration": 3960
+    },
+    {
+      "text": "questions want to hi um thank thank you",
+      "offset": 2234520,
+      "duration": 6079
+    },
+    {
+      "text": "for the presentation it's pretty um",
+      "offset": 2238280,
+      "duration": 3799
+    },
+    {
+      "text": "useful I think I'm going to take this",
+      "offset": 2240599,
+      "duration": 4841
+    },
+    {
+      "text": "back to my team as well um I've got two",
+      "offset": 2242079,
+      "duration": 4841
+    },
+    {
+      "text": "questions one is a little bit of an",
+      "offset": 2245440,
+      "duration": 3800
+    },
+    {
+      "text": "observation um you use the word",
+      "offset": 2246920,
+      "duration": 4800
+    },
+    {
+      "text": "intentional in uh one of the slides to",
+      "offset": 2249240,
+      "duration": 6160
+    },
+    {
+      "text": "explain um how to understand code and um",
+      "offset": 2251720,
+      "duration": 5280
+    },
+    {
+      "text": "uh some some traits that the code is",
+      "offset": 2255400,
+      "duration": 3439
+    },
+    {
+      "text": "supposed to have um I was wondering",
+      "offset": 2257000,
+      "duration": 3480
+    },
+    {
+      "text": "whether the the word",
+      "offset": 2258839,
+      "duration": 4480
+    },
+    {
+      "text": "intuitive because um would make more",
+      "offset": 2260480,
+      "duration": 4639
+    },
+    {
+      "text": "sense because intentional you know",
+      "offset": 2263319,
+      "duration": 4921
+    },
+    {
+      "text": "sometimes people want to write code that",
+      "offset": 2265119,
+      "duration": 5240
+    },
+    {
+      "text": "is not intuitive and they are doing it",
+      "offset": 2268240,
+      "duration": 4480
+    },
+    {
+      "text": "intentionally I had a a colleague who",
+      "offset": 2270359,
+      "duration": 5240
+    },
+    {
+      "text": "wanted to write um convert some logic",
+      "offset": 2272720,
+      "duration": 5240
+    },
+    {
+      "text": "using binary code yeah it would be",
+      "offset": 2275599,
+      "duration": 4041
+    },
+    {
+      "text": "faster you know yes it wouldn't be",
+      "offset": 2277960,
+      "duration": 4920
+    },
+    {
+      "text": "intuitive but it was intentional um I'm",
+      "offset": 2279640,
+      "duration": 5400
+    },
+    {
+      "text": "just just wondering about that uh to",
+      "offset": 2282880,
+      "duration": 3640
+    },
+    {
+      "text": "better understand the word intentional",
+      "offset": 2285040,
+      "duration": 3920
+    },
+    {
+      "text": "and the other question I have is about",
+      "offset": 2286520,
+      "duration": 5480
+    },
+    {
+      "text": "um cleaning as your code um one of the",
+      "offset": 2288960,
+      "duration": 5040
+    },
+    {
+      "text": "problems that I personally have is that",
+      "offset": 2292000,
+      "duration": 4119
+    },
+    {
+      "text": "when I try to develop a feature and you",
+      "offset": 2294000,
+      "duration": 5280
+    },
+    {
+      "text": "know um finish the code I will clean as",
+      "offset": 2296119,
+      "duration": 7720
+    },
+    {
+      "text": "I go but then quite rightfully um a",
+      "offset": 2299280,
+      "duration": 6640
+    },
+    {
+      "text": "Reviewer is going to say I noticed that",
+      "offset": 2303839,
+      "duration": 3321
+    },
+    {
+      "text": "you changed that thing where you were",
+      "offset": 2305920,
+      "duration": 2120
+    },
+    {
+      "text": "coding",
+      "offset": 2307160,
+      "duration": 2640
+    },
+    {
+      "text": "focusing on this bringing in this new",
+      "offset": 2308040,
+      "duration": 3840
+    },
+    {
+      "text": "feature maybe you should raise a",
+      "offset": 2309800,
+      "duration": 4840
+    },
+    {
+      "text": "different PR to to clean up code and",
+      "offset": 2311880,
+      "duration": 4040
+    },
+    {
+      "text": "raise it and you know do it as a",
+      "offset": 2314640,
+      "duration": 4160
+    },
+    {
+      "text": "separate thing and I I try to adhere to",
+      "offset": 2315920,
+      "duration": 5040
+    },
+    {
+      "text": "that because it makes a lot of sense but",
+      "offset": 2318800,
+      "duration": 4080
+    },
+    {
+      "text": "sometimes I I catch myself thinking I'm",
+      "offset": 2320960,
+      "duration": 3159
+    },
+    {
+      "text": "never going to find the time to do it",
+      "offset": 2322880,
+      "duration": 3080
+    },
+    {
+      "text": "later so I want to push it in this PR",
+      "offset": 2324119,
+      "duration": 3960
+    },
+    {
+      "text": "and I get sloppy um do you have any",
+      "offset": 2325960,
+      "duration": 5680
+    },
+    {
+      "text": "advice on how to avoid that so what your",
+      "offset": 2328079,
+      "duration": 7641
+    },
+    {
+      "text": "first uh question uh I think we have a",
+      "offset": 2331640,
+      "duration": 7280
+    },
+    {
+      "text": "sub so intentional I would say is the",
+      "offset": 2335720,
+      "duration": 6359
+    },
+    {
+      "text": "main category and under this there are",
+      "offset": 2338920,
+      "duration": 5840
+    },
+    {
+      "text": "subcategories which I didn't go through",
+      "offset": 2342079,
+      "duration": 5240
+    },
+    {
+      "text": "uh one of them is complete one of them",
+      "offset": 2344760,
+      "duration": 5400
+    },
+    {
+      "text": "is intuitive it's not called intuitive",
+      "offset": 2347319,
+      "duration": 5520
+    },
+    {
+      "text": "but it it relates to uh to what you say",
+      "offset": 2350160,
+      "duration": 6520
+    },
+    {
+      "text": "which is one of the um one of the thing",
+      "offset": 2352839,
+      "duration": 7480
+    },
+    {
+      "text": "when you read code is it has to be if",
+      "offset": 2356680,
+      "duration": 6080
+    },
+    {
+      "text": "you ask 10 developers to read it the 10",
+      "offset": 2360319,
+      "duration": 4081
+    },
+    {
+      "text": "developer should have the same",
+      "offset": 2362760,
+      "duration": 5480
+    },
+    {
+      "text": "understanding of it so definitely",
+      "offset": 2364400,
+      "duration": 6320
+    },
+    {
+      "text": "uh probably this is obvious yes you took",
+      "offset": 2368240,
+      "duration": 5520
+    },
+    {
+      "text": "a photo right okay I thought you knew it",
+      "offset": 2370720,
+      "duration": 6639
+    },
+    {
+      "text": "better than I do um on the on the second",
+      "offset": 2373760,
+      "duration": 6000
+    },
+    {
+      "text": "thing I",
+      "offset": 2377359,
+      "duration": 2401
+    },
+    {
+      "text": "think um so when we say clean as you C",
+      "offset": 2379920,
+      "duration": 9919
+    },
+    {
+      "text": "what we mean is your duty is that every",
+      "offset": 2383960,
+      "duration": 9320
+    },
+    {
+      "text": "line that you change becomes yours so",
+      "offset": 2389839,
+      "duration": 4961
+    },
+    {
+      "text": "you have the responsibility for that",
+      "offset": 2393280,
+      "duration": 3559
+    },
+    {
+      "text": "line if you change if you change a",
+      "offset": 2394800,
+      "duration": 3840
+    },
+    {
+      "text": "method you become the owner of that",
+      "offset": 2396839,
+      "duration": 3401
+    },
+    {
+      "text": "method for the time you change it and",
+      "offset": 2398640,
+      "duration": 4600
+    },
+    {
+      "text": "you should not introduce new problems",
+      "offset": 2400240,
+      "duration": 5879
+    },
+    {
+      "text": "basically in that in that method when it",
+      "offset": 2403240,
+      "duration": 5520
+    },
+    {
+      "text": "comes to remediating um existing",
+      "offset": 2406119,
+      "duration": 5641
+    },
+    {
+      "text": "problems which so if they are part of",
+      "offset": 2408760,
+      "duration": 5520
+    },
+    {
+      "text": "what you are changing not not a problem",
+      "offset": 2411760,
+      "duration": 5160
+    },
+    {
+      "text": "if they are not this is when there is a",
+      "offset": 2414280,
+      "duration": 5839
+    },
+    {
+      "text": "a debate I think if you are in the code",
+      "offset": 2416920,
+      "duration": 5800
+    },
+    {
+      "text": "you see something obvious on you fix it",
+      "offset": 2420119,
+      "duration": 5801
+    },
+    {
+      "text": "uh this is totally fine um but you also",
+      "offset": 2422720,
+      "duration": 4399
+    },
+    {
+      "text": "know that sometimes you're going to fix",
+      "offset": 2425920,
+      "duration": 4320
+    },
+    {
+      "text": "something which seems to be very um",
+      "offset": 2427119,
+      "duration": 5960
+    },
+    {
+      "text": "simple and it it might have side effects",
+      "offset": 2430240,
+      "duration": 3760
+    },
+    {
+      "text": "so",
+      "offset": 2433079,
+      "duration": 4481
+    },
+    {
+      "text": "always um you have to always be careful",
+      "offset": 2434000,
+      "duration": 7079
+    },
+    {
+      "text": "the the big upside of of doing this as",
+      "offset": 2437560,
+      "duration": 5519
+    },
+    {
+      "text": "you develop new features is that they",
+      "offset": 2441079,
+      "duration": 3280
+    },
+    {
+      "text": "will",
+      "offset": 2443079,
+      "duration": 5760
+    },
+    {
+      "text": "be um people are going to be willing to",
+      "offset": 2444359,
+      "duration": 7121
+    },
+    {
+      "text": "do the testing to to to make sure it's",
+      "offset": 2448839,
+      "duration": 4601
+    },
+    {
+      "text": "all fine etc etc because you are",
+      "offset": 2451480,
+      "duration": 4839
+    },
+    {
+      "text": "bringing value to the business so the",
+      "offset": 2453440,
+      "duration": 5440
+    },
+    {
+      "text": "engineering team the users everybody is",
+      "offset": 2456319,
+      "duration": 4601
+    },
+    {
+      "text": "going to be willing to do the effort to",
+      "offset": 2458880,
+      "duration": 4400
+    },
+    {
+      "text": "push the new feature out when you start",
+      "offset": 2460920,
+      "duration": 6280
+    },
+    {
+      "text": "to randomly change uh bits on pieces uh",
+      "offset": 2463280,
+      "duration": 5600
+    },
+    {
+      "text": "this is difficult to",
+      "offset": 2467200,
+      "duration": 3600
+    },
+    {
+      "text": "explain",
+      "offset": 2468880,
+      "duration": 4400
+    },
+    {
+      "text": "that you decided to invest time in",
+      "offset": 2470800,
+      "duration": 4680
+    },
+    {
+      "text": "something that doesn't have Direct Value",
+      "offset": 2473280,
+      "duration": 3600
+    },
+    {
+      "text": "to the business and you broke the",
+      "offset": 2475480,
+      "duration": 3400
+    },
+    {
+      "text": "application that's that's a bit that's a",
+      "offset": 2476880,
+      "duration": 4760
+    },
+    {
+      "text": "bit more difficult so to your point I",
+      "offset": 2478880,
+      "duration": 4120
+    },
+    {
+      "text": "wouldn't do if you fix something",
+      "offset": 2481640,
+      "duration": 4000
+    },
+    {
+      "text": "randomly I wouldn't do a separate PR",
+      "offset": 2483000,
+      "duration": 6599
+    },
+    {
+      "text": "it's okay uh but I would I would not try",
+      "offset": 2485640,
+      "duration": 7479
+    },
+    {
+      "text": "to do um to do this to me is um I",
+      "offset": 2489599,
+      "duration": 6281
+    },
+    {
+      "text": "mentioned it earlier I see many",
+      "offset": 2493119,
+      "duration": 5801
+    },
+    {
+      "text": "companies uh where they do like uh hav",
+      "offset": 2495880,
+      "duration": 4600
+    },
+    {
+      "text": "seen startups where they do like the",
+      "offset": 2498920,
+      "duration": 4240
+    },
+    {
+      "text": "technical dead day this is Wednesday on",
+      "offset": 2500480,
+      "duration": 4680
+    },
+    {
+      "text": "on Wednesday we fix the technical debt",
+      "offset": 2503160,
+      "duration": 3560
+    },
+    {
+      "text": "that we introduce on the other four days",
+      "offset": 2505160,
+      "duration": 2480
+    },
+    {
+      "text": "of the",
+      "offset": 2506720,
+      "duration": 3040
+    },
+    {
+      "text": "week it's",
+      "offset": 2507640,
+      "duration": 4719
+    },
+    {
+      "text": "like why don't you clean as you Cod I",
+      "offset": 2509760,
+      "duration": 4599
+    },
+    {
+      "text": "mean if you don't introduce a problems",
+      "offset": 2512359,
+      "duration": 4881
+    },
+    {
+      "text": "you don't have to fix them and the best",
+      "offset": 2514359,
+      "duration": 6681
+    },
+    {
+      "text": "moment to actually I mean the the the",
+      "offset": 2517240,
+      "duration": 5920
+    },
+    {
+      "text": "best moment to work on that is once it's",
+      "offset": 2521040,
+      "duration": 5600
+    },
+    {
+      "text": "fresh um in your",
+      "offset": 2523160,
+      "duration": 3480
+    },
+    {
+      "text": "mind the Klean A as you code concept is",
+      "offset": 2532720,
+      "duration": 6080
+    },
+    {
+      "text": "great um I've been doing that with test",
+      "offset": 2536400,
+      "duration": 4840
+    },
+    {
+      "text": "coverage for a while but when it comes",
+      "offset": 2538800,
+      "duration": 6000
+    },
+    {
+      "text": "to other issues I imagine sonar Cube has",
+      "offset": 2541240,
+      "duration": 7160
+    },
+    {
+      "text": "all sorts of lint and and logic",
+      "offset": 2544800,
+      "duration": 5759
+    },
+    {
+      "text": "analysis it's tough to change the",
+      "offset": 2548400,
+      "duration": 4679
+    },
+    {
+      "text": "culture of a team how do I get the",
+      "offset": 2550559,
+      "duration": 4441
+    },
+    {
+      "text": "culture of where I work to accept this",
+      "offset": 2553079,
+      "duration": 4361
+    },
+    {
+      "text": "and how do I get the leadership to",
+      "offset": 2555000,
+      "duration": 6559
+    },
+    {
+      "text": "invest in tooling to enable us to do",
+      "offset": 2557440,
+      "duration": 4119
+    },
+    {
+      "text": "so",
+      "offset": 2561640,
+      "duration": 3000
+    },
+    {
+      "text": "so now I I",
+      "offset": 2566920,
+      "duration": 7199
+    },
+    {
+      "text": "am no I was thinking okay for the last",
+      "offset": 2571160,
+      "duration": 4480
+    },
+    {
+      "text": "part I will put you in touch with the",
+      "offset": 2574119,
+      "duration": 5000
+    },
+    {
+      "text": "salesperson from the organization",
+      "offset": 2575640,
+      "duration": 3479
+    },
+    {
+      "text": "no",
+      "offset": 2579359,
+      "duration": 3921
+    },
+    {
+      "text": "but I do not think this is right what",
+      "offset": 2580400,
+      "duration": 5280
+    },
+    {
+      "text": "you said sorry that's why I was",
+      "offset": 2583280,
+      "duration": 4360
+    },
+    {
+      "text": "carefully thinking about the the way I'm",
+      "offset": 2585680,
+      "duration": 4280
+    },
+    {
+      "text": "going to answer which",
+      "offset": 2587640,
+      "duration": 4840
+    },
+    {
+      "text": "is I think if you",
+      "offset": 2589960,
+      "duration": 5760
+    },
+    {
+      "text": "ask your organization which means the",
+      "offset": 2592480,
+      "duration": 6359
+    },
+    {
+      "text": "developers the testers the manager the",
+      "offset": 2595720,
+      "duration": 6280
+    },
+    {
+      "text": "business if you ask everybody to invest",
+      "offset": 2598839,
+      "duration": 5921
+    },
+    {
+      "text": "into something",
+      "offset": 2602000,
+      "duration": 6200
+    },
+    {
+      "text": "like the technical day week or the",
+      "offset": 2604760,
+      "duration": 5440
+    },
+    {
+      "text": "technical day month or something like",
+      "offset": 2608200,
+      "duration": 5240
+    },
+    {
+      "text": "this it's going to require a lot of",
+      "offset": 2610200,
+      "duration": 5440
+    },
+    {
+      "text": "convincing it's going to be really hard",
+      "offset": 2613440,
+      "duration": 4720
+    },
+    {
+      "text": "on it you will really need to to to",
+      "offset": 2615640,
+      "duration": 4439
+    },
+    {
+      "text": "convince people now if you telling",
+      "offset": 2618160,
+      "duration": 6679
+    },
+    {
+      "text": "people hey from now on whenever you make",
+      "offset": 2620079,
+      "duration": 5480
+    },
+    {
+      "text": "a",
+      "offset": 2624839,
+      "duration": 6121
+    },
+    {
+      "text": "change that change cannot introduce new",
+      "offset": 2625559,
+      "duration": 9721
+    },
+    {
+      "text": "issues um it it may be like it may seem",
+      "offset": 2630960,
+      "duration": 5960
+    },
+    {
+      "text": "like a big cultural change but at the",
+      "offset": 2635280,
+      "duration": 4880
+    },
+    {
+      "text": "end end of the day how can anyone push",
+      "offset": 2636920,
+      "duration": 6919
+    },
+    {
+      "text": "back on this I mean honestly how you how",
+      "offset": 2640160,
+      "duration": 5480
+    },
+    {
+      "text": "can you push back and say no no no no no",
+      "offset": 2643839,
+      "duration": 3561
+    },
+    {
+      "text": "I really insist I would like to",
+      "offset": 2645640,
+      "duration": 5400
+    },
+    {
+      "text": "introduce this big bug or this security",
+      "offset": 2647400,
+      "duration": 6120
+    },
+    {
+      "text": "vulnerability I I want to leave",
+      "offset": 2651040,
+      "duration": 4400
+    },
+    {
+      "text": "something to um you know to the next",
+      "offset": 2653520,
+      "duration": 4319
+    },
+    {
+      "text": "generation of",
+      "offset": 2655440,
+      "duration": 4240
+    },
+    {
+      "text": "developers",
+      "offset": 2657839,
+      "duration": 5760
+    },
+    {
+      "text": "so and and and and I would also argue",
+      "offset": 2659680,
+      "duration": 7080
+    },
+    {
+      "text": "that doing good code does not cost more",
+      "offset": 2663599,
+      "duration": 7401
+    },
+    {
+      "text": "than doing bad code",
+      "offset": 2666760,
+      "duration": 4240
+    },
+    {
+      "text": "arguably uh sometimes you have to leave",
+      "offset": 2671319,
+      "duration": 4681
+    },
+    {
+      "text": "with the existing and you cannot just",
+      "offset": 2674160,
+      "duration": 5320
+    },
+    {
+      "text": "refactor all the time when you know but",
+      "offset": 2676000,
+      "duration": 6160
+    },
+    {
+      "text": "in most cases uh it will cost you no",
+      "offset": 2679480,
+      "duration": 4960
+    },
+    {
+      "text": "more the big problem to me the biggest",
+      "offset": 2682160,
+      "duration": 5080
+    },
+    {
+      "text": "problem is when you learn about the",
+      "offset": 2684440,
+      "duration": 6040
+    },
+    {
+      "text": "problem it's too late um I asked earlier",
+      "offset": 2687240,
+      "duration": 7000
+    },
+    {
+      "text": "who uses sonar lots of hands raised okay",
+      "offset": 2690480,
+      "duration": 7839
+    },
+    {
+      "text": "now who uses sonar lint",
+      "offset": 2694240,
+      "duration": 4079
+    },
+    {
+      "text": "no not bad not bad but who doesn't use",
+      "offset": 2698800,
+      "duration": 4240
+    },
+    {
+      "text": "sonar",
+      "offset": 2701200,
+      "duration": 5119
+    },
+    {
+      "text": "lint here you go probably people a lot",
+      "offset": 2703040,
+      "duration": 5559
+    },
+    {
+      "text": "of people we see at the booth they know",
+      "offset": 2706319,
+      "duration": 6000
+    },
+    {
+      "text": "sonar Cube sometimes Cloud rarely lint",
+      "offset": 2708599,
+      "duration": 6520
+    },
+    {
+      "text": "which is if you have it in lint you are",
+      "offset": 2712319,
+      "duration": 5201
+    },
+    {
+      "text": "going to see that as you could so",
+      "offset": 2715119,
+      "duration": 6681
+    },
+    {
+      "text": "basically um we used to say um sonar",
+      "offset": 2717520,
+      "duration": 7160
+    },
+    {
+      "text": "lint on the on the tagline was fix issue",
+      "offset": 2721800,
+      "duration": 5200
+    },
+    {
+      "text": "before they exist which which meant okay",
+      "offset": 2724680,
+      "duration": 4720
+    },
+    {
+      "text": "they will exist only if they reach git",
+      "offset": 2727000,
+      "duration": 3960
+    },
+    {
+      "text": "uh here if you fix them on your local",
+      "offset": 2729400,
+      "duration": 3560
+    },
+    {
+      "text": "machine nobody will know and this is",
+      "offset": 2730960,
+      "duration": 5440
+    },
+    {
+      "text": "really really the best place so to your",
+      "offset": 2732960,
+      "duration": 7960
+    },
+    {
+      "text": "point I I I understand it's a change but",
+      "offset": 2736400,
+      "duration": 6719
+    },
+    {
+      "text": "to me this change is pretty much",
+      "offset": 2740920,
+      "duration": 5000
+    },
+    {
+      "text": "unchallengeable which",
+      "offset": 2743119,
+      "duration": 5480
+    },
+    {
+      "text": "is you you get you need to get",
+      "offset": 2745920,
+      "duration": 4720
+    },
+    {
+      "text": "management buying to make sure it's",
+      "offset": 2748599,
+      "duration": 4681
+    },
+    {
+      "text": "going to be unforced but to me this is",
+      "offset": 2750640,
+      "duration": 5959
+    },
+    {
+      "text": "this is it",
+      "offset": 2753280,
+      "duration": 3319
+    },
+    {
+      "text": "uh maybe next year you can tell me how",
+      "offset": 2757040,
+      "duration": 3920
+    },
+    {
+      "text": "it",
+      "offset": 2758839,
+      "duration": 5801
+    },
+    {
+      "text": "went are there other",
+      "offset": 2760960,
+      "duration": 3680
+    },
+    {
+      "text": "questions hello um thank you for your",
+      "offset": 2773599,
+      "duration": 5281
+    },
+    {
+      "text": "talk it was really nice um before I",
+      "offset": 2776319,
+      "duration": 5361
+    },
+    {
+      "text": "start I just want to say I love sonar",
+      "offset": 2778880,
+      "duration": 8679
+    },
+    {
+      "text": "okay don't hit me but I'm now",
+      "offset": 2781680,
+      "duration": 8639
+    },
+    {
+      "text": "in fact um when newcomers come to did",
+      "offset": 2787559,
+      "duration": 4201
+    },
+    {
+      "text": "the microphone die no when newcomers",
+      "offset": 2790319,
+      "duration": 3000
+    },
+    {
+      "text": "come to our team I tell them son is your",
+      "offset": 2791760,
+      "duration": 4319
+    },
+    {
+      "text": "best friend not your enemy but do you",
+      "offset": 2793319,
+      "duration": 4881
+    },
+    {
+      "text": "think that sometimes zooming into the",
+      "offset": 2796079,
+      "duration": 5681
+    },
+    {
+      "text": "code too much will backfire you like if",
+      "offset": 2798200,
+      "duration": 6399
+    },
+    {
+      "text": "you zoom into the code and start to get",
+      "offset": 2801760,
+      "duration": 5400
+    },
+    {
+      "text": "a little um obsessed with the",
+      "offset": 2804599,
+      "duration": 4720
+    },
+    {
+      "text": "cleanliness this will affect the",
+      "offset": 2807160,
+      "duration": 5159
+    },
+    {
+      "text": "architecture in a way that is",
+      "offset": 2809319,
+      "duration": 4681
+    },
+    {
+      "text": "irreversible so like sometimes you can",
+      "offset": 2812319,
+      "duration": 3121
+    },
+    {
+      "text": "have the cleanest code ever it's the",
+      "offset": 2814000,
+      "duration": 3760
+    },
+    {
+      "text": "most readable",
+      "offset": 2815440,
+      "duration": 6480
+    },
+    {
+      "text": "uh fun to to work with ever but it has",
+      "offset": 2817760,
+      "duration": 6880
+    },
+    {
+      "text": "that one architecture bug in it that you",
+      "offset": 2821920,
+      "duration": 7080
+    },
+    {
+      "text": "cannot um detect yes with static code so",
+      "offset": 2824640,
+      "duration": 8520
+    },
+    {
+      "text": "yes do you think that having um a lot of",
+      "offset": 2829000,
+      "duration": 6920
+    },
+    {
+      "text": "zoom in why am I saying this because",
+      "offset": 2833160,
+      "duration": 5640
+    },
+    {
+      "text": "when you say you need 80% coverage yeah",
+      "offset": 2835920,
+      "duration": 5000
+    },
+    {
+      "text": "you will do whatever is in your power to",
+      "offset": 2838800,
+      "duration": 3840
+    },
+    {
+      "text": "add coverage as you said like you will",
+      "offset": 2840920,
+      "duration": 4480
+    },
+    {
+      "text": "add uh coverage to those big classes in",
+      "offset": 2842640,
+      "duration": 6080
+    },
+    {
+      "text": "our case we do a little more that but um",
+      "offset": 2845400,
+      "duration": 5120
+    },
+    {
+      "text": "it will affect the architecture no no no",
+      "offset": 2848720,
+      "duration": 3280
+    },
+    {
+      "text": "if you look at the new sorry for cut",
+      "offset": 2850520,
+      "duration": 3319
+    },
+    {
+      "text": "coverage if you look at the new code",
+      "offset": 2852000,
+      "duration": 4760
+    },
+    {
+      "text": "yeah uh you are going to have",
+      "offset": 2853839,
+      "duration": 6201
+    },
+    {
+      "text": "to cover the line that you change or",
+      "offset": 2856760,
+      "duration": 5960
+    },
+    {
+      "text": "added so you cannot cheat with the way",
+      "offset": 2860040,
+      "duration": 6880
+    },
+    {
+      "text": "we were cheating at source anymore but I",
+      "offset": 2862720,
+      "duration": 7720
+    },
+    {
+      "text": "but I I think I understand your question",
+      "offset": 2866920,
+      "duration": 3520
+    },
+    {
+      "text": "so okay so the people who should be",
+      "offset": 2871599,
+      "duration": 6480
+    },
+    {
+      "text": "obsessed with codee are the people who",
+      "offset": 2875520,
+      "duration": 7880
+    },
+    {
+      "text": "work at Sonos Source okay this is we we",
+      "offset": 2878079,
+      "duration": 7921
+    },
+    {
+      "text": "should be obsessed to really try to",
+      "offset": 2883400,
+      "duration": 5320
+    },
+    {
+      "text": "provide the best best-in-class tool to",
+      "offset": 2886000,
+      "duration": 5800
+    },
+    {
+      "text": "help other companies I agree I fully",
+      "offset": 2888720,
+      "duration": 5440
+    },
+    {
+      "text": "agree with you which",
+      "offset": 2891800,
+      "duration": 5440
+    },
+    {
+      "text": "is being obsessed about c will will make",
+      "offset": 2894160,
+      "duration": 5199
+    },
+    {
+      "text": "you feel like you are doing a super good",
+      "offset": 2897240,
+      "duration": 3680
+    },
+    {
+      "text": "job when maybe you are completely",
+      "offset": 2899359,
+      "duration": 3960
+    },
+    {
+      "text": "missing the mark totally totally agree",
+      "offset": 2900920,
+      "duration": 5280
+    },
+    {
+      "text": "with that but don't forget this is a",
+      "offset": 2903319,
+      "duration": 4040
+    },
+    {
+      "text": "talk",
+      "offset": 2906200,
+      "duration": 4280
+    },
+    {
+      "text": "where I'm trying to get people to",
+      "offset": 2907359,
+      "duration": 4960
+    },
+    {
+      "text": "understand that actually doing a better",
+      "offset": 2910480,
+      "duration": 6040
+    },
+    {
+      "text": "job is very simple so I have to be",
+      "offset": 2912319,
+      "duration": 6641
+    },
+    {
+      "text": "obsessed with code in that talk to",
+      "offset": 2916520,
+      "duration": 4799
+    },
+    {
+      "text": "actually get people to um to to come",
+      "offset": 2918960,
+      "duration": 5240
+    },
+    {
+      "text": "with me what we are talking about here",
+      "offset": 2921319,
+      "duration": 5201
+    },
+    {
+      "text": "at the end of the day once you have all",
+      "offset": 2924200,
+      "duration": 4600
+    },
+    {
+      "text": "moved into clean as you code approach we",
+      "offset": 2926520,
+      "duration": 4440
+    },
+    {
+      "text": "are just talking about basic hygiene",
+      "offset": 2928800,
+      "duration": 4440
+    },
+    {
+      "text": "which is you the code that you deliver",
+      "offset": 2930960,
+      "duration": 3839
+    },
+    {
+      "text": "has the right level and you don't have",
+      "offset": 2933240,
+      "duration": 3160
+    },
+    {
+      "text": "to put more effort you can actually",
+      "offset": 2934799,
+      "duration": 5320
+    },
+    {
+      "text": "spend your time on energy into solving",
+      "offset": 2936400,
+      "duration": 6120
+    },
+    {
+      "text": "bigger problem like architecture",
+      "offset": 2940119,
+      "duration": 5440
+    },
+    {
+      "text": "functional Innovation etc etc totally",
+      "offset": 2942520,
+      "duration": 6480
+    },
+    {
+      "text": "agree it should be that should be built",
+      "offset": 2945559,
+      "duration": 6280
+    },
+    {
+      "text": "in the code that you deliver but because",
+      "offset": 2949000,
+      "duration": 7040
+    },
+    {
+      "text": "it's not we need to do this uh special",
+      "offset": 2951839,
+      "duration": 7641
+    },
+    {
+      "text": "effort here to uh to actually get people",
+      "offset": 2956040,
+      "duration": 9039
+    },
+    {
+      "text": "to on board with the idea so agree",
+      "offset": 2959480,
+      "duration": 5599
+    },
+    {
+      "text": "um so is the goal to get 100% Kean code",
+      "offset": 2968160,
+      "duration": 7800
+    },
+    {
+      "text": "because it's not is it",
+      "offset": 2973400,
+      "duration": 6080
+    },
+    {
+      "text": "um so",
+      "offset": 2975960,
+      "duration": 5800
+    },
+    {
+      "text": "okay if we",
+      "offset": 2979480,
+      "duration": 6160
+    },
+    {
+      "text": "fix the rules that are not super good in",
+      "offset": 2981760,
+      "duration": 5720
+    },
+    {
+      "text": "the product some some rules are like",
+      "offset": 2985640,
+      "duration": 6600
+    },
+    {
+      "text": "arguable and we should fix that um then",
+      "offset": 2987480,
+      "duration": 8839
+    },
+    {
+      "text": "I believe on new code uh 100% should be",
+      "offset": 2992240,
+      "duration": 6000
+    },
+    {
+      "text": "the go goal is it the goal for the",
+      "offset": 2996319,
+      "duration": 4401
+    },
+    {
+      "text": "overall application no but the more you",
+      "offset": 2998240,
+      "duration": 5760
+    },
+    {
+      "text": "make changes to this application the the",
+      "offset": 3000720,
+      "duration": 6480
+    },
+    {
+      "text": "closer you are going to get to um to a",
+      "offset": 3004000,
+      "duration": 6119
+    },
+    {
+      "text": "100% clean code and these rules are more",
+      "offset": 3007200,
+      "duration": 7159
+    },
+    {
+      "text": "like um Team agreed standards or are",
+      "offset": 3010119,
+      "duration": 6881
+    },
+    {
+      "text": "there general rules from let's say",
+      "offset": 3014359,
+      "duration": 4561
+    },
+    {
+      "text": "generally on the the code language",
+      "offset": 3017000,
+      "duration": 6280
+    },
+    {
+      "text": "itself or so there is a little bit of",
+      "offset": 3018920,
+      "duration": 7800
+    },
+    {
+      "text": "everything which is some rules are uh",
+      "offset": 3023280,
+      "duration": 8079
+    },
+    {
+      "text": "standard across languages some rules are",
+      "offset": 3026720,
+      "duration": 7760
+    },
+    {
+      "text": "um directly on uh construction of the",
+      "offset": 3031359,
+      "duration": 7000
+    },
+    {
+      "text": "language some rules are even on version",
+      "offset": 3034480,
+      "duration": 6319
+    },
+    {
+      "text": "of the language which is to do certain",
+      "offset": 3038359,
+      "duration": 3960
+    },
+    {
+      "text": "things in a newer version of the",
+      "offset": 3040799,
+      "duration": 3401
+    },
+    {
+      "text": "language you have a better construction",
+      "offset": 3042319,
+      "duration": 4280
+    },
+    {
+      "text": "so we recommend that better",
+      "offset": 3044200,
+      "duration": 5240
+    },
+    {
+      "text": "construction uh and some rules are like",
+      "offset": 3046599,
+      "duration": 6921
+    },
+    {
+      "text": "basic style um to to me I mean the way",
+      "offset": 3049440,
+      "duration": 5879
+    },
+    {
+      "text": "we are thinking about it today is the",
+      "offset": 3053520,
+      "duration": 4319
+    },
+    {
+      "text": "curly brace",
+      "offset": 3055319,
+      "duration": 5081
+    },
+    {
+      "text": "just to go back there are two rules and",
+      "offset": 3057839,
+      "duration": 3561
+    },
+    {
+      "text": "you",
+      "offset": 3060400,
+      "duration": 4600
+    },
+    {
+      "text": "can activate one you you could activate",
+      "offset": 3061400,
+      "duration": 5719
+    },
+    {
+      "text": "the two if you want it to one says left",
+      "offset": 3065000,
+      "duration": 3960
+    },
+    {
+      "text": "one says right so you could get a",
+      "offset": 3067119,
+      "duration": 3321
+    },
+    {
+      "text": "violation every time there is a curly",
+      "offset": 3068960,
+      "duration": 2960
+    },
+    {
+      "text": "brace if you want",
+      "offset": 3070440,
+      "duration": 4600
+    },
+    {
+      "text": "to and to me it should be one rule and",
+      "offset": 3071920,
+      "duration": 4600
+    },
+    {
+      "text": "it should be mandatory you cannot",
+      "offset": 3075040,
+      "duration": 4519
+    },
+    {
+      "text": "deactivate like you have to choose if",
+      "offset": 3076520,
+      "duration": 3960
+    },
+    {
+      "text": "you",
+      "offset": 3079559,
+      "duration": 3040
+    },
+    {
+      "text": "cannot",
+      "offset": 3080480,
+      "duration": 5440
+    },
+    {
+      "text": "um if you cannot choose which side your",
+      "offset": 3082599,
+      "duration": 6361
+    },
+    {
+      "text": "CBR is going to be you don't need to use",
+      "offset": 3085920,
+      "duration": 4840
+    },
+    {
+      "text": "Sona I mean you are going to do nothing",
+      "offset": 3088960,
+      "duration": 4599
+    },
+    {
+      "text": "with it this is the base of the base and",
+      "offset": 3090760,
+      "duration": 5400
+    },
+    {
+      "text": "now you all feel I'm a clean Cod",
+      "offset": 3093559,
+      "duration": 4481
+    },
+    {
+      "text": "psychopath okay",
+      "offset": 3096160,
+      "duration": 6679
+    },
+    {
+      "text": "fine does that answer your question",
+      "offset": 3098040,
+      "duration": 4799
+    },
+    {
+      "text": "okay yeah hi um I have a friend and he",
+      "offset": 3105760,
+      "duration": 6760
+    },
+    {
+      "text": "has quite controversial approach and he",
+      "offset": 3110119,
+      "duration": 5161
+    },
+    {
+      "text": "said that basically they're trying to",
+      "offset": 3112520,
+      "duration": 4120
+    },
+    {
+      "text": "reuse the code as much as possible",
+      "offset": 3115280,
+      "duration": 3760
+    },
+    {
+      "text": "possible copy pasting and so on because",
+      "offset": 3116640,
+      "duration": 5320
+    },
+    {
+      "text": "it reduces the complexity and it makes",
+      "offset": 3119040,
+      "duration": 4720
+    },
+    {
+      "text": "it much easier for new people who are",
+      "offset": 3121960,
+      "duration": 3480
+    },
+    {
+      "text": "coming into the system because when",
+      "offset": 3123760,
+      "duration": 3720
+    },
+    {
+      "text": "you're starting over engineering your",
+      "offset": 3125440,
+      "duration": 4320
+    },
+    {
+      "text": "code introducing a method which calls a",
+      "offset": 3127480,
+      "duration": 4520
+    },
+    {
+      "text": "method which calls a class and so on it",
+      "offset": 3129760,
+      "duration": 6480
+    },
+    {
+      "text": "becomes really complex and hard for some",
+      "offset": 3132000,
+      "duration": 8319
+    },
+    {
+      "text": "so is there a golden like SP",
+      "offset": 3136240,
+      "duration": 7960
+    },
+    {
+      "text": "here I think over engineering is as bad",
+      "offset": 3140319,
+      "duration": 7161
+    },
+    {
+      "text": "as uh under engineering",
+      "offset": 3144200,
+      "duration": 6879
+    },
+    {
+      "text": "uh which is think think about a copy",
+      "offset": 3147480,
+      "duration": 8160
+    },
+    {
+      "text": "paste uh I mean uh if you if you",
+      "offset": 3151079,
+      "duration": 6921
+    },
+    {
+      "text": "have been in a system where there are",
+      "offset": 3155640,
+      "duration": 5320
+    },
+    {
+      "text": "lots of copy paste you need to fix",
+      "offset": 3158000,
+      "duration": 5440
+    },
+    {
+      "text": "something and you're going to fix it in",
+      "offset": 3160960,
+      "duration": 6520
+    },
+    {
+      "text": "several places and it doesn't work and",
+      "offset": 3163440,
+      "duration": 6159
+    },
+    {
+      "text": "then you find another place and another",
+      "offset": 3167480,
+      "duration": 4960
+    },
+    {
+      "text": "place and another place this is Extreme",
+      "offset": 3169599,
+      "duration": 5841
+    },
+    {
+      "text": "it's a big waste of time basically so",
+      "offset": 3172440,
+      "duration": 7399
+    },
+    {
+      "text": "yes uh uh over engineering makes it very",
+      "offset": 3175440,
+      "duration": 6480
+    },
+    {
+      "text": "difficult to understand the system as a",
+      "offset": 3179839,
+      "duration": 3561
+    },
+    {
+      "text": "whole and you start to make random",
+      "offset": 3181920,
+      "duration": 3960
+    },
+    {
+      "text": "changes but if you under engineer and if",
+      "offset": 3183400,
+      "duration": 5840
+    },
+    {
+      "text": "you just copy paste everything I mean if",
+      "offset": 3185880,
+      "duration": 6239
+    },
+    {
+      "text": "it's a marketing if it's a website which",
+      "offset": 3189240,
+      "duration": 5800
+    },
+    {
+      "text": "is going to be up for three weeks it's",
+      "offset": 3192119,
+      "duration": 6081
+    },
+    {
+      "text": "okay this disposible application but in",
+      "offset": 3195040,
+      "duration": 6279
+    },
+    {
+      "text": "I cannot think about another case where",
+      "offset": 3198200,
+      "duration": 6000
+    },
+    {
+      "text": "it's okay to actually replicate the code",
+      "offset": 3201319,
+      "duration": 4760
+    },
+    {
+      "text": "everywhere because when you need to make",
+      "offset": 3204200,
+      "duration": 3879
+    },
+    {
+      "text": "a single change you are going to have to",
+      "offset": 3206079,
+      "duration": 6401
+    },
+    {
+      "text": "do it everywhere also so to me this is a",
+      "offset": 3208079,
+      "duration": 6760
+    },
+    {
+      "text": "this is really a balance and by the way",
+      "offset": 3212480,
+      "duration": 4720
+    },
+    {
+      "text": "I um",
+      "offset": 3214839,
+      "duration": 6041
+    },
+    {
+      "text": "this there is a big stop sign",
+      "offset": 3217200,
+      "duration": 8760
+    },
+    {
+      "text": "now so thank you very much I will uh",
+      "offset": 3220880,
+      "duration": 7040
+    },
+    {
+      "text": "finish to answer your question uh after",
+      "offset": 3225960,
+      "duration": 6480
+    },
+    {
+      "text": "that thank you very much thank you",
+      "offset": 3227920,
+      "duration": 4520
+    },
+    {
+      "text": "[Music]",
+      "offset": 3235670,
+      "duration": 5449
+    }
+  ],
+  "fullText": "[Music] hello everybody thanks for joining this session about clean code and before I really talk about clean code I'm going to do just a quick introduction so I'm Olivier uh CEO on the co-founder of sonar source so I started this a long time ago uh basically 15 years ago and uh sonar source is a company based in Switzerland in Geneva uh and sonar Source develops and promotes uh three products sonar lint sonar Cube and sonar cloud and we have a boost downstairs if you want to talk more about the product otherwise this is probably the last time you're going to hear about Sona in this talk before I go uh on on I start can I ask who knows Sona who uses Sona very good very good who doesn't no son okay okay that's okay always risky uh as a question to start with anyway so um what I'm going to do today is I'm mostly going to talk about code uh I feel uh as a software engineer that we always forget how code how important code is uh we always tend to spend a lot of time a lot of energy a lot of focus talking about many other things and we I would say neglect uh code when actually um I would I would argue that this is one of the most important thing when you build on operate software and I would say that in my view there are three really important thing when you build software one is a team uh this is super important unless you have a team uh it's going to be hard I do not think that uh copilot will run operate maintain adapt Etc software it will be helpful AI can certainly help many other things can help Frameworks can help but at the end of the day uh software is going to be built by a team the second thing is and there is no priority order here but these are the three most important thing in my opinion the second thing is code the code is super important and I will come in a minute to it and the last one of course is the software itself which is what does it do is it is it doing what it's supposed to do does it behave the way it's supposed to behave etc etc it's extremely important of course um moving a little bit in how do we at sonar see the world so in case you didn't recognize this is a tree it's a very modern uh tree actually and we feel that software uh is a little bit like uh like a tree which is there are two parts uh one is the part which is above the ground the part that you see what you really aim for when you do a software which is this is basically the functional part what your software uh is going to do um how it's going to behave what service it's going to R to the business and that part in uh at at sonar this is really the part we we don't take care of we take care of all the rest which is the part which is below the ground the root basically to make sure that the root of the software are solid and this part is extremely important uh it's called it's quite funny it's called non-functional requirements all the thing around stability security um sometimes performance also sometimes performance can also be uh functional requirement for certain domains and these parts are very often the part that we forget to specify when we do a software specification you know like if you ask people and you say do you want the software to be stable fast secure Etc the answer is going to be of course but this is not written anywhere and this is what so the top part we call it this is how the software perform uh sorry behaves on the bottom part is how the software performs and we really focus on the second part but if you think about it when you talk about code code is going to dictate both code is going to dictate how the software behaves and it's going to dictate how the software performs code I would argue is the only real asset that you have as a as a software engineering team to build your software everything else everything else is either a commodity which you can replace or a disposable something that you can throw away when you don't need it anymore um code is the one thing you cannot replace you cannot uh which is not a commodity it's going to really dictate these two things right I forgot to say I will make sure there are uh there is time for questions uh at the end I will try to have 10 minutes so very very important and it is super important to do clean code and the thing which is uh I me this this is uh kind of difficult to talk about clean code because people ask what is clean code and very often what you see in your software is when the code is not clean so we tend to to talk about Bad Code junk code sometimes dirty code but not too much so I'm going to talk a little bit about not so clean code on what happens um when your code is not clean so what happens is you get what we call technical debt which is you get small problems here and there and if you are a little bit of technical debt if you have a few issues in the code it's okay um it's it's actually not bad to have a few problems what's really bad is when you have so many problems that you only deal with these problems and you do not you cannot basically improve the software anymore you cannot add more value to the business you keep spending all your time trying just to uh basically survive this is security problems stability problems you want to change something and you break something else etc etc who has never seen that happening around them okay good I'm glad to see that uh I got a room of fans here so we call that technical debt a little bit of technical debt okay a lot of technical debt you basically spend your entire life uh working on this on honest ly this is not fun this is not much value to the business um there is also an argument that the only way to really measure technical debt is this way uh I actually do not think this is true I think we have AOL there are now tools and products to do this and I will talk a little bit later about this now so what back to the question what is clean code um we believe that clean code and I'm going to spend a little bit of time on this is to explain clean code is codee which is consistent intentional responsible and adaptable why is it important to uh to formalize this it's important because I want to map this to actually the consequences of not having clean code a bit a bit later on so why is it important that code is consistent because many people are going to interact with that code and you do not want each and everyone to Define their own um styles or ways of doing things you want to the code to be as um consistent as possible in order to be for the team to to Really own it and for anyone to be able to change something that's one the second thing is if you think about it who who had issues about debates about left curly brace braces or right curly braces okay only two I mean you guys are too shy I'm sure many more um honestly should the curly brace be on the right or on the left to me doesn't matter I've got a preference I've got a personal preference but what really matters is that we agree one way or the other and then the whole code is consistent why because if we don't do that every time you're going to hit one every time you are going to read some lines of code you are going to wonder okay is it on the left is it on the right this two seconds you are spending there is just a waste of time a waste of energy if you multiply it by whatever 10 people in your team uh whatever 100 team in your organization at the end of the day it's a massive waste of time what value do you get for this you just won the ego battle around okay we won I mean I win every time I put a curly brace and but everybody wins but at the end of the day the team uh loses so consistency is super important and here I'm talking about style but I'm also talking about um constructions which is to solve a certain problem we should try to always use uh the same approach and that needs to be agreed with a team so that's one the second thing is intentionality this is is all about logical errors code that can never be reach so that code would you really intentionally leave code that is dead uh in your program um apart from confusing other people uh you don't want to do this but it's also about um memory leaks if if if a leak uh if there is a leak in your code it means your code is incomplete if there is a security vulnerability in your code which means if somebody can inject data which is going to reach a critical component of your application something is missing in in that case a sanitizer is missing in your code so these are all the kind of problems that we classify about intentional adaptable is about you need to be able to change your application uh in in you you need to be able to make changes to your application in a way which is um reasonable fairly cost effective and without breaking everything so anything which has to do with complexity of code anything which has to do with duplication anything which has to do with design will fall under that part and this is obviously extremely important um when people refer to technical Deb um very often it's because they cannot change uh the software anymore at all and generally this is because they have a major problem in that category on the last one is about the code has to be responsible which is it has to be inclusive you cannot uh you you cannot uh you cannot just steal code somewhere on use it in your application etc etc so the last part will not really have an impact on your software or on your team but it's more more like uh it's it's more about compliance so why does this matter um this matter because specifically the first three categories here will have two impacts one it will have an impact on your Dev team I uh already mentioned if you if the code is not consistent every line you're are going to wonder is this more this more that try to read an email which is written in many fonts or many size of font or which is larger as a screen when you start to have to uh to scroll horizontally that becomes uh very uh painful so will have an impact on your team it will also have an impact on the software uh if the software is not if you don't use sanitizer uh to sanitize data which is injected by user uh at the end of the day somebody will catch it it's just a matter of time somebody from Security will catch it and they will come back and they will ask to fix it which is fair enough which means rework you have to reload the whole programm in memory and all of that to to add no value to the business the only thing you do is you avoid to destroy value for the business that's the only thing you do when you when you fix such an issue um so my three pillars team software codes uh oops uhuh here we are okay so now what I would like to do is I would like to do pretty uh quickly a mapping here between the categories that I mentioned and what happens to the team and to the software so the responsible part mentioned it already this is mostly about compliance um this is for the people in the team to comply to company mostly to to to company rules and for the software to comply to Industry standards like you shall not steal code that's kind of a I would say that's a legal requirement but also uh to certain industry standards um if if you guys I don't some of you work in U automotive industry in automotive industry you have certain um s certain standards that needs to be followed and here your code being responsible means you're going to follow these standards um so first so the rest is a kind of a pyramid which is everything is built on top of uh previous level so if the code is not consistent we always have say not in our world um this is going to be super difficult for your team to be accountable for for that code basically which is very difficult to have Collective ownership uh very it's going to be mostly each and everyone owns a little a little part of the software and it's difficult to get all of that together if the code is not consistent it's going to be very difficult to maintain the software which is every change you want to make is going to take a bit longer it's going to be a bit more risky on and maybe before I um I I go up here I just should just summarize how we see software uh it's a very simple way software is being run uh so basically you run it in production and you need to be able to maintain it maintaining just means make sure it runs smoothly if there is a bug you fix it if there is a security vulnerability you uh you fix it if there is I don't know like a button needs to be changed slightly you can change it but this is the kind of um changes you are talking about when you talk about maintenance which is things which will not impact the behavior of the software IE the functionality of the software evolving means you are actually changing uh um the functionality of the software you are changing the behavior it's something totally different I mean in both cases you are you are changing the code but it's the kind of code change is totally different so if the code is not consistent it's going to be hard it's going to be harder to maintain so this is really the first thing you need to obtain the second thing is intentional the code has to be intentional um it mean if it is in ntional it means it's going to be much easier for the team to be predictable any surprise in your code like I'm going to just pick random examples here but things like always true always uh false conditions are leading to confusion and potentially to bugs why would you have an always false condition in a loop because you felt it was super smart to actually keep that piece of code but that nobody nothing can reach it sure there are other ways um there are other ways to do this so anything here which um if your code is very intentional your team is going to be more predictable why because when you make a change you will not have to spend minutes days or minutes hours days to understand what the code does that's for one plus all the problems that you are not sending to production you are not going to have to fix them uh to have the software running smoothly and obviously um to run the software it's it's going to have a direct impact on this running the software the last part is adaptability which is it's really about as I mentioned earlier design architecture picture but also things like uh copy paste in the code which uh eventually lead back to a design uh to a design problem unless your code is adaptable at some stage it will be hard to make it evolve which is this software which you see that are paralyzed at some stage um most of the time this is because uh code is not adaptable and if the code is adaptable your team will really become effective because when you say this is going to take me a day it will really take you a day to change there is a very interesting uh diagram which um uh which represent actually the real work that is done uh by teams um I don't have it in this presentation but I'm I'm going to describe it which is if you think as a developer that you are spending 30 hours to do development so let's say you do 10 hours of other things not development not direct development the reality is probably that you are spending half of this really in doing uh effective development you're probably going to you are probably spending out of the non-effective development you're probably spending a third in extra time because the code was not really consistent intentional this is what we call the lowlevel um the the code level sorry technical Deb which is basically all these little things that make you waste a little bit of time and you are spending another uh 70% of that time is spent actually to fix is this existing problem that you have in the code which is basically reworking this um I don't know if it explains directly why every time we say it's going to take a week it actually takes two uh but but probably that's one of the one of the reason okay [Music] um okay so what um I'm not I'm not going to go into how to measure what you can do etc etc there are quite a few tools um out there to do this um and most of these Tool uh unable to find problems so Sona finds problem but you also have tools like on each language things like CPP check fine bugs check style etc etc there are a lot of tools out there that can help you find problems on problems of different Natures uh a lot of tools um look at security problems today uh security is important don't get me wrong but I think only looking at security is a big mistake which is you are solving one um one side of the equation which is the security side but there are many other aspect which in my opinion impact much more engineering team um so all these tools they can measure on then you are presented with uh with results and then what do you do that's that's always a big question um I I summarize it with um I don't know if you guys know uh a product called Snak so Snak finds very um security vulnerabilities on Snak actually stands for so now you know which is exactly what what the tools does which is to show you the thing each on every company Z each and every team within a company Z has their own policy or rule or process to solve problems in most cases the policy is there is actually the policy is we leave it each to every individual to do whatever they want on the pro on the problem that's roughly the policy unless this is something which crashes the production or this is something which creates a real vulnerability we leave it up to Engineers to decide what they are going to do with a problem in some cases people block they stop you pushing more and very often it uh it gets escalated and after a while uh this becomes impossible to continue to block so people have to just uh let go um by the way if you ask I think if you ask most um engineering managers or CIO CTO or head of engineering if you if you ask them do you think the quality of the code today is better that what it will be in one year or worse at what it will be in one year the general answer you get is it is better which mean people expect that the quality of the code is going to decrease throughout time and I think overall we have come to a point where we feel this is a we are how do we say it's it's a little bit like a fatalism which is there is nothing um we can do about it had a very good conversation earlier about this which is hey we don't really have time for this or we try to block sometime to fix it etc etc it doesn't work that that these approaches do not work okay so how can we impact so most important thing is when you think about this problem you should think about it as a water leak that's a big big leak but I would uh I would argue that the leak is probably the same in your organization when it comes to clean coat so super easy question when you have a water leak at home what do you do first shut off the water fix the leak right why do you not start to mob the floor before shutting the water no trap tell me what's that more water will come exactly it's useless right you are you mopping more water is coming so totally useless think about code let's say that after this session you liked it so much you decide to install Sona immediately you run it you have 10,000 issues what what do you do stop start to Mo the floor exactly I mean I don't know why when it's about water this is very intutive there is no point to mop the floor unless until we have fixed the leak super intuitive we we would all react the same when it's about code for some reasons the first thing we want to do is we were like I've got this issue and that issue Etc I have to fix them I have to fix them immediately and if you think about it there is a big water leak uh in the meantime which is people keep developing the same way they have always developed and you are basically fighting against the you're you're climbing a mountain you will never have an impact by having this approach and to me this is when it comes to our domain this is this thing which is stopping us to solve um the clean code problem which is super obvious problem since 10 years ago I said 50 years so now it must be since 60 years we know about this we know the impact we know we shouldn't do that and we don't really do something about it and I think this is simply because we look at the wrong problem we are looking at making the software totally clean before uh we fix basically the link so in order to solve that problem we think that there is a much better approach which is super simple and super effective which is to do what we call clean as you code it used to be uh called fix the leak but apparently clean as you coulde is better for engineering organizations where basically what you are saying is every developer own their code and as such to do a good job you should not introduce new problems so every time you change code every time you add code you don't introduce problems we are asking nobody to solve problem that were introduced 10 15 years ago not not the goal that belongs to someone else and maybe we should do something about this but this is not developers responsibility to actually fix that while they are developing so the only thing we are saying is as a developer you should be be developing new features or changing existing features on as part of this the code that you deliver should be clear um if you think about it this is kind of just very basic on standard right what else would you expect from any good developer um you also get a chance to uh learn as you could and one big big big upside of this approach is it's a forward looking approach what do I mean by this I mean it doesn't matter what your standard is today you can always increase it later on and you have built no backlog I'm going to take uh a very simple example about this which is if you think about cut coverage so if you start to do unit test in your organization and you want to have uh if you want to to monitor coverage which by the way you should do [Music] um what you would do is rather than looking at the overall coverage you would look at the new code coverage which is every time you change a line every time you add a line of code it should be covered you may have a pretty junior team which is not really used to to write unit test in that case you want to start with maybe like okay 50% of the uh I should have 50% of coverage on uh the new lines it's okay if if you want to raise it to 80% later on it's okay because the new bar will be on the future code not on the past so you are totally fine to progressively increase this which also makes it much easier to onboard people on the approach okay as we say in French the second key School effect which probably doesn't resonate here so there is another upside uh to this which is so F first big thing is developers will do a good job which is all the codes that they deliver will be clean the second impact that it has is that because by Nature we keep changing software I mean software is a never ending um uh it's it's a it's a it's a moving uh um how do we say it's a moving asset you you always change software you need new features you need to comply to regulation there is a new version of java etc etc so because we keep changing software every time we change a code it act its quality will increase at least not decrease but in general it will increase because you will change lines of code so industry standard is that 20 in average 20% of a code based get change every year so it means if you follow this after one year 20% of the lines of code will be clean think about it after five years that might be 50% uh because there there is overlap so it's not going to be 100% of course um if you thought about cleaning up 50% of your software um that would be probably an impossible job here you do it as you develop code and of course all of this has to be super integrated to the to the development pipeline which is you cannot you cannot do clean as you could by looking at what's going to go to production it's too late when it's about to go to production um I mean you won't be able to stand and push uh on on and push back on this so it really has to start in the ID it has to happen at the change request merge request pull request you you you you name it uh level um which is this is where between the ID and the pool request this is where most of the issues are going to be CAU anything that passes a pull request should be like an exception it should be a oneoff but there shouldn't be many things to uh to catch after that oops crap doesn't want to come okay here we go so couple of uh couple of takeaways about this presentation so one is bad code will impact code of course but um also it will have a big impact on the team code is a this is a work on environment of developers if the code is bad it's a bad work environment for developers and it will impact the software bad code is not fun because after a while you you're going to spend most of your time to actually deal with the consequences uh of the bad code and with the bad code itself knowing is not good enough um sorry I said I wouldn't speak to about sonar anymore in this presentation I will speak about sonar again um I hear people saying it's okay we do our static analysis with sonor okay uh it's not okay actually what do you do with it is the real question which is knowing sure better than not knowing but hey guess what uh if you don't know about the quality of your code I can tell you it's crap okay no no if you don't have if you don't have a product uh whatever son or another you you you you bet the code is bad um we this is code is too complex that we can really have it clean without uh some external help and the last point is the clean as you code will help to close this Gap I know it sounds simplistic we started to use it at sonar Source we actually build that approach for ourselves because we we were struggling at every release uh we wanted to have at the time 70% of cut coverage and every single time we released guess what we had 65 67 68 which which was good which was okay uh not too bad but we couldn't get naturally at 70 to uh to to make the 70 we were adding unit test uh classes that uh unit test that actually cover big classes Etc we were playing with the numbers to to feel good in our mind and at some stage we were like okay three founders of this company software engineer we totally believe in the value of this if we cannot achieve our goals who can I mean our goals on code quality who who can we need to come up with something that will work and will be simple to use we started to use it so it's very difficult U mentally to uh to to stop looking at at the overall coverage very difficult because you are at like 65 and suddenly you say we will not look at the overall coverage of the product anymore we will only look at the coverage on the new code and then we decided our minimum should be 80% and after a while we made it we made it 85 because the team said 80 or 85 is actually the same and SE them we have seen the whole uh grp graph of overall code coverage you know this thing we don't look at anymore but we still have a graph uh we saw it um increasing uh slowly and it was very steady um no spec no specific effort but at the same time a big a big reward so sounds very simplistic but it's really impactful it is simple and this is it and I'm happy to take questions on I I think there will be a microphone for questions and if there are no questions I can I can keep asking you questions want to hi um thank thank you for the presentation it's pretty um useful I think I'm going to take this back to my team as well um I've got two questions one is a little bit of an observation um you use the word intentional in uh one of the slides to explain um how to understand code and um uh some some traits that the code is supposed to have um I was wondering whether the the word intuitive because um would make more sense because intentional you know sometimes people want to write code that is not intuitive and they are doing it intentionally I had a a colleague who wanted to write um convert some logic using binary code yeah it would be faster you know yes it wouldn't be intuitive but it was intentional um I'm just just wondering about that uh to better understand the word intentional and the other question I have is about um cleaning as your code um one of the problems that I personally have is that when I try to develop a feature and you know um finish the code I will clean as I go but then quite rightfully um a Reviewer is going to say I noticed that you changed that thing where you were coding focusing on this bringing in this new feature maybe you should raise a different PR to to clean up code and raise it and you know do it as a separate thing and I I try to adhere to that because it makes a lot of sense but sometimes I I catch myself thinking I'm never going to find the time to do it later so I want to push it in this PR and I get sloppy um do you have any advice on how to avoid that so what your first uh question uh I think we have a sub so intentional I would say is the main category and under this there are subcategories which I didn't go through uh one of them is complete one of them is intuitive it's not called intuitive but it it relates to uh to what you say which is one of the um one of the thing when you read code is it has to be if you ask 10 developers to read it the 10 developer should have the same understanding of it so definitely uh probably this is obvious yes you took a photo right okay I thought you knew it better than I do um on the on the second thing I think um so when we say clean as you C what we mean is your duty is that every line that you change becomes yours so you have the responsibility for that line if you change if you change a method you become the owner of that method for the time you change it and you should not introduce new problems basically in that in that method when it comes to remediating um existing problems which so if they are part of what you are changing not not a problem if they are not this is when there is a a debate I think if you are in the code you see something obvious on you fix it uh this is totally fine um but you also know that sometimes you're going to fix something which seems to be very um simple and it it might have side effects so always um you have to always be careful the the big upside of of doing this as you develop new features is that they will be um people are going to be willing to do the testing to to to make sure it's all fine etc etc because you are bringing value to the business so the engineering team the users everybody is going to be willing to do the effort to push the new feature out when you start to randomly change uh bits on pieces uh this is difficult to explain that you decided to invest time in something that doesn't have Direct Value to the business and you broke the application that's that's a bit that's a bit more difficult so to your point I wouldn't do if you fix something randomly I wouldn't do a separate PR it's okay uh but I would I would not try to do um to do this to me is um I mentioned it earlier I see many companies uh where they do like uh hav seen startups where they do like the technical dead day this is Wednesday on on Wednesday we fix the technical debt that we introduce on the other four days of the week it's like why don't you clean as you Cod I mean if you don't introduce a problems you don't have to fix them and the best moment to actually I mean the the the best moment to work on that is once it's fresh um in your mind the Klean A as you code concept is great um I've been doing that with test coverage for a while but when it comes to other issues I imagine sonar Cube has all sorts of lint and and logic analysis it's tough to change the culture of a team how do I get the culture of where I work to accept this and how do I get the leadership to invest in tooling to enable us to do so so now I I am no I was thinking okay for the last part I will put you in touch with the salesperson from the organization no but I do not think this is right what you said sorry that's why I was carefully thinking about the the way I'm going to answer which is I think if you ask your organization which means the developers the testers the manager the business if you ask everybody to invest into something like the technical day week or the technical day month or something like this it's going to require a lot of convincing it's going to be really hard on it you will really need to to to convince people now if you telling people hey from now on whenever you make a change that change cannot introduce new issues um it it may be like it may seem like a big cultural change but at the end end of the day how can anyone push back on this I mean honestly how you how can you push back and say no no no no no I really insist I would like to introduce this big bug or this security vulnerability I I want to leave something to um you know to the next generation of developers so and and and and I would also argue that doing good code does not cost more than doing bad code arguably uh sometimes you have to leave with the existing and you cannot just refactor all the time when you know but in most cases uh it will cost you no more the big problem to me the biggest problem is when you learn about the problem it's too late um I asked earlier who uses sonar lots of hands raised okay now who uses sonar lint no not bad not bad but who doesn't use sonar lint here you go probably people a lot of people we see at the booth they know sonar Cube sometimes Cloud rarely lint which is if you have it in lint you are going to see that as you could so basically um we used to say um sonar lint on the on the tagline was fix issue before they exist which which meant okay they will exist only if they reach git uh here if you fix them on your local machine nobody will know and this is really really the best place so to your point I I I understand it's a change but to me this change is pretty much unchallengeable which is you you get you need to get management buying to make sure it's going to be unforced but to me this is this is it uh maybe next year you can tell me how it went are there other questions hello um thank you for your talk it was really nice um before I start I just want to say I love sonar okay don't hit me but I'm now in fact um when newcomers come to did the microphone die no when newcomers come to our team I tell them son is your best friend not your enemy but do you think that sometimes zooming into the code too much will backfire you like if you zoom into the code and start to get a little um obsessed with the cleanliness this will affect the architecture in a way that is irreversible so like sometimes you can have the cleanest code ever it's the most readable uh fun to to work with ever but it has that one architecture bug in it that you cannot um detect yes with static code so yes do you think that having um a lot of zoom in why am I saying this because when you say you need 80% coverage yeah you will do whatever is in your power to add coverage as you said like you will add uh coverage to those big classes in our case we do a little more that but um it will affect the architecture no no no if you look at the new sorry for cut coverage if you look at the new code yeah uh you are going to have to cover the line that you change or added so you cannot cheat with the way we were cheating at source anymore but I but I I think I understand your question so okay so the people who should be obsessed with codee are the people who work at Sonos Source okay this is we we should be obsessed to really try to provide the best best-in-class tool to help other companies I agree I fully agree with you which is being obsessed about c will will make you feel like you are doing a super good job when maybe you are completely missing the mark totally totally agree with that but don't forget this is a talk where I'm trying to get people to understand that actually doing a better job is very simple so I have to be obsessed with code in that talk to actually get people to um to to come with me what we are talking about here at the end of the day once you have all moved into clean as you code approach we are just talking about basic hygiene which is you the code that you deliver has the right level and you don't have to put more effort you can actually spend your time on energy into solving bigger problem like architecture functional Innovation etc etc totally agree it should be that should be built in the code that you deliver but because it's not we need to do this uh special effort here to uh to actually get people to on board with the idea so agree um so is the goal to get 100% Kean code because it's not is it um so okay if we fix the rules that are not super good in the product some some rules are like arguable and we should fix that um then I believe on new code uh 100% should be the go goal is it the goal for the overall application no but the more you make changes to this application the the closer you are going to get to um to a 100% clean code and these rules are more like um Team agreed standards or are there general rules from let's say generally on the the code language itself or so there is a little bit of everything which is some rules are uh standard across languages some rules are um directly on uh construction of the language some rules are even on version of the language which is to do certain things in a newer version of the language you have a better construction so we recommend that better construction uh and some rules are like basic style um to to me I mean the way we are thinking about it today is the curly brace just to go back there are two rules and you can activate one you you could activate the two if you want it to one says left one says right so you could get a violation every time there is a curly brace if you want to and to me it should be one rule and it should be mandatory you cannot deactivate like you have to choose if you cannot um if you cannot choose which side your CBR is going to be you don't need to use Sona I mean you are going to do nothing with it this is the base of the base and now you all feel I'm a clean Cod psychopath okay fine does that answer your question okay yeah hi um I have a friend and he has quite controversial approach and he said that basically they're trying to reuse the code as much as possible possible copy pasting and so on because it reduces the complexity and it makes it much easier for new people who are coming into the system because when you're starting over engineering your code introducing a method which calls a method which calls a class and so on it becomes really complex and hard for some so is there a golden like SP here I think over engineering is as bad as uh under engineering uh which is think think about a copy paste uh I mean uh if you if you have been in a system where there are lots of copy paste you need to fix something and you're going to fix it in several places and it doesn't work and then you find another place and another place and another place this is Extreme it's a big waste of time basically so yes uh uh over engineering makes it very difficult to understand the system as a whole and you start to make random changes but if you under engineer and if you just copy paste everything I mean if it's a marketing if it's a website which is going to be up for three weeks it's okay this disposible application but in I cannot think about another case where it's okay to actually replicate the code everywhere because when you need to make a single change you are going to have to do it everywhere also so to me this is a this is really a balance and by the way I um this there is a big stop sign now so thank you very much I will uh finish to answer your question uh after that thank you very much thank you [Music]",
+  "fetchedAt": "2026-03-14T09:23:20.099Z"
+}

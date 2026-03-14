@@ -1,0 +1,1293 @@
+{
+  "videoId": "v98",
+  "youtubeId": "t87V5bxUHRM",
+  "segments": [
+    {
+      "text": "Doing what technical that and presents you with a sustainable approach approach to not just effectively manage your existing technical debt, but also preventing a future one from accumulating.",
+      "offset": 15246,
+      "duration": 11000
+    },
+    {
+      "text": "My name is Bianco. I'll be your moderator for the session, which will be presented by Speaking of the Vivek, Vivek is a product manager at Sonar.",
+      "offset": 26246,
+      "duration": 13000
+    },
+    {
+      "text": "He has more than a decade of experience in static, code analysis and cold quality under his belt.",
+      "offset": 39246,
+      "duration": 7000
+    },
+    {
+      "text": "Us and his experience in a white range of industries, gives him a very holistic perspective on creating solutions for clean code and handling complex challenges such as technical deaths.",
+      "offset": 46246,
+      "duration": 15000
+    },
+    {
+      "text": "So needless to say, you are in excellent hands here. Now, before we move on.",
+      "offset": 61246,
+      "duration": 7000
+    },
+    {
+      "text": "Allow me to very quickly go over some essential housekeeping items. 1st of all, this session will last for 45 min and those 45 min include the questions and answers in the end.",
+      "offset": 68246,
+      "duration": 15000
+    },
+    {
+      "text": "In the course of the webinar, you will be invited to submit your questions via the QA box at the bottom.",
+      "offset": 83246,
+      "duration": 5000
+    },
+    {
+      "text": "Mind you. Do make sure that you submit them in the QA box, not in the chat box.",
+      "offset": 88246,
+      "duration": 8000
+    },
+    {
+      "text": "And additionally, we do have 2 fantastic, panelists behind the scenes. Who are going to be answering your question with live during the webinar that is Alexander from our product management team and Robert from our perk marketing team.",
+      "offset": 96246,
+      "duration": 20000
+    },
+    {
+      "text": "For those of you who have already asked this question, this session will be recorded and we will send you, an email and the next couple of days with the recording as well as, the questions that were asked during the webinar.",
+      "offset": 116246,
+      "duration": 17000
+    },
+    {
+      "text": "Finally, at the end of this webinar, you will see a short survey that will pop up on your screen.",
+      "offset": 133246,
+      "duration": 7000
+    },
+    {
+      "text": "We will greatly appreciate your feedback. So thank you in advance for your participation. Now I will not steal any more of your time and without further ado, let's dive into the session you're all here for.",
+      "offset": 140246,
+      "duration": 14000
+    },
+    {
+      "text": "So. After you, Beck.",
+      "offset": 154246,
+      "duration": 1000
+    },
+    {
+      "text": "Thank you very much, Vienna. I'm extremely excited to talk to you all about, Clean Asica today, hello to all of you.",
+      "offset": 155246,
+      "duration": 9000
+    },
+    {
+      "text": "So, 1st of all, let's see, one will be covered today. Well, when we talk about technical depth there is 2 camps generally.",
+      "offset": 164246,
+      "duration": 9000
+    },
+    {
+      "text": "And the 1st one is technical that is high and let's do some data addressing sprints. To bring things under control so that we can develop some features after that kind of.",
+      "offset": 173246,
+      "duration": 11000
+    },
+    {
+      "text": "Our camp is kind of a sad count as you can imagine. And then there is a happy camp. That is technical that is under control.",
+      "offset": 184246,
+      "duration": 7000
+    },
+    {
+      "text": "Because we have a sustainable process. Obviously, very happy camp there. Now what we are going to discuss today is how to take people from camp one to camp 2 that in we all can be happy when we deal with technical debt.",
+      "offset": 191246,
+      "duration": 18000
+    },
+    {
+      "text": "And how are we going to do that? Now, doing that will typically mean answering some questions as usual.",
+      "offset": 209246,
+      "duration": 9000
+    },
+    {
+      "text": "Well, I would start by saying smart way to fix issues is note to fix everything. Stay with me.",
+      "offset": 218246,
+      "duration": 9000
+    },
+    {
+      "text": "Now that will count. Think that you will think that that is counterproductive. However, How can we make sense out of this statement that let's not fix everything?",
+      "offset": 227246,
+      "duration": 11000
+    },
+    {
+      "text": "Now, to do that, we need to answer the question. Why are we fixing issues anyway? What is the motivation behind fixing for all of us?",
+      "offset": 238246,
+      "duration": 9000
+    },
+    {
+      "text": "Because there are there are some straightforward answers for this, but it is very important for us to set the context by understanding our motivation behind fixing all these issues.",
+      "offset": 247246,
+      "duration": 11000
+    },
+    {
+      "text": "So that we can craft the perfect way to actually address technical data. So, why are we fixing issues really?",
+      "offset": 258246,
+      "duration": 11000
+    },
+    {
+      "text": "Now, there are some very common answers that will be popping up in your mind at this point. Security issues to avoid security issues that can cause your business money and reputation.",
+      "offset": 269246,
+      "duration": 13000
+    },
+    {
+      "text": "Of course everybody wants to fix security issues. No questions asked. Usually this is one of the highest priority and obviously so.",
+      "offset": 282246,
+      "duration": 8000
+    },
+    {
+      "text": "No questions there. Then there are reliability issues. Why do you want to care about reliability issues?",
+      "offset": 290246,
+      "duration": 6000
+    },
+    {
+      "text": "To make sure that the application is performing as intended. It's functionalities of working as expected because if it is not then The software is not doing the job it is designed to and it is not providing any value at that point.",
+      "offset": 296246,
+      "duration": 16000
+    },
+    {
+      "text": "Therefore. You may want to fix all the reliability you suspect. If you see these security issues and reliable issues fall under the category which we can broadly classified as operational risk management.",
+      "offset": 312246,
+      "duration": 12000
+    },
+    {
+      "text": "You want to make sure that the business is operating risk-free because of this. Remember the label issues can be really problematic in the way it can be really fatal as well in some cases.",
+      "offset": 324246,
+      "duration": 12000
+    },
+    {
+      "text": "So you want to really take care of these 2 categories of issues. You are really sure about this. However, what about the larger number of main maintainability issues?",
+      "offset": 336246,
+      "duration": 12000
+    },
+    {
+      "text": "We often echner maintainability issues because they are not directly thought of as something that can can be.",
+      "offset": 348246,
+      "duration": 8000
+    },
+    {
+      "text": "Problematic like security or reliable dishes. But we ignored them at what price. Well, lower velocity of development.",
+      "offset": 356246,
+      "duration": 8000
+    },
+    {
+      "text": "The will ship last number of features. Extending existing features are very slow. New developers take more time to onboard and so on.",
+      "offset": 364246,
+      "duration": 11000
+    },
+    {
+      "text": "That means, when we add maintainability issues to our code base, the immediate future, our engineering teams Development velocity or delivery velocity is going to suffer.",
+      "offset": 375246,
+      "duration": 12000
+    },
+    {
+      "text": "We are overlooking this fundamental fact a lot of times when we think about a strategy on how to address technical data.",
+      "offset": 387246,
+      "duration": 9000
+    },
+    {
+      "text": "This is very important because on long terms, It is very important for engineering teams to be optimized. We will see in a moment.",
+      "offset": 396246,
+      "duration": 9000
+    },
+    {
+      "text": "And there is one more reason why we need to address maintainability issues. With a lower, maintainable, maintainable code base that is accumulating a lot of maintainability issues, It can be also correlated with another situation where in it can result in more security and reliability issues as well.",
+      "offset": 405246,
+      "duration": 21000
+    },
+    {
+      "text": "What I'm saying is, with this, it's increased. Reliable issues comes the risk of having more security and reliable issues as well therefore It is an investment on our part.",
+      "offset": 426246,
+      "duration": 14000
+    },
+    {
+      "text": "To actually take care of this maintainability issues in the long run. Therefore, We can have happy developers because it is easier to extend features.",
+      "offset": 440246,
+      "duration": 9000
+    },
+    {
+      "text": "It is easier to understand. It is easier to onboard a new developers, etc, etc.",
+      "offset": 449246,
+      "duration": 7000
+    },
+    {
+      "text": "Plus, we will have less security and reliability issues probably in the future as well. Therefore, now we know Fixing issues the motivation behind fixing issues is not just about you know mitigating risk and operation risk but also saving time, effort and money for the business while doing it in the long term.",
+      "offset": 456246,
+      "duration": 25000
+    },
+    {
+      "text": "When I'm talking about long term it is not just long term in the immediate future Taking care of maintainability issues in the new code in the in the code that we write in the recent time.",
+      "offset": 481246,
+      "duration": 11000
+    },
+    {
+      "text": "We'll start giving dividends in the terms that you will start seeing. Hi, velocity from the engineering team.",
+      "offset": 492246,
+      "duration": 7000
+    },
+    {
+      "text": "So therefore, now at this point we clearly know. Why we are fixing issues. What kind of benefits addressing different kinds of issues gives us?",
+      "offset": 499246,
+      "duration": 6000
+    },
+    {
+      "text": "Therefore, we should not ignore one kind or the other. No. So we know the real goals behind fixing issues.",
+      "offset": 505246,
+      "duration": 15000
+    },
+    {
+      "text": "So. Should we stop everything and fix all these issues that is detected by sonar products? So that they can be faster afterwards.",
+      "offset": 520246,
+      "duration": 10000
+    },
+    {
+      "text": "That means we will fix more the issues detected and then we will go develop features. Is that a viable option?",
+      "offset": 530246,
+      "duration": 8000
+    },
+    {
+      "text": "Well, I will restate this smart way to fix issues is to not fix everything. Right? Please remember this point because that is our story today.",
+      "offset": 538246,
+      "duration": 10000
+    },
+    {
+      "text": "Smart way to fix issues is not to fix everything. Now, let's see what happens in real life, right?",
+      "offset": 548246,
+      "duration": 10000
+    },
+    {
+      "text": "I have taken an example with a patchy hive. If you look at this, I have taken a screen graph from Sonar Cloud to see what is really going on.",
+      "offset": 558246,
+      "duration": 10000
+    },
+    {
+      "text": "We have 90 security issues. We have 100,600 reliability issues. There's plenty of reliability issues there.",
+      "offset": 568246,
+      "duration": 10000
+    },
+    {
+      "text": "And over 44,000. Maintainability issues. Let it sink in. You see a lot of issues here.",
+      "offset": 578246,
+      "duration": 10000
+    },
+    {
+      "text": "However, you have probably seen similar cases with your projects as well. Not of issues. Lot officious.",
+      "offset": 588246,
+      "duration": 10000
+    },
+    {
+      "text": "And this will raise questions in your mind is this kind of tools really usable? What am I supposed to do with such?",
+      "offset": 598246,
+      "duration": 7000
+    },
+    {
+      "text": "Huge amount of technical debt. You ask how huge the technical that is. Yes, it is over 780 days of, effort to fix all of those issues.",
+      "offset": 605246,
+      "duration": 12000
+    },
+    {
+      "text": "Well, okay, that is too many issues. And too much time is required to fix all of those issues.",
+      "offset": 617246,
+      "duration": 8000
+    },
+    {
+      "text": "And obviously when such situation comes, but we do. As humans, we prioritize, right? For example, if you have so many tasks, we will think, okay.",
+      "offset": 625246,
+      "duration": 13000
+    },
+    {
+      "text": "The most important ones for me so that I can prioritize those issues. And work on them first.st",
+      "offset": 638246,
+      "duration": 7000
+    },
+    {
+      "text": "Because that will give us the most, return for our investment. We cannot play the same principle here.",
+      "offset": 645246,
+      "duration": 8000
+    },
+    {
+      "text": "Can we fix just the highest priority issues? Now, how will we prioritize issues? For example, we can look at severeity in sonar cloud for example.",
+      "offset": 653246,
+      "duration": 13000
+    },
+    {
+      "text": "And we can take the highest severeity examples and you will be still left with a lot of issues. So let's hold that question for a moment.",
+      "offset": 666246,
+      "duration": 11000
+    },
+    {
+      "text": "Should we prioritize issues?",
+      "offset": 677246,
+      "duration": 4000
+    },
+    {
+      "text": "And that is the perfect time for a poor. When you have so many issues in your project just like this.",
+      "offset": 681246,
+      "duration": 9000
+    },
+    {
+      "text": "In your overall code. You have so many issues. What would you do usually when you are encountering such a situation?",
+      "offset": 690246,
+      "duration": 7000
+    },
+    {
+      "text": "Well, we have few options here. We fix everything. We may take a couple of years, but we will fix all of them.",
+      "offset": 697246,
+      "duration": 8000
+    },
+    {
+      "text": "And then we will develop features. We prioritize all severity or issues by severeity and fix most critical issues.",
+      "offset": 705246,
+      "duration": 10000
+    },
+    {
+      "text": "Just as we said, prioritization. We fix our vulnerabilities and leave the rest. For now we fix security issues or They keep come and clean as you could.",
+      "offset": 715246,
+      "duration": 13000
+    },
+    {
+      "text": "I'm really interested to see. What would you do?",
+      "offset": 728246,
+      "duration": 11000
+    },
+    {
+      "text": "And the response is coming.",
+      "offset": 739246,
+      "duration": 22000
+    },
+    {
+      "text": "Excellent. Well, I'm really pleased to see this result and Let's start by saying a lot of you are saying we keep comment the cleanness code.",
+      "offset": 761246,
+      "duration": 10000
+    },
+    {
+      "text": "That is really amazing to see. You are already on the right path. It's really pleasing to see that.",
+      "offset": 771246,
+      "duration": 8000
+    },
+    {
+      "text": "And obviously, a lot of you have responded by saying we prioritize by severity and fix most critical issues.",
+      "offset": 779246,
+      "duration": 7000
+    },
+    {
+      "text": "Because this is this makes sense right this is the common way of doing this so it makes perfect sense to do it this way.",
+      "offset": 786246,
+      "duration": 8000
+    },
+    {
+      "text": "I understand it, but you are going to find this way today that is cleaner secret which will be much better than your current approach.",
+      "offset": 794246,
+      "duration": 6000
+    },
+    {
+      "text": "So let's continue on our understanding Jenny with this one.",
+      "offset": 800246,
+      "duration": 8000
+    },
+    {
+      "text": "Alright. So",
+      "offset": 808246,
+      "duration": 12000
+    },
+    {
+      "text": "Just analyzing that issues a little bit more here.",
+      "offset": 820246,
+      "duration": 6000
+    },
+    {
+      "text": "We have over 96% of our issues in Apache Hive that are actually older than one year.",
+      "offset": 826246,
+      "duration": 8000
+    },
+    {
+      "text": "And how much time you might take to fix them all. Over 750 days of work. To fix those 96% over 96% of that issues in the in issues that are really hot.",
+      "offset": 834246,
+      "duration": 14000
+    },
+    {
+      "text": "Now that races a question should we really fix these older issues. Now, we are going to continue exploring and finding that answers.",
+      "offset": 848246,
+      "duration": 9000
+    },
+    {
+      "text": "Now, I mentioned One year like The remaining 3 and a half percent of issues are from the last year, right?",
+      "offset": 857246,
+      "duration": 9000
+    },
+    {
+      "text": "Detected last year. Now, with that Let's see why prioritization is not the best strategy.",
+      "offset": 866246,
+      "duration": 9000
+    },
+    {
+      "text": "A lot of you have said, that's prioritize and let's fix those issues that are higher priority, right?",
+      "offset": 875246,
+      "duration": 6000
+    },
+    {
+      "text": "Now, for a moment, imagine that this big blue box is the overall chord. Maybe for a patchy hive.",
+      "offset": 881246,
+      "duration": 9000
+    },
+    {
+      "text": "Or any other project. Now, There are a lot of issues in this overall code, right? There is it.",
+      "offset": 890246,
+      "duration": 7000
+    },
+    {
+      "text": "There's plenty of issues in this case. Over 750 days worth of work of issues in this opera code.",
+      "offset": 897246,
+      "duration": 8000
+    },
+    {
+      "text": "Now, should we fix all of those issues? By prioritizing? Let's see in a moment and you see that little pink patch that is the code changes made last year.",
+      "offset": 905246,
+      "duration": 11000
+    },
+    {
+      "text": "That's assume that is a small area where we are making code changes last year. And there are obviously some issues line in that, new code as well.",
+      "offset": 916246,
+      "duration": 12000
+    },
+    {
+      "text": "Well, what does that all mean is that If you are going to fix some prioritized issues in that overall chord, which is the bigger shank of cord, right?",
+      "offset": 928246,
+      "duration": 11000
+    },
+    {
+      "text": "We are going to get limited benefit from fixing issues there. Why? Because Our developers are not going to touch those chord thus does a dormant chord.",
+      "offset": 939246,
+      "duration": 10000
+    },
+    {
+      "text": "Therefore, having more clean dormant code may not accelerate our development process in any meaningful way. So we will get more benefit, more return on our investment if we fix issues on that.",
+      "offset": 949246,
+      "duration": 15000
+    },
+    {
+      "text": "Think patch that is our fresh new code. I mentioned one year. However, what if we focus on new code, the term new code is very important here.",
+      "offset": 964246,
+      "duration": 12000
+    },
+    {
+      "text": "And it can be something different from one year, actually. Then we develop software. Quote is added incrementally, isn't it?",
+      "offset": 976246,
+      "duration": 10000
+    },
+    {
+      "text": "We make new code increments and add to our existing codebase batch by batch over time.",
+      "offset": 986246,
+      "duration": 5000
+    },
+    {
+      "text": "This is how we develop software. And if we just focus on the quality of such new code increments, we can ensure 2 things.",
+      "offset": 991246,
+      "duration": 10000
+    },
+    {
+      "text": "We are just focusing on the quality of the neocode increments. We make sure every new code increment is clean.",
+      "offset": 1001246,
+      "duration": 9000
+    },
+    {
+      "text": "One thing that we attend by doing this is no new that is sadder. That means we stop adding new technical debt to our repository altogether because we are making sure new code is always clean, right?",
+      "offset": 1010246,
+      "duration": 14000
+    },
+    {
+      "text": "All these new code increments are clean. But there is one more benefit that we often forget that we get.",
+      "offset": 1024246,
+      "duration": 9000
+    },
+    {
+      "text": "With this approach that is most important parts of old code. Is also getting cleaned. Tadually.",
+      "offset": 1033246,
+      "duration": 8000
+    },
+    {
+      "text": "Why? Because when we talk about new chord in sonar products, it includes 2 things. On his audit code, Second one, modified or changed code that lies in the old code.",
+      "offset": 1041246,
+      "duration": 12000
+    },
+    {
+      "text": "You may take or your team members may take some file that is in old code may modify a little bit, but with cleaners you could approach, when you touch some more code, you clean that piece as well.",
+      "offset": 1053246,
+      "duration": 13000
+    },
+    {
+      "text": "So simply by practicing clean as you could using sonar products. You not only clean the newly added cord you also clean all code that you are modifying.",
+      "offset": 1066246,
+      "duration": 12000
+    },
+    {
+      "text": "So the practice with this is very simple. How do we apply this new code, increment, cleaning process?",
+      "offset": 1078246,
+      "duration": 9000
+    },
+    {
+      "text": "It's pretty simple. You write code. That is your new code and you scan that new code which is on our products.",
+      "offset": 1087246,
+      "duration": 6000
+    },
+    {
+      "text": "And then fix issues when it is reported and continue the cycle move. That is very obvious, Vivic.",
+      "offset": 1093246,
+      "duration": 6000
+    },
+    {
+      "text": "Yes, it is obvious and it is super simple. But we will see, this. Cleaning process in a little bit more details so that it will sink better.",
+      "offset": 1099246,
+      "duration": 12000
+    },
+    {
+      "text": "Now, when we are practicing this clean as you code, Then we talk about this new code increment.",
+      "offset": 1111246,
+      "duration": 10000
+    },
+    {
+      "text": "Developer is supposed to practice. Yeah, the thing is very simple. We have this new code increment.",
+      "offset": 1121246,
+      "duration": 6000
+    },
+    {
+      "text": "We need to make sure that Quality gate is passing, thus quality gets green. That will make sure we have a clean code instrument that is 0 issues.",
+      "offset": 1127246,
+      "duration": 10000
+    },
+    {
+      "text": "But that actually means resolving all issues. As early as possible when they are reported. Now, to solving an issue, primarily have to be done by Fixing them?",
+      "offset": 1137246,
+      "duration": 12000
+    },
+    {
+      "text": "It makes sense, right? And then you can accept issues if you don't want to fix some of those issues at this point in time.",
+      "offset": 1149246,
+      "duration": 9000
+    },
+    {
+      "text": "We should use this option responsibly. Because by accepting an issue you are adding technical debt to the repository.",
+      "offset": 1158246,
+      "duration": 7000
+    },
+    {
+      "text": "So if you use this option, I will strongly recommend you come back and fix those issues at a good time.",
+      "offset": 1165246,
+      "duration": 7000
+    },
+    {
+      "text": "Now, finally, you can mark for positive as such. And at this point with these 3 options, you make sure you resolve all issues.",
+      "offset": 1172246,
+      "duration": 10000
+    },
+    {
+      "text": "In the new code and therefore our new code increment is keen. In other words, new code increment is confirming to the standard defined by your organization.",
+      "offset": 1182246,
+      "duration": 10000
+    },
+    {
+      "text": "Therefore it is clean. And that is the process the engineer have to follow. Now, clean as you code in 3 stages.",
+      "offset": 1192246,
+      "duration": 10000
+    },
+    {
+      "text": "Cleanassic code as a process have. 3 essential stages or layers in practice. And all of them are very important.",
+      "offset": 1202246,
+      "duration": 7000
+    },
+    {
+      "text": "Let's go through each of those layers one by one to better understand what is really happening. So the 1st stage is in ID.",
+      "offset": 1209246,
+      "duration": 12000
+    },
+    {
+      "text": "In idea, you know, we have some Ireland presenter. So the developer is writing some code in his personal space.",
+      "offset": 1221246,
+      "duration": 7000
+    },
+    {
+      "text": "And or her personal space, this is what we call a new code increment. In the ID. Whatever code I am writing, but that is not yet committed.",
+      "offset": 1228246,
+      "duration": 13000
+    },
+    {
+      "text": "Is my new coding. And we will scan it with sonar lint. And by doing so, We make sure that, okay, one of our issue is reported, we fix those issues.",
+      "offset": 1241246,
+      "duration": 10000
+    },
+    {
+      "text": "Thus we are confirming to the standard because you know we are using connected mode in Southern Ireland and it allows you to sync with your, defined standard.",
+      "offset": 1251246,
+      "duration": 12000
+    },
+    {
+      "text": "And when it is really clean, that is this New code increment is clean. The code is ready to be committed.",
+      "offset": 1263246,
+      "duration": 7000
+    },
+    {
+      "text": "That is the promotion at this stage. That is stage one. Now, what is stage 2? Stage 2 is where you make a pull request.",
+      "offset": 1270246,
+      "duration": 11000
+    },
+    {
+      "text": "You open a pull request. And whatever chord changes. Happening or happened in the pull request. Is the new code increment in the context of the pull request?",
+      "offset": 1281246,
+      "duration": 12000
+    },
+    {
+      "text": "Or rather all requests can, let's say. And here as you can imagine, so not cloud or solar cube will help you scan your new code increment.",
+      "offset": 1293246,
+      "duration": 11000
+    },
+    {
+      "text": "You have to make sure after the scan the quality gate on that pull request is passing. Well, if you have issues, obviously you have to fix those issues.",
+      "offset": 1304246,
+      "duration": 10000
+    },
+    {
+      "text": "Or resolve those issues to be more accurate. And at the end the portrait custody is ready to be matched.",
+      "offset": 1314246,
+      "duration": 6000
+    },
+    {
+      "text": "You can see in stage one in the ID, Developer was the only person involved in. This contributing to the new code increment and when it comes to portrait cuz there are a few more people few more team members involved because the PR.",
+      "offset": 1320246,
+      "duration": 17000
+    },
+    {
+      "text": "Have reviewers probably somebody else some colleagues are looking at it so that is your stage 2 Now let's see what is stage 3.",
+      "offset": 1337246,
+      "duration": 11000
+    },
+    {
+      "text": "Can you make a guess what is stage 3? I'm sure some of you will definitely do. And it is the branch scan.",
+      "offset": 1348246,
+      "duration": 7000
+    },
+    {
+      "text": "When multiple are. Team mates are contributing to a branch, right? It is not just few people now, there are contributions from old teammates, all developers coming together.",
+      "offset": 1355246,
+      "duration": 12000
+    },
+    {
+      "text": "To a branch. Now That is new code in the branch but coming together how. In Sonar products, we have something called Newcode definition.",
+      "offset": 1367246,
+      "duration": 12000
+    },
+    {
+      "text": "You can define what is new cut definition and it may be based on your team's context. I will in a bit explain more about that.",
+      "offset": 1379246,
+      "duration": 3000
+    },
+    {
+      "text": "But it's segments. It defines and it helps on our products to identify your newly added code in the branch.",
+      "offset": 1382246,
+      "duration": 13000
+    },
+    {
+      "text": "Ask new code. And again, so on our QUEUEs, our cloud scans, your new code.",
+      "offset": 1395246,
+      "duration": 5000
+    },
+    {
+      "text": "And again, you have to fix issues until your qualitative screen. It is passing. Now, your is ready for deployment.",
+      "offset": 1400246,
+      "duration": 9000
+    },
+    {
+      "text": "Now see, you have 3 different stages to clean as you could. Now you may ask. All right, why do we need all these 3 stages?",
+      "offset": 1409246,
+      "duration": 13000
+    },
+    {
+      "text": "Can't we just get away with doing the Puerto Rican? Maybe why we need all these when we are using sonar lent.",
+      "offset": 1422246,
+      "duration": 7000
+    },
+    {
+      "text": "Well, sonar prioritizes speed of analysis to its left and depth of analysis to its right. Why we do this?",
+      "offset": 1429246,
+      "duration": 9000
+    },
+    {
+      "text": "Because as developers We need faster analysis results in the IDE in the port request, therefore in the ID you will get in within seconds you will get this analysis resent.",
+      "offset": 1438246,
+      "duration": 13000
+    },
+    {
+      "text": "In pull request within minutes you will get the results that way the results are usable. If you are getting a PR scan results in 1 h, it's barely usable, I would say.",
+      "offset": 1451246,
+      "duration": 10000
+    },
+    {
+      "text": "Therefore, we had to prioritize paid towards the left. However, by having the branch scan we can completely be sure that our new code increment is.",
+      "offset": 1461246,
+      "duration": 12000
+    },
+    {
+      "text": "Free from all kinds of issues. That is the depth of analysis coming into play. Well, now you see why we need all 3 layers or.",
+      "offset": 1473246,
+      "duration": 11000
+    },
+    {
+      "text": "Stages of clean as you code and how they work. Now, let's see how to implement cleanacy code in your organization, your team or in your project.",
+      "offset": 1484246,
+      "duration": 12000
+    },
+    {
+      "text": "There are few steps that you have to take in practice. Based on your, your personal area, job title, some of these steps will be applicable to you.",
+      "offset": 1496246,
+      "duration": 12000
+    },
+    {
+      "text": "Now let's see what those steps are. 1st of all, you will have to define quality goal.",
+      "offset": 1508246,
+      "duration": 7000
+    },
+    {
+      "text": "Or your clean court goal. Or the standard that your organization want to, maintain on your code.",
+      "offset": 1515246,
+      "duration": 7000
+    },
+    {
+      "text": "And for this you can use quality profile and quality gate. It's quality profile. You will list the rules you want to enforce.",
+      "offset": 1522246,
+      "duration": 8000
+    },
+    {
+      "text": "And with Quality Gate, you will define your quality criteria that is to be met by the new core increments.",
+      "offset": 1530246,
+      "duration": 7000
+    },
+    {
+      "text": "Now, this will be important for the quality committee you may have in your organization or the people who are actually managing the quality of code standards for your organization.",
+      "offset": 1537246,
+      "duration": 13000
+    },
+    {
+      "text": "No, the next step here is define new code for branches. Sometime before I mentioned about ability to define new code.",
+      "offset": 1550246,
+      "duration": 10000
+    },
+    {
+      "text": "What is a new code in a branch? So, in sonar products, we have ability to define new code.",
+      "offset": 1560246,
+      "duration": 9000
+    },
+    {
+      "text": "One is new core. For example, you may choose something like, okay, everything after last release should be treated as new core.",
+      "offset": 1569246,
+      "duration": 9000
+    },
+    {
+      "text": "Maybe your team is making a release every month so that sonar cube can automatically detect any code written after that version bump asked new code.",
+      "offset": 1578246,
+      "duration": 10000
+    },
+    {
+      "text": "Or maybe if you are doing continuous delivery you may want to use something like number of days you can set a value up to 90 days and the So not to you, Oshanna Cloud will detect.",
+      "offset": 1588246,
+      "duration": 11000
+    },
+    {
+      "text": "A new code based on that. There are different options available for new code definition and you should choose the best option that works for your development team's context.",
+      "offset": 1599246,
+      "duration": 11000
+    },
+    {
+      "text": "I will recommend you to take a look at sonar product documentation to see what works best for you. Or at that of this webinar, I will share you a very interesting resource that will help you just as well.",
+      "offset": 1610246,
+      "duration": 13000
+    },
+    {
+      "text": "Now, this is something an engineering leader engineering manager will have to take care of or their team. After that, we have to ensure regular scan is happening.",
+      "offset": 1623246,
+      "duration": 12000
+    },
+    {
+      "text": "If you have done, set up the goal, we have the, we have defined what is new code that will help us on our cube to identify new code.",
+      "offset": 1635246,
+      "duration": 8000
+    },
+    {
+      "text": "We still need something more. We need to enforce scans in all 3 stages. 1st of all, we need to make sure that every developer is empowered to use on our LIND in connected mode to take advantage of this stage.",
+      "offset": 1643246,
+      "duration": 17000
+    },
+    {
+      "text": "Train as you code. You need to ensure this and then to have DevOps integration so that pull request can can be done effectively in your project.",
+      "offset": 1660246,
+      "duration": 10000
+    },
+    {
+      "text": "So, DevOps integration is important. And finally, or the last stage of cleanness record you need CIA integration so that a routine scan is happening on your branches.",
+      "offset": 1670246,
+      "duration": 12000
+    },
+    {
+      "text": "So these are something your engineering operations team can handle and make sure your project is canned regularly in old 3 stages of cleaner secret.",
+      "offset": 1682246,
+      "duration": 11000
+    },
+    {
+      "text": "Now, with that, the setup for Classic code is ready and it is good for the final stage that is where engineering practitioners or the cleaners you called practitioners come into play.",
+      "offset": 1693246,
+      "duration": 12000
+    },
+    {
+      "text": "All new code increments meets quality standard. For that, you will just make sure that clean clean as you code quality gate is always screen.",
+      "offset": 1705246,
+      "duration": 9000
+    },
+    {
+      "text": "The quality gate is green means your new code increment is cleaned. And when you insert this simple thing in all those 3 stages.",
+      "offset": 1714246,
+      "duration": 9000
+    },
+    {
+      "text": "You are on the path to clean code. Well, that is our. Implementation steps when you adopt, clean as you could practice.",
+      "offset": 1723246,
+      "duration": 10000
+    },
+    {
+      "text": "Now, let's take a look at what would have happened if you have focused on the new code.",
+      "offset": 1733246,
+      "duration": 8000
+    },
+    {
+      "text": "In the Apache Hive project. You would have just 107 issues and little bit of a 1 day worth of effort to fix issues.",
+      "offset": 1741246,
+      "duration": 8000
+    },
+    {
+      "text": "That is not just manageable. That proves that this methodology, the cleanup secret methodology, is sustainable.",
+      "offset": 1749246,
+      "duration": 8000
+    },
+    {
+      "text": "You can keep doing this. All the time. Now in this particular example this project have 90 days as new code definition if you are wondering these 107 issues are accumulated in 90 days in this case not too much see it's really manageable Now, let's see why are the benefits of practicing clean energy code that can bring practically to your engineering teams.",
+      "offset": 1757246,
+      "duration": 27000
+    },
+    {
+      "text": "Well, we focus only on new code. And edited code. So Developers are going to be happy.",
+      "offset": 1784246,
+      "duration": 8000
+    },
+    {
+      "text": "Because they don't have to really work on ancient code written 15 years ago by somebody else try to understand that.",
+      "offset": 1792246,
+      "duration": 2000
+    },
+    {
+      "text": "How long I do that? Now we focus on chord and There is court ownership now because I have to work only on the code that I or my team have written in recent time.",
+      "offset": 1794246,
+      "duration": 15000
+    },
+    {
+      "text": "Stay happy and organically prioritize most important issues. What do you mean by your can carry prioritizing right when you are changing old code you are also fixing issues in the most important parts.",
+      "offset": 1809246,
+      "duration": 15000
+    },
+    {
+      "text": "Of all code. You see how clean as you code is prioritizing most beneficial parts of old code naturally organically.",
+      "offset": 1824246,
+      "duration": 9000
+    },
+    {
+      "text": "That is really cool, I would say. And then you don't have to worry about, am I fixing the most important old issues or not?",
+      "offset": 1833246,
+      "duration": 7000
+    },
+    {
+      "text": "You are when you are using clean as you could. Any code added from now is clean. Basically you fix the leak, No longer you're adding any more debt.",
+      "offset": 1840246,
+      "duration": 10000
+    },
+    {
+      "text": "Your software remains an asset. By doing this fixed the leak, you make sure that your software is remaining an asset.",
+      "offset": 1850246,
+      "duration": 9000
+    },
+    {
+      "text": "Not a liability.",
+      "offset": 1859246,
+      "duration": 3000
+    },
+    {
+      "text": "Easier to extend your code base from now on. And faster team onboarding because your recent code is very clean.",
+      "offset": 1862246,
+      "duration": 7000
+    },
+    {
+      "text": "So. Your developers are really happy to work on it and new developers can in find it really easy to understand this recent code.",
+      "offset": 1869246,
+      "duration": 8000
+    },
+    {
+      "text": "Therefore, they can onboard faster. No more data addressing sprints because you no longer need them.",
+      "offset": 1877246,
+      "duration": 6000
+    },
+    {
+      "text": "Because you're debt situation is under control. Therefore, your team can actually focus on feature delivery. Therefore, improved feature delivery velocity can be achieved by the engineering team.",
+      "offset": 1883246,
+      "duration": 13000
+    },
+    {
+      "text": "Well, that is exactly what you will get practically. By using Kinasikor. Now, let us recap this quickly.",
+      "offset": 1896246,
+      "duration": 11000
+    },
+    {
+      "text": "Clean us your cord is the most efficient path to clean God. Now clean code is what you define as your goal for your organization.",
+      "offset": 1907246,
+      "duration": 8000
+    },
+    {
+      "text": "This is the minimum practice every team should have. Why am I saying this as the minimum practice it works for all kind of projects?",
+      "offset": 1915246,
+      "duration": 10000
+    },
+    {
+      "text": "It works for legacy projects that is written 20 years ago. It works perfectly for a brand new project that your team is excited about.",
+      "offset": 1925246,
+      "duration": 8000
+    },
+    {
+      "text": "It works in every single project. In case you have some goals. Over and Dubo Clean As you could, you want to pursue some goals on the overall code.",
+      "offset": 1933246,
+      "duration": 10000
+    },
+    {
+      "text": "You can obviously still pursue them. As complementary to cleanse code. Now, therefore cleaner secret works for every team for sure.",
+      "offset": 1943246,
+      "duration": 11000
+    },
+    {
+      "text": "Therefore, I will recommend you. Adopt this methodology today. And to do that. Now there will be a link shared to you.",
+      "offset": 1954246,
+      "duration": 9000
+    },
+    {
+      "text": "I would recommend you go check that out. See how to get started with KAY NASA code.",
+      "offset": 1963246,
+      "duration": 5000
+    },
+    {
+      "text": "You can see how to actually set it up in the product and get started with it.",
+      "offset": 1968246,
+      "duration": 8000
+    },
+    {
+      "text": "With that, over to you Bianca and before that. Thank you very much for listening to me.",
+      "offset": 1976246,
+      "duration": 7000
+    },
+    {
+      "text": "Thank you very much. That was truly a great presentation on a rather challenging topic. And may I just say that I'm actually very pleased to see how many of our attendees are actually cleaning as they code.",
+      "offset": 1983246,
+      "duration": 14000
+    },
+    {
+      "text": "So Rock on guys, this is truly the most effective way to use summer tools. Now, before we move to the questions and answers portion of our webinar, I briefly wanted to share a couple of things with you.",
+      "offset": 1997246,
+      "duration": 10000
+    },
+    {
+      "text": "1st of all, Look, more webinars. So, and the upcoming weeks we have 2 more interesting webinars.",
+      "offset": 2007246,
+      "duration": 12000
+    },
+    {
+      "text": "The 1st one is on June 6.th if you're a.net developer and even if you're not and if you want to know more about security in a web application join our dotnet team alongside with a Microsoft MVP.",
+      "offset": 2019246,
+      "duration": 17000
+    },
+    {
+      "text": "And if you want to know more or everything about Sara cube, join our extremely knowledgeable community manager and on June 12.th",
+      "offset": 2036246,
+      "duration": 16000
+    },
+    {
+      "text": "You can register today for these webinars. You will get the links in the chat right now.",
+      "offset": 2052246,
+      "duration": 6000
+    },
+    {
+      "text": "As a reminder, a short survey will appear after our questions and answer session and we will regularly appreciate your feedback.",
+      "offset": 2058246,
+      "duration": 10000
+    },
+    {
+      "text": "No.",
+      "offset": 2068246,
+      "duration": 3000
+    },
+    {
+      "text": "Before we, move to the Q&A session on your screen, you'll see a brief poll to indicate if you, if you would like to learn more about our solutions.",
+      "offset": 2071246,
+      "duration": 10000
+    },
+    {
+      "text": "So. Let's just take few seconds to answer. Seeing quite a lot of answers.",
+      "offset": 2081246,
+      "duration": 8000
+    },
+    {
+      "text": "Oh good.",
+      "offset": 2089246,
+      "duration": 7000
+    },
+    {
+      "text": "Okay.",
+      "offset": 2096246,
+      "duration": 4000
+    },
+    {
+      "text": "No, just squeeze. Some more responses.",
+      "offset": 2100246,
+      "duration": 13000
+    },
+    {
+      "text": "Okay, perfect. Thank you very much. Okay, so, Webex looks like we have some, questions that need to be answered.",
+      "offset": 2113246,
+      "duration": 12000
+    },
+    {
+      "text": "Wonderful.",
+      "offset": 2125246,
+      "duration": 1000
+    },
+    {
+      "text": "Hmm, let's get started. Okay, so. What tends to be the most widely used? This is a really good one, the most widely used clean is you code duration for example 30 days 90 days 180 days",
+      "offset": 2126246,
+      "duration": 19000
+    },
+    {
+      "text": "So, 30 days is super popular. If I don't write 30 days is the most popular one and the other one that is really popular is using the previous version as, the version bump will help you automatically detect Newark period.",
+      "offset": 2145246,
+      "duration": 17000
+    },
+    {
+      "text": "So it is a very popular option among our users. And it may be even better than using number of days there because this way is really automated and no issues can slip out of your new code, period.",
+      "offset": 2162246,
+      "duration": 16000
+    },
+    {
+      "text": "So basically use cleanity code all the time. Okay.",
+      "offset": 2178246,
+      "duration": 2000
+    },
+    {
+      "text": "Oh yes. Yeah. And yeah, previous version that is pretty, pretty much the most suitable and most popular.",
+      "offset": 2180246,
+      "duration": 8000
+    },
+    {
+      "text": "Option right there.",
+      "offset": 2188246,
+      "duration": 2000
+    },
+    {
+      "text": "Okay, so there's another one. What if we have critical issues such as security vulnerabilities?",
+      "offset": 2190246,
+      "duration": 6000
+    },
+    {
+      "text": "In the overall cult and we care about fixing those. How do we go about that?",
+      "offset": 2196246,
+      "duration": 7000
+    },
+    {
+      "text": "Bill, this is, this is very important to understand. You are totally okay to pursue goals on our records such as addressing vulnerabilities and bucks on overall code is very important.",
+      "offset": 2203246,
+      "duration": 14000
+    },
+    {
+      "text": "So what we can do is that we can add conditions on overall code in quality gate to make sure that we are covered there and this will still keep your quality gates suitable for clean as you could.",
+      "offset": 2217246,
+      "duration": 13000
+    },
+    {
+      "text": "And you are still covering your goals on overall code. So what are we doing with this? We are basically Doing this course on overall record as complementary to clean as you got.",
+      "offset": 2230246,
+      "duration": 11000
+    },
+    {
+      "text": "You are doing cleaner secret as the fundamental process then you have some additional conditions that will make sure that your goals on overall code is also covered.",
+      "offset": 2241246,
+      "duration": 9000
+    },
+    {
+      "text": "So, Cleanas you code is not the solution for overall code or every special use cases for your organization, but it is the minimum process everybody should have.",
+      "offset": 2250246,
+      "duration": 11000
+    },
+    {
+      "text": "And on top of that, you can add complementary processes using the flexibility available in our quality gate basically.",
+      "offset": 2261246,
+      "duration": 10000
+    },
+    {
+      "text": "Thank you. Okay, thanks. There's a lot of questions popping in. Another one for you, Vivek.",
+      "offset": 2271246,
+      "duration": 8000
+    },
+    {
+      "text": "Another one for you, Vivek. We cannot achieve high coverage or duvet.",
+      "offset": 2279246,
+      "duration": 3000
+    },
+    {
+      "text": "We cannot achieve high coverage or duplication as recommended by methodology. So what should we do in that case?",
+      "offset": 2282246,
+      "duration": 7000
+    },
+    {
+      "text": "Excellent, excellent question there, Bianca. Yes, we understand this that coverage and duplication is 2 areas where you may not be able to achieve a very high degree or threshold in your project.",
+      "offset": 2289246,
+      "duration": 15000
+    },
+    {
+      "text": "Because of this, we kept it such that you can tune these 2 conditions in a cleaner so you could compliant quality gate.",
+      "offset": 2304246,
+      "duration": 6000
+    },
+    {
+      "text": "When your quality gates still remains suitable for cleaners you could, you can change the slider.",
+      "offset": 2310246,
+      "duration": 7000
+    },
+    {
+      "text": "You can change the coverage to suit your team's need. Similarly, you can tune at just the threshold for your duplication as well in the new code.",
+      "offset": 2317246,
+      "duration": 2000
+    },
+    {
+      "text": "These 2 conditions can be adjusted as per your requirement in a cleaner secret compliant quality gate. Other conditions cannot be because you have to be strict about them.",
+      "offset": 2319246,
+      "duration": 17000
+    },
+    {
+      "text": "In these 2, it is important to have that great flexibility for each team. That way cleaners you code methodology can be used by more number of teams realistically.",
+      "offset": 2336246,
+      "duration": 9000
+    },
+    {
+      "text": "So we kept this flexibility for you.",
+      "offset": 2345246,
+      "duration": 4000
+    },
+    {
+      "text": "Okay, thank you. Another interesting question, popped in. Could we apply the clean as you code methodology in just one stage for example in the ID.",
+      "offset": 2349246,
+      "duration": 15000
+    },
+    {
+      "text": "Well, this have to answers. 1st of all, I will recommend having all 3 stages down. This way you make sure that New chord increments are absolutely clean.",
+      "offset": 2364246,
+      "duration": 11000
+    },
+    {
+      "text": "And if you are not using one stage, you are missing out a little bit on that insurance. That said, if you are getting standard with cleaner secret methodology, it is totally fine to start with one stage and then ramp it up to stage 2, stage 3. It's great.",
+      "offset": 2375246,
+      "duration": 17000
+    },
+    {
+      "text": "Start with one stage and then go to the all status. That's it. If you have the ability to have all 3 stages, it is important to have all 3 stages to have maximum efficiency of early detection as well as deep detection in branches so that you can make sure that your new code increment is absolutely clean.",
+      "offset": 2392246,
+      "duration": 19000
+    },
+    {
+      "text": "So. Simple answer is yes, you need all 3, but to get started start with one stage and, don't worry about having all 3 at the beginning.",
+      "offset": 2411246,
+      "duration": 10000
+    },
+    {
+      "text": "Great. Okay, we have Time for one last question. And this one is about Gen.",
+      "offset": 2421246,
+      "duration": 7000
+    },
+    {
+      "text": "A. How does generative AI for code assist helps with clean energy code like GitHub co-pilot, so on and so forth.",
+      "offset": 2428246,
+      "duration": 5000
+    },
+    {
+      "text": "What is our source, gen AI strategy?",
+      "offset": 2433246,
+      "duration": 9000
+    },
+    {
+      "text": "Well, here, what I can say is at least that we understand that there is a lot of air generated code in your code basis.",
+      "offset": 2442246,
+      "duration": 10000
+    },
+    {
+      "text": "Right now it is already there and it is going to be more in your code basis. Right now it is already there and it is going to be more in the future.",
+      "offset": 2452246,
+      "duration": 4000
+    },
+    {
+      "text": "However, Sonar products will make sure that You're generated code. You want to make sure that your generated code is clean, right?",
+      "offset": 2456246,
+      "duration": 8000
+    },
+    {
+      "text": "You cannot trust blindly the generated code. That is where SOAR products comes in and make sure that your generated code is also clean from big risks and maintainable issues as well.",
+      "offset": 2464246,
+      "duration": 12000
+    },
+    {
+      "text": "So you still need so not to carve this and and there may be more but this is the most important thing I can share at this point about, you know, the AI generated code and house on our products will help you cover there.",
+      "offset": 2476246,
+      "duration": 17000
+    },
+    {
+      "text": "Okay, so in a nutshell, whether it's man-made or, you know, machine-generated, just use clean as you code is that your, your words of wisdom to our audience?",
+      "offset": 2493246,
+      "duration": 10000
+    },
+    {
+      "text": "Absolutely.",
+      "offset": 2503246,
+      "duration": 2000
+    },
+    {
+      "text": "Perfect. Okay. So I see that our panelists are still, answering questions in case, we can't answer all of your questions in a follow-up.",
+      "offset": 2505246,
+      "duration": 5000
+    },
+    {
+      "text": "Email to our community to our community post we will have we will share all the questions that have been asked and answered and will continue to answer them.",
+      "offset": 2510246,
+      "duration": 10000
+    },
+    {
+      "text": "Now, 1st of all, thanks Vivek. That was an absolutely fantastic presentation and thanks for all of you that post questions.",
+      "offset": 2520246,
+      "duration": 15000
+    },
+    {
+      "text": "Again, our community is a great place to pose further questions and review the ones that were already asked during the questions and review the ones that were already asked during the course further questions and review the ones that were already asked during the course of this webinar and that would have answered the ones that were already asked during the course of this webinar and that would have answered.",
+      "offset": 2535246,
+      "duration": 14000
+    },
+    {
+      "text": "Please do visit dinosaurs.com for the information on how to use clean. E. Coach and check out the information on future.",
+      "offset": 2549246,
+      "duration": 10000
+    },
+    {
+      "text": "Webinars. And, again, thank you for providing you with, for providing us with your feedback.",
+      "offset": 2559246,
+      "duration": 10000
+    },
+    {
+      "text": "And that will, you know, it will surely pop up on your screen and, see you all soon.",
+      "offset": 2569246,
+      "duration": 21000
+    }
+  ],
+  "fullText": "Doing what technical that and presents you with a sustainable approach approach to not just effectively manage your existing technical debt, but also preventing a future one from accumulating. My name is Bianco. I'll be your moderator for the session, which will be presented by Speaking of the Vivek, Vivek is a product manager at Sonar. He has more than a decade of experience in static, code analysis and cold quality under his belt. Us and his experience in a white range of industries, gives him a very holistic perspective on creating solutions for clean code and handling complex challenges such as technical deaths. So needless to say, you are in excellent hands here. Now, before we move on. Allow me to very quickly go over some essential housekeeping items. 1st of all, this session will last for 45 min and those 45 min include the questions and answers in the end. In the course of the webinar, you will be invited to submit your questions via the QA box at the bottom. Mind you. Do make sure that you submit them in the QA box, not in the chat box. And additionally, we do have 2 fantastic, panelists behind the scenes. Who are going to be answering your question with live during the webinar that is Alexander from our product management team and Robert from our perk marketing team. For those of you who have already asked this question, this session will be recorded and we will send you, an email and the next couple of days with the recording as well as, the questions that were asked during the webinar. Finally, at the end of this webinar, you will see a short survey that will pop up on your screen. We will greatly appreciate your feedback. So thank you in advance for your participation. Now I will not steal any more of your time and without further ado, let's dive into the session you're all here for. So. After you, Beck. Thank you very much, Vienna. I'm extremely excited to talk to you all about, Clean Asica today, hello to all of you. So, 1st of all, let's see, one will be covered today. Well, when we talk about technical depth there is 2 camps generally. And the 1st one is technical that is high and let's do some data addressing sprints. To bring things under control so that we can develop some features after that kind of. Our camp is kind of a sad count as you can imagine. And then there is a happy camp. That is technical that is under control. Because we have a sustainable process. Obviously, very happy camp there. Now what we are going to discuss today is how to take people from camp one to camp 2 that in we all can be happy when we deal with technical debt. And how are we going to do that? Now, doing that will typically mean answering some questions as usual. Well, I would start by saying smart way to fix issues is note to fix everything. Stay with me. Now that will count. Think that you will think that that is counterproductive. However, How can we make sense out of this statement that let's not fix everything? Now, to do that, we need to answer the question. Why are we fixing issues anyway? What is the motivation behind fixing for all of us? Because there are there are some straightforward answers for this, but it is very important for us to set the context by understanding our motivation behind fixing all these issues. So that we can craft the perfect way to actually address technical data. So, why are we fixing issues really? Now, there are some very common answers that will be popping up in your mind at this point. Security issues to avoid security issues that can cause your business money and reputation. Of course everybody wants to fix security issues. No questions asked. Usually this is one of the highest priority and obviously so. No questions there. Then there are reliability issues. Why do you want to care about reliability issues? To make sure that the application is performing as intended. It's functionalities of working as expected because if it is not then The software is not doing the job it is designed to and it is not providing any value at that point. Therefore. You may want to fix all the reliability you suspect. If you see these security issues and reliable issues fall under the category which we can broadly classified as operational risk management. You want to make sure that the business is operating risk-free because of this. Remember the label issues can be really problematic in the way it can be really fatal as well in some cases. So you want to really take care of these 2 categories of issues. You are really sure about this. However, what about the larger number of main maintainability issues? We often echner maintainability issues because they are not directly thought of as something that can can be. Problematic like security or reliable dishes. But we ignored them at what price. Well, lower velocity of development. The will ship last number of features. Extending existing features are very slow. New developers take more time to onboard and so on. That means, when we add maintainability issues to our code base, the immediate future, our engineering teams Development velocity or delivery velocity is going to suffer. We are overlooking this fundamental fact a lot of times when we think about a strategy on how to address technical data. This is very important because on long terms, It is very important for engineering teams to be optimized. We will see in a moment. And there is one more reason why we need to address maintainability issues. With a lower, maintainable, maintainable code base that is accumulating a lot of maintainability issues, It can be also correlated with another situation where in it can result in more security and reliability issues as well. What I'm saying is, with this, it's increased. Reliable issues comes the risk of having more security and reliable issues as well therefore It is an investment on our part. To actually take care of this maintainability issues in the long run. Therefore, We can have happy developers because it is easier to extend features. It is easier to understand. It is easier to onboard a new developers, etc, etc. Plus, we will have less security and reliability issues probably in the future as well. Therefore, now we know Fixing issues the motivation behind fixing issues is not just about you know mitigating risk and operation risk but also saving time, effort and money for the business while doing it in the long term. When I'm talking about long term it is not just long term in the immediate future Taking care of maintainability issues in the new code in the in the code that we write in the recent time. We'll start giving dividends in the terms that you will start seeing. Hi, velocity from the engineering team. So therefore, now at this point we clearly know. Why we are fixing issues. What kind of benefits addressing different kinds of issues gives us? Therefore, we should not ignore one kind or the other. No. So we know the real goals behind fixing issues. So. Should we stop everything and fix all these issues that is detected by sonar products? So that they can be faster afterwards. That means we will fix more the issues detected and then we will go develop features. Is that a viable option? Well, I will restate this smart way to fix issues is to not fix everything. Right? Please remember this point because that is our story today. Smart way to fix issues is not to fix everything. Now, let's see what happens in real life, right? I have taken an example with a patchy hive. If you look at this, I have taken a screen graph from Sonar Cloud to see what is really going on. We have 90 security issues. We have 100,600 reliability issues. There's plenty of reliability issues there. And over 44,000. Maintainability issues. Let it sink in. You see a lot of issues here. However, you have probably seen similar cases with your projects as well. Not of issues. Lot officious. And this will raise questions in your mind is this kind of tools really usable? What am I supposed to do with such? Huge amount of technical debt. You ask how huge the technical that is. Yes, it is over 780 days of, effort to fix all of those issues. Well, okay, that is too many issues. And too much time is required to fix all of those issues. And obviously when such situation comes, but we do. As humans, we prioritize, right? For example, if you have so many tasks, we will think, okay. The most important ones for me so that I can prioritize those issues. And work on them first.st Because that will give us the most, return for our investment. We cannot play the same principle here. Can we fix just the highest priority issues? Now, how will we prioritize issues? For example, we can look at severeity in sonar cloud for example. And we can take the highest severeity examples and you will be still left with a lot of issues. So let's hold that question for a moment. Should we prioritize issues? And that is the perfect time for a poor. When you have so many issues in your project just like this. In your overall code. You have so many issues. What would you do usually when you are encountering such a situation? Well, we have few options here. We fix everything. We may take a couple of years, but we will fix all of them. And then we will develop features. We prioritize all severity or issues by severeity and fix most critical issues. Just as we said, prioritization. We fix our vulnerabilities and leave the rest. For now we fix security issues or They keep come and clean as you could. I'm really interested to see. What would you do? And the response is coming. Excellent. Well, I'm really pleased to see this result and Let's start by saying a lot of you are saying we keep comment the cleanness code. That is really amazing to see. You are already on the right path. It's really pleasing to see that. And obviously, a lot of you have responded by saying we prioritize by severity and fix most critical issues. Because this is this makes sense right this is the common way of doing this so it makes perfect sense to do it this way. I understand it, but you are going to find this way today that is cleaner secret which will be much better than your current approach. So let's continue on our understanding Jenny with this one. Alright. So Just analyzing that issues a little bit more here. We have over 96% of our issues in Apache Hive that are actually older than one year. And how much time you might take to fix them all. Over 750 days of work. To fix those 96% over 96% of that issues in the in issues that are really hot. Now that races a question should we really fix these older issues. Now, we are going to continue exploring and finding that answers. Now, I mentioned One year like The remaining 3 and a half percent of issues are from the last year, right? Detected last year. Now, with that Let's see why prioritization is not the best strategy. A lot of you have said, that's prioritize and let's fix those issues that are higher priority, right? Now, for a moment, imagine that this big blue box is the overall chord. Maybe for a patchy hive. Or any other project. Now, There are a lot of issues in this overall code, right? There is it. There's plenty of issues in this case. Over 750 days worth of work of issues in this opera code. Now, should we fix all of those issues? By prioritizing? Let's see in a moment and you see that little pink patch that is the code changes made last year. That's assume that is a small area where we are making code changes last year. And there are obviously some issues line in that, new code as well. Well, what does that all mean is that If you are going to fix some prioritized issues in that overall chord, which is the bigger shank of cord, right? We are going to get limited benefit from fixing issues there. Why? Because Our developers are not going to touch those chord thus does a dormant chord. Therefore, having more clean dormant code may not accelerate our development process in any meaningful way. So we will get more benefit, more return on our investment if we fix issues on that. Think patch that is our fresh new code. I mentioned one year. However, what if we focus on new code, the term new code is very important here. And it can be something different from one year, actually. Then we develop software. Quote is added incrementally, isn't it? We make new code increments and add to our existing codebase batch by batch over time. This is how we develop software. And if we just focus on the quality of such new code increments, we can ensure 2 things. We are just focusing on the quality of the neocode increments. We make sure every new code increment is clean. One thing that we attend by doing this is no new that is sadder. That means we stop adding new technical debt to our repository altogether because we are making sure new code is always clean, right? All these new code increments are clean. But there is one more benefit that we often forget that we get. With this approach that is most important parts of old code. Is also getting cleaned. Tadually. Why? Because when we talk about new chord in sonar products, it includes 2 things. On his audit code, Second one, modified or changed code that lies in the old code. You may take or your team members may take some file that is in old code may modify a little bit, but with cleaners you could approach, when you touch some more code, you clean that piece as well. So simply by practicing clean as you could using sonar products. You not only clean the newly added cord you also clean all code that you are modifying. So the practice with this is very simple. How do we apply this new code, increment, cleaning process? It's pretty simple. You write code. That is your new code and you scan that new code which is on our products. And then fix issues when it is reported and continue the cycle move. That is very obvious, Vivic. Yes, it is obvious and it is super simple. But we will see, this. Cleaning process in a little bit more details so that it will sink better. Now, when we are practicing this clean as you code, Then we talk about this new code increment. Developer is supposed to practice. Yeah, the thing is very simple. We have this new code increment. We need to make sure that Quality gate is passing, thus quality gets green. That will make sure we have a clean code instrument that is 0 issues. But that actually means resolving all issues. As early as possible when they are reported. Now, to solving an issue, primarily have to be done by Fixing them? It makes sense, right? And then you can accept issues if you don't want to fix some of those issues at this point in time. We should use this option responsibly. Because by accepting an issue you are adding technical debt to the repository. So if you use this option, I will strongly recommend you come back and fix those issues at a good time. Now, finally, you can mark for positive as such. And at this point with these 3 options, you make sure you resolve all issues. In the new code and therefore our new code increment is keen. In other words, new code increment is confirming to the standard defined by your organization. Therefore it is clean. And that is the process the engineer have to follow. Now, clean as you code in 3 stages. Cleanassic code as a process have. 3 essential stages or layers in practice. And all of them are very important. Let's go through each of those layers one by one to better understand what is really happening. So the 1st stage is in ID. In idea, you know, we have some Ireland presenter. So the developer is writing some code in his personal space. And or her personal space, this is what we call a new code increment. In the ID. Whatever code I am writing, but that is not yet committed. Is my new coding. And we will scan it with sonar lint. And by doing so, We make sure that, okay, one of our issue is reported, we fix those issues. Thus we are confirming to the standard because you know we are using connected mode in Southern Ireland and it allows you to sync with your, defined standard. And when it is really clean, that is this New code increment is clean. The code is ready to be committed. That is the promotion at this stage. That is stage one. Now, what is stage 2? Stage 2 is where you make a pull request. You open a pull request. And whatever chord changes. Happening or happened in the pull request. Is the new code increment in the context of the pull request? Or rather all requests can, let's say. And here as you can imagine, so not cloud or solar cube will help you scan your new code increment. You have to make sure after the scan the quality gate on that pull request is passing. Well, if you have issues, obviously you have to fix those issues. Or resolve those issues to be more accurate. And at the end the portrait custody is ready to be matched. You can see in stage one in the ID, Developer was the only person involved in. This contributing to the new code increment and when it comes to portrait cuz there are a few more people few more team members involved because the PR. Have reviewers probably somebody else some colleagues are looking at it so that is your stage 2 Now let's see what is stage 3. Can you make a guess what is stage 3? I'm sure some of you will definitely do. And it is the branch scan. When multiple are. Team mates are contributing to a branch, right? It is not just few people now, there are contributions from old teammates, all developers coming together. To a branch. Now That is new code in the branch but coming together how. In Sonar products, we have something called Newcode definition. You can define what is new cut definition and it may be based on your team's context. I will in a bit explain more about that. But it's segments. It defines and it helps on our products to identify your newly added code in the branch. Ask new code. And again, so on our QUEUEs, our cloud scans, your new code. And again, you have to fix issues until your qualitative screen. It is passing. Now, your is ready for deployment. Now see, you have 3 different stages to clean as you could. Now you may ask. All right, why do we need all these 3 stages? Can't we just get away with doing the Puerto Rican? Maybe why we need all these when we are using sonar lent. Well, sonar prioritizes speed of analysis to its left and depth of analysis to its right. Why we do this? Because as developers We need faster analysis results in the IDE in the port request, therefore in the ID you will get in within seconds you will get this analysis resent. In pull request within minutes you will get the results that way the results are usable. If you are getting a PR scan results in 1 h, it's barely usable, I would say. Therefore, we had to prioritize paid towards the left. However, by having the branch scan we can completely be sure that our new code increment is. Free from all kinds of issues. That is the depth of analysis coming into play. Well, now you see why we need all 3 layers or. Stages of clean as you code and how they work. Now, let's see how to implement cleanacy code in your organization, your team or in your project. There are few steps that you have to take in practice. Based on your, your personal area, job title, some of these steps will be applicable to you. Now let's see what those steps are. 1st of all, you will have to define quality goal. Or your clean court goal. Or the standard that your organization want to, maintain on your code. And for this you can use quality profile and quality gate. It's quality profile. You will list the rules you want to enforce. And with Quality Gate, you will define your quality criteria that is to be met by the new core increments. Now, this will be important for the quality committee you may have in your organization or the people who are actually managing the quality of code standards for your organization. No, the next step here is define new code for branches. Sometime before I mentioned about ability to define new code. What is a new code in a branch? So, in sonar products, we have ability to define new code. One is new core. For example, you may choose something like, okay, everything after last release should be treated as new core. Maybe your team is making a release every month so that sonar cube can automatically detect any code written after that version bump asked new code. Or maybe if you are doing continuous delivery you may want to use something like number of days you can set a value up to 90 days and the So not to you, Oshanna Cloud will detect. A new code based on that. There are different options available for new code definition and you should choose the best option that works for your development team's context. I will recommend you to take a look at sonar product documentation to see what works best for you. Or at that of this webinar, I will share you a very interesting resource that will help you just as well. Now, this is something an engineering leader engineering manager will have to take care of or their team. After that, we have to ensure regular scan is happening. If you have done, set up the goal, we have the, we have defined what is new code that will help us on our cube to identify new code. We still need something more. We need to enforce scans in all 3 stages. 1st of all, we need to make sure that every developer is empowered to use on our LIND in connected mode to take advantage of this stage. Train as you code. You need to ensure this and then to have DevOps integration so that pull request can can be done effectively in your project. So, DevOps integration is important. And finally, or the last stage of cleanness record you need CIA integration so that a routine scan is happening on your branches. So these are something your engineering operations team can handle and make sure your project is canned regularly in old 3 stages of cleaner secret. Now, with that, the setup for Classic code is ready and it is good for the final stage that is where engineering practitioners or the cleaners you called practitioners come into play. All new code increments meets quality standard. For that, you will just make sure that clean clean as you code quality gate is always screen. The quality gate is green means your new code increment is cleaned. And when you insert this simple thing in all those 3 stages. You are on the path to clean code. Well, that is our. Implementation steps when you adopt, clean as you could practice. Now, let's take a look at what would have happened if you have focused on the new code. In the Apache Hive project. You would have just 107 issues and little bit of a 1 day worth of effort to fix issues. That is not just manageable. That proves that this methodology, the cleanup secret methodology, is sustainable. You can keep doing this. All the time. Now in this particular example this project have 90 days as new code definition if you are wondering these 107 issues are accumulated in 90 days in this case not too much see it's really manageable Now, let's see why are the benefits of practicing clean energy code that can bring practically to your engineering teams. Well, we focus only on new code. And edited code. So Developers are going to be happy. Because they don't have to really work on ancient code written 15 years ago by somebody else try to understand that. How long I do that? Now we focus on chord and There is court ownership now because I have to work only on the code that I or my team have written in recent time. Stay happy and organically prioritize most important issues. What do you mean by your can carry prioritizing right when you are changing old code you are also fixing issues in the most important parts. Of all code. You see how clean as you code is prioritizing most beneficial parts of old code naturally organically. That is really cool, I would say. And then you don't have to worry about, am I fixing the most important old issues or not? You are when you are using clean as you could. Any code added from now is clean. Basically you fix the leak, No longer you're adding any more debt. Your software remains an asset. By doing this fixed the leak, you make sure that your software is remaining an asset. Not a liability. Easier to extend your code base from now on. And faster team onboarding because your recent code is very clean. So. Your developers are really happy to work on it and new developers can in find it really easy to understand this recent code. Therefore, they can onboard faster. No more data addressing sprints because you no longer need them. Because you're debt situation is under control. Therefore, your team can actually focus on feature delivery. Therefore, improved feature delivery velocity can be achieved by the engineering team. Well, that is exactly what you will get practically. By using Kinasikor. Now, let us recap this quickly. Clean us your cord is the most efficient path to clean God. Now clean code is what you define as your goal for your organization. This is the minimum practice every team should have. Why am I saying this as the minimum practice it works for all kind of projects? It works for legacy projects that is written 20 years ago. It works perfectly for a brand new project that your team is excited about. It works in every single project. In case you have some goals. Over and Dubo Clean As you could, you want to pursue some goals on the overall code. You can obviously still pursue them. As complementary to cleanse code. Now, therefore cleaner secret works for every team for sure. Therefore, I will recommend you. Adopt this methodology today. And to do that. Now there will be a link shared to you. I would recommend you go check that out. See how to get started with KAY NASA code. You can see how to actually set it up in the product and get started with it. With that, over to you Bianca and before that. Thank you very much for listening to me. Thank you very much. That was truly a great presentation on a rather challenging topic. And may I just say that I'm actually very pleased to see how many of our attendees are actually cleaning as they code. So Rock on guys, this is truly the most effective way to use summer tools. Now, before we move to the questions and answers portion of our webinar, I briefly wanted to share a couple of things with you. 1st of all, Look, more webinars. So, and the upcoming weeks we have 2 more interesting webinars. The 1st one is on June 6.th if you're a.net developer and even if you're not and if you want to know more about security in a web application join our dotnet team alongside with a Microsoft MVP. And if you want to know more or everything about Sara cube, join our extremely knowledgeable community manager and on June 12.th You can register today for these webinars. You will get the links in the chat right now. As a reminder, a short survey will appear after our questions and answer session and we will regularly appreciate your feedback. No. Before we, move to the Q&A session on your screen, you'll see a brief poll to indicate if you, if you would like to learn more about our solutions. So. Let's just take few seconds to answer. Seeing quite a lot of answers. Oh good. Okay. No, just squeeze. Some more responses. Okay, perfect. Thank you very much. Okay, so, Webex looks like we have some, questions that need to be answered. Wonderful. Hmm, let's get started. Okay, so. What tends to be the most widely used? This is a really good one, the most widely used clean is you code duration for example 30 days 90 days 180 days So, 30 days is super popular. If I don't write 30 days is the most popular one and the other one that is really popular is using the previous version as, the version bump will help you automatically detect Newark period. So it is a very popular option among our users. And it may be even better than using number of days there because this way is really automated and no issues can slip out of your new code, period. So basically use cleanity code all the time. Okay. Oh yes. Yeah. And yeah, previous version that is pretty, pretty much the most suitable and most popular. Option right there. Okay, so there's another one. What if we have critical issues such as security vulnerabilities? In the overall cult and we care about fixing those. How do we go about that? Bill, this is, this is very important to understand. You are totally okay to pursue goals on our records such as addressing vulnerabilities and bucks on overall code is very important. So what we can do is that we can add conditions on overall code in quality gate to make sure that we are covered there and this will still keep your quality gates suitable for clean as you could. And you are still covering your goals on overall code. So what are we doing with this? We are basically Doing this course on overall record as complementary to clean as you got. You are doing cleaner secret as the fundamental process then you have some additional conditions that will make sure that your goals on overall code is also covered. So, Cleanas you code is not the solution for overall code or every special use cases for your organization, but it is the minimum process everybody should have. And on top of that, you can add complementary processes using the flexibility available in our quality gate basically. Thank you. Okay, thanks. There's a lot of questions popping in. Another one for you, Vivek. Another one for you, Vivek. We cannot achieve high coverage or duvet. We cannot achieve high coverage or duplication as recommended by methodology. So what should we do in that case? Excellent, excellent question there, Bianca. Yes, we understand this that coverage and duplication is 2 areas where you may not be able to achieve a very high degree or threshold in your project. Because of this, we kept it such that you can tune these 2 conditions in a cleaner so you could compliant quality gate. When your quality gates still remains suitable for cleaners you could, you can change the slider. You can change the coverage to suit your team's need. Similarly, you can tune at just the threshold for your duplication as well in the new code. These 2 conditions can be adjusted as per your requirement in a cleaner secret compliant quality gate. Other conditions cannot be because you have to be strict about them. In these 2, it is important to have that great flexibility for each team. That way cleaners you code methodology can be used by more number of teams realistically. So we kept this flexibility for you. Okay, thank you. Another interesting question, popped in. Could we apply the clean as you code methodology in just one stage for example in the ID. Well, this have to answers. 1st of all, I will recommend having all 3 stages down. This way you make sure that New chord increments are absolutely clean. And if you are not using one stage, you are missing out a little bit on that insurance. That said, if you are getting standard with cleaner secret methodology, it is totally fine to start with one stage and then ramp it up to stage 2, stage 3. It's great. Start with one stage and then go to the all status. That's it. If you have the ability to have all 3 stages, it is important to have all 3 stages to have maximum efficiency of early detection as well as deep detection in branches so that you can make sure that your new code increment is absolutely clean. So. Simple answer is yes, you need all 3, but to get started start with one stage and, don't worry about having all 3 at the beginning. Great. Okay, we have Time for one last question. And this one is about Gen. A. How does generative AI for code assist helps with clean energy code like GitHub co-pilot, so on and so forth. What is our source, gen AI strategy? Well, here, what I can say is at least that we understand that there is a lot of air generated code in your code basis. Right now it is already there and it is going to be more in your code basis. Right now it is already there and it is going to be more in the future. However, Sonar products will make sure that You're generated code. You want to make sure that your generated code is clean, right? You cannot trust blindly the generated code. That is where SOAR products comes in and make sure that your generated code is also clean from big risks and maintainable issues as well. So you still need so not to carve this and and there may be more but this is the most important thing I can share at this point about, you know, the AI generated code and house on our products will help you cover there. Okay, so in a nutshell, whether it's man-made or, you know, machine-generated, just use clean as you code is that your, your words of wisdom to our audience? Absolutely. Perfect. Okay. So I see that our panelists are still, answering questions in case, we can't answer all of your questions in a follow-up. Email to our community to our community post we will have we will share all the questions that have been asked and answered and will continue to answer them. Now, 1st of all, thanks Vivek. That was an absolutely fantastic presentation and thanks for all of you that post questions. Again, our community is a great place to pose further questions and review the ones that were already asked during the questions and review the ones that were already asked during the course further questions and review the ones that were already asked during the course of this webinar and that would have answered the ones that were already asked during the course of this webinar and that would have answered. Please do visit dinosaurs.com for the information on how to use clean. E. Coach and check out the information on future. Webinars. And, again, thank you for providing you with, for providing us with your feedback. And that will, you know, it will surely pop up on your screen and, see you all soon.",
+  "fetchedAt": "2026-03-14T09:23:07.257Z"
+}

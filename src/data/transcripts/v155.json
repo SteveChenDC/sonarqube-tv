@@ -1,0 +1,1013 @@
+{
+  "videoId": "v155",
+  "youtubeId": "hucvAJcCgdY",
+  "segments": [
+    {
+      "text": "foreign",
+      "offset": 1020,
+      "duration": 3000
+    },
+    {
+      "text": "[Music]",
+      "offset": 4850,
+      "duration": 4749
+    },
+    {
+      "text": "hey folks I'm your host nafiel and",
+      "offset": 7620,
+      "duration": 3360
+    },
+    {
+      "text": "welcome to this video on five",
+      "offset": 9599,
+      "duration": 4381
+    },
+    {
+      "text": "lesser-known python security pitfalls in",
+      "offset": 10980,
+      "duration": 4440
+    },
+    {
+      "text": "this video we're going to take a look at",
+      "offset": 13980,
+      "duration": 4139
+    },
+    {
+      "text": "the subtle ways in which security can be",
+      "offset": 15420,
+      "duration": 5040
+    },
+    {
+      "text": "compromised in your code so without much",
+      "offset": 18119,
+      "duration": 5160
+    },
+    {
+      "text": "further Ado let's dive into it",
+      "offset": 20460,
+      "duration": 4860
+    },
+    {
+      "text": "alright so for our first example let's",
+      "offset": 23279,
+      "duration": 4080
+    },
+    {
+      "text": "talk about running python in optimized",
+      "offset": 25320,
+      "duration": 2879
+    },
+    {
+      "text": "mode",
+      "offset": 27359,
+      "duration": 2580
+    },
+    {
+      "text": "here we have a very simple flask",
+      "offset": 28199,
+      "duration": 4200
+    },
+    {
+      "text": "application and has a single route",
+      "offset": 29939,
+      "duration": 4441
+    },
+    {
+      "text": "and in that route recalling a function",
+      "offset": 32399,
+      "duration": 4500
+    },
+    {
+      "text": "called sumfunk and this sumfunk is",
+      "offset": 34380,
+      "duration": 4740
+    },
+    {
+      "text": "always going to return none if we were",
+      "offset": 36899,
+      "duration": 4381
+    },
+    {
+      "text": "to run this in the normal way we would",
+      "offset": 39120,
+      "duration": 4200
+    },
+    {
+      "text": "see that it would tell us that we have",
+      "offset": 41280,
+      "duration": 5520
+    },
+    {
+      "text": "an assertion error inside of our code",
+      "offset": 43320,
+      "duration": 6540
+    },
+    {
+      "text": "there we go not too great The thing that",
+      "offset": 46800,
+      "duration": 7020
+    },
+    {
+      "text": "is often scary is when you run this in",
+      "offset": 49860,
+      "duration": 6900
+    },
+    {
+      "text": "an optimized mode so python has an",
+      "offset": 53820,
+      "duration": 5940
+    },
+    {
+      "text": "optimized mode using the dash o operator",
+      "offset": 56760,
+      "duration": 5279
+    },
+    {
+      "text": "and if we were to run that and reload",
+      "offset": 59760,
+      "duration": 4200
+    },
+    {
+      "text": "the page we would see that that",
+      "offset": 62039,
+      "duration": 4501
+    },
+    {
+      "text": "statement is completely ignored",
+      "offset": 63960,
+      "duration": 4620
+    },
+    {
+      "text": "the reason for this is because when you",
+      "offset": 66540,
+      "duration": 5220
+    },
+    {
+      "text": "run python in an optimized mode using",
+      "offset": 68580,
+      "duration": 7079
+    },
+    {
+      "text": "the dash o argument what happens is all",
+      "offset": 71760,
+      "duration": 6420
+    },
+    {
+      "text": "the asserts in your application are",
+      "offset": 75659,
+      "duration": 4381
+    },
+    {
+      "text": "removed which can lead to some pretty",
+      "offset": 78180,
+      "duration": 4979
+    },
+    {
+      "text": "catastrophic results now python is often",
+      "offset": 80040,
+      "duration": 5880
+    },
+    {
+      "text": "not run using optimized mode because",
+      "offset": 83159,
+      "duration": 5221
+    },
+    {
+      "text": "most often you don't need it but in case",
+      "offset": 85920,
+      "duration": 3839
+    },
+    {
+      "text": "you wanted to save a little bit of",
+      "offset": 88380,
+      "duration": 4080
+    },
+    {
+      "text": "memory and you have to distribute python",
+      "offset": 89759,
+      "duration": 4921
+    },
+    {
+      "text": "to a lot of different machines this can",
+      "offset": 92460,
+      "duration": 4440
+    },
+    {
+      "text": "be quite helpful alright folks it's time",
+      "offset": 94680,
+      "duration": 4200
+    },
+    {
+      "text": "for number two and that's joining paths",
+      "offset": 96900,
+      "duration": 4140
+    },
+    {
+      "text": "this might come as a surprise but",
+      "offset": 98880,
+      "duration": 4620
+    },
+    {
+      "text": "joining paths in Python might not be as",
+      "offset": 101040,
+      "duration": 4980
+    },
+    {
+      "text": "intuitive as you think it is so here in",
+      "offset": 103500,
+      "duration": 4140
+    },
+    {
+      "text": "this example what we're going to do is",
+      "offset": 106020,
+      "duration": 4020
+    },
+    {
+      "text": "import OS because we're going to use the",
+      "offset": 107640,
+      "duration": 4920
+    },
+    {
+      "text": "os.path module and we're going to",
+      "offset": 110040,
+      "duration": 5039
+    },
+    {
+      "text": "declare two paths that we will want to",
+      "offset": 112560,
+      "duration": 4019
+    },
+    {
+      "text": "join in the future",
+      "offset": 115079,
+      "duration": 3320
+    },
+    {
+      "text": "all right so we're going to hit",
+      "offset": 116579,
+      "duration": 3781
+    },
+    {
+      "text": "os.path.join and something interesting",
+      "offset": 118399,
+      "duration": 4661
+    },
+    {
+      "text": "is going to happen which is that the",
+      "offset": 120360,
+      "duration": 4859
+    },
+    {
+      "text": "pads are not going to be joined",
+      "offset": 123060,
+      "duration": 4320
+    },
+    {
+      "text": "which isn't what we wanted and that's",
+      "offset": 125219,
+      "duration": 3540
+    },
+    {
+      "text": "not great",
+      "offset": 127380,
+      "duration": 4740
+    },
+    {
+      "text": "so what we need to do is actually get",
+      "offset": 128759,
+      "duration": 6421
+    },
+    {
+      "text": "rid of the forward slash at the",
+      "offset": 132120,
+      "duration": 6780
+    },
+    {
+      "text": "beginning of the path and if we had a",
+      "offset": 135180,
+      "duration": 5580
+    },
+    {
+      "text": "Windows machine this would be backward",
+      "offset": 138900,
+      "duration": 4800
+    },
+    {
+      "text": "slashes and now if we were to join those",
+      "offset": 140760,
+      "duration": 5400
+    },
+    {
+      "text": "two together we would see that those two",
+      "offset": 143700,
+      "duration": 4740
+    },
+    {
+      "text": "can be joined and are joined now you",
+      "offset": 146160,
+      "duration": 4579
+    },
+    {
+      "text": "might say well nafio I don't really use",
+      "offset": 148440,
+      "duration": 6180
+    },
+    {
+      "text": "os.path I use pathlib and I use the path",
+      "offset": 150739,
+      "duration": 6281
+    },
+    {
+      "text": "object well if you were to do the same",
+      "offset": 154620,
+      "duration": 4199
+    },
+    {
+      "text": "thing with path objects you would find",
+      "offset": 157020,
+      "duration": 4799
+    },
+    {
+      "text": "yourself in the same sort of conundrum",
+      "offset": 158819,
+      "duration": 5700
+    },
+    {
+      "text": "so here if we were to join those two",
+      "offset": 161819,
+      "duration": 4500
+    },
+    {
+      "text": "paths together we would just get the",
+      "offset": 164519,
+      "duration": 4021
+    },
+    {
+      "text": "same as what we did when we first",
+      "offset": 166319,
+      "duration": 5601
+    },
+    {
+      "text": "attempted to join paths using",
+      "offset": 168540,
+      "duration": 6240
+    },
+    {
+      "text": "os.path.join and if we were to use the",
+      "offset": 171920,
+      "duration": 3819
+    },
+    {
+      "text": "method",
+      "offset": 174780,
+      "duration": 5039
+    },
+    {
+      "text": "on the path object as well we would have",
+      "offset": 175739,
+      "duration": 6741
+    },
+    {
+      "text": "the same results",
+      "offset": 179819,
+      "duration": 2661
+    },
+    {
+      "text": "and that's not exactly what we wanted",
+      "offset": 182819,
+      "duration": 3721
+    },
+    {
+      "text": "now if we were to get rid of the forward",
+      "offset": 184500,
+      "duration": 4019
+    },
+    {
+      "text": "slash at the beginning we would get what",
+      "offset": 186540,
+      "duration": 3720
+    },
+    {
+      "text": "we wanted in the first place",
+      "offset": 188519,
+      "duration": 4140
+    },
+    {
+      "text": "so when dealing with paths make sure",
+      "offset": 190260,
+      "duration": 4080
+    },
+    {
+      "text": "that the forward slash",
+      "offset": 192659,
+      "duration": 4321
+    },
+    {
+      "text": "at the front he's gotten rid of this",
+      "offset": 194340,
+      "duration": 5280
+    },
+    {
+      "text": "particular Quirk has caused trouble for",
+      "offset": 196980,
+      "duration": 5640
+    },
+    {
+      "text": "eight one a web-based terminal emulator",
+      "offset": 199620,
+      "duration": 6600
+    },
+    {
+      "text": "and it was actually a cve back in 2020.",
+      "offset": 202620,
+      "duration": 5339
+    },
+    {
+      "text": "so be careful about how you deal with",
+      "offset": 206220,
+      "duration": 4680
+    },
+    {
+      "text": "your paths okay so this one is called",
+      "offset": 207959,
+      "duration": 5461
+    },
+    {
+      "text": "the zip slip now the zip slip is",
+      "offset": 210900,
+      "duration": 5220
+    },
+    {
+      "text": "basically where you sneak in a file",
+      "offset": 213420,
+      "duration": 5420
+    },
+    {
+      "text": "within a zip file that is actually",
+      "offset": 216120,
+      "duration": 6360
+    },
+    {
+      "text": "referring to a directory that is out of",
+      "offset": 218840,
+      "duration": 5979
+    },
+    {
+      "text": "your current working directory so to",
+      "offset": 222480,
+      "duration": 4020
+    },
+    {
+      "text": "demonstrate that I'm going to show you",
+      "offset": 224819,
+      "duration": 4621
+    },
+    {
+      "text": "this little file so here we have a main",
+      "offset": 226500,
+      "duration": 5040
+    },
+    {
+      "text": "function and in this main function we",
+      "offset": 229440,
+      "duration": 4799
+    },
+    {
+      "text": "are going to use zip file.zip file to",
+      "offset": 231540,
+      "duration": 5220
+    },
+    {
+      "text": "extract a zip file",
+      "offset": 234239,
+      "duration": 4021
+    },
+    {
+      "text": "so here",
+      "offset": 236760,
+      "duration": 5759
+    },
+    {
+      "text": "we are using for entry in zf.name list",
+      "offset": 238260,
+      "duration": 6539
+    },
+    {
+      "text": "and we're going to say hey if the entry",
+      "offset": 242519,
+      "duration": 5940
+    },
+    {
+      "text": "ends with DOT txt we want to read it and",
+      "offset": 244799,
+      "duration": 5101
+    },
+    {
+      "text": "then we want to write it",
+      "offset": 248459,
+      "duration": 4140
+    },
+    {
+      "text": "okay seems harmless enough",
+      "offset": 249900,
+      "duration": 4199
+    },
+    {
+      "text": "but I'm going to show you something that",
+      "offset": 252599,
+      "duration": 3181
+    },
+    {
+      "text": "is kind of scary",
+      "offset": 254099,
+      "duration": 4501
+    },
+    {
+      "text": "so I'm going to run this in debug mode",
+      "offset": 255780,
+      "duration": 5100
+    },
+    {
+      "text": "and you're going to see one of these",
+      "offset": 258600,
+      "duration": 4260
+    },
+    {
+      "text": "things is referring to",
+      "offset": 260880,
+      "duration": 5220
+    },
+    {
+      "text": "a place that is outside of our current",
+      "offset": 262860,
+      "duration": 5700
+    },
+    {
+      "text": "working directory so this if we were to",
+      "offset": 266100,
+      "duration": 3960
+    },
+    {
+      "text": "create it in the way that we are now",
+      "offset": 268560,
+      "duration": 3300
+    },
+    {
+      "text": "this would be created outside of our",
+      "offset": 270060,
+      "duration": 4380
+    },
+    {
+      "text": "working directory and this is one of the",
+      "offset": 271860,
+      "duration": 4320
+    },
+    {
+      "text": "ways in which malicious attacks can",
+      "offset": 274440,
+      "duration": 4199
+    },
+    {
+      "text": "happen so in order to mitigate this what",
+      "offset": 276180,
+      "duration": 5280
+    },
+    {
+      "text": "you want to do is use extract which is",
+      "offset": 278639,
+      "duration": 4620
+    },
+    {
+      "text": "what I'm going to do so here I'm just",
+      "offset": 281460,
+      "duration": 3500
+    },
+    {
+      "text": "going to replace all of this with",
+      "offset": 283259,
+      "duration": 4440
+    },
+    {
+      "text": "zf.extract so zip file.extract and I'm",
+      "offset": 284960,
+      "duration": 5200
+    },
+    {
+      "text": "going to tell which place to put the",
+      "offset": 287699,
+      "duration": 4500
+    },
+    {
+      "text": "file in and once we've run that program",
+      "offset": 290160,
+      "duration": 4319
+    },
+    {
+      "text": "we can see that inside a place to",
+      "offset": 292199,
+      "duration": 5940
+    },
+    {
+      "text": "extract there is only good.txt and",
+      "offset": 294479,
+      "duration": 6361
+    },
+    {
+      "text": "anything that has to do or refers to",
+      "offset": 298139,
+      "duration": 4861
+    },
+    {
+      "text": "anything outside of our working",
+      "offset": 300840,
+      "duration": 4940
+    },
+    {
+      "text": "directory is ignored and this is because",
+      "offset": 303000,
+      "duration": 7320
+    },
+    {
+      "text": "extract and extract all our methods that",
+      "offset": 305780,
+      "duration": 7960
+    },
+    {
+      "text": "try to prevent the zip slip attack from",
+      "offset": 310320,
+      "duration": 6599
+    },
+    {
+      "text": "happening the next one is a problem in a",
+      "offset": 313740,
+      "duration": 5880
+    },
+    {
+      "text": "similar vein to the last so this is",
+      "offset": 316919,
+      "duration": 4801
+    },
+    {
+      "text": "about the temp file module that we have",
+      "offset": 319620,
+      "duration": 4139
+    },
+    {
+      "text": "in Python and what interesting about",
+      "offset": 321720,
+      "duration": 4380
+    },
+    {
+      "text": "this module is that it can create a",
+      "offset": 323759,
+      "duration": 4861
+    },
+    {
+      "text": "named temporary file so over here you",
+      "offset": 326100,
+      "duration": 4800
+    },
+    {
+      "text": "can see that I have something called a",
+      "offset": 328620,
+      "duration": 3840
+    },
+    {
+      "text": "prefix and this is something that is",
+      "offset": 330900,
+      "duration": 4560
+    },
+    {
+      "text": "prepended to the file name and this is",
+      "offset": 332460,
+      "duration": 5280
+    },
+    {
+      "text": "the keyword argument that is susceptible",
+      "offset": 335460,
+      "duration": 5040
+    },
+    {
+      "text": "to a path traversal attack you can put",
+      "offset": 337740,
+      "duration": 5880
+    },
+    {
+      "text": "in a path that tries to access a",
+      "offset": 340500,
+      "duration": 5039
+    },
+    {
+      "text": "directory right above the one that",
+      "offset": 343620,
+      "duration": 3660
+    },
+    {
+      "text": "you're creating the temp file in so for",
+      "offset": 345539,
+      "duration": 6201
+    },
+    {
+      "text": "example if we were to run this request",
+      "offset": 347280,
+      "duration": 4460
+    },
+    {
+      "text": "you would see that we have created this",
+      "offset": 352919,
+      "duration": 5641
+    },
+    {
+      "text": "text file over here that's right above",
+      "offset": 356340,
+      "duration": 4320
+    },
+    {
+      "text": "this particular directory",
+      "offset": 358560,
+      "duration": 4620
+    },
+    {
+      "text": "now in most places you should have",
+      "offset": 360660,
+      "duration": 4979
+    },
+    {
+      "text": "permissions in place to prevent access",
+      "offset": 363180,
+      "duration": 6420
+    },
+    {
+      "text": "to anything sensitive however this does",
+      "offset": 365639,
+      "duration": 6780
+    },
+    {
+      "text": "act as a vector for attack when people",
+      "offset": 369600,
+      "duration": 5879
+    },
+    {
+      "text": "want to exploit your system this",
+      "offset": 372419,
+      "duration": 6000
+    },
+    {
+      "text": "particular kind of issue is called the",
+      "offset": 375479,
+      "duration": 5641
+    },
+    {
+      "text": "path traversal attack or the directory",
+      "offset": 378419,
+      "duration": 4861
+    },
+    {
+      "text": "traversal attack this is something that",
+      "offset": 381120,
+      "duration": 3840
+    },
+    {
+      "text": "you want to avoid so make sure that you",
+      "offset": 383280,
+      "duration": 4020
+    },
+    {
+      "text": "always sanitize any input that's coming",
+      "offset": 384960,
+      "duration": 5519
+    },
+    {
+      "text": "in and be careful what you plug into the",
+      "offset": 387300,
+      "duration": 6119
+    },
+    {
+      "text": "prefix variable of your temp files okay",
+      "offset": 390479,
+      "duration": 7500
+    },
+    {
+      "text": "so for the last but not least member of",
+      "offset": 393419,
+      "duration": 6481
+    },
+    {
+      "text": "the Lesser known python security",
+      "offset": 397979,
+      "duration": 5641
+    },
+    {
+      "text": "pitfalls is IP address normalization now",
+      "offset": 399900,
+      "duration": 6660
+    },
+    {
+      "text": "if you take a look at here we have the",
+      "offset": 403620,
+      "duration": 5220
+    },
+    {
+      "text": "IP address library and what we're going",
+      "offset": 406560,
+      "duration": 4440
+    },
+    {
+      "text": "to do is we're going to send a request",
+      "offset": 408840,
+      "duration": 6120
+    },
+    {
+      "text": "to an IP that we get from the user",
+      "offset": 411000,
+      "duration": 6180
+    },
+    {
+      "text": "now the user is a little malicious over",
+      "offset": 414960,
+      "duration": 5100
+    },
+    {
+      "text": "here you can see that instead of writing",
+      "offset": 417180,
+      "duration": 6239
+    },
+    {
+      "text": "an IP address normally they have chosen",
+      "offset": 420060,
+      "duration": 6240
+    },
+    {
+      "text": "to write the IP in an abnormal kind of",
+      "offset": 423419,
+      "duration": 4321
+    },
+    {
+      "text": "way but you're going to see something",
+      "offset": 426300,
+      "duration": 3360
+    },
+    {
+      "text": "interesting happen when this gets",
+      "offset": 427740,
+      "duration": 4260
+    },
+    {
+      "text": "normalized so if we were to run this",
+      "offset": 429660,
+      "duration": 5580
+    },
+    {
+      "text": "with python 3.7 you are going to see",
+      "offset": 432000,
+      "duration": 6240
+    },
+    {
+      "text": "that we actually did try to send a",
+      "offset": 435240,
+      "duration": 6000
+    },
+    {
+      "text": "request to a local address let's add a",
+      "offset": 438240,
+      "duration": 4859
+    },
+    {
+      "text": "little more clarity and I'm going to do",
+      "offset": 441240,
+      "duration": 4200
+    },
+    {
+      "text": "that by printing out the normalized",
+      "offset": 443099,
+      "duration": 5401
+    },
+    {
+      "text": "version of the ip4 address that we are",
+      "offset": 445440,
+      "duration": 4800
+    },
+    {
+      "text": "getting from the ip4 method and then",
+      "offset": 448500,
+      "duration": 4740
+    },
+    {
+      "text": "running it again in Python 3.7",
+      "offset": 450240,
+      "duration": 7579
+    },
+    {
+      "text": "we see that the IP is normalized to",
+      "offset": 453240,
+      "duration": 7859
+    },
+    {
+      "text": "127.0.0.1 and that means that the server",
+      "offset": 457819,
+      "duration": 5741
+    },
+    {
+      "text": "is making an internal request however",
+      "offset": 461099,
+      "duration": 4921
+    },
+    {
+      "text": "this line fails to catch that because",
+      "offset": 463560,
+      "duration": 5880
+    },
+    {
+      "text": "there are two zeros here instead of one",
+      "offset": 466020,
+      "duration": 5640
+    },
+    {
+      "text": "and what eventually happens",
+      "offset": 469440,
+      "duration": 4860
+    },
+    {
+      "text": "is that this gets normalized by the IP",
+      "offset": 471660,
+      "duration": 5220
+    },
+    {
+      "text": "address library and eventually the",
+      "offset": 474300,
+      "duration": 4739
+    },
+    {
+      "text": "request gets sent",
+      "offset": 476880,
+      "duration": 4259
+    },
+    {
+      "text": "so what you want to do is use the latest",
+      "offset": 479039,
+      "duration": 4621
+    },
+    {
+      "text": "version of python whenever you can but",
+      "offset": 481139,
+      "duration": 4560
+    },
+    {
+      "text": "if you're using a version of python",
+      "offset": 483660,
+      "duration": 5879
+    },
+    {
+      "text": "that's less than 3.8 you can be",
+      "offset": 485699,
+      "duration": 5940
+    },
+    {
+      "text": "susceptible to this kind of attack where",
+      "offset": 489539,
+      "duration": 4921
+    },
+    {
+      "text": "user input is sending you a malicious IP",
+      "offset": 491639,
+      "duration": 6000
+    },
+    {
+      "text": "address that will eventually be used to",
+      "offset": 494460,
+      "duration": 5940
+    },
+    {
+      "text": "attack one of your own internal servers",
+      "offset": 497639,
+      "duration": 4261
+    },
+    {
+      "text": "or services",
+      "offset": 500400,
+      "duration": 3299
+    },
+    {
+      "text": "and with that thank you so much for",
+      "offset": 501900,
+      "duration": 3960
+    },
+    {
+      "text": "watching I hope to see you again in the",
+      "offset": 503699,
+      "duration": 3721
+    },
+    {
+      "text": "next video",
+      "offset": 505860,
+      "duration": 9059
+    },
+    {
+      "text": "[Music]",
+      "offset": 507420,
+      "duration": 7499
+    }
+  ],
+  "fullText": "foreign [Music] hey folks I'm your host nafiel and welcome to this video on five lesser-known python security pitfalls in this video we're going to take a look at the subtle ways in which security can be compromised in your code so without much further Ado let's dive into it alright so for our first example let's talk about running python in optimized mode here we have a very simple flask application and has a single route and in that route recalling a function called sumfunk and this sumfunk is always going to return none if we were to run this in the normal way we would see that it would tell us that we have an assertion error inside of our code there we go not too great The thing that is often scary is when you run this in an optimized mode so python has an optimized mode using the dash o operator and if we were to run that and reload the page we would see that that statement is completely ignored the reason for this is because when you run python in an optimized mode using the dash o argument what happens is all the asserts in your application are removed which can lead to some pretty catastrophic results now python is often not run using optimized mode because most often you don't need it but in case you wanted to save a little bit of memory and you have to distribute python to a lot of different machines this can be quite helpful alright folks it's time for number two and that's joining paths this might come as a surprise but joining paths in Python might not be as intuitive as you think it is so here in this example what we're going to do is import OS because we're going to use the os.path module and we're going to declare two paths that we will want to join in the future all right so we're going to hit os.path.join and something interesting is going to happen which is that the pads are not going to be joined which isn't what we wanted and that's not great so what we need to do is actually get rid of the forward slash at the beginning of the path and if we had a Windows machine this would be backward slashes and now if we were to join those two together we would see that those two can be joined and are joined now you might say well nafio I don't really use os.path I use pathlib and I use the path object well if you were to do the same thing with path objects you would find yourself in the same sort of conundrum so here if we were to join those two paths together we would just get the same as what we did when we first attempted to join paths using os.path.join and if we were to use the method on the path object as well we would have the same results and that's not exactly what we wanted now if we were to get rid of the forward slash at the beginning we would get what we wanted in the first place so when dealing with paths make sure that the forward slash at the front he's gotten rid of this particular Quirk has caused trouble for eight one a web-based terminal emulator and it was actually a cve back in 2020. so be careful about how you deal with your paths okay so this one is called the zip slip now the zip slip is basically where you sneak in a file within a zip file that is actually referring to a directory that is out of your current working directory so to demonstrate that I'm going to show you this little file so here we have a main function and in this main function we are going to use zip file.zip file to extract a zip file so here we are using for entry in zf.name list and we're going to say hey if the entry ends with DOT txt we want to read it and then we want to write it okay seems harmless enough but I'm going to show you something that is kind of scary so I'm going to run this in debug mode and you're going to see one of these things is referring to a place that is outside of our current working directory so this if we were to create it in the way that we are now this would be created outside of our working directory and this is one of the ways in which malicious attacks can happen so in order to mitigate this what you want to do is use extract which is what I'm going to do so here I'm just going to replace all of this with zf.extract so zip file.extract and I'm going to tell which place to put the file in and once we've run that program we can see that inside a place to extract there is only good.txt and anything that has to do or refers to anything outside of our working directory is ignored and this is because extract and extract all our methods that try to prevent the zip slip attack from happening the next one is a problem in a similar vein to the last so this is about the temp file module that we have in Python and what interesting about this module is that it can create a named temporary file so over here you can see that I have something called a prefix and this is something that is prepended to the file name and this is the keyword argument that is susceptible to a path traversal attack you can put in a path that tries to access a directory right above the one that you're creating the temp file in so for example if we were to run this request you would see that we have created this text file over here that's right above this particular directory now in most places you should have permissions in place to prevent access to anything sensitive however this does act as a vector for attack when people want to exploit your system this particular kind of issue is called the path traversal attack or the directory traversal attack this is something that you want to avoid so make sure that you always sanitize any input that's coming in and be careful what you plug into the prefix variable of your temp files okay so for the last but not least member of the Lesser known python security pitfalls is IP address normalization now if you take a look at here we have the IP address library and what we're going to do is we're going to send a request to an IP that we get from the user now the user is a little malicious over here you can see that instead of writing an IP address normally they have chosen to write the IP in an abnormal kind of way but you're going to see something interesting happen when this gets normalized so if we were to run this with python 3.7 you are going to see that we actually did try to send a request to a local address let's add a little more clarity and I'm going to do that by printing out the normalized version of the ip4 address that we are getting from the ip4 method and then running it again in Python 3.7 we see that the IP is normalized to 127.0.0.1 and that means that the server is making an internal request however this line fails to catch that because there are two zeros here instead of one and what eventually happens is that this gets normalized by the IP address library and eventually the request gets sent so what you want to do is use the latest version of python whenever you can but if you're using a version of python that's less than 3.8 you can be susceptible to this kind of attack where user input is sending you a malicious IP address that will eventually be used to attack one of your own internal servers or services and with that thank you so much for watching I hope to see you again in the next video [Music]",
+  "fetchedAt": "2026-03-14T09:24:23.880Z"
+}

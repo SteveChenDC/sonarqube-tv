@@ -1,0 +1,1043 @@
+{
+  "videoId": "v78",
+  "youtubeId": "JRiF-w-3Cog",
+  "segments": [
+    {
+      "text": "Hi, I'm Ann Campbell and today I'm going",
+      "offset": 5839,
+      "duration": 3121
+    },
+    {
+      "text": "to talk about the key features of",
+      "offset": 7759,
+      "duration": 3920
+    },
+    {
+      "text": "SonarCube 2025.5.",
+      "offset": 8960,
+      "duration": 5200
+    },
+    {
+      "text": "Let's start with some rules. In Python,",
+      "offset": 11679,
+      "duration": 4481
+    },
+    {
+      "text": "we've added 15 new rules to help you",
+      "offset": 14160,
+      "duration": 3760
+    },
+    {
+      "text": "write good lambdas because writing",
+      "offset": 16160,
+      "duration": 3600
+    },
+    {
+      "text": "efficient, maintainable lambda functions",
+      "offset": 17920,
+      "duration": 4160
+    },
+    {
+      "text": "in Python can be challenging. So, I'm",
+      "offset": 19760,
+      "duration": 5120
+    },
+    {
+      "text": "going to linger lovingly across these",
+      "offset": 22080,
+      "duration": 5439
+    },
+    {
+      "text": "slides so that if you want to pause the",
+      "offset": 24880,
+      "duration": 4639
+    },
+    {
+      "text": "video to take a closer look, you can.",
+      "offset": 27519,
+      "duration": 4241
+    },
+    {
+      "text": "Now, moving on to GitHub actions. We're",
+      "offset": 29519,
+      "duration": 4081
+    },
+    {
+      "text": "adding brand new rules for GitHub",
+      "offset": 31760,
+      "duration": 3360
+    },
+    {
+      "text": "actions to help you detect",
+      "offset": 33600,
+      "duration": 3760
+    },
+    {
+      "text": "vulnerabilities and configuration floods",
+      "offset": 35120,
+      "duration": 4560
+    },
+    {
+      "text": "and prevent supply chain attacks. So,",
+      "offset": 37360,
+      "duration": 4800
+    },
+    {
+      "text": "here are the eight new rules we've added",
+      "offset": 39680,
+      "duration": 4960
+    },
+    {
+      "text": "for GitHub actions. I suspect more will",
+      "offset": 42160,
+      "duration": 4320
+    },
+    {
+      "text": "be coming, but I can't promise anything.",
+      "offset": 44640,
+      "duration": 4800
+    },
+    {
+      "text": "In C++, we've added nine new Misra",
+      "offset": 46480,
+      "duration": 5599
+    },
+    {
+      "text": "rules. This brings our coverage up to",
+      "offset": 49440,
+      "duration": 6720
+    },
+    {
+      "text": "150 out of 179 rules, or 84%.",
+      "offset": 52079,
+      "duration": 8000
+    },
+    {
+      "text": "So, here are the miser C++ 2023 rules",
+      "offset": 56160,
+      "duration": 6000
+    },
+    {
+      "text": "we've added in this version. For",
+      "offset": 60079,
+      "duration": 4001
+    },
+    {
+      "text": "Angular, we've added rules to help you",
+      "offset": 62160,
+      "duration": 3840
+    },
+    {
+      "text": "target the most common problems in code",
+      "offset": 64080,
+      "duration": 4399
+    },
+    {
+      "text": "outside of templates. We have rules for",
+      "offset": 66000,
+      "duration": 6000
+    },
+    {
+      "text": "input and pipes, rules for output, and",
+      "offset": 68479,
+      "duration": 6000
+    },
+    {
+      "text": "rules for life cycle.",
+      "offset": 72000,
+      "duration": 4799
+    },
+    {
+      "text": "And now, let's move on to the demo. I'm",
+      "offset": 74479,
+      "duration": 3921
+    },
+    {
+      "text": "going to show you two features in Sonar",
+      "offset": 76799,
+      "duration": 3680
+    },
+    {
+      "text": "Cube this time. Issue sandboxing and",
+      "offset": 78400,
+      "duration": 3920
+    },
+    {
+      "text": "links in global messages. And I'm going",
+      "offset": 80479,
+      "duration": 3441
+    },
+    {
+      "text": "to start with issue sandboxing because",
+      "offset": 82320,
+      "duration": 4080
+    },
+    {
+      "text": "it's kind of a big deal. So, for years,",
+      "offset": 83920,
+      "duration": 4239
+    },
+    {
+      "text": "we've been hearing that people were",
+      "offset": 86400,
+      "duration": 4719
+    },
+    {
+      "text": "reluctant to take center cube upgrades.",
+      "offset": 88159,
+      "duration": 4721
+    },
+    {
+      "text": "Not because they didn't want the",
+      "offset": 91119,
+      "duration": 3601
+    },
+    {
+      "text": "features in the new version, and not",
+      "offset": 92880,
+      "duration": 3520
+    },
+    {
+      "text": "because they were afraid the new version",
+      "offset": 94720,
+      "duration": 3840
+    },
+    {
+      "text": "might be buggy, but because they were",
+      "offset": 96400,
+      "duration": 3920
+    },
+    {
+      "text": "afraid of what the new version could do",
+      "offset": 98560,
+      "duration": 3680
+    },
+    {
+      "text": "to their quality gates. And that's",
+      "offset": 100320,
+      "duration": 4320
+    },
+    {
+      "text": "because every new version ships updated",
+      "offset": 102240,
+      "duration": 4159
+    },
+    {
+      "text": "analyzers. And those analyzer",
+      "offset": 104640,
+      "duration": 4080
+    },
+    {
+      "text": "improvements can include not just new",
+      "offset": 106399,
+      "duration": 4961
+    },
+    {
+      "text": "rules, but also updated rules that are",
+      "offset": 108720,
+      "duration": 5120
+    },
+    {
+      "text": "smarter and find issues now that they",
+      "offset": 111360,
+      "duration": 5119
+    },
+    {
+      "text": "didn't before. Now, even though we",
+      "offset": 113840,
+      "duration": 4559
+    },
+    {
+      "text": "backdate those rules to take them out of",
+      "offset": 116479,
+      "duration": 3920
+    },
+    {
+      "text": "your new code period, it can still blow",
+      "offset": 118399,
+      "duration": 4320
+    },
+    {
+      "text": "up your quality gate if you've got a",
+      "offset": 120399,
+      "duration": 4801
+    },
+    {
+      "text": "condition on say no blocker bugs in",
+      "offset": 122719,
+      "duration": 5201
+    },
+    {
+      "text": "overall code. And that's why we invented",
+      "offset": 125200,
+      "duration": 5039
+    },
+    {
+      "text": "issue sandboxing. So, let's take a look",
+      "offset": 127920,
+      "duration": 4640
+    },
+    {
+      "text": "at what that looks like. Now, here's a",
+      "offset": 130239,
+      "duration": 4241
+    },
+    {
+      "text": "project that's failing its quality gate,",
+      "offset": 132560,
+      "duration": 3440
+    },
+    {
+      "text": "but it's failing its quality gate",
+      "offset": 134480,
+      "duration": 4320
+    },
+    {
+      "text": "because it's got 10 issues in new code",
+      "offset": 136000,
+      "duration": 5360
+    },
+    {
+      "text": "that were not introduced by the upgrade.",
+      "offset": 138800,
+      "duration": 4000
+    },
+    {
+      "text": "How do I know they were not introduced",
+      "offset": 141360,
+      "duration": 3680
+    },
+    {
+      "text": "by the upgrade? Because issue sandboxing",
+      "offset": 142800,
+      "duration": 4640
+    },
+    {
+      "text": "is turned on in this instance. And I see",
+      "offset": 145040,
+      "duration": 4240
+    },
+    {
+      "text": "in this brand new section of the",
+      "offset": 147440,
+      "duration": 4720
+    },
+    {
+      "text": "homepage, the issue sandbox. So, the new",
+      "offset": 149280,
+      "duration": 5360
+    },
+    {
+      "text": "issues that were introduced by the",
+      "offset": 152160,
+      "duration": 4480
+    },
+    {
+      "text": "upgrade are in the sandbox. And I see",
+      "offset": 154640,
+      "duration": 4640
+    },
+    {
+      "text": "I've got six security issues here. So,",
+      "offset": 156640,
+      "duration": 4319
+    },
+    {
+      "text": "let's take a look at those. The first",
+      "offset": 159280,
+      "duration": 3599
+    },
+    {
+      "text": "thing I notice here is that they've got",
+      "offset": 160959,
+      "duration": 5441
+    },
+    {
+      "text": "a status in sandbox. Now, as the human",
+      "offset": 162879,
+      "duration": 5841
+    },
+    {
+      "text": "user, I can move this issue out of the",
+      "offset": 166400,
+      "duration": 6080
+    },
+    {
+      "text": "sandbox to open, accepted, whatever.",
+      "offset": 168720,
+      "duration": 6000
+    },
+    {
+      "text": "Once I move it out of the sandbox, I",
+      "offset": 172480,
+      "duration": 4560
+    },
+    {
+      "text": "cannot move it back in. Only the",
+      "offset": 174720,
+      "duration": 5200
+    },
+    {
+      "text": "analyzer on the first analysis after the",
+      "offset": 177040,
+      "duration": 5919
+    },
+    {
+      "text": "upgrade can put an issue in the sandbox.",
+      "offset": 179920,
+      "duration": 5039
+    },
+    {
+      "text": "Now, I want to show another project",
+      "offset": 182959,
+      "duration": 4481
+    },
+    {
+      "text": "here. Why is this project failing its",
+      "offset": 184959,
+      "duration": 4161
+    },
+    {
+      "text": "quality gate? because it's got a",
+      "offset": 187440,
+      "duration": 4320
+    },
+    {
+      "text": "reliability issue that was introduced by",
+      "offset": 189120,
+      "duration": 5280
+    },
+    {
+      "text": "an update. So, we're seeing this issue",
+      "offset": 191760,
+      "duration": 5920
+    },
+    {
+      "text": "here because a user moved it out of the",
+      "offset": 194400,
+      "duration": 6320
+    },
+    {
+      "text": "sandbox back into the normal set of",
+      "offset": 197680,
+      "duration": 5839
+    },
+    {
+      "text": "issues. Now, issues in the sandbox are",
+      "offset": 200720,
+      "duration": 5519
+    },
+    {
+      "text": "not included in issue metrics. but",
+      "offset": 203519,
+      "duration": 4800
+    },
+    {
+      "text": "moving it out of the sandbox into an",
+      "offset": 206239,
+      "duration": 5360
+    },
+    {
+      "text": "open status reincluded it into the",
+      "offset": 208319,
+      "duration": 5681
+    },
+    {
+      "text": "normal issue metrics. The quality gate",
+      "offset": 211599,
+      "duration": 4481
+    },
+    {
+      "text": "was recalculated and now we have a",
+      "offset": 214000,
+      "duration": 4720
+    },
+    {
+      "text": "failing quality gate because of that. So",
+      "offset": 216080,
+      "duration": 4960
+    },
+    {
+      "text": "I've got one issue from a sonar cube",
+      "offset": 218720,
+      "duration": 5840
+    },
+    {
+      "text": "update that's in the open issues and",
+      "offset": 221040,
+      "duration": 5440
+    },
+    {
+      "text": "I've got record that I have five issues",
+      "offset": 224560,
+      "duration": 4160
+    },
+    {
+      "text": "from sonar cube updates moved out of the",
+      "offset": 226480,
+      "duration": 4800
+    },
+    {
+      "text": "sandbox into an open status in",
+      "offset": 228720,
+      "duration": 4480
+    },
+    {
+      "text": "maintainability. Let's take a look at",
+      "offset": 231280,
+      "duration": 5599
+    },
+    {
+      "text": "that. So again, here are my 436 issues",
+      "offset": 233200,
+      "duration": 7039
+    },
+    {
+      "text": "in the sandbox. I can filter for that",
+      "offset": 236879,
+      "duration": 7121
+    },
+    {
+      "text": "status anytime I like. And if I move",
+      "offset": 240239,
+      "duration": 6481
+    },
+    {
+      "text": "this issue to open, then my metrics are",
+      "offset": 244000,
+      "duration": 5040
+    },
+    {
+      "text": "updated automatically. If I go back to",
+      "offset": 246720,
+      "duration": 5280
+    },
+    {
+      "text": "the homepage, I see that I now in",
+      "offset": 249040,
+      "duration": 5839
+    },
+    {
+      "text": "overall code have six issues from the",
+      "offset": 252000,
+      "duration": 5359
+    },
+    {
+      "text": "Sonar Cube update. Now, it's worth",
+      "offset": 254879,
+      "duration": 5040
+    },
+    {
+      "text": "looking briefly at the settings to turn",
+      "offset": 257359,
+      "duration": 4641
+    },
+    {
+      "text": "this on. And I want to mention at this",
+      "offset": 259919,
+      "duration": 6321
+    },
+    {
+      "text": "point that this must be turned on before",
+      "offset": 262000,
+      "duration": 6720
+    },
+    {
+      "text": "the first analysis after an update",
+      "offset": 266240,
+      "duration": 4880
+    },
+    {
+      "text": "because again only the first analysis",
+      "offset": 268720,
+      "duration": 5199
+    },
+    {
+      "text": "after an update can put an issue in the",
+      "offset": 271120,
+      "duration": 5280
+    },
+    {
+      "text": "sandbox. If you do the update, run the",
+      "offset": 273919,
+      "duration": 5280
+    },
+    {
+      "text": "analysis and then turn this on, your",
+      "offset": 276400,
+      "duration": 5519
+    },
+    {
+      "text": "issues won't be in the sandbox. So here",
+      "offset": 279199,
+      "duration": 4161
+    },
+    {
+      "text": "at the global level under",
+      "offset": 281919,
+      "duration": 3521
+    },
+    {
+      "text": "administration, general settings, I've",
+      "offset": 283360,
+      "duration": 4320
+    },
+    {
+      "text": "scrolled down to the sandbox feature.",
+      "offset": 285440,
+      "duration": 4160
+    },
+    {
+      "text": "This has been turned on for the whole",
+      "offset": 287680,
+      "duration": 5200
+    },
+    {
+      "text": "instance and we can configure what types",
+      "offset": 289600,
+      "duration": 6240
+    },
+    {
+      "text": "of issues we would like to sandbox. So a",
+      "offset": 292880,
+      "duration": 4480
+    },
+    {
+      "text": "previous administrator turned on",
+      "offset": 295840,
+      "duration": 4960
+    },
+    {
+      "text": "maintainability of all severities and I",
+      "offset": 297360,
+      "duration": 6240
+    },
+    {
+      "text": "am going to turn on security. You see I",
+      "offset": 300800,
+      "duration": 7040
+    },
+    {
+      "text": "get a warning in the UI. So I'm going to",
+      "offset": 303600,
+      "duration": 6560
+    },
+    {
+      "text": "sandbox all security issues and I'm",
+      "offset": 307840,
+      "duration": 4079
+    },
+    {
+      "text": "going to sandbox",
+      "offset": 310160,
+      "duration": 4720
+    },
+    {
+      "text": "let's see info and low reliability",
+      "offset": 311919,
+      "duration": 5521
+    },
+    {
+      "text": "issues. So, I've got the warnings here",
+      "offset": 314880,
+      "duration": 4640
+    },
+    {
+      "text": "in the UI. I really should think about",
+      "offset": 317440,
+      "duration": 4960
+    },
+    {
+      "text": "what I'm doing here. And when I save it,",
+      "offset": 319520,
+      "duration": 5519
+    },
+    {
+      "text": "I get another warning. Yes, I really do",
+      "offset": 322400,
+      "duration": 5920
+    },
+    {
+      "text": "want to do this. And now I can run my",
+      "offset": 325039,
+      "duration": 6160
+    },
+    {
+      "text": "first analysis after the upgrade to get",
+      "offset": 328320,
+      "duration": 5680
+    },
+    {
+      "text": "my sandboxed issues. So, I hope y'all",
+      "offset": 331199,
+      "duration": 5440
+    },
+    {
+      "text": "enjoy using this feature. I know it's",
+      "offset": 334000,
+      "duration": 4720
+    },
+    {
+      "text": "going to be super useful to a whole lot",
+      "offset": 336639,
+      "duration": 4241
+    },
+    {
+      "text": "of people. Now, on the topic of",
+      "offset": 338720,
+      "duration": 4960
+    },
+    {
+      "text": "understanding the upgrade of an impact,",
+      "offset": 340880,
+      "duration": 4960
+    },
+    {
+      "text": "I want to point out one more thing, and",
+      "offset": 343680,
+      "duration": 4000
+    },
+    {
+      "text": "that's that we've added a resource to",
+      "offset": 345840,
+      "duration": 4799
+    },
+    {
+      "text": "the sonarsource.com website to help you",
+      "offset": 347680,
+      "duration": 5440
+    },
+    {
+      "text": "understand what the rule changes were",
+      "offset": 350639,
+      "duration": 7361
+    },
+    {
+      "text": "between the 9.9 LTA and the 2025.1 LTA.",
+      "offset": 353120,
+      "duration": 6960
+    },
+    {
+      "text": "These reports will be coming for other",
+      "offset": 358000,
+      "duration": 4479
+    },
+    {
+      "text": "versions in between, but it's important",
+      "offset": 360080,
+      "duration": 4480
+    },
+    {
+      "text": "to know if you're still considering",
+      "offset": 362479,
+      "duration": 3361
+    },
+    {
+      "text": "whether or not you should take the",
+      "offset": 364560,
+      "duration": 2960
+    },
+    {
+      "text": "2025.1",
+      "offset": 365840,
+      "duration": 4479
+    },
+    {
+      "text": "update, which yes, you should. This is a",
+      "offset": 367520,
+      "duration": 6160
+    },
+    {
+      "text": "list of all of the rules that were added",
+      "offset": 370319,
+      "duration": 5921
+    },
+    {
+      "text": "or updated between those two LTA",
+      "offset": 373680,
+      "duration": 5040
+    },
+    {
+      "text": "versions. And now jumping back into the",
+      "offset": 376240,
+      "duration": 4000
+    },
+    {
+      "text": "product, I want to show you one more",
+      "offset": 378720,
+      "duration": 4720
+    },
+    {
+      "text": "thing uh which is around it links in",
+      "offset": 380240,
+      "duration": 4959
+    },
+    {
+      "text": "global announcements. So, here I am",
+      "offset": 383440,
+      "duration": 4000
+    },
+    {
+      "text": "again in administration, general",
+      "offset": 385199,
+      "duration": 4401
+    },
+    {
+      "text": "settings. Here at the very top, I've got",
+      "offset": 387440,
+      "duration": 4879
+    },
+    {
+      "text": "the announcement configurations. So, let",
+      "offset": 389600,
+      "duration": 5680
+    },
+    {
+      "text": "me just start by turning this on. Save",
+      "offset": 392319,
+      "duration": 5600
+    },
+    {
+      "text": "that. And I'm going to refresh the page.",
+      "offset": 395280,
+      "duration": 5120
+    },
+    {
+      "text": "And we see that I have a message. Global",
+      "offset": 397919,
+      "duration": 4961
+    },
+    {
+      "text": "messages appear on all pages. Yes, they",
+      "offset": 400400,
+      "duration": 5519
+    },
+    {
+      "text": "do. Now, I'm going to edit this. And I'm",
+      "offset": 402880,
+      "duration": 5520
+    },
+    {
+      "text": "going to add a link. And once I save",
+      "offset": 405919,
+      "duration": 5921
+    },
+    {
+      "text": "this and refresh again, there I have my",
+      "offset": 408400,
+      "duration": 6160
+    },
+    {
+      "text": "link to the community and it works. And",
+      "offset": 411840,
+      "duration": 4560
+    },
+    {
+      "text": "that's what I wanted to show you in the",
+      "offset": 414560,
+      "duration": 3440
+    },
+    {
+      "text": "demo.",
+      "offset": 416400,
+      "duration": 3199
+    },
+    {
+      "text": "Coming back to the slides, I've got just",
+      "offset": 418000,
+      "duration": 3280
+    },
+    {
+      "text": "a few more things I'd like to share with",
+      "offset": 419599,
+      "duration": 5600
+    },
+    {
+      "text": "you. So first, intain analysis has been",
+      "offset": 421280,
+      "duration": 6479
+    },
+    {
+      "text": "updated to support the WPF framework",
+      "offset": 425199,
+      "duration": 5041
+    },
+    {
+      "text": "inputs. That means that we'll recognize",
+      "offset": 427759,
+      "duration": 5440
+    },
+    {
+      "text": "WPF framework UI controls, data",
+      "offset": 430240,
+      "duration": 5440
+    },
+    {
+      "text": "bindings, command parameters as entry",
+      "offset": 433199,
+      "duration": 5041
+    },
+    {
+      "text": "points and sources of untrusted user",
+      "offset": 435680,
+      "duration": 5359
+    },
+    {
+      "text": "input. In JavaScript TypeScript, we've",
+      "offset": 438240,
+      "duration": 4959
+    },
+    {
+      "text": "actually swapped out the TAN analysis",
+      "offset": 441039,
+      "duration": 4081
+    },
+    {
+      "text": "engine for a new engine we've written",
+      "offset": 443199,
+      "duration": 3921
+    },
+    {
+      "text": "from scratch to provide better",
+      "offset": 445120,
+      "duration": 6160
+    },
+    {
+      "text": "detection. In Go, we've added Go 1.25",
+      "offset": 447120,
+      "duration": 7680
+    },
+    {
+      "text": "syntax parsing. In Python, we've added",
+      "offset": 451280,
+      "duration": 6240
+    },
+    {
+      "text": "parallelization of Python analysis. Now,",
+      "offset": 454800,
+      "duration": 5280
+    },
+    {
+      "text": "this has been available by parameter for",
+      "offset": 457520,
+      "duration": 5200
+    },
+    {
+      "text": "a little while now, but now it's on by",
+      "offset": 460080,
+      "duration": 5119
+    },
+    {
+      "text": "default and will automatically look at",
+      "offset": 462720,
+      "duration": 4560
+    },
+    {
+      "text": "your environment, figure out how many",
+      "offset": 465199,
+      "duration": 4000
+    },
+    {
+      "text": "threads make sense, and use that",
+      "offset": 467280,
+      "duration": 4000
+    },
+    {
+      "text": "automatically. If you want fine grain",
+      "offset": 469199,
+      "duration": 4241
+    },
+    {
+      "text": "control of this, that's still available",
+      "offset": 471280,
+      "duration": 4560
+    },
+    {
+      "text": "with analysis parameters, but now it's",
+      "offset": 473440,
+      "duration": 3920
+    },
+    {
+      "text": "on by default for everyone",
+      "offset": 475840,
+      "duration": 4079
+    },
+    {
+      "text": "automatically. And finally, we've added",
+      "offset": 477360,
+      "duration": 5279
+    },
+    {
+      "text": "a global level SCA toggle. Now,",
+      "offset": 479919,
+      "duration": 5361
+    },
+    {
+      "text": "previously it was either on or off for",
+      "offset": 482639,
+      "duration": 5041
+    },
+    {
+      "text": "your entire instance. And if you had the",
+      "offset": 485280,
+      "duration": 5359
+    },
+    {
+      "text": "license for it, it was on. In very big",
+      "offset": 487680,
+      "duration": 5280
+    },
+    {
+      "text": "instances, this was a problem because",
+      "offset": 490639,
+      "duration": 4641
+    },
+    {
+      "text": "people wanted to try it out with a few",
+      "offset": 492960,
+      "duration": 4239
+    },
+    {
+      "text": "projects first and not impose it on",
+      "offset": 495280,
+      "duration": 4319
+    },
+    {
+      "text": "everyone all at once. So now you have",
+      "offset": 497199,
+      "duration": 4000
+    },
+    {
+      "text": "the ability to turn it off at the",
+      "offset": 499599,
+      "duration": 4160
+    },
+    {
+      "text": "instance level so that you can reenable",
+      "offset": 501199,
+      "duration": 5120
+    },
+    {
+      "text": "it at the project level with analysis",
+      "offset": 503759,
+      "duration": 4081
+    },
+    {
+      "text": "parameters.",
+      "offset": 506319,
+      "duration": 3361
+    },
+    {
+      "text": "And that's all I've got for you today.",
+      "offset": 507840,
+      "duration": 6520
+    },
+    {
+      "text": "Thanks for listening. See you next time.",
+      "offset": 509680,
+      "duration": 4680
+    }
+  ],
+  "fullText": "Hi, I'm Ann Campbell and today I'm going to talk about the key features of SonarCube 2025.5. Let's start with some rules. In Python, we've added 15 new rules to help you write good lambdas because writing efficient, maintainable lambda functions in Python can be challenging. So, I'm going to linger lovingly across these slides so that if you want to pause the video to take a closer look, you can. Now, moving on to GitHub actions. We're adding brand new rules for GitHub actions to help you detect vulnerabilities and configuration floods and prevent supply chain attacks. So, here are the eight new rules we've added for GitHub actions. I suspect more will be coming, but I can't promise anything. In C++, we've added nine new Misra rules. This brings our coverage up to 150 out of 179 rules, or 84%. So, here are the miser C++ 2023 rules we've added in this version. For Angular, we've added rules to help you target the most common problems in code outside of templates. We have rules for input and pipes, rules for output, and rules for life cycle. And now, let's move on to the demo. I'm going to show you two features in Sonar Cube this time. Issue sandboxing and links in global messages. And I'm going to start with issue sandboxing because it's kind of a big deal. So, for years, we've been hearing that people were reluctant to take center cube upgrades. Not because they didn't want the features in the new version, and not because they were afraid the new version might be buggy, but because they were afraid of what the new version could do to their quality gates. And that's because every new version ships updated analyzers. And those analyzer improvements can include not just new rules, but also updated rules that are smarter and find issues now that they didn't before. Now, even though we backdate those rules to take them out of your new code period, it can still blow up your quality gate if you've got a condition on say no blocker bugs in overall code. And that's why we invented issue sandboxing. So, let's take a look at what that looks like. Now, here's a project that's failing its quality gate, but it's failing its quality gate because it's got 10 issues in new code that were not introduced by the upgrade. How do I know they were not introduced by the upgrade? Because issue sandboxing is turned on in this instance. And I see in this brand new section of the homepage, the issue sandbox. So, the new issues that were introduced by the upgrade are in the sandbox. And I see I've got six security issues here. So, let's take a look at those. The first thing I notice here is that they've got a status in sandbox. Now, as the human user, I can move this issue out of the sandbox to open, accepted, whatever. Once I move it out of the sandbox, I cannot move it back in. Only the analyzer on the first analysis after the upgrade can put an issue in the sandbox. Now, I want to show another project here. Why is this project failing its quality gate? because it's got a reliability issue that was introduced by an update. So, we're seeing this issue here because a user moved it out of the sandbox back into the normal set of issues. Now, issues in the sandbox are not included in issue metrics. but moving it out of the sandbox into an open status reincluded it into the normal issue metrics. The quality gate was recalculated and now we have a failing quality gate because of that. So I've got one issue from a sonar cube update that's in the open issues and I've got record that I have five issues from sonar cube updates moved out of the sandbox into an open status in maintainability. Let's take a look at that. So again, here are my 436 issues in the sandbox. I can filter for that status anytime I like. And if I move this issue to open, then my metrics are updated automatically. If I go back to the homepage, I see that I now in overall code have six issues from the Sonar Cube update. Now, it's worth looking briefly at the settings to turn this on. And I want to mention at this point that this must be turned on before the first analysis after an update because again only the first analysis after an update can put an issue in the sandbox. If you do the update, run the analysis and then turn this on, your issues won't be in the sandbox. So here at the global level under administration, general settings, I've scrolled down to the sandbox feature. This has been turned on for the whole instance and we can configure what types of issues we would like to sandbox. So a previous administrator turned on maintainability of all severities and I am going to turn on security. You see I get a warning in the UI. So I'm going to sandbox all security issues and I'm going to sandbox let's see info and low reliability issues. So, I've got the warnings here in the UI. I really should think about what I'm doing here. And when I save it, I get another warning. Yes, I really do want to do this. And now I can run my first analysis after the upgrade to get my sandboxed issues. So, I hope y'all enjoy using this feature. I know it's going to be super useful to a whole lot of people. Now, on the topic of understanding the upgrade of an impact, I want to point out one more thing, and that's that we've added a resource to the sonarsource.com website to help you understand what the rule changes were between the 9.9 LTA and the 2025.1 LTA. These reports will be coming for other versions in between, but it's important to know if you're still considering whether or not you should take the 2025.1 update, which yes, you should. This is a list of all of the rules that were added or updated between those two LTA versions. And now jumping back into the product, I want to show you one more thing uh which is around it links in global announcements. So, here I am again in administration, general settings. Here at the very top, I've got the announcement configurations. So, let me just start by turning this on. Save that. And I'm going to refresh the page. And we see that I have a message. Global messages appear on all pages. Yes, they do. Now, I'm going to edit this. And I'm going to add a link. And once I save this and refresh again, there I have my link to the community and it works. And that's what I wanted to show you in the demo. Coming back to the slides, I've got just a few more things I'd like to share with you. So first, intain analysis has been updated to support the WPF framework inputs. That means that we'll recognize WPF framework UI controls, data bindings, command parameters as entry points and sources of untrusted user input. In JavaScript TypeScript, we've actually swapped out the TAN analysis engine for a new engine we've written from scratch to provide better detection. In Go, we've added Go 1.25 syntax parsing. In Python, we've added parallelization of Python analysis. Now, this has been available by parameter for a little while now, but now it's on by default and will automatically look at your environment, figure out how many threads make sense, and use that automatically. If you want fine grain control of this, that's still available with analysis parameters, but now it's on by default for everyone automatically. And finally, we've added a global level SCA toggle. Now, previously it was either on or off for your entire instance. And if you had the license for it, it was on. In very big instances, this was a problem because people wanted to try it out with a few projects first and not impose it on everyone all at once. So now you have the ability to turn it off at the instance level so that you can reenable it at the project level with analysis parameters. And that's all I've got for you today. Thanks for listening. See you next time.",
+  "fetchedAt": "2026-03-14T09:22:38.116Z"
+}

@@ -1,0 +1,1233 @@
+{
+  "videoId": "v154",
+  "youtubeId": "e6dXEfAHouM",
+  "segments": [
+    {
+      "text": "hi I'm Ann Campbell and today I'm going",
+      "offset": 480,
+      "duration": 3839
+    },
+    {
+      "text": "to talk about the key features of sonar",
+      "offset": 2639,
+      "duration": 4140
+    },
+    {
+      "text": "Cube 10.2 let's start with the rules",
+      "offset": 4319,
+      "duration": 6121
+    },
+    {
+      "text": "first we've implemented 43 strict",
+      "offset": 6779,
+      "duration": 6661
+    },
+    {
+      "text": "implementations of misra C plus 2023",
+      "offset": 10440,
+      "duration": 4980
+    },
+    {
+      "text": "rules now in the past we've always",
+      "offset": 13440,
+      "duration": 4140
+    },
+    {
+      "text": "declined to do strict implementations of",
+      "offset": 15420,
+      "duration": 4140
+    },
+    {
+      "text": "miserable rules we did rules that were",
+      "offset": 17580,
+      "duration": 5100
+    },
+    {
+      "text": "derived from this or related to misra",
+      "offset": 19560,
+      "duration": 6240
+    },
+    {
+      "text": "but these are strict implementations and",
+      "offset": 22680,
+      "duration": 4380
+    },
+    {
+      "text": "you'll recognize that when you're",
+      "offset": 25800,
+      "duration": 3059
+    },
+    {
+      "text": "looking at the rule titles and Rule",
+      "offset": 27060,
+      "duration": 4320
+    },
+    {
+      "text": "descriptions you can find these rules in",
+      "offset": 28859,
+      "duration": 4461
+    },
+    {
+      "text": "the interface using the mizra C plus",
+      "offset": 31380,
+      "duration": 5519
+    },
+    {
+      "text": "2023 tag and when you look at them you",
+      "offset": 33320,
+      "duration": 5380
+    },
+    {
+      "text": "may notice that the rule cues are all",
+      "offset": 36899,
+      "duration": 4801
+    },
+    {
+      "text": "starting with M23 underscore and then",
+      "offset": 38700,
+      "duration": 5039
+    },
+    {
+      "text": "The Miser rule number so this will help",
+      "offset": 41700,
+      "duration": 4140
+    },
+    {
+      "text": "you correlate between the misser",
+      "offset": 43739,
+      "duration": 4140
+    },
+    {
+      "text": "documentation and the rules in the",
+      "offset": 45840,
+      "duration": 3120
+    },
+    {
+      "text": "interface",
+      "offset": 47879,
+      "duration": 3541
+    },
+    {
+      "text": "we've also expanded Secrets detection",
+      "offset": 48960,
+      "duration": 4439
+    },
+    {
+      "text": "now originally when we implemented",
+      "offset": 51420,
+      "duration": 4139
+    },
+    {
+      "text": "Secrets detection it was one rule in",
+      "offset": 53399,
+      "duration": 4441
+    },
+    {
+      "text": "sonar lint that was aimed at helping you",
+      "offset": 55559,
+      "duration": 4401
+    },
+    {
+      "text": "prevent ever checking in a secret",
+      "offset": 57840,
+      "duration": 4800
+    },
+    {
+      "text": "eventually we expanded that to have that",
+      "offset": 59960,
+      "duration": 5019
+    },
+    {
+      "text": "rule also in sonar Cube and now today",
+      "offset": 62640,
+      "duration": 5100
+    },
+    {
+      "text": "we're adding 29 additional secret",
+      "offset": 64979,
+      "duration": 6061
+    },
+    {
+      "text": "detection rules that detect 67 different",
+      "offset": 67740,
+      "duration": 5520
+    },
+    {
+      "text": "Secrets patterns",
+      "offset": 71040,
+      "duration": 5399
+    },
+    {
+      "text": "we've also started parsing the kotlin",
+      "offset": 73260,
+      "duration": 6600
+    },
+    {
+      "text": "DSL and we've added five new rules to",
+      "offset": 76439,
+      "duration": 5461
+    },
+    {
+      "text": "help you master its use",
+      "offset": 79860,
+      "duration": 4860
+    },
+    {
+      "text": "for JavaScript we've added 11 new rules",
+      "offset": 81900,
+      "duration": 5640
+    },
+    {
+      "text": "for python we've added nine new rules",
+      "offset": 84720,
+      "duration": 6000
+    },
+    {
+      "text": "and in.net we've added nine new date",
+      "offset": 87540,
+      "duration": 4740
+    },
+    {
+      "text": "time rules",
+      "offset": 90720,
+      "duration": 4079
+    },
+    {
+      "text": "we've also started parsing Azure",
+      "offset": 92280,
+      "duration": 4740
+    },
+    {
+      "text": "resource manager and bicep templates",
+      "offset": 94799,
+      "duration": 5401
+    },
+    {
+      "text": "we've got parsing and 19 new rules to",
+      "offset": 97020,
+      "duration": 5040
+    },
+    {
+      "text": "help you use them well",
+      "offset": 100200,
+      "duration": 4980
+    },
+    {
+      "text": "but wait there's more for C plus plus MC",
+      "offset": 102060,
+      "duration": 5519
+    },
+    {
+      "text": "we now import Cobra Tura coverage",
+      "offset": 105180,
+      "duration": 5160
+    },
+    {
+      "text": "reports for python we import rough",
+      "offset": 107579,
+      "duration": 6000
+    },
+    {
+      "text": "reports for PHP and python we have",
+      "offset": 110340,
+      "duration": 4980
+    },
+    {
+      "text": "improved cache handling which means",
+      "offset": 113579,
+      "duration": 3601
+    },
+    {
+      "text": "speed improvements for chain analysis",
+      "offset": 115320,
+      "duration": 4860
+    },
+    {
+      "text": "rules for PHP we have advanced support",
+      "offset": 117180,
+      "duration": 6360
+    },
+    {
+      "text": "for super Global arrays and in c-sharp",
+      "offset": 120180,
+      "duration": 5880
+    },
+    {
+      "text": "we've added support and constant",
+      "offset": 123540,
+      "duration": 5100
+    },
+    {
+      "text": "tracking rules for c-sharp nine C sharp",
+      "offset": 126060,
+      "duration": 4740
+    },
+    {
+      "text": "10 and c-sharp 11.",
+      "offset": 128640,
+      "duration": 4620
+    },
+    {
+      "text": "on the topic of but wait there's more I",
+      "offset": 130800,
+      "duration": 4140
+    },
+    {
+      "text": "want to talk about Cobalt that's not",
+      "offset": 133260,
+      "duration": 4140
+    },
+    {
+      "text": "something I get to do very often but I",
+      "offset": 134940,
+      "duration": 4560
+    },
+    {
+      "text": "want to point out that this release with",
+      "offset": 137400,
+      "duration": 5339
+    },
+    {
+      "text": "sonar Cube will include a lot of fixes",
+      "offset": 139500,
+      "duration": 6300
+    },
+    {
+      "text": "for sonar Cobalt most of those come",
+      "offset": 142739,
+      "duration": 5701
+    },
+    {
+      "text": "because of one particular user in the",
+      "offset": 145800,
+      "duration": 4620
+    },
+    {
+      "text": "community who stepped up to provide us",
+      "offset": 148440,
+      "duration": 4320
+    },
+    {
+      "text": "some very specific very detailed",
+      "offset": 150420,
+      "duration": 4380
+    },
+    {
+      "text": "feedback and because of that we were",
+      "offset": 152760,
+      "duration": 3600
+    },
+    {
+      "text": "able to make these significant",
+      "offset": 154800,
+      "duration": 4439
+    },
+    {
+      "text": "improvements so Joss thank you",
+      "offset": 156360,
+      "duration": 5159
+    },
+    {
+      "text": "and now I want to return to the topic of",
+      "offset": 159239,
+      "duration": 4201
+    },
+    {
+      "text": "c-sharp because we've done a lot of work",
+      "offset": 161519,
+      "duration": 4381
+    },
+    {
+      "text": "in the last few versions to replace the",
+      "offset": 163440,
+      "duration": 4980
+    },
+    {
+      "text": "symbolic execution engine we finished",
+      "offset": 165900,
+      "duration": 5760
+    },
+    {
+      "text": "that replacement in 10.2 and that means",
+      "offset": 168420,
+      "duration": 5160
+    },
+    {
+      "text": "a couple things so you might see a",
+      "offset": 171660,
+      "duration": 3900
+    },
+    {
+      "text": "marginal Improvement in the speed of",
+      "offset": 173580,
+      "duration": 3780
+    },
+    {
+      "text": "c-sharp analysis but more importantly",
+      "offset": 175560,
+      "duration": 4200
+    },
+    {
+      "text": "we've improved the accuracy of the",
+      "offset": 177360,
+      "duration": 5040
+    },
+    {
+      "text": "c-sharp analysis and that allowed us to",
+      "offset": 179760,
+      "duration": 5940
+    },
+    {
+      "text": "find new issues such as this one so this",
+      "offset": 182400,
+      "duration": 6540
+    },
+    {
+      "text": "is an issue in dot net and net runtime",
+      "offset": 185700,
+      "duration": 5580
+    },
+    {
+      "text": "and we have an always true condition",
+      "offset": 188940,
+      "duration": 5360
+    },
+    {
+      "text": "here now this is in",
+      "offset": 191280,
+      "duration": 5819
+    },
+    {
+      "text": "sqlmoney.cs and I just want to show you",
+      "offset": 194300,
+      "duration": 5740
+    },
+    {
+      "text": "what the implications of this are so",
+      "offset": 197099,
+      "duration": 6541
+    },
+    {
+      "text": "here we are in sharplab.io where we're",
+      "offset": 200040,
+      "duration": 7140
+    },
+    {
+      "text": "testing a rounding with SQL money first",
+      "offset": 203640,
+      "duration": 5519
+    },
+    {
+      "text": "of a positive number and then of a",
+      "offset": 207180,
+      "duration": 4199
+    },
+    {
+      "text": "negative number and as you see the",
+      "offset": 209159,
+      "duration": 4500
+    },
+    {
+      "text": "positive number is rounded as expected",
+      "offset": 211379,
+      "duration": 5401
+    },
+    {
+      "text": "from 2.6 to 3 and the negative number is",
+      "offset": 213659,
+      "duration": 5641
+    },
+    {
+      "text": "rounded as expected from 2.6 to negative",
+      "offset": 216780,
+      "duration": 4739
+    },
+    {
+      "text": "wait a minute that's not what's expected",
+      "offset": 219300,
+      "duration": 4560
+    },
+    {
+      "text": "is it it should be rounding to negative",
+      "offset": 221519,
+      "duration": 5280
+    },
+    {
+      "text": "three but that always true condition",
+      "offset": 223860,
+      "duration": 5400
+    },
+    {
+      "text": "means that it's not rounded correctly",
+      "offset": 226799,
+      "duration": 5520
+    },
+    {
+      "text": "for negative numbers yes we have",
+      "offset": 229260,
+      "duration": 5580
+    },
+    {
+      "text": "submitted a bug report for this",
+      "offset": 232319,
+      "duration": 4081
+    },
+    {
+      "text": "and now I want to talk a little bit",
+      "offset": 234840,
+      "duration": 3420
+    },
+    {
+      "text": "about sonar lint I've got two things to",
+      "offset": 236400,
+      "duration": 4619
+    },
+    {
+      "text": "tell you first we've added documentation",
+      "offset": 238260,
+      "duration": 5460
+    },
+    {
+      "text": "to the documentation site for sonarlint",
+      "offset": 241019,
+      "duration": 5580
+    },
+    {
+      "text": "so you'll find it here in the drop down",
+      "offset": 243720,
+      "duration": 4980
+    },
+    {
+      "text": "just change from sonar Cube to sonar",
+      "offset": 246599,
+      "duration": 4560
+    },
+    {
+      "text": "lint and we've got documentation for",
+      "offset": 248700,
+      "duration": 5340
+    },
+    {
+      "text": "each individual flavor of sonar lint so",
+      "offset": 251159,
+      "duration": 4621
+    },
+    {
+      "text": "it's much easier now you've got one",
+      "offset": 254040,
+      "duration": 4439
+    },
+    {
+      "text": "place to go to find out all the details",
+      "offset": 255780,
+      "duration": 4620
+    },
+    {
+      "text": "of course why am I talking about sonar",
+      "offset": 258479,
+      "duration": 3540
+    },
+    {
+      "text": "lint in a sonar Cube release",
+      "offset": 260400,
+      "duration": 3780
+    },
+    {
+      "text": "announcement well this is a nice segue",
+      "offset": 262019,
+      "duration": 3900
+    },
+    {
+      "text": "for me to talk about something that it's",
+      "offset": 264180,
+      "duration": 3900
+    },
+    {
+      "text": "a little bit harder to show which is",
+      "offset": 265919,
+      "duration": 5220
+    },
+    {
+      "text": "that in sonar lint you can already mark",
+      "offset": 268080,
+      "duration": 5940
+    },
+    {
+      "text": "an issue false positive in sonar lint",
+      "offset": 271139,
+      "duration": 5280
+    },
+    {
+      "text": "and it will be marked false positive on",
+      "offset": 274020,
+      "duration": 4140
+    },
+    {
+      "text": "the server if you're in Connected mode",
+      "offset": 276419,
+      "duration": 4141
+    },
+    {
+      "text": "but what about when you're writing new",
+      "offset": 278160,
+      "duration": 5580
+    },
+    {
+      "text": "code and son or lint raises an issue in",
+      "offset": 280560,
+      "duration": 5520
+    },
+    {
+      "text": "your brand new code that doesn't appear",
+      "offset": 283740,
+      "duration": 4080
+    },
+    {
+      "text": "yet on the server because your brand new",
+      "offset": 286080,
+      "duration": 4140
+    },
+    {
+      "text": "code hasn't been analyzed but you don't",
+      "offset": 287820,
+      "duration": 4439
+    },
+    {
+      "text": "agree with it or you think in this",
+      "offset": 290220,
+      "duration": 4199
+    },
+    {
+      "text": "context it's okay and you're not going",
+      "offset": 292259,
+      "duration": 4440
+    },
+    {
+      "text": "to fix it so you would like to Market",
+      "offset": 294419,
+      "duration": 4621
+    },
+    {
+      "text": "false positive or won't fix but",
+      "offset": 296699,
+      "duration": 5461
+    },
+    {
+      "text": "previously you had to check in your code",
+      "offset": 299040,
+      "duration": 5820
+    },
+    {
+      "text": "wait for it to be committed wait for it",
+      "offset": 302160,
+      "duration": 5099
+    },
+    {
+      "text": "to be merged then go to the server if",
+      "offset": 304860,
+      "duration": 4440
+    },
+    {
+      "text": "you remembered to Market false positive",
+      "offset": 307259,
+      "duration": 4561
+    },
+    {
+      "text": "or won't fix well now you can do that",
+      "offset": 309300,
+      "duration": 5520
+    },
+    {
+      "text": "right away you can Market false positive",
+      "offset": 311820,
+      "duration": 5400
+    },
+    {
+      "text": "or won't fix in sonar lint in",
+      "offset": 314820,
+      "duration": 5099
+    },
+    {
+      "text": "anticipation of of that new code's first",
+      "offset": 317220,
+      "duration": 6000
+    },
+    {
+      "text": "analysis and when it gets to sonar Cube",
+      "offset": 319919,
+      "duration": 5761
+    },
+    {
+      "text": "it will already be marked false positive",
+      "offset": 323220,
+      "duration": 4560
+    },
+    {
+      "text": "or won't fix because of the work you did",
+      "offset": 325680,
+      "duration": 4799
+    },
+    {
+      "text": "ahead of time in sonar lent I think",
+      "offset": 327780,
+      "duration": 4620
+    },
+    {
+      "text": "that's pretty awesome",
+      "offset": 330479,
+      "duration": 3361
+    },
+    {
+      "text": "and now I'm going to jump into the",
+      "offset": 332400,
+      "duration": 3299
+    },
+    {
+      "text": "interface to talk about the clean code",
+      "offset": 333840,
+      "duration": 4500
+    },
+    {
+      "text": "taxonomy so we've made some significant",
+      "offset": 335699,
+      "duration": 4560
+    },
+    {
+      "text": "changes here but this is really just a",
+      "offset": 338340,
+      "duration": 4260
+    },
+    {
+      "text": "down payment on what's coming so",
+      "offset": 340259,
+      "duration": 5041
+    },
+    {
+      "text": "previously we used to talk about bugs",
+      "offset": 342600,
+      "duration": 5159
+    },
+    {
+      "text": "vulnerabilities and code smells but",
+      "offset": 345300,
+      "duration": 5520
+    },
+    {
+      "text": "we've been realizing that's too simple a",
+      "offset": 347759,
+      "duration": 6061
+    },
+    {
+      "text": "picture the reality of it is that any",
+      "offset": 350820,
+      "duration": 6360
+    },
+    {
+      "text": "given issue in the source code can have",
+      "offset": 353820,
+      "duration": 5580
+    },
+    {
+      "text": "multiple impacts in the compiled",
+      "offset": 357180,
+      "duration": 5820
+    },
+    {
+      "text": "software so some problems can cause both",
+      "offset": 359400,
+      "duration": 6000
+    },
+    {
+      "text": "bugs or the software doesn't act like",
+      "offset": 363000,
+      "duration": 6120
+    },
+    {
+      "text": "you expected and also vulnerabilities or",
+      "offset": 365400,
+      "duration": 6660
+    },
+    {
+      "text": "an opening for an attacker and it used",
+      "offset": 369120,
+      "duration": 5340
+    },
+    {
+      "text": "to be that we struggled sometimes in how",
+      "offset": 372060,
+      "duration": 4460
+    },
+    {
+      "text": "to classify rules between",
+      "offset": 374460,
+      "duration": 5640
+    },
+    {
+      "text": "maintainability reliability bugs or",
+      "offset": 376520,
+      "duration": 6880
+    },
+    {
+      "text": "vulnerabilities security so we took a",
+      "offset": 380100,
+      "duration": 5159
+    },
+    {
+      "text": "step back we did some deep thinking and",
+      "offset": 383400,
+      "duration": 5100
+    },
+    {
+      "text": "we said okay what's really the key here",
+      "offset": 385259,
+      "duration": 6720
+    },
+    {
+      "text": "is the attributes of the code does the",
+      "offset": 388500,
+      "duration": 6080
+    },
+    {
+      "text": "code display consistency does it display",
+      "offset": 391979,
+      "duration": 4401
+    },
+    {
+      "text": "intentionality adaptability",
+      "offset": 394580,
+      "duration": 5399
+    },
+    {
+      "text": "responsibility and from any one of those",
+      "offset": 396380,
+      "duration": 6520
+    },
+    {
+      "text": "attributes consistency intentionality",
+      "offset": 399979,
+      "duration": 5861
+    },
+    {
+      "text": "adaptability that could have multiple",
+      "offset": 402900,
+      "duration": 5579
+    },
+    {
+      "text": "impacts on the code for instance a",
+      "offset": 405840,
+      "duration": 5840
+    },
+    {
+      "text": "buffer overflow rule",
+      "offset": 408479,
+      "duration": 3201
+    },
+    {
+      "text": "might have impacts on both the",
+      "offset": 412560,
+      "duration": 4979
+    },
+    {
+      "text": "reliability and the security of the code",
+      "offset": 414539,
+      "duration": 5940
+    },
+    {
+      "text": "so what we've done is reclassify most",
+      "offset": 417539,
+      "duration": 5160
+    },
+    {
+      "text": "rules and the issues that come from them",
+      "offset": 420479,
+      "duration": 4681
+    },
+    {
+      "text": "against the relevant clean code",
+      "offset": 422699,
+      "duration": 5761
+    },
+    {
+      "text": "attribute so now on both rules and",
+      "offset": 425160,
+      "duration": 6060
+    },
+    {
+      "text": "issues you're going to see a label for",
+      "offset": 428460,
+      "duration": 5160
+    },
+    {
+      "text": "the attribute that that rule ties back",
+      "offset": 431220,
+      "duration": 5940
+    },
+    {
+      "text": "to and the software qualities that can",
+      "offset": 433620,
+      "duration": 6540
+    },
+    {
+      "text": "be impacted by violations of the rule",
+      "offset": 437160,
+      "duration": 5099
+    },
+    {
+      "text": "that affect the attribute there's a lot",
+      "offset": 440160,
+      "duration": 3720
+    },
+    {
+      "text": "more to come on this topic both in",
+      "offset": 442259,
+      "duration": 4081
+    },
+    {
+      "text": "future releases the other products and",
+      "offset": 443880,
+      "duration": 5280
+    },
+    {
+      "text": "other Publications so watch this space",
+      "offset": 446340,
+      "duration": 4799
+    },
+    {
+      "text": "and now the clean energy code quality",
+      "offset": 449160,
+      "duration": 5580
+    },
+    {
+      "text": "gate in 9.9 we added a warning on",
+      "offset": 451139,
+      "duration": 5521
+    },
+    {
+      "text": "quality Gates and the projects that use",
+      "offset": 454740,
+      "duration": 4320
+    },
+    {
+      "text": "them when the quality gate included",
+      "offset": 456660,
+      "duration": 4860
+    },
+    {
+      "text": "conditions above and beyond the clean",
+      "offset": 459060,
+      "duration": 4979
+    },
+    {
+      "text": "issue code criteria so here I have a",
+      "offset": 461520,
+      "duration": 4679
+    },
+    {
+      "text": "quality gate that I've copied from our",
+      "offset": 464039,
+      "duration": 4021
+    },
+    {
+      "text": "production instance and you see I've got",
+      "offset": 466199,
+      "duration": 3661
+    },
+    {
+      "text": "this warning that I have extra",
+      "offset": 468060,
+      "duration": 3840
+    },
+    {
+      "text": "conditions that are not recommended and",
+      "offset": 469860,
+      "duration": 4500
+    },
+    {
+      "text": "I have extra conditions both on new code",
+      "offset": 471900,
+      "duration": 4199
+    },
+    {
+      "text": "and I've got some additional conditions",
+      "offset": 474360,
+      "duration": 3480
+    },
+    {
+      "text": "on overall code and I'm getting this",
+      "offset": 476099,
+      "duration": 4341
+    },
+    {
+      "text": "warning both in the quality gate itself",
+      "offset": 477840,
+      "duration": 5880
+    },
+    {
+      "text": "and on the project that uses it we got",
+      "offset": 480440,
+      "duration": 6699
+    },
+    {
+      "text": "feedback on that and we heard you and so",
+      "offset": 483720,
+      "duration": 6840
+    },
+    {
+      "text": "now we fixed it so now here's the exact",
+      "offset": 487139,
+      "duration": 5101
+    },
+    {
+      "text": "same quality gate that I copied from",
+      "offset": 490560,
+      "duration": 4160
+    },
+    {
+      "text": "this is 10.2 on our production instance",
+      "offset": 492240,
+      "duration": 5280
+    },
+    {
+      "text": "and I don't have that warning anymore",
+      "offset": 494720,
+      "duration": 4840
+    },
+    {
+      "text": "even though I still have the extra",
+      "offset": 497520,
+      "duration": 4440
+    },
+    {
+      "text": "conditions both on new code and on",
+      "offset": 499560,
+      "duration": 5400
+    },
+    {
+      "text": "overall code and even better the warning",
+      "offset": 501960,
+      "duration": 5280
+    },
+    {
+      "text": "goes away on the projects that use the",
+      "offset": 504960,
+      "duration": 4500
+    },
+    {
+      "text": "quality gate as well",
+      "offset": 507240,
+      "duration": 4200
+    },
+    {
+      "text": "now while we're in the project space I",
+      "offset": 509460,
+      "duration": 3240
+    },
+    {
+      "text": "want to poke around a little bit more",
+      "offset": 511440,
+      "duration": 4620
+    },
+    {
+      "text": "last time I said that we had updated all",
+      "offset": 512700,
+      "duration": 5759
+    },
+    {
+      "text": "parts of the project space for the new",
+      "offset": 516060,
+      "duration": 4800
+    },
+    {
+      "text": "look and feel but I was wrong I missed a",
+      "offset": 518459,
+      "duration": 4861
+    },
+    {
+      "text": "few spots so now we've actually done",
+      "offset": 520860,
+      "duration": 5160
+    },
+    {
+      "text": "that we finished that up by updating the",
+      "offset": 523320,
+      "duration": 4980
+    },
+    {
+      "text": "activity page the security reports",
+      "offset": 526020,
+      "duration": 5400
+    },
+    {
+      "text": "project information tab which is now its",
+      "offset": 528300,
+      "duration": 5700
+    },
+    {
+      "text": "own page and all the other pieces of the",
+      "offset": 531420,
+      "duration": 5280
+    },
+    {
+      "text": "project space as well as the list of",
+      "offset": 534000,
+      "duration": 6300
+    },
+    {
+      "text": "projects in 10.2 we expanded that to",
+      "offset": 536700,
+      "duration": 6300
+    },
+    {
+      "text": "also sync project permissions let's move",
+      "offset": 540300,
+      "duration": 4920
+    },
+    {
+      "text": "on to upgrades we've gotten the feedback",
+      "offset": 543000,
+      "duration": 4500
+    },
+    {
+      "text": "that some people put off upgrading sonar",
+      "offset": 545220,
+      "duration": 4440
+    },
+    {
+      "text": "Cube because the downtime represented by",
+      "offset": 547500,
+      "duration": 4260
+    },
+    {
+      "text": "waiting for elasticsearch indices to be",
+      "offset": 549660,
+      "duration": 4200
+    },
+    {
+      "text": "rebuilt was just unacceptable in their",
+      "offset": 551760,
+      "duration": 4920
+    },
+    {
+      "text": "context so we've worked on that and now",
+      "offset": 553860,
+      "duration": 5520
+    },
+    {
+      "text": "we're looking at a freshly refreshed",
+      "offset": 556680,
+      "duration": 4440
+    },
+    {
+      "text": "instance of sonar Cube and you see I",
+      "offset": 559380,
+      "duration": 4160
+    },
+    {
+      "text": "have this yellow banner across the top",
+      "offset": 561120,
+      "duration": 5640
+    },
+    {
+      "text": "re-indexing is in progress and yet I can",
+      "offset": 563540,
+      "duration": 6280
+    },
+    {
+      "text": "see all of my projects I can access my",
+      "offset": 566760,
+      "duration": 5820
+    },
+    {
+      "text": "projects I can get to the issues of my",
+      "offset": 569820,
+      "duration": 4800
+    },
+    {
+      "text": "projects and do what I need to do with",
+      "offset": 572580,
+      "duration": 5100
+    },
+    {
+      "text": "them what we've done is restrict The",
+      "offset": 574620,
+      "duration": 5640
+    },
+    {
+      "text": "Limited functionality to only those",
+      "offset": 577680,
+      "duration": 4700
+    },
+    {
+      "text": "things that actually really require",
+      "offset": 580260,
+      "duration": 4920
+    },
+    {
+      "text": "elasticsearch indices so I can do most",
+      "offset": 582380,
+      "duration": 4420
+    },
+    {
+      "text": "of the things I need to do the only",
+      "offset": 585180,
+      "duration": 4020
+    },
+    {
+      "text": "thing I really can't do is filter my",
+      "offset": 586800,
+      "duration": 5880
+    },
+    {
+      "text": "issues and now last but not least let's",
+      "offset": 589200,
+      "duration": 6960
+    },
+    {
+      "text": "talk about gitlab because in 10.2 we've",
+      "offset": 592680,
+      "duration": 5159
+    },
+    {
+      "text": "added the ability to show security",
+      "offset": 596160,
+      "duration": 4980
+    },
+    {
+      "text": "reports in gitlab here I am at the",
+      "offset": 597839,
+      "duration": 5281
+    },
+    {
+      "text": "project level where I can see my issues",
+      "offset": 601140,
+      "duration": 5400
+    },
+    {
+      "text": "and also in PRS where I can see the full",
+      "offset": 603120,
+      "duration": 6240
+    },
+    {
+      "text": "details of the vulnerabilities in my",
+      "offset": 606540,
+      "duration": 4260
+    },
+    {
+      "text": "project",
+      "offset": 609360,
+      "duration": 3360
+    },
+    {
+      "text": "that's all I've got for you thanks for",
+      "offset": 610800,
+      "duration": 5120
+    },
+    {
+      "text": "watching see you next time",
+      "offset": 612720,
+      "duration": 3200
+    }
+  ],
+  "fullText": "hi I'm Ann Campbell and today I'm going to talk about the key features of sonar Cube 10.2 let's start with the rules first we've implemented 43 strict implementations of misra C plus 2023 rules now in the past we've always declined to do strict implementations of miserable rules we did rules that were derived from this or related to misra but these are strict implementations and you'll recognize that when you're looking at the rule titles and Rule descriptions you can find these rules in the interface using the mizra C plus 2023 tag and when you look at them you may notice that the rule cues are all starting with M23 underscore and then The Miser rule number so this will help you correlate between the misser documentation and the rules in the interface we've also expanded Secrets detection now originally when we implemented Secrets detection it was one rule in sonar lint that was aimed at helping you prevent ever checking in a secret eventually we expanded that to have that rule also in sonar Cube and now today we're adding 29 additional secret detection rules that detect 67 different Secrets patterns we've also started parsing the kotlin DSL and we've added five new rules to help you master its use for JavaScript we've added 11 new rules for python we've added nine new rules and in.net we've added nine new date time rules we've also started parsing Azure resource manager and bicep templates we've got parsing and 19 new rules to help you use them well but wait there's more for C plus plus MC we now import Cobra Tura coverage reports for python we import rough reports for PHP and python we have improved cache handling which means speed improvements for chain analysis rules for PHP we have advanced support for super Global arrays and in c-sharp we've added support and constant tracking rules for c-sharp nine C sharp 10 and c-sharp 11. on the topic of but wait there's more I want to talk about Cobalt that's not something I get to do very often but I want to point out that this release with sonar Cube will include a lot of fixes for sonar Cobalt most of those come because of one particular user in the community who stepped up to provide us some very specific very detailed feedback and because of that we were able to make these significant improvements so Joss thank you and now I want to return to the topic of c-sharp because we've done a lot of work in the last few versions to replace the symbolic execution engine we finished that replacement in 10.2 and that means a couple things so you might see a marginal Improvement in the speed of c-sharp analysis but more importantly we've improved the accuracy of the c-sharp analysis and that allowed us to find new issues such as this one so this is an issue in dot net and net runtime and we have an always true condition here now this is in sqlmoney.cs and I just want to show you what the implications of this are so here we are in sharplab.io where we're testing a rounding with SQL money first of a positive number and then of a negative number and as you see the positive number is rounded as expected from 2.6 to 3 and the negative number is rounded as expected from 2.6 to negative wait a minute that's not what's expected is it it should be rounding to negative three but that always true condition means that it's not rounded correctly for negative numbers yes we have submitted a bug report for this and now I want to talk a little bit about sonar lint I've got two things to tell you first we've added documentation to the documentation site for sonarlint so you'll find it here in the drop down just change from sonar Cube to sonar lint and we've got documentation for each individual flavor of sonar lint so it's much easier now you've got one place to go to find out all the details of course why am I talking about sonar lint in a sonar Cube release announcement well this is a nice segue for me to talk about something that it's a little bit harder to show which is that in sonar lint you can already mark an issue false positive in sonar lint and it will be marked false positive on the server if you're in Connected mode but what about when you're writing new code and son or lint raises an issue in your brand new code that doesn't appear yet on the server because your brand new code hasn't been analyzed but you don't agree with it or you think in this context it's okay and you're not going to fix it so you would like to Market false positive or won't fix but previously you had to check in your code wait for it to be committed wait for it to be merged then go to the server if you remembered to Market false positive or won't fix well now you can do that right away you can Market false positive or won't fix in sonar lint in anticipation of of that new code's first analysis and when it gets to sonar Cube it will already be marked false positive or won't fix because of the work you did ahead of time in sonar lent I think that's pretty awesome and now I'm going to jump into the interface to talk about the clean code taxonomy so we've made some significant changes here but this is really just a down payment on what's coming so previously we used to talk about bugs vulnerabilities and code smells but we've been realizing that's too simple a picture the reality of it is that any given issue in the source code can have multiple impacts in the compiled software so some problems can cause both bugs or the software doesn't act like you expected and also vulnerabilities or an opening for an attacker and it used to be that we struggled sometimes in how to classify rules between maintainability reliability bugs or vulnerabilities security so we took a step back we did some deep thinking and we said okay what's really the key here is the attributes of the code does the code display consistency does it display intentionality adaptability responsibility and from any one of those attributes consistency intentionality adaptability that could have multiple impacts on the code for instance a buffer overflow rule might have impacts on both the reliability and the security of the code so what we've done is reclassify most rules and the issues that come from them against the relevant clean code attribute so now on both rules and issues you're going to see a label for the attribute that that rule ties back to and the software qualities that can be impacted by violations of the rule that affect the attribute there's a lot more to come on this topic both in future releases the other products and other Publications so watch this space and now the clean energy code quality gate in 9.9 we added a warning on quality Gates and the projects that use them when the quality gate included conditions above and beyond the clean issue code criteria so here I have a quality gate that I've copied from our production instance and you see I've got this warning that I have extra conditions that are not recommended and I have extra conditions both on new code and I've got some additional conditions on overall code and I'm getting this warning both in the quality gate itself and on the project that uses it we got feedback on that and we heard you and so now we fixed it so now here's the exact same quality gate that I copied from this is 10.2 on our production instance and I don't have that warning anymore even though I still have the extra conditions both on new code and on overall code and even better the warning goes away on the projects that use the quality gate as well now while we're in the project space I want to poke around a little bit more last time I said that we had updated all parts of the project space for the new look and feel but I was wrong I missed a few spots so now we've actually done that we finished that up by updating the activity page the security reports project information tab which is now its own page and all the other pieces of the project space as well as the list of projects in 10.2 we expanded that to also sync project permissions let's move on to upgrades we've gotten the feedback that some people put off upgrading sonar Cube because the downtime represented by waiting for elasticsearch indices to be rebuilt was just unacceptable in their context so we've worked on that and now we're looking at a freshly refreshed instance of sonar Cube and you see I have this yellow banner across the top re-indexing is in progress and yet I can see all of my projects I can access my projects I can get to the issues of my projects and do what I need to do with them what we've done is restrict The Limited functionality to only those things that actually really require elasticsearch indices so I can do most of the things I need to do the only thing I really can't do is filter my issues and now last but not least let's talk about gitlab because in 10.2 we've added the ability to show security reports in gitlab here I am at the project level where I can see my issues and also in PRS where I can see the full details of the vulnerabilities in my project that's all I've got for you thanks for watching see you next time",
+  "fetchedAt": "2026-03-14T09:24:23.129Z"
+}

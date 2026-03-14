@@ -1,0 +1,1543 @@
+{
+  "videoId": "v18",
+  "youtubeId": "QevvNlv35PU",
+  "segments": [
+    {
+      "text": "Hi everyone, my name is Daniel and I'm",
+      "offset": 17000,
+      "duration": 1000
+    },
+    {
+      "text": "an onboarding engineer at Sonar.",
+      "offset": 18000,
+      "duration": 4000
+    },
+    {
+      "text": "today we're going to be talking about",
+      "offset": 22000,
+      "duration": 1000
+    },
+    {
+      "text": "the architectural options for deploying",
+      "offset": 23000,
+      "duration": 3000
+    },
+    {
+      "text": "in a large organization.",
+      "offset": 26000,
+      "duration": 3000
+    },
+    {
+      "text": "so we'll be looking from the perspective",
+      "offset": 29000,
+      "duration": 2000
+    },
+    {
+      "text": "of an enterprise architect who is to",
+      "offset": 31000,
+      "duration": 3000
+    },
+    {
+      "text": "introduce in a large",
+      "offset": 34000,
+      "duration": 2000
+    },
+    {
+      "text": "organization. we're going to walk you",
+      "offset": 36000,
+      "duration": 2000
+    },
+    {
+      "text": "through what the options are. what",
+      "offset": 38000,
+      "duration": 3000
+    },
+    {
+      "text": "are the choices that you're going to be",
+      "offset": 41000,
+      "duration": 2000
+    },
+    {
+      "text": "facing and how to decide which one is",
+      "offset": 43000,
+      "duration": 3000
+    },
+    {
+      "text": "better for your organization.",
+      "offset": 46000,
+      "duration": 3000
+    },
+    {
+      "text": "so here's an overview of what we're",
+      "offset": 49000,
+      "duration": 2000
+    },
+    {
+      "text": "going to be talking about. So",
+      "offset": 51000,
+      "duration": 2000
+    },
+    {
+      "text": "in Enterprise, why do you need it in an",
+      "offset": 53000,
+      "duration": 2000
+    },
+    {
+      "text": "enterprise? how it can bring value to",
+      "offset": 55000,
+      "duration": 4000
+    },
+    {
+      "text": "your business and where exactly that",
+      "offset": 59000,
+      "duration": 2000
+    },
+    {
+      "text": "value comes from. We're going to then",
+      "offset": 61000,
+      "duration": 3000
+    },
+    {
+      "text": "move on to deployment choices. we're",
+      "offset": 64000,
+      "duration": 3000
+    },
+    {
+      "text": "going to talk about the self-hosted",
+      "offset": 67000,
+      "duration": 2000
+    },
+    {
+      "text": "options. where you could potentially",
+      "offset": 69000,
+      "duration": 2000
+    },
+    {
+      "text": "install it, how you install it, and then",
+      "offset": 71000,
+      "duration": 2000
+    },
+    {
+      "text": "we're going to move on to Solar Cloud",
+      "offset": 73000,
+      "duration": 3000
+    },
+    {
+      "text": "to demonstrate some benefits of",
+      "offset": 76000,
+      "duration": 3000
+    },
+    {
+      "text": "SAS. we're going to also discuss the",
+      "offset": 79000,
+      "duration": 3000
+    },
+    {
+      "text": "integration ecosystem. so this is",
+      "offset": 82000,
+      "duration": 3000
+    },
+    {
+      "text": "past the installation once you are",
+      "offset": 85000,
+      "duration": 2000
+    },
+    {
+      "text": "making choice of where your code is",
+      "offset": 87000,
+      "duration": 4000
+    },
+    {
+      "text": "and how to integrate it with sonar.",
+      "offset": 91000,
+      "duration": 3000
+    },
+    {
+      "text": "and then we're going to also",
+      "offset": 94000,
+      "duration": 2000
+    },
+    {
+      "text": "show where the value is for the",
+      "offset": 96000,
+      "duration": 3000
+    },
+    {
+      "text": "developers themsel and importantly",
+      "offset": 99000,
+      "duration": 4000
+    },
+    {
+      "text": "we're going to also touch on your",
+      "offset": 103000,
+      "duration": 1000
+    },
+    {
+      "text": "organizational goals. that is the",
+      "offset": 104000,
+      "duration": 3000
+    },
+    {
+      "text": "checkpoint once you completed an",
+      "offset": 107000,
+      "duration": 3000
+    },
+    {
+      "text": "implementation of to be able",
+      "offset": 110000,
+      "duration": 2000
+    },
+    {
+      "text": "to tell whether you actually have met",
+      "offset": 112000,
+      "duration": 3000
+    },
+    {
+      "text": "your goals.",
+      "offset": 115000,
+      "duration": 3000
+    },
+    {
+      "text": "so moving on in an enterprise",
+      "offset": 119000,
+      "duration": 3000
+    },
+    {
+      "text": "what does it actually mean? It's not just a code",
+      "offset": 122000,
+      "duration": 2000
+    },
+    {
+      "text": "scanning solution. There is actually",
+      "offset": 124000,
+      "duration": 2000
+    },
+    {
+      "text": "much more to that. is at",
+      "offset": 126000,
+      "duration": 3000
+    },
+    {
+      "text": "the center of your software development",
+      "offset": 129000,
+      "duration": 3000
+    },
+    {
+      "text": "life cycle. but it's also at the",
+      "offset": 132000,
+      "duration": 3000
+    },
+    {
+      "text": "center of your code quality",
+      "offset": 135000,
+      "duration": 4000
+    },
+    {
+      "text": "your standards. It helps you enforce",
+      "offset": 139000,
+      "duration": 3000
+    },
+    {
+      "text": "those standards. It helps you",
+      "offset": 142000,
+      "duration": 2000
+    },
+    {
+      "text": "maintain healthy code. but it",
+      "offset": 144000,
+      "duration": 4000
+    },
+    {
+      "text": "also helps you with the reporting. It",
+      "offset": 148000,
+      "duration": 3000
+    },
+    {
+      "text": "shows you the general overview of where",
+      "offset": 151000,
+      "duration": 3000
+    },
+    {
+      "text": "your code is, how you are with",
+      "offset": 154000,
+      "duration": 3000
+    },
+    {
+      "text": "compliance frameworks. And it allows",
+      "offset": 157000,
+      "duration": 2000
+    },
+    {
+      "text": "you to have that executive view also",
+      "offset": 159000,
+      "duration": 3000
+    },
+    {
+      "text": "where you are when it comes to code",
+      "offset": 162000,
+      "duration": 3000
+    },
+    {
+      "text": "quality and standards within your",
+      "offset": 165000,
+      "duration": 3000
+    },
+    {
+      "text": "organization.",
+      "offset": 168000,
+      "duration": 2000
+    },
+    {
+      "text": "So moving on to deployment choices.",
+      "offset": 170000,
+      "duration": 4000
+    },
+    {
+      "text": "that is often the first",
+      "offset": 174000,
+      "duration": 3000
+    },
+    {
+      "text": "decision that you would have to make",
+      "offset": 177000,
+      "duration": 1000
+    },
+    {
+      "text": "when you are deploying in an",
+      "offset": 178000,
+      "duration": 2000
+    },
+    {
+      "text": "organization. you would have to think",
+      "offset": 180000,
+      "duration": 3000
+    },
+    {
+      "text": "about whether you are going to self-host",
+      "offset": 183000,
+      "duration": 4000
+    },
+    {
+      "text": "the solution or whether you are going",
+      "offset": 187000,
+      "duration": 3000
+    },
+    {
+      "text": "to actually use the SAS option where all",
+      "offset": 190000,
+      "duration": 2000
+    },
+    {
+      "text": "you do is connect to already set up",
+      "offset": 192000,
+      "duration": 4000
+    },
+    {
+      "text": "cloud. There are some",
+      "offset": 196000,
+      "duration": 3000
+    },
+    {
+      "text": "key factors which you would have to",
+      "offset": 199000,
+      "duration": 2000
+    },
+    {
+      "text": "consider. So you would have to think",
+      "offset": 201000,
+      "duration": 2000
+    },
+    {
+      "text": "about the technical resources that you",
+      "offset": 203000,
+      "duration": 2000
+    },
+    {
+      "text": "have available because somebody will",
+      "offset": 205000,
+      "duration": 3000
+    },
+    {
+      "text": "have to build virtual machines for",
+      "offset": 208000,
+      "duration": 2000
+    },
+    {
+      "text": "you. Someone will have to install the",
+      "offset": 210000,
+      "duration": 4000
+    },
+    {
+      "text": "binaries. Someone will have to",
+      "offset": 214000,
+      "duration": 2000
+    },
+    {
+      "text": "prepare the databases for you. And",
+      "offset": 216000,
+      "duration": 3000
+    },
+    {
+      "text": "networking and security. There is number",
+      "offset": 219000,
+      "duration": 3000
+    },
+    {
+      "text": "of items to address. And you would",
+      "offset": 222000,
+      "duration": 3000
+    },
+    {
+      "text": "have to also factor that in when you",
+      "offset": 225000,
+      "duration": 2000
+    },
+    {
+      "text": "think about your operational expenses",
+      "offset": 227000,
+      "duration": 3000
+    },
+    {
+      "text": "over long term. How is that going to",
+      "offset": 230000,
+      "duration": 3000
+    },
+    {
+      "text": "reflect on those? You're also going",
+      "offset": 233000,
+      "duration": 3000
+    },
+    {
+      "text": "to think about regulatory requirements.",
+      "offset": 236000,
+      "duration": 3000
+    },
+    {
+      "text": "whether you have some mandate to keep",
+      "offset": 239000,
+      "duration": 3000
+    },
+    {
+      "text": "your data in a inside",
+      "offset": 242000,
+      "duration": 5000
+    },
+    {
+      "text": "air gap environment all of that is an important",
+      "offset": 247000,
+      "duration": 3000
+    },
+    {
+      "text": "factor in decision making and",
+      "offset": 250000,
+      "duration": 4000
+    },
+    {
+      "text": "you also have to think specifically in",
+      "offset": 254000,
+      "duration": 3000
+    },
+    {
+      "text": "regulated industry about your DR",
+      "offset": 257000,
+      "duration": 3000
+    },
+    {
+      "text": "standards whether you are able to",
+      "offset": 260000,
+      "duration": 2000
+    },
+    {
+      "text": "guarantee that you are fulfilling",
+      "offset": 262000,
+      "duration": 2000
+    },
+    {
+      "text": "your obligations maybe to your",
+      "offset": 264000,
+      "duration": 3000
+    },
+    {
+      "text": "partners Maybe again there is a",
+      "offset": 267000,
+      "duration": 3000
+    },
+    {
+      "text": "regulation that you need to that you",
+      "offset": 270000,
+      "duration": 3000
+    },
+    {
+      "text": "need to comply with. That is the",
+      "offset": 273000,
+      "duration": 3000
+    },
+    {
+      "text": "first step. Whether you are going to",
+      "offset": 276000,
+      "duration": 4000
+    },
+    {
+      "text": "self-host or you are going to to the",
+      "offset": 280000,
+      "duration": 4000
+    },
+    {
+      "text": "cloud. Now when it comes to self-hosting",
+      "offset": 284000,
+      "duration": 3000
+    },
+    {
+      "text": "there is number of choices for you.",
+      "offset": 287000,
+      "duration": 2000
+    },
+    {
+      "text": "First of all, obviously you choose",
+      "offset": 289000,
+      "duration": 2000
+    },
+    {
+      "text": "which operating system you are going to",
+      "offset": 291000,
+      "duration": 2000
+    },
+    {
+      "text": "use and is available as",
+      "offset": 293000,
+      "duration": 4000
+    },
+    {
+      "text": "Java application for both Windows and",
+      "offset": 297000,
+      "duration": 3000
+    },
+    {
+      "text": "Linux. You can then decide okay are",
+      "offset": 300000,
+      "duration": 3000
+    },
+    {
+      "text": "we going to host this in a virtual",
+      "offset": 303000,
+      "duration": 3000
+    },
+    {
+      "text": "machine or maybe we want to go for",
+      "offset": 306000,
+      "duration": 2000
+    },
+    {
+      "text": "containerized option. If you choose",
+      "offset": 308000,
+      "duration": 2000
+    },
+    {
+      "text": "virtual machine, obviously it is an",
+      "offset": 310000,
+      "duration": 3000
+    },
+    {
+      "text": "operating system where you're installing",
+      "offset": 313000,
+      "duration": 3000
+    },
+    {
+      "text": "and it's just a virtual",
+      "offset": 316000,
+      "duration": 3000
+    },
+    {
+      "text": "machine that you can deploy anywhere. It",
+      "offset": 319000,
+      "duration": 2000
+    },
+    {
+      "text": "could be your VMware infrastructure. It",
+      "offset": 321000,
+      "duration": 3000
+    },
+    {
+      "text": "could be in Google cloud. It could be an",
+      "offset": 324000,
+      "duration": 2000
+    },
+    {
+      "text": "AWS EC2 instance or it could be a a",
+      "offset": 326000,
+      "duration": 4000
+    },
+    {
+      "text": "self-hosted instance. You could",
+      "offset": 330000,
+      "duration": 4000
+    },
+    {
+      "text": "also go for the containerized option and",
+      "offset": 334000,
+      "duration": 2000
+    },
+    {
+      "text": "the simplest one is official docker",
+      "offset": 336000,
+      "duration": 2000
+    },
+    {
+      "text": "image that you can download from sonar.",
+      "offset": 338000,
+      "duration": 3000
+    },
+    {
+      "text": "You might also have more of a",
+      "offset": 341000,
+      "duration": 3000
+    },
+    {
+      "text": "enterprisegrade solution where your",
+      "offset": 344000,
+      "duration": 2000
+    },
+    {
+      "text": "application applications live in ECS",
+      "offset": 346000,
+      "duration": 5000
+    },
+    {
+      "text": "for example or you might have a",
+      "offset": 351000,
+      "duration": 2000
+    },
+    {
+      "text": "Kubernetes deployment maybe even across",
+      "offset": 353000,
+      "duration": 3000
+    },
+    {
+      "text": "multiple clouds. So all of those are",
+      "offset": 356000,
+      "duration": 3000
+    },
+    {
+      "text": "supported. when it comes to",
+      "offset": 359000,
+      "duration": 2000
+    },
+    {
+      "text": "Kubernetes obviously you could choose",
+      "offset": 361000,
+      "duration": 1000
+    },
+    {
+      "text": "EKS on AWS but you can also choose",
+      "offset": 362000,
+      "duration": 4000
+    },
+    {
+      "text": "Azure AKS or Google GKE so the",
+      "offset": 366000,
+      "duration": 4000
+    },
+    {
+      "text": "deployment options are there for you for",
+      "offset": 370000,
+      "duration": 3000
+    },
+    {
+      "text": "a self-hosted and obviously as",
+      "offset": 373000,
+      "duration": 1000
+    },
+    {
+      "text": "enterprise architect you have to factor",
+      "offset": 374000,
+      "duration": 3000
+    },
+    {
+      "text": "in all those variables that we",
+      "offset": 377000,
+      "duration": 3000
+    },
+    {
+      "text": "discussed just moments ago.",
+      "offset": 380000,
+      "duration": 4000
+    },
+    {
+      "text": "so what is important once you do",
+      "offset": 384000,
+      "duration": 4000
+    },
+    {
+      "text": "the self-hosting once you decided on",
+      "offset": 388000,
+      "duration": 2000
+    },
+    {
+      "text": "your architecture what are the",
+      "offset": 390000,
+      "duration": 3000
+    },
+    {
+      "text": "long-term considerations? so",
+      "offset": 393000,
+      "duration": 3000
+    },
+    {
+      "text": "version upgrades and compliance. So",
+      "offset": 396000,
+      "duration": 2000
+    },
+    {
+      "text": "obviously as we as we keep improving our",
+      "offset": 398000,
+      "duration": 3000
+    },
+    {
+      "text": "software as we keep releasing new",
+      "offset": 401000,
+      "duration": 2000
+    },
+    {
+      "text": "versions of it you would have to have a",
+      "offset": 403000,
+      "duration": 2000
+    },
+    {
+      "text": "process in place for doing so. So",
+      "offset": 405000,
+      "duration": 2000
+    },
+    {
+      "text": "probably have adequate down downtime,",
+      "offset": 407000,
+      "duration": 3000
+    },
+    {
+      "text": "have adequate planning and team in",
+      "offset": 410000,
+      "duration": 3000
+    },
+    {
+      "text": "place that is able to upgrade",
+      "offset": 413000,
+      "duration": 3000
+    },
+    {
+      "text": "for you. You also have to think",
+      "offset": 416000,
+      "duration": 3000
+    },
+    {
+      "text": "about any SLAs's that you might have in",
+      "offset": 419000,
+      "duration": 3000
+    },
+    {
+      "text": "place. whether you are complying",
+      "offset": 422000,
+      "duration": 3000
+    },
+    {
+      "text": "with those SLAs and whether you have",
+      "offset": 425000,
+      "duration": 2000
+    },
+    {
+      "text": "adequate testing to prove that there is",
+      "offset": 427000,
+      "duration": 3000
+    },
+    {
+      "text": "compliance in place. Infrastructure",
+      "offset": 430000,
+      "duration": 2000
+    },
+    {
+      "text": "costs are non-negligible. so those",
+      "offset": 432000,
+      "duration": 4000
+    },
+    {
+      "text": "you have to factor in. There is storage,",
+      "offset": 436000,
+      "duration": 2000
+    },
+    {
+      "text": "there is networking, there is a VM,",
+      "offset": 438000,
+      "duration": 2000
+    },
+    {
+      "text": "there is a database that you have to",
+      "offset": 440000,
+      "duration": 4000
+    },
+    {
+      "text": "think about long term. also",
+      "offset": 444000,
+      "duration": 3000
+    },
+    {
+      "text": "self-hosting means your dedicated",
+      "offset": 447000,
+      "duration": 3000
+    },
+    {
+      "text": "DevOps resources will need to be in",
+      "offset": 450000,
+      "duration": 3000
+    },
+    {
+      "text": "place to help you maintain",
+      "offset": 453000,
+      "duration": 3000
+    },
+    {
+      "text": "the solution to help you ensure that you're",
+      "offset": 456000,
+      "duration": 2000
+    },
+    {
+      "text": "up to date and help you with",
+      "offset": 458000,
+      "duration": 3000
+    },
+    {
+      "text": "all the compliance frameworks that you are",
+      "offset": 461000,
+      "duration": 2000
+    },
+    {
+      "text": "subject to. There is also probably a",
+      "offset": 463000,
+      "duration": 3000
+    },
+    {
+      "text": "database team in your organization",
+      "offset": 466000,
+      "duration": 2000
+    },
+    {
+      "text": "that is going to have to ensure that",
+      "offset": 468000,
+      "duration": 4000
+    },
+    {
+      "text": "there are adequate backups in place that",
+      "offset": 472000,
+      "duration": 2000
+    },
+    {
+      "text": "there is retention policy that you have",
+      "offset": 474000,
+      "duration": 3000
+    },
+    {
+      "text": "DR option available that your",
+      "offset": 477000,
+      "duration": 2000
+    },
+    {
+      "text": "database is highly available. So that is",
+      "offset": 479000,
+      "duration": 3000
+    },
+    {
+      "text": "obviously the reality of of",
+      "offset": 482000,
+      "duration": 2000
+    },
+    {
+      "text": "self-hosting . But there is",
+      "offset": 484000,
+      "duration": 4000
+    },
+    {
+      "text": "a there is a path if you recognize",
+      "offset": 488000,
+      "duration": 3000
+    },
+    {
+      "text": "that perhaps those costs though those",
+      "offset": 491000,
+      "duration": 3000
+    },
+    {
+      "text": "factors add too much complexity",
+      "offset": 494000,
+      "duration": 3000
+    },
+    {
+      "text": "within your organization and you want to",
+      "offset": 497000,
+      "duration": 3000
+    },
+    {
+      "text": "move on for a cloud solution. some",
+      "offset": 500000,
+      "duration": 3000
+    },
+    {
+      "text": "benefits of cloud is",
+      "offset": 503000,
+      "duration": 3000
+    },
+    {
+      "text": "automatic updates. so you no",
+      "offset": 506000,
+      "duration": 4000
+    },
+    {
+      "text": "longer have to think about planning",
+      "offset": 510000,
+      "duration": 3000
+    },
+    {
+      "text": "the the upgrades life cycle",
+      "offset": 513000,
+      "duration": 3000
+    },
+    {
+      "text": "planning ahead with the teams being in",
+      "offset": 516000,
+      "duration": 3000
+    },
+    {
+      "text": "place with downtime being scheduled",
+      "offset": 519000,
+      "duration": 3000
+    },
+    {
+      "text": "communication internally within your",
+      "offset": 522000,
+      "duration": 2000
+    },
+    {
+      "text": "organization within any partners that",
+      "offset": 524000,
+      "duration": 2000
+    },
+    {
+      "text": "might be using your solution. That is",
+      "offset": 526000,
+      "duration": 2000
+    },
+    {
+      "text": "all taken care for and",
+      "offset": 528000,
+      "duration": 5000
+    },
+    {
+      "text": "another factor is the database itself.",
+      "offset": 533000,
+      "duration": 3000
+    },
+    {
+      "text": "Now you do not have to take that into",
+      "offset": 536000,
+      "duration": 2000
+    },
+    {
+      "text": "consideration anymore because the",
+      "offset": 538000,
+      "duration": 2000
+    },
+    {
+      "text": "database is hosted and maintained by",
+      "offset": 540000,
+      "duration": 3000
+    },
+    {
+      "text": "solar the operational lower head is",
+      "offset": 543000,
+      "duration": 3000
+    },
+    {
+      "text": "almost reduced to zero because you don't",
+      "offset": 546000,
+      "duration": 3000
+    },
+    {
+      "text": "have those DevOps teams anymore looking",
+      "offset": 549000,
+      "duration": 2000
+    },
+    {
+      "text": "after your infrastructure making sure",
+      "offset": 551000,
+      "duration": 3000
+    },
+    {
+      "text": "it's highly available. The live",
+      "offset": 554000,
+      "duration": 3000
+    },
+    {
+      "text": "upgrades actually are seamless they",
+      "offset": 557000,
+      "duration": 2000
+    },
+    {
+      "text": "transparent to customers. You no longer",
+      "offset": 559000,
+      "duration": 3000
+    },
+    {
+      "text": "plan for downtime. you don't expect a",
+      "offset": 562000,
+      "duration": 4000
+    },
+    {
+      "text": "notification to tell you, hey in some",
+      "offset": 566000,
+      "duration": 3000
+    },
+    {
+      "text": "time we're going to do an upgrades,",
+      "offset": 569000,
+      "duration": 2000
+    },
+    {
+      "text": "please make sure that you're not using",
+      "offset": 571000,
+      "duration": 1000
+    },
+    {
+      "text": "the system. This is all happening for",
+      "offset": 572000,
+      "duration": 2000
+    },
+    {
+      "text": "you without you even knowing. there",
+      "offset": 574000,
+      "duration": 3000
+    },
+    {
+      "text": "are also ISO 2701s and so type 2",
+      "offset": 577000,
+      "duration": 6000
+    },
+    {
+      "text": "certifications which might be important",
+      "offset": 583000,
+      "duration": 2000
+    },
+    {
+      "text": "particularly for for compliance.",
+      "offset": 585000,
+      "duration": 3000
+    },
+    {
+      "text": "and all those factors for you as an",
+      "offset": 588000,
+      "duration": 2000
+    },
+    {
+      "text": "enterprise architect or for you as a",
+      "offset": 590000,
+      "duration": 3000
+    },
+    {
+      "text": "head of technical organization, they",
+      "offset": 593000,
+      "duration": 3000
+    },
+    {
+      "text": "make the total cost of ownership much",
+      "offset": 596000,
+      "duration": 3000
+    },
+    {
+      "text": "easier to assess because now there is",
+      "offset": 599000,
+      "duration": 3000
+    },
+    {
+      "text": "only one factor for you to take into",
+      "offset": 602000,
+      "duration": 2000
+    },
+    {
+      "text": "account that is how big your code base",
+      "offset": 604000,
+      "duration": 4000
+    },
+    {
+      "text": "is because that effectively determines",
+      "offset": 608000,
+      "duration": 2000
+    },
+    {
+      "text": "the cost of running better code and",
+      "offset": 610000,
+      "duration": 5000
+    },
+    {
+      "text": "more secure code with cloud.",
+      "offset": 615000,
+      "duration": 3000
+    },
+    {
+      "text": "and also one more benefit if we think back about",
+      "offset": 618000,
+      "duration": 3000
+    },
+    {
+      "text": "the need to plan for various resources to be put",
+      "offset": 625000,
+      "duration": 3000
+    },
+    {
+      "text": "together in place like virtual",
+      "offset": 628000,
+      "duration": 3000
+    },
+    {
+      "text": "machines, storage, networking, security",
+      "offset": 631000,
+      "duration": 3000
+    },
+    {
+      "text": "in order to start scanning your code",
+      "offset": 634000,
+      "duration": 3000
+    },
+    {
+      "text": "with here we are talking",
+      "offset": 637000,
+      "duration": 3000
+    },
+    {
+      "text": "about scanning your first project",
+      "offset": 640000,
+      "duration": 1000
+    },
+    {
+      "text": "probably within 10 minutes or less.",
+      "offset": 641000,
+      "duration": 4000
+    },
+    {
+      "text": "which also could be an important",
+      "offset": 645000,
+      "duration": 3000
+    },
+    {
+      "text": "factor to you. Now moving on beyond the",
+      "offset": 648000,
+      "duration": 4000
+    },
+    {
+      "text": "deployment where else an enterprise",
+      "offset": 652000,
+      "duration": 3000
+    },
+    {
+      "text": "architect will have to look in order",
+      "offset": 655000,
+      "duration": 3000
+    },
+    {
+      "text": "to have in their",
+      "offset": 658000,
+      "duration": 4000
+    },
+    {
+      "text": "organization. so the next step would",
+      "offset": 662000,
+      "duration": 4000
+    },
+    {
+      "text": "be project on boarding which means",
+      "offset": 666000,
+      "duration": 2000
+    },
+    {
+      "text": "adding projects adding your repositories",
+      "offset": 668000,
+      "duration": 3000
+    },
+    {
+      "text": "to and there is variety of",
+      "offset": 671000,
+      "duration": 2000
+    },
+    {
+      "text": "options there. By default we support",
+      "offset": 673000,
+      "duration": 3000
+    },
+    {
+      "text": "GitHub, Bitbucket, Azure DevOps,",
+      "offset": 676000,
+      "duration": 3000
+    },
+    {
+      "text": "GitLab they will integrate all you",
+      "offset": 679000,
+      "duration": 3000
+    },
+    {
+      "text": "have to do is create a token and you",
+      "offset": 682000,
+      "duration": 3000
+    },
+    {
+      "text": "start with deploying those",
+      "offset": 685000,
+      "duration": 4000
+    },
+    {
+      "text": "projects in . Another",
+      "offset": 689000,
+      "duration": 3000
+    },
+    {
+      "text": "factor is user authentication. So",
+      "offset": 692000,
+      "duration": 3000
+    },
+    {
+      "text": "within large enterprise you would use",
+      "offset": 695000,
+      "duration": 2000
+    },
+    {
+      "text": "SSO for security for compliance you",
+      "offset": 697000,
+      "duration": 3000
+    },
+    {
+      "text": "would use some kind of secure",
+      "offset": 700000,
+      "duration": 2000
+    },
+    {
+      "text": "framework and by default GitHub",
+      "offset": 702000,
+      "duration": 3000
+    },
+    {
+      "text": "Bitbucket and GitLab authentication",
+      "offset": 705000,
+      "duration": 4000
+    },
+    {
+      "text": "is supported but also in",
+      "offset": 709000,
+      "duration": 4000
+    },
+    {
+      "text": "accordance with enterprise standard SM",
+      "offset": 713000,
+      "duration": 2000
+    },
+    {
+      "text": "v2 is available. So any sour provider",
+      "offset": 715000,
+      "duration": 4000
+    },
+    {
+      "text": "including the major ones like entra ID",
+      "offset": 719000,
+      "duration": 3000
+    },
+    {
+      "text": "and octa are supported and they are",
+      "offset": 722000,
+      "duration": 3000
+    },
+    {
+      "text": "actually well documented as well.",
+      "offset": 725000,
+      "duration": 3000
+    },
+    {
+      "text": "moving on through the",
+      "offset": 728000,
+      "duration": 5000
+    },
+    {
+      "text": "enterprise architects workflow the",
+      "offset": 733000,
+      "duration": 3000
+    },
+    {
+      "text": "next step once we have onboarded",
+      "offset": 736000,
+      "duration": 2000
+    },
+    {
+      "text": "projects once we have users that are",
+      "offset": 738000,
+      "duration": 3000
+    },
+    {
+      "text": "able to log into we",
+      "offset": 741000,
+      "duration": 3000
+    },
+    {
+      "text": "also want to obviously start scanning",
+      "offset": 744000,
+      "duration": 3000
+    },
+    {
+      "text": "the code start improving the qual",
+      "offset": 747000,
+      "duration": 3000
+    },
+    {
+      "text": "code quality within our organization and",
+      "offset": 750000,
+      "duration": 3000
+    },
+    {
+      "text": "that is where you integrate your",
+      "offset": 753000,
+      "duration": 2000
+    },
+    {
+      "text": "pipelines with . So by",
+      "offset": 755000,
+      "duration": 3000
+    },
+    {
+      "text": "default all the major players are",
+      "offset": 758000,
+      "duration": 3000
+    },
+    {
+      "text": "supported. So you could have your code",
+      "offset": 761000,
+      "duration": 2000
+    },
+    {
+      "text": "in GitHub in Azure DevOps and you could",
+      "offset": 763000,
+      "duration": 2000
+    },
+    {
+      "text": "be using GitHub actions or Azure",
+      "offset": 765000,
+      "duration": 3000
+    },
+    {
+      "text": "pipelines. You could be using Jenkins",
+      "offset": 768000,
+      "duration": 2000
+    },
+    {
+      "text": "for your builds or you could have your",
+      "offset": 770000,
+      "duration": 3000
+    },
+    {
+      "text": "own CLI solution. All of that is is",
+      "offset": 773000,
+      "duration": 3000
+    },
+    {
+      "text": "supported. All those solutions very",
+      "offset": 776000,
+      "duration": 3000
+    },
+    {
+      "text": "much boil down to running specific",
+      "offset": 779000,
+      "duration": 3000
+    },
+    {
+      "text": "sonar scanners for your programming",
+      "offset": 782000,
+      "duration": 3000
+    },
+    {
+      "text": "languages and for your environments in",
+      "offset": 785000,
+      "duration": 2000
+    },
+    {
+      "text": "order to feed data to . Now",
+      "offset": 787000,
+      "duration": 5000
+    },
+    {
+      "text": "we can't obviously forget about the",
+      "offset": 792000,
+      "duration": 2000
+    },
+    {
+      "text": "developers the ultimate end users of",
+      "offset": 794000,
+      "duration": 4000
+    },
+    {
+      "text": "and we also have",
+      "offset": 798000,
+      "duration": 4000
+    },
+    {
+      "text": "solutions to make their workflow more",
+      "offset": 802000,
+      "duration": 4000
+    },
+    {
+      "text": "efficient. One of those solutions is",
+      "offset": 806000,
+      "duration": 3000
+    },
+    {
+      "text": "the built-in IDE support. So",
+      "offset": 809000,
+      "duration": 4000
+    },
+    {
+      "text": "through extensions for the major idees",
+      "offset": 813000,
+      "duration": 4000
+    },
+    {
+      "text": "we allow developers to query the",
+      "offset": 817000,
+      "duration": 3000
+    },
+    {
+      "text": "status of their code within",
+      "offset": 820000,
+      "duration": 4000
+    },
+    {
+      "text": "to be able to see the issues",
+      "offset": 824000,
+      "duration": 3000
+    },
+    {
+      "text": "that were introduced with their code",
+      "offset": 827000,
+      "duration": 2000
+    },
+    {
+      "text": "but also to see the rules that are being",
+      "offset": 829000,
+      "duration": 3000
+    },
+    {
+      "text": "applied to the code that developers",
+      "offset": 832000,
+      "duration": 3000
+    },
+    {
+      "text": "are writing. we also have an MCP",
+      "offset": 835000,
+      "duration": 4000
+    },
+    {
+      "text": "solution, MCP server and I invite you to",
+      "offset": 839000,
+      "duration": 3000
+    },
+    {
+      "text": "watch my other presentation on the",
+      "offset": 842000,
+      "duration": 2000
+    },
+    {
+      "text": "topic whereas we seamlessly integrate",
+      "offset": 844000,
+      "duration": 4000
+    },
+    {
+      "text": "AI agents AI coding agents specifically",
+      "offset": 848000,
+      "duration": 4000
+    },
+    {
+      "text": "with and we bring the",
+      "offset": 852000,
+      "duration": 3000
+    },
+    {
+      "text": "developer experience to next level.",
+      "offset": 855000,
+      "duration": 5000
+    },
+    {
+      "text": "So as discussed before you always want",
+      "offset": 860000,
+      "duration": 4000
+    },
+    {
+      "text": "to ensure that you are actually meeting",
+      "offset": 864000,
+      "duration": 2000
+    },
+    {
+      "text": "your organizational goals with",
+      "offset": 866000,
+      "duration": 3000
+    },
+    {
+      "text": "cube. So whatever those goals are",
+      "offset": 869000,
+      "duration": 3000
+    },
+    {
+      "text": "whether you want to maintain high coding",
+      "offset": 872000,
+      "duration": 2000
+    },
+    {
+      "text": "standards whether there is a compliance",
+      "offset": 874000,
+      "duration": 3000
+    },
+    {
+      "text": "framework that you bound by and whether",
+      "offset": 877000,
+      "duration": 4000
+    },
+    {
+      "text": "you need that extra executive visibility",
+      "offset": 881000,
+      "duration": 4000
+    },
+    {
+      "text": "in how your coding standards are",
+      "offset": 885000,
+      "duration": 2000
+    },
+    {
+      "text": "enforced within organization.",
+      "offset": 887000,
+      "duration": 3000
+    },
+    {
+      "text": "whichever organization goal you're",
+      "offset": 890000,
+      "duration": 2000
+    },
+    {
+      "text": "working towards, we are here to help",
+      "offset": 892000,
+      "duration": 2000
+    },
+    {
+      "text": "you.",
+      "offset": 894000,
+      "duration": 2000
+    },
+    {
+      "text": "With that, thank you very much for",
+      "offset": 896000,
+      "duration": 2000
+    },
+    {
+      "text": "watching this video.",
+      "offset": 898000,
+      "duration": 2000
+    }
+  ],
+  "fullText": "Hi everyone, my name is Daniel and I'm an onboarding engineer at Sonar. today we're going to be talking about the architectural options for deploying in a large organization. so we'll be looking from the perspective of an enterprise architect who is to introduce in a large organization. we're going to walk you through what the options are. what are the choices that you're going to be facing and how to decide which one is better for your organization. so here's an overview of what we're going to be talking about. So in Enterprise, why do you need it in an enterprise? how it can bring value to your business and where exactly that value comes from. We're going to then move on to deployment choices. we're going to talk about the self-hosted options. where you could potentially install it, how you install it, and then we're going to move on to Solar Cloud to demonstrate some benefits of SAS. we're going to also discuss the integration ecosystem. so this is past the installation once you are making choice of where your code is and how to integrate it with sonar. and then we're going to also show where the value is for the developers themsel and importantly we're going to also touch on your organizational goals. that is the checkpoint once you completed an implementation of to be able to tell whether you actually have met your goals. so moving on in an enterprise what does it actually mean? It's not just a code scanning solution. There is actually much more to that. is at the center of your software development life cycle. but it's also at the center of your code quality your standards. It helps you enforce those standards. It helps you maintain healthy code. but it also helps you with the reporting. It shows you the general overview of where your code is, how you are with compliance frameworks. And it allows you to have that executive view also where you are when it comes to code quality and standards within your organization. So moving on to deployment choices. that is often the first decision that you would have to make when you are deploying in an organization. you would have to think about whether you are going to self-host the solution or whether you are going to actually use the SAS option where all you do is connect to already set up cloud. There are some key factors which you would have to consider. So you would have to think about the technical resources that you have available because somebody will have to build virtual machines for you. Someone will have to install the binaries. Someone will have to prepare the databases for you. And networking and security. There is number of items to address. And you would have to also factor that in when you think about your operational expenses over long term. How is that going to reflect on those? You're also going to think about regulatory requirements. whether you have some mandate to keep your data in a inside air gap environment all of that is an important factor in decision making and you also have to think specifically in regulated industry about your DR standards whether you are able to guarantee that you are fulfilling your obligations maybe to your partners Maybe again there is a regulation that you need to that you need to comply with. That is the first step. Whether you are going to self-host or you are going to to the cloud. Now when it comes to self-hosting there is number of choices for you. First of all, obviously you choose which operating system you are going to use and is available as Java application for both Windows and Linux. You can then decide okay are we going to host this in a virtual machine or maybe we want to go for containerized option. If you choose virtual machine, obviously it is an operating system where you're installing and it's just a virtual machine that you can deploy anywhere. It could be your VMware infrastructure. It could be in Google cloud. It could be an AWS EC2 instance or it could be a a self-hosted instance. You could also go for the containerized option and the simplest one is official docker image that you can download from sonar. You might also have more of a enterprisegrade solution where your application applications live in ECS for example or you might have a Kubernetes deployment maybe even across multiple clouds. So all of those are supported. when it comes to Kubernetes obviously you could choose EKS on AWS but you can also choose Azure AKS or Google GKE so the deployment options are there for you for a self-hosted and obviously as enterprise architect you have to factor in all those variables that we discussed just moments ago. so what is important once you do the self-hosting once you decided on your architecture what are the long-term considerations? so version upgrades and compliance. So obviously as we as we keep improving our software as we keep releasing new versions of it you would have to have a process in place for doing so. So probably have adequate down downtime, have adequate planning and team in place that is able to upgrade for you. You also have to think about any SLAs's that you might have in place. whether you are complying with those SLAs and whether you have adequate testing to prove that there is compliance in place. Infrastructure costs are non-negligible. so those you have to factor in. There is storage, there is networking, there is a VM, there is a database that you have to think about long term. also self-hosting means your dedicated DevOps resources will need to be in place to help you maintain the solution to help you ensure that you're up to date and help you with all the compliance frameworks that you are subject to. There is also probably a database team in your organization that is going to have to ensure that there are adequate backups in place that there is retention policy that you have DR option available that your database is highly available. So that is obviously the reality of of self-hosting . But there is a there is a path if you recognize that perhaps those costs though those factors add too much complexity within your organization and you want to move on for a cloud solution. some benefits of cloud is automatic updates. so you no longer have to think about planning the the upgrades life cycle planning ahead with the teams being in place with downtime being scheduled communication internally within your organization within any partners that might be using your solution. That is all taken care for and another factor is the database itself. Now you do not have to take that into consideration anymore because the database is hosted and maintained by solar the operational lower head is almost reduced to zero because you don't have those DevOps teams anymore looking after your infrastructure making sure it's highly available. The live upgrades actually are seamless they transparent to customers. You no longer plan for downtime. you don't expect a notification to tell you, hey in some time we're going to do an upgrades, please make sure that you're not using the system. This is all happening for you without you even knowing. there are also ISO 2701s and so type 2 certifications which might be important particularly for for compliance. and all those factors for you as an enterprise architect or for you as a head of technical organization, they make the total cost of ownership much easier to assess because now there is only one factor for you to take into account that is how big your code base is because that effectively determines the cost of running better code and more secure code with cloud. and also one more benefit if we think back about the need to plan for various resources to be put together in place like virtual machines, storage, networking, security in order to start scanning your code with here we are talking about scanning your first project probably within 10 minutes or less. which also could be an important factor to you. Now moving on beyond the deployment where else an enterprise architect will have to look in order to have in their organization. so the next step would be project on boarding which means adding projects adding your repositories to and there is variety of options there. By default we support GitHub, Bitbucket, Azure DevOps, GitLab they will integrate all you have to do is create a token and you start with deploying those projects in . Another factor is user authentication. So within large enterprise you would use SSO for security for compliance you would use some kind of secure framework and by default GitHub Bitbucket and GitLab authentication is supported but also in accordance with enterprise standard SM v2 is available. So any sour provider including the major ones like entra ID and octa are supported and they are actually well documented as well. moving on through the enterprise architects workflow the next step once we have onboarded projects once we have users that are able to log into we also want to obviously start scanning the code start improving the qual code quality within our organization and that is where you integrate your pipelines with . So by default all the major players are supported. So you could have your code in GitHub in Azure DevOps and you could be using GitHub actions or Azure pipelines. You could be using Jenkins for your builds or you could have your own CLI solution. All of that is is supported. All those solutions very much boil down to running specific sonar scanners for your programming languages and for your environments in order to feed data to . Now we can't obviously forget about the developers the ultimate end users of and we also have solutions to make their workflow more efficient. One of those solutions is the built-in IDE support. So through extensions for the major idees we allow developers to query the status of their code within to be able to see the issues that were introduced with their code but also to see the rules that are being applied to the code that developers are writing. we also have an MCP solution, MCP server and I invite you to watch my other presentation on the topic whereas we seamlessly integrate AI agents AI coding agents specifically with and we bring the developer experience to next level. So as discussed before you always want to ensure that you are actually meeting your organizational goals with cube. So whatever those goals are whether you want to maintain high coding standards whether there is a compliance framework that you bound by and whether you need that extra executive visibility in how your coding standards are enforced within organization. whichever organization goal you're working towards, we are here to help you. With that, thank you very much for watching this video.",
+  "fetchedAt": "2026-03-14T09:18:52.887Z"
+}

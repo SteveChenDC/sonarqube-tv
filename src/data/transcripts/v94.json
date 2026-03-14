@@ -1,0 +1,1418 @@
+{
+  "videoId": "v94",
+  "youtubeId": "GRVA4AiO7OM",
+  "segments": [
+    {
+      "text": "Alright, let's go and get started. Hello everyone, thank you for joining and welcome to our sonar webinar entitled Everything You Need to Know about Sonar Cube.",
+      "offset": 387,
+      "duration": 8000
+    },
+    {
+      "text": "I'm Liz Ryan, your moderator for this webinar, which will be presented by Anne Campbell.",
+      "offset": 8387,
+      "duration": 4000
+    },
+    {
+      "text": "Please allow me to quickly go over some essential housekeeping points before we get started. This session will last approximately 45 min including Q&A.",
+      "offset": 12387,
+      "duration": 9000
+    },
+    {
+      "text": "You're invited to submit your questions via the QA box in Zoom. Please don't use the chat box, try to use the QA box.",
+      "offset": 21387,
+      "duration": 1000
+    },
+    {
+      "text": "We have 2 panelists joining us today. Lucas Grie from our sales engineering team and Robert Kerley from our product marketing team.",
+      "offset": 22387,
+      "duration": 6000
+    },
+    {
+      "text": "There are tasks with answering as many of your questions as possible live during the webinar. This session will be recorded and we will send out a link via email in the coming days.",
+      "offset": 28387,
+      "duration": 15000
+    },
+    {
+      "text": "Finally, at the end of this webinar, a short survey will appear on your screen. We welcome your feedback.",
+      "offset": 43387,
+      "duration": 1000
+    },
+    {
+      "text": "Thank you in advance for your participation. So without further ado, I'd like to introduce today's presenter and Campbell.",
+      "offset": 44387,
+      "duration": 11000
+    },
+    {
+      "text": "Anne is a community manager at Sonar. She's self top she's a self-taught programmer who's coded JavaScript for early browsers.",
+      "offset": 55387,
+      "duration": 1000
+    },
+    {
+      "text": "Think Netscape 3 and IE 4. Perl CCC plus plus and Java.",
+      "offset": 56387,
+      "duration": 10000
+    },
+    {
+      "text": "Her software career has spanned support, documentation, coding, and product management. She's been a part of the Sonar community for 14 years and joined in 2,013 after co-authoring the book Sonar Cube in Action.",
+      "offset": 66387,
+      "duration": 12000
+    },
+    {
+      "text": "And over to you.",
+      "offset": 78387,
+      "duration": 3000
+    },
+    {
+      "text": "Thanks, Liz. So as Liz said, I've been in the community for about 14 years.",
+      "offset": 81387,
+      "duration": 6000
+    },
+    {
+      "text": "And when I was asked to take this topic, everything you need to know about Sonar Cube. It's a big topic.",
+      "offset": 87387,
+      "duration": 6000
+    },
+    {
+      "text": "I decided to. Focus on some misunderstandings that I've seen recur over the years. As people get up and running with center cube.",
+      "offset": 93387,
+      "duration": 13000
+    },
+    {
+      "text": "So we're gonna look at it from that standpoint. I'm going to cover this in 5 sections.",
+      "offset": 106387,
+      "duration": 3000
+    },
+    {
+      "text": "So first, st getting center cube up and running, then how analysis works. A deep dive into that.",
+      "offset": 109387,
+      "duration": 7000
+    },
+    {
+      "text": "Will help you understand what's going on as you configure your analysis. So then we'll talk about configuring analysis, then clean as you code.",
+      "offset": 116387,
+      "duration": 11000
+    },
+    {
+      "text": "And then operating sonar cube going forward. So let's start with getting Center Cube up and running.",
+      "offset": 127387,
+      "duration": 6000
+    },
+    {
+      "text": "Now, we've worked hard to make it easy to evaluate Sonar Cube. All you have to do is download the Zip or pull the Docker image and spin it up.",
+      "offset": 133387,
+      "duration": 10000
+    },
+    {
+      "text": "And it runs. It does that because we have embedded the H 2 database for evaluation purposes and when you're running with the H 2 database You see this warning at the bottom of your page.",
+      "offset": 143387,
+      "duration": 13000
+    },
+    {
+      "text": "And what I want to make sure you understand is that this is not for production. If you see this warning on your page footer, then you are not production ready.",
+      "offset": 156387,
+      "duration": 12000
+    },
+    {
+      "text": "If you try to move into production with this warning on your page footer, you will be sorely disappointed.",
+      "offset": 168387,
+      "duration": 7000
+    },
+    {
+      "text": "Upgrade because we simply don't support embed the upgrading the embedded H 2 database. So in order to upgrade, you'll have to lose all of the data you've accumulated in the H 2 database.",
+      "offset": 175387,
+      "duration": 13000
+    },
+    {
+      "text": "Start over with an external. Production database. So let's assume that if you currently have this warning on your page footer, you're going to spin so in our cube down, configure an external database, and start it back up fresh.",
+      "offset": 188387,
+      "duration": 15000
+    },
+    {
+      "text": "Now when you do that, you move from an evaluation context into a production context. And when you make that move, the you might have initial problems starting center cube back up.",
+      "offset": 203387,
+      "duration": 13000
+    },
+    {
+      "text": "When someone tells me their server isn't starting, the 1st thing I ask is what shows up in your server logs.",
+      "offset": 216387,
+      "duration": 6000
+    },
+    {
+      "text": "And in particular, the web. Log because if you have Maybe not quite configured your JDBC URL correctly or there's some problem with authenticating to your database.",
+      "offset": 222387,
+      "duration": 11000
+    },
+    {
+      "text": "That's gonna show up in web. Dot log. Now also, when you move from evaluation into production, we begin imposing the requirements that Elasticsearch needs to run well in a production context.",
+      "offset": 233387,
+      "duration": 15000
+    },
+    {
+      "text": "And specifically, Elasticsearch wants to be able to open a minimum number of files and threads.",
+      "offset": 248387,
+      "duration": 1000
+    },
+    {
+      "text": "And that's not always the configured by default in all OSs. And so that's another reason you're.",
+      "offset": 249387,
+      "duration": 7000
+    },
+    {
+      "text": "Server might not start up is that elastic search requirements aren't met. And if that's the case, you're going to find that in ES dialogue.",
+      "offset": 256387,
+      "duration": 8000
+    },
+    {
+      "text": "Another thing you might see in ES. Log is that elastic search simply will not run as root.",
+      "offset": 264387,
+      "duration": 8000
+    },
+    {
+      "text": "So if you're trying to start sonar cube is either root or a user with root type permissions.",
+      "offset": 272387,
+      "duration": 11000
+    },
+    {
+      "text": "Elasticsearch will refuse to start and you'll see that in ES. The final big reason that you might see your server not starting.",
+      "offset": 283387,
+      "duration": 9000
+    },
+    {
+      "text": "Is LDAP configuration. Now we integrate with a lot of different IDPs. And most of those you configure through the UI.",
+      "offset": 292387,
+      "duration": 9000
+    },
+    {
+      "text": "But with LDAP it's old-school. LDAP is the very 1st integration that we built and it's configured through the basic server configuration.",
+      "offset": 301387,
+      "duration": 9000
+    },
+    {
+      "text": "And having a problem with your LDAP configuration. Can fail your server startup and that would show up in web.",
+      "offset": 310387,
+      "duration": 4000
+    },
+    {
+      "text": "Log. Now if you're running into this, the best thing to do is get a 3rd party LDAP only client.",
+      "offset": 314387,
+      "duration": 10000
+    },
+    {
+      "text": "Use it to work through what your configuration should be and then transfer that into sonar cube.",
+      "offset": 324387,
+      "duration": 7000
+    },
+    {
+      "text": "Okay, so let's talk about how analysis works. Let's say that you've got your server up and running in a production context.",
+      "offset": 331387,
+      "duration": 8000
+    },
+    {
+      "text": "Now it's time to configure analysis. I want to give you an idea of how that works.",
+      "offset": 339387,
+      "duration": 1000
+    },
+    {
+      "text": "So here is the big picture of that. This sequence. Normally would be presented vertically, but it's so big it wouldn't fit nicely in the normal vertical presentation.",
+      "offset": 340387,
+      "duration": 14000
+    },
+    {
+      "text": "I'm going to talk about this in sections, but 1st I wanted to give you an overall idea of what this looks like.",
+      "offset": 354387,
+      "duration": 8000
+    },
+    {
+      "text": "So let's start with what happens before analysis. So we start over here on the left when the developer pushes a new commit into the SEM.",
+      "offset": 362387,
+      "duration": 8000
+    },
+    {
+      "text": "Typically that's going to be some flavor of Git, GitHub, Gitlab, Azure DevOps, etc.",
+      "offset": 370387,
+      "duration": 8000
+    },
+    {
+      "text": "So Git says, okay, I have a change in the repository. I need to trigger the web hooks to send the notifications to the systems that you've configured to be notified, including your CI CD.",
+      "offset": 378387,
+      "duration": 7000
+    },
+    {
+      "text": "So that's Jenkins, Azure DevOps, GitHub Actions, etc.",
+      "offset": 385387,
+      "duration": 10000
+    },
+    {
+      "text": "So then your CI says, okay, I have a change in this repository. I need to trigger the pipeline for this repository.",
+      "offset": 395387,
+      "duration": 9000
+    },
+    {
+      "text": "So it says, hey, can I have the code for this repository? Or SEM says, sure, here's the code.",
+      "offset": 404387,
+      "duration": 5000
+    },
+    {
+      "text": "Then your CI for. Compiled languages is going to run the build. So Java, CCCC sharp, objective C.",
+      "offset": 409387,
+      "duration": 9000
+    },
+    {
+      "text": "And then the next step it's going to do is run your tests and collect your coverage reports.",
+      "offset": 418387,
+      "duration": 6000
+    },
+    {
+      "text": "Now I want to call out 3 pieces of this because they put important information into the workspace that analysis is going to need.",
+      "offset": 424387,
+      "duration": 8000
+    },
+    {
+      "text": "So 1st the code checkout. Yes, obviously it puts the code into the workspace and analysis is going to need that.",
+      "offset": 432387,
+      "duration": 7000
+    },
+    {
+      "text": "But more subtly, it puts the SCM metadata into the workspace. And analysis is going to need that as well.",
+      "offset": 439387,
+      "duration": 8000
+    },
+    {
+      "text": "I've seen people stumble with this when they try to check out in a different directory and move it or unzip a a zip file to get the code.",
+      "offset": 447387,
+      "duration": 8000
+    },
+    {
+      "text": "No, you want to check out directly into your workspace. The next important part of this is the bill.",
+      "offset": 455387,
+      "duration": 9000
+    },
+    {
+      "text": "So for compiled languages running the build before analysis. Puts important information about the built project that analysis is going to need in order to do a full thorough analysis of the project.",
+      "offset": 464387,
+      "duration": 14000
+    },
+    {
+      "text": "And finally, if you have tests and you're running your tests, you probably want your coverage data to show up in your Sonarcube analysis once it's run.",
+      "offset": 478387,
+      "duration": 9000
+    },
+    {
+      "text": "And for that to happen, your tests and your coverage reports need to be done before analysis starts. So that the reports can be fed into analysis.",
+      "offset": 487387,
+      "duration": 10000
+    },
+    {
+      "text": "So our cube will not run your tests for you. It will not generate your coverage information. It only reads these reports that are put in to the workspace before analysis.",
+      "offset": 497387,
+      "duration": 11000
+    },
+    {
+      "text": "Okay, so the next thing that happens is that your CI kicks off analysis. So it triggers the sonar scanner that you've configured for your build.",
+      "offset": 508387,
+      "duration": 10000
+    },
+    {
+      "text": "And so the 1st thing that's on our scanner does is it reaches out to the sonar dot host dot URL value that you've configured to say hey sonar cube what version are you?",
+      "offset": 518387,
+      "duration": 11000
+    },
+    {
+      "text": "Senator Cube says, I'm 10.5 point 1. And the scanner says, cool, we're compatible.",
+      "offset": 529387,
+      "duration": 6000
+    },
+    {
+      "text": "Let's get going. Please give me all of the analyzers I need to run. Tell me which rules I need and everything else that needs.",
+      "offset": 535387,
+      "duration": 9000
+    },
+    {
+      "text": "That is needed on the CI side to run the analysis. So the center keep server returns all that data.",
+      "offset": 544387,
+      "duration": 7000
+    },
+    {
+      "text": "Then locally on the CI side, this scanner is going to execute all the rules. It's going to examine every single file and collect a file level metrics such as lines, lines of code, etc.",
+      "offset": 551387,
+      "duration": 13000
+    },
+    {
+      "text": "It's going to read in those coverage reports. And it's going to read that blame data from the environment that we got with the checkout.",
+      "offset": 564387,
+      "duration": 7000
+    },
+    {
+      "text": "So we use that blame data to understand which lines of which files are new, who issues should be assigned to, and so on.",
+      "offset": 571387,
+      "duration": 10000
+    },
+    {
+      "text": "What's it has all of that data, it's going to bundle it up in a zip and it's going to post that zip to the center cube server.",
+      "offset": 581387,
+      "duration": 8000
+    },
+    {
+      "text": "Now I want to call out here 2 potential points of failure. The 1st one is this. Initial call to the server to get the version.",
+      "offset": 589387,
+      "duration": 9000
+    },
+    {
+      "text": "Because if you have misconfigured your sonar host URL or forgotten to configure it, then this call is going to fail.",
+      "offset": 598387,
+      "duration": 9000
+    },
+    {
+      "text": "So this is a really early warning fail fast kind of thing to take a look at that configuration. The other point of failure, potential point of failure, is here when we post the analysis report because up to this point all of the interaction with Centre Keep Server has been through get calls.",
+      "offset": 607387,
+      "duration": 12000
+    },
+    {
+      "text": "At the end here we switch to a post call and sometimes what we see is that there's a proxy in the middle that either won't allow a post payload or more commonly there is a size limit on the post payload.",
+      "offset": 619387,
+      "duration": 25000
+    },
+    {
+      "text": "And so that usually manifests is someone saying, hey, suddenly my analysis stopped working and it was working fine for months.",
+      "offset": 644387,
+      "duration": 7000
+    },
+    {
+      "text": "And now it's broken. Or it used to work fine and now it fails intermittently. And what that is is that the size of the project and thus the size of the analysis report has grown over time to finally.",
+      "offset": 651387,
+      "duration": 14000
+    },
+    {
+      "text": "Trip over the threshold of the Heyload size that's allowed by the proxy. So if you see that, talk to your network folks, they should be able to change that limit.",
+      "offset": 665387,
+      "duration": 11000
+    },
+    {
+      "text": "Help you out. Okay, so at this point, the CI side analysis is complete. But analysis overall is not yet complete.",
+      "offset": 676387,
+      "duration": 9000
+    },
+    {
+      "text": "So what happens? We post the analysis report to the Sonarcube server. Center cube receives that report and accuse it for processing intern.",
+      "offset": 685387,
+      "duration": 9000
+    },
+    {
+      "text": "When it's that report's turn, that report is popped off the queue. Unbundled and we store the issues, we store the file level metrics and then from those file level metrics we're going to calculate the aggregate metrics.",
+      "offset": 694387,
+      "duration": 14000
+    },
+    {
+      "text": "So We now already know on the CI side how many lines are in each file. From that, we calculate how many lines total are in the subdirectory and then in the directory and then in the module and on up to the project.",
+      "offset": 708387,
+      "duration": 15000
+    },
+    {
+      "text": "So all of that gets stored and the project updated. And at that point, server side analysis is complete.",
+      "offset": 723387,
+      "duration": 7000
+    },
+    {
+      "text": "But we're not quite done. This next step is where we tell all of the other systems the status of the analysis.",
+      "offset": 730387,
+      "duration": 2000
+    },
+    {
+      "text": "So in a PR analysis, this is where the PR is decorated in the DevOps platform.",
+      "offset": 732387,
+      "duration": 8000
+    },
+    {
+      "text": "As your DevOps, GitHub, what have you. This is also where the web hooks are called to notify other systems.",
+      "offset": 740387,
+      "duration": 11000
+    },
+    {
+      "text": "So this is where Jenkins gets the quality gate results. This is also when the other systems get the notification that analysis is complete and what the quality gate status is.",
+      "offset": 751387,
+      "duration": 14000
+    },
+    {
+      "text": "So at that point, analysis is complete overall. So now let's talk about configuring your analysis.",
+      "offset": 765387,
+      "duration": 8000
+    },
+    {
+      "text": "The watchword here is use the right tool for the job. We've worked really hard to give you tools to make it easy for the popular.",
+      "offset": 773387,
+      "duration": 6000
+    },
+    {
+      "text": "Configurations for the popular integrations. So we've built something for GitHub Actions, Azure DevOps, etc.",
+      "offset": 779387,
+      "duration": 12000
+    },
+    {
+      "text": "So if we have built an integration for your system. Please install it and use it in the long run.",
+      "offset": 791387,
+      "duration": 6000
+    },
+    {
+      "text": "It's going to make your life much easier. Similarly, we have built. Scanner sonar scanners for particular.",
+      "offset": 797387,
+      "duration": 8000
+    },
+    {
+      "text": "Build systems. Now depending on the the Depending on the DevOps platform, you're using, you may not be able to choose your scanner.",
+      "offset": 805387,
+      "duration": 12000
+    },
+    {
+      "text": "But if you do have a choice of scanner, pick the one. For your build system. So if you're building with Maven, use the center scanner for Maven, if you're building with Gradle, use that scanner and for.net.",
+      "offset": 817387,
+      "duration": 12000
+    },
+    {
+      "text": "Now, for everyone else, you're going to use the Sonar Skin or CLI and you will still be well served with it.",
+      "offset": 829387,
+      "duration": 1000
+    },
+    {
+      "text": "You just will have to do a little bit more configuration than the other folks. And finally, use the onboarding.",
+      "offset": 830387,
+      "duration": 14000
+    },
+    {
+      "text": "So once you have installed the integration for your DevOps platform once you have installed the Sonar scanner, you need to use, then it's time to start configuring your projects.",
+      "offset": 844387,
+      "duration": 9000
+    },
+    {
+      "text": "Now the projects page in Sonar Q will invite you to import or create your projects through the through the UI.",
+      "offset": 853387,
+      "duration": 13000
+    },
+    {
+      "text": "When you do that, there will then be a wizard to guide you through the initial analysis configuration.",
+      "offset": 866387,
+      "duration": 7000
+    },
+    {
+      "text": "Go ahead and use that. And that's going to do most of the work for you. Okay.",
+      "offset": 873387,
+      "duration": 6000
+    },
+    {
+      "text": "So now let's talk about analysis parameters. That initial configuration gives you a set of analysis parameters. To put into your pipeline.",
+      "offset": 879387,
+      "duration": 10000
+    },
+    {
+      "text": "And I want to talk about analysis parameters because if you look at the documentation, and by the way we have excellent documentation, and I can say that because I'm no longer responsible for it.",
+      "offset": 889387,
+      "duration": 10000
+    },
+    {
+      "text": "We have a full-time professional documentation team and they have done an excellent job. And if you look at the documentation.",
+      "offset": 899387,
+      "duration": 8000
+    },
+    {
+      "text": "And you look at the analysis parameters page, you are going to see literally dozens and dozens and dozens of parameters.",
+      "offset": 907387,
+      "duration": 8000
+    },
+    {
+      "text": "I have seen people in the past take that as a to-do list. They they go down the list and seem to think that they need to provide a value for every single parameter.",
+      "offset": 915387,
+      "duration": 10000
+    },
+    {
+      "text": "And I want to make sure to today that you understand that that is simply not the case. Really less is more here.",
+      "offset": 925387,
+      "duration": 8000
+    },
+    {
+      "text": "So let's talk about what's actually needed to configure analysis. First, st there are 3 values that you must provide for every analysis.",
+      "offset": 933387,
+      "duration": 10000
+    },
+    {
+      "text": "The 1st is sonar dot host. And you're going to provide this. At the global level if you're using Azure DevOps or Jenkins for everyone else you're going to provide this at the project level through either the center host dot URL parameter or a sonar underscore host, underscore URL, environment variable.",
+      "offset": 943387,
+      "duration": 22000
+    },
+    {
+      "text": "This tells the scanner where sonar cube is. The second you must provide is the sonar.",
+      "offset": 965387,
+      "duration": 1000
+    },
+    {
+      "text": "Project key parameter and this tells analysis what project is being analyzed. And the 3rd is the sonar dot token parameter or the sonar underscore token environment variable.",
+      "offset": 966387,
+      "duration": 18000
+    },
+    {
+      "text": "And this tells analysis who you are and proves that you do actually have permissions to analyze the project.",
+      "offset": 984387,
+      "duration": 1000
+    },
+    {
+      "text": "You're trying to analyze. For and if you're in Azure DevOps, that one is also, configured at the global level.",
+      "offset": 985387,
+      "duration": 15000
+    },
+    {
+      "text": "Now, beyond that, you might want to provide your coverage. Report to analysis. This is that one of those things that pre analysis we seeded into the workspace.",
+      "offset": 1000387,
+      "duration": 13000
+    },
+    {
+      "text": "You're going to do that with a parameter named something like sonar dot the name of the language.",
+      "offset": 1013387,
+      "duration": 1000
+    },
+    {
+      "text": "Coverage dot report paths. Now this very this is a general pattern and it varies a bit by language and by coverage engine.",
+      "offset": 1014387,
+      "duration": 11000
+    },
+    {
+      "text": "So please go check the docs get the exact spelling for your language coverage engine. Now if you have coverage reports, that implies that you have both source files and test files in your project.",
+      "offset": 1025387,
+      "duration": 16000
+    },
+    {
+      "text": "If you're using this owner scanner CLI, you need to manually differentiate which is which.",
+      "offset": 1041387,
+      "duration": 5000
+    },
+    {
+      "text": "And you're going to do that with sonar dot sources and sonar dot tests. Now these aren't absolutely necessary because sonar dot sources.",
+      "offset": 1046387,
+      "duration": 10000
+    },
+    {
+      "text": "Defaults to dot and sonar. Test defaults to nothing. So if you don't provide these values, then what you're telling analysis is that everything in the directory that analysis was kicked off from is a source file.",
+      "offset": 1056387,
+      "duration": 7000
+    },
+    {
+      "text": "And and that may not be what you want if you've actually got tests in your project. If you're using one of the build system specific scanners, then you don't actually have to provide this.",
+      "offset": 1063387,
+      "duration": 19000
+    },
+    {
+      "text": "The scanner reads these values from your build environment. But if you're using the Sunner scanner, CLI, this is one of those extra pieces that you have to do manually.",
+      "offset": 1082387,
+      "duration": 11000
+    },
+    {
+      "text": "Now beyond that, there are a couple of parameters you might additionally want to specify. So by default, Sonar Cube is going to use your sonar dot project key value as the display name in the UI.",
+      "offset": 1093387,
+      "duration": 14000
+    },
+    {
+      "text": "If that's not visually appealing, then you may want to provide a pretty name using sonar.",
+      "offset": 1107387,
+      "duration": 1000
+    },
+    {
+      "text": "Dot project name. And you would need to do this if you're using the SO. S. Scanner CLI or the center scanner for.net.",
+      "offset": 1108387,
+      "duration": 11000
+    },
+    {
+      "text": "If you're using the Center scanner for Maven or Gradle, it's going to read that out of your build environment.",
+      "offset": 1119387,
+      "duration": 5000
+    },
+    {
+      "text": "Additionally, if you have run extra analyses before, This on our cube analysis, then you may want to push those results into your sonar cube analysis.",
+      "offset": 1124387,
+      "duration": 11000
+    },
+    {
+      "text": "And you're going to do that with a parameter that's something like sonar dot the name of the language dot the name of the analyzer dot report paths.",
+      "offset": 1135387,
+      "duration": 8000
+    },
+    {
+      "text": "Again, this is a general pattern that it varies in specific. So go check the docs for your exact spelling.",
+      "offset": 1143387,
+      "duration": 8000
+    },
+    {
+      "text": "And finally, depending on which CI you're using, you may need to specify sonar.",
+      "offset": 1151387,
+      "duration": 1000
+    },
+    {
+      "text": "Quality gate. Weight equals true. And what this does is make your pipeline wait for that very final step of analysis where we notify all the external systems.",
+      "offset": 1152387,
+      "duration": 17000
+    },
+    {
+      "text": "Before it proceeds with the rest of your pipeline. Because if your quality gate fails, the analysis, then you may not want to proceed with the rest of the pipeline.",
+      "offset": 1169387,
+      "duration": 4000
+    },
+    {
+      "text": "And so this parameter is what allows you to wait for that final step of analysis. Get the results and then make the decision.",
+      "offset": 1173387,
+      "duration": 17000
+    },
+    {
+      "text": "Beyond parameters, there are a couple more things you can configure. But again, less really is more here.",
+      "offset": 1190387,
+      "duration": 8000
+    },
+    {
+      "text": "So for every single language in Sonar Cube, there is a default built-in sonar way profile for the language.",
+      "offset": 1198387,
+      "duration": 2000
+    },
+    {
+      "text": "And we've worked really hard and continue to work hard on an ongoing basis to make sure these Centerway profiles.",
+      "offset": 1200387,
+      "duration": 14000
+    },
+    {
+      "text": "Are very much same defaults. Our goal here is that when you analyze any given project with the Sonarway profile, 99% of the time the developers of that project are going to look at the results and go.",
+      "offset": 1214387,
+      "duration": 15000
+    },
+    {
+      "text": "Yeah, that makes sense. So these should be non-controversial defaults.",
+      "offset": 1229387,
+      "duration": 6000
+    },
+    {
+      "text": "Yes, you can tune your quality profiles, but this is not something that I would put on the shortlist of things to do soon.",
+      "offset": 1235387,
+      "duration": 9000
+    },
+    {
+      "text": "Similarly, you can configure your quality gate. But there is a default built in sonar way quality gate.",
+      "offset": 1244387,
+      "duration": 8000
+    },
+    {
+      "text": "Focuses entirely on new code and by using that new code quality gate, you really can get a good experience.",
+      "offset": 1252387,
+      "duration": 11000
+    },
+    {
+      "text": "Cube in general. Now, that sort of leads me into talking about the cleanness you code methodology.",
+      "offset": 1263387,
+      "duration": 9000
+    },
+    {
+      "text": "This is something that is. Not entirely intuitive for most people. And so I want to spend some time talking about what it means, how it works.",
+      "offset": 1272387,
+      "duration": 11000
+    },
+    {
+      "text": "So let me start by saying that when you run the initial analysis on any given project, other older than maybe 3 months.",
+      "offset": 1283387,
+      "duration": 10000
+    },
+    {
+      "text": "That 1st analysis usually turns up. Thousands of issues. If it's a really legacy project, it might have very little or maybe 0 code coverage, high duplications.",
+      "offset": 1293387,
+      "duration": 13000
+    },
+    {
+      "text": "And the Almost instinctual reaction of most project maintainer is to go Okay, I gotta find time to do all this work because I've got to clean up all these issues.",
+      "offset": 1306387,
+      "duration": 14000
+    },
+    {
+      "text": "And what we say to you is that No. You really don't. You really don't have to do that.",
+      "offset": 1320387,
+      "duration": 7000
+    },
+    {
+      "text": "Now if analysis has turned up some severe security problems or, you know, a null pointer dereference in your overall code base.",
+      "offset": 1327387,
+      "duration": 10000
+    },
+    {
+      "text": "Yeah, you probably want to get those fixed. Beyond those immediate things, you really can ignore the problems in old code.",
+      "offset": 1337387,
+      "duration": 11000
+    },
+    {
+      "text": "Instead, what you should be doing is focusing on the new code. Make sure that the code you check in today has 0 issues.",
+      "offset": 1348387,
+      "duration": 10000
+    },
+    {
+      "text": "Hi, test coverage and minimal duplications. Sonarcube is built to help you do this.",
+      "offset": 1358387,
+      "duration": 7000
+    },
+    {
+      "text": "So. The new the project homepage focuses on new code. The default quality gate is going to fail if you don't meet those criteria on new code.",
+      "offset": 1365387,
+      "duration": 12000
+    },
+    {
+      "text": "And beyond that, you really can ignore the problems in old code. Over time, the quality of the overall code base will really take care of itself just by making sure that the code you write today is clean.",
+      "offset": 1377387,
+      "duration": 17000
+    },
+    {
+      "text": "Now I understand. That this sounds like a fairy tale. So I want to offer you some proof.",
+      "offset": 1394387,
+      "duration": 8000
+    },
+    {
+      "text": "There's a project out there, not from us. Called the Git of Theseus. And you can point it at your code base and it will generate graphs for you that show.",
+      "offset": 1402387,
+      "duration": 11000
+    },
+    {
+      "text": "How long code added in a given year remains in the code base. So this is the get of Theseus graph for sonar q itself.",
+      "offset": 1413387,
+      "duration": 9000
+    },
+    {
+      "text": "It starts in 2,010 when the project was moved to GitHub. And it ends about August of last year when we generated this graph.",
+      "offset": 1422387,
+      "duration": 5000
+    },
+    {
+      "text": "I was too lazy to generate a new graph. So what we're seeing here is the code that was added in each year and how long it stayed in the project.",
+      "offset": 1427387,
+      "duration": 10000
+    },
+    {
+      "text": "So all of this red is the code that was present in the code base. At the end of 2010.",
+      "offset": 1437387,
+      "duration": 13000
+    },
+    {
+      "text": "So here at the end of, 2,010, we had about 400,000 lines of code in the code base.",
+      "offset": 1450387,
+      "duration": 5000
+    },
+    {
+      "text": "And then this cyan is the code that was added or updated in 2,011. And then this sort of bluey purple is what added was was added to the code base in 2,012 and so on.",
+      "offset": 1455387,
+      "duration": 14000
+    },
+    {
+      "text": "Now I want you to imagine. That this is your project. And imagine that on January 1st of 2413 so that's this bright green here.",
+      "offset": 1469387,
+      "duration": 11000
+    },
+    {
+      "text": "That you and your teammates looked at each other. And agreed that from that day forward you would clean as you code.",
+      "offset": 1480387,
+      "duration": 8000
+    },
+    {
+      "text": "So from January 1, st 2013. You all agree that no one on the team is going to add new issues in in code.",
+      "offset": 1488387,
+      "duration": 9000
+    },
+    {
+      "text": "You're not going to check anything in with new issues. You're going to make sure that everything you check in today has high coverage and low duplications. And that's it.",
+      "offset": 1497387,
+      "duration": 11000
+    },
+    {
+      "text": "Just in the normal course of fulfilling business requests, you're going to make sure that the code you check in today.",
+      "offset": 1508387,
+      "duration": 6000
+    },
+    {
+      "text": "Is clean. So imagine you did this on January, the 1st of 2,013. That means that everything that's bright green is clean code.",
+      "offset": 1514387,
+      "duration": 9000
+    },
+    {
+      "text": "Everything that's pink is clean code. Everything that's pale green is cleaned out. So look what happens here by.",
+      "offset": 1523387,
+      "duration": 6000
+    },
+    {
+      "text": "By the time we generated this graph. Almost everything in the code base. Almost all of the 900,000 lines of code is clean.",
+      "offset": 1529387,
+      "duration": 11000
+    },
+    {
+      "text": "Yes, you probably have some lingering problems in this red cyan and blue code. But today, look what a tiny percentage of the overall code base that is.",
+      "offset": 1540387,
+      "duration": 12000
+    },
+    {
+      "text": "Everything else is clean. Clean code clean as you code really does work and this is the proof Okay, I'm gonna get off my soapbox.",
+      "offset": 1552387,
+      "duration": 11000
+    },
+    {
+      "text": "Moving on. What do you need to do operating center cube going forward to keep your sonar cube instance healthy and happy?",
+      "offset": 1563387,
+      "duration": 8000
+    },
+    {
+      "text": "Now I want to start with some license questions because this is one of the things that people get a little confused about.",
+      "offset": 1571387,
+      "duration": 9000
+    },
+    {
+      "text": "So 1st of all, you do not use up your license by reanalyzing the same code. Let's say that I have a license for a hundred 1,000 lines of code and I have a project that's 10,000 licenses.",
+      "offset": 1580387,
+      "duration": 14000
+    },
+    {
+      "text": "And I analyze that project. I've just used 10,000 lines of code. Let's say that I've analyzed that project.",
+      "offset": 1594387,
+      "duration": 10000
+    },
+    {
+      "text": "4 more times. So I've analyzed that project. A total of 5 times. Of my license, I've used up.",
+      "offset": 1604387,
+      "duration": 9000
+    },
+    {
+      "text": "10,000 lines of code. We feel it's a best practice to analyze every single commit. We are never going to do anything to incent you not to do that.",
+      "offset": 1613387,
+      "duration": 11000
+    },
+    {
+      "text": "So you cannot use up your license by reanalyzing the same code. So the next thing I want to talk about is the license lines of code and how they're counted because I've had people who go down the projects page.",
+      "offset": 1624387,
+      "duration": 16000
+    },
+    {
+      "text": "And they get the lines of code that are listed on that page for each project and they add them up.",
+      "offset": 1640387,
+      "duration": 6000
+    },
+    {
+      "text": "And they come to me and they say, why doesn't this total match what I see on the license page?",
+      "offset": 1646387,
+      "duration": 7000
+    },
+    {
+      "text": "Well, the license lines of code are counted by the largest branch in each project. And that may not be the main branch.",
+      "offset": 1653387,
+      "duration": 8000
+    },
+    {
+      "text": "Projects page shows. The statistics for the main branch of your code. Which is not necessarily the largest branch of your code.",
+      "offset": 1661387,
+      "duration": 10000
+    },
+    {
+      "text": "Now if it's important to you to figure this out, There is a web service for you. So go to your page footer in the page footer is a link to the web API.",
+      "offset": 1671387,
+      "duration": 5000
+    },
+    {
+      "text": "Click through on that. There's a search bar, search for the word license, and it will bring up the web service that will give you exactly the information you're looking for.",
+      "offset": 1676387,
+      "duration": 16000
+    },
+    {
+      "text": "And the last thing I want to cover here is that licenses are for additions, not versions. So every once in a while, I'll tell someone you need to upgrade either because they're on a very old version or they want a feature that's only in the newest versions.",
+      "offset": 1692387,
+      "duration": 15000
+    },
+    {
+      "text": "And they say, but Anne, I can't upgrade my licenses for 7.9. No, we want you to upgrade.",
+      "offset": 1707387,
+      "duration": 5000
+    },
+    {
+      "text": "We are never going to do anything to incent you against upgrading. So you are licensed for developer addition in.",
+      "offset": 1712387,
+      "duration": 11000
+    },
+    {
+      "text": "7.9, please don't go backwards or 8.9, 9.9, 10.0, 10.1, 10.2.",
+      "offset": 1723387,
+      "duration": 8000
+    },
+    {
+      "text": "All the way through. You were licensed for every single version. With developer edition or enterprise edition or data center.",
+      "offset": 1731387,
+      "duration": 13000
+    },
+    {
+      "text": "Now, is there regular maintenance that you need to do to keep your son or cube server happy and healthy?",
+      "offset": 1744387,
+      "duration": 7000
+    },
+    {
+      "text": "Basically, no. You want your database administrator to do the database administration stuff to keep the database happy.",
+      "offset": 1751387,
+      "duration": 9000
+    },
+    {
+      "text": "You want to make sure that you have enough free file space on the Sonarcube post so that Sonarcube can write out its logs.",
+      "offset": 1760387,
+      "duration": 8000
+    },
+    {
+      "text": "And that's it. Beyond that, all you really ought ought to do is stay up to date with the active versions.",
+      "offset": 1768387,
+      "duration": 1000
+    },
+    {
+      "text": "So whether you're on the LTA train or the latest when a new version comes out. Upgrade.",
+      "offset": 1769387,
+      "duration": 12000
+    },
+    {
+      "text": "So for LTA, that means picking up the point releases. If you're on 9.9 and we release 9.9 point 12.",
+      "offset": 1781387,
+      "duration": 10000
+    },
+    {
+      "text": "Make sure you upgrade to that. If you're currently on 10.5, make sure that when 10.6 comes out, you upgrade to that.",
+      "offset": 1791387,
+      "duration": 9000
+    },
+    {
+      "text": "And I want to say pick up the point releases. So specifically, those are going to be the only releases you're picking up for the LTAs until the next LTA comes out.",
+      "offset": 1800387,
+      "duration": 10000
+    },
+    {
+      "text": "But if you're on, for instance, 10.5 right now, 10.5 point 1 is the latest pickup as point releases.",
+      "offset": 1810387,
+      "duration": 6000
+    },
+    {
+      "text": "Now I've seen people who are reluctant to do these minor upgrades because they're afraid of regressions or functionality changes.",
+      "offset": 1816387,
+      "duration": 6000
+    },
+    {
+      "text": "They feel like they have to do a lot of testing to test the point release. What I want to say to you is that we don't put out point releases that change functionality unless the bug we're fixing is in the functionality.",
+      "offset": 1822387,
+      "duration": 21000
+    },
+    {
+      "text": "So the point of point releases is to fix bugs to fix security problems. These are really low risk upgrades.",
+      "offset": 1843387,
+      "duration": 9000
+    },
+    {
+      "text": "You should always do your best to pick up the point releases pretty much as soon as they come out.",
+      "offset": 1852387,
+      "duration": 8000
+    },
+    {
+      "text": "Now, when you do an upgrade, you do want to make sure that you back up your database before you do that upgrade.",
+      "offset": 1860387,
+      "duration": 7000
+    },
+    {
+      "text": "Part of most of an upgrade is updating your sonar, sonar cube database schema for the new version.",
+      "offset": 1867387,
+      "duration": 6000
+    },
+    {
+      "text": "And there's no rollback for that, not that people need to roll back very often at all.",
+      "offset": 1873387,
+      "duration": 6000
+    },
+    {
+      "text": "But if for some reason you do need to roll back, the only way to do that is by restoring the backup that you took before you did the upgrade.",
+      "offset": 1879387,
+      "duration": 6000
+    },
+    {
+      "text": "So make sure you do the backup. And finally, after you've done the upgrade, There are some database cleanup steps that we recommend.",
+      "offset": 1885387,
+      "duration": 13000
+    },
+    {
+      "text": "They vary a little bit by database engine, so I'm not going to go into them here, but they're in the documentation.",
+      "offset": 1898387,
+      "duration": 5000
+    },
+    {
+      "text": "So point your DBA at the docs, make sure they run those steps. And that's it.",
+      "offset": 1903387,
+      "duration": 7000
+    },
+    {
+      "text": "Alright, so what are the takeaways? What are the key points that you should remember from this webinar?",
+      "offset": 1910387,
+      "duration": 6000
+    },
+    {
+      "text": "First, st when you're getting Center Cube up and running, make sure you configure an external database and if you have any questions about what's going on, the server logs are your friends.",
+      "offset": 1916387,
+      "duration": 11000
+    },
+    {
+      "text": "Now, if you look at the server logs and they're not showing you much. Then you can go into the admin interface and bump up the log level briefly.",
+      "offset": 1927387,
+      "duration": 9000
+    },
+    {
+      "text": "Those logs get very big very fast. Recreate your situation and then bring the log level back down.",
+      "offset": 1936387,
+      "duration": 9000
+    },
+    {
+      "text": "For analysis. Analysis happens in stages and what happens before the actual analysis is important to analysis. For configuring analysis, use the integrations, the scanners, the wizards to get the configuration to get the setup for your system and really less is more.",
+      "offset": 1945387,
+      "duration": 24000
+    },
+    {
+      "text": "Clean as you code Really, just focus on today's code over time. Overall quality will take care of itself.",
+      "offset": 1969387,
+      "duration": 9000
+    },
+    {
+      "text": "And going forward. Take the upgrade. At this point, I'm going to turn it back over to Liz.",
+      "offset": 1978387,
+      "duration": 11000
+    },
+    {
+      "text": "Thank you, and I appreciate that. That was great. As we move into our Q&A and we gather questions on our set of things.",
+      "offset": 1989387,
+      "duration": 7000
+    },
+    {
+      "text": "We had lots of questions in the chat box. So thank you for that and hopefully we've answered lots of your questions, but left some for An.",
+      "offset": 1996387,
+      "duration": 7000
+    },
+    {
+      "text": "I briefly want to share that we have 2 upcoming webinars you can attend while we gather those Q&A.",
+      "offset": 2003387,
+      "duration": 1000
+    },
+    {
+      "text": "If you work in the federal sector, please join us for our next webinar tomorrow. It's sooner cube enterprise edition for federal agencies.",
+      "offset": 2004387,
+      "duration": 10000
+    },
+    {
+      "text": "It's presented by Colin Mueller. You can register today with a link in the chat.",
+      "offset": 2014387,
+      "duration": 5000
+    },
+    {
+      "text": "You can also join us for another webinar, Security and Design, how implementing good quality methodology delivers better.",
+      "offset": 2019387,
+      "duration": 6000
+    },
+    {
+      "text": "Software security presented by Jonathan Slaughter on Wednesday, July 17.th You can also register today with that chat in the link.",
+      "offset": 2025387,
+      "duration": 9000
+    },
+    {
+      "text": "And now you'll see a brief poll to indicate if you'd like to learn more about our solutions.",
+      "offset": 2034387,
+      "duration": 5000
+    },
+    {
+      "text": "And please feel free to answer or not totally up to you.",
+      "offset": 2039387,
+      "duration": 6000
+    },
+    {
+      "text": "As a reminder, short survey will also appear after the QA and we greatly appreciate your feedback just on the webinar in general, which like to see in the future.",
+      "offset": 2045387,
+      "duration": 7000
+    },
+    {
+      "text": "We love hearing from you. Okay, let's see what questions we have. I'll start with you here and are you ready?",
+      "offset": 2052387,
+      "duration": 11000
+    },
+    {
+      "text": "I'm ready.",
+      "offset": 2063387,
+      "duration": 1000
+    },
+    {
+      "text": "Hey. What are some things to look for when coverage is 0%?",
+      "offset": 2064387,
+      "duration": 8000
+    },
+    {
+      "text": "Okay, so I wish I could ask a follow up question on that. So if you're trying to raise a 0% coverage then what to look for is Again, clean as you code.",
+      "offset": 2072387,
+      "duration": 14000
+    },
+    {
+      "text": "Make sure that. The code that you check in today is covered. Now, I have been in the situation of working in a legacy code base with, you know, 1,000 line classes and methods that were 200 lines long and It's very difficult to, you know.",
+      "offset": 2086387,
+      "duration": 22000
+    },
+    {
+      "text": "Tackle that coverage. Situation. What I would urge you to do at that point is look at extracting the part of the code that you're working on today into another method, then you can cover that method.",
+      "offset": 2108387,
+      "duration": 15000
+    },
+    {
+      "text": "And that does 2 things. It gets today's code covered. And it also starts to break down those giant monolithic methods so that over time the code base becomes easier to work in.",
+      "offset": 2123387,
+      "duration": 7000
+    },
+    {
+      "text": "Now if this is a question about Okay. My coverage is coming up 0 even though it shouldn't be.",
+      "offset": 2130387,
+      "duration": 13000
+    },
+    {
+      "text": "That's kind of an in depth technical debugging thing that I would ask you to come to the community and pose.",
+      "offset": 2143387,
+      "duration": 10000
+    },
+    {
+      "text": "Great, thanks, Anne. We've got a few more here. What is PR decoration, especially in Azure DevOps?",
+      "offset": 2153387,
+      "duration": 8000
+    },
+    {
+      "text": "Okay, so, let me start by mentioning that PR decoration is a commercial feature.",
+      "offset": 2161387,
+      "duration": 5000
+    },
+    {
+      "text": "It starts in developer edition and above. And in commercial editions, we allow you to analyze pull requests.",
+      "offset": 2166387,
+      "duration": 10000
+    },
+    {
+      "text": "So what we'll do there is analyze just the code that was changed. And so you get an analysis of just today's code, just your new code.",
+      "offset": 2176387,
+      "duration": 4000
+    },
+    {
+      "text": "And then if everything's configured correctly and if you've used the wizards and the integrations, it probably is.",
+      "offset": 2180387,
+      "duration": 14000
+    },
+    {
+      "text": "Then we go back into that PR. In Azure DevOps. And we're going to annotate the PR in Azure DevOps with your quality gauge status.",
+      "offset": 2194387,
+      "duration": 8000
+    },
+    {
+      "text": "So did I meet the requirements of my quality gate. And if I did not, how many issues did I introduce?",
+      "offset": 2202387,
+      "duration": 6000
+    },
+    {
+      "text": "What is my code coverage? And so on.",
+      "offset": 2208387,
+      "duration": 5000
+    },
+    {
+      "text": "Okay, we've got lots of questions, so we'll try to get it to as many as we can.",
+      "offset": 2213387,
+      "duration": 4000
+    },
+    {
+      "text": "The next one, how do I get results when using sonar dot quality dot gateway dot true?",
+      "offset": 2217387,
+      "duration": 8000
+    },
+    {
+      "text": "So I think this is about sonar. Dot quality gate. That weight equals true. So you're gonna use that in the context of, get lab.",
+      "offset": 2225387,
+      "duration": 11000
+    },
+    {
+      "text": "I think there might be somewhere else where you need to set that up. The exact details of that integration are not coming to my mind.",
+      "offset": 2236387,
+      "duration": 4000
+    },
+    {
+      "text": "The It's in the docks how to get this set up. So check the docs and if you have questions about it.",
+      "offset": 2240387,
+      "duration": 14000
+    },
+    {
+      "text": "In the community.",
+      "offset": 2254387,
+      "duration": 2000
+    },
+    {
+      "text": "Perfect. And you the term server logs in her presentation. So what did she mean if there are no logs?",
+      "offset": 2256387,
+      "duration": 10000
+    },
+    {
+      "text": "If there are no logs, then your server probably didn't start up. So if your server did start up because Centre, center cube won't start up if it can't ride its logs.",
+      "offset": 2266387,
+      "duration": 12000
+    },
+    {
+      "text": "And that's not one of the things I covered because it's a very rare circumstance.",
+      "offset": 2278387,
+      "duration": 5000
+    },
+    {
+      "text": "But if you look in your sonar cube directory, there should be a logs directory and the files in that logs directory are what I called the server logs.",
+      "offset": 2283387,
+      "duration": 5000
+    },
+    {
+      "text": "Sonar Cube runs as under the hood 3 separate processes. So there's an overall log, the which is sonar dot log, and then each of the 3 processes has its own log.",
+      "offset": 2288387,
+      "duration": 16000
+    },
+    {
+      "text": "The web log the CE log and the ES log and those processes do their logging there and those are the logs that I was telling you to check at the beginning.",
+      "offset": 2304387,
+      "duration": 10000
+    },
+    {
+      "text": "If your server isn't starting up.",
+      "offset": 2314387,
+      "duration": 3000
+    },
+    {
+      "text": "Okay, this one's a little bit more general. I think it's good to cover for, those that are a little less familiar with sonar in general.",
+      "offset": 2317387,
+      "duration": 1000
+    },
+    {
+      "text": "What's the difference between and our Cube and Sonar Cloud, do both provide the same features?",
+      "offset": 2318387,
+      "duration": 12000
+    },
+    {
+      "text": "So. Sterno Keep and Centre Cloud started as identical twins. Over time they evolved to be sisters.",
+      "offset": 2330387,
+      "duration": 10000
+    },
+    {
+      "text": "Today they're more like cousins, but we're trying to pull them back into being sisters.",
+      "offset": 2340387,
+      "duration": 1000
+    },
+    {
+      "text": "But the marketing people listening are probably all cringing and throwing things at their screens at this moment.",
+      "offset": 2341387,
+      "duration": 8000
+    },
+    {
+      "text": "Okay.",
+      "offset": 2349387,
+      "duration": 1000
+    },
+    {
+      "text": "So In general, at a base layer, yes, they provide the same features. They both provide analysis of all the same languages.",
+      "offset": 2350387,
+      "duration": 8000
+    },
+    {
+      "text": "They both provide PR analysis. Where it differentiates a little bit is that sonar cloud is a little bit more specialized for the cloud environment where is sonar cube is more specialized for an enterprise environment so you're going to find today more reporting for instance in Sonar Cube.",
+      "offset": 2358387,
+      "duration": 18000
+    },
+    {
+      "text": "Now I said we're working to bring these back to being more like sisters. So we're adding some of that enterprise functionality into Sonar Cloud as we speak.",
+      "offset": 2376387,
+      "duration": 14000
+    },
+    {
+      "text": "So today the differentiator I would say is do you need to manage your own infrastructure picks on our cube?",
+      "offset": 2390387,
+      "duration": 7000
+    },
+    {
+      "text": "Do you want in-depth reporting right now today Pixon or Cube? If you're a little bit more lazy, fair about it and you can wait for the reporting, even though you want it, then you might look at center cloud.",
+      "offset": 2397387,
+      "duration": 14000
+    },
+    {
+      "text": "Alright. Start with another one. How do I find web dot log and the rest of my server logs?",
+      "offset": 2411387,
+      "duration": 6000
+    },
+    {
+      "text": "I think we kind of covered that a little bit. We were talking about server log.",
+      "offset": 2417387,
+      "duration": 1000
+    },
+    {
+      "text": "Okay, yeah, so look in the sonar cube directory. There should be a logs directory there and those are the files in that logs directory.",
+      "offset": 2418387,
+      "duration": 12000
+    },
+    {
+      "text": "Okay. You talked about focusing on new code. What exactly is new code? By sonars definition.",
+      "offset": 2430387,
+      "duration": 9000
+    },
+    {
+      "text": "Yeah, I kind of glossed over that didn't I? So we make a distinction between new code and overall code.",
+      "offset": 2439387,
+      "duration": 8000
+    },
+    {
+      "text": "And for us, typically, New code is everything that has been touched. So every every line of code that has been added or edited.",
+      "offset": 2447387,
+      "duration": 10000
+    },
+    {
+      "text": "Since the last production deployment. Our idea here is that. Each new deployment to production should be at least as good as the previous one.",
+      "offset": 2457387,
+      "duration": 4000
+    },
+    {
+      "text": "And so that's why we talk about don't add issues on new code. Right, so what's in production now?",
+      "offset": 2461387,
+      "duration": 12000
+    },
+    {
+      "text": "Doesn't have this issue that you might have added. Today. So make sure you take that issue back out so that your new code that you the changes that you deploy to production.",
+      "offset": 2473387,
+      "duration": 12000
+    },
+    {
+      "text": "Or at least as good as what was already there.",
+      "offset": 2485387,
+      "duration": 4000
+    },
+    {
+      "text": "Okay. Let's see. I know we've got, We're a rapid fire answering questions as they come in.",
+      "offset": 2489387,
+      "duration": 8000
+    },
+    {
+      "text": "Let's see if there's anything else we can get to before we close things out.",
+      "offset": 2497387,
+      "duration": 11000
+    },
+    {
+      "text": "Okay, I think I'm gonna stop there. I know we've got lots of questions. Lots of answers, a few that we'll follow up on.",
+      "offset": 2508387,
+      "duration": 6000
+    },
+    {
+      "text": "In general, I think we, did a good job covering what we could today. Thanks, and again, for presenting us with this webinar and thanks to all of you that posed some really great in depth questions.",
+      "offset": 2514387,
+      "duration": 13000
+    },
+    {
+      "text": "Hopefully we got to your question if we didn't. Please visit our community and you can send those questions there and interact with Anne again in our community.",
+      "offset": 2527387,
+      "duration": 7000
+    },
+    {
+      "text": "Also you can please visit sonarsforce. Com to see more information on our products and as far as clean as you code goes in that new code definition you can find more information there.",
+      "offset": 2534387,
+      "duration": 12000
+    },
+    {
+      "text": "Thank you in advance for providing your feedback via the short survey that will appear on your screen as our webinar ends and we'll see all soon.",
+      "offset": 2546387,
+      "duration": 8000
+    }
+  ],
+  "fullText": "Alright, let's go and get started. Hello everyone, thank you for joining and welcome to our sonar webinar entitled Everything You Need to Know about Sonar Cube. I'm Liz Ryan, your moderator for this webinar, which will be presented by Anne Campbell. Please allow me to quickly go over some essential housekeeping points before we get started. This session will last approximately 45 min including Q&A. You're invited to submit your questions via the QA box in Zoom. Please don't use the chat box, try to use the QA box. We have 2 panelists joining us today. Lucas Grie from our sales engineering team and Robert Kerley from our product marketing team. There are tasks with answering as many of your questions as possible live during the webinar. This session will be recorded and we will send out a link via email in the coming days. Finally, at the end of this webinar, a short survey will appear on your screen. We welcome your feedback. Thank you in advance for your participation. So without further ado, I'd like to introduce today's presenter and Campbell. Anne is a community manager at Sonar. She's self top she's a self-taught programmer who's coded JavaScript for early browsers. Think Netscape 3 and IE 4. Perl CCC plus plus and Java. Her software career has spanned support, documentation, coding, and product management. She's been a part of the Sonar community for 14 years and joined in 2,013 after co-authoring the book Sonar Cube in Action. And over to you. Thanks, Liz. So as Liz said, I've been in the community for about 14 years. And when I was asked to take this topic, everything you need to know about Sonar Cube. It's a big topic. I decided to. Focus on some misunderstandings that I've seen recur over the years. As people get up and running with center cube. So we're gonna look at it from that standpoint. I'm going to cover this in 5 sections. So first, st getting center cube up and running, then how analysis works. A deep dive into that. Will help you understand what's going on as you configure your analysis. So then we'll talk about configuring analysis, then clean as you code. And then operating sonar cube going forward. So let's start with getting Center Cube up and running. Now, we've worked hard to make it easy to evaluate Sonar Cube. All you have to do is download the Zip or pull the Docker image and spin it up. And it runs. It does that because we have embedded the H 2 database for evaluation purposes and when you're running with the H 2 database You see this warning at the bottom of your page. And what I want to make sure you understand is that this is not for production. If you see this warning on your page footer, then you are not production ready. If you try to move into production with this warning on your page footer, you will be sorely disappointed. Upgrade because we simply don't support embed the upgrading the embedded H 2 database. So in order to upgrade, you'll have to lose all of the data you've accumulated in the H 2 database. Start over with an external. Production database. So let's assume that if you currently have this warning on your page footer, you're going to spin so in our cube down, configure an external database, and start it back up fresh. Now when you do that, you move from an evaluation context into a production context. And when you make that move, the you might have initial problems starting center cube back up. When someone tells me their server isn't starting, the 1st thing I ask is what shows up in your server logs. And in particular, the web. Log because if you have Maybe not quite configured your JDBC URL correctly or there's some problem with authenticating to your database. That's gonna show up in web. Dot log. Now also, when you move from evaluation into production, we begin imposing the requirements that Elasticsearch needs to run well in a production context. And specifically, Elasticsearch wants to be able to open a minimum number of files and threads. And that's not always the configured by default in all OSs. And so that's another reason you're. Server might not start up is that elastic search requirements aren't met. And if that's the case, you're going to find that in ES dialogue. Another thing you might see in ES. Log is that elastic search simply will not run as root. So if you're trying to start sonar cube is either root or a user with root type permissions. Elasticsearch will refuse to start and you'll see that in ES. The final big reason that you might see your server not starting. Is LDAP configuration. Now we integrate with a lot of different IDPs. And most of those you configure through the UI. But with LDAP it's old-school. LDAP is the very 1st integration that we built and it's configured through the basic server configuration. And having a problem with your LDAP configuration. Can fail your server startup and that would show up in web. Log. Now if you're running into this, the best thing to do is get a 3rd party LDAP only client. Use it to work through what your configuration should be and then transfer that into sonar cube. Okay, so let's talk about how analysis works. Let's say that you've got your server up and running in a production context. Now it's time to configure analysis. I want to give you an idea of how that works. So here is the big picture of that. This sequence. Normally would be presented vertically, but it's so big it wouldn't fit nicely in the normal vertical presentation. I'm going to talk about this in sections, but 1st I wanted to give you an overall idea of what this looks like. So let's start with what happens before analysis. So we start over here on the left when the developer pushes a new commit into the SEM. Typically that's going to be some flavor of Git, GitHub, Gitlab, Azure DevOps, etc. So Git says, okay, I have a change in the repository. I need to trigger the web hooks to send the notifications to the systems that you've configured to be notified, including your CI CD. So that's Jenkins, Azure DevOps, GitHub Actions, etc. So then your CI says, okay, I have a change in this repository. I need to trigger the pipeline for this repository. So it says, hey, can I have the code for this repository? Or SEM says, sure, here's the code. Then your CI for. Compiled languages is going to run the build. So Java, CCCC sharp, objective C. And then the next step it's going to do is run your tests and collect your coverage reports. Now I want to call out 3 pieces of this because they put important information into the workspace that analysis is going to need. So 1st the code checkout. Yes, obviously it puts the code into the workspace and analysis is going to need that. But more subtly, it puts the SCM metadata into the workspace. And analysis is going to need that as well. I've seen people stumble with this when they try to check out in a different directory and move it or unzip a a zip file to get the code. No, you want to check out directly into your workspace. The next important part of this is the bill. So for compiled languages running the build before analysis. Puts important information about the built project that analysis is going to need in order to do a full thorough analysis of the project. And finally, if you have tests and you're running your tests, you probably want your coverage data to show up in your Sonarcube analysis once it's run. And for that to happen, your tests and your coverage reports need to be done before analysis starts. So that the reports can be fed into analysis. So our cube will not run your tests for you. It will not generate your coverage information. It only reads these reports that are put in to the workspace before analysis. Okay, so the next thing that happens is that your CI kicks off analysis. So it triggers the sonar scanner that you've configured for your build. And so the 1st thing that's on our scanner does is it reaches out to the sonar dot host dot URL value that you've configured to say hey sonar cube what version are you? Senator Cube says, I'm 10.5 point 1. And the scanner says, cool, we're compatible. Let's get going. Please give me all of the analyzers I need to run. Tell me which rules I need and everything else that needs. That is needed on the CI side to run the analysis. So the center keep server returns all that data. Then locally on the CI side, this scanner is going to execute all the rules. It's going to examine every single file and collect a file level metrics such as lines, lines of code, etc. It's going to read in those coverage reports. And it's going to read that blame data from the environment that we got with the checkout. So we use that blame data to understand which lines of which files are new, who issues should be assigned to, and so on. What's it has all of that data, it's going to bundle it up in a zip and it's going to post that zip to the center cube server. Now I want to call out here 2 potential points of failure. The 1st one is this. Initial call to the server to get the version. Because if you have misconfigured your sonar host URL or forgotten to configure it, then this call is going to fail. So this is a really early warning fail fast kind of thing to take a look at that configuration. The other point of failure, potential point of failure, is here when we post the analysis report because up to this point all of the interaction with Centre Keep Server has been through get calls. At the end here we switch to a post call and sometimes what we see is that there's a proxy in the middle that either won't allow a post payload or more commonly there is a size limit on the post payload. And so that usually manifests is someone saying, hey, suddenly my analysis stopped working and it was working fine for months. And now it's broken. Or it used to work fine and now it fails intermittently. And what that is is that the size of the project and thus the size of the analysis report has grown over time to finally. Trip over the threshold of the Heyload size that's allowed by the proxy. So if you see that, talk to your network folks, they should be able to change that limit. Help you out. Okay, so at this point, the CI side analysis is complete. But analysis overall is not yet complete. So what happens? We post the analysis report to the Sonarcube server. Center cube receives that report and accuse it for processing intern. When it's that report's turn, that report is popped off the queue. Unbundled and we store the issues, we store the file level metrics and then from those file level metrics we're going to calculate the aggregate metrics. So We now already know on the CI side how many lines are in each file. From that, we calculate how many lines total are in the subdirectory and then in the directory and then in the module and on up to the project. So all of that gets stored and the project updated. And at that point, server side analysis is complete. But we're not quite done. This next step is where we tell all of the other systems the status of the analysis. So in a PR analysis, this is where the PR is decorated in the DevOps platform. As your DevOps, GitHub, what have you. This is also where the web hooks are called to notify other systems. So this is where Jenkins gets the quality gate results. This is also when the other systems get the notification that analysis is complete and what the quality gate status is. So at that point, analysis is complete overall. So now let's talk about configuring your analysis. The watchword here is use the right tool for the job. We've worked really hard to give you tools to make it easy for the popular. Configurations for the popular integrations. So we've built something for GitHub Actions, Azure DevOps, etc. So if we have built an integration for your system. Please install it and use it in the long run. It's going to make your life much easier. Similarly, we have built. Scanner sonar scanners for particular. Build systems. Now depending on the the Depending on the DevOps platform, you're using, you may not be able to choose your scanner. But if you do have a choice of scanner, pick the one. For your build system. So if you're building with Maven, use the center scanner for Maven, if you're building with Gradle, use that scanner and for.net. Now, for everyone else, you're going to use the Sonar Skin or CLI and you will still be well served with it. You just will have to do a little bit more configuration than the other folks. And finally, use the onboarding. So once you have installed the integration for your DevOps platform once you have installed the Sonar scanner, you need to use, then it's time to start configuring your projects. Now the projects page in Sonar Q will invite you to import or create your projects through the through the UI. When you do that, there will then be a wizard to guide you through the initial analysis configuration. Go ahead and use that. And that's going to do most of the work for you. Okay. So now let's talk about analysis parameters. That initial configuration gives you a set of analysis parameters. To put into your pipeline. And I want to talk about analysis parameters because if you look at the documentation, and by the way we have excellent documentation, and I can say that because I'm no longer responsible for it. We have a full-time professional documentation team and they have done an excellent job. And if you look at the documentation. And you look at the analysis parameters page, you are going to see literally dozens and dozens and dozens of parameters. I have seen people in the past take that as a to-do list. They they go down the list and seem to think that they need to provide a value for every single parameter. And I want to make sure to today that you understand that that is simply not the case. Really less is more here. So let's talk about what's actually needed to configure analysis. First, st there are 3 values that you must provide for every analysis. The 1st is sonar dot host. And you're going to provide this. At the global level if you're using Azure DevOps or Jenkins for everyone else you're going to provide this at the project level through either the center host dot URL parameter or a sonar underscore host, underscore URL, environment variable. This tells the scanner where sonar cube is. The second you must provide is the sonar. Project key parameter and this tells analysis what project is being analyzed. And the 3rd is the sonar dot token parameter or the sonar underscore token environment variable. And this tells analysis who you are and proves that you do actually have permissions to analyze the project. You're trying to analyze. For and if you're in Azure DevOps, that one is also, configured at the global level. Now, beyond that, you might want to provide your coverage. Report to analysis. This is that one of those things that pre analysis we seeded into the workspace. You're going to do that with a parameter named something like sonar dot the name of the language. Coverage dot report paths. Now this very this is a general pattern and it varies a bit by language and by coverage engine. So please go check the docs get the exact spelling for your language coverage engine. Now if you have coverage reports, that implies that you have both source files and test files in your project. If you're using this owner scanner CLI, you need to manually differentiate which is which. And you're going to do that with sonar dot sources and sonar dot tests. Now these aren't absolutely necessary because sonar dot sources. Defaults to dot and sonar. Test defaults to nothing. So if you don't provide these values, then what you're telling analysis is that everything in the directory that analysis was kicked off from is a source file. And and that may not be what you want if you've actually got tests in your project. If you're using one of the build system specific scanners, then you don't actually have to provide this. The scanner reads these values from your build environment. But if you're using the Sunner scanner, CLI, this is one of those extra pieces that you have to do manually. Now beyond that, there are a couple of parameters you might additionally want to specify. So by default, Sonar Cube is going to use your sonar dot project key value as the display name in the UI. If that's not visually appealing, then you may want to provide a pretty name using sonar. Dot project name. And you would need to do this if you're using the SO. S. Scanner CLI or the center scanner for.net. If you're using the Center scanner for Maven or Gradle, it's going to read that out of your build environment. Additionally, if you have run extra analyses before, This on our cube analysis, then you may want to push those results into your sonar cube analysis. And you're going to do that with a parameter that's something like sonar dot the name of the language dot the name of the analyzer dot report paths. Again, this is a general pattern that it varies in specific. So go check the docs for your exact spelling. And finally, depending on which CI you're using, you may need to specify sonar. Quality gate. Weight equals true. And what this does is make your pipeline wait for that very final step of analysis where we notify all the external systems. Before it proceeds with the rest of your pipeline. Because if your quality gate fails, the analysis, then you may not want to proceed with the rest of the pipeline. And so this parameter is what allows you to wait for that final step of analysis. Get the results and then make the decision. Beyond parameters, there are a couple more things you can configure. But again, less really is more here. So for every single language in Sonar Cube, there is a default built-in sonar way profile for the language. And we've worked really hard and continue to work hard on an ongoing basis to make sure these Centerway profiles. Are very much same defaults. Our goal here is that when you analyze any given project with the Sonarway profile, 99% of the time the developers of that project are going to look at the results and go. Yeah, that makes sense. So these should be non-controversial defaults. Yes, you can tune your quality profiles, but this is not something that I would put on the shortlist of things to do soon. Similarly, you can configure your quality gate. But there is a default built in sonar way quality gate. Focuses entirely on new code and by using that new code quality gate, you really can get a good experience. Cube in general. Now, that sort of leads me into talking about the cleanness you code methodology. This is something that is. Not entirely intuitive for most people. And so I want to spend some time talking about what it means, how it works. So let me start by saying that when you run the initial analysis on any given project, other older than maybe 3 months. That 1st analysis usually turns up. Thousands of issues. If it's a really legacy project, it might have very little or maybe 0 code coverage, high duplications. And the Almost instinctual reaction of most project maintainer is to go Okay, I gotta find time to do all this work because I've got to clean up all these issues. And what we say to you is that No. You really don't. You really don't have to do that. Now if analysis has turned up some severe security problems or, you know, a null pointer dereference in your overall code base. Yeah, you probably want to get those fixed. Beyond those immediate things, you really can ignore the problems in old code. Instead, what you should be doing is focusing on the new code. Make sure that the code you check in today has 0 issues. Hi, test coverage and minimal duplications. Sonarcube is built to help you do this. So. The new the project homepage focuses on new code. The default quality gate is going to fail if you don't meet those criteria on new code. And beyond that, you really can ignore the problems in old code. Over time, the quality of the overall code base will really take care of itself just by making sure that the code you write today is clean. Now I understand. That this sounds like a fairy tale. So I want to offer you some proof. There's a project out there, not from us. Called the Git of Theseus. And you can point it at your code base and it will generate graphs for you that show. How long code added in a given year remains in the code base. So this is the get of Theseus graph for sonar q itself. It starts in 2,010 when the project was moved to GitHub. And it ends about August of last year when we generated this graph. I was too lazy to generate a new graph. So what we're seeing here is the code that was added in each year and how long it stayed in the project. So all of this red is the code that was present in the code base. At the end of 2010. So here at the end of, 2,010, we had about 400,000 lines of code in the code base. And then this cyan is the code that was added or updated in 2,011. And then this sort of bluey purple is what added was was added to the code base in 2,012 and so on. Now I want you to imagine. That this is your project. And imagine that on January 1st of 2413 so that's this bright green here. That you and your teammates looked at each other. And agreed that from that day forward you would clean as you code. So from January 1, st 2013. You all agree that no one on the team is going to add new issues in in code. You're not going to check anything in with new issues. You're going to make sure that everything you check in today has high coverage and low duplications. And that's it. Just in the normal course of fulfilling business requests, you're going to make sure that the code you check in today. Is clean. So imagine you did this on January, the 1st of 2,013. That means that everything that's bright green is clean code. Everything that's pink is clean code. Everything that's pale green is cleaned out. So look what happens here by. By the time we generated this graph. Almost everything in the code base. Almost all of the 900,000 lines of code is clean. Yes, you probably have some lingering problems in this red cyan and blue code. But today, look what a tiny percentage of the overall code base that is. Everything else is clean. Clean code clean as you code really does work and this is the proof Okay, I'm gonna get off my soapbox. Moving on. What do you need to do operating center cube going forward to keep your sonar cube instance healthy and happy? Now I want to start with some license questions because this is one of the things that people get a little confused about. So 1st of all, you do not use up your license by reanalyzing the same code. Let's say that I have a license for a hundred 1,000 lines of code and I have a project that's 10,000 licenses. And I analyze that project. I've just used 10,000 lines of code. Let's say that I've analyzed that project. 4 more times. So I've analyzed that project. A total of 5 times. Of my license, I've used up. 10,000 lines of code. We feel it's a best practice to analyze every single commit. We are never going to do anything to incent you not to do that. So you cannot use up your license by reanalyzing the same code. So the next thing I want to talk about is the license lines of code and how they're counted because I've had people who go down the projects page. And they get the lines of code that are listed on that page for each project and they add them up. And they come to me and they say, why doesn't this total match what I see on the license page? Well, the license lines of code are counted by the largest branch in each project. And that may not be the main branch. Projects page shows. The statistics for the main branch of your code. Which is not necessarily the largest branch of your code. Now if it's important to you to figure this out, There is a web service for you. So go to your page footer in the page footer is a link to the web API. Click through on that. There's a search bar, search for the word license, and it will bring up the web service that will give you exactly the information you're looking for. And the last thing I want to cover here is that licenses are for additions, not versions. So every once in a while, I'll tell someone you need to upgrade either because they're on a very old version or they want a feature that's only in the newest versions. And they say, but Anne, I can't upgrade my licenses for 7.9. No, we want you to upgrade. We are never going to do anything to incent you against upgrading. So you are licensed for developer addition in. 7.9, please don't go backwards or 8.9, 9.9, 10.0, 10.1, 10.2. All the way through. You were licensed for every single version. With developer edition or enterprise edition or data center. Now, is there regular maintenance that you need to do to keep your son or cube server happy and healthy? Basically, no. You want your database administrator to do the database administration stuff to keep the database happy. You want to make sure that you have enough free file space on the Sonarcube post so that Sonarcube can write out its logs. And that's it. Beyond that, all you really ought ought to do is stay up to date with the active versions. So whether you're on the LTA train or the latest when a new version comes out. Upgrade. So for LTA, that means picking up the point releases. If you're on 9.9 and we release 9.9 point 12. Make sure you upgrade to that. If you're currently on 10.5, make sure that when 10.6 comes out, you upgrade to that. And I want to say pick up the point releases. So specifically, those are going to be the only releases you're picking up for the LTAs until the next LTA comes out. But if you're on, for instance, 10.5 right now, 10.5 point 1 is the latest pickup as point releases. Now I've seen people who are reluctant to do these minor upgrades because they're afraid of regressions or functionality changes. They feel like they have to do a lot of testing to test the point release. What I want to say to you is that we don't put out point releases that change functionality unless the bug we're fixing is in the functionality. So the point of point releases is to fix bugs to fix security problems. These are really low risk upgrades. You should always do your best to pick up the point releases pretty much as soon as they come out. Now, when you do an upgrade, you do want to make sure that you back up your database before you do that upgrade. Part of most of an upgrade is updating your sonar, sonar cube database schema for the new version. And there's no rollback for that, not that people need to roll back very often at all. But if for some reason you do need to roll back, the only way to do that is by restoring the backup that you took before you did the upgrade. So make sure you do the backup. And finally, after you've done the upgrade, There are some database cleanup steps that we recommend. They vary a little bit by database engine, so I'm not going to go into them here, but they're in the documentation. So point your DBA at the docs, make sure they run those steps. And that's it. Alright, so what are the takeaways? What are the key points that you should remember from this webinar? First, st when you're getting Center Cube up and running, make sure you configure an external database and if you have any questions about what's going on, the server logs are your friends. Now, if you look at the server logs and they're not showing you much. Then you can go into the admin interface and bump up the log level briefly. Those logs get very big very fast. Recreate your situation and then bring the log level back down. For analysis. Analysis happens in stages and what happens before the actual analysis is important to analysis. For configuring analysis, use the integrations, the scanners, the wizards to get the configuration to get the setup for your system and really less is more. Clean as you code Really, just focus on today's code over time. Overall quality will take care of itself. And going forward. Take the upgrade. At this point, I'm going to turn it back over to Liz. Thank you, and I appreciate that. That was great. As we move into our Q&A and we gather questions on our set of things. We had lots of questions in the chat box. So thank you for that and hopefully we've answered lots of your questions, but left some for An. I briefly want to share that we have 2 upcoming webinars you can attend while we gather those Q&A. If you work in the federal sector, please join us for our next webinar tomorrow. It's sooner cube enterprise edition for federal agencies. It's presented by Colin Mueller. You can register today with a link in the chat. You can also join us for another webinar, Security and Design, how implementing good quality methodology delivers better. Software security presented by Jonathan Slaughter on Wednesday, July 17.th You can also register today with that chat in the link. And now you'll see a brief poll to indicate if you'd like to learn more about our solutions. And please feel free to answer or not totally up to you. As a reminder, short survey will also appear after the QA and we greatly appreciate your feedback just on the webinar in general, which like to see in the future. We love hearing from you. Okay, let's see what questions we have. I'll start with you here and are you ready? I'm ready. Hey. What are some things to look for when coverage is 0%? Okay, so I wish I could ask a follow up question on that. So if you're trying to raise a 0% coverage then what to look for is Again, clean as you code. Make sure that. The code that you check in today is covered. Now, I have been in the situation of working in a legacy code base with, you know, 1,000 line classes and methods that were 200 lines long and It's very difficult to, you know. Tackle that coverage. Situation. What I would urge you to do at that point is look at extracting the part of the code that you're working on today into another method, then you can cover that method. And that does 2 things. It gets today's code covered. And it also starts to break down those giant monolithic methods so that over time the code base becomes easier to work in. Now if this is a question about Okay. My coverage is coming up 0 even though it shouldn't be. That's kind of an in depth technical debugging thing that I would ask you to come to the community and pose. Great, thanks, Anne. We've got a few more here. What is PR decoration, especially in Azure DevOps? Okay, so, let me start by mentioning that PR decoration is a commercial feature. It starts in developer edition and above. And in commercial editions, we allow you to analyze pull requests. So what we'll do there is analyze just the code that was changed. And so you get an analysis of just today's code, just your new code. And then if everything's configured correctly and if you've used the wizards and the integrations, it probably is. Then we go back into that PR. In Azure DevOps. And we're going to annotate the PR in Azure DevOps with your quality gauge status. So did I meet the requirements of my quality gate. And if I did not, how many issues did I introduce? What is my code coverage? And so on. Okay, we've got lots of questions, so we'll try to get it to as many as we can. The next one, how do I get results when using sonar dot quality dot gateway dot true? So I think this is about sonar. Dot quality gate. That weight equals true. So you're gonna use that in the context of, get lab. I think there might be somewhere else where you need to set that up. The exact details of that integration are not coming to my mind. The It's in the docks how to get this set up. So check the docs and if you have questions about it. In the community. Perfect. And you the term server logs in her presentation. So what did she mean if there are no logs? If there are no logs, then your server probably didn't start up. So if your server did start up because Centre, center cube won't start up if it can't ride its logs. And that's not one of the things I covered because it's a very rare circumstance. But if you look in your sonar cube directory, there should be a logs directory and the files in that logs directory are what I called the server logs. Sonar Cube runs as under the hood 3 separate processes. So there's an overall log, the which is sonar dot log, and then each of the 3 processes has its own log. The web log the CE log and the ES log and those processes do their logging there and those are the logs that I was telling you to check at the beginning. If your server isn't starting up. Okay, this one's a little bit more general. I think it's good to cover for, those that are a little less familiar with sonar in general. What's the difference between and our Cube and Sonar Cloud, do both provide the same features? So. Sterno Keep and Centre Cloud started as identical twins. Over time they evolved to be sisters. Today they're more like cousins, but we're trying to pull them back into being sisters. But the marketing people listening are probably all cringing and throwing things at their screens at this moment. Okay. So In general, at a base layer, yes, they provide the same features. They both provide analysis of all the same languages. They both provide PR analysis. Where it differentiates a little bit is that sonar cloud is a little bit more specialized for the cloud environment where is sonar cube is more specialized for an enterprise environment so you're going to find today more reporting for instance in Sonar Cube. Now I said we're working to bring these back to being more like sisters. So we're adding some of that enterprise functionality into Sonar Cloud as we speak. So today the differentiator I would say is do you need to manage your own infrastructure picks on our cube? Do you want in-depth reporting right now today Pixon or Cube? If you're a little bit more lazy, fair about it and you can wait for the reporting, even though you want it, then you might look at center cloud. Alright. Start with another one. How do I find web dot log and the rest of my server logs? I think we kind of covered that a little bit. We were talking about server log. Okay, yeah, so look in the sonar cube directory. There should be a logs directory there and those are the files in that logs directory. Okay. You talked about focusing on new code. What exactly is new code? By sonars definition. Yeah, I kind of glossed over that didn't I? So we make a distinction between new code and overall code. And for us, typically, New code is everything that has been touched. So every every line of code that has been added or edited. Since the last production deployment. Our idea here is that. Each new deployment to production should be at least as good as the previous one. And so that's why we talk about don't add issues on new code. Right, so what's in production now? Doesn't have this issue that you might have added. Today. So make sure you take that issue back out so that your new code that you the changes that you deploy to production. Or at least as good as what was already there. Okay. Let's see. I know we've got, We're a rapid fire answering questions as they come in. Let's see if there's anything else we can get to before we close things out. Okay, I think I'm gonna stop there. I know we've got lots of questions. Lots of answers, a few that we'll follow up on. In general, I think we, did a good job covering what we could today. Thanks, and again, for presenting us with this webinar and thanks to all of you that posed some really great in depth questions. Hopefully we got to your question if we didn't. Please visit our community and you can send those questions there and interact with Anne again in our community. Also you can please visit sonarsforce. Com to see more information on our products and as far as clean as you code goes in that new code definition you can find more information there. Thank you in advance for providing your feedback via the short survey that will appear on your screen as our webinar ends and we'll see all soon.",
+  "fetchedAt": "2026-03-14T09:22:59.366Z"
+}

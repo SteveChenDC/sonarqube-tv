@@ -1,0 +1,1593 @@
+{
+  "videoId": "v132",
+  "youtubeId": "g7OlG7VFfzg",
+  "segments": [
+    {
+      "text": "I'm Liz Ryan, your moderator for this webinar, which will be presented by Peter McKee.",
+      "offset": 2848,
+      "duration": 8000
+    },
+    {
+      "text": "Please allow me to quickly go over some essential housekeeping points before we get started. This is a 30 min session with a 10 min Q&A afterward.",
+      "offset": 10848,
+      "duration": 8000
+    },
+    {
+      "text": "Please use the Zoom Q&A box to ask questions, not the chat box. And we have 2 panelists joining us.",
+      "offset": 18848,
+      "duration": 4000
+    },
+    {
+      "text": "And Campbell and Manish Kapoor from our community and product marketing teams. They're tasked with answering as many of your questions as possible.",
+      "offset": 22848,
+      "duration": 8000
+    },
+    {
+      "text": "Live during the webinar. This session will be recorded. And we'll send out a link via email in the coming days.",
+      "offset": 30848,
+      "duration": 7000
+    },
+    {
+      "text": "Finally, at the end of this webinar, short survey will appear on your screen. We welcome your feedback.",
+      "offset": 37848,
+      "duration": 5000
+    },
+    {
+      "text": "Thank you in advance for your participation. So without further ado, I'd like to introduce today's presenter.",
+      "offset": 42848,
+      "duration": 6000
+    },
+    {
+      "text": "Peter McKee, Peter is the head of developer relations and community. It's sonar and maintainer of the open source project, Ronan Js.",
+      "offset": 48848,
+      "duration": 7000
+    },
+    {
+      "text": "Originally from Pittsburgh, Pennsylvania, but currently residing in Austin, Texas. Peter built his career developing full stack applications for over 25 years.",
+      "offset": 55848,
+      "duration": 9000
+    },
+    {
+      "text": "He's held multiple roles, roles, but enjoys teaching and mentoring the most. Peter, I'll send it over to you.",
+      "offset": 64848,
+      "duration": 6000
+    },
+    {
+      "text": "Awesome. Thanks, Liz. I thought you were gonna say, 45 years or for a minute.",
+      "offset": 70848,
+      "duration": 5000
+    },
+    {
+      "text": "Should have, she left.",
+      "offset": 75848,
+      "duration": 1000
+    },
+    {
+      "text": "I would have taken that. Yeah, alright, thanks. Hello everybody, thanks for joining. I really appreciate it.",
+      "offset": 76848,
+      "duration": 5000
+    },
+    {
+      "text": "So yeah, today we're gonna be, covering. We're gonna do a quick review, of clean code.",
+      "offset": 81848,
+      "duration": 7000
+    },
+    {
+      "text": "I'm gonna go a little bit deeper this round. If you were with us a couple of months ago.",
+      "offset": 88848,
+      "duration": 4000
+    },
+    {
+      "text": "I went over clean code, but I didn't go much into the details. I'm gonna talk a little bit about our thinking around Clean Code.",
+      "offset": 92848,
+      "duration": 7000
+    },
+    {
+      "text": "And then we're gonna take a look at achieving clean code with our method methodology called clean as you code and then we'll take a look at setting up sonar.",
+      "offset": 99848,
+      "duration": 5000
+    },
+    {
+      "text": "With a demo. All right, so let's jump right into it. So what is clean code?",
+      "offset": 104848,
+      "duration": 8000
+    },
+    {
+      "text": "So. There's a lot of books out there in the industry, a lot of good books. There's a couple of them.",
+      "offset": 112848,
+      "duration": 5000
+    },
+    {
+      "text": "There's a lot of good websites. And we talk about what clean code is, what good code quality is.",
+      "offset": 117848,
+      "duration": 7000
+    },
+    {
+      "text": "I like to equate it to, a famous US Supreme Court judge said once when asked about obscenities.",
+      "offset": 124848,
+      "duration": 7000
+    },
+    {
+      "text": "He said, I'm not sure I could describe it to you, but I know it when I see it.",
+      "offset": 131848,
+      "duration": 6000
+    },
+    {
+      "text": "And that's kind of how we think about clean code a lot of times is, you know, when I look at a piece of code, how do I know it's written well?",
+      "offset": 137848,
+      "duration": 6000
+    },
+    {
+      "text": "How do I know it's maintainable? Those type of things, right? And here at Sonar, we're really bullish on code, right?",
+      "offset": 143848,
+      "duration": 3000
+    },
+    {
+      "text": "We think that everything starts with the code. And so we really took a deep look at how do you understand clean code?",
+      "offset": 146848,
+      "duration": 10000
+    },
+    {
+      "text": "How do we categorize it? How do we talk about it? And then how do we produce it?",
+      "offset": 156848,
+      "duration": 4000
+    },
+    {
+      "text": "And so we started looking at security maintainability, reliability, and that rolled into bugs and code smells and those type of things.",
+      "offset": 160848,
+      "duration": 8000
+    },
+    {
+      "text": "But we ran into a little bit of a problem. Then at the bottom there you can see the patterns and code that lead to bugs and code spells and so forth.",
+      "offset": 168848,
+      "duration": 7000
+    },
+    {
+      "text": "Well, down to the right you can see that those pattern encode does just doesn't always just apply to One bucket, right?",
+      "offset": 175848,
+      "duration": 7000
+    },
+    {
+      "text": "So you could have a pattern in code that looks like a bug and is a bug. And also could be a vulnerability.",
+      "offset": 182848,
+      "duration": 7000
+    },
+    {
+      "text": "And so when we started looking at these things, we started identifying software quality. So security, maintainability, relaxability and others.",
+      "offset": 189848,
+      "duration": 7000
+    },
+    {
+      "text": "And then code, clean code attributes, patterns of code that kind of make up things. And they were kind of distinct.",
+      "offset": 196848,
+      "duration": 6000
+    },
+    {
+      "text": "But also had these patterns that matched into qualities. And so we started moving and shifting things and looking at categories and attributes.",
+      "offset": 202848,
+      "duration": 10000
+    },
+    {
+      "text": "And you can see that attributes, produce an outcome. And underneath our attributes, you have different categories.",
+      "offset": 212848,
+      "duration": 7000
+    },
+    {
+      "text": "You have a category subcategory. And then you have a pattern in code. And these categories could, you'll see that yeah, we're highlighting the security.",
+      "offset": 219848,
+      "duration": 10000
+    },
+    {
+      "text": "Quality on the right And then the 2 green categories in those flow down. And as we move along here, you can see that maintainability security all don't sit in just one category they come across and so as we look at reliability the first category on the left it goes down to blue and if you remember up here at security it was hitting the same bucket.",
+      "offset": 229848,
+      "duration": 23000
+    },
+    {
+      "text": "So these things have crossover, they're multi hierarchical. And so. How do we know when your code is clean?",
+      "offset": 252848,
+      "duration": 9000
+    },
+    {
+      "text": "How do we know when you have maintainability, reliability, and so forth? And these are the attributes that we came up with and we've kind of took a look at these pretty hard pretty deeply.",
+      "offset": 261848,
+      "duration": 11000
+    },
+    {
+      "text": "And so you have consistent, intentional, adaptable, and responsible. I remember these as CIA are.",
+      "offset": 272848,
+      "duration": 8000
+    },
+    {
+      "text": "You can remember it however you would. But underneath consistently have formatted conventional identifiable, intentional, we have clear, logical, complete and efficient.",
+      "offset": 280848,
+      "duration": 9000
+    },
+    {
+      "text": "Adaptable, we have focused to distinct modular and tested and responsible. Lawful, trustworthy and respectful.",
+      "offset": 289848,
+      "duration": 3000
+    },
+    {
+      "text": "And let's talk a little bit about these. I'm gonna give you some details around some of these, but you can see these attributes.",
+      "offset": 292848,
+      "duration": 6000
+    },
+    {
+      "text": "Lead into qualities, maintainability, reliability, and security. So let's take a look at these clean code attributes.",
+      "offset": 298848,
+      "duration": 12000
+    },
+    {
+      "text": "So clean code is consistent and part of consistent consistency is well-formatted code. This is a pretty simple example, but it illustrates the point very well.",
+      "offset": 310848,
+      "duration": 10000
+    },
+    {
+      "text": "So we have some Java code here. So if you look at a non-compliant code, it's a little bit easy to see because you have the the red blocks there and the green blocks on the below.",
+      "offset": 320848,
+      "duration": 10000
+    },
+    {
+      "text": "And it's indicating that you have your tabbing your formatting off. Right and on the surface you might say well not a big deal we're gonna argue about it should we have 2 tabs, for tabs, spaces, what not.",
+      "offset": 330848,
+      "duration": 12000
+    },
+    {
+      "text": "At Sonar, we don't we don't care what kind of whether you use tabs or spaces.",
+      "offset": 342848,
+      "duration": 6000
+    },
+    {
+      "text": "We don't have an opinion on that. We do have a strong opinion on it should be consistent and it should be consistent across your code bases.",
+      "offset": 348848,
+      "duration": 6000
+    },
+    {
+      "text": "It makes it easy to read, easy to flow. You know what we do as software engineers is we take real-world issues, business flows, those type of things.",
+      "offset": 354848,
+      "duration": 11000
+    },
+    {
+      "text": "And we. Put those into abstract code, right? We resent, represent them in. And therefore we have a lot of cognitive overload.",
+      "offset": 365848,
+      "duration": 10000
+    },
+    {
+      "text": "We put all of these. Software classes and patterns into our head and we try and manipulate them and our brains are a pattern matching engine, right?",
+      "offset": 375848,
+      "duration": 8000
+    },
+    {
+      "text": "So when they read down the code, They need to see consistency. It makes patterns easily. To view and to read and it lowers your cognitive.",
+      "offset": 383848,
+      "duration": 6000
+    },
+    {
+      "text": "Overload. And, so another part of being consistent is conventional. So this is a C plus example.",
+      "offset": 389848,
+      "duration": 11000
+    },
+    {
+      "text": "So code should be idiomatic and follow syntax, conventions.",
+      "offset": 400848,
+      "duration": 5000
+    },
+    {
+      "text": "I'm not a C, developer, but apparently in version 11 or above. There's a couple different ways you can do type analysis.",
+      "offset": 405848,
+      "duration": 2000
+    },
+    {
+      "text": "Aliases, but pardon me. With the type def and the using the using structure is.",
+      "offset": 407848,
+      "duration": 13000
+    },
+    {
+      "text": "The more modern way of writing C plus plus code. So if you're using the more modern way, you want to stick to that convention, you want to use that across your code base.",
+      "offset": 420848,
+      "duration": 9000
+    },
+    {
+      "text": "Again, for consistency in a ability to easily reason about your code.",
+      "offset": 429848,
+      "duration": 7000
+    },
+    {
+      "text": "Let's move on to intentional. So intentional, again, a pretty easy one to at least have in your brain, but when you see it in code, it becomes a little more confusing.",
+      "offset": 436848,
+      "duration": 10000
+    },
+    {
+      "text": "So code should be clear and straightforward. So if you look at a 9 non-compliant code.",
+      "offset": 446848,
+      "duration": 4000
+    },
+    {
+      "text": "I believe this is some Ruby code. Ruby or Python. But as we read down through the top, so we have low, takes a parameter called name.",
+      "offset": 450848,
+      "duration": 11000
+    },
+    {
+      "text": "Then it's taking it creating a variable, assigning hello, concatenating name to it, and then me print name, right, right away you start to get confused.",
+      "offset": 461848,
+      "duration": 7000
+    },
+    {
+      "text": "Why do we have message declared or we're not using it should we be using it is that a mistake am I missing something what is going on right so even in just a simple what is that 5 lines of code we start to get confused it's not super clear and then the variable I right we never use I we're just looping through 10 times and printing and calling foo.",
+      "offset": 468848,
+      "duration": 19000
+    },
+    {
+      "text": "Not exactly sure what's going on. So below that, right, you can see that we have hello and then we assign create a variable message, we concatenate and assign to message.",
+      "offset": 487848,
+      "duration": 9000
+    },
+    {
+      "text": "And there we go, we use message. And then we use the underscore kind of throwaway variable to, to indicate that we're not really going to use that.",
+      "offset": 496848,
+      "duration": 7000
+    },
+    {
+      "text": "So it's a lot clearer, even if it is only 5 lines of code. I hope you can see.",
+      "offset": 503848,
+      "duration": 5000
+    },
+    {
+      "text": "Point of being very clear in your code. Another part of intentional is being efficient. So this is a Docker example.",
+      "offset": 508848,
+      "duration": 10000
+    },
+    {
+      "text": "So code should be efficient and not with waste resources unnecessarily. Or needlessly, let's say.",
+      "offset": 518848,
+      "duration": 6000
+    },
+    {
+      "text": "So in a non-compliant code, so a Docker file is basically a shell script.",
+      "offset": 524848,
+      "duration": 6000
+    },
+    {
+      "text": "It's gonna run commands. Those commands are gonna produce an image that then later you can run.",
+      "offset": 530848,
+      "duration": 5000
+    },
+    {
+      "text": "So when you do run app get updates and then an app get install engine X app, app get is going to install things and, you're gonna get, that you might not want.",
+      "offset": 535848,
+      "duration": 12000
+    },
+    {
+      "text": "And it's going to bloat your image. So you can see down the compliant code, we have an extra line in there that says app, get and it's doing it clean at the end, which should clean up.",
+      "offset": 547848,
+      "duration": 11000
+    },
+    {
+      "text": "Unneeded resources. In this example here, just a little nitpick for me. I like to move the double.",
+      "offset": 558848,
+      "duration": 6000
+    },
+    {
+      "text": "And to the end so you kind of line up all your app gets but again, doesn't really matter if you put them all in the same place, it's also, consistent.",
+      "offset": 564848,
+      "duration": 11000
+    },
+    {
+      "text": "Another, another quality is adaptable and part of that is being distinct. Code should be distinct and minimize duplication.",
+      "offset": 575848,
+      "duration": 7000
+    },
+    {
+      "text": "Again, here's a pretty rim entry example, but it proves the point. So in non compliant you see a string with action random one That's string is being repeated.",
+      "offset": 582848,
+      "duration": 9000
+    },
+    {
+      "text": "Typically we wouldn't see it something like this 3 lines right in a row. You'll have extra code in between the prepare and execute and release.",
+      "offset": 591848,
+      "duration": 9000
+    },
+    {
+      "text": "And so therefore it gets spread out and you can identify those strings everywhere. One, an issue immediately recognizable is how do I maintain this, right?",
+      "offset": 600848,
+      "duration": 9000
+    },
+    {
+      "text": "And it's not adaptable. If I go to change action random one, I gotta change it everywhere I use it, right?",
+      "offset": 609848,
+      "duration": 6000
+    },
+    {
+      "text": "Classic example. So you can see the compliant code. We declare a variable action one and we set the string to that.",
+      "offset": 615848,
+      "duration": 7000
+    },
+    {
+      "text": "And then we use that variable everywhere that we needed. So you only have to change it one place. 2, you know, in this larger code base, that action one would probably mean something, right?",
+      "offset": 622848,
+      "duration": 12000
+    },
+    {
+      "text": "And so then when you see action one through ultra code, you know exactly what that is. Another piece of adaptable being adaptable adaptability is being modular.",
+      "offset": 634848,
+      "duration": 11000
+    },
+    {
+      "text": "So code should be modular and as a key aspect of this is encapsulation. So we have a vB.",
+      "offset": 645848,
+      "duration": 6000
+    },
+    {
+      "text": "Dot net example over here to the right. In the non-compliant, you see we have, we're using a public property.",
+      "offset": 651848,
+      "duration": 3000
+    },
+    {
+      "text": "Pardon me, a public, variable. And I'm sure when you're starting out, that might be okay.",
+      "offset": 654848,
+      "duration": 11000
+    },
+    {
+      "text": "People will start using this code and they're going to use that that bar. They're gonna access it directly So it's not going to make it very module, right?",
+      "offset": 665848,
+      "duration": 8000
+    },
+    {
+      "text": "It's gonna tightly bound it to your other code, right? The base of adaptability is being highly cohesive and highly cohesive and low coupling, right?",
+      "offset": 673848,
+      "duration": 14000
+    },
+    {
+      "text": "So you don't want your code to be bound together. Right, and so put it being modular is to break those pieces apart and give good interfaces.",
+      "offset": 687848,
+      "duration": 8000
+    },
+    {
+      "text": "So in the compliant code, you can see we're doing a class and we give a public property.",
+      "offset": 695848,
+      "duration": 4000
+    },
+    {
+      "text": "Right, properties are better because they'll have getters and setters. If you need to change the functionality of how you set the value bar with some logic.",
+      "offset": 699848,
+      "duration": 7000
+    },
+    {
+      "text": "You can do that in your setter, function. Okay. So, moving on to responsible.",
+      "offset": 706848,
+      "duration": 6000
+    },
+    {
+      "text": "First one is trust, trustworthy. So, Coach should avoid hard coding secrets, right?",
+      "offset": 712848,
+      "duration": 7000
+    },
+    {
+      "text": "Pretty example, pretty easy example to illustrate what we're talking about here. So in a non-compliant code, you see a function.",
+      "offset": 719848,
+      "duration": 7000
+    },
+    {
+      "text": "And we've hard coded some, the user in the password, right?",
+      "offset": 726848,
+      "duration": 4000
+    },
+    {
+      "text": "That's a big no no. To fix that. Put move it down into, function and just that go read that data off a secure input.",
+      "offset": 730848,
+      "duration": 10000
+    },
+    {
+      "text": "However, you want to do that in your, in your, programming environment you should use those constructs and not hard coded in there.",
+      "offset": 740848,
+      "duration": 8000
+    },
+    {
+      "text": "Okay. And the last one we're gonna take a look at is lawful. So coach should be lawful.",
+      "offset": 748848,
+      "duration": 6000
+    },
+    {
+      "text": "It should respect basic licensing and copyright regulation. It exercises the creators rights and honors the rights of the license and their owner.",
+      "offset": 754848,
+      "duration": 7000
+    },
+    {
+      "text": "So we have a lot of our coders open open source and free. We have a. Our open source license, we put it in all the top of our files, we ask that you respect that and others respect ours, we respect other people's licenses.",
+      "offset": 761848,
+      "duration": 14000
+    },
+    {
+      "text": "So You know, basically don't go steal their people's code, copy it, reuse it, you know, attribute it back to.",
+      "offset": 775848,
+      "duration": 6000
+    },
+    {
+      "text": "The original creator. And there there's some other attributes in responsible, while awful too, but Let's move on.",
+      "offset": 781848,
+      "duration": 6000
+    },
+    {
+      "text": "Okay, so we talked about clean code, what it is, how we look at it, how we identify.",
+      "offset": 787848,
+      "duration": 2000
+    },
+    {
+      "text": "Clean code. What are the categories? What are the patterns in code that we're looking for?",
+      "offset": 789848,
+      "duration": 6000
+    },
+    {
+      "text": "Right, so we went from a pretty high level theoretical understanding of clean code down to more of a tactical.",
+      "offset": 795848,
+      "duration": 10000
+    },
+    {
+      "text": "How do you actually? Produce clean code and so at this point you might say well, how do I how do I get to clean all of my code.",
+      "offset": 805848,
+      "duration": 9000
+    },
+    {
+      "text": "And we have a methodology here, so in our called clean as you code. And that uses the power of static analysis.",
+      "offset": 814848,
+      "duration": 6000
+    },
+    {
+      "text": "So as sonar, the son our analyzer, we have overth, look, 5,000 rules.",
+      "offset": 820848,
+      "duration": 5000
+    },
+    {
+      "text": "English is hard today for me. So, 5,000 rules, 30 plus languages. We scan all of your code run all of your code.",
+      "offset": 825848,
+      "duration": 8000
+    },
+    {
+      "text": "We use, quality profiles. I'm going to show you that in a minute. And we look at it all kinds of different issues.",
+      "offset": 833848,
+      "duration": 6000
+    },
+    {
+      "text": "Some of my favorites are cognitive complexity. Crypto functions, secret detection, which we saw earlier.",
+      "offset": 839848,
+      "duration": 7000
+    },
+    {
+      "text": "So we look a lot of your code and we, we handle a lot of issues. But what happens, right?",
+      "offset": 846848,
+      "duration": 6000
+    },
+    {
+      "text": "You turn on a static and analyzer, any kind of scanner, and you get thousands, thousands of issues, right?",
+      "offset": 852848,
+      "duration": 6000
+    },
+    {
+      "text": "And as a good engineer, you turn that off, right? And you go about your business. Nope, don't do that.",
+      "offset": 858848,
+      "duration": 4000
+    },
+    {
+      "text": "So again, use a methodology called clean energy code. So, Clean as your code, you focus only on the new code.",
+      "offset": 862848,
+      "duration": 8000
+    },
+    {
+      "text": "So only added or modified code. And what this does, it allows you to get the work done as you're working on features as your coding is fresh.",
+      "offset": 870848,
+      "duration": 9000
+    },
+    {
+      "text": "It's non disruptive. And it allows developers to do their best work as they're coding as they're working.",
+      "offset": 879848,
+      "duration": 6000
+    },
+    {
+      "text": "They're cleaning their code. Either added brand new code or modified code. Right. And as you're implementing, it takes 2 steps.",
+      "offset": 885848,
+      "duration": 7000
+    },
+    {
+      "text": "You're going to set up a quality profile. Which defines the standards. It's a set of rules that we're going to apply to a piece of code to our code base.",
+      "offset": 892848,
+      "duration": 11000
+    },
+    {
+      "text": "And then your quality gate is a scorecard on how good that code is and whether it should pass on.",
+      "offset": 903848,
+      "duration": 7000
+    },
+    {
+      "text": "In the CI CD pipeline, or you should stop it, right? And it takes a take a look, it takes a look at things such as security, vulnerabilities, bugs, those type of things.",
+      "offset": 910848,
+      "duration": 12000
+    },
+    {
+      "text": "And we're going to see that in a second. And, and so you set up, you only modify.",
+      "offset": 922848,
+      "duration": 6000
+    },
+    {
+      "text": "You only take a look at modified or new code. You set up your quality profile, you include quality gate, and then only when that quality gate is green is when you merge.",
+      "offset": 928848,
+      "duration": 9000
+    },
+    {
+      "text": "And so what happens? So you might say, well, I'm only cleaning code as I go, and that's going to take forever, right?",
+      "offset": 937848,
+      "duration": 3000
+    },
+    {
+      "text": "I'm not always touching all of my code base. And you're right. And so what we did, we kind of looked at, we have a tool, the open source tool called G thesis.",
+      "offset": 940848,
+      "duration": 14000
+    },
+    {
+      "text": "We applied it to some major open source. Tools, projects out there. And we found that after about 5 years you get down to a little bit less than 40% and it depends on your specific project.",
+      "offset": 954848,
+      "duration": 14000
+    },
+    {
+      "text": "But looking over this, this broad range of projects on GitHub. After the first year you get down to around 80% so you cleaned roughly 20% of your code after 3 years you've cleaned about 65 70% of your code and then about 5 years you can see in the graph you start in a dip below the 40% so you're cleaning over 60% of your code.",
+      "offset": 968848,
+      "duration": 22000
+    },
+    {
+      "text": "I do get a question a lot to say well after what about that 40% of the code that I haven't touched?",
+      "offset": 990848,
+      "duration": 6000
+    },
+    {
+      "text": "Don't worry about it. You know. Is it maintainable? Maybe not, right?",
+      "offset": 996848,
+      "duration": 5000
+    },
+    {
+      "text": "But it's reliable, it's secure, it's running. If it wasn't reliable and secure, you would have been in there.",
+      "offset": 1001848,
+      "duration": 5000
+    },
+    {
+      "text": "You've been working on that code and fixed it anyways. The real issue is a rain around maintainability, but if you haven't touched it in 5 years you might not ever touch it.",
+      "offset": 1006848,
+      "duration": 8000
+    },
+    {
+      "text": "Okay, so let's take a look at a demo here.",
+      "offset": 1014848,
+      "duration": 9000
+    },
+    {
+      "text": "Let me. Okay, so first thing I can do is I'm gonna go into sonar cloud And I'm gonna log out.",
+      "offset": 1023848,
+      "duration": 8000
+    },
+    {
+      "text": "I'm gonna show you how you can. Set things up. So when you first go to center cloud, you'll see, explore projects.",
+      "offset": 1031848,
+      "duration": 2000
+    },
+    {
+      "text": "I wanna highlight something here real quick, which is really, really cool. So we scan a lot of open source projects and we put the results out here on the public.",
+      "offset": 1033848,
+      "duration": 13000
+    },
+    {
+      "text": "So if we take a look at Amazon's AWS Java SDK. You can see right now that's failing a quality.",
+      "offset": 1046848,
+      "duration": 8000
+    },
+    {
+      "text": "You could actually go into the pull requests. You can take a look at a failed pull request.",
+      "offset": 1054848,
+      "duration": 5000
+    },
+    {
+      "text": "And you can see the issues that are happening. 412 code smells. So if you want to help out and go clean some of these up.",
+      "offset": 1059848,
+      "duration": 7000
+    },
+    {
+      "text": "But it's pretty cool. You can take a look at open source projects. You know, go take a look at.",
+      "offset": 1066848,
+      "duration": 5000
+    },
+    {
+      "text": "Some of the open source patch packages that you're using and see what kind of vulnerabilities are in there.",
+      "offset": 1071848,
+      "duration": 6000
+    },
+    {
+      "text": "Okay, so we're here at Sonar. We've got a new project. Let's set this up.",
+      "offset": 1077848,
+      "duration": 4000
+    },
+    {
+      "text": "So I'm gonna go and log in. When you log in, you can, obviously log in, GitHub, Bitbucket, Gitlab, Azure.",
+      "offset": 1081848,
+      "duration": 7000
+    },
+    {
+      "text": "I'm along in with GitHub. I'm already logged in. I've already authorized through Get Home, but if you haven't, you'll be presented with a to authorize into Get GitHub and authorize sonar.",
+      "offset": 1088848,
+      "duration": 12000
+    },
+    {
+      "text": "To access it. Once you do that, then you. Come back into sonar.",
+      "offset": 1100848,
+      "duration": 5000
+    },
+    {
+      "text": "Come up here and say I want to create a new organization. This will go out to your source code repository, take a look, see what organizations you have.",
+      "offset": 1105848,
+      "duration": 11000
+    },
+    {
+      "text": "I'm gonna import the strata organization. So you give it some details and name and a key.",
+      "offset": 1116848,
+      "duration": 6000
+    },
+    {
+      "text": "This little hint here will tell you that all the members in the GitHub organization will be added into the Sonar Cloud organization and then you choose your plans.",
+      "offset": 1122848,
+      "duration": 9000
+    },
+    {
+      "text": "I'm going to do the free plan.",
+      "offset": 1131848,
+      "duration": 4000
+    },
+    {
+      "text": "We'll move over and then here at this time you're set up but you don't have a project so you would go in.",
+      "offset": 1135848,
+      "duration": 6000
+    },
+    {
+      "text": "Choose a project. Again, here's my organization. I would choose strata. And then I would hit set up.",
+      "offset": 1141848,
+      "duration": 5000
+    },
+    {
+      "text": "I'm gonna not going to do that now because it's gonna run a scan. So let me jump back.",
+      "offset": 1146848,
+      "duration": 5000
+    },
+    {
+      "text": "Into our projects. And I have a small application that's been written before. Called Clean Code Alpha.",
+      "offset": 1151848,
+      "duration": 10000
+    },
+    {
+      "text": "You can see my quality gate is passing right now. Everything seems to be working fine, right?",
+      "offset": 1161848,
+      "duration": 6000
+    },
+    {
+      "text": "Well, I have a sitting on a sprint. They pulled off a ticket off the backlog.",
+      "offset": 1167848,
+      "duration": 4000
+    },
+    {
+      "text": "I have to change. There's an issue with our database sessions. And so I'm going to fix that.",
+      "offset": 1171848,
+      "duration": 5000
+    },
+    {
+      "text": "Right, I've already fixed the code. Frit in the code and I've pushed that up into a PR.",
+      "offset": 1176848,
+      "duration": 5000
+    },
+    {
+      "text": "And so when you do that, sonar will pick up that you've, that you've created a PR and it'll scan it.",
+      "offset": 1181848,
+      "duration": 10000
+    },
+    {
+      "text": "And you can see here this fixed dB sessions is that PR. And I failed, right? So my quality gate has failed.",
+      "offset": 1191848,
+      "duration": 7000
+    },
+    {
+      "text": "I have issues that I need to go and fix first, right? The main one we can see here is the security vulnerability.",
+      "offset": 1198848,
+      "duration": 8000
+    },
+    {
+      "text": "But I also have a maintainability, one code smell. So let's click on that. It's an intentionality issue, right?",
+      "offset": 1206848,
+      "duration": 4000
+    },
+    {
+      "text": "And you can learn about more in our documentation about that. And so here I'm gonna gonna click on the actual issue and it's gonna take me into my code.",
+      "offset": 1210848,
+      "duration": 11000
+    },
+    {
+      "text": "If I scroll down a bit, I can say, oh, okay, well I didn't add a letter const or a bar at the beginning of this.",
+      "offset": 1221848,
+      "duration": 6000
+    },
+    {
+      "text": "Not sure why I did that. But if you were curious why this is an issue and click on why this is an issue you can read down, learn all about far, let in.",
+      "offset": 1227848,
+      "duration": 4000
+    },
+    {
+      "text": "Const. And why you should use each, right? Activity is where you can go in and add comments.",
+      "offset": 1231848,
+      "duration": 11000
+    },
+    {
+      "text": "I love this rule. Alright. And so here's where you can have a thread. You can discuss this actual rule with your colleagues, whether you want to.",
+      "offset": 1242848,
+      "duration": 9000
+    },
+    {
+      "text": "Change the status of it, remove it and those type of things. And then when you click it into more info, this gives you more info where you can learn all about this issue and why you should fix it.",
+      "offset": 1251848,
+      "duration": 10000
+    },
+    {
+      "text": "Okay, cool. So let's jump back to the summary. Let's take a look at our security vulnerability, which is Really what is causing us to fail right as you can see we have an a rating here.",
+      "offset": 1261848,
+      "duration": 9000
+    },
+    {
+      "text": "We have an A rating, maintainability security. Our duplications don't look bad.",
+      "offset": 1270848,
+      "duration": 6000
+    },
+    {
+      "text": "And so let's go and take a look at our vulnerability. It's a responsibility issue.",
+      "offset": 1276848,
+      "duration": 6000
+    },
+    {
+      "text": "And I'm hard coding some passwords, right? That's not good. We should never do that.",
+      "offset": 1282848,
+      "duration": 4000
+    },
+    {
+      "text": "This is actually probably being reverted from an earlier version of this, feature. And as I fix the set I inadvertently overwrote this shame on me.",
+      "offset": 1286848,
+      "duration": 12000
+    },
+    {
+      "text": "Or merging, merging of branches. Okay, so. Want to come over here and show you after that PRs run.",
+      "offset": 1298848,
+      "duration": 7000
+    },
+    {
+      "text": "This is scanned. We've gotten our results. Back here in GitHub, you'll see on my PR, so in my poor requests, come over and this is a fixed dB sessions.",
+      "offset": 1305848,
+      "duration": 11000
+    },
+    {
+      "text": "And you can see it's decorated my. My pool request. It's showing me that I have a vulnerability code smell.",
+      "offset": 1316848,
+      "duration": 6000
+    },
+    {
+      "text": "So as an engineer, you don't even have to leave, leave this IDE, right? You're inside the IDE.",
+      "offset": 1322848,
+      "duration": 7000
+    },
+    {
+      "text": "Pardon me, not in the ID. You're in GitHub. You're in your pull request.",
+      "offset": 1329848,
+      "duration": 3000
+    },
+    {
+      "text": "You see the issue right here. And as we scroll down, you can actually see the code snippet that's saying, hey.",
+      "offset": 1332848,
+      "duration": 5000
+    },
+    {
+      "text": "Here's the issue right here. So you can go and fix that in your code base. So let's take a look at the code right now.",
+      "offset": 1337848,
+      "duration": 8000
+    },
+    {
+      "text": "And before I do that, so I'm looking at the code. Here's the issue.",
+      "offset": 1345848,
+      "duration": 4000
+    },
+    {
+      "text": "Right here, I have a. Hard coded password here. And, which is big no, no, of course.",
+      "offset": 1349848,
+      "duration": 7000
+    },
+    {
+      "text": "So. Before I fix it, I'm gonna show you, we have sonar lint, which is a,ter that you can use.",
+      "offset": 1356848,
+      "duration": 6000
+    },
+    {
+      "text": "In your ID to see the issues and clean them locally so you don't have to cut PRs.",
+      "offset": 1362848,
+      "duration": 6000
+    },
+    {
+      "text": "So your issues come back in the ID, go back, okay, what follows that in is it over here, right?",
+      "offset": 1368848,
+      "duration": 3000
+    },
+    {
+      "text": "Searching all around. So if you just come into the extensions and this works across all your major IDEs just use the normal flow of installing extensions.",
+      "offset": 1371848,
+      "duration": 7000
+    },
+    {
+      "text": "So here's Sonar L, click on that. And I'm going to click install. So that's been installed.",
+      "offset": 1378848,
+      "duration": 6000
+    },
+    {
+      "text": "Let's come back to our source code. Let's close this down. You see, I don't have any problems detected yet, but as I open my files, you'll start to see.",
+      "offset": 1384848,
+      "duration": 10000
+    },
+    {
+      "text": "The issues should come out let's go Oh, there they go. Thank you. So there is mine.",
+      "offset": 1394848,
+      "duration": 8000
+    },
+    {
+      "text": "Let's open my server. And now, now we can see the 2 issues, right? Right here, it tells me.",
+      "offset": 1402848,
+      "duration": 8000
+    },
+    {
+      "text": "Yeah, let get in so far. You can see it's sonar lent, JavaScript, and this is our rule number, S 2703.",
+      "offset": 1410848,
+      "duration": 7000
+    },
+    {
+      "text": "So right here in the IDE, we can see our issues. We can jump to them. We can fix them.",
+      "offset": 1417848,
+      "duration": 5000
+    },
+    {
+      "text": "Right. Okay, so for the sake of time, I fixed these issues. I've created a PR and I've pushed that up into GitHub.",
+      "offset": 1422848,
+      "duration": 11000
+    },
+    {
+      "text": "And another analysis is kicked off. So we come over here and our into our pool requests. You can see fixed dB issues, double zeros.",
+      "offset": 1433848,
+      "duration": 9000
+    },
+    {
+      "text": "And you can see the scan run and have passed, right? I don't have any the security issue has been fixed and the maintainability issue has been fixed.",
+      "offset": 1442848,
+      "duration": 8000
+    },
+    {
+      "text": "And again, on the PR if we come over. Our PR has been decorated.",
+      "offset": 1450848,
+      "duration": 5000
+    },
+    {
+      "text": "We could see we have 0 issues in our merge pull request button is nice and bright and green so we can go ahead and merge.",
+      "offset": 1455848,
+      "duration": 8000
+    },
+    {
+      "text": "Okay, one more thing I want to show you before we jump out of here. Is let me go in.",
+      "offset": 1463848,
+      "duration": 10000
+    },
+    {
+      "text": "To our organization. And I want to take a look at the quality profiles and quality gates. So a quality profile profile like I said before is a set of rules that you want to apply to a project.",
+      "offset": 1473848,
+      "duration": 12000
+    },
+    {
+      "text": "And you can read about a lot of this on the page and in our documentation. I'm not gonna go to too deep.",
+      "offset": 1485848,
+      "duration": 5000
+    },
+    {
+      "text": "I don't wanna do a product, you know, training session. But I want to give you a hint of what it looks like.",
+      "offset": 1490848,
+      "duration": 7000
+    },
+    {
+      "text": "So of course there's a list of all of. All the languages we support. Most of them have this profile called sonar way.",
+      "offset": 1497848,
+      "duration": 7000
+    },
+    {
+      "text": "That's our default profile for all of our languages. And so let me go into the language we're using here, which is JavaScript.",
+      "offset": 1504848,
+      "duration": 8000
+    },
+    {
+      "text": "So we have one profile called Sonar Way. If we click on that, we can see the inheritance tree right now.",
+      "offset": 1512848,
+      "duration": 4000
+    },
+    {
+      "text": "This is at the root. And then over here you can see we have a 265 total rules how they break down.",
+      "offset": 1516848,
+      "duration": 8000
+    },
+    {
+      "text": "You can see we have inactive rules. Right, and you could click on those and then you can navigate and see what issues are included in the in that.",
+      "offset": 1524848,
+      "duration": 9000
+    },
+    {
+      "text": "Also too if you wanted to change these rules or you wanted to create your own profile The first way to do it is you want to go and either want to copy or extend.",
+      "offset": 1533848,
+      "duration": 12000
+    },
+    {
+      "text": "The difference between a copying and extending is is if you're a software engineer and you've worked in object oriented programming.",
+      "offset": 1545848,
+      "duration": 7000
+    },
+    {
+      "text": "It's the same thing, right? So if you copy a profile, you'll take the properties and rules and you make a copy of them and then you can extend them from there.",
+      "offset": 1552848,
+      "duration": 10000
+    },
+    {
+      "text": "You would want to do that if you copied if you wanted to control that base profile when sonar is updated, we update our profiles, not always, but sometimes we do, we'll add rules, we will move rules.",
+      "offset": 1562848,
+      "duration": 13000
+    },
+    {
+      "text": "If you're gonna, if you don't want that, then you want get a copy and then you're going to extend.",
+      "offset": 1575848,
+      "duration": 6000
+    },
+    {
+      "text": "If you want to keep the base on our way, so you get those new rules as they're updated, but you want to modify it, you extend it.",
+      "offset": 1581848,
+      "duration": 7000
+    },
+    {
+      "text": "So you'll extend it, you can make modifications, you can activate a rule, deactivate a rule.",
+      "offset": 1588848,
+      "duration": 4000
+    },
+    {
+      "text": "And then when sonar comes in, you'll get the new rules and they're still higher argument.",
+      "offset": 1592848,
+      "duration": 4000
+    },
+    {
+      "text": "So that's that's the way you want to look at that.",
+      "offset": 1596848,
+      "duration": 4000
+    },
+    {
+      "text": "Okay, excellent. So let's jump back over.",
+      "offset": 1600848,
+      "duration": 6000
+    },
+    {
+      "text": "And Liz, kick it back for you, but while she's coming back online, if you want to get started, you can start for free.",
+      "offset": 1606848,
+      "duration": 7000
+    },
+    {
+      "text": "We're gonna drop the links in the chat. We'll get the, the team will take care of that.",
+      "offset": 1613848,
+      "duration": 4000
+    },
+    {
+      "text": "If you don't get a link, you don't have a question. Please reach out to me on Twitter, LinkedIn.",
+      "offset": 1617848,
+      "duration": 5000
+    },
+    {
+      "text": "I'd love to talk to people. If you're using the products, give them a try.",
+      "offset": 1622848,
+      "duration": 4000
+    },
+    {
+      "text": "If you have any issues whatsoever, jump into our community. We have some great technical community managers in there.",
+      "offset": 1626848,
+      "duration": 6000
+    },
+    {
+      "text": "They're gonna get you, Your question is answered and get your point in the right direction.",
+      "offset": 1632848,
+      "duration": 4000
+    },
+    {
+      "text": "A lot of our engineers in there and they will help you troubleshoot and get things fixed. All right, time for me to be quiet.",
+      "offset": 1636848,
+      "duration": 4000
+    },
+    {
+      "text": "Where do you Liz?",
+      "offset": 1640848,
+      "duration": 2000
+    },
+    {
+      "text": "Okay, awesome. Thanks, Peter. That was great. As we move into our time of Q&A and I gather the questions up, I briefly wanted to share our 2 upcoming webinars that you can attend.",
+      "offset": 1642848,
+      "duration": 12000
+    },
+    {
+      "text": "We've got Clean Code, how mistakes can make you great for apakanemia on Tuesday, September, the 20 sixth.",
+      "offset": 1654848,
+      "duration": 6000
+    },
+    {
+      "text": "And we also have Clean Code in Java, a story of monsters, heroes and victories.",
+      "offset": 1660848,
+      "duration": 5000
+    },
+    {
+      "text": "From our developer advocate for Java, Jonathan Via Lopez. That's October eighteenth.",
+      "offset": 1665848,
+      "duration": 7000
+    },
+    {
+      "text": "So let's look over and see what questions we have for you, Peter.",
+      "offset": 1672848,
+      "duration": 6000
+    },
+    {
+      "text": "Alright, we've got one from Joey who asked would the get PR decoration be the same between Sonar Cloud and Sonar Cube?",
+      "offset": 1678848,
+      "duration": 10000
+    },
+    {
+      "text": "Oh, that's a great question. Yes. I believe so. Yeah, the same information is there might look a slight little bit different, but yes the same information is there on the decorations",
+      "offset": 1688848,
+      "duration": 11000
+    },
+    {
+      "text": "Okay, great. We have another question when working with an existing code base with Sonar Cube analyze the entire file or just the updated lines.",
+      "offset": 1699848,
+      "duration": 10000
+    },
+    {
+      "text": "So it updates it analyzes the whole. Project, but only looks at the new files, new lines of code that you've changed, right?",
+      "offset": 1709848,
+      "duration": 10000
+    },
+    {
+      "text": "So yes, it still looks at the whole file because we the way we do our analysis is comprehensive. But yes, it's only worried about the new code that you've changed.",
+      "offset": 1719848,
+      "duration": 10000
+    },
+    {
+      "text": "Right. So although so to answer more succinctly. It scans everything, but only tells you the issues with the codes that you've changed or added.",
+      "offset": 1729848,
+      "duration": 11000
+    },
+    {
+      "text": "Perfect. Okay, we've got a couple more here. With Clean as you code as an organization where only new and modified code is analyzed an issue we come across is when a line of code is modified, it impacts.",
+      "offset": 1740848,
+      "duration": 13000
+    },
+    {
+      "text": "Our code coverage. Metric. Is there a way to break out new verses modified?",
+      "offset": 1753848,
+      "duration": 5000
+    },
+    {
+      "text": "Oh, great question. I do not believe so, but to be honest with you, I'm not a hundred percent sure on that answer.",
+      "offset": 1758848,
+      "duration": 7000
+    },
+    {
+      "text": "Let me let me get that answered for you and I can we can drop it into we'll answer it in the community.",
+      "offset": 1765848,
+      "duration": 5000
+    },
+    {
+      "text": "Yeah, I believe that I believe it is no. But you can set it because there's only really 2 ways to set it up if I'm correct.",
+      "offset": 1770848,
+      "duration": 9000
+    },
+    {
+      "text": "It's by a date number of days or new or modified. So those are kind of your 2 options.",
+      "offset": 1779848,
+      "duration": 5000
+    },
+    {
+      "text": "But let me let me, I know we're making changes and stuff. So let, let me dig into that.",
+      "offset": 1784848,
+      "duration": 5000
+    },
+    {
+      "text": "And we'll get an answer on the form in the community form. Great question. Thank you.",
+      "offset": 1789848,
+      "duration": 6000
+    },
+    {
+      "text": "Absolutely. We still have time for a few more, so I'm going to keep coming at you, Peter.",
+      "offset": 1795848,
+      "duration": 6000
+    },
+    {
+      "text": "Right on.",
+      "offset": 1801848,
+      "duration": 1000
+    },
+    {
+      "text": "How do we as a team improve our code reviews using the principles of clean code?",
+      "offset": 1802848,
+      "duration": 5000
+    },
+    {
+      "text": "Oh great, that's that's a great question. So code reviews are interesting. They're necessary in my mind, right?",
+      "offset": 1807848,
+      "duration": 9000
+    },
+    {
+      "text": "But sometimes they're set up to be adversarial, right? You our career has to relies on a lot of our our ability to reason and to be smart and to know a lot of things, right?",
+      "offset": 1816848,
+      "duration": 16000
+    },
+    {
+      "text": "And so when you do code review, sometimes it's an opportunity for, so junior folks to show how much they know.",
+      "offset": 1832848,
+      "duration": 6000
+    },
+    {
+      "text": "By beating up other people's code or sometime more senior folks, they're not always the most gentler, gentle folks and they're beating up.",
+      "offset": 1838848,
+      "duration": 8000
+    },
+    {
+      "text": "More journey your code or their peers, right? And you get in a battle around Should you use concatenation?",
+      "offset": 1846848,
+      "duration": 7000
+    },
+    {
+      "text": "You should use the, the dot and cat function, these type of things, right? And with sonar, our static analysis, right, it eliminate eliminates a lot of those discussions, a lot of those arguments, right?",
+      "offset": 1853848,
+      "duration": 13000
+    },
+    {
+      "text": "Sometimes it'll lead into arguing about the rule but i think that's a better place to argue right that's a more data-based argument around the rules instead of their application across the project.",
+      "offset": 1866848,
+      "duration": 5000
+    },
+    {
+      "text": "And so I think the way you improve them right is use static analysis that'll help eliminate a lot of the people that come in with cognitive biases and those type of things.",
+      "offset": 1871848,
+      "duration": 9000
+    },
+    {
+      "text": "It'll help eliminate a lot of that. And then you can focus on the structure and functionality of the code and you can really look at the deeper things that we don't really handle.",
+      "offset": 1880848,
+      "duration": 14000
+    },
+    {
+      "text": "It's a little bit harder to handle architectural issues, things between cohesion and coupling, right?",
+      "offset": 1894848,
+      "duration": 6000
+    },
+    {
+      "text": "And so the team can focus on that. And not so much on the tactical, simpler rules, right?",
+      "offset": 1900848,
+      "duration": 7000
+    },
+    {
+      "text": "And there's also rules that we have around security and those type of things. And, taint analysis that are very, very hard to see as a human, right?",
+      "offset": 1907848,
+      "duration": 9000
+    },
+    {
+      "text": "You have to really dig through the code. It's not going to be. Super obvious when you're looking at just the single PR.",
+      "offset": 1916848,
+      "duration": 6000
+    },
+    {
+      "text": "And helps to look at how the code fits into the larger picture. So hopefully I answer that question, but I think, if you're using, static analysis.",
+      "offset": 1922848,
+      "duration": 9000
+    },
+    {
+      "text": "That will help minimize and streamline a lot of your code reviews. And if you focus on architectural issues, and code construction issues then that that will should hope improve it and make it more Enjoyable for everybody.",
+      "offset": 1931848,
+      "duration": 17000
+    },
+    {
+      "text": "Okay, great. How do you change a quality profile, but make sure you are up to date with all the new rules that Sonar releases.",
+      "offset": 1948848,
+      "duration": 8000
+    },
+    {
+      "text": "Yeah, I think, it's a good question. Jumping back. We have a couple of different best practices, but you want to do that with extending, right?",
+      "offset": 1956848,
+      "duration": 10000
+    },
+    {
+      "text": "Remember you can copy and extend if you copy a profile then you kind of break that connection back into the original So in our way.",
+      "offset": 1966848,
+      "duration": 11000
+    },
+    {
+      "text": "And so when we updates on our way, you won't get those changes. That's copy.",
+      "offset": 1977848,
+      "duration": 5000
+    },
+    {
+      "text": "So. I recommend extend. So extend this on our way and remove rules that you need and then when sonar way is updated, you'll get those rules updated for you also.",
+      "offset": 1982848,
+      "duration": 11000
+    },
+    {
+      "text": "And then only a copy when you get to a point where you feel really really comfortable when you know what you're doing, right?",
+      "offset": 1993848,
+      "duration": 6000
+    },
+    {
+      "text": "You you know how to handle that, you want to handle it all yourself. And that's totally fine.",
+      "offset": 1999848,
+      "duration": 5000
+    },
+    {
+      "text": "I didn't show it. There's also a compare. Features so if you are copying it and we update some rules, you can do a compare, you can see what has changed.",
+      "offset": 2004848,
+      "duration": 9000
+    },
+    {
+      "text": "And also at any time, if you do copy, you can compare and, and that gives you a, an idea of what you changed in case it's not super obvious sometimes.",
+      "offset": 2013848,
+      "duration": 11000
+    },
+    {
+      "text": "But yeah, I would use extend, and that will keep the, rules that are coming out from, our way, they'll still update.",
+      "offset": 2024848,
+      "duration": 7000
+    },
+    {
+      "text": "In your extended profile will still have those.",
+      "offset": 2031848,
+      "duration": 4000
+    },
+    {
+      "text": "Okay, we've got a sonar cube specific question now. Can center cube detect bad architecture issues?",
+      "offset": 2035848,
+      "duration": 9000
+    },
+    {
+      "text": "Not a hundred percent sure what you mean by bad architecture issues. Oh. In so in code architecture I think they might be talking about.",
+      "offset": 2044848,
+      "duration": 12000
+    },
+    {
+      "text": "Let's go with that.",
+      "offset": 2056848,
+      "duration": 1000
+    },
+    {
+      "text": "Yeah, okay, cool. No, it can't.",
+      "offset": 2057848,
+      "duration": 5000
+    },
+    {
+      "text": "And I was actually, talking to some, folks on the engineering team. And I was asking them to do that, right?",
+      "offset": 2062848,
+      "duration": 8000
+    },
+    {
+      "text": "That would be the next level, be really cool, right? Where do you, How do we scan and understand your architecture and how do we give recommendations?",
+      "offset": 2070848,
+      "duration": 5000
+    },
+    {
+      "text": "It's really hard to do. Again, I talk a lot about collision and coupling, right?",
+      "offset": 2075848,
+      "duration": 10000
+    },
+    {
+      "text": "Your boundaries between your your pieces of software are abstract and so finding those are very difficult. And setting those are very difficult, right, as software engineers, as programmers, as designers and architects.",
+      "offset": 2085848,
+      "duration": 16000
+    },
+    {
+      "text": "Doing your defining where your domains are within your software is very, very hard. And so doing that as an analysis is interesting, right?",
+      "offset": 2101848,
+      "duration": 5000
+    },
+    {
+      "text": "I'm not saying it can't be done, but I think it's something we should were thinking about.",
+      "offset": 2106848,
+      "duration": 8000
+    },
+    {
+      "text": "But right now, no, we don't do that. If I understand your correct your question, no, we do not do that right now.",
+      "offset": 2114848,
+      "duration": 8000
+    },
+    {
+      "text": "Okay, and then this one is actually administrative. Peter, if you can go back to our webinars slide, Keith requested just to see the details of our our next 2 webinars real quick.",
+      "offset": 2122848,
+      "duration": 10000
+    },
+    {
+      "text": "Yeah. Okay.",
+      "offset": 2132848,
+      "duration": 2000
+    },
+    {
+      "text": "And we'll also be sending out these details. The email and they'll be available on our website.",
+      "offset": 2134848,
+      "duration": 4000
+    },
+    {
+      "text": "So. Thomas sticks can make you great is coming September 20 sixth for Apache and Amia and then we've got clink code in Java, a story of monsters, heroes and victories.",
+      "offset": 2138848,
+      "duration": 9000
+    },
+    {
+      "text": "That that title is a Very enticing in my opinion Wednesday October eighteenth So those are those are 2 upcoming webinars. I have a couple more questions.",
+      "offset": 2147848,
+      "duration": 10000
+    },
+    {
+      "text": "I know we're running out of time here so I'll just I'll just take you with.",
+      "offset": 2157848,
+      "duration": 4000
+    },
+    {
+      "text": "Okay.",
+      "offset": 2161848,
+      "duration": 1000
+    },
+    {
+      "text": "A couple more. Is there a version of sonar that we can download try today?",
+      "offset": 2162848,
+      "duration": 4000
+    },
+    {
+      "text": "Yes. You can get our community edition. So you can go up to our website. We'll drop the link in there, but yeah, download our community edition.",
+      "offset": 2166848,
+      "duration": 11000
+    },
+    {
+      "text": "You can run it locally. We also have Docker images. If you know Docker, that's probably the easiest way to do it.",
+      "offset": 2177848,
+      "duration": 6000
+    },
+    {
+      "text": "2 images, go grab those, the UI in the scanner. I used to work at Docker, but I made the mistake when you run them, make sure there's on the same network so they can talk to each other.",
+      "offset": 2183848,
+      "duration": 10000
+    },
+    {
+      "text": "Pulled my hair out for a couple hours and then realized yeah. Anyways, yeah, that's probably the easiest way.",
+      "offset": 2193848,
+      "duration": 7000
+    },
+    {
+      "text": "It's called a community.",
+      "offset": 2200848,
+      "duration": 2000
+    },
+    {
+      "text": "Perfect. We had one last question coming in here. Oh, okay. Sorry.",
+      "offset": 2202848,
+      "duration": 4000
+    },
+    {
+      "text": "I didn't mean to cut you off.",
+      "offset": 2206848,
+      "duration": 1000
+    },
+    {
+      "text": "And also to Oh, I was just, to jump in. The question was around download too.",
+      "offset": 2207848,
+      "duration": 7000
+    },
+    {
+      "text": "Good point.",
+      "offset": 2214848,
+      "duration": 1000
+    },
+    {
+      "text": "I get that, but you can also get a free tier in cloud. So you can go and mess around with cloud on the free tier if if you want to get more advanced than download.",
+      "offset": 2215848,
+      "duration": 5000
+    },
+    {
+      "text": "Okay, sorry, Liz.",
+      "offset": 2220848,
+      "duration": 1000
+    },
+    {
+      "text": "No, that's great. We have one here. How often does Sonar update the default quality profile with new rules?",
+      "offset": 2221848,
+      "duration": 8000
+    },
+    {
+      "text": "It's not a set time. I know when we do our dot releases, you potentially could have rules in there.",
+      "offset": 2229848,
+      "duration": 7000
+    },
+    {
+      "text": "We, we don't have a set cadence as far as I know. So, but it's not random.",
+      "offset": 2236848,
+      "duration": 6000
+    },
+    {
+      "text": "So, but it's not random. So when we get enough rules set together, then we'll release them.",
+      "offset": 2242848,
+      "duration": 3000
+    },
+    {
+      "text": "It's done, it's done programmatically, but not on a cadence.",
+      "offset": 2245848,
+      "duration": 6000
+    },
+    {
+      "text": "Hmm.",
+      "offset": 2251848,
+      "duration": 1000
+    },
+    {
+      "text": "So. Keep an eye out for, you know. Stay connected on our social and look at the read.",
+      "offset": 2252848,
+      "duration": 4000
+    },
+    {
+      "text": "Be best. Yep.",
+      "offset": 2256848,
+      "duration": 1000
+    },
+    {
+      "text": "I was gonna say in community is a great place to go too if you want more information on on our announcements related to our new rules.",
+      "offset": 2257848,
+      "duration": 6000
+    },
+    {
+      "text": "So.",
+      "offset": 2263848,
+      "duration": 1000
+    },
+    {
+      "text": "Yes, yes. Alright.",
+      "offset": 2264848,
+      "duration": 2000
+    },
+    {
+      "text": "Okay. Well, we only have a couple of minutes left. I think we've covered most of the questions here.",
+      "offset": 2266848,
+      "duration": 4000
+    },
+    {
+      "text": "Any questions that we have't covered? We will certainly follow up and get them answered. And Peter, thank you for answering all those questions.",
+      "offset": 2270848,
+      "duration": 9000
+    },
+    {
+      "text": "Thank you all to who stayed on the line and pose those questions and we'll make sure that we we get them all addressed.",
+      "offset": 2279848,
+      "duration": 6000
+    },
+    {
+      "text": "In the future. We hope that you'll visit sonar source. Com to come see more clean code content and learn how to clean it you code and check out information for our future webinars and events as you can see here on the screen.",
+      "offset": 2285848,
+      "duration": 12000
+    },
+    {
+      "text": "Thank you again in advance for providing your feedback via the survey that will appear shortly, on your screen.",
+      "offset": 2297848,
+      "duration": 1000
+    },
+    {
+      "text": "So thanks everybody and we'll see you all soon.",
+      "offset": 2298848,
+      "duration": 8000
+    },
+    {
+      "text": "Thanks everybody.",
+      "offset": 2306848,
+      "duration": 30000
+    }
+  ],
+  "fullText": "I'm Liz Ryan, your moderator for this webinar, which will be presented by Peter McKee. Please allow me to quickly go over some essential housekeeping points before we get started. This is a 30 min session with a 10 min Q&A afterward. Please use the Zoom Q&A box to ask questions, not the chat box. And we have 2 panelists joining us. And Campbell and Manish Kapoor from our community and product marketing teams. They're tasked with answering as many of your questions as possible. Live during the webinar. This session will be recorded. And we'll send out a link via email in the coming days. Finally, at the end of this webinar, short survey will appear on your screen. We welcome your feedback. Thank you in advance for your participation. So without further ado, I'd like to introduce today's presenter. Peter McKee, Peter is the head of developer relations and community. It's sonar and maintainer of the open source project, Ronan Js. Originally from Pittsburgh, Pennsylvania, but currently residing in Austin, Texas. Peter built his career developing full stack applications for over 25 years. He's held multiple roles, roles, but enjoys teaching and mentoring the most. Peter, I'll send it over to you. Awesome. Thanks, Liz. I thought you were gonna say, 45 years or for a minute. Should have, she left. I would have taken that. Yeah, alright, thanks. Hello everybody, thanks for joining. I really appreciate it. So yeah, today we're gonna be, covering. We're gonna do a quick review, of clean code. I'm gonna go a little bit deeper this round. If you were with us a couple of months ago. I went over clean code, but I didn't go much into the details. I'm gonna talk a little bit about our thinking around Clean Code. And then we're gonna take a look at achieving clean code with our method methodology called clean as you code and then we'll take a look at setting up sonar. With a demo. All right, so let's jump right into it. So what is clean code? So. There's a lot of books out there in the industry, a lot of good books. There's a couple of them. There's a lot of good websites. And we talk about what clean code is, what good code quality is. I like to equate it to, a famous US Supreme Court judge said once when asked about obscenities. He said, I'm not sure I could describe it to you, but I know it when I see it. And that's kind of how we think about clean code a lot of times is, you know, when I look at a piece of code, how do I know it's written well? How do I know it's maintainable? Those type of things, right? And here at Sonar, we're really bullish on code, right? We think that everything starts with the code. And so we really took a deep look at how do you understand clean code? How do we categorize it? How do we talk about it? And then how do we produce it? And so we started looking at security maintainability, reliability, and that rolled into bugs and code smells and those type of things. But we ran into a little bit of a problem. Then at the bottom there you can see the patterns and code that lead to bugs and code spells and so forth. Well, down to the right you can see that those pattern encode does just doesn't always just apply to One bucket, right? So you could have a pattern in code that looks like a bug and is a bug. And also could be a vulnerability. And so when we started looking at these things, we started identifying software quality. So security, maintainability, relaxability and others. And then code, clean code attributes, patterns of code that kind of make up things. And they were kind of distinct. But also had these patterns that matched into qualities. And so we started moving and shifting things and looking at categories and attributes. And you can see that attributes, produce an outcome. And underneath our attributes, you have different categories. You have a category subcategory. And then you have a pattern in code. And these categories could, you'll see that yeah, we're highlighting the security. Quality on the right And then the 2 green categories in those flow down. And as we move along here, you can see that maintainability security all don't sit in just one category they come across and so as we look at reliability the first category on the left it goes down to blue and if you remember up here at security it was hitting the same bucket. So these things have crossover, they're multi hierarchical. And so. How do we know when your code is clean? How do we know when you have maintainability, reliability, and so forth? And these are the attributes that we came up with and we've kind of took a look at these pretty hard pretty deeply. And so you have consistent, intentional, adaptable, and responsible. I remember these as CIA are. You can remember it however you would. But underneath consistently have formatted conventional identifiable, intentional, we have clear, logical, complete and efficient. Adaptable, we have focused to distinct modular and tested and responsible. Lawful, trustworthy and respectful. And let's talk a little bit about these. I'm gonna give you some details around some of these, but you can see these attributes. Lead into qualities, maintainability, reliability, and security. So let's take a look at these clean code attributes. So clean code is consistent and part of consistent consistency is well-formatted code. This is a pretty simple example, but it illustrates the point very well. So we have some Java code here. So if you look at a non-compliant code, it's a little bit easy to see because you have the the red blocks there and the green blocks on the below. And it's indicating that you have your tabbing your formatting off. Right and on the surface you might say well not a big deal we're gonna argue about it should we have 2 tabs, for tabs, spaces, what not. At Sonar, we don't we don't care what kind of whether you use tabs or spaces. We don't have an opinion on that. We do have a strong opinion on it should be consistent and it should be consistent across your code bases. It makes it easy to read, easy to flow. You know what we do as software engineers is we take real-world issues, business flows, those type of things. And we. Put those into abstract code, right? We resent, represent them in. And therefore we have a lot of cognitive overload. We put all of these. Software classes and patterns into our head and we try and manipulate them and our brains are a pattern matching engine, right? So when they read down the code, They need to see consistency. It makes patterns easily. To view and to read and it lowers your cognitive. Overload. And, so another part of being consistent is conventional. So this is a C plus example. So code should be idiomatic and follow syntax, conventions. I'm not a C, developer, but apparently in version 11 or above. There's a couple different ways you can do type analysis. Aliases, but pardon me. With the type def and the using the using structure is. The more modern way of writing C plus plus code. So if you're using the more modern way, you want to stick to that convention, you want to use that across your code base. Again, for consistency in a ability to easily reason about your code. Let's move on to intentional. So intentional, again, a pretty easy one to at least have in your brain, but when you see it in code, it becomes a little more confusing. So code should be clear and straightforward. So if you look at a 9 non-compliant code. I believe this is some Ruby code. Ruby or Python. But as we read down through the top, so we have low, takes a parameter called name. Then it's taking it creating a variable, assigning hello, concatenating name to it, and then me print name, right, right away you start to get confused. Why do we have message declared or we're not using it should we be using it is that a mistake am I missing something what is going on right so even in just a simple what is that 5 lines of code we start to get confused it's not super clear and then the variable I right we never use I we're just looping through 10 times and printing and calling foo. Not exactly sure what's going on. So below that, right, you can see that we have hello and then we assign create a variable message, we concatenate and assign to message. And there we go, we use message. And then we use the underscore kind of throwaway variable to, to indicate that we're not really going to use that. So it's a lot clearer, even if it is only 5 lines of code. I hope you can see. Point of being very clear in your code. Another part of intentional is being efficient. So this is a Docker example. So code should be efficient and not with waste resources unnecessarily. Or needlessly, let's say. So in a non-compliant code, so a Docker file is basically a shell script. It's gonna run commands. Those commands are gonna produce an image that then later you can run. So when you do run app get updates and then an app get install engine X app, app get is going to install things and, you're gonna get, that you might not want. And it's going to bloat your image. So you can see down the compliant code, we have an extra line in there that says app, get and it's doing it clean at the end, which should clean up. Unneeded resources. In this example here, just a little nitpick for me. I like to move the double. And to the end so you kind of line up all your app gets but again, doesn't really matter if you put them all in the same place, it's also, consistent. Another, another quality is adaptable and part of that is being distinct. Code should be distinct and minimize duplication. Again, here's a pretty rim entry example, but it proves the point. So in non compliant you see a string with action random one That's string is being repeated. Typically we wouldn't see it something like this 3 lines right in a row. You'll have extra code in between the prepare and execute and release. And so therefore it gets spread out and you can identify those strings everywhere. One, an issue immediately recognizable is how do I maintain this, right? And it's not adaptable. If I go to change action random one, I gotta change it everywhere I use it, right? Classic example. So you can see the compliant code. We declare a variable action one and we set the string to that. And then we use that variable everywhere that we needed. So you only have to change it one place. 2, you know, in this larger code base, that action one would probably mean something, right? And so then when you see action one through ultra code, you know exactly what that is. Another piece of adaptable being adaptable adaptability is being modular. So code should be modular and as a key aspect of this is encapsulation. So we have a vB. Dot net example over here to the right. In the non-compliant, you see we have, we're using a public property. Pardon me, a public, variable. And I'm sure when you're starting out, that might be okay. People will start using this code and they're going to use that that bar. They're gonna access it directly So it's not going to make it very module, right? It's gonna tightly bound it to your other code, right? The base of adaptability is being highly cohesive and highly cohesive and low coupling, right? So you don't want your code to be bound together. Right, and so put it being modular is to break those pieces apart and give good interfaces. So in the compliant code, you can see we're doing a class and we give a public property. Right, properties are better because they'll have getters and setters. If you need to change the functionality of how you set the value bar with some logic. You can do that in your setter, function. Okay. So, moving on to responsible. First one is trust, trustworthy. So, Coach should avoid hard coding secrets, right? Pretty example, pretty easy example to illustrate what we're talking about here. So in a non-compliant code, you see a function. And we've hard coded some, the user in the password, right? That's a big no no. To fix that. Put move it down into, function and just that go read that data off a secure input. However, you want to do that in your, in your, programming environment you should use those constructs and not hard coded in there. Okay. And the last one we're gonna take a look at is lawful. So coach should be lawful. It should respect basic licensing and copyright regulation. It exercises the creators rights and honors the rights of the license and their owner. So we have a lot of our coders open open source and free. We have a. Our open source license, we put it in all the top of our files, we ask that you respect that and others respect ours, we respect other people's licenses. So You know, basically don't go steal their people's code, copy it, reuse it, you know, attribute it back to. The original creator. And there there's some other attributes in responsible, while awful too, but Let's move on. Okay, so we talked about clean code, what it is, how we look at it, how we identify. Clean code. What are the categories? What are the patterns in code that we're looking for? Right, so we went from a pretty high level theoretical understanding of clean code down to more of a tactical. How do you actually? Produce clean code and so at this point you might say well, how do I how do I get to clean all of my code. And we have a methodology here, so in our called clean as you code. And that uses the power of static analysis. So as sonar, the son our analyzer, we have overth, look, 5,000 rules. English is hard today for me. So, 5,000 rules, 30 plus languages. We scan all of your code run all of your code. We use, quality profiles. I'm going to show you that in a minute. And we look at it all kinds of different issues. Some of my favorites are cognitive complexity. Crypto functions, secret detection, which we saw earlier. So we look a lot of your code and we, we handle a lot of issues. But what happens, right? You turn on a static and analyzer, any kind of scanner, and you get thousands, thousands of issues, right? And as a good engineer, you turn that off, right? And you go about your business. Nope, don't do that. So again, use a methodology called clean energy code. So, Clean as your code, you focus only on the new code. So only added or modified code. And what this does, it allows you to get the work done as you're working on features as your coding is fresh. It's non disruptive. And it allows developers to do their best work as they're coding as they're working. They're cleaning their code. Either added brand new code or modified code. Right. And as you're implementing, it takes 2 steps. You're going to set up a quality profile. Which defines the standards. It's a set of rules that we're going to apply to a piece of code to our code base. And then your quality gate is a scorecard on how good that code is and whether it should pass on. In the CI CD pipeline, or you should stop it, right? And it takes a take a look, it takes a look at things such as security, vulnerabilities, bugs, those type of things. And we're going to see that in a second. And, and so you set up, you only modify. You only take a look at modified or new code. You set up your quality profile, you include quality gate, and then only when that quality gate is green is when you merge. And so what happens? So you might say, well, I'm only cleaning code as I go, and that's going to take forever, right? I'm not always touching all of my code base. And you're right. And so what we did, we kind of looked at, we have a tool, the open source tool called G thesis. We applied it to some major open source. Tools, projects out there. And we found that after about 5 years you get down to a little bit less than 40% and it depends on your specific project. But looking over this, this broad range of projects on GitHub. After the first year you get down to around 80% so you cleaned roughly 20% of your code after 3 years you've cleaned about 65 70% of your code and then about 5 years you can see in the graph you start in a dip below the 40% so you're cleaning over 60% of your code. I do get a question a lot to say well after what about that 40% of the code that I haven't touched? Don't worry about it. You know. Is it maintainable? Maybe not, right? But it's reliable, it's secure, it's running. If it wasn't reliable and secure, you would have been in there. You've been working on that code and fixed it anyways. The real issue is a rain around maintainability, but if you haven't touched it in 5 years you might not ever touch it. Okay, so let's take a look at a demo here. Let me. Okay, so first thing I can do is I'm gonna go into sonar cloud And I'm gonna log out. I'm gonna show you how you can. Set things up. So when you first go to center cloud, you'll see, explore projects. I wanna highlight something here real quick, which is really, really cool. So we scan a lot of open source projects and we put the results out here on the public. So if we take a look at Amazon's AWS Java SDK. You can see right now that's failing a quality. You could actually go into the pull requests. You can take a look at a failed pull request. And you can see the issues that are happening. 412 code smells. So if you want to help out and go clean some of these up. But it's pretty cool. You can take a look at open source projects. You know, go take a look at. Some of the open source patch packages that you're using and see what kind of vulnerabilities are in there. Okay, so we're here at Sonar. We've got a new project. Let's set this up. So I'm gonna go and log in. When you log in, you can, obviously log in, GitHub, Bitbucket, Gitlab, Azure. I'm along in with GitHub. I'm already logged in. I've already authorized through Get Home, but if you haven't, you'll be presented with a to authorize into Get GitHub and authorize sonar. To access it. Once you do that, then you. Come back into sonar. Come up here and say I want to create a new organization. This will go out to your source code repository, take a look, see what organizations you have. I'm gonna import the strata organization. So you give it some details and name and a key. This little hint here will tell you that all the members in the GitHub organization will be added into the Sonar Cloud organization and then you choose your plans. I'm going to do the free plan. We'll move over and then here at this time you're set up but you don't have a project so you would go in. Choose a project. Again, here's my organization. I would choose strata. And then I would hit set up. I'm gonna not going to do that now because it's gonna run a scan. So let me jump back. Into our projects. And I have a small application that's been written before. Called Clean Code Alpha. You can see my quality gate is passing right now. Everything seems to be working fine, right? Well, I have a sitting on a sprint. They pulled off a ticket off the backlog. I have to change. There's an issue with our database sessions. And so I'm going to fix that. Right, I've already fixed the code. Frit in the code and I've pushed that up into a PR. And so when you do that, sonar will pick up that you've, that you've created a PR and it'll scan it. And you can see here this fixed dB sessions is that PR. And I failed, right? So my quality gate has failed. I have issues that I need to go and fix first, right? The main one we can see here is the security vulnerability. But I also have a maintainability, one code smell. So let's click on that. It's an intentionality issue, right? And you can learn about more in our documentation about that. And so here I'm gonna gonna click on the actual issue and it's gonna take me into my code. If I scroll down a bit, I can say, oh, okay, well I didn't add a letter const or a bar at the beginning of this. Not sure why I did that. But if you were curious why this is an issue and click on why this is an issue you can read down, learn all about far, let in. Const. And why you should use each, right? Activity is where you can go in and add comments. I love this rule. Alright. And so here's where you can have a thread. You can discuss this actual rule with your colleagues, whether you want to. Change the status of it, remove it and those type of things. And then when you click it into more info, this gives you more info where you can learn all about this issue and why you should fix it. Okay, cool. So let's jump back to the summary. Let's take a look at our security vulnerability, which is Really what is causing us to fail right as you can see we have an a rating here. We have an A rating, maintainability security. Our duplications don't look bad. And so let's go and take a look at our vulnerability. It's a responsibility issue. And I'm hard coding some passwords, right? That's not good. We should never do that. This is actually probably being reverted from an earlier version of this, feature. And as I fix the set I inadvertently overwrote this shame on me. Or merging, merging of branches. Okay, so. Want to come over here and show you after that PRs run. This is scanned. We've gotten our results. Back here in GitHub, you'll see on my PR, so in my poor requests, come over and this is a fixed dB sessions. And you can see it's decorated my. My pool request. It's showing me that I have a vulnerability code smell. So as an engineer, you don't even have to leave, leave this IDE, right? You're inside the IDE. Pardon me, not in the ID. You're in GitHub. You're in your pull request. You see the issue right here. And as we scroll down, you can actually see the code snippet that's saying, hey. Here's the issue right here. So you can go and fix that in your code base. So let's take a look at the code right now. And before I do that, so I'm looking at the code. Here's the issue. Right here, I have a. Hard coded password here. And, which is big no, no, of course. So. Before I fix it, I'm gonna show you, we have sonar lint, which is a,ter that you can use. In your ID to see the issues and clean them locally so you don't have to cut PRs. So your issues come back in the ID, go back, okay, what follows that in is it over here, right? Searching all around. So if you just come into the extensions and this works across all your major IDEs just use the normal flow of installing extensions. So here's Sonar L, click on that. And I'm going to click install. So that's been installed. Let's come back to our source code. Let's close this down. You see, I don't have any problems detected yet, but as I open my files, you'll start to see. The issues should come out let's go Oh, there they go. Thank you. So there is mine. Let's open my server. And now, now we can see the 2 issues, right? Right here, it tells me. Yeah, let get in so far. You can see it's sonar lent, JavaScript, and this is our rule number, S 2703. So right here in the IDE, we can see our issues. We can jump to them. We can fix them. Right. Okay, so for the sake of time, I fixed these issues. I've created a PR and I've pushed that up into GitHub. And another analysis is kicked off. So we come over here and our into our pool requests. You can see fixed dB issues, double zeros. And you can see the scan run and have passed, right? I don't have any the security issue has been fixed and the maintainability issue has been fixed. And again, on the PR if we come over. Our PR has been decorated. We could see we have 0 issues in our merge pull request button is nice and bright and green so we can go ahead and merge. Okay, one more thing I want to show you before we jump out of here. Is let me go in. To our organization. And I want to take a look at the quality profiles and quality gates. So a quality profile profile like I said before is a set of rules that you want to apply to a project. And you can read about a lot of this on the page and in our documentation. I'm not gonna go to too deep. I don't wanna do a product, you know, training session. But I want to give you a hint of what it looks like. So of course there's a list of all of. All the languages we support. Most of them have this profile called sonar way. That's our default profile for all of our languages. And so let me go into the language we're using here, which is JavaScript. So we have one profile called Sonar Way. If we click on that, we can see the inheritance tree right now. This is at the root. And then over here you can see we have a 265 total rules how they break down. You can see we have inactive rules. Right, and you could click on those and then you can navigate and see what issues are included in the in that. Also too if you wanted to change these rules or you wanted to create your own profile The first way to do it is you want to go and either want to copy or extend. The difference between a copying and extending is is if you're a software engineer and you've worked in object oriented programming. It's the same thing, right? So if you copy a profile, you'll take the properties and rules and you make a copy of them and then you can extend them from there. You would want to do that if you copied if you wanted to control that base profile when sonar is updated, we update our profiles, not always, but sometimes we do, we'll add rules, we will move rules. If you're gonna, if you don't want that, then you want get a copy and then you're going to extend. If you want to keep the base on our way, so you get those new rules as they're updated, but you want to modify it, you extend it. So you'll extend it, you can make modifications, you can activate a rule, deactivate a rule. And then when sonar comes in, you'll get the new rules and they're still higher argument. So that's that's the way you want to look at that. Okay, excellent. So let's jump back over. And Liz, kick it back for you, but while she's coming back online, if you want to get started, you can start for free. We're gonna drop the links in the chat. We'll get the, the team will take care of that. If you don't get a link, you don't have a question. Please reach out to me on Twitter, LinkedIn. I'd love to talk to people. If you're using the products, give them a try. If you have any issues whatsoever, jump into our community. We have some great technical community managers in there. They're gonna get you, Your question is answered and get your point in the right direction. A lot of our engineers in there and they will help you troubleshoot and get things fixed. All right, time for me to be quiet. Where do you Liz? Okay, awesome. Thanks, Peter. That was great. As we move into our time of Q&A and I gather the questions up, I briefly wanted to share our 2 upcoming webinars that you can attend. We've got Clean Code, how mistakes can make you great for apakanemia on Tuesday, September, the 20 sixth. And we also have Clean Code in Java, a story of monsters, heroes and victories. From our developer advocate for Java, Jonathan Via Lopez. That's October eighteenth. So let's look over and see what questions we have for you, Peter. Alright, we've got one from Joey who asked would the get PR decoration be the same between Sonar Cloud and Sonar Cube? Oh, that's a great question. Yes. I believe so. Yeah, the same information is there might look a slight little bit different, but yes the same information is there on the decorations Okay, great. We have another question when working with an existing code base with Sonar Cube analyze the entire file or just the updated lines. So it updates it analyzes the whole. Project, but only looks at the new files, new lines of code that you've changed, right? So yes, it still looks at the whole file because we the way we do our analysis is comprehensive. But yes, it's only worried about the new code that you've changed. Right. So although so to answer more succinctly. It scans everything, but only tells you the issues with the codes that you've changed or added. Perfect. Okay, we've got a couple more here. With Clean as you code as an organization where only new and modified code is analyzed an issue we come across is when a line of code is modified, it impacts. Our code coverage. Metric. Is there a way to break out new verses modified? Oh, great question. I do not believe so, but to be honest with you, I'm not a hundred percent sure on that answer. Let me let me get that answered for you and I can we can drop it into we'll answer it in the community. Yeah, I believe that I believe it is no. But you can set it because there's only really 2 ways to set it up if I'm correct. It's by a date number of days or new or modified. So those are kind of your 2 options. But let me let me, I know we're making changes and stuff. So let, let me dig into that. And we'll get an answer on the form in the community form. Great question. Thank you. Absolutely. We still have time for a few more, so I'm going to keep coming at you, Peter. Right on. How do we as a team improve our code reviews using the principles of clean code? Oh great, that's that's a great question. So code reviews are interesting. They're necessary in my mind, right? But sometimes they're set up to be adversarial, right? You our career has to relies on a lot of our our ability to reason and to be smart and to know a lot of things, right? And so when you do code review, sometimes it's an opportunity for, so junior folks to show how much they know. By beating up other people's code or sometime more senior folks, they're not always the most gentler, gentle folks and they're beating up. More journey your code or their peers, right? And you get in a battle around Should you use concatenation? You should use the, the dot and cat function, these type of things, right? And with sonar, our static analysis, right, it eliminate eliminates a lot of those discussions, a lot of those arguments, right? Sometimes it'll lead into arguing about the rule but i think that's a better place to argue right that's a more data-based argument around the rules instead of their application across the project. And so I think the way you improve them right is use static analysis that'll help eliminate a lot of the people that come in with cognitive biases and those type of things. It'll help eliminate a lot of that. And then you can focus on the structure and functionality of the code and you can really look at the deeper things that we don't really handle. It's a little bit harder to handle architectural issues, things between cohesion and coupling, right? And so the team can focus on that. And not so much on the tactical, simpler rules, right? And there's also rules that we have around security and those type of things. And, taint analysis that are very, very hard to see as a human, right? You have to really dig through the code. It's not going to be. Super obvious when you're looking at just the single PR. And helps to look at how the code fits into the larger picture. So hopefully I answer that question, but I think, if you're using, static analysis. That will help minimize and streamline a lot of your code reviews. And if you focus on architectural issues, and code construction issues then that that will should hope improve it and make it more Enjoyable for everybody. Okay, great. How do you change a quality profile, but make sure you are up to date with all the new rules that Sonar releases. Yeah, I think, it's a good question. Jumping back. We have a couple of different best practices, but you want to do that with extending, right? Remember you can copy and extend if you copy a profile then you kind of break that connection back into the original So in our way. And so when we updates on our way, you won't get those changes. That's copy. So. I recommend extend. So extend this on our way and remove rules that you need and then when sonar way is updated, you'll get those rules updated for you also. And then only a copy when you get to a point where you feel really really comfortable when you know what you're doing, right? You you know how to handle that, you want to handle it all yourself. And that's totally fine. I didn't show it. There's also a compare. Features so if you are copying it and we update some rules, you can do a compare, you can see what has changed. And also at any time, if you do copy, you can compare and, and that gives you a, an idea of what you changed in case it's not super obvious sometimes. But yeah, I would use extend, and that will keep the, rules that are coming out from, our way, they'll still update. In your extended profile will still have those. Okay, we've got a sonar cube specific question now. Can center cube detect bad architecture issues? Not a hundred percent sure what you mean by bad architecture issues. Oh. In so in code architecture I think they might be talking about. Let's go with that. Yeah, okay, cool. No, it can't. And I was actually, talking to some, folks on the engineering team. And I was asking them to do that, right? That would be the next level, be really cool, right? Where do you, How do we scan and understand your architecture and how do we give recommendations? It's really hard to do. Again, I talk a lot about collision and coupling, right? Your boundaries between your your pieces of software are abstract and so finding those are very difficult. And setting those are very difficult, right, as software engineers, as programmers, as designers and architects. Doing your defining where your domains are within your software is very, very hard. And so doing that as an analysis is interesting, right? I'm not saying it can't be done, but I think it's something we should were thinking about. But right now, no, we don't do that. If I understand your correct your question, no, we do not do that right now. Okay, and then this one is actually administrative. Peter, if you can go back to our webinars slide, Keith requested just to see the details of our our next 2 webinars real quick. Yeah. Okay. And we'll also be sending out these details. The email and they'll be available on our website. So. Thomas sticks can make you great is coming September 20 sixth for Apache and Amia and then we've got clink code in Java, a story of monsters, heroes and victories. That that title is a Very enticing in my opinion Wednesday October eighteenth So those are those are 2 upcoming webinars. I have a couple more questions. I know we're running out of time here so I'll just I'll just take you with. Okay. A couple more. Is there a version of sonar that we can download try today? Yes. You can get our community edition. So you can go up to our website. We'll drop the link in there, but yeah, download our community edition. You can run it locally. We also have Docker images. If you know Docker, that's probably the easiest way to do it. 2 images, go grab those, the UI in the scanner. I used to work at Docker, but I made the mistake when you run them, make sure there's on the same network so they can talk to each other. Pulled my hair out for a couple hours and then realized yeah. Anyways, yeah, that's probably the easiest way. It's called a community. Perfect. We had one last question coming in here. Oh, okay. Sorry. I didn't mean to cut you off. And also to Oh, I was just, to jump in. The question was around download too. Good point. I get that, but you can also get a free tier in cloud. So you can go and mess around with cloud on the free tier if if you want to get more advanced than download. Okay, sorry, Liz. No, that's great. We have one here. How often does Sonar update the default quality profile with new rules? It's not a set time. I know when we do our dot releases, you potentially could have rules in there. We, we don't have a set cadence as far as I know. So, but it's not random. So, but it's not random. So when we get enough rules set together, then we'll release them. It's done, it's done programmatically, but not on a cadence. Hmm. So. Keep an eye out for, you know. Stay connected on our social and look at the read. Be best. Yep. I was gonna say in community is a great place to go too if you want more information on on our announcements related to our new rules. So. Yes, yes. Alright. Okay. Well, we only have a couple of minutes left. I think we've covered most of the questions here. Any questions that we have't covered? We will certainly follow up and get them answered. And Peter, thank you for answering all those questions. Thank you all to who stayed on the line and pose those questions and we'll make sure that we we get them all addressed. In the future. We hope that you'll visit sonar source. Com to come see more clean code content and learn how to clean it you code and check out information for our future webinars and events as you can see here on the screen. Thank you again in advance for providing your feedback via the survey that will appear shortly, on your screen. So thanks everybody and we'll see you all soon. Thanks everybody.",
+  "fetchedAt": "2026-03-14T09:23:52.881Z"
+}

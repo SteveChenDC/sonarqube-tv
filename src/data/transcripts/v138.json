@@ -1,0 +1,868 @@
+{
+  "videoId": "v138",
+  "youtubeId": "Z3vkBQRN1qU",
+  "segments": [
+    {
+      "text": "[Music]",
+      "offset": 1180,
+      "duration": 5499
+    },
+    {
+      "text": "hi this is Ali from sonar in this video",
+      "offset": 9280,
+      "duration": 4680
+    },
+    {
+      "text": "we will look at upgrading your sonar",
+      "offset": 12360,
+      "duration": 4079
+    },
+    {
+      "text": "Cube instance from one version to",
+      "offset": 13960,
+      "duration": 4680
+    },
+    {
+      "text": "another we will look at what to do",
+      "offset": 16439,
+      "duration": 5041
+    },
+    {
+      "text": "before you upgrade how to perform your",
+      "offset": 18640,
+      "duration": 6399
+    },
+    {
+      "text": "upgrade and what to do after the",
+      "offset": 21480,
+      "duration": 5840
+    },
+    {
+      "text": "upgrade before you upgrade it is",
+      "offset": 25039,
+      "duration": 4160
+    },
+    {
+      "text": "important that you decide your target",
+      "offset": 27320,
+      "duration": 5000
+    },
+    {
+      "text": "version map out your migration path read",
+      "offset": 29199,
+      "duration": 5401
+    },
+    {
+      "text": "through our release upgrade notes and",
+      "offset": 32320,
+      "duration": 3840
+    },
+    {
+      "text": "practice your upgrade on Commercial",
+      "offset": 34600,
+      "duration": 4080
+    },
+    {
+      "text": "staging",
+      "offset": 36160,
+      "duration": 2520
+    },
+    {
+      "text": "license the first step is to decide",
+      "offset": 39520,
+      "duration": 5120
+    },
+    {
+      "text": "which version to upgrade to roughly",
+      "offset": 41879,
+      "duration": 6000
+    },
+    {
+      "text": "every 18 months sonar releases a LTS",
+      "offset": 44640,
+      "duration": 5680
+    },
+    {
+      "text": "long-term support version that consists",
+      "offset": 47879,
+      "duration": 4520
+    },
+    {
+      "text": "of all the features and Bug fixes",
+      "offset": 50320,
+      "duration": 5239
+    },
+    {
+      "text": "introduced in sonar Cube since the last",
+      "offset": 52399,
+      "duration": 6361
+    },
+    {
+      "text": "LTS there is a grace period of 6 months",
+      "offset": 55559,
+      "duration": 5480
+    },
+    {
+      "text": "after the LTS has been been released",
+      "offset": 58760,
+      "duration": 4520
+    },
+    {
+      "text": "after which all versions below the LTS",
+      "offset": 61039,
+      "duration": 4841
+    },
+    {
+      "text": "will no longer be supported and we",
+      "offset": 63280,
+      "duration": 5240
+    },
+    {
+      "text": "recommend upgrading to LTS version to",
+      "offset": 65880,
+      "duration": 4599
+    },
+    {
+      "text": "stay up toate with our product features",
+      "offset": 68520,
+      "duration": 4400
+    },
+    {
+      "text": "and Bug",
+      "offset": 70479,
+      "duration": 2441
+    },
+    {
+      "text": "fixes in addition to the LTS sonar Cube",
+      "offset": 73400,
+      "duration": 5440
+    },
+    {
+      "text": "releases for latest versions also",
+      "offset": 76880,
+      "duration": 5120
+    },
+    {
+      "text": "happens every 2 to 3 months these latest",
+      "offset": 78840,
+      "duration": 5160
+    },
+    {
+      "text": "versions correspond to the incremental",
+      "offset": 82000,
+      "duration": 3720
+    },
+    {
+      "text": "functional changes within the major",
+      "offset": 84000,
+      "duration": 3799
+    },
+    {
+      "text": "release cycle that will eventually",
+      "offset": 85720,
+      "duration": 5240
+    },
+    {
+      "text": "culminate in the Nyx LTS so the choice",
+      "offset": 87799,
+      "duration": 5201
+    },
+    {
+      "text": "is yours you can either upgrade to the",
+      "offset": 90960,
+      "duration": 5400
+    },
+    {
+      "text": "LTS version or the latest version note",
+      "offset": 93000,
+      "duration": 5119
+    },
+    {
+      "text": "that it is not possible to perform",
+      "offset": 96360,
+      "duration": 3560
+    },
+    {
+      "text": "version downgrades and our",
+      "offset": 98119,
+      "duration": 3761
+    },
+    {
+      "text": "recommendation is always to make sure",
+      "offset": 99920,
+      "duration": 4280
+    },
+    {
+      "text": "you're at least on the latest LTS",
+      "offset": 101880,
+      "duration": 5120
+    },
+    {
+      "text": "version it is also possible to upgrade",
+      "offset": 104200,
+      "duration": 5000
+    },
+    {
+      "text": "your sonar Cube Edition alongside the",
+      "offset": 107000,
+      "duration": 4240
+    },
+    {
+      "text": "version just make sure you select the",
+      "offset": 109200,
+      "duration": 4400
+    },
+    {
+      "text": "correct package you",
+      "offset": 111240,
+      "duration": 5199
+    },
+    {
+      "text": "want after deciding on the version and",
+      "offset": 113600,
+      "duration": 5080
+    },
+    {
+      "text": "addition the next thing to do is to map",
+      "offset": 116439,
+      "duration": 3921
+    },
+    {
+      "text": "out your upgrade migration",
+      "offset": 118680,
+      "duration": 4439
+    },
+    {
+      "text": "path this depends on a Target version",
+      "offset": 120360,
+      "duration": 5520
+    },
+    {
+      "text": "and how many LTS releases there has been",
+      "offset": 123119,
+      "duration": 4881
+    },
+    {
+      "text": "between that and your current",
+      "offset": 125880,
+      "duration": 4480
+    },
+    {
+      "text": "version the rule here is in your",
+      "offset": 128000,
+      "duration": 4560
+    },
+    {
+      "text": "migration path you should upgrade to",
+      "offset": 130360,
+      "duration": 4480
+    },
+    {
+      "text": "each intermediate LTS version between",
+      "offset": 132560,
+      "duration": 4640
+    },
+    {
+      "text": "your current and Target version in order",
+      "offset": 134840,
+      "duration": 4320
+    },
+    {
+      "text": "for the correct database schemas to be",
+      "offset": 137200,
+      "duration": 3520
+    },
+    {
+      "text": "applied in the correct",
+      "offset": 139160,
+      "duration": 5000
+    },
+    {
+      "text": "order here are a few examples if you're",
+      "offset": 140720,
+      "duration": 7159
+    },
+    {
+      "text": "upgrading from 8.9 to 9.9 LTS there were",
+      "offset": 144160,
+      "duration": 6120
+    },
+    {
+      "text": "no other LTS releases in between",
+      "offset": 147879,
+      "duration": 6841
+    },
+    {
+      "text": "so you can upgrade from 8.9 to 9.9",
+      "offset": 150280,
+      "duration": 6640
+    },
+    {
+      "text": "directly however if you're upgrading",
+      "offset": 154720,
+      "duration": 7280
+    },
+    {
+      "text": "from 7.9 LTS to 9.9 LTS there is one LTS",
+      "offset": 156920,
+      "duration": 8120
+    },
+    {
+      "text": "8.9 in between so you need to First",
+      "offset": 162000,
+      "duration": 5760
+    },
+    {
+      "text": "perform an intermediate upgrade to 8.9",
+      "offset": 165040,
+      "duration": 7240
+    },
+    {
+      "text": "LTS first before upgrading to the 9.9",
+      "offset": 167760,
+      "duration": 6920
+    },
+    {
+      "text": "LTS the same principle applies for",
+      "offset": 172280,
+      "duration": 4879
+    },
+    {
+      "text": "upgrading from non-lts versions",
+      "offset": 174680,
+      "duration": 5720
+    },
+    {
+      "text": "upgrading from 9.6 to 9.9 LT LS can be",
+      "offset": 177159,
+      "duration": 5720
+    },
+    {
+      "text": "done directly as there are no LTS",
+      "offset": 180400,
+      "duration": 4000
+    },
+    {
+      "text": "releases in",
+      "offset": 182879,
+      "duration": 5521
+    },
+    {
+      "text": "between however upgrading from 7.6 to",
+      "offset": 184400,
+      "duration": 7040
+    },
+    {
+      "text": "10.2 will require intermediate upgrades",
+      "offset": 188400,
+      "duration": 6119
+    },
+    {
+      "text": "to the LTS in between before upgrading",
+      "offset": 191440,
+      "duration": 4960
+    },
+    {
+      "text": "to",
+      "offset": 194519,
+      "duration": 4360
+    },
+    {
+      "text": "10.2 now that you have your migration",
+      "offset": 196400,
+      "duration": 4399
+    },
+    {
+      "text": "path in place it is time to read through",
+      "offset": 198879,
+      "duration": 4121
+    },
+    {
+      "text": "the release ofg great notes that can be",
+      "offset": 200799,
+      "duration": 4720
+    },
+    {
+      "text": "found on our documentation",
+      "offset": 203000,
+      "duration": 4840
+    },
+    {
+      "text": "page this contains specific",
+      "offset": 205519,
+      "duration": 4881
+    },
+    {
+      "text": "recommendation we provide when upgrading",
+      "offset": 207840,
+      "duration": 4959
+    },
+    {
+      "text": "between different versions We also",
+      "offset": 210400,
+      "duration": 4320
+    },
+    {
+      "text": "recommend that you review your scanner",
+      "offset": 212799,
+      "duration": 3881
+    },
+    {
+      "text": "and build wrapper versions and upgrade",
+      "offset": 214720,
+      "duration": 3560
+    },
+    {
+      "text": "those at the same",
+      "offset": 216680,
+      "duration": 4440
+    },
+    {
+      "text": "time for Enterprise and data center",
+      "offset": 218280,
+      "duration": 4720
+    },
+    {
+      "text": "addition users your sonar Cube",
+      "offset": 221120,
+      "duration": 3839
+    },
+    {
+      "text": "subscription comes with additional",
+      "offset": 223000,
+      "duration": 4519
+    },
+    {
+      "text": "staging licenses and we recommend that",
+      "offset": 224959,
+      "duration": 4121
+    },
+    {
+      "text": "you practice your upgrade on those",
+      "offset": 227519,
+      "duration": 4041
+    },
+    {
+      "text": "instances first please also know that",
+      "offset": 229080,
+      "duration": 4680
+    },
+    {
+      "text": "for the data center Edition you will",
+      "offset": 231560,
+      "duration": 4160
+    },
+    {
+      "text": "need to switch off all application and",
+      "offset": 233760,
+      "duration": 4920
+    },
+    {
+      "text": "search nodes before performing the",
+      "offset": 235720,
+      "duration": 4799
+    },
+    {
+      "text": "upgrade",
+      "offset": 238680,
+      "duration": 4240
+    },
+    {
+      "text": "if you have thirdparty plugins installed",
+      "offset": 240519,
+      "duration": 4360
+    },
+    {
+      "text": "you may need to manually install newer",
+      "offset": 242920,
+      "duration": 3800
+    },
+    {
+      "text": "versions of your plugins that are",
+      "offset": 244879,
+      "duration": 4241
+    },
+    {
+      "text": "compatible with your chosen target sonar",
+      "offset": 246720,
+      "duration": 4000
+    },
+    {
+      "text": "Cube",
+      "offset": 249120,
+      "duration": 4000
+    },
+    {
+      "text": "version you can use the plug-in version",
+      "offset": 250720,
+      "duration": 4599
+    },
+    {
+      "text": "Matrix available in our documentation",
+      "offset": 253120,
+      "duration": 4320
+    },
+    {
+      "text": "page to check if your version of the",
+      "offset": 255319,
+      "duration": 3961
+    },
+    {
+      "text": "plug-in is still compatible with your",
+      "offset": 257440,
+      "duration": 4840
+    },
+    {
+      "text": "new sonar Cube",
+      "offset": 259280,
+      "duration": 3000
+    },
+    {
+      "text": "version for the actual upgrade of your",
+      "offset": 262479,
+      "duration": 5121
+    },
+    {
+      "text": "sonar Cube version our documentation has",
+      "offset": 265040,
+      "duration": 4159
+    },
+    {
+      "text": "an upgrade guide that provides",
+      "offset": 267600,
+      "duration": 3599
+    },
+    {
+      "text": "comprehens ensive information when",
+      "offset": 269199,
+      "duration": 3321
+    },
+    {
+      "text": "performing your",
+      "offset": 271199,
+      "duration": 3641
+    },
+    {
+      "text": "upgrade depending on your sonar Cube",
+      "offset": 272520,
+      "duration": 4480
+    },
+    {
+      "text": "deployment you can either upgrade from a",
+      "offset": 274840,
+      "duration": 5960
+    },
+    {
+      "text": "zip file Docker image or a Helm chart",
+      "offset": 277000,
+      "duration": 5759
+    },
+    {
+      "text": "for example if your Center cube is",
+      "offset": 280800,
+      "duration": 4480
+    },
+    {
+      "text": "deployed via a Docker container you will",
+      "offset": 282759,
+      "duration": 6641
+    },
+    {
+      "text": "first need to stop and remove your",
+      "offset": 285280,
+      "duration": 4120
+    },
+    {
+      "text": "container then all you need to do is to",
+      "offset": 296160,
+      "duration": 4120
+    },
+    {
+      "text": "run your Docker command again for your",
+      "offset": 298520,
+      "duration": 4040
+    },
+    {
+      "text": "sonar Cube container but remember to",
+      "offset": 300280,
+      "duration": 4080
+    },
+    {
+      "text": "point it to the correct image of your",
+      "offset": 302560,
+      "duration": 3680
+    },
+    {
+      "text": "target sonar Cube",
+      "offset": 304360,
+      "duration": 4559
+    },
+    {
+      "text": "version in this case I am updating the",
+      "offset": 306240,
+      "duration": 4920
+    },
+    {
+      "text": "image in my Docker compose yaml and",
+      "offset": 308919,
+      "duration": 6361
+    },
+    {
+      "text": "deploying my new sonar Cube using Docker",
+      "offset": 311160,
+      "duration": 4120
+    },
+    {
+      "text": "compose if your sonar Cube instance was",
+      "offset": 316000,
+      "duration": 5039
+    },
+    {
+      "text": "deployed via a Helm chart or if you",
+      "offset": 318720,
+      "duration": 4680
+    },
+    {
+      "text": "using the official sonar Cube Helm chart",
+      "offset": 321039,
+      "duration": 4081
+    },
+    {
+      "text": "all you need to do is to change the",
+      "offset": 323400,
+      "duration": 4239
+    },
+    {
+      "text": "sonar Cube version in your values. yaml",
+      "offset": 325120,
+      "duration": 5079
+    },
+    {
+      "text": "file in this case I am upgrading from",
+      "offset": 327639,
+      "duration": 4441
+    },
+    {
+      "text": "9.9 to",
+      "offset": 330199,
+      "duration": 4081
+    },
+    {
+      "text": "10.2.1 then all you have to do is",
+      "offset": 332080,
+      "duration": 4440
+    },
+    {
+      "text": "redeploy your sonar Cube using the helm",
+      "offset": 334280,
+      "duration": 6080
+    },
+    {
+      "text": "chart with your values. yaml",
+      "offset": 336520,
+      "duration": 3840
+    },
+    {
+      "text": "file to perform the upgrade manually",
+      "offset": 344600,
+      "duration": 5240
+    },
+    {
+      "text": "from a zip file first download the zip",
+      "offset": 347199,
+      "duration": 6041
+    },
+    {
+      "text": "file for your Target soner Cube",
+      "offset": 349840,
+      "duration": 5960
+    },
+    {
+      "text": "version then unzip it to a fresh",
+      "offset": 353240,
+      "duration": 5079
+    },
+    {
+      "text": "directory if the sonar Cube installation",
+      "offset": 355800,
+      "duration": 4959
+    },
+    {
+      "text": "directory is in your path make sure that",
+      "offset": 358319,
+      "duration": 5720
+    },
+    {
+      "text": "that is also updated",
+      "offset": 360759,
+      "duration": 3280
+    },
+    {
+      "text": "accordingly next update your sonar.",
+      "offset": 365440,
+      "duration": 5319
+    },
+    {
+      "text": "properties file in the new installation",
+      "offset": 368400,
+      "duration": 4440
+    },
+    {
+      "text": "directory so that all relevant",
+      "offset": 370759,
+      "duration": 4201
+    },
+    {
+      "text": "parameters and most importantly your",
+      "offset": 372840,
+      "duration": 4600
+    },
+    {
+      "text": "database connection parameters are all",
+      "offset": 374960,
+      "duration": 4560
+    },
+    {
+      "text": "propagated into the new sonar.",
+      "offset": 377440,
+      "duration": 4920
+    },
+    {
+      "text": "properties file please note that you",
+      "offset": 379520,
+      "duration": 4840
+    },
+    {
+      "text": "can't just copy and paste the sonar.",
+      "offset": 382360,
+      "duration": 4279
+    },
+    {
+      "text": "properties file into the new",
+      "offset": 384360,
+      "duration": 4600
+    },
+    {
+      "text": "installation directory as that file",
+      "offset": 386639,
+      "duration": 5840
+    },
+    {
+      "text": "might have change with the newer",
+      "offset": 388960,
+      "duration": 3519
+    },
+    {
+      "text": "version after this you are now all set",
+      "offset": 394919,
+      "duration": 4921
+    },
+    {
+      "text": "to start up your sonar Cube again this",
+      "offset": 397360,
+      "duration": 5239
+    },
+    {
+      "text": "might take a few",
+      "offset": 399840,
+      "duration": 2759
+    },
+    {
+      "text": "minutes whether you are upgrading via a",
+      "offset": 414800,
+      "duration": 5280
+    },
+    {
+      "text": "Helm chart socer image or manual via a",
+      "offset": 417240,
+      "duration": 5399
+    },
+    {
+      "text": "zip file once your new sonar cube is up",
+      "offset": 420080,
+      "duration": 5119
+    },
+    {
+      "text": "and running navigate to your sonar Cube",
+      "offset": 422639,
+      "duration": 5560
+    },
+    {
+      "text": "URL back/ setup and follow the",
+      "offset": 425199,
+      "duration": 5000
+    },
+    {
+      "text": "instructions there for your database to",
+      "offset": 428199,
+      "duration": 4361
+    },
+    {
+      "text": "finish",
+      "offset": 430199,
+      "duration": 2361
+    },
+    {
+      "text": "migrating it is also ideal to trigger",
+      "offset": 439280,
+      "duration": 4759
+    },
+    {
+      "text": "the analysis of all your projects again",
+      "offset": 441759,
+      "duration": 4521
+    },
+    {
+      "text": "so you can get more updated data",
+      "offset": 444039,
+      "duration": 4081
+    },
+    {
+      "text": "especially with any new rules that have",
+      "offset": 446280,
+      "duration": 3720
+    },
+    {
+      "text": "been added",
+      "offset": 448120,
+      "duration": 3560
+    },
+    {
+      "text": "finally once you have upgraded your",
+      "offset": 450000,
+      "duration": 4000
+    },
+    {
+      "text": "sonar Cube You should also rebuild your",
+      "offset": 451680,
+      "duration": 5199
+    },
+    {
+      "text": "database indices to refresh the database",
+      "offset": 454000,
+      "duration": 5000
+    },
+    {
+      "text": "statistics and follow the instructions",
+      "offset": 456879,
+      "duration": 3921
+    },
+    {
+      "text": "in our documentation here for your",
+      "offset": 459000,
+      "duration": 4280
+    },
+    {
+      "text": "chosen",
+      "offset": 460800,
+      "duration": 2480
+    },
+    {
+      "text": "database",
+      "offset": 470240,
+      "duration": 3000
+    }
+  ],
+  "fullText": "[Music] hi this is Ali from sonar in this video we will look at upgrading your sonar Cube instance from one version to another we will look at what to do before you upgrade how to perform your upgrade and what to do after the upgrade before you upgrade it is important that you decide your target version map out your migration path read through our release upgrade notes and practice your upgrade on Commercial staging license the first step is to decide which version to upgrade to roughly every 18 months sonar releases a LTS long-term support version that consists of all the features and Bug fixes introduced in sonar Cube since the last LTS there is a grace period of 6 months after the LTS has been been released after which all versions below the LTS will no longer be supported and we recommend upgrading to LTS version to stay up toate with our product features and Bug fixes in addition to the LTS sonar Cube releases for latest versions also happens every 2 to 3 months these latest versions correspond to the incremental functional changes within the major release cycle that will eventually culminate in the Nyx LTS so the choice is yours you can either upgrade to the LTS version or the latest version note that it is not possible to perform version downgrades and our recommendation is always to make sure you're at least on the latest LTS version it is also possible to upgrade your sonar Cube Edition alongside the version just make sure you select the correct package you want after deciding on the version and addition the next thing to do is to map out your upgrade migration path this depends on a Target version and how many LTS releases there has been between that and your current version the rule here is in your migration path you should upgrade to each intermediate LTS version between your current and Target version in order for the correct database schemas to be applied in the correct order here are a few examples if you're upgrading from 8.9 to 9.9 LTS there were no other LTS releases in between so you can upgrade from 8.9 to 9.9 directly however if you're upgrading from 7.9 LTS to 9.9 LTS there is one LTS 8.9 in between so you need to First perform an intermediate upgrade to 8.9 LTS first before upgrading to the 9.9 LTS the same principle applies for upgrading from non-lts versions upgrading from 9.6 to 9.9 LT LS can be done directly as there are no LTS releases in between however upgrading from 7.6 to 10.2 will require intermediate upgrades to the LTS in between before upgrading to 10.2 now that you have your migration path in place it is time to read through the release ofg great notes that can be found on our documentation page this contains specific recommendation we provide when upgrading between different versions We also recommend that you review your scanner and build wrapper versions and upgrade those at the same time for Enterprise and data center addition users your sonar Cube subscription comes with additional staging licenses and we recommend that you practice your upgrade on those instances first please also know that for the data center Edition you will need to switch off all application and search nodes before performing the upgrade if you have thirdparty plugins installed you may need to manually install newer versions of your plugins that are compatible with your chosen target sonar Cube version you can use the plug-in version Matrix available in our documentation page to check if your version of the plug-in is still compatible with your new sonar Cube version for the actual upgrade of your sonar Cube version our documentation has an upgrade guide that provides comprehens ensive information when performing your upgrade depending on your sonar Cube deployment you can either upgrade from a zip file Docker image or a Helm chart for example if your Center cube is deployed via a Docker container you will first need to stop and remove your container then all you need to do is to run your Docker command again for your sonar Cube container but remember to point it to the correct image of your target sonar Cube version in this case I am updating the image in my Docker compose yaml and deploying my new sonar Cube using Docker compose if your sonar Cube instance was deployed via a Helm chart or if you using the official sonar Cube Helm chart all you need to do is to change the sonar Cube version in your values. yaml file in this case I am upgrading from 9.9 to 10.2.1 then all you have to do is redeploy your sonar Cube using the helm chart with your values. yaml file to perform the upgrade manually from a zip file first download the zip file for your Target soner Cube version then unzip it to a fresh directory if the sonar Cube installation directory is in your path make sure that that is also updated accordingly next update your sonar. properties file in the new installation directory so that all relevant parameters and most importantly your database connection parameters are all propagated into the new sonar. properties file please note that you can't just copy and paste the sonar. properties file into the new installation directory as that file might have change with the newer version after this you are now all set to start up your sonar Cube again this might take a few minutes whether you are upgrading via a Helm chart socer image or manual via a zip file once your new sonar cube is up and running navigate to your sonar Cube URL back/ setup and follow the instructions there for your database to finish migrating it is also ideal to trigger the analysis of all your projects again so you can get more updated data especially with any new rules that have been added finally once you have upgraded your sonar Cube You should also rebuild your database indices to refresh the database statistics and follow the instructions in our documentation here for your chosen database",
+  "fetchedAt": "2026-03-14T09:24:02.179Z"
+}

@@ -1,0 +1,133 @@
+{
+  "videoId": "v2",
+  "youtubeId": "3kcshDYJAEg",
+  "segments": [
+    {
+      "text": "Hi, today I'm going to show you how you can detect\nsecrets before they get leaked and result\nin security incidents.",
+      "offset": 6000,
+      "duration": 6000
+    },
+    {
+      "text": "I'm going to walk you through a demo where\nI'll show you how you can use SonarQube CLI\nto detect secrets.",
+      "offset": 12000,
+      "duration": 8000
+    },
+    {
+      "text": "And if you're a Claude Code user, you definitely\nwant to see how the SonarQube CLI can help you.",
+      "offset": 20000,
+      "duration": 7000
+    },
+    {
+      "text": "AI coding agents read your files to build context.\nThat includes config files, ENV files, and logs.",
+      "offset": 27000,
+      "duration": 7000
+    },
+    {
+      "text": "If any of those contain a live secret,\nit goes straight to the LLM.",
+      "offset": 34000,
+      "duration": 8000
+    },
+    {
+      "text": "You're not going to get a warning.\nThe agent doesn't know that it's doing anything wrong,\nbut the SonarQube CLI fixes that.",
+      "offset": 42000,
+      "duration": 7000
+    },
+    {
+      "text": "I'll set it up in a couple minutes.\nSo you start with one curl command to install.",
+      "offset": 49000,
+      "duration": 8000
+    },
+    {
+      "text": "Okay. And we're also going to want to export that path.\nThe installer updates your shell profile,\nbut you need to reload the path for the current session.",
+      "offset": 57000,
+      "duration": 9000
+    },
+    {
+      "text": "The next thing you need to do is authenticate your CLI\nto connect to SonarQube Cloud or server.",
+      "offset": 66000,
+      "duration": 7000
+    },
+    {
+      "text": "SonarQube Cloud is an automatic code review\nand verification solution. If you don't have access\nto SonarQube Cloud, you can start a free trial\nat sonar.com.",
+      "offset": 73000,
+      "duration": 14000
+    },
+    {
+      "text": "Now run the secret scanner. This is a separate binary\nthat the CLI manages for you and covers over\n400 secret patterns across 248 cloud services.",
+      "offset": 87000,
+      "duration": 16000
+    },
+    {
+      "text": "So here's a database config with hardcoded passwords,\ntwo of them in plain text.\nSo we're going to want to scan it.",
+      "offset": 103000,
+      "duration": 12000
+    },
+    {
+      "text": "So we do that with\nsonar analyze secrets\nand then the file name.",
+      "offset": 115000,
+      "duration": 7000
+    },
+    {
+      "text": "Two secrets were found.\nExit code 51 means secrets detected.\nThat's not an error.",
+      "offset": 122000,
+      "duration": 5000
+    },
+    {
+      "text": "That's the scanner doing its job.\nAny CI pipeline or hook can key off\nthat exit code to block.",
+      "offset": 127000,
+      "duration": 7000
+    },
+    {
+      "text": "Now if we do the same thing for a clean file\nthat has the same structure.",
+      "offset": 134000,
+      "duration": 8000
+    },
+    {
+      "text": "But secrets are in environment variables\nwhere they belong.",
+      "offset": 142000,
+      "duration": 6000
+    },
+    {
+      "text": "So same thing —\nrun sonar analyze secrets on that file.",
+      "offset": 148000,
+      "duration": 6000
+    },
+    {
+      "text": "Clean. The scanner completed successfully.",
+      "offset": 154000,
+      "duration": 4000
+    },
+    {
+      "text": "Now here's the real payoff.\nWe can use one command to protect Claude Code.",
+      "offset": 158000,
+      "duration": 14000
+    },
+    {
+      "text": "This installs two hooks into your project.\nOne scans every file before Claude reads it.",
+      "offset": 172000,
+      "duration": 7000
+    },
+    {
+      "text": "The other scans every prompt you submit.\nIf either finds a secret, it blocks it.\nThe secret never hits the LLM.",
+      "offset": 179000,
+      "duration": 10000
+    },
+    {
+      "text": "Both hooks live right here in your project settings,\nalthough you can also install them globally\nwith a flag.",
+      "offset": 189000,
+      "duration": 9000
+    },
+    {
+      "text": "Zero workflow changes.\nAnd that's it.",
+      "offset": 198000,
+      "duration": 3000
+    },
+    {
+      "text": "Every file read, every prompt scanned automatically.\nSecrets stay local. The SonarQube CLI is in open beta\nright now. Link in the description.",
+      "offset": 201000,
+      "duration": 9000
+    }
+  ],
+  "fullText": "Hi, today I'm going to show you how you can detect\nsecrets before they get leaked and result\nin security incidents. I'm going to walk you through a demo where\nI'll show you how you can use SonarQube CLI\nto detect secrets. And if you're a Claude Code user, you definitely\nwant to see how the SonarQube CLI can help you. AI coding agents read your files to build context.\nThat includes config files, ENV files, and logs. If any of those contain a live secret,\nit goes straight to the LLM. You're not going to get a warning.\nThe agent doesn't know that it's doing anything wrong,\nbut the SonarQube CLI fixes that. I'll set it up in a couple minutes.\nSo you start with one curl command to install. Okay. And we're also going to want to export that path.\nThe installer updates your shell profile,\nbut you need to reload the path for the current session. The next thing you need to do is authenticate your CLI\nto connect to SonarQube Cloud or server. SonarQube Cloud is an automatic code review\nand verification solution. If you don't have access\nto SonarQube Cloud, you can start a free trial\nat sonar.com. Now run the secret scanner. This is a separate binary\nthat the CLI manages for you and covers over\n400 secret patterns across 248 cloud services. So here's a database config with hardcoded passwords,\ntwo of them in plain text.\nSo we're going to want to scan it. So we do that with\nsonar analyze secrets\nand then the file name. Two secrets were found.\nExit code 51 means secrets detected.\nThat's not an error. That's the scanner doing its job.\nAny CI pipeline or hook can key off\nthat exit code to block. Now if we do the same thing for a clean file\nthat has the same structure. But secrets are in environment variables\nwhere they belong. So same thing —\nrun sonar analyze secrets on that file. Clean. The scanner completed successfully. Now here's the real payoff.\nWe can use one command to protect Claude Code. This installs two hooks into your project.\nOne scans every file before Claude reads it. The other scans every prompt you submit.\nIf either finds a secret, it blocks it.\nThe secret never hits the LLM. Both hooks live right here in your project settings,\nalthough you can also install them globally\nwith a flag. Zero workflow changes.\nAnd that's it. Every file read, every prompt scanned automatically.\nSecrets stay local. The SonarQube CLI is in open beta\nright now. Link in the description.",
+  "fetchedAt": "2026-03-14T09:18:41.491Z"
+}

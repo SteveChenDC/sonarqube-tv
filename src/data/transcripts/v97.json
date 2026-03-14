@@ -1,0 +1,1458 @@
+{
+  "videoId": "v97",
+  "youtubeId": "6qUxCKCtJ1M",
+  "segments": [
+    {
+      "text": "Okay, so let's get going. Hello everyone and thank you for joining. And welcome to our webinar entitled Community to Commercial.",
+      "offset": 597,
+      "duration": 9000
+    },
+    {
+      "text": "Why upgrade to Sonar Cube Enterprise Edition? Where we will invite you to join us.",
+      "offset": 9597,
+      "duration": 6000
+    },
+    {
+      "text": "To discover the benefits that Sonar Cube Enterprise Edition will have for you. And your developers.",
+      "offset": 15597,
+      "duration": 6000
+    },
+    {
+      "text": "I'm Andrew, your webinar, your moderator for this webinar I should say which will be presented by Colin from Sonar.",
+      "offset": 21597,
+      "duration": 7000
+    },
+    {
+      "text": "But before I introduce Colin, please allow me to go over a few essential housekeeping points. Session will last for around 45 min and we will include a time for questions and answers at the end.",
+      "offset": 28597,
+      "duration": 15000
+    },
+    {
+      "text": "You are invited to submit your questions at any time. During the webinar via the Q&A box in Zoom.",
+      "offset": 43597,
+      "duration": 8000
+    },
+    {
+      "text": "So that's the little box with the question mark in it you should see at the bottom of your screen.",
+      "offset": 51597,
+      "duration": 5000
+    },
+    {
+      "text": "It is not the chat box. We will not respond to questions in the chat. So please do post your questions.",
+      "offset": 56597,
+      "duration": 1000
+    },
+    {
+      "text": "Using the Q&A box. We have one panelist joining us who is Yassin. Who is our solutions engineer at Sonar and he will be tasked with answering as many of your questions live during the webinar.",
+      "offset": 57597,
+      "duration": 20000
+    },
+    {
+      "text": "So once again, do feel free to submit your questions at any time. And don't wait until the end.",
+      "offset": 77597,
+      "duration": 6000
+    },
+    {
+      "text": "The session will be recorded. And we will send out a link via email in the coming days. Finally, at the end of this webinar, a short survey will pop up on your screen.",
+      "offset": 83597,
+      "duration": 12000
+    },
+    {
+      "text": "Consider your feedback to be a gift. So thank you in advance for your participation.",
+      "offset": 95597,
+      "duration": 7000
+    },
+    {
+      "text": "So without further ado, I'd like to introduce to you today Colin, Colin is a community manager at Sonar.",
+      "offset": 102597,
+      "duration": 9000
+    },
+    {
+      "text": "So if we move to the BIO screen, you'll see that years ago he was actually responsible for an enterprise edition instance of SONA Cube and his former job.",
+      "offset": 111597,
+      "duration": 10000
+    },
+    {
+      "text": "He knows Sona Q probably better than anyone I know, so we're in good hands. Before Colin starts, I'd like to kick us off by taking a minute to ask you a couple of questions.",
+      "offset": 121597,
+      "duration": 12000
+    },
+    {
+      "text": "Using a pole. Question one. Which edition of Sona Cube Are you currently using? Please submit your answers now.",
+      "offset": 133597,
+      "duration": 16000
+    },
+    {
+      "text": "Fantastic.",
+      "offset": 149597,
+      "duration": 6000
+    },
+    {
+      "text": "That's great. A lot of community users there. And also a few enterprise edition users too.",
+      "offset": 155597,
+      "duration": 7000
+    },
+    {
+      "text": "And Also good, some people not currently using SO. No cube at all.",
+      "offset": 162597,
+      "duration": 10000
+    },
+    {
+      "text": "Let's close that poll there. And move on to the second question. Which is, which feature are you looking forward to discovering the most?",
+      "offset": 172597,
+      "duration": 12000
+    },
+    {
+      "text": "Which enterprise feature, in fact.",
+      "offset": 184597,
+      "duration": 4000
+    },
+    {
+      "text": "So feel free to submit your answers now.",
+      "offset": 188597,
+      "duration": 5000
+    },
+    {
+      "text": "And I know Colin will be very excited to understand. The areas of interest from you all.",
+      "offset": 193597,
+      "duration": 7000
+    },
+    {
+      "text": "It looks fairly balanced, although advanced bug and vulnerability detection does seem to be. Bleeding at the moment.",
+      "offset": 200597,
+      "duration": 12000
+    },
+    {
+      "text": "Fantastic. Just a few more seconds for any other final answers there.",
+      "offset": 212597,
+      "duration": 8000
+    },
+    {
+      "text": "And I think we're good. Thank you. Excellent. Thanks for your participation and now Colin.",
+      "offset": 220597,
+      "duration": 6000
+    },
+    {
+      "text": "Of a",
+      "offset": 226597,
+      "duration": 2000
+    },
+    {
+      "text": "Sure, thanks Andrew. Hey everyone. Like Andrew said, my name is Colin. I'm a community manager at Sonar.",
+      "offset": 228597,
+      "duration": 7000
+    },
+    {
+      "text": "I joined Sonar as a support engineer back in 2,018 but like Andrew said before that I was actually a Soon our keep administrator at a company.",
+      "offset": 235597,
+      "duration": 7000
+    },
+    {
+      "text": "A big health care company in the US that was using Centre Cubes enterprise edition. But today I am a community manager.",
+      "offset": 242597,
+      "duration": 9000
+    },
+    {
+      "text": "Community is right there in my job title you can always find me at the Sonar community community.com helping users find their way with our products so it makes sense that I spend a lot of my time with our products.",
+      "offset": 251597,
+      "duration": 12000
+    },
+    {
+      "text": "So it makes sense that I spend a lot of my time talking to folks that use the community edition of Centre Cube, talking to folks that use the community edition of Centre Cube.",
+      "offset": 263597,
+      "duration": 8000
+    },
+    {
+      "text": "And people offers users quite a lot of value. With the community edition of Sonar Cube, users can analyze 20 programming languages including very popular languages like Java, C sharp, JavaScript, Typescript.",
+      "offset": 271597,
+      "duration": 13000
+    },
+    {
+      "text": "Python and PHP. And these are all flagship languages for Sonar. So these are languages that we dedicate the most effort to analyzing.",
+      "offset": 284597,
+      "duration": 7000
+    },
+    {
+      "text": "And there are also a lot of other great features that go beyond just language support, like how well Sonar Cube integrates with CICD tools, the quality gate that lets you know your code is ready to go to production or not.",
+      "offset": 291597,
+      "duration": 12000
+    },
+    {
+      "text": "And of course you can start to clean as you code, which means focus on the new code that's being developed and we'll talk a lot more about that soon.",
+      "offset": 303597,
+      "duration": 9000
+    },
+    {
+      "text": "And this is really in line with our four-point commitment to open source, which starts with you know, our open offerings must provide value.",
+      "offset": 312597,
+      "duration": 8000
+    },
+    {
+      "text": "And to me, this is always felt like our secret sauce. A developer can download Sonar Cube for personal use or for their team and immediately start to get some value.",
+      "offset": 320597,
+      "duration": 9000
+    },
+    {
+      "text": "Out of it. That's why our community edition is used by over 400,000 organizations and that's all without having to contact a salesperson or get a license, you know, buying stuff in a company can be hard.",
+      "offset": 329597,
+      "duration": 14000
+    },
+    {
+      "text": "Trust me, it's hard at soar. 2. And very importantly, developers love using Sonar Cube.",
+      "offset": 343597,
+      "duration": 6000
+    },
+    {
+      "text": "Typically they're the ones that suggest starting to Use it. But sometimes our users are surprised to learn that they actually can get more than what they already have.",
+      "offset": 349597,
+      "duration": 4000
+    },
+    {
+      "text": "You probably had a clue. When you signed up for this webinar, Centre Cube offers 3 commercial editions.",
+      "offset": 353597,
+      "duration": 13000
+    },
+    {
+      "text": "So they're tiers above the community edition and those tiers offer some additional value when organizations are really ready to commit to clean code.",
+      "offset": 366597,
+      "duration": 9000
+    },
+    {
+      "text": "You know, as organizations use on our cube more, their needs tend to evolve and advanced features can really help those organizations meet their goals.",
+      "offset": 375597,
+      "duration": 6000
+    },
+    {
+      "text": "The truth is that large organizations have different needs than the individual developers and smaller development teams that the community edition is targeted at.",
+      "offset": 381597,
+      "duration": 13000
+    },
+    {
+      "text": "As we'll discuss in a moment, it can be really hard to apply the Clean as you code methodology with the community edition.",
+      "offset": 394597,
+      "duration": 6000
+    },
+    {
+      "text": "So in our cube is less integrated with DevOps platforms. Performance of the community edition does not scale as adoption of the platform grows.",
+      "offset": 400597,
+      "duration": 7000
+    },
+    {
+      "text": "Other tools might start getting evaluated for more advanced needs like SAS or security analysis. Not all languages that get used in large companies are covered and enterprise-wide reporting is at best manual or at worst just doesn't happen at all.",
+      "offset": 407597,
+      "duration": 17000
+    },
+    {
+      "text": "So while the Centre Keep Community Edition is a great way to get started using Sonar Cube, Centre Keeps Enterprise Edition really helps big organizations get more out of Sonar cube.",
+      "offset": 424597,
+      "duration": 11000
+    },
+    {
+      "text": "And really scale sonar cube to the company's needs. And these features on the on the right are the features that we're going to discuss in today's webinar.",
+      "offset": 435597,
+      "duration": 4000
+    },
+    {
+      "text": "So 1st we're going to discuss branch and pull request analysis and how those features really let you clean as you code.",
+      "offset": 439597,
+      "duration": 13000
+    },
+    {
+      "text": "We'll also discuss some features that are really important in an enterprise environment. Including supporting complex DevOps platform landscapes.",
+      "offset": 452597,
+      "duration": 8000
+    },
+    {
+      "text": "We'll also discuss the additional languages that are supported by Sonarcube Enterprise Edition and for the languages that you might already be analyzing.",
+      "offset": 460597,
+      "duration": 7000
+    },
+    {
+      "text": "We'll discuss advanced bug and vulnerability detection and what we call deeper SAS based on the poll.",
+      "offset": 467597,
+      "duration": 5000
+    },
+    {
+      "text": "It sounds like a lot of you came to hear about that. And finally, we'll talk about the better scalability and performance that's included in sort of our Q enterprise edition.",
+      "offset": 472597,
+      "duration": 9000
+    },
+    {
+      "text": "Before talking about reporting, which will include a demo, of our portfolios feature.",
+      "offset": 481597,
+      "duration": 6000
+    },
+    {
+      "text": "My goal in this webinar is really to just convince you that it's least that it's worth at least requesting a trial of our enterprise edition and trying it out.",
+      "offset": 487597,
+      "duration": 9000
+    },
+    {
+      "text": "I really believe in these features to me, the Centre Cube that I know and love and I've been working with for 7 years wouldn't be a sonar cube without them.",
+      "offset": 496597,
+      "duration": 8000
+    },
+    {
+      "text": "My goal here is just to convince you that there might be a little bit more value worth exploring deeper with a trial.",
+      "offset": 504597,
+      "duration": 7000
+    },
+    {
+      "text": "So let's start off by talking about branch and pull request analysis for full transparency. I'm starting off with some features that are also available in Centre Keeps Developer Edition.",
+      "offset": 511597,
+      "duration": 7000
+    },
+    {
+      "text": "Their commercial features, but the main focus of this webinar overall is really Sonar Cubes Enterprise Edition.",
+      "offset": 518597,
+      "duration": 10000
+    },
+    {
+      "text": "So, one of the foundational aspects of Centre Cube is a methodology that we called clean as you code.",
+      "offset": 528597,
+      "duration": 6000
+    },
+    {
+      "text": "L as you code emphasizes that after analyzing your code with Sonar Cube, instead of trying to tackle all of the issues that it finds, you should just focus on the new issues that are in the code that you're adding or changing in the repository.",
+      "offset": 534597,
+      "duration": 12000
+    },
+    {
+      "text": "And because by some estimates, 20% of enterprise code bases will change every year. The strategy means that your code base will progressively become clean over time with no additional effort other than making sure that the new code is clean.",
+      "offset": 546597,
+      "duration": 13000
+    },
+    {
+      "text": "There's a chart on the screen right now which actually shows the progression of Sonar keeps own code base over time since it started in 2,010 is when we have the history back too and you can see that most of the code that was added in 2,010 doesn't exist in the repository anymore.",
+      "offset": 559597,
+      "duration": 14000
+    },
+    {
+      "text": "All that code has been changed. Code has been added. Code has been modified and as long as all of that changed code is you you ultimately end up with a lean code base.",
+      "offset": 573597,
+      "duration": 10000
+    },
+    {
+      "text": "And we really believe in this because the alternative, you know, trying to tackle all issues at once, it just doesn't work.",
+      "offset": 583597,
+      "duration": 7000
+    },
+    {
+      "text": "It ends up leading to developer burnout and eventually tools like that just get switched off. And so, keeps community edition lets you start down this path of clean as you code, clearly separating overall code from new code.",
+      "offset": 590597,
+      "duration": 11000
+    },
+    {
+      "text": "But the tricky thing is that community edition only lets you analyze the main branch of your project.",
+      "offset": 601597,
+      "duration": 8000
+    },
+    {
+      "text": "And by the time that unclean code has been merged into your main branch, you're more or less already losing the battle to prevent code issues from getting into production.",
+      "offset": 609597,
+      "duration": 9000
+    },
+    {
+      "text": "I think we all know that it's much harder to address issues once they've been merged into your main branch and it will probably lead it to a buildup of technical debts over time.",
+      "offset": 618597,
+      "duration": 9000
+    },
+    {
+      "text": "Now you can try fighting this using tools like Sonar L, which is our IDE extension for Visual Studio, VS Code, Intel, J, and Eclipse.",
+      "offset": 627597,
+      "duration": 9000
+    },
+    {
+      "text": "So sonar lint detects issues while the developer is coding right in the IDE, but it can be difficult to make sure that all of your developers are using Sonar L and it doesn't actually provide any controls to prevent you from committing and ultimately merging on clean code.",
+      "offset": 636597,
+      "duration": 13000
+    },
+    {
+      "text": "It will just warn developers about the issues while they're developing. And the real solution can be found in Centrecubes Enterprise Edition where you have access to branch and pull request analysis.",
+      "offset": 649597,
+      "duration": 4000
+    },
+    {
+      "text": "The goal here is to focus specifically on the changed code and offer feedback to the developer before that change is merged in the code base.",
+      "offset": 653597,
+      "duration": 15000
+    },
+    {
+      "text": "For example, here we have a pull request that would introduce 2 new issues into the main branch of a project.",
+      "offset": 668597,
+      "duration": 1000
+    },
+    {
+      "text": "And because Sonar Cube is analyzing this request. It can give feedback to the developer right in their DevOps platform.",
+      "offset": 669597,
+      "duration": 11000
+    },
+    {
+      "text": "Here we have a comment on the pull request in GitHub. And the developer can even block the merge of the pull request until those issues are fixed and the quality gate is passing.",
+      "offset": 680597,
+      "duration": 11000
+    },
+    {
+      "text": "What this really means is that Sonar Keep is no longer something that's living separately from the rest of the software development workflow, you know, web application that sits separately from everything else going on.",
+      "offset": 691597,
+      "duration": 9000
+    },
+    {
+      "text": "But actually requiring a passing quality gate in order for that code to be merged into the main branch. And this is really a game changer for applying the clean as you code methodology.",
+      "offset": 700597,
+      "duration": 11000
+    },
+    {
+      "text": "This works across all of our supported DevOps platforms, so that's Azure DevOps, GitHub, Bitbucket, and Gitlab.",
+      "offset": 711597,
+      "duration": 6000
+    },
+    {
+      "text": "And while any pipeline can support this, almost no configuration is needed to get it working. With the CI providers that you see on the screen.",
+      "offset": 717597,
+      "duration": 9000
+    },
+    {
+      "text": "You can make it work with any CI provider with a couple of configuration parameters, but with these providers, more or less it just works.",
+      "offset": 726597,
+      "duration": 6000
+    },
+    {
+      "text": "And we know how important that is when a tool like Sonar Cube, not just for an individual project or for one team, but across an enterprise.",
+      "offset": 732597,
+      "duration": 8000
+    },
+    {
+      "text": "And so if you're already running Centre Keep Analysis with one of these tools, you just have to make sure that the same job is targeting your pull requests.",
+      "offset": 740597,
+      "duration": 8000
+    },
+    {
+      "text": "That's probably one line. In your pipeline file. And so pull request analysis not only shows you what issues you might be introducing into your main branch, but as of sonar keeps very latest releases, it can also show you what issues that exist in the target branch will be fixed by merging the pull request.",
+      "offset": 748597,
+      "duration": 17000
+    },
+    {
+      "text": "And so this means that your developers can be sure that they're fixing an issue. With the change that they're making.",
+      "offset": 765597,
+      "duration": 4000
+    },
+    {
+      "text": "And this might sound trivial, but it's actually taken us a quite a long time to get rights and we're really proud of the developer experience here.",
+      "offset": 769597,
+      "duration": 11000
+    },
+    {
+      "text": "Now, I focused a lot on pull requests because That's where we think a lot of the value is.",
+      "offset": 780597,
+      "duration": 6000
+    },
+    {
+      "text": "But software projects tend to have multiple branches that reflect multiple states of Development or deployment or long term maintenance branches that are maintained alongside the latest and greatest.",
+      "offset": 786597,
+      "duration": 11000
+    },
+    {
+      "text": "We have that for Sonar Cube, we maintain our 9. Point 9 LTA branch while also developing on main branch the very latest releases of Sonar Cube.",
+      "offset": 797597,
+      "duration": 10000
+    },
+    {
+      "text": "But this isn't just true for software companies. Like us, this is especially true in enterprise environments where releases are planned.",
+      "offset": 807597,
+      "duration": 7000
+    },
+    {
+      "text": "Far in advance and you might have different branches for your September release and your December release. The Sonarky Enterprise Edition lets you track the status of all of the branches in your code base.",
+      "offset": 814597,
+      "duration": 11000
+    },
+    {
+      "text": "So no stone goes. And you're not just limited to the main branch of your project like you are.",
+      "offset": 825597,
+      "duration": 7000
+    },
+    {
+      "text": "With the community addition. And so a lot of the value that I've just talked about really relies on a tight integration.",
+      "offset": 832597,
+      "duration": 2000
+    },
+    {
+      "text": "Between Centre Cube and DevOps platform. So GitHub, Gitlab, Azure DevOps and Bitbucket.",
+      "offset": 834597,
+      "duration": 11000
+    },
+    {
+      "text": "How, but it's worth noting again, be fully transparent that that feature is also available in our developer edition.",
+      "offset": 845597,
+      "duration": 5000
+    },
+    {
+      "text": "It's a commercial feature but doesn't start in Enterprise Edition. The developer edition works really well if you have a relatively simple DevOps platform landscape at work.",
+      "offset": 850597,
+      "duration": 10000
+    },
+    {
+      "text": "So that means that you're connecting to a single instance of GitHub, Gitlab, Azure DevOps, or Bitbucket.",
+      "offset": 860597,
+      "duration": 6000
+    },
+    {
+      "text": "However, and we know that this isn't always the case for bigger organizations as companies acquire other businesses with their own DevOps toolkits or migrate from on-premise solutions to SAS offerings of these platforms.",
+      "offset": 866597,
+      "duration": 13000
+    },
+    {
+      "text": "You can often really end up with a complex DevOps platform landscape. And soner keeps enterprise edition addresses this complexity by allowing you to have an unlimited number of DevOps platform integrations, not just one per platform.",
+      "offset": 879597,
+      "duration": 14000
+    },
+    {
+      "text": "Oh, what this means is that you don't have to choose which instance of a DevOps platform gets the quote unquote easy onboarding path for projects or which instance has the projects where PR.",
+      "offset": 893597,
+      "duration": 10000
+    },
+    {
+      "text": "Would be the most valuable. And so our queue will accommodate whatever mess you have. Internally.",
+      "offset": 903597,
+      "duration": 5000
+    },
+    {
+      "text": "And what this really means is that there's room for everyone. One instance of Centre Q can cover a huge number of teams at your company and this will become especially valuable when we talk about reporting, which we'll talk about a little bit later on.",
+      "offset": 908597,
+      "duration": 15000
+    },
+    {
+      "text": "But something that we haven't talked about yet, is language supports. So as I mentioned at the top of this presentation, Centre Kube Community Edition supports 20 programming languages, including some of the most popular languages that are used by developers these days.",
+      "offset": 923597,
+      "duration": 15000
+    },
+    {
+      "text": "The enterprise edition of Sonar Cube brings up that number and adds support for these additional 14 languages.",
+      "offset": 938597,
+      "duration": 7000
+    },
+    {
+      "text": "So maybe you haven't seen some of these logos in a while or you know that somebody at your company is developing in these languages and you're thankful that it isn't you.",
+      "offset": 945597,
+      "duration": 10000
+    },
+    {
+      "text": "We would love if all new development used the most modern languages, but we also know that that just isn't the case and often these projects are written off as kind of relics of the past that can't benefit from the same tools that drive software development today.",
+      "offset": 955597,
+      "duration": 13000
+    },
+    {
+      "text": "But we know at Sonar that that just isn't true. I believe it or not, Starcke Enterprise Edition also supports Kobol, a language that has been around for over 60 years and while Kobol may not be the 1st choice for new projects.",
+      "offset": 968597,
+      "duration": 13000
+    },
+    {
+      "text": "Many large organizations, particularly those in the financial and government sectors, still rely on COBOL applications to run their business.",
+      "offset": 981597,
+      "duration": 12000
+    },
+    {
+      "text": "And I always enjoy these kind of articles that pop up every few months. The world depends on 60 year old code that no one knows anymore because it represents a real risk because experienced cobalt developers are retiring and maintaining and updating these legacy systems can become increasingly Alan.",
+      "offset": 993597,
+      "duration": 20000
+    },
+    {
+      "text": "And Sonar keeps Kobol support, which includes over 200 rules, or almost 200 rules, I'm sorry, helps organizations ensure the quality and maintainability of their Cobalt code base even as that pool of experts.",
+      "offset": 1013597,
+      "duration": 12000
+    },
+    {
+      "text": "Shrinks. And what it really means is that your mainframe developers can modernize their development alongside your developers who are working on newer projects.",
+      "offset": 1025597,
+      "duration": 10000
+    },
+    {
+      "text": "Clean code is not just for the shiny new languages. Cobalt is a bit of an extreme example.",
+      "offset": 1035597,
+      "duration": 8000
+    },
+    {
+      "text": "There are other languages supported by the enterprise edition like C and C. They're also not the the most modern languages, but they're still very crucial in many industries today, especially when performance.",
+      "offset": 1043597,
+      "duration": 13000
+    },
+    {
+      "text": "Matters. Center keeps supports analyzing C and C plus with around 500 600 rules respectively.",
+      "offset": 1056597,
+      "duration": 7000
+    },
+    {
+      "text": "The analysis even targets the specific version of these languages. The latest version of these languages. We have rules specifically designed to help developers use the latest features of the latest versions of these languages.",
+      "offset": 1063597,
+      "duration": 15000
+    },
+    {
+      "text": "And you may have seen a lot of news these days about programming languages that aren't memory safe and the threats that those languages pose.",
+      "offset": 1078597,
+      "duration": 1000
+    },
+    {
+      "text": "Centre cube has a number of rules that can and help ensure that you're using these very flexible languages in safe ways.",
+      "offset": 1079597,
+      "duration": 15000
+    },
+    {
+      "text": "And all of that has to do with sonar cube, but center key enterprise edition also integrates with Sonar L, our IDE plug-in and its connected mode.",
+      "offset": 1094597,
+      "duration": 8000
+    },
+    {
+      "text": "And when using the connected mode with Centre Keep Enterprise Edition, you get access to analyzing languages that you wouldn't have.",
+      "offset": 1102597,
+      "duration": 9000
+    },
+    {
+      "text": "And so we mentioned Sarlin earlier. It's the IDE extension that gives real time feedback as developers are coding in their IDE, without having to switch context, which means that your developers in these languages can get immediate guidance on issues that would be raised in Sonar Cube if that, that, code was submitted to Sonar Cube and for C and C, there are even quick fixes with",
+      "offset": 1111597,
+      "duration": 24000
+    },
+    {
+      "text": "just. One click fixes for issues that are being raised for a number of the rules that we offer for those languages.",
+      "offset": 1135597,
+      "duration": 8000
+    },
+    {
+      "text": "What I really want you to take away from all of this is that if Centre Cube is already helping your developers write better code, there may be a large number of developers in your organization that can also be supported by Sonar Cube if they have an instance where that language is supported.",
+      "offset": 1143597,
+      "duration": 16000
+    },
+    {
+      "text": "The enterprise edition of SOME, RICE, you really opens up the door to a lot more code that can be made clean.",
+      "offset": 1159597,
+      "duration": 8000
+    },
+    {
+      "text": "And so now we come to the section that I think most of you were excited to learn about, which is advanced bug and vulnerability detection.",
+      "offset": 1167597,
+      "duration": 8000
+    },
+    {
+      "text": "So of course it's great to analyze all of your code whether it's in branches or pull requests modern languages or legacy languages but it's also just as important to consider how relevant the issues being raised are.",
+      "offset": 1175597,
+      "duration": 15000
+    },
+    {
+      "text": "You know, at its core. So in our cube tries to find basic issues that should not waste a code reviewer's time and tricky issues that you could never expect a human to find.",
+      "offset": 1190597,
+      "duration": 9000
+    },
+    {
+      "text": "And so Centrecub's Enterprise Edition builds on the issues that can be found with Sonar keeps community edition, adding our most advanced detection engines across our flagship languages.",
+      "offset": 1199597,
+      "duration": 4000
+    },
+    {
+      "text": "These are really rules that go deeper into languages that are already available to analyze in community edition. So what is it that these advanced detections engines can find?",
+      "offset": 1203597,
+      "duration": 13000
+    },
+    {
+      "text": "So Centre Q Enterprise Edition can detect where data is entering an application. That data as flows through the code and raise an issue when that data is being used in an unsafe way.",
+      "offset": 1216597,
+      "duration": 14000
+    },
+    {
+      "text": "This could mean that the code represents a potential vulnerability. Meaning that untrusted data is being used in an unsafe way.",
+      "offset": 1230597,
+      "duration": 7000
+    },
+    {
+      "text": "So in the security context, we would usually call this taint analysis or, SAS. For concrete example, you can consider this piece of code.",
+      "offset": 1237597,
+      "duration": 9000
+    },
+    {
+      "text": "Data is coming from the user and it enters an application only to immediately be used by to be used to execute a SQL statement without any validation or sanitization before it's used.",
+      "offset": 1246597,
+      "duration": 13000
+    },
+    {
+      "text": "Simple example of a pretty substantial security risk. Many of you probably immediately recognize this as code that is susceptible to a SQL injection attack.",
+      "offset": 1259597,
+      "duration": 10000
+    },
+    {
+      "text": "So our key enterprise edition supports the detection of these kinds of attacks even when that data is flowing through many functions and files.",
+      "offset": 1269597,
+      "duration": 8000
+    },
+    {
+      "text": "And this issue is a great example of something else that is special about Sonar Cube, which is really precise information about how to fix the issue at that sonar cube is reporting on.",
+      "offset": 1277597,
+      "duration": 11000
+    },
+    {
+      "text": "Here for SQL injections, Centreube is even able to detect the framework. That is being used here, Python SQLites, and provide the most relevant recommendation about how to fix the issue.",
+      "offset": 1288597,
+      "duration": 13000
+    },
+    {
+      "text": "Released on our cube is a great learning tool in this context for senior developers who need a reminder and even junior developers that have never faced an issue like this before.",
+      "offset": 1301597,
+      "duration": 12000
+    },
+    {
+      "text": "So SQL injection is just one of the security issues that this advanced engine can detect. It also detects many other common vulnerabilities and you can see it some of those called out here.",
+      "offset": 1313597,
+      "duration": 11000
+    },
+    {
+      "text": "This field of analysis. It's called static application security testing or SASS. And we at Sonar are not the only ones doing it.",
+      "offset": 1324597,
+      "duration": 10000
+    },
+    {
+      "text": "So what is it that sets Sonar Cube and Centre Keep Enterprise Edition apart?",
+      "offset": 1334597,
+      "duration": 5000
+    },
+    {
+      "text": "So Our analysis consistently ranks incredibly high in public industry standard open source SAS benchmarks that are used to judge the quality of security results from tools like ours.",
+      "offset": 1339597,
+      "duration": 9000
+    },
+    {
+      "text": "Our true positive rates are over 90% and our false detection rates are absolutely rock bottom. And this really speaks to something that's at the core of all of our analyzers, which is that we would rather not raise a few true positives if it means suppressing a lot of false positives.",
+      "offset": 1348597,
+      "duration": 21000
+    },
+    {
+      "text": "So stated another way, our number one priority is to not flood developers with noise that ultimately waste their time.",
+      "offset": 1369597,
+      "duration": 7000
+    },
+    {
+      "text": "Yeah, as soon as a tool starts to lie to developers, the less that tool is going to be trusted.",
+      "offset": 1376597,
+      "duration": 5000
+    },
+    {
+      "text": "You know, while other tools in our space prioritize giving as many results as possible and making it the developers job to figure out what is important.",
+      "offset": 1381597,
+      "duration": 6000
+    },
+    {
+      "text": "We think that developers deserve a better experience. I'm speaking of other tools in our space, the support for SAS really means that you might no longer need to look at other tools to cover this domain.",
+      "offset": 1387597,
+      "duration": 17000
+    },
+    {
+      "text": "Known for our quality and reliability analysis, but our security analysis is absolutely top tier. And this slide goes a little bit deeper into how well we cover this domain.",
+      "offset": 1404597,
+      "duration": 9000
+    },
+    {
+      "text": "You know, our security engine covers hundreds of most popular frameworks with 0 configuration. But often there are whole teams at big companies designed to build libraries for developers to use internally and those libraries often handle sensitive data.",
+      "offset": 1413597,
+      "duration": 19000
+    },
+    {
+      "text": "So Center Keeps Enterprise Edition and this is exclusive to the Enterprise Edition, includes a feature called Security Engine Custom Configuration that allows you to define which functions of those libraries are sources or syncs or validators and really enhanced Sonar keeps knowledge about your applications by being able to continue to track data.",
+      "offset": 1432597,
+      "duration": 18000
+    },
+    {
+      "text": "Through those, through those libraries. And so that's great. Our SAS capabilities are powerful on their own, but we've also taken this one step further with something that we call Deeper SAS.",
+      "offset": 1450597,
+      "duration": 11000
+    },
+    {
+      "text": "So what I've just explained, tracking data through an application and flagging when untrusted data is used in potentially a harmful way.",
+      "offset": 1461597,
+      "duration": 4000
+    },
+    {
+      "text": "It isn't new, but there's always been a problem with this strategy, which is that usually only project code gets analyzed.",
+      "offset": 1465597,
+      "duration": 12000
+    },
+    {
+      "text": "That is to say, user developed code. As soon as some data enters a dependency and then starts to interact with its own transitive dependencies, that data can get lost and sneaky vulnerabilities end up making their way through.",
+      "offset": 1477597,
+      "duration": 12000
+    },
+    {
+      "text": "The dependencies basically become a black box. And ultimately, this is a partial analysis of your project. And so we have worked very hard to introduce something called deeper.",
+      "offset": 1489597,
+      "duration": 7000
+    },
+    {
+      "text": "SASS. With deeper SAS, we've actually analyzed the top open source libraries for Java, JavaScript, Typescript, and C sharp to model those libraries and their dependencies, which let us find more vulnerabilities than other tools not using this approach.",
+      "offset": 1496597,
+      "duration": 19000
+    },
+    {
+      "text": "We estimate that for every 10 vulnerabilities reported by sonar, we can find one additional vulnerability using this approach.",
+      "offset": 1515597,
+      "duration": 3000
+    },
+    {
+      "text": "And this this feature, deeper SASs, requires no additional configuration. It just comes with the rest of our SAS functionality.",
+      "offset": 1518597,
+      "duration": 13000
+    },
+    {
+      "text": "I haven't really had the chance to talk about. Bug detection, but I want to just have a quick note here.",
+      "offset": 1531597,
+      "duration": 1000
+    },
+    {
+      "text": "To say that we've been able to apply a lot of what we've learned in security analysis to bug detection as well.",
+      "offset": 1532597,
+      "duration": 10000
+    },
+    {
+      "text": "It can be very useful to be able to track data. As it flows through an application, you can imagine.",
+      "offset": 1542597,
+      "duration": 6000
+    },
+    {
+      "text": "Tracking nulls to make sure that nulls aren't being used in the enterprise edition of Summer Cube provides also more advanced bug detection rules using the same idea of tracking data from, where it.",
+      "offset": 1548597,
+      "duration": 12000
+    },
+    {
+      "text": "Originates in an application to where that data ultimately gets used.",
+      "offset": 1560597,
+      "duration": 6000
+    },
+    {
+      "text": "So, we've discussed a lot of features that might increase the load on your Centrecube server.",
+      "offset": 1566597,
+      "duration": 3000
+    },
+    {
+      "text": "The 1st was analyzing branches and pull requests, which will increase the number of analyses submitted to your server.",
+      "offset": 1569597,
+      "duration": 10000
+    },
+    {
+      "text": "The second was being able to connect all of your DevOps platforms, which means that no code can hide from Sonar Cube.",
+      "offset": 1579597,
+      "duration": 6000
+    },
+    {
+      "text": "This might increase the number of projects on your instance. And finally, we've talked about additional language support that might let you onboard other teams to start cube and security analysis that means you might be able to drop other tools in favor of Center Cube.",
+      "offset": 1585597,
+      "duration": 13000
+    },
+    {
+      "text": "An often forgotten feature of Centre Cubes enterprise edition is scalability. In fact, when I 1st started putting together this list of features, I overlooked this one, but it's so crucial in an organization that starts using Sonar Cube more extensively.",
+      "offset": 1598597,
+      "duration": 15000
+    },
+    {
+      "text": "Because Sonar Cube operates like this. An analysis report is sent to Sonar Cube every time the scanner completes successfully.",
+      "offset": 1613597,
+      "duration": 7000
+    },
+    {
+      "text": "That report is then passed on to some of our Keeps Compute Engine, which does all the necessary tasks to process the measures and issues, match the data with preview analyses and perform actions like sending web hooks or decorating pull requests and computing the quality gates.",
+      "offset": 1620597,
+      "duration": 13000
+    },
+    {
+      "text": "And in the community edition, the compute engine can only process one of these tasks at a time. These tasks can take anywhere from seconds to minutes depending on the power of the machine running sonar cube and the size of the analysis report which roughly correlates to the size of the project.",
+      "offset": 1633597,
+      "duration": 19000
+    },
+    {
+      "text": "This limitation, This fact really presents a problem on a busy sonar keep instance because it's the number of projects and analyses grow, the compute engine may struggle to keep up with the incoming reports, which leads to a delay in processing.",
+      "offset": 1652597,
+      "duration": 17000
+    },
+    {
+      "text": "This means that it takes longer to get results and longer to address issues. You have to wait for the results of one analysis to be available until the next one.",
+      "offset": 1669597,
+      "duration": 5000
+    },
+    {
+      "text": "Start getting processed. And this is where Centre Keeps Enterprise Edition really comes to play.",
+      "offset": 1674597,
+      "duration": 12000
+    },
+    {
+      "text": "With Enterprise Edition, you can add additional compute engine workers to your sonar cube instance up to 10 which allows multiple analysis reports to be processed simultaneously.",
+      "offset": 1686597,
+      "duration": 5000
+    },
+    {
+      "text": "This means that even as your organization's usage of sonar cube increases. You can scale the infrastructure to meet the growing demand.",
+      "offset": 1691597,
+      "duration": 13000
+    },
+    {
+      "text": "And ensure that analysis results are delivered promptly. So in our key enterprise edition is really the best way to make sure that growing demand on your sonar cube server.",
+      "offset": 1704597,
+      "duration": 10000
+    },
+    {
+      "text": "Doesn't slow down your team. And this is just a screenshot from the UI of where you're able to adjust the number of compute engine workers.",
+      "offset": 1714597,
+      "duration": 9000
+    },
+    {
+      "text": "On your Centre Keep instance.",
+      "offset": 1723597,
+      "duration": 3000
+    },
+    {
+      "text": "And so finally we've reached our last feature. I want to talk a bit about. It's no secret that large organizations, especially managers, love their dashboards.",
+      "offset": 1726597,
+      "duration": 12000
+    },
+    {
+      "text": "And so, our cube is really primarily a tool for developers. Its core use case is making sure that developers can do their best work.",
+      "offset": 1738597,
+      "duration": 9000
+    },
+    {
+      "text": "And at the same time, Centre Cube covers many domains and can fulfill many reporting and compliance requirements if the features exist to pull that data out of Sonar Cube.",
+      "offset": 1747597,
+      "duration": 10000
+    },
+    {
+      "text": "And these features are available with SOAR. QUEUE, Enterprise Edition.",
+      "offset": 1757597,
+      "duration": 5000
+    },
+    {
+      "text": "At 2 levels. So the 1st is project level reporting. So our Q enterprise edition offers downloadable project level security reports that show sonar cubes results across different security standards including OAS, CWE, and our own Center Source Security Standard.",
+      "offset": 1762597,
+      "duration": 18000
+    },
+    {
+      "text": "And you can see here you can also download those reports as a PDF. But Centre Cube Enterprise Edition also gives access to regulatory reports, which are essentially downloadable.",
+      "offset": 1780597,
+      "duration": 13000
+    },
+    {
+      "text": "App shots of analysis at a given point in time. And this is especially useful, for example, if you need to attach analysis results to a specific release.",
+      "offset": 1793597,
+      "duration": 9000
+    },
+    {
+      "text": "It can replace most if not all custom API reporting that you might have had to build in the past to extract point in time data from sonar cube.",
+      "offset": 1802597,
+      "duration": 10000
+    },
+    {
+      "text": "And so what we've talked about so far is project level dashboards that focus on individual repositories.",
+      "offset": 1812597,
+      "duration": 7000
+    },
+    {
+      "text": "And that's great if you're just working on a few projects, but you may want to see how those projects are doing.",
+      "offset": 1819597,
+      "duration": 6000
+    },
+    {
+      "text": "You know, be able to sum up many projects in a department, compare those departments and really get a holistic view of clean code across your organization.",
+      "offset": 1825597,
+      "duration": 10000
+    },
+    {
+      "text": "And the enterprise edition lets you aggregate projects and project branches into what we call portfolios and organize those projects however makes sense for your business by region.",
+      "offset": 1835597,
+      "duration": 12000
+    },
+    {
+      "text": "By department or even by contracts. These drill down views allow you to understand at the right granularity how different parts of your organization or tech stack are performing in terms of clean code.",
+      "offset": 1847597,
+      "duration": 14000
+    },
+    {
+      "text": "For example, portfolios might help you notice that up particular department or project is struggling with a higher than average number of issues.",
+      "offset": 1861597,
+      "duration": 8000
+    },
+    {
+      "text": "And quickly start to the specific areas that need improvement and allocate resources accordingly. Really here, Center, you can highlight trends and patterns in your projects that might otherwise.",
+      "offset": 1869597,
+      "duration": 11000
+    },
+    {
+      "text": "Go and notice. And portfolios also ensure that everyone in your organization shares the same view of clean code.",
+      "offset": 1880597,
+      "duration": 4000
+    },
+    {
+      "text": "Including new code, which is crucial for sonars clean as you code methodology. What this really means is that there's a shared understanding between developers and higher ups about how to.",
+      "offset": 1884597,
+      "duration": 15000
+    },
+    {
+      "text": "Talk about clean code when they're consuming these aggregated reports. I'll switch over to a demo in a moment.",
+      "offset": 1899597,
+      "duration": 8000
+    },
+    {
+      "text": "But first, st I want to make it really clear what I mean here. The reporting I'm about to show you can map directly to your organizational structure.",
+      "offset": 1907597,
+      "duration": 8000
+    },
+    {
+      "text": "So here on this slide we see one company that has 2 business units with multiple divisions underneath and projects that contribute to these divisions.",
+      "offset": 1915597,
+      "duration": 10000
+    },
+    {
+      "text": "The portfolio reporting functionality of Centre Q can directly match this portfolio structure and give you some really powerful insights.",
+      "offset": 1925597,
+      "duration": 11000
+    },
+    {
+      "text": "So I'm gonna stop sharing my screen for a moment and share. The demo that I have. Prepared.",
+      "offset": 1936597,
+      "duration": 10000
+    },
+    {
+      "text": "Cool. So what I'm showing you here is actually the administration console for constructing a portfolio.",
+      "offset": 1946597,
+      "duration": 8000
+    },
+    {
+      "text": "In Sonar Cube, this page lets you see what your portfolio looks like at a high level and also how projects have been assigned to various portfolios.",
+      "offset": 1954597,
+      "duration": 10000
+    },
+    {
+      "text": "Strictly speaking, the only portfolio here is at the top level, Keeling John's Corp, and everything underneath that is considered a sub portfolio.",
+      "offset": 1964597,
+      "duration": 9000
+    },
+    {
+      "text": "Which will be important here in a second. I have a lot of options. For how I want to add projects to my portfolios, I can do that manually just by selecting individual projects.",
+      "offset": 1973597,
+      "duration": 12000
+    },
+    {
+      "text": "I can decide to include projects in my portfolios. Based on tags that project administrators have added to the projects or I could choose to include projects by regular expression.",
+      "offset": 1985597,
+      "duration": 12000
+    },
+    {
+      "text": "So if I have project keys that always follow a specific format, I can set a regular expression to make sure that all of those projects.",
+      "offset": 1997597,
+      "duration": 7000
+    },
+    {
+      "text": "Get brought into the portfolio. And if needed, I can also add all remaining projects here in this portfolio.",
+      "offset": 2004597,
+      "duration": 7000
+    },
+    {
+      "text": "I've just added projects manually. I added the main branch of all these projects, but you can also add specific branches and you can add the same project multiple times to these portfolios with different branches.",
+      "offset": 2011597,
+      "duration": 12000
+    },
+    {
+      "text": "And here I have my top level organization. I have 3 business units under that customer acquisition operations and R&D and then some departments that go.",
+      "offset": 2023597,
+      "duration": 13000
+    },
+    {
+      "text": "Underneath that and I've decided to assign all of my projects at the very lowest level. And so now that all of, this portfolio is configured, we can actually come back and view the portfolio, which is showing the aggregate of all of these projects that have been included in the portfolio hierarchy.",
+      "offset": 2036597,
+      "duration": 16000
+    },
+    {
+      "text": "So you can see that there are 22 projects in this portfolio. I have an overview of all of these projects and can see which projects currently have a passing quality gate and which ones don't.",
+      "offset": 2052597,
+      "duration": 17000
+    },
+    {
+      "text": "This is the top level view and so I can also see a breakdown of the main axes of some of our cubes quality model.",
+      "offset": 2069597,
+      "duration": 1000
+    },
+    {
+      "text": "So reliability, maintainability, security, and security review. So this is the top level showing all of my projects, but I can also move into this portfolio breakdown, which starts to.",
+      "offset": 2070597,
+      "duration": 18000
+    },
+    {
+      "text": "Drill down into the various business units that I have to find in my portfolio hierarchy.",
+      "offset": 2088597,
+      "duration": 7000
+    },
+    {
+      "text": "So I can see here that R&D has an E rating for security. And if I want to learn more, I can click into.",
+      "offset": 2095597,
+      "duration": 8000
+    },
+    {
+      "text": "Here I'm start getting a better idea of where those issues are in my organization. But maybe I just want to see a single security report for the entire R&D organization of my company, that same security report that I was talking about for individual projects can also be found at the portfolio level so I can really get an understanding of what kinds of issues, what kind of security issues this department is facing.",
+      "offset": 2103597,
+      "duration": 29000
+    },
+    {
+      "text": "Specifically. Now if I want to get a real idea about where there's some risk in my organization, I can also come over to the measures tab and start looking at some of the visualizations that are offered to me in this portfolio.",
+      "offset": 2132597,
+      "duration": 14000
+    },
+    {
+      "text": "So what this port, what's the specific graph is looking at is where do I have low code coverage and how much technical debt.",
+      "offset": 2146597,
+      "duration": 10000
+    },
+    {
+      "text": "Do I have? So these projects down here, okay, very little technical debts and an acceptable amount of code coverage, but I can really start to drill into these projects to understand, alright, something is clearly not going to well.",
+      "offset": 2156597,
+      "duration": 16000
+    },
+    {
+      "text": "Here. And if I want to look at the progress of all the projects in my portfolio over time, I also have this activity tab.",
+      "offset": 2172597,
+      "duration": 3000
+    },
+    {
+      "text": "Now I created this portfolio yesterday, so there's not a lot of history here. But if I come over to another instance of Centre cube.",
+      "offset": 2175597,
+      "duration": 13000
+    },
+    {
+      "text": "That includes all of the projects in that instance and one portfolio, I can look at something like code coverage and see, hey, over time is the amount of coverage for projects in my organization, increasing, decreasing here it looks like it's just been increasing so you know, if my company had an initiative to, you know, improve code coverage, for example, that can be pretty confident that that initiative was working.",
+      "offset": 2188597,
+      "duration": 25000
+    },
+    {
+      "text": "Really, portfolios give you a lot of insights at a high level of what's going on in your organization while still letting you drill down to the right granularity, whether that's a business unit or division department or an individual project and figure out, what's going on in my organization.",
+      "offset": 2213597,
+      "duration": 16000
+    },
+    {
+      "text": "These dashboards are live every time that there's a new analysis of a project. The portfolio gets recomputed.",
+      "offset": 2229597,
+      "duration": 8000
+    },
+    {
+      "text": "So these are always Up to date, you don't have to wait until these dashboards. Rerun, rerun every morning or something.",
+      "offset": 2237597,
+      "duration": 9000
+    },
+    {
+      "text": "They're just always, Just always up to date. And that's the end of our demo.",
+      "offset": 2246597,
+      "duration": 8000
+    },
+    {
+      "text": "I'm gonna switch back to my slides. Just to. Wrap up here. So to recap.",
+      "offset": 2254597,
+      "duration": 7000
+    },
+    {
+      "text": "We have a great community edition that supports analyzing 20 programming languages and supports analyzing the main branch of your project.",
+      "offset": 2261597,
+      "duration": 6000
+    },
+    {
+      "text": "But the Enterprise Edition offers a lot of value, especially as Summer Keep is getting used more and more in an organization.",
+      "offset": 2267597,
+      "duration": 9000
+    },
+    {
+      "text": "There's support for an additional 14 programming languages. You can analyze all the branches of your projects. You can analyze.",
+      "offset": 2276597,
+      "duration": 10000
+    },
+    {
+      "text": "Requests and get your pull requests in your DevOps platform. Decorated by Sonar Cube, which also lets you block the merge of pull requests until the quality gate passes, really enforcing clean as you code is not just an idea.",
+      "offset": 2286597,
+      "duration": 11000
+    },
+    {
+      "text": "But something that must be done in order for a pull request to get merged. With all this additional demand you can scale your infrastructure to meet the growing analysis needs.",
+      "offset": 2297597,
+      "duration": 13000
+    },
+    {
+      "text": "You can maybe consider dropping other tools because you're getting all of the security analysis functionality you need from Centreube with our advanced vulnerability detection rules.",
+      "offset": 2310597,
+      "duration": 10000
+    },
+    {
+      "text": "And there's a lot of built-in project level and aggregate reporting that can fulfill. Reporting and compliance needs at your organization.",
+      "offset": 2320597,
+      "duration": 11000
+    },
+    {
+      "text": "And those are all the features I had the time to talk about today. There are also many other features of Centre.",
+      "offset": 2331597,
+      "duration": 5000
+    },
+    {
+      "text": "There are also many other features of some our Cubs enterprise edition that we didn't talk about today.",
+      "offset": 2336597,
+      "duration": 5000
+    },
+    {
+      "text": "There are also many other features of Centre Keep Enterprise Edition that we didn't talk about today.",
+      "offset": 2341597,
+      "duration": 3000
+    },
+    {
+      "text": "You know, project move lets you consolidate some our key projects from many instances. Monoreipos are supported in our enterprise edition for cases.",
+      "offset": 2344597,
+      "duration": 1000
+    },
+    {
+      "text": "Where a pull request might have to be decorated multiple times. We have skim to provision and de-provision users in one click.",
+      "offset": 2345597,
+      "duration": 11000
+    },
+    {
+      "text": "Audit logs which provide traceability for all security sensitive actions on your sonar cube instance. Custom secrets detection so you can define patterns for detecting secrets.",
+      "offset": 2356597,
+      "duration": 7000
+    },
+    {
+      "text": "And finally being able to export all issues via the API, which is a feature exclusive to Enterprise Edition and for those users that have really advanced reporting needs makes it really easy to get data out of Senna Cube Enterprise Edition.",
+      "offset": 2363597,
+      "duration": 21000
+    },
+    {
+      "text": "So at the end of this webinar, there will be a poll asking whether or not you'd like to be contacted.",
+      "offset": 2384597,
+      "duration": 2000
+    },
+    {
+      "text": "And start talking with someone and maybe consider a trial of Centre Cubes Enterprise Edition.",
+      "offset": 2386597,
+      "duration": 10000
+    },
+    {
+      "text": "And if you miss out on that, you can always request a free trial on center source.com, where we also have lots of information about.",
+      "offset": 2396597,
+      "duration": 8000
+    },
+    {
+      "text": "The Sonar Cube Enterprise Edition. And I think that poll just came up.",
+      "offset": 2404597,
+      "duration": 7000
+    },
+    {
+      "text": "So I'll let you all answer that. We have a few other webinars that are coming up, towards the end of the month.",
+      "offset": 2411597,
+      "duration": 7000
+    },
+    {
+      "text": "Vivek, close friend of mine, will be giving a webinar on Clean as you code proactive approach to technical debt and then next month one of our project product managers will team up with a with a developer from Microsoft to talk about end-to-end security in a web.",
+      "offset": 2418597,
+      "duration": 22000
+    },
+    {
+      "text": "Andrew, are you there?",
+      "offset": 2440597,
+      "duration": 2000
+    },
+    {
+      "text": "I am there calling well. That was fantastic. A really good, great job. I think that was packed.",
+      "offset": 2442597,
+      "duration": 6000
+    },
+    {
+      "text": "I think I particularly like the demo on portfolios that was that was awesome. Okay, so as we move into a time of questions.",
+      "offset": 2448597,
+      "duration": 11000
+    },
+    {
+      "text": "Let me just review the questions that have come in and thank you all for those. Let's kick off with a question, which is, Okay, I've heard about a data center edition.",
+      "offset": 2459597,
+      "duration": 11000
+    },
+    {
+      "text": "What's the difference between enterprise edition and data center addition?",
+      "offset": 2470597,
+      "duration": 5000
+    },
+    {
+      "text": "Sure. So as you mentioned at the beginning, there are 3 commercial editions above our community edition.",
+      "offset": 2475597,
+      "duration": 5000
+    },
+    {
+      "text": "So developer enterprise and data center. The data center addition includes all of the features and functionality of enterprise edition, but also provide some features to allow for high availability of Sonar Cube.",
+      "offset": 2480597,
+      "duration": 14000
+    },
+    {
+      "text": "So it allows for clustered deployment so that if something happens to one node, it doesn't bring down sonar cube for.",
+      "offset": 2494597,
+      "duration": 8000
+    },
+    {
+      "text": "For everybody. And so really the data center edition is designed for you companies that I mean it's crucial they're center keep instance is up 99.9 9 9% of the time enterprise edition is still very reliable but data center edition provides You know, it's more sure that if something happens, it won't bring it down for everyone.",
+      "offset": 2502597,
+      "duration": 27000
+    },
+    {
+      "text": "Great. Thank you. And then another question. Regarding support.",
+      "offset": 2529597,
+      "duration": 5000
+    },
+    {
+      "text": "So what are the support options available for enterprise edition?",
+      "offset": 2534597,
+      "duration": 5000
+    },
+    {
+      "text": "Sure. So support does not come immediately with, with enterprise edition. So users that don't opt for support can come visit me in our community.",
+      "offset": 2539597,
+      "duration": 3000
+    },
+    {
+      "text": "At community.com. source.com.",
+      "offset": 2542597,
+      "duration": 6000
+    },
+    {
+      "text": "But we also have an amazing team of support engineers that if you choose to add support to your Enterprise Edition will help you get started, help you onboard into the platform, help you in case you run into any problems.",
+      "offset": 2548597,
+      "duration": 9000
+    },
+    {
+      "text": "Or have any questions. It's an amazing team that I used to be on. And then we also have a premium support package that we recently launched.",
+      "offset": 2557597,
+      "duration": 10000
+    },
+    {
+      "text": "The very short SLAs and a few other benefits but definitely the right time to start talking about support is after you've Already decided to, to join join the ranks of enterprise edition users.",
+      "offset": 2567597,
+      "duration": 20000
+    },
+    {
+      "text": "Our sales team will be happy to talk to you about, about the different support options available.",
+      "offset": 2587597,
+      "duration": 6000
+    },
+    {
+      "text": "Cool, thanks Colin. And maybe just one or maybe 2 quick, 2 further quick questions. Portfolios and setting up those, where would be the best place to go to get more information?",
+      "offset": 2593597,
+      "duration": 12000
+    },
+    {
+      "text": "We have a great documentation about Portfolio. So at Dockstock Center cube. Org, it will give you all the details about the various ways that you can set up portfolios.",
+      "offset": 2605597,
+      "duration": 12000
+    },
+    {
+      "text": "There are quite a few ways that you can get creative. With them So I would have to say, it's cheap answer, but our documentation is, is pretty good.",
+      "offset": 2617597,
+      "duration": 12000
+    },
+    {
+      "text": "On portfolios.",
+      "offset": 2629597,
+      "duration": 2000
+    },
+    {
+      "text": "How would agree. I think there's a link that's just popped up for the documentation that was quite handy.",
+      "offset": 2631597,
+      "duration": 5000
+    },
+    {
+      "text": "Maybe one final quick question. Tags, you talked about tags. And I know that's, that's often very powerful.",
+      "offset": 2636597,
+      "duration": 2000
+    },
+    {
+      "text": "And can tags for project be set programmatically or only via the UI?",
+      "offset": 2638597,
+      "duration": 11000
+    },
+    {
+      "text": "That's a great question. Often when that question is asked what they're asking is are we able to set those through analysis parameters?",
+      "offset": 2649597,
+      "duration": 9000
+    },
+    {
+      "text": "And the answer to that is no, it's a highly requested feature. Trust me, I am one of those people that are highly requesting it, but it's not possible today.",
+      "offset": 2658597,
+      "duration": 10000
+    },
+    {
+      "text": "There are web APIs available to do anything that you want to do in this in our QUI.",
+      "offset": 2668597,
+      "duration": 6000
+    },
+    {
+      "text": "You can do programmatically. If you really wanted to, you could use those Api's in the context of a CI pipeline.",
+      "offset": 2674597,
+      "duration": 7000
+    },
+    {
+      "text": "But if you'd like to join the conversation of getting a project tags. Set the analysis, come to the center community.",
+      "offset": 2681597,
+      "duration": 8000
+    },
+    {
+      "text": "It would be super easy to find that thread, just search for. Project tags or come to our roadmap, which you can find on center source.",
+      "offset": 2689597,
+      "duration": 9000
+    },
+    {
+      "text": "Dot com and add your feedback there.",
+      "offset": 2698597,
+      "duration": 3000
+    },
+    {
+      "text": "Thanks, Colin. That's perfect. Segway into, into the fact that I think our community is a great place.",
+      "offset": 2701597,
+      "duration": 6000
+    },
+    {
+      "text": "To pose questions in general and also to review those that people have asked in the past and which have been responded to by the community.",
+      "offset": 2707597,
+      "duration": 8000
+    },
+    {
+      "text": "So, At that point, I think we'll pause there. Thank you, Colin.",
+      "offset": 2715597,
+      "duration": 5000
+    },
+    {
+      "text": "Okay.",
+      "offset": 2720597,
+      "duration": 1000
+    },
+    {
+      "text": "Thanks to all those who did pose questions. Sorry, we didn't get a time to cover them all live, but again, the community is that great place, to go.",
+      "offset": 2721597,
+      "duration": 7000
+    },
+    {
+      "text": "Please do visit Sonosource. Calm of course for further information on some of the subjects that Colin mentioned, such as clean as you code.",
+      "offset": 2728597,
+      "duration": 8000
+    },
+    {
+      "text": "And also to check out, information on, on our future webinars and events that Colin also mentioned earlier.",
+      "offset": 2736597,
+      "duration": 7000
+    },
+    {
+      "text": "And then finally thanks again for providing your feedback. Via the survey that will pop up on your screen if it hasn't already.",
+      "offset": 2743597,
+      "duration": 2000
+    },
+    {
+      "text": "Your feedback is a gift and we do take it into consideration. Thank you again for your participation. This was a great packed webinar.",
+      "offset": 2745597,
+      "duration": 13000
+    },
+    {
+      "text": "Look out for the recording links. Thank you and see you all soon.",
+      "offset": 2758597,
+      "duration": 8000
+    }
+  ],
+  "fullText": "Okay, so let's get going. Hello everyone and thank you for joining. And welcome to our webinar entitled Community to Commercial. Why upgrade to Sonar Cube Enterprise Edition? Where we will invite you to join us. To discover the benefits that Sonar Cube Enterprise Edition will have for you. And your developers. I'm Andrew, your webinar, your moderator for this webinar I should say which will be presented by Colin from Sonar. But before I introduce Colin, please allow me to go over a few essential housekeeping points. Session will last for around 45 min and we will include a time for questions and answers at the end. You are invited to submit your questions at any time. During the webinar via the Q&A box in Zoom. So that's the little box with the question mark in it you should see at the bottom of your screen. It is not the chat box. We will not respond to questions in the chat. So please do post your questions. Using the Q&A box. We have one panelist joining us who is Yassin. Who is our solutions engineer at Sonar and he will be tasked with answering as many of your questions live during the webinar. So once again, do feel free to submit your questions at any time. And don't wait until the end. The session will be recorded. And we will send out a link via email in the coming days. Finally, at the end of this webinar, a short survey will pop up on your screen. Consider your feedback to be a gift. So thank you in advance for your participation. So without further ado, I'd like to introduce to you today Colin, Colin is a community manager at Sonar. So if we move to the BIO screen, you'll see that years ago he was actually responsible for an enterprise edition instance of SONA Cube and his former job. He knows Sona Q probably better than anyone I know, so we're in good hands. Before Colin starts, I'd like to kick us off by taking a minute to ask you a couple of questions. Using a pole. Question one. Which edition of Sona Cube Are you currently using? Please submit your answers now. Fantastic. That's great. A lot of community users there. And also a few enterprise edition users too. And Also good, some people not currently using SO. No cube at all. Let's close that poll there. And move on to the second question. Which is, which feature are you looking forward to discovering the most? Which enterprise feature, in fact. So feel free to submit your answers now. And I know Colin will be very excited to understand. The areas of interest from you all. It looks fairly balanced, although advanced bug and vulnerability detection does seem to be. Bleeding at the moment. Fantastic. Just a few more seconds for any other final answers there. And I think we're good. Thank you. Excellent. Thanks for your participation and now Colin. Of a Sure, thanks Andrew. Hey everyone. Like Andrew said, my name is Colin. I'm a community manager at Sonar. I joined Sonar as a support engineer back in 2,018 but like Andrew said before that I was actually a Soon our keep administrator at a company. A big health care company in the US that was using Centre Cubes enterprise edition. But today I am a community manager. Community is right there in my job title you can always find me at the Sonar community community.com helping users find their way with our products so it makes sense that I spend a lot of my time with our products. So it makes sense that I spend a lot of my time talking to folks that use the community edition of Centre Cube, talking to folks that use the community edition of Centre Cube. And people offers users quite a lot of value. With the community edition of Sonar Cube, users can analyze 20 programming languages including very popular languages like Java, C sharp, JavaScript, Typescript. Python and PHP. And these are all flagship languages for Sonar. So these are languages that we dedicate the most effort to analyzing. And there are also a lot of other great features that go beyond just language support, like how well Sonar Cube integrates with CICD tools, the quality gate that lets you know your code is ready to go to production or not. And of course you can start to clean as you code, which means focus on the new code that's being developed and we'll talk a lot more about that soon. And this is really in line with our four-point commitment to open source, which starts with you know, our open offerings must provide value. And to me, this is always felt like our secret sauce. A developer can download Sonar Cube for personal use or for their team and immediately start to get some value. Out of it. That's why our community edition is used by over 400,000 organizations and that's all without having to contact a salesperson or get a license, you know, buying stuff in a company can be hard. Trust me, it's hard at soar. 2. And very importantly, developers love using Sonar Cube. Typically they're the ones that suggest starting to Use it. But sometimes our users are surprised to learn that they actually can get more than what they already have. You probably had a clue. When you signed up for this webinar, Centre Cube offers 3 commercial editions. So they're tiers above the community edition and those tiers offer some additional value when organizations are really ready to commit to clean code. You know, as organizations use on our cube more, their needs tend to evolve and advanced features can really help those organizations meet their goals. The truth is that large organizations have different needs than the individual developers and smaller development teams that the community edition is targeted at. As we'll discuss in a moment, it can be really hard to apply the Clean as you code methodology with the community edition. So in our cube is less integrated with DevOps platforms. Performance of the community edition does not scale as adoption of the platform grows. Other tools might start getting evaluated for more advanced needs like SAS or security analysis. Not all languages that get used in large companies are covered and enterprise-wide reporting is at best manual or at worst just doesn't happen at all. So while the Centre Keep Community Edition is a great way to get started using Sonar Cube, Centre Keeps Enterprise Edition really helps big organizations get more out of Sonar cube. And really scale sonar cube to the company's needs. And these features on the on the right are the features that we're going to discuss in today's webinar. So 1st we're going to discuss branch and pull request analysis and how those features really let you clean as you code. We'll also discuss some features that are really important in an enterprise environment. Including supporting complex DevOps platform landscapes. We'll also discuss the additional languages that are supported by Sonarcube Enterprise Edition and for the languages that you might already be analyzing. We'll discuss advanced bug and vulnerability detection and what we call deeper SAS based on the poll. It sounds like a lot of you came to hear about that. And finally, we'll talk about the better scalability and performance that's included in sort of our Q enterprise edition. Before talking about reporting, which will include a demo, of our portfolios feature. My goal in this webinar is really to just convince you that it's least that it's worth at least requesting a trial of our enterprise edition and trying it out. I really believe in these features to me, the Centre Cube that I know and love and I've been working with for 7 years wouldn't be a sonar cube without them. My goal here is just to convince you that there might be a little bit more value worth exploring deeper with a trial. So let's start off by talking about branch and pull request analysis for full transparency. I'm starting off with some features that are also available in Centre Keeps Developer Edition. Their commercial features, but the main focus of this webinar overall is really Sonar Cubes Enterprise Edition. So, one of the foundational aspects of Centre Cube is a methodology that we called clean as you code. L as you code emphasizes that after analyzing your code with Sonar Cube, instead of trying to tackle all of the issues that it finds, you should just focus on the new issues that are in the code that you're adding or changing in the repository. And because by some estimates, 20% of enterprise code bases will change every year. The strategy means that your code base will progressively become clean over time with no additional effort other than making sure that the new code is clean. There's a chart on the screen right now which actually shows the progression of Sonar keeps own code base over time since it started in 2,010 is when we have the history back too and you can see that most of the code that was added in 2,010 doesn't exist in the repository anymore. All that code has been changed. Code has been added. Code has been modified and as long as all of that changed code is you you ultimately end up with a lean code base. And we really believe in this because the alternative, you know, trying to tackle all issues at once, it just doesn't work. It ends up leading to developer burnout and eventually tools like that just get switched off. And so, keeps community edition lets you start down this path of clean as you code, clearly separating overall code from new code. But the tricky thing is that community edition only lets you analyze the main branch of your project. And by the time that unclean code has been merged into your main branch, you're more or less already losing the battle to prevent code issues from getting into production. I think we all know that it's much harder to address issues once they've been merged into your main branch and it will probably lead it to a buildup of technical debts over time. Now you can try fighting this using tools like Sonar L, which is our IDE extension for Visual Studio, VS Code, Intel, J, and Eclipse. So sonar lint detects issues while the developer is coding right in the IDE, but it can be difficult to make sure that all of your developers are using Sonar L and it doesn't actually provide any controls to prevent you from committing and ultimately merging on clean code. It will just warn developers about the issues while they're developing. And the real solution can be found in Centrecubes Enterprise Edition where you have access to branch and pull request analysis. The goal here is to focus specifically on the changed code and offer feedback to the developer before that change is merged in the code base. For example, here we have a pull request that would introduce 2 new issues into the main branch of a project. And because Sonar Cube is analyzing this request. It can give feedback to the developer right in their DevOps platform. Here we have a comment on the pull request in GitHub. And the developer can even block the merge of the pull request until those issues are fixed and the quality gate is passing. What this really means is that Sonar Keep is no longer something that's living separately from the rest of the software development workflow, you know, web application that sits separately from everything else going on. But actually requiring a passing quality gate in order for that code to be merged into the main branch. And this is really a game changer for applying the clean as you code methodology. This works across all of our supported DevOps platforms, so that's Azure DevOps, GitHub, Bitbucket, and Gitlab. And while any pipeline can support this, almost no configuration is needed to get it working. With the CI providers that you see on the screen. You can make it work with any CI provider with a couple of configuration parameters, but with these providers, more or less it just works. And we know how important that is when a tool like Sonar Cube, not just for an individual project or for one team, but across an enterprise. And so if you're already running Centre Keep Analysis with one of these tools, you just have to make sure that the same job is targeting your pull requests. That's probably one line. In your pipeline file. And so pull request analysis not only shows you what issues you might be introducing into your main branch, but as of sonar keeps very latest releases, it can also show you what issues that exist in the target branch will be fixed by merging the pull request. And so this means that your developers can be sure that they're fixing an issue. With the change that they're making. And this might sound trivial, but it's actually taken us a quite a long time to get rights and we're really proud of the developer experience here. Now, I focused a lot on pull requests because That's where we think a lot of the value is. But software projects tend to have multiple branches that reflect multiple states of Development or deployment or long term maintenance branches that are maintained alongside the latest and greatest. We have that for Sonar Cube, we maintain our 9. Point 9 LTA branch while also developing on main branch the very latest releases of Sonar Cube. But this isn't just true for software companies. Like us, this is especially true in enterprise environments where releases are planned. Far in advance and you might have different branches for your September release and your December release. The Sonarky Enterprise Edition lets you track the status of all of the branches in your code base. So no stone goes. And you're not just limited to the main branch of your project like you are. With the community addition. And so a lot of the value that I've just talked about really relies on a tight integration. Between Centre Cube and DevOps platform. So GitHub, Gitlab, Azure DevOps and Bitbucket. How, but it's worth noting again, be fully transparent that that feature is also available in our developer edition. It's a commercial feature but doesn't start in Enterprise Edition. The developer edition works really well if you have a relatively simple DevOps platform landscape at work. So that means that you're connecting to a single instance of GitHub, Gitlab, Azure DevOps, or Bitbucket. However, and we know that this isn't always the case for bigger organizations as companies acquire other businesses with their own DevOps toolkits or migrate from on-premise solutions to SAS offerings of these platforms. You can often really end up with a complex DevOps platform landscape. And soner keeps enterprise edition addresses this complexity by allowing you to have an unlimited number of DevOps platform integrations, not just one per platform. Oh, what this means is that you don't have to choose which instance of a DevOps platform gets the quote unquote easy onboarding path for projects or which instance has the projects where PR. Would be the most valuable. And so our queue will accommodate whatever mess you have. Internally. And what this really means is that there's room for everyone. One instance of Centre Q can cover a huge number of teams at your company and this will become especially valuable when we talk about reporting, which we'll talk about a little bit later on. But something that we haven't talked about yet, is language supports. So as I mentioned at the top of this presentation, Centre Kube Community Edition supports 20 programming languages, including some of the most popular languages that are used by developers these days. The enterprise edition of Sonar Cube brings up that number and adds support for these additional 14 languages. So maybe you haven't seen some of these logos in a while or you know that somebody at your company is developing in these languages and you're thankful that it isn't you. We would love if all new development used the most modern languages, but we also know that that just isn't the case and often these projects are written off as kind of relics of the past that can't benefit from the same tools that drive software development today. But we know at Sonar that that just isn't true. I believe it or not, Starcke Enterprise Edition also supports Kobol, a language that has been around for over 60 years and while Kobol may not be the 1st choice for new projects. Many large organizations, particularly those in the financial and government sectors, still rely on COBOL applications to run their business. And I always enjoy these kind of articles that pop up every few months. The world depends on 60 year old code that no one knows anymore because it represents a real risk because experienced cobalt developers are retiring and maintaining and updating these legacy systems can become increasingly Alan. And Sonar keeps Kobol support, which includes over 200 rules, or almost 200 rules, I'm sorry, helps organizations ensure the quality and maintainability of their Cobalt code base even as that pool of experts. Shrinks. And what it really means is that your mainframe developers can modernize their development alongside your developers who are working on newer projects. Clean code is not just for the shiny new languages. Cobalt is a bit of an extreme example. There are other languages supported by the enterprise edition like C and C. They're also not the the most modern languages, but they're still very crucial in many industries today, especially when performance. Matters. Center keeps supports analyzing C and C plus with around 500 600 rules respectively. The analysis even targets the specific version of these languages. The latest version of these languages. We have rules specifically designed to help developers use the latest features of the latest versions of these languages. And you may have seen a lot of news these days about programming languages that aren't memory safe and the threats that those languages pose. Centre cube has a number of rules that can and help ensure that you're using these very flexible languages in safe ways. And all of that has to do with sonar cube, but center key enterprise edition also integrates with Sonar L, our IDE plug-in and its connected mode. And when using the connected mode with Centre Keep Enterprise Edition, you get access to analyzing languages that you wouldn't have. And so we mentioned Sarlin earlier. It's the IDE extension that gives real time feedback as developers are coding in their IDE, without having to switch context, which means that your developers in these languages can get immediate guidance on issues that would be raised in Sonar Cube if that, that, code was submitted to Sonar Cube and for C and C, there are even quick fixes with just. One click fixes for issues that are being raised for a number of the rules that we offer for those languages. What I really want you to take away from all of this is that if Centre Cube is already helping your developers write better code, there may be a large number of developers in your organization that can also be supported by Sonar Cube if they have an instance where that language is supported. The enterprise edition of SOME, RICE, you really opens up the door to a lot more code that can be made clean. And so now we come to the section that I think most of you were excited to learn about, which is advanced bug and vulnerability detection. So of course it's great to analyze all of your code whether it's in branches or pull requests modern languages or legacy languages but it's also just as important to consider how relevant the issues being raised are. You know, at its core. So in our cube tries to find basic issues that should not waste a code reviewer's time and tricky issues that you could never expect a human to find. And so Centrecub's Enterprise Edition builds on the issues that can be found with Sonar keeps community edition, adding our most advanced detection engines across our flagship languages. These are really rules that go deeper into languages that are already available to analyze in community edition. So what is it that these advanced detections engines can find? So Centre Q Enterprise Edition can detect where data is entering an application. That data as flows through the code and raise an issue when that data is being used in an unsafe way. This could mean that the code represents a potential vulnerability. Meaning that untrusted data is being used in an unsafe way. So in the security context, we would usually call this taint analysis or, SAS. For concrete example, you can consider this piece of code. Data is coming from the user and it enters an application only to immediately be used by to be used to execute a SQL statement without any validation or sanitization before it's used. Simple example of a pretty substantial security risk. Many of you probably immediately recognize this as code that is susceptible to a SQL injection attack. So our key enterprise edition supports the detection of these kinds of attacks even when that data is flowing through many functions and files. And this issue is a great example of something else that is special about Sonar Cube, which is really precise information about how to fix the issue at that sonar cube is reporting on. Here for SQL injections, Centreube is even able to detect the framework. That is being used here, Python SQLites, and provide the most relevant recommendation about how to fix the issue. Released on our cube is a great learning tool in this context for senior developers who need a reminder and even junior developers that have never faced an issue like this before. So SQL injection is just one of the security issues that this advanced engine can detect. It also detects many other common vulnerabilities and you can see it some of those called out here. This field of analysis. It's called static application security testing or SASS. And we at Sonar are not the only ones doing it. So what is it that sets Sonar Cube and Centre Keep Enterprise Edition apart? So Our analysis consistently ranks incredibly high in public industry standard open source SAS benchmarks that are used to judge the quality of security results from tools like ours. Our true positive rates are over 90% and our false detection rates are absolutely rock bottom. And this really speaks to something that's at the core of all of our analyzers, which is that we would rather not raise a few true positives if it means suppressing a lot of false positives. So stated another way, our number one priority is to not flood developers with noise that ultimately waste their time. Yeah, as soon as a tool starts to lie to developers, the less that tool is going to be trusted. You know, while other tools in our space prioritize giving as many results as possible and making it the developers job to figure out what is important. We think that developers deserve a better experience. I'm speaking of other tools in our space, the support for SAS really means that you might no longer need to look at other tools to cover this domain. Known for our quality and reliability analysis, but our security analysis is absolutely top tier. And this slide goes a little bit deeper into how well we cover this domain. You know, our security engine covers hundreds of most popular frameworks with 0 configuration. But often there are whole teams at big companies designed to build libraries for developers to use internally and those libraries often handle sensitive data. So Center Keeps Enterprise Edition and this is exclusive to the Enterprise Edition, includes a feature called Security Engine Custom Configuration that allows you to define which functions of those libraries are sources or syncs or validators and really enhanced Sonar keeps knowledge about your applications by being able to continue to track data. Through those, through those libraries. And so that's great. Our SAS capabilities are powerful on their own, but we've also taken this one step further with something that we call Deeper SAS. So what I've just explained, tracking data through an application and flagging when untrusted data is used in potentially a harmful way. It isn't new, but there's always been a problem with this strategy, which is that usually only project code gets analyzed. That is to say, user developed code. As soon as some data enters a dependency and then starts to interact with its own transitive dependencies, that data can get lost and sneaky vulnerabilities end up making their way through. The dependencies basically become a black box. And ultimately, this is a partial analysis of your project. And so we have worked very hard to introduce something called deeper. SASS. With deeper SAS, we've actually analyzed the top open source libraries for Java, JavaScript, Typescript, and C sharp to model those libraries and their dependencies, which let us find more vulnerabilities than other tools not using this approach. We estimate that for every 10 vulnerabilities reported by sonar, we can find one additional vulnerability using this approach. And this this feature, deeper SASs, requires no additional configuration. It just comes with the rest of our SAS functionality. I haven't really had the chance to talk about. Bug detection, but I want to just have a quick note here. To say that we've been able to apply a lot of what we've learned in security analysis to bug detection as well. It can be very useful to be able to track data. As it flows through an application, you can imagine. Tracking nulls to make sure that nulls aren't being used in the enterprise edition of Summer Cube provides also more advanced bug detection rules using the same idea of tracking data from, where it. Originates in an application to where that data ultimately gets used. So, we've discussed a lot of features that might increase the load on your Centrecube server. The 1st was analyzing branches and pull requests, which will increase the number of analyses submitted to your server. The second was being able to connect all of your DevOps platforms, which means that no code can hide from Sonar Cube. This might increase the number of projects on your instance. And finally, we've talked about additional language support that might let you onboard other teams to start cube and security analysis that means you might be able to drop other tools in favor of Center Cube. An often forgotten feature of Centre Cubes enterprise edition is scalability. In fact, when I 1st started putting together this list of features, I overlooked this one, but it's so crucial in an organization that starts using Sonar Cube more extensively. Because Sonar Cube operates like this. An analysis report is sent to Sonar Cube every time the scanner completes successfully. That report is then passed on to some of our Keeps Compute Engine, which does all the necessary tasks to process the measures and issues, match the data with preview analyses and perform actions like sending web hooks or decorating pull requests and computing the quality gates. And in the community edition, the compute engine can only process one of these tasks at a time. These tasks can take anywhere from seconds to minutes depending on the power of the machine running sonar cube and the size of the analysis report which roughly correlates to the size of the project. This limitation, This fact really presents a problem on a busy sonar keep instance because it's the number of projects and analyses grow, the compute engine may struggle to keep up with the incoming reports, which leads to a delay in processing. This means that it takes longer to get results and longer to address issues. You have to wait for the results of one analysis to be available until the next one. Start getting processed. And this is where Centre Keeps Enterprise Edition really comes to play. With Enterprise Edition, you can add additional compute engine workers to your sonar cube instance up to 10 which allows multiple analysis reports to be processed simultaneously. This means that even as your organization's usage of sonar cube increases. You can scale the infrastructure to meet the growing demand. And ensure that analysis results are delivered promptly. So in our key enterprise edition is really the best way to make sure that growing demand on your sonar cube server. Doesn't slow down your team. And this is just a screenshot from the UI of where you're able to adjust the number of compute engine workers. On your Centre Keep instance. And so finally we've reached our last feature. I want to talk a bit about. It's no secret that large organizations, especially managers, love their dashboards. And so, our cube is really primarily a tool for developers. Its core use case is making sure that developers can do their best work. And at the same time, Centre Cube covers many domains and can fulfill many reporting and compliance requirements if the features exist to pull that data out of Sonar Cube. And these features are available with SOAR. QUEUE, Enterprise Edition. At 2 levels. So the 1st is project level reporting. So our Q enterprise edition offers downloadable project level security reports that show sonar cubes results across different security standards including OAS, CWE, and our own Center Source Security Standard. And you can see here you can also download those reports as a PDF. But Centre Cube Enterprise Edition also gives access to regulatory reports, which are essentially downloadable. App shots of analysis at a given point in time. And this is especially useful, for example, if you need to attach analysis results to a specific release. It can replace most if not all custom API reporting that you might have had to build in the past to extract point in time data from sonar cube. And so what we've talked about so far is project level dashboards that focus on individual repositories. And that's great if you're just working on a few projects, but you may want to see how those projects are doing. You know, be able to sum up many projects in a department, compare those departments and really get a holistic view of clean code across your organization. And the enterprise edition lets you aggregate projects and project branches into what we call portfolios and organize those projects however makes sense for your business by region. By department or even by contracts. These drill down views allow you to understand at the right granularity how different parts of your organization or tech stack are performing in terms of clean code. For example, portfolios might help you notice that up particular department or project is struggling with a higher than average number of issues. And quickly start to the specific areas that need improvement and allocate resources accordingly. Really here, Center, you can highlight trends and patterns in your projects that might otherwise. Go and notice. And portfolios also ensure that everyone in your organization shares the same view of clean code. Including new code, which is crucial for sonars clean as you code methodology. What this really means is that there's a shared understanding between developers and higher ups about how to. Talk about clean code when they're consuming these aggregated reports. I'll switch over to a demo in a moment. But first, st I want to make it really clear what I mean here. The reporting I'm about to show you can map directly to your organizational structure. So here on this slide we see one company that has 2 business units with multiple divisions underneath and projects that contribute to these divisions. The portfolio reporting functionality of Centre Q can directly match this portfolio structure and give you some really powerful insights. So I'm gonna stop sharing my screen for a moment and share. The demo that I have. Prepared. Cool. So what I'm showing you here is actually the administration console for constructing a portfolio. In Sonar Cube, this page lets you see what your portfolio looks like at a high level and also how projects have been assigned to various portfolios. Strictly speaking, the only portfolio here is at the top level, Keeling John's Corp, and everything underneath that is considered a sub portfolio. Which will be important here in a second. I have a lot of options. For how I want to add projects to my portfolios, I can do that manually just by selecting individual projects. I can decide to include projects in my portfolios. Based on tags that project administrators have added to the projects or I could choose to include projects by regular expression. So if I have project keys that always follow a specific format, I can set a regular expression to make sure that all of those projects. Get brought into the portfolio. And if needed, I can also add all remaining projects here in this portfolio. I've just added projects manually. I added the main branch of all these projects, but you can also add specific branches and you can add the same project multiple times to these portfolios with different branches. And here I have my top level organization. I have 3 business units under that customer acquisition operations and R&D and then some departments that go. Underneath that and I've decided to assign all of my projects at the very lowest level. And so now that all of, this portfolio is configured, we can actually come back and view the portfolio, which is showing the aggregate of all of these projects that have been included in the portfolio hierarchy. So you can see that there are 22 projects in this portfolio. I have an overview of all of these projects and can see which projects currently have a passing quality gate and which ones don't. This is the top level view and so I can also see a breakdown of the main axes of some of our cubes quality model. So reliability, maintainability, security, and security review. So this is the top level showing all of my projects, but I can also move into this portfolio breakdown, which starts to. Drill down into the various business units that I have to find in my portfolio hierarchy. So I can see here that R&D has an E rating for security. And if I want to learn more, I can click into. Here I'm start getting a better idea of where those issues are in my organization. But maybe I just want to see a single security report for the entire R&D organization of my company, that same security report that I was talking about for individual projects can also be found at the portfolio level so I can really get an understanding of what kinds of issues, what kind of security issues this department is facing. Specifically. Now if I want to get a real idea about where there's some risk in my organization, I can also come over to the measures tab and start looking at some of the visualizations that are offered to me in this portfolio. So what this port, what's the specific graph is looking at is where do I have low code coverage and how much technical debt. Do I have? So these projects down here, okay, very little technical debts and an acceptable amount of code coverage, but I can really start to drill into these projects to understand, alright, something is clearly not going to well. Here. And if I want to look at the progress of all the projects in my portfolio over time, I also have this activity tab. Now I created this portfolio yesterday, so there's not a lot of history here. But if I come over to another instance of Centre cube. That includes all of the projects in that instance and one portfolio, I can look at something like code coverage and see, hey, over time is the amount of coverage for projects in my organization, increasing, decreasing here it looks like it's just been increasing so you know, if my company had an initiative to, you know, improve code coverage, for example, that can be pretty confident that that initiative was working. Really, portfolios give you a lot of insights at a high level of what's going on in your organization while still letting you drill down to the right granularity, whether that's a business unit or division department or an individual project and figure out, what's going on in my organization. These dashboards are live every time that there's a new analysis of a project. The portfolio gets recomputed. So these are always Up to date, you don't have to wait until these dashboards. Rerun, rerun every morning or something. They're just always, Just always up to date. And that's the end of our demo. I'm gonna switch back to my slides. Just to. Wrap up here. So to recap. We have a great community edition that supports analyzing 20 programming languages and supports analyzing the main branch of your project. But the Enterprise Edition offers a lot of value, especially as Summer Keep is getting used more and more in an organization. There's support for an additional 14 programming languages. You can analyze all the branches of your projects. You can analyze. Requests and get your pull requests in your DevOps platform. Decorated by Sonar Cube, which also lets you block the merge of pull requests until the quality gate passes, really enforcing clean as you code is not just an idea. But something that must be done in order for a pull request to get merged. With all this additional demand you can scale your infrastructure to meet the growing analysis needs. You can maybe consider dropping other tools because you're getting all of the security analysis functionality you need from Centreube with our advanced vulnerability detection rules. And there's a lot of built-in project level and aggregate reporting that can fulfill. Reporting and compliance needs at your organization. And those are all the features I had the time to talk about today. There are also many other features of Centre. There are also many other features of some our Cubs enterprise edition that we didn't talk about today. There are also many other features of Centre Keep Enterprise Edition that we didn't talk about today. You know, project move lets you consolidate some our key projects from many instances. Monoreipos are supported in our enterprise edition for cases. Where a pull request might have to be decorated multiple times. We have skim to provision and de-provision users in one click. Audit logs which provide traceability for all security sensitive actions on your sonar cube instance. Custom secrets detection so you can define patterns for detecting secrets. And finally being able to export all issues via the API, which is a feature exclusive to Enterprise Edition and for those users that have really advanced reporting needs makes it really easy to get data out of Senna Cube Enterprise Edition. So at the end of this webinar, there will be a poll asking whether or not you'd like to be contacted. And start talking with someone and maybe consider a trial of Centre Cubes Enterprise Edition. And if you miss out on that, you can always request a free trial on center source.com, where we also have lots of information about. The Sonar Cube Enterprise Edition. And I think that poll just came up. So I'll let you all answer that. We have a few other webinars that are coming up, towards the end of the month. Vivek, close friend of mine, will be giving a webinar on Clean as you code proactive approach to technical debt and then next month one of our project product managers will team up with a with a developer from Microsoft to talk about end-to-end security in a web. Andrew, are you there? I am there calling well. That was fantastic. A really good, great job. I think that was packed. I think I particularly like the demo on portfolios that was that was awesome. Okay, so as we move into a time of questions. Let me just review the questions that have come in and thank you all for those. Let's kick off with a question, which is, Okay, I've heard about a data center edition. What's the difference between enterprise edition and data center addition? Sure. So as you mentioned at the beginning, there are 3 commercial editions above our community edition. So developer enterprise and data center. The data center addition includes all of the features and functionality of enterprise edition, but also provide some features to allow for high availability of Sonar Cube. So it allows for clustered deployment so that if something happens to one node, it doesn't bring down sonar cube for. For everybody. And so really the data center edition is designed for you companies that I mean it's crucial they're center keep instance is up 99.9 9 9% of the time enterprise edition is still very reliable but data center edition provides You know, it's more sure that if something happens, it won't bring it down for everyone. Great. Thank you. And then another question. Regarding support. So what are the support options available for enterprise edition? Sure. So support does not come immediately with, with enterprise edition. So users that don't opt for support can come visit me in our community. At community.com. source.com. But we also have an amazing team of support engineers that if you choose to add support to your Enterprise Edition will help you get started, help you onboard into the platform, help you in case you run into any problems. Or have any questions. It's an amazing team that I used to be on. And then we also have a premium support package that we recently launched. The very short SLAs and a few other benefits but definitely the right time to start talking about support is after you've Already decided to, to join join the ranks of enterprise edition users. Our sales team will be happy to talk to you about, about the different support options available. Cool, thanks Colin. And maybe just one or maybe 2 quick, 2 further quick questions. Portfolios and setting up those, where would be the best place to go to get more information? We have a great documentation about Portfolio. So at Dockstock Center cube. Org, it will give you all the details about the various ways that you can set up portfolios. There are quite a few ways that you can get creative. With them So I would have to say, it's cheap answer, but our documentation is, is pretty good. On portfolios. How would agree. I think there's a link that's just popped up for the documentation that was quite handy. Maybe one final quick question. Tags, you talked about tags. And I know that's, that's often very powerful. And can tags for project be set programmatically or only via the UI? That's a great question. Often when that question is asked what they're asking is are we able to set those through analysis parameters? And the answer to that is no, it's a highly requested feature. Trust me, I am one of those people that are highly requesting it, but it's not possible today. There are web APIs available to do anything that you want to do in this in our QUI. You can do programmatically. If you really wanted to, you could use those Api's in the context of a CI pipeline. But if you'd like to join the conversation of getting a project tags. Set the analysis, come to the center community. It would be super easy to find that thread, just search for. Project tags or come to our roadmap, which you can find on center source. Dot com and add your feedback there. Thanks, Colin. That's perfect. Segway into, into the fact that I think our community is a great place. To pose questions in general and also to review those that people have asked in the past and which have been responded to by the community. So, At that point, I think we'll pause there. Thank you, Colin. Okay. Thanks to all those who did pose questions. Sorry, we didn't get a time to cover them all live, but again, the community is that great place, to go. Please do visit Sonosource. Calm of course for further information on some of the subjects that Colin mentioned, such as clean as you code. And also to check out, information on, on our future webinars and events that Colin also mentioned earlier. And then finally thanks again for providing your feedback. Via the survey that will pop up on your screen if it hasn't already. Your feedback is a gift and we do take it into consideration. Thank you again for your participation. This was a great packed webinar. Look out for the recording links. Thank you and see you all soon.",
+  "fetchedAt": "2026-03-14T09:23:06.475Z"
+}

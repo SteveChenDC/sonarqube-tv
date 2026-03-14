@@ -1,0 +1,1693 @@
+{
+  "videoId": "v42",
+  "youtubeId": "ZKjTmw4IehE",
+  "segments": [
+    {
+      "text": "Hi, I'm Tom Howlett. I'm a product",
+      "offset": 17000,
+      "duration": 2000
+    },
+    {
+      "text": "director on the code quality domain at",
+      "offset": 19000,
+      "duration": 2000
+    },
+    {
+      "text": "Sonar.",
+      "offset": 21000,
+      "duration": 1000
+    },
+    {
+      "text": "So, we all know that AI agents are",
+      "offset": 22000,
+      "duration": 3000
+    },
+    {
+      "text": "developing code incredibly fast now and",
+      "offset": 25000,
+      "duration": 3000
+    },
+    {
+      "text": "that's working. It's functional, but is",
+      "offset": 28000,
+      "duration": 2000
+    },
+    {
+      "text": "it correct? At Sonar, that's our",
+      "offset": 30000,
+      "duration": 3000
+    },
+    {
+      "text": "specialism. We check code for",
+      "offset": 33000,
+      "duration": 3000
+    },
+    {
+      "text": "reliability, maintainability, and",
+      "offset": 36000,
+      "duration": 3000
+    },
+    {
+      "text": "security. But at the moment, you wait",
+      "offset": 39000,
+      "duration": 3000
+    },
+    {
+      "text": "for the code to be committed, going up",
+      "offset": 42000,
+      "duration": 2000
+    },
+    {
+      "text": "to the CI, waiting for a pull request,",
+      "offset": 44000,
+      "duration": 3000
+    },
+    {
+      "text": "and then you see the problems, at which",
+      "offset": 47000,
+      "duration": 3000
+    },
+    {
+      "text": "point the agent is really slowed down.",
+      "offset": 50000,
+      "duration": 1000
+    },
+    {
+      "text": "So over the last few months, we've been",
+      "offset": 51000,
+      "duration": 2000
+    },
+    {
+      "text": "developing a new product called Analysis",
+      "offset": 53000,
+      "duration": 4000
+    },
+    {
+      "text": "for Agents, which allows the agent to",
+      "offset": 57000,
+      "duration": 3000
+    },
+    {
+      "text": "analyze the code as it's writing it.",
+      "offset": 60000,
+      "duration": 2000
+    },
+    {
+      "text": "It can do this incredibly fast.",
+      "offset": 62000,
+      "duration": 2000
+    },
+    {
+      "text": "So we will return an analysis result in",
+      "offset": 64000,
+      "duration": 3000
+    },
+    {
+      "text": "one to three seconds.",
+      "offset": 67000,
+      "duration": 2000
+    },
+    {
+      "text": "Now you're probably thinking this is",
+      "offset": 69000,
+      "duration": 2000
+    },
+    {
+      "text": "like a linter and it's just doing a",
+      "offset": 71000,
+      "duration": 2000
+    },
+    {
+      "text": "shallow analysis, but no, we've",
+      "offset": 73000,
+      "duration": 2000
+    },
+    {
+      "text": "developed a service where the code is",
+      "offset": 75000,
+      "duration": 3000
+    },
+    {
+      "text": "sent up to SonarQube. SonarQube then",
+      "offset": 78000,
+      "duration": 2000
+    },
+    {
+      "text": "combines the code change that the agent",
+      "offset": 80000,
+      "duration": 2000
+    },
+    {
+      "text": "has just made with everything it knows",
+      "offset": 82000,
+      "duration": 2000
+    },
+    {
+      "text": "about the project in the first place.",
+      "offset": 84000,
+      "duration": 2000
+    },
+    {
+      "text": "All the other analysis artifacts that",
+      "offset": 86000,
+      "duration": 2000
+    },
+    {
+      "text": "it's created using dependencies and",
+      "offset": 88000,
+      "duration": 2000
+    },
+    {
+      "text": "things like that. So we can within three",
+      "offset": 90000,
+      "duration": 3000
+    },
+    {
+      "text": "seconds pull back a really deep analysis",
+      "offset": 93000,
+      "duration": 4000
+    },
+    {
+      "text": "and find real deep issues on the code.",
+      "offset": 97000,
+      "duration": 2000
+    },
+    {
+      "text": "So today I'm going to do a demo of that.",
+      "offset": 99000,
+      "duration": 3000
+    },
+    {
+      "text": "It's just available now in beta. So once",
+      "offset": 102000,
+      "duration": 3000
+    },
+    {
+      "text": "you sign up for the beta, you can use it",
+      "offset": 105000,
+      "duration": 1000
+    },
+    {
+      "text": "through the MCP service. It works with",
+      "offset": 106000,
+      "duration": 4000
+    },
+    {
+      "text": "any AI agent that supports MCP, which",
+      "offset": 110000,
+      "duration": 2000
+    },
+    {
+      "text": "they all do, but Claude Code is a fun",
+      "offset": 112000,
+      "duration": 2000
+    },
+    {
+      "text": "one to try today. So I'm going to start",
+      "offset": 114000,
+      "duration": 2000
+    },
+    {
+      "text": "off. Let's have a look at our MCP",
+      "offset": 116000,
+      "duration": 3000
+    },
+    {
+      "text": "servers.",
+      "offset": 119000,
+      "duration": 2000
+    },
+    {
+      "text": "We can see I've got a few enabled here,",
+      "offset": 121000,
+      "duration": 1000
+    },
+    {
+      "text": "including things like Jira, but we'll",
+      "offset": 122000,
+      "duration": 3000
+    },
+    {
+      "text": "jump into the SonarQube A3S1, which is",
+      "offset": 125000,
+      "duration": 3000
+    },
+    {
+      "text": "basically the SonarQube MCP, but it's",
+      "offset": 128000,
+      "duration": 3000
+    },
+    {
+      "text": "got this beta enabled on it. If we look",
+      "offset": 131000,
+      "duration": 3000
+    },
+    {
+      "text": "at the tools, we have a great list of",
+      "offset": 134000,
+      "duration": 1000
+    },
+    {
+      "text": "tools. If you haven't used the MCP so",
+      "offset": 135000,
+      "duration": 2000
+    },
+    {
+      "text": "far, they're super valuable. So we can",
+      "offset": 137000,
+      "duration": 2000
+    },
+    {
+      "text": "see our SonarQube projects. We can see",
+      "offset": 139000,
+      "duration": 2000
+    },
+    {
+      "text": "issues. We can see quality gates.",
+      "offset": 141000,
+      "duration": 2000
+    },
+    {
+      "text": "Really importantly, we can see rules.",
+      "offset": 143000,
+      "duration": 3000
+    },
+    {
+      "text": "So if we break a SonarQube rule, the",
+      "offset": 146000,
+      "duration": 2000
+    },
+    {
+      "text": "agent can get details back on what the",
+      "offset": 148000,
+      "duration": 3000
+    },
+    {
+      "text": "problem is, how it can fix it, etc. But",
+      "offset": 151000,
+      "duration": 3000
+    },
+    {
+      "text": "if we skip to the bottom to number 18,",
+      "offset": 154000,
+      "duration": 3000
+    },
+    {
+      "text": "we see this magical new one called Run",
+      "offset": 157000,
+      "duration": 3000
+    },
+    {
+      "text": "Advanced Code Analysis, and that's the",
+      "offset": 160000,
+      "duration": 2000
+    },
+    {
+      "text": "one we're going to play with today.",
+      "offset": 162000,
+      "duration": 2000
+    },
+    {
+      "text": "Before we jump into that, I'm just going",
+      "offset": 164000,
+      "duration": 2000
+    },
+    {
+      "text": "to do a little quick test to make sure",
+      "offset": 166000,
+      "duration": 3000
+    },
+    {
+      "text": "my MCP is working. So let's ask what",
+      "offset": 169000,
+      "duration": 6000
+    },
+    {
+      "text": "SonarQube projects do I have access to?",
+      "offset": 175000,
+      "duration": 2000
+    },
+    {
+      "text": "And it's slithering apparently.",
+      "offset": 177000,
+      "duration": 7000
+    },
+    {
+      "text": "And it's pulled back from the MCP",
+      "offset": 184000,
+      "duration": 2000
+    },
+    {
+      "text": "server. You can see there's a list of",
+      "offset": 186000,
+      "duration": 3000
+    },
+    {
+      "text": "projects and it's summarized that. So we",
+      "offset": 189000,
+      "duration": 3000
+    },
+    {
+      "text": "can see I've got a couple on my personal",
+      "offset": 192000,
+      "duration": 3000
+    },
+    {
+      "text": "SonarQube GitHub, and the one we're",
+      "offset": 195000,
+      "duration": 3000
+    },
+    {
+      "text": "going to use today is the Insider, and",
+      "offset": 198000,
+      "duration": 2000
+    },
+    {
+      "text": "it's already spotted that it knows we're",
+      "offset": 200000,
+      "duration": 2000
+    },
+    {
+      "text": "on the Insider project and says the",
+      "offset": 202000,
+      "duration": 2000
+    },
+    {
+      "text": "Insider project is the one we actively",
+      "offset": 204000,
+      "duration": 2000
+    },
+    {
+      "text": "use in this repo. So that's great.",
+      "offset": 206000,
+      "duration": 2000
+    },
+    {
+      "text": "Okay. Let me clear that and we'll start",
+      "offset": 208000,
+      "duration": 7000
+    },
+    {
+      "text": "with a task.",
+      "offset": 215000,
+      "duration": 3000
+    },
+    {
+      "text": "So to speed things up a bit, I've given",
+      "offset": 218000,
+      "duration": 5000
+    },
+    {
+      "text": "Claude a planning session and it's",
+      "offset": 223000,
+      "duration": 5000
+    },
+    {
+      "text": "come up with a nice plan to work on this",
+      "offset": 228000,
+      "duration": 2000
+    },
+    {
+      "text": "Insider repo. So the project Insider is",
+      "offset": 230000,
+      "duration": 3000
+    },
+    {
+      "text": "a personal project which we use to",
+      "offset": 233000,
+      "duration": 5000
+    },
+    {
+      "text": "collect insights from customers and we",
+      "offset": 238000,
+      "duration": 2000
+    },
+    {
+      "text": "can kind of get insights on them using",
+      "offset": 240000,
+      "duration": 2000
+    },
+    {
+      "text": "AI. So I'm just going to add some UI",
+      "offset": 242000,
+      "duration": 3000
+    },
+    {
+      "text": "endpoints to this now. I'm going to kick",
+      "offset": 245000,
+      "duration": 4000
+    },
+    {
+      "text": "it off now and then we'll have a look at",
+      "offset": 249000,
+      "duration": 2000
+    },
+    {
+      "text": "what it's doing. So I'm going to say",
+      "offset": 251000,
+      "duration": 3000
+    },
+    {
+      "text": "execute analytics export/import.",
+      "offset": 254000,
+      "duration": 10000
+    },
+    {
+      "text": "Okay. And it's off.",
+      "offset": 264000,
+      "duration": 4000
+    },
+    {
+      "text": "And it started. We give it a minute to",
+      "offset": 268000,
+      "duration": 5000
+    },
+    {
+      "text": "start.",
+      "offset": 273000,
+      "duration": 3000
+    },
+    {
+      "text": "And it's reading the files.",
+      "offset": 276000,
+      "duration": 4000
+    },
+    {
+      "text": "It's having a look around in typical",
+      "offset": 280000,
+      "duration": 2000
+    },
+    {
+      "text": "Claude fashion.",
+      "offset": 282000,
+      "duration": 4000
+    },
+    {
+      "text": "And let's see where it gets to there.",
+      "offset": 286000,
+      "duration": 3000
+    },
+    {
+      "text": "Okay, it's read the key files. It knows",
+      "offset": 289000,
+      "duration": 3000
+    },
+    {
+      "text": "what it's got to do, and it's telling me",
+      "offset": 292000,
+      "duration": 3000
+    },
+    {
+      "text": "I've read the codebase and I have a",
+      "offset": 295000,
+      "duration": 2000
+    },
+    {
+      "text": "clear plan. This is great. Ready for me",
+      "offset": 297000,
+      "duration": 4000
+    },
+    {
+      "text": "to start writing the schemas and tests.",
+      "offset": 301000,
+      "duration": 3000
+    },
+    {
+      "text": "So you notice there it's not just going",
+      "offset": 304000,
+      "duration": 2000
+    },
+    {
+      "text": "to jump into the code. It's going to",
+      "offset": 306000,
+      "duration": 4000
+    },
+    {
+      "text": "write tests first. So I'm going to set",
+      "offset": 310000,
+      "duration": 3000
+    },
+    {
+      "text": "that off. And while it starts doing",
+      "offset": 313000,
+      "duration": 3000
+    },
+    {
+      "text": "that, because it'll take a little while",
+      "offset": 316000,
+      "duration": 3000
+    },
+    {
+      "text": "running tests, we'll see why it's taking",
+      "offset": 319000,
+      "duration": 4000
+    },
+    {
+      "text": "that path. So if we look at the Claude",
+      "offset": 323000,
+      "duration": 2000
+    },
+    {
+      "text": "MD here, if you haven't used Claude",
+      "offset": 325000,
+      "duration": 2000
+    },
+    {
+      "text": "before, this is just its guidance on how",
+      "offset": 327000,
+      "duration": 3000
+    },
+    {
+      "text": "to work, and we're telling it here for",
+      "offset": 330000,
+      "duration": 2000
+    },
+    {
+      "text": "this project we always want to do",
+      "offset": 332000,
+      "duration": 2000
+    },
+    {
+      "text": "test-first development, TDD.",
+      "offset": 334000,
+      "duration": 2000
+    },
+    {
+      "text": "So it's writing failing tests first,",
+      "offset": 336000,
+      "duration": 3000
+    },
+    {
+      "text": "which it said it was going to do. And",
+      "offset": 339000,
+      "duration": 3000
+    },
+    {
+      "text": "you can see here as well, we've",
+      "offset": 342000,
+      "duration": 2000
+    },
+    {
+      "text": "instructed it to keep code coverage of",
+      "offset": 344000,
+      "duration": 2000
+    },
+    {
+      "text": "any change up to 80%. Now, that matches",
+      "offset": 346000,
+      "duration": 3000
+    },
+    {
+      "text": "our SonarQube quality gate, which",
+      "offset": 349000,
+      "duration": 2000
+    },
+    {
+      "text": "enforces this 80% check. So if Claude",
+      "offset": 351000,
+      "duration": 2000
+    },
+    {
+      "text": "does a good job, it's going to pass the",
+      "offset": 353000,
+      "duration": 2000
+    },
+    {
+      "text": "quality gate there.",
+      "offset": 355000,
+      "duration": 1000
+    },
+    {
+      "text": "Now, if we look down at the git workflow,",
+      "offset": 356000,
+      "duration": 5000
+    },
+    {
+      "text": "we've got a fairly standard workflow. So",
+      "offset": 361000,
+      "duration": 4000
+    },
+    {
+      "text": "never commit to main, use feature",
+      "offset": 365000,
+      "duration": 3000
+    },
+    {
+      "text": "branches. It gives some instructions on",
+      "offset": 368000,
+      "duration": 3000
+    },
+    {
+      "text": "how to create feature branches. But then",
+      "offset": 371000,
+      "duration": 3000
+    },
+    {
+      "text": "this point number three: before",
+      "offset": 374000,
+      "duration": 2000
+    },
+    {
+      "text": "completing a task that changes or writes",
+      "offset": 376000,
+      "duration": 2000
+    },
+    {
+      "text": "code, always use Analyze. Now Analyze is",
+      "offset": 378000,
+      "duration": 2000
+    },
+    {
+      "text": "a skill that I've given Claude, and",
+      "offset": 380000,
+      "duration": 5000
+    },
+    {
+      "text": "we'll have a look at that in a minute.",
+      "offset": 385000,
+      "duration": 2000
+    },
+    {
+      "text": "It says here never use the SonarQube",
+      "offset": 387000,
+      "duration": 3000
+    },
+    {
+      "text": "MCP. The skill uses the MCP, but it uses",
+      "offset": 390000,
+      "duration": 2000
+    },
+    {
+      "text": "it in quite a specific way. It's",
+      "offset": 392000,
+      "duration": 3000
+    },
+    {
+      "text": "possible for you just to install the MCP",
+      "offset": 395000,
+      "duration": 2000
+    },
+    {
+      "text": "and let Claude work with it, but it's",
+      "offset": 397000,
+      "duration": 3000
+    },
+    {
+      "text": "much better to give it instructions on",
+      "offset": 400000,
+      "duration": 2000
+    },
+    {
+      "text": "how to use it, which is what we've done",
+      "offset": 402000,
+      "duration": 2000
+    },
+    {
+      "text": "here. There's also some instructions",
+      "offset": 404000,
+      "duration": 2000
+    },
+    {
+      "text": "around PR as well, which we've built in",
+      "offset": 406000,
+      "duration": 2000
+    },
+    {
+      "text": "to make sure that it's checking the",
+      "offset": 408000,
+      "duration": 2000
+    },
+    {
+      "text": "SonarQube quality gate and reacting to",
+      "offset": 410000,
+      "duration": 2000
+    },
+    {
+      "text": "that, but we won't go into that too much",
+      "offset": 412000,
+      "duration": 2000
+    },
+    {
+      "text": "today. This is more about the Analyze",
+      "offset": 414000,
+      "duration": 2000
+    },
+    {
+      "text": "step. So let's jump back to Claude and",
+      "offset": 416000,
+      "duration": 2000
+    },
+    {
+      "text": "see how it's getting on. This looks",
+      "offset": 418000,
+      "duration": 3000
+    },
+    {
+      "text": "good. So I can see it's written a whole",
+      "offset": 421000,
+      "duration": 3000
+    },
+    {
+      "text": "bunch of tests, and normally I'd",
+      "offset": 424000,
+      "duration": 3000
+    },
+    {
+      "text": "probably have a good look at those, but",
+      "offset": 427000,
+      "duration": 2000
+    },
+    {
+      "text": "for now we'll trust they're good. And it",
+      "offset": 429000,
+      "duration": 4000
+    },
+    {
+      "text": "says yes, it's written tests, there's",
+      "offset": 433000,
+      "duration": 3000
+    },
+    {
+      "text": "five failures, so it's got failing tests",
+      "offset": 436000,
+      "duration": 5000
+    },
+    {
+      "text": "for code it hasn't written yet. And it's",
+      "offset": 441000,
+      "duration": 2000
+    },
+    {
+      "text": "saying that's the TDD red state. Are you",
+      "offset": 443000,
+      "duration": 5000
+    },
+    {
+      "text": "ready to implement? So let's implement.",
+      "offset": 448000,
+      "duration": 4000
+    },
+    {
+      "text": "And it's off. Okay. So while it's off,",
+      "offset": 452000,
+      "duration": 5000
+    },
+    {
+      "text": "let's have a look at the skills. So if",
+      "offset": 457000,
+      "duration": 2000
+    },
+    {
+      "text": "we move up into our Claude folder, we",
+      "offset": 459000,
+      "duration": 2000
+    },
+    {
+      "text": "can see Skills, and I've got this",
+      "offset": 461000,
+      "duration": 2000
+    },
+    {
+      "text": "Analyze skill here.",
+      "offset": 463000,
+      "duration": 2000
+    },
+    {
+      "text": "So let's have a quick look at that.",
+      "offset": 465000,
+      "duration": 2000
+    },
+    {
+      "text": "Skills are great to use because you can",
+      "offset": 467000,
+      "duration": 2000
+    },
+    {
+      "text": "give it specific instructions and you",
+      "offset": 469000,
+      "duration": 2000
+    },
+    {
+      "text": "can give it its own permissions. So this",
+      "offset": 471000,
+      "duration": 2000
+    },
+    {
+      "text": "skill has permissions to do everything",
+      "offset": 473000,
+      "duration": 3000
+    },
+    {
+      "text": "it needs with the tool and everything it",
+      "offset": 476000,
+      "duration": 3000
+    },
+    {
+      "text": "needs for git to be able to see the diff",
+      "offset": 479000,
+      "duration": 3000
+    },
+    {
+      "text": "that it's going to look at. And we've",
+      "offset": 482000,
+      "duration": 2000
+    },
+    {
+      "text": "got some parameters at the top here.",
+      "offset": 484000,
+      "duration": 3000
+    },
+    {
+      "text": "It's given it a hint on how to do a diff",
+      "offset": 487000,
+      "duration": 2000
+    },
+    {
+      "text": "so we get a nice consistent result",
+      "offset": 489000,
+      "duration": 3000
+    },
+    {
+      "text": "there. And then here, this Analyze step.",
+      "offset": 492000,
+      "duration": 6000
+    },
+    {
+      "text": "So it says read the file using the Read",
+      "offset": 498000,
+      "duration": 2000
+    },
+    {
+      "text": "tool and then run the analysis using",
+      "offset": 500000,
+      "duration": 4000
+    },
+    {
+      "text": "this MCP tool. Right? Run Advanced Code",
+      "offset": 504000,
+      "duration": 4000
+    },
+    {
+      "text": "Analysis. Now let's look at what it",
+      "offset": 508000,
+      "duration": 2000
+    },
+    {
+      "text": "passes in. Passes in the project key,",
+      "offset": 510000,
+      "duration": 2000
+    },
+    {
+      "text": "which it's told it is this project key",
+      "offset": 512000,
+      "duration": 4000
+    },
+    {
+      "text": "here. There's the file path that we",
+      "offset": 516000,
+      "duration": 3000
+    },
+    {
+      "text": "talked about before, and it's given an",
+      "offset": 519000,
+      "duration": 3000
+    },
+    {
+      "text": "example. The file content, which is the",
+      "offset": 522000,
+      "duration": 5000
+    },
+    {
+      "text": "content that it's testing, and then the",
+      "offset": 527000,
+      "duration": 2000
+    },
+    {
+      "text": "branch name. And when we use the branch",
+      "offset": 529000,
+      "duration": 3000
+    },
+    {
+      "text": "name, it can match that code up with a",
+      "offset": 532000,
+      "duration": 2000
+    },
+    {
+      "text": "recent analysis so that it gets really",
+      "offset": 534000,
+      "duration": 2000
+    },
+    {
+      "text": "good context and gives us really good",
+      "offset": 536000,
+      "duration": 2000
+    },
+    {
+      "text": "results.",
+      "offset": 538000,
+      "duration": 4000
+    },
+    {
+      "text": "And then after it's done an analysis for",
+      "offset": 542000,
+      "duration": 3000
+    },
+    {
+      "text": "each file, we're instructing it to try",
+      "offset": 545000,
+      "duration": 2000
+    },
+    {
+      "text": "and fix the issues. Now to fix the issue",
+      "offset": 547000,
+      "duration": 4000
+    },
+    {
+      "text": "it needs to understand the issue. So in",
+      "offset": 551000,
+      "duration": 2000
+    },
+    {
+      "text": "this case it's calling another SonarQube",
+      "offset": 553000,
+      "duration": 3000
+    },
+    {
+      "text": "MCP method which is called Show Rule and",
+      "offset": 556000,
+      "duration": 2000
+    },
+    {
+      "text": "it passes the rule that failed when it",
+      "offset": 558000,
+      "duration": 2000
+    },
+    {
+      "text": "did the analysis. Do this to understand",
+      "offset": 560000,
+      "duration": 2000
+    },
+    {
+      "text": "the rationale and recommend a fix.",
+      "offset": 562000,
+      "duration": 2000
+    },
+    {
+      "text": "There's a bit more to this as well.",
+      "offset": 564000,
+      "duration": 3000
+    },
+    {
+      "text": "I've built this so that when it does",
+      "offset": 567000,
+      "duration": 3000
+    },
+    {
+      "text": "find issues, it also records the issues",
+      "offset": 570000,
+      "duration": 2000
+    },
+    {
+      "text": "as well, and then it adds that to Claude",
+      "offset": 572000,
+      "duration": 3000
+    },
+    {
+      "text": "MD in the future to give guidelines to",
+      "offset": 575000,
+      "duration": 2000
+    },
+    {
+      "text": "stop it creating issues in the future.",
+      "offset": 577000,
+      "duration": 2000
+    },
+    {
+      "text": "So once agents start using this service",
+      "offset": 579000,
+      "duration": 3000
+    },
+    {
+      "text": "and seeing what issues they're creating,",
+      "offset": 582000,
+      "duration": 2000
+    },
+    {
+      "text": "they can then adjust their own",
+      "offset": 584000,
+      "duration": 3000
+    },
+    {
+      "text": "guidelines, or you can help them adjust",
+      "offset": 587000,
+      "duration": 2000
+    },
+    {
+      "text": "their own guidelines so they don't make",
+      "offset": 589000,
+      "duration": 2000
+    },
+    {
+      "text": "those mistakes again. And this makes it",
+      "offset": 591000,
+      "duration": 2000
+    },
+    {
+      "text": "even more efficient. So over time you",
+      "offset": 593000,
+      "duration": 2000
+    },
+    {
+      "text": "should get less and less issues coming",
+      "offset": 595000,
+      "duration": 2000
+    },
+    {
+      "text": "through and you'll go faster and faster",
+      "offset": 597000,
+      "duration": 3000
+    },
+    {
+      "text": "with AI.",
+      "offset": 600000,
+      "duration": 3000
+    },
+    {
+      "text": "Okay. So that is our Analyze skill.",
+      "offset": 603000,
+      "duration": 3000
+    },
+    {
+      "text": "Let's jump back and see how Claude is",
+      "offset": 606000,
+      "duration": 3000
+    },
+    {
+      "text": "doing now. Okay. So it has written the",
+      "offset": 609000,
+      "duration": 3000
+    },
+    {
+      "text": "implementation for the test. I won't go",
+      "offset": 612000,
+      "duration": 2000
+    },
+    {
+      "text": "into the code here. It's all looking",
+      "offset": 614000,
+      "duration": 3000
+    },
+    {
+      "text": "good. And now it's saying to run Sonar.",
+      "offset": 617000,
+      "duration": 3000
+    },
+    {
+      "text": "One thing I didn't mention here is in",
+      "offset": 620000,
+      "duration": 3000
+    },
+    {
+      "text": "the instructions we given it, we told it",
+      "offset": 623000,
+      "duration": 3000
+    },
+    {
+      "text": "to pause. Now, I wouldn't normally tell",
+      "offset": 626000,
+      "duration": 4000
+    },
+    {
+      "text": "it to pause at this stage. I'll be quite",
+      "offset": 630000,
+      "duration": 2000
+    },
+    {
+      "text": "happy, well, if you're happy to let it",
+      "offset": 632000,
+      "duration": 2000
+    },
+    {
+      "text": "run the whole thing and then present you",
+      "offset": 634000,
+      "duration": 3000
+    },
+    {
+      "text": "with code that is already clean and has",
+      "offset": 637000,
+      "duration": 2000
+    },
+    {
+      "text": "already been checked with Sonar, but for",
+      "offset": 639000,
+      "duration": 3000
+    },
+    {
+      "text": "the sake of this demo, I'm getting it to",
+      "offset": 642000,
+      "duration": 3000
+    },
+    {
+      "text": "stop so we can see the stages it's going",
+      "offset": 645000,
+      "duration": 3000
+    },
+    {
+      "text": "through. So, let's get it to run the",
+      "offset": 648000,
+      "duration": 2000
+    },
+    {
+      "text": "analysis.",
+      "offset": 650000,
+      "duration": 6000
+    },
+    {
+      "text": "Okay. So, it'll take a minute here. Now,",
+      "offset": 656000,
+      "duration": 4000
+    },
+    {
+      "text": "the analysis is actually really fast.",
+      "offset": 660000,
+      "duration": 3000
+    },
+    {
+      "text": "It's less than 3 seconds. However,",
+      "offset": 663000,
+      "duration": 2000
+    },
+    {
+      "text": "Claude does take a little while kind of",
+      "offset": 665000,
+      "duration": 2000
+    },
+    {
+      "text": "working out exactly what it's going to",
+      "offset": 667000,
+      "duration": 2000
+    },
+    {
+      "text": "send to the analysis and formatting it",
+      "offset": 669000,
+      "duration": 2000
+    },
+    {
+      "text": "and then bring it back. So it appears to",
+      "offset": 671000,
+      "duration": 3000
+    },
+    {
+      "text": "take a little bit longer. So let's see",
+      "offset": 674000,
+      "duration": 3000
+    },
+    {
+      "text": "how it's going now.",
+      "offset": 677000,
+      "duration": 4000
+    },
+    {
+      "text": "And you can see there this is Claude",
+      "offset": 681000,
+      "duration": 3000
+    },
+    {
+      "text": "sending the content of the files it's",
+      "offset": 684000,
+      "duration": 2000
+    },
+    {
+      "text": "changed to the MCP server.",
+      "offset": 686000,
+      "duration": 2000
+    },
+    {
+      "text": "That's the first one gone. It runs them",
+      "offset": 688000,
+      "duration": 3000
+    },
+    {
+      "text": "in parallel as well, so it can do all",
+      "offset": 691000,
+      "duration": 3000
+    },
+    {
+      "text": "three at once, although it seems it can",
+      "offset": 694000,
+      "duration": 3000
+    },
+    {
+      "text": "only really process them in sync.",
+      "offset": 697000,
+      "duration": 3000
+    },
+    {
+      "text": "I guess what I'm showing you here as",
+      "offset": 700000,
+      "duration": 3000
+    },
+    {
+      "text": "well is just one way to build the",
+      "offset": 703000,
+      "duration": 3000
+    },
+    {
+      "text": "skills. Now, you can obviously",
+      "offset": 706000,
+      "duration": 3000
+    },
+    {
+      "text": "experiment and come up with your own",
+      "offset": 709000,
+      "duration": 2000
+    },
+    {
+      "text": "ways. We're looking internally at Sonar",
+      "offset": 711000,
+      "duration": 3000
+    },
+    {
+      "text": "at the best ways to use these services",
+      "offset": 714000,
+      "duration": 3000
+    },
+    {
+      "text": "with different agents and we'll be",
+      "offset": 717000,
+      "duration": 2000
+    },
+    {
+      "text": "releasing kind of more guidelines around",
+      "offset": 719000,
+      "duration": 2000
+    },
+    {
+      "text": "this in the future. Obviously this is",
+      "offset": 721000,
+      "duration": 2000
+    },
+    {
+      "text": "beta at the moment. So just giving you",
+      "offset": 723000,
+      "duration": 3000
+    },
+    {
+      "text": "an example of how we think it's working",
+      "offset": 726000,
+      "duration": 3000
+    },
+    {
+      "text": "well at the moment.",
+      "offset": 729000,
+      "duration": 3000
+    },
+    {
+      "text": "Okay. So we can see — oh yes, I can see",
+      "offset": 732000,
+      "duration": 3000
+    },
+    {
+      "text": "one of the files had some issues that's",
+      "offset": 735000,
+      "duration": 3000
+    },
+    {
+      "text": "come back. It's just checking the other",
+      "offset": 738000,
+      "duration": 2000
+    },
+    {
+      "text": "files which should be there in a minute.",
+      "offset": 740000,
+      "duration": 5000
+    },
+    {
+      "text": "Okay, I can see the last file has no",
+      "offset": 745000,
+      "duration": 3000
+    },
+    {
+      "text": "issues, and it looks like we're done.",
+      "offset": 748000,
+      "duration": 3000
+    },
+    {
+      "text": "Okay, so it found one issue, which is",
+      "offset": 751000,
+      "duration": 3000
+    },
+    {
+      "text": "what I was expecting. I'm pleased. And",
+      "offset": 754000,
+      "duration": 3000
+    },
+    {
+      "text": "it's “Async functions should not contain",
+      "offset": 757000,
+      "duration": 3000
+    },
+    {
+      "text": "synchronous file operations.” Now that's",
+      "offset": 760000,
+      "duration": 2000
+    },
+    {
+      "text": "an interesting issue. That's not",
+      "offset": 762000,
+      "duration": 3000
+    },
+    {
+      "text": "something you'd get from a standard",
+      "offset": 765000,
+      "duration": 2000
+    },
+    {
+      "text": "linter. It would be quite a hard thing",
+      "offset": 767000,
+      "duration": 2000
+    },
+    {
+      "text": "to detect sometimes. But it's a sort",
+      "offset": 769000,
+      "duration": 3000
+    },
+    {
+      "text": "thing we can get from this deep Sonar",
+      "offset": 772000,
+      "duration": 2000
+    },
+    {
+      "text": "analysis that we're getting here.",
+      "offset": 774000,
+      "duration": 3000
+    },
+    {
+      "text": "So it's gone off and it called the MCP",
+      "offset": 777000,
+      "duration": 3000
+    },
+    {
+      "text": "Show Rule method. So it's understood.",
+      "offset": 780000,
+      "duration": 4000
+    },
+    {
+      "text": "It's got some good details of that issue",
+      "offset": 784000,
+      "duration": 2000
+    },
+    {
+      "text": "and how to fix it. It's got some",
+      "offset": 786000,
+      "duration": 2000
+    },
+    {
+      "text": "suggestions. So you can say the fix is",
+      "offset": 788000,
+      "duration": 2000
+    },
+    {
+      "text": "to build the CSV in memory with StringIO.",
+      "offset": 790000,
+      "duration": 3000
+    },
+    {
+      "text": "So it's come up with a strategy.",
+      "offset": 793000,
+      "duration": 2000
+    },
+    {
+      "text": "It's also doing some other checks and",
+      "offset": 795000,
+      "duration": 3000
+    },
+    {
+      "text": "it's asking me just to do, just run",
+      "offset": 798000,
+      "duration": 3000
+    },
+    {
+      "text": "another command there.",
+      "offset": 801000,
+      "duration": 4000
+    },
+    {
+      "text": "It's looking to see if it can see this",
+      "offset": 805000,
+      "duration": 3000
+    },
+    {
+      "text": "dependency for anyio, which I think is",
+      "offset": 808000,
+      "duration": 3000
+    },
+    {
+      "text": "the recommended solution to this issue.",
+      "offset": 811000,
+      "duration": 2000
+    },
+    {
+      "text": "The fun thing with working with Claude",
+      "offset": 813000,
+      "duration": 3000
+    },
+    {
+      "text": "is it will come up with a slightly",
+      "offset": 816000,
+      "duration": 3000
+    },
+    {
+      "text": "different solution almost every time. So",
+      "offset": 819000,
+      "duration": 3000
+    },
+    {
+      "text": "I never quite know what I'm going to",
+      "offset": 822000,
+      "duration": 2000
+    },
+    {
+      "text": "get. It's good fun for demos.",
+      "offset": 824000,
+      "duration": 2000
+    },
+    {
+      "text": "Okay. So the recommended library is",
+      "offset": 826000,
+      "duration": 3000
+    },
+    {
+      "text": "available.",
+      "offset": 829000,
+      "duration": 4000
+    },
+    {
+      "text": "It's adding that into its imports",
+      "offset": 833000,
+      "duration": 3000
+    },
+    {
+      "text": "and it's making some more changes.",
+      "offset": 836000,
+      "duration": 5000
+    },
+    {
+      "text": "It's made sure the dependency is pulled",
+      "offset": 841000,
+      "duration": 4000
+    },
+    {
+      "text": "in in the TOML file and now it's",
+      "offset": 845000,
+      "duration": 3000
+    },
+    {
+      "text": "reanalyzing main.py. So that's the file",
+      "offset": 848000,
+      "duration": 3000
+    },
+    {
+      "text": "that had the issue.",
+      "offset": 851000,
+      "duration": 2000
+    },
+    {
+      "text": "And let's see if it's resolved the",
+      "offset": 853000,
+      "duration": 5000
+    },
+    {
+      "text": "issue.",
+      "offset": 858000,
+      "duration": 1000
+    },
+    {
+      "text": "And there it goes. Sending it up.",
+      "offset": 859000,
+      "duration": 4000
+    },
+    {
+      "text": "It's also at the same time rerunning all",
+      "offset": 863000,
+      "duration": 4000
+    },
+    {
+      "text": "our unit tests to check our unit tests",
+      "offset": 867000,
+      "duration": 2000
+    },
+    {
+      "text": "are still working.",
+      "offset": 869000,
+      "duration": 2000
+    },
+    {
+      "text": "Okay, our unit tests are still passing.",
+      "offset": 871000,
+      "duration": 3000
+    },
+    {
+      "text": "That's great.",
+      "offset": 874000,
+      "duration": 3000
+    },
+    {
+      "text": "And now it looks like it's got the fix",
+      "offset": 877000,
+      "duration": 2000
+    },
+    {
+      "text": "and no issues came back. So it's now",
+      "offset": 879000,
+      "duration": 2000
+    },
+    {
+      "text": "going to log that issue so it doesn't",
+      "offset": 881000,
+      "duration": 3000
+    },
+    {
+      "text": "make that problem again next time.",
+      "offset": 884000,
+      "duration": 2000
+    },
+    {
+      "text": "And so it's updating our Claude — well,",
+      "offset": 886000,
+      "duration": 3000
+    },
+    {
+      "text": "it's updating the issue log first. Let's",
+      "offset": 889000,
+      "duration": 2000
+    },
+    {
+      "text": "have a look at that. It's adding it to",
+      "offset": 891000,
+      "duration": 3000
+    },
+    {
+      "text": "our issue log and now it's going to",
+      "offset": 894000,
+      "duration": 2000
+    },
+    {
+      "text": "update Claude MD,",
+      "offset": 896000,
+      "duration": 2000
+    },
+    {
+      "text": "which will basically give it some",
+      "offset": 898000,
+      "duration": 3000
+    },
+    {
+      "text": "guidance in the future. So you can see",
+      "offset": 901000,
+      "duration": 3000
+    },
+    {
+      "text": "here: never use open on a temp file.",
+      "offset": 904000,
+      "duration": 3000
+    },
+    {
+      "text": "There, that's all cool. Okay. And so now",
+      "offset": 907000,
+      "duration": 2000
+    },
+    {
+      "text": "it's given us a nice summary. It didn't",
+      "offset": 909000,
+      "duration": 3000
+    },
+    {
+      "text": "find any issues at all, which is often",
+      "offset": 912000,
+      "duration": 2000
+    },
+    {
+      "text": "the case, on three of the files. But it",
+      "offset": 914000,
+      "duration": 3000
+    },
+    {
+      "text": "did find this really critical issue on",
+      "offset": 917000,
+      "duration": 2000
+    },
+    {
+      "text": "the main file that really could have",
+      "offset": 919000,
+      "duration": 2000
+    },
+    {
+      "text": "caused some nasty bugs around",
+      "offset": 921000,
+      "duration": 2000
+    },
+    {
+      "text": "concurrency at runtime. So it's super",
+      "offset": 923000,
+      "duration": 2000
+    },
+    {
+      "text": "valuable it's found that and it's done",
+      "offset": 925000,
+      "duration": 2000
+    },
+    {
+      "text": "the fix and it's ready. It says it's",
+      "offset": 927000,
+      "duration": 3000
+    },
+    {
+      "text": "ready for the PR. Now, I'm not going to",
+      "offset": 930000,
+      "duration": 2000
+    },
+    {
+      "text": "go into the PR now. I don't think we've",
+      "offset": 932000,
+      "duration": 2000
+    },
+    {
+      "text": "really got time, but you can really see",
+      "offset": 934000,
+      "duration": 2000
+    },
+    {
+      "text": "the value here. We've managed — the agent",
+      "offset": 936000,
+      "duration": 2000
+    },
+    {
+      "text": "has done a pre-analysis.",
+      "offset": 938000,
+      "duration": 500
+    }
+  ],
+  "fullText": "Hi, I'm Tom Howlett. I'm a product director on the code quality domain at Sonar. So, we all know that AI agents are developing code incredibly fast now and that's working. It's functional, but is it correct? At Sonar, that's our specialism. We check code for reliability, maintainability, and security. But at the moment, you wait for the code to be committed, going up to the CI, waiting for a pull request, and then you see the problems, at which point the agent is really slowed down. So over the last few months, we've been developing a new product called Analysis for Agents, which allows the agent to analyze the code as it's writing it. It can do this incredibly fast. So we will return an analysis result in one to three seconds. Now you're probably thinking this is like a linter and it's just doing a shallow analysis, but no, we've developed a service where the code is sent up to SonarQube. SonarQube then combines the code change that the agent has just made with everything it knows about the project in the first place. All the other analysis artifacts that it's created using dependencies and things like that. So we can within three seconds pull back a really deep analysis and find real deep issues on the code. So today I'm going to do a demo of that. It's just available now in beta. So once you sign up for the beta, you can use it through the MCP service. It works with any AI agent that supports MCP, which they all do, but Claude Code is a fun one to try today. So I'm going to start off. Let's have a look at our MCP servers. We can see I've got a few enabled here, including things like Jira, but we'll jump into the SonarQube A3S1, which is basically the SonarQube MCP, but it's got this beta enabled on it. If we look at the tools, we have a great list of tools. If you haven't used the MCP so far, they're super valuable. So we can see our SonarQube projects. We can see issues. We can see quality gates. Really importantly, we can see rules. So if we break a SonarQube rule, the agent can get details back on what the problem is, how it can fix it, etc. But if we skip to the bottom to number 18, we see this magical new one called Run Advanced Code Analysis, and that's the one we're going to play with today. Before we jump into that, I'm just going to do a little quick test to make sure my MCP is working. So let's ask what SonarQube projects do I have access to? And it's slithering apparently. And it's pulled back from the MCP server. You can see there's a list of projects and it's summarized that. So we can see I've got a couple on my personal SonarQube GitHub, and the one we're going to use today is the Insider, and it's already spotted that it knows we're on the Insider project and says the Insider project is the one we actively use in this repo. So that's great. Okay. Let me clear that and we'll start with a task. So to speed things up a bit, I've given Claude a planning session and it's come up with a nice plan to work on this Insider repo. So the project Insider is a personal project which we use to collect insights from customers and we can kind of get insights on them using AI. So I'm just going to add some UI endpoints to this now. I'm going to kick it off now and then we'll have a look at what it's doing. So I'm going to say execute analytics export/import. Okay. And it's off. And it started. We give it a minute to start. And it's reading the files. It's having a look around in typical Claude fashion. And let's see where it gets to there. Okay, it's read the key files. It knows what it's got to do, and it's telling me I've read the codebase and I have a clear plan. This is great. Ready for me to start writing the schemas and tests. So you notice there it's not just going to jump into the code. It's going to write tests first. So I'm going to set that off. And while it starts doing that, because it'll take a little while running tests, we'll see why it's taking that path. So if we look at the Claude MD here, if you haven't used Claude before, this is just its guidance on how to work, and we're telling it here for this project we always want to do test-first development, TDD. So it's writing failing tests first, which it said it was going to do. And you can see here as well, we've instructed it to keep code coverage of any change up to 80%. Now, that matches our SonarQube quality gate, which enforces this 80% check. So if Claude does a good job, it's going to pass the quality gate there. Now, if we look down at the git workflow, we've got a fairly standard workflow. So never commit to main, use feature branches. It gives some instructions on how to create feature branches. But then this point number three: before completing a task that changes or writes code, always use Analyze. Now Analyze is a skill that I've given Claude, and we'll have a look at that in a minute. It says here never use the SonarQube MCP. The skill uses the MCP, but it uses it in quite a specific way. It's possible for you just to install the MCP and let Claude work with it, but it's much better to give it instructions on how to use it, which is what we've done here. There's also some instructions around PR as well, which we've built in to make sure that it's checking the SonarQube quality gate and reacting to that, but we won't go into that too much today. This is more about the Analyze step. So let's jump back to Claude and see how it's getting on. This looks good. So I can see it's written a whole bunch of tests, and normally I'd probably have a good look at those, but for now we'll trust they're good. And it says yes, it's written tests, there's five failures, so it's got failing tests for code it hasn't written yet. And it's saying that's the TDD red state. Are you ready to implement? So let's implement. And it's off. Okay. So while it's off, let's have a look at the skills. So if we move up into our Claude folder, we can see Skills, and I've got this Analyze skill here. So let's have a quick look at that. Skills are great to use because you can give it specific instructions and you can give it its own permissions. So this skill has permissions to do everything it needs with the tool and everything it needs for git to be able to see the diff that it's going to look at. And we've got some parameters at the top here. It's given it a hint on how to do a diff so we get a nice consistent result there. And then here, this Analyze step. So it says read the file using the Read tool and then run the analysis using this MCP tool. Right? Run Advanced Code Analysis. Now let's look at what it passes in. Passes in the project key, which it's told it is this project key here. There's the file path that we talked about before, and it's given an example. The file content, which is the content that it's testing, and then the branch name. And when we use the branch name, it can match that code up with a recent analysis so that it gets really good context and gives us really good results. And then after it's done an analysis for each file, we're instructing it to try and fix the issues. Now to fix the issue it needs to understand the issue. So in this case it's calling another SonarQube MCP method which is called Show Rule and it passes the rule that failed when it did the analysis. Do this to understand the rationale and recommend a fix. There's a bit more to this as well. I've built this so that when it does find issues, it also records the issues as well, and then it adds that to Claude MD in the future to give guidelines to stop it creating issues in the future. So once agents start using this service and seeing what issues they're creating, they can then adjust their own guidelines, or you can help them adjust their own guidelines so they don't make those mistakes again. And this makes it even more efficient. So over time you should get less and less issues coming through and you'll go faster and faster with AI. Okay. So that is our Analyze skill. Let's jump back and see how Claude is doing now. Okay. So it has written the implementation for the test. I won't go into the code here. It's all looking good. And now it's saying to run Sonar. One thing I didn't mention here is in the instructions we given it, we told it to pause. Now, I wouldn't normally tell it to pause at this stage. I'll be quite happy, well, if you're happy to let it run the whole thing and then present you with code that is already clean and has already been checked with Sonar, but for the sake of this demo, I'm getting it to stop so we can see the stages it's going through. So, let's get it to run the analysis. Okay. So, it'll take a minute here. Now, the analysis is actually really fast. It's less than 3 seconds. However, Claude does take a little while kind of working out exactly what it's going to send to the analysis and formatting it and then bring it back. So it appears to take a little bit longer. So let's see how it's going now. And you can see there this is Claude sending the content of the files it's changed to the MCP server. That's the first one gone. It runs them in parallel as well, so it can do all three at once, although it seems it can only really process them in sync. I guess what I'm showing you here as well is just one way to build the skills. Now, you can obviously experiment and come up with your own ways. We're looking internally at Sonar at the best ways to use these services with different agents and we'll be releasing kind of more guidelines around this in the future. Obviously this is beta at the moment. So just giving you an example of how we think it's working well at the moment. Okay. So we can see — oh yes, I can see one of the files had some issues that's come back. It's just checking the other files which should be there in a minute. Okay, I can see the last file has no issues, and it looks like we're done. Okay, so it found one issue, which is what I was expecting. I'm pleased. And it's “Async functions should not contain synchronous file operations.” Now that's an interesting issue. That's not something you'd get from a standard linter. It would be quite a hard thing to detect sometimes. But it's a sort thing we can get from this deep Sonar analysis that we're getting here. So it's gone off and it called the MCP Show Rule method. So it's understood. It's got some good details of that issue and how to fix it. It's got some suggestions. So you can say the fix is to build the CSV in memory with StringIO. So it's come up with a strategy. It's also doing some other checks and it's asking me just to do, just run another command there. It's looking to see if it can see this dependency for anyio, which I think is the recommended solution to this issue. The fun thing with working with Claude is it will come up with a slightly different solution almost every time. So I never quite know what I'm going to get. It's good fun for demos. Okay. So the recommended library is available. It's adding that into its imports and it's making some more changes. It's made sure the dependency is pulled in in the TOML file and now it's reanalyzing main.py. So that's the file that had the issue. And let's see if it's resolved the issue. And there it goes. Sending it up. It's also at the same time rerunning all our unit tests to check our unit tests are still working. Okay, our unit tests are still passing. That's great. And now it looks like it's got the fix and no issues came back. So it's now going to log that issue so it doesn't make that problem again next time. And so it's updating our Claude — well, it's updating the issue log first. Let's have a look at that. It's adding it to our issue log and now it's going to update Claude MD, which will basically give it some guidance in the future. So you can see here: never use open on a temp file. There, that's all cool. Okay. And so now it's given us a nice summary. It didn't find any issues at all, which is often the case, on three of the files. But it did find this really critical issue on the main file that really could have caused some nasty bugs around concurrency at runtime. So it's super valuable it's found that and it's done the fix and it's ready. It says it's ready for the PR. Now, I'm not going to go into the PR now. I don't think we've really got time, but you can really see the value here. We've managed — the agent has done a pre-analysis.",
+  "fetchedAt": "2026-03-14T09:22:07.585Z"
+}

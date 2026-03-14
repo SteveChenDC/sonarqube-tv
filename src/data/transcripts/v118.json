@@ -1,0 +1,698 @@
+{
+  "videoId": "v118",
+  "youtubeId": "xtLVCy0o28Q",
+  "segments": [
+    {
+      "text": "hey folks welcome to this video on",
+      "offset": 80,
+      "duration": 4679
+    },
+    {
+      "text": "Python's new jit compiler or just in",
+      "offset": 1920,
+      "duration": 5560
+    },
+    {
+      "text": "time compiler I'm your host nafal Islam",
+      "offset": 4759,
+      "duration": 5721
+    },
+    {
+      "text": "a developer Advocate at sonar python has",
+      "offset": 7480,
+      "duration": 5039
+    },
+    {
+      "text": "this new jit compiler and you might be",
+      "offset": 10480,
+      "duration": 4680
+    },
+    {
+      "text": "really confused because python is an",
+      "offset": 12519,
+      "duration": 5001
+    },
+    {
+      "text": "interpreted language what are we doing",
+      "offset": 15160,
+      "duration": 4720
+    },
+    {
+      "text": "with a compiler what exactly is a",
+      "offset": 17520,
+      "duration": 5759
+    },
+    {
+      "text": "compiler why now and all these questions",
+      "offset": 19880,
+      "duration": 4760
+    },
+    {
+      "text": "I'm going to try and answer in this",
+      "offset": 23279,
+      "duration": 3641
+    },
+    {
+      "text": "video but first of all we need to talk a",
+      "offset": 24640,
+      "duration": 5479
+    },
+    {
+      "text": "little bit about pet 659 this was the",
+      "offset": 26920,
+      "duration": 5440
+    },
+    {
+      "text": "specializing adaptive interpreter that",
+      "offset": 30119,
+      "duration": 5081
+    },
+    {
+      "text": "was introduced recently I think as early",
+      "offset": 32360,
+      "duration": 6320
+    },
+    {
+      "text": "as python 310 and what is interesting",
+      "offset": 35200,
+      "duration": 5600
+    },
+    {
+      "text": "about this specializing adaptive",
+      "offset": 38680,
+      "duration": 5359
+    },
+    {
+      "text": "interpreter change was that this was",
+      "offset": 40800,
+      "duration": 6800
+    },
+    {
+      "text": "setting the foundations for a lot more",
+      "offset": 44039,
+      "duration": 7160
+    },
+    {
+      "text": "changes to come to the python ecosystem",
+      "offset": 47600,
+      "duration": 5959
+    },
+    {
+      "text": "so if you go back to the motivation of",
+      "offset": 51199,
+      "duration": 6000
+    },
+    {
+      "text": "Pep 659 you're going to see by adaptive",
+      "offset": 53559,
+      "duration": 6081
+    },
+    {
+      "text": "and speculative specialization at the",
+      "offset": 57199,
+      "duration": 5601
+    },
+    {
+      "text": "Grand ularity of individual virtual",
+      "offset": 59640,
+      "duration": 6240
+    },
+    {
+      "text": "machine instructions we get a faster",
+      "offset": 62800,
+      "duration": 5800
+    },
+    {
+      "text": "interpreter that also generates",
+      "offset": 65880,
+      "duration": 4760
+    },
+    {
+      "text": "profiling information for more",
+      "offset": 68600,
+      "duration": 4600
+    },
+    {
+      "text": "sophisticated optimizations in the",
+      "offset": 70640,
+      "duration": 4680
+    },
+    {
+      "text": "future what's interesting is that if we",
+      "offset": 73200,
+      "duration": 4440
+    },
+    {
+      "text": "take a look at what this means if we",
+      "offset": 75320,
+      "duration": 5320
+    },
+    {
+      "text": "have a simple function that sums A and B",
+      "offset": 77640,
+      "duration": 5799
+    },
+    {
+      "text": "together and we kind of repeat this over",
+      "offset": 80640,
+      "duration": 5960
+    },
+    {
+      "text": "and over again The Interpreter actually",
+      "offset": 83439,
+      "duration": 5881
+    },
+    {
+      "text": "understands that hey this is always",
+      "offset": 86600,
+      "duration": 6519
+    },
+    {
+      "text": "going to be be an integer being added to",
+      "offset": 89320,
+      "duration": 7400
+    },
+    {
+      "text": "another integer and so you get something",
+      "offset": 93119,
+      "duration": 6841
+    },
+    {
+      "text": "called a binary op but the binary op is",
+      "offset": 96720,
+      "duration": 5960
+    },
+    {
+      "text": "specialized to add int and you can get",
+      "offset": 99960,
+      "duration": 4439
+    },
+    {
+      "text": "this kind of information when you use",
+      "offset": 102680,
+      "duration": 4680
+    },
+    {
+      "text": "the dis module you can pass in your",
+      "offset": 104399,
+      "duration": 5281
+    },
+    {
+      "text": "python object and you can set adaptive",
+      "offset": 107360,
+      "duration": 5600
+    },
+    {
+      "text": "in is equal to true to tell you what",
+      "offset": 109680,
+      "duration": 5119
+    },
+    {
+      "text": "adaptive changes have been made to the",
+      "offset": 112960,
+      "duration": 4360
+    },
+    {
+      "text": "python by code what you're seeing here",
+      "offset": 114799,
+      "duration": 4441
+    },
+    {
+      "text": "is the python by code and what you're",
+      "offset": 117320,
+      "duration": 4920
+    },
+    {
+      "text": "seeing highlight highed is the change to",
+      "offset": 119240,
+      "duration": 7440
+    },
+    {
+      "text": "the binary op from regular edition and",
+      "offset": 122240,
+      "duration": 6879
+    },
+    {
+      "text": "this is what it looks like in Python 3.8",
+      "offset": 126680,
+      "duration": 4600
+    },
+    {
+      "text": "that does not have the specializing",
+      "offset": 129119,
+      "duration": 4081
+    },
+    {
+      "text": "adaptive interpreter which is that you",
+      "offset": 131280,
+      "duration": 4800
+    },
+    {
+      "text": "just have your regular binary ad there",
+      "offset": 133200,
+      "duration": 5920
+    },
+    {
+      "text": "is nothing special about it there is no",
+      "offset": 136080,
+      "duration": 6280
+    },
+    {
+      "text": "optimization nothing and in Python 3.8",
+      "offset": 139120,
+      "duration": 6040
+    },
+    {
+      "text": "you don't even have an Adaptive is equal",
+      "offset": 142360,
+      "duration": 6400
+    },
+    {
+      "text": "to True option that you can set in dis.",
+      "offset": 145160,
+      "duration": 6079
+    },
+    {
+      "text": "dis but we're not here to talk about the",
+      "offset": 148760,
+      "duration": 4479
+    },
+    {
+      "text": "old versions of python or the python",
+      "offset": 151239,
+      "duration": 4121
+    },
+    {
+      "text": "version that we're currently in we are",
+      "offset": 153239,
+      "duration": 4481
+    },
+    {
+      "text": "going to talk about python",
+      "offset": 155360,
+      "duration": 5360
+    },
+    {
+      "text": "3.13 which will have this new jit",
+      "offset": 157720,
+      "duration": 5599
+    },
+    {
+      "text": "compiler now I've been building up to",
+      "offset": 160720,
+      "duration": 4840
+    },
+    {
+      "text": "all of this because I wanted to show you",
+      "offset": 163319,
+      "duration": 4200
+    },
+    {
+      "text": "how the python bite code has been slowly",
+      "offset": 165560,
+      "duration": 4759
+    },
+    {
+      "text": "changing over time and over releases but",
+      "offset": 167519,
+      "duration": 5360
+    },
+    {
+      "text": "now we have two tiers of bite code and",
+      "offset": 170319,
+      "duration": 5161
+    },
+    {
+      "text": "let me explain what that means so on our",
+      "offset": 172879,
+      "duration": 4280
+    },
+    {
+      "text": "left here we have python code which is",
+      "offset": 175480,
+      "duration": 3880
+    },
+    {
+      "text": "pretty simple you have your function you",
+      "offset": 177159,
+      "duration": 4121
+    },
+    {
+      "text": "have your variables you have your return",
+      "offset": 179360,
+      "duration": 4920
+    },
+    {
+      "text": "Clauses all that good stuff but then you",
+      "offset": 181280,
+      "duration": 5760
+    },
+    {
+      "text": "get your tier one by code which is your",
+      "offset": 184280,
+      "duration": 6319
+    },
+    {
+      "text": "your binary add your load fast and then",
+      "offset": 187040,
+      "duration": 6400
+    },
+    {
+      "text": "in this brand new release of python",
+      "offset": 190599,
+      "duration": 6000
+    },
+    {
+      "text": "3.13 we have a tier 2 bite code that",
+      "offset": 193440,
+      "duration": 6120
+    },
+    {
+      "text": "breaks down something like binary ad",
+      "offset": 196599,
+      "duration": 6321
+    },
+    {
+      "text": "into smaller pieces so for example you",
+      "offset": 199560,
+      "duration": 5280
+    },
+    {
+      "text": "have undor set",
+      "offset": 202920,
+      "duration": 7080
+    },
+    {
+      "text": "ipor guard both intore binary op add int",
+      "offset": 204840,
+      "duration": 8720
+    },
+    {
+      "text": "and all of that goes into a specialized",
+      "offset": 210000,
+      "duration": 6680
+    },
+    {
+      "text": "version of the binary and op code inside",
+      "offset": 213560,
+      "duration": 5560
+    },
+    {
+      "text": "of the Python interpreter and eventually",
+      "offset": 216680,
+      "duration": 4119
+    },
+    {
+      "text": "this is taken in by the python",
+      "offset": 219120,
+      "duration": 4880
+    },
+    {
+      "text": "interpreter and it's run so in a way",
+      "offset": 220799,
+      "duration": 6241
+    },
+    {
+      "text": "this allows us to be closer and closer",
+      "offset": 224000,
+      "duration": 6319
+    },
+    {
+      "text": "and closer to the machine code to a",
+      "offset": 227040,
+      "duration": 6520
+    },
+    {
+      "text": "point where we can use a lot of the",
+      "offset": 230319,
+      "duration": 5401
+    },
+    {
+      "text": "things that are generated in tier 2 bite",
+      "offset": 233560,
+      "duration": 6759
+    },
+    {
+      "text": "code inside of some kind of container ER",
+      "offset": 235720,
+      "duration": 6200
+    },
+    {
+      "text": "that is machine code but here's the",
+      "offset": 240319,
+      "duration": 3681
+    },
+    {
+      "text": "thing jits are everywhere there are all",
+      "offset": 241920,
+      "duration": 5280
+    },
+    {
+      "text": "kinds of jits but this particular git is",
+      "offset": 244000,
+      "duration": 5599
+    },
+    {
+      "text": "really quite interesting because it's",
+      "offset": 247200,
+      "duration": 5640
+    },
+    {
+      "text": "relatively new so all of this started in",
+      "offset": 249599,
+      "duration": 7040
+    },
+    {
+      "text": "2021 and this new method of a justtin",
+      "offset": 252840,
+      "duration": 5799
+    },
+    {
+      "text": "Time compiler the copy and Patch",
+      "offset": 256639,
+      "duration": 5280
+    },
+    {
+      "text": "compilation mechanism for this jit is",
+      "offset": 258639,
+      "duration": 5321
+    },
+    {
+      "text": "used because it works really well with",
+      "offset": 261919,
+      "duration": 4321
+    },
+    {
+      "text": "dynamic programming languages so what",
+      "offset": 263960,
+      "duration": 4959
+    },
+    {
+      "text": "happens is you get your python code you",
+      "offset": 266240,
+      "duration": 4959
+    },
+    {
+      "text": "take your tier one by code you take your",
+      "offset": 268919,
+      "duration": 5081
+    },
+    {
+      "text": "tier 2 by code and then you take this",
+      "offset": 271199,
+      "duration": 4601
+    },
+    {
+      "text": "tier 2 by code which is closer to the",
+      "offset": 274000,
+      "duration": 5000
+    },
+    {
+      "text": "machine code which has more information",
+      "offset": 275800,
+      "duration": 5239
+    },
+    {
+      "text": "such as you know what are your caches",
+      "offset": 279000,
+      "duration": 4880
+    },
+    {
+      "text": "what are your constants as well as",
+      "offset": 281039,
+      "duration": 5481
+    },
+    {
+      "text": "things like type information and so you",
+      "offset": 283880,
+      "duration": 4920
+    },
+    {
+      "text": "can take this stuff you can take this",
+      "offset": 286520,
+      "duration": 4440
+    },
+    {
+      "text": "information you can put it into",
+      "offset": 288800,
+      "duration": 5040
+    },
+    {
+      "text": "something called a relocatable object",
+      "offset": 290960,
+      "duration": 5320
+    },
+    {
+      "text": "file and it's kind of like filling in",
+      "offset": 293840,
+      "duration": 4760
+    },
+    {
+      "text": "the gaps a little bit take these",
+      "offset": 296280,
+      "duration": 4680
+    },
+    {
+      "text": "operations you put put them into these",
+      "offset": 298600,
+      "duration": 4720
+    },
+    {
+      "text": "relocatable object files and then you",
+      "offset": 300960,
+      "duration": 5400
+    },
+    {
+      "text": "compile it and you get machine code it's",
+      "offset": 303320,
+      "duration": 5280
+    },
+    {
+      "text": "much more simple to maintain because",
+      "offset": 306360,
+      "duration": 4559
+    },
+    {
+      "text": "it's just like using a template you just",
+      "offset": 308600,
+      "duration": 5640
+    },
+    {
+      "text": "fill in the blanks with the relevant",
+      "offset": 310919,
+      "duration": 6120
+    },
+    {
+      "text": "information so for example the machine",
+      "offset": 314240,
+      "duration": 6840
+    },
+    {
+      "text": "knows how to add adding two integers is",
+      "offset": 317039,
+      "duration": 6801
+    },
+    {
+      "text": "a very low-level operation that can be",
+      "offset": 321080,
+      "duration": 5920
+    },
+    {
+      "text": "done and so what happens here is you",
+      "offset": 323840,
+      "duration": 4840
+    },
+    {
+      "text": "take bits of the tier 2 bite code you",
+      "offset": 327000,
+      "duration": 4039
+    },
+    {
+      "text": "put it into this relocatable object file",
+      "offset": 328680,
+      "duration": 3720
+    },
+    {
+      "text": "and then you compile that code and then",
+      "offset": 331039,
+      "duration": 3761
+    },
+    {
+      "text": "you can run it and that increases your",
+      "offset": 332400,
+      "duration": 4359
+    },
+    {
+      "text": "speed by a lot because you're closer to",
+      "offset": 334800,
+      "duration": 4320
+    },
+    {
+      "text": "the machine and this has resulted in a",
+      "offset": 336759,
+      "duration": 5241
+    },
+    {
+      "text": "performance increase from 2 to 9% and",
+      "offset": 339120,
+      "duration": 5079
+    },
+    {
+      "text": "you might say that that's not a lot",
+      "offset": 342000,
+      "duration": 4560
+    },
+    {
+      "text": "that's that's that's just sad but but it",
+      "offset": 344199,
+      "duration": 4361
+    },
+    {
+      "text": "isn't this is just the beginning this is",
+      "offset": 346560,
+      "duration": 4840
+    },
+    {
+      "text": "the very first time we've put in a",
+      "offset": 348560,
+      "duration": 6199
+    },
+    {
+      "text": "compiler into uh a python release and of",
+      "offset": 351400,
+      "duration": 5040
+    },
+    {
+      "text": "course all tier one platforms are",
+      "offset": 354759,
+      "duration": 3921
+    },
+    {
+      "text": "supported so if you think that's",
+      "offset": 356440,
+      "duration": 5599
+    },
+    {
+      "text": "exciting please go ahead and download uh",
+      "offset": 358680,
+      "duration": 6480
+    },
+    {
+      "text": "python 3.13 I personally use pyv to do",
+      "offset": 362039,
+      "duration": 5641
+    },
+    {
+      "text": "it and I hope to see you in the next",
+      "offset": 365160,
+      "duration": 5159
+    },
+    {
+      "text": "video",
+      "offset": 367680,
+      "duration": 2639
+    }
+  ],
+  "fullText": "hey folks welcome to this video on Python's new jit compiler or just in time compiler I'm your host nafal Islam a developer Advocate at sonar python has this new jit compiler and you might be really confused because python is an interpreted language what are we doing with a compiler what exactly is a compiler why now and all these questions I'm going to try and answer in this video but first of all we need to talk a little bit about pet 659 this was the specializing adaptive interpreter that was introduced recently I think as early as python 310 and what is interesting about this specializing adaptive interpreter change was that this was setting the foundations for a lot more changes to come to the python ecosystem so if you go back to the motivation of Pep 659 you're going to see by adaptive and speculative specialization at the Grand ularity of individual virtual machine instructions we get a faster interpreter that also generates profiling information for more sophisticated optimizations in the future what's interesting is that if we take a look at what this means if we have a simple function that sums A and B together and we kind of repeat this over and over again The Interpreter actually understands that hey this is always going to be be an integer being added to another integer and so you get something called a binary op but the binary op is specialized to add int and you can get this kind of information when you use the dis module you can pass in your python object and you can set adaptive in is equal to true to tell you what adaptive changes have been made to the python by code what you're seeing here is the python by code and what you're seeing highlight highed is the change to the binary op from regular edition and this is what it looks like in Python 3.8 that does not have the specializing adaptive interpreter which is that you just have your regular binary ad there is nothing special about it there is no optimization nothing and in Python 3.8 you don't even have an Adaptive is equal to True option that you can set in dis. dis but we're not here to talk about the old versions of python or the python version that we're currently in we are going to talk about python 3.13 which will have this new jit compiler now I've been building up to all of this because I wanted to show you how the python bite code has been slowly changing over time and over releases but now we have two tiers of bite code and let me explain what that means so on our left here we have python code which is pretty simple you have your function you have your variables you have your return Clauses all that good stuff but then you get your tier one by code which is your your binary add your load fast and then in this brand new release of python 3.13 we have a tier 2 bite code that breaks down something like binary ad into smaller pieces so for example you have undor set ipor guard both intore binary op add int and all of that goes into a specialized version of the binary and op code inside of the Python interpreter and eventually this is taken in by the python interpreter and it's run so in a way this allows us to be closer and closer and closer to the machine code to a point where we can use a lot of the things that are generated in tier 2 bite code inside of some kind of container ER that is machine code but here's the thing jits are everywhere there are all kinds of jits but this particular git is really quite interesting because it's relatively new so all of this started in 2021 and this new method of a justtin Time compiler the copy and Patch compilation mechanism for this jit is used because it works really well with dynamic programming languages so what happens is you get your python code you take your tier one by code you take your tier 2 by code and then you take this tier 2 by code which is closer to the machine code which has more information such as you know what are your caches what are your constants as well as things like type information and so you can take this stuff you can take this information you can put it into something called a relocatable object file and it's kind of like filling in the gaps a little bit take these operations you put put them into these relocatable object files and then you compile it and you get machine code it's much more simple to maintain because it's just like using a template you just fill in the blanks with the relevant information so for example the machine knows how to add adding two integers is a very low-level operation that can be done and so what happens here is you take bits of the tier 2 bite code you put it into this relocatable object file and then you compile that code and then you can run it and that increases your speed by a lot because you're closer to the machine and this has resulted in a performance increase from 2 to 9% and you might say that that's not a lot that's that's that's just sad but but it isn't this is just the beginning this is the very first time we've put in a compiler into uh a python release and of course all tier one platforms are supported so if you think that's exciting please go ahead and download uh python 3.13 I personally use pyv to do it and I hope to see you in the next video",
+  "fetchedAt": "2026-03-14T09:23:34.635Z"
+}

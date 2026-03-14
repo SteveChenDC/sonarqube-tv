@@ -1,0 +1,1303 @@
+{
+  "videoId": "v100",
+  "youtubeId": "_ua8Iz1RmV8",
+  "segments": [
+    {
+      "text": "[Music]",
+      "offset": 290,
+      "duration": 9990
+    },
+    {
+      "text": "so I've got I've got VSS code uh up here",
+      "offset": 7680,
+      "duration": 4680
+    },
+    {
+      "text": "running and um yeah just going to walk",
+      "offset": 10280,
+      "duration": 4640
+    },
+    {
+      "text": "through a little bit of what these tools",
+      "offset": 12360,
+      "duration": 4679
+    },
+    {
+      "text": "look like from a developer",
+      "offset": 14920,
+      "duration": 4840
+    },
+    {
+      "text": "perspective uh now sonar lint uh as",
+      "offset": 17039,
+      "duration": 4961
+    },
+    {
+      "text": "Manish said this is available not just",
+      "offset": 19760,
+      "duration": 4359
+    },
+    {
+      "text": "for vs code but we also have uh",
+      "offset": 22000,
+      "duration": 4400
+    },
+    {
+      "text": "implementations for uh jet brains",
+      "offset": 24119,
+      "duration": 6441
+    },
+    {
+      "text": "products uh Eclipse uh Visual Studio um",
+      "offset": 26400,
+      "duration": 6319
+    },
+    {
+      "text": "and so for whatever Marketplace for",
+      "offset": 30560,
+      "duration": 5800
+    },
+    {
+      "text": "whatever uh IDE you're using um head out",
+      "offset": 32719,
+      "duration": 6121
+    },
+    {
+      "text": "and just search for sonar",
+      "offset": 36360,
+      "duration": 4719
+    },
+    {
+      "text": "lent and you should see it pop up you",
+      "offset": 38840,
+      "duration": 4120
+    },
+    {
+      "text": "can install it uh and start working with",
+      "offset": 41079,
+      "duration": 3761
+    },
+    {
+      "text": "it today um so it actually doesn't",
+      "offset": 42960,
+      "duration": 4640
+    },
+    {
+      "text": "require any subscription or or or setup",
+      "offset": 44840,
+      "duration": 5320
+    },
+    {
+      "text": "um essentially we ship sonar lint just",
+      "offset": 47600,
+      "duration": 4080
+    },
+    {
+      "text": "with all of the base set of rules that",
+      "offset": 50160,
+      "duration": 3480
+    },
+    {
+      "text": "sonar Cube or sonar Cloud would detect",
+      "offset": 51680,
+      "duration": 5199
+    },
+    {
+      "text": "on these projects um so uh yeah let's",
+      "offset": 53640,
+      "duration": 4399
+    },
+    {
+      "text": "let's take a look and see how this",
+      "offset": 56879,
+      "duration": 3561
+    },
+    {
+      "text": "interacts with an AI uh code generation",
+      "offset": 58039,
+      "duration": 5400
+    },
+    {
+      "text": "tool so I've got co-pilot here",
+      "offset": 60440,
+      "duration": 4920
+    },
+    {
+      "text": "specifically let's um let's give it a",
+      "offset": 63439,
+      "duration": 5121
+    },
+    {
+      "text": "softball to start with uh let's uh have",
+      "offset": 65360,
+      "duration": 5880
+    },
+    {
+      "text": "it generate a uh a Javascript app that",
+      "offset": 68560,
+      "duration": 6080
+    },
+    {
+      "text": "fetches some data from a graphql uh API",
+      "offset": 71240,
+      "duration": 5239
+    },
+    {
+      "text": "and let's make this maybe a a plant",
+      "offset": 74640,
+      "duration": 5360
+    },
+    {
+      "text": "caretaking app um so I'm a plant dad uh",
+      "offset": 76479,
+      "duration": 6280
+    },
+    {
+      "text": "I I have a lot here at home but uh it",
+      "offset": 80000,
+      "duration": 4479
+    },
+    {
+      "text": "sometimes is difficult to remember when",
+      "offset": 82759,
+      "duration": 4320
+    },
+    {
+      "text": "to water",
+      "offset": 84479,
+      "duration": 2600
+    },
+    {
+      "text": "things so it looks like it's generating",
+      "offset": 88200,
+      "duration": 5879
+    },
+    {
+      "text": "what we're asking",
+      "offset": 91600,
+      "duration": 5519
+    },
+    {
+      "text": "for provides us with uh some pretty nice",
+      "offset": 94079,
+      "duration": 6040
+    },
+    {
+      "text": "output here um and uh really this this",
+      "offset": 97119,
+      "duration": 5040
+    },
+    {
+      "text": "looks you know pretty clean we're we're",
+      "offset": 100119,
+      "duration": 3481
+    },
+    {
+      "text": "really we didn't really ask it to do",
+      "offset": 102159,
+      "duration": 4761
+    },
+    {
+      "text": "anything too uh too difficult here uh",
+      "offset": 103600,
+      "duration": 5119
+    },
+    {
+      "text": "however you'll notice that uh we're",
+      "offset": 106920,
+      "duration": 4239
+    },
+    {
+      "text": "starting to get some markup on some of",
+      "offset": 108719,
+      "duration": 5161
+    },
+    {
+      "text": "these uh some of these variable names",
+      "offset": 111159,
+      "duration": 5041
+    },
+    {
+      "text": "and so while nothing here has been",
+      "offset": 113880,
+      "duration": 6040
+    },
+    {
+      "text": "generated that's super concerning um",
+      "offset": 116200,
+      "duration": 5400
+    },
+    {
+      "text": "sonar lint has already started to give",
+      "offset": 119920,
+      "duration": 3239
+    },
+    {
+      "text": "us some value and let us know that",
+      "offset": 121600,
+      "duration": 3320
+    },
+    {
+      "text": "there's there's some things that are off",
+      "offset": 123159,
+      "duration": 4361
+    },
+    {
+      "text": "with what we've defined to be our our",
+      "offset": 124920,
+      "duration": 4280
+    },
+    {
+      "text": "quality",
+      "offset": 127520,
+      "duration": 5320
+    },
+    {
+      "text": "profile now um while sonar lint does act",
+      "offset": 129200,
+      "duration": 7319
+    },
+    {
+      "text": "out of the box uh on um a lot of issues",
+      "offset": 132840,
+      "duration": 5200
+    },
+    {
+      "text": "there's there is some customization you",
+      "offset": 136519,
+      "duration": 3881
+    },
+    {
+      "text": "can do here as well uh and so this",
+      "offset": 138040,
+      "duration": 5240
+    },
+    {
+      "text": "particular project I have it linked up",
+      "offset": 140400,
+      "duration": 5199
+    },
+    {
+      "text": "uh with a with a project in my Sonar",
+      "offset": 143280,
+      "duration": 6880
+    },
+    {
+      "text": "Cube server so I've got that here",
+      "offset": 145599,
+      "duration": 6441
+    },
+    {
+      "text": "and so what this is actually doing is",
+      "offset": 150160,
+      "duration": 5640
+    },
+    {
+      "text": "pulling down um some uh um some",
+      "offset": 152040,
+      "duration": 6680
+    },
+    {
+      "text": "particular maintainability rules uh for",
+      "offset": 155800,
+      "duration": 5680
+    },
+    {
+      "text": "uh for us to work with co-pilot",
+      "offset": 158720,
+      "duration": 5599
+    },
+    {
+      "text": "obviously has no idea that I have a a",
+      "offset": 161480,
+      "duration": 4720
+    },
+    {
+      "text": "particular regular expression naming",
+      "offset": 164319,
+      "duration": 4280
+    },
+    {
+      "text": "convention for my my variables in",
+      "offset": 166200,
+      "duration": 5319
+    },
+    {
+      "text": "JavaScript uh but sonor lint has has let",
+      "offset": 168599,
+      "duration": 4720
+    },
+    {
+      "text": "us know hey the code generated doesn't",
+      "offset": 171519,
+      "duration": 4761
+    },
+    {
+      "text": "necessarily match our quality",
+      "offset": 173319,
+      "duration": 5241
+    },
+    {
+      "text": "standard so let's go and check out what",
+      "offset": 176280,
+      "duration": 4640
+    },
+    {
+      "text": "sonarlint is actually letting us know uh",
+      "offset": 178560,
+      "duration": 4319
+    },
+    {
+      "text": "yep sure enough we have a variable that",
+      "offset": 180920,
+      "duration": 3560
+    },
+    {
+      "text": "doesn't comply with the naming",
+      "offset": 182879,
+      "duration": 4000
+    },
+    {
+      "text": "convention that we've set up um it",
+      "offset": 184480,
+      "duration": 4280
+    },
+    {
+      "text": "provides some kind of generic details on",
+      "offset": 186879,
+      "duration": 4041
+    },
+    {
+      "text": "how to fix this but where this",
+      "offset": 188760,
+      "duration": 4880
+    },
+    {
+      "text": "interaction gets really cool is uh",
+      "offset": 190920,
+      "duration": 5120
+    },
+    {
+      "text": "co-pilot actually has the ability to",
+      "offset": 193640,
+      "duration": 4560
+    },
+    {
+      "text": "read into particular issues that show up",
+      "offset": 196040,
+      "duration": 4919
+    },
+    {
+      "text": "in the IDE uh and so while we could go",
+      "offset": 198200,
+      "duration": 4480
+    },
+    {
+      "text": "in and and you know take a look at the",
+      "offset": 200959,
+      "duration": 3681
+    },
+    {
+      "text": "redx and try to figure out exactly what",
+      "offset": 202680,
+      "duration": 4279
+    },
+    {
+      "text": "the naming convention is supposed to",
+      "offset": 204640,
+      "duration": 4920
+    },
+    {
+      "text": "be co-pilot can come in and actually",
+      "offset": 206959,
+      "duration": 6521
+    },
+    {
+      "text": "give us uh give us a suggested fix here",
+      "offset": 209560,
+      "duration": 5959
+    },
+    {
+      "text": "so if we bump back up to the Quick Fix",
+      "offset": 213480,
+      "duration": 5399
+    },
+    {
+      "text": "and we have we apply a fix using",
+      "offset": 215519,
+      "duration": 5841
+    },
+    {
+      "text": "co-pilot you'll see we get the the",
+      "offset": 218879,
+      "duration": 4321
+    },
+    {
+      "text": "correct naming convention here and I",
+      "offset": 221360,
+      "duration": 3200
+    },
+    {
+      "text": "don't advise all caps for your",
+      "offset": 223200,
+      "duration": 3319
+    },
+    {
+      "text": "JavaScript apps just this is just for",
+      "offset": 224560,
+      "duration": 4319
+    },
+    {
+      "text": "for a demo purpose but uh you can see",
+      "offset": 226519,
+      "duration": 5041
+    },
+    {
+      "text": "how co-pilot actually uh detects what",
+      "offset": 228879,
+      "duration": 6521
+    },
+    {
+      "text": "that Rex is and fixes it for",
+      "offset": 231560,
+      "duration": 3840
+    },
+    {
+      "text": "us um and and again this isn't these",
+      "offset": 238040,
+      "duration": 4640
+    },
+    {
+      "text": "aren't rules that are out of the box",
+      "offset": 241319,
+      "duration": 3560
+    },
+    {
+      "text": "we've actually defined these in sonar",
+      "offset": 242680,
+      "duration": 4320
+    },
+    {
+      "text": "Cube so if I'm looking at my project",
+      "offset": 244879,
+      "duration": 4640
+    },
+    {
+      "text": "here uh and if I go to my project",
+      "offset": 247000,
+      "duration": 5079
+    },
+    {
+      "text": "settings quality profiles are the sets",
+      "offset": 249519,
+      "duration": 5401
+    },
+    {
+      "text": "of rules that we Define to be uh to be",
+      "offset": 252079,
+      "duration": 5120
+    },
+    {
+      "text": "detected uh for our projects so you'll",
+      "offset": 254920,
+      "duration": 4879
+    },
+    {
+      "text": "see I have actually a custom JavaScript",
+      "offset": 257199,
+      "duration": 5361
+    },
+    {
+      "text": "quality profile here and so if we go",
+      "offset": 259799,
+      "duration": 5241
+    },
+    {
+      "text": "click to to see what that is whoops",
+      "offset": 262560,
+      "duration": 6079
+    },
+    {
+      "text": "let's go back",
+      "offset": 265040,
+      "duration": 3599
+    },
+    {
+      "text": "so if I jump into that that custom",
+      "offset": 274759,
+      "duration": 4401
+    },
+    {
+      "text": "quality profile um you'll see that I",
+      "offset": 276680,
+      "duration": 5120
+    },
+    {
+      "text": "have my my project uh linked up with",
+      "offset": 279160,
+      "duration": 5039
+    },
+    {
+      "text": "this quality profile and I've actually",
+      "offset": 281800,
+      "duration": 4399
+    },
+    {
+      "text": "recently added a rule",
+      "offset": 284199,
+      "duration": 6401
+    },
+    {
+      "text": "here that uh that sure enough um sets up",
+      "offset": 286199,
+      "duration": 6241
+    },
+    {
+      "text": "that that custom naming convention for",
+      "offset": 290600,
+      "duration": 3680
+    },
+    {
+      "text": "us so serar lit actually pulls that down",
+      "offset": 292440,
+      "duration": 3920
+    },
+    {
+      "text": "in and applies it for us and then the",
+      "offset": 294280,
+      "duration": 3479
+    },
+    {
+      "text": "code generation tool can actually",
+      "offset": 296360,
+      "duration": 2800
+    },
+    {
+      "text": "interact with that rule in a way that's",
+      "offset": 297759,
+      "duration": 3880
+    },
+    {
+      "text": "meaningful",
+      "offset": 299160,
+      "duration": 2479
+    },
+    {
+      "text": "so this is a pretty simple example let's",
+      "offset": 301680,
+      "duration": 3760
+    },
+    {
+      "text": "uh let's go see if we can generate our",
+      "offset": 303840,
+      "duration": 3560
+    },
+    {
+      "text": "backend for this app",
+      "offset": 305440,
+      "duration": 5039
+    },
+    {
+      "text": "now um so let's have it do uh maybe a",
+      "offset": 307400,
+      "duration": 7680
+    },
+    {
+      "text": "python API uh that uses graphql uh to",
+      "offset": 310479,
+      "duration": 6641
+    },
+    {
+      "text": "interact with our house plant database",
+      "offset": 315080,
+      "duration": 3640
+    },
+    {
+      "text": "where we're going to keep uh keep all of",
+      "offset": 317120,
+      "duration": 3760
+    },
+    {
+      "text": "our",
+      "offset": 318720,
+      "duration": 2160
+    },
+    {
+      "text": "data looks like it's chosen to use a",
+      "offset": 323720,
+      "duration": 6479
+    },
+    {
+      "text": "flask graphql Library",
+      "offset": 326160,
+      "duration": 7599
+    },
+    {
+      "text": "and it's generating some output for",
+      "offset": 330199,
+      "duration": 3560
+    },
+    {
+      "text": "us let's go ahead and put that into our",
+      "offset": 335560,
+      "duration": 4400
+    },
+    {
+      "text": "file um so uh immediately uh we start to",
+      "offset": 340080,
+      "duration": 6839
+    },
+    {
+      "text": "get uh some some results here uh so",
+      "offset": 343960,
+      "duration": 4720
+    },
+    {
+      "text": "sonar lint is letting us know that there",
+      "offset": 346919,
+      "duration": 4120
+    },
+    {
+      "text": "are uh some some particular issues here",
+      "offset": 348680,
+      "duration": 5799
+    },
+    {
+      "text": "that we may want to be aware of um so if",
+      "offset": 351039,
+      "duration": 5280
+    },
+    {
+      "text": "we come over and and hover over one of",
+      "offset": 354479,
+      "duration": 3720
+    },
+    {
+      "text": "these uh we can go to that quick fix",
+      "offset": 356319,
+      "duration": 5361
+    },
+    {
+      "text": "menu again uh and and actually uh get oh",
+      "offset": 358199,
+      "duration": 5560
+    },
+    {
+      "text": "whoops let's look at this one here if we",
+      "offset": 361680,
+      "duration": 3480
+    },
+    {
+      "text": "go to the Quick Fix menu again we get a",
+      "offset": 363759,
+      "duration": 3880
+    },
+    {
+      "text": "sonar lint uh rule description here",
+      "offset": 365160,
+      "duration": 5159
+    },
+    {
+      "text": "letting us know that uh graphql",
+      "offset": 367639,
+      "duration": 4400
+    },
+    {
+      "text": "introspection should be disabled in",
+      "offset": 370319,
+      "duration": 5000
+    },
+    {
+      "text": "production now I understand why the code",
+      "offset": 372039,
+      "duration": 4921
+    },
+    {
+      "text": "generation tool made it this way this is",
+      "offset": 375319,
+      "duration": 3720
+    },
+    {
+      "text": "really helpful for debugging purposes",
+      "offset": 376960,
+      "duration": 4239
+    },
+    {
+      "text": "but uh should this be committed it could",
+      "offset": 379039,
+      "duration": 6160
+    },
+    {
+      "text": "turn into a pretty uh um uh severe",
+      "offset": 381199,
+      "duration": 6761
+    },
+    {
+      "text": "vulnerability so sonar lint lets us know",
+      "offset": 385199,
+      "duration": 4921
+    },
+    {
+      "text": "up front hey this is a potenti issue",
+      "offset": 387960,
+      "duration": 4440
+    },
+    {
+      "text": "let's make sure that that we're keeping",
+      "offset": 390120,
+      "duration": 3960
+    },
+    {
+      "text": "track of this and and not letting it go",
+      "offset": 392400,
+      "duration": 4079
+    },
+    {
+      "text": "into our production environment whereas",
+      "offset": 394080,
+      "duration": 3880
+    },
+    {
+      "text": "you know a developer who may not be",
+      "offset": 396479,
+      "duration": 4601
+    },
+    {
+      "text": "super familiar with graphql May uh end",
+      "offset": 397960,
+      "duration": 6280
+    },
+    {
+      "text": "up accidentally committing this",
+      "offset": 401080,
+      "duration": 6519
+    },
+    {
+      "text": "code again uh if we want some help from",
+      "offset": 404240,
+      "duration": 6840
+    },
+    {
+      "text": "co-pilot with this particular",
+      "offset": 407599,
+      "duration": 3481
+    },
+    {
+      "text": "rule we can generate a",
+      "offset": 414759,
+      "duration": 5160
+    },
+    {
+      "text": "fix make sure that interest inspection",
+      "offset": 417759,
+      "duration": 4681
+    },
+    {
+      "text": "is turned",
+      "offset": 419919,
+      "duration": 2521
+    },
+    {
+      "text": "off now um sonar lint is really powerful",
+      "offset": 424240,
+      "duration": 6399
+    },
+    {
+      "text": "uh because it's not only it doesn't only",
+      "offset": 428160,
+      "duration": 4599
+    },
+    {
+      "text": "link up with the the initial main branch",
+      "offset": 430639,
+      "duration": 4761
+    },
+    {
+      "text": "that you've scanned um if we actually go",
+      "offset": 432759,
+      "duration": 4160
+    },
+    {
+      "text": "in and switch",
+      "offset": 435400,
+      "duration": 3880
+    },
+    {
+      "text": "branches uh it'll keep track of any",
+      "offset": 436919,
+      "duration": 4361
+    },
+    {
+      "text": "changes that we've done uh to that",
+      "offset": 439280,
+      "duration": 4000
+    },
+    {
+      "text": "Branch so I've got another uh another",
+      "offset": 441280,
+      "duration": 5240
+    },
+    {
+      "text": "Branch here that I'm going to switch to",
+      "offset": 443280,
+      "duration": 5560
+    },
+    {
+      "text": "and you'll see once I switch to that",
+      "offset": 446520,
+      "duration": 4280
+    },
+    {
+      "text": "sonar l actually detects that we've",
+      "offset": 448840,
+      "duration": 3479
+    },
+    {
+      "text": "switched to this feature Branch I",
+      "offset": 450800,
+      "duration": 2799
+    },
+    {
+      "text": "understand it's probably pretty small",
+      "offset": 452319,
+      "duration": 3560
+    },
+    {
+      "text": "for a lot of you to see but uh this is",
+      "offset": 453599,
+      "duration": 5880
+    },
+    {
+      "text": "this is now looking at my my feature",
+      "offset": 455879,
+      "duration": 6361
+    },
+    {
+      "text": "Branch we have an additional file here",
+      "offset": 459479,
+      "duration": 5400
+    },
+    {
+      "text": "and again we're getting a lot of uh a",
+      "offset": 462240,
+      "duration": 4120
+    },
+    {
+      "text": "lot of those notifications from our",
+      "offset": 464879,
+      "duration": 5641
+    },
+    {
+      "text": "custom JavaScript uh quality",
+      "offset": 466360,
+      "duration": 6119
+    },
+    {
+      "text": "profile and you'll notice we have some",
+      "offset": 470520,
+      "duration": 4320
+    },
+    {
+      "text": "additional notifications over",
+      "offset": 472479,
+      "duration": 5601
+    },
+    {
+      "text": "here now sonar lint isn't just uh",
+      "offset": 474840,
+      "duration": 5120
+    },
+    {
+      "text": "interested in in showing the most",
+      "offset": 478080,
+      "duration": 3519
+    },
+    {
+      "text": "actionable vulnerabilities we also want",
+      "offset": 479960,
+      "duration": 3000
+    },
+    {
+      "text": "to make sure that you're aware of",
+      "offset": 481599,
+      "duration": 4440
+    },
+    {
+      "text": "potential vulnerabilities uh and so um",
+      "offset": 482960,
+      "duration": 5199
+    },
+    {
+      "text": "we do this through a mechanism called uh",
+      "offset": 486039,
+      "duration": 3641
+    },
+    {
+      "text": "security",
+      "offset": 488159,
+      "duration": 3961
+    },
+    {
+      "text": "hotspots um in this case uh I've",
+      "offset": 489680,
+      "duration": 4840
+    },
+    {
+      "text": "generated just a generic rest API with",
+      "offset": 492120,
+      "duration": 5359
+    },
+    {
+      "text": "JavaScript uh and it's letting us know",
+      "offset": 494520,
+      "duration": 5079
+    },
+    {
+      "text": "that there are uh there are some",
+      "offset": 497479,
+      "duration": 4921
+    },
+    {
+      "text": "particular issues with uh with the way",
+      "offset": 499599,
+      "duration": 6040
+    },
+    {
+      "text": "that we're invoking Express here um and",
+      "offset": 502400,
+      "duration": 7120
+    },
+    {
+      "text": "so if we click into um the assess the",
+      "offset": 505639,
+      "duration": 6000
+    },
+    {
+      "text": "risk function here it's going to let us",
+      "offset": 509520,
+      "duration": 4480
+    },
+    {
+      "text": "know exactly what we could do to uh to",
+      "offset": 511639,
+      "duration": 5280
+    },
+    {
+      "text": "fix this um and so it's asking you know",
+      "offset": 514000,
+      "duration": 4959
+    },
+    {
+      "text": "in this case uh we want to make sure",
+      "offset": 516919,
+      "duration": 4521
+    },
+    {
+      "text": "we're using the uh the X powered by HTTP",
+      "offset": 518959,
+      "duration": 5761
+    },
+    {
+      "text": "header and if we were to drop that in um",
+      "offset": 521440,
+      "duration": 5399
+    },
+    {
+      "text": "that that hotspot would then uh drop off",
+      "offset": 524720,
+      "duration": 5799
+    },
+    {
+      "text": "of our our detected issues",
+      "offset": 526839,
+      "duration": 6841
+    },
+    {
+      "text": "there now should we not actually catch",
+      "offset": 530519,
+      "duration": 6320
+    },
+    {
+      "text": "things here in the IDE um we have a",
+      "offset": 533680,
+      "duration": 4599
+    },
+    {
+      "text": "couple of different touch points for the",
+      "offset": 536839,
+      "duration": 4281
+    },
+    {
+      "text": "sonar product Suite that really help to",
+      "offset": 538279,
+      "duration": 5321
+    },
+    {
+      "text": "uh to make sure that we're checking in",
+      "offset": 541120,
+      "duration": 4800
+    },
+    {
+      "text": "with the static an the static analysis",
+      "offset": 543600,
+      "duration": 3840
+    },
+    {
+      "text": "tool as we",
+      "offset": 545920,
+      "duration": 5720
+    },
+    {
+      "text": "go so for my particular project here um",
+      "offset": 547440,
+      "duration": 6519
+    },
+    {
+      "text": "on this Branch I've actually uh pushed",
+      "offset": 551640,
+      "duration": 4840
+    },
+    {
+      "text": "it up to my GitHub",
+      "offset": 553959,
+      "duration": 4560
+    },
+    {
+      "text": "repository um and I actually have",
+      "offset": 556480,
+      "duration": 4520
+    },
+    {
+      "text": "generated a an individual report for",
+      "offset": 558519,
+      "duration": 4560
+    },
+    {
+      "text": "this",
+      "offset": 561000,
+      "duration": 4560
+    },
+    {
+      "text": "branch and uh so what this does is it",
+      "offset": 563079,
+      "duration": 4961
+    },
+    {
+      "text": "lets us know that for the code that's",
+      "offset": 565560,
+      "duration": 4560
+    },
+    {
+      "text": "actually changed in this case",
+      "offset": 568040,
+      "duration": 4640
+    },
+    {
+      "text": "uh We've again we've added 39 uh lines",
+      "offset": 570120,
+      "duration": 4399
+    },
+    {
+      "text": "here to an individual",
+      "offset": 572680,
+      "duration": 4240
+    },
+    {
+      "text": "file but we're able to catch those",
+      "offset": 574519,
+      "duration": 5401
+    },
+    {
+      "text": "issues uh here uh directly in the uh in",
+      "offset": 576920,
+      "duration": 6599
+    },
+    {
+      "text": "the poll request um poll request report",
+      "offset": 579920,
+      "duration": 5880
+    },
+    {
+      "text": "uh this then would reach back out to my",
+      "offset": 583519,
+      "duration": 4841
+    },
+    {
+      "text": "GitHub server and uh do some decoration",
+      "offset": 585800,
+      "duration": 6000
+    },
+    {
+      "text": "on the poll request to uh to let us know",
+      "offset": 588360,
+      "duration": 6479
+    },
+    {
+      "text": "um that uh that we've actually failed uh",
+      "offset": 591800,
+      "duration": 4599
+    },
+    {
+      "text": "the the quality gate or the quality",
+      "offset": 594839,
+      "duration": 4641
+    },
+    {
+      "text": "standard that we've set up here um and",
+      "offset": 596399,
+      "duration": 4440
+    },
+    {
+      "text": "so a lot of times you know we'll be",
+      "offset": 599480,
+      "duration": 3280
+    },
+    {
+      "text": "working with these tools we'll get",
+      "offset": 600839,
+      "duration": 4440
+    },
+    {
+      "text": "excited have you know an Impulse to push",
+      "offset": 602760,
+      "duration": 5319
+    },
+    {
+      "text": "that code up having this this pull",
+      "offset": 605279,
+      "duration": 6041
+    },
+    {
+      "text": "request analysis feature in place uh is",
+      "offset": 608079,
+      "duration": 4841
+    },
+    {
+      "text": "a huge bonus when working with these",
+      "offset": 611320,
+      "duration": 4560
+    },
+    {
+      "text": "generative AI tools uh not only is it",
+      "offset": 612920,
+      "duration": 5479
+    },
+    {
+      "text": "going to help us uh be more precise uh",
+      "offset": 615880,
+      "duration": 3760
+    },
+    {
+      "text": "more careful but it's going to give us a",
+      "offset": 618399,
+      "duration": 3401
+    },
+    {
+      "text": "lot more confidence so that we can move",
+      "offset": 619640,
+      "duration": 4480
+    },
+    {
+      "text": "quickly with these tools uh and also be",
+      "offset": 621800,
+      "duration": 3840
+    },
+    {
+      "text": "safe with the types of code that we're",
+      "offset": 624120,
+      "duration": 4000
+    },
+    {
+      "text": "we're actually",
+      "offset": 625640,
+      "duration": 2480
+    },
+    {
+      "text": "committing so I could show you a lot",
+      "offset": 628320,
+      "duration": 4320
+    },
+    {
+      "text": "more here um I highly encourage you to",
+      "offset": 630800,
+      "duration": 3400
+    },
+    {
+      "text": "go and download this tool check it out",
+      "offset": 632640,
+      "duration": 4080
+    },
+    {
+      "text": "for yourself uh use it with your uh with",
+      "offset": 634200,
+      "duration": 5000
+    },
+    {
+      "text": "your co-pilot or or other AI tools that",
+      "offset": 636720,
+      "duration": 3720
+    },
+    {
+      "text": "you're that you're currently playing",
+      "offset": 639200,
+      "duration": 4240
+    },
+    {
+      "text": "with um and uh see for yourself you know",
+      "offset": 640440,
+      "duration": 4680
+    },
+    {
+      "text": "the kinds of things that this picks up",
+      "offset": 643440,
+      "duration": 4519
+    },
+    {
+      "text": "um while preparing for this demo uh I",
+      "offset": 645120,
+      "duration": 4320
+    },
+    {
+      "text": "actually had you know several different",
+      "offset": 647959,
+      "duration": 3041
+    },
+    {
+      "text": "times where I would generate code and",
+      "offset": 649440,
+      "duration": 4160
+    },
+    {
+      "text": "the output would be different each time",
+      "offset": 651000,
+      "duration": 4959
+    },
+    {
+      "text": "uh and so it's it's always kind of a uh",
+      "offset": 653600,
+      "duration": 5720
+    },
+    {
+      "text": "um uh a surprise when uh when you know",
+      "offset": 655959,
+      "duration": 5641
+    },
+    {
+      "text": "you generate something new and find out",
+      "offset": 659320,
+      "duration": 3840
+    },
+    {
+      "text": "what just what sonar lint is going to",
+      "offset": 661600,
+      "duration": 5039
+    },
+    {
+      "text": "detect there",
+      "offset": 663160,
+      "duration": 3479
+    }
+  ],
+  "fullText": "[Music] so I've got I've got VSS code uh up here running and um yeah just going to walk through a little bit of what these tools look like from a developer perspective uh now sonar lint uh as Manish said this is available not just for vs code but we also have uh implementations for uh jet brains products uh Eclipse uh Visual Studio um and so for whatever Marketplace for whatever uh IDE you're using um head out and just search for sonar lent and you should see it pop up you can install it uh and start working with it today um so it actually doesn't require any subscription or or or setup um essentially we ship sonar lint just with all of the base set of rules that sonar Cube or sonar Cloud would detect on these projects um so uh yeah let's let's take a look and see how this interacts with an AI uh code generation tool so I've got co-pilot here specifically let's um let's give it a softball to start with uh let's uh have it generate a uh a Javascript app that fetches some data from a graphql uh API and let's make this maybe a a plant caretaking app um so I'm a plant dad uh I I have a lot here at home but uh it sometimes is difficult to remember when to water things so it looks like it's generating what we're asking for provides us with uh some pretty nice output here um and uh really this this looks you know pretty clean we're we're really we didn't really ask it to do anything too uh too difficult here uh however you'll notice that uh we're starting to get some markup on some of these uh some of these variable names and so while nothing here has been generated that's super concerning um sonar lint has already started to give us some value and let us know that there's there's some things that are off with what we've defined to be our our quality profile now um while sonar lint does act out of the box uh on um a lot of issues there's there is some customization you can do here as well uh and so this particular project I have it linked up uh with a with a project in my Sonar Cube server so I've got that here and so what this is actually doing is pulling down um some uh um some particular maintainability rules uh for uh for us to work with co-pilot obviously has no idea that I have a a particular regular expression naming convention for my my variables in JavaScript uh but sonor lint has has let us know hey the code generated doesn't necessarily match our quality standard so let's go and check out what sonarlint is actually letting us know uh yep sure enough we have a variable that doesn't comply with the naming convention that we've set up um it provides some kind of generic details on how to fix this but where this interaction gets really cool is uh co-pilot actually has the ability to read into particular issues that show up in the IDE uh and so while we could go in and and you know take a look at the redx and try to figure out exactly what the naming convention is supposed to be co-pilot can come in and actually give us uh give us a suggested fix here so if we bump back up to the Quick Fix and we have we apply a fix using co-pilot you'll see we get the the correct naming convention here and I don't advise all caps for your JavaScript apps just this is just for for a demo purpose but uh you can see how co-pilot actually uh detects what that Rex is and fixes it for us um and and again this isn't these aren't rules that are out of the box we've actually defined these in sonar Cube so if I'm looking at my project here uh and if I go to my project settings quality profiles are the sets of rules that we Define to be uh to be detected uh for our projects so you'll see I have actually a custom JavaScript quality profile here and so if we go click to to see what that is whoops let's go back so if I jump into that that custom quality profile um you'll see that I have my my project uh linked up with this quality profile and I've actually recently added a rule here that uh that sure enough um sets up that that custom naming convention for us so serar lit actually pulls that down in and applies it for us and then the code generation tool can actually interact with that rule in a way that's meaningful so this is a pretty simple example let's uh let's go see if we can generate our backend for this app now um so let's have it do uh maybe a python API uh that uses graphql uh to interact with our house plant database where we're going to keep uh keep all of our data looks like it's chosen to use a flask graphql Library and it's generating some output for us let's go ahead and put that into our file um so uh immediately uh we start to get uh some some results here uh so sonar lint is letting us know that there are uh some some particular issues here that we may want to be aware of um so if we come over and and hover over one of these uh we can go to that quick fix menu again uh and and actually uh get oh whoops let's look at this one here if we go to the Quick Fix menu again we get a sonar lint uh rule description here letting us know that uh graphql introspection should be disabled in production now I understand why the code generation tool made it this way this is really helpful for debugging purposes but uh should this be committed it could turn into a pretty uh um uh severe vulnerability so sonar lint lets us know up front hey this is a potenti issue let's make sure that that we're keeping track of this and and not letting it go into our production environment whereas you know a developer who may not be super familiar with graphql May uh end up accidentally committing this code again uh if we want some help from co-pilot with this particular rule we can generate a fix make sure that interest inspection is turned off now um sonar lint is really powerful uh because it's not only it doesn't only link up with the the initial main branch that you've scanned um if we actually go in and switch branches uh it'll keep track of any changes that we've done uh to that Branch so I've got another uh another Branch here that I'm going to switch to and you'll see once I switch to that sonar l actually detects that we've switched to this feature Branch I understand it's probably pretty small for a lot of you to see but uh this is this is now looking at my my feature Branch we have an additional file here and again we're getting a lot of uh a lot of those notifications from our custom JavaScript uh quality profile and you'll notice we have some additional notifications over here now sonar lint isn't just uh interested in in showing the most actionable vulnerabilities we also want to make sure that you're aware of potential vulnerabilities uh and so um we do this through a mechanism called uh security hotspots um in this case uh I've generated just a generic rest API with JavaScript uh and it's letting us know that there are uh there are some particular issues with uh with the way that we're invoking Express here um and so if we click into um the assess the risk function here it's going to let us know exactly what we could do to uh to fix this um and so it's asking you know in this case uh we want to make sure we're using the uh the X powered by HTTP header and if we were to drop that in um that that hotspot would then uh drop off of our our detected issues there now should we not actually catch things here in the IDE um we have a couple of different touch points for the sonar product Suite that really help to uh to make sure that we're checking in with the static an the static analysis tool as we go so for my particular project here um on this Branch I've actually uh pushed it up to my GitHub repository um and I actually have generated a an individual report for this branch and uh so what this does is it lets us know that for the code that's actually changed in this case uh We've again we've added 39 uh lines here to an individual file but we're able to catch those issues uh here uh directly in the uh in the poll request um poll request report uh this then would reach back out to my GitHub server and uh do some decoration on the poll request to uh to let us know um that uh that we've actually failed uh the the quality gate or the quality standard that we've set up here um and so a lot of times you know we'll be working with these tools we'll get excited have you know an Impulse to push that code up having this this pull request analysis feature in place uh is a huge bonus when working with these generative AI tools uh not only is it going to help us uh be more precise uh more careful but it's going to give us a lot more confidence so that we can move quickly with these tools uh and also be safe with the types of code that we're we're actually committing so I could show you a lot more here um I highly encourage you to go and download this tool check it out for yourself uh use it with your uh with your co-pilot or or other AI tools that you're that you're currently playing with um and uh see for yourself you know the kinds of things that this picks up um while preparing for this demo uh I actually had you know several different times where I would generate code and the output would be different each time uh and so it's it's always kind of a uh um uh a surprise when uh when you know you generate something new and find out what just what sonar lint is going to detect there",
+  "fetchedAt": "2026-03-14T09:23:08.677Z"
+}

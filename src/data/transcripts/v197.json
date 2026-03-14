@@ -1,0 +1,1258 @@
+{
+  "videoId": "v197",
+  "youtubeId": "VCkA8nGLbPg",
+  "segments": [
+    {
+      "text": "[Music]",
+      "offset": 550,
+      "duration": 8330
+    },
+    {
+      "text": "hi i'm anne campbell and today i'm going",
+      "offset": 6960,
+      "duration": 3360
+    },
+    {
+      "text": "to talk about some of the key features",
+      "offset": 8880,
+      "duration": 3679
+    },
+    {
+      "text": "in sonar cube 9.6",
+      "offset": 10320,
+      "duration": 4080
+    },
+    {
+      "text": "we've added a lot of new rules in this",
+      "offset": 12559,
+      "duration": 3521
+    },
+    {
+      "text": "version in some interesting categories",
+      "offset": 14400,
+      "duration": 3520
+    },
+    {
+      "text": "and i'm going to start with those",
+      "offset": 16080,
+      "duration": 3600
+    },
+    {
+      "text": "so first",
+      "offset": 17920,
+      "duration": 4480
+    },
+    {
+      "text": "ta-da kubernetes rules yes",
+      "offset": 19680,
+      "duration": 5359
+    },
+    {
+      "text": "infrastructure as code is code you've",
+      "offset": 22400,
+      "duration": 4000
+    },
+    {
+      "text": "been telling us for a while that you",
+      "offset": 25039,
+      "duration": 3601
+    },
+    {
+      "text": "want to analyze it and we've heard you",
+      "offset": 26400,
+      "duration": 4240
+    },
+    {
+      "text": "so we started by adding one new code",
+      "offset": 28640,
+      "duration": 4480
+    },
+    {
+      "text": "smell rule and six new security hotspot",
+      "offset": 30640,
+      "duration": 3520
+    },
+    {
+      "text": "rules",
+      "offset": 33120,
+      "duration": 3520
+    },
+    {
+      "text": "here's an example security hotspot being",
+      "offset": 34160,
+      "duration": 5120
+    },
+    {
+      "text": "raised on the use of privileged true",
+      "offset": 36640,
+      "duration": 4800
+    },
+    {
+      "text": "as with every security hotspot with",
+      "offset": 39280,
+      "duration": 4160
+    },
+    {
+      "text": "these kubernetes security hotspots we're",
+      "offset": 41440,
+      "duration": 3520
+    },
+    {
+      "text": "going to help you understand what the",
+      "offset": 43440,
+      "duration": 3599
+    },
+    {
+      "text": "risk is we're going to help you assess",
+      "offset": 44960,
+      "duration": 3680
+    },
+    {
+      "text": "whether or not in your particular",
+      "offset": 47039,
+      "duration": 3921
+    },
+    {
+      "text": "situation you are at risk and if you",
+      "offset": 48640,
+      "duration": 4239
+    },
+    {
+      "text": "think you are we'll give you some advice",
+      "offset": 50960,
+      "duration": 3599
+    },
+    {
+      "text": "on how to fix it",
+      "offset": 52879,
+      "duration": 3921
+    },
+    {
+      "text": "staying in the cloud but moving to java",
+      "offset": 54559,
+      "duration": 4000
+    },
+    {
+      "text": "we've added some rules to help you write",
+      "offset": 56800,
+      "duration": 5200
+    },
+    {
+      "text": "java aws lambdas the key themes here are",
+      "offset": 58559,
+      "duration": 6000
+    },
+    {
+      "text": "aws best practices and the use of the",
+      "offset": 62000,
+      "duration": 4880
+    },
+    {
+      "text": "aws cdk",
+      "offset": 64559,
+      "duration": 4880
+    },
+    {
+      "text": "so here's an example issue we've got one",
+      "offset": 66880,
+      "duration": 5200
+    },
+    {
+      "text": "lambda calling another an issue is",
+      "offset": 69439,
+      "duration": 4881
+    },
+    {
+      "text": "raised on that because the first lambda",
+      "offset": 72080,
+      "duration": 3920
+    },
+    {
+      "text": "could time out while it's waiting for",
+      "offset": 74320,
+      "duration": 4080
+    },
+    {
+      "text": "the second lambda to come back that",
+      "offset": 76000,
+      "duration": 4479
+    },
+    {
+      "text": "should be happening asynchronously",
+      "offset": 78400,
+      "duration": 3759
+    },
+    {
+      "text": "instead",
+      "offset": 80479,
+      "duration": 3921
+    },
+    {
+      "text": "staying in the cloud but moving on to c",
+      "offset": 82159,
+      "duration": 4401
+    },
+    {
+      "text": "sharp we've added rules for azure",
+      "offset": 84400,
+      "duration": 3920
+    },
+    {
+      "text": "functions this time",
+      "offset": 86560,
+      "duration": 4160
+    },
+    {
+      "text": "six new code smell rules with the themes",
+      "offset": 88320,
+      "duration": 5040
+    },
+    {
+      "text": "of resource management error handling",
+      "offset": 90720,
+      "duration": 4960
+    },
+    {
+      "text": "and entity interface design help you",
+      "offset": 93360,
+      "duration": 4480
+    },
+    {
+      "text": "write better azure functions",
+      "offset": 95680,
+      "duration": 5360
+    },
+    {
+      "text": "here are some examples in sample code so",
+      "offset": 97840,
+      "duration": 4720
+    },
+    {
+      "text": "first we've got",
+      "offset": 101040,
+      "duration": 3600
+    },
+    {
+      "text": "error handling telling us to use a try",
+      "offset": 102560,
+      "duration": 4480
+    },
+    {
+      "text": "catch block in the body of the function",
+      "offset": 104640,
+      "duration": 4240
+    },
+    {
+      "text": "as well as some resource management",
+      "offset": 107040,
+      "duration": 3359
+    },
+    {
+      "text": "issues",
+      "offset": 108880,
+      "duration": 3440
+    },
+    {
+      "text": "staying with c sharp but moving out of a",
+      "offset": 110399,
+      "duration": 3601
+    },
+    {
+      "text": "cloud we've added support for",
+      "offset": 112320,
+      "duration": 4479
+    },
+    {
+      "text": "deconstruction this time so now you see",
+      "offset": 114000,
+      "duration": 5439
+    },
+    {
+      "text": "that we can properly raise issues on the",
+      "offset": 116799,
+      "duration": 5280
+    },
+    {
+      "text": "deconstruction syntax",
+      "offset": 119439,
+      "duration": 5201
+    },
+    {
+      "text": "wrapping up rules and issues let's talk",
+      "offset": 122079,
+      "duration": 5360
+    },
+    {
+      "text": "about analysis itself",
+      "offset": 124640,
+      "duration": 5200
+    },
+    {
+      "text": "faster analysis is a key theme for us",
+      "offset": 127439,
+      "duration": 4241
+    },
+    {
+      "text": "this year because we understand that",
+      "offset": 129840,
+      "duration": 4320
+    },
+    {
+      "text": "it's a key theme for you we've been",
+      "offset": 131680,
+      "duration": 4880
+    },
+    {
+      "text": "working hard this year to make analysis",
+      "offset": 134160,
+      "duration": 4640
+    },
+    {
+      "text": "faster and this time we've added",
+      "offset": 136560,
+      "duration": 3840
+    },
+    {
+      "text": "something that folks have been waiting a",
+      "offset": 138800,
+      "duration": 5840
+    },
+    {
+      "text": "long time for faster java pr analysis",
+      "offset": 140400,
+      "duration": 7040
+    },
+    {
+      "text": "we did that by adding an analysis cache",
+      "offset": 144640,
+      "duration": 5280
+    },
+    {
+      "text": "at the server side what this means is",
+      "offset": 147440,
+      "duration": 5040
+    },
+    {
+      "text": "that it's independent of analysis",
+      "offset": 149920,
+      "duration": 5200
+    },
+    {
+      "text": "location so as your job moves from build",
+      "offset": 152480,
+      "duration": 5039
+    },
+    {
+      "text": "agent to build agent this is still going",
+      "offset": 155120,
+      "duration": 4960
+    },
+    {
+      "text": "to work now we just finished putting a",
+      "offset": 157519,
+      "duration": 5440
+    },
+    {
+      "text": "bow on this like right before release so",
+      "offset": 160080,
+      "duration": 4560
+    },
+    {
+      "text": "we haven't had time to run full",
+      "offset": 162959,
+      "duration": 3761
+    },
+    {
+      "text": "statistics on it yet but in one of the",
+      "offset": 164640,
+      "duration": 4800
+    },
+    {
+      "text": "test projects we were looking at we saw",
+      "offset": 166720,
+      "duration": 6239
+    },
+    {
+      "text": "pr analysis drop from 120 seconds excuse",
+      "offset": 169440,
+      "duration": 6480
+    },
+    {
+      "text": "me 160 seconds to 20 seconds and we",
+      "offset": 172959,
+      "duration": 4721
+    },
+    {
+      "text": "think that's going to scale out to your",
+      "offset": 175920,
+      "duration": 3360
+    },
+    {
+      "text": "projects as well",
+      "offset": 177680,
+      "duration": 4320
+    },
+    {
+      "text": "now we just proved out the technology",
+      "offset": 179280,
+      "duration": 5200
+    },
+    {
+      "text": "but it's not java specific we proved it",
+      "offset": 182000,
+      "duration": 5120
+    },
+    {
+      "text": "out with java but we expect to",
+      "offset": 184480,
+      "duration": 4960
+    },
+    {
+      "text": "push it out to more languages very",
+      "offset": 187120,
+      "duration": 3920
+    },
+    {
+      "text": "quickly",
+      "offset": 189440,
+      "duration": 3920
+    },
+    {
+      "text": "moving on from that we've also improved",
+      "offset": 191040,
+      "duration": 4800
+    },
+    {
+      "text": "tein analysis in this version",
+      "offset": 193360,
+      "duration": 4959
+    },
+    {
+      "text": "by recognizing custom validators now",
+      "offset": 195840,
+      "duration": 4960
+    },
+    {
+      "text": "previously when you used a validator",
+      "offset": 198319,
+      "duration": 5121
+    },
+    {
+      "text": "provided by a library we understood that",
+      "offset": 200800,
+      "duration": 4640
+    },
+    {
+      "text": "and then didn't raise an issue on",
+      "offset": 203440,
+      "duration": 4640
+    },
+    {
+      "text": "subsequent use of the user-provided data",
+      "offset": 205440,
+      "duration": 5120
+    },
+    {
+      "text": "but if you wrote your own validator we",
+      "offset": 208080,
+      "duration": 4480
+    },
+    {
+      "text": "didn't know what that was and so we were",
+      "offset": 210560,
+      "duration": 3840
+    },
+    {
+      "text": "raising some false positive issues on",
+      "offset": 212560,
+      "duration": 4399
+    },
+    {
+      "text": "your code so now we're going to",
+      "offset": 214400,
+      "duration": 4720
+    },
+    {
+      "text": "recognize the validators that you write",
+      "offset": 216959,
+      "duration": 3121
+    },
+    {
+      "text": "as well",
+      "offset": 219120,
+      "duration": 3759
+    },
+    {
+      "text": "when they follow particular patterns so",
+      "offset": 220080,
+      "duration": 5360
+    },
+    {
+      "text": "if it returns a boolean it follows a",
+      "offset": 222879,
+      "duration": 5121
+    },
+    {
+      "text": "naming convention that we understand",
+      "offset": 225440,
+      "duration": 4799
+    },
+    {
+      "text": "and it calls a known validator method",
+      "offset": 228000,
+      "duration": 4400
+    },
+    {
+      "text": "such as a pattern matcher or a regular",
+      "offset": 230239,
+      "duration": 4481
+    },
+    {
+      "text": "expression then we're going to recognize",
+      "offset": 232400,
+      "duration": 5039
+    },
+    {
+      "text": "that as a custom validator and",
+      "offset": 234720,
+      "duration": 5439
+    },
+    {
+      "text": "understand that if the user provided",
+      "offset": 237439,
+      "duration": 6401
+    },
+    {
+      "text": "data gets through that it's okay to use",
+      "offset": 240159,
+      "duration": 6160
+    },
+    {
+      "text": "we've also updated our language version",
+      "offset": 243840,
+      "duration": 5039
+    },
+    {
+      "text": "understanding so we now parse properly",
+      "offset": 246319,
+      "duration": 6401
+    },
+    {
+      "text": "scala 213 8 and 312",
+      "offset": 248879,
+      "duration": 10001
+    },
+    {
+      "text": "ruby 3.1 kotlin 1.7 and apex 54.12",
+      "offset": 252720,
+      "duration": 8960
+    },
+    {
+      "text": "for go in addition to the parsing we've",
+      "offset": 258880,
+      "duration": 5360
+    },
+    {
+      "text": "also updated the rules to properly deal",
+      "offset": 261680,
+      "duration": 5600
+    },
+    {
+      "text": "with go 1.18",
+      "offset": 264240,
+      "duration": 5200
+    },
+    {
+      "text": "moving on from there let's talk about",
+      "offset": 267280,
+      "duration": 4880
+    },
+    {
+      "text": "security reports in this version we've",
+      "offset": 269440,
+      "duration": 6319
+    },
+    {
+      "text": "added a pci dss report this is about",
+      "offset": 272160,
+      "duration": 6000
+    },
+    {
+      "text": "credit card processing and the industry",
+      "offset": 275759,
+      "duration": 5681
+    },
+    {
+      "text": "has 12 high level guidelines that break",
+      "offset": 278160,
+      "duration": 6800
+    },
+    {
+      "text": "down into 240 specific rules",
+      "offset": 281440,
+      "duration": 5600
+    },
+    {
+      "text": "now most of those are not statically",
+      "offset": 284960,
+      "duration": 4720
+    },
+    {
+      "text": "checkable so this report is only about",
+      "offset": 287040,
+      "duration": 4560
+    },
+    {
+      "text": "the things that we can check through",
+      "offset": 289680,
+      "duration": 4560
+    },
+    {
+      "text": "analysis but we've added it for both",
+      "offset": 291600,
+      "duration": 6720
+    },
+    {
+      "text": "versions 4.0 and 3.2 of the standard you",
+      "offset": 294240,
+      "duration": 5600
+    },
+    {
+      "text": "see both of those versions in the",
+      "offset": 298320,
+      "duration": 4480
+    },
+    {
+      "text": "interface we've also added the 4.0",
+      "offset": 299840,
+      "duration": 6960
+    },
+    {
+      "text": "report to the pdf",
+      "offset": 302800,
+      "duration": 4000
+    },
+    {
+      "text": "sticking with the theme of security but",
+      "offset": 306960,
+      "duration": 4400
+    },
+    {
+      "text": "moving to the security of analysis in",
+      "offset": 309120,
+      "duration": 4400
+    },
+    {
+      "text": "the sonarcube instance let's talk about",
+      "offset": 311360,
+      "duration": 3839
+    },
+    {
+      "text": "analysis tokens",
+      "offset": 313520,
+      "duration": 5440
+    },
+    {
+      "text": "so in 9.5 we added the ability to select",
+      "offset": 315199,
+      "duration": 6801
+    },
+    {
+      "text": "a token type so you can narrow",
+      "offset": 318960,
+      "duration": 5519
+    },
+    {
+      "text": "what can be done with your analysis",
+      "offset": 322000,
+      "duration": 3520
+    },
+    {
+      "text": "tokens",
+      "offset": 324479,
+      "duration": 4000
+    },
+    {
+      "text": "in 9.6 we go further to give you the",
+      "offset": 325520,
+      "duration": 6080
+    },
+    {
+      "text": "ability to expire your tokens so you",
+      "offset": 328479,
+      "duration": 5280
+    },
+    {
+      "text": "still have the ability to issue a token",
+      "offset": 331600,
+      "duration": 4960
+    },
+    {
+      "text": "with no expiration but you can also",
+      "offset": 333759,
+      "duration": 5201
+    },
+    {
+      "text": "limit the life of your tokens",
+      "offset": 336560,
+      "duration": 3199
+    },
+    {
+      "text": "so",
+      "offset": 338960,
+      "duration": 3120
+    },
+    {
+      "text": "for one year maybe now that's what i can",
+      "offset": 339759,
+      "duration": 5681
+    },
+    {
+      "text": "do as a user as a global admin i have",
+      "offset": 342080,
+      "duration": 6959
+    },
+    {
+      "text": "the ability to limit the token analysis",
+      "offset": 345440,
+      "duration": 7440
+    },
+    {
+      "text": "excuse me the token lifespan that users",
+      "offset": 349039,
+      "duration": 5921
+    },
+    {
+      "text": "can choose so let's narrow this down to",
+      "offset": 352880,
+      "duration": 4800
+    },
+    {
+      "text": "30 days i'm going to save that",
+      "offset": 354960,
+      "duration": 4880
+    },
+    {
+      "text": "and now when the user comes back in",
+      "offset": 357680,
+      "duration": 6480
+    },
+    {
+      "text": "which i'm going to simulate by reloading",
+      "offset": 359840,
+      "duration": 4320
+    },
+    {
+      "text": "you see that i only have the one option",
+      "offset": 365199,
+      "duration": 4961
+    },
+    {
+      "text": "any new token i issue can only last for",
+      "offset": 367039,
+      "duration": 5121
+    },
+    {
+      "text": "30 days",
+      "offset": 370160,
+      "duration": 3920
+    },
+    {
+      "text": "coming back to this global admin",
+      "offset": 372160,
+      "duration": 3360
+    },
+    {
+      "text": "interface i do want to show you",
+      "offset": 374080,
+      "duration": 3760
+    },
+    {
+      "text": "something else related to the security",
+      "offset": 375520,
+      "duration": 3679
+    },
+    {
+      "text": "of the instance",
+      "offset": 377840,
+      "duration": 4560
+    },
+    {
+      "text": "which is that you can now sign your saml",
+      "offset": 379199,
+      "duration": 4641
+    },
+    {
+      "text": "requests",
+      "offset": 382400,
+      "duration": 4799
+    },
+    {
+      "text": "and you can use assertion encryption",
+      "offset": 383840,
+      "duration": 5359
+    },
+    {
+      "text": "with your saml requests i think a lot of",
+      "offset": 387199,
+      "duration": 4720
+    },
+    {
+      "text": "people will be happy to see that added",
+      "offset": 389199,
+      "duration": 4481
+    },
+    {
+      "text": "as well",
+      "offset": 391919,
+      "duration": 3361
+    },
+    {
+      "text": "now let's talk about the interface",
+      "offset": 393680,
+      "duration": 5120
+    },
+    {
+      "text": "itself so here i am on the projects page",
+      "offset": 395280,
+      "duration": 5600
+    },
+    {
+      "text": "your antenna may have quivered when i",
+      "offset": 398800,
+      "duration": 4640
+    },
+    {
+      "text": "loaded this page because it does look",
+      "offset": 400880,
+      "duration": 4240
+    },
+    {
+      "text": "subtly different",
+      "offset": 403440,
+      "duration": 3680
+    },
+    {
+      "text": "you'll see that the contrast has",
+      "offset": 405120,
+      "duration": 4560
+    },
+    {
+      "text": "strengthened here in the facets on the",
+      "offset": 407120,
+      "duration": 5120
+    },
+    {
+      "text": "left we've also added some explicit",
+      "offset": 409680,
+      "duration": 4880
+    },
+    {
+      "text": "wording where we were in places just",
+      "offset": 412240,
+      "duration": 6000
+    },
+    {
+      "text": "using the icons to convey meaning",
+      "offset": 414560,
+      "duration": 6320
+    },
+    {
+      "text": "we did this as a way to improve the",
+      "offset": 418240,
+      "duration": 4799
+    },
+    {
+      "text": "accessibility of this page",
+      "offset": 420880,
+      "duration": 3520
+    },
+    {
+      "text": "this is something that we're going to be",
+      "offset": 423039,
+      "duration": 3600
+    },
+    {
+      "text": "working on through the end of this year",
+      "offset": 424400,
+      "duration": 4160
+    },
+    {
+      "text": "and into the next year with a goal of",
+      "offset": 426639,
+      "duration": 4881
+    },
+    {
+      "text": "making our entire interface accessible",
+      "offset": 428560,
+      "duration": 6079
+    },
+    {
+      "text": "to all of our users where sadly today",
+      "offset": 431520,
+      "duration": 5920
+    },
+    {
+      "text": "it's not always doing great at that",
+      "offset": 434639,
+      "duration": 5041
+    },
+    {
+      "text": "we've started on the projects page and",
+      "offset": 437440,
+      "duration": 4560
+    },
+    {
+      "text": "in a few other spots in the interface",
+      "offset": 439680,
+      "duration": 4639
+    },
+    {
+      "text": "and you should see more changes going",
+      "offset": 442000,
+      "duration": 4400
+    },
+    {
+      "text": "forward",
+      "offset": 444319,
+      "duration": 3921
+    },
+    {
+      "text": "also on the interface",
+      "offset": 446400,
+      "duration": 3600
+    },
+    {
+      "text": "in 9.5",
+      "offset": 448240,
+      "duration": 3920
+    },
+    {
+      "text": "we gave you an updated issue",
+      "offset": 450000,
+      "duration": 4800
+    },
+    {
+      "text": "presentation to help you focus on the",
+      "offset": 452160,
+      "duration": 5599
+    },
+    {
+      "text": "issue at hand we further iterated on",
+      "offset": 454800,
+      "duration": 4959
+    },
+    {
+      "text": "that in 9.6",
+      "offset": 457759,
+      "duration": 4241
+    },
+    {
+      "text": "to move all of the metadata about the",
+      "offset": 459759,
+      "duration": 4880
+    },
+    {
+      "text": "issue here into the header so i've still",
+      "offset": 462000,
+      "duration": 4560
+    },
+    {
+      "text": "got all of the same information i had",
+      "offset": 464639,
+      "duration": 2960
+    },
+    {
+      "text": "before",
+      "offset": 466560,
+      "duration": 4079
+    },
+    {
+      "text": "but this the type the severity the",
+      "offset": 467599,
+      "duration": 5681
+    },
+    {
+      "text": "status and so on are pulled up out of",
+      "offset": 470639,
+      "duration": 5761
+    },
+    {
+      "text": "the way of the issue and code so now i'm",
+      "offset": 473280,
+      "duration": 5280
+    },
+    {
+      "text": "focused purely on",
+      "offset": 476400,
+      "duration": 4320
+    },
+    {
+      "text": "where is the problem and what should i",
+      "offset": 478560,
+      "duration": 5120
+    },
+    {
+      "text": "do to fix it and of course i still have",
+      "offset": 480720,
+      "duration": 5680
+    },
+    {
+      "text": "access easy access to the rule",
+      "offset": 483680,
+      "duration": 4160
+    },
+    {
+      "text": "description",
+      "offset": 486400,
+      "duration": 3600
+    },
+    {
+      "text": "speaking of rule descriptions forte",
+      "offset": 487840,
+      "duration": 4880
+    },
+    {
+      "text": "analysis rules we've done significant",
+      "offset": 490000,
+      "duration": 5360
+    },
+    {
+      "text": "work this time to expand those rule",
+      "offset": 492720,
+      "duration": 4879
+    },
+    {
+      "text": "descriptions to help you better",
+      "offset": 495360,
+      "duration": 6399
+    },
+    {
+      "text": "understand from them and learn from them",
+      "offset": 497599,
+      "duration": 6720
+    },
+    {
+      "text": "what's going on security wise with your",
+      "offset": 501759,
+      "duration": 4961
+    },
+    {
+      "text": "project to give you the larger",
+      "offset": 504319,
+      "duration": 4481
+    },
+    {
+      "text": "understanding so that you can fix not",
+      "offset": 506720,
+      "duration": 5039
+    },
+    {
+      "text": "just the issue at hand but maybe prevent",
+      "offset": 508800,
+      "duration": 5280
+    },
+    {
+      "text": "introducing other issues in the future",
+      "offset": 511759,
+      "duration": 5121
+    },
+    {
+      "text": "so we've got the why is this an issue",
+      "offset": 514080,
+      "duration": 5040
+    },
+    {
+      "text": "section that you're used to seeing this",
+      "offset": 516880,
+      "duration": 4480
+    },
+    {
+      "text": "is the basic description data we've",
+      "offset": 519120,
+      "duration": 5919
+    },
+    {
+      "text": "added to that some",
+      "offset": 521360,
+      "duration": 3679
+    },
+    {
+      "text": "specific information on how to fix",
+      "offset": 525120,
+      "duration": 4560
+    },
+    {
+      "text": "issues",
+      "offset": 528720,
+      "duration": 2880
+    },
+    {
+      "text": "based based on the framework that you're",
+      "offset": 529680,
+      "duration": 4960
+    },
+    {
+      "text": "using so we start here with jsp if i'm",
+      "offset": 531600,
+      "duration": 5919
+    },
+    {
+      "text": "using jsp and i have an issue there i've",
+      "offset": 534640,
+      "duration": 6319
+    },
+    {
+      "text": "got specific jsp related information",
+      "offset": 537519,
+      "duration": 5760
+    },
+    {
+      "text": "on how to go about fixing that issue but",
+      "offset": 540959,
+      "duration": 3841
+    },
+    {
+      "text": "it what if i'm using a servlet well",
+      "offset": 543279,
+      "duration": 4321
+    },
+    {
+      "text": "we've got servlet specific information",
+      "offset": 544800,
+      "duration": 5039
+    },
+    {
+      "text": "spring specific information time leaf",
+      "offset": 547600,
+      "duration": 4400
+    },
+    {
+      "text": "and etc",
+      "offset": 549839,
+      "duration": 5521
+    },
+    {
+      "text": "when i have an actual issue raised the",
+      "offset": 552000,
+      "duration": 5519
+    },
+    {
+      "text": "correct",
+      "offset": 555360,
+      "duration": 4400
+    },
+    {
+      "text": "information for the framework i'm using",
+      "offset": 557519,
+      "duration": 4000
+    },
+    {
+      "text": "is going to be pre-selected so i don't",
+      "offset": 559760,
+      "duration": 3360
+    },
+    {
+      "text": "even have to do the work of clicking",
+      "offset": 561519,
+      "duration": 2961
+    },
+    {
+      "text": "around here",
+      "offset": 563120,
+      "duration": 4320
+    },
+    {
+      "text": "it's already ready for me when i come in",
+      "offset": 564480,
+      "duration": 5919
+    },
+    {
+      "text": "beyond that we've added some basic",
+      "offset": 567440,
+      "duration": 4880
+    },
+    {
+      "text": "information on",
+      "offset": 570399,
+      "duration": 3841
+    },
+    {
+      "text": "basically other reading so if you want",
+      "offset": 572320,
+      "duration": 3760
+    },
+    {
+      "text": "to go even further if you want to delve",
+      "offset": 574240,
+      "duration": 4560
+    },
+    {
+      "text": "deeper into the topic the data is here",
+      "offset": 576080,
+      "duration": 5120
+    },
+    {
+      "text": "for you to learn and we've also added",
+      "offset": 578800,
+      "duration": 4640
+    },
+    {
+      "text": "some fundamentals so we're calling them",
+      "offset": 581200,
+      "duration": 5600
+    },
+    {
+      "text": "security principles to help you really",
+      "offset": 583440,
+      "duration": 5760
+    },
+    {
+      "text": "beef up your security chops",
+      "offset": 586800,
+      "duration": 4880
+    },
+    {
+      "text": "if you're ready to do that we've put the",
+      "offset": 589200,
+      "duration": 4720
+    },
+    {
+      "text": "information here for you",
+      "offset": 591680,
+      "duration": 4400
+    },
+    {
+      "text": "so you can be a better stronger more",
+      "offset": 593920,
+      "duration": 3919
+    },
+    {
+      "text": "secure coder",
+      "offset": 596080,
+      "duration": 3360
+    },
+    {
+      "text": "and that's what i wanted to show you",
+      "offset": 597839,
+      "duration": 2721
+    },
+    {
+      "text": "this time",
+      "offset": 599440,
+      "duration": 2880
+    },
+    {
+      "text": "and i'll see you next time thanks for",
+      "offset": 600560,
+      "duration": 4760
+    },
+    {
+      "text": "listening",
+      "offset": 602320,
+      "duration": 3000
+    }
+  ],
+  "fullText": "[Music] hi i'm anne campbell and today i'm going to talk about some of the key features in sonar cube 9.6 we've added a lot of new rules in this version in some interesting categories and i'm going to start with those so first ta-da kubernetes rules yes infrastructure as code is code you've been telling us for a while that you want to analyze it and we've heard you so we started by adding one new code smell rule and six new security hotspot rules here's an example security hotspot being raised on the use of privileged true as with every security hotspot with these kubernetes security hotspots we're going to help you understand what the risk is we're going to help you assess whether or not in your particular situation you are at risk and if you think you are we'll give you some advice on how to fix it staying in the cloud but moving to java we've added some rules to help you write java aws lambdas the key themes here are aws best practices and the use of the aws cdk so here's an example issue we've got one lambda calling another an issue is raised on that because the first lambda could time out while it's waiting for the second lambda to come back that should be happening asynchronously instead staying in the cloud but moving on to c sharp we've added rules for azure functions this time six new code smell rules with the themes of resource management error handling and entity interface design help you write better azure functions here are some examples in sample code so first we've got error handling telling us to use a try catch block in the body of the function as well as some resource management issues staying with c sharp but moving out of a cloud we've added support for deconstruction this time so now you see that we can properly raise issues on the deconstruction syntax wrapping up rules and issues let's talk about analysis itself faster analysis is a key theme for us this year because we understand that it's a key theme for you we've been working hard this year to make analysis faster and this time we've added something that folks have been waiting a long time for faster java pr analysis we did that by adding an analysis cache at the server side what this means is that it's independent of analysis location so as your job moves from build agent to build agent this is still going to work now we just finished putting a bow on this like right before release so we haven't had time to run full statistics on it yet but in one of the test projects we were looking at we saw pr analysis drop from 120 seconds excuse me 160 seconds to 20 seconds and we think that's going to scale out to your projects as well now we just proved out the technology but it's not java specific we proved it out with java but we expect to push it out to more languages very quickly moving on from that we've also improved tein analysis in this version by recognizing custom validators now previously when you used a validator provided by a library we understood that and then didn't raise an issue on subsequent use of the user-provided data but if you wrote your own validator we didn't know what that was and so we were raising some false positive issues on your code so now we're going to recognize the validators that you write as well when they follow particular patterns so if it returns a boolean it follows a naming convention that we understand and it calls a known validator method such as a pattern matcher or a regular expression then we're going to recognize that as a custom validator and understand that if the user provided data gets through that it's okay to use we've also updated our language version understanding so we now parse properly scala 213 8 and 312 ruby 3.1 kotlin 1.7 and apex 54.12 for go in addition to the parsing we've also updated the rules to properly deal with go 1.18 moving on from there let's talk about security reports in this version we've added a pci dss report this is about credit card processing and the industry has 12 high level guidelines that break down into 240 specific rules now most of those are not statically checkable so this report is only about the things that we can check through analysis but we've added it for both versions 4.0 and 3.2 of the standard you see both of those versions in the interface we've also added the 4.0 report to the pdf sticking with the theme of security but moving to the security of analysis in the sonarcube instance let's talk about analysis tokens so in 9.5 we added the ability to select a token type so you can narrow what can be done with your analysis tokens in 9.6 we go further to give you the ability to expire your tokens so you still have the ability to issue a token with no expiration but you can also limit the life of your tokens so for one year maybe now that's what i can do as a user as a global admin i have the ability to limit the token analysis excuse me the token lifespan that users can choose so let's narrow this down to 30 days i'm going to save that and now when the user comes back in which i'm going to simulate by reloading you see that i only have the one option any new token i issue can only last for 30 days coming back to this global admin interface i do want to show you something else related to the security of the instance which is that you can now sign your saml requests and you can use assertion encryption with your saml requests i think a lot of people will be happy to see that added as well now let's talk about the interface itself so here i am on the projects page your antenna may have quivered when i loaded this page because it does look subtly different you'll see that the contrast has strengthened here in the facets on the left we've also added some explicit wording where we were in places just using the icons to convey meaning we did this as a way to improve the accessibility of this page this is something that we're going to be working on through the end of this year and into the next year with a goal of making our entire interface accessible to all of our users where sadly today it's not always doing great at that we've started on the projects page and in a few other spots in the interface and you should see more changes going forward also on the interface in 9.5 we gave you an updated issue presentation to help you focus on the issue at hand we further iterated on that in 9.6 to move all of the metadata about the issue here into the header so i've still got all of the same information i had before but this the type the severity the status and so on are pulled up out of the way of the issue and code so now i'm focused purely on where is the problem and what should i do to fix it and of course i still have access easy access to the rule description speaking of rule descriptions forte analysis rules we've done significant work this time to expand those rule descriptions to help you better understand from them and learn from them what's going on security wise with your project to give you the larger understanding so that you can fix not just the issue at hand but maybe prevent introducing other issues in the future so we've got the why is this an issue section that you're used to seeing this is the basic description data we've added to that some specific information on how to fix issues based based on the framework that you're using so we start here with jsp if i'm using jsp and i have an issue there i've got specific jsp related information on how to go about fixing that issue but it what if i'm using a servlet well we've got servlet specific information spring specific information time leaf and etc when i have an actual issue raised the correct information for the framework i'm using is going to be pre-selected so i don't even have to do the work of clicking around here it's already ready for me when i come in beyond that we've added some basic information on basically other reading so if you want to go even further if you want to delve deeper into the topic the data is here for you to learn and we've also added some fundamentals so we're calling them security principles to help you really beef up your security chops if you're ready to do that we've put the information here for you so you can be a better stronger more secure coder and that's what i wanted to show you this time and i'll see you next time thanks for listening",
+  "fetchedAt": "2026-03-14T09:25:04.701Z"
+}

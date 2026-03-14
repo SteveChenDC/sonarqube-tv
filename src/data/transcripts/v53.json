@@ -1,0 +1,133 @@
+{
+  "videoId": "v53",
+  "youtubeId": "-u2uSqxiB4Q",
+  "segments": [
+    {
+      "text": "Hello everyone. My name is Joe Tyler.\nI'm an AI researcher at Sonar.",
+      "offset": 18500,
+      "duration": 5000
+    },
+    {
+      "text": "Today we're going to be talking about SonarSweep,\na tool we've been researching and developing.",
+      "offset": 23500,
+      "duration": 4000
+    },
+    {
+      "text": "It helps improve the quality of AI output.",
+      "offset": 27500,
+      "duration": 6000
+    },
+    {
+      "text": "We're speaking at a time where AI tools\nare being adopted across enterprise teams.",
+      "offset": 36500,
+      "duration": 7000
+    },
+    {
+      "text": "They're not just for people experimenting with new workflows.\nIt's important that when you use these tools across your enterprise,",
+      "offset": 43500,
+      "duration": 7000
+    },
+    {
+      "text": "you're not building up a mass of technical debt\nand you're aware of the quality of the code your AI is generating.",
+      "offset": 50500,
+      "duration": 8000
+    },
+    {
+      "text": "Even if your AI models\nare generating good quality code,",
+      "offset": 62500,
+      "duration": 4000
+    },
+    {
+      "text": "it can take several iterations to make sure\nit's free of bugs and vulnerabilities.",
+      "offset": 66500,
+      "duration": 10000
+    },
+    {
+      "text": "Today we'll look at why that happens,\nwhy LLMs generate vulnerabilities and bugs,",
+      "offset": 76500,
+      "duration": 7000
+    },
+    {
+      "text": "and how we can fix that at the source.",
+      "offset": 83500,
+      "duration": 8000
+    },
+    {
+      "text": "Searching for improvements to LLMs,\nespecially their coding abilities,",
+      "offset": 91500,
+      "duration": 7000
+    },
+    {
+      "text": "is a very relevant topic.",
+      "offset": 98500,
+      "duration": 8000
+    },
+    {
+      "text": "This is a quote from Ilya,\na prominent AI researcher and co-founder at OpenAI.",
+      "offset": 106500,
+      "duration": 7000
+    },
+    {
+      "text": "As he says, the 2010s were an age of scaling.\nNow we're looking at what's next.",
+      "offset": 113500,
+      "duration": 7000
+    },
+    {
+      "text": "How can we improve our AI and large language models\nwithout using more data?",
+      "offset": 120500,
+      "duration": 14000
+    },
+    {
+      "text": "That question made us think:\nif we can't scale up the amount of code used anymore,",
+      "offset": 134500,
+      "duration": 10000
+    },
+    {
+      "text": "how can we improve the data and training processes\nfor expert coding language models?",
+      "offset": 144500,
+      "duration": 8000
+    },
+    {
+      "text": "And can we build on our knowledge of static analysis and code\nto build better AI coding?",
+      "offset": 152500,
+      "duration": 8000
+    },
+    {
+      "text": "To develop this idea further,\nI'm going to introduce the concept of garbage in, garbage out",
+      "offset": 160500,
+      "duration": 6000
+    },
+    {
+      "text": "in AI code generation.\nThis is a significant hurdle.",
+      "offset": 166500,
+      "duration": 3000
+    },
+    {
+      "text": "Foundational model datasets can be a chaotic mix\nof really good engineering patterns,",
+      "offset": 171500,
+      "duration": 9000
+    },
+    {
+      "text": "but they can also contain bugs\nand vulnerabilities.",
+      "offset": 180500,
+      "duration": 8000
+    },
+    {
+      "text": "In training, LLMs aren't taught subtle patterns.\nThey're taught to generate the most likely tokens",
+      "offset": 188500,
+      "duration": 10000
+    },
+    {
+      "text": "and completions for each prompt.",
+      "offset": 198500,
+      "duration": 12000
+    },
+    {
+      "text": "If there are bad coding examples in a dataset,\nan LLM might inadvertently learn to generate vulnerabilities or bugs.",
+      "offset": 210500,
+      "duration": 12000
+    }
+  ],
+  "fullText": "Hello everyone. My name is Joe Tyler.\nI'm an AI researcher at Sonar. Today we're going to be talking about SonarSweep,\na tool we've been researching and developing. It helps improve the quality of AI output. We're speaking at a time where AI tools\nare being adopted across enterprise teams. They're not just for people experimenting with new workflows.\nIt's important that when you use these tools across your enterprise, you're not building up a mass of technical debt\nand you're aware of the quality of the code your AI is generating. Even if your AI models\nare generating good quality code, it can take several iterations to make sure\nit's free of bugs and vulnerabilities. Today we'll look at why that happens,\nwhy LLMs generate vulnerabilities and bugs, and how we can fix that at the source. Searching for improvements to LLMs,\nespecially their coding abilities, is a very relevant topic. This is a quote from Ilya,\na prominent AI researcher and co-founder at OpenAI. As he says, the 2010s were an age of scaling.\nNow we're looking at what's next. How can we improve our AI and large language models\nwithout using more data? That question made us think:\nif we can't scale up the amount of code used anymore, how can we improve the data and training processes\nfor expert coding language models? And can we build on our knowledge of static analysis and code\nto build better AI coding? To develop this idea further,\nI'm going to introduce the concept of garbage in, garbage out in AI code generation.\nThis is a significant hurdle. Foundational model datasets can be a chaotic mix\nof really good engineering patterns, but they can also contain bugs\nand vulnerabilities. In training, LLMs aren't taught subtle patterns.\nThey're taught to generate the most likely tokens and completions for each prompt. If there are bad coding examples in a dataset,\nan LLM might inadvertently learn to generate vulnerabilities or bugs.",
+  "fetchedAt": "2026-03-14T09:22:15.662Z"
+}

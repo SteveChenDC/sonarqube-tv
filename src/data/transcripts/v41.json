@@ -1,0 +1,1888 @@
+{
+  "videoId": "v41",
+  "youtubeId": "aId-UDaJSXg",
+  "segments": [
+    {
+      "text": "Hello everyone. Thanks for taking the",
+      "offset": 14000,
+      "duration": 2000
+    },
+    {
+      "text": "time to join this session today. My name",
+      "offset": 16000,
+      "duration": 2000
+    },
+    {
+      "text": "is Manish Kapur and I lead the product",
+      "offset": 18000,
+      "duration": 3000
+    },
+    {
+      "text": "marketing team at Sonar. Today I'm",
+      "offset": 21000,
+      "duration": 2000
+    },
+    {
+      "text": "excited to share with you how Sonar can",
+      "offset": 23000,
+      "duration": 3000
+    },
+    {
+      "text": "help you choose the LLMs that you use",
+      "offset": 26000,
+      "duration": 1000
+    },
+    {
+      "text": "for coding. Over the next 20 minutes,",
+      "offset": 27000,
+      "duration": 3000
+    },
+    {
+      "text": "I'm going to walk you through the",
+      "offset": 30000,
+      "duration": 2000
+    },
+    {
+      "text": "results of the evaluation of over 40",
+      "offset": 32000,
+      "duration": 2000
+    },
+    {
+      "text": "leading LLMs. My LinkedIn and X",
+      "offset": 34000,
+      "duration": 4000
+    },
+    {
+      "text": "coordinates are on the slide if you'd",
+      "offset": 38000,
+      "duration": 2000
+    },
+    {
+      "text": "like to connect and continue the",
+      "offset": 40000,
+      "duration": 1000
+    },
+    {
+      "text": "conversation after this session.",
+      "offset": 41000,
+      "duration": 2000
+    },
+    {
+      "text": "Let's start with the obvious. AI is writing a",
+      "offset": 43000,
+      "duration": 3000
+    },
+    {
+      "text": "lot of code. What we see here is that",
+      "offset": 46000,
+      "duration": 3000
+    },
+    {
+      "text": "the red curve of AI generated code is",
+      "offset": 49000,
+      "duration": 2000
+    },
+    {
+      "text": "skyrocketing while the blue curve for",
+      "offset": 51000,
+      "duration": 3000
+    },
+    {
+      "text": "human written code looks almost flat by",
+      "offset": 54000,
+      "duration": 3000
+    },
+    {
+      "text": "comparison.",
+      "offset": 57000,
+      "duration": 1000
+    },
+    {
+      "text": "Every pull request, every sprint, you",
+      "offset": 58000,
+      "duration": 3000
+    },
+    {
+      "text": "see more code coming out of Copilot,",
+      "offset": 61000,
+      "duration": 2000
+    },
+    {
+      "text": "Cursor, Claude, and any other LLMs that",
+      "offset": 63000,
+      "duration": 2000
+    },
+    {
+      "text": "you're using. The speed is amazing. But",
+      "offset": 65000,
+      "duration": 3000
+    },
+    {
+      "text": "that leads to our next question. Is AI",
+      "offset": 68000,
+      "duration": 3000
+    },
+    {
+      "text": "producing good code or not? Let's be",
+      "offset": 71000,
+      "duration": 3000
+    },
+    {
+      "text": "honest with the answer. Unless you",
+      "offset": 74000,
+      "duration": 3000
+    },
+    {
+      "text": "evaluate the LLMs and verify the code,",
+      "offset": 77000,
+      "duration": 3000
+    },
+    {
+      "text": "you cannot be sure. So that's what we",
+      "offset": 80000,
+      "duration": 2000
+    },
+    {
+      "text": "are going to do today. We'll look at",
+      "offset": 82000,
+      "duration": 2000
+    },
+    {
+      "text": "different LLMs, look at their",
+      "offset": 84000,
+      "duration": 2000
+    },
+    {
+      "text": "characteristics, look at their output,",
+      "offset": 86000,
+      "duration": 2000
+    },
+    {
+      "text": "and understand how they behave.",
+      "offset": 88000,
+      "duration": 3000
+    },
+    {
+      "text": "Let's take a step back. When any",
+      "offset": 91000,
+      "duration": 2000
+    },
+    {
+      "text": "state-of-the-art LLM is released,",
+      "offset": 93000,
+      "duration": 3000
+    },
+    {
+      "text": "typically the vendor will provide you",
+      "offset": 96000,
+      "duration": 2000
+    },
+    {
+      "text": "with some benchmark numbers. These are",
+      "offset": 98000,
+      "duration": 2000
+    },
+    {
+      "text": "industry standard benchmarks. Industry",
+      "offset": 100000,
+      "duration": 4000
+    },
+    {
+      "text": "standard benchmarks are basically",
+      "offset": 104000,
+      "duration": 2000
+    },
+    {
+      "text": "measuring the functional correctness of",
+      "offset": 106000,
+      "duration": 3000
+    },
+    {
+      "text": "the code. That's a good start, but",
+      "offset": 109000,
+      "duration": 2000
+    },
+    {
+      "text": "that's not enough. You do need more",
+      "offset": 111000,
+      "duration": 2000
+    },
+    {
+      "text": "evaluation of models to truly understand",
+      "offset": 113000,
+      "duration": 3000
+    },
+    {
+      "text": "how they're performing. So standard",
+      "offset": 116000,
+      "duration": 2000
+    },
+    {
+      "text": "benchmarks measure functional",
+      "offset": 118000,
+      "duration": 2000
+    },
+    {
+      "text": "correctness. They look at whether the",
+      "offset": 120000,
+      "duration": 2000
+    },
+    {
+      "text": "algorithm can be implemented correctly",
+      "offset": 122000,
+      "duration": 2000
+    },
+    {
+      "text": "or not. They look at pass fail metrics",
+      "offset": 124000,
+      "duration": 2000
+    },
+    {
+      "text": "and things like that. We have standard",
+      "offset": 126000,
+      "duration": 3000
+    },
+    {
+      "text": "benchmarks like HumanEval, MBP. So these",
+      "offset": 129000,
+      "duration": 2000
+    },
+    {
+      "text": "benchmarks are always quoted whenever a",
+      "offset": 131000,
+      "duration": 3000
+    },
+    {
+      "text": "new LLM comes out. But what's missing in",
+      "offset": 134000,
+      "duration": 3000
+    },
+    {
+      "text": "these LLM benchmarks is the real world",
+      "offset": 137000,
+      "duration": 3000
+    },
+    {
+      "text": "assessment of the quality of the code",
+      "offset": 140000,
+      "duration": 2000
+    },
+    {
+      "text": "generated by these LLMs. The LLM",
+      "offset": 142000,
+      "duration": 2000
+    },
+    {
+      "text": "benchmarks do not talk about how secure",
+      "offset": 144000,
+      "duration": 3000
+    },
+    {
+      "text": "the code is or how maintainable the code",
+      "offset": 147000,
+      "duration": 2000
+    },
+    {
+      "text": "is or how much tech debt are you",
+      "offset": 149000,
+      "duration": 3000
+    },
+    {
+      "text": "introducing by using the code as is. So",
+      "offset": 152000,
+      "duration": 2000
+    },
+    {
+      "text": "these are some of the questions that we",
+      "offset": 154000,
+      "duration": 2000
+    },
+    {
+      "text": "wanted to answer. So at Sonar we are all",
+      "offset": 156000,
+      "duration": 3000
+    },
+    {
+      "text": "about code quality and code security.",
+      "offset": 159000,
+      "duration": 2000
+    },
+    {
+      "text": "For the last 17 years, we have been",
+      "offset": 161000,
+      "duration": 3000
+    },
+    {
+      "text": "focused on helping developers and now AI",
+      "offset": 164000,
+      "duration": 2000
+    },
+    {
+      "text": "produce better code. When I say better",
+      "offset": 166000,
+      "duration": 3000
+    },
+    {
+      "text": "code, it's code that is reliable,",
+      "offset": 169000,
+      "duration": 3000
+    },
+    {
+      "text": "maintainable, readable, etc. So, what we",
+      "offset": 172000,
+      "duration": 3000
+    },
+    {
+      "text": "did was we created a framework at Sonar",
+      "offset": 175000,
+      "duration": 5000
+    },
+    {
+      "text": "that can help us evaluate the coding",
+      "offset": 180000,
+      "duration": 2000
+    },
+    {
+      "text": "output of different LLMs. This is a very",
+      "offset": 182000,
+      "duration": 2000
+    },
+    {
+      "text": "comprehensive framework where we have",
+      "offset": 184000,
+      "duration": 3000
+    },
+    {
+      "text": "4,400 plus Java programming assignments",
+      "offset": 187000,
+      "duration": 4000
+    },
+    {
+      "text": "that we give to different LLMs and then",
+      "offset": 191000,
+      "duration": 2000
+    },
+    {
+      "text": "analyze the output of the LLMs using",
+      "offset": 193000,
+      "duration": 3000
+    },
+    {
+      "text": "SonarQube Enterprise. This data will help",
+      "offset": 196000,
+      "duration": 3000
+    },
+    {
+      "text": "you understand how each LLM works and",
+      "offset": 199000,
+      "duration": 3000
+    },
+    {
+      "text": "what kind of issues it produces. So in",
+      "offset": 202000,
+      "duration": 2000
+    },
+    {
+      "text": "our evaluation, we tested about 40 plus",
+      "offset": 204000,
+      "duration": 2000
+    },
+    {
+      "text": "models including Opus 4.6 Thinking, one",
+      "offset": 206000,
+      "duration": 3000
+    },
+    {
+      "text": "of the newer models, and all the way to",
+      "offset": 209000,
+      "duration": 2000
+    },
+    {
+      "text": "Claude Sonnet 4.5 and even the Llama",
+      "offset": 211000,
+      "duration": 4000
+    },
+    {
+      "text": "models and the older GPT models. So we",
+      "offset": 215000,
+      "duration": 2000
+    },
+    {
+      "text": "have a comprehensive leaderboard that",
+      "offset": 217000,
+      "duration": 3000
+    },
+    {
+      "text": "shows the results of all these 40 plus",
+      "offset": 220000,
+      "duration": 2000
+    },
+    {
+      "text": "models that we have evaluated.",
+      "offset": 222000,
+      "duration": 1000
+    },
+    {
+      "text": "Why do the LLMs produce these errors or",
+      "offset": 223000,
+      "duration": 3000
+    },
+    {
+      "text": "why do they produce issues in the code",
+      "offset": 226000,
+      "duration": 2000
+    },
+    {
+      "text": "that they generate? It all comes down to",
+      "offset": 228000,
+      "duration": 2000
+    },
+    {
+      "text": "three broad things. Mixed quality data.",
+      "offset": 230000,
+      "duration": 2000
+    },
+    {
+      "text": "So the code on which they are trained on",
+      "offset": 232000,
+      "duration": 3000
+    },
+    {
+      "text": "is the same code that humans have",
+      "offset": 235000,
+      "duration": 3000
+    },
+    {
+      "text": "written over the last 20 years. So",
+      "offset": 238000,
+      "duration": 2000
+    },
+    {
+      "text": "there's some good code in there, there's",
+      "offset": 240000,
+      "duration": 2000
+    },
+    {
+      "text": "some bad code in there. This code has",
+      "offset": 242000,
+      "duration": 1000
+    },
+    {
+      "text": "some security bugs in it, some hidden",
+      "offset": 243000,
+      "duration": 3000
+    },
+    {
+      "text": "bugs in it. And LLMs are being trained",
+      "offset": 246000,
+      "duration": 2000
+    },
+    {
+      "text": "on that data. As they get trained on",
+      "offset": 248000,
+      "duration": 3000
+    },
+    {
+      "text": "this data, they inherently pick up some",
+      "offset": 251000,
+      "duration": 2000
+    },
+    {
+      "text": "of the characteristics and traits and",
+      "offset": 253000,
+      "duration": 1000
+    },
+    {
+      "text": "the good and the bad from the training",
+      "offset": 254000,
+      "duration": 2000
+    },
+    {
+      "text": "data that they are trained on. So in",
+      "offset": 256000,
+      "duration": 2000
+    },
+    {
+      "text": "addition to that, the LLMs themselves",
+      "offset": 258000,
+      "duration": 2000
+    },
+    {
+      "text": "are probabilistic by nature. What does",
+      "offset": 260000,
+      "duration": 2000
+    },
+    {
+      "text": "that mean? That means they are basically",
+      "offset": 262000,
+      "duration": 3000
+    },
+    {
+      "text": "doing a kind of pattern matching and",
+      "offset": 265000,
+      "duration": 3000
+    },
+    {
+      "text": "predictability of the results. So each",
+      "offset": 268000,
+      "duration": 2000
+    },
+    {
+      "text": "time you might see a different result.",
+      "offset": 270000,
+      "duration": 2000
+    },
+    {
+      "text": "You might see things where the pattern",
+      "offset": 272000,
+      "duration": 2000
+    },
+    {
+      "text": "is wrongly matched or correctly matched.",
+      "offset": 274000,
+      "duration": 3000
+    },
+    {
+      "text": "Right? So there is a chance of error all",
+      "offset": 277000,
+      "duration": 3000
+    },
+    {
+      "text": "the time because of the way they",
+      "offset": 280000,
+      "duration": 2000
+    },
+    {
+      "text": "operate. They also have limited context",
+      "offset": 282000,
+      "duration": 2000
+    },
+    {
+      "text": "and they are hard to explain. So these",
+      "offset": 284000,
+      "duration": 2000
+    },
+    {
+      "text": "are some other factors which lead us to",
+      "offset": 286000,
+      "duration": 4000
+    },
+    {
+      "text": "believe that LLMs will have issues in",
+      "offset": 290000,
+      "duration": 2000
+    },
+    {
+      "text": "the code that they produce. So and",
+      "offset": 292000,
+      "duration": 3000
+    },
+    {
+      "text": "that's not just me telling LLMs have",
+      "offset": 295000,
+      "duration": 3000
+    },
+    {
+      "text": "problems. We have the proof in front of",
+      "offset": 298000,
+      "duration": 3000
+    },
+    {
+      "text": "us. We have LLM leaderboard that we",
+      "offset": 301000,
+      "duration": 2000
+    },
+    {
+      "text": "launched last year. You can access it at",
+      "offset": 303000,
+      "duration": 3000
+    },
+    {
+      "text": "sonar.com/leaderboard.",
+      "offset": 306000,
+      "duration": 2000
+    },
+    {
+      "text": "It's a collection of 40 plus LLMs today",
+      "offset": 308000,
+      "duration": 3000
+    },
+    {
+      "text": "that are ranked by performance. We look",
+      "offset": 311000,
+      "duration": 3000
+    },
+    {
+      "text": "at not just standard benchmark results,",
+      "offset": 314000,
+      "duration": 2000
+    },
+    {
+      "text": "the functional performance of the",
+      "offset": 316000,
+      "duration": 3000
+    },
+    {
+      "text": "benchmarks, but we go deeper. We look at",
+      "offset": 319000,
+      "duration": 1000
+    },
+    {
+      "text": "the qualitative analysis. We look at the",
+      "offset": 320000,
+      "duration": 3000
+    },
+    {
+      "text": "security of the code. We look at the",
+      "offset": 323000,
+      "duration": 1000
+    },
+    {
+      "text": "complexity of the code. So we look at",
+      "offset": 324000,
+      "duration": 3000
+    },
+    {
+      "text": "all attributes of the code when we",
+      "offset": 327000,
+      "duration": 2000
+    },
+    {
+      "text": "measure the performance of these LLMs.",
+      "offset": 329000,
+      "duration": 2000
+    },
+    {
+      "text": "So let's dive deeper into it as to what",
+      "offset": 331000,
+      "duration": 2000
+    },
+    {
+      "text": "we found in our analysis of these 40",
+      "offset": 333000,
+      "duration": 2000
+    },
+    {
+      "text": "plus LLMs. So here on this slide I'm",
+      "offset": 335000,
+      "duration": 2000
+    },
+    {
+      "text": "showing you top five LLMs out of the 10",
+      "offset": 337000,
+      "duration": 3000
+    },
+    {
+      "text": "LLMs that have a greater than 80% pass",
+      "offset": 340000,
+      "duration": 3000
+    },
+    {
+      "text": "rate. On this slide I'm talking about",
+      "offset": 343000,
+      "duration": 2000
+    },
+    {
+      "text": "two things. One is the pass rate for",
+      "offset": 345000,
+      "duration": 3000
+    },
+    {
+      "text": "each of the LLMs. And next we're looking",
+      "offset": 348000,
+      "duration": 4000
+    },
+    {
+      "text": "at the issue density per thousand lines",
+      "offset": 352000,
+      "duration": 2000
+    },
+    {
+      "text": "of code. Issue density and pass rate",
+      "offset": 354000,
+      "duration": 2000
+    },
+    {
+      "text": "give us a good snapshot as to how well",
+      "offset": 356000,
+      "duration": 3000
+    },
+    {
+      "text": "the LLMs are performing. in this list",
+      "offset": 359000,
+      "duration": 3000
+    },
+    {
+      "text": "what we found as of today and of course",
+      "offset": 362000,
+      "duration": 3000
+    },
+    {
+      "text": "in future we'll have more LLMs and we'll",
+      "offset": 365000,
+      "duration": 3000
+    },
+    {
+      "text": "be updating the results as we find more",
+      "offset": 368000,
+      "duration": 1000
+    },
+    {
+      "text": "LLMs, newer LLMs come out, we'll be",
+      "offset": 369000,
+      "duration": 3000
+    },
+    {
+      "text": "updating these results. But as of today",
+      "offset": 372000,
+      "duration": 2000
+    },
+    {
+      "text": "we found that Opus 4.5 Thinking is the",
+      "offset": 374000,
+      "duration": 2000
+    },
+    {
+      "text": "leading model in terms of both the pass",
+      "offset": 376000,
+      "duration": 3000
+    },
+    {
+      "text": "rate as well as the lowest issue",
+      "offset": 379000,
+      "duration": 3000
+    },
+    {
+      "text": "density. The lower the issues, the",
+      "offset": 382000,
+      "duration": 3000
+    },
+    {
+      "text": "better the model is and higher the pass",
+      "offset": 385000,
+      "duration": 3000
+    },
+    {
+      "text": "rate the better the model is. So we have",
+      "offset": 388000,
+      "duration": 2000
+    },
+    {
+      "text": "got it ranked here in terms of both the",
+      "offset": 390000,
+      "duration": 5000
+    },
+    {
+      "text": "pass rate as well as the issue density.",
+      "offset": 395000,
+      "duration": 2000
+    },
+    {
+      "text": "Opus 4.5 followed by 4.6 and then the",
+      "offset": 397000,
+      "duration": 3000
+    },
+    {
+      "text": "Gemini 3 models are the ones which are",
+      "offset": 400000,
+      "duration": 3000
+    },
+    {
+      "text": "leading the list as of today. So in",
+      "offset": 403000,
+      "duration": 2000
+    },
+    {
+      "text": "addition to looking at the pass rates",
+      "offset": 405000,
+      "duration": 4000
+    },
+    {
+      "text": "and the issue density, we also went",
+      "offset": 409000,
+      "duration": 3000
+    },
+    {
+      "text": "ahead and looked at the complexity of",
+      "offset": 412000,
+      "duration": 2000
+    },
+    {
+      "text": "the code. This is something really",
+      "offset": 414000,
+      "duration": 2000
+    },
+    {
+      "text": "important. Complexity tells us how easy",
+      "offset": 416000,
+      "duration": 2000
+    },
+    {
+      "text": "or how hard it is to maintain code base.",
+      "offset": 418000,
+      "duration": 3000
+    },
+    {
+      "text": "So we looked at two parameters. We",
+      "offset": 421000,
+      "duration": 3000
+    },
+    {
+      "text": "looked at cyclomatic complexity and we",
+      "offset": 424000,
+      "duration": 2000
+    },
+    {
+      "text": "looked at cognitive complexity. So what",
+      "offset": 426000,
+      "duration": 2000
+    },
+    {
+      "text": "is cyclomatic complexity? It basically",
+      "offset": 428000,
+      "duration": 2000
+    },
+    {
+      "text": "measures the number of linear",
+      "offset": 430000,
+      "duration": 3000
+    },
+    {
+      "text": "independent code paths that your project",
+      "offset": 433000,
+      "duration": 3000
+    },
+    {
+      "text": "is taking. A higher score for cyclomatic",
+      "offset": 436000,
+      "duration": 2000
+    },
+    {
+      "text": "complexity means it's harder to test and",
+      "offset": 438000,
+      "duration": 2000
+    },
+    {
+      "text": "cover all execution paths of that code.",
+      "offset": 440000,
+      "duration": 3000
+    },
+    {
+      "text": "So we should aim for a lower cyclomatic",
+      "offset": 443000,
+      "duration": 2000
+    },
+    {
+      "text": "complexity in a good codebase. On the",
+      "offset": 445000,
+      "duration": 2000
+    },
+    {
+      "text": "other side we have cognitive complexity.",
+      "offset": 447000,
+      "duration": 2000
+    },
+    {
+      "text": "Cognitive complexity measures how hard",
+      "offset": 449000,
+      "duration": 3000
+    },
+    {
+      "text": "it is for the humans to understand the",
+      "offset": 452000,
+      "duration": 3000
+    },
+    {
+      "text": "code that is being produced by LLMs.",
+      "offset": 455000,
+      "duration": 2000
+    },
+    {
+      "text": "It's all about reasoning. It's all about",
+      "offset": 457000,
+      "duration": 2000
+    },
+    {
+      "text": "understanding the code by human beings.",
+      "offset": 459000,
+      "duration": 2000
+    },
+    {
+      "text": "So what does it tell us? The impact of",
+      "offset": 461000,
+      "duration": 3000
+    },
+    {
+      "text": "this is if the code is harder to read,",
+      "offset": 464000,
+      "duration": 3000
+    },
+    {
+      "text": "review and debug, it becomes harder to",
+      "offset": 467000,
+      "duration": 2000
+    },
+    {
+      "text": "maintain. It becomes complex. It becomes",
+      "offset": 469000,
+      "duration": 4000
+    },
+    {
+      "text": "needlessly difficult and time consuming",
+      "offset": 473000,
+      "duration": 3000
+    },
+    {
+      "text": "to manage and maintain a code base which",
+      "offset": 476000,
+      "duration": 3000
+    },
+    {
+      "text": "has higher complexity. This slide we",
+      "offset": 479000,
+      "duration": 2000
+    },
+    {
+      "text": "talk about two things. We look at the",
+      "offset": 481000,
+      "duration": 2000
+    },
+    {
+      "text": "lines of code produced by each model and",
+      "offset": 483000,
+      "duration": 3000
+    },
+    {
+      "text": "we look at the cognitive complexity and",
+      "offset": 486000,
+      "duration": 2000
+    },
+    {
+      "text": "the cyclomatic complexity for each",
+      "offset": 488000,
+      "duration": 3000
+    },
+    {
+      "text": "model. So what we are trying to do here",
+      "offset": 491000,
+      "duration": 2000
+    },
+    {
+      "text": "is understand how these models behave",
+      "offset": 493000,
+      "duration": 2000
+    },
+    {
+      "text": "and when they generate complex code",
+      "offset": 495000,
+      "duration": 3000
+    },
+    {
+      "text": "versus when they don't generate complex",
+      "offset": 498000,
+      "duration": 2000
+    },
+    {
+      "text": "code. So in general what we have found",
+      "offset": 500000,
+      "duration": 2000
+    },
+    {
+      "text": "is models with higher functional",
+      "offset": 502000,
+      "duration": 2000
+    },
+    {
+      "text": "performance tend to be more verbose and",
+      "offset": 504000,
+      "duration": 3000
+    },
+    {
+      "text": "complex. If you look at our left side",
+      "offset": 507000,
+      "duration": 2000
+    },
+    {
+      "text": "chart in blue it shows you the lines of",
+      "offset": 509000,
+      "duration": 3000
+    },
+    {
+      "text": "code produced by each of those models.",
+      "offset": 512000,
+      "duration": 2000
+    },
+    {
+      "text": "So what this tells us is for a given",
+      "offset": 514000,
+      "duration": 3000
+    },
+    {
+      "text": "programming assignment or for a given",
+      "offset": 517000,
+      "duration": 3000
+    },
+    {
+      "text": "set of programming assignments GPT 5.2",
+      "offset": 520000,
+      "duration": 2000
+    },
+    {
+      "text": "High for example almost took 900",
+      "offset": 522000,
+      "duration": 4000
+    },
+    {
+      "text": "thousand lines of code or a million",
+      "offset": 526000,
+      "duration": 4000
+    },
+    {
+      "text": "lines of code to do the same task where",
+      "offset": 530000,
+      "duration": 2000
+    },
+    {
+      "text": "versus GPT 40 which took less than",
+      "offset": 532000,
+      "duration": 3000
+    },
+    {
+      "text": "200,000 lines of code to do the same",
+      "offset": 535000,
+      "duration": 2000
+    },
+    {
+      "text": "task. So you can see there's a big",
+      "offset": 537000,
+      "duration": 2000
+    },
+    {
+      "text": "variability here in terms of lines of",
+      "offset": 539000,
+      "duration": 3000
+    },
+    {
+      "text": "code produced for the same programming",
+      "offset": 542000,
+      "duration": 2000
+    },
+    {
+      "text": "assignments. What does this tell us? It",
+      "offset": 544000,
+      "duration": 2000
+    },
+    {
+      "text": "basically tells us that a code can be",
+      "offset": 546000,
+      "duration": 3000
+    },
+    {
+      "text": "written in 10 different ways. How many",
+      "offset": 549000,
+      "duration": 3000
+    },
+    {
+      "text": "lines can you use to solve a particular",
+      "offset": 552000,
+      "duration": 2000
+    },
+    {
+      "text": "problem? It depends on the LLM and the",
+      "offset": 554000,
+      "duration": 3000
+    },
+    {
+      "text": "type of training that they have gone",
+      "offset": 557000,
+      "duration": 2000
+    },
+    {
+      "text": "through and the type of reasoning modes",
+      "offset": 559000,
+      "duration": 2000
+    },
+    {
+      "text": "that they have. So on the right-hand",
+      "offset": 561000,
+      "duration": 2000
+    },
+    {
+      "text": "side we looked at cyclomatic and",
+      "offset": 563000,
+      "duration": 2000
+    },
+    {
+      "text": "cognitive complexity of the models. You",
+      "offset": 565000,
+      "duration": 2000
+    },
+    {
+      "text": "can see the red and the blue numbers",
+      "offset": 567000,
+      "duration": 2000
+    },
+    {
+      "text": "show the cyclomatic and cognitive",
+      "offset": 569000,
+      "duration": 2000
+    },
+    {
+      "text": "complexities for some of the models",
+      "offset": 571000,
+      "duration": 2000
+    },
+    {
+      "text": "here. What we can correlate here is for",
+      "offset": 573000,
+      "duration": 2000
+    },
+    {
+      "text": "example going back to GPT 5.2 High, GPT",
+      "offset": 575000,
+      "duration": 3000
+    },
+    {
+      "text": "5.2 High produced about a million lines",
+      "offset": 578000,
+      "duration": 3000
+    },
+    {
+      "text": "of code for doing an assignment and if",
+      "offset": 581000,
+      "duration": 2000
+    },
+    {
+      "text": "you look at the cognitive complexity of",
+      "offset": 583000,
+      "duration": 3000
+    },
+    {
+      "text": "GPT 5.2 and the cyclomatic complexity of",
+      "offset": 586000,
+      "duration": 3000
+    },
+    {
+      "text": "5.2 High, it's quite high. So it's",
+      "offset": 589000,
+      "duration": 3000
+    },
+    {
+      "text": "roughly that the more verbose your code",
+      "offset": 592000,
+      "duration": 3000
+    },
+    {
+      "text": "base is in terms of the code produced by",
+      "offset": 595000,
+      "duration": 3000
+    },
+    {
+      "text": "LLMs, the higher the cognitive and",
+      "offset": 598000,
+      "duration": 2000
+    },
+    {
+      "text": "cyclomatic complexity is and what that",
+      "offset": 600000,
+      "duration": 2000
+    },
+    {
+      "text": "basically means is it'll take you longer",
+      "offset": 602000,
+      "duration": 2000
+    },
+    {
+      "text": "to understand that code, maintain that",
+      "offset": 604000,
+      "duration": 3000
+    },
+    {
+      "text": "code and it's going to be an",
+      "offset": 607000,
+      "duration": 2000
+    },
+    {
+      "text": "accumulation of technical debt if you",
+      "offset": 609000,
+      "duration": 2000
+    },
+    {
+      "text": "cannot maintain that code. So we also",
+      "offset": 611000,
+      "duration": 3000
+    },
+    {
+      "text": "dig a bit deeper into the performance of",
+      "offset": 614000,
+      "duration": 2000
+    },
+    {
+      "text": "the LLMs. So we analyzed the number of",
+      "offset": 616000,
+      "duration": 2000
+    },
+    {
+      "text": "bugs produced by each of the LLMs and we",
+      "offset": 618000,
+      "duration": 2000
+    },
+    {
+      "text": "also looked at the number of security",
+      "offset": 620000,
+      "duration": 3000
+    },
+    {
+      "text": "issues that each of the LLMs produced.",
+      "offset": 623000,
+      "duration": 2000
+    },
+    {
+      "text": "On the left side we are looking at the",
+      "offset": 625000,
+      "duration": 3000
+    },
+    {
+      "text": "bugs per model and you can see that as",
+      "offset": 628000,
+      "duration": 3000
+    },
+    {
+      "text": "and when we have been moving from GPT 40",
+      "offset": 631000,
+      "duration": 2000
+    },
+    {
+      "text": "to Opus 4.5 and 4.6 there's a gradual",
+      "offset": 633000,
+      "duration": 3000
+    },
+    {
+      "text": "slight decrease in the number of bugs",
+      "offset": 636000,
+      "duration": 3000
+    },
+    {
+      "text": "being produced by the LLMs. So generally",
+      "offset": 639000,
+      "duration": 2000
+    },
+    {
+      "text": "speaking, it's not a hard well-defined",
+      "offset": 641000,
+      "duration": 3000
+    },
+    {
+      "text": "trend, but you can see GPT40 had tons of",
+      "offset": 644000,
+      "duration": 3000
+    },
+    {
+      "text": "bugs in it when it was doing a",
+      "offset": 647000,
+      "duration": 3000
+    },
+    {
+      "text": "programming assignment. The same",
+      "offset": 650000,
+      "duration": 2000
+    },
+    {
+      "text": "assignment if it was done by GPT 5.2 or",
+      "offset": 652000,
+      "duration": 2000
+    },
+    {
+      "text": "GPT 5.1 High, the number of bugs were",
+      "offset": 654000,
+      "duration": 4000
+    },
+    {
+      "text": "far lesser. And if you look at the",
+      "offset": 658000,
+      "duration": 2000
+    },
+    {
+      "text": "security issues on the right-hand side,",
+      "offset": 660000,
+      "duration": 2000
+    },
+    {
+      "text": "generally more of all of the models have",
+      "offset": 662000,
+      "duration": 3000
+    },
+    {
+      "text": "started to become very good in terms of",
+      "offset": 665000,
+      "duration": 3000
+    },
+    {
+      "text": "security. They have reduced the number",
+      "offset": 668000,
+      "duration": 2000
+    },
+    {
+      "text": "of security bugs drastically over the",
+      "offset": 670000,
+      "duration": 3000
+    },
+    {
+      "text": "last one and a half years. You can see",
+      "offset": 673000,
+      "duration": 3000
+    },
+    {
+      "text": "GPT4 had a ton of security bugs and now",
+      "offset": 676000,
+      "duration": 3000
+    },
+    {
+      "text": "the newer models like Opus 4.5 and 4.6",
+      "offset": 679000,
+      "duration": 3000
+    },
+    {
+      "text": "and GPT 5.2 High have the least number",
+      "offset": 682000,
+      "duration": 2000
+    },
+    {
+      "text": "of security bugs. In fact GPT 5.2 ranks",
+      "offset": 684000,
+      "duration": 3000
+    },
+    {
+      "text": "as the best in terms of the lowest",
+      "offset": 687000,
+      "duration": 3000
+    },
+    {
+      "text": "number of security issues produced based",
+      "offset": 690000,
+      "duration": 3000
+    },
+    {
+      "text": "on our testing. So what does this data",
+      "offset": 693000,
+      "duration": 1000
+    },
+    {
+      "text": "tell us? This data tells us a few",
+      "offset": 694000,
+      "duration": 3000
+    },
+    {
+      "text": "different things. The current leader is",
+      "offset": 697000,
+      "duration": 3000
+    },
+    {
+      "text": "Opus 4.5 and we are calling it a leader",
+      "offset": 700000,
+      "duration": 3000
+    },
+    {
+      "text": "based on two factors. One is how much",
+      "offset": 703000,
+      "duration": 3000
+    },
+    {
+      "text": "correct code it is producing and what's",
+      "offset": 706000,
+      "duration": 3000
+    },
+    {
+      "text": "the pass rate like? So in this case it's",
+      "offset": 709000,
+      "duration": 2000
+    },
+    {
+      "text": "83.6%.",
+      "offset": 711000,
+      "duration": 2000
+    },
+    {
+      "text": "And what's the issue density like? In",
+      "offset": 713000,
+      "duration": 3000
+    },
+    {
+      "text": "this case the issue density is 15.15 per",
+      "offset": 716000,
+      "duration": 2000
+    },
+    {
+      "text": "thousand lines of code. And this is this",
+      "offset": 718000,
+      "duration": 2000
+    },
+    {
+      "text": "density is the least among all the",
+      "offset": 720000,
+      "duration": 3000
+    },
+    {
+      "text": "models that we have evaluated.",
+      "offset": 723000,
+      "duration": 2000
+    },
+    {
+      "text": "We've also found that after late 2025",
+      "offset": 725000,
+      "duration": 3000
+    },
+    {
+      "text": "and 2026 models have been getting better",
+      "offset": 728000,
+      "duration": 2000
+    },
+    {
+      "text": "and better and their pass rates are",
+      "offset": 730000,
+      "duration": 3000
+    },
+    {
+      "text": "always higher than 80%. Which means the",
+      "offset": 733000,
+      "duration": 2000
+    },
+    {
+      "text": "models are improving in terms of the",
+      "offset": 735000,
+      "duration": 3000
+    },
+    {
+      "text": "output that they're producing.",
+      "offset": 738000,
+      "duration": 2000
+    },
+    {
+      "text": "One other striking fact that we found",
+      "offset": 740000,
+      "duration": 2000
+    },
+    {
+      "text": "was correctness is not equal to quality.",
+      "offset": 742000,
+      "duration": 3000
+    },
+    {
+      "text": "High pass rates do not guarantee that",
+      "offset": 745000,
+      "duration": 3000
+    },
+    {
+      "text": "your model is producing high quality",
+      "offset": 748000,
+      "duration": 2000
+    },
+    {
+      "text": "code. I'll call out Gemini 3 Pro here.",
+      "offset": 750000,
+      "duration": 2000
+    },
+    {
+      "text": "It ranks number three in terms of",
+      "offset": 752000,
+      "duration": 3000
+    },
+    {
+      "text": "correctness, but it produces a lot of",
+      "offset": 755000,
+      "duration": 2000
+    },
+    {
+      "text": "issues. So, it's 24th ranked in terms of",
+      "offset": 757000,
+      "duration": 3000
+    },
+    {
+      "text": "issue density. So, you do need to take",
+      "offset": 760000,
+      "duration": 3000
+    },
+    {
+      "text": "care of looking at the details and",
+      "offset": 763000,
+      "duration": 3000
+    },
+    {
+      "text": "evaluate the correctness of the model,",
+      "offset": 766000,
+      "duration": 3000
+    },
+    {
+      "text": "complexity of the model, the code",
+      "offset": 769000,
+      "duration": 1000
+    },
+    {
+      "text": "quality of the model, the security of",
+      "offset": 770000,
+      "duration": 3000
+    },
+    {
+      "text": "the model when you're evaluating the",
+      "offset": 773000,
+      "duration": 2000
+    },
+    {
+      "text": "models. The other thing which we found",
+      "offset": 775000,
+      "duration": 3000
+    },
+    {
+      "text": "was models which are smaller like Open",
+      "offset": 778000,
+      "duration": 2000
+    },
+    {
+      "text": "Coder 8B which is a relatively small",
+      "offset": 780000,
+      "duration": 3000
+    },
+    {
+      "text": "language model as compared to Llama or",
+      "offset": 783000,
+      "duration": 3000
+    },
+    {
+      "text": "GPT 5.2. Pass rates there are very low",
+      "offset": 786000,
+      "duration": 3000
+    },
+    {
+      "text": "but they are also compromising on",
+      "offset": 789000,
+      "duration": 3000
+    },
+    {
+      "text": "correctness. They generate simple code",
+      "offset": 792000,
+      "duration": 3000
+    },
+    {
+      "text": "but the complexity is less but they're",
+      "offset": 795000,
+      "duration": 2000
+    },
+    {
+      "text": "also compromising on correctness. So you",
+      "offset": 797000,
+      "duration": 3000
+    },
+    {
+      "text": "need to be careful in terms of choosing",
+      "offset": 800000,
+      "duration": 2000
+    },
+    {
+      "text": "your models based on the data that you",
+      "offset": 802000,
+      "duration": 2000
+    },
+    {
+      "text": "see on the leaderboard. It'll help you",
+      "offset": 804000,
+      "duration": 2000
+    },
+    {
+      "text": "guide in terms of which use cases your",
+      "offset": 806000,
+      "duration": 2000
+    },
+    {
+      "text": "models are suitable for. So what do you",
+      "offset": 808000,
+      "duration": 2000
+    },
+    {
+      "text": "do with all of this information that I",
+      "offset": 810000,
+      "duration": 3000
+    },
+    {
+      "text": "shared earlier today? Let me give you",
+      "offset": 813000,
+      "duration": 11000
+    },
+    {
+      "text": "some concrete takeaways. When choosing",
+      "offset": 824000,
+      "duration": 2000
+    },
+    {
+      "text": "an LLM for your team, prioritize models",
+      "offset": 826000,
+      "duration": 3000
+    },
+    {
+      "text": "with 80% or higher pass rates for any",
+      "offset": 829000,
+      "duration": 3000
+    },
+    {
+      "text": "code headed to production. Below that",
+      "offset": 832000,
+      "duration": 3000
+    },
+    {
+      "text": "threshold you are basically spending",
+      "offset": 835000,
+      "duration": 2000
+    },
+    {
+      "text": "time going to spend time fixing than",
+      "offset": 837000,
+      "duration": 2000
+    },
+    {
+      "text": "what you're saving in terms of time.",
+      "offset": 839000,
+      "duration": 3000
+    },
+    {
+      "text": "Look at the issue density along with",
+      "offset": 842000,
+      "duration": 2000
+    },
+    {
+      "text": "correctness. A model with 82% pass rate",
+      "offset": 844000,
+      "duration": 2000
+    },
+    {
+      "text": "and 18 as the issue density count is a",
+      "offset": 846000,
+      "duration": 4000
+    },
+    {
+      "text": "much better choice than one with 81% as",
+      "offset": 850000,
+      "duration": 3000
+    },
+    {
+      "text": "the pass rate and 25 as the issue",
+      "offset": 853000,
+      "duration": 3000
+    },
+    {
+      "text": "density. The review burden is",
+      "offset": 856000,
+      "duration": 3000
+    },
+    {
+      "text": "dramatically different in these two",
+      "offset": 859000,
+      "duration": 2000
+    },
+    {
+      "text": "models.",
+      "offset": 861000,
+      "duration": 2000
+    },
+    {
+      "text": "Favor the late 2025 and 2026 models. The",
+      "offset": 863000,
+      "duration": 5000
+    },
+    {
+      "text": "generational improvement is significant",
+      "offset": 868000,
+      "duration": 2000
+    },
+    {
+      "text": "and measurable in the newer models.",
+      "offset": 870000,
+      "duration": 3000
+    },
+    {
+      "text": "Prioritize readability and",
+      "offset": 873000,
+      "duration": 1000
+    },
+    {
+      "text": "maintainability. Look at complexity of",
+      "offset": 874000,
+      "duration": 2000
+    },
+    {
+      "text": "these models. Your team has to live with",
+      "offset": 876000,
+      "duration": 3000
+    },
+    {
+      "text": "this code. The complexity metrics do",
+      "offset": 879000,
+      "duration": 3000
+    },
+    {
+      "text": "matter. And for your day-to-day",
+      "offset": 882000,
+      "duration": 2000
+    },
+    {
+      "text": "practice, here are some tips. Always",
+      "offset": 884000,
+      "duration": 2000
+    },
+    {
+      "text": "review LLM generated code for code",
+      "offset": 886000,
+      "duration": 3000
+    },
+    {
+      "text": "quality and security. Always. There are",
+      "offset": 889000,
+      "duration": 2000
+    },
+    {
+      "text": "no exceptions. The models are not",
+      "offset": 891000,
+      "duration": 3000
+    },
+    {
+      "text": "security aware and they will make",
+      "offset": 894000,
+      "duration": 2000
+    },
+    {
+      "text": "mistakes. Use automated code review",
+      "offset": 896000,
+      "duration": 2000
+    },
+    {
+      "text": "tools like SonarQube to catch what human",
+      "offset": 898000,
+      "duration": 4000
+    },
+    {
+      "text": "reviews miss. This is exactly the kind",
+      "offset": 902000,
+      "duration": 3000
+    },
+    {
+      "text": "of analysis that scales. Don't assume",
+      "offset": 905000,
+      "duration": 3000
+    },
+    {
+      "text": "simpler is better. Verify correctness.",
+      "offset": 908000,
+      "duration": 3000
+    },
+    {
+      "text": "The simplicity paradox is real. And stay",
+      "offset": 911000,
+      "duration": 4000
+    },
+    {
+      "text": "current. The landscape is evolving fast.",
+      "offset": 915000,
+      "duration": 3000
+    },
+    {
+      "text": "The best model today may not be the best",
+      "offset": 918000,
+      "duration": 2000
+    },
+    {
+      "text": "model in 6 months. Let's wrap with five",
+      "offset": 920000,
+      "duration": 3000
+    },
+    {
+      "text": "key messages. Benchmarks alone don't",
+      "offset": 923000,
+      "duration": 3000
+    },
+    {
+      "text": "tell the full story. You do need to do",
+      "offset": 926000,
+      "duration": 3000
+    },
+    {
+      "text": "qualitative analysis of all the code",
+      "offset": 929000,
+      "duration": 2000
+    },
+    {
+      "text": "that is being produced by LLMs. Newer",
+      "offset": 931000,
+      "duration": 3000
+    },
+    {
+      "text": "models generally are better, but don't",
+      "offset": 934000,
+      "duration": 3000
+    },
+    {
+      "text": "take it for granted. You do need to",
+      "offset": 937000,
+      "duration": 3000
+    },
+    {
+      "text": "evaluate them. You do need to test them.",
+      "offset": 940000,
+      "duration": 1000
+    },
+    {
+      "text": "Verification isn't optional. It's",
+      "offset": 941000,
+      "duration": 3000
+    },
+    {
+      "text": "essential. Quality and security are",
+      "offset": 944000,
+      "duration": 4000
+    },
+    {
+      "text": "non-negotiable. You absolutely need to",
+      "offset": 948000,
+      "duration": 2000
+    },
+    {
+      "text": "make sure that the code being produced",
+      "offset": 950000,
+      "duration": 2000
+    },
+    {
+      "text": "by LLMs is of high quality, secure, and",
+      "offset": 952000,
+      "duration": 3000
+    },
+    {
+      "text": "trustworthy.",
+      "offset": 955000,
+      "duration": 4000
+    },
+    {
+      "text": "Thank you for taking the time today. I",
+      "offset": 959000,
+      "duration": 2000
+    },
+    {
+      "text": "hope you learned something useful today.",
+      "offset": 961000,
+      "duration": 2000
+    },
+    {
+      "text": "Feel free to reach out if you have any",
+      "offset": 963000,
+      "duration": 2000
+    },
+    {
+      "text": "questions or would like to continue the",
+      "offset": 965000,
+      "duration": 2000
+    },
+    {
+      "text": "discussion.",
+      "offset": 967000,
+      "duration": 500
+    }
+  ],
+  "fullText": "Hello everyone. Thanks for taking the time to join this session today. My name is Manish Kapur and I lead the product marketing team at Sonar. Today I'm excited to share with you how Sonar can help you choose the LLMs that you use for coding. Over the next 20 minutes, I'm going to walk you through the results of the evaluation of over 40 leading LLMs. My LinkedIn and X coordinates are on the slide if you'd like to connect and continue the conversation after this session. Let's start with the obvious. AI is writing a lot of code. What we see here is that the red curve of AI generated code is skyrocketing while the blue curve for human written code looks almost flat by comparison. Every pull request, every sprint, you see more code coming out of Copilot, Cursor, Claude, and any other LLMs that you're using. The speed is amazing. But that leads to our next question. Is AI producing good code or not? Let's be honest with the answer. Unless you evaluate the LLMs and verify the code, you cannot be sure. So that's what we are going to do today. We'll look at different LLMs, look at their characteristics, look at their output, and understand how they behave. Let's take a step back. When any state-of-the-art LLM is released, typically the vendor will provide you with some benchmark numbers. These are industry standard benchmarks. Industry standard benchmarks are basically measuring the functional correctness of the code. That's a good start, but that's not enough. You do need more evaluation of models to truly understand how they're performing. So standard benchmarks measure functional correctness. They look at whether the algorithm can be implemented correctly or not. They look at pass fail metrics and things like that. We have standard benchmarks like HumanEval, MBP. So these benchmarks are always quoted whenever a new LLM comes out. But what's missing in these LLM benchmarks is the real world assessment of the quality of the code generated by these LLMs. The LLM benchmarks do not talk about how secure the code is or how maintainable the code is or how much tech debt are you introducing by using the code as is. So these are some of the questions that we wanted to answer. So at Sonar we are all about code quality and code security. For the last 17 years, we have been focused on helping developers and now AI produce better code. When I say better code, it's code that is reliable, maintainable, readable, etc. So, what we did was we created a framework at Sonar that can help us evaluate the coding output of different LLMs. This is a very comprehensive framework where we have 4,400 plus Java programming assignments that we give to different LLMs and then analyze the output of the LLMs using SonarQube Enterprise. This data will help you understand how each LLM works and what kind of issues it produces. So in our evaluation, we tested about 40 plus models including Opus 4.6 Thinking, one of the newer models, and all the way to Claude Sonnet 4.5 and even the Llama models and the older GPT models. So we have a comprehensive leaderboard that shows the results of all these 40 plus models that we have evaluated. Why do the LLMs produce these errors or why do they produce issues in the code that they generate? It all comes down to three broad things. Mixed quality data. So the code on which they are trained on is the same code that humans have written over the last 20 years. So there's some good code in there, there's some bad code in there. This code has some security bugs in it, some hidden bugs in it. And LLMs are being trained on that data. As they get trained on this data, they inherently pick up some of the characteristics and traits and the good and the bad from the training data that they are trained on. So in addition to that, the LLMs themselves are probabilistic by nature. What does that mean? That means they are basically doing a kind of pattern matching and predictability of the results. So each time you might see a different result. You might see things where the pattern is wrongly matched or correctly matched. Right? So there is a chance of error all the time because of the way they operate. They also have limited context and they are hard to explain. So these are some other factors which lead us to believe that LLMs will have issues in the code that they produce. So and that's not just me telling LLMs have problems. We have the proof in front of us. We have LLM leaderboard that we launched last year. You can access it at sonar.com/leaderboard. It's a collection of 40 plus LLMs today that are ranked by performance. We look at not just standard benchmark results, the functional performance of the benchmarks, but we go deeper. We look at the qualitative analysis. We look at the security of the code. We look at the complexity of the code. So we look at all attributes of the code when we measure the performance of these LLMs. So let's dive deeper into it as to what we found in our analysis of these 40 plus LLMs. So here on this slide I'm showing you top five LLMs out of the 10 LLMs that have a greater than 80% pass rate. On this slide I'm talking about two things. One is the pass rate for each of the LLMs. And next we're looking at the issue density per thousand lines of code. Issue density and pass rate give us a good snapshot as to how well the LLMs are performing. in this list what we found as of today and of course in future we'll have more LLMs and we'll be updating the results as we find more LLMs, newer LLMs come out, we'll be updating these results. But as of today we found that Opus 4.5 Thinking is the leading model in terms of both the pass rate as well as the lowest issue density. The lower the issues, the better the model is and higher the pass rate the better the model is. So we have got it ranked here in terms of both the pass rate as well as the issue density. Opus 4.5 followed by 4.6 and then the Gemini 3 models are the ones which are leading the list as of today. So in addition to looking at the pass rates and the issue density, we also went ahead and looked at the complexity of the code. This is something really important. Complexity tells us how easy or how hard it is to maintain code base. So we looked at two parameters. We looked at cyclomatic complexity and we looked at cognitive complexity. So what is cyclomatic complexity? It basically measures the number of linear independent code paths that your project is taking. A higher score for cyclomatic complexity means it's harder to test and cover all execution paths of that code. So we should aim for a lower cyclomatic complexity in a good codebase. On the other side we have cognitive complexity. Cognitive complexity measures how hard it is for the humans to understand the code that is being produced by LLMs. It's all about reasoning. It's all about understanding the code by human beings. So what does it tell us? The impact of this is if the code is harder to read, review and debug, it becomes harder to maintain. It becomes complex. It becomes needlessly difficult and time consuming to manage and maintain a code base which has higher complexity. This slide we talk about two things. We look at the lines of code produced by each model and we look at the cognitive complexity and the cyclomatic complexity for each model. So what we are trying to do here is understand how these models behave and when they generate complex code versus when they don't generate complex code. So in general what we have found is models with higher functional performance tend to be more verbose and complex. If you look at our left side chart in blue it shows you the lines of code produced by each of those models. So what this tells us is for a given programming assignment or for a given set of programming assignments GPT 5.2 High for example almost took 900 thousand lines of code or a million lines of code to do the same task where versus GPT 40 which took less than 200,000 lines of code to do the same task. So you can see there's a big variability here in terms of lines of code produced for the same programming assignments. What does this tell us? It basically tells us that a code can be written in 10 different ways. How many lines can you use to solve a particular problem? It depends on the LLM and the type of training that they have gone through and the type of reasoning modes that they have. So on the right-hand side we looked at cyclomatic and cognitive complexity of the models. You can see the red and the blue numbers show the cyclomatic and cognitive complexities for some of the models here. What we can correlate here is for example going back to GPT 5.2 High, GPT 5.2 High produced about a million lines of code for doing an assignment and if you look at the cognitive complexity of GPT 5.2 and the cyclomatic complexity of 5.2 High, it's quite high. So it's roughly that the more verbose your code base is in terms of the code produced by LLMs, the higher the cognitive and cyclomatic complexity is and what that basically means is it'll take you longer to understand that code, maintain that code and it's going to be an accumulation of technical debt if you cannot maintain that code. So we also dig a bit deeper into the performance of the LLMs. So we analyzed the number of bugs produced by each of the LLMs and we also looked at the number of security issues that each of the LLMs produced. On the left side we are looking at the bugs per model and you can see that as and when we have been moving from GPT 40 to Opus 4.5 and 4.6 there's a gradual slight decrease in the number of bugs being produced by the LLMs. So generally speaking, it's not a hard well-defined trend, but you can see GPT40 had tons of bugs in it when it was doing a programming assignment. The same assignment if it was done by GPT 5.2 or GPT 5.1 High, the number of bugs were far lesser. And if you look at the security issues on the right-hand side, generally more of all of the models have started to become very good in terms of security. They have reduced the number of security bugs drastically over the last one and a half years. You can see GPT4 had a ton of security bugs and now the newer models like Opus 4.5 and 4.6 and GPT 5.2 High have the least number of security bugs. In fact GPT 5.2 ranks as the best in terms of the lowest number of security issues produced based on our testing. So what does this data tell us? This data tells us a few different things. The current leader is Opus 4.5 and we are calling it a leader based on two factors. One is how much correct code it is producing and what's the pass rate like? So in this case it's 83.6%. And what's the issue density like? In this case the issue density is 15.15 per thousand lines of code. And this is this density is the least among all the models that we have evaluated. We've also found that after late 2025 and 2026 models have been getting better and better and their pass rates are always higher than 80%. Which means the models are improving in terms of the output that they're producing. One other striking fact that we found was correctness is not equal to quality. High pass rates do not guarantee that your model is producing high quality code. I'll call out Gemini 3 Pro here. It ranks number three in terms of correctness, but it produces a lot of issues. So, it's 24th ranked in terms of issue density. So, you do need to take care of looking at the details and evaluate the correctness of the model, complexity of the model, the code quality of the model, the security of the model when you're evaluating the models. The other thing which we found was models which are smaller like Open Coder 8B which is a relatively small language model as compared to Llama or GPT 5.2. Pass rates there are very low but they are also compromising on correctness. They generate simple code but the complexity is less but they're also compromising on correctness. So you need to be careful in terms of choosing your models based on the data that you see on the leaderboard. It'll help you guide in terms of which use cases your models are suitable for. So what do you do with all of this information that I shared earlier today? Let me give you some concrete takeaways. When choosing an LLM for your team, prioritize models with 80% or higher pass rates for any code headed to production. Below that threshold you are basically spending time going to spend time fixing than what you're saving in terms of time. Look at the issue density along with correctness. A model with 82% pass rate and 18 as the issue density count is a much better choice than one with 81% as the pass rate and 25 as the issue density. The review burden is dramatically different in these two models. Favor the late 2025 and 2026 models. The generational improvement is significant and measurable in the newer models. Prioritize readability and maintainability. Look at complexity of these models. Your team has to live with this code. The complexity metrics do matter. And for your day-to-day practice, here are some tips. Always review LLM generated code for code quality and security. Always. There are no exceptions. The models are not security aware and they will make mistakes. Use automated code review tools like SonarQube to catch what human reviews miss. This is exactly the kind of analysis that scales. Don't assume simpler is better. Verify correctness. The simplicity paradox is real. And stay current. The landscape is evolving fast. The best model today may not be the best model in 6 months. Let's wrap with five key messages. Benchmarks alone don't tell the full story. You do need to do qualitative analysis of all the code that is being produced by LLMs. Newer models generally are better, but don't take it for granted. You do need to evaluate them. You do need to test them. Verification isn't optional. It's essential. Quality and security are non-negotiable. You absolutely need to make sure that the code being produced by LLMs is of high quality, secure, and trustworthy. Thank you for taking the time today. I hope you learned something useful today. Feel free to reach out if you have any questions or would like to continue the discussion.",
+  "fetchedAt": "2026-03-14T09:22:06.856Z"
+}

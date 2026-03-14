@@ -1,0 +1,2158 @@
+{
+  "videoId": "v20",
+  "youtubeId": "PYazHOcZyXA",
+  "segments": [
+    {
+      "text": "Hi there. I'm Geoffray, product",
+      "offset": 17000,
+      "duration": 2000
+    },
+    {
+      "text": "manager for CNC C++ ecosystem at",
+      "offset": 19000,
+      "duration": 3000
+    },
+    {
+      "text": "Sonar. And today I would like to talk to",
+      "offset": 22000,
+      "duration": 2000
+    },
+    {
+      "text": "you about rule, standards, and AI.",
+      "offset": 24000,
+      "duration": 3000
+    },
+    {
+      "text": "what coding standards really do and why",
+      "offset": 27000,
+      "duration": 3000
+    },
+    {
+      "text": "they still matter. So just a few words",
+      "offset": 30000,
+      "duration": 2000
+    },
+    {
+      "text": "about myself so that you can better",
+      "offset": 32000,
+      "duration": 1000
+    },
+    {
+      "text": "understand the angle of this talk,",
+      "offset": 33000,
+      "duration": 2000
+    },
+    {
+      "text": "right? I started probably like seven",
+      "offset": 35000,
+      "duration": 2000
+    },
+    {
+      "text": "years ago at Sonar as a developer in the",
+      "offset": 37000,
+      "duration": 3000
+    },
+    {
+      "text": "C++ analyzer development team and",
+      "offset": 40000,
+      "duration": 3000
+    },
+    {
+      "text": "since then I transitioned to being the",
+      "offset": 43000,
+      "duration": 2000
+    },
+    {
+      "text": "product manager for the CN C++",
+      "offset": 45000,
+      "duration": 2000
+    },
+    {
+      "text": "ecosystem. So back in my developer days",
+      "offset": 47000,
+      "duration": 3000
+    },
+    {
+      "text": "here I was deeply involved in",
+      "offset": 50000,
+      "duration": 3000
+    },
+    {
+      "text": "crafting rules implementing them in all",
+      "offset": 53000,
+      "duration": 3000
+    },
+    {
+      "text": "the details. Right now as a product",
+      "offset": 56000,
+      "duration": 1000
+    },
+    {
+      "text": "manager of course I don't get that much",
+      "offset": 57000,
+      "duration": 2000
+    },
+    {
+      "text": "into the details but I still deal with",
+      "offset": 59000,
+      "duration": 2000
+    },
+    {
+      "text": "rules at a higher level let's say and",
+      "offset": 61000,
+      "duration": 3000
+    },
+    {
+      "text": "also I got to dive into coding",
+      "offset": 64000,
+      "duration": 3000
+    },
+    {
+      "text": "standards and we're going to talk about",
+      "offset": 67000,
+      "duration": 3000
+    },
+    {
+      "text": "this. As I said we're going to talk",
+      "offset": 70000,
+      "duration": 1000
+    },
+    {
+      "text": "about standards. standards is really",
+      "offset": 71000,
+      "duration": 3000
+    },
+    {
+      "text": "like a broad word I've used to put all",
+      "offset": 74000,
+      "duration": 4000
+    },
+    {
+      "text": "sorts of good practices together. So it",
+      "offset": 78000,
+      "duration": 2000
+    },
+    {
+      "text": "it really ranges from things like OAS",
+      "offset": 80000,
+      "duration": 2000
+    },
+    {
+      "text": "top 10 which are really high level",
+      "offset": 82000,
+      "duration": 3000
+    },
+    {
+      "text": "awareness standards to really hard",
+      "offset": 85000,
+      "duration": 3000
+    },
+    {
+      "text": "requirement standards like misra for",
+      "offset": 88000,
+      "duration": 3000
+    },
+    {
+      "text": "instance there's no way that you're",
+      "offset": 91000,
+      "duration": 1000
+    },
+    {
+      "text": "going to ship any critical automotive",
+      "offset": 92000,
+      "duration": 2000
+    },
+    {
+      "text": "software these days without the misra",
+      "offset": 94000,
+      "duration": 3000
+    },
+    {
+      "text": "badge on it or it's going to be very",
+      "offset": 97000,
+      "duration": 3000
+    },
+    {
+      "text": "difficult for you to pass some",
+      "offset": 100000,
+      "duration": 1000
+    },
+    {
+      "text": "requirements without being able to",
+      "offset": 101000,
+      "duration": 3000
+    },
+    {
+      "text": "demonstrate some OASP ASVS compliance",
+      "offset": 104000,
+      "duration": 5000
+    },
+    {
+      "text": "And this is the sort of things that",
+      "offset": 109000,
+      "duration": 2000
+    },
+    {
+      "text": "we are dealing here at the highest",
+      "offset": 111000,
+      "duration": 2000
+    },
+    {
+      "text": "level. But concretely when it comes to",
+      "offset": 113000,
+      "duration": 2000
+    },
+    {
+      "text": "your code and what developers see when",
+      "offset": 115000,
+      "duration": 2000
+    },
+    {
+      "text": "they use our product they see the result",
+      "offset": 117000,
+      "duration": 2000
+    },
+    {
+      "text": "of rules that are really small",
+      "offset": 119000,
+      "duration": 3000
+    },
+    {
+      "text": "individual atomic checks. And",
+      "offset": 122000,
+      "duration": 3000
+    },
+    {
+      "text": "we'll have a look at the link between",
+      "offset": 125000,
+      "duration": 2000
+    },
+    {
+      "text": "these two. So what we're going to do",
+      "offset": 127000,
+      "duration": 2000
+    },
+    {
+      "text": "we're going to start with the standards",
+      "offset": 129000,
+      "duration": 3000
+    },
+    {
+      "text": "and see that they have purpose and",
+      "offset": 132000,
+      "duration": 1000
+    },
+    {
+      "text": "philosophies. We're going to go down to",
+      "offset": 133000,
+      "duration": 2000
+    },
+    {
+      "text": "the at the rule level and to really",
+      "offset": 135000,
+      "duration": 3000
+    },
+    {
+      "text": "understand that rules are tools serving",
+      "offset": 138000,
+      "duration": 2000
+    },
+    {
+      "text": "standards and but they're not truth.",
+      "offset": 140000,
+      "duration": 4000
+    },
+    {
+      "text": "And then we're going to have a look",
+      "offset": 144000,
+      "duration": 2000
+    },
+    {
+      "text": "at AI because AI now is everywhere. AI",
+      "offset": 146000,
+      "duration": 3000
+    },
+    {
+      "text": "is most certainly into the coding",
+      "offset": 149000,
+      "duration": 2000
+    },
+    {
+      "text": "business and we need to understand what",
+      "offset": 151000,
+      "duration": 3000
+    },
+    {
+      "text": "it changes and spoiler alert it doesn't",
+      "offset": 154000,
+      "duration": 2000
+    },
+    {
+      "text": "change the fundamentals. So let's get",
+      "offset": 156000,
+      "duration": 2000
+    },
+    {
+      "text": "started with this very homemade chart",
+      "offset": 158000,
+      "duration": 3000
+    },
+    {
+      "text": "where I put some of the the most famous",
+      "offset": 161000,
+      "duration": 3000
+    },
+    {
+      "text": "let's say coding guidelines. So",
+      "offset": 164000,
+      "duration": 3000
+    },
+    {
+      "text": "on the left side you would have like very",
+      "offset": 167000,
+      "duration": 2000
+    },
+    {
+      "text": "abstract guidelines that are not really",
+      "offset": 169000,
+      "duration": 3000
+    },
+    {
+      "text": "strict in their level of",
+      "offset": 172000,
+      "duration": 2000
+    },
+    {
+      "text": "prescription. To the extreme right, you",
+      "offset": 174000,
+      "duration": 2000
+    },
+    {
+      "text": "will see mostly things that are very",
+      "offset": 176000,
+      "duration": 3000
+    },
+    {
+      "text": "prescriptive on what the problems you",
+      "offset": 179000,
+      "duration": 3000
+    },
+    {
+      "text": "are tackling, how you should tackle them",
+      "offset": 182000,
+      "duration": 1000
+    },
+    {
+      "text": "or resolve them like misra, which is",
+      "offset": 183000,
+      "duration": 3000
+    },
+    {
+      "text": "something very hands-on in the code with",
+      "offset": 186000,
+      "duration": 2000
+    },
+    {
+      "text": "very strict rules that you need to",
+      "offset": 188000,
+      "duration": 2000
+    },
+    {
+      "text": "follow. On the vertical axis, you will",
+      "offset": 190000,
+      "duration": 3000
+    },
+    {
+      "text": "have at the bottom things that are",
+      "offset": 193000,
+      "duration": 1000
+    },
+    {
+      "text": "really mostly dealing with code and",
+      "offset": 194000,
+      "duration": 3000
+    },
+    {
+      "text": "nothing else. And at the top you will",
+      "offset": 197000,
+      "duration": 3000
+    },
+    {
+      "text": "have standards that really specify the",
+      "offset": 200000,
+      "duration": 2000
+    },
+    {
+      "text": "entire full system life cycle management.",
+      "offset": 202000,
+      "duration": 4000
+    },
+    {
+      "text": "And it is very important to",
+      "offset": 206000,
+      "duration": 2000
+    },
+    {
+      "text": "understand that when you consider all",
+      "offset": 208000,
+      "duration": 2000
+    },
+    {
+      "text": "these standards there are cost",
+      "offset": 210000,
+      "duration": 4000
+    },
+    {
+      "text": "tradeoffs to be made if you want to",
+      "offset": 214000,
+      "duration": 2000
+    },
+    {
+      "text": "follow them somehow. If you want to",
+      "offset": 216000,
+      "duration": 2000
+    },
+    {
+      "text": "solve a problem there are a variety of",
+      "offset": 218000,
+      "duration": 2000
+    },
+    {
+      "text": "solutions and depending on the cost",
+      "offset": 220000,
+      "duration": 2000
+    },
+    {
+      "text": "you're ready to put you will have",
+      "offset": 222000,
+      "duration": 1000
+    },
+    {
+      "text": "different level of solutions let's say.",
+      "offset": 223000,
+      "duration": 3000
+    },
+    {
+      "text": "So for instance constraints of course",
+      "offset": 226000,
+      "duration": 2000
+    },
+    {
+      "text": "you can code quick and dirty but most",
+      "offset": 228000,
+      "duration": 3000
+    },
+    {
+      "text": "likely you will introduce bug and it's",
+      "offset": 231000,
+      "duration": 1000
+    },
+    {
+      "text": "not good for safe safety critical",
+      "offset": 232000,
+      "duration": 3000
+    },
+    {
+      "text": "application this sort of stuff. So you",
+      "offset": 235000,
+      "duration": 2000
+    },
+    {
+      "text": "won't hear there is a first level of",
+      "offset": 237000,
+      "duration": 2000
+    },
+    {
+      "text": "tradeoff. You can't be that fast. You",
+      "offset": 239000,
+      "duration": 2000
+    },
+    {
+      "text": "need to do things properly to be sure",
+      "offset": 241000,
+      "duration": 2000
+    },
+    {
+      "text": "they're done properly. There are",
+      "offset": 243000,
+      "duration": 2000
+    },
+    {
+      "text": "trade-offs on expertise. You will have",
+      "offset": 245000,
+      "duration": 2000
+    },
+    {
+      "text": "additional processes, additional audit",
+      "offset": 247000,
+      "duration": 2000
+    },
+    {
+      "text": "and these sort of things. Are you ready",
+      "offset": 249000,
+      "duration": 2000
+    },
+    {
+      "text": "to embark into this and to support the",
+      "offset": 251000,
+      "duration": 2000
+    },
+    {
+      "text": "cost that comes with it? There is also",
+      "offset": 253000,
+      "duration": 2000
+    },
+    {
+      "text": "the tooling for instance if you",
+      "offset": 255000,
+      "duration": 2000
+    },
+    {
+      "text": "consider security you have static",
+      "offset": 257000,
+      "duration": 2000
+    },
+    {
+      "text": "analysis dynamic analysis software",
+      "offset": 259000,
+      "duration": 2000
+    },
+    {
+      "text": "composure analysis real time",
+      "offset": 261000,
+      "duration": 2000
+    },
+    {
+      "text": "application self protection and these",
+      "offset": 263000,
+      "duration": 3000
+    },
+    {
+      "text": "sort of things all sort of things that",
+      "offset": 266000,
+      "duration": 2000
+    },
+    {
+      "text": "come to a cost and that can also harm",
+      "offset": 268000,
+      "duration": 3000
+    },
+    {
+      "text": "developers velocity so that's let's say",
+      "offset": 271000,
+      "duration": 2000
+    },
+    {
+      "text": "the standard spectrum I would like you",
+      "offset": 273000,
+      "duration": 3000
+    },
+    {
+      "text": "to now we're going to move on to a",
+      "offset": 276000,
+      "duration": 3000
+    },
+    {
+      "text": "few examples to see that in action",
+      "offset": 279000,
+      "duration": 2000
+    },
+    {
+      "text": "somehow so the first one is OASP SVS",
+      "offset": 281000,
+      "duration": 3000
+    },
+    {
+      "text": "which targets web application",
+      "offset": 284000,
+      "duration": 3000
+    },
+    {
+      "text": "security. The purpose of the standard",
+      "offset": 287000,
+      "duration": 3000
+    },
+    {
+      "text": "was merely to stop the guessing game in",
+      "offset": 290000,
+      "duration": 2000
+    },
+    {
+      "text": "security verification.",
+      "offset": 292000,
+      "duration": 2000
+    },
+    {
+      "text": "Because it was not standardized",
+      "offset": 294000,
+      "duration": 2000
+    },
+    {
+      "text": "before. It used to be difficult to",
+      "offset": 296000,
+      "duration": 2000
+    },
+    {
+      "text": "understand what needs to what need to be",
+      "offset": 298000,
+      "duration": 3000
+    },
+    {
+      "text": "checked by whom what all these sort",
+      "offset": 301000,
+      "duration": 2000
+    },
+    {
+      "text": "of things. So the philosophy is really",
+      "offset": 303000,
+      "duration": 2000
+    },
+    {
+      "text": "to make security testable and",
+      "offset": 305000,
+      "duration": 2000
+    },
+    {
+      "text": "contractual. So the content of this",
+      "offset": 307000,
+      "duration": 3000
+    },
+    {
+      "text": "standard is mostly 286 testable",
+      "offset": 310000,
+      "duration": 4000
+    },
+    {
+      "text": "requirements in various categories and",
+      "offset": 314000,
+      "duration": 2000
+    },
+    {
+      "text": "levels and this comes with really three",
+      "offset": 316000,
+      "duration": 3000
+    },
+    {
+      "text": "functions. Let's call it this way. So",
+      "offset": 319000,
+      "duration": 3000
+    },
+    {
+      "text": "first it's a metric that's very",
+      "offset": 322000,
+      "duration": 1000
+    },
+    {
+      "text": "important because checks have different",
+      "offset": 323000,
+      "duration": 2000
+    },
+    {
+      "text": "levels. You can say oh when we",
+      "offset": 325000,
+      "duration": 3000
+    },
+    {
+      "text": "develop our application we are",
+      "offset": 328000,
+      "duration": 2000
+    },
+    {
+      "text": "conformed to ASVS level two that",
+      "offset": 330000,
+      "duration": 3000
+    },
+    {
+      "text": "actually means something specific. It's",
+      "offset": 333000,
+      "duration": 3000
+    },
+    {
+      "text": "also a blueprint. All the security",
+      "offset": 336000,
+      "duration": 2000
+    },
+    {
+      "text": "requirement to build to build into the",
+      "offset": 338000,
+      "duration": 2000
+    },
+    {
+      "text": "code is specified in this testable",
+      "offset": 340000,
+      "duration": 3000
+    },
+    {
+      "text": "requirements and it's also a contract",
+      "offset": 343000,
+      "duration": 4000
+    },
+    {
+      "text": "and that's a very powerful feature of",
+      "offset": 347000,
+      "duration": 1000
+    },
+    {
+      "text": "this which is basically you can use this",
+      "offset": 348000,
+      "duration": 3000
+    },
+    {
+      "text": "to subcontract software development.",
+      "offset": 351000,
+      "duration": 2000
+    },
+    {
+      "text": "You can say oh I would like you to",
+      "offset": 353000,
+      "duration": 2000
+    },
+    {
+      "text": "develop this application while being",
+      "offset": 355000,
+      "duration": 2000
+    },
+    {
+      "text": "conformed to ASVS level two. And that's",
+      "offset": 357000,
+      "duration": 3000
+    },
+    {
+      "text": "a very powerful feature of standards in",
+      "offset": 360000,
+      "duration": 2000
+    },
+    {
+      "text": "general. Another standard I wanted to",
+      "offset": 362000,
+      "duration": 2000
+    },
+    {
+      "text": "take as an example is Misra. So Misra",
+      "offset": 364000,
+      "duration": 3000
+    },
+    {
+      "text": "so we're going to focus on the C++",
+      "offset": 367000,
+      "duration": 2000
+    },
+    {
+      "text": "version of Misra. There are other",
+      "offset": 369000,
+      "duration": 2000
+    },
+    {
+      "text": "versions but for the example that's",
+      "offset": 371000,
+      "duration": 2000
+    },
+    {
+      "text": "fine. So Misra was born in the",
+      "offset": 373000,
+      "duration": 3000
+    },
+    {
+      "text": "automotive industry with the need of",
+      "offset": 376000,
+      "duration": 2000
+    },
+    {
+      "text": "really streamlining what it means to",
+      "offset": 378000,
+      "duration": 2000
+    },
+    {
+      "text": "have safety critical code and it also",
+      "offset": 380000,
+      "duration": 3000
+    },
+    {
+      "text": "became a de facto standard in functional",
+      "offset": 383000,
+      "duration": 2000
+    },
+    {
+      "text": "safety more broadly.",
+      "offset": 385000,
+      "duration": 3000
+    },
+    {
+      "text": "and the purpose of misra C++ 2023 is",
+      "offset": 388000,
+      "duration": 3000
+    },
+    {
+      "text": "to define a safe subset of C++ 17.",
+      "offset": 391000,
+      "duration": 4000
+    },
+    {
+      "text": "C++ is a very complex language. C++ 17",
+      "offset": 395000,
+      "duration": 5000
+    },
+    {
+      "text": "is a version of it which is very complex",
+      "offset": 400000,
+      "duration": 2000
+    },
+    {
+      "text": "with many features and a group of",
+      "offset": 402000,
+      "duration": 4000
+    },
+    {
+      "text": "experts decided that it's much",
+      "offset": 406000,
+      "duration": 3000
+    },
+    {
+      "text": "better to restrict it to a safe subset",
+      "offset": 409000,
+      "duration": 3000
+    },
+    {
+      "text": "of functionalities that you're able",
+      "offset": 412000,
+      "duration": 2000
+    },
+    {
+      "text": "to use in your code. So they came up",
+      "offset": 414000,
+      "duration": 3000
+    },
+    {
+      "text": "with 179 spec very detailed",
+      "offset": 417000,
+      "duration": 3000
+    },
+    {
+      "text": "specified guidelines plus compliance",
+      "offset": 420000,
+      "duration": 4000
+    },
+    {
+      "text": "procedure detailed one and all these",
+      "offset": 424000,
+      "duration": 3000
+    },
+    {
+      "text": "guidelines are classified in two",
+      "offset": 427000,
+      "duration": 2000
+    },
+    {
+      "text": "categories. They were all made with a",
+      "offset": 429000,
+      "duration": 2000
+    },
+    {
+      "text": "static check in mind. There are",
+      "offset": 431000,
+      "duration": 2000
+    },
+    {
+      "text": "decidable rules. The decidable rules",
+      "offset": 433000,
+      "duration": 2000
+    },
+    {
+      "text": "basically it is mathematically",
+      "offset": 435000,
+      "duration": 4000
+    },
+    {
+      "text": "demonstrated basically that you can",
+      "offset": 439000,
+      "duration": 2000
+    },
+    {
+      "text": "implement a perfect check for such a",
+      "offset": 441000,
+      "duration": 2000
+    },
+    {
+      "text": "rule. So tools vendor will not really",
+      "offset": 443000,
+      "duration": 2000
+    },
+    {
+      "text": "differ much in the quality of these",
+      "offset": 445000,
+      "duration": 3000
+    },
+    {
+      "text": "findings. For undecidable rules, that's",
+      "offset": 448000,
+      "duration": 3000
+    },
+    {
+      "text": "a different game. There's not many rules",
+      "offset": 451000,
+      "duration": 2000
+    },
+    {
+      "text": "undecidable because they're undecidable,",
+      "offset": 453000,
+      "duration": 3000
+    },
+    {
+      "text": "but they tend to cover very critical",
+      "offset": 456000,
+      "duration": 2000
+    },
+    {
+      "text": "bugs. So there you want to have",
+      "offset": 458000,
+      "duration": 3000
+    },
+    {
+      "text": "something good. But little spoiler, in",
+      "offset": 461000,
+      "duration": 3000
+    },
+    {
+      "text": "my own experience",
+      "offset": 464000,
+      "duration": 2000
+    },
+    {
+      "text": "after these years at Sonar, I would",
+      "offset": 466000,
+      "duration": 3000
+    },
+    {
+      "text": "say the best bugs are the ones that you",
+      "offset": 469000,
+      "duration": 2000
+    },
+    {
+      "text": "never wrote. So basically having",
+      "offset": 471000,
+      "duration": 2000
+    },
+    {
+      "text": "it's really great to have good bug",
+      "offset": 475000,
+      "duration": 2000
+    },
+    {
+      "text": "detection capabilities but the first",
+      "offset": 477000,
+      "duration": 2000
+    },
+    {
+      "text": "thing you should focus on is to never",
+      "offset": 479000,
+      "duration": 2000
+    },
+    {
+      "text": "write bugs. It's a bit like if you have",
+      "offset": 481000,
+      "duration": 2000
+    },
+    {
+      "text": "a car of course you want to have the",
+      "offset": 483000,
+      "duration": 2000
+    },
+    {
+      "text": "safety belt of course you want to have",
+      "offset": 485000,
+      "duration": 2000
+    },
+    {
+      "text": "an airbag and but of course the first",
+      "offset": 487000,
+      "duration": 3000
+    },
+    {
+      "text": "thing you should do is to focus on being",
+      "offset": 490000,
+      "duration": 2000
+    },
+    {
+      "text": "a good driver. So that's the same with",
+      "offset": 492000,
+      "duration": 2000
+    },
+    {
+      "text": "code basically. You can check out",
+      "offset": 494000,
+      "duration": 2000
+    },
+    {
+      "text": "what we've been doing with about Mistra",
+      "offset": 496000,
+      "duration": 2000
+    },
+    {
+      "text": "C++ compliance recently if you want",
+      "offset": 498000,
+      "duration": 2000
+    },
+    {
+      "text": "there.",
+      "offset": 500000,
+      "duration": 2000
+    },
+    {
+      "text": "So the last one I the last standard I",
+      "offset": 502000,
+      "duration": 3000
+    },
+    {
+      "text": "I want to to talk about is Sonar Way and",
+      "offset": 505000,
+      "duration": 3000
+    },
+    {
+      "text": "people that know a bit our product",
+      "offset": 508000,
+      "duration": 2000
+    },
+    {
+      "text": "will say hey wait it's not a standard.",
+      "offset": 510000,
+      "duration": 3000
+    },
+    {
+      "text": "yeah it's not exactly a standard. I I",
+      "offset": 513000,
+      "duration": 2000
+    },
+    {
+      "text": "acknowledge that but it it really",
+      "offset": 515000,
+      "duration": 3000
+    },
+    {
+      "text": "fulfills the same role somehow. So it",
+      "offset": 518000,
+      "duration": 2000
+    },
+    {
+      "text": "targets mostly all industries. The",
+      "offset": 520000,
+      "duration": 2000
+    },
+    {
+      "text": "purpose is to be sure that your code",
+      "offset": 522000,
+      "duration": 3000
+    },
+    {
+      "text": "remain an asset secure reliable and",
+      "offset": 525000,
+      "duration": 2000
+    },
+    {
+      "text": "maintainable. And the philosophy there",
+      "offset": 527000,
+      "duration": 3000
+    },
+    {
+      "text": "is really like try to shift left and be",
+      "offset": 530000,
+      "duration": 2000
+    },
+    {
+      "text": "actionable and educate your developer to",
+      "offset": 532000,
+      "duration": 3000
+    },
+    {
+      "text": "doing so. Right? So basically what is",
+      "offset": 535000,
+      "duration": 3000
+    },
+    {
+      "text": "the content of sonar way? It's um a set",
+      "offset": 538000,
+      "duration": 3000
+    },
+    {
+      "text": "of default rules that we enable for each",
+      "offset": 541000,
+      "duration": 3000
+    },
+    {
+      "text": "and every single language. Let's say",
+      "offset": 544000,
+      "duration": 2000
+    },
+    {
+      "text": "for the bigger languages like C++,",
+      "offset": 546000,
+      "duration": 4000
+    },
+    {
+      "text": "Java or Python. This is between 250 and",
+      "offset": 550000,
+      "duration": 3000
+    },
+    {
+      "text": "600 rules by default for this language.",
+      "offset": 553000,
+      "duration": 3000
+    },
+    {
+      "text": "that will take care all of all the",
+      "offset": 556000,
+      "duration": 2000
+    },
+    {
+      "text": "aspects of the code that I have named",
+      "offset": 558000,
+      "duration": 2000
+    },
+    {
+      "text": "before. So I think this is not",
+      "offset": 560000,
+      "duration": 4000
+    },
+    {
+      "text": "standardized. So it cannot be used as",
+      "offset": 564000,
+      "duration": 3000
+    },
+    {
+      "text": "the previous standards as we said but it",
+      "offset": 567000,
+      "duration": 2000
+    },
+    {
+      "text": "can be used for internal purpose and",
+      "offset": 569000,
+      "duration": 3000
+    },
+    {
+      "text": "that is being used by our customers",
+      "offset": 572000,
+      "duration": 2000
+    },
+    {
+      "text": "for this internal purpose. So now I",
+      "offset": 574000,
+      "duration": 3000
+    },
+    {
+      "text": "would like to zoom in a little bit on",
+      "offset": 577000,
+      "duration": 2000
+    },
+    {
+      "text": "rules as I said we would do. we will",
+      "offset": 579000,
+      "duration": 2000
+    },
+    {
+      "text": "use here three standards two of",
+      "offset": 581000,
+      "duration": 4000
+    },
+    {
+      "text": "which I've already mentioned. So first",
+      "offset": 585000,
+      "duration": 2000
+    },
+    {
+      "text": "we need to understand that for instance",
+      "offset": 587000,
+      "duration": 2000
+    },
+    {
+      "text": "in sonar we can either write original",
+      "offset": 589000,
+      "duration": 3000
+    },
+    {
+      "text": "rules our expert will write rules as",
+      "offset": 592000,
+      "duration": 3000
+    },
+    {
+      "text": "they see fit or we can also adopt other",
+      "offset": 595000,
+      "duration": 3000
+    },
+    {
+      "text": "rules from external standards and",
+      "offset": 598000,
+      "duration": 3000
+    },
+    {
+      "text": "implement them as required by some",
+      "offset": 601000,
+      "duration": 3000
+    },
+    {
+      "text": "standards so that our customers can use",
+      "offset": 604000,
+      "duration": 2000
+    },
+    {
+      "text": "these standards.",
+      "offset": 606000,
+      "duration": 2000
+    },
+    {
+      "text": "any of such rules can map to either",
+      "offset": 608000,
+      "duration": 4000
+    },
+    {
+      "text": "standard to whatever standard if they",
+      "offset": 612000,
+      "duration": 2000
+    },
+    {
+      "text": "fulfill some part of requirements of",
+      "offset": 614000,
+      "duration": 2000
+    },
+    {
+      "text": "these standards.",
+      "offset": 616000,
+      "duration": 2000
+    },
+    {
+      "text": "It is what I would like you to",
+      "offset": 618000,
+      "duration": 2000
+    },
+    {
+      "text": "understand to take away from this slide",
+      "offset": 620000,
+      "duration": 1000
+    },
+    {
+      "text": "it is that rules solve a problem and",
+      "offset": 621000,
+      "duration": 3000
+    },
+    {
+      "text": "they have a philosophy mostly inherited",
+      "offset": 624000,
+      "duration": 2000
+    },
+    {
+      "text": "from some coding standards out there and",
+      "offset": 626000,
+      "duration": 3000
+    },
+    {
+      "text": "we will take these three examples. So",
+      "offset": 629000,
+      "duration": 2000
+    },
+    {
+      "text": "first Misra is focusing on safety safety",
+      "offset": 631000,
+      "duration": 3000
+    },
+    {
+      "text": "criticality and aims at defining a",
+      "offset": 634000,
+      "duration": 4000
+    },
+    {
+      "text": "safe language of the subset and",
+      "offset": 638000,
+      "duration": 2000
+    },
+    {
+      "text": "things that you will see out of Misra",
+      "offset": 640000,
+      "duration": 2000
+    },
+    {
+      "text": "are things like oh you should not use",
+      "offset": 642000,
+      "duration": 3000
+    },
+    {
+      "text": "this or you should not use that then",
+      "offset": 645000,
+      "duration": 2000
+    },
+    {
+      "text": "it's your job to try to fix it but you",
+      "offset": 647000,
+      "duration": 3000
+    },
+    {
+      "text": "need to fix it or to justify that you",
+      "offset": 650000,
+      "duration": 2000
+    },
+    {
+      "text": "did not fix it. Third is another",
+      "offset": 652000,
+      "duration": 3000
+    },
+    {
+      "text": "standard that's trying to go around",
+      "offset": 655000,
+      "duration": 3000
+    },
+    {
+      "text": "vulnerabilities",
+      "offset": 658000,
+      "duration": 2000
+    },
+    {
+      "text": "with a philosophy that's very much",
+      "offset": 660000,
+      "duration": 3000
+    },
+    {
+      "text": "defensive. So for instance, it will",
+      "offset": 663000,
+      "duration": 2000
+    },
+    {
+      "text": "often tell you, oh, you should make sure",
+      "offset": 665000,
+      "duration": 2000
+    },
+    {
+      "text": "that this is validated or that is",
+      "offset": 667000,
+      "duration": 2000
+    },
+    {
+      "text": "validated in your code. So it will",
+      "offset": 669000,
+      "duration": 3000
+    },
+    {
+      "text": "give you plenty of issues in your code",
+      "offset": 672000,
+      "duration": 3000
+    },
+    {
+      "text": "with various levels of priorities and",
+      "offset": 675000,
+      "duration": 3000
+    },
+    {
+      "text": "you're free to fix whatever you're",
+      "offset": 678000,
+      "duration": 3000
+    },
+    {
+      "text": "able to fix there. Then there is sonar.",
+      "offset": 681000,
+      "duration": 3000
+    },
+    {
+      "text": "There is the our own rule set at sonar.",
+      "offset": 684000,
+      "duration": 4000
+    },
+    {
+      "text": "So it's about software and code health",
+      "offset": 688000,
+      "duration": 2000
+    },
+    {
+      "text": "in general. it's about shifting left",
+      "offset": 690000,
+      "duration": 3000
+    },
+    {
+      "text": "as I said already being actionable and",
+      "offset": 693000,
+      "duration": 2000
+    },
+    {
+      "text": "educate developers. So the sort of issues",
+      "offset": 695000,
+      "duration": 3000
+    },
+    {
+      "text": "that you would get out of sonar rules is",
+      "offset": 698000,
+      "duration": 2000
+    },
+    {
+      "text": "oh this thing is dangerous because of",
+      "offset": 700000,
+      "duration": 3000
+    },
+    {
+      "text": "that reason please do it this other way",
+      "offset": 703000,
+      "duration": 3000
+    },
+    {
+      "text": "please. So this is very actionable. So",
+      "offset": 706000,
+      "duration": 3000
+    },
+    {
+      "text": "it has various quality. you understand",
+      "offset": 709000,
+      "duration": 2000
+    },
+    {
+      "text": "the problem you understand the source",
+      "offset": 711000,
+      "duration": 3000
+    },
+    {
+      "text": "of the problem and you understand what",
+      "offset": 714000,
+      "duration": 2000
+    },
+    {
+      "text": "you need to do to fix it. This is as I",
+      "offset": 716000,
+      "duration": 2000
+    },
+    {
+      "text": "said in the philosophy part very",
+      "offset": 718000,
+      "duration": 2000
+    },
+    {
+      "text": "actionable and we have this workflow",
+      "offset": 720000,
+      "duration": 3000
+    },
+    {
+      "text": "called clean as you code to help you",
+      "offset": 723000,
+      "duration": 2000
+    },
+    {
+      "text": "actually applying this with all the new",
+      "offset": 725000,
+      "duration": 3000
+    },
+    {
+      "text": "code that you put to your application",
+      "offset": 728000,
+      "duration": 3000
+    },
+    {
+      "text": "so that over time the your entire code",
+      "offset": 731000,
+      "duration": 2000
+    },
+    {
+      "text": "base gets clean. So we're going to have",
+      "offset": 733000,
+      "duration": 3000
+    },
+    {
+      "text": "just a quick look at the concrete example",
+      "offset": 736000,
+      "duration": 2000
+    },
+    {
+      "text": "for all this to sound a bit less",
+      "offset": 738000,
+      "duration": 3000
+    },
+    {
+      "text": "theoretical. So this is a little bit of",
+      "offset": 741000,
+      "duration": 2000
+    },
+    {
+      "text": "C++ code. I know everyone is not",
+      "offset": 743000,
+      "duration": 2000
+    },
+    {
+      "text": "familiar with it but it's going to be",
+      "offset": 745000,
+      "duration": 2000
+    },
+    {
+      "text": "quite simple. So there is a function",
+      "offset": 747000,
+      "duration": 2000
+    },
+    {
+      "text": "that takes a pointer to a consture",
+      "offset": 749000,
+      "duration": 2000
+    },
+    {
+      "text": "and this is casted with a certain sort",
+      "offset": 751000,
+      "duration": 5000
+    },
+    {
+      "text": "of cast this parenthesis around",
+      "offset": 756000,
+      "duration": 4000
+    },
+    {
+      "text": "unsigned integer and this cast has",
+      "offset": 760000,
+      "duration": 2000
+    },
+    {
+      "text": "problems. I will explain this. So",
+      "offset": 762000,
+      "duration": 5000
+    },
+    {
+      "text": "basically it can create unexpected",
+      "offset": 767000,
+      "duration": 2000
+    },
+    {
+      "text": "consequences in your code. So Misra says",
+      "offset": 769000,
+      "duration": 4000
+    },
+    {
+      "text": "that this functionality casting with a",
+      "offset": 773000,
+      "duration": 2000
+    },
+    {
+      "text": "ccast is totally banned. You must use",
+      "offset": 775000,
+      "duration": 3000
+    },
+    {
+      "text": "name cast as I wrote them in the",
+      "offset": 778000,
+      "duration": 3000
+    },
+    {
+      "text": "comments. You have static cast, dynamic",
+      "offset": 781000,
+      "duration": 3000
+    },
+    {
+      "text": "cast, concast cast or interpret cast",
+      "offset": 784000,
+      "duration": 2000
+    },
+    {
+      "text": "that allows you to state your intent. So",
+      "offset": 786000,
+      "duration": 3000
+    },
+    {
+      "text": "there's no exception. This is banned by",
+      "offset": 789000,
+      "duration": 3000
+    },
+    {
+      "text": "misra rule. Cert has a different angle.",
+      "offset": 792000,
+      "duration": 2000
+    },
+    {
+      "text": "search says oh we are aware a aware",
+      "offset": 794000,
+      "duration": 3000
+    },
+    {
+      "text": "of a few occurrenments in specific cases",
+      "offset": 797000,
+      "duration": 3000
+    },
+    {
+      "text": "in Ccast of dangerous cases please check",
+      "offset": 800000,
+      "duration": 3000
+    },
+    {
+      "text": "that it's not one of these case but the",
+      "offset": 803000,
+      "duration": 3000
+    },
+    {
+      "text": "rest of the time we don't care you using",
+      "offset": 806000,
+      "duration": 2000
+    },
+    {
+      "text": "this C sele cast then finally we have",
+      "offset": 808000,
+      "duration": 3000
+    },
+    {
+      "text": "the sonar rule the sonar rule actually",
+      "offset": 811000,
+      "duration": 3000
+    },
+    {
+      "text": "discourage it's not as hard as misra",
+      "offset": 814000,
+      "duration": 2000
+    },
+    {
+      "text": "that totally ban this practice at sonar",
+      "offset": 816000,
+      "duration": 3000
+    },
+    {
+      "text": "we just say oh look this is not a good",
+      "offset": 819000,
+      "duration": 4000
+    },
+    {
+      "text": "idea because you're really hiding",
+      "offset": 823000,
+      "duration": 2000
+    },
+    {
+      "text": "your intent here. It hurts readability",
+      "offset": 825000,
+      "duration": 3000
+    },
+    {
+      "text": "of the code and then could be",
+      "offset": 828000,
+      "duration": 2000
+    },
+    {
+      "text": "misleading. So you should not do that",
+      "offset": 830000,
+      "duration": 1000
+    },
+    {
+      "text": "and we have other ways for you to do it.",
+      "offset": 831000,
+      "duration": 3000
+    },
+    {
+      "text": "So now the final part of this talk is",
+      "offset": 834000,
+      "duration": 2000
+    },
+    {
+      "text": "about so I've been talking about",
+      "offset": 836000,
+      "duration": 2000
+    },
+    {
+      "text": "standards. I've been talking about rules",
+      "offset": 838000,
+      "duration": 2000
+    },
+    {
+      "text": "and now we all know that the world of",
+      "offset": 840000,
+      "duration": 3000
+    },
+    {
+      "text": "development is changing big time because",
+      "offset": 843000,
+      "duration": 2000
+    },
+    {
+      "text": "of AI. What doesn't change here? So are",
+      "offset": 845000,
+      "duration": 2000
+    },
+    {
+      "text": "coding standards still useful? Well, yes",
+      "offset": 847000,
+      "duration": 3000
+    },
+    {
+      "text": "they are. Why are they? because mostly",
+      "offset": 850000,
+      "duration": 3000
+    },
+    {
+      "text": "LLM write code that looks a lot like",
+      "offset": 853000,
+      "duration": 2000
+    },
+    {
+      "text": "human written readable code written code",
+      "offset": 855000,
+      "duration": 3000
+    },
+    {
+      "text": "sorry so that's the first reason they",
+      "offset": 858000,
+      "duration": 2000
+    },
+    {
+      "text": "will mostly do the same blunder as we",
+      "offset": 860000,
+      "duration": 4000
+    },
+    {
+      "text": "can do as human beings so all these",
+      "offset": 864000,
+      "duration": 2000
+    },
+    {
+      "text": "parts that were crafted in the standards",
+      "offset": 866000,
+      "duration": 3000
+    },
+    {
+      "text": "and in the rules to spot these blenders",
+      "offset": 869000,
+      "duration": 2000
+    },
+    {
+      "text": "yes they will still work so and are they",
+      "offset": 871000,
+      "duration": 3000
+    },
+    {
+      "text": "still enough all these um standards",
+      "offset": 874000,
+      "duration": 3000
+    },
+    {
+      "text": "and these rules for the code itself",
+      "offset": 877000,
+      "duration": 4000
+    },
+    {
+      "text": "largely Yes, but not for the full",
+      "offset": 881000,
+      "duration": 2000
+    },
+    {
+      "text": "picture. So, the code itself, we've",
+      "offset": 883000,
+      "duration": 3000
+    },
+    {
+      "text": "run a very interesting study that you",
+      "offset": 886000,
+      "duration": 3000
+    },
+    {
+      "text": "can see here is called the coding",
+      "offset": 889000,
+      "duration": 2000
+    },
+    {
+      "text": "personalities of leading LLM. What we",
+      "offset": 891000,
+      "duration": 2000
+    },
+    {
+      "text": "noticed is basically that LLMs write",
+      "offset": 893000,
+      "duration": 2000
+    },
+    {
+      "text": "code a bit like human beings. They do",
+      "offset": 895000,
+      "duration": 2000
+    },
+    {
+      "text": "the same sort of mistakes in various",
+      "offset": 897000,
+      "duration": 2000
+    },
+    {
+      "text": "proportion depending on which LM you",
+      "offset": 899000,
+      "duration": 3000
+    },
+    {
+      "text": "using. So in from that perspective",
+      "offset": 902000,
+      "duration": 2000
+    },
+    {
+      "text": "one more time yes all this is still",
+      "offset": 904000,
+      "duration": 3000
+    },
+    {
+      "text": "largely enough from that perspective",
+      "offset": 907000,
+      "duration": 4000
+    },
+    {
+      "text": "but there is a but AI is also",
+      "offset": 911000,
+      "duration": 3000
+    },
+    {
+      "text": "introducing new risks that we're going",
+      "offset": 914000,
+      "duration": 4000
+    },
+    {
+      "text": "to have a look to just right now. So the",
+      "offset": 918000,
+      "duration": 2000
+    },
+    {
+      "text": "risk that AI is introducing the first",
+      "offset": 920000,
+      "duration": 3000
+    },
+    {
+      "text": "one is AI as a code writer. So AI is not",
+      "offset": 923000,
+      "duration": 2000
+    },
+    {
+      "text": "really inventing a new sort of mistake",
+      "offset": 925000,
+      "duration": 3000
+    },
+    {
+      "text": "but it's doing this sort of mistakes",
+      "offset": 928000,
+      "duration": 2000
+    },
+    {
+      "text": "much more often that a human programmer",
+      "offset": 930000,
+      "duration": 5000
+    },
+    {
+      "text": "would do it. The first one is logic",
+      "offset": 935000,
+      "duration": 2000
+    },
+    {
+      "text": "logical and flow which is like the happy",
+      "offset": 937000,
+      "duration": 2000
+    },
+    {
+      "text": "path coding you know like it's like when",
+      "offset": 939000,
+      "duration": 3000
+    },
+    {
+      "text": "you only consider the main use case of",
+      "offset": 942000,
+      "duration": 3000
+    },
+    {
+      "text": "your program and you forget about edge",
+      "offset": 945000,
+      "duration": 2000
+    },
+    {
+      "text": "cases error handling and all that stuff",
+      "offset": 947000,
+      "duration": 2000
+    },
+    {
+      "text": "AI tends to do that a lot.",
+      "offset": 949000,
+      "duration": 3000
+    },
+    {
+      "text": "dependencies slope squatting. This is an",
+      "offset": 952000,
+      "duration": 3000
+    },
+    {
+      "text": "interesting one. Actually AIS will",
+      "offset": 955000,
+      "duration": 2000
+    },
+    {
+      "text": "invent some packages that don't actually",
+      "offset": 957000,
+      "duration": 3000
+    },
+    {
+      "text": "exist just because that would sort of",
+      "offset": 960000,
+      "duration": 2000
+    },
+    {
+      "text": "make sense they exist. And so some",
+      "offset": 962000,
+      "duration": 2000
+    },
+    {
+      "text": "studies suggest that up to 20% of",
+      "offset": 964000,
+      "duration": 2000
+    },
+    {
+      "text": "introduced packages in some code by AI",
+      "offset": 966000,
+      "duration": 3000
+    },
+    {
+      "text": "does not actually exist. But if",
+      "offset": 969000,
+      "duration": 3000
+    },
+    {
+      "text": "someone is smart enough to actually",
+      "offset": 972000,
+      "duration": 2000
+    },
+    {
+      "text": "implement this package that does not",
+      "offset": 974000,
+      "duration": 2000
+    },
+    {
+      "text": "exist yet, they could sort of inject",
+      "offset": 976000,
+      "duration": 2000
+    },
+    {
+      "text": "your code inside your code their",
+      "offset": 978000,
+      "duration": 2000
+    },
+    {
+      "text": "code inside your code. So that's a",
+      "offset": 980000,
+      "duration": 4000
+    },
+    {
+      "text": "big risk and it's called slope",
+      "offset": 984000,
+      "duration": 3000
+    },
+    {
+      "text": "squatting. There's also maintability",
+      "offset": 987000,
+      "duration": 1000
+    },
+    {
+      "text": "issues with AI code churn, copy paste,",
+      "offset": 988000,
+      "duration": 3000
+    },
+    {
+      "text": "big blocks. All people that have been",
+      "offset": 991000,
+      "duration": 2000
+    },
+    {
+      "text": "using to write code, they've been around",
+      "offset": 993000,
+      "duration": 3000
+    },
+    {
+      "text": "this, you know this. This is not",
+      "offset": 996000,
+      "duration": 2000
+    },
+    {
+      "text": "really good for maintainability of your",
+      "offset": 998000,
+      "duration": 2000
+    },
+    {
+      "text": "code. And finally there is architecture.",
+      "offset": 1000000,
+      "duration": 2000
+    },
+    {
+      "text": "Basically AI is mostly generated",
+      "offset": 1002000,
+      "duration": 2000
+    },
+    {
+      "text": "isolated snippet snippets of code",
+      "offset": 1004000,
+      "duration": 2000
+    },
+    {
+      "text": "without a bigger understanding of",
+      "offset": 1006000,
+      "duration": 3000
+    },
+    {
+      "text": "your code and is leading to",
+      "offset": 1009000,
+      "duration": 3000
+    },
+    {
+      "text": "architectural issues. And by the way you",
+      "offset": 1012000,
+      "duration": 2000
+    },
+    {
+      "text": "can have a look because we also have an",
+      "offset": 1014000,
+      "duration": 2000
+    },
+    {
+      "text": "upcoming solution for architectural",
+      "offset": 1016000,
+      "duration": 2000
+    },
+    {
+      "text": "issues. And the second category of big",
+      "offset": 1018000,
+      "duration": 2000
+    },
+    {
+      "text": "risk that AI is introducing is AI is",
+      "offset": 1020000,
+      "duration": 3000
+    },
+    {
+      "text": "just simply a new software subsystem.",
+      "offset": 1023000,
+      "duration": 3000
+    },
+    {
+      "text": "a big one a very big one that is being",
+      "offset": 1026000,
+      "duration": 4000
+    },
+    {
+      "text": "used more and more and so it's",
+      "offset": 1030000,
+      "duration": 2000
+    },
+    {
+      "text": "introducing ways to do things badly",
+      "offset": 1032000,
+      "duration": 1000
+    },
+    {
+      "text": "unsafe ways it's introducing bad things",
+      "offset": 1033000,
+      "duration": 4000
+    },
+    {
+      "text": "that you should not do and for that",
+      "offset": 1037000,
+      "duration": 2000
+    },
+    {
+      "text": "there are new standards to tackle",
+      "offset": 1039000,
+      "duration": 3000
+    },
+    {
+      "text": "these problems like O was top 10 for LM",
+      "offset": 1042000,
+      "duration": 2000
+    },
+    {
+      "text": "applications",
+      "offset": 1044000,
+      "duration": 3000
+    },
+    {
+      "text": "so I would like now to wrap up this",
+      "offset": 1048000,
+      "duration": 2000
+    },
+    {
+      "text": "talk so first point I would like you",
+      "offset": 1050000,
+      "duration": 3000
+    },
+    {
+      "text": "to remember coding standards have",
+      "offset": 1053000,
+      "duration": 1000
+    },
+    {
+      "text": "purpose and philosophies that's",
+      "offset": 1054000,
+      "duration": 2000
+    },
+    {
+      "text": "important",
+      "offset": 1056000,
+      "duration": 2000
+    },
+    {
+      "text": "It translates to rules. Second point, a",
+      "offset": 1058000,
+      "duration": 1000
+    },
+    {
+      "text": "rule is a tool to tackle a problem. It's",
+      "offset": 1059000,
+      "duration": 3000
+    },
+    {
+      "text": "not a single source of truth. If you're",
+      "offset": 1062000,
+      "duration": 2000
+    },
+    {
+      "text": "being said that something is a single",
+      "offset": 1064000,
+      "duration": 3000
+    },
+    {
+      "text": "source of truth, yeah, about rules,",
+      "offset": 1067000,
+      "duration": 2000
+    },
+    {
+      "text": "there is something fishy there. AI",
+      "offset": 1069000,
+      "duration": 3000
+    },
+    {
+      "text": "generates big amounts of code. Yes.",
+      "offset": 1072000,
+      "duration": 2000
+    },
+    {
+      "text": "But it's mostly similar to human",
+      "offset": 1074000,
+      "duration": 4000
+    },
+    {
+      "text": "code. So most of standards and rules are",
+      "offset": 1078000,
+      "duration": 2000
+    },
+    {
+      "text": "still valid for this code. And finally,",
+      "offset": 1080000,
+      "duration": 3000
+    },
+    {
+      "text": "EI introduces new risks and these new",
+      "offset": 1083000,
+      "duration": 3000
+    },
+    {
+      "text": "risks are being tackled or are on the",
+      "offset": 1086000,
+      "duration": 3000
+    },
+    {
+      "text": "way to being tackled by existing",
+      "offset": 1089000,
+      "duration": 3000
+    },
+    {
+      "text": "standards and new standards. So that's",
+      "offset": 1092000,
+      "duration": 3000
+    },
+    {
+      "text": "it for my part. Thank you for listening.",
+      "offset": 1095000,
+      "duration": 2000
+    },
+    {
+      "text": "Bye-bye.",
+      "offset": 1097000,
+      "duration": 3000
+    }
+  ],
+  "fullText": "Hi there. I'm Geoffray, product manager for CNC C++ ecosystem at Sonar. And today I would like to talk to you about rule, standards, and AI. what coding standards really do and why they still matter. So just a few words about myself so that you can better understand the angle of this talk, right? I started probably like seven years ago at Sonar as a developer in the C++ analyzer development team and since then I transitioned to being the product manager for the CN C++ ecosystem. So back in my developer days here I was deeply involved in crafting rules implementing them in all the details. Right now as a product manager of course I don't get that much into the details but I still deal with rules at a higher level let's say and also I got to dive into coding standards and we're going to talk about this. As I said we're going to talk about standards. standards is really like a broad word I've used to put all sorts of good practices together. So it it really ranges from things like OAS top 10 which are really high level awareness standards to really hard requirement standards like misra for instance there's no way that you're going to ship any critical automotive software these days without the misra badge on it or it's going to be very difficult for you to pass some requirements without being able to demonstrate some OASP ASVS compliance And this is the sort of things that we are dealing here at the highest level. But concretely when it comes to your code and what developers see when they use our product they see the result of rules that are really small individual atomic checks. And we'll have a look at the link between these two. So what we're going to do we're going to start with the standards and see that they have purpose and philosophies. We're going to go down to the at the rule level and to really understand that rules are tools serving standards and but they're not truth. And then we're going to have a look at AI because AI now is everywhere. AI is most certainly into the coding business and we need to understand what it changes and spoiler alert it doesn't change the fundamentals. So let's get started with this very homemade chart where I put some of the the most famous let's say coding guidelines. So on the left side you would have like very abstract guidelines that are not really strict in their level of prescription. To the extreme right, you will see mostly things that are very prescriptive on what the problems you are tackling, how you should tackle them or resolve them like misra, which is something very hands-on in the code with very strict rules that you need to follow. On the vertical axis, you will have at the bottom things that are really mostly dealing with code and nothing else. And at the top you will have standards that really specify the entire full system life cycle management. And it is very important to understand that when you consider all these standards there are cost tradeoffs to be made if you want to follow them somehow. If you want to solve a problem there are a variety of solutions and depending on the cost you're ready to put you will have different level of solutions let's say. So for instance constraints of course you can code quick and dirty but most likely you will introduce bug and it's not good for safe safety critical application this sort of stuff. So you won't hear there is a first level of tradeoff. You can't be that fast. You need to do things properly to be sure they're done properly. There are trade-offs on expertise. You will have additional processes, additional audit and these sort of things. Are you ready to embark into this and to support the cost that comes with it? There is also the tooling for instance if you consider security you have static analysis dynamic analysis software composure analysis real time application self protection and these sort of things all sort of things that come to a cost and that can also harm developers velocity so that's let's say the standard spectrum I would like you to now we're going to move on to a few examples to see that in action somehow so the first one is OASP SVS which targets web application security. The purpose of the standard was merely to stop the guessing game in security verification. Because it was not standardized before. It used to be difficult to understand what needs to what need to be checked by whom what all these sort of things. So the philosophy is really to make security testable and contractual. So the content of this standard is mostly 286 testable requirements in various categories and levels and this comes with really three functions. Let's call it this way. So first it's a metric that's very important because checks have different levels. You can say oh when we develop our application we are conformed to ASVS level two that actually means something specific. It's also a blueprint. All the security requirement to build to build into the code is specified in this testable requirements and it's also a contract and that's a very powerful feature of this which is basically you can use this to subcontract software development. You can say oh I would like you to develop this application while being conformed to ASVS level two. And that's a very powerful feature of standards in general. Another standard I wanted to take as an example is Misra. So Misra so we're going to focus on the C++ version of Misra. There are other versions but for the example that's fine. So Misra was born in the automotive industry with the need of really streamlining what it means to have safety critical code and it also became a de facto standard in functional safety more broadly. and the purpose of misra C++ 2023 is to define a safe subset of C++ 17. C++ is a very complex language. C++ 17 is a version of it which is very complex with many features and a group of experts decided that it's much better to restrict it to a safe subset of functionalities that you're able to use in your code. So they came up with 179 spec very detailed specified guidelines plus compliance procedure detailed one and all these guidelines are classified in two categories. They were all made with a static check in mind. There are decidable rules. The decidable rules basically it is mathematically demonstrated basically that you can implement a perfect check for such a rule. So tools vendor will not really differ much in the quality of these findings. For undecidable rules, that's a different game. There's not many rules undecidable because they're undecidable, but they tend to cover very critical bugs. So there you want to have something good. But little spoiler, in my own experience after these years at Sonar, I would say the best bugs are the ones that you never wrote. So basically having it's really great to have good bug detection capabilities but the first thing you should focus on is to never write bugs. It's a bit like if you have a car of course you want to have the safety belt of course you want to have an airbag and but of course the first thing you should do is to focus on being a good driver. So that's the same with code basically. You can check out what we've been doing with about Mistra C++ compliance recently if you want there. So the last one I the last standard I I want to to talk about is Sonar Way and people that know a bit our product will say hey wait it's not a standard. yeah it's not exactly a standard. I I acknowledge that but it it really fulfills the same role somehow. So it targets mostly all industries. The purpose is to be sure that your code remain an asset secure reliable and maintainable. And the philosophy there is really like try to shift left and be actionable and educate your developer to doing so. Right? So basically what is the content of sonar way? It's um a set of default rules that we enable for each and every single language. Let's say for the bigger languages like C++, Java or Python. This is between 250 and 600 rules by default for this language. that will take care all of all the aspects of the code that I have named before. So I think this is not standardized. So it cannot be used as the previous standards as we said but it can be used for internal purpose and that is being used by our customers for this internal purpose. So now I would like to zoom in a little bit on rules as I said we would do. we will use here three standards two of which I've already mentioned. So first we need to understand that for instance in sonar we can either write original rules our expert will write rules as they see fit or we can also adopt other rules from external standards and implement them as required by some standards so that our customers can use these standards. any of such rules can map to either standard to whatever standard if they fulfill some part of requirements of these standards. It is what I would like you to understand to take away from this slide it is that rules solve a problem and they have a philosophy mostly inherited from some coding standards out there and we will take these three examples. So first Misra is focusing on safety safety criticality and aims at defining a safe language of the subset and things that you will see out of Misra are things like oh you should not use this or you should not use that then it's your job to try to fix it but you need to fix it or to justify that you did not fix it. Third is another standard that's trying to go around vulnerabilities with a philosophy that's very much defensive. So for instance, it will often tell you, oh, you should make sure that this is validated or that is validated in your code. So it will give you plenty of issues in your code with various levels of priorities and you're free to fix whatever you're able to fix there. Then there is sonar. There is the our own rule set at sonar. So it's about software and code health in general. it's about shifting left as I said already being actionable and educate developers. So the sort of issues that you would get out of sonar rules is oh this thing is dangerous because of that reason please do it this other way please. So this is very actionable. So it has various quality. you understand the problem you understand the source of the problem and you understand what you need to do to fix it. This is as I said in the philosophy part very actionable and we have this workflow called clean as you code to help you actually applying this with all the new code that you put to your application so that over time the your entire code base gets clean. So we're going to have just a quick look at the concrete example for all this to sound a bit less theoretical. So this is a little bit of C++ code. I know everyone is not familiar with it but it's going to be quite simple. So there is a function that takes a pointer to a consture and this is casted with a certain sort of cast this parenthesis around unsigned integer and this cast has problems. I will explain this. So basically it can create unexpected consequences in your code. So Misra says that this functionality casting with a ccast is totally banned. You must use name cast as I wrote them in the comments. You have static cast, dynamic cast, concast cast or interpret cast that allows you to state your intent. So there's no exception. This is banned by misra rule. Cert has a different angle. search says oh we are aware a aware of a few occurrenments in specific cases in Ccast of dangerous cases please check that it's not one of these case but the rest of the time we don't care you using this C sele cast then finally we have the sonar rule the sonar rule actually discourage it's not as hard as misra that totally ban this practice at sonar we just say oh look this is not a good idea because you're really hiding your intent here. It hurts readability of the code and then could be misleading. So you should not do that and we have other ways for you to do it. So now the final part of this talk is about so I've been talking about standards. I've been talking about rules and now we all know that the world of development is changing big time because of AI. What doesn't change here? So are coding standards still useful? Well, yes they are. Why are they? because mostly LLM write code that looks a lot like human written readable code written code sorry so that's the first reason they will mostly do the same blunder as we can do as human beings so all these parts that were crafted in the standards and in the rules to spot these blenders yes they will still work so and are they still enough all these um standards and these rules for the code itself largely Yes, but not for the full picture. So, the code itself, we've run a very interesting study that you can see here is called the coding personalities of leading LLM. What we noticed is basically that LLMs write code a bit like human beings. They do the same sort of mistakes in various proportion depending on which LM you using. So in from that perspective one more time yes all this is still largely enough from that perspective but there is a but AI is also introducing new risks that we're going to have a look to just right now. So the risk that AI is introducing the first one is AI as a code writer. So AI is not really inventing a new sort of mistake but it's doing this sort of mistakes much more often that a human programmer would do it. The first one is logic logical and flow which is like the happy path coding you know like it's like when you only consider the main use case of your program and you forget about edge cases error handling and all that stuff AI tends to do that a lot. dependencies slope squatting. This is an interesting one. Actually AIS will invent some packages that don't actually exist just because that would sort of make sense they exist. And so some studies suggest that up to 20% of introduced packages in some code by AI does not actually exist. But if someone is smart enough to actually implement this package that does not exist yet, they could sort of inject your code inside your code their code inside your code. So that's a big risk and it's called slope squatting. There's also maintability issues with AI code churn, copy paste, big blocks. All people that have been using to write code, they've been around this, you know this. This is not really good for maintainability of your code. And finally there is architecture. Basically AI is mostly generated isolated snippet snippets of code without a bigger understanding of your code and is leading to architectural issues. And by the way you can have a look because we also have an upcoming solution for architectural issues. And the second category of big risk that AI is introducing is AI is just simply a new software subsystem. a big one a very big one that is being used more and more and so it's introducing ways to do things badly unsafe ways it's introducing bad things that you should not do and for that there are new standards to tackle these problems like O was top 10 for LM applications so I would like now to wrap up this talk so first point I would like you to remember coding standards have purpose and philosophies that's important It translates to rules. Second point, a rule is a tool to tackle a problem. It's not a single source of truth. If you're being said that something is a single source of truth, yeah, about rules, there is something fishy there. AI generates big amounts of code. Yes. But it's mostly similar to human code. So most of standards and rules are still valid for this code. And finally, EI introduces new risks and these new risks are being tackled or are on the way to being tackled by existing standards and new standards. So that's it for my part. Thank you for listening. Bye-bye.",
+  "fetchedAt": "2026-03-14T09:18:54.286Z"
+}

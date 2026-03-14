@@ -1,0 +1,5013 @@
+{
+  "videoId": "v72",
+  "youtubeId": "fJ_wu5ruzBk",
+  "segments": [
+    {
+      "text": "Um thank you for joining our webinar uh",
+      "offset": 0,
+      "duration": 5200
+    },
+    {
+      "text": "from detection to resolution introducing",
+      "offset": 2240,
+      "duration": 6160
+    },
+    {
+      "text": "AI codefix. Um if you have joined any of",
+      "offset": 5200,
+      "duration": 5359
+    },
+    {
+      "text": "our previous webinar hello again and",
+      "offset": 8400,
+      "duration": 4880
+    },
+    {
+      "text": "welcome back. We um know that you know",
+      "offset": 10559,
+      "duration": 5040
+    },
+    {
+      "text": "the the software bugs lead to production",
+      "offset": 13280,
+      "duration": 3919
+    },
+    {
+      "text": "failures that you know the customer",
+      "offset": 15599,
+      "duration": 4801
+    },
+    {
+      "text": "trust but what are these bugs and you",
+      "offset": 17199,
+      "duration": 5441
+    },
+    {
+      "text": "know how prevalent are they in the code",
+      "offset": 20400,
+      "duration": 4160
+    },
+    {
+      "text": "being written today especially you know",
+      "offset": 22640,
+      "duration": 3440
+    },
+    {
+      "text": "given the volume of the code being",
+      "offset": 24560,
+      "duration": 4080
+    },
+    {
+      "text": "produced by AI. U my name is Prasinjit",
+      "offset": 26080,
+      "duration": 4880
+    },
+    {
+      "text": "Sarkar and I'll be your moderator today.",
+      "offset": 28640,
+      "duration": 6079
+    },
+    {
+      "text": "Um I'm excited to have Alexander Ra our",
+      "offset": 30960,
+      "duration": 5840
+    },
+    {
+      "text": "product manager um who will be",
+      "offset": 34719,
+      "duration": 4561
+    },
+    {
+      "text": "presenting it today. Uh before we go uh",
+      "offset": 36800,
+      "duration": 4560
+    },
+    {
+      "text": "and before we begin let's uh you know go",
+      "offset": 39280,
+      "duration": 6080
+    },
+    {
+      "text": "over some quick uh housekeeping points.",
+      "offset": 41360,
+      "duration": 6640
+    },
+    {
+      "text": "So we'll have uh 45 minutes session",
+      "offset": 45360,
+      "duration": 5600
+    },
+    {
+      "text": "including Q&A. Um please use the Zoom",
+      "offset": 48000,
+      "duration": 6000
+    },
+    {
+      "text": "Q&A box to ask questions. um you know",
+      "offset": 50960,
+      "duration": 4800
+    },
+    {
+      "text": "look for an email in a few days with a",
+      "offset": 54000,
+      "duration": 3199
+    },
+    {
+      "text": "recording so we'll do a follow-up as",
+      "offset": 55760,
+      "duration": 4319
+    },
+    {
+      "text": "well um and we will have a posteinar",
+      "offset": 57199,
+      "duration": 5200
+    },
+    {
+      "text": "survey you know what did you like what",
+      "offset": 60079,
+      "duration": 4641
+    },
+    {
+      "text": "should be improved uh and what topics",
+      "offset": 62399,
+      "duration": 4001
+    },
+    {
+      "text": "should we cover in the future uh",
+      "offset": 64720,
+      "duration": 6079
+    },
+    {
+      "text": "sessions and all things like that",
+      "offset": 66400,
+      "duration": 6399
+    },
+    {
+      "text": "um so yeah feel free to submit your",
+      "offset": 70799,
+      "duration": 5041
+    },
+    {
+      "text": "questions at any time and not wait until",
+      "offset": 72799,
+      "duration": 5041
+    },
+    {
+      "text": "the end of it um the session will be",
+      "offset": 75840,
+      "duration": 3680
+    },
+    {
+      "text": "recorded and as I said that will be sent",
+      "offset": 77840,
+      "duration": 6720
+    },
+    {
+      "text": "via the email um so Let's move over to",
+      "offset": 79520,
+      "duration": 8720
+    },
+    {
+      "text": "Alex. Now, Alex is our product manager",
+      "offset": 84560,
+      "duration": 5599
+    },
+    {
+      "text": "for the code remediation solutions at",
+      "offset": 88240,
+      "duration": 4239
+    },
+    {
+      "text": "Sonar. He started his career over 10",
+      "offset": 90159,
+      "duration": 4481
+    },
+    {
+      "text": "years ago um as a software engineer has",
+      "offset": 92479,
+      "duration": 4640
+    },
+    {
+      "text": "evolved um you know since then he has",
+      "offset": 94640,
+      "duration": 4400
+    },
+    {
+      "text": "worked in various IT software space with",
+      "offset": 97119,
+      "duration": 4481
+    },
+    {
+      "text": "the product roles at Sonar. He's focused",
+      "offset": 99040,
+      "duration": 4719
+    },
+    {
+      "text": "on helping the developers um you know",
+      "offset": 101600,
+      "duration": 4720
+    },
+    {
+      "text": "remediate the Sonar findings um with the",
+      "offset": 103759,
+      "duration": 4561
+    },
+    {
+      "text": "static analysis leveraging the AI",
+      "offset": 106320,
+      "duration": 3600
+    },
+    {
+      "text": "technology to boost uh their",
+      "offset": 108320,
+      "duration": 3839
+    },
+    {
+      "text": "productivity. So without further",
+      "offset": 109920,
+      "duration": 4320
+    },
+    {
+      "text": "waiting, let me hand it over to",
+      "offset": 112159,
+      "duration": 5041
+    },
+    {
+      "text": "Alexander. Al uh Alexander and and by",
+      "offset": 114240,
+      "duration": 6000
+    },
+    {
+      "text": "the way, we also have uh in the in the",
+      "offset": 117200,
+      "duration": 6879
+    },
+    {
+      "text": "in the back end we have um Robert uh who",
+      "offset": 120240,
+      "duration": 6400
+    },
+    {
+      "text": "will be um you know doing the moderation",
+      "offset": 124079,
+      "duration": 4081
+    },
+    {
+      "text": "and then answering your questions as",
+      "offset": 126640,
+      "duration": 4239
+    },
+    {
+      "text": "well and I'll be here as as moderator.",
+      "offset": 128160,
+      "duration": 5439
+    },
+    {
+      "text": "Over to you Alex.",
+      "offset": 130879,
+      "duration": 4641
+    },
+    {
+      "text": ">> Thank you very much Prasanjit. Uh hello",
+      "offset": 133599,
+      "duration": 3761
+    },
+    {
+      "text": "everyone. I'm very happy and very",
+      "offset": 135520,
+      "duration": 4000
+    },
+    {
+      "text": "excited to be here uh with you today to",
+      "offset": 137360,
+      "duration": 4720
+    },
+    {
+      "text": "to present a feature that we we have",
+      "offset": 139520,
+      "duration": 6480
+    },
+    {
+      "text": "worked on uh during almost a year now uh",
+      "offset": 142080,
+      "duration": 6799
+    },
+    {
+      "text": "and I'm happy to announce that uh we",
+      "offset": 146000,
+      "duration": 5120
+    },
+    {
+      "text": "reached the general availability for AI",
+      "offset": 148879,
+      "duration": 5201
+    },
+    {
+      "text": "cookics uh and I will present you uh the",
+      "offset": 151120,
+      "duration": 5199
+    },
+    {
+      "text": "feature uh during this webinar. So",
+      "offset": 154080,
+      "duration": 4640
+    },
+    {
+      "text": "basically what we will cover during this",
+      "offset": 156319,
+      "duration": 5121
+    },
+    {
+      "text": "presentation uh as a first section we",
+      "offset": 158720,
+      "duration": 6080
+    },
+    {
+      "text": "will try to uh",
+      "offset": 161440,
+      "duration": 6799
+    },
+    {
+      "text": "elaborate the state of AI in the SDLC",
+      "offset": 164800,
+      "duration": 6799
+    },
+    {
+      "text": "today. Uh it's evolving at a very fast",
+      "offset": 168239,
+      "duration": 7681
+    },
+    {
+      "text": "pace. Uh we will try to to to put this",
+      "offset": 171599,
+      "duration": 7920
+    },
+    {
+      "text": "uh in a in a in a slide to to understand",
+      "offset": 175920,
+      "duration": 6080
+    },
+    {
+      "text": "how it works. And in the second section",
+      "offset": 179519,
+      "duration": 5281
+    },
+    {
+      "text": "we will go over the solution uh that we",
+      "offset": 182000,
+      "duration": 5920
+    },
+    {
+      "text": "built uh why we built it. So the problem",
+      "offset": 184800,
+      "duration": 6320
+    },
+    {
+      "text": "we are solving uh what it contains what",
+      "offset": 187920,
+      "duration": 5920
+    },
+    {
+      "text": "is the solution itself and also how it",
+      "offset": 191120,
+      "duration": 6479
+    },
+    {
+      "text": "works. Uh and on the third section uh I",
+      "offset": 193840,
+      "duration": 6000
+    },
+    {
+      "text": "will do a live demo of the feature to",
+      "offset": 197599,
+      "duration": 4481
+    },
+    {
+      "text": "explain how it works and how it is",
+      "offset": 199840,
+      "duration": 5280
+    },
+    {
+      "text": "integrated within the the SDLC and the",
+      "offset": 202080,
+      "duration": 5680
+    },
+    {
+      "text": "the developer portal.",
+      "offset": 205120,
+      "duration": 4960
+    },
+    {
+      "text": "But before jumping into the first",
+      "offset": 207760,
+      "duration": 6160
+    },
+    {
+      "text": "section, I have a a question for you. Uh",
+      "offset": 210080,
+      "duration": 6000
+    },
+    {
+      "text": "because I'm very curious and I will be",
+      "offset": 213920,
+      "duration": 5039
+    },
+    {
+      "text": "very curious to know the answer. Uh how",
+      "offset": 216080,
+      "duration": 6079
+    },
+    {
+      "text": "will you rate the adoption of AIdriven",
+      "offset": 218959,
+      "duration": 6321
+    },
+    {
+      "text": "tools within your organization?",
+      "offset": 222159,
+      "duration": 5041
+    },
+    {
+      "text": "uh it can it's an approximation if you",
+      "offset": 225280,
+      "duration": 5440
+    },
+    {
+      "text": "would like to to to answer but the goal",
+      "offset": 227200,
+      "duration": 8160
+    },
+    {
+      "text": "is really to see how AI uh is being",
+      "offset": 230720,
+      "duration": 7519
+    },
+    {
+      "text": "integrated uh in your organization.",
+      "offset": 235360,
+      "duration": 6079
+    },
+    {
+      "text": "Maybe I will give you 10 minute 10",
+      "offset": 238239,
+      "duration": 6801
+    },
+    {
+      "text": "seconds uh sorry to answer um and then",
+      "offset": 241439,
+      "duration": 7800
+    },
+    {
+      "text": "we can we can see the results.",
+      "offset": 245040,
+      "duration": 4199
+    },
+    {
+      "text": "Okay.",
+      "offset": 258880,
+      "duration": 6400
+    },
+    {
+      "text": "Oh, perfect. I have the results. Uh, and",
+      "offset": 261680,
+      "duration": 7440
+    },
+    {
+      "text": "I can see that actually it's not really",
+      "offset": 265280,
+      "duration": 9359
+    },
+    {
+      "text": "widely uh used. We have 44%",
+      "offset": 269120,
+      "duration": 8960
+    },
+    {
+      "text": "uh that answered less than 25%.",
+      "offset": 274639,
+      "duration": 6801
+    },
+    {
+      "text": "uh which is which is uh interesting. Uh",
+      "offset": 278080,
+      "duration": 8160
+    },
+    {
+      "text": "it is slowly being integrated uh within",
+      "offset": 281440,
+      "duration": 8640
+    },
+    {
+      "text": "uh companies but uh yeah it depends on",
+      "offset": 286240,
+      "duration": 6160
+    },
+    {
+      "text": "the side of the company. Okay without",
+      "offset": 290080,
+      "duration": 5760
+    },
+    {
+      "text": "further ado let's go to the AI in the",
+      "offset": 292400,
+      "duration": 6400
+    },
+    {
+      "text": "SDLC. So",
+      "offset": 295840,
+      "duration": 7040
+    },
+    {
+      "text": "if we map the AI adoption today, uh I",
+      "offset": 298800,
+      "duration": 6160
+    },
+    {
+      "text": "really like to present this image",
+      "offset": 302880,
+      "duration": 5440
+    },
+    {
+      "text": "because that's where we will see uh AI",
+      "offset": 304960,
+      "duration": 7120
+    },
+    {
+      "text": "uh integrated into the SDLC. From the",
+      "offset": 308320,
+      "duration": 5439
+    },
+    {
+      "text": "bottom to the top, we can see the",
+      "offset": 312080,
+      "duration": 3839
+    },
+    {
+      "text": "different steps of the SDLC from the",
+      "offset": 313759,
+      "duration": 5280
+    },
+    {
+      "text": "setup to implementation to deployment.",
+      "offset": 315919,
+      "duration": 5280
+    },
+    {
+      "text": "implementation is really interesting",
+      "offset": 319039,
+      "duration": 5521
+    },
+    {
+      "text": "because that's where we see uh the code",
+      "offset": 321199,
+      "duration": 7761
+    },
+    {
+      "text": "written uh the code reviewed. Um and",
+      "offset": 324560,
+      "duration": 7199
+    },
+    {
+      "text": "actually if you if we start from the",
+      "offset": 328960,
+      "duration": 6079
+    },
+    {
+      "text": "left to the right we see different also",
+      "offset": 331759,
+      "duration": 6720
+    },
+    {
+      "text": "uh tools categorization from the equants",
+      "offset": 335039,
+      "duration": 6081
+    },
+    {
+      "text": "to the dev tool.2.0",
+      "offset": 338479,
+      "duration": 4881
+    },
+    {
+      "text": "uh and the dev tool 2.0 zero. That's",
+      "offset": 341120,
+      "duration": 7200
+    },
+    {
+      "text": "where we see all the AI uh tools uh that",
+      "offset": 343360,
+      "duration": 7520
+    },
+    {
+      "text": "comes into play. And basically we can",
+      "offset": 348320,
+      "duration": 6080
+    },
+    {
+      "text": "see in this implementation step that",
+      "offset": 350880,
+      "duration": 6800
+    },
+    {
+      "text": "humans uh are being assisted more and",
+      "offset": 354400,
+      "duration": 6639
+    },
+    {
+      "text": "more by AI capabilities and AI tools",
+      "offset": 357680,
+      "duration": 5600
+    },
+    {
+      "text": "here. So we can see for instance",
+      "offset": 361039,
+      "duration": 7041
+    },
+    {
+      "text": "copilots autopilots chpt uh to help uh",
+      "offset": 363280,
+      "duration": 9120
+    },
+    {
+      "text": "debugging uh and we are also seeing some",
+      "offset": 368080,
+      "duration": 7360
+    },
+    {
+      "text": "tools appearing in the setup space uh",
+      "offset": 372400,
+      "duration": 6960
+    },
+    {
+      "text": "and specifically in ids with cursor we",
+      "offset": 375440,
+      "duration": 9039
+    },
+    {
+      "text": "have surf as well uh so basically",
+      "offset": 379360,
+      "duration": 7839
+    },
+    {
+      "text": "AI is not here to replace human it's",
+      "offset": 384479,
+      "duration": 5921
+    },
+    {
+      "text": "here to assist human being more",
+      "offset": 387199,
+      "duration": 4161
+    },
+    {
+      "text": "productive",
+      "offset": 390400,
+      "duration": 3440
+    },
+    {
+      "text": "Uh but what are the next steps? We don't",
+      "offset": 391360,
+      "duration": 5440
+    },
+    {
+      "text": "know. We have ideas. So maybe we can",
+      "offset": 393840,
+      "duration": 5440
+    },
+    {
+      "text": "think of new tools appearing in the",
+      "offset": 396800,
+      "duration": 5920
+    },
+    {
+      "text": "deployment sphere. Uh and also AI",
+      "offset": 399280,
+      "duration": 6320
+    },
+    {
+      "text": "teammates. So basically having AI agents",
+      "offset": 402720,
+      "duration": 4960
+    },
+    {
+      "text": "that will assist developer doing",
+      "offset": 405600,
+      "duration": 5039
+    },
+    {
+      "text": "specific task and interact with specific",
+      "offset": 407680,
+      "duration": 5959
+    },
+    {
+      "text": "tools.",
+      "offset": 410639,
+      "duration": 3000
+    },
+    {
+      "text": "So if we zoom in a little bit uh on the",
+      "offset": 414160,
+      "duration": 6879
+    },
+    {
+      "text": "top three dev areas that are currently",
+      "offset": 417360,
+      "duration": 8239
+    },
+    {
+      "text": "accelerated by AI uh we can find three",
+      "offset": 421039,
+      "duration": 7921
+    },
+    {
+      "text": "uh areas. The first one is the shift",
+      "offset": 425599,
+      "duration": 5600
+    },
+    {
+      "text": "left approach. So basically if we want",
+      "offset": 428960,
+      "duration": 5200
+    },
+    {
+      "text": "to improve the developer productivity it",
+      "offset": 431199,
+      "duration": 5280
+    },
+    {
+      "text": "needs to start uh as they're writing",
+      "offset": 434160,
+      "duration": 4960
+    },
+    {
+      "text": "code and where are they writing code is",
+      "offset": 436479,
+      "duration": 6641
+    },
+    {
+      "text": "in the ID itself. So we have copilot",
+      "offset": 439120,
+      "duration": 8720
+    },
+    {
+      "text": "that appeared as a uh part of VS code uh",
+      "offset": 443120,
+      "duration": 8479
+    },
+    {
+      "text": "and we also have the new ID",
+      "offset": 447840,
+      "duration": 8720
+    },
+    {
+      "text": "that embeds uh AI like cursor and winds",
+      "offset": 451599,
+      "duration": 7440
+    },
+    {
+      "text": "uh and basically it helps developer",
+      "offset": 456560,
+      "duration": 4880
+    },
+    {
+      "text": "being more productive and generate a lot",
+      "offset": 459039,
+      "duration": 5600
+    },
+    {
+      "text": "of code. Then we have the code review",
+      "offset": 461440,
+      "duration": 5199
+    },
+    {
+      "text": "part. The code review part is really",
+      "offset": 464639,
+      "duration": 3761
+    },
+    {
+      "text": "interesting because we see that",
+      "offset": 466639,
+      "duration": 3361
+    },
+    {
+      "text": "developer",
+      "offset": 468400,
+      "duration": 5600
+    },
+    {
+      "text": "lose a lot of time by doing peer reviews",
+      "offset": 470000,
+      "duration": 7360
+    },
+    {
+      "text": "uh on PR specifically and we are seeing",
+      "offset": 474000,
+      "duration": 5680
+    },
+    {
+      "text": "more and more tools uh doing code",
+      "offset": 477360,
+      "duration": 5679
+    },
+    {
+      "text": "reviews instead of humans uh we can",
+      "offset": 479680,
+      "duration": 6239
+    },
+    {
+      "text": "think of copilot reviews for instance uh",
+      "offset": 483039,
+      "duration": 7921
+    },
+    {
+      "text": "that will help developer um having a",
+      "offset": 485919,
+      "duration": 7601
+    },
+    {
+      "text": "better code in PR",
+      "offset": 490960,
+      "duration": 5200
+    },
+    {
+      "text": "and finally we can see the tech backlog",
+      "offset": 493520,
+      "duration": 5600
+    },
+    {
+      "text": "problem uh that has been accelerated by",
+      "offset": 496160,
+      "duration": 7120
+    },
+    {
+      "text": "AI and uh it's really about having",
+      "offset": 499120,
+      "duration": 7199
+    },
+    {
+      "text": "specific agent that will tackle specific",
+      "offset": 503280,
+      "duration": 7759
+    },
+    {
+      "text": "task uh letting developer be uh more",
+      "offset": 506319,
+      "duration": 7600
+    },
+    {
+      "text": "focus on building more impactful",
+      "offset": 511039,
+      "duration": 6000
+    },
+    {
+      "text": "features. Uh so we can think also about",
+      "offset": 513919,
+      "duration": 6161
+    },
+    {
+      "text": "the last agent uh the latest agent that",
+      "offset": 517039,
+      "duration": 6560
+    },
+    {
+      "text": "has been released by copilot uh where",
+      "offset": 520080,
+      "duration": 6560
+    },
+    {
+      "text": "you can assign uh a specific GitHub",
+      "offset": 523599,
+      "duration": 6321
+    },
+    {
+      "text": "issue to copilot agent and he will try",
+      "offset": 526640,
+      "duration": 5920
+    },
+    {
+      "text": "to solve this issue by himself under the",
+      "offset": 529920,
+      "duration": 5599
+    },
+    {
+      "text": "hood.",
+      "offset": 532560,
+      "duration": 5839
+    },
+    {
+      "text": "And now I want to really spend some",
+      "offset": 535519,
+      "duration": 5841
+    },
+    {
+      "text": "times on where uh Sona",
+      "offset": 538399,
+      "duration": 6721
+    },
+    {
+      "text": "here in this specific areas and how do",
+      "offset": 541360,
+      "duration": 7680
+    },
+    {
+      "text": "we supercharge developer. Um so first of",
+      "offset": 545120,
+      "duration": 6800
+    },
+    {
+      "text": "all we are integrated in the ID directly",
+      "offset": 549040,
+      "duration": 7520
+    },
+    {
+      "text": "with our plugins. Uh and we have",
+      "offset": 551920,
+      "duration": 8000
+    },
+    {
+      "text": "specific plug-in that works with cursor",
+      "offset": 556560,
+      "duration": 7360
+    },
+    {
+      "text": "ID. uh and basically here we are raising",
+      "offset": 559920,
+      "duration": 6640
+    },
+    {
+      "text": "issues to the developer and we are also",
+      "offset": 563920,
+      "duration": 5599
+    },
+    {
+      "text": "trying to uh help them remediate those",
+      "offset": 566560,
+      "duration": 6640
+    },
+    {
+      "text": "issues before it reach the SEM platform",
+      "offset": 569519,
+      "duration": 5601
+    },
+    {
+      "text": "and before the developer is committing",
+      "offset": 573200,
+      "duration": 4480
+    },
+    {
+      "text": "the code directly then we have some",
+      "offset": 575120,
+      "duration": 5279
+    },
+    {
+      "text": "integration with SEM platform CI/CD",
+      "offset": 577680,
+      "duration": 6080
+    },
+    {
+      "text": "platform uh where we'll have analysis",
+      "offset": 580399,
+      "duration": 8081
+    },
+    {
+      "text": "that will be um that will come uh here",
+      "offset": 583760,
+      "duration": 7280
+    },
+    {
+      "text": "and basically we have integration with",
+      "offset": 588480,
+      "duration": 4560
+    },
+    {
+      "text": "GitHub, bit the cat, GitLab, Azure",
+      "offset": 591040,
+      "duration": 7120
+    },
+    {
+      "text": "DevOps or Jenkins and we will be able to",
+      "offset": 593040,
+      "duration": 9520
+    },
+    {
+      "text": "highlight um analysis uh outputs within",
+      "offset": 598160,
+      "duration": 7840
+    },
+    {
+      "text": "directly those SEM platforms. We can see",
+      "offset": 602560,
+      "duration": 6000
+    },
+    {
+      "text": "also Sonar Cube server and Sonar cube",
+      "offset": 606000,
+      "duration": 5279
+    },
+    {
+      "text": "cloud platforms where we have AI code",
+      "offset": 608560,
+      "duration": 5839
+    },
+    {
+      "text": "and AI code assurance uh features on",
+      "offset": 611279,
+      "duration": 6481
+    },
+    {
+      "text": "marked in it. uh and those are the key",
+      "offset": 614399,
+      "duration": 5761
+    },
+    {
+      "text": "instances that will interact with the",
+      "offset": 617760,
+      "duration": 5040
+    },
+    {
+      "text": "SCM platform.",
+      "offset": 620160,
+      "duration": 4960
+    },
+    {
+      "text": "And of course, the real goal afterwards",
+      "offset": 622800,
+      "duration": 5680
+    },
+    {
+      "text": "is to let the developer uh be",
+      "offset": 625120,
+      "duration": 6080
+    },
+    {
+      "text": "comfortable of releasing software that",
+      "offset": 628480,
+      "duration": 7400
+    },
+    {
+      "text": "are secure, maintainable, and reliable.",
+      "offset": 631200,
+      "duration": 4680
+    },
+    {
+      "text": "So now that we see the current state of",
+      "offset": 636240,
+      "duration": 6080
+    },
+    {
+      "text": "AI in the SDLC,",
+      "offset": 639760,
+      "duration": 5280
+    },
+    {
+      "text": "uh let's dive into the AI codefix",
+      "offset": 642320,
+      "duration": 5840
+    },
+    {
+      "text": "feature. Um but before that I have a",
+      "offset": 645040,
+      "duration": 5359
+    },
+    {
+      "text": "couple of question. I'm very curious",
+      "offset": 648160,
+      "duration": 4400
+    },
+    {
+      "text": "again about the answer you will provide",
+      "offset": 650399,
+      "duration": 4880
+    },
+    {
+      "text": "and the first question is what are the",
+      "offset": 652560,
+      "duration": 7600
+    },
+    {
+      "text": "top three task you use AI the most for?",
+      "offset": 655279,
+      "duration": 9120
+    },
+    {
+      "text": "So you have several um possibility, you",
+      "offset": 660160,
+      "duration": 7040
+    },
+    {
+      "text": "have multiple choice but please",
+      "offset": 664399,
+      "duration": 5041
+    },
+    {
+      "text": "just select the top three task. I'm very",
+      "offset": 667200,
+      "duration": 6920
+    },
+    {
+      "text": "interesting about the results. Um",
+      "offset": 669440,
+      "duration": 4680
+    },
+    {
+      "text": "I will give you 20 to 30 seconds to",
+      "offset": 674160,
+      "duration": 7400
+    },
+    {
+      "text": "provide answers.",
+      "offset": 678160,
+      "duration": 3400
+    },
+    {
+      "text": "It's really as a developer what would be",
+      "offset": 684000,
+      "duration": 6880
+    },
+    {
+      "text": "the first or the top three um task you",
+      "offset": 686480,
+      "duration": 9720
+    },
+    {
+      "text": "want to to do or you are doing with AI.",
+      "offset": 690880,
+      "duration": 5320
+    },
+    {
+      "text": "Okay,",
+      "offset": 707839,
+      "duration": 4560
+    },
+    {
+      "text": "I think we can go to the results. Ah,",
+      "offset": 710000,
+      "duration": 5600
+    },
+    {
+      "text": "okay. It's very interesting results. Uh,",
+      "offset": 712399,
+      "duration": 6241
+    },
+    {
+      "text": "we can see that generating test code and",
+      "offset": 715600,
+      "duration": 8000
+    },
+    {
+      "text": "generating source code are the most um",
+      "offset": 718640,
+      "duration": 8080
+    },
+    {
+      "text": "answered also writing documentation. So",
+      "offset": 723600,
+      "duration": 4960
+    },
+    {
+      "text": "it's really about generating it's it",
+      "offset": 726720,
+      "duration": 4239
+    },
+    {
+      "text": "validates a bit what we've been through",
+      "offset": 728560,
+      "duration": 6399
+    },
+    {
+      "text": "during the AI adoption slide uh where we",
+      "offset": 730959,
+      "duration": 6961
+    },
+    {
+      "text": "see all the tools uh on the",
+      "offset": 734959,
+      "duration": 4641
+    },
+    {
+      "text": "implementation",
+      "offset": 737920,
+      "duration": 6320
+    },
+    {
+      "text": "uh step. So yeah it validates and the",
+      "offset": 739600,
+      "duration": 7120
+    },
+    {
+      "text": "second question is really the contrary",
+      "offset": 744240,
+      "duration": 5279
+    },
+    {
+      "text": "uh I want to know what are the top three",
+      "offset": 746720,
+      "duration": 5840
+    },
+    {
+      "text": "task that you rarely or you don't want",
+      "offset": 749519,
+      "duration": 7641
+    },
+    {
+      "text": "to use AI. And",
+      "offset": 752560,
+      "duration": 4600
+    },
+    {
+      "text": "normally the answer should be the",
+      "offset": 759040,
+      "duration": 5280
+    },
+    {
+      "text": "opposite, but we'll see if this is the",
+      "offset": 761600,
+      "duration": 5720
+    },
+    {
+      "text": "case.",
+      "offset": 764320,
+      "duration": 3000
+    },
+    {
+      "text": "I give you also 202",
+      "offset": 768560,
+      "duration": 6680
+    },
+    {
+      "text": "30 second",
+      "offset": 771839,
+      "duration": 3401
+    },
+    {
+      "text": "Okay,",
+      "offset": 786480,
+      "duration": 3919
+    },
+    {
+      "text": "I think we can have a look at the",
+      "offset": 788639,
+      "duration": 5200
+    },
+    {
+      "text": "answer. Okay, the answers are pretty",
+      "offset": 790399,
+      "duration": 5680
+    },
+    {
+      "text": "interesting. Specify, plan, and estimate",
+      "offset": 793839,
+      "duration": 7120
+    },
+    {
+      "text": "the work is the most answered with 53%",
+      "offset": 796079,
+      "duration": 7361
+    },
+    {
+      "text": "uh of answer.",
+      "offset": 800959,
+      "duration": 5521
+    },
+    {
+      "text": "Okay. Yeah, I think",
+      "offset": 803440,
+      "duration": 6399
+    },
+    {
+      "text": "specifying uh planning and estimate the",
+      "offset": 806480,
+      "duration": 7200
+    },
+    {
+      "text": "work is something where humans interact",
+      "offset": 809839,
+      "duration": 8401
+    },
+    {
+      "text": "between themsel and relates on AI to do",
+      "offset": 813680,
+      "duration": 8320
+    },
+    {
+      "text": "that can be difficult.",
+      "offset": 818240,
+      "duration": 5440
+    },
+    {
+      "text": "Okay, cool. Thank you very much for your",
+      "offset": 822000,
+      "duration": 4880
+    },
+    {
+      "text": "answer. It's really amazing to see. Uh",
+      "offset": 823680,
+      "duration": 6080
+    },
+    {
+      "text": "so now let's deep dive into AIP and have",
+      "offset": 826880,
+      "duration": 6320
+    },
+    {
+      "text": "an overview of the the functionality.",
+      "offset": 829760,
+      "duration": 6800
+    },
+    {
+      "text": "Uh so basically we are seeing now uh",
+      "offset": 833200,
+      "duration": 8160
+    },
+    {
+      "text": "more and more demand uh for delivery of",
+      "offset": 836560,
+      "duration": 9360
+    },
+    {
+      "text": "code uh than ever. So people are asking",
+      "offset": 841360,
+      "duration": 7839
+    },
+    {
+      "text": "to deliver faster and faster uh but to",
+      "offset": 845920,
+      "duration": 7680
+    },
+    {
+      "text": "keep the code uh super maintainable uh",
+      "offset": 849199,
+      "duration": 7121
+    },
+    {
+      "text": "with a high quality standard and",
+      "offset": 853600,
+      "duration": 5359
+    },
+    {
+      "text": "developers are the one that face this",
+      "offset": 856320,
+      "duration": 6160
+    },
+    {
+      "text": "constant pressure to write code uh but",
+      "offset": 858959,
+      "duration": 6641
+    },
+    {
+      "text": "also to deploy uh the code efficiently",
+      "offset": 862480,
+      "duration": 5599
+    },
+    {
+      "text": "while maintaining maintaining",
+      "offset": 865600,
+      "duration": 6080
+    },
+    {
+      "text": "maintaining sorry high quality standard.",
+      "offset": 868079,
+      "duration": 5601
+    },
+    {
+      "text": "Engineering leaders on the other side",
+      "offset": 871680,
+      "duration": 4480
+    },
+    {
+      "text": "that they're trying to seek tools that",
+      "offset": 873680,
+      "duration": 5120
+    },
+    {
+      "text": "will enhance this productivity of the of",
+      "offset": 876160,
+      "duration": 4960
+    },
+    {
+      "text": "their developers. They want to reduce",
+      "offset": 878800,
+      "duration": 5039
+    },
+    {
+      "text": "time to market and they want to maintain",
+      "offset": 881120,
+      "duration": 5200
+    },
+    {
+      "text": "keep maintaining also high code quality",
+      "offset": 883839,
+      "duration": 4800
+    },
+    {
+      "text": "standard.",
+      "offset": 886320,
+      "duration": 6319
+    },
+    {
+      "text": "That's why we decided to uh introduce",
+      "offset": 888639,
+      "duration": 7041
+    },
+    {
+      "text": "Sonar AI could fix to actually help",
+      "offset": 892639,
+      "duration": 5760
+    },
+    {
+      "text": "developer remediate issues that are",
+      "offset": 895680,
+      "duration": 5040
+    },
+    {
+      "text": "raised by sonar",
+      "offset": 898399,
+      "duration": 7120
+    },
+    {
+      "text": "faster. Um we want to let them focus on",
+      "offset": 900720,
+      "duration": 8799
+    },
+    {
+      "text": "something or other task that are more",
+      "offset": 905519,
+      "duration": 7281
+    },
+    {
+      "text": "impactful instead of spending time at",
+      "offset": 909519,
+      "duration": 6961
+    },
+    {
+      "text": "resolving and remediating issues.",
+      "offset": 912800,
+      "duration": 6000
+    },
+    {
+      "text": "So the solution that we designed is",
+      "offset": 916480,
+      "duration": 5120
+    },
+    {
+      "text": "trying to firstly reduce the developer",
+      "offset": 918800,
+      "duration": 5360
+    },
+    {
+      "text": "workflow. Like I mentioned, we want to",
+      "offset": 921600,
+      "duration": 4880
+    },
+    {
+      "text": "let the developer focus on impactful",
+      "offset": 924160,
+      "duration": 6239
+    },
+    {
+      "text": "task, not spending time on um resolving",
+      "offset": 926480,
+      "duration": 6560
+    },
+    {
+      "text": "and remediating issues. We have a",
+      "offset": 930399,
+      "duration": 5841
+    },
+    {
+      "text": "contextual understanding. So basically",
+      "offset": 933040,
+      "duration": 6000
+    },
+    {
+      "text": "we interact with the LLM. send",
+      "offset": 936240,
+      "duration": 5360
+    },
+    {
+      "text": "informations to the LLM",
+      "offset": 939040,
+      "duration": 7359
+    },
+    {
+      "text": "um that will provide after that an",
+      "offset": 941600,
+      "duration": 7039
+    },
+    {
+      "text": "answer uh that is relevant to the",
+      "offset": 946399,
+      "duration": 4000
+    },
+    {
+      "text": "developer",
+      "offset": 948639,
+      "duration": 4000
+    },
+    {
+      "text": "also the choice of the provider. So we",
+      "offset": 950399,
+      "duration": 5521
+    },
+    {
+      "text": "let the developer choose between",
+      "offset": 952639,
+      "duration": 5281
+    },
+    {
+      "text": "different providers. So we support",
+      "offset": 955920,
+      "duration": 5279
+    },
+    {
+      "text": "OpenAI, we support Entropic uh and we",
+      "offset": 957920,
+      "duration": 6560
+    },
+    {
+      "text": "support Azure OpenAI. uh and the goal is",
+      "offset": 961199,
+      "duration": 5841
+    },
+    {
+      "text": "really to let him choose which one he",
+      "offset": 964480,
+      "duration": 4400
+    },
+    {
+      "text": "wants.",
+      "offset": 967040,
+      "duration": 5039
+    },
+    {
+      "text": "Then we have a seamless integration in",
+      "offset": 968880,
+      "duration": 6480
+    },
+    {
+      "text": "the workflow. So the I will demo it",
+      "offset": 972079,
+      "duration": 4721
+    },
+    {
+      "text": "afterwards and I will explain it",
+      "offset": 975360,
+      "duration": 5599
+    },
+    {
+      "text": "afterwards. But uh we are seamlessly",
+      "offset": 976800,
+      "duration": 6320
+    },
+    {
+      "text": "integrating into the developer workflow",
+      "offset": 980959,
+      "duration": 5201
+    },
+    {
+      "text": "by offering the possibility to generate",
+      "offset": 983120,
+      "duration": 6480
+    },
+    {
+      "text": "a fix from the ID directly with the",
+      "offset": 986160,
+      "duration": 6479
+    },
+    {
+      "text": "sonar cube ID plug-in and also from",
+      "offset": 989600,
+      "duration": 7200
+    },
+    {
+      "text": "sonar cube uh UI. Uh and the goal is",
+      "offset": 992639,
+      "duration": 8241
+    },
+    {
+      "text": "really to be as close as possible uh as",
+      "offset": 996800,
+      "duration": 7520
+    },
+    {
+      "text": "the the developer. And then we have this",
+      "offset": 1000880,
+      "duration": 6879
+    },
+    {
+      "text": "continuous learning part where we always",
+      "offset": 1004320,
+      "duration": 6720
+    },
+    {
+      "text": "improve the feature uh by evaluating new",
+      "offset": 1007759,
+      "duration": 6801
+    },
+    {
+      "text": "models by evite evaluating new prompts.",
+      "offset": 1011040,
+      "duration": 5680
+    },
+    {
+      "text": "Uh and basically the goal is really to",
+      "offset": 1014560,
+      "duration": 6839
+    },
+    {
+      "text": "keep supporting more and more rules.",
+      "offset": 1016720,
+      "duration": 4679
+    },
+    {
+      "text": "So how does it work? Uh I will demo it",
+      "offset": 1021680,
+      "duration": 6159
+    },
+    {
+      "text": "afterwards live but here is just a first",
+      "offset": 1024559,
+      "duration": 6000
+    },
+    {
+      "text": "three steps uh of the features. The",
+      "offset": 1027839,
+      "duration": 4480
+    },
+    {
+      "text": "first step is really to generate the",
+      "offset": 1030559,
+      "duration": 5120
+    },
+    {
+      "text": "fix. So on the sonar cube UI you will",
+      "offset": 1032319,
+      "duration": 6880
+    },
+    {
+      "text": "have on um issues where the rules is",
+      "offset": 1035679,
+      "duration": 5681
+    },
+    {
+      "text": "supported by AI code fix a new tab",
+      "offset": 1039199,
+      "duration": 6081
+    },
+    {
+      "text": "appearing uh AI could fix that basically",
+      "offset": 1041360,
+      "duration": 6319
+    },
+    {
+      "text": "and on where is the issue tab you will",
+      "offset": 1045280,
+      "duration": 4720
+    },
+    {
+      "text": "have the possibility to generate a fix",
+      "offset": 1047679,
+      "duration": 5360
+    },
+    {
+      "text": "by clicking on a button. Uh then when",
+      "offset": 1050000,
+      "duration": 5280
+    },
+    {
+      "text": "you click on the button",
+      "offset": 1053039,
+      "duration": 4561
+    },
+    {
+      "text": "we will send the information to the LLM.",
+      "offset": 1055280,
+      "duration": 5759
+    },
+    {
+      "text": "the LLM will send the the the output uh",
+      "offset": 1057600,
+      "duration": 6319
+    },
+    {
+      "text": "with the diff and that's where you will",
+      "offset": 1061039,
+      "duration": 6000
+    },
+    {
+      "text": "be able to uh see the diff within the",
+      "offset": 1063919,
+      "duration": 7441
+    },
+    {
+      "text": "UI. Uh basically two options here. You",
+      "offset": 1067039,
+      "duration": 8321
+    },
+    {
+      "text": "can either copy pass uh by yourself the",
+      "offset": 1071360,
+      "duration": 7520
+    },
+    {
+      "text": "diff in your ID um or you can view the",
+      "offset": 1075360,
+      "duration": 5760
+    },
+    {
+      "text": "fix in the ID. And this view the fix in",
+      "offset": 1078880,
+      "duration": 6240
+    },
+    {
+      "text": "the ID is the integration between uh",
+      "offset": 1081120,
+      "duration": 6320
+    },
+    {
+      "text": "sonar cube server or cloud and sonar",
+      "offset": 1085120,
+      "duration": 4799
+    },
+    {
+      "text": "cube ID. Uh and basically what it does",
+      "offset": 1087440,
+      "duration": 5440
+    },
+    {
+      "text": "is you just open the diff directly in",
+      "offset": 1089919,
+      "duration": 4961
+    },
+    {
+      "text": "your ID and that's where you can apply",
+      "offset": 1092880,
+      "duration": 5360
+    },
+    {
+      "text": "or discard fix from from there.",
+      "offset": 1094880,
+      "duration": 5600
+    },
+    {
+      "text": "You also have a quick explanation of",
+      "offset": 1098240,
+      "duration": 6319
+    },
+    {
+      "text": "what the uh the fix is doing uh and how",
+      "offset": 1100480,
+      "duration": 6880
+    },
+    {
+      "text": "it solved the issues.",
+      "offset": 1104559,
+      "duration": 5441
+    },
+    {
+      "text": "And the final step uh like I mentioned",
+      "offset": 1107360,
+      "duration": 5199
+    },
+    {
+      "text": "previously, you open in the ID and",
+      "offset": 1110000,
+      "duration": 4320
+    },
+    {
+      "text": "that's where you see the diff and that's",
+      "offset": 1112559,
+      "duration": 5201
+    },
+    {
+      "text": "where you can apply uh the div.",
+      "offset": 1114320,
+      "duration": 6080
+    },
+    {
+      "text": "But it will be clear when I will demo it",
+      "offset": 1117760,
+      "duration": 5520
+    },
+    {
+      "text": "afterwards.",
+      "offset": 1120400,
+      "duration": 5519
+    },
+    {
+      "text": "Now if we go to the language and the",
+      "offset": 1123280,
+      "duration": 5920
+    },
+    {
+      "text": "rules we support so far. So we support",
+      "offset": 1125919,
+      "duration": 5760
+    },
+    {
+      "text": "six languages in total. So Java,",
+      "offset": 1129200,
+      "duration": 5599
+    },
+    {
+      "text": "JavaScript, TypeScript, C, C++ and",
+      "offset": 1131679,
+      "duration": 5681
+    },
+    {
+      "text": "Python. These are the most used",
+      "offset": 1134799,
+      "duration": 5120
+    },
+    {
+      "text": "languages. Uh and these languages we",
+      "offset": 1137360,
+      "duration": 4880
+    },
+    {
+      "text": "call them flagship.",
+      "offset": 1139919,
+      "duration": 5760
+    },
+    {
+      "text": "We support in total 570",
+      "offset": 1142240,
+      "duration": 5439
+    },
+    {
+      "text": "rules.",
+      "offset": 1145679,
+      "duration": 9921
+    },
+    {
+      "text": "um and we covered uh approximately 45%",
+      "offset": 1147679,
+      "duration": 10561
+    },
+    {
+      "text": "uh of issues. Here we are not talking",
+      "offset": 1155600,
+      "duration": 5280
+    },
+    {
+      "text": "about rules coverage but issue coverage.",
+      "offset": 1158240,
+      "duration": 4880
+    },
+    {
+      "text": "What I mean by issue coverage is like we",
+      "offset": 1160880,
+      "duration": 4720
+    },
+    {
+      "text": "build some statistics of all the issues",
+      "offset": 1163120,
+      "duration": 4799
+    },
+    {
+      "text": "that has been raised on Sonaku cloud for",
+      "offset": 1165600,
+      "duration": 4959
+    },
+    {
+      "text": "the past two years",
+      "offset": 1167919,
+      "duration": 5041
+    },
+    {
+      "text": "uh and we see the one that has the most",
+      "offset": 1170559,
+      "duration": 7041
+    },
+    {
+      "text": "impact because we can we can do it by",
+      "offset": 1172960,
+      "duration": 8240
+    },
+    {
+      "text": "rules coverage but if a rules only raise",
+      "offset": 1177600,
+      "duration": 6959
+    },
+    {
+      "text": "two issues uh every month it's not",
+      "offset": 1181200,
+      "duration": 5359
+    },
+    {
+      "text": "really impactful. Here we prefer to",
+      "offset": 1184559,
+      "duration": 4480
+    },
+    {
+      "text": "focus on the issue coverage. And if we",
+      "offset": 1186559,
+      "duration": 5281
+    },
+    {
+      "text": "decouple by language, we can see that we",
+      "offset": 1189039,
+      "duration": 6961
+    },
+    {
+      "text": "are almost at 50% for each language. And",
+      "offset": 1191840,
+      "duration": 7520
+    },
+    {
+      "text": "which means that for approximately one",
+      "offset": 1196000,
+      "duration": 6960
+    },
+    {
+      "text": "out of two issues, we have AI code fix",
+      "offset": 1199360,
+      "duration": 6600
+    },
+    {
+      "text": "available.",
+      "offset": 1202960,
+      "duration": 3000
+    },
+    {
+      "text": "So now if we have if we see the overview",
+      "offset": 1207840,
+      "duration": 7600
+    },
+    {
+      "text": "of the solution in general availability",
+      "offset": 1211760,
+      "duration": 8240
+    },
+    {
+      "text": "here is how it works. So basically you",
+      "offset": 1215440,
+      "duration": 6720
+    },
+    {
+      "text": "can see on the top side the three",
+      "offset": 1220000,
+      "duration": 4080
+    },
+    {
+      "text": "different product that we have sonar",
+      "offset": 1222160,
+      "duration": 4160
+    },
+    {
+      "text": "cube server, sonar cube cloud and sonarq",
+      "offset": 1224080,
+      "duration": 6000
+    },
+    {
+      "text": "ID. And here you can see the different",
+      "offset": 1226320,
+      "duration": 6320
+    },
+    {
+      "text": "features of the product. So the fix",
+      "offset": 1230080,
+      "duration": 5920
+    },
+    {
+      "text": "generation which is the core uh uh the",
+      "offset": 1232640,
+      "duration": 7840
+    },
+    {
+      "text": "core product is everywhere. So basically",
+      "offset": 1236000,
+      "duration": 6559
+    },
+    {
+      "text": "on sonar cube server you can generate a",
+      "offset": 1240480,
+      "duration": 3920
+    },
+    {
+      "text": "fix on sonar cube cloud you can generate",
+      "offset": 1242559,
+      "duration": 5120
+    },
+    {
+      "text": "a fix and also on sonar cube IDE you can",
+      "offset": 1244400,
+      "duration": 5360
+    },
+    {
+      "text": "generate a fix. You need to be in",
+      "offset": 1247679,
+      "duration": 4081
+    },
+    {
+      "text": "connected mode and you you need to have",
+      "offset": 1249760,
+      "duration": 5039
+    },
+    {
+      "text": "a specific version of sonar cube server.",
+      "offset": 1251760,
+      "duration": 7360
+    },
+    {
+      "text": "So it starts at 2025.3.",
+      "offset": 1254799,
+      "duration": 8401
+    },
+    {
+      "text": "you can uh choose which project will",
+      "offset": 1259120,
+      "duration": 6880
+    },
+    {
+      "text": "have access to the feature. Uh so that's",
+      "offset": 1263200,
+      "duration": 4880
+    },
+    {
+      "text": "what we call the per project activation",
+      "offset": 1266000,
+      "duration": 5440
+    },
+    {
+      "text": "and it's do it's done on sonar cube",
+      "offset": 1268080,
+      "duration": 6640
+    },
+    {
+      "text": "server and sonar cube cloud",
+      "offset": 1271440,
+      "duration": 5760
+    },
+    {
+      "text": "we of course support two providers so",
+      "offset": 1274720,
+      "duration": 5920
+    },
+    {
+      "text": "open aai and anthropic uh and here the",
+      "offset": 1277200,
+      "duration": 5599
+    },
+    {
+      "text": "two providers support our own sonar",
+      "offset": 1280640,
+      "duration": 5279
+    },
+    {
+      "text": "cloud uh anthropic we are not supporting",
+      "offset": 1282799,
+      "duration": 5521
+    },
+    {
+      "text": "on sonar cube server yet but it will",
+      "offset": 1285919,
+      "duration": 4801
+    },
+    {
+      "text": "come in the future",
+      "offset": 1288320,
+      "duration": 5040
+    },
+    {
+      "text": "on the other hand we have aure openai",
+      "offset": 1290720,
+      "duration": 4880
+    },
+    {
+      "text": "connectivity what we bring your own",
+      "offset": 1293360,
+      "duration": 6080
+    },
+    {
+      "text": "model uh on sonar cube server available",
+      "offset": 1295600,
+      "duration": 8400
+    },
+    {
+      "text": "and basically what it does uh it's",
+      "offset": 1299440,
+      "duration": 8400
+    },
+    {
+      "text": "we uh allow a connectivity between AI",
+      "offset": 1304000,
+      "duration": 8640
+    },
+    {
+      "text": "confix and an AI Azure open AI service",
+      "offset": 1307840,
+      "duration": 8480
+    },
+    {
+      "text": "uh that our customer can have uh and",
+      "offset": 1312640,
+      "duration": 6000
+    },
+    {
+      "text": "basically it will interact directly",
+      "offset": 1316320,
+      "duration": 4800
+    },
+    {
+      "text": "between between them and the code will",
+      "offset": 1318640,
+      "duration": 4240
+    },
+    {
+      "text": "never leave the infrastructure of the",
+      "offset": 1321120,
+      "duration": 4400
+    },
+    {
+      "text": "customer. So this was a biggest the",
+      "offset": 1322880,
+      "duration": 5200
+    },
+    {
+      "text": "biggest request from Sonar Cube server",
+      "offset": 1325520,
+      "duration": 6159
+    },
+    {
+      "text": "customer uh dur during the early access",
+      "offset": 1328080,
+      "duration": 7000
+    },
+    {
+      "text": "um time",
+      "offset": 1331679,
+      "duration": 3401
+    },
+    {
+      "text": "some key results that I wanted to share",
+      "offset": 1335360,
+      "duration": 6480
+    },
+    {
+      "text": "uh today that we have we have already",
+      "offset": 1337919,
+      "duration": 6721
+    },
+    {
+      "text": "3,000 organization that enabled AI",
+      "offset": 1341840,
+      "duration": 6240
+    },
+    {
+      "text": "codefix so far uh with",
+      "offset": 1344640,
+      "duration": 7760
+    },
+    {
+      "text": "150,000 suggestion generated with and",
+      "offset": 1348080,
+      "duration": 5920
+    },
+    {
+      "text": "this This is where it's really",
+      "offset": 1352400,
+      "duration": 4000
+    },
+    {
+      "text": "interesting with an acceptance rate of",
+      "offset": 1354000,
+      "duration": 4400
+    },
+    {
+      "text": "65%.",
+      "offset": 1356400,
+      "duration": 4880
+    },
+    {
+      "text": "Just to give you an idea of comparison,",
+      "offset": 1358400,
+      "duration": 6480
+    },
+    {
+      "text": "copilot it's around 30% of acceptance",
+      "offset": 1361280,
+      "duration": 7519
+    },
+    {
+      "text": "rate. So it means that we are providing",
+      "offset": 1364880,
+      "duration": 7039
+    },
+    {
+      "text": "suggestions that are really relevant to",
+      "offset": 1368799,
+      "duration": 6081
+    },
+    {
+      "text": "uh the developer. And if we see this",
+      "offset": 1371919,
+      "duration": 5841
+    },
+    {
+      "text": "average rating on fix quality uh that we",
+      "offset": 1374880,
+      "duration": 6880
+    },
+    {
+      "text": "are tracking for each fixes we provide",
+      "offset": 1377760,
+      "duration": 7840
+    },
+    {
+      "text": "uh we have an average rate of four out",
+      "offset": 1381760,
+      "duration": 8080
+    },
+    {
+      "text": "of five which also highlights that we",
+      "offset": 1385600,
+      "duration": 9319
+    },
+    {
+      "text": "are providing high quality fixes.",
+      "offset": 1389840,
+      "duration": 5079
+    },
+    {
+      "text": "Now the availability and the pricing. Uh",
+      "offset": 1397039,
+      "duration": 8241
+    },
+    {
+      "text": "so AI confix is available on sonar cloud",
+      "offset": 1401039,
+      "duration": 7361
+    },
+    {
+      "text": "and sonar cube server for free. So it's",
+      "offset": 1405280,
+      "duration": 6399
+    },
+    {
+      "text": "included at no additional cost for all",
+      "offset": 1408400,
+      "duration": 5600
+    },
+    {
+      "text": "the following plans and addition. So on",
+      "offset": 1411679,
+      "duration": 4321
+    },
+    {
+      "text": "sonarcube cloud it's available on team",
+      "offset": 1414000,
+      "duration": 5039
+    },
+    {
+      "text": "and enterprise plan uh included at no",
+      "offset": 1416000,
+      "duration": 5600
+    },
+    {
+      "text": "additional cost and on sonar cube server",
+      "offset": 1419039,
+      "duration": 5601
+    },
+    {
+      "text": "it starts at enterprise edition. So",
+      "offset": 1421600,
+      "duration": 4880
+    },
+    {
+      "text": "enterprise edition and data center",
+      "offset": 1424640,
+      "duration": 4640
+    },
+    {
+      "text": "edition. So since it's free, feel free",
+      "offset": 1426480,
+      "duration": 5199
+    },
+    {
+      "text": "to install it if you are part of this",
+      "offset": 1429280,
+      "duration": 7720
+    },
+    {
+      "text": "edition and plans because it's included.",
+      "offset": 1431679,
+      "duration": 5321
+    },
+    {
+      "text": "So now that we've been the overview of",
+      "offset": 1437679,
+      "duration": 5921
+    },
+    {
+      "text": "AI config, I will run a little live",
+      "offset": 1440400,
+      "duration": 6399
+    },
+    {
+      "text": "demo. Uh I know that you were waiting",
+      "offset": 1443600,
+      "duration": 7520
+    },
+    {
+      "text": "for this to happen and now",
+      "offset": 1446799,
+      "duration": 7841
+    },
+    {
+      "text": "so I have created a pull request on a",
+      "offset": 1451120,
+      "duration": 5679
+    },
+    {
+      "text": "specific project which is called juice",
+      "offset": 1454640,
+      "duration": 4639
+    },
+    {
+      "text": "shop. Uh juice shop for those who don't",
+      "offset": 1456799,
+      "duration": 6561
+    },
+    {
+      "text": "know is full of issues. Uh and actually",
+      "offset": 1459279,
+      "duration": 6561
+    },
+    {
+      "text": "what is funny is that I use copilot",
+      "offset": 1463360,
+      "duration": 5199
+    },
+    {
+      "text": "agent to generate this PR with some",
+      "offset": 1465840,
+      "duration": 4240
+    },
+    {
+      "text": "issues.",
+      "offset": 1468559,
+      "duration": 4240
+    },
+    {
+      "text": "Basically once the quality get failed",
+      "offset": 1470080,
+      "duration": 5760
+    },
+    {
+      "text": "because I wanted to I asked copilot to",
+      "offset": 1472799,
+      "duration": 5921
+    },
+    {
+      "text": "introduce issues my quality get failed",
+      "offset": 1475840,
+      "duration": 5520
+    },
+    {
+      "text": "uh and as a developer normally what I do",
+      "offset": 1478720,
+      "duration": 7280
+    },
+    {
+      "text": "is I go on sonaru cloud and I review the",
+      "offset": 1481360,
+      "duration": 8000
+    },
+    {
+      "text": "issue that has been raised uh so here I",
+      "offset": 1486000,
+      "duration": 6080
+    },
+    {
+      "text": "have I can see that I have 11 new issues",
+      "offset": 1489360,
+      "duration": 5760
+    },
+    {
+      "text": "and that my quality get failed",
+      "offset": 1492080,
+      "duration": 5839
+    },
+    {
+      "text": "I will go over each issues and trying to",
+      "offset": 1495120,
+      "duration": 5520
+    },
+    {
+      "text": "fix them and that's where developer is",
+      "offset": 1497919,
+      "duration": 5281
+    },
+    {
+      "text": "losing time. Uh so let's take for",
+      "offset": 1500640,
+      "duration": 6399
+    },
+    {
+      "text": "instance this issue uh now and as you",
+      "offset": 1503200,
+      "duration": 8400
+    },
+    {
+      "text": "can see this issue uh I can generate a",
+      "offset": 1507039,
+      "duration": 8240
+    },
+    {
+      "text": "fix on uh so you have the new tab AI",
+      "offset": 1511600,
+      "duration": 6959
+    },
+    {
+      "text": "could fix here and you can generate the",
+      "offset": 1515279,
+      "duration": 5201
+    },
+    {
+      "text": "fix by clicking the button. So this",
+      "offset": 1518559,
+      "duration": 5921
+    },
+    {
+      "text": "issue is about having an optional chain",
+      "offset": 1520480,
+      "duration": 6880
+    },
+    {
+      "text": "instead uh",
+      "offset": 1524480,
+      "duration": 5040
+    },
+    {
+      "text": "because here it's not very maintainable",
+      "offset": 1527360,
+      "duration": 5280
+    },
+    {
+      "text": "and it's not really easy to to read. So",
+      "offset": 1529520,
+      "duration": 5840
+    },
+    {
+      "text": "if I generate a fix normally",
+      "offset": 1532640,
+      "duration": 5680
+    },
+    {
+      "text": "it should automatically so that's where",
+      "offset": 1535360,
+      "duration": 6319
+    },
+    {
+      "text": "we're sending the information to the LLM",
+      "offset": 1538320,
+      "duration": 7520
+    },
+    {
+      "text": "uh and we are waiting for some response",
+      "offset": 1541679,
+      "duration": 9120
+    },
+    {
+      "text": "and once the response is been sent",
+      "offset": 1545840,
+      "duration": 7199
+    },
+    {
+      "text": "that's where we can see the diff. So",
+      "offset": 1550799,
+      "duration": 5041
+    },
+    {
+      "text": "basically is replacing the user and and",
+      "offset": 1553039,
+      "duration": 6240
+    },
+    {
+      "text": "user is active by user uh exclamation",
+      "offset": 1555840,
+      "duration": 6000
+    },
+    {
+      "text": "point is active.",
+      "offset": 1559279,
+      "duration": 5201
+    },
+    {
+      "text": "Uh basically how it is decoupled we can",
+      "offset": 1561840,
+      "duration": 4319
+    },
+    {
+      "text": "you can see the diff here. You can copy",
+      "offset": 1564480,
+      "duration": 4160
+    },
+    {
+      "text": "pass in your IDE or you can view the fix",
+      "offset": 1566159,
+      "duration": 5441
+    },
+    {
+      "text": "in the ID like we like we saw before.",
+      "offset": 1568640,
+      "duration": 7440
+    },
+    {
+      "text": "You also have an explanation of the fix",
+      "offset": 1571600,
+      "duration": 7280
+    },
+    {
+      "text": "um that can help understand what it",
+      "offset": 1576080,
+      "duration": 5599
+    },
+    {
+      "text": "does.",
+      "offset": 1578880,
+      "duration": 6159
+    },
+    {
+      "text": "Okay. So now that you saw how it works,",
+      "offset": 1581679,
+      "duration": 7761
+    },
+    {
+      "text": "let me let me So here we were uh on a",
+      "offset": 1585039,
+      "duration": 7361
+    },
+    {
+      "text": "pull request, but it can also be applied",
+      "offset": 1589440,
+      "duration": 4719
+    },
+    {
+      "text": "on the main branch. For instance, if you",
+      "offset": 1592400,
+      "duration": 4159
+    },
+    {
+      "text": "want to reduce technical debt, you can",
+      "offset": 1594159,
+      "duration": 4640
+    },
+    {
+      "text": "review your main branch, go to overall",
+      "offset": 1596559,
+      "duration": 5360
+    },
+    {
+      "text": "code. So let me for instance take a",
+      "offset": 1598799,
+      "duration": 6801
+    },
+    {
+      "text": "security issue that you want to solve.",
+      "offset": 1601919,
+      "duration": 7760
+    },
+    {
+      "text": "Uh and let's take for instance this one.",
+      "offset": 1605600,
+      "duration": 9199
+    },
+    {
+      "text": "So we have we have uh we don't want to",
+      "offset": 1609679,
+      "duration": 9441
+    },
+    {
+      "text": "inject uh SQL queries with user control",
+      "offset": 1614799,
+      "duration": 6801
+    },
+    {
+      "text": "data directly in it. So this is a",
+      "offset": 1619120,
+      "duration": 7039
+    },
+    {
+      "text": "security issue and it can uh imply uh",
+      "offset": 1621600,
+      "duration": 7840
+    },
+    {
+      "text": "security breaching. So here in the at",
+      "offset": 1626159,
+      "duration": 5681
+    },
+    {
+      "text": "the same time I can generate a fix. Uh I",
+      "offset": 1629440,
+      "duration": 6080
+    },
+    {
+      "text": "know that it will get rid of the",
+      "offset": 1631840,
+      "duration": 8400
+    },
+    {
+      "text": "parameter directly injected in the query",
+      "offset": 1635520,
+      "duration": 7039
+    },
+    {
+      "text": "and normally it should create",
+      "offset": 1640240,
+      "duration": 3840
+    },
+    {
+      "text": "replacement",
+      "offset": 1642559,
+      "duration": 4761
+    },
+    {
+      "text": "uh variable.",
+      "offset": 1644080,
+      "duration": 3240
+    },
+    {
+      "text": "So the fix is being generated. This one",
+      "offset": 1647919,
+      "duration": 5041
+    },
+    {
+      "text": "is a bit more complex that's why it's",
+      "offset": 1650799,
+      "duration": 5041
+    },
+    {
+      "text": "taking a bit more time. And here you can",
+      "offset": 1652960,
+      "duration": 5360
+    },
+    {
+      "text": "see that it replies.",
+      "offset": 1655840,
+      "duration": 5760
+    },
+    {
+      "text": "And here instead of having the variable",
+      "offset": 1658320,
+      "duration": 6640
+    },
+    {
+      "text": "directly defined in the query, you can",
+      "offset": 1661600,
+      "duration": 7760
+    },
+    {
+      "text": "see that u it created",
+      "offset": 1664960,
+      "duration": 7440
+    },
+    {
+      "text": "here the replacement",
+      "offset": 1669360,
+      "duration": 6080
+    },
+    {
+      "text": "with the variable.",
+      "offset": 1672400,
+      "duration": 5519
+    },
+    {
+      "text": "And one thing I wanted to also highlight",
+      "offset": 1675440,
+      "duration": 6080
+    },
+    {
+      "text": "is here we generated some suggestion in",
+      "offset": 1677919,
+      "duration": 7521
+    },
+    {
+      "text": "the UI directly but I wanted to show how",
+      "offset": 1681520,
+      "duration": 6639
+    },
+    {
+      "text": "it works in the ID as well. So I have",
+      "offset": 1685440,
+      "duration": 8239
+    },
+    {
+      "text": "cursor here uh that has been with uh the",
+      "offset": 1688159,
+      "duration": 8561
+    },
+    {
+      "text": "plug-in sonar cube ID installed in it",
+      "offset": 1693679,
+      "duration": 5441
+    },
+    {
+      "text": "and here I just open the same issue in",
+      "offset": 1696720,
+      "duration": 5439
+    },
+    {
+      "text": "the ID. So what it does is it's pointing",
+      "offset": 1699120,
+      "duration": 5919
+    },
+    {
+      "text": "me to the right issue here in the login",
+      "offset": 1702159,
+      "duration": 6000
+    },
+    {
+      "text": "uh file and here you can see the same",
+      "offset": 1705039,
+      "duration": 6401
+    },
+    {
+      "text": "issue. So it's explaining the the the",
+      "offset": 1708159,
+      "duration": 6000
+    },
+    {
+      "text": "rule why we have this issue. I can I fix",
+      "offset": 1711440,
+      "duration": 6239
+    },
+    {
+      "text": "it and here if I close this I can see",
+      "offset": 1714159,
+      "duration": 6400
+    },
+    {
+      "text": "the issue here with the different",
+      "offset": 1717679,
+      "duration": 5521
+    },
+    {
+      "text": "locations",
+      "offset": 1720559,
+      "duration": 5120
+    },
+    {
+      "text": "and if I want to generate the fix. So if",
+      "offset": 1723200,
+      "duration": 5680
+    },
+    {
+      "text": "I'm in connected mode uh with my",
+      "offset": 1725679,
+      "duration": 5761
+    },
+    {
+      "text": "rightful sonar cube server or sonar cube",
+      "offset": 1728880,
+      "duration": 6159
+    },
+    {
+      "text": "cloud uh instance then I will be able to",
+      "offset": 1731440,
+      "duration": 6239
+    },
+    {
+      "text": "generate a fix directly from the ID and",
+      "offset": 1735039,
+      "duration": 5360
+    },
+    {
+      "text": "basically here is the issue I want to",
+      "offset": 1737679,
+      "duration": 5120
+    },
+    {
+      "text": "highlight. If I right click on it I can",
+      "offset": 1740399,
+      "duration": 5280
+    },
+    {
+      "text": "fix uh I can generate a fix with AI",
+      "offset": 1742799,
+      "duration": 5441
+    },
+    {
+      "text": "confix. So I would click on it. You can",
+      "offset": 1745679,
+      "duration": 6401
+    },
+    {
+      "text": "see that it's generating a fix uh thanks",
+      "offset": 1748240,
+      "duration": 7880
+    },
+    {
+      "text": "to AI confix feature.",
+      "offset": 1752080,
+      "duration": 4040
+    },
+    {
+      "text": "And once it's done, it will produce a",
+      "offset": 1756320,
+      "duration": 5280
+    },
+    {
+      "text": "refactor view. Uh and if you click on",
+      "offset": 1758720,
+      "duration": 6480
+    },
+    {
+      "text": "it, that's where you will see the diff",
+      "offset": 1761600,
+      "duration": 6840
+    },
+    {
+      "text": "uh generated.",
+      "offset": 1765200,
+      "duration": 3240
+    },
+    {
+      "text": "So it's very powerful to use a code fix",
+      "offset": 1768480,
+      "duration": 7120
+    },
+    {
+      "text": "in Z because it helps the developer",
+      "offset": 1771360,
+      "duration": 7679
+    },
+    {
+      "text": "remediate issue as they're writing code.",
+      "offset": 1775600,
+      "duration": 7439
+    },
+    {
+      "text": "Whereas on the UI, you need to wait for",
+      "offset": 1779039,
+      "duration": 6961
+    },
+    {
+      "text": "the PR analysis or the main branch",
+      "offset": 1783039,
+      "duration": 5441
+    },
+    {
+      "text": "analysis to see the issue and then to",
+      "offset": 1786000,
+      "duration": 5679
+    },
+    {
+      "text": "generate some fixes. I think the two can",
+      "offset": 1788480,
+      "duration": 6480
+    },
+    {
+      "text": "be used uh but it depends on the on the",
+      "offset": 1791679,
+      "duration": 5360
+    },
+    {
+      "text": "developer workflow uh and where you want",
+      "offset": 1794960,
+      "duration": 4880
+    },
+    {
+      "text": "to use it. And here for instance if I",
+      "offset": 1797039,
+      "duration": 5601
+    },
+    {
+      "text": "want to of course apply the fix I can do",
+      "offset": 1799840,
+      "duration": 7280
+    },
+    {
+      "text": "it and it will of course update the the",
+      "offset": 1802640,
+      "duration": 7840
+    },
+    {
+      "text": "line uh where we had the issue and we",
+      "offset": 1807120,
+      "duration": 7400
+    },
+    {
+      "text": "see that the issue actually disappeared.",
+      "offset": 1810480,
+      "duration": 4040
+    },
+    {
+      "text": "Okay. So if I go back to",
+      "offset": 1815440,
+      "duration": 5680
+    },
+    {
+      "text": "the presentation,",
+      "offset": 1819279,
+      "duration": 4561
+    },
+    {
+      "text": "here was the live demo that I wanted to",
+      "offset": 1821120,
+      "duration": 6640
+    },
+    {
+      "text": "show and maybe before going into the Q&A",
+      "offset": 1823840,
+      "duration": 8240
+    },
+    {
+      "text": "session, I can give it back to",
+      "offset": 1827760,
+      "duration": 6560
+    },
+    {
+      "text": "Hassenit",
+      "offset": 1832080,
+      "duration": 5280
+    },
+    {
+      "text": "to talk about this",
+      "offset": 1834320,
+      "duration": 6040
+    },
+    {
+      "text": "slide.",
+      "offset": 1837360,
+      "duration": 3000
+    },
+    {
+      "text": "Thank you, Alex. Um, that was really",
+      "offset": 1842080,
+      "duration": 4880
+    },
+    {
+      "text": "amazing. uh presentation and the demo",
+      "offset": 1844880,
+      "duration": 4320
+    },
+    {
+      "text": "and I guess that you guys have uh you",
+      "offset": 1846960,
+      "duration": 4959
+    },
+    {
+      "text": "know got some really uh cool information",
+      "offset": 1849200,
+      "duration": 4400
+    },
+    {
+      "text": "about the code fix and then you know",
+      "offset": 1851919,
+      "duration": 3601
+    },
+    {
+      "text": "what we are doing in terms of the G and",
+      "offset": 1853600,
+      "duration": 4959
+    },
+    {
+      "text": "all that. Um so uh this is about that",
+      "offset": 1855520,
+      "duration": 5200
+    },
+    {
+      "text": "update that you know um this is the son",
+      "offset": 1858559,
+      "duration": 5120
+    },
+    {
+      "text": "cube LT update hub. Um so the benefit of",
+      "offset": 1860720,
+      "duration": 7120
+    },
+    {
+      "text": "this is uh the the 2025.1 LTA has this",
+      "offset": 1863679,
+      "duration": 7761
+    },
+    {
+      "text": "new um you know AI uh capability um you",
+      "offset": 1867840,
+      "duration": 5439
+    },
+    {
+      "text": "know it is uh strongest with stronger",
+      "offset": 1871440,
+      "duration": 4080
+    },
+    {
+      "text": "security and more rules and um languages",
+      "offset": 1873279,
+      "duration": 4961
+    },
+    {
+      "text": "support um easy to use uh better for",
+      "offset": 1875520,
+      "duration": 4480
+    },
+    {
+      "text": "your user experience and user uh",
+      "offset": 1878240,
+      "duration": 4319
+    },
+    {
+      "text": "increased accuracy um peace of your mind",
+      "offset": 1880000,
+      "duration": 5200
+    },
+    {
+      "text": "and and and you can see the impact um so",
+      "offset": 1882559,
+      "duration": 5521
+    },
+    {
+      "text": "you should uh check the link uh in there",
+      "offset": 1885200,
+      "duration": 5920
+    },
+    {
+      "text": "um Sona Cube LT update hub and uh be",
+      "offset": 1888080,
+      "duration": 4959
+    },
+    {
+      "text": "informed about you what's what uh you",
+      "offset": 1891120,
+      "duration": 5200
+    },
+    {
+      "text": "know update we're doing. All right. Um",
+      "offset": 1893039,
+      "duration": 5041
+    },
+    {
+      "text": "so that marks the end of the",
+      "offset": 1896320,
+      "duration": 4560
+    },
+    {
+      "text": "presentation. Uh let's move on to the",
+      "offset": 1898080,
+      "duration": 4319
+    },
+    {
+      "text": "Q&A.",
+      "offset": 1900880,
+      "duration": 2960
+    },
+    {
+      "text": ">> Yes,",
+      "offset": 1902399,
+      "duration": 3441
+    },
+    {
+      "text": ">> that's cool.",
+      "offset": 1903840,
+      "duration": 6000
+    },
+    {
+      "text": ">> So by the way I um Alex I have um and me",
+      "offset": 1905840,
+      "duration": 6880
+    },
+    {
+      "text": "and Robert has answered some questions",
+      "offset": 1909840,
+      "duration": 5439
+    },
+    {
+      "text": "already. Uh but you can see the other",
+      "offset": 1912720,
+      "duration": 7079
+    },
+    {
+      "text": "questions if you want to take up",
+      "offset": 1915279,
+      "duration": 4520
+    },
+    {
+      "text": ">> uh Q&A.",
+      "offset": 1920000,
+      "duration": 6240
+    },
+    {
+      "text": ">> Yes.",
+      "offset": 1923519,
+      "duration": 7280
+    },
+    {
+      "text": "So the one answered or the one",
+      "offset": 1926240,
+      "duration": 7679
+    },
+    {
+      "text": ">> the and the one that is not answered",
+      "offset": 1930799,
+      "duration": 5921
+    },
+    {
+      "text": "that should be first priority to go",
+      "offset": 1933919,
+      "duration": 5801
+    },
+    {
+      "text": "ahead.",
+      "offset": 1936720,
+      "duration": 3000
+    },
+    {
+      "text": "So there's a question from Michael um",
+      "offset": 1939919,
+      "duration": 5041
+    },
+    {
+      "text": "about how does the code fix work for",
+      "offset": 1942720,
+      "duration": 4640
+    },
+    {
+      "text": "analysis? Is the source code uploaded to",
+      "offset": 1944960,
+      "duration": 4800
+    },
+    {
+      "text": "Sunar's cloud servers or does it take",
+      "offset": 1947360,
+      "duration": 6679
+    },
+    {
+      "text": "the issue and analyze it?",
+      "offset": 1949760,
+      "duration": 4279
+    },
+    {
+      "text": ">> So that's a that's a good question. what",
+      "offset": 1955679,
+      "duration": 6961
+    },
+    {
+      "text": "we are sending to the LLM uh that will",
+      "offset": 1957679,
+      "duration": 6561
+    },
+    {
+      "text": "um",
+      "offset": 1962640,
+      "duration": 4080
+    },
+    {
+      "text": "give the answer. We are sending the file",
+      "offset": 1964240,
+      "duration": 4080
+    },
+    {
+      "text": "where we have the issue and we are",
+      "offset": 1966720,
+      "duration": 3760
+    },
+    {
+      "text": "sending the metadata of the issue. So",
+      "offset": 1968320,
+      "duration": 4880
+    },
+    {
+      "text": "basically the rule description uh and",
+      "offset": 1970480,
+      "duration": 4720
+    },
+    {
+      "text": "all the info related to the issue and",
+      "offset": 1973200,
+      "duration": 5199
+    },
+    {
+      "text": "the rule uh itself and basically what it",
+      "offset": 1975200,
+      "duration": 6640
+    },
+    {
+      "text": "will do is the LLM will try to",
+      "offset": 1978399,
+      "duration": 6640
+    },
+    {
+      "text": "understand why there is this issue uh",
+      "offset": 1981840,
+      "duration": 5040
+    },
+    {
+      "text": "with information and all the context we",
+      "offset": 1985039,
+      "duration": 4081
+    },
+    {
+      "text": "are sending to it and then it will",
+      "offset": 1986880,
+      "duration": 4080
+    },
+    {
+      "text": "provide a diff. So the prompt that we",
+      "offset": 1989120,
+      "duration": 5360
+    },
+    {
+      "text": "have built uh also mentioned that the",
+      "offset": 1990960,
+      "duration": 6240
+    },
+    {
+      "text": "output should be a diff right so that",
+      "offset": 1994480,
+      "duration": 6240
+    },
+    {
+      "text": "the LLM normally should provide a div to",
+      "offset": 1997200,
+      "duration": 8160
+    },
+    {
+      "text": "it. uh and we evaluated each each rules",
+      "offset": 2000720,
+      "duration": 7199
+    },
+    {
+      "text": "uh on a specific data set to see for",
+      "offset": 2005360,
+      "duration": 5360
+    },
+    {
+      "text": "each rules and to build for each rules a",
+      "offset": 2007919,
+      "duration": 6880
+    },
+    {
+      "text": "confidence score uh to know if actually",
+      "offset": 2010720,
+      "duration": 8079
+    },
+    {
+      "text": "we are enough confidence to let or to",
+      "offset": 2014799,
+      "duration": 7600
+    },
+    {
+      "text": "support this rules uh with AI goods. So",
+      "offset": 2018799,
+      "duration": 5281
+    },
+    {
+      "text": "yeah,",
+      "offset": 2022399,
+      "duration": 4000
+    },
+    {
+      "text": ">> cool. Um, thank you Alex. Um, there's",
+      "offset": 2024080,
+      "duration": 4400
+    },
+    {
+      "text": "one more interesting question. It's kind",
+      "offset": 2026399,
+      "duration": 5201
+    },
+    {
+      "text": "of a road map. Um, question. Why is C",
+      "offset": 2028480,
+      "duration": 5360
+    },
+    {
+      "text": "not part of your set of supported",
+      "offset": 2031600,
+      "duration": 4799
+    },
+    {
+      "text": "languages?",
+      "offset": 2033840,
+      "duration": 4719
+    },
+    {
+      "text": ">> Why is uh which",
+      "offset": 2036399,
+      "duration": 5760
+    },
+    {
+      "text": ">> lang why is C language C?",
+      "offset": 2038559,
+      "duration": 6000
+    },
+    {
+      "text": ">> Ah",
+      "offset": 2042159,
+      "duration": 6480
+    },
+    {
+      "text": "yeah that's a that's a good question. uh",
+      "offset": 2044559,
+      "duration": 7600
+    },
+    {
+      "text": "C C initially was part of it but uh when",
+      "offset": 2048639,
+      "duration": 7200
+    },
+    {
+      "text": "we tested but yeah it's it's very",
+      "offset": 2052159,
+      "duration": 8641
+    },
+    {
+      "text": "difficult to generate um suggestions uh",
+      "offset": 2055839,
+      "duration": 8240
+    },
+    {
+      "text": "from LLM",
+      "offset": 2060800,
+      "duration": 7440
+    },
+    {
+      "text": "in the C language I mean uh because here",
+      "offset": 2064079,
+      "duration": 8241
+    },
+    {
+      "text": "we are only sending one file uh and as",
+      "offset": 2068240,
+      "duration": 8080
+    },
+    {
+      "text": "you know LLMs are trained on opensource",
+      "offset": 2072320,
+      "duration": 6240
+    },
+    {
+      "text": "language age and you have more",
+      "offset": 2076320,
+      "duration": 6000
+    },
+    {
+      "text": "JavaScript as open source. Uh so yeah C",
+      "offset": 2078560,
+      "duration": 11200
+    },
+    {
+      "text": "is it will come uh we prefer not to",
+      "offset": 2082320,
+      "duration": 9279
+    },
+    {
+      "text": "to to",
+      "offset": 2089760,
+      "duration": 5200
+    },
+    {
+      "text": "cover C uh at the beginning uh but it",
+      "offset": 2091599,
+      "duration": 5361
+    },
+    {
+      "text": "will come we are evaluating more",
+      "offset": 2094960,
+      "duration": 4560
+    },
+    {
+      "text": "languages to support and C is part is",
+      "offset": 2096960,
+      "duration": 5680
+    },
+    {
+      "text": "part of it but we needed to start from",
+      "offset": 2099520,
+      "duration": 4079
+    },
+    {
+      "text": "somewhere.",
+      "offset": 2102640,
+      "duration": 3439
+    },
+    {
+      "text": ">> Yeah. Cool. Okay. Um so that's an",
+      "offset": 2103599,
+      "duration": 5681
+    },
+    {
+      "text": "interesting question um from um sort of",
+      "offset": 2106079,
+      "duration": 7280
+    },
+    {
+      "text": "verma um are we able to connect with our",
+      "offset": 2109280,
+      "duration": 6720
+    },
+    {
+      "text": "open AI enterprise again open AAI",
+      "offset": 2113359,
+      "duration": 6000
+    },
+    {
+      "text": "enterprise um it's not Azure OpenAI uh",
+      "offset": 2116000,
+      "duration": 6000
+    },
+    {
+      "text": "we just have the keys to connect uh and",
+      "offset": 2119359,
+      "duration": 5441
+    },
+    {
+      "text": "it is not Azure hosted",
+      "offset": 2122000,
+      "duration": 6880
+    },
+    {
+      "text": ">> yes yes so it's like connect to an open",
+      "offset": 2124800,
+      "duration": 6880
+    },
+    {
+      "text": "AI enterprise account what we call",
+      "offset": 2128880,
+      "duration": 4800
+    },
+    {
+      "text": "internally bring your own key so it's in",
+      "offset": 2131680,
+      "duration": 3520
+    },
+    {
+      "text": "the road map right",
+      "offset": 2133680,
+      "duration": 4560
+    },
+    {
+      "text": "Uh and yes, we have a lot of customer",
+      "offset": 2135200,
+      "duration": 5919
+    },
+    {
+      "text": "that are asking for this feature uh",
+      "offset": 2138240,
+      "duration": 6400
+    },
+    {
+      "text": "being being able to plug uh their own",
+      "offset": 2141119,
+      "duration": 6720
+    },
+    {
+      "text": "key instead of using ours. Uh so this is",
+      "offset": 2144640,
+      "duration": 4719
+    },
+    {
+      "text": "in the road map and this is something",
+      "offset": 2147839,
+      "duration": 3841
+    },
+    {
+      "text": "that will come uh later on in the",
+      "offset": 2149359,
+      "duration": 3201
+    },
+    {
+      "text": "future.",
+      "offset": 2151680,
+      "duration": 2960
+    },
+    {
+      "text": ">> Amazing. Thank you. Um there's a next",
+      "offset": 2152560,
+      "duration": 4320
+    },
+    {
+      "text": "question uh which is also my favorite",
+      "offset": 2154640,
+      "duration": 4240
+    },
+    {
+      "text": "question which is hey are you planning",
+      "offset": 2156880,
+      "duration": 3840
+    },
+    {
+      "text": "on supporting open source LLMs like",
+      "offset": 2158880,
+      "duration": 4400
+    },
+    {
+      "text": "Llama?",
+      "offset": 2160720,
+      "duration": 7000
+    },
+    {
+      "text": "That's a good question. Um",
+      "offset": 2163280,
+      "duration": 4440
+    },
+    {
+      "text": "I think",
+      "offset": 2168640,
+      "duration": 6080
+    },
+    {
+      "text": "we it came easy into into our mind. Uh",
+      "offset": 2171520,
+      "duration": 6559
+    },
+    {
+      "text": "but what we are maybe going for instead",
+      "offset": 2174720,
+      "duration": 7200
+    },
+    {
+      "text": "is not having a support in like having",
+      "offset": 2178079,
+      "duration": 6161
+    },
+    {
+      "text": "our own open source model that we train",
+      "offset": 2181920,
+      "duration": 4800
+    },
+    {
+      "text": "right. I think the goal would be to let",
+      "offset": 2184240,
+      "duration": 5280
+    },
+    {
+      "text": "customer plug their own open source",
+      "offset": 2186720,
+      "duration": 5920
+    },
+    {
+      "text": "model as a first part and then as a",
+      "offset": 2189520,
+      "duration": 5520
+    },
+    {
+      "text": "second part if we see that we can train",
+      "offset": 2192640,
+      "duration": 6320
+    },
+    {
+      "text": "our own model if we can have and like",
+      "offset": 2195040,
+      "duration": 7039
+    },
+    {
+      "text": "host this kind of models then we will be",
+      "offset": 2198960,
+      "duration": 6480
+    },
+    {
+      "text": "able to to support uh our own llama",
+      "offset": 2202079,
+      "duration": 6321
+    },
+    {
+      "text": "model and our own open source model but",
+      "offset": 2205440,
+      "duration": 4880
+    },
+    {
+      "text": "we are seeing more customer asking to",
+      "offset": 2208400,
+      "duration": 4959
+    },
+    {
+      "text": "plug their own opensource model than us",
+      "offset": 2210320,
+      "duration": 5840
+    },
+    {
+      "text": "having our own opensource",
+      "offset": 2213359,
+      "duration": 5601
+    },
+    {
+      "text": "Yeah. So the answer is uh are we looking",
+      "offset": 2216160,
+      "duration": 4880
+    },
+    {
+      "text": "for I mean are we looking to support",
+      "offset": 2218960,
+      "duration": 5280
+    },
+    {
+      "text": "this in the future?",
+      "offset": 2221040,
+      "duration": 4480
+    },
+    {
+      "text": ">> Potentially. Yes.",
+      "offset": 2224240,
+      "duration": 3839
+    },
+    {
+      "text": ">> Okay. Fair enough. Fair enough. Okay. Um",
+      "offset": 2225520,
+      "duration": 5839
+    },
+    {
+      "text": "so you know as as I have uh anticipated",
+      "offset": 2228079,
+      "duration": 5280
+    },
+    {
+      "text": "there are you know kind of road map",
+      "offset": 2231359,
+      "duration": 4000
+    },
+    {
+      "text": "questions from two different gentlemen.",
+      "offset": 2233359,
+      "duration": 4881
+    },
+    {
+      "text": "Um so the question is um you know I'm",
+      "offset": 2235359,
+      "duration": 4081
+    },
+    {
+      "text": "just going to combine these two",
+      "offset": 2238240,
+      "duration": 3119
+    },
+    {
+      "text": "questions. Number one question sorry.",
+      "offset": 2239440,
+      "duration": 4399
+    },
+    {
+      "text": "Anyways, the combined question is when",
+      "offset": 2241359,
+      "duration": 6641
+    },
+    {
+      "text": "is Golang, Swift and Kotlin be added to",
+      "offset": 2243839,
+      "duration": 7760
+    },
+    {
+      "text": "the AI code fix?",
+      "offset": 2248000,
+      "duration": 6320
+    },
+    {
+      "text": "Same answer like uh for C. We are",
+      "offset": 2251599,
+      "duration": 4961
+    },
+    {
+      "text": "evaluating a lot of languages uh to",
+      "offset": 2254320,
+      "duration": 4720
+    },
+    {
+      "text": "support next that we will support next.",
+      "offset": 2256560,
+      "duration": 6720
+    },
+    {
+      "text": "Uh Golang, Cotlin uh are are part of it.",
+      "offset": 2259040,
+      "duration": 6319
+    },
+    {
+      "text": "So we are evaluating the next languages",
+      "offset": 2263280,
+      "duration": 4000
+    },
+    {
+      "text": "and definitely it will come. We will",
+      "offset": 2265359,
+      "duration": 4480
+    },
+    {
+      "text": "open to more languages. we just needed",
+      "offset": 2267280,
+      "duration": 6000
+    },
+    {
+      "text": "to start from somewhere. That's why we",
+      "offset": 2269839,
+      "duration": 6321
+    },
+    {
+      "text": "support the most used one but we we will",
+      "offset": 2273280,
+      "duration": 5120
+    },
+    {
+      "text": "definitely add more in the future. So",
+      "offset": 2276160,
+      "duration": 4080
+    },
+    {
+      "text": "it's in the road map.",
+      "offset": 2278400,
+      "duration": 4160
+    },
+    {
+      "text": ">> Fair enough. Um so there's one more",
+      "offset": 2280240,
+      "duration": 6000
+    },
+    {
+      "text": "question. Um says in what ways does your",
+      "offset": 2282560,
+      "duration": 6240
+    },
+    {
+      "text": "solution differentiate itself from the",
+      "offset": 2286240,
+      "duration": 5040
+    },
+    {
+      "text": "tools such as the AI assistant in",
+      "offset": 2288800,
+      "duration": 4559
+    },
+    {
+      "text": "intelligj or is it a complimentary",
+      "offset": 2291280,
+      "duration": 4000
+    },
+    {
+      "text": "solution?",
+      "offset": 2293359,
+      "duration": 4240
+    },
+    {
+      "text": "I think it's a complement solution",
+      "offset": 2295280,
+      "duration": 6160
+    },
+    {
+      "text": "because we are adding uh sonar value as",
+      "offset": 2297599,
+      "duration": 9201
+    },
+    {
+      "text": "part of the LLM right we are adding uh",
+      "offset": 2301440,
+      "duration": 7919
+    },
+    {
+      "text": "all the quality information uh that we",
+      "offset": 2306800,
+      "duration": 5039
+    },
+    {
+      "text": "have internally we are adding the",
+      "offset": 2309359,
+      "duration": 5041
+    },
+    {
+      "text": "context of the code and with this",
+      "offset": 2311839,
+      "duration": 7280
+    },
+    {
+      "text": "mixture um we are sure that the LLM will",
+      "offset": 2314400,
+      "duration": 8000
+    },
+    {
+      "text": "provide some high quality fixes uh",
+      "offset": 2319119,
+      "duration": 5121
+    },
+    {
+      "text": "whereas like I mentioned copilot that",
+      "offset": 2322400,
+      "duration": 3760
+    },
+    {
+      "text": "for instance okay you have a full",
+      "offset": 2324240,
+      "duration": 4480
+    },
+    {
+      "text": "coverage but the acceptance rate at the",
+      "offset": 2326160,
+      "duration": 6880
+    },
+    {
+      "text": "at the end is is low right",
+      "offset": 2328720,
+      "duration": 7760
+    },
+    {
+      "text": "so I think it's a complimentary to other",
+      "offset": 2333040,
+      "duration": 8240
+    },
+    {
+      "text": "tools like copilot like intellig AI uh",
+      "offset": 2336480,
+      "duration": 7760
+    },
+    {
+      "text": "but yeah I think we are adding some",
+      "offset": 2341280,
+      "duration": 6960
+    },
+    {
+      "text": "value by bringing some more information",
+      "offset": 2344240,
+      "duration": 6320
+    },
+    {
+      "text": ">> absolutely fair enough um there's a",
+      "offset": 2348240,
+      "duration": 5119
+    },
+    {
+      "text": "question from Sebastian Ray um and I'll",
+      "offset": 2350560,
+      "duration": 5200
+    },
+    {
+      "text": "answer his question the first part and",
+      "offset": 2353359,
+      "duration": 4641
+    },
+    {
+      "text": "then I'll hand it over to you Alex. Um",
+      "offset": 2355760,
+      "duration": 4079
+    },
+    {
+      "text": "so his question is how can I maintain",
+      "offset": 2358000,
+      "duration": 4880
+    },
+    {
+      "text": "the long-term continuity if LM produce",
+      "offset": 2359839,
+      "duration": 6081
+    },
+    {
+      "text": "codes that is difficult to maintain. Um",
+      "offset": 2362880,
+      "duration": 5360
+    },
+    {
+      "text": "this is my main concern with these tools",
+      "offset": 2365920,
+      "duration": 3919
+    },
+    {
+      "text": "I'm worried that I won't be able to",
+      "offset": 2368240,
+      "duration": 4800
+    },
+    {
+      "text": "maintain that code over the time. Um so",
+      "offset": 2369839,
+      "duration": 5041
+    },
+    {
+      "text": "Sebastian to answer your question first",
+      "offset": 2373040,
+      "duration": 5520
+    },
+    {
+      "text": "part yes um you are um you know you're",
+      "offset": 2374880,
+      "duration": 5680
+    },
+    {
+      "text": "absolutely right to be worried um about",
+      "offset": 2378560,
+      "duration": 3920
+    },
+    {
+      "text": "maintaining of those code over the time",
+      "offset": 2380560,
+      "duration": 3840
+    },
+    {
+      "text": "because you really don't know the code",
+      "offset": 2382480,
+      "duration": 3920
+    },
+    {
+      "text": "what is being written by those uh",
+      "offset": 2384400,
+      "duration": 4640
+    },
+    {
+      "text": "engines um so for that Sonar has done a",
+      "offset": 2386400,
+      "duration": 5280
+    },
+    {
+      "text": "research and uh we have released a",
+      "offset": 2389040,
+      "duration": 6000
+    },
+    {
+      "text": "research paper last week um yes and uh",
+      "offset": 2391680,
+      "duration": 6000
+    },
+    {
+      "text": "you know that is over um you know that's",
+      "offset": 2395040,
+      "duration": 5280
+    },
+    {
+      "text": "about how the different code uh",
+      "offset": 2397680,
+      "duration": 4560
+    },
+    {
+      "text": "different LLM have their home coding",
+      "offset": 2400320,
+      "duration": 4480
+    },
+    {
+      "text": "personality and it will tell you that",
+      "offset": 2402240,
+      "duration": 4560
+    },
+    {
+      "text": "all these different models you talk",
+      "offset": 2404800,
+      "duration": 4559
+    },
+    {
+      "text": "about uh you know anthropic models or",
+      "offset": 2406800,
+      "duration": 5520
+    },
+    {
+      "text": "openAI models um even open source models",
+      "offset": 2409359,
+      "duration": 4480
+    },
+    {
+      "text": "like llama have their own different",
+      "offset": 2412320,
+      "duration": 3120
+    },
+    {
+      "text": "personalities some are different to",
+      "offset": 2413839,
+      "duration": 3760
+    },
+    {
+      "text": "maintain some are easy to maintain so",
+      "offset": 2415440,
+      "duration": 4560
+    },
+    {
+      "text": "you'll see that the entire research",
+      "offset": 2417599,
+      "duration": 5601
+    },
+    {
+      "text": "report um so it should tell you uh what",
+      "offset": 2420000,
+      "duration": 4880
+    },
+    {
+      "text": "exactly is going on in the in the back",
+      "offset": 2423200,
+      "duration": 5360
+    },
+    {
+      "text": "end of those models um so inherently",
+      "offset": 2424880,
+      "duration": 6160
+    },
+    {
+      "text": "what I would like to answer you is that",
+      "offset": 2428560,
+      "duration": 4799
+    },
+    {
+      "text": "you Obviously you need a thrust but",
+      "offset": 2431040,
+      "duration": 5039
+    },
+    {
+      "text": "verify method and that's a core part of",
+      "offset": 2433359,
+      "duration": 5361
+    },
+    {
+      "text": "sonar which is having a static analysis",
+      "offset": 2436079,
+      "duration": 5201
+    },
+    {
+      "text": "always looking at those code which is",
+      "offset": 2438720,
+      "duration": 5680
+    },
+    {
+      "text": "being generated by those LMS um and then",
+      "offset": 2441280,
+      "duration": 4559
+    },
+    {
+      "text": "you know it will tell you that what are",
+      "offset": 2444400,
+      "duration": 3199
+    },
+    {
+      "text": "the problems that you're going to get",
+      "offset": 2445839,
+      "duration": 4000
+    },
+    {
+      "text": "whether it is maintainable or not what's",
+      "offset": 2447599,
+      "duration": 3441
+    },
+    {
+      "text": "the code smell and what's the",
+      "offset": 2449839,
+      "duration": 3121
+    },
+    {
+      "text": "maintainability score and all of that",
+      "offset": 2451040,
+      "duration": 3680
+    },
+    {
+      "text": "and then you can refactor that code",
+      "offset": 2452960,
+      "duration": 5760
+    },
+    {
+      "text": "using uh the LLMs which will uh make",
+      "offset": 2454720,
+      "duration": 5680
+    },
+    {
+      "text": "sure that you know you are a good you",
+      "offset": 2458720,
+      "duration": 4160
+    },
+    {
+      "text": "are in good hands But again uh I would",
+      "offset": 2460400,
+      "duration": 4320
+    },
+    {
+      "text": "suggest that read through that research",
+      "offset": 2462880,
+      "duration": 5120
+    },
+    {
+      "text": "paper. It's a it's a it's a good PDF. Um",
+      "offset": 2464720,
+      "duration": 7920
+    },
+    {
+      "text": "and uh and understand exactly what uh is",
+      "offset": 2468000,
+      "duration": 7359
+    },
+    {
+      "text": "happening across those models. Uh when",
+      "offset": 2472640,
+      "duration": 5439
+    },
+    {
+      "text": "you talk about maintainability um so",
+      "offset": 2475359,
+      "duration": 5281
+    },
+    {
+      "text": "some are really really producing verbose",
+      "offset": 2478079,
+      "duration": 4881
+    },
+    {
+      "text": "output, some are really straightforward",
+      "offset": 2480640,
+      "duration": 5040
+    },
+    {
+      "text": "without looking at any age cases. Uh but",
+      "offset": 2482960,
+      "duration": 5840
+    },
+    {
+      "text": "again it's it's it's your choice to um",
+      "offset": 2485680,
+      "duration": 5760
+    },
+    {
+      "text": "to ch go for a particular model and then",
+      "offset": 2488800,
+      "duration": 3840
+    },
+    {
+      "text": "make sure that you always have that",
+      "offset": 2491440,
+      "duration": 3679
+    },
+    {
+      "text": "trust but verify method um using the",
+      "offset": 2492640,
+      "duration": 5040
+    },
+    {
+      "text": "sonar cube enterprise.",
+      "offset": 2495119,
+      "duration": 5281
+    },
+    {
+      "text": "Um okay so there are couple of more",
+      "offset": 2497680,
+      "duration": 5439
+    },
+    {
+      "text": "questions um",
+      "offset": 2500400,
+      "duration": 4719
+    },
+    {
+      "text": "having twice the same problem with the",
+      "offset": 2503119,
+      "duration": 4881
+    },
+    {
+      "text": "AI produce the same result which is",
+      "offset": 2505119,
+      "duration": 7321
+    },
+    {
+      "text": "reproducibility. Um",
+      "offset": 2508000,
+      "duration": 4440
+    },
+    {
+      "text": "not exactly very sure about how should I",
+      "offset": 2514079,
+      "duration": 6000
+    },
+    {
+      "text": ">> I think I I think I think this question",
+      "offset": 2517920,
+      "duration": 3919
+    },
+    {
+      "text": "is about",
+      "offset": 2520079,
+      "duration": 6000
+    },
+    {
+      "text": "um if you generate multiple fix will I",
+      "offset": 2521839,
+      "duration": 6801
+    },
+    {
+      "text": "have the same results.",
+      "offset": 2526079,
+      "duration": 6801
+    },
+    {
+      "text": "I cannot be sure because uh LLM",
+      "offset": 2528640,
+      "duration": 7840
+    },
+    {
+      "text": "hallucinate right so you can have",
+      "offset": 2532880,
+      "duration": 5600
+    },
+    {
+      "text": "different answers but usually with the",
+      "offset": 2536480,
+      "duration": 4639
+    },
+    {
+      "text": "pump that we built normally the answer",
+      "offset": 2538480,
+      "duration": 7440
+    },
+    {
+      "text": "should be similar uh so yeah ro",
+      "offset": 2541119,
+      "duration": 6321
+    },
+    {
+      "text": "producibility",
+      "offset": 2545920,
+      "duration": 6720
+    },
+    {
+      "text": "rate should be high uh in our case",
+      "offset": 2547440,
+      "duration": 6639
+    },
+    {
+      "text": "I don't know if it answers the question",
+      "offset": 2552640,
+      "duration": 5360
+    },
+    {
+      "text": "the question I hope so",
+      "offset": 2554079,
+      "duration": 6000
+    },
+    {
+      "text": ">> all All right. So one more question we",
+      "offset": 2558000,
+      "duration": 4960
+    },
+    {
+      "text": "say um said that we already use copilot",
+      "offset": 2560079,
+      "duration": 6000
+    },
+    {
+      "text": "in our ids. So does enabling AI code fix",
+      "offset": 2562960,
+      "duration": 5840
+    },
+    {
+      "text": "make sense in that context?",
+      "offset": 2566079,
+      "duration": 4240
+    },
+    {
+      "text": ">> I think you have already answered that",
+      "offset": 2568800,
+      "duration": 2000
+    },
+    {
+      "text": "question.",
+      "offset": 2570319,
+      "duration": 3520
+    },
+    {
+      "text": ">> Yeah. Yeah. To to also clarify it's the",
+      "offset": 2570800,
+      "duration": 6000
+    },
+    {
+      "text": "same question as intelligj. I think",
+      "offset": 2573839,
+      "duration": 5041
+    },
+    {
+      "text": ">> we are here as a compliment. We don't",
+      "offset": 2576800,
+      "duration": 6319
+    },
+    {
+      "text": "want to replace copilot. Um and I think",
+      "offset": 2578880,
+      "duration": 7280
+    },
+    {
+      "text": "here we are really focusing on helping",
+      "offset": 2583119,
+      "duration": 6881
+    },
+    {
+      "text": "developer remediate issues that uh has",
+      "offset": 2586160,
+      "duration": 7840
+    },
+    {
+      "text": "been solve uh raised sorry by Sona right",
+      "offset": 2590000,
+      "duration": 6319
+    },
+    {
+      "text": "uh so",
+      "offset": 2594000,
+      "duration": 5200
+    },
+    {
+      "text": "yeah it's more a complimentary solution",
+      "offset": 2596319,
+      "duration": 6201
+    },
+    {
+      "text": "I would say",
+      "offset": 2599200,
+      "duration": 3320
+    },
+    {
+      "text": ">> oh um if the same issue appears in",
+      "offset": 2602640,
+      "duration": 6959
+    },
+    {
+      "text": "multiple places in our source code and",
+      "offset": 2606480,
+      "duration": 6720
+    },
+    {
+      "text": "we resolve it in one location. Does AI",
+      "offset": 2609599,
+      "duration": 5681
+    },
+    {
+      "text": "in Sona Cube have the capability to",
+      "offset": 2613200,
+      "duration": 5360
+    },
+    {
+      "text": "apply bulk updates to the fix that issue",
+      "offset": 2615280,
+      "duration": 5360
+    },
+    {
+      "text": "everywhere in the codebase?",
+      "offset": 2618560,
+      "duration": 4080
+    },
+    {
+      "text": ">> That's a very good question and we had",
+      "offset": 2620640,
+      "duration": 5840
+    },
+    {
+      "text": "like several uh requests from customer",
+      "offset": 2622640,
+      "duration": 7920
+    },
+    {
+      "text": "asking the same. Unfortunately, it's uh",
+      "offset": 2626480,
+      "duration": 6879
+    },
+    {
+      "text": "only possible to generate a fix issue by",
+      "offset": 2630560,
+      "duration": 5519
+    },
+    {
+      "text": "issue. meaning that you need to go on",
+      "offset": 2633359,
+      "duration": 5760
+    },
+    {
+      "text": "the issue, generate the fix and then uh",
+      "offset": 2636079,
+      "duration": 6000
+    },
+    {
+      "text": "open it in the ID to commit right. We",
+      "offset": 2639119,
+      "duration": 6720
+    },
+    {
+      "text": "don't do bulk fix for now uh but it",
+      "offset": 2642079,
+      "duration": 7201
+    },
+    {
+      "text": "might come in the future uh because that",
+      "offset": 2645839,
+      "duration": 6881
+    },
+    {
+      "text": "has been requested a lot but we we",
+      "offset": 2649280,
+      "duration": 5920
+    },
+    {
+      "text": "wanted to really focus on issue by issue",
+      "offset": 2652720,
+      "duration": 5520
+    },
+    {
+      "text": "first and then having the bs coming",
+      "offset": 2655200,
+      "duration": 5520
+    },
+    {
+      "text": "after.",
+      "offset": 2658240,
+      "duration": 4240
+    },
+    {
+      "text": "But yeah, very good question, very good",
+      "offset": 2660720,
+      "duration": 4480
+    },
+    {
+      "text": "point.",
+      "offset": 2662480,
+      "duration": 2720
+    },
+    {
+      "text": "Okay. Um,",
+      "offset": 2666240,
+      "duration": 4879
+    },
+    {
+      "text": "there was a question. Let me answer",
+      "offset": 2669280,
+      "duration": 8440
+    },
+    {
+      "text": "that. Um, so send. Okay. Um,",
+      "offset": 2671119,
+      "duration": 6601
+    },
+    {
+      "text": "I think we have answered this.",
+      "offset": 2678079,
+      "duration": 4201
+    },
+    {
+      "text": "Um",
+      "offset": 2688640,
+      "duration": 3000
+    },
+    {
+      "text": "the same problem",
+      "offset": 2691920,
+      "duration": 5080
+    },
+    {
+      "text": "that",
+      "offset": 2694000,
+      "duration": 3000
+    },
+    {
+      "text": "oh um okay so there's a question which",
+      "offset": 2701599,
+      "duration": 5601
+    },
+    {
+      "text": "is",
+      "offset": 2705520,
+      "duration": 3839
+    },
+    {
+      "text": "what training assets are available to",
+      "offset": 2707200,
+      "duration": 5119
+    },
+    {
+      "text": "the developer and what is the average",
+      "offset": 2709359,
+      "duration": 5201
+    },
+    {
+      "text": "time for a dev to feel that they're able",
+      "offset": 2712319,
+      "duration": 5361
+    },
+    {
+      "text": "to use these tools easily?",
+      "offset": 2714560,
+      "duration": 7559
+    },
+    {
+      "text": "Well, that's an interesting one.",
+      "offset": 2717680,
+      "duration": 4439
+    },
+    {
+      "text": ">> Um,",
+      "offset": 2722960,
+      "duration": 4560
+    },
+    {
+      "text": "sorry, can you repeat the question maybe",
+      "offset": 2725599,
+      "duration": 3281
+    },
+    {
+      "text": "or present it? I",
+      "offset": 2727520,
+      "duration": 3040
+    },
+    {
+      "text": ">> Yeah, so the so the question is what",
+      "offset": 2728880,
+      "duration": 3439
+    },
+    {
+      "text": "training assets are available to the",
+      "offset": 2730560,
+      "duration": 4480
+    },
+    {
+      "text": "developer and what is the average time",
+      "offset": 2732319,
+      "duration": 6401
+    },
+    {
+      "text": "for a dev to feel that they are able to",
+      "offset": 2735040,
+      "duration": 6559
+    },
+    {
+      "text": "use the tools easily which is kind of",
+      "offset": 2738720,
+      "duration": 4879
+    },
+    {
+      "text": "adoption of the tool",
+      "offset": 2741599,
+      "duration": 3601
+    },
+    {
+      "text": ">> the AI confix tool.",
+      "offset": 2743599,
+      "duration": 3441
+    },
+    {
+      "text": ">> Yeah. Yeah. Yeah, I mean I think it's",
+      "offset": 2745200,
+      "duration": 4399
+    },
+    {
+      "text": "pretty simple to use, right? We have the",
+      "offset": 2747040,
+      "duration": 5760
+    },
+    {
+      "text": "our documentation uh already that",
+      "offset": 2749599,
+      "duration": 4801
+    },
+    {
+      "text": "explains how it works, how you can",
+      "offset": 2752800,
+      "duration": 5360
+    },
+    {
+      "text": "enable it. Uh and after that we also",
+      "offset": 2754400,
+      "duration": 6560
+    },
+    {
+      "text": "have the list of rules that we support",
+      "offset": 2758160,
+      "duration": 6080
+    },
+    {
+      "text": "with a code fix and after that it's",
+      "offset": 2760960,
+      "duration": 5200
+    },
+    {
+      "text": "pretty simple to use right you just go",
+      "offset": 2764240,
+      "duration": 4000
+    },
+    {
+      "text": "on the issue and you just generate the",
+      "offset": 2766160,
+      "duration": 4080
+    },
+    {
+      "text": "fix from there uh and you will get the",
+      "offset": 2768240,
+      "duration": 4480
+    },
+    {
+      "text": "the answer right away. So if you if you",
+      "offset": 2770240,
+      "duration": 4879
+    },
+    {
+      "text": "need guidance uh please go on the",
+      "offset": 2772720,
+      "duration": 3920
+    },
+    {
+      "text": "documentation",
+      "offset": 2775119,
+      "duration": 4161
+    },
+    {
+      "text": "uh that we have everything is explained",
+      "offset": 2776640,
+      "duration": 8000
+    },
+    {
+      "text": "there and then you should be good to go.",
+      "offset": 2779280,
+      "duration": 8240
+    },
+    {
+      "text": ">> Cool. Um one good question again um on",
+      "offset": 2784640,
+      "duration": 4880
+    },
+    {
+      "text": "the type of kind of a rule set that we",
+      "offset": 2787520,
+      "duration": 4720
+    },
+    {
+      "text": "have which is hey does AI have the",
+      "offset": 2789520,
+      "duration": 4960
+    },
+    {
+      "text": "ability to identify the legitimate",
+      "offset": 2792240,
+      "duration": 4560
+    },
+    {
+      "text": "duplicate lines of code and offer",
+      "offset": 2794480,
+      "duration": 4960
+    },
+    {
+      "text": "suggestions or fixes to help reduce the",
+      "offset": 2796800,
+      "duration": 5880
+    },
+    {
+      "text": "code duplication.",
+      "offset": 2799440,
+      "duration": 3240
+    },
+    {
+      "text": "Um",
+      "offset": 2803760,
+      "duration": 3000
+    },
+    {
+      "text": ">> so to think about it is like uh do we",
+      "offset": 2811040,
+      "duration": 4880
+    },
+    {
+      "text": "have a rule",
+      "offset": 2813920,
+      "duration": 4560
+    },
+    {
+      "text": "um in the AI code fix support which",
+      "offset": 2815920,
+      "duration": 6720
+    },
+    {
+      "text": "looks at the duplication of the code and",
+      "offset": 2818480,
+      "duration": 5040
+    },
+    {
+      "text": "then maybe some",
+      "offset": 2822640,
+      "duration": 5439
+    },
+    {
+      "text": ">> no no no we don't we don't for now uh",
+      "offset": 2823520,
+      "duration": 8240
+    },
+    {
+      "text": "no so basically we we only see the",
+      "offset": 2828079,
+      "duration": 5520
+    },
+    {
+      "text": "current file because that's what we sent",
+      "offset": 2831760,
+      "duration": 4240
+    },
+    {
+      "text": "to cutfix uh the current file. So we",
+      "offset": 2833599,
+      "duration": 5361
+    },
+    {
+      "text": "don't have the overall project context.",
+      "offset": 2836000,
+      "duration": 5599
+    },
+    {
+      "text": "So having the duplication",
+      "offset": 2838960,
+      "duration": 6320
+    },
+    {
+      "text": "uh policy or it's it's not possible for",
+      "offset": 2841599,
+      "duration": 8161
+    },
+    {
+      "text": "now. We we will be able to uh do this if",
+      "offset": 2845280,
+      "duration": 8839
+    },
+    {
+      "text": "we send more context to the LLM",
+      "offset": 2849760,
+      "duration": 4359
+    },
+    {
+      "text": "and also reducing code duplication",
+      "offset": 2854560,
+      "duration": 6559
+    },
+    {
+      "text": "uh with AI that is something that we are",
+      "offset": 2858079,
+      "duration": 7520
+    },
+    {
+      "text": "looking at uh and it will also come in",
+      "offset": 2861119,
+      "duration": 6641
+    },
+    {
+      "text": "the future. Basically we want to help",
+      "offset": 2865599,
+      "duration": 4641
+    },
+    {
+      "text": "also developer remediate on",
+      "offset": 2867760,
+      "duration": 5040
+    },
+    {
+      "text": "duplications.",
+      "offset": 2870240,
+      "duration": 6160
+    },
+    {
+      "text": ">> Cool. Yeah, I guess so. Um cool. Okay.",
+      "offset": 2872800,
+      "duration": 6480
+    },
+    {
+      "text": "Um so there's a comment from Peter. It",
+      "offset": 2876400,
+      "duration": 6000
+    },
+    {
+      "text": "says that uh and I agree on that point",
+      "offset": 2879280,
+      "duration": 5440
+    },
+    {
+      "text": "which is hey in my experience bulk fixes",
+      "offset": 2882400,
+      "duration": 4560
+    },
+    {
+      "text": "which is let's say there's a rule called",
+      "offset": 2884720,
+      "duration": 6480
+    },
+    {
+      "text": "uh you know replace end by sint32",
+      "offset": 2886960,
+      "duration": 7600
+    },
+    {
+      "text": "um in big projects is non advisable as",
+      "offset": 2891200,
+      "duration": 6240
+    },
+    {
+      "text": "in some cases it should it introduces",
+      "offset": 2894560,
+      "duration": 5680
+    },
+    {
+      "text": "other problems uh because every fix",
+      "offset": 2897440,
+      "duration": 6399
+    },
+    {
+      "text": "needs check and approval.",
+      "offset": 2900240,
+      "duration": 6160
+    },
+    {
+      "text": "Yes.",
+      "offset": 2903839,
+      "duration": 4480
+    },
+    {
+      "text": "So, uh",
+      "offset": 2906400,
+      "duration": 3520
+    },
+    {
+      "text": ">> it's a comment basically. It's not a",
+      "offset": 2908319,
+      "duration": 2240
+    },
+    {
+      "text": "question. It's",
+      "offset": 2909920,
+      "duration": 2320
+    },
+    {
+      "text": ">> okay. Okay. Okay. Okay.",
+      "offset": 2910559,
+      "duration": 2721
+    },
+    {
+      "text": ">> Yeah. It's a comment.",
+      "offset": 2912240,
+      "duration": 2160
+    },
+    {
+      "text": ">> Good.",
+      "offset": 2913280,
+      "duration": 3680
+    },
+    {
+      "text": ">> Very very good. Very good comment. Uh I",
+      "offset": 2914400,
+      "duration": 3679
+    },
+    {
+      "text": "think",
+      "offset": 2916960,
+      "duration": 3920
+    },
+    {
+      "text": ">> everything that has been that is been",
+      "offset": 2918079,
+      "duration": 5601
+    },
+    {
+      "text": "generated by AI should have a check and",
+      "offset": 2920880,
+      "duration": 7280
+    },
+    {
+      "text": "approval. uh because yeah like like I",
+      "offset": 2923680,
+      "duration": 8560
+    },
+    {
+      "text": "said LLMs can hallucinate a lot and we",
+      "offset": 2928160,
+      "duration": 6880
+    },
+    {
+      "text": "need to have a human after uh that",
+      "offset": 2932240,
+      "duration": 5280
+    },
+    {
+      "text": "reviews those kind of outputs.",
+      "offset": 2935040,
+      "duration": 5120
+    },
+    {
+      "text": ">> Yeah. Trust but verify.",
+      "offset": 2937520,
+      "duration": 6720
+    },
+    {
+      "text": ">> Exactly. Trust but verify. Okay. I think",
+      "offset": 2940160,
+      "duration": 7520
+    },
+    {
+      "text": "we are out of time.",
+      "offset": 2944240,
+      "duration": 6240
+    },
+    {
+      "text": "So I think we should wrap this up. Thank",
+      "offset": 2947680,
+      "duration": 5760
+    },
+    {
+      "text": "you everyone uh for your time. uh it was",
+      "offset": 2950480,
+      "duration": 5520
+    },
+    {
+      "text": "a very nice webinar and I'm I was really",
+      "offset": 2953440,
+      "duration": 6159
+    },
+    {
+      "text": "happy to present uh that new features",
+      "offset": 2956000,
+      "duration": 5839
+    },
+    {
+      "text": "that we launched uh and general",
+      "offset": 2959599,
+      "duration": 4801
+    },
+    {
+      "text": "generally available. So feel free to",
+      "offset": 2961839,
+      "duration": 4480
+    },
+    {
+      "text": "install it in your instance or in your",
+      "offset": 2964400,
+      "duration": 4959
+    },
+    {
+      "text": "Sonar cloud organization",
+      "offset": 2966319,
+      "duration": 5841
+    },
+    {
+      "text": "and if you have any feedback feel free",
+      "offset": 2969359,
+      "duration": 5521
+    },
+    {
+      "text": "to reach out to us we more than happy to",
+      "offset": 2972160,
+      "duration": 6520
+    },
+    {
+      "text": "answer your question.",
+      "offset": 2974880,
+      "duration": 3800
+    },
+    {
+      "text": ">> Thank you Alex. No this is this is",
+      "offset": 2979599,
+      "duration": 3921
+    },
+    {
+      "text": "absolutely amazing presentation lot of",
+      "offset": 2981040,
+      "duration": 5120
+    },
+    {
+      "text": "good questions um and you know we try to",
+      "offset": 2983520,
+      "duration": 5280
+    },
+    {
+      "text": "answer all of them um we'll see if he",
+      "offset": 2986160,
+      "duration": 4080
+    },
+    {
+      "text": "can you know answer the other questions",
+      "offset": 2988800,
+      "duration": 3120
+    },
+    {
+      "text": "as well but please feel free to give",
+      "offset": 2990240,
+      "duration": 6000
+    },
+    {
+      "text": "feedback. um on the you know um on on",
+      "offset": 2991920,
+      "duration": 6159
+    },
+    {
+      "text": "the tool itself if you're using that you",
+      "offset": 2996240,
+      "duration": 4240
+    },
+    {
+      "text": "know then we'll know that what are the",
+      "offset": 2998079,
+      "duration": 3841
+    },
+    {
+      "text": "you know issues that you are facing or",
+      "offset": 3000480,
+      "duration": 2800
+    },
+    {
+      "text": "maybe what are the different type of",
+      "offset": 3001920,
+      "duration": 4240
+    },
+    {
+      "text": "requests that you have um and yeah happy",
+      "offset": 3003280,
+      "duration": 5839
+    },
+    {
+      "text": "coding days uh trust refi",
+      "offset": 3006160,
+      "duration": 6159
+    },
+    {
+      "text": ">> yes thank you everyone all right",
+      "offset": 3009119,
+      "duration": 6641
+    },
+    {
+      "text": ">> bye bye bye",
+      "offset": 3012319,
+      "duration": 3441
+    }
+  ],
+  "fullText": "Um thank you for joining our webinar uh from detection to resolution introducing AI codefix. Um if you have joined any of our previous webinar hello again and welcome back. We um know that you know the the software bugs lead to production failures that you know the customer trust but what are these bugs and you know how prevalent are they in the code being written today especially you know given the volume of the code being produced by AI. U my name is Prasinjit Sarkar and I'll be your moderator today. Um I'm excited to have Alexander Ra our product manager um who will be presenting it today. Uh before we go uh and before we begin let's uh you know go over some quick uh housekeeping points. So we'll have uh 45 minutes session including Q&A. Um please use the Zoom Q&A box to ask questions. um you know look for an email in a few days with a recording so we'll do a follow-up as well um and we will have a posteinar survey you know what did you like what should be improved uh and what topics should we cover in the future uh sessions and all things like that um so yeah feel free to submit your questions at any time and not wait until the end of it um the session will be recorded and as I said that will be sent via the email um so Let's move over to Alex. Now, Alex is our product manager for the code remediation solutions at Sonar. He started his career over 10 years ago um as a software engineer has evolved um you know since then he has worked in various IT software space with the product roles at Sonar. He's focused on helping the developers um you know remediate the Sonar findings um with the static analysis leveraging the AI technology to boost uh their productivity. So without further waiting, let me hand it over to Alexander. Al uh Alexander and and by the way, we also have uh in the in the in the back end we have um Robert uh who will be um you know doing the moderation and then answering your questions as well and I'll be here as as moderator. Over to you Alex. >> Thank you very much Prasanjit. Uh hello everyone. I'm very happy and very excited to be here uh with you today to to present a feature that we we have worked on uh during almost a year now uh and I'm happy to announce that uh we reached the general availability for AI cookics uh and I will present you uh the feature uh during this webinar. So basically what we will cover during this presentation uh as a first section we will try to uh elaborate the state of AI in the SDLC today. Uh it's evolving at a very fast pace. Uh we will try to to to put this uh in a in a in a slide to to understand how it works. And in the second section we will go over the solution uh that we built uh why we built it. So the problem we are solving uh what it contains what is the solution itself and also how it works. Uh and on the third section uh I will do a live demo of the feature to explain how it works and how it is integrated within the the SDLC and the the developer portal. But before jumping into the first section, I have a a question for you. Uh because I'm very curious and I will be very curious to know the answer. Uh how will you rate the adoption of AIdriven tools within your organization? uh it can it's an approximation if you would like to to to answer but the goal is really to see how AI uh is being integrated uh in your organization. Maybe I will give you 10 minute 10 seconds uh sorry to answer um and then we can we can see the results. Okay. Oh, perfect. I have the results. Uh, and I can see that actually it's not really widely uh used. We have 44% uh that answered less than 25%. uh which is which is uh interesting. Uh it is slowly being integrated uh within uh companies but uh yeah it depends on the side of the company. Okay without further ado let's go to the AI in the SDLC. So if we map the AI adoption today, uh I really like to present this image because that's where we will see uh AI uh integrated into the SDLC. From the bottom to the top, we can see the different steps of the SDLC from the setup to implementation to deployment. implementation is really interesting because that's where we see uh the code written uh the code reviewed. Um and actually if you if we start from the left to the right we see different also uh tools categorization from the equants to the dev tool.2.0 uh and the dev tool 2.0 zero. That's where we see all the AI uh tools uh that comes into play. And basically we can see in this implementation step that humans uh are being assisted more and more by AI capabilities and AI tools here. So we can see for instance copilots autopilots chpt uh to help uh debugging uh and we are also seeing some tools appearing in the setup space uh and specifically in ids with cursor we have surf as well uh so basically AI is not here to replace human it's here to assist human being more productive Uh but what are the next steps? We don't know. We have ideas. So maybe we can think of new tools appearing in the deployment sphere. Uh and also AI teammates. So basically having AI agents that will assist developer doing specific task and interact with specific tools. So if we zoom in a little bit uh on the top three dev areas that are currently accelerated by AI uh we can find three uh areas. The first one is the shift left approach. So basically if we want to improve the developer productivity it needs to start uh as they're writing code and where are they writing code is in the ID itself. So we have copilot that appeared as a uh part of VS code uh and we also have the new ID that embeds uh AI like cursor and winds uh and basically it helps developer being more productive and generate a lot of code. Then we have the code review part. The code review part is really interesting because we see that developer lose a lot of time by doing peer reviews uh on PR specifically and we are seeing more and more tools uh doing code reviews instead of humans uh we can think of copilot reviews for instance uh that will help developer um having a better code in PR and finally we can see the tech backlog problem uh that has been accelerated by AI and uh it's really about having specific agent that will tackle specific task uh letting developer be uh more focus on building more impactful features. Uh so we can think also about the last agent uh the latest agent that has been released by copilot uh where you can assign uh a specific GitHub issue to copilot agent and he will try to solve this issue by himself under the hood. And now I want to really spend some times on where uh Sona here in this specific areas and how do we supercharge developer. Um so first of all we are integrated in the ID directly with our plugins. Uh and we have specific plug-in that works with cursor ID. uh and basically here we are raising issues to the developer and we are also trying to uh help them remediate those issues before it reach the SEM platform and before the developer is committing the code directly then we have some integration with SEM platform CI/CD platform uh where we'll have analysis that will be um that will come uh here and basically we have integration with GitHub, bit the cat, GitLab, Azure DevOps or Jenkins and we will be able to highlight um analysis uh outputs within directly those SEM platforms. We can see also Sonar Cube server and Sonar cube cloud platforms where we have AI code and AI code assurance uh features on marked in it. uh and those are the key instances that will interact with the SCM platform. And of course, the real goal afterwards is to let the developer uh be comfortable of releasing software that are secure, maintainable, and reliable. So now that we see the current state of AI in the SDLC, uh let's dive into the AI codefix feature. Um but before that I have a couple of question. I'm very curious again about the answer you will provide and the first question is what are the top three task you use AI the most for? So you have several um possibility, you have multiple choice but please just select the top three task. I'm very interesting about the results. Um I will give you 20 to 30 seconds to provide answers. It's really as a developer what would be the first or the top three um task you want to to do or you are doing with AI. Okay, I think we can go to the results. Ah, okay. It's very interesting results. Uh, we can see that generating test code and generating source code are the most um answered also writing documentation. So it's really about generating it's it validates a bit what we've been through during the AI adoption slide uh where we see all the tools uh on the implementation uh step. So yeah it validates and the second question is really the contrary uh I want to know what are the top three task that you rarely or you don't want to use AI. And normally the answer should be the opposite, but we'll see if this is the case. I give you also 202 30 second Okay, I think we can have a look at the answer. Okay, the answers are pretty interesting. Specify, plan, and estimate the work is the most answered with 53% uh of answer. Okay. Yeah, I think specifying uh planning and estimate the work is something where humans interact between themsel and relates on AI to do that can be difficult. Okay, cool. Thank you very much for your answer. It's really amazing to see. Uh so now let's deep dive into AIP and have an overview of the the functionality. Uh so basically we are seeing now uh more and more demand uh for delivery of code uh than ever. So people are asking to deliver faster and faster uh but to keep the code uh super maintainable uh with a high quality standard and developers are the one that face this constant pressure to write code uh but also to deploy uh the code efficiently while maintaining maintaining maintaining sorry high quality standard. Engineering leaders on the other side that they're trying to seek tools that will enhance this productivity of the of their developers. They want to reduce time to market and they want to maintain keep maintaining also high code quality standard. That's why we decided to uh introduce Sonar AI could fix to actually help developer remediate issues that are raised by sonar faster. Um we want to let them focus on something or other task that are more impactful instead of spending time at resolving and remediating issues. So the solution that we designed is trying to firstly reduce the developer workflow. Like I mentioned, we want to let the developer focus on impactful task, not spending time on um resolving and remediating issues. We have a contextual understanding. So basically we interact with the LLM. send informations to the LLM um that will provide after that an answer uh that is relevant to the developer also the choice of the provider. So we let the developer choose between different providers. So we support OpenAI, we support Entropic uh and we support Azure OpenAI. uh and the goal is really to let him choose which one he wants. Then we have a seamless integration in the workflow. So the I will demo it afterwards and I will explain it afterwards. But uh we are seamlessly integrating into the developer workflow by offering the possibility to generate a fix from the ID directly with the sonar cube ID plug-in and also from sonar cube uh UI. Uh and the goal is really to be as close as possible uh as the the developer. And then we have this continuous learning part where we always improve the feature uh by evaluating new models by evite evaluating new prompts. Uh and basically the goal is really to keep supporting more and more rules. So how does it work? Uh I will demo it afterwards live but here is just a first three steps uh of the features. The first step is really to generate the fix. So on the sonar cube UI you will have on um issues where the rules is supported by AI code fix a new tab appearing uh AI could fix that basically and on where is the issue tab you will have the possibility to generate a fix by clicking on a button. Uh then when you click on the button we will send the information to the LLM. the LLM will send the the the output uh with the diff and that's where you will be able to uh see the diff within the UI. Uh basically two options here. You can either copy pass uh by yourself the diff in your ID um or you can view the fix in the ID. And this view the fix in the ID is the integration between uh sonar cube server or cloud and sonar cube ID. Uh and basically what it does is you just open the diff directly in your ID and that's where you can apply or discard fix from from there. You also have a quick explanation of what the uh the fix is doing uh and how it solved the issues. And the final step uh like I mentioned previously, you open in the ID and that's where you see the diff and that's where you can apply uh the div. But it will be clear when I will demo it afterwards. Now if we go to the language and the rules we support so far. So we support six languages in total. So Java, JavaScript, TypeScript, C, C++ and Python. These are the most used languages. Uh and these languages we call them flagship. We support in total 570 rules. um and we covered uh approximately 45% uh of issues. Here we are not talking about rules coverage but issue coverage. What I mean by issue coverage is like we build some statistics of all the issues that has been raised on Sonaku cloud for the past two years uh and we see the one that has the most impact because we can we can do it by rules coverage but if a rules only raise two issues uh every month it's not really impactful. Here we prefer to focus on the issue coverage. And if we decouple by language, we can see that we are almost at 50% for each language. And which means that for approximately one out of two issues, we have AI code fix available. So now if we have if we see the overview of the solution in general availability here is how it works. So basically you can see on the top side the three different product that we have sonar cube server, sonar cube cloud and sonarq ID. And here you can see the different features of the product. So the fix generation which is the core uh uh the core product is everywhere. So basically on sonar cube server you can generate a fix on sonar cube cloud you can generate a fix and also on sonar cube IDE you can generate a fix. You need to be in connected mode and you you need to have a specific version of sonar cube server. So it starts at 2025.3. you can uh choose which project will have access to the feature. Uh so that's what we call the per project activation and it's do it's done on sonar cube server and sonar cube cloud we of course support two providers so open aai and anthropic uh and here the two providers support our own sonar cloud uh anthropic we are not supporting on sonar cube server yet but it will come in the future on the other hand we have aure openai connectivity what we bring your own model uh on sonar cube server available and basically what it does uh it's we uh allow a connectivity between AI confix and an AI Azure open AI service uh that our customer can have uh and basically it will interact directly between between them and the code will never leave the infrastructure of the customer. So this was a biggest the biggest request from Sonar Cube server customer uh dur during the early access um time some key results that I wanted to share uh today that we have we have already 3,000 organization that enabled AI codefix so far uh with 150,000 suggestion generated with and this This is where it's really interesting with an acceptance rate of 65%. Just to give you an idea of comparison, copilot it's around 30% of acceptance rate. So it means that we are providing suggestions that are really relevant to uh the developer. And if we see this average rating on fix quality uh that we are tracking for each fixes we provide uh we have an average rate of four out of five which also highlights that we are providing high quality fixes. Now the availability and the pricing. Uh so AI confix is available on sonar cloud and sonar cube server for free. So it's included at no additional cost for all the following plans and addition. So on sonarcube cloud it's available on team and enterprise plan uh included at no additional cost and on sonar cube server it starts at enterprise edition. So enterprise edition and data center edition. So since it's free, feel free to install it if you are part of this edition and plans because it's included. So now that we've been the overview of AI config, I will run a little live demo. Uh I know that you were waiting for this to happen and now so I have created a pull request on a specific project which is called juice shop. Uh juice shop for those who don't know is full of issues. Uh and actually what is funny is that I use copilot agent to generate this PR with some issues. Basically once the quality get failed because I wanted to I asked copilot to introduce issues my quality get failed uh and as a developer normally what I do is I go on sonaru cloud and I review the issue that has been raised uh so here I have I can see that I have 11 new issues and that my quality get failed I will go over each issues and trying to fix them and that's where developer is losing time. Uh so let's take for instance this issue uh now and as you can see this issue uh I can generate a fix on uh so you have the new tab AI could fix here and you can generate the fix by clicking the button. So this issue is about having an optional chain instead uh because here it's not very maintainable and it's not really easy to to read. So if I generate a fix normally it should automatically so that's where we're sending the information to the LLM uh and we are waiting for some response and once the response is been sent that's where we can see the diff. So basically is replacing the user and and user is active by user uh exclamation point is active. Uh basically how it is decoupled we can you can see the diff here. You can copy pass in your IDE or you can view the fix in the ID like we like we saw before. You also have an explanation of the fix um that can help understand what it does. Okay. So now that you saw how it works, let me let me So here we were uh on a pull request, but it can also be applied on the main branch. For instance, if you want to reduce technical debt, you can review your main branch, go to overall code. So let me for instance take a security issue that you want to solve. Uh and let's take for instance this one. So we have we have uh we don't want to inject uh SQL queries with user control data directly in it. So this is a security issue and it can uh imply uh security breaching. So here in the at the same time I can generate a fix. Uh I know that it will get rid of the parameter directly injected in the query and normally it should create replacement uh variable. So the fix is being generated. This one is a bit more complex that's why it's taking a bit more time. And here you can see that it replies. And here instead of having the variable directly defined in the query, you can see that u it created here the replacement with the variable. And one thing I wanted to also highlight is here we generated some suggestion in the UI directly but I wanted to show how it works in the ID as well. So I have cursor here uh that has been with uh the plug-in sonar cube ID installed in it and here I just open the same issue in the ID. So what it does is it's pointing me to the right issue here in the login uh file and here you can see the same issue. So it's explaining the the the rule why we have this issue. I can I fix it and here if I close this I can see the issue here with the different locations and if I want to generate the fix. So if I'm in connected mode uh with my rightful sonar cube server or sonar cube cloud uh instance then I will be able to generate a fix directly from the ID and basically here is the issue I want to highlight. If I right click on it I can fix uh I can generate a fix with AI confix. So I would click on it. You can see that it's generating a fix uh thanks to AI confix feature. And once it's done, it will produce a refactor view. Uh and if you click on it, that's where you will see the diff uh generated. So it's very powerful to use a code fix in Z because it helps the developer remediate issue as they're writing code. Whereas on the UI, you need to wait for the PR analysis or the main branch analysis to see the issue and then to generate some fixes. I think the two can be used uh but it depends on the on the developer workflow uh and where you want to use it. And here for instance if I want to of course apply the fix I can do it and it will of course update the the line uh where we had the issue and we see that the issue actually disappeared. Okay. So if I go back to the presentation, here was the live demo that I wanted to show and maybe before going into the Q&A session, I can give it back to Hassenit to talk about this slide. Thank you, Alex. Um, that was really amazing. uh presentation and the demo and I guess that you guys have uh you know got some really uh cool information about the code fix and then you know what we are doing in terms of the G and all that. Um so uh this is about that update that you know um this is the son cube LT update hub. Um so the benefit of this is uh the the 2025.1 LTA has this new um you know AI uh capability um you know it is uh strongest with stronger security and more rules and um languages support um easy to use uh better for your user experience and user uh increased accuracy um peace of your mind and and and you can see the impact um so you should uh check the link uh in there um Sona Cube LT update hub and uh be informed about you what's what uh you know update we're doing. All right. Um so that marks the end of the presentation. Uh let's move on to the Q&A. >> Yes, >> that's cool. >> So by the way I um Alex I have um and me and Robert has answered some questions already. Uh but you can see the other questions if you want to take up >> uh Q&A. >> Yes. So the one answered or the one >> the and the one that is not answered that should be first priority to go ahead. So there's a question from Michael um about how does the code fix work for analysis? Is the source code uploaded to Sunar's cloud servers or does it take the issue and analyze it? >> So that's a that's a good question. what we are sending to the LLM uh that will um give the answer. We are sending the file where we have the issue and we are sending the metadata of the issue. So basically the rule description uh and all the info related to the issue and the rule uh itself and basically what it will do is the LLM will try to understand why there is this issue uh with information and all the context we are sending to it and then it will provide a diff. So the prompt that we have built uh also mentioned that the output should be a diff right so that the LLM normally should provide a div to it. uh and we evaluated each each rules uh on a specific data set to see for each rules and to build for each rules a confidence score uh to know if actually we are enough confidence to let or to support this rules uh with AI goods. So yeah, >> cool. Um, thank you Alex. Um, there's one more interesting question. It's kind of a road map. Um, question. Why is C not part of your set of supported languages? >> Why is uh which >> lang why is C language C? >> Ah yeah that's a that's a good question. uh C C initially was part of it but uh when we tested but yeah it's it's very difficult to generate um suggestions uh from LLM in the C language I mean uh because here we are only sending one file uh and as you know LLMs are trained on opensource language age and you have more JavaScript as open source. Uh so yeah C is it will come uh we prefer not to to to cover C uh at the beginning uh but it will come we are evaluating more languages to support and C is part is part of it but we needed to start from somewhere. >> Yeah. Cool. Okay. Um so that's an interesting question um from um sort of verma um are we able to connect with our open AI enterprise again open AAI enterprise um it's not Azure OpenAI uh we just have the keys to connect uh and it is not Azure hosted >> yes yes so it's like connect to an open AI enterprise account what we call internally bring your own key so it's in the road map right Uh and yes, we have a lot of customer that are asking for this feature uh being being able to plug uh their own key instead of using ours. Uh so this is in the road map and this is something that will come uh later on in the future. >> Amazing. Thank you. Um there's a next question uh which is also my favorite question which is hey are you planning on supporting open source LLMs like Llama? That's a good question. Um I think we it came easy into into our mind. Uh but what we are maybe going for instead is not having a support in like having our own open source model that we train right. I think the goal would be to let customer plug their own open source model as a first part and then as a second part if we see that we can train our own model if we can have and like host this kind of models then we will be able to to support uh our own llama model and our own open source model but we are seeing more customer asking to plug their own opensource model than us having our own opensource Yeah. So the answer is uh are we looking for I mean are we looking to support this in the future? >> Potentially. Yes. >> Okay. Fair enough. Fair enough. Okay. Um so you know as as I have uh anticipated there are you know kind of road map questions from two different gentlemen. Um so the question is um you know I'm just going to combine these two questions. Number one question sorry. Anyways, the combined question is when is Golang, Swift and Kotlin be added to the AI code fix? Same answer like uh for C. We are evaluating a lot of languages uh to support next that we will support next. Uh Golang, Cotlin uh are are part of it. So we are evaluating the next languages and definitely it will come. We will open to more languages. we just needed to start from somewhere. That's why we support the most used one but we we will definitely add more in the future. So it's in the road map. >> Fair enough. Um so there's one more question. Um says in what ways does your solution differentiate itself from the tools such as the AI assistant in intelligj or is it a complimentary solution? I think it's a complement solution because we are adding uh sonar value as part of the LLM right we are adding uh all the quality information uh that we have internally we are adding the context of the code and with this mixture um we are sure that the LLM will provide some high quality fixes uh whereas like I mentioned copilot that for instance okay you have a full coverage but the acceptance rate at the at the end is is low right so I think it's a complimentary to other tools like copilot like intellig AI uh but yeah I think we are adding some value by bringing some more information >> absolutely fair enough um there's a question from Sebastian Ray um and I'll answer his question the first part and then I'll hand it over to you Alex. Um so his question is how can I maintain the long-term continuity if LM produce codes that is difficult to maintain. Um this is my main concern with these tools I'm worried that I won't be able to maintain that code over the time. Um so Sebastian to answer your question first part yes um you are um you know you're absolutely right to be worried um about maintaining of those code over the time because you really don't know the code what is being written by those uh engines um so for that Sonar has done a research and uh we have released a research paper last week um yes and uh you know that is over um you know that's about how the different code uh different LLM have their home coding personality and it will tell you that all these different models you talk about uh you know anthropic models or openAI models um even open source models like llama have their own different personalities some are different to maintain some are easy to maintain so you'll see that the entire research report um so it should tell you uh what exactly is going on in the in the back end of those models um so inherently what I would like to answer you is that you Obviously you need a thrust but verify method and that's a core part of sonar which is having a static analysis always looking at those code which is being generated by those LMS um and then you know it will tell you that what are the problems that you're going to get whether it is maintainable or not what's the code smell and what's the maintainability score and all of that and then you can refactor that code using uh the LLMs which will uh make sure that you know you are a good you are in good hands But again uh I would suggest that read through that research paper. It's a it's a it's a good PDF. Um and uh and understand exactly what uh is happening across those models. Uh when you talk about maintainability um so some are really really producing verbose output, some are really straightforward without looking at any age cases. Uh but again it's it's it's your choice to um to ch go for a particular model and then make sure that you always have that trust but verify method um using the sonar cube enterprise. Um okay so there are couple of more questions um having twice the same problem with the AI produce the same result which is reproducibility. Um not exactly very sure about how should I >> I think I I think I think this question is about um if you generate multiple fix will I have the same results. I cannot be sure because uh LLM hallucinate right so you can have different answers but usually with the pump that we built normally the answer should be similar uh so yeah ro producibility rate should be high uh in our case I don't know if it answers the question the question I hope so >> all All right. So one more question we say um said that we already use copilot in our ids. So does enabling AI code fix make sense in that context? >> I think you have already answered that question. >> Yeah. Yeah. To to also clarify it's the same question as intelligj. I think >> we are here as a compliment. We don't want to replace copilot. Um and I think here we are really focusing on helping developer remediate issues that uh has been solve uh raised sorry by Sona right uh so yeah it's more a complimentary solution I would say >> oh um if the same issue appears in multiple places in our source code and we resolve it in one location. Does AI in Sona Cube have the capability to apply bulk updates to the fix that issue everywhere in the codebase? >> That's a very good question and we had like several uh requests from customer asking the same. Unfortunately, it's uh only possible to generate a fix issue by issue. meaning that you need to go on the issue, generate the fix and then uh open it in the ID to commit right. We don't do bulk fix for now uh but it might come in the future uh because that has been requested a lot but we we wanted to really focus on issue by issue first and then having the bs coming after. But yeah, very good question, very good point. Okay. Um, there was a question. Let me answer that. Um, so send. Okay. Um, I think we have answered this. Um the same problem that oh um okay so there's a question which is what training assets are available to the developer and what is the average time for a dev to feel that they're able to use these tools easily? Well, that's an interesting one. >> Um, sorry, can you repeat the question maybe or present it? I >> Yeah, so the so the question is what training assets are available to the developer and what is the average time for a dev to feel that they are able to use the tools easily which is kind of adoption of the tool >> the AI confix tool. >> Yeah. Yeah. Yeah, I mean I think it's pretty simple to use, right? We have the our documentation uh already that explains how it works, how you can enable it. Uh and after that we also have the list of rules that we support with a code fix and after that it's pretty simple to use right you just go on the issue and you just generate the fix from there uh and you will get the the answer right away. So if you if you need guidance uh please go on the documentation uh that we have everything is explained there and then you should be good to go. >> Cool. Um one good question again um on the type of kind of a rule set that we have which is hey does AI have the ability to identify the legitimate duplicate lines of code and offer suggestions or fixes to help reduce the code duplication. Um >> so to think about it is like uh do we have a rule um in the AI code fix support which looks at the duplication of the code and then maybe some >> no no no we don't we don't for now uh no so basically we we only see the current file because that's what we sent to cutfix uh the current file. So we don't have the overall project context. So having the duplication uh policy or it's it's not possible for now. We we will be able to uh do this if we send more context to the LLM and also reducing code duplication uh with AI that is something that we are looking at uh and it will also come in the future. Basically we want to help also developer remediate on duplications. >> Cool. Yeah, I guess so. Um cool. Okay. Um so there's a comment from Peter. It says that uh and I agree on that point which is hey in my experience bulk fixes which is let's say there's a rule called uh you know replace end by sint32 um in big projects is non advisable as in some cases it should it introduces other problems uh because every fix needs check and approval. Yes. So, uh >> it's a comment basically. It's not a question. It's >> okay. Okay. Okay. Okay. >> Yeah. It's a comment. >> Good. >> Very very good. Very good comment. Uh I think >> everything that has been that is been generated by AI should have a check and approval. uh because yeah like like I said LLMs can hallucinate a lot and we need to have a human after uh that reviews those kind of outputs. >> Yeah. Trust but verify. >> Exactly. Trust but verify. Okay. I think we are out of time. So I think we should wrap this up. Thank you everyone uh for your time. uh it was a very nice webinar and I'm I was really happy to present uh that new features that we launched uh and general generally available. So feel free to install it in your instance or in your Sonar cloud organization and if you have any feedback feel free to reach out to us we more than happy to answer your question. >> Thank you Alex. No this is this is absolutely amazing presentation lot of good questions um and you know we try to answer all of them um we'll see if he can you know answer the other questions as well but please feel free to give feedback. um on the you know um on on the tool itself if you're using that you know then we'll know that what are the you know issues that you are facing or maybe what are the different type of requests that you have um and yeah happy coding days uh trust refi >> yes thank you everyone all right >> bye bye bye",
+  "fetchedAt": "2026-03-14T09:22:33.991Z"
+}

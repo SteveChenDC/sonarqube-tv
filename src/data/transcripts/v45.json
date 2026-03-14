@@ -1,0 +1,1168 @@
+{
+  "videoId": "v45",
+  "youtubeId": "VecMTZMmhEg",
+  "segments": [
+    {
+      "text": "Hi there. How is it going? First of all,",
+      "offset": 17000,
+      "duration": 3000
+    },
+    {
+      "text": "I appreciate you being here and taking",
+      "offset": 20000,
+      "duration": 2000
+    },
+    {
+      "text": "your time to attend the first Sonar",
+      "offset": 22000,
+      "duration": 2000
+    },
+    {
+      "text": "Summit. And thank Sonar for letting me",
+      "offset": 24000,
+      "duration": 2000
+    },
+    {
+      "text": "present for you here. Let me introduce",
+      "offset": 26000,
+      "duration": 2000
+    },
+    {
+      "text": "My name is Mario Bastardo and I'm a",
+      "offset": 30000,
+      "duration": 3000
+    },
+    {
+      "text": "SonarQube Hunter at Extensia.",
+      "offset": 33000,
+      "duration": 3000
+    },
+    {
+      "text": "Our team is called SonarQube Hunters",
+      "offset": 36000,
+      "duration": 2000
+    },
+    {
+      "text": "because we make implementations of the",
+      "offset": 38000,
+      "duration": 2000
+    },
+    {
+      "text": "SonarQube ecosystem for our clients and",
+      "offset": 40000,
+      "duration": 3000
+    },
+    {
+      "text": "we help them continuously improve",
+      "offset": 43000,
+      "duration": 3000
+    },
+    {
+      "text": "their code in both quality and security.",
+      "offset": 46000,
+      "duration": 4000
+    },
+    {
+      "text": "Likewise, we are partners of",
+      "offset": 50000,
+      "duration": 3000
+    },
+    {
+      "text": "Atlassian where we also help our",
+      "offset": 53000,
+      "duration": 3000
+    },
+    {
+      "text": "clients improve their processes.",
+      "offset": 56000,
+      "duration": 4000
+    },
+    {
+      "text": "I'm also part of the Sonar Navigators",
+      "offset": 60000,
+      "duration": 2000
+    },
+    {
+      "text": "program where we provide feedback to",
+      "offset": 62000,
+      "duration": 2000
+    },
+    {
+      "text": "Sonar on features and procedures",
+      "offset": 64000,
+      "duration": 3000
+    },
+    {
+      "text": "and I usually contribute to the",
+      "offset": 67000,
+      "duration": 3000
+    },
+    {
+      "text": "community too sharing knowledge about",
+      "offset": 70000,
+      "duration": 2000
+    },
+    {
+      "text": "Today we are going to talk about",
+      "offset": 75000,
+      "duration": 2000
+    },
+    {
+      "text": "advanced SAST and several of the",
+      "offset": 77000,
+      "duration": 2000
+    },
+    {
+      "text": "mechanisms Sonar provides to protect us",
+      "offset": 79000,
+      "duration": 4000
+    },
+    {
+      "text": "against code defects.",
+      "offset": 83000,
+      "duration": 2000
+    },
+    {
+      "text": "But first I want to make a small",
+      "offset": 85000,
+      "duration": 3000
+    },
+    {
+      "text": "introduction and explain how AI code",
+      "offset": 88000,
+      "duration": 4000
+    },
+    {
+      "text": "differs from man-made code.",
+      "offset": 92000,
+      "duration": 3000
+    },
+    {
+      "text": "Do you know what differentiates AI",
+      "offset": 95000,
+      "duration": 2000
+    },
+    {
+      "text": "generated code from man-made",
+      "offset": 97000,
+      "duration": 4000
+    },
+    {
+      "text": "AI generated code is man-made code with a",
+      "offset": 111000,
+      "duration": 3000
+    },
+    {
+      "text": "few steps in between. Someone has to",
+      "offset": 114000,
+      "duration": 4000
+    },
+    {
+      "text": "write the code and then we train models",
+      "offset": 118000,
+      "duration": 3000
+    },
+    {
+      "text": "with that code. So technically it's the",
+      "offset": 121000,
+      "duration": 3000
+    },
+    {
+      "text": "same code. But well it's not that simple",
+      "offset": 124000,
+      "duration": 4000
+    },
+    {
+      "text": "because there are quite a few",
+      "offset": 128000,
+      "duration": 2000
+    },
+    {
+      "text": "differences between them. But from our",
+      "offset": 130000,
+      "duration": 3000
+    },
+    {
+      "text": "point of view, they don't matter",
+      "offset": 133000,
+      "duration": 3000
+    },
+    {
+      "text": "regarding code quality and security.",
+      "offset": 136000,
+      "duration": 2000
+    },
+    {
+      "text": "Reliability is reliability and security",
+      "offset": 138000,
+      "duration": 3000
+    },
+    {
+      "text": "is security. Bugs are bugs,",
+      "offset": 141000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerabilities are vulnerabilities.",
+      "offset": 143000,
+      "duration": 2000
+    },
+    {
+      "text": "Let's define them because there are",
+      "offset": 148000,
+      "duration": 2000
+    },
+    {
+      "text": "maybe people who don't know what they",
+      "offset": 150000,
+      "duration": 3000
+    },
+    {
+      "text": "Bugs are those code defects that cause",
+      "offset": 154000,
+      "duration": 3000
+    },
+    {
+      "text": "software not to behave as it was",
+      "offset": 157000,
+      "duration": 4000
+    },
+    {
+      "text": "designed to. Something is not working as",
+      "offset": 161000,
+      "duration": 3000
+    },
+    {
+      "text": "Vulnerabilities on the other hand are",
+      "offset": 166000,
+      "duration": 2000
+    },
+    {
+      "text": "code defects that allow attackers to",
+      "offset": 168000,
+      "duration": 3000
+    },
+    {
+      "text": "gain control of our machines or steal",
+      "offset": 171000,
+      "duration": 3000
+    },
+    {
+      "text": "our data obviously without prior",
+      "offset": 174000,
+      "duration": 3000
+    },
+    {
+      "text": "So we are going to analyze code as it",
+      "offset": 180000,
+      "duration": 3000
+    },
+    {
+      "text": "But there is indeed a major difference",
+      "offset": 189000,
+      "duration": 3000
+    },
+    {
+      "text": "AI tries to give a plausible answer one",
+      "offset": 195000,
+      "duration": 3000
+    },
+    {
+      "text": "of many. And those answers can contain",
+      "offset": 198000,
+      "duration": 3000
+    },
+    {
+      "text": "defects. AI does not perform that double",
+      "offset": 201000,
+      "duration": 3000
+    },
+    {
+      "text": "check where we review our code and try",
+      "offset": 204000,
+      "duration": 3000
+    },
+    {
+      "text": "Models usually do not check for",
+      "offset": 212000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerabilities, neither already",
+      "offset": 214000,
+      "duration": 3000
+    },
+    {
+      "text": "documented ones nor the possibility of",
+      "offset": 217000,
+      "duration": 2000
+    },
+    {
+      "text": "And also they tend to overuse",
+      "offset": 225000,
+      "duration": 2000
+    },
+    {
+      "text": "dependencies. Dependencies included in",
+      "offset": 227000,
+      "duration": 2000
+    },
+    {
+      "text": "standard language packages or",
+      "offset": 229000,
+      "duration": 3000
+    },
+    {
+      "text": "frameworks may be overwritten by",
+      "offset": 232000,
+      "duration": 3000
+    },
+    {
+      "text": "and trained models are prone to suggesting",
+      "offset": 237000,
+      "duration": 3000
+    },
+    {
+      "text": "updated dependencies, sometimes abandoned",
+      "offset": 240000,
+      "duration": 3000
+    },
+    {
+      "text": "and in other cases vulnerable.",
+      "offset": 243000,
+      "duration": 2000
+    },
+    {
+      "text": "I have to say these are common biases.",
+      "offset": 248000,
+      "duration": 3000
+    },
+    {
+      "text": "Not every model does that and some",
+      "offset": 251000,
+      "duration": 3000
+    },
+    {
+      "text": "So I'm going to introduce three",
+      "offset": 260000,
+      "duration": 2000
+    },
+    {
+      "text": "Sonar mechanisms that ensure code",
+      "offset": 262000,
+      "duration": 3000
+    },
+    {
+      "text": "Nowadays, at least during the last 40",
+      "offset": 274000,
+      "duration": 4000
+    },
+    {
+      "text": "years when programming, we reuse code. So",
+      "offset": 278000,
+      "duration": 4000
+    },
+    {
+      "text": "we call methods, functions and even",
+      "offset": 282000,
+      "duration": 5000
+    },
+    {
+      "text": "Sonar is able to analyze how code will",
+      "offset": 289000,
+      "duration": 3000
+    },
+    {
+      "text": "be executed and therefore how data moves",
+      "offset": 292000,
+      "duration": 4000
+    },
+    {
+      "text": "So as in this screenshot we can see the",
+      "offset": 299000,
+      "duration": 3000
+    },
+    {
+      "text": "execution flow. We can see the execution",
+      "offset": 302000,
+      "duration": 4000
+    },
+    {
+      "text": "flow a particular piece of the data",
+      "offset": 306000,
+      "duration": 3000
+    },
+    {
+      "text": "follows from its injection or",
+      "offset": 309000,
+      "duration": 3000
+    },
+    {
+      "text": "introduction until it becomes a problem,",
+      "offset": 312000,
+      "duration": 3000
+    },
+    {
+      "text": "In this screenshot, we can see how a",
+      "offset": 320000,
+      "duration": 2000
+    },
+    {
+      "text": "user could call a URL in order to upload",
+      "offset": 322000,
+      "duration": 4000
+    },
+    {
+      "text": "a file and without any kind of",
+      "offset": 326000,
+      "duration": 4000
+    },
+    {
+      "text": "control is able to create that file in",
+      "offset": 330000,
+      "duration": 3000
+    },
+    {
+      "text": "the application host. This could be a",
+      "offset": 333000,
+      "duration": 2000
+    },
+    {
+      "text": "huge problem because it could lead to",
+      "offset": 335000,
+      "duration": 3000
+    },
+    {
+      "text": "an LFI (Local File Inclusion) vulnerability",
+      "offset": 338000,
+      "duration": 3000
+    },
+    {
+      "text": "and execute arbitrary code from",
+      "offset": 341000,
+      "duration": 3000
+    },
+    {
+      "text": "our own machine.",
+      "offset": 344000,
+      "duration": 3000
+    },
+    {
+      "text": "Okay. SCA stands for Software",
+      "offset": 350000,
+      "duration": 4000
+    },
+    {
+      "text": "As you may know, we don't build",
+      "offset": 357000,
+      "duration": 2000
+    },
+    {
+      "text": "applications only by writing our own",
+      "offset": 359000,
+      "duration": 3000
+    },
+    {
+      "text": "code, but also by using packages made by",
+      "offset": 362000,
+      "duration": 4000
+    },
+    {
+      "text": "other people, third party scripts and so",
+      "offset": 366000,
+      "duration": 3000
+    },
+    {
+      "text": "Since we do not control those",
+      "offset": 373000,
+      "duration": 3000
+    },
+    {
+      "text": "dependencies and just use them, some may",
+      "offset": 376000,
+      "duration": 3000
+    },
+    {
+      "text": "With SCA software, we can check data",
+      "offset": 120000,
+      "duration": 262000
+    },
+    {
+      "text": "associated with those dependencies and",
+      "offset": 385000,
+      "duration": 2000
+    },
+    {
+      "text": "compare it with public vulnerability",
+      "offset": 387000,
+      "duration": 3000
+    },
+    {
+      "text": "databases to know whether they are",
+      "offset": 390000,
+      "duration": 3000
+    },
+    {
+      "text": "affected by any known vulnerability:",
+      "offset": 393000,
+      "duration": 5000
+    },
+    {
+      "text": "name, version, licenses and transitive",
+      "offset": 398000,
+      "duration": 4000
+    },
+    {
+      "text": "dependencies. The dependencies of our",
+      "offset": 402000,
+      "duration": 2000
+    },
+    {
+      "text": "Sonar is also able to retrieve",
+      "offset": 409000,
+      "duration": 5000
+    },
+    {
+      "text": "additional data that is not relevant for",
+      "offset": 414000,
+      "duration": 3000
+    },
+    {
+      "text": "Let me introduce Sonar Advanced Security.",
+      "offset": 422000,
+      "duration": 4000
+    },
+    {
+      "text": "Sonar Advanced Security is the Sonar",
+      "offset": 426000,
+      "duration": 2000
+    },
+    {
+      "text": "package for dependency analysis",
+      "offset": 428000,
+      "duration": 3000
+    },
+    {
+      "text": "and control. In this screenshot you can",
+      "offset": 431000,
+      "duration": 3000
+    },
+    {
+      "text": "see the list of dependencies inside an",
+      "offset": 434000,
+      "duration": 2000
+    },
+    {
+      "text": "In this other screenshot, I can show you",
+      "offset": 438000,
+      "duration": 3000
+    },
+    {
+      "text": "one dependency and some of the",
+      "offset": 441000,
+      "duration": 2000
+    },
+    {
+      "text": "previously mentioned features,",
+      "offset": 150000,
+      "duration": 293000
+    },
+    {
+      "text": "whether it is a direct dependency one we",
+      "offset": 446000,
+      "duration": 3000
+    },
+    {
+      "text": "added or transitive, a dependency of our",
+      "offset": 449000,
+      "duration": 4000
+    },
+    {
+      "text": "We can also show you the",
+      "offset": 455000,
+      "duration": 3000
+    },
+    {
+      "text": "scope whether it is used in production",
+      "offset": 458000,
+      "duration": 3000
+    },
+    {
+      "text": "or in development. And we can show",
+      "offset": 461000,
+      "duration": 3000
+    },
+    {
+      "text": "And if a package contains a",
+      "offset": 470000,
+      "duration": 3000
+    },
+    {
+      "text": "vulnerability, we can rely on",
+      "offset": 473000,
+      "duration": 3000
+    },
+    {
+      "text": "Sonar's traditional way of presenting",
+      "offset": 476000,
+      "duration": 3000
+    },
+    {
+      "text": "information. As we usually say, Sonar is",
+      "offset": 479000,
+      "duration": 3000
+    },
+    {
+      "text": "developers first and shows us why this",
+      "offset": 482000,
+      "duration": 3000
+    },
+    {
+      "text": "is a vulnerability and provides quite a",
+      "offset": 485000,
+      "duration": 3000
+    },
+    {
+      "text": "lot of information for us to decide how",
+      "offset": 488000,
+      "duration": 3000
+    },
+    {
+      "text": "We could see",
+      "offset": 497000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerability info, how attackers could",
+      "offset": 499000,
+      "duration": 3000
+    },
+    {
+      "text": "exploit it, severity, exploitation",
+      "offset": 502000,
+      "duration": 3000
+    },
+    {
+      "text": "probability, and last but not least,",
+      "offset": 505000,
+      "duration": 2000
+    },
+    {
+      "text": "whether this vulnerability has been",
+      "offset": 507000,
+      "duration": 5000
+    },
+    {
+      "text": "publicly exploited.",
+      "offset": 509000,
+      "duration": 3000
+    },
+    {
+      "text": "With this information, we may be able to",
+      "offset": 512000,
+      "duration": 2000
+    },
+    {
+      "text": "decide how to approach this particular",
+      "offset": 514000,
+      "duration": 3000
+    },
+    {
+      "text": "Furthermore,",
+      "offset": 519000,
+      "duration": 2000
+    },
+    {
+      "text": "Sonar also helps us to update the",
+      "offset": 521000,
+      "duration": 4000
+    },
+    {
+      "text": "packages telling us which versions are",
+      "offset": 525000,
+      "duration": 3000
+    },
+    {
+      "text": "or are not affected by the",
+      "offset": 528000,
+      "duration": 3000
+    },
+    {
+      "text": "As I said earlier, Sonar Advanced",
+      "offset": 533000,
+      "duration": 3000
+    },
+    {
+      "text": "Security also analyzes and controls",
+      "offset": 536000,
+      "duration": 3000
+    },
+    {
+      "text": "dependency licenses. In some cases,",
+      "offset": 539000,
+      "duration": 3000
+    },
+    {
+      "text": "organizations may decide not to use",
+      "offset": 542000,
+      "duration": 3000
+    },
+    {
+      "text": "certain commercial licenses for legal",
+      "offset": 545000,
+      "duration": 2000
+    },
+    {
+      "text": "reasons. Sonar prevents us from using",
+      "offset": 547000,
+      "duration": 4000
+    },
+    {
+      "text": "unauthorized packages.",
+      "offset": 551000,
+      "duration": 4000
+    },
+    {
+      "text": "If one is used, Sonar warns us as seen",
+      "offset": 558000,
+      "duration": 3000
+    },
+    {
+      "text": "in this screenshot: CC BY-SA 3.0 should",
+      "offset": 561000,
+      "duration": 4000
+    },
+    {
+      "text": "And we've reached the part of the talk",
+      "offset": 570000,
+      "duration": 3000
+    },
+    {
+      "text": "where I speak badly about technology.",
+      "offset": 573000,
+      "duration": 2000
+    },
+    {
+      "text": "Let's talk about the disadvantage SCA",
+      "offset": 575000,
+      "duration": 3000
+    },
+    {
+      "text": "We've been saying that SCA checks for",
+      "offset": 581000,
+      "duration": 3000
+    },
+    {
+      "text": "previously known vulnerabilities and",
+      "offset": 584000,
+      "duration": 1000
+    },
+    {
+      "text": "that's the main problem. The package or",
+      "offset": 585000,
+      "duration": 4000
+    },
+    {
+      "text": "its code must be public. Someone must",
+      "offset": 589000,
+      "duration": 3000
+    },
+    {
+      "text": "have discovered the vulnerability and",
+      "offset": 592000,
+      "duration": 4000
+    },
+    {
+      "text": "the discoverer has to have had the",
+      "offset": 596000,
+      "duration": 3000
+    },
+    {
+      "text": "In summary, we only know vulnerabilities",
+      "offset": 602000,
+      "duration": 3000
+    },
+    {
+      "text": "We can check vulnerabilities introduced",
+      "offset": 611000,
+      "duration": 3000
+    },
+    {
+      "text": "through our code before it reaches",
+      "offset": 614000,
+      "duration": 3000
+    },
+    {
+      "text": "production, that is taint analysis, and we",
+      "offset": 617000,
+      "duration": 4000
+    },
+    {
+      "text": "can also check known vulnerabilities in",
+      "offset": 621000,
+      "duration": 3000
+    },
+    {
+      "text": "third party dependencies (SCA). Doesn't",
+      "offset": 624000,
+      "duration": 3000
+    },
+    {
+      "text": "the following step seem logical?",
+      "offset": 627000,
+      "duration": 4000
+    },
+    {
+      "text": "Let me introduce Advanced SAST.",
+      "offset": 631000,
+      "duration": 4000
+    },
+    {
+      "text": "Advanced SAST, previously known as deeper",
+      "offset": 635000,
+      "duration": 2000
+    },
+    {
+      "text": "SAST, is data analysis applied to",
+      "offset": 637000,
+      "duration": 3000
+    },
+    {
+      "text": "Advanced SAST is able to analyze where our data",
+      "offset": 645000,
+      "duration": 3000
+    },
+    {
+      "text": "flows not only in our own code but also",
+      "offset": 648000,
+      "duration": 4000
+    },
+    {
+      "text": "It can check where our code",
+      "offset": 655000,
+      "duration": 4000
+    },
+    {
+      "text": "interacts with a package and knowing",
+      "offset": 659000,
+      "duration": 4000
+    },
+    {
+      "text": "its internal code tell us whether that",
+      "offset": 663000,
+      "duration": 3000
+    },
+    {
+      "text": "interaction leads to a vulnerability not",
+      "offset": 666000,
+      "duration": 3000
+    },
+    {
+      "text": "because of the library alone but",
+      "offset": 669000,
+      "duration": 2000
+    },
+    {
+      "text": "because of the combination of our code",
+      "offset": 671000,
+      "duration": 3000
+    },
+    {
+      "text": "We probably agree that some libraries by",
+      "offset": 677000,
+      "duration": 3000
+    },
+    {
+      "text": "themselves should not be a potential",
+      "offset": 680000,
+      "duration": 2000
+    },
+    {
+      "text": "risk. For example, a logging library is",
+      "offset": 682000,
+      "duration": 4000
+    },
+    {
+      "text": "But when the user controls",
+      "offset": 690000,
+      "duration": 4000
+    },
+    {
+      "text": "the display data and that",
+      "offset": 694000,
+      "duration": 3000
+    },
+    {
+      "text": "data is extracted from our company",
+      "offset": 697000,
+      "duration": 2000
+    },
+    {
+      "text": "And how did we achieve this? Easy.",
+      "offset": 705000,
+      "duration": 4000
+    },
+    {
+      "text": "Studies have shown that over 97% of",
+      "offset": 709000,
+      "duration": 4000
+    },
+    {
+      "text": "every library used is open source. If we",
+      "offset": 713000,
+      "duration": 3000
+    },
+    {
+      "text": "have access to the code, we can analyze",
+      "offset": 716000,
+      "duration": 3000
+    },
+    {
+      "text": "it and if we can analyze it, we can feed",
+      "offset": 719000,
+      "duration": 4000
+    },
+    {
+      "text": "And if we have a database with those",
+      "offset": 726000,
+      "duration": 3000
+    },
+    {
+      "text": "results, we can feed the taint analysis",
+      "offset": 729000,
+      "duration": 2000
+    },
+    {
+      "text": "It's a two-phase solution. On our side,",
+      "offset": 735000,
+      "duration": 3000
+    },
+    {
+      "text": "we analyze open source libraries, up to",
+      "offset": 738000,
+      "duration": 3000
+    },
+    {
+      "text": "10,000 of the most popular ones today",
+      "offset": 741000,
+      "duration": 3000
+    },
+    {
+      "text": "and growing. On your side, you use that",
+      "offset": 744000,
+      "duration": 4000
+    },
+    {
+      "text": "data to detect whether your code is",
+      "offset": 748000,
+      "duration": 3000
+    },
+    {
+      "text": "interacting dangerously with dependency",
+      "offset": 751000,
+      "duration": 2000
+    },
+    {
+      "text": "In this screenshot, we can see a user",
+      "offset": 757000,
+      "duration": 3000
+    },
+    {
+      "text": "controlled input that is propagated through",
+      "offset": 760000,
+      "duration": 3000
+    },
+    {
+      "text": "the dependency and inside the",
+      "offset": 763000,
+      "duration": 2000
+    },
+    {
+      "text": "And I want to showcase the first",
+      "offset": 771000,
+      "duration": 3000
+    },
+    {
+      "text": "vulnerability ever discovered thanks to",
+      "offset": 774000,
+      "duration": 3000
+    },
+    {
+      "text": "Advanced SAST. But when we called it Deeper",
+      "offset": 777000,
+      "duration": 4000
+    },
+    {
+      "text": "SAST, this is CVE-2024-23897.",
+      "offset": 781000,
+      "duration": 6000
+    },
+    {
+      "text": "Jenkins as you may know is an open",
+      "offset": 790000,
+      "duration": 3000
+    },
+    {
+      "text": "source product. Many projects like it",
+      "offset": 793000,
+      "duration": 4000
+    },
+    {
+      "text": "are scanning SonarQube testing to",
+      "offset": 797000,
+      "duration": 3000
+    },
+    {
+      "text": "ensure not only that SonarQube works",
+      "offset": 800000,
+      "duration": 3000
+    },
+    {
+      "text": "properly but also to help the open",
+      "offset": 803000,
+      "duration": 3000
+    },
+    {
+      "text": "This code here executes a",
+      "offset": 810000,
+      "duration": 5000
+    },
+    {
+      "text": "command introduced via a CLI.",
+      "offset": 815000,
+      "duration": 3000
+    },
+    {
+      "text": "This function",
+      "offset": 818000,
+      "duration": 3000
+    },
+    {
+      "text": "calls a method in a library called args4j",
+      "offset": 821000,
+      "duration": 3000
+    },
+    {
+      "text": "This parse argument method ends up",
+      "offset": 829000,
+      "duration": 2000
+    },
+    {
+      "text": "calling an expandAtFiles method. And",
+      "offset": 831000,
+      "duration": 4000
+    },
+    {
+      "text": "here is the problem. If one of the",
+      "offset": 835000,
+      "duration": 3000
+    },
+    {
+      "text": "parameters passed through expandAtFiles",
+      "offset": 838000,
+      "duration": 2000
+    },
+    {
+      "text": "starts with an \"@\", it is treated like",
+      "offset": 840000,
+      "duration": 4000
+    },
+    {
+      "text": "a file on the file system; it can",
+      "offset": 844000,
+      "duration": 4000
+    },
+    {
+      "text": "display any file the attacker wants. And",
+      "offset": 848000,
+      "duration": 4000
+    },
+    {
+      "text": "if the attackers want /etc/passwd or",
+      "offset": 852000,
+      "duration": 3000
+    },
+    {
+      "text": "/etc/shadow, your machine is",
+      "offset": 855000,
+      "duration": 4000
+    },
+    {
+      "text": "We could prevent the AI from",
+      "offset": 861000,
+      "duration": 4000
+    },
+    {
+      "text": "Someone or something has to check all",
+      "offset": 872000,
+      "duration": 3000
+    },
+    {
+      "text": "written code. AI generated code has some",
+      "offset": 875000,
+      "duration": 4000
+    },
+    {
+      "text": "biases or some problems and using AI",
+      "offset": 879000,
+      "duration": 4000
+    },
+    {
+      "text": "makes them more likely to go unnoticed.",
+      "offset": 883000,
+      "duration": 3000
+    },
+    {
+      "text": "Sonar has the ability to find",
+      "offset": 888000,
+      "duration": 2000
+    },
+    {
+      "text": "vulnerabilities arising in our code,",
+      "offset": 890000,
+      "duration": 3000
+    },
+    {
+      "text": "check known vulnerabilities in our",
+      "offset": 893000,
+      "duration": 2000
+    },
+    {
+      "text": "dependencies, and check whether the",
+      "offset": 895000,
+      "duration": 3000
+    },
+    {
+      "text": "usage of a library leads to a",
+      "offset": 898000,
+      "duration": 3000
+    },
+    {
+      "text": "And that's it. Thank you very much for",
+      "offset": 904000,
+      "duration": 2000
+    },
+    {
+      "text": "staying until the end of the talk. I",
+      "offset": 906000,
+      "duration": 3000
+    },
+    {
+      "text": "hope it was helpful or at least",
+      "offset": 909000,
+      "duration": 2000
+    },
+    {
+      "text": "As I say, we are Extensia and we are",
+      "offset": 913000,
+      "duration": 3000
+    },
+    {
+      "text": "here for any questions or suggestions",
+      "offset": 916000,
+      "duration": 2000
+    }
+  ],
+  "fullText": "Hi there. How is it going? First of all, I appreciate you being here and taking your time to attend the first Sonar Summit. And thank Sonar for letting me present for you here. Let me introduce My name is Mario Bastardo and I'm a SonarQube Hunter at Extensia. Our team is called SonarQube Hunters because we make implementations of the SonarQube ecosystem for our clients and we help them continuously improve their code in both quality and security. Likewise, we are partners of Atlassian where we also help our clients improve their processes. I'm also part of the Sonar Navigators program where we provide feedback to Sonar on features and procedures and I usually contribute to the community too sharing knowledge about Today we are going to talk about advanced SAST and several of the mechanisms Sonar provides to protect us against code defects. But first I want to make a small introduction and explain how AI code differs from man-made code. Do you know what differentiates AI generated code from man-made AI generated code is man-made code with a few steps in between. Someone has to write the code and then we train models with that code. So technically it's the same code. But well it's not that simple because there are quite a few differences between them. But from our point of view, they don't matter regarding code quality and security. Reliability is reliability and security is security. Bugs are bugs, vulnerabilities are vulnerabilities. Let's define them because there are maybe people who don't know what they Bugs are those code defects that cause software not to behave as it was designed to. Something is not working as Vulnerabilities on the other hand are code defects that allow attackers to gain control of our machines or steal our data obviously without prior So we are going to analyze code as it But there is indeed a major difference AI tries to give a plausible answer one of many. And those answers can contain defects. AI does not perform that double check where we review our code and try Models usually do not check for vulnerabilities, neither already documented ones nor the possibility of And also they tend to overuse dependencies. Dependencies included in standard language packages or frameworks may be overwritten by and trained models are prone to suggesting updated dependencies, sometimes abandoned and in other cases vulnerable. I have to say these are common biases. Not every model does that and some So I'm going to introduce three Sonar mechanisms that ensure code Nowadays, at least during the last 40 years when programming, we reuse code. So we call methods, functions and even Sonar is able to analyze how code will be executed and therefore how data moves So as in this screenshot we can see the execution flow. We can see the execution flow a particular piece of the data follows from its injection or introduction until it becomes a problem, In this screenshot, we can see how a user could call a URL in order to upload a file and without any kind of control is able to create that file in the application host. This could be a huge problem because it could lead to an LFI (Local File Inclusion) vulnerability and execute arbitrary code from our own machine. Okay. SCA stands for Software As you may know, we don't build applications only by writing our own code, but also by using packages made by other people, third party scripts and so Since we do not control those dependencies and just use them, some may With SCA software, we can check data associated with those dependencies and compare it with public vulnerability databases to know whether they are affected by any known vulnerability: name, version, licenses and transitive dependencies. The dependencies of our Sonar is also able to retrieve additional data that is not relevant for Let me introduce Sonar Advanced Security. Sonar Advanced Security is the Sonar package for dependency analysis and control. In this screenshot you can see the list of dependencies inside an In this other screenshot, I can show you one dependency and some of the previously mentioned features, whether it is a direct dependency one we added or transitive, a dependency of our We can also show you the scope whether it is used in production or in development. And we can show And if a package contains a vulnerability, we can rely on Sonar's traditional way of presenting information. As we usually say, Sonar is developers first and shows us why this is a vulnerability and provides quite a lot of information for us to decide how We could see vulnerability info, how attackers could exploit it, severity, exploitation probability, and last but not least, whether this vulnerability has been publicly exploited. With this information, we may be able to decide how to approach this particular Furthermore, Sonar also helps us to update the packages telling us which versions are or are not affected by the As I said earlier, Sonar Advanced Security also analyzes and controls dependency licenses. In some cases, organizations may decide not to use certain commercial licenses for legal reasons. Sonar prevents us from using unauthorized packages. If one is used, Sonar warns us as seen in this screenshot: CC BY-SA 3.0 should And we've reached the part of the talk where I speak badly about technology. Let's talk about the disadvantage SCA We've been saying that SCA checks for previously known vulnerabilities and that's the main problem. The package or its code must be public. Someone must have discovered the vulnerability and the discoverer has to have had the In summary, we only know vulnerabilities We can check vulnerabilities introduced through our code before it reaches production, that is taint analysis, and we can also check known vulnerabilities in third party dependencies (SCA). Doesn't the following step seem logical? Let me introduce Advanced SAST. Advanced SAST, previously known as deeper SAST, is data analysis applied to Advanced SAST is able to analyze where our data flows not only in our own code but also It can check where our code interacts with a package and knowing its internal code tell us whether that interaction leads to a vulnerability not because of the library alone but because of the combination of our code We probably agree that some libraries by themselves should not be a potential risk. For example, a logging library is But when the user controls the display data and that data is extracted from our company And how did we achieve this? Easy. Studies have shown that over 97% of every library used is open source. If we have access to the code, we can analyze it and if we can analyze it, we can feed And if we have a database with those results, we can feed the taint analysis It's a two-phase solution. On our side, we analyze open source libraries, up to 10,000 of the most popular ones today and growing. On your side, you use that data to detect whether your code is interacting dangerously with dependency In this screenshot, we can see a user controlled input that is propagated through the dependency and inside the And I want to showcase the first vulnerability ever discovered thanks to Advanced SAST. But when we called it Deeper SAST, this is CVE-2024-23897. Jenkins as you may know is an open source product. Many projects like it are scanning SonarQube testing to ensure not only that SonarQube works properly but also to help the open This code here executes a command introduced via a CLI. This function calls a method in a library called args4j This parse argument method ends up calling an expandAtFiles method. And here is the problem. If one of the parameters passed through expandAtFiles starts with an \"@\", it is treated like a file on the file system; it can display any file the attacker wants. And if the attackers want /etc/passwd or /etc/shadow, your machine is We could prevent the AI from Someone or something has to check all written code. AI generated code has some biases or some problems and using AI makes them more likely to go unnoticed. Sonar has the ability to find vulnerabilities arising in our code, check known vulnerabilities in our dependencies, and check whether the usage of a library leads to a And that's it. Thank you very much for staying until the end of the talk. I hope it was helpful or at least As I say, we are Extensia and we are here for any questions or suggestions",
+  "fetchedAt": "2026-03-14T09:22:09.773Z"
+}

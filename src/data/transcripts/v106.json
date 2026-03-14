@@ -1,0 +1,5428 @@
+{
+  "videoId": "v106",
+  "youtubeId": "4nZaynCJS58",
+  "segments": [
+    {
+      "text": "okay so hello everybody and thank you",
+      "offset": 1400,
+      "duration": 5720
+    },
+    {
+      "text": "for joining and Welcome to our webinar",
+      "offset": 5040,
+      "duration": 4639
+    },
+    {
+      "text": "entitled conquering complexity",
+      "offset": 7120,
+      "duration": 5479
+    },
+    {
+      "text": "refactoring JavaScript projects where we",
+      "offset": 9679,
+      "duration": 5840
+    },
+    {
+      "text": "invite you to learn how to identify",
+      "offset": 12599,
+      "duration": 5520
+    },
+    {
+      "text": "unnecessary complexity in your code base",
+      "offset": 15519,
+      "duration": 5641
+    },
+    {
+      "text": "using cognitive complexity as a measure",
+      "offset": 18119,
+      "duration": 6601
+    },
+    {
+      "text": "and what tools are available to help you",
+      "offset": 21160,
+      "duration": 6640
+    },
+    {
+      "text": "refactor as a bonus I believe we will be",
+      "offset": 24720,
+      "duration": 5680
+    },
+    {
+      "text": "treated to a live example I'm Andrew",
+      "offset": 27800,
+      "duration": 4919
+    },
+    {
+      "text": "your moderator for this webinar which",
+      "offset": 30400,
+      "duration": 4560
+    },
+    {
+      "text": "will be presented by Phil Nash Our",
+      "offset": 32719,
+      "duration": 5160
+    },
+    {
+      "text": "developer advocate for JavaScript at",
+      "offset": 34960,
+      "duration": 5439
+    },
+    {
+      "text": "sonar before I introduce Phil please",
+      "offset": 37879,
+      "duration": 5081
+    },
+    {
+      "text": "allow me to quickly go over the",
+      "offset": 40399,
+      "duration": 5521
+    },
+    {
+      "text": "essential housekeeping",
+      "offset": 42960,
+      "duration": 5560
+    },
+    {
+      "text": "points the session will last around 30",
+      "offset": 45920,
+      "duration": 5440
+    },
+    {
+      "text": "minutes and we will include a time for",
+      "offset": 48520,
+      "duration": 5640
+    },
+    {
+      "text": "questions and answers at the end you are",
+      "offset": 51360,
+      "duration": 4999
+    },
+    {
+      "text": "invited to submit your questions at any",
+      "offset": 54160,
+      "duration": 5320
+    },
+    {
+      "text": "time during the webinar via the Q&A box",
+      "offset": 56359,
+      "duration": 6121
+    },
+    {
+      "text": "in Zoom Zoom so that's the little icon",
+      "offset": 59480,
+      "duration": 5880
+    },
+    {
+      "text": "in the middle of your bottom toolbar in",
+      "offset": 62480,
+      "duration": 5480
+    },
+    {
+      "text": "Zoom so please do submit your questions",
+      "offset": 65360,
+      "duration": 5480
+    },
+    {
+      "text": "at any time using that Q&A box and we",
+      "offset": 67960,
+      "duration": 6280
+    },
+    {
+      "text": "have two panelists joining us Victor and",
+      "offset": 70840,
+      "duration": 7160
+    },
+    {
+      "text": "tore from our JavaScript Squad plus",
+      "offset": 74240,
+      "duration": 7280
+    },
+    {
+      "text": "Kenny from our apj office so they are",
+      "offset": 78000,
+      "duration": 5759
+    },
+    {
+      "text": "tasked with answering as many of your",
+      "offset": 81520,
+      "duration": 5720
+    },
+    {
+      "text": "questions live during the webinar so do",
+      "offset": 83759,
+      "duration": 5320
+    },
+    {
+      "text": "feel free to submit your questions at",
+      "offset": 87240,
+      "duration": 5239
+    },
+    {
+      "text": "any time don't wait till the end uh the",
+      "offset": 89079,
+      "duration": 5680
+    },
+    {
+      "text": "session will be recorded and we'll send",
+      "offset": 92479,
+      "duration": 5401
+    },
+    {
+      "text": "out a link via email in the coming days",
+      "offset": 94759,
+      "duration": 5961
+    },
+    {
+      "text": "so you will get a link to the recording",
+      "offset": 97880,
+      "duration": 4599
+    },
+    {
+      "text": "finally at the end of the webinar a",
+      "offset": 100720,
+      "duration": 4640
+    },
+    {
+      "text": "short survey will pop up on your screen",
+      "offset": 102479,
+      "duration": 5920
+    },
+    {
+      "text": "so we consider your feedback as a gift",
+      "offset": 105360,
+      "duration": 5560
+    },
+    {
+      "text": "thank you in advance for your",
+      "offset": 108399,
+      "duration": 5921
+    },
+    {
+      "text": "participation without further Ado I'd",
+      "offset": 110920,
+      "duration": 5119
+    },
+    {
+      "text": "like to introduce you to today's",
+      "offset": 114320,
+      "duration": 5680
+    },
+    {
+      "text": "presenter Phil over to you thanks thanks",
+      "offset": 116039,
+      "duration": 5841
+    },
+    {
+      "text": "very much Andrew and hello and good",
+      "offset": 120000,
+      "duration": 4079
+    },
+    {
+      "text": "afternoon good evening good morning uh",
+      "offset": 121880,
+      "duration": 4519
+    },
+    {
+      "text": "to wherever you are uh my name is for as",
+      "offset": 124079,
+      "duration": 4281
+    },
+    {
+      "text": "I am a developer advocate here at Sona",
+      "offset": 126399,
+      "duration": 3881
+    },
+    {
+      "text": "uh for JavaScript and typescript uh and",
+      "offset": 128360,
+      "duration": 3840
+    },
+    {
+      "text": "I'm very excited to talk to you about uh",
+      "offset": 130280,
+      "duration": 5599
+    },
+    {
+      "text": "refactoring that JavaScript uh today um",
+      "offset": 132200,
+      "duration": 5880
+    },
+    {
+      "text": "if you are ever ever got questions like",
+      "offset": 135879,
+      "duration": 3401
+    },
+    {
+      "text": "if you have questions today get them",
+      "offset": 138080,
+      "duration": 3320
+    },
+    {
+      "text": "into the Q&A box uh but if you think of",
+      "offset": 139280,
+      "duration": 3160
+    },
+    {
+      "text": "other questions or you want to get in",
+      "offset": 141400,
+      "duration": 3080
+    },
+    {
+      "text": "touch with me any other way uh you can",
+      "offset": 142440,
+      "duration": 3519
+    },
+    {
+      "text": "find me all over the internet as Phil",
+      "offset": 144480,
+      "duration": 3240
+    },
+    {
+      "text": "Nash on Twitter on LinkedIn or just hit",
+      "offset": 145959,
+      "duration": 3601
+    },
+    {
+      "text": "my website which is my favorite URL in",
+      "offset": 147720,
+      "duration": 4239
+    },
+    {
+      "text": "the world cuz it is just F Nash I'm just",
+      "offset": 149560,
+      "duration": 5679
+    },
+    {
+      "text": "delighted by that um I'm also into",
+      "offset": 151959,
+      "duration": 5241
+    },
+    {
+      "text": "interactivity uh in these talks so if",
+      "offset": 155239,
+      "duration": 3481
+    },
+    {
+      "text": "you do have kind of comments or things",
+      "offset": 157200,
+      "duration": 3560
+    },
+    {
+      "text": "you want to say as part of it do get",
+      "offset": 158720,
+      "duration": 4040
+    },
+    {
+      "text": "into the chat uh say so keep your",
+      "offset": 160760,
+      "duration": 3399
+    },
+    {
+      "text": "questions in Q&A but if you just got",
+      "offset": 162760,
+      "duration": 2440
+    },
+    {
+      "text": "comments or other things you want to",
+      "offset": 164159,
+      "duration": 3360
+    },
+    {
+      "text": "mention I love to uh I love to hear from",
+      "offset": 165200,
+      "duration": 4360
+    },
+    {
+      "text": "you uh as I'm going through this and I",
+      "offset": 167519,
+      "duration": 3640
+    },
+    {
+      "text": "have the chat right in front of me as",
+      "offset": 169560,
+      "duration": 4920
+    },
+    {
+      "text": "I'm talking to you um but uh let's not",
+      "offset": 171159,
+      "duration": 4561
+    },
+    {
+      "text": "waste any more time let's talk about",
+      "offset": 174480,
+      "duration": 3479
+    },
+    {
+      "text": "conquering complexity and in order to",
+      "offset": 175720,
+      "duration": 4439
+    },
+    {
+      "text": "conquer that complexity uh we need to",
+      "offset": 177959,
+      "duration": 3881
+    },
+    {
+      "text": "ask first what is",
+      "offset": 180159,
+      "duration": 4201
+    },
+    {
+      "text": "complexity now I don't mean to be uh",
+      "offset": 181840,
+      "duration": 6959
+    },
+    {
+      "text": "kind of too um I don't know uh into",
+      "offset": 184360,
+      "duration": 5879
+    },
+    {
+      "text": "myself as a developer or whatever but I",
+      "offset": 188799,
+      "duration": 3961
+    },
+    {
+      "text": "think our jobs are complex our jobs are",
+      "offset": 190239,
+      "duration": 5280
+    },
+    {
+      "text": "mostly about um you know trying to model",
+      "offset": 192760,
+      "duration": 6920
+    },
+    {
+      "text": "real life uh things inside a machine uh",
+      "offset": 195519,
+      "duration": 6360
+    },
+    {
+      "text": "using uh a language that both we're",
+      "offset": 199680,
+      "duration": 3520
+    },
+    {
+      "text": "supposed to understand as well as a",
+      "offset": 201879,
+      "duration": 3681
+    },
+    {
+      "text": "computer supposed to understand uh the",
+      "offset": 203200,
+      "duration": 3920
+    },
+    {
+      "text": "complexities of the things we're working",
+      "offset": 205560,
+      "duration": 2920
+    },
+    {
+      "text": "on and do shout out if you're working on",
+      "offset": 207120,
+      "duration": 2839
+    },
+    {
+      "text": "anything particularly complex I love to",
+      "offset": 208480,
+      "duration": 3800
+    },
+    {
+      "text": "hear the kind of stuff you're working on",
+      "offset": 209959,
+      "duration": 3241
+    },
+    {
+      "text": "but the kind of things that we're",
+      "offset": 212280,
+      "duration": 2720
+    },
+    {
+      "text": "working on",
+      "offset": 213200,
+      "duration": 4119
+    },
+    {
+      "text": "um have an enormous amount of complexity",
+      "offset": 215000,
+      "duration": 4200
+    },
+    {
+      "text": "in their real world State and then we",
+      "offset": 217319,
+      "duration": 4280
+    },
+    {
+      "text": "add code on top of that code is",
+      "offset": 219200,
+      "duration": 4039
+    },
+    {
+      "text": "inherently complex because it is this",
+      "offset": 221599,
+      "duration": 3321
+    },
+    {
+      "text": "language that we've invented that both",
+      "offset": 223239,
+      "duration": 3200
+    },
+    {
+      "text": "we're supposed to understand and a",
+      "offset": 224920,
+      "duration": 3920
+    },
+    {
+      "text": "computer supposed to understand uh and",
+      "offset": 226439,
+      "duration": 3880
+    },
+    {
+      "text": "the problem is that the computer gets to",
+      "offset": 228840,
+      "duration": 3239
+    },
+    {
+      "text": "turn it into things it really really",
+      "offset": 230319,
+      "duration": 3241
+    },
+    {
+      "text": "does understand zeros and ones and all",
+      "offset": 232079,
+      "duration": 3000
+    },
+    {
+      "text": "that kind of stuff whereas we still have",
+      "offset": 233560,
+      "duration": 2959
+    },
+    {
+      "text": "to read stuff that other developers",
+      "offset": 235079,
+      "duration": 3401
+    },
+    {
+      "text": "wrote or stuff that we wrote 12 months",
+      "offset": 236519,
+      "duration": 3841
+    },
+    {
+      "text": "ago that we now have no idea what what",
+      "offset": 238480,
+      "duration": 4720
+    },
+    {
+      "text": "we were thinking at the time and so that",
+      "offset": 240360,
+      "duration": 5920
+    },
+    {
+      "text": "code is inherently complex uh and uh and",
+      "offset": 243200,
+      "duration": 5640
+    },
+    {
+      "text": "it turns out in order to actually um",
+      "offset": 246280,
+      "duration": 5120
+    },
+    {
+      "text": "maintain a decent velocity of writing",
+      "offset": 248840,
+      "duration": 5720
+    },
+    {
+      "text": "code a decent um ability to to change",
+      "offset": 251400,
+      "duration": 5040
+    },
+    {
+      "text": "that code and to make progress building",
+      "offset": 254560,
+      "duration": 3600
+    },
+    {
+      "text": "your application or fixing things that",
+      "offset": 256440,
+      "duration": 5280
+    },
+    {
+      "text": "maybe have gone wrong uh that we uh uh",
+      "offset": 258160,
+      "duration": 5560
+    },
+    {
+      "text": "introduce a bunch of excess",
+      "offset": 261720,
+      "duration": 4919
+    },
+    {
+      "text": "complexity um and so really our job",
+      "offset": 263720,
+      "duration": 6080
+    },
+    {
+      "text": "becomes managing uh that complexity uh",
+      "offset": 266639,
+      "duration": 5161
+    },
+    {
+      "text": "ideally when we write something uh when",
+      "offset": 269800,
+      "duration": 4200
+    },
+    {
+      "text": "we write a piece of code uh to model",
+      "offset": 271800,
+      "duration": 3839
+    },
+    {
+      "text": "something that is in our system or in",
+      "offset": 274000,
+      "duration": 4840
+    },
+    {
+      "text": "real life uh we we only capture the",
+      "offset": 275639,
+      "duration": 6241
+    },
+    {
+      "text": "amount of complexity that exists uh in",
+      "offset": 278840,
+      "duration": 7560
+    },
+    {
+      "text": "that um uh in that code itself uh adding",
+      "offset": 281880,
+      "duration": 6480
+    },
+    {
+      "text": "excess or accidental complexity is what",
+      "offset": 286400,
+      "duration": 4040
+    },
+    {
+      "text": "we're trying to avoid and so our job is",
+      "offset": 288360,
+      "duration": 5040
+    },
+    {
+      "text": "to manage that complexity rather sadly",
+      "offset": 290440,
+      "duration": 5039
+    },
+    {
+      "text": "uh it turns out that maybe in JavaScript",
+      "offset": 293400,
+      "duration": 4639
+    },
+    {
+      "text": "we're not doing that quite as well as we",
+      "offset": 295479,
+      "duration": 5160
+    },
+    {
+      "text": "we'd like to think so I gave a talk last",
+      "offset": 298039,
+      "duration": 6281
+    },
+    {
+      "text": "year uh in which I um dug through the uh",
+      "offset": 300639,
+      "duration": 6081
+    },
+    {
+      "text": "the logs and things from sonarcloud uh",
+      "offset": 304320,
+      "duration": 4120
+    },
+    {
+      "text": "and all the scans of uh JavaScript",
+      "offset": 306720,
+      "duration": 3160
+    },
+    {
+      "text": "projects in sonar Cloud to dig out the",
+      "offset": 308440,
+      "duration": 3560
+    },
+    {
+      "text": "most common issues in JavaScript",
+      "offset": 309880,
+      "duration": 4640
+    },
+    {
+      "text": "projects now number one not too much of",
+      "offset": 312000,
+      "duration": 3680
+    },
+    {
+      "text": "an issue really it's probably just",
+      "offset": 314520,
+      "duration": 2519
+    },
+    {
+      "text": "Legacy code in which people are still",
+      "offset": 315680,
+      "duration": 4120
+    },
+    {
+      "text": "using VAR instead of conet that's fine",
+      "offset": 317039,
+      "duration": 4440
+    },
+    {
+      "text": "it's probably not going to collapse our",
+      "offset": 319800,
+      "duration": 4640
+    },
+    {
+      "text": "entire code base or make us uh worse at",
+      "offset": 321479,
+      "duration": 5361
+    },
+    {
+      "text": "programming however the second virus the",
+      "offset": 324440,
+      "duration": 4640
+    },
+    {
+      "text": "second most common uh issue that turned",
+      "offset": 326840,
+      "duration": 4240
+    },
+    {
+      "text": "up in JavaScript code bases was that the",
+      "offset": 329080,
+      "duration": 6200
+    },
+    {
+      "text": "cognitive complexity of functions is too",
+      "offset": 331080,
+      "duration": 6760
+    },
+    {
+      "text": "high and cognitive complexity uh which I",
+      "offset": 335280,
+      "duration": 4320
+    },
+    {
+      "text": "will get on to later is that just a",
+      "offset": 337840,
+      "duration": 3520
+    },
+    {
+      "text": "measure of understandability and when",
+      "offset": 339600,
+      "duration": 3319
+    },
+    {
+      "text": "it's uh when the cognitive complexity is",
+      "offset": 341360,
+      "duration": 3480
+    },
+    {
+      "text": "high it means that our functions are",
+      "offset": 342919,
+      "duration": 4081
+    },
+    {
+      "text": "more difficult to understand and that's",
+      "offset": 344840,
+      "duration": 3600
+    },
+    {
+      "text": "going to that just slows down progress",
+      "offset": 347000,
+      "duration": 3520
+    },
+    {
+      "text": "makes it hard to actually change things",
+      "offset": 348440,
+      "duration": 6039
+    },
+    {
+      "text": "uh and makes it worse uh and so I might",
+      "offset": 350520,
+      "duration": 6600
+    },
+    {
+      "text": "say that the co of functions is too high",
+      "offset": 354479,
+      "duration": 3961
+    },
+    {
+      "text": "but that really begs the question what",
+      "offset": 357120,
+      "duration": 3359
+    },
+    {
+      "text": "is too high",
+      "offset": 358440,
+      "duration": 5319
+    },
+    {
+      "text": "and uh that brings with it uh an even",
+      "offset": 360479,
+      "duration": 4840
+    },
+    {
+      "text": "more important question really which is",
+      "offset": 363759,
+      "duration": 3521
+    },
+    {
+      "text": "how do we actually measure",
+      "offset": 365319,
+      "duration": 4081
+    },
+    {
+      "text": "complexity uh you might have some ideas",
+      "offset": 367280,
+      "duration": 3359
+    },
+    {
+      "text": "about how to measure complexity in your",
+      "offset": 369400,
+      "duration": 3440
+    },
+    {
+      "text": "own code bases you might have used uh",
+      "offset": 370639,
+      "duration": 4161
+    },
+    {
+      "text": "some uh some tools to measure this",
+      "offset": 372840,
+      "duration": 4120
+    },
+    {
+      "text": "before if you have again shout it out in",
+      "offset": 374800,
+      "duration": 3799
+    },
+    {
+      "text": "the chat box I'm excited I'm interested",
+      "offset": 376960,
+      "duration": 4160
+    },
+    {
+      "text": "to see but when we talk about measuring",
+      "offset": 378599,
+      "duration": 4761
+    },
+    {
+      "text": "complexity I can show you some code I",
+      "offset": 381120,
+      "duration": 3799
+    },
+    {
+      "text": "can show you some code this is a",
+      "offset": 383360,
+      "duration": 5119
+    },
+    {
+      "text": "function uh that will uh sum up prime",
+      "offset": 384919,
+      "duration": 6161
+    },
+    {
+      "text": "numbers underneath uh the the function",
+      "offset": 388479,
+      "duration": 4361
+    },
+    {
+      "text": "uh sorry the number that you you enter",
+      "offset": 391080,
+      "duration": 5239
+    },
+    {
+      "text": "as the argument to this function um how",
+      "offset": 392840,
+      "duration": 5479
+    },
+    {
+      "text": "complex is this how do you answer uh",
+      "offset": 396319,
+      "duration": 4481
+    },
+    {
+      "text": "that kind of question",
+      "offset": 398319,
+      "duration": 4720
+    },
+    {
+      "text": "um it doesn't look too bad Ian it's not",
+      "offset": 400800,
+      "duration": 5040
+    },
+    {
+      "text": "too long a function uh it's got I know",
+      "offset": 403039,
+      "duration": 4201
+    },
+    {
+      "text": "it's got some conditionals It's Got Some",
+      "offset": 405840,
+      "duration": 4680
+    },
+    {
+      "text": "Loops in it it's it's got some uh single",
+      "offset": 407240,
+      "duration": 6359
+    },
+    {
+      "text": "letter um uh variable names which is not",
+      "offset": 410520,
+      "duration": 5640
+    },
+    {
+      "text": "my favorite thing in the world um maybe",
+      "offset": 413599,
+      "duration": 5320
+    },
+    {
+      "text": "it's complex um but we can compare that",
+      "offset": 416160,
+      "duration": 4680
+    },
+    {
+      "text": "we can compare and say we also have this",
+      "offset": 418919,
+      "duration": 3560
+    },
+    {
+      "text": "function a get words function we add a",
+      "offset": 420840,
+      "duration": 4079
+    },
+    {
+      "text": "number in and it returns a a piece of",
+      "offset": 422479,
+      "duration": 4761
+    },
+    {
+      "text": "text uh for that number so if the number",
+      "offset": 424919,
+      "duration": 4000
+    },
+    {
+      "text": "is one it's going to return one if the",
+      "offset": 427240,
+      "duration": 3239
+    },
+    {
+      "text": "number is two it's a couple if number is",
+      "offset": 428919,
+      "duration": 4201
+    },
+    {
+      "text": "three a few if number is four many if",
+      "offset": 430479,
+      "duration": 5120
+    },
+    {
+      "text": "anything else it's Lots um ideally we'd",
+      "offset": 433120,
+      "duration": 4400
+    },
+    {
+      "text": "put positive integers into this uh",
+      "offset": 435599,
+      "duration": 3081
+    },
+    {
+      "text": "because it doesn't work for zero and",
+      "offset": 437520,
+      "duration": 2959
+    },
+    {
+      "text": "Below uh but that's not important what",
+      "offset": 438680,
+      "duration": 3160
+    },
+    {
+      "text": "we can see is that this is not a very",
+      "offset": 440479,
+      "duration": 4201
+    },
+    {
+      "text": "complex function I would say this is",
+      "offset": 441840,
+      "duration": 4880
+    },
+    {
+      "text": "nice and easy to understand this one may",
+      "offset": 444680,
+      "duration": 5519
+    },
+    {
+      "text": "be less so um but how do we how do we",
+      "offset": 446720,
+      "duration": 5199
+    },
+    {
+      "text": "really measure that how do we I don't",
+      "offset": 450199,
+      "duration": 3321
+    },
+    {
+      "text": "know put a number on that that would be",
+      "offset": 451919,
+      "duration": 4241
+    },
+    {
+      "text": "a nice way of doing it you might have",
+      "offset": 453520,
+      "duration": 6480
+    },
+    {
+      "text": "thought of um cyclomatic complexity as a",
+      "offset": 456160,
+      "duration": 5159
+    },
+    {
+      "text": "a method to measure this this is",
+      "offset": 460000,
+      "duration": 2680
+    },
+    {
+      "text": "actually this has been around for a long",
+      "offset": 461319,
+      "duration": 3521
+    },
+    {
+      "text": "time hopefully you have heard about it",
+      "offset": 462680,
+      "duration": 3639
+    },
+    {
+      "text": "uh it was invented back in",
+      "offset": 464840,
+      "duration": 4520
+    },
+    {
+      "text": "1976 uh in order to uh yeah try and put",
+      "offset": 466319,
+      "duration": 5880
+    },
+    {
+      "text": "a number on the complexity of functions",
+      "offset": 469360,
+      "duration": 4519
+    },
+    {
+      "text": "and and and",
+      "offset": 472199,
+      "duration": 4280
+    },
+    {
+      "text": "methods uh and so cyclomatic complexity",
+      "offset": 473879,
+      "duration": 6401
+    },
+    {
+      "text": "is um defined uh as um",
+      "offset": 476479,
+      "duration": 6801
+    },
+    {
+      "text": "uh it adds a score for a function uh",
+      "offset": 480280,
+      "duration": 5280
+    },
+    {
+      "text": "based on uh the number of brakes uh in",
+      "offset": 483280,
+      "duration": 3639
+    },
+    {
+      "text": "that function the number of Loops or",
+      "offset": 485560,
+      "duration": 3400
+    },
+    {
+      "text": "branches in fact actually it scores one",
+      "offset": 486919,
+      "duration": 3361
+    },
+    {
+      "text": "for being a function in the first place",
+      "offset": 488960,
+      "duration": 3280
+    },
+    {
+      "text": "and so if we look at our sum of Prime's",
+      "offset": 490280,
+      "duration": 4000
+    },
+    {
+      "text": "uh function here we score one for being",
+      "offset": 492240,
+      "duration": 4040
+    },
+    {
+      "text": "a function you always have uh the",
+      "offset": 494280,
+      "duration": 3400
+    },
+    {
+      "text": "minimum cyclomatic complexity of a",
+      "offset": 496280,
+      "duration": 4639
+    },
+    {
+      "text": "function is one but then as we hit four",
+      "offset": 497680,
+      "duration": 6120
+    },
+    {
+      "text": "loops and uh conditionals or any Loops",
+      "offset": 500919,
+      "duration": 4601
+    },
+    {
+      "text": "uh and conditionals we also score",
+      "offset": 503800,
+      "duration": 3640
+    },
+    {
+      "text": "additional points for that uh so we",
+      "offset": 505520,
+      "duration": 4160
+    },
+    {
+      "text": "score one for this for Loop here we",
+      "offset": 507440,
+      "duration": 3640
+    },
+    {
+      "text": "score one for the second for Loop we",
+      "offset": 509680,
+      "duration": 4200
+    },
+    {
+      "text": "score one for the uh conditional inside",
+      "offset": 511080,
+      "duration": 4800
+    },
+    {
+      "text": "of that uh and then we've got one final",
+      "offset": 513880,
+      "duration": 3360
+    },
+    {
+      "text": "conditional which is going to score one",
+      "offset": 515880,
+      "duration": 3719
+    },
+    {
+      "text": "and it scores five uh cyclomatic",
+      "offset": 517240,
+      "duration": 4320
+    },
+    {
+      "text": "complexity of this function is",
+      "offset": 519599,
+      "duration": 4081
+    },
+    {
+      "text": "five uh we can move on to our other",
+      "offset": 521560,
+      "duration": 4200
+    },
+    {
+      "text": "function which I think we we probably",
+      "offset": 523680,
+      "duration": 3800
+    },
+    {
+      "text": "again agree get words probably a bit",
+      "offset": 525760,
+      "duration": 4040
+    },
+    {
+      "text": "simpler but in world in the world of",
+      "offset": 527480,
+      "duration": 4280
+    },
+    {
+      "text": "cyclomatic complexity we score one for",
+      "offset": 529800,
+      "duration": 4599
+    },
+    {
+      "text": "being a function said that already uh",
+      "offset": 531760,
+      "duration": 4079
+    },
+    {
+      "text": "and then for each of the cases in the",
+      "offset": 534399,
+      "duration": 3680
+    },
+    {
+      "text": "function case of one two three and four",
+      "offset": 535839,
+      "duration": 4601
+    },
+    {
+      "text": "we also score one because those are also",
+      "offset": 538079,
+      "duration": 5721
+    },
+    {
+      "text": "branches uh that the uh the the path the",
+      "offset": 540440,
+      "duration": 6880
+    },
+    {
+      "text": "code can kind of Traverse down and so",
+      "offset": 543800,
+      "duration": 7240
+    },
+    {
+      "text": "getw and uh some of primes are both uh",
+      "offset": 547320,
+      "duration": 5400
+    },
+    {
+      "text": "scored as five in cognitive in",
+      "offset": 551040,
+      "duration": 4120
+    },
+    {
+      "text": "cyclomatic complexity and that doesn't",
+      "offset": 552720,
+      "duration": 4040
+    },
+    {
+      "text": "feel exactly",
+      "offset": 555160,
+      "duration": 3760
+    },
+    {
+      "text": "right um it doesn't feel right because",
+      "offset": 556760,
+      "duration": 4120
+    },
+    {
+      "text": "we can clearly see that this simple",
+      "offset": 558920,
+      "duration": 6640
+    },
+    {
+      "text": "switch uh is less complex uh than our uh",
+      "offset": 560880,
+      "duration": 6880
+    },
+    {
+      "text": "our set of uh loops and conditionals in",
+      "offset": 565560,
+      "duration": 4800
+    },
+    {
+      "text": "the sum of primes so can we do better",
+      "offset": 567760,
+      "duration": 5800
+    },
+    {
+      "text": "than that in order to kind of understand",
+      "offset": 570360,
+      "duration": 6000
+    },
+    {
+      "text": "well the understandability uh of a",
+      "offset": 573560,
+      "duration": 4880
+    },
+    {
+      "text": "function this cyclomatic complexity",
+      "offset": 576360,
+      "duration": 3760
+    },
+    {
+      "text": "really actually measures the number of",
+      "offset": 578440,
+      "duration": 3480
+    },
+    {
+      "text": "paths through a function now that's",
+      "offset": 580120,
+      "duration": 3440
+    },
+    {
+      "text": "useful that's a useful number because it",
+      "offset": 581920,
+      "duration": 3320
+    },
+    {
+      "text": "tells us some things it tells us how",
+      "offset": 583560,
+      "duration": 3560
+    },
+    {
+      "text": "many tests you'd need to write to fully",
+      "offset": 585240,
+      "duration": 4560
+    },
+    {
+      "text": "cover that function like both of those",
+      "offset": 587120,
+      "duration": 4360
+    },
+    {
+      "text": "functions would require five tests to",
+      "offset": 589800,
+      "duration": 5320
+    },
+    {
+      "text": "get 100% test coverage on them but as",
+      "offset": 591480,
+      "duration": 5599
+    },
+    {
+      "text": "we've seen it doesn't necessarily uh",
+      "offset": 595120,
+      "duration": 4320
+    },
+    {
+      "text": "tell us about understandability and",
+      "offset": 597079,
+      "duration": 4241
+    },
+    {
+      "text": "that's what we'd really like to measure",
+      "offset": 599440,
+      "duration": 4560
+    },
+    {
+      "text": "uh because understandability is is how",
+      "offset": 601320,
+      "duration": 5240
+    },
+    {
+      "text": "we interact with the with the code uh",
+      "offset": 604000,
+      "duration": 5000
+    },
+    {
+      "text": "over time uh if we can understand it",
+      "offset": 606560,
+      "duration": 4360
+    },
+    {
+      "text": "then we're e we're more easily able to",
+      "offset": 609000,
+      "duration": 3800
+    },
+    {
+      "text": "interact with change and improve our",
+      "offset": 610920,
+      "duration": 4320
+    },
+    {
+      "text": "code over time if we can't understand it",
+      "offset": 612800,
+      "duration": 4039
+    },
+    {
+      "text": "we spend a long time trying to",
+      "offset": 615240,
+      "duration": 3120
+    },
+    {
+      "text": "understand it before we even get to the",
+      "offset": 616839,
+      "duration": 2881
+    },
+    {
+      "text": "uh the changing",
+      "offset": 618360,
+      "duration": 3680
+    },
+    {
+      "text": "parts uh and",
+      "offset": 619720,
+      "duration": 4400
+    },
+    {
+      "text": "so that brings me to cognitive",
+      "offset": 622040,
+      "duration": 4120
+    },
+    {
+      "text": "complexity a score that I told you",
+      "offset": 624120,
+      "duration": 3560
+    },
+    {
+      "text": "earlier is too high in many JavaScript",
+      "offset": 626160,
+      "duration": 2960
+    },
+    {
+      "text": "functions but let's find out how that",
+      "offset": 627680,
+      "duration": 3800
+    },
+    {
+      "text": "score score is made at least at first so",
+      "offset": 629120,
+      "duration": 4480
+    },
+    {
+      "text": "cognitive complexity still gives a",
+      "offset": 631480,
+      "duration": 4440
+    },
+    {
+      "text": "number at the end of the day uh for a",
+      "offset": 633600,
+      "duration": 4600
+    },
+    {
+      "text": "function it gives this idea of of how",
+      "offset": 635920,
+      "duration": 4599
+    },
+    {
+      "text": "complex it is how hard it is to",
+      "offset": 638200,
+      "duration": 5079
+    },
+    {
+      "text": "understand uh and it creates that score",
+      "offset": 640519,
+      "duration": 4601
+    },
+    {
+      "text": "uh by uh incrementing for brakes and",
+      "offset": 643279,
+      "duration": 4201
+    },
+    {
+      "text": "flow using loops and conditionals much",
+      "offset": 645120,
+      "duration": 5560
+    },
+    {
+      "text": "like cyclomatic complexity but it also",
+      "offset": 647480,
+      "duration": 4799
+    },
+    {
+      "text": "keeps in the back of its mind a nesting",
+      "offset": 650680,
+      "duration": 4080
+    },
+    {
+      "text": "score which it increments every time we",
+      "offset": 652279,
+      "duration": 4641
+    },
+    {
+      "text": "Nest uh and when you increment for a",
+      "offset": 654760,
+      "duration": 4319
+    },
+    {
+      "text": "Breakin flow you add one for the",
+      "offset": 656920,
+      "duration": 4200
+    },
+    {
+      "text": "condition or The Loop and you also add",
+      "offset": 659079,
+      "duration": 4521
+    },
+    {
+      "text": "what the current nesting score is and so",
+      "offset": 661120,
+      "duration": 4519
+    },
+    {
+      "text": "let's see how that works out with our",
+      "offset": 663600,
+      "duration": 3239
+    },
+    {
+      "text": "two",
+      "offset": 665639,
+      "duration": 3760
+    },
+    {
+      "text": "functions so our sum of primes first up",
+      "offset": 666839,
+      "duration": 3800
+    },
+    {
+      "text": "cognitive complexity doesn't bother",
+      "offset": 669399,
+      "duration": 4161
+    },
+    {
+      "text": "scoring uh for being a function uh if",
+      "offset": 670639,
+      "duration": 4320
+    },
+    {
+      "text": "you think of cyclomatic complexity",
+      "offset": 673560,
+      "duration": 3279
+    },
+    {
+      "text": "includes the you know the number of",
+      "offset": 674959,
+      "duration": 3241
+    },
+    {
+      "text": "paths that you can take through a",
+      "offset": 676839,
+      "duration": 3721
+    },
+    {
+      "text": "function a linear function will still",
+      "offset": 678200,
+      "duration": 4840
+    },
+    {
+      "text": "call still score one because you take",
+      "offset": 680560,
+      "duration": 5880
+    },
+    {
+      "text": "one you can take one path through it um",
+      "offset": 683040,
+      "duration": 5560
+    },
+    {
+      "text": "meanwhile um we don't have to care about",
+      "offset": 686440,
+      "duration": 3880
+    },
+    {
+      "text": "that when we're trying to understand it",
+      "offset": 688600,
+      "duration": 2840
+    },
+    {
+      "text": "and so we don't have to score for being",
+      "offset": 690320,
+      "duration": 3120
+    },
+    {
+      "text": "a function but we do score one for",
+      "offset": 691440,
+      "duration": 4639
+    },
+    {
+      "text": "having a for Loop uh now our nesting",
+      "offset": 693440,
+      "duration": 4320
+    },
+    {
+      "text": "score has started as zero but now we're",
+      "offset": 696079,
+      "duration": 3161
+    },
+    {
+      "text": "going to add one to the nesting score in",
+      "offset": 697760,
+      "duration": 3680
+    },
+    {
+      "text": "the background too and so when we get to",
+      "offset": 699240,
+      "duration": 4520
+    },
+    {
+      "text": "our second for Loop which is nested once",
+      "offset": 701440,
+      "duration": 3959
+    },
+    {
+      "text": "it's going to score two one for being a",
+      "offset": 703760,
+      "duration": 4720
+    },
+    {
+      "text": "loop and one for being nested one deep",
+      "offset": 705399,
+      "duration": 4240
+    },
+    {
+      "text": "we're going to increment that nesting",
+      "offset": 708480,
+      "duration": 2359
+    },
+    {
+      "text": "score again and we get to our",
+      "offset": 709639,
+      "duration": 3000
+    },
+    {
+      "text": "conditional which now scores three one",
+      "offset": 710839,
+      "duration": 3641
+    },
+    {
+      "text": "for being conditional and two for being",
+      "offset": 712639,
+      "duration": 4961
+    },
+    {
+      "text": "nested twice uh now this would also",
+      "offset": 714480,
+      "duration": 4440
+    },
+    {
+      "text": "increment the nesting as well because",
+      "offset": 717600,
+      "duration": 2840
+    },
+    {
+      "text": "we're going to go inside a third level",
+      "offset": 718920,
+      "duration": 3320
+    },
+    {
+      "text": "of nesting for this conditional but",
+      "offset": 720440,
+      "duration": 3199
+    },
+    {
+      "text": "there are no further Loops or",
+      "offset": 722240,
+      "duration": 2839
+    },
+    {
+      "text": "conditionals in there and so we'd",
+      "offset": 723639,
+      "duration": 3121
+    },
+    {
+      "text": "actually then start decreasing the the",
+      "offset": 725079,
+      "duration": 4000
+    },
+    {
+      "text": "nesting so that's now back down to two",
+      "offset": 726760,
+      "duration": 3879
+    },
+    {
+      "text": "uh back down to one as we drop out of",
+      "offset": 729079,
+      "duration": 4081
+    },
+    {
+      "text": "the uh for Loop uh then we hit another",
+      "offset": 730639,
+      "duration": 5320
+    },
+    {
+      "text": "conditional so we go back up um so this",
+      "offset": 733160,
+      "duration": 4760
+    },
+    {
+      "text": "is now nested once so we score one for",
+      "offset": 735959,
+      "duration": 4240
+    },
+    {
+      "text": "nesting one for being a conditional uh",
+      "offset": 737920,
+      "duration": 4960
+    },
+    {
+      "text": "and then the rest of the uh uh oops the",
+      "offset": 740199,
+      "duration": 5041
+    },
+    {
+      "text": "rest of the function um no more Loops no",
+      "offset": 742880,
+      "duration": 3480
+    },
+    {
+      "text": "more conditionals we don't have to worry",
+      "offset": 745240,
+      "duration": 3320
+    },
+    {
+      "text": "about it anymore and so now our sum of",
+      "offset": 746360,
+      "duration": 4800
+    },
+    {
+      "text": "Prime's function is scoring eight total",
+      "offset": 748560,
+      "duration": 4800
+    },
+    {
+      "text": "for cognitive",
+      "offset": 751160,
+      "duration": 5200
+    },
+    {
+      "text": "complexity meanwhile the get words",
+      "offset": 753360,
+      "duration": 5560
+    },
+    {
+      "text": "function which again I hope you hope you",
+      "offset": 756360,
+      "duration": 4599
+    },
+    {
+      "text": "agree with me that this is a lot simpler",
+      "offset": 758920,
+      "duration": 4279
+    },
+    {
+      "text": "uh this get wordss function uh is going",
+      "offset": 760959,
+      "duration": 4680
+    },
+    {
+      "text": "to score one uh it scores one for being",
+      "offset": 763199,
+      "duration": 4521
+    },
+    {
+      "text": "a switch uh it's one big conditional",
+      "offset": 765639,
+      "duration": 3721
+    },
+    {
+      "text": "it's one big conditional on one value",
+      "offset": 767720,
+      "duration": 3320
+    },
+    {
+      "text": "the number that we passed into this",
+      "offset": 769360,
+      "duration": 3800
+    },
+    {
+      "text": "function uh it turns out you know if you",
+      "offset": 771040,
+      "duration": 4159
+    },
+    {
+      "text": "were to rewrite this function as a",
+      "offset": 773160,
+      "duration": 4359
+    },
+    {
+      "text": "series of if eles then we would score",
+      "offset": 775199,
+      "duration": 4481
+    },
+    {
+      "text": "one for each of the IFS",
+      "offset": 777519,
+      "duration": 5601
+    },
+    {
+      "text": "because uh an if a conditional with an",
+      "offset": 779680,
+      "duration": 5760
+    },
+    {
+      "text": "if uh could be on a different variable",
+      "offset": 783120,
+      "duration": 4159
+    },
+    {
+      "text": "each time a different value each time",
+      "offset": 785440,
+      "duration": 3440
+    },
+    {
+      "text": "meanwhile our switch is only the one",
+      "offset": 787279,
+      "duration": 3321
+    },
+    {
+      "text": "value and so we only have to think about",
+      "offset": 788880,
+      "duration": 3800
+    },
+    {
+      "text": "one value at any one",
+      "offset": 790600,
+      "duration": 4919
+    },
+    {
+      "text": "time and so now our Cog complexity for",
+      "offset": 792680,
+      "duration": 4480
+    },
+    {
+      "text": "get words is one our cognitive",
+      "offset": 795519,
+      "duration": 3440
+    },
+    {
+      "text": "complexity for our sum of primes is",
+      "offset": 797160,
+      "duration": 4960
+    },
+    {
+      "text": "eight and that feels a bit more like it",
+      "offset": 798959,
+      "duration": 4641
+    },
+    {
+      "text": "matches the complexity of those",
+      "offset": 802120,
+      "duration": 3519
+    },
+    {
+      "text": "functions for our for the way we",
+      "offset": 803600,
+      "duration": 4239
+    },
+    {
+      "text": "actually think about these things and",
+      "offset": 805639,
+      "duration": 3281
+    },
+    {
+      "text": "the way I've been thinking about this is",
+      "offset": 807839,
+      "duration": 2921
+    },
+    {
+      "text": "that we end up with kind of like a brain",
+      "offset": 808920,
+      "duration": 4080
+    },
+    {
+      "text": "stack we end up with a this this stack",
+      "offset": 810760,
+      "duration": 3920
+    },
+    {
+      "text": "in our head as we're trying to read",
+      "offset": 813000,
+      "duration": 2839
+    },
+    {
+      "text": "through a function and if we were",
+      "offset": 814680,
+      "duration": 4360
+    },
+    {
+      "text": "reading through our sum of um sum of",
+      "offset": 815839,
+      "duration": 5240
+    },
+    {
+      "text": "Prime's function then we start having to",
+      "offset": 819040,
+      "duration": 3919
+    },
+    {
+      "text": "add kind of things onto the stack we we",
+      "offset": 821079,
+      "duration": 3681
+    },
+    {
+      "text": "hit our first Loop and we're like okay",
+      "offset": 822959,
+      "duration": 3921
+    },
+    {
+      "text": "now we have to consider at all times",
+      "offset": 824760,
+      "duration": 4079
+    },
+    {
+      "text": "that this could be running many times",
+      "offset": 826880,
+      "duration": 4319
+    },
+    {
+      "text": "and that our value of I uh the variable",
+      "offset": 828839,
+      "duration": 3841
+    },
+    {
+      "text": "I in this case will be changing through",
+      "offset": 831199,
+      "duration": 3481
+    },
+    {
+      "text": "that we get to the second one we have a",
+      "offset": 832680,
+      "duration": 4719
+    },
+    {
+      "text": "loop through a number of uh and we have",
+      "offset": 834680,
+      "duration": 4560
+    },
+    {
+      "text": "the variable J which will also be Chang",
+      "offset": 837399,
+      "duration": 3721
+    },
+    {
+      "text": "in so I and J are both to be considered",
+      "offset": 839240,
+      "duration": 3760
+    },
+    {
+      "text": "both of these Loops are important and we",
+      "offset": 841120,
+      "duration": 3680
+    },
+    {
+      "text": "hit the conditional in there and we're",
+      "offset": 843000,
+      "duration": 3160
+    },
+    {
+      "text": "just adding things on top that we have",
+      "offset": 844800,
+      "duration": 4959
+    },
+    {
+      "text": "to consider now uh is I less than J or",
+      "offset": 846160,
+      "duration": 4880
+    },
+    {
+      "text": "something I I can't remember what the",
+      "offset": 849759,
+      "duration": 3320
+    },
+    {
+      "text": "code does but like uh that's why I'd",
+      "offset": 851040,
+      "duration": 3280
+    },
+    {
+      "text": "have to go back and read it in order to",
+      "offset": 853079,
+      "duration": 3000
+    },
+    {
+      "text": "find out and I have to be considering",
+      "offset": 854320,
+      "duration": 4079
+    },
+    {
+      "text": "all of these things then things start to",
+      "offset": 856079,
+      "duration": 3880
+    },
+    {
+      "text": "get easier as you kind of drop out of",
+      "offset": 858399,
+      "duration": 2921
+    },
+    {
+      "text": "those Loops which is nice but then you",
+      "offset": 859959,
+      "duration": 2961
+    },
+    {
+      "text": "go back in you like okay I have to still",
+      "offset": 861320,
+      "duration": 3560
+    },
+    {
+      "text": "be considering that first for Loop and",
+      "offset": 862920,
+      "duration": 4320
+    },
+    {
+      "text": "now I'm considering whether uh it turned",
+      "offset": 864880,
+      "duration": 4519
+    },
+    {
+      "text": "out that that number was prime or not uh",
+      "offset": 867240,
+      "duration": 3680
+    },
+    {
+      "text": "and then finally we can pop those things",
+      "offset": 869399,
+      "duration": 4880
+    },
+    {
+      "text": "off the brain uh stack and carry on uh",
+      "offset": 870920,
+      "duration": 4839
+    },
+    {
+      "text": "with our day now we understand what's",
+      "offset": 874279,
+      "duration": 4041
+    },
+    {
+      "text": "going on but the higher that stack goes",
+      "offset": 875759,
+      "duration": 4681
+    },
+    {
+      "text": "or the more times we go up and down the",
+      "offset": 878320,
+      "duration": 4680
+    },
+    {
+      "text": "stack the more complex the function is",
+      "offset": 880440,
+      "duration": 4560
+    },
+    {
+      "text": "and the more our brain has to work to",
+      "offset": 883000,
+      "duration": 3519
+    },
+    {
+      "text": "understand what's actually going on",
+      "offset": 885000,
+      "duration": 4600
+    },
+    {
+      "text": "whilst keeping all the context uh stored",
+      "offset": 886519,
+      "duration": 4560
+    },
+    {
+      "text": "uh in our in our memory in our",
+      "offset": 889600,
+      "duration": 4840
+    },
+    {
+      "text": "short-term memory right there and so uh",
+      "offset": 891079,
+      "duration": 5120
+    },
+    {
+      "text": "optimizing what we do with our brain",
+      "offset": 894440,
+      "duration": 3600
+    },
+    {
+      "text": "stack is very much where I'm going with",
+      "offset": 896199,
+      "duration": 3640
+    },
+    {
+      "text": "this",
+      "offset": 898040,
+      "duration": 3400
+    },
+    {
+      "text": "and so that brings us to part three",
+      "offset": 899839,
+      "duration": 3521
+    },
+    {
+      "text": "which is to conquer that complexity what",
+      "offset": 901440,
+      "duration": 3639
+    },
+    {
+      "text": "do we",
+      "offset": 903360,
+      "duration": 4240
+    },
+    {
+      "text": "do well first up the important thing is",
+      "offset": 905079,
+      "duration": 5601
+    },
+    {
+      "text": "to understand where that complexity is",
+      "offset": 907600,
+      "duration": 5560
+    },
+    {
+      "text": "and to do that we're going to be uh",
+      "offset": 910680,
+      "duration": 4200
+    },
+    {
+      "text": "we're going to need some tools to do so",
+      "offset": 913160,
+      "duration": 3880
+    },
+    {
+      "text": "uh I don't expect you to uh work out",
+      "offset": 914880,
+      "duration": 3440
+    },
+    {
+      "text": "cognitive complexity of functions in",
+      "offset": 917040,
+      "duration": 4159
+    },
+    {
+      "text": "your head the entire time uh no one is",
+      "offset": 918320,
+      "duration": 5280
+    },
+    {
+      "text": "any good at that we have tools for this",
+      "offset": 921199,
+      "duration": 4601
+    },
+    {
+      "text": "uh and so I'm just going to oh drop out",
+      "offset": 923600,
+      "duration": 5080
+    },
+    {
+      "text": "of here and over here I've got um I've",
+      "offset": 925800,
+      "duration": 5519
+    },
+    {
+      "text": "got some code uh this is not a hugely uh",
+      "offset": 928680,
+      "duration": 3920
+    },
+    {
+      "text": "interactive demo with the code I'm",
+      "offset": 931319,
+      "duration": 4161
+    },
+    {
+      "text": "afraid but um uh this is actually some",
+      "offset": 932600,
+      "duration": 4239
+    },
+    {
+      "text": "code that I use in a different slide",
+      "offset": 935480,
+      "duration": 3640
+    },
+    {
+      "text": "deck of mine uh that throws confetti on",
+      "offset": 936839,
+      "duration": 4120
+    },
+    {
+      "text": "two her slides it's a it's a JavaScript",
+      "offset": 939120,
+      "duration": 4920
+    },
+    {
+      "text": "slide deck in reveal JS uh and um and",
+      "offset": 940959,
+      "duration": 5081
+    },
+    {
+      "text": "yeah we'll throw confetti and so we have",
+      "offset": 944040,
+      "duration": 3799
+    },
+    {
+      "text": "this big function uh that runs on the",
+      "offset": 946040,
+      "duration": 3880
+    },
+    {
+      "text": "end of a slide transition and what it",
+      "offset": 947839,
+      "duration": 4680
+    },
+    {
+      "text": "does is it checks a few things uh",
+      "offset": 949920,
+      "duration": 4320
+    },
+    {
+      "text": "collects some variables from the uh from",
+      "offset": 952519,
+      "duration": 4041
+    },
+    {
+      "text": "the HTML and decides how much confetti",
+      "offset": 954240,
+      "duration": 4800
+    },
+    {
+      "text": "to throw lovely little function although",
+      "offset": 956560,
+      "duration": 4719
+    },
+    {
+      "text": "it turns out I've got a yellow underline",
+      "offset": 959040,
+      "duration": 3520
+    },
+    {
+      "text": "there because I have sonor lint",
+      "offset": 961279,
+      "duration": 3441
+    },
+    {
+      "text": "installed uh and sonar lint is telling",
+      "offset": 962560,
+      "duration": 4240
+    },
+    {
+      "text": "me right here that this function needs",
+      "offset": 964720,
+      "duration": 4039
+    },
+    {
+      "text": "refactoring because its cognitive",
+      "offset": 966800,
+      "duration": 5120
+    },
+    {
+      "text": "complexity is uh is 16 and that's 15 is",
+      "offset": 968759,
+      "duration": 5281
+    },
+    {
+      "text": "allowed so when I said earlier that the",
+      "offset": 971920,
+      "duration": 3719
+    },
+    {
+      "text": "cognitive complexity of functions is too",
+      "offset": 974040,
+      "duration": 3960
+    },
+    {
+      "text": "high we have a threshold for that and",
+      "offset": 975639,
+      "duration": 4041
+    },
+    {
+      "text": "that threshold by default in JavaScript",
+      "offset": 978000,
+      "duration": 4079
+    },
+    {
+      "text": "is 15 I think that's a pretty good",
+      "offset": 979680,
+      "duration": 3719
+    },
+    {
+      "text": "threshold because you can write some",
+      "offset": 982079,
+      "duration": 4841
+    },
+    {
+      "text": "quite complex code um without hitting it",
+      "offset": 983399,
+      "duration": 5041
+    },
+    {
+      "text": "uh and in fact I had to try quite hard",
+      "offset": 986920,
+      "duration": 3960
+    },
+    {
+      "text": "to get to this point now give it a lot",
+      "offset": 988440,
+      "duration": 4839
+    },
+    {
+      "text": "of time I think it's much easier to add",
+      "offset": 990880,
+      "duration": 5600
+    },
+    {
+      "text": "complexity to to to functions but uh in",
+      "offset": 993279,
+      "duration": 5800
+    },
+    {
+      "text": "this this particular example I got to 16",
+      "offset": 996480,
+      "duration": 3919
+    },
+    {
+      "text": "and uh and",
+      "offset": 999079,
+      "duration": 4041
+    },
+    {
+      "text": "so uh in order to see like where that is",
+      "offset": 1000399,
+      "duration": 4321
+    },
+    {
+      "text": "if you hit Quick Fix you're going to go",
+      "offset": 1003120,
+      "duration": 4360
+    },
+    {
+      "text": "to show all locations for this issue uh",
+      "offset": 1004720,
+      "duration": 4039
+    },
+    {
+      "text": "and that would bring up these numbers I",
+      "offset": 1007480,
+      "duration": 3520
+    },
+    {
+      "text": "already had them loaded apparently uh",
+      "offset": 1008759,
+      "duration": 3640
+    },
+    {
+      "text": "but uh that brings up these numbers",
+      "offset": 1011000,
+      "duration": 3720
+    },
+    {
+      "text": "which shows all of those brakes all of",
+      "offset": 1012399,
+      "duration": 3961
+    },
+    {
+      "text": "those Loops those conditionals those",
+      "offset": 1014720,
+      "duration": 4760
+    },
+    {
+      "text": "branches um that we are adding uh",
+      "offset": 1016360,
+      "duration": 5240
+    },
+    {
+      "text": "complexity with and then if you hover",
+      "offset": 1019480,
+      "duration": 4080
+    },
+    {
+      "text": "over them you can see uh the score for",
+      "offset": 1021600,
+      "duration": 4319
+    },
+    {
+      "text": "them so this big outside conditional",
+      "offset": 1023560,
+      "duration": 4279
+    },
+    {
+      "text": "here is scoring a plus one and then",
+      "offset": 1025919,
+      "duration": 4040
+    },
+    {
+      "text": "inside we have a turnery conditional uh",
+      "offset": 1027839,
+      "duration": 4360
+    },
+    {
+      "text": "which is scoring plus two one for being",
+      "offset": 1029959,
+      "duration": 5080
+    },
+    {
+      "text": "nested uh once we've got another turnery",
+      "offset": 1032199,
+      "duration": 4720
+    },
+    {
+      "text": "we've got another conditional we end up",
+      "offset": 1035039,
+      "duration": 3561
+    },
+    {
+      "text": "looping uh we end up doing quite a bit",
+      "offset": 1036919,
+      "duration": 4081
+    },
+    {
+      "text": "of stuff here this one this Turner is",
+      "offset": 1038600,
+      "duration": 5880
+    },
+    {
+      "text": "now uh too deep uh and and later on we",
+      "offset": 1041000,
+      "duration": 5760
+    },
+    {
+      "text": "have it nested oops hello we have it",
+      "offset": 1044480,
+      "duration": 3920
+    },
+    {
+      "text": "nested uh quite deeply there with the",
+      "offset": 1046760,
+      "duration": 3880
+    },
+    {
+      "text": "plus4 three nesting for this uh final",
+      "offset": 1048400,
+      "duration": 5480
+    },
+    {
+      "text": "like check if the time is is right it",
+      "offset": 1050640,
+      "duration": 5000
+    },
+    {
+      "text": "doesn't matter what this code does what",
+      "offset": 1053880,
+      "duration": 4039
+    },
+    {
+      "text": "matters is that you can see uh if you",
+      "offset": 1055640,
+      "duration": 4440
+    },
+    {
+      "text": "have son lint installed uh you can see",
+      "offset": 1057919,
+      "duration": 5201
+    },
+    {
+      "text": "when functions breach uh this uh this",
+      "offset": 1060080,
+      "duration": 6000
+    },
+    {
+      "text": "threshold of 15 and complexity and",
+      "offset": 1063120,
+      "duration": 5439
+    },
+    {
+      "text": "consider whether that's the time to fix",
+      "offset": 1066080,
+      "duration": 5680
+    },
+    {
+      "text": "them so let's go back to the slides",
+      "offset": 1068559,
+      "duration": 5120
+    },
+    {
+      "text": "because the next St stage is actually to",
+      "offset": 1071760,
+      "duration": 5880
+    },
+    {
+      "text": "do nothing um if you understand where",
+      "offset": 1073679,
+      "duration": 6161
+    },
+    {
+      "text": "the complexity is in your code Cod base",
+      "offset": 1077640,
+      "duration": 3680
+    },
+    {
+      "text": "uh and Sona lint is great at showing",
+      "offset": 1079840,
+      "duration": 2760
+    },
+    {
+      "text": "that as you're writing it but if you're",
+      "offset": 1081320,
+      "duration": 3440
+    },
+    {
+      "text": "using Sona Cube or Sona Cloud then that",
+      "offset": 1082600,
+      "duration": 4600
+    },
+    {
+      "text": "can uh kind of will scan your entire",
+      "offset": 1084760,
+      "duration": 4799
+    },
+    {
+      "text": "project and show you all the places uh",
+      "offset": 1087200,
+      "duration": 5080
+    },
+    {
+      "text": "where you have uh High complexity uh",
+      "offset": 1089559,
+      "duration": 4161
+    },
+    {
+      "text": "Second Stage is still to do nothing",
+      "offset": 1092280,
+      "duration": 5040
+    },
+    {
+      "text": "don't do anything about it yet you see",
+      "offset": 1093720,
+      "duration": 4920
+    },
+    {
+      "text": "that complexity is only actually an",
+      "offset": 1097320,
+      "duration": 2920
+    },
+    {
+      "text": "issue if you need to understand and",
+      "offset": 1098640,
+      "duration": 4880
+    },
+    {
+      "text": "change the code uh up until now I would",
+      "offset": 1100240,
+      "duration": 4960
+    },
+    {
+      "text": "assume that your code is for the most",
+      "offset": 1103520,
+      "duration": 5279
+    },
+    {
+      "text": "part working um and if it's working",
+      "offset": 1105200,
+      "duration": 5120
+    },
+    {
+      "text": "working then that's fine if you don't",
+      "offset": 1108799,
+      "duration": 3201
+    },
+    {
+      "text": "need to change it then that's fine it",
+      "offset": 1110320,
+      "duration": 3599
+    },
+    {
+      "text": "doesn't need to change in fact changing",
+      "offset": 1112000,
+      "duration": 4240
+    },
+    {
+      "text": "working code is a potential risk you",
+      "offset": 1113919,
+      "duration": 4841
+    },
+    {
+      "text": "could turn it into non-working code",
+      "offset": 1116240,
+      "duration": 4319
+    },
+    {
+      "text": "which would be much worse than just",
+      "offset": 1118760,
+      "duration": 4560
+    },
+    {
+      "text": "complex code uh complexity is only an",
+      "offset": 1120559,
+      "duration": 4681
+    },
+    {
+      "text": "issue if you need to change the",
+      "offset": 1123320,
+      "duration": 4800
+    },
+    {
+      "text": "code and so when it comes down to the",
+      "offset": 1125240,
+      "duration": 5200
+    },
+    {
+      "text": "the the time where you need to fix a bug",
+      "offset": 1128120,
+      "duration": 4760
+    },
+    {
+      "text": "somewhere or add a feature to something",
+      "offset": 1130440,
+      "duration": 3640
+    },
+    {
+      "text": "and you find you're working with a",
+      "offset": 1132880,
+      "duration": 3120
+    },
+    {
+      "text": "complex function that's when it's time",
+      "offset": 1134080,
+      "duration": 4920
+    },
+    {
+      "text": "to clean as you code it's time to clean",
+      "offset": 1136000,
+      "duration": 5640
+    },
+    {
+      "text": "up that complexity first before you then",
+      "offset": 1139000,
+      "duration": 5559
+    },
+    {
+      "text": "make the changes because if you find you",
+      "offset": 1141640,
+      "duration": 5120
+    },
+    {
+      "text": "are working with a complex piece of code",
+      "offset": 1144559,
+      "duration": 4240
+    },
+    {
+      "text": "it's important to understand it break it",
+      "offset": 1146760,
+      "duration": 4279
+    },
+    {
+      "text": "down into easier to handle pieces of",
+      "offset": 1148799,
+      "duration": 4120
+    },
+    {
+      "text": "code and then make the change because",
+      "offset": 1151039,
+      "duration": 3481
+    },
+    {
+      "text": "it's much easier to make that change",
+      "offset": 1152919,
+      "duration": 4000
+    },
+    {
+      "text": "afterwards and so this leads me to you",
+      "offset": 1154520,
+      "duration": 4360
+    },
+    {
+      "text": "know suggest that you refactor things",
+      "offset": 1156919,
+      "duration": 5161
+    },
+    {
+      "text": "first uh refactoring that code uh before",
+      "offset": 1158880,
+      "duration": 5320
+    },
+    {
+      "text": "you change it again will make the making",
+      "offset": 1162080,
+      "duration": 4240
+    },
+    {
+      "text": "the change easier but it also will mean",
+      "offset": 1164200,
+      "duration": 3959
+    },
+    {
+      "text": "that you understand that code much",
+      "offset": 1166320,
+      "duration": 3800
+    },
+    {
+      "text": "better and it will be easier to",
+      "offset": 1168159,
+      "duration": 3201
+    },
+    {
+      "text": "understand the next time somebody comes",
+      "offset": 1170120,
+      "duration": 3400
+    },
+    {
+      "text": "along to change or fix",
+      "offset": 1171360,
+      "duration": 5360
+    },
+    {
+      "text": "something now refactoring uh in my",
+      "offset": 1173520,
+      "duration": 5800
+    },
+    {
+      "text": "opinion is improving how the code Works",
+      "offset": 1176720,
+      "duration": 5400
+    },
+    {
+      "text": "without changing what the code does uh",
+      "offset": 1179320,
+      "duration": 5719
+    },
+    {
+      "text": "and this is important um for a number of",
+      "offset": 1182120,
+      "duration": 5679
+    },
+    {
+      "text": "reasons uh refactoring uh sorry your",
+      "offset": 1185039,
+      "duration": 4561
+    },
+    {
+      "text": "code you should never have to worry",
+      "offset": 1187799,
+      "duration": 3760
+    },
+    {
+      "text": "about what happens sort of within a",
+      "offset": 1189600,
+      "duration": 4319
+    },
+    {
+      "text": "within a function as long as um you know",
+      "offset": 1191559,
+      "duration": 4240
+    },
+    {
+      "text": "when you put the same things in the same",
+      "offset": 1193919,
+      "duration": 5561
+    },
+    {
+      "text": "results come out the other side um uh",
+      "offset": 1195799,
+      "duration": 5281
+    },
+    {
+      "text": "the inside can be a black box for the",
+      "offset": 1199480,
+      "duration": 3840
+    },
+    {
+      "text": "most part uh and that's why you know if",
+      "offset": 1201080,
+      "duration": 3680
+    },
+    {
+      "text": "you want to rearrange that code on the",
+      "offset": 1203320,
+      "duration": 3440
+    },
+    {
+      "text": "inside of the function uh the outside",
+      "offset": 1204760,
+      "duration": 3480
+    },
+    {
+      "text": "should never should never change at",
+      "offset": 1206760,
+      "duration": 3320
+    },
+    {
+      "text": "least during refactoring we're here to",
+      "offset": 1208240,
+      "duration": 3760
+    },
+    {
+      "text": "improve how the code Works without",
+      "offset": 1210080,
+      "duration": 4320
+    },
+    {
+      "text": "changing what the code",
+      "offset": 1212000,
+      "duration": 4880
+    },
+    {
+      "text": "does how do you know we didn't change",
+      "offset": 1214400,
+      "duration": 4880
+    },
+    {
+      "text": "the result of running the code uh well",
+      "offset": 1216880,
+      "duration": 4720
+    },
+    {
+      "text": "that leads us straight into tests I hope",
+      "offset": 1219280,
+      "duration": 4240
+    },
+    {
+      "text": "you're a fan of tests I certainly am I'm",
+      "offset": 1221600,
+      "duration": 3480
+    },
+    {
+      "text": "even a fan of test driven development",
+      "offset": 1223520,
+      "duration": 4080
+    },
+    {
+      "text": "writing tests first uh so that that can",
+      "offset": 1225080,
+      "duration": 5320
+    },
+    {
+      "text": "drive the design of your application uh",
+      "offset": 1227600,
+      "duration": 4959
+    },
+    {
+      "text": "and uh I'm a big fan of uh of the idea",
+      "offset": 1230400,
+      "duration": 4159
+    },
+    {
+      "text": "that test driven development uh requires",
+      "offset": 1232559,
+      "duration": 4161
+    },
+    {
+      "text": "you to go from a failing test red to",
+      "offset": 1234559,
+      "duration": 4281
+    },
+    {
+      "text": "Green to a passing test and then",
+      "offset": 1236720,
+      "duration": 5079
+    },
+    {
+      "text": "refactoring uh that would be a uh a",
+      "offset": 1238840,
+      "duration": 5440
+    },
+    {
+      "text": "great way to um that's a great way of",
+      "offset": 1241799,
+      "duration": 4281
+    },
+    {
+      "text": "dealing with things uh I did notice a",
+      "offset": 1244280,
+      "duration": 4040
+    },
+    {
+      "text": "hand go up there if you have questions",
+      "offset": 1246080,
+      "duration": 4640
+    },
+    {
+      "text": "pop them in the Q&A box uh that's the",
+      "offset": 1248320,
+      "duration": 4920
+    },
+    {
+      "text": "best way to ask a question uh during the",
+      "offset": 1250720,
+      "duration": 5160
+    },
+    {
+      "text": "during the webinar um so yeah I like",
+      "offset": 1253240,
+      "duration": 3919
+    },
+    {
+      "text": "tester development you don't have to do",
+      "offset": 1255880,
+      "duration": 2840
+    },
+    {
+      "text": "it that way but the important thing",
+      "offset": 1257159,
+      "duration": 3681
+    },
+    {
+      "text": "about this is that we have tests if we",
+      "offset": 1258720,
+      "duration": 4319
+    },
+    {
+      "text": "have tests to cover what the function",
+      "offset": 1260840,
+      "duration": 4920
+    },
+    {
+      "text": "does uh and and what the outputs are",
+      "offset": 1263039,
+      "duration": 4801
+    },
+    {
+      "text": "from a function uh then we can change",
+      "offset": 1265760,
+      "duration": 4399
+    },
+    {
+      "text": "the internals of the function and know",
+      "offset": 1267840,
+      "duration": 4120
+    },
+    {
+      "text": "that it's still doing the same",
+      "offset": 1270159,
+      "duration": 4481
+    },
+    {
+      "text": "job um and it's important in that case",
+      "offset": 1271960,
+      "duration": 5400
+    },
+    {
+      "text": "that your tests are there also to test",
+      "offset": 1274640,
+      "duration": 4840
+    },
+    {
+      "text": "what a function does and not how it does",
+      "offset": 1277360,
+      "duration": 6880
+    },
+    {
+      "text": "it if your tests have any kind of um uh",
+      "offset": 1279480,
+      "duration": 6600
+    },
+    {
+      "text": "any kind of thing that reaches inside",
+      "offset": 1284240,
+      "duration": 3840
+    },
+    {
+      "text": "the code of a function and and and deals",
+      "offset": 1286080,
+      "duration": 5040
+    },
+    {
+      "text": "with like internals uh then",
+      "offset": 1288080,
+      "duration": 5400
+    },
+    {
+      "text": "um uh then when you change how the",
+      "offset": 1291120,
+      "duration": 4240
+    },
+    {
+      "text": "internals work the tests will fail and",
+      "offset": 1293480,
+      "duration": 4360
+    },
+    {
+      "text": "you won't have that same confidence uh",
+      "offset": 1295360,
+      "duration": 4559
+    },
+    {
+      "text": "that tests that only care about the",
+      "offset": 1297840,
+      "duration": 5600
+    },
+    {
+      "text": "outputs uh do so make sure you test what",
+      "offset": 1299919,
+      "duration": 5360
+    },
+    {
+      "text": "a function does and not how it does it",
+      "offset": 1303440,
+      "duration": 4080
+    },
+    {
+      "text": "you can see how that kind of mirrors or",
+      "offset": 1305279,
+      "duration": 3880
+    },
+    {
+      "text": "maps to the same as what refactoring",
+      "offset": 1307520,
+      "duration": 4759
+    },
+    {
+      "text": "does refactoring is is changing uh is",
+      "offset": 1309159,
+      "duration": 5441
+    },
+    {
+      "text": "changing how a code how the code does it",
+      "offset": 1312279,
+      "duration": 4681
+    },
+    {
+      "text": "but not what it does and tests should",
+      "offset": 1314600,
+      "duration": 4000
+    },
+    {
+      "text": "test what a function does and not how it",
+      "offset": 1316960,
+      "duration": 4880
+    },
+    {
+      "text": "does it uh they go hand in hand and so",
+      "offset": 1318600,
+      "duration": 4480
+    },
+    {
+      "text": "yeah if you don't have any tests for a",
+      "offset": 1321840,
+      "duration": 2400
+    },
+    {
+      "text": "piece of code that you're working on and",
+      "offset": 1323080,
+      "duration": 3079
+    },
+    {
+      "text": "you need to refactor that's absolutely",
+      "offset": 1324240,
+      "duration": 4280
+    },
+    {
+      "text": "Step Zero you need to go and write some",
+      "offset": 1326159,
+      "duration": 5681
+    },
+    {
+      "text": "tests um there's many ways to go about",
+      "offset": 1328520,
+      "duration": 6039
+    },
+    {
+      "text": "that um goodness go get your AI",
+      "offset": 1331840,
+      "duration": 4160
+    },
+    {
+      "text": "assistant to go write some tests for you",
+      "offset": 1334559,
+      "duration": 4321
+    },
+    {
+      "text": "that might help I don't know",
+      "offset": 1336000,
+      "duration": 6279
+    },
+    {
+      "text": "um but uh the important thing is when",
+      "offset": 1338880,
+      "duration": 5159
+    },
+    {
+      "text": "your writing tests for refactoring a",
+      "offset": 1342279,
+      "duration": 3520
+    },
+    {
+      "text": "piece of code is that the test must",
+      "offset": 1344039,
+      "duration": 4120
+    },
+    {
+      "text": "cover the existing Behavior exactly as",
+      "offset": 1345799,
+      "duration": 5480
+    },
+    {
+      "text": "it is even if it's wrong we are",
+      "offset": 1348159,
+      "duration": 5400
+    },
+    {
+      "text": "absolutely in this refactoring stage",
+      "offset": 1351279,
+      "duration": 4280
+    },
+    {
+      "text": "trying to ensure that we do not change",
+      "offset": 1353559,
+      "duration": 3881
+    },
+    {
+      "text": "the behavior of the system we just want",
+      "offset": 1355559,
+      "duration": 4081
+    },
+    {
+      "text": "to improve how the code works if you",
+      "offset": 1357440,
+      "duration": 3560
+    },
+    {
+      "text": "change how the code works at the same",
+      "offset": 1359640,
+      "duration": 2840
+    },
+    {
+      "text": "time then the test will break and how",
+      "offset": 1361000,
+      "duration": 3679
+    },
+    {
+      "text": "will you know uh that you have indeed",
+      "offset": 1362480,
+      "duration": 4199
+    },
+    {
+      "text": "fixed anything if if you're just",
+      "offset": 1364679,
+      "duration": 4921
+    },
+    {
+      "text": "breaking your old tests",
+      "offset": 1366679,
+      "duration": 7681
+    },
+    {
+      "text": "so you refactor first um and uh and then",
+      "offset": 1369600,
+      "duration": 6520
+    },
+    {
+      "text": "once you're refactored once you have",
+      "offset": 1374360,
+      "duration": 3439
+    },
+    {
+      "text": "indeed committed all those changes to",
+      "offset": 1376120,
+      "duration": 4280
+    },
+    {
+      "text": "say okay this is now uh a piece of code",
+      "offset": 1377799,
+      "duration": 5841
+    },
+    {
+      "text": "that has passing tests uh that behaves",
+      "offset": 1380400,
+      "duration": 5279
+    },
+    {
+      "text": "exactly the same way as the as how I",
+      "offset": 1383640,
+      "duration": 5560
+    },
+    {
+      "text": "started uh but has changed the internals",
+      "offset": 1385679,
+      "duration": 5521
+    },
+    {
+      "text": "that's the point where we can then uh",
+      "offset": 1389200,
+      "duration": 4280
+    },
+    {
+      "text": "move on to make the change that you",
+      "offset": 1391200,
+      "duration": 4160
+    },
+    {
+      "text": "actually need to to to make in that code",
+      "offset": 1393480,
+      "duration": 3520
+    },
+    {
+      "text": "you can go and fix things you can change",
+      "offset": 1395360,
+      "duration": 4720
+    },
+    {
+      "text": "the tests um but only after you finish",
+      "offset": 1397000,
+      "duration": 4960
+    },
+    {
+      "text": "that refactoring",
+      "offset": 1400080,
+      "duration": 4479
+    },
+    {
+      "text": "step but uh that's getting a little",
+      "offset": 1401960,
+      "duration": 4199
+    },
+    {
+      "text": "ahead of myself uh because I want to",
+      "offset": 1404559,
+      "duration": 3401
+    },
+    {
+      "text": "give you some uh tips on refactoring",
+      "offset": 1406159,
+      "duration": 4801
+    },
+    {
+      "text": "JavaScript code for uh to to improve",
+      "offset": 1407960,
+      "duration": 5120
+    },
+    {
+      "text": "your cognitive complexity and so",
+      "offset": 1410960,
+      "duration": 4280
+    },
+    {
+      "text": "cognitive complexity very much punishes",
+      "offset": 1413080,
+      "duration": 4920
+    },
+    {
+      "text": "nested code the deeper we Nest things",
+      "offset": 1415240,
+      "duration": 4520
+    },
+    {
+      "text": "the more stuff we stick on our brain",
+      "offset": 1418000,
+      "duration": 5039
+    },
+    {
+      "text": "stack uh the more um the more difficult",
+      "offset": 1419760,
+      "duration": 4960
+    },
+    {
+      "text": "it is to understand what's going on and",
+      "offset": 1423039,
+      "duration": 4041
+    },
+    {
+      "text": "so our aim here is to reduce that",
+      "offset": 1424720,
+      "duration": 4920
+    },
+    {
+      "text": "nesting reducing the nesting of our code",
+      "offset": 1427080,
+      "duration": 5199
+    },
+    {
+      "text": "will allow us to uh think more clearly",
+      "offset": 1429640,
+      "duration": 5440
+    },
+    {
+      "text": "through it uh break it into smaller bits",
+      "offset": 1432279,
+      "duration": 4961
+    },
+    {
+      "text": "and understand those bits better and so",
+      "offset": 1435080,
+      "duration": 4280
+    },
+    {
+      "text": "I have four tips here uh the first one",
+      "offset": 1437240,
+      "duration": 4600
+    },
+    {
+      "text": "is to invert invert conditions and exit",
+      "offset": 1439360,
+      "duration": 5480
+    },
+    {
+      "text": "early uh structural collapse extracting",
+      "offset": 1441840,
+      "duration": 5040
+    },
+    {
+      "text": "helper methods and then using a couple",
+      "offset": 1444840,
+      "duration": 3520
+    },
+    {
+      "text": "of other language features that I think",
+      "offset": 1446880,
+      "duration": 3240
+    },
+    {
+      "text": "are really cool for for this in in",
+      "offset": 1448360,
+      "duration": 3240
+    },
+    {
+      "text": "JavaScript",
+      "offset": 1450120,
+      "duration": 4280
+    },
+    {
+      "text": "particularly um so let's jump into those",
+      "offset": 1451600,
+      "duration": 4520
+    },
+    {
+      "text": "uh inverting the conditional early exit",
+      "offset": 1454400,
+      "duration": 3600
+    },
+    {
+      "text": "I showed you that code earlier that has",
+      "offset": 1456120,
+      "duration": 3840
+    },
+    {
+      "text": "this onslide transition end and we had",
+      "offset": 1458000,
+      "duration": 4240
+    },
+    {
+      "text": "this big",
+      "offset": 1459960,
+      "duration": 5160
+    },
+    {
+      "text": "um that's not working I had this big if",
+      "offset": 1462240,
+      "duration": 4480
+    },
+    {
+      "text": "big conditional around the outside of a",
+      "offset": 1465120,
+      "duration": 4080
+    },
+    {
+      "text": "code uh the whole function starts with",
+      "offset": 1466720,
+      "duration": 4040
+    },
+    {
+      "text": "this big if there's conetti in the",
+      "offset": 1469200,
+      "duration": 4479
+    },
+    {
+      "text": "current slides data set um and that's",
+      "offset": 1470760,
+      "duration": 5000
+    },
+    {
+      "text": "great but it sort of immediately nests",
+      "offset": 1473679,
+      "duration": 4321
+    },
+    {
+      "text": "everything inside that first conditional",
+      "offset": 1475760,
+      "duration": 4080
+    },
+    {
+      "text": "uh and you're always considering is",
+      "offset": 1478000,
+      "duration": 4760
+    },
+    {
+      "text": "there confetti uh in the data set what",
+      "offset": 1479840,
+      "duration": 4680
+    },
+    {
+      "text": "you can do instead is of course invert",
+      "offset": 1482760,
+      "duration": 3200
+    },
+    {
+      "text": "that condition say if there's not",
+      "offset": 1484520,
+      "duration": 3920
+    },
+    {
+      "text": "confetti then we simply return we get",
+      "offset": 1485960,
+      "duration": 4959
+    },
+    {
+      "text": "out of here we're done uh and that's",
+      "offset": 1488440,
+      "duration": 5200
+    },
+    {
+      "text": "brilliant we've uh we've kind of dropped",
+      "offset": 1490919,
+      "duration": 4601
+    },
+    {
+      "text": "off having to consider whether there's",
+      "offset": 1493640,
+      "duration": 3360
+    },
+    {
+      "text": "confetti in the current data set if",
+      "offset": 1495520,
+      "duration": 3360
+    },
+    {
+      "text": "there's not we've already left",
+      "offset": 1497000,
+      "duration": 3399
+    },
+    {
+      "text": "uh and and so we can just get on with",
+      "offset": 1498880,
+      "duration": 2840
+    },
+    {
+      "text": "the rest of the function which is to",
+      "offset": 1500399,
+      "duration": 3201
+    },
+    {
+      "text": "throw some confetti on the screen we're",
+      "offset": 1501720,
+      "duration": 4520
+    },
+    {
+      "text": "ready to do that we're going to do that",
+      "offset": 1503600,
+      "duration": 4480
+    },
+    {
+      "text": "uh We've reduced the nesting and things",
+      "offset": 1506240,
+      "duration": 3000
+    },
+    {
+      "text": "are a lot",
+      "offset": 1508080,
+      "duration": 3160
+    },
+    {
+      "text": "happier so we just",
+      "offset": 1509240,
+      "duration": 4280
+    },
+    {
+      "text": "pop pop one little thing off the brain",
+      "offset": 1511240,
+      "duration": 3880
+    },
+    {
+      "text": "stack there we we've got rid of one",
+      "offset": 1513520,
+      "duration": 4120
+    },
+    {
+      "text": "conditional we we are happy to just exit",
+      "offset": 1515120,
+      "duration": 4679
+    },
+    {
+      "text": "early uh instead of keeping that around",
+      "offset": 1517640,
+      "duration": 3560
+    },
+    {
+      "text": "in our mind keeping that at the bottom",
+      "offset": 1519799,
+      "duration": 2921
+    },
+    {
+      "text": "of the",
+      "offset": 1521200,
+      "duration": 4400
+    },
+    {
+      "text": "stack next up is structural collapse uh",
+      "offset": 1522720,
+      "duration": 4559
+    },
+    {
+      "text": "this is kind of where uh this doesn't",
+      "offset": 1525600,
+      "duration": 4040
+    },
+    {
+      "text": "have to be uh around the outside of a",
+      "offset": 1527279,
+      "duration": 4561
+    },
+    {
+      "text": "function again uh like this code code",
+      "offset": 1529640,
+      "duration": 3919
+    },
+    {
+      "text": "shows but what's Happening Here is we've",
+      "offset": 1531840,
+      "duration": 3959
+    },
+    {
+      "text": "got two conditionals one after each",
+      "offset": 1533559,
+      "duration": 4201
+    },
+    {
+      "text": "other uh with nothing else happening in",
+      "offset": 1535799,
+      "duration": 3760
+    },
+    {
+      "text": "between uh and that means that we can",
+      "offset": 1537760,
+      "duration": 4600
+    },
+    {
+      "text": "turn that two conditions into just one",
+      "offset": 1539559,
+      "duration": 4921
+    },
+    {
+      "text": "condition um and we only have to deal",
+      "offset": 1542360,
+      "duration": 3679
+    },
+    {
+      "text": "with kind of one idea of what's",
+      "offset": 1544480,
+      "duration": 3840
+    },
+    {
+      "text": "happening at this time rather than uh",
+      "offset": 1546039,
+      "duration": 3801
+    },
+    {
+      "text": "the idea that we there could be other",
+      "offset": 1548320,
+      "duration": 4160
+    },
+    {
+      "text": "stuff going on between these conditions",
+      "offset": 1549840,
+      "duration": 4719
+    },
+    {
+      "text": "uh all we need to know is at this point",
+      "offset": 1552480,
+      "duration": 3559
+    },
+    {
+      "text": "uh and this is sort of some madeup code",
+      "offset": 1554559,
+      "duration": 3240
+    },
+    {
+      "text": "here is there confetti in the slide and",
+      "offset": 1556039,
+      "duration": 4441
+    },
+    {
+      "text": "the media query says that uh animations",
+      "offset": 1557799,
+      "duration": 5441
+    },
+    {
+      "text": "are are fine in that case we can animate",
+      "offset": 1560480,
+      "duration": 4120
+    },
+    {
+      "text": "some confetti on the",
+      "offset": 1563240,
+      "duration": 4600
+    },
+    {
+      "text": "screen uh if we combine those conditions",
+      "offset": 1564600,
+      "duration": 5679
+    },
+    {
+      "text": "uh we drop one level of nesting uh and",
+      "offset": 1567840,
+      "duration": 4559
+    },
+    {
+      "text": "we only have one uh thing to think about",
+      "offset": 1570279,
+      "duration": 3760
+    },
+    {
+      "text": "on our on on that brain stack or one",
+      "offset": 1572399,
+      "duration": 4601
+    },
+    {
+      "text": "thing to add to the stack there um",
+      "offset": 1574039,
+      "duration": 5481
+    },
+    {
+      "text": "rather than two we can pop uh that",
+      "offset": 1577000,
+      "duration": 4360
+    },
+    {
+      "text": "second conditional off the brain stack",
+      "offset": 1579520,
+      "duration": 4080
+    },
+    {
+      "text": "and we're H we're in a happier place",
+      "offset": 1581360,
+      "duration": 4799
+    },
+    {
+      "text": "again uh next is probably I think the",
+      "offset": 1583600,
+      "duration": 5480
+    },
+    {
+      "text": "most important one uh uh in terms of",
+      "offset": 1586159,
+      "duration": 5361
+    },
+    {
+      "text": "refactoring for complexity like this and",
+      "offset": 1589080,
+      "duration": 5199
+    },
+    {
+      "text": "that's to extract a helper method uh it",
+      "offset": 1591520,
+      "duration": 4960
+    },
+    {
+      "text": "helps with duplication but it also it",
+      "offset": 1594279,
+      "duration": 4361
+    },
+    {
+      "text": "doesn't necessarily need duplication to",
+      "offset": 1596480,
+      "duration": 4679
+    },
+    {
+      "text": "exist uh it helps you to break down a",
+      "offset": 1598640,
+      "duration": 5440
+    },
+    {
+      "text": "function into its component parts uh and",
+      "offset": 1601159,
+      "duration": 4760
+    },
+    {
+      "text": "uh and allows you to kind of decrease",
+      "offset": 1604080,
+      "duration": 3240
+    },
+    {
+      "text": "the amount of context that you have to",
+      "offset": 1605919,
+      "duration": 3000
+    },
+    {
+      "text": "consider when you're dealing with each",
+      "offset": 1607320,
+      "duration": 4120
+    },
+    {
+      "text": "of the individual functions and when you",
+      "offset": 1608919,
+      "duration": 4721
+    },
+    {
+      "text": "are changing or fixing something inside",
+      "offset": 1611440,
+      "duration": 5000
+    },
+    {
+      "text": "of a a large complex function if you",
+      "offset": 1613640,
+      "duration": 4919
+    },
+    {
+      "text": "break it down into smaller fun functions",
+      "offset": 1616440,
+      "duration": 4560
+    },
+    {
+      "text": "full of helper methods uh then then you",
+      "offset": 1618559,
+      "duration": 4120
+    },
+    {
+      "text": "probably find that what you what's",
+      "offset": 1621000,
+      "duration": 3840
+    },
+    {
+      "text": "broken or what needs adding is part of",
+      "offset": 1622679,
+      "duration": 3801
+    },
+    {
+      "text": "one of those smaller methods and so it's",
+      "offset": 1624840,
+      "duration": 4319
+    },
+    {
+      "text": "easier to deal with in this case the",
+      "offset": 1626480,
+      "duration": 4480
+    },
+    {
+      "text": "code on screen is",
+      "offset": 1629159,
+      "duration": 4681
+    },
+    {
+      "text": "um is is a bit of is two turnery",
+      "offset": 1630960,
+      "duration": 5480
+    },
+    {
+      "text": "functions that I have sorry two tary",
+      "offset": 1633840,
+      "duration": 4680
+    },
+    {
+      "text": "expressions that I have uh which are",
+      "offset": 1636440,
+      "duration": 3599
+    },
+    {
+      "text": "both doing the same thing we've got the",
+      "offset": 1638520,
+      "duration": 3480
+    },
+    {
+      "text": "slide we're looking inside the data set",
+      "offset": 1640039,
+      "duration": 4041
+    },
+    {
+      "text": "for a particular attribute when we get",
+      "offset": 1642000,
+      "duration": 4279
+    },
+    {
+      "text": "that attribute we PA it as an integer if",
+      "offset": 1644080,
+      "duration": 4240
+    },
+    {
+      "text": "we don't get the attribute we leave it",
+      "offset": 1646279,
+      "duration": 4880
+    },
+    {
+      "text": "we return a default integer uh and so we",
+      "offset": 1648320,
+      "duration": 5359
+    },
+    {
+      "text": "can turn that into a a well-named",
+      "offset": 1651159,
+      "duration": 4400
+    },
+    {
+      "text": "function that's one thing we can do to",
+      "offset": 1653679,
+      "duration": 3841
+    },
+    {
+      "text": "make things a lot easier to to",
+      "offset": 1655559,
+      "duration": 4761
+    },
+    {
+      "text": "understand uh in the code now I know if",
+      "offset": 1657520,
+      "duration": 4680
+    },
+    {
+      "text": "I'm getting an integer integer data",
+      "offset": 1660320,
+      "duration": 4560
+    },
+    {
+      "text": "attribute or default uh I can use this",
+      "offset": 1662200,
+      "duration": 5640
+    },
+    {
+      "text": "function uh and uh and I don't have to",
+      "offset": 1664880,
+      "duration": 4880
+    },
+    {
+      "text": "understand how it's going about it I",
+      "offset": 1667840,
+      "duration": 3600
+    },
+    {
+      "text": "didn't have to drop the turnery that's",
+      "offset": 1669760,
+      "duration": 4639
+    },
+    {
+      "text": "still part of the original function but",
+      "offset": 1671440,
+      "duration": 5280
+    },
+    {
+      "text": "uh I've reduced duplication in my code",
+      "offset": 1674399,
+      "duration": 4081
+    },
+    {
+      "text": "by extracting as a helper method but",
+      "offset": 1676720,
+      "duration": 3480
+    },
+    {
+      "text": "I've also dropped out a couple of",
+      "offset": 1678480,
+      "duration": 3960
+    },
+    {
+      "text": "conditionals from my code and now I just",
+      "offset": 1680200,
+      "duration": 3359
+    },
+    {
+      "text": "understand that this is going to return",
+      "offset": 1682440,
+      "duration": 3160
+    },
+    {
+      "text": "me either an integer that was in the",
+      "offset": 1683559,
+      "duration": 4321
+    },
+    {
+      "text": "data attribute or a default number that",
+      "offset": 1685600,
+      "duration": 3559
+    },
+    {
+      "text": "I added at the",
+      "offset": 1687880,
+      "duration": 4760
+    },
+    {
+      "text": "end um the important thing as I said in",
+      "offset": 1689159,
+      "duration": 5041
+    },
+    {
+      "text": "these helper methods is that we're",
+      "offset": 1692640,
+      "duration": 4080
+    },
+    {
+      "text": "reducing the context if you extract a",
+      "offset": 1694200,
+      "duration": 5719
+    },
+    {
+      "text": "helper method from a function and uh it",
+      "offset": 1696720,
+      "duration": 4920
+    },
+    {
+      "text": "brings the entire context of the",
+      "offset": 1699919,
+      "duration": 3441
+    },
+    {
+      "text": "existing function with it then it's",
+      "offset": 1701640,
+      "duration": 3639
+    },
+    {
+      "text": "still just as complex as we started with",
+      "offset": 1703360,
+      "duration": 4439
+    },
+    {
+      "text": "and now we're just moving code around uh",
+      "offset": 1705279,
+      "duration": 4081
+    },
+    {
+      "text": "in fact it's probably harder to deal",
+      "offset": 1707799,
+      "duration": 2961
+    },
+    {
+      "text": "with that because you're now trying to",
+      "offset": 1709360,
+      "duration": 3480
+    },
+    {
+      "text": "handle a helper method that has gone",
+      "offset": 1710760,
+      "duration": 4039
+    },
+    {
+      "text": "somewhere else but still requires all of",
+      "offset": 1712840,
+      "duration": 3240
+    },
+    {
+      "text": "the",
+      "offset": 1714799,
+      "duration": 4401
+    },
+    {
+      "text": "context um and so extracting a helper",
+      "offset": 1716080,
+      "duration": 5360
+    },
+    {
+      "text": "method should reduce that",
+      "offset": 1719200,
+      "duration": 5199
+    },
+    {
+      "text": "context uh and ultimately uh pop some of",
+      "offset": 1721440,
+      "duration": 4719
+    },
+    {
+      "text": "that context off of our own brain Stacks",
+      "offset": 1724399,
+      "duration": 2880
+    },
+    {
+      "text": "make it a lot",
+      "offset": 1726159,
+      "duration": 3161
+    },
+    {
+      "text": "happier finally there's uh there's some",
+      "offset": 1727279,
+      "duration": 5880
+    },
+    {
+      "text": "language features",
+      "offset": 1729320,
+      "duration": 3839
+    },
+    {
+      "text": "um uh there's some some language",
+      "offset": 1734279,
+      "duration": 3120
+    },
+    {
+      "text": "features we can use which are going to",
+      "offset": 1736279,
+      "duration": 3400
+    },
+    {
+      "text": "make things slightly easier as well um",
+      "offset": 1737399,
+      "duration": 5041
+    },
+    {
+      "text": "the first one is um if you have nested",
+      "offset": 1739679,
+      "duration": 4360
+    },
+    {
+      "text": "objects and you need to get a property",
+      "offset": 1742440,
+      "duration": 3719
+    },
+    {
+      "text": "that's deeply nested inside of an object",
+      "offset": 1744039,
+      "duration": 3360
+    },
+    {
+      "text": "you used to have to do this kind of",
+      "offset": 1746159,
+      "duration": 2921
+    },
+    {
+      "text": "thing where you'd have to check that the",
+      "offset": 1747399,
+      "duration": 3640
+    },
+    {
+      "text": "first object exists within sorry that",
+      "offset": 1749080,
+      "duration": 3439
+    },
+    {
+      "text": "the the second object exists within the",
+      "offset": 1751039,
+      "duration": 3161
+    },
+    {
+      "text": "first and then the the property exists",
+      "offset": 1752519,
+      "duration": 4481
+    },
+    {
+      "text": "on that that object and we've got this",
+      "offset": 1754200,
+      "duration": 4479
+    },
+    {
+      "text": "uh Boolean and and it can go deeper and",
+      "offset": 1757000,
+      "duration": 3679
+    },
+    {
+      "text": "deeper uh and ultimately looks quite",
+      "offset": 1758679,
+      "duration": 5081
+    },
+    {
+      "text": "ugly but also uh is adding complexity to",
+      "offset": 1760679,
+      "duration": 6240
+    },
+    {
+      "text": "uh to things we're having to understand",
+      "offset": 1763760,
+      "duration": 5519
+    },
+    {
+      "text": "uh but now in JavaScript we have uh",
+      "offset": 1766919,
+      "duration": 5721
+    },
+    {
+      "text": "optional chaining uh which allows us to",
+      "offset": 1769279,
+      "duration": 5801
+    },
+    {
+      "text": "um optionally chain all the way through",
+      "offset": 1772640,
+      "duration": 5759
+    },
+    {
+      "text": "a deep uh set of properties and objects",
+      "offset": 1775080,
+      "duration": 5040
+    },
+    {
+      "text": "uh in order to get something that's uh",
+      "offset": 1778399,
+      "duration": 3481
+    },
+    {
+      "text": "that's at the bottom we dig out a",
+      "offset": 1780120,
+      "duration": 3320
+    },
+    {
+      "text": "property at the bottom of a of a set of",
+      "offset": 1781880,
+      "duration": 6080
+    },
+    {
+      "text": "nested objects um and uh you know if any",
+      "offset": 1783440,
+      "duration": 6599
+    },
+    {
+      "text": "of the question mark dots fail at any",
+      "offset": 1787960,
+      "duration": 4240
+    },
+    {
+      "text": "one point during that it just returns",
+      "offset": 1790039,
+      "duration": 4321
+    },
+    {
+      "text": "undefined uh as you'd expect without you",
+      "offset": 1792200,
+      "duration": 4120
+    },
+    {
+      "text": "having to do a whole bunch of tests to",
+      "offset": 1794360,
+      "duration": 3760
+    },
+    {
+      "text": "find out if uh if everything was there",
+      "offset": 1796320,
+      "duration": 3959
+    },
+    {
+      "text": "there and so optional chaining very nice",
+      "offset": 1798120,
+      "duration": 5200
+    },
+    {
+      "text": "to just simplify things and then",
+      "offset": 1800279,
+      "duration": 6000
+    },
+    {
+      "text": "secondly um there's this idea if I have",
+      "offset": 1803320,
+      "duration": 5160
+    },
+    {
+      "text": "a an object here I've got some defaults",
+      "offset": 1806279,
+      "duration": 5201
+    },
+    {
+      "text": "that I had set up and then if uh this",
+      "offset": 1808480,
+      "duration": 5679
+    },
+    {
+      "text": "bit then checks if the defaults colors",
+      "offset": 1811480,
+      "duration": 5360
+    },
+    {
+      "text": "uh is still undefined or null that is it",
+      "offset": 1814159,
+      "duration": 4081
+    },
+    {
+      "text": "hasn't been defined or I've defined it",
+      "offset": 1816840,
+      "duration": 3480
+    },
+    {
+      "text": "as something that is null then we can",
+      "offset": 1818240,
+      "duration": 4439
+    },
+    {
+      "text": "reach into the the Dom into the page to",
+      "offset": 1820320,
+      "duration": 4280
+    },
+    {
+      "text": "get a in this case an array data",
+      "offset": 1822679,
+      "duration": 4321
+    },
+    {
+      "text": "attribute of default um and get some",
+      "offset": 1824600,
+      "duration": 4480
+    },
+    {
+      "text": "colors out of there",
+      "offset": 1827000,
+      "duration": 4360
+    },
+    {
+      "text": "uh this is great but like it's adding a",
+      "offset": 1829080,
+      "duration": 3599
+    },
+    {
+      "text": "conditional to our thing and we don't",
+      "offset": 1831360,
+      "duration": 4199
+    },
+    {
+      "text": "have to anymore not with the Nosh Lish",
+      "offset": 1832679,
+      "duration": 5321
+    },
+    {
+      "text": "coaling assignment operator that's our",
+      "offset": 1835559,
+      "duration": 5480
+    },
+    {
+      "text": "little double question mark equals there",
+      "offset": 1838000,
+      "duration": 5640
+    },
+    {
+      "text": "um which says hey if default. colors is",
+      "offset": 1841039,
+      "duration": 4801
+    },
+    {
+      "text": "not already assigned to something then",
+      "offset": 1843640,
+      "duration": 4560
+    },
+    {
+      "text": "we can assign it to this uh and that",
+      "offset": 1845840,
+      "duration": 4959
+    },
+    {
+      "text": "checks for null or undefined simplifying",
+      "offset": 1848200,
+      "duration": 4839
+    },
+    {
+      "text": "things dropping that conditional and",
+      "offset": 1850799,
+      "duration": 5000
+    },
+    {
+      "text": "popping things off the brain",
+      "offset": 1853039,
+      "duration": 5240
+    },
+    {
+      "text": "stack I am uh running a little out of",
+      "offset": 1855799,
+      "duration": 4480
+    },
+    {
+      "text": "time here but I have a quick bonus rant",
+      "offset": 1858279,
+      "duration": 4081
+    },
+    {
+      "text": "for you as well because",
+      "offset": 1860279,
+      "duration": 7240
+    },
+    {
+      "text": "um nested ceries uh have got uh up uh in",
+      "offset": 1862360,
+      "duration": 8279
+    },
+    {
+      "text": "my mind recently and I don't like them",
+      "offset": 1867519,
+      "duration": 4681
+    },
+    {
+      "text": "uh nested turnery look like this where",
+      "offset": 1870639,
+      "duration": 4880
+    },
+    {
+      "text": "we have ah there's two three Turner",
+      "offset": 1872200,
+      "duration": 6000
+    },
+    {
+      "text": "there and I don't like it um it so at",
+      "offset": 1875519,
+      "duration": 5280
+    },
+    {
+      "text": "the end of last year prettier the format",
+      "offset": 1878200,
+      "duration": 5040
+    },
+    {
+      "text": "actually um uh came up with a new way to",
+      "offset": 1880799,
+      "duration": 5401
+    },
+    {
+      "text": "format nested Turner uh because people",
+      "offset": 1883240,
+      "duration": 6559
+    },
+    {
+      "text": "were unable to uh to consider that uh",
+      "offset": 1886200,
+      "duration": 5240
+    },
+    {
+      "text": "unable to agree on a good way of doing",
+      "offset": 1889799,
+      "duration": 3641
+    },
+    {
+      "text": "so over many years and this is the way",
+      "offset": 1891440,
+      "duration": 4079
+    },
+    {
+      "text": "they came up with and I still don't like",
+      "offset": 1893440,
+      "duration": 3760
+    },
+    {
+      "text": "it um",
+      "offset": 1895519,
+      "duration": 4760
+    },
+    {
+      "text": "and the main problem is nesting is bad I",
+      "offset": 1897200,
+      "duration": 5520
+    },
+    {
+      "text": "still don't like nesting uh it's extra",
+      "offset": 1900279,
+      "duration": 4640
+    },
+    {
+      "text": "complex uh but in this case like reading",
+      "offset": 1902720,
+      "duration": 4040
+    },
+    {
+      "text": "this through at least to me says okay",
+      "offset": 1904919,
+      "duration": 3480
+    },
+    {
+      "text": "we've got this we got this pet and if it",
+      "offset": 1906760,
+      "duration": 3919
+    },
+    {
+      "text": "can bark then we have a and if the pet",
+      "offset": 1908399,
+      "duration": 4841
+    },
+    {
+      "text": "is scary then it's a wolf otherwi else",
+      "offset": 1910679,
+      "duration": 5480
+    },
+    {
+      "text": "it's a dog else and we got to drop out",
+      "offset": 1913240,
+      "duration": 5799
+    },
+    {
+      "text": "of that if the if meow it's it's a cat",
+      "offset": 1916159,
+      "duration": 4640
+    },
+    {
+      "text": "and otherwise it's probably a bunny okay",
+      "offset": 1919039,
+      "duration": 3321
+    },
+    {
+      "text": "I'm I'm happy I got through that but I",
+      "offset": 1920799,
+      "duration": 4880
+    },
+    {
+      "text": "didn't like it um there are many better",
+      "offset": 1922360,
+      "duration": 5640
+    },
+    {
+      "text": "ways I think to deal with nested taries",
+      "offset": 1925679,
+      "duration": 5041
+    },
+    {
+      "text": "and one of them uh or or and a few of",
+      "offset": 1928000,
+      "duration": 6200
+    },
+    {
+      "text": "them kind of uh deal with the um uh a",
+      "offset": 1930720,
+      "duration": 6040
+    },
+    {
+      "text": "few of the a couple of the",
+      "offset": 1934200,
+      "duration": 5160
+    },
+    {
+      "text": "um refactorings that that we've just",
+      "offset": 1936760,
+      "duration": 4840
+    },
+    {
+      "text": "gone through uh so if you actually were",
+      "offset": 1939360,
+      "duration": 4279
+    },
+    {
+      "text": "to extract this turnery as a as a",
+      "offset": 1941600,
+      "duration": 4559
+    },
+    {
+      "text": "function itself as a helper function uh",
+      "offset": 1943639,
+      "duration": 3400
+    },
+    {
+      "text": "then it's something that you can",
+      "offset": 1946159,
+      "duration": 2921
+    },
+    {
+      "text": "actually test indep L which I think is a",
+      "offset": 1947039,
+      "duration": 4360
+    },
+    {
+      "text": "is a really useful factor of that but",
+      "offset": 1949080,
+      "duration": 4360
+    },
+    {
+      "text": "then we can also use that idea of uh",
+      "offset": 1951399,
+      "duration": 4721
+    },
+    {
+      "text": "using conditionals and and exiting early",
+      "offset": 1953440,
+      "duration": 4680
+    },
+    {
+      "text": "and so this now reads I think a lot",
+      "offset": 1956120,
+      "duration": 4159
+    },
+    {
+      "text": "easier in that case in the case where if",
+      "offset": 1958120,
+      "duration": 3799
+    },
+    {
+      "text": "a pet can bark and is scary then it's a",
+      "offset": 1960279,
+      "duration": 3880
+    },
+    {
+      "text": "wolf otherwise if a pet can bark and",
+      "offset": 1961919,
+      "duration": 4480
+    },
+    {
+      "text": "then it's a dog otherwise if it can meow",
+      "offset": 1964159,
+      "duration": 4120
+    },
+    {
+      "text": "it's a cat otherwise probably a bunny",
+      "offset": 1966399,
+      "duration": 3481
+    },
+    {
+      "text": "and I'm fine with that that's much",
+      "offset": 1968279,
+      "duration": 3721
+    },
+    {
+      "text": "easier to read but it's also easier to",
+      "offset": 1969880,
+      "duration": 4799
+    },
+    {
+      "text": "test uh and it's also easier then to use",
+      "offset": 1972000,
+      "duration": 5159
+    },
+    {
+      "text": "that function elsewhere in your project",
+      "offset": 1974679,
+      "duration": 4041
+    },
+    {
+      "text": "so I don't like nested Turner I think",
+      "offset": 1977159,
+      "duration": 3880
+    },
+    {
+      "text": "they should um go I have no problem with",
+      "offset": 1978720,
+      "duration": 5520
+    },
+    {
+      "text": "Turner as such but nested ones can uh",
+      "offset": 1981039,
+      "duration": 5120
+    },
+    {
+      "text": "can can get out of my code base thank",
+      "offset": 1984240,
+      "duration": 3360
+    },
+    {
+      "text": "you very",
+      "offset": 1986159,
+      "duration": 4880
+    },
+    {
+      "text": "much okay so what have we covered here",
+      "offset": 1987600,
+      "duration": 4720
+    },
+    {
+      "text": "we had a little talk about what is",
+      "offset": 1991039,
+      "duration": 4880
+    },
+    {
+      "text": "complexity mainly our jobs and code um",
+      "offset": 1992320,
+      "duration": 5920
+    },
+    {
+      "text": "we asked how do we measure complexity",
+      "offset": 1995919,
+      "duration": 5120
+    },
+    {
+      "text": "and I POS it to you that in terms of how",
+      "offset": 1998240,
+      "duration": 5000
+    },
+    {
+      "text": "we understand code and how we work with",
+      "offset": 2001039,
+      "duration": 4561
+    },
+    {
+      "text": "it cognitive complexity is a useful",
+      "offset": 2003240,
+      "duration": 4520
+    },
+    {
+      "text": "measure cyclomatic complexity is also",
+      "offset": 2005600,
+      "duration": 4039
+    },
+    {
+      "text": "useful measure but more about code",
+      "offset": 2007760,
+      "duration": 4600
+    },
+    {
+      "text": "coverage and the ability to uh",
+      "offset": 2009639,
+      "duration": 4000
+    },
+    {
+      "text": "understand the number of branches you",
+      "offset": 2012360,
+      "duration": 4039
+    },
+    {
+      "text": "have uh in a system and then finally we",
+      "offset": 2013639,
+      "duration": 4640
+    },
+    {
+      "text": "looked at conquering complexity we we",
+      "offset": 2016399,
+      "duration": 4240
+    },
+    {
+      "text": "refactor we ensure we have tests we",
+      "offset": 2018279,
+      "duration": 5921
+    },
+    {
+      "text": "refactor code first uh using uh uh",
+      "offset": 2020639,
+      "duration": 6201
+    },
+    {
+      "text": "refactorings like um extracting helper",
+      "offset": 2024200,
+      "duration": 5240
+    },
+    {
+      "text": "methods uh structurally collapsing",
+      "offset": 2026840,
+      "duration": 4400
+    },
+    {
+      "text": "conditionals into each other early",
+      "offset": 2029440,
+      "duration": 4000
+    },
+    {
+      "text": "exiting and using other kind of optional",
+      "offset": 2031240,
+      "duration": 4279
+    },
+    {
+      "text": "chaining or Nish coalescing uh functions",
+      "offset": 2033440,
+      "duration": 4479
+    },
+    {
+      "text": "in the language uh once we have",
+      "offset": 2035519,
+      "duration": 4081
+    },
+    {
+      "text": "conquered that complexity when you are",
+      "offset": 2037919,
+      "duration": 3801
+    },
+    {
+      "text": "making changes to code we reach back to",
+      "offset": 2039600,
+      "duration": 3919
+    },
+    {
+      "text": "first we make it easier to understand",
+      "offset": 2041720,
+      "duration": 3880
+    },
+    {
+      "text": "the code and then we make the change and",
+      "offset": 2043519,
+      "duration": 4521
+    },
+    {
+      "text": "making that change becomes easier not",
+      "offset": 2045600,
+      "duration": 4840
+    },
+    {
+      "text": "just there but for the future for future",
+      "offset": 2048040,
+      "duration": 4079
+    },
+    {
+      "text": "code as well for future developers on",
+      "offset": 2050440,
+      "duration": 4320
+    },
+    {
+      "text": "your project for yourself in the",
+      "offset": 2052119,
+      "duration": 5121
+    },
+    {
+      "text": "future um there are tools of course uh",
+      "offset": 2054760,
+      "duration": 4119
+    },
+    {
+      "text": "to help you out with this as I showed",
+      "offset": 2057240,
+      "duration": 3720
+    },
+    {
+      "text": "Sona lint can show you uh when you're",
+      "offset": 2058879,
+      "duration": 4200
+    },
+    {
+      "text": "writing uh more complex code as you're",
+      "offset": 2060960,
+      "duration": 4719
+    },
+    {
+      "text": "coding it as well as applying hundreds",
+      "offset": 2063079,
+      "duration": 4401
+    },
+    {
+      "text": "of other rules to your code at the same",
+      "offset": 2065679,
+      "duration": 2561
+    },
+    {
+      "text": "time",
+      "offset": 2067480,
+      "duration": 2560
+    },
+    {
+      "text": "to help you out help you wrri in clean",
+      "offset": 2068240,
+      "duration": 3879
+    },
+    {
+      "text": "code and then Sona Cube and Sona Cloud",
+      "offset": 2070040,
+      "duration": 3799
+    },
+    {
+      "text": "will live there can live there in your",
+      "offset": 2072119,
+      "duration": 4040
+    },
+    {
+      "text": "CI and CD pipelines to catch complexity",
+      "offset": 2073839,
+      "duration": 3961
+    },
+    {
+      "text": "as well as all those other things that",
+      "offset": 2076159,
+      "duration": 4240
+    },
+    {
+      "text": "uh that can go wrong in code as you uh",
+      "offset": 2077800,
+      "duration": 6839
+    },
+    {
+      "text": "as your as you push uh to uh to your um",
+      "offset": 2080399,
+      "duration": 6601
+    },
+    {
+      "text": "devops uh",
+      "offset": 2084639,
+      "duration": 4561
+    },
+    {
+      "text": "pipeline I got some other links for you",
+      "offset": 2087000,
+      "duration": 3720
+    },
+    {
+      "text": "which have just been popped into the",
+      "offset": 2089200,
+      "duration": 3719
+    },
+    {
+      "text": "chat right there that was magic um",
+      "offset": 2090720,
+      "duration": 3639
+    },
+    {
+      "text": "there's a there's a paper that was",
+      "offset": 2092919,
+      "duration": 3641
+    },
+    {
+      "text": "written back in 2016 on cognitive",
+      "offset": 2094359,
+      "duration": 3681
+    },
+    {
+      "text": "complexity and I actually highly",
+      "offset": 2096560,
+      "duration": 2760
+    },
+    {
+      "text": "recommend reading it if you are",
+      "offset": 2098040,
+      "duration": 3720
+    },
+    {
+      "text": "interested in this at all further uh",
+      "offset": 2099320,
+      "duration": 3960
+    },
+    {
+      "text": "it's a very good read I don't normally",
+      "offset": 2101760,
+      "duration": 4000
+    },
+    {
+      "text": "read computer science papers honestly uh",
+      "offset": 2103280,
+      "duration": 4160
+    },
+    {
+      "text": "but I've read this one several times uh",
+      "offset": 2105760,
+      "duration": 3640
+    },
+    {
+      "text": "and it's a great read uh and it will",
+      "offset": 2107440,
+      "duration": 3399
+    },
+    {
+      "text": "give you a few more details and a few",
+      "offset": 2109400,
+      "duration": 3480
+    },
+    {
+      "text": "more kind of bits we look at in terms of",
+      "offset": 2110839,
+      "duration": 5361
+    },
+    {
+      "text": "cognitive complexity uh at Sona and then",
+      "offset": 2112880,
+      "duration": 5000
+    },
+    {
+      "text": "uh because I included the bonus rant",
+      "offset": 2116200,
+      "duration": 3120
+    },
+    {
+      "text": "I've also got the blog post I wrote up",
+      "offset": 2117880,
+      "duration": 4360
+    },
+    {
+      "text": "on um stop nesting taries uh highly",
+      "offset": 2119320,
+      "duration": 4680
+    },
+    {
+      "text": "recommend going and reading that and if",
+      "offset": 2122240,
+      "duration": 4240
+    },
+    {
+      "text": "you disagree with me uh not leaving a",
+      "offset": 2124000,
+      "duration": 4560
+    },
+    {
+      "text": "comment um",
+      "offset": 2126480,
+      "duration": 3800
+    },
+    {
+      "text": "so that's all I've got for you this uh",
+      "offset": 2128560,
+      "duration": 4039
+    },
+    {
+      "text": "this evening for me uh again my name is",
+      "offset": 2130280,
+      "duration": 4200
+    },
+    {
+      "text": "fash I am a developer advocate here at",
+      "offset": 2132599,
+      "duration": 3721
+    },
+    {
+      "text": "Sona uh and I'd love to hear your",
+      "offset": 2134480,
+      "duration": 3400
+    },
+    {
+      "text": "questions uh but right now I'm going to",
+      "offset": 2136320,
+      "duration": 4200
+    },
+    {
+      "text": "pass back over to Andrew to uh to to",
+      "offset": 2137880,
+      "duration": 5880
+    },
+    {
+      "text": "finish things up Bill thanks that was",
+      "offset": 2140520,
+      "duration": 6920
+    },
+    {
+      "text": "that was awesome um you certainly uh did",
+      "offset": 2143760,
+      "duration": 6200
+    },
+    {
+      "text": "help us understand how we can conquer",
+      "offset": 2147440,
+      "duration": 4000
+    },
+    {
+      "text": "complexity and I particularly love how",
+      "offset": 2149960,
+      "duration": 5879
+    },
+    {
+      "text": "we can um recognize complexity as we're",
+      "offset": 2151440,
+      "duration": 6520
+    },
+    {
+      "text": "coding and then resolve it almost before",
+      "offset": 2155839,
+      "duration": 3601
+    },
+    {
+      "text": "it becomes an issue later on so thank",
+      "offset": 2157960,
+      "duration": 4240
+    },
+    {
+      "text": "you for that um as we move into a time",
+      "offset": 2159440,
+      "duration": 4879
+    },
+    {
+      "text": "of Q&A and I just check to see if we've",
+      "offset": 2162200,
+      "duration": 4080
+    },
+    {
+      "text": "answered all the questions during the",
+      "offset": 2164319,
+      "duration": 4201
+    },
+    {
+      "text": "session or not I did just want to",
+      "offset": 2166280,
+      "duration": 5000
+    },
+    {
+      "text": "briefly um put on the screen uh some of",
+      "offset": 2168520,
+      "duration": 5520
+    },
+    {
+      "text": "the upcoming webinars that we have um",
+      "offset": 2171280,
+      "duration": 4160
+    },
+    {
+      "text": "particularly the first one it's a Hot",
+      "offset": 2174040,
+      "duration": 5520
+    },
+    {
+      "text": "Topic uh writing cleaner using AI coding",
+      "offset": 2175440,
+      "duration": 6560
+    },
+    {
+      "text": "assistance with sonar so that's uh",
+      "offset": 2179560,
+      "duration": 3920
+    },
+    {
+      "text": "something that people may be interested",
+      "offset": 2182000,
+      "duration": 4760
+    },
+    {
+      "text": "in anyway um let's just check on the",
+      "offset": 2183480,
+      "duration": 5280
+    },
+    {
+      "text": "questions we haven't got an awful lot of",
+      "offset": 2186760,
+      "duration": 3880
+    },
+    {
+      "text": "time but I would like to just uh check",
+      "offset": 2188760,
+      "duration": 5880
+    },
+    {
+      "text": "on those um perhaps to kick us off um",
+      "offset": 2190640,
+      "duration": 6560
+    },
+    {
+      "text": "Phil what do you do if a framework",
+      "offset": 2194640,
+      "duration": 5760
+    },
+    {
+      "text": "encourages nesting and complexity so",
+      "offset": 2197200,
+      "duration": 5800
+    },
+    {
+      "text": "you're almost having to start with",
+      "offset": 2200400,
+      "duration": 6080
+    },
+    {
+      "text": "that um yeah that's a that is an",
+      "offset": 2203000,
+      "duration": 5079
+    },
+    {
+      "text": "interesting question like I'm I'm",
+      "offset": 2206480,
+      "duration": 3000
+    },
+    {
+      "text": "certainly aware",
+      "offset": 2208079,
+      "duration": 4481
+    },
+    {
+      "text": "that yeah some patterns are encouraged",
+      "offset": 2209480,
+      "duration": 5440
+    },
+    {
+      "text": "by Frameworks that maybe would be um",
+      "offset": 2212560,
+      "duration": 3880
+    },
+    {
+      "text": "picked up or quite obviously kind of",
+      "offset": 2214920,
+      "duration": 3240
+    },
+    {
+      "text": "nested and nested",
+      "offset": 2216440,
+      "duration": 5000
+    },
+    {
+      "text": "um in terms of uh uh in terms of this",
+      "offset": 2218160,
+      "duration": 5159
+    },
+    {
+      "text": "cognitive complexity thing uh now it",
+      "offset": 2221440,
+      "duration": 4080
+    },
+    {
+      "text": "turns out that we are aware of this and",
+      "offset": 2223319,
+      "duration": 6000
+    },
+    {
+      "text": "um uh we actually um our fabulous",
+      "offset": 2225520,
+      "duration": 5760
+    },
+    {
+      "text": "JavaScript team uh who works on the",
+      "offset": 2229319,
+      "duration": 3800
+    },
+    {
+      "text": "analyzers and works on making sure this",
+      "offset": 2231280,
+      "duration": 3760
+    },
+    {
+      "text": "is the case are very much JavaScript and",
+      "offset": 2233119,
+      "duration": 4561
+    },
+    {
+      "text": "tcri developers themselves uh and uh and",
+      "offset": 2235040,
+      "duration": 4160
+    },
+    {
+      "text": "have spent time in these applications",
+      "offset": 2237680,
+      "duration": 4040
+    },
+    {
+      "text": "and so we work with both uh our own",
+      "offset": 2239200,
+      "duration": 4720
+    },
+    {
+      "text": "internal knowledge but also feedback to",
+      "offset": 2241720,
+      "duration": 5040
+    },
+    {
+      "text": "uh ensure that um cognitive complexity",
+      "offset": 2243920,
+      "duration": 5199
+    },
+    {
+      "text": "uh doesn't uh complain too much when it",
+      "offset": 2246760,
+      "duration": 4640
+    },
+    {
+      "text": "doesn't make sense when it is indeed uh",
+      "offset": 2249119,
+      "duration": 5361
+    },
+    {
+      "text": "some part of the um uh of the framework",
+      "offset": 2251400,
+      "duration": 5360
+    },
+    {
+      "text": "or or the way that it is conventionally",
+      "offset": 2254480,
+      "duration": 4280
+    },
+    {
+      "text": "written uh convention is actually an",
+      "offset": 2256760,
+      "duration": 5640
+    },
+    {
+      "text": "important part of uh of how we uh see uh",
+      "offset": 2258760,
+      "duration": 7319
+    },
+    {
+      "text": "clean code um a clean code we kind of",
+      "offset": 2262400,
+      "duration": 6360
+    },
+    {
+      "text": "Define as code that is um consistent and",
+      "offset": 2266079,
+      "duration": 4801
+    },
+    {
+      "text": "adaptable and intentional and",
+      "offset": 2268760,
+      "duration": 4240
+    },
+    {
+      "text": "responsible and under consistency is",
+      "offset": 2270880,
+      "duration": 4600
+    },
+    {
+      "text": "convention uh the best way to write code",
+      "offset": 2273000,
+      "duration": 3680
+    },
+    {
+      "text": "that's going to be understood is to",
+      "offset": 2275480,
+      "duration": 3040
+    },
+    {
+      "text": "write it in the inventions of the",
+      "offset": 2276680,
+      "duration": 3040
+    },
+    {
+      "text": "language or framework that you're",
+      "offset": 2278520,
+      "duration": 3120
+    },
+    {
+      "text": "working in and so if a framework is",
+      "offset": 2279720,
+      "duration": 3840
+    },
+    {
+      "text": "encouraging that kind of thing uh then",
+      "offset": 2281640,
+      "duration": 4160
+    },
+    {
+      "text": "we will put in exceptions in terms of",
+      "offset": 2283560,
+      "duration": 5120
+    },
+    {
+      "text": "cognitive complexity to uh ensure that",
+      "offset": 2285800,
+      "duration": 4559
+    },
+    {
+      "text": "it's not uh that that sonar is not",
+      "offset": 2288680,
+      "duration": 3200
+    },
+    {
+      "text": "complaining about things that shouldn't",
+      "offset": 2290359,
+      "duration": 3681
+    },
+    {
+      "text": "be complained about um I think it's",
+      "offset": 2291880,
+      "duration": 3680
+    },
+    {
+      "text": "really useful because like this",
+      "offset": 2294040,
+      "duration": 4600
+    },
+    {
+      "text": "cognitive complexity uh so cyclomatic",
+      "offset": 2295560,
+      "duration": 4720
+    },
+    {
+      "text": "complexity is this very kind of rigidly",
+      "offset": 2298640,
+      "duration": 3679
+    },
+    {
+      "text": "defined uh number of paths through a",
+      "offset": 2300280,
+      "duration": 4640
+    },
+    {
+      "text": "system uh kind of score whereas our",
+      "offset": 2302319,
+      "duration": 4401
+    },
+    {
+      "text": "cognitive complexity is actually more",
+      "offset": 2304920,
+      "duration": 5199
+    },
+    {
+      "text": "more of this IC about of of about how",
+      "offset": 2306720,
+      "duration": 5680
+    },
+    {
+      "text": "understandable a piece of code is uh and",
+      "offset": 2310119,
+      "duration": 5000
+    },
+    {
+      "text": "if it if you are working within uh the",
+      "offset": 2312400,
+      "duration": 6520
+    },
+    {
+      "text": "confines within the um conventions and",
+      "offset": 2315119,
+      "duration": 6121
+    },
+    {
+      "text": "um uh yeah within the conventions of a",
+      "offset": 2318920,
+      "duration": 4800
+    },
+    {
+      "text": "framework or a system then we don't want",
+      "offset": 2321240,
+      "duration": 4920
+    },
+    {
+      "text": "to complain about that it's a horis for",
+      "offset": 2323720,
+      "duration": 4480
+    },
+    {
+      "text": "for understanding and if you are writing",
+      "offset": 2326160,
+      "duration": 4080
+    },
+    {
+      "text": "conventional code within that framework",
+      "offset": 2328200,
+      "duration": 4960
+    },
+    {
+      "text": "then it will be more understandable um",
+      "offset": 2330240,
+      "duration": 4480
+    },
+    {
+      "text": "so yeah so cognitive complexity is",
+      "offset": 2333160,
+      "duration": 4400
+    },
+    {
+      "text": "malleable uh in in a way uh and will",
+      "offset": 2334720,
+      "duration": 5720
+    },
+    {
+      "text": "will work to help",
+      "offset": 2337560,
+      "duration": 2880
+    },
+    {
+      "text": "you great thank you um just checking the",
+      "offset": 2340960,
+      "duration": 5280
+    },
+    {
+      "text": "other questions I did love your rant by",
+      "offset": 2344200,
+      "duration": 4879
+    },
+    {
+      "text": "the way at the end uh nested Turner I",
+      "offset": 2346240,
+      "duration": 4320
+    },
+    {
+      "text": "don't know what your problem is um I'm",
+      "offset": 2349079,
+      "duration": 3040
+    },
+    {
+      "text": "sure you're up for a debate with anybody",
+      "offset": 2350560,
+      "duration": 4559
+    },
+    {
+      "text": "who wishes to have",
+      "offset": 2352119,
+      "duration": 5000
+    },
+    {
+      "text": "one come and grab you at the next",
+      "offset": 2355119,
+      "duration": 5200
+    },
+    {
+      "text": "conference right yes yeah in person is",
+      "offset": 2357119,
+      "duration": 4641
+    },
+    {
+      "text": "much more fun because we can we can do",
+      "offset": 2360319,
+      "duration": 3161
+    },
+    {
+      "text": "it over a cup of coffee or a beer or",
+      "offset": 2361760,
+      "duration": 2839
+    },
+    {
+      "text": "something I don't",
+      "offset": 2363480,
+      "duration": 4560
+    },
+    {
+      "text": "know that sounds great uh well Phil",
+      "offset": 2364599,
+      "duration": 5601
+    },
+    {
+      "text": "thank you so much I appreciate uh your",
+      "offset": 2368040,
+      "duration": 3600
+    },
+    {
+      "text": "time I know you're always traveling so",
+      "offset": 2370200,
+      "duration": 3280
+    },
+    {
+      "text": "it's great to be able to catch you and",
+      "offset": 2371640,
+      "duration": 4719
+    },
+    {
+      "text": "uh use you for this uh this webinar um",
+      "offset": 2373480,
+      "duration": 5080
+    },
+    {
+      "text": "thanks to all those who've attended and",
+      "offset": 2376359,
+      "duration": 5081
+    },
+    {
+      "text": "posed questions um if you do have any",
+      "offset": 2378560,
+      "duration": 5200
+    },
+    {
+      "text": "other questions uh our community is a",
+      "offset": 2381440,
+      "duration": 5760
+    },
+    {
+      "text": "great place to pose them um and also to",
+      "offset": 2383760,
+      "duration": 6000
+    },
+    {
+      "text": "review other questions that have been",
+      "offset": 2387200,
+      "duration": 4919
+    },
+    {
+      "text": "posed in the past and answered you can",
+      "offset": 2389760,
+      "duration": 5400
+    },
+    {
+      "text": "contribute to that ongoing discussion um",
+      "offset": 2392119,
+      "duration": 5321
+    },
+    {
+      "text": "and also do visit um Sonos source.com",
+      "offset": 2395160,
+      "duration": 4120
+    },
+    {
+      "text": "for further information on some of the",
+      "offset": 2397440,
+      "duration": 3919
+    },
+    {
+      "text": "topics that Phil mentioned he mentioned",
+      "offset": 2399280,
+      "duration": 4600
+    },
+    {
+      "text": "clean as you code for example as well as",
+      "offset": 2401359,
+      "duration": 5000
+    },
+    {
+      "text": "Sona lint and the other Sona Solutions",
+      "offset": 2403880,
+      "duration": 4640
+    },
+    {
+      "text": "so uh you can also check out that and",
+      "offset": 2406359,
+      "duration": 4960
+    },
+    {
+      "text": "also our other webinars and also um",
+      "offset": 2408520,
+      "duration": 5079
+    },
+    {
+      "text": "places where Phil will be uh appearing",
+      "offset": 2411319,
+      "duration": 5241
+    },
+    {
+      "text": "in the near future I'm sure um and thank",
+      "offset": 2413599,
+      "duration": 6081
+    },
+    {
+      "text": "you again uh Phil and thanks for",
+      "offset": 2416560,
+      "duration": 5080
+    },
+    {
+      "text": "attending everybody and for providing",
+      "offset": 2419680,
+      "duration": 4200
+    },
+    {
+      "text": "your feedback uh which we do consider a",
+      "offset": 2421640,
+      "duration": 5360
+    },
+    {
+      "text": "gift uh via the survey that will shortly",
+      "offset": 2423880,
+      "duration": 6760
+    },
+    {
+      "text": "pop up on your screen but um let me just",
+      "offset": 2427000,
+      "duration": 7160
+    },
+    {
+      "text": "end by saying big thank you for Phil and",
+      "offset": 2430640,
+      "duration": 6199
+    },
+    {
+      "text": "for delivering that excellent webinar on",
+      "offset": 2434160,
+      "duration": 5880
+    },
+    {
+      "text": "conquering complexity thanks Phil thanks",
+      "offset": 2436839,
+      "duration": 5520
+    },
+    {
+      "text": "very much",
+      "offset": 2440040,
+      "duration": 2319
+    },
+    {
+      "text": "everyone",
+      "offset": 2450079,
+      "duration": 3000
+    }
+  ],
+  "fullText": "okay so hello everybody and thank you for joining and Welcome to our webinar entitled conquering complexity refactoring JavaScript projects where we invite you to learn how to identify unnecessary complexity in your code base using cognitive complexity as a measure and what tools are available to help you refactor as a bonus I believe we will be treated to a live example I'm Andrew your moderator for this webinar which will be presented by Phil Nash Our developer advocate for JavaScript at sonar before I introduce Phil please allow me to quickly go over the essential housekeeping points the session will last around 30 minutes and we will include a time for questions and answers at the end you are invited to submit your questions at any time during the webinar via the Q&A box in Zoom Zoom so that's the little icon in the middle of your bottom toolbar in Zoom so please do submit your questions at any time using that Q&A box and we have two panelists joining us Victor and tore from our JavaScript Squad plus Kenny from our apj office so they are tasked with answering as many of your questions live during the webinar so do feel free to submit your questions at any time don't wait till the end uh the session will be recorded and we'll send out a link via email in the coming days so you will get a link to the recording finally at the end of the webinar a short survey will pop up on your screen so we consider your feedback as a gift thank you in advance for your participation without further Ado I'd like to introduce you to today's presenter Phil over to you thanks thanks very much Andrew and hello and good afternoon good evening good morning uh to wherever you are uh my name is for as I am a developer advocate here at Sona uh for JavaScript and typescript uh and I'm very excited to talk to you about uh refactoring that JavaScript uh today um if you are ever ever got questions like if you have questions today get them into the Q&A box uh but if you think of other questions or you want to get in touch with me any other way uh you can find me all over the internet as Phil Nash on Twitter on LinkedIn or just hit my website which is my favorite URL in the world cuz it is just F Nash I'm just delighted by that um I'm also into interactivity uh in these talks so if you do have kind of comments or things you want to say as part of it do get into the chat uh say so keep your questions in Q&A but if you just got comments or other things you want to mention I love to uh I love to hear from you uh as I'm going through this and I have the chat right in front of me as I'm talking to you um but uh let's not waste any more time let's talk about conquering complexity and in order to conquer that complexity uh we need to ask first what is complexity now I don't mean to be uh kind of too um I don't know uh into myself as a developer or whatever but I think our jobs are complex our jobs are mostly about um you know trying to model real life uh things inside a machine uh using uh a language that both we're supposed to understand as well as a computer supposed to understand uh the complexities of the things we're working on and do shout out if you're working on anything particularly complex I love to hear the kind of stuff you're working on but the kind of things that we're working on um have an enormous amount of complexity in their real world State and then we add code on top of that code is inherently complex because it is this language that we've invented that both we're supposed to understand and a computer supposed to understand uh and the problem is that the computer gets to turn it into things it really really does understand zeros and ones and all that kind of stuff whereas we still have to read stuff that other developers wrote or stuff that we wrote 12 months ago that we now have no idea what what we were thinking at the time and so that code is inherently complex uh and uh and it turns out in order to actually um maintain a decent velocity of writing code a decent um ability to to change that code and to make progress building your application or fixing things that maybe have gone wrong uh that we uh uh introduce a bunch of excess complexity um and so really our job becomes managing uh that complexity uh ideally when we write something uh when we write a piece of code uh to model something that is in our system or in real life uh we we only capture the amount of complexity that exists uh in that um uh in that code itself uh adding excess or accidental complexity is what we're trying to avoid and so our job is to manage that complexity rather sadly uh it turns out that maybe in JavaScript we're not doing that quite as well as we we'd like to think so I gave a talk last year uh in which I um dug through the uh the logs and things from sonarcloud uh and all the scans of uh JavaScript projects in sonar Cloud to dig out the most common issues in JavaScript projects now number one not too much of an issue really it's probably just Legacy code in which people are still using VAR instead of conet that's fine it's probably not going to collapse our entire code base or make us uh worse at programming however the second virus the second most common uh issue that turned up in JavaScript code bases was that the cognitive complexity of functions is too high and cognitive complexity uh which I will get on to later is that just a measure of understandability and when it's uh when the cognitive complexity is high it means that our functions are more difficult to understand and that's going to that just slows down progress makes it hard to actually change things uh and makes it worse uh and so I might say that the co of functions is too high but that really begs the question what is too high and uh that brings with it uh an even more important question really which is how do we actually measure complexity uh you might have some ideas about how to measure complexity in your own code bases you might have used uh some uh some tools to measure this before if you have again shout it out in the chat box I'm excited I'm interested to see but when we talk about measuring complexity I can show you some code I can show you some code this is a function uh that will uh sum up prime numbers underneath uh the the function uh sorry the number that you you enter as the argument to this function um how complex is this how do you answer uh that kind of question um it doesn't look too bad Ian it's not too long a function uh it's got I know it's got some conditionals It's Got Some Loops in it it's it's got some uh single letter um uh variable names which is not my favorite thing in the world um maybe it's complex um but we can compare that we can compare and say we also have this function a get words function we add a number in and it returns a a piece of text uh for that number so if the number is one it's going to return one if the number is two it's a couple if number is three a few if number is four many if anything else it's Lots um ideally we'd put positive integers into this uh because it doesn't work for zero and Below uh but that's not important what we can see is that this is not a very complex function I would say this is nice and easy to understand this one may be less so um but how do we how do we really measure that how do we I don't know put a number on that that would be a nice way of doing it you might have thought of um cyclomatic complexity as a a method to measure this this is actually this has been around for a long time hopefully you have heard about it uh it was invented back in 1976 uh in order to uh yeah try and put a number on the complexity of functions and and and methods uh and so cyclomatic complexity is um defined uh as um uh it adds a score for a function uh based on uh the number of brakes uh in that function the number of Loops or branches in fact actually it scores one for being a function in the first place and so if we look at our sum of Prime's uh function here we score one for being a function you always have uh the minimum cyclomatic complexity of a function is one but then as we hit four loops and uh conditionals or any Loops uh and conditionals we also score additional points for that uh so we score one for this for Loop here we score one for the second for Loop we score one for the uh conditional inside of that uh and then we've got one final conditional which is going to score one and it scores five uh cyclomatic complexity of this function is five uh we can move on to our other function which I think we we probably again agree get words probably a bit simpler but in world in the world of cyclomatic complexity we score one for being a function said that already uh and then for each of the cases in the function case of one two three and four we also score one because those are also branches uh that the uh the the path the code can kind of Traverse down and so getw and uh some of primes are both uh scored as five in cognitive in cyclomatic complexity and that doesn't feel exactly right um it doesn't feel right because we can clearly see that this simple switch uh is less complex uh than our uh our set of uh loops and conditionals in the sum of primes so can we do better than that in order to kind of understand well the understandability uh of a function this cyclomatic complexity really actually measures the number of paths through a function now that's useful that's a useful number because it tells us some things it tells us how many tests you'd need to write to fully cover that function like both of those functions would require five tests to get 100% test coverage on them but as we've seen it doesn't necessarily uh tell us about understandability and that's what we'd really like to measure uh because understandability is is how we interact with the with the code uh over time uh if we can understand it then we're e we're more easily able to interact with change and improve our code over time if we can't understand it we spend a long time trying to understand it before we even get to the uh the changing parts uh and so that brings me to cognitive complexity a score that I told you earlier is too high in many JavaScript functions but let's find out how that score score is made at least at first so cognitive complexity still gives a number at the end of the day uh for a function it gives this idea of of how complex it is how hard it is to understand uh and it creates that score uh by uh incrementing for brakes and flow using loops and conditionals much like cyclomatic complexity but it also keeps in the back of its mind a nesting score which it increments every time we Nest uh and when you increment for a Breakin flow you add one for the condition or The Loop and you also add what the current nesting score is and so let's see how that works out with our two functions so our sum of primes first up cognitive complexity doesn't bother scoring uh for being a function uh if you think of cyclomatic complexity includes the you know the number of paths that you can take through a function a linear function will still call still score one because you take one you can take one path through it um meanwhile um we don't have to care about that when we're trying to understand it and so we don't have to score for being a function but we do score one for having a for Loop uh now our nesting score has started as zero but now we're going to add one to the nesting score in the background too and so when we get to our second for Loop which is nested once it's going to score two one for being a loop and one for being nested one deep we're going to increment that nesting score again and we get to our conditional which now scores three one for being conditional and two for being nested twice uh now this would also increment the nesting as well because we're going to go inside a third level of nesting for this conditional but there are no further Loops or conditionals in there and so we'd actually then start decreasing the the nesting so that's now back down to two uh back down to one as we drop out of the uh for Loop uh then we hit another conditional so we go back up um so this is now nested once so we score one for nesting one for being a conditional uh and then the rest of the uh uh oops the rest of the function um no more Loops no more conditionals we don't have to worry about it anymore and so now our sum of Prime's function is scoring eight total for cognitive complexity meanwhile the get words function which again I hope you hope you agree with me that this is a lot simpler uh this get wordss function uh is going to score one uh it scores one for being a switch uh it's one big conditional it's one big conditional on one value the number that we passed into this function uh it turns out you know if you were to rewrite this function as a series of if eles then we would score one for each of the IFS because uh an if a conditional with an if uh could be on a different variable each time a different value each time meanwhile our switch is only the one value and so we only have to think about one value at any one time and so now our Cog complexity for get words is one our cognitive complexity for our sum of primes is eight and that feels a bit more like it matches the complexity of those functions for our for the way we actually think about these things and the way I've been thinking about this is that we end up with kind of like a brain stack we end up with a this this stack in our head as we're trying to read through a function and if we were reading through our sum of um sum of Prime's function then we start having to add kind of things onto the stack we we hit our first Loop and we're like okay now we have to consider at all times that this could be running many times and that our value of I uh the variable I in this case will be changing through that we get to the second one we have a loop through a number of uh and we have the variable J which will also be Chang in so I and J are both to be considered both of these Loops are important and we hit the conditional in there and we're just adding things on top that we have to consider now uh is I less than J or something I I can't remember what the code does but like uh that's why I'd have to go back and read it in order to find out and I have to be considering all of these things then things start to get easier as you kind of drop out of those Loops which is nice but then you go back in you like okay I have to still be considering that first for Loop and now I'm considering whether uh it turned out that that number was prime or not uh and then finally we can pop those things off the brain uh stack and carry on uh with our day now we understand what's going on but the higher that stack goes or the more times we go up and down the stack the more complex the function is and the more our brain has to work to understand what's actually going on whilst keeping all the context uh stored uh in our in our memory in our short-term memory right there and so uh optimizing what we do with our brain stack is very much where I'm going with this and so that brings us to part three which is to conquer that complexity what do we do well first up the important thing is to understand where that complexity is and to do that we're going to be uh we're going to need some tools to do so uh I don't expect you to uh work out cognitive complexity of functions in your head the entire time uh no one is any good at that we have tools for this uh and so I'm just going to oh drop out of here and over here I've got um I've got some code uh this is not a hugely uh interactive demo with the code I'm afraid but um uh this is actually some code that I use in a different slide deck of mine uh that throws confetti on two her slides it's a it's a JavaScript slide deck in reveal JS uh and um and yeah we'll throw confetti and so we have this big function uh that runs on the end of a slide transition and what it does is it checks a few things uh collects some variables from the uh from the HTML and decides how much confetti to throw lovely little function although it turns out I've got a yellow underline there because I have sonor lint installed uh and sonar lint is telling me right here that this function needs refactoring because its cognitive complexity is uh is 16 and that's 15 is allowed so when I said earlier that the cognitive complexity of functions is too high we have a threshold for that and that threshold by default in JavaScript is 15 I think that's a pretty good threshold because you can write some quite complex code um without hitting it uh and in fact I had to try quite hard to get to this point now give it a lot of time I think it's much easier to add complexity to to to functions but uh in this this particular example I got to 16 and uh and so uh in order to see like where that is if you hit Quick Fix you're going to go to show all locations for this issue uh and that would bring up these numbers I already had them loaded apparently uh but uh that brings up these numbers which shows all of those brakes all of those Loops those conditionals those branches um that we are adding uh complexity with and then if you hover over them you can see uh the score for them so this big outside conditional here is scoring a plus one and then inside we have a turnery conditional uh which is scoring plus two one for being nested uh once we've got another turnery we've got another conditional we end up looping uh we end up doing quite a bit of stuff here this one this Turner is now uh too deep uh and and later on we have it nested oops hello we have it nested uh quite deeply there with the plus4 three nesting for this uh final like check if the time is is right it doesn't matter what this code does what matters is that you can see uh if you have son lint installed uh you can see when functions breach uh this uh this threshold of 15 and complexity and consider whether that's the time to fix them so let's go back to the slides because the next St stage is actually to do nothing um if you understand where the complexity is in your code Cod base uh and Sona lint is great at showing that as you're writing it but if you're using Sona Cube or Sona Cloud then that can uh kind of will scan your entire project and show you all the places uh where you have uh High complexity uh Second Stage is still to do nothing don't do anything about it yet you see that complexity is only actually an issue if you need to understand and change the code uh up until now I would assume that your code is for the most part working um and if it's working working then that's fine if you don't need to change it then that's fine it doesn't need to change in fact changing working code is a potential risk you could turn it into non-working code which would be much worse than just complex code uh complexity is only an issue if you need to change the code and so when it comes down to the the the time where you need to fix a bug somewhere or add a feature to something and you find you're working with a complex function that's when it's time to clean as you code it's time to clean up that complexity first before you then make the changes because if you find you are working with a complex piece of code it's important to understand it break it down into easier to handle pieces of code and then make the change because it's much easier to make that change afterwards and so this leads me to you know suggest that you refactor things first uh refactoring that code uh before you change it again will make the making the change easier but it also will mean that you understand that code much better and it will be easier to understand the next time somebody comes along to change or fix something now refactoring uh in my opinion is improving how the code Works without changing what the code does uh and this is important um for a number of reasons uh refactoring uh sorry your code you should never have to worry about what happens sort of within a within a function as long as um you know when you put the same things in the same results come out the other side um uh the inside can be a black box for the most part uh and that's why you know if you want to rearrange that code on the inside of the function uh the outside should never should never change at least during refactoring we're here to improve how the code Works without changing what the code does how do you know we didn't change the result of running the code uh well that leads us straight into tests I hope you're a fan of tests I certainly am I'm even a fan of test driven development writing tests first uh so that that can drive the design of your application uh and uh I'm a big fan of uh of the idea that test driven development uh requires you to go from a failing test red to Green to a passing test and then refactoring uh that would be a uh a great way to um that's a great way of dealing with things uh I did notice a hand go up there if you have questions pop them in the Q&A box uh that's the best way to ask a question uh during the during the webinar um so yeah I like tester development you don't have to do it that way but the important thing about this is that we have tests if we have tests to cover what the function does uh and and what the outputs are from a function uh then we can change the internals of the function and know that it's still doing the same job um and it's important in that case that your tests are there also to test what a function does and not how it does it if your tests have any kind of um uh any kind of thing that reaches inside the code of a function and and and deals with like internals uh then um uh then when you change how the internals work the tests will fail and you won't have that same confidence uh that tests that only care about the outputs uh do so make sure you test what a function does and not how it does it you can see how that kind of mirrors or maps to the same as what refactoring does refactoring is is changing uh is changing how a code how the code does it but not what it does and tests should test what a function does and not how it does it uh they go hand in hand and so yeah if you don't have any tests for a piece of code that you're working on and you need to refactor that's absolutely Step Zero you need to go and write some tests um there's many ways to go about that um goodness go get your AI assistant to go write some tests for you that might help I don't know um but uh the important thing is when your writing tests for refactoring a piece of code is that the test must cover the existing Behavior exactly as it is even if it's wrong we are absolutely in this refactoring stage trying to ensure that we do not change the behavior of the system we just want to improve how the code works if you change how the code works at the same time then the test will break and how will you know uh that you have indeed fixed anything if if you're just breaking your old tests so you refactor first um and uh and then once you're refactored once you have indeed committed all those changes to say okay this is now uh a piece of code that has passing tests uh that behaves exactly the same way as the as how I started uh but has changed the internals that's the point where we can then uh move on to make the change that you actually need to to to make in that code you can go and fix things you can change the tests um but only after you finish that refactoring step but uh that's getting a little ahead of myself uh because I want to give you some uh tips on refactoring JavaScript code for uh to to improve your cognitive complexity and so cognitive complexity very much punishes nested code the deeper we Nest things the more stuff we stick on our brain stack uh the more um the more difficult it is to understand what's going on and so our aim here is to reduce that nesting reducing the nesting of our code will allow us to uh think more clearly through it uh break it into smaller bits and understand those bits better and so I have four tips here uh the first one is to invert invert conditions and exit early uh structural collapse extracting helper methods and then using a couple of other language features that I think are really cool for for this in in JavaScript particularly um so let's jump into those uh inverting the conditional early exit I showed you that code earlier that has this onslide transition end and we had this big um that's not working I had this big if big conditional around the outside of a code uh the whole function starts with this big if there's conetti in the current slides data set um and that's great but it sort of immediately nests everything inside that first conditional uh and you're always considering is there confetti uh in the data set what you can do instead is of course invert that condition say if there's not confetti then we simply return we get out of here we're done uh and that's brilliant we've uh we've kind of dropped off having to consider whether there's confetti in the current data set if there's not we've already left uh and and so we can just get on with the rest of the function which is to throw some confetti on the screen we're ready to do that we're going to do that uh We've reduced the nesting and things are a lot happier so we just pop pop one little thing off the brain stack there we we've got rid of one conditional we we are happy to just exit early uh instead of keeping that around in our mind keeping that at the bottom of the stack next up is structural collapse uh this is kind of where uh this doesn't have to be uh around the outside of a function again uh like this code code shows but what's Happening Here is we've got two conditionals one after each other uh with nothing else happening in between uh and that means that we can turn that two conditions into just one condition um and we only have to deal with kind of one idea of what's happening at this time rather than uh the idea that we there could be other stuff going on between these conditions uh all we need to know is at this point uh and this is sort of some madeup code here is there confetti in the slide and the media query says that uh animations are are fine in that case we can animate some confetti on the screen uh if we combine those conditions uh we drop one level of nesting uh and we only have one uh thing to think about on our on on that brain stack or one thing to add to the stack there um rather than two we can pop uh that second conditional off the brain stack and we're H we're in a happier place again uh next is probably I think the most important one uh uh in terms of refactoring for complexity like this and that's to extract a helper method uh it helps with duplication but it also it doesn't necessarily need duplication to exist uh it helps you to break down a function into its component parts uh and uh and allows you to kind of decrease the amount of context that you have to consider when you're dealing with each of the individual functions and when you are changing or fixing something inside of a a large complex function if you break it down into smaller fun functions full of helper methods uh then then you probably find that what you what's broken or what needs adding is part of one of those smaller methods and so it's easier to deal with in this case the code on screen is um is is a bit of is two turnery functions that I have sorry two tary expressions that I have uh which are both doing the same thing we've got the slide we're looking inside the data set for a particular attribute when we get that attribute we PA it as an integer if we don't get the attribute we leave it we return a default integer uh and so we can turn that into a a well-named function that's one thing we can do to make things a lot easier to to understand uh in the code now I know if I'm getting an integer integer data attribute or default uh I can use this function uh and uh and I don't have to understand how it's going about it I didn't have to drop the turnery that's still part of the original function but uh I've reduced duplication in my code by extracting as a helper method but I've also dropped out a couple of conditionals from my code and now I just understand that this is going to return me either an integer that was in the data attribute or a default number that I added at the end um the important thing as I said in these helper methods is that we're reducing the context if you extract a helper method from a function and uh it brings the entire context of the existing function with it then it's still just as complex as we started with and now we're just moving code around uh in fact it's probably harder to deal with that because you're now trying to handle a helper method that has gone somewhere else but still requires all of the context um and so extracting a helper method should reduce that context uh and ultimately uh pop some of that context off of our own brain Stacks make it a lot happier finally there's uh there's some language features um uh there's some some language features we can use which are going to make things slightly easier as well um the first one is um if you have nested objects and you need to get a property that's deeply nested inside of an object you used to have to do this kind of thing where you'd have to check that the first object exists within sorry that the the second object exists within the first and then the the property exists on that that object and we've got this uh Boolean and and it can go deeper and deeper uh and ultimately looks quite ugly but also uh is adding complexity to uh to things we're having to understand uh but now in JavaScript we have uh optional chaining uh which allows us to um optionally chain all the way through a deep uh set of properties and objects uh in order to get something that's uh that's at the bottom we dig out a property at the bottom of a of a set of nested objects um and uh you know if any of the question mark dots fail at any one point during that it just returns undefined uh as you'd expect without you having to do a whole bunch of tests to find out if uh if everything was there there and so optional chaining very nice to just simplify things and then secondly um there's this idea if I have a an object here I've got some defaults that I had set up and then if uh this bit then checks if the defaults colors uh is still undefined or null that is it hasn't been defined or I've defined it as something that is null then we can reach into the the Dom into the page to get a in this case an array data attribute of default um and get some colors out of there uh this is great but like it's adding a conditional to our thing and we don't have to anymore not with the Nosh Lish coaling assignment operator that's our little double question mark equals there um which says hey if default. colors is not already assigned to something then we can assign it to this uh and that checks for null or undefined simplifying things dropping that conditional and popping things off the brain stack I am uh running a little out of time here but I have a quick bonus rant for you as well because um nested ceries uh have got uh up uh in my mind recently and I don't like them uh nested turnery look like this where we have ah there's two three Turner there and I don't like it um it so at the end of last year prettier the format actually um uh came up with a new way to format nested Turner uh because people were unable to uh to consider that uh unable to agree on a good way of doing so over many years and this is the way they came up with and I still don't like it um and the main problem is nesting is bad I still don't like nesting uh it's extra complex uh but in this case like reading this through at least to me says okay we've got this we got this pet and if it can bark then we have a and if the pet is scary then it's a wolf otherwi else it's a dog else and we got to drop out of that if the if meow it's it's a cat and otherwise it's probably a bunny okay I'm I'm happy I got through that but I didn't like it um there are many better ways I think to deal with nested taries and one of them uh or or and a few of them kind of uh deal with the um uh a few of the a couple of the um refactorings that that we've just gone through uh so if you actually were to extract this turnery as a as a function itself as a helper function uh then it's something that you can actually test indep L which I think is a is a really useful factor of that but then we can also use that idea of uh using conditionals and and exiting early and so this now reads I think a lot easier in that case in the case where if a pet can bark and is scary then it's a wolf otherwise if a pet can bark and then it's a dog otherwise if it can meow it's a cat otherwise probably a bunny and I'm fine with that that's much easier to read but it's also easier to test uh and it's also easier then to use that function elsewhere in your project so I don't like nested Turner I think they should um go I have no problem with Turner as such but nested ones can uh can can get out of my code base thank you very much okay so what have we covered here we had a little talk about what is complexity mainly our jobs and code um we asked how do we measure complexity and I POS it to you that in terms of how we understand code and how we work with it cognitive complexity is a useful measure cyclomatic complexity is also useful measure but more about code coverage and the ability to uh understand the number of branches you have uh in a system and then finally we looked at conquering complexity we we refactor we ensure we have tests we refactor code first uh using uh uh refactorings like um extracting helper methods uh structurally collapsing conditionals into each other early exiting and using other kind of optional chaining or Nish coalescing uh functions in the language uh once we have conquered that complexity when you are making changes to code we reach back to first we make it easier to understand the code and then we make the change and making that change becomes easier not just there but for the future for future code as well for future developers on your project for yourself in the future um there are tools of course uh to help you out with this as I showed Sona lint can show you uh when you're writing uh more complex code as you're coding it as well as applying hundreds of other rules to your code at the same time to help you out help you wrri in clean code and then Sona Cube and Sona Cloud will live there can live there in your CI and CD pipelines to catch complexity as well as all those other things that uh that can go wrong in code as you uh as your as you push uh to uh to your um devops uh pipeline I got some other links for you which have just been popped into the chat right there that was magic um there's a there's a paper that was written back in 2016 on cognitive complexity and I actually highly recommend reading it if you are interested in this at all further uh it's a very good read I don't normally read computer science papers honestly uh but I've read this one several times uh and it's a great read uh and it will give you a few more details and a few more kind of bits we look at in terms of cognitive complexity uh at Sona and then uh because I included the bonus rant I've also got the blog post I wrote up on um stop nesting taries uh highly recommend going and reading that and if you disagree with me uh not leaving a comment um so that's all I've got for you this uh this evening for me uh again my name is fash I am a developer advocate here at Sona uh and I'd love to hear your questions uh but right now I'm going to pass back over to Andrew to uh to to finish things up Bill thanks that was that was awesome um you certainly uh did help us understand how we can conquer complexity and I particularly love how we can um recognize complexity as we're coding and then resolve it almost before it becomes an issue later on so thank you for that um as we move into a time of Q&A and I just check to see if we've answered all the questions during the session or not I did just want to briefly um put on the screen uh some of the upcoming webinars that we have um particularly the first one it's a Hot Topic uh writing cleaner using AI coding assistance with sonar so that's uh something that people may be interested in anyway um let's just check on the questions we haven't got an awful lot of time but I would like to just uh check on those um perhaps to kick us off um Phil what do you do if a framework encourages nesting and complexity so you're almost having to start with that um yeah that's a that is an interesting question like I'm I'm certainly aware that yeah some patterns are encouraged by Frameworks that maybe would be um picked up or quite obviously kind of nested and nested um in terms of uh uh in terms of this cognitive complexity thing uh now it turns out that we are aware of this and um uh we actually um our fabulous JavaScript team uh who works on the analyzers and works on making sure this is the case are very much JavaScript and tcri developers themselves uh and uh and have spent time in these applications and so we work with both uh our own internal knowledge but also feedback to uh ensure that um cognitive complexity uh doesn't uh complain too much when it doesn't make sense when it is indeed uh some part of the um uh of the framework or or the way that it is conventionally written uh convention is actually an important part of uh of how we uh see uh clean code um a clean code we kind of Define as code that is um consistent and adaptable and intentional and responsible and under consistency is convention uh the best way to write code that's going to be understood is to write it in the inventions of the language or framework that you're working in and so if a framework is encouraging that kind of thing uh then we will put in exceptions in terms of cognitive complexity to uh ensure that it's not uh that that sonar is not complaining about things that shouldn't be complained about um I think it's really useful because like this cognitive complexity uh so cyclomatic complexity is this very kind of rigidly defined uh number of paths through a system uh kind of score whereas our cognitive complexity is actually more more of this IC about of of about how understandable a piece of code is uh and if it if you are working within uh the confines within the um conventions and um uh yeah within the conventions of a framework or a system then we don't want to complain about that it's a horis for for understanding and if you are writing conventional code within that framework then it will be more understandable um so yeah so cognitive complexity is malleable uh in in a way uh and will will work to help you great thank you um just checking the other questions I did love your rant by the way at the end uh nested Turner I don't know what your problem is um I'm sure you're up for a debate with anybody who wishes to have one come and grab you at the next conference right yes yeah in person is much more fun because we can we can do it over a cup of coffee or a beer or something I don't know that sounds great uh well Phil thank you so much I appreciate uh your time I know you're always traveling so it's great to be able to catch you and uh use you for this uh this webinar um thanks to all those who've attended and posed questions um if you do have any other questions uh our community is a great place to pose them um and also to review other questions that have been posed in the past and answered you can contribute to that ongoing discussion um and also do visit um Sonos source.com for further information on some of the topics that Phil mentioned he mentioned clean as you code for example as well as Sona lint and the other Sona Solutions so uh you can also check out that and also our other webinars and also um places where Phil will be uh appearing in the near future I'm sure um and thank you again uh Phil and thanks for attending everybody and for providing your feedback uh which we do consider a gift uh via the survey that will shortly pop up on your screen but um let me just end by saying big thank you for Phil and for delivering that excellent webinar on conquering complexity thanks Phil thanks very much everyone",
+  "fetchedAt": "2026-03-14T09:23:12.951Z"
+}

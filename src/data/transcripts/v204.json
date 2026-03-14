@@ -1,0 +1,1253 @@
+{
+  "videoId": "v204",
+  "youtubeId": "0oGOWds9oQ0",
+  "segments": [
+    {
+      "text": "hi i'm anne campbell and today i'm going",
+      "offset": 5680,
+      "duration": 3520
+    },
+    {
+      "text": "to talk about the major features in",
+      "offset": 7680,
+      "duration": 3520
+    },
+    {
+      "text": "sonar cube 9.4",
+      "offset": 9200,
+      "duration": 3519
+    },
+    {
+      "text": "in the last few versions we've made a",
+      "offset": 11200,
+      "duration": 4479
+    },
+    {
+      "text": "significant effort to add iac rules for",
+      "offset": 12719,
+      "duration": 6881
+    },
+    {
+      "text": "aws and azure cloud today with 9.4 we",
+      "offset": 15679,
+      "duration": 6161
+    },
+    {
+      "text": "round out the offering by adding 17",
+      "offset": 19600,
+      "duration": 4240
+    },
+    {
+      "text": "terraform rules for google cloud",
+      "offset": 21840,
+      "duration": 3199
+    },
+    {
+      "text": "platform",
+      "offset": 23840,
+      "duration": 2720
+    },
+    {
+      "text": "most of these rules are security",
+      "offset": 25039,
+      "duration": 3761
+    },
+    {
+      "text": "hotspots and as a reminder a security",
+      "offset": 26560,
+      "duration": 4160
+    },
+    {
+      "text": "hotspot is a place in code where there",
+      "offset": 28800,
+      "duration": 4640
+    },
+    {
+      "text": "might be a vulnerability there might not",
+      "offset": 30720,
+      "duration": 5440
+    },
+    {
+      "text": "human review is required to determine so",
+      "offset": 33440,
+      "duration": 6160
+    },
+    {
+      "text": "here is an example of a g gcp",
+      "offset": 36160,
+      "duration": 6239
+    },
+    {
+      "text": "security hotspot where we're creating a",
+      "offset": 39600,
+      "duration": 5119
+    },
+    {
+      "text": "custom role and a human reviewer needs",
+      "offset": 42399,
+      "duration": 3840
+    },
+    {
+      "text": "to come and look and see if there is a",
+      "offset": 44719,
+      "duration": 4881
+    },
+    {
+      "text": "vulnerability here or if it's just fine",
+      "offset": 46239,
+      "duration": 6800
+    },
+    {
+      "text": "now sometimes with security hotspots",
+      "offset": 49600,
+      "duration": 5520
+    },
+    {
+      "text": "it takes a little bit more context than",
+      "offset": 53039,
+      "duration": 4961
+    },
+    {
+      "text": "just the location and code to understand",
+      "offset": 55120,
+      "duration": 5040
+    },
+    {
+      "text": "whether or not there's a problem so in",
+      "offset": 58000,
+      "duration": 5280
+    },
+    {
+      "text": "9.4 we've reworked the security hotspots",
+      "offset": 60160,
+      "duration": 4800
+    },
+    {
+      "text": "interface to make room to provide",
+      "offset": 63280,
+      "duration": 4400
+    },
+    {
+      "text": "secondary locations so here we see the",
+      "offset": 64960,
+      "duration": 5760
+    },
+    {
+      "text": "new 9.4 security hotspots interface",
+      "offset": 67680,
+      "duration": 5520
+    },
+    {
+      "text": "we're raising the hot spot on line three",
+      "offset": 70720,
+      "duration": 4160
+    },
+    {
+      "text": "where we say make sure it's safe to give",
+      "offset": 73200,
+      "duration": 4080
+    },
+    {
+      "text": "all members full access in the creation",
+      "offset": 74880,
+      "duration": 4080
+    },
+    {
+      "text": "of this role",
+      "offset": 77280,
+      "duration": 4560
+    },
+    {
+      "text": "but you may not know enough from just",
+      "offset": 78960,
+      "duration": 4720
+    },
+    {
+      "text": "line three to know whether or not",
+      "offset": 81840,
+      "duration": 3760
+    },
+    {
+      "text": "there's a problem here so we've added",
+      "offset": 83680,
+      "duration": 4479
+    },
+    {
+      "text": "secondary locations and in this case the",
+      "offset": 85600,
+      "duration": 5040
+    },
+    {
+      "text": "secondary location shows where that",
+      "offset": 88159,
+      "duration": 5841
+    },
+    {
+      "text": "policy where that role is being used so",
+      "offset": 90640,
+      "duration": 5439
+    },
+    {
+      "text": "with this additional data you should be",
+      "offset": 94000,
+      "duration": 4640
+    },
+    {
+      "text": "better able to make the determination",
+      "offset": 96079,
+      "duration": 4801
+    },
+    {
+      "text": "whether or not there's a problem there",
+      "offset": 98640,
+      "duration": 4400
+    },
+    {
+      "text": "in addition we've realized that with",
+      "offset": 100880,
+      "duration": 4480
+    },
+    {
+      "text": "these infrastructure related hot spots",
+      "offset": 103040,
+      "duration": 4320
+    },
+    {
+      "text": "it's not always possible to make the",
+      "offset": 105360,
+      "duration": 4480
+    },
+    {
+      "text": "change immediately sometimes what you",
+      "offset": 107360,
+      "duration": 5439
+    },
+    {
+      "text": "need to do is review it say yes there's",
+      "offset": 109840,
+      "duration": 5440
+    },
+    {
+      "text": "a problem i'm going to come back to this",
+      "offset": 112799,
+      "duration": 4801
+    },
+    {
+      "text": "and then move on to review the rest of",
+      "offset": 115280,
+      "duration": 4400
+    },
+    {
+      "text": "your hot spots and get your code to a",
+      "offset": 117600,
+      "duration": 3600
+    },
+    {
+      "text": "releasable state",
+      "offset": 119680,
+      "duration": 3840
+    },
+    {
+      "text": "so to do that we've added this",
+      "offset": 121200,
+      "duration": 5519
+    },
+    {
+      "text": "acknowledged feature this this status",
+      "offset": 123520,
+      "duration": 5840
+    },
+    {
+      "text": "allows you to say yes there's a problem",
+      "offset": 126719,
+      "duration": 4721
+    },
+    {
+      "text": "here i'm going to fix it but i'm not",
+      "offset": 129360,
+      "duration": 4080
+    },
+    {
+      "text": "going to do it right now",
+      "offset": 131440,
+      "duration": 3920
+    },
+    {
+      "text": "and that gets it out of your review",
+      "offset": 133440,
+      "duration": 2960
+    },
+    {
+      "text": "queue",
+      "offset": 135360,
+      "duration": 4480
+    },
+    {
+      "text": "so that you can move on",
+      "offset": 136400,
+      "duration": 3440
+    },
+    {
+      "text": "with your deployment",
+      "offset": 140160,
+      "duration": 3400
+    },
+    {
+      "text": "moving on to java",
+      "offset": 144319,
+      "duration": 4481
+    },
+    {
+      "text": "we've added some additional rules for",
+      "offset": 146400,
+      "duration": 5839
+    },
+    {
+      "text": "xml so not all xml processing",
+      "offset": 148800,
+      "duration": 7040
+    },
+    {
+      "text": "vulnerabilities are about",
+      "offset": 152239,
+      "duration": 6640
+    },
+    {
+      "text": "for instance if you didn't already know",
+      "offset": 155840,
+      "duration": 6160
+    },
+    {
+      "text": "that the java xml digital signature api",
+      "offset": 158879,
+      "duration": 5440
+    },
+    {
+      "text": "doesn't use strong signature validation",
+      "offset": 162000,
+      "duration": 3599
+    },
+    {
+      "text": "by default",
+      "offset": 164319,
+      "duration": 3361
+    },
+    {
+      "text": "then you could look at this code all day",
+      "offset": 165599,
+      "duration": 4081
+    },
+    {
+      "text": "long and never realize there was a",
+      "offset": 167680,
+      "duration": 6000
+    },
+    {
+      "text": "problem here so for that we've added",
+      "offset": 169680,
+      "duration": 6240
+    },
+    {
+      "text": "four new xml processing rules to help",
+      "offset": 173680,
+      "duration": 5199
+    },
+    {
+      "text": "you find these maybe less obvious xml",
+      "offset": 175920,
+      "duration": 4160
+    },
+    {
+      "text": "processing",
+      "offset": 178879,
+      "duration": 3440
+    },
+    {
+      "text": "vulnerabilities",
+      "offset": 180080,
+      "duration": 4400
+    },
+    {
+      "text": "along similar lines in commercial",
+      "offset": 182319,
+      "duration": 4321
+    },
+    {
+      "text": "editions we've added additional taint",
+      "offset": 184480,
+      "duration": 5119
+    },
+    {
+      "text": "analysis vulnerabilities for some of the",
+      "offset": 186640,
+      "duration": 6160
+    },
+    {
+      "text": "less prominent types of",
+      "offset": 189599,
+      "duration": 5441
+    },
+    {
+      "text": "vulnerability",
+      "offset": 192800,
+      "duration": 5359
+    },
+    {
+      "text": "with user-provided code so this",
+      "offset": 195040,
+      "duration": 4960
+    },
+    {
+      "text": "particular vulnerability that i'm",
+      "offset": 198159,
+      "duration": 4160
+    },
+    {
+      "text": "showing you is about",
+      "offset": 200000,
+      "duration": 4000
+    },
+    {
+      "text": "reflection",
+      "offset": 202319,
+      "duration": 4480
+    },
+    {
+      "text": "and it's reflection with user provided",
+      "offset": 204000,
+      "duration": 3920
+    },
+    {
+      "text": "data so",
+      "offset": 206799,
+      "duration": 4481
+    },
+    {
+      "text": "as a review what tein analysis does is",
+      "offset": 207920,
+      "duration": 5920
+    },
+    {
+      "text": "start from where you get data from the",
+      "offset": 211280,
+      "duration": 4959
+    },
+    {
+      "text": "user anytime you get data from the user",
+      "offset": 213840,
+      "duration": 5119
+    },
+    {
+      "text": "you have to assume that it can't be",
+      "offset": 216239,
+      "duration": 4881
+    },
+    {
+      "text": "trusted maybe it can maybe it can't but",
+      "offset": 218959,
+      "duration": 3681
+    },
+    {
+      "text": "you need to assume that you shouldn't",
+      "offset": 221120,
+      "duration": 3440
+    },
+    {
+      "text": "trust it and it's going to follow that",
+      "offset": 222640,
+      "duration": 4400
+    },
+    {
+      "text": "user-provided data through the control",
+      "offset": 224560,
+      "duration": 4640
+    },
+    {
+      "text": "flow from method to method",
+      "offset": 227040,
+      "duration": 4000
+    },
+    {
+      "text": "from file to file",
+      "offset": 229200,
+      "duration": 4640
+    },
+    {
+      "text": "to where that user-provided data is used",
+      "offset": 231040,
+      "duration": 4800
+    },
+    {
+      "text": "in unsafe ways",
+      "offset": 233840,
+      "duration": 3039
+    },
+    {
+      "text": "so",
+      "offset": 235840,
+      "duration": 2880
+    },
+    {
+      "text": "the other neat thing about this",
+      "offset": 236879,
+      "duration": 4000
+    },
+    {
+      "text": "particular vulnerability is that there",
+      "offset": 238720,
+      "duration": 5120
+    },
+    {
+      "text": "are multiple paths through the code that",
+      "offset": 240879,
+      "duration": 6321
+    },
+    {
+      "text": "can get you to this same unsafe usage",
+      "offset": 243840,
+      "duration": 5520
+    },
+    {
+      "text": "and we can see those here in the left",
+      "offset": 247200,
+      "duration": 4319
+    },
+    {
+      "text": "pane so this first one that we started",
+      "offset": 249360,
+      "duration": 4720
+    },
+    {
+      "text": "with has 21 steps to get to the",
+      "offset": 251519,
+      "duration": 4720
+    },
+    {
+      "text": "problematic usage this one's a little",
+      "offset": 254080,
+      "duration": 4800
+    },
+    {
+      "text": "bit shorter but again it goes from",
+      "offset": 256239,
+      "duration": 5520
+    },
+    {
+      "text": "method to method and file to file to",
+      "offset": 258880,
+      "duration": 5520
+    },
+    {
+      "text": "help you trace where the untrusted user",
+      "offset": 261759,
+      "duration": 4160
+    },
+    {
+      "text": "input comes in",
+      "offset": 264400,
+      "duration": 5600
+    },
+    {
+      "text": "and where it's used in an unsafe manner",
+      "offset": 265919,
+      "duration": 5921
+    },
+    {
+      "text": "moving on from that",
+      "offset": 270000,
+      "duration": 3680
+    },
+    {
+      "text": "there's another",
+      "offset": 271840,
+      "duration": 4320
+    },
+    {
+      "text": "feature that we've added to taint",
+      "offset": 273680,
+      "duration": 4239
+    },
+    {
+      "text": "analysis",
+      "offset": 276160,
+      "duration": 2560
+    },
+    {
+      "text": "so",
+      "offset": 277919,
+      "duration": 4000
+    },
+    {
+      "text": "with 9.4 we've done an effort to analyze",
+      "offset": 278720,
+      "duration": 6960
+    },
+    {
+      "text": "the source code of 10 major libraries",
+      "offset": 281919,
+      "duration": 6321
+    },
+    {
+      "text": "slash dependencies and we fed the",
+      "offset": 285680,
+      "duration": 5280
+    },
+    {
+      "text": "resulting data into analysis so that",
+      "offset": 288240,
+      "duration": 6000
+    },
+    {
+      "text": "ships with 9.4 and it's going to enrich",
+      "offset": 290960,
+      "duration": 5200
+    },
+    {
+      "text": "your obtain analysis if you're using",
+      "offset": 294240,
+      "duration": 4239
+    },
+    {
+      "text": "these 10 libraries so that you can start",
+      "offset": 296160,
+      "duration": 4000
+    },
+    {
+      "text": "to pick up vulnerabilities that might",
+      "offset": 298479,
+      "duration": 4241
+    },
+    {
+      "text": "have been missed before so an example of",
+      "offset": 300160,
+      "duration": 4879
+    },
+    {
+      "text": "one and this is some sample data so it's",
+      "offset": 302720,
+      "duration": 4080
+    },
+    {
+      "text": "a little bit contrived",
+      "offset": 305039,
+      "duration": 5201
+    },
+    {
+      "text": "but we're getting user data through a",
+      "offset": 306800,
+      "duration": 4800
+    },
+    {
+      "text": "dependency",
+      "offset": 310240,
+      "duration": 4799
+    },
+    {
+      "text": "that we previously would have missed",
+      "offset": 311600,
+      "duration": 5439
+    },
+    {
+      "text": "then we pass it in",
+      "offset": 315039,
+      "duration": 5201
+    },
+    {
+      "text": "in the code here in the main application",
+      "offset": 317039,
+      "duration": 5440
+    },
+    {
+      "text": "it goes through a pass-through in a",
+      "offset": 320240,
+      "duration": 5040
+    },
+    {
+      "text": "dependency again it might have",
+      "offset": 322479,
+      "duration": 4321
+    },
+    {
+      "text": "we might have lost track of it",
+      "offset": 325280,
+      "duration": 3440
+    },
+    {
+      "text": "previously at this point",
+      "offset": 326800,
+      "duration": 4160
+    },
+    {
+      "text": "then we pass it around some more within",
+      "offset": 328720,
+      "duration": 3440
+    },
+    {
+      "text": "this code",
+      "offset": 330960,
+      "duration": 4079
+    },
+    {
+      "text": "and then here's a sink in a dependency",
+      "offset": 332160,
+      "duration": 4319
+    },
+    {
+      "text": "so again",
+      "offset": 335039,
+      "duration": 4081
+    },
+    {
+      "text": "we have analyzed 10 major popular",
+      "offset": 336479,
+      "duration": 4081
+    },
+    {
+      "text": "dependencies",
+      "offset": 339120,
+      "duration": 4000
+    },
+    {
+      "text": "fed that code into your analysis and so",
+      "offset": 340560,
+      "duration": 5199
+    },
+    {
+      "text": "with 9.4 you may see additional taint",
+      "offset": 343120,
+      "duration": 4880
+    },
+    {
+      "text": "analysis vulnerabilities raised that",
+      "offset": 345759,
+      "duration": 4000
+    },
+    {
+      "text": "weren't raised before because basically",
+      "offset": 348000,
+      "duration": 4960
+    },
+    {
+      "text": "we've made the rules smarter",
+      "offset": 349759,
+      "duration": 5521
+    },
+    {
+      "text": "still on java i think anyone who",
+      "offset": 352960,
+      "duration": 4480
+    },
+    {
+      "text": "analyzes java is going to be happy to",
+      "offset": 355280,
+      "duration": 3919
+    },
+    {
+      "text": "see this because we have made your",
+      "offset": 357440,
+      "duration": 3759
+    },
+    {
+      "text": "analysis faster",
+      "offset": 359199,
+      "duration": 4641
+    },
+    {
+      "text": "in our test the the changes that we did",
+      "offset": 361199,
+      "duration": 6401
+    },
+    {
+      "text": "were up to 67 percent faster across the",
+      "offset": 363840,
+      "duration": 5600
+    },
+    {
+      "text": "projects that we tested",
+      "offset": 367600,
+      "duration": 4480
+    },
+    {
+      "text": "larger projects see a greater impact on",
+      "offset": 369440,
+      "duration": 5599
+    },
+    {
+      "text": "this your bigger projects get a bigger",
+      "offset": 372080,
+      "duration": 5280
+    },
+    {
+      "text": "boost in performance and small projects",
+      "offset": 375039,
+      "duration": 4160
+    },
+    {
+      "text": "may not see much of an improvement at",
+      "offset": 377360,
+      "duration": 5920
+    },
+    {
+      "text": "all but on average we saw a 30 increase",
+      "offset": 379199,
+      "duration": 6401
+    },
+    {
+      "text": "in performance of the java sensor so the",
+      "offset": 383280,
+      "duration": 4960
+    },
+    {
+      "text": "java portion of analysis",
+      "offset": 385600,
+      "duration": 4640
+    },
+    {
+      "text": "with these improvements what we've done",
+      "offset": 388240,
+      "duration": 4320
+    },
+    {
+      "text": "is grouped the processing of related",
+      "offset": 390240,
+      "duration": 5040
+    },
+    {
+      "text": "files together so we get this",
+      "offset": 392560,
+      "duration": 5600
+    },
+    {
+      "text": "performance boost with no impact on",
+      "offset": 395280,
+      "duration": 4800
+    },
+    {
+      "text": "accuracy",
+      "offset": 398160,
+      "duration": 3200
+    },
+    {
+      "text": "similarly",
+      "offset": 400080,
+      "duration": 3679
+    },
+    {
+      "text": "in commercial editions we've improved",
+      "offset": 401360,
+      "duration": 3360
+    },
+    {
+      "text": "the",
+      "offset": 403759,
+      "duration": 4241
+    },
+    {
+      "text": "speed of pr analysis as well another",
+      "offset": 404720,
+      "duration": 6000
+    },
+    {
+      "text": "another eight to twenty five percent on",
+      "offset": 408000,
+      "duration": 5280
+    },
+    {
+      "text": "top of the average thirty percent in",
+      "offset": 410720,
+      "duration": 4319
+    },
+    {
+      "text": "overall analysis",
+      "offset": 413280,
+      "duration": 3600
+    },
+    {
+      "text": "and the way we've gotten this pr",
+      "offset": 415039,
+      "duration": 4401
+    },
+    {
+      "text": "analysis speed boost is that we've",
+      "offset": 416880,
+      "duration": 5039
+    },
+    {
+      "text": "changed what we're analyzing so",
+      "offset": 419440,
+      "duration": 4800
+    },
+    {
+      "text": "previously we were running full analysis",
+      "offset": 421919,
+      "duration": 4641
+    },
+    {
+      "text": "on all the files and then narrowing what",
+      "offset": 424240,
+      "duration": 4880
+    },
+    {
+      "text": "we reported to what was related to the",
+      "offset": 426560,
+      "duration": 3680
+    },
+    {
+      "text": "pr",
+      "offset": 429120,
+      "duration": 2960
+    },
+    {
+      "text": "now we're only going to run full",
+      "offset": 430240,
+      "duration": 4959
+    },
+    {
+      "text": "analysis on the files changed in the pr",
+      "offset": 432080,
+      "duration": 5119
+    },
+    {
+      "text": "and on the files that weren't changed in",
+      "offset": 435199,
+      "duration": 4241
+    },
+    {
+      "text": "the pr we're only running the rules that",
+      "offset": 437199,
+      "duration": 4801
+    },
+    {
+      "text": "can be affected by f changes in other",
+      "offset": 439440,
+      "duration": 3520
+    },
+    {
+      "text": "files",
+      "offset": 442000,
+      "duration": 3199
+    },
+    {
+      "text": "so again if you're if you're running",
+      "offset": 442960,
+      "duration": 4320
+    },
+    {
+      "text": "java analysis you're going to get your",
+      "offset": 445199,
+      "duration": 4161
+    },
+    {
+      "text": "results faster and i think everybody",
+      "offset": 447280,
+      "duration": 3680
+    },
+    {
+      "text": "likes that",
+      "offset": 449360,
+      "duration": 4880
+    },
+    {
+      "text": "moving on to cnc plus plus we've",
+      "offset": 450960,
+      "duration": 5519
+    },
+    {
+      "text": "improved compiler support across a",
+      "offset": 454240,
+      "duration": 4799
+    },
+    {
+      "text": "number of different compilers so we've",
+      "offset": 456479,
+      "duration": 5601
+    },
+    {
+      "text": "added a whole bunch of flag supports",
+      "offset": 459039,
+      "duration": 4081
+    },
+    {
+      "text": "and",
+      "offset": 462080,
+      "duration": 2959
+    },
+    {
+      "text": "some other precision",
+      "offset": 463120,
+      "duration": 4799
+    },
+    {
+      "text": "improvements so across msvc",
+      "offset": 465039,
+      "duration": 4641
+    },
+    {
+      "text": "dab",
+      "offset": 467919,
+      "duration": 5521
+    },
+    {
+      "text": "rmcc texas instruments g lang",
+      "offset": 469680,
+      "duration": 5280
+    },
+    {
+      "text": "and iar",
+      "offset": 473440,
+      "duration": 3360
+    },
+    {
+      "text": "i'll give a little pause here so you can",
+      "offset": 474960,
+      "duration": 4320
+    },
+    {
+      "text": "scan for your flag",
+      "offset": 476800,
+      "duration": 5119
+    },
+    {
+      "text": "and in addition we've improved our",
+      "offset": 479280,
+      "duration": 5359
+    },
+    {
+      "text": "handling of headers so previously we",
+      "offset": 481919,
+      "duration": 4641
+    },
+    {
+      "text": "were treating all headers like system",
+      "offset": 484639,
+      "duration": 4641
+    },
+    {
+      "text": "headers so like system provided",
+      "offset": 486560,
+      "duration": 4639
+    },
+    {
+      "text": "libraries we weren't doing",
+      "offset": 489280,
+      "duration": 3919
+    },
+    {
+      "text": "a full analysis we weren't doing an",
+      "offset": 491199,
+      "duration": 4400
+    },
+    {
+      "text": "analysis of the code of headers",
+      "offset": 493199,
+      "duration": 4881
+    },
+    {
+      "text": "now we've segregated out user provided",
+      "offset": 495599,
+      "duration": 4801
+    },
+    {
+      "text": "headers and we are analyzing that code",
+      "offset": 498080,
+      "duration": 4399
+    },
+    {
+      "text": "and what that's done is eliminate a",
+      "offset": 500400,
+      "duration": 4000
+    },
+    {
+      "text": "number of false negatives as well as a",
+      "offset": 502479,
+      "duration": 4081
+    },
+    {
+      "text": "few false positives and here is an",
+      "offset": 504400,
+      "duration": 5199
+    },
+    {
+      "text": "example of an issue in a user-provided",
+      "offset": 506560,
+      "duration": 5520
+    },
+    {
+      "text": "header that we weren't previously",
+      "offset": 509599,
+      "duration": 7440
+    },
+    {
+      "text": "finding and now in 9.4 we do find",
+      "offset": 512080,
+      "duration": 7120
+    },
+    {
+      "text": "moving on from cnc plus plus into the",
+      "offset": 517039,
+      "duration": 3920
+    },
+    {
+      "text": "realm of reporting",
+      "offset": 519200,
+      "duration": 4079
+    },
+    {
+      "text": "in enterprise edition and above",
+      "offset": 520959,
+      "duration": 4801
+    },
+    {
+      "text": "we have added support for the owasp top",
+      "offset": 523279,
+      "duration": 6321
+    },
+    {
+      "text": "10 2021 report the oauth group released",
+      "offset": 525760,
+      "duration": 7519
+    },
+    {
+      "text": "oau's top 10 2021 in late september and",
+      "offset": 529600,
+      "duration": 6720
+    },
+    {
+      "text": "now here in 9.4 you have the report to",
+      "offset": 533279,
+      "duration": 6401
+    },
+    {
+      "text": "reflect uh your code status against the",
+      "offset": 536320,
+      "duration": 6959
+    },
+    {
+      "text": "os top 10 2021. it's here in the ui and",
+      "offset": 539680,
+      "duration": 7200
+    },
+    {
+      "text": "it's also in the security report pdf",
+      "offset": 543279,
+      "duration": 6081
+    },
+    {
+      "text": "and speaking of pdfs we have also",
+      "offset": 546880,
+      "duration": 5200
+    },
+    {
+      "text": "updated the portfolio pdf to show new",
+      "offset": 549360,
+      "duration": 5520
+    },
+    {
+      "text": "code so previously we had been showing",
+      "offset": 552080,
+      "duration": 5439
+    },
+    {
+      "text": "developers new code first we made the",
+      "offset": 554880,
+      "duration": 5440
+    },
+    {
+      "text": "new code values visible in the ui then",
+      "offset": 557519,
+      "duration": 5440
+    },
+    {
+      "text": "we made them dominant in the ui what you",
+      "offset": 560320,
+      "duration": 4480
+    },
+    {
+      "text": "see by default",
+      "offset": 562959,
+      "duration": 5201
+    },
+    {
+      "text": "then in 9.3 we updated the portfolio",
+      "offset": 564800,
+      "duration": 6000
+    },
+    {
+      "text": "interface to make new code values",
+      "offset": 568160,
+      "duration": 4480
+    },
+    {
+      "text": "available in addition to the overall",
+      "offset": 570800,
+      "duration": 4080
+    },
+    {
+      "text": "code values that we've always shown",
+      "offset": 572640,
+      "duration": 5600
+    },
+    {
+      "text": "and now in 9.4 we finished the job by",
+      "offset": 574880,
+      "duration": 5200
+    },
+    {
+      "text": "bringing new code values to the",
+      "offset": 578240,
+      "duration": 4960
+    },
+    {
+      "text": "portfolio pdf so you see that here on",
+      "offset": 580080,
+      "duration": 5280
+    },
+    {
+      "text": "the main overview page with the new code",
+      "offset": 583200,
+      "duration": 4000
+    },
+    {
+      "text": "values here on the left",
+      "offset": 585360,
+      "duration": 2800
+    },
+    {
+      "text": "and",
+      "offset": 587200,
+      "duration": 3280
+    },
+    {
+      "text": "and at the domain level we have new code",
+      "offset": 588160,
+      "duration": 4799
+    },
+    {
+      "text": "values in addition to the overall code",
+      "offset": 590480,
+      "duration": 3760
+    },
+    {
+      "text": "values",
+      "offset": 592959,
+      "duration": 2721
+    },
+    {
+      "text": "and that's what i wanted to show you",
+      "offset": 594240,
+      "duration": 3680
+    },
+    {
+      "text": "today thanks for watching i'll see you",
+      "offset": 595680,
+      "duration": 5560
+    },
+    {
+      "text": "next time",
+      "offset": 597920,
+      "duration": 3320
+    }
+  ],
+  "fullText": "hi i'm anne campbell and today i'm going to talk about the major features in sonar cube 9.4 in the last few versions we've made a significant effort to add iac rules for aws and azure cloud today with 9.4 we round out the offering by adding 17 terraform rules for google cloud platform most of these rules are security hotspots and as a reminder a security hotspot is a place in code where there might be a vulnerability there might not human review is required to determine so here is an example of a g gcp security hotspot where we're creating a custom role and a human reviewer needs to come and look and see if there is a vulnerability here or if it's just fine now sometimes with security hotspots it takes a little bit more context than just the location and code to understand whether or not there's a problem so in 9.4 we've reworked the security hotspots interface to make room to provide secondary locations so here we see the new 9.4 security hotspots interface we're raising the hot spot on line three where we say make sure it's safe to give all members full access in the creation of this role but you may not know enough from just line three to know whether or not there's a problem here so we've added secondary locations and in this case the secondary location shows where that policy where that role is being used so with this additional data you should be better able to make the determination whether or not there's a problem there in addition we've realized that with these infrastructure related hot spots it's not always possible to make the change immediately sometimes what you need to do is review it say yes there's a problem i'm going to come back to this and then move on to review the rest of your hot spots and get your code to a releasable state so to do that we've added this acknowledged feature this this status allows you to say yes there's a problem here i'm going to fix it but i'm not going to do it right now and that gets it out of your review queue so that you can move on with your deployment moving on to java we've added some additional rules for xml so not all xml processing vulnerabilities are about for instance if you didn't already know that the java xml digital signature api doesn't use strong signature validation by default then you could look at this code all day long and never realize there was a problem here so for that we've added four new xml processing rules to help you find these maybe less obvious xml processing vulnerabilities along similar lines in commercial editions we've added additional taint analysis vulnerabilities for some of the less prominent types of vulnerability with user-provided code so this particular vulnerability that i'm showing you is about reflection and it's reflection with user provided data so as a review what tein analysis does is start from where you get data from the user anytime you get data from the user you have to assume that it can't be trusted maybe it can maybe it can't but you need to assume that you shouldn't trust it and it's going to follow that user-provided data through the control flow from method to method from file to file to where that user-provided data is used in unsafe ways so the other neat thing about this particular vulnerability is that there are multiple paths through the code that can get you to this same unsafe usage and we can see those here in the left pane so this first one that we started with has 21 steps to get to the problematic usage this one's a little bit shorter but again it goes from method to method and file to file to help you trace where the untrusted user input comes in and where it's used in an unsafe manner moving on from that there's another feature that we've added to taint analysis so with 9.4 we've done an effort to analyze the source code of 10 major libraries slash dependencies and we fed the resulting data into analysis so that ships with 9.4 and it's going to enrich your obtain analysis if you're using these 10 libraries so that you can start to pick up vulnerabilities that might have been missed before so an example of one and this is some sample data so it's a little bit contrived but we're getting user data through a dependency that we previously would have missed then we pass it in in the code here in the main application it goes through a pass-through in a dependency again it might have we might have lost track of it previously at this point then we pass it around some more within this code and then here's a sink in a dependency so again we have analyzed 10 major popular dependencies fed that code into your analysis and so with 9.4 you may see additional taint analysis vulnerabilities raised that weren't raised before because basically we've made the rules smarter still on java i think anyone who analyzes java is going to be happy to see this because we have made your analysis faster in our test the the changes that we did were up to 67 percent faster across the projects that we tested larger projects see a greater impact on this your bigger projects get a bigger boost in performance and small projects may not see much of an improvement at all but on average we saw a 30 increase in performance of the java sensor so the java portion of analysis with these improvements what we've done is grouped the processing of related files together so we get this performance boost with no impact on accuracy similarly in commercial editions we've improved the speed of pr analysis as well another another eight to twenty five percent on top of the average thirty percent in overall analysis and the way we've gotten this pr analysis speed boost is that we've changed what we're analyzing so previously we were running full analysis on all the files and then narrowing what we reported to what was related to the pr now we're only going to run full analysis on the files changed in the pr and on the files that weren't changed in the pr we're only running the rules that can be affected by f changes in other files so again if you're if you're running java analysis you're going to get your results faster and i think everybody likes that moving on to cnc plus plus we've improved compiler support across a number of different compilers so we've added a whole bunch of flag supports and some other precision improvements so across msvc dab rmcc texas instruments g lang and iar i'll give a little pause here so you can scan for your flag and in addition we've improved our handling of headers so previously we were treating all headers like system headers so like system provided libraries we weren't doing a full analysis we weren't doing an analysis of the code of headers now we've segregated out user provided headers and we are analyzing that code and what that's done is eliminate a number of false negatives as well as a few false positives and here is an example of an issue in a user-provided header that we weren't previously finding and now in 9.4 we do find moving on from cnc plus plus into the realm of reporting in enterprise edition and above we have added support for the owasp top 10 2021 report the oauth group released oau's top 10 2021 in late september and now here in 9.4 you have the report to reflect uh your code status against the os top 10 2021. it's here in the ui and it's also in the security report pdf and speaking of pdfs we have also updated the portfolio pdf to show new code so previously we had been showing developers new code first we made the new code values visible in the ui then we made them dominant in the ui what you see by default then in 9.3 we updated the portfolio interface to make new code values available in addition to the overall code values that we've always shown and now in 9.4 we finished the job by bringing new code values to the portfolio pdf so you see that here on the main overview page with the new code values here on the left and and at the domain level we have new code values in addition to the overall code values and that's what i wanted to show you today thanks for watching i'll see you next time",
+  "fetchedAt": "2026-03-14T09:25:14.582Z"
+}

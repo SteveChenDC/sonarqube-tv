@@ -1,0 +1,3453 @@
+{
+  "videoId": "v223",
+  "youtubeId": "ow-yuIlCuHk",
+  "segments": [
+    {
+      "text": "so let's talk about Python we're here to",
+      "offset": 410,
+      "duration": 4630
+    },
+    {
+      "text": "talk about how to write cleaner safer",
+      "offset": 3330,
+      "duration": 4410
+    },
+    {
+      "text": "Python code with sonar cube I'll jump",
+      "offset": 5040,
+      "duration": 5160
+    },
+    {
+      "text": "right in I want to start with sonar",
+      "offset": 7740,
+      "duration": 4620
+    },
+    {
+      "text": "source which is the company behind sonar",
+      "offset": 10200,
+      "duration": 2640
+    },
+    {
+      "text": "cube",
+      "offset": 12360,
+      "duration": 3000
+    },
+    {
+      "text": "sonar source was founded in 2008 by",
+      "offset": 12840,
+      "duration": 4800
+    },
+    {
+      "text": "three developers who got together with",
+      "offset": 15360,
+      "duration": 4230
+    },
+    {
+      "text": "the goal of giving other developers",
+      "offset": 17640,
+      "duration": 4110
+    },
+    {
+      "text": "better tools for code quality and",
+      "offset": 19590,
+      "duration": 5730
+    },
+    {
+      "text": "security the goal then and now has been",
+      "offset": 21750,
+      "duration": 5310
+    },
+    {
+      "text": "to write tools for developers and",
+      "offset": 25320,
+      "duration": 4049
+    },
+    {
+      "text": "development teams not managers but",
+      "offset": 27060,
+      "duration": 4680
+    },
+    {
+      "text": "developers that are simple and",
+      "offset": 29369,
+      "duration": 4501
+    },
+    {
+      "text": "transparent and easy to integrate into",
+      "offset": 31740,
+      "duration": 4650
+    },
+    {
+      "text": "your development process and oh by the",
+      "offset": 33870,
+      "duration": 5250
+    },
+    {
+      "text": "way accurate and helpful always and",
+      "offset": 36390,
+      "duration": 4590
+    },
+    {
+      "text": "specifically what that means is no false",
+      "offset": 39120,
+      "duration": 4170
+    },
+    {
+      "text": "positives now that's not a promise for",
+      "offset": 40980,
+      "duration": 4950
+    },
+    {
+      "text": "human but it's our goal and it's our",
+      "offset": 43290,
+      "duration": 4410
+    },
+    {
+      "text": "promise that it will always be our goal",
+      "offset": 45930,
+      "duration": 5160
+    },
+    {
+      "text": "to get rid of false positives so our",
+      "offset": 47700,
+      "duration": 5249
+    },
+    {
+      "text": "mission statement is that every",
+      "offset": 51090,
+      "duration": 3840
+    },
+    {
+      "text": "developer and development team should",
+      "offset": 52949,
+      "duration": 4051
+    },
+    {
+      "text": "use our products for code quality and",
+      "offset": 54930,
+      "duration": 3809
+    },
+    {
+      "text": "security and we see that as Mission",
+      "offset": 57000,
+      "duration": 4350
+    },
+    {
+      "text": "Possible and specifically we see it as",
+      "offset": 58739,
+      "duration": 4351
+    },
+    {
+      "text": "Mission Possible that every Python",
+      "offset": 61350,
+      "duration": 3449
+    },
+    {
+      "text": "developer and development team should",
+      "offset": 63090,
+      "duration": 4170
+    },
+    {
+      "text": "use our products so let me tell you why",
+      "offset": 64799,
+      "duration": 5640
+    },
+    {
+      "text": "we think that's possible with sonarqube",
+      "offset": 67260,
+      "duration": 5310
+    },
+    {
+      "text": "you get a static analysis that's",
+      "offset": 70439,
+      "duration": 5101
+    },
+    {
+      "text": "powerful fast and accurate out of the",
+      "offset": 72570,
+      "duration": 4650
+    },
+    {
+      "text": "box we've worked hard to give you",
+      "offset": 75540,
+      "duration": 5700
+    },
+    {
+      "text": "valuable rules that raise real issues to",
+      "offset": 77220,
+      "duration": 5789
+    },
+    {
+      "text": "give you tools that work where you do",
+      "offset": 81240,
+      "duration": 4040
+    },
+    {
+      "text": "and at work with minimal configuration",
+      "offset": 83009,
+      "duration": 4771
+    },
+    {
+      "text": "so let's start with the rules and issues",
+      "offset": 85280,
+      "duration": 4449
+    },
+    {
+      "text": "we divide these into what we call the",
+      "offset": 87780,
+      "duration": 4100
+    },
+    {
+      "text": "three pillars maintainability",
+      "offset": 89729,
+      "duration": 4460
+    },
+    {
+      "text": "reliability and security",
+      "offset": 91880,
+      "duration": 5470
+    },
+    {
+      "text": "starting with maintainability this is",
+      "offset": 94189,
+      "duration": 5890
+    },
+    {
+      "text": "about more than naming conventions and",
+      "offset": 97350,
+      "duration": 5430
+    },
+    {
+      "text": "tabs versus spaces there have been",
+      "offset": 100079,
+      "duration": 6750
+    },
+    {
+      "text": "multiple studies about where the time",
+      "offset": 102780,
+      "duration": 6119
+    },
+    {
+      "text": "and therefore the money goes in the life",
+      "offset": 106829,
+      "duration": 4711
+    },
+    {
+      "text": "of a project and different studies come",
+      "offset": 108899,
+      "duration": 4141
+    },
+    {
+      "text": "up with different numbers some studies",
+      "offset": 111540,
+      "duration": 4530
+    },
+    {
+      "text": "come up with numbers as high as like 96%",
+      "offset": 113040,
+      "duration": 6329
+    },
+    {
+      "text": "of the time spent on a project is spent",
+      "offset": 116070,
+      "duration": 6450
+    },
+    {
+      "text": "in maintenance right so that's 96% of",
+      "offset": 119369,
+      "duration": 5341
+    },
+    {
+      "text": "the time that goes into a project is",
+      "offset": 122520,
+      "duration": 5609
+    },
+    {
+      "text": "spent reading old code so the more",
+      "offset": 124710,
+      "duration": 5430
+    },
+    {
+      "text": "readable you can make that code the more",
+      "offset": 128129,
+      "duration": 4351
+    },
+    {
+      "text": "easily understandable you can make it",
+      "offset": 130140,
+      "duration": 3720
+    },
+    {
+      "text": "then as",
+      "offset": 132480,
+      "duration": 3240
+    },
+    {
+      "text": "a developer that's less time you spend",
+      "offset": 133860,
+      "duration": 4560
+    },
+    {
+      "text": "figuring out what it does and more time",
+      "offset": 135720,
+      "duration": 5340
+    },
+    {
+      "text": "you can spend actually writing cool code",
+      "offset": 138420,
+      "duration": 4800
+    },
+    {
+      "text": "to solve problems which is why you got",
+      "offset": 141060,
+      "duration": 3510
+    },
+    {
+      "text": "into this to start with",
+      "offset": 143220,
+      "duration": 5790
+    },
+    {
+      "text": "right so Nicola would you so in just a",
+      "offset": 144570,
+      "duration": 5970
+    },
+    {
+      "text": "second I'm gonna turn it over to Nicola",
+      "offset": 149010,
+      "duration": 2910
+    },
+    {
+      "text": "to tell us about some of the",
+      "offset": 150540,
+      "duration": 3030
+    },
+    {
+      "text": "maintainability rules but first I want",
+      "offset": 151920,
+      "duration": 3930
+    },
+    {
+      "text": "to point out he said earlier that his",
+      "offset": 153570,
+      "duration": 4970
+    },
+    {
+      "text": "job is as a code quality researcher",
+      "offset": 155850,
+      "duration": 4740
+    },
+    {
+      "text": "specifically what that means is that",
+      "offset": 158540,
+      "duration": 4419
+    },
+    {
+      "text": "it's his job to look at a language and",
+      "offset": 160590,
+      "duration": 4920
+    },
+    {
+      "text": "figure out which rules are needed for",
+      "offset": 162959,
+      "duration": 5701
+    },
+    {
+      "text": "that language and then for each rule to",
+      "offset": 165510,
+      "duration": 5220
+    },
+    {
+      "text": "write up a really good description so",
+      "offset": 168660,
+      "duration": 3900
+    },
+    {
+      "text": "that when that rule raises an issue on",
+      "offset": 170730,
+      "duration": 4970
+    },
+    {
+      "text": "your code you can understand very easily",
+      "offset": 172560,
+      "duration": 6510
+    },
+    {
+      "text": "why there's a problem and what you need",
+      "offset": 175700,
+      "duration": 6340
+    },
+    {
+      "text": "to do to fix it so with that now Nicola",
+      "offset": 179070,
+      "duration": 4139
+    },
+    {
+      "text": "could you show us some of the",
+      "offset": 182040,
+      "duration": 7460
+    },
+    {
+      "text": "maintainability rules sure thank you and",
+      "offset": 183209,
+      "duration": 6291
+    },
+    {
+      "text": "good I'll go over a few cut smell rules",
+      "offset": 191300,
+      "duration": 6100
+    },
+    {
+      "text": "to show you how we design and categorize",
+      "offset": 195540,
+      "duration": 4910
+    },
+    {
+      "text": "them in this example the developer",
+      "offset": 197400,
+      "duration": 6210
+    },
+    {
+      "text": "checks if the built-in int returns none",
+      "offset": 200450,
+      "duration": 5770
+    },
+    {
+      "text": "this is overly defensive programming as",
+      "offset": 203610,
+      "duration": 7050
+    },
+    {
+      "text": "int can only return integer numbers so",
+      "offset": 206220,
+      "duration": 6450
+    },
+    {
+      "text": "now people will raise an issue on the",
+      "offset": 210660,
+      "duration": 4200
+    },
+    {
+      "text": "non check explaining that it will always",
+      "offset": 212670,
+      "duration": 5280
+    },
+    {
+      "text": "be false subjects usually have no effect",
+      "offset": 214860,
+      "duration": 5280
+    },
+    {
+      "text": "on your program on crash that they",
+      "offset": 217950,
+      "duration": 5900
+    },
+    {
+      "text": "confuse developers coming behind you",
+      "offset": 220140,
+      "duration": 3710
+    },
+    {
+      "text": "here is also a common Python pitfall we",
+      "offset": 226400,
+      "duration": 7540
+    },
+    {
+      "text": "can see that the issue highlights three",
+      "offset": 232049,
+      "duration": 4201
+    },
+    {
+      "text": "locations in your code first the add",
+      "offset": 233940,
+      "duration": 4470
+    },
+    {
+      "text": "free parameter which has a dict literal",
+      "offset": 236250,
+      "duration": 4380
+    },
+    {
+      "text": "as its default value then the issue",
+      "offset": 238410,
+      "duration": 4049
+    },
+    {
+      "text": "highlights location where this parameter",
+      "offset": 240630,
+      "duration": 3660
+    },
+    {
+      "text": "is modified and assigned to a class",
+      "offset": 242459,
+      "duration": 5401
+    },
+    {
+      "text": "attribute why because in Python",
+      "offset": 244290,
+      "duration": 5850
+    },
+    {
+      "text": "every call shares the same parameter",
+      "offset": 247860,
+      "duration": 5760
+    },
+    {
+      "text": "default value modifying this value in",
+      "offset": 250140,
+      "duration": 5340
+    },
+    {
+      "text": "one function call will impact every",
+      "offset": 253620,
+      "duration": 4350
+    },
+    {
+      "text": "subsequent calls sometimes this is on",
+      "offset": 255480,
+      "duration": 4410
+    },
+    {
+      "text": "purpose but most of the time it's either",
+      "offset": 257970,
+      "duration": 5550
+    },
+    {
+      "text": "a bug or a bad design this rule accepts",
+      "offset": 259890,
+      "duration": 5910
+    },
+    {
+      "text": "caching as a varied use case and it only",
+      "offset": 263520,
+      "duration": 3720
+    },
+    {
+      "text": "raises issues",
+      "offset": 265800,
+      "duration": 3690
+    },
+    {
+      "text": "if the default value is modified or",
+      "offset": 267240,
+      "duration": 7019
+    },
+    {
+      "text": "assigned and here is the last Cardinal",
+      "offset": 269490,
+      "duration": 7560
+    },
+    {
+      "text": "example the format method is used to",
+      "offset": 274259,
+      "duration": 5551
+    },
+    {
+      "text": "format a string in this case the first",
+      "offset": 277050,
+      "duration": 4980
+    },
+    {
+      "text": "parameter will be correctly inserted the",
+      "offset": 279810,
+      "duration": 3810
+    },
+    {
+      "text": "second one will be ignored because there",
+      "offset": 282030,
+      "duration": 4020
+    },
+    {
+      "text": "is no matching replacement field this",
+      "offset": 283620,
+      "duration": 4500
+    },
+    {
+      "text": "could just be some dead code left of",
+      "offset": 286050,
+      "duration": 5190
+    },
+    {
+      "text": "after a refactoring and it won't make",
+      "offset": 288120,
+      "duration": 5880
+    },
+    {
+      "text": "your program crash again so we only",
+      "offset": 291240,
+      "duration": 4980
+    },
+    {
+      "text": "raise a code smell issue not a big one",
+      "offset": 294000,
+      "duration": 4710
+    },
+    {
+      "text": "from those few examples you can see that",
+      "offset": 296220,
+      "duration": 5220
+    },
+    {
+      "text": "we avoid raising a necessary alarms we",
+      "offset": 298710,
+      "duration": 4590
+    },
+    {
+      "text": "will help you maintain your code but we",
+      "offset": 301440,
+      "duration": 4229
+    },
+    {
+      "text": "won't shout at you every every time",
+      "offset": 303300,
+      "duration": 5570
+    },
+    {
+      "text": "something might be a bug like to un",
+      "offset": 305669,
+      "duration": 7201
+    },
+    {
+      "text": "thank Allah so now let's move on to the",
+      "offset": 308870,
+      "duration": 7090
+    },
+    {
+      "text": "reliability pillar reliability rules",
+      "offset": 312870,
+      "duration": 5910
+    },
+    {
+      "text": "raise bug issues and I think it's",
+      "offset": 315960,
+      "duration": 5100
+    },
+    {
+      "text": "obvious to most people why you don't",
+      "offset": 318780,
+      "duration": 4319
+    },
+    {
+      "text": "want bugs in your application",
+      "offset": 321060,
+      "duration": 5070
+    },
+    {
+      "text": "so the bug rules that we provide help",
+      "offset": 323099,
+      "duration": 4681
+    },
+    {
+      "text": "you make sure your code is going to",
+      "offset": 326130,
+      "duration": 5099
+    },
+    {
+      "text": "behave as you expect at runtime could",
+      "offset": 327780,
+      "duration": 5330
+    },
+    {
+      "text": "you show us some of those rules Nicola",
+      "offset": 331229,
+      "duration": 10500
+    },
+    {
+      "text": "yes thank you and you remember how I",
+      "offset": 333110,
+      "duration": 10410
+    },
+    {
+      "text": "said that we avoid the necessary alarms",
+      "offset": 341729,
+      "duration": 4141
+    },
+    {
+      "text": "well for big rules it means that were",
+      "offset": 343520,
+      "duration": 4449
+    },
+    {
+      "text": "quite sure that the issues are really",
+      "offset": 345870,
+      "duration": 6120
+    },
+    {
+      "text": "bugs we saw previously that unnecessary",
+      "offset": 347969,
+      "duration": 6061
+    },
+    {
+      "text": "non checks can be confusing but",
+      "offset": 351990,
+      "duration": 4350
+    },
+    {
+      "text": "comparing with the equal operator two",
+      "offset": 354030,
+      "duration": 4620
+    },
+    {
+      "text": "incompatible types such as a string and",
+      "offset": 356340,
+      "duration": 6299
+    },
+    {
+      "text": "a temple is always a mistake you can see",
+      "offset": 358650,
+      "duration": 6660
+    },
+    {
+      "text": "this exact case here the architecture",
+      "offset": 362639,
+      "duration": 6571
+    },
+    {
+      "text": "function always returns at Apple so the",
+      "offset": 365310,
+      "duration": 5370
+    },
+    {
+      "text": "Equality check will always be false",
+      "offset": 369210,
+      "duration": 4259
+    },
+    {
+      "text": "because it's comparing it to a string it",
+      "offset": 370680,
+      "duration": 4650
+    },
+    {
+      "text": "won't crash but it is most certainly not",
+      "offset": 373469,
+      "duration": 6331
+    },
+    {
+      "text": "what you wanted to do we also detect",
+      "offset": 375330,
+      "duration": 7139
+    },
+    {
+      "text": "usual copy-paste mistakes if you write",
+      "offset": 379800,
+      "duration": 4470
+    },
+    {
+      "text": "twice to the same key of a dictionary",
+      "offset": 382469,
+      "duration": 3811
+    },
+    {
+      "text": "without reading the value in between",
+      "offset": 384270,
+      "duration": 3899
+    },
+    {
+      "text": "you probably copy pasted some code and",
+      "offset": 386280,
+      "duration": 4650
+    },
+    {
+      "text": "forgot to change the key this actually",
+      "offset": 388169,
+      "duration": 5601
+    },
+    {
+      "text": "happens quite often",
+      "offset": 390930,
+      "duration": 2840
+    },
+    {
+      "text": "another common problem in Python is a",
+      "offset": 394250,
+      "duration": 5250
+    },
+    {
+      "text": "difficulty to refactor our code add one",
+      "offset": 396500,
+      "duration": 5070
+    },
+    {
+      "text": "parameter to a function and every call",
+      "offset": 399500,
+      "duration": 3300
+    },
+    {
+      "text": "will break at runtime",
+      "offset": 401570,
+      "duration": 3570
+    },
+    {
+      "text": "luckily sonarqube helps you detect these",
+      "offset": 402800,
+      "duration": 7400
+    },
+    {
+      "text": "invalid codes and the final bug rule I",
+      "offset": 405140,
+      "duration": 7290
+    },
+    {
+      "text": "really mentioned a code smell rule",
+      "offset": 410200,
+      "duration": 3760
+    },
+    {
+      "text": "detecting string formatting problems",
+      "offset": 412430,
+      "duration": 4200
+    },
+    {
+      "text": "which don't crash but make your code",
+      "offset": 413960,
+      "duration": 6000
+    },
+    {
+      "text": "difficult to maintain well we have an",
+      "offset": 416630,
+      "duration": 4290
+    },
+    {
+      "text": "equivalent back rule",
+      "offset": 419960,
+      "duration": 3390
+    },
+    {
+      "text": "which raises issues when code will fail",
+      "offset": 420920,
+      "duration": 5250
+    },
+    {
+      "text": "at runtime here you can see that the",
+      "offset": 423350,
+      "duration": 5960
+    },
+    {
+      "text": "developer use replacement fields 0 2 & 3",
+      "offset": 426170,
+      "duration": 7890
+    },
+    {
+      "text": "instead of 0 1 & 2 as there is no value",
+      "offset": 429310,
+      "duration": 6880
+    },
+    {
+      "text": "for field 3 the format call will raise",
+      "offset": 434060,
+      "duration": 3110
+    },
+    {
+      "text": "an exception",
+      "offset": 436190,
+      "duration": 3570
+    },
+    {
+      "text": "separating khat smells from bugs enables",
+      "offset": 437170,
+      "duration": 5500
+    },
+    {
+      "text": "you as a developer to know what you",
+      "offset": 439760,
+      "duration": 4710
+    },
+    {
+      "text": "should fix right away",
+      "offset": 442670,
+      "duration": 6270
+    },
+    {
+      "text": "back to you n thanks Nicola so now",
+      "offset": 444470,
+      "duration": 7020
+    },
+    {
+      "text": "moving on to the security pillar we",
+      "offset": 448940,
+      "duration": 4320
+    },
+    {
+      "text": "actually divide that into two sub",
+      "offset": 451490,
+      "duration": 3720
+    },
+    {
+      "text": "categories and I'll start with the",
+      "offset": 453260,
+      "duration": 3510
+    },
+    {
+      "text": "vulnerability issues just like the",
+      "offset": 455210,
+      "duration": 5340
+    },
+    {
+      "text": "distinction between code smells and bugs",
+      "offset": 456770,
+      "duration": 5760
+    },
+    {
+      "text": "we make a distinction in security",
+      "offset": 460550,
+      "duration": 4140
+    },
+    {
+      "text": "between vulnerabilities and hotspots now",
+      "offset": 462530,
+      "duration": 4110
+    },
+    {
+      "text": "I'll come back to hotspots but I'll",
+      "offset": 464690,
+      "duration": 3360
+    },
+    {
+      "text": "start by saying that when we raise a",
+      "offset": 466640,
+      "duration": 3180
+    },
+    {
+      "text": "vulnerability issue what we're saying to",
+      "offset": 468050,
+      "duration": 3929
+    },
+    {
+      "text": "you is there is something here that",
+      "offset": 469820,
+      "duration": 5640
+    },
+    {
+      "text": "needs to be fixed so security issues put",
+      "offset": 471979,
+      "duration": 5250
+    },
+    {
+      "text": "your systems your users and your",
+      "offset": 475460,
+      "duration": 4650
+    },
+    {
+      "text": "reputation at risk there like an open",
+      "offset": 477229,
+      "duration": 4771
+    },
+    {
+      "text": "door to your house right if your front",
+      "offset": 480110,
+      "duration": 3900
+    },
+    {
+      "text": "door is standing open and a thief walks",
+      "offset": 482000,
+      "duration": 4770
+    },
+    {
+      "text": "by and sees that then you're gonna end",
+      "offset": 484010,
+      "duration": 5100
+    },
+    {
+      "text": "up having a bad day and vulnerabilities",
+      "offset": 486770,
+      "duration": 6330
+    },
+    {
+      "text": "are the same way so our approach is to",
+      "offset": 489110,
+      "duration": 5760
+    },
+    {
+      "text": "raise vulnerabilities as early in the",
+      "offset": 493100,
+      "duration": 3990
+    },
+    {
+      "text": "process as possible while the code is",
+      "offset": 494870,
+      "duration": 4380
+    },
+    {
+      "text": "still fresh in your mind you remember",
+      "offset": 497090,
+      "duration": 3780
+    },
+    {
+      "text": "what you intended and it's really easy",
+      "offset": 499250,
+      "duration": 5340
+    },
+    {
+      "text": "for you to do the fix and move on with",
+      "offset": 500870,
+      "duration": 6299
+    },
+    {
+      "text": "your life with secure code could you",
+      "offset": 504590,
+      "duration": 8000
+    },
+    {
+      "text": "show us some of these rules Nicola yes",
+      "offset": 507169,
+      "duration": 5421
+    },
+    {
+      "text": "a common mistake for a developer is to",
+      "offset": 513780,
+      "duration": 7770
+    },
+    {
+      "text": "disable security features and forget to",
+      "offset": 519330,
+      "duration": 3990
+    },
+    {
+      "text": "remove this code before going to",
+      "offset": 521550,
+      "duration": 5250
+    },
+    {
+      "text": "production so now Qube is here to warn",
+      "offset": 523320,
+      "duration": 6360
+    },
+    {
+      "text": "you when you do this for example you",
+      "offset": 526800,
+      "duration": 4890
+    },
+    {
+      "text": "develop a website and generate an SSL",
+      "offset": 529680,
+      "duration": 4500
+    },
+    {
+      "text": "certificate to test it you then disable",
+      "offset": 531690,
+      "duration": 4170
+    },
+    {
+      "text": "certificate validation as your",
+      "offset": 534180,
+      "duration": 3870
+    },
+    {
+      "text": "certificate is self signed which means",
+      "offset": 535860,
+      "duration": 4350
+    },
+    {
+      "text": "that it's not signed by a certification",
+      "offset": 538050,
+      "duration": 5040
+    },
+    {
+      "text": "Authority so now Qube detects this issue",
+      "offset": 540210,
+      "duration": 4890
+    },
+    {
+      "text": "for multiple libraries such as by open",
+      "offset": 543090,
+      "duration": 8250
+    },
+    {
+      "text": "ssl and requests even when you avoid",
+      "offset": 545100,
+      "duration": 8520
+    },
+    {
+      "text": "this kind of mistake and follow security",
+      "offset": 551340,
+      "duration": 4230
+    },
+    {
+      "text": "best practices you might forget to",
+      "offset": 553620,
+      "duration": 4770
+    },
+    {
+      "text": "update your code regularly let's say you",
+      "offset": 555570,
+      "duration": 5730
+    },
+    {
+      "text": "use cryptographic keys such as RSA or",
+      "offset": 558390,
+      "duration": 6750
+    },
+    {
+      "text": "DSA the recommend length for a key",
+      "offset": 561300,
+      "duration": 6420
+    },
+    {
+      "text": "increases with time as computer crack",
+      "offset": 565140,
+      "duration": 5760
+    },
+    {
+      "text": "then more and more easily at an ASUS we",
+      "offset": 567720,
+      "duration": 6090
+    },
+    {
+      "text": "have a dedicated security team improving",
+      "offset": 570900,
+      "duration": 5250
+    },
+    {
+      "text": "our rules constantly as standards evolve",
+      "offset": 573810,
+      "duration": 4740
+    },
+    {
+      "text": "you will get notified that you need to",
+      "offset": 576150,
+      "duration": 7500
+    },
+    {
+      "text": "update your code our security team also",
+      "offset": 578550,
+      "duration": 6720
+    },
+    {
+      "text": "works on sonic ships taint analysis",
+      "offset": 583650,
+      "duration": 3780
+    },
+    {
+      "text": "engine it enables us to detect",
+      "offset": 585270,
+      "duration": 3990
+    },
+    {
+      "text": "vulnerabilities such as cross-site",
+      "offset": 587430,
+      "duration": 4590
+    },
+    {
+      "text": "scripting or XSS which is the most",
+      "offset": 589260,
+      "duration": 5310
+    },
+    {
+      "text": "common vulnerability in Python open",
+      "offset": 592020,
+      "duration": 5700
+    },
+    {
+      "text": "source projects to make it simple so now",
+      "offset": 594570,
+      "duration": 5130
+    },
+    {
+      "text": "Qube detect when dangerous data can be",
+      "offset": 597720,
+      "duration": 4260
+    },
+    {
+      "text": "injected by an attacker and send back to",
+      "offset": 599700,
+      "duration": 5250
+    },
+    {
+      "text": "your user so here from a request to make",
+      "offset": 601980,
+      "duration": 6120
+    },
+    {
+      "text": "response our security team improves",
+      "offset": 604950,
+      "duration": 6510
+    },
+    {
+      "text": "these rules constantly to make to detect",
+      "offset": 608100,
+      "duration": 5220
+    },
+    {
+      "text": "more issues but also to avoid false",
+      "offset": 611460,
+      "duration": 4560
+    },
+    {
+      "text": "positives as an said we will not raise",
+      "offset": 613320,
+      "duration": 5190
+    },
+    {
+      "text": "an issue if you sanitize the data before",
+      "offset": 616020,
+      "duration": 8160
+    },
+    {
+      "text": "sending it back to you thanks so now",
+      "offset": 618510,
+      "duration": 7230
+    },
+    {
+      "text": "let's talk about the other half of the",
+      "offset": 624180,
+      "duration": 4170
+    },
+    {
+      "text": "equation security hotspots I said that",
+      "offset": 625740,
+      "duration": 3720
+    },
+    {
+      "text": "when we raise a security vulnerability",
+      "offset": 628350,
+      "duration": 3360
+    },
+    {
+      "text": "issue we're saying to you there is",
+      "offset": 629460,
+      "duration": 4400
+    },
+    {
+      "text": "something here that needs to be fixed on",
+      "offset": 631710,
+      "duration": 4860
+    },
+    {
+      "text": "the other side of that our security",
+      "offset": 633860,
+      "duration": 6700
+    },
+    {
+      "text": "hotspots so there are times when you're",
+      "offset": 636570,
+      "duration": 6920
+    },
+    {
+      "text": "using a security sensitive piece of code",
+      "offset": 640560,
+      "duration": 6960
+    },
+    {
+      "text": "but static analysis is unable to detect",
+      "offset": 643490,
+      "duration": 5740
+    },
+    {
+      "text": "they're not there's actually a problem",
+      "offset": 647520,
+      "duration": 4230
+    },
+    {
+      "text": "these are the places that require human",
+      "offset": 649230,
+      "duration": 6330
+    },
+    {
+      "text": "review to know whether or not there's a",
+      "offset": 651750,
+      "duration": 5880
+    },
+    {
+      "text": "problem so you need to go in and look at",
+      "offset": 655560,
+      "duration": 4380
+    },
+    {
+      "text": "the security sensitive code in context",
+      "offset": 657630,
+      "duration": 4890
+    },
+    {
+      "text": "to determine whether it's fine and you",
+      "offset": 659940,
+      "duration": 4110
+    },
+    {
+      "text": "can move on or there's actually",
+      "offset": 662520,
+      "duration": 3510
+    },
+    {
+      "text": "something here to be fixed I like to",
+      "offset": 664050,
+      "duration": 3440
+    },
+    {
+      "text": "think of these as Schrodinger's",
+      "offset": 666030,
+      "duration": 3630
+    },
+    {
+      "text": "vulnerabilities because you won't know",
+      "offset": 667490,
+      "duration": 4780
+    },
+    {
+      "text": "that there's a vulnerability until you",
+      "offset": 669660,
+      "duration": 3570
+    },
+    {
+      "text": "take a look",
+      "offset": 672270,
+      "duration": 3810
+    },
+    {
+      "text": "so with security hotspots we segregate",
+      "offset": 673230,
+      "duration": 5040
+    },
+    {
+      "text": "those issues from the rest of the issues",
+      "offset": 676080,
+      "duration": 4500
+    },
+    {
+      "text": "to make it super clear this is not",
+      "offset": 678270,
+      "duration": 4410
+    },
+    {
+      "text": "necessarily a problem it's just",
+      "offset": 680580,
+      "duration": 4170
+    },
+    {
+      "text": "something you need to come review and we",
+      "offset": 682680,
+      "duration": 3930
+    },
+    {
+      "text": "give you the tools and the context to",
+      "offset": 684750,
+      "duration": 3900
+    },
+    {
+      "text": "look at each one and understand for sure",
+      "offset": 686610,
+      "duration": 4140
+    },
+    {
+      "text": "can you give us some examples of this",
+      "offset": 688650,
+      "duration": 11340
+    },
+    {
+      "text": "Nicola thank you so let's see a few case",
+      "offset": 690750,
+      "duration": 10740
+    },
+    {
+      "text": "where you should really double check",
+      "offset": 699990,
+      "duration": 4680
+    },
+    {
+      "text": "your code to see if it is secure as a",
+      "offset": 701490,
+      "duration": 4950
+    },
+    {
+      "text": "developer you might expect that",
+      "offset": 704670,
+      "duration": 4430
+    },
+    {
+      "text": "libraries api's are safe by default",
+      "offset": 706440,
+      "duration": 6060
+    },
+    {
+      "text": "sadly it's not the case for every",
+      "offset": 709100,
+      "duration": 7090
+    },
+    {
+      "text": "library let's take the example of flask",
+      "offset": 712500,
+      "duration": 6360
+    },
+    {
+      "text": "set cookie method by default it will not",
+      "offset": 716190,
+      "duration": 5550
+    },
+    {
+      "text": "set a secure flag to true and cookies",
+      "offset": 718860,
+      "duration": 7640
+    },
+    {
+      "text": "will be sent over HTTPS but also HTTP",
+      "offset": 721740,
+      "duration": 7800
+    },
+    {
+      "text": "when they are sent over HTTP anybody can",
+      "offset": 726500,
+      "duration": 4870
+    },
+    {
+      "text": "read or modify the data you send and",
+      "offset": 729540,
+      "duration": 5130
+    },
+    {
+      "text": "receive in some very rare cases it is",
+      "offset": 731370,
+      "duration": 5910
+    },
+    {
+      "text": "okay to use HTTP which is why it's not",
+      "offset": 734670,
+      "duration": 4890
+    },
+    {
+      "text": "always a vulnerability but most of the",
+      "offset": 737280,
+      "duration": 9540
+    },
+    {
+      "text": "time only HTTP should be used even with",
+      "offset": 739560,
+      "duration": 10620
+    },
+    {
+      "text": "safe connections your browser can still",
+      "offset": 746820,
+      "duration": 5460
+    },
+    {
+      "text": "be vulnerable if such a fast repeated",
+      "offset": 750180,
+      "duration": 5640
+    },
+    {
+      "text": "execute can connect to any server course",
+      "offset": 752280,
+      "duration": 5880
+    },
+    {
+      "text": "policy have been created to prevent this",
+      "offset": 755820,
+      "duration": 4950
+    },
+    {
+      "text": "from happening but as always you can",
+      "offset": 758160,
+      "duration": 4980
+    },
+    {
+      "text": "disable them if you want so now it will",
+      "offset": 760770,
+      "duration": 4440
+    },
+    {
+      "text": "help you see if you can do it safely or",
+      "offset": 763140,
+      "duration": 4220
+    },
+    {
+      "text": "not",
+      "offset": 765210,
+      "duration": 2150
+    },
+    {
+      "text": "let's finish with a very simple common",
+      "offset": 768740,
+      "duration": 7209
+    },
+    {
+      "text": "which you have probably used a lot if",
+      "offset": 772410,
+      "duration": 5760
+    },
+    {
+      "text": "you open a file like here for example",
+      "offset": 775949,
+      "duration": 6271
+    },
+    {
+      "text": "/tmp /f an attacker could create a",
+      "offset": 778170,
+      "duration": 6469
+    },
+    {
+      "text": "symbolic link with the same path and",
+      "offset": 782220,
+      "duration": 6510
+    },
+    {
+      "text": "point to another file you will then",
+      "offset": 784639,
+      "duration": 6250
+    },
+    {
+      "text": "write to this other file without even",
+      "offset": 788730,
+      "duration": 3990
+    },
+    {
+      "text": "realizing it you could for example",
+      "offset": 790889,
+      "duration": 3781
+    },
+    {
+      "text": "overwrite the password file of your",
+      "offset": 792720,
+      "duration": 4950
+    },
+    {
+      "text": "server most developers are not aware of",
+      "offset": 794670,
+      "duration": 5699
+    },
+    {
+      "text": "these risks but once you know it they",
+      "offset": 797670,
+      "duration": 4800
+    },
+    {
+      "text": "are pretty easy to avoid each security",
+      "offset": 800369,
+      "duration": 4351
+    },
+    {
+      "text": "hotspot rule provides a checklist to guy",
+      "offset": 802470,
+      "duration": 4169
+    },
+    {
+      "text": "developers and help you take the right",
+      "offset": 804720,
+      "duration": 6020
+    },
+    {
+      "text": "decision back to you Anna thanks Nicola",
+      "offset": 806639,
+      "duration": 7711
+    },
+    {
+      "text": "so now let's talk about where you get",
+      "offset": 810740,
+      "duration": 7839
+    },
+    {
+      "text": "these rules and issues first we provide",
+      "offset": 814350,
+      "duration": 7859
+    },
+    {
+      "text": "static analysis in IDE with sonar lint",
+      "offset": 818579,
+      "duration": 6000
+    },
+    {
+      "text": "this is a plug-in that's available for",
+      "offset": 822209,
+      "duration": 4430
+    },
+    {
+      "text": "vs code which is what you're seeing here",
+      "offset": 824579,
+      "duration": 5190
+    },
+    {
+      "text": "it's compatible with IntelliJ and also",
+      "offset": 826639,
+      "duration": 4930
+    },
+    {
+      "text": "specifically with pycharm",
+      "offset": 829769,
+      "duration": 4771
+    },
+    {
+      "text": "and for eclipse this is free and open",
+      "offset": 831569,
+      "duration": 5221
+    },
+    {
+      "text": "source you can get started with it today",
+      "offset": 834540,
+      "duration": 6389
+    },
+    {
+      "text": "just by installing it next we provide PR",
+      "offset": 836790,
+      "duration": 6509
+    },
+    {
+      "text": "analysis and decoration so that once you",
+      "offset": 840929,
+      "duration": 4291
+    },
+    {
+      "text": "have committed your code and you're",
+      "offset": 843299,
+      "duration": 3450
+    },
+    {
+      "text": "beginning to collaborate with your",
+      "offset": 845220,
+      "duration": 4049
+    },
+    {
+      "text": "teammates we're going to run those",
+      "offset": 846749,
+      "duration": 4440
+    },
+    {
+      "text": "checks against your code so that then",
+      "offset": 849269,
+      "duration": 4620
+    },
+    {
+      "text": "your reviewers don't have to worry about",
+      "offset": 851189,
+      "duration": 5671
+    },
+    {
+      "text": "looking for the normal suspects right",
+      "offset": 853889,
+      "duration": 6390
+    },
+    {
+      "text": "we're going to detect those for you mark",
+      "offset": 856860,
+      "duration": 5669
+    },
+    {
+      "text": "it up in your PR and then as a reviewer",
+      "offset": 860279,
+      "duration": 4951
+    },
+    {
+      "text": "I can focus on the code the",
+      "offset": 862529,
+      "duration": 5250
+    },
+    {
+      "text": "implementation the logic rather than",
+      "offset": 865230,
+      "duration": 5729
+    },
+    {
+      "text": "looking for you know the boring stuff we",
+      "offset": 867779,
+      "duration": 6480
+    },
+    {
+      "text": "do that for you and next there's the",
+      "offset": 870959,
+      "duration": 5550
+    },
+    {
+      "text": "sonar cube interface which we provide as",
+      "offset": 874259,
+      "duration": 5640
+    },
+    {
+      "text": "a centralized place to coalesce the team",
+      "offset": 876509,
+      "duration": 5700
+    },
+    {
+      "text": "around a shared vision of quality so",
+      "offset": 879899,
+      "duration": 4891
+    },
+    {
+      "text": "with the sonar cube web interface all of",
+      "offset": 882209,
+      "duration": 4590
+    },
+    {
+      "text": "the stakeholders for the project can",
+      "offset": 884790,
+      "duration": 4259
+    },
+    {
+      "text": "come see the current status of the",
+      "offset": 886799,
+      "duration": 4921
+    },
+    {
+      "text": "project at any given time understand",
+      "offset": 889049,
+      "duration": 4681
+    },
+    {
+      "text": "what needs to be worked on in order for",
+      "offset": 891720,
+      "duration": 4169
+    },
+    {
+      "text": "the project to be releasable by the",
+      "offset": 893730,
+      "duration": 5719
+    },
+    {
+      "text": "standards that you set for your own team",
+      "offset": 895889,
+      "duration": 6151
+    },
+    {
+      "text": "all of this works with",
+      "offset": 899449,
+      "duration": 5681
+    },
+    {
+      "text": "or no configuration so there's minimal",
+      "offset": 902040,
+      "duration": 5370
+    },
+    {
+      "text": "setup to this and I'll talk about that a",
+      "offset": 905130,
+      "duration": 4560
+    },
+    {
+      "text": "little bit more during the demo analysis",
+      "offset": 907410,
+      "duration": 4950
+    },
+    {
+      "text": "is fast and thorough and out of the box",
+      "offset": 909690,
+      "duration": 3990
+    },
+    {
+      "text": "you're gonna be running with a",
+      "offset": 912360,
+      "duration": 3990
+    },
+    {
+      "text": "non-controversial default rule set so",
+      "offset": 913680,
+      "duration": 4889
+    },
+    {
+      "text": "what I forgot to say earlier was Nicolas",
+      "offset": 916350,
+      "duration": 4409
+    },
+    {
+      "text": "showed you three or four rules from each",
+      "offset": 918569,
+      "duration": 6181
+    },
+    {
+      "text": "category of rules we offer a total today",
+      "offset": 920759,
+      "duration": 6481
+    },
+    {
+      "text": "of a hundred and seventy rules that's",
+      "offset": 924750,
+      "duration": 4620
+    },
+    {
+      "text": "forty four bucks twenty five loner",
+      "offset": 927240,
+      "duration": 4260
+    },
+    {
+      "text": "abilities twenty-three hot spots seventy",
+      "offset": 929370,
+      "duration": 4199
+    },
+    {
+      "text": "eight code smells not all of those are",
+      "offset": 931500,
+      "duration": 6959
+    },
+    {
+      "text": "turned on when you first unbox sonarqube",
+      "offset": 933569,
+      "duration": 7380
+    },
+    {
+      "text": "right we have a default rule set which",
+      "offset": 938459,
+      "duration": 5281
+    },
+    {
+      "text": "is a smaller set and these are all going",
+      "offset": 940949,
+      "duration": 4620
+    },
+    {
+      "text": "to be rules that when they raise issues",
+      "offset": 943740,
+      "duration": 3750
+    },
+    {
+      "text": "as a developer you're going to look at",
+      "offset": 945569,
+      "duration": 4890
+    },
+    {
+      "text": "these issues and you're gonna go yeah we",
+      "offset": 947490,
+      "duration": 4260
+    },
+    {
+      "text": "need to do something about that",
+      "offset": 950459,
+      "duration": 4531
+    },
+    {
+      "text": "now there are additional rules that are",
+      "offset": 951750,
+      "duration": 5819
+    },
+    {
+      "text": "available that might be appropriate in",
+      "offset": 954990,
+      "duration": 4829
+    },
+    {
+      "text": "your situation for your project that you",
+      "offset": 957569,
+      "duration": 4200
+    },
+    {
+      "text": "can additionally turn on but out of the",
+      "offset": 959819,
+      "duration": 4681
+    },
+    {
+      "text": "box you can spin this up and you should",
+      "offset": 961769,
+      "duration": 5911
+    },
+    {
+      "text": "be getting a great experience so now",
+      "offset": 964500,
+      "duration": 4740
+    },
+    {
+      "text": "it's time to show you that experience",
+      "offset": 967680,
+      "duration": 4349
+    },
+    {
+      "text": "with the demo so I'm gonna make my",
+      "offset": 969240,
+      "duration": 4589
+    },
+    {
+      "text": "window a little bit smaller here so I",
+      "offset": 972029,
+      "duration": 5071
+    },
+    {
+      "text": "can get to the console so here is my",
+      "offset": 973829,
+      "duration": 6781
+    },
+    {
+      "text": "empty center cube instance what I've",
+      "offset": 977100,
+      "duration": 6510
+    },
+    {
+      "text": "done here is download the zip explode it",
+      "offset": 980610,
+      "duration": 5849
+    },
+    {
+      "text": "run the startup script because I'm",
+      "offset": 983610,
+      "duration": 4469
+    },
+    {
+      "text": "running developer edition I did before",
+      "offset": 986459,
+      "duration": 4320
+    },
+    {
+      "text": "this demo configure it with the license",
+      "offset": 988079,
+      "duration": 4831
+    },
+    {
+      "text": "key but if you're running Community",
+      "offset": 990779,
+      "duration": 3750
+    },
+    {
+      "text": "Edition you don't need to do that part",
+      "offset": 992910,
+      "duration": 5100
+    },
+    {
+      "text": "so here in my console I have seeded into",
+      "offset": 994529,
+      "duration": 6091
+    },
+    {
+      "text": "my project I have installed sonar",
+      "offset": 998010,
+      "duration": 5910
+    },
+    {
+      "text": "scanner and a JDK on my machine to run",
+      "offset": 1000620,
+      "duration": 6120
+    },
+    {
+      "text": "it on and I've put sonar scanner in my",
+      "offset": 1003920,
+      "duration": 6510
+    },
+    {
+      "text": "path now I can run analysis with almost",
+      "offset": 1006740,
+      "duration": 6480
+    },
+    {
+      "text": "no configuration I do however need to",
+      "offset": 1010430,
+      "duration": 5159
+    },
+    {
+      "text": "give the server a key to identify my",
+      "offset": 1013220,
+      "duration": 6299
+    },
+    {
+      "text": "project by so - d4 define sonar dot",
+      "offset": 1015589,
+      "duration": 8310
+    },
+    {
+      "text": "project key equals demo and I hit return",
+      "offset": 1019519,
+      "duration": 7711
+    },
+    {
+      "text": "and analysis starts the first thing that",
+      "offset": 1023899,
+      "duration": 5670
+    },
+    {
+      "text": "the analyzer does is reach out to the",
+      "offset": 1027230,
+      "duration": 5400
+    },
+    {
+      "text": "server and say okay what version of you",
+      "offset": 1029569,
+      "duration": 5671
+    },
+    {
+      "text": "what version are you what rules should I",
+      "offset": 1032630,
+      "duration": 3539
+    },
+    {
+      "text": "be applied",
+      "offset": 1035240,
+      "duration": 4349
+    },
+    {
+      "text": "this analysis and it downloads those and",
+      "offset": 1036169,
+      "duration": 4980
+    },
+    {
+      "text": "then it's going to start stepping",
+      "offset": 1039589,
+      "duration": 3840
+    },
+    {
+      "text": "through the project looking at all the",
+      "offset": 1041149,
+      "duration": 5460
+    },
+    {
+      "text": "different files now I want to give you a",
+      "offset": 1043429,
+      "duration": 4740
+    },
+    {
+      "text": "little bit of background here I said",
+      "offset": 1046609,
+      "duration": 3300
+    },
+    {
+      "text": "that I'm running a JDK on my machine",
+      "offset": 1048169,
+      "duration": 5010
+    },
+    {
+      "text": "that's required for the center cube",
+      "offset": 1049909,
+      "duration": 5370
+    },
+    {
+      "text": "server itself so you do need to have",
+      "offset": 1053179,
+      "duration": 6180
+    },
+    {
+      "text": "Java installed and then probably you",
+      "offset": 1055279,
+      "duration": 6301
+    },
+    {
+      "text": "want to be running as a service",
+      "offset": 1059359,
+      "duration": 4170
+    },
+    {
+      "text": "I'm just running it from the script",
+      "offset": 1061580,
+      "duration": 5669
+    },
+    {
+      "text": "directly but after that setup is pretty",
+      "offset": 1063529,
+      "duration": 4291
+    },
+    {
+      "text": "simple",
+      "offset": 1067249,
+      "duration": 4321
+    },
+    {
+      "text": "you download the zip you explode it you",
+      "offset": 1067820,
+      "duration": 6299
+    },
+    {
+      "text": "set up your service you start it up",
+      "offset": 1071570,
+      "duration": 6750
+    },
+    {
+      "text": "you're good to go and then here on the",
+      "offset": 1074119,
+      "duration": 7170
+    },
+    {
+      "text": "analysis side as I said on my analysis",
+      "offset": 1078320,
+      "duration": 5579
+    },
+    {
+      "text": "machine I've got a Java running I've",
+      "offset": 1081289,
+      "duration": 4980
+    },
+    {
+      "text": "installed my scanner and put it in path",
+      "offset": 1083899,
+      "duration": 5311
+    },
+    {
+      "text": "and that's it now you can provide",
+      "offset": 1086269,
+      "duration": 7500
+    },
+    {
+      "text": "additional configurations and you can do",
+      "offset": 1089210,
+      "duration": 6510
+    },
+    {
+      "text": "that either by providing a project",
+      "offset": 1093769,
+      "duration": 4110
+    },
+    {
+      "text": "settings file or you can do it on the",
+      "offset": 1095720,
+      "duration": 4019
+    },
+    {
+      "text": "command line like you just saw me",
+      "offset": 1097879,
+      "duration": 7081
+    },
+    {
+      "text": "provide the project key so looks like",
+      "offset": 1099739,
+      "duration": 7760
+    },
+    {
+      "text": "we're getting into the Python files now",
+      "offset": 1104960,
+      "duration": 6029
+    },
+    {
+      "text": "and stepping through those pretty",
+      "offset": 1107499,
+      "duration": 5550
+    },
+    {
+      "text": "quickly so what's happening here is",
+      "offset": 1110989,
+      "duration": 4981
+    },
+    {
+      "text": "sonar cube is going through excuse me",
+      "offset": 1113049,
+      "duration": 4480
+    },
+    {
+      "text": "not the center cube but the scanner is",
+      "offset": 1115970,
+      "duration": 5010
+    },
+    {
+      "text": "going through each file and it's sort of",
+      "offset": 1117529,
+      "duration": 6240
+    },
+    {
+      "text": "racking up a list of issues and metrics",
+      "offset": 1120980,
+      "duration": 5610
+    },
+    {
+      "text": "on each file at the end it's going to",
+      "offset": 1123769,
+      "duration": 5461
+    },
+    {
+      "text": "compile everything it's found in to an",
+      "offset": 1126590,
+      "duration": 5309
+    },
+    {
+      "text": "analysis report bundle and it's going to",
+      "offset": 1129230,
+      "duration": 5100
+    },
+    {
+      "text": "shoot that bundle over to the server the",
+      "offset": 1131899,
+      "duration": 4201
+    },
+    {
+      "text": "server is going to receive that and put",
+      "offset": 1134330,
+      "duration": 4140
+    },
+    {
+      "text": "it in a queue and then it'll pop the",
+      "offset": 1136100,
+      "duration": 4590
+    },
+    {
+      "text": "queue as it has availability to process",
+      "offset": 1138470,
+      "duration": 5309
+    },
+    {
+      "text": "a new report explode the report and it's",
+      "offset": 1140690,
+      "duration": 5549
+    },
+    {
+      "text": "going to save the issues save the",
+      "offset": 1143779,
+      "duration": 4801
+    },
+    {
+      "text": "individual file metrics it's going to",
+      "offset": 1146239,
+      "duration": 4351
+    },
+    {
+      "text": "aggregate some higher-level project",
+      "offset": 1148580,
+      "duration": 6439
+    },
+    {
+      "text": "metrics and then analysis is over so",
+      "offset": 1150590,
+      "duration": 8200
+    },
+    {
+      "text": "we're almost done here",
+      "offset": 1155019,
+      "duration": 6381
+    },
+    {
+      "text": "and just a second it'll be checking the",
+      "offset": 1158790,
+      "duration": 5690
+    },
+    {
+      "text": "SCM data and that allows it to",
+      "offset": 1161400,
+      "duration": 6360
+    },
+    {
+      "text": "understand which lines in a file are new",
+      "offset": 1164480,
+      "duration": 5650
+    },
+    {
+      "text": "so which issues are new it also helps",
+      "offset": 1167760,
+      "duration": 5430
+    },
+    {
+      "text": "that understand who owns issues so that",
+      "offset": 1170130,
+      "duration": 5310
+    },
+    {
+      "text": "it can properly assign those issues to",
+      "offset": 1173190,
+      "duration": 4980
+    },
+    {
+      "text": "their authors if I can interrupt you for",
+      "offset": 1175440,
+      "duration": 7040
+    },
+    {
+      "text": "a minute then we have one question about",
+      "offset": 1178170,
+      "duration": 10410
+    },
+    {
+      "text": "Sanaa Cuba and django support so yes you",
+      "offset": 1182480,
+      "duration": 8530
+    },
+    {
+      "text": "can a nice triangle project with",
+      "offset": 1188580,
+      "duration": 5340
+    },
+    {
+      "text": "sonarqube and actually flask project -",
+      "offset": 1191010,
+      "duration": 6240
+    },
+    {
+      "text": "we have rules like the XSS rule which I",
+      "offset": 1193920,
+      "duration": 8880
+    },
+    {
+      "text": "showed before which will support the",
+      "offset": 1197250,
+      "duration": 9600
+    },
+    {
+      "text": "source and sinks for different different",
+      "offset": 1202800,
+      "duration": 8580
+    },
+    {
+      "text": "web frameworks great thank you so I",
+      "offset": 1206850,
+      "duration": 10260
+    },
+    {
+      "text": "think analysis has almost done here and",
+      "offset": 1211380,
+      "duration": 9810
+    },
+    {
+      "text": "I do just want to point out so when zoom",
+      "offset": 1217110,
+      "duration": 6710
+    },
+    {
+      "text": "is not taking half of my processor",
+      "offset": 1221190,
+      "duration": 5130
+    },
+    {
+      "text": "analyzing this particular project takes",
+      "offset": 1223820,
+      "duration": 6010
+    },
+    {
+      "text": "minute 37 as you see it takes a little",
+      "offset": 1226320,
+      "duration": 5460
+    },
+    {
+      "text": "bit longer with half my processor gone",
+      "offset": 1229830,
+      "duration": 3540
+    },
+    {
+      "text": "but analysis time that's entirely",
+      "offset": 1231780,
+      "duration": 4860
+    },
+    {
+      "text": "dependent on the resources available on",
+      "offset": 1233370,
+      "duration": 6120
+    },
+    {
+      "text": "the analysis machine on one hand and on",
+      "offset": 1236640,
+      "duration": 4800
+    },
+    {
+      "text": "the other hand the size of your project",
+      "offset": 1239490,
+      "duration": 4650
+    },
+    {
+      "text": "but analysis is complete now the",
+      "offset": 1241440,
+      "duration": 4440
+    },
+    {
+      "text": "analysis report has been submitted to",
+      "offset": 1244140,
+      "duration": 3870
+    },
+    {
+      "text": "the server so if I come to my projects",
+      "offset": 1245880,
+      "duration": 6150
+    },
+    {
+      "text": "list I see that the report has been",
+      "offset": 1248010,
+      "duration": 6410
+    },
+    {
+      "text": "processed so I'm gonna click through and",
+      "offset": 1252030,
+      "duration": 4950
+    },
+    {
+      "text": "here's my project home page with my",
+      "offset": 1254420,
+      "duration": 6280
+    },
+    {
+      "text": "aggregated project level metrics but I",
+      "offset": 1256980,
+      "duration": 5370
+    },
+    {
+      "text": "want to talk about the issues today so",
+      "offset": 1260700,
+      "duration": 3660
+    },
+    {
+      "text": "I'm not gonna spend any time on the home",
+      "offset": 1262350,
+      "duration": 3750
+    },
+    {
+      "text": "page I'm just going to jump straight",
+      "offset": 1264360,
+      "duration": 4470
+    },
+    {
+      "text": "into the issues and the first thing I",
+      "offset": 1266100,
+      "duration": 5940
+    },
+    {
+      "text": "want to do is point out that even though",
+      "offset": 1268830,
+      "duration": 5850
+    },
+    {
+      "text": "we're here to analyze Python today for",
+      "offset": 1272040,
+      "duration": 4890
+    },
+    {
+      "text": "the price of that one simple analysis",
+      "offset": 1274680,
+      "duration": 2820
+    },
+    {
+      "text": "command",
+      "offset": 1276930,
+      "duration": 2760
+    },
+    {
+      "text": "I got analysis of not just the Python in",
+      "offset": 1277500,
+      "duration": 4080
+    },
+    {
+      "text": "my project but all the other languages",
+      "offset": 1279690,
+      "duration": 5160
+    },
+    {
+      "text": "as well so also the HTML Javascript PL",
+      "offset": 1281580,
+      "duration": 6390
+    },
+    {
+      "text": "sequel and CSS but we are here to talk",
+      "offset": 1284850,
+      "duration": 4770
+    },
+    {
+      "text": "about Python so I'm going to narrow my",
+      "offset": 1287970,
+      "duration": 4650
+    },
+    {
+      "text": "list of issues to that and",
+      "offset": 1289620,
+      "duration": 5760
+    },
+    {
+      "text": "when I do I see that I have 10 bugs 8",
+      "offset": 1292620,
+      "duration": 6420
+    },
+    {
+      "text": "boner abilities 261 code smells so let's",
+      "offset": 1295380,
+      "duration": 6450
+    },
+    {
+      "text": "dig into this a little bit if I click on",
+      "offset": 1299040,
+      "duration": 4860
+    },
+    {
+      "text": "the bugs I narrowed my list further and",
+      "offset": 1301830,
+      "duration": 5729
+    },
+    {
+      "text": "I start to see my remediation messages",
+      "offset": 1303900,
+      "duration": 6600
+    },
+    {
+      "text": "and I see what file they're in what line",
+      "offset": 1307559,
+      "duration": 5821
+    },
+    {
+      "text": "they're on but having a message in a",
+      "offset": 1310500,
+      "duration": 6000
+    },
+    {
+      "text": "file on a line isn't terribly helpful to",
+      "offset": 1313380,
+      "duration": 6570
+    },
+    {
+      "text": "me so either I can click on this box or",
+      "offset": 1316500,
+      "duration": 6059
+    },
+    {
+      "text": "I can right arrow on the keyboard to see",
+      "offset": 1319950,
+      "duration": 5460
+    },
+    {
+      "text": "the issue in context so my issue message",
+      "offset": 1322559,
+      "duration": 4861
+    },
+    {
+      "text": "is remove or correct this useless self",
+      "offset": 1325410,
+      "duration": 4260
+    },
+    {
+      "text": "assignment and when I get here into the",
+      "offset": 1327420,
+      "duration": 4290
+    },
+    {
+      "text": "code I see that sure enough I'm",
+      "offset": 1329670,
+      "duration": 5070
+    },
+    {
+      "text": "assigning sequel the sequel and that's",
+      "offset": 1331710,
+      "duration": 5310
+    },
+    {
+      "text": "probably not what was intended so I've",
+      "offset": 1334740,
+      "duration": 4260
+    },
+    {
+      "text": "got a bug here this needs to be",
+      "offset": 1337020,
+      "duration": 5310
+    },
+    {
+      "text": "addressed so moving on to the next one",
+      "offset": 1339000,
+      "duration": 4920
+    },
+    {
+      "text": "and I'm just going to arrow down on the",
+      "offset": 1342330,
+      "duration": 4470
+    },
+    {
+      "text": "keyboard to get there here I've got",
+      "offset": 1343920,
+      "duration": 4920
+    },
+    {
+      "text": "remove this return statement from this",
+      "offset": 1346800,
+      "duration": 4200
+    },
+    {
+      "text": "finally block so I've got it there's my",
+      "offset": 1348840,
+      "duration": 5850
+    },
+    {
+      "text": "return in my finally now if I'm not",
+      "offset": 1351000,
+      "duration": 5970
+    },
+    {
+      "text": "familiar with Python if I'm new to",
+      "offset": 1354690,
+      "duration": 5100
+    },
+    {
+      "text": "Python it might not be super obvious to",
+      "offset": 1356970,
+      "duration": 5280
+    },
+    {
+      "text": "me why this is a problem so that's why",
+      "offset": 1359790,
+      "duration": 4320
+    },
+    {
+      "text": "the rule description is close at hand",
+      "offset": 1362250,
+      "duration": 4260
+    },
+    {
+      "text": "and this is what Nicola wrote up to help",
+      "offset": 1364110,
+      "duration": 4110
+    },
+    {
+      "text": "you understand why we're raising an",
+      "offset": 1366510,
+      "duration": 4530
+    },
+    {
+      "text": "issue so for each rule I'm going to have",
+      "offset": 1368220,
+      "duration": 5339
+    },
+    {
+      "text": "a description that explains why there's",
+      "offset": 1371040,
+      "duration": 5100
+    },
+    {
+      "text": "a problem what bad thing might happen if",
+      "offset": 1373559,
+      "duration": 5461
+    },
+    {
+      "text": "you don't follow the rule and for each",
+      "offset": 1376140,
+      "duration": 5820
+    },
+    {
+      "text": "one I have well for most rules you're",
+      "offset": 1379020,
+      "duration": 4380
+    },
+    {
+      "text": "going to have a non-compliant code",
+      "offset": 1381960,
+      "duration": 4620
+    },
+    {
+      "text": "example which shows you what broken code",
+      "offset": 1383400,
+      "duration": 7590
+    },
+    {
+      "text": "looks like and then additionally we have",
+      "offset": 1386580,
+      "duration": 6210
+    },
+    {
+      "text": "a compliance solution which shows you",
+      "offset": 1390990,
+      "duration": 4650
+    },
+    {
+      "text": "the broken code fixed so that you have a",
+      "offset": 1392790,
+      "duration": 6690
+    },
+    {
+      "text": "model for fixing your own code alright",
+      "offset": 1395640,
+      "duration": 5789
+    },
+    {
+      "text": "so I'm going to close that out and I'm",
+      "offset": 1399480,
+      "duration": 4590
+    },
+    {
+      "text": "gonna go back to my list and look at the",
+      "offset": 1401429,
+      "duration": 4761
+    },
+    {
+      "text": "vulnerabilities and I'm just going to",
+      "offset": 1404070,
+      "duration": 5100
+    },
+    {
+      "text": "right arrow into the first vulnerability",
+      "offset": 1406190,
+      "duration": 5560
+    },
+    {
+      "text": "add password protection of this database",
+      "offset": 1409170,
+      "duration": 6210
+    },
+    {
+      "text": "so I've got a key of password and a",
+      "offset": 1411750,
+      "duration": 7200
+    },
+    {
+      "text": "value of empty string so yeah that looks",
+      "offset": 1415380,
+      "duration": 5340
+    },
+    {
+      "text": "like I'm getting into a database without",
+      "offset": 1418950,
+      "duration": 4080
+    },
+    {
+      "text": "a password I probably need to put a",
+      "offset": 1420720,
+      "duration": 5910
+    },
+    {
+      "text": "password on that database so",
+      "offset": 1423030,
+      "duration": 5760
+    },
+    {
+      "text": "moving on to the next one now this one's",
+      "offset": 1426630,
+      "duration": 3390
+    },
+    {
+      "text": "a little bit more interesting you're",
+      "offset": 1428790,
+      "duration": 4430
+    },
+    {
+      "text": "seeing a more intricate interface here",
+      "offset": 1430020,
+      "duration": 6420
+    },
+    {
+      "text": "so it's telling me that I'm constructing",
+      "offset": 1433220,
+      "duration": 5680
+    },
+    {
+      "text": "a single query from tainted user",
+      "offset": 1436440,
+      "duration": 4890
+    },
+    {
+      "text": "controlled data and I've got a lot of",
+      "offset": 1438900,
+      "duration": 5460
+    },
+    {
+      "text": "extra locations here over here on the",
+      "offset": 1441330,
+      "duration": 4560
+    },
+    {
+      "text": "Left I've got my list of secondary",
+      "offset": 1444360,
+      "duration": 3990
+    },
+    {
+      "text": "locations which is collapsed by default",
+      "offset": 1445890,
+      "duration": 5250
+    },
+    {
+      "text": "so I'm going to expand that and I see",
+      "offset": 1448350,
+      "duration": 4590
+    },
+    {
+      "text": "that I'm going across two different",
+      "offset": 1451140,
+      "duration": 4380
+    },
+    {
+      "text": "files and I want to see where this",
+      "offset": 1452940,
+      "duration": 4590
+    },
+    {
+      "text": "starts so I can either click on the one",
+      "offset": 1455520,
+      "duration": 4260
+    },
+    {
+      "text": "or I can hit alt on my keyboard to jump",
+      "offset": 1457530,
+      "duration": 4830
+    },
+    {
+      "text": "to the first location to see that I",
+      "offset": 1459780,
+      "duration": 5940
+    },
+    {
+      "text": "start by getting a value from the user",
+      "offset": 1462360,
+      "duration": 6210
+    },
+    {
+      "text": "request that gets their alt down",
+      "offset": 1465720,
+      "duration": 6930
+    },
+    {
+      "text": "assigned into a variable and then it",
+      "offset": 1468570,
+      "duration": 11690
+    },
+    {
+      "text": "gets turned through some other methods",
+      "offset": 1472650,
+      "duration": 7610
+    },
+    {
+      "text": "until finally it gets executed as sequel",
+      "offset": 1480590,
+      "duration": 7690
+    },
+    {
+      "text": "so and and all of that without actually",
+      "offset": 1485010,
+      "duration": 5220
+    },
+    {
+      "text": "being sanitized without actually being",
+      "offset": 1488280,
+      "duration": 4170
+    },
+    {
+      "text": "escaped or cleaned up right so I'm",
+      "offset": 1490230,
+      "duration": 5160
+    },
+    {
+      "text": "taking the raw user data and stuffing it",
+      "offset": 1492450,
+      "duration": 5550
+    },
+    {
+      "text": "straight into the database probably not",
+      "offset": 1495390,
+      "duration": 5130
+    },
+    {
+      "text": "a good idea if this were my code I would",
+      "offset": 1498000,
+      "duration": 4920
+    },
+    {
+      "text": "want to get that cleaned up so I'm gonna",
+      "offset": 1500520,
+      "duration": 4800
+    },
+    {
+      "text": "go back and just look briefly at the",
+      "offset": 1502920,
+      "duration": 4050
+    },
+    {
+      "text": "code smells I don't want to take time to",
+      "offset": 1505320,
+      "duration": 4920
+    },
+    {
+      "text": "go through all of these 261 code smells",
+      "offset": 1506970,
+      "duration": 5160
+    },
+    {
+      "text": "but I do want to point out the",
+      "offset": 1510240,
+      "duration": 4050
+    },
+    {
+      "text": "distribution of issues across the rules",
+      "offset": 1512130,
+      "duration": 3810
+    },
+    {
+      "text": "because this is a little bit interesting",
+      "offset": 1514290,
+      "duration": 3980
+    },
+    {
+      "text": "here so we've got a hundred and seven",
+      "offset": 1515940,
+      "duration": 5400
+    },
+    {
+      "text": "instances of duplicated string literals",
+      "offset": 1518270,
+      "duration": 7570
+    },
+    {
+      "text": "so that's certainly an opportunity for",
+      "offset": 1521340,
+      "duration": 6960
+    },
+    {
+      "text": "cleaning up we've got a number of",
+      "offset": 1525840,
+      "duration": 4650
+    },
+    {
+      "text": "cognitive complexity issues cognitive",
+      "offset": 1528300,
+      "duration": 4280
+    },
+    {
+      "text": "complexity is a method of measuring",
+      "offset": 1530490,
+      "duration": 4830
+    },
+    {
+      "text": "understandability that we invented here",
+      "offset": 1532580,
+      "duration": 5680
+    },
+    {
+      "text": "at sonar source and it can be really",
+      "offset": 1535320,
+      "duration": 4440
+    },
+    {
+      "text": "helpful to make your code more readable",
+      "offset": 1538260,
+      "duration": 5040
+    },
+    {
+      "text": "to reduce your cognitive complexity and",
+      "offset": 1539760,
+      "duration": 4950
+    },
+    {
+      "text": "then we've got a number of others",
+      "offset": 1543300,
+      "duration": 3480
+    },
+    {
+      "text": "collapsible if statements this is one of",
+      "offset": 1544710,
+      "duration": 5220
+    },
+    {
+      "text": "my perennial favorites so I'm not going",
+      "offset": 1546780,
+      "duration": 4440
+    },
+    {
+      "text": "to go through all of these but I just",
+      "offset": 1549930,
+      "duration": 3690
+    },
+    {
+      "text": "wanted to point that out now what you're",
+      "offset": 1551220,
+      "duration": 5820
+    },
+    {
+      "text": "not seeing in this list is hotspots you",
+      "offset": 1553620,
+      "duration": 5010
+    },
+    {
+      "text": "know we gave you four categories of",
+      "offset": 1557040,
+      "duration": 3180
+    },
+    {
+      "text": "rules but you're only seeing three of",
+      "offset": 1558630,
+      "duration": 2160
+    },
+    {
+      "text": "them here",
+      "offset": 1560220,
+      "duration": 2970
+    },
+    {
+      "text": "and that's because we do segregate hot",
+      "offset": 1560790,
+      "duration": 4920
+    },
+    {
+      "text": "spots into their own separate category",
+      "offset": 1563190,
+      "duration": 3780
+    },
+    {
+      "text": "we give you an entirely different",
+      "offset": 1565710,
+      "duration": 3060
+    },
+    {
+      "text": "interface because again we want to",
+      "offset": 1566970,
+      "duration": 4110
+    },
+    {
+      "text": "emphasize this is not necessarily a",
+      "offset": 1568770,
+      "duration": 4170
+    },
+    {
+      "text": "problem it's just something you need to",
+      "offset": 1571080,
+      "duration": 4200
+    },
+    {
+      "text": "look at and so here's the interface we",
+      "offset": 1572940,
+      "duration": 4440
+    },
+    {
+      "text": "give you to review those hot spots in",
+      "offset": 1575280,
+      "duration": 5190
+    },
+    {
+      "text": "the context of the code so here on the",
+      "offset": 1577380,
+      "duration": 7020
+    },
+    {
+      "text": "left is my review queue and then on the",
+      "offset": 1580470,
+      "duration": 6960
+    },
+    {
+      "text": "right I see the issue in context I've",
+      "offset": 1584400,
+      "duration": 5310
+    },
+    {
+      "text": "got the rule description to help me",
+      "offset": 1587430,
+      "duration": 5070
+    },
+    {
+      "text": "understand what could go wrong here if",
+      "offset": 1589710,
+      "duration": 5130
+    },
+    {
+      "text": "there actually is a problem I've got the",
+      "offset": 1592500,
+      "duration": 4170
+    },
+    {
+      "text": "criteria to help me understand whether",
+      "offset": 1594840,
+      "duration": 4440
+    },
+    {
+      "text": "this particular instance actually is a",
+      "offset": 1596670,
+      "duration": 6900
+    },
+    {
+      "text": "problem and if it is what I can do to",
+      "offset": 1599280,
+      "duration": 7200
+    },
+    {
+      "text": "make the problem go away now if I think",
+      "offset": 1603570,
+      "duration": 4350
+    },
+    {
+      "text": "that this particular instance is",
+      "offset": 1606480,
+      "duration": 4650
+    },
+    {
+      "text": "actually okay in this context what I can",
+      "offset": 1607920,
+      "duration": 6810
+    },
+    {
+      "text": "do is mark this safe and once I change",
+      "offset": 1611130,
+      "duration": 5460
+    },
+    {
+      "text": "the status it's going to take this one",
+      "offset": 1614730,
+      "duration": 3720
+    },
+    {
+      "text": "out of my queue because it no longer",
+      "offset": 1616590,
+      "duration": 4890
+    },
+    {
+      "text": "needs to be dealt with but if I think",
+      "offset": 1618450,
+      "duration": 5370
+    },
+    {
+      "text": "that it actually does need to be handled",
+      "offset": 1621480,
+      "duration": 5040
+    },
+    {
+      "text": "I can assign it to someone to handle now",
+      "offset": 1623820,
+      "duration": 4710
+    },
+    {
+      "text": "we're looking at a demo instance with no",
+      "offset": 1626520,
+      "duration": 3540
+    },
+    {
+      "text": "other users so that's why only",
+      "offset": 1628530,
+      "duration": 4740
+    },
+    {
+      "text": "administrator shows up here but that's a",
+      "offset": 1630060,
+      "duration": 6150
+    },
+    {
+      "text": "hotspot review and that's what I wanted",
+      "offset": 1633270,
+      "duration": 5160
+    },
+    {
+      "text": "to show you in the Sooner cube interface",
+      "offset": 1636210,
+      "duration": 4740
+    },
+    {
+      "text": "so now I'm going to jump back to the",
+      "offset": 1638430,
+      "duration": 7110
+    },
+    {
+      "text": "slide show and talk about additions a",
+      "offset": 1640950,
+      "duration": 8790
+    },
+    {
+      "text": "little bit so 95% of what we've talked",
+      "offset": 1645540,
+      "duration": 6930
+    },
+    {
+      "text": "about just now is in community edition",
+      "offset": 1649740,
+      "duration": 4890
+    },
+    {
+      "text": "which is free and open source it gives",
+      "offset": 1652470,
+      "duration": 4410
+    },
+    {
+      "text": "you the powerful fast accurate static",
+      "offset": 1654630,
+      "duration": 4830
+    },
+    {
+      "text": "analysis that you've just seen with all",
+      "offset": 1656880,
+      "duration": 5610
+    },
+    {
+      "text": "four issue types when you move up to",
+      "offset": 1659460,
+      "duration": 4980
+    },
+    {
+      "text": "developer edition which is the lowest",
+      "offset": 1662490,
+      "duration": 4320
+    },
+    {
+      "text": "commercial edition you add on taint",
+      "offset": 1664440,
+      "duration": 6330
+    },
+    {
+      "text": "analysis so that gives you the sequel",
+      "offset": 1666810,
+      "duration": 5900
+    },
+    {
+      "text": "injection issue that I just showed you",
+      "offset": 1670770,
+      "duration": 5310
+    },
+    {
+      "text": "as well as PR analysis and decoration",
+      "offset": 1672710,
+      "duration": 6310
+    },
+    {
+      "text": "the next edition is Enterprise Edition",
+      "offset": 1676080,
+      "duration": 4770
+    },
+    {
+      "text": "and this adds some management features",
+      "offset": 1679020,
+      "duration": 3750
+    },
+    {
+      "text": "so you get portfolio management",
+      "offset": 1680850,
+      "duration": 6690
+    },
+    {
+      "text": "executive reporting security reports so",
+      "offset": 1682770,
+      "duration": 8220
+    },
+    {
+      "text": "in summary with sonar cube Python static",
+      "offset": 1687540,
+      "duration": 6540
+    },
+    {
+      "text": "analysis you get a fast accurate static",
+      "offset": 1690990,
+      "duration": 3730
+    },
+    {
+      "text": "analysis",
+      "offset": 1694080,
+      "duration": 3339
+    },
+    {
+      "text": "it gives you valuable rules and issues",
+      "offset": 1694720,
+      "duration": 5459
+    },
+    {
+      "text": "it works out of the box with minimal or",
+      "offset": 1697419,
+      "duration": 4861
+    },
+    {
+      "text": "even no configuration that's what you",
+      "offset": 1700179,
+      "duration": 5311
+    },
+    {
+      "text": "just saw in the demo for developers we",
+      "offset": 1702280,
+      "duration": 5399
+    },
+    {
+      "text": "give you this static analysis in IDE",
+      "offset": 1705490,
+      "duration": 5460
+    },
+    {
+      "text": "with sonar Lentz in PR decorations with",
+      "offset": 1707679,
+      "duration": 5401
+    },
+    {
+      "text": "an excuse me with developer edition and",
+      "offset": 1710950,
+      "duration": 6240
+    },
+    {
+      "text": "above and four teams with sonar cube",
+      "offset": 1713080,
+      "duration": 6979
+    },
+    {
+      "text": "itself and that's it",
+      "offset": 1717190,
+      "duration": 4979
+    },
+    {
+      "text": "Nicola are there any questions we need",
+      "offset": 1720059,
+      "duration": 6461
+    },
+    {
+      "text": "to answer yes we have some questions",
+      "offset": 1722169,
+      "duration": 9811
+    },
+    {
+      "text": "about different editions so the first",
+      "offset": 1726520,
+      "duration": 10320
+    },
+    {
+      "text": "one would be are the rules updated in",
+      "offset": 1731980,
+      "duration": 8699
+    },
+    {
+      "text": "the community edition - yes absolutely",
+      "offset": 1736840,
+      "duration": 9270
+    },
+    {
+      "text": "so every edition every new version adds",
+      "offset": 1740679,
+      "duration": 10171
+    },
+    {
+      "text": "new rules no not every language gets new",
+      "offset": 1746110,
+      "duration": 8189
+    },
+    {
+      "text": "rules in every version the Python is one",
+      "offset": 1750850,
+      "duration": 6329
+    },
+    {
+      "text": "that we're actively working on and most",
+      "offset": 1754299,
+      "duration": 4981
+    },
+    {
+      "text": "the vast majority of the rules are",
+      "offset": 1757179,
+      "duration": 4771
+    },
+    {
+      "text": "available in Community Edition it's only",
+      "offset": 1759280,
+      "duration": 5220
+    },
+    {
+      "text": "those taint analysis rules that follow",
+      "offset": 1761950,
+      "duration": 5550
+    },
+    {
+      "text": "the untrusted user input from where it",
+      "offset": 1764500,
+      "duration": 4799
+    },
+    {
+      "text": "comes into the application to where it",
+      "offset": 1767500,
+      "duration": 5580
+    },
+    {
+      "text": "goes into things like files sequel that",
+      "offset": 1769299,
+      "duration": 6931
+    },
+    {
+      "text": "sort of thing that show up in developer",
+      "offset": 1773080,
+      "duration": 7050
+    },
+    {
+      "text": "edition and and I'm sorry I know I asked",
+      "offset": 1776230,
+      "duration": 5550
+    },
+    {
+      "text": "you for questions but as I was doing",
+      "offset": 1780130,
+      "duration": 3750
+    },
+    {
+      "text": "that my eyes fell on the time which is",
+      "offset": 1781780,
+      "duration": 4139
+    },
+    {
+      "text": "11:30 once we're actually over time",
+      "offset": 1783880,
+      "duration": 5429
+    },
+    {
+      "text": "already it looks like we lingered",
+      "offset": 1785919,
+      "duration": 5851
+    },
+    {
+      "text": "lovingly on too many details here and I",
+      "offset": 1789309,
+      "duration": 4561
+    },
+    {
+      "text": "do have one more slide that I need to",
+      "offset": 1791770,
+      "duration": 4980
+    },
+    {
+      "text": "hit before we quit so I'm sorry I'm not",
+      "offset": 1793870,
+      "duration": 4620
+    },
+    {
+      "text": "going to give you time to give me any",
+      "offset": 1796750,
+      "duration": 3900
+    },
+    {
+      "text": "more questions Nicola I am just going to",
+      "offset": 1798490,
+      "duration": 5640
+    },
+    {
+      "text": "move on to the wrap-up so please please",
+      "offset": 1800650,
+      "duration": 5730
+    },
+    {
+      "text": "please take the survey that you're going",
+      "offset": 1804130,
+      "duration": 4799
+    },
+    {
+      "text": "to get in just a minute please tell me",
+      "offset": 1806380,
+      "duration": 5730
+    },
+    {
+      "text": "what we need to do better what you'd",
+      "offset": 1808929,
+      "duration": 5851
+    },
+    {
+      "text": "like to see in future webinars if you",
+      "offset": 1812110,
+      "duration": 4679
+    },
+    {
+      "text": "had a question that you posed that",
+      "offset": 1814780,
+      "duration": 3990
+    },
+    {
+      "text": "didn't get answered we are going to be",
+      "offset": 1816789,
+      "duration": 3421
+    },
+    {
+      "text": "following up with that you'll get an",
+      "offset": 1818770,
+      "duration": 4289
+    },
+    {
+      "text": "email with a link to the answers we post",
+      "offset": 1820210,
+      "duration": 5490
+    },
+    {
+      "text": "those in our community and you'll also",
+      "offset": 1823059,
+      "duration": 4911
+    },
+    {
+      "text": "get an email to a recording of this",
+      "offset": 1825700,
+      "duration": 4190
+    },
+    {
+      "text": "in case you want to watch it again or",
+      "offset": 1827970,
+      "duration": 3290
+    },
+    {
+      "text": "share it with your colleagues whatever",
+      "offset": 1829890,
+      "duration": 4410
+    },
+    {
+      "text": "you can find more information about our",
+      "offset": 1831260,
+      "duration": 5260
+    },
+    {
+      "text": "Python analysis at sonarqube dot org",
+      "offset": 1834300,
+      "duration": 4800
+    },
+    {
+      "text": "slash Python or you can just jump right",
+      "offset": 1836520,
+      "duration": 5130
+    },
+    {
+      "text": "in and download it at sonarqube dot org",
+      "offset": 1839100,
+      "duration": 5490
+    },
+    {
+      "text": "slash downloads thanks everyone for",
+      "offset": 1841650,
+      "duration": 5100
+    },
+    {
+      "text": "joining us and maybe I'll see you again",
+      "offset": 1844590,
+      "duration": 5000
+    },
+    {
+      "text": "at the next webinar",
+      "offset": 1846750,
+      "duration": 2840
+    }
+  ],
+  "fullText": "so let's talk about Python we're here to talk about how to write cleaner safer Python code with sonar cube I'll jump right in I want to start with sonar source which is the company behind sonar cube sonar source was founded in 2008 by three developers who got together with the goal of giving other developers better tools for code quality and security the goal then and now has been to write tools for developers and development teams not managers but developers that are simple and transparent and easy to integrate into your development process and oh by the way accurate and helpful always and specifically what that means is no false positives now that's not a promise for human but it's our goal and it's our promise that it will always be our goal to get rid of false positives so our mission statement is that every developer and development team should use our products for code quality and security and we see that as Mission Possible and specifically we see it as Mission Possible that every Python developer and development team should use our products so let me tell you why we think that's possible with sonarqube you get a static analysis that's powerful fast and accurate out of the box we've worked hard to give you valuable rules that raise real issues to give you tools that work where you do and at work with minimal configuration so let's start with the rules and issues we divide these into what we call the three pillars maintainability reliability and security starting with maintainability this is about more than naming conventions and tabs versus spaces there have been multiple studies about where the time and therefore the money goes in the life of a project and different studies come up with different numbers some studies come up with numbers as high as like 96% of the time spent on a project is spent in maintenance right so that's 96% of the time that goes into a project is spent reading old code so the more readable you can make that code the more easily understandable you can make it then as a developer that's less time you spend figuring out what it does and more time you can spend actually writing cool code to solve problems which is why you got into this to start with right so Nicola would you so in just a second I'm gonna turn it over to Nicola to tell us about some of the maintainability rules but first I want to point out he said earlier that his job is as a code quality researcher specifically what that means is that it's his job to look at a language and figure out which rules are needed for that language and then for each rule to write up a really good description so that when that rule raises an issue on your code you can understand very easily why there's a problem and what you need to do to fix it so with that now Nicola could you show us some of the maintainability rules sure thank you and good I'll go over a few cut smell rules to show you how we design and categorize them in this example the developer checks if the built-in int returns none this is overly defensive programming as int can only return integer numbers so now people will raise an issue on the non check explaining that it will always be false subjects usually have no effect on your program on crash that they confuse developers coming behind you here is also a common Python pitfall we can see that the issue highlights three locations in your code first the add free parameter which has a dict literal as its default value then the issue highlights location where this parameter is modified and assigned to a class attribute why because in Python every call shares the same parameter default value modifying this value in one function call will impact every subsequent calls sometimes this is on purpose but most of the time it's either a bug or a bad design this rule accepts caching as a varied use case and it only raises issues if the default value is modified or assigned and here is the last Cardinal example the format method is used to format a string in this case the first parameter will be correctly inserted the second one will be ignored because there is no matching replacement field this could just be some dead code left of after a refactoring and it won't make your program crash again so we only raise a code smell issue not a big one from those few examples you can see that we avoid raising a necessary alarms we will help you maintain your code but we won't shout at you every every time something might be a bug like to un thank Allah so now let's move on to the reliability pillar reliability rules raise bug issues and I think it's obvious to most people why you don't want bugs in your application so the bug rules that we provide help you make sure your code is going to behave as you expect at runtime could you show us some of those rules Nicola yes thank you and you remember how I said that we avoid the necessary alarms well for big rules it means that were quite sure that the issues are really bugs we saw previously that unnecessary non checks can be confusing but comparing with the equal operator two incompatible types such as a string and a temple is always a mistake you can see this exact case here the architecture function always returns at Apple so the Equality check will always be false because it's comparing it to a string it won't crash but it is most certainly not what you wanted to do we also detect usual copy-paste mistakes if you write twice to the same key of a dictionary without reading the value in between you probably copy pasted some code and forgot to change the key this actually happens quite often another common problem in Python is a difficulty to refactor our code add one parameter to a function and every call will break at runtime luckily sonarqube helps you detect these invalid codes and the final bug rule I really mentioned a code smell rule detecting string formatting problems which don't crash but make your code difficult to maintain well we have an equivalent back rule which raises issues when code will fail at runtime here you can see that the developer use replacement fields 0 2 & 3 instead of 0 1 & 2 as there is no value for field 3 the format call will raise an exception separating khat smells from bugs enables you as a developer to know what you should fix right away back to you n thanks Nicola so now moving on to the security pillar we actually divide that into two sub categories and I'll start with the vulnerability issues just like the distinction between code smells and bugs we make a distinction in security between vulnerabilities and hotspots now I'll come back to hotspots but I'll start by saying that when we raise a vulnerability issue what we're saying to you is there is something here that needs to be fixed so security issues put your systems your users and your reputation at risk there like an open door to your house right if your front door is standing open and a thief walks by and sees that then you're gonna end up having a bad day and vulnerabilities are the same way so our approach is to raise vulnerabilities as early in the process as possible while the code is still fresh in your mind you remember what you intended and it's really easy for you to do the fix and move on with your life with secure code could you show us some of these rules Nicola yes a common mistake for a developer is to disable security features and forget to remove this code before going to production so now Qube is here to warn you when you do this for example you develop a website and generate an SSL certificate to test it you then disable certificate validation as your certificate is self signed which means that it's not signed by a certification Authority so now Qube detects this issue for multiple libraries such as by open ssl and requests even when you avoid this kind of mistake and follow security best practices you might forget to update your code regularly let's say you use cryptographic keys such as RSA or DSA the recommend length for a key increases with time as computer crack then more and more easily at an ASUS we have a dedicated security team improving our rules constantly as standards evolve you will get notified that you need to update your code our security team also works on sonic ships taint analysis engine it enables us to detect vulnerabilities such as cross-site scripting or XSS which is the most common vulnerability in Python open source projects to make it simple so now Qube detect when dangerous data can be injected by an attacker and send back to your user so here from a request to make response our security team improves these rules constantly to make to detect more issues but also to avoid false positives as an said we will not raise an issue if you sanitize the data before sending it back to you thanks so now let's talk about the other half of the equation security hotspots I said that when we raise a security vulnerability issue we're saying to you there is something here that needs to be fixed on the other side of that our security hotspots so there are times when you're using a security sensitive piece of code but static analysis is unable to detect they're not there's actually a problem these are the places that require human review to know whether or not there's a problem so you need to go in and look at the security sensitive code in context to determine whether it's fine and you can move on or there's actually something here to be fixed I like to think of these as Schrodinger's vulnerabilities because you won't know that there's a vulnerability until you take a look so with security hotspots we segregate those issues from the rest of the issues to make it super clear this is not necessarily a problem it's just something you need to come review and we give you the tools and the context to look at each one and understand for sure can you give us some examples of this Nicola thank you so let's see a few case where you should really double check your code to see if it is secure as a developer you might expect that libraries api's are safe by default sadly it's not the case for every library let's take the example of flask set cookie method by default it will not set a secure flag to true and cookies will be sent over HTTPS but also HTTP when they are sent over HTTP anybody can read or modify the data you send and receive in some very rare cases it is okay to use HTTP which is why it's not always a vulnerability but most of the time only HTTP should be used even with safe connections your browser can still be vulnerable if such a fast repeated execute can connect to any server course policy have been created to prevent this from happening but as always you can disable them if you want so now it will help you see if you can do it safely or not let's finish with a very simple common which you have probably used a lot if you open a file like here for example /tmp /f an attacker could create a symbolic link with the same path and point to another file you will then write to this other file without even realizing it you could for example overwrite the password file of your server most developers are not aware of these risks but once you know it they are pretty easy to avoid each security hotspot rule provides a checklist to guy developers and help you take the right decision back to you Anna thanks Nicola so now let's talk about where you get these rules and issues first we provide static analysis in IDE with sonar lint this is a plug-in that's available for vs code which is what you're seeing here it's compatible with IntelliJ and also specifically with pycharm and for eclipse this is free and open source you can get started with it today just by installing it next we provide PR analysis and decoration so that once you have committed your code and you're beginning to collaborate with your teammates we're going to run those checks against your code so that then your reviewers don't have to worry about looking for the normal suspects right we're going to detect those for you mark it up in your PR and then as a reviewer I can focus on the code the implementation the logic rather than looking for you know the boring stuff we do that for you and next there's the sonar cube interface which we provide as a centralized place to coalesce the team around a shared vision of quality so with the sonar cube web interface all of the stakeholders for the project can come see the current status of the project at any given time understand what needs to be worked on in order for the project to be releasable by the standards that you set for your own team all of this works with or no configuration so there's minimal setup to this and I'll talk about that a little bit more during the demo analysis is fast and thorough and out of the box you're gonna be running with a non-controversial default rule set so what I forgot to say earlier was Nicolas showed you three or four rules from each category of rules we offer a total today of a hundred and seventy rules that's forty four bucks twenty five loner abilities twenty-three hot spots seventy eight code smells not all of those are turned on when you first unbox sonarqube right we have a default rule set which is a smaller set and these are all going to be rules that when they raise issues as a developer you're going to look at these issues and you're gonna go yeah we need to do something about that now there are additional rules that are available that might be appropriate in your situation for your project that you can additionally turn on but out of the box you can spin this up and you should be getting a great experience so now it's time to show you that experience with the demo so I'm gonna make my window a little bit smaller here so I can get to the console so here is my empty center cube instance what I've done here is download the zip explode it run the startup script because I'm running developer edition I did before this demo configure it with the license key but if you're running Community Edition you don't need to do that part so here in my console I have seeded into my project I have installed sonar scanner and a JDK on my machine to run it on and I've put sonar scanner in my path now I can run analysis with almost no configuration I do however need to give the server a key to identify my project by so - d4 define sonar dot project key equals demo and I hit return and analysis starts the first thing that the analyzer does is reach out to the server and say okay what version of you what version are you what rules should I be applied this analysis and it downloads those and then it's going to start stepping through the project looking at all the different files now I want to give you a little bit of background here I said that I'm running a JDK on my machine that's required for the center cube server itself so you do need to have Java installed and then probably you want to be running as a service I'm just running it from the script directly but after that setup is pretty simple you download the zip you explode it you set up your service you start it up you're good to go and then here on the analysis side as I said on my analysis machine I've got a Java running I've installed my scanner and put it in path and that's it now you can provide additional configurations and you can do that either by providing a project settings file or you can do it on the command line like you just saw me provide the project key so looks like we're getting into the Python files now and stepping through those pretty quickly so what's happening here is sonar cube is going through excuse me not the center cube but the scanner is going through each file and it's sort of racking up a list of issues and metrics on each file at the end it's going to compile everything it's found in to an analysis report bundle and it's going to shoot that bundle over to the server the server is going to receive that and put it in a queue and then it'll pop the queue as it has availability to process a new report explode the report and it's going to save the issues save the individual file metrics it's going to aggregate some higher-level project metrics and then analysis is over so we're almost done here and just a second it'll be checking the SCM data and that allows it to understand which lines in a file are new so which issues are new it also helps that understand who owns issues so that it can properly assign those issues to their authors if I can interrupt you for a minute then we have one question about Sanaa Cuba and django support so yes you can a nice triangle project with sonarqube and actually flask project - we have rules like the XSS rule which I showed before which will support the source and sinks for different different web frameworks great thank you so I think analysis has almost done here and I do just want to point out so when zoom is not taking half of my processor analyzing this particular project takes minute 37 as you see it takes a little bit longer with half my processor gone but analysis time that's entirely dependent on the resources available on the analysis machine on one hand and on the other hand the size of your project but analysis is complete now the analysis report has been submitted to the server so if I come to my projects list I see that the report has been processed so I'm gonna click through and here's my project home page with my aggregated project level metrics but I want to talk about the issues today so I'm not gonna spend any time on the home page I'm just going to jump straight into the issues and the first thing I want to do is point out that even though we're here to analyze Python today for the price of that one simple analysis command I got analysis of not just the Python in my project but all the other languages as well so also the HTML Javascript PL sequel and CSS but we are here to talk about Python so I'm going to narrow my list of issues to that and when I do I see that I have 10 bugs 8 boner abilities 261 code smells so let's dig into this a little bit if I click on the bugs I narrowed my list further and I start to see my remediation messages and I see what file they're in what line they're on but having a message in a file on a line isn't terribly helpful to me so either I can click on this box or I can right arrow on the keyboard to see the issue in context so my issue message is remove or correct this useless self assignment and when I get here into the code I see that sure enough I'm assigning sequel the sequel and that's probably not what was intended so I've got a bug here this needs to be addressed so moving on to the next one and I'm just going to arrow down on the keyboard to get there here I've got remove this return statement from this finally block so I've got it there's my return in my finally now if I'm not familiar with Python if I'm new to Python it might not be super obvious to me why this is a problem so that's why the rule description is close at hand and this is what Nicola wrote up to help you understand why we're raising an issue so for each rule I'm going to have a description that explains why there's a problem what bad thing might happen if you don't follow the rule and for each one I have well for most rules you're going to have a non-compliant code example which shows you what broken code looks like and then additionally we have a compliance solution which shows you the broken code fixed so that you have a model for fixing your own code alright so I'm going to close that out and I'm gonna go back to my list and look at the vulnerabilities and I'm just going to right arrow into the first vulnerability add password protection of this database so I've got a key of password and a value of empty string so yeah that looks like I'm getting into a database without a password I probably need to put a password on that database so moving on to the next one now this one's a little bit more interesting you're seeing a more intricate interface here so it's telling me that I'm constructing a single query from tainted user controlled data and I've got a lot of extra locations here over here on the Left I've got my list of secondary locations which is collapsed by default so I'm going to expand that and I see that I'm going across two different files and I want to see where this starts so I can either click on the one or I can hit alt on my keyboard to jump to the first location to see that I start by getting a value from the user request that gets their alt down assigned into a variable and then it gets turned through some other methods until finally it gets executed as sequel so and and all of that without actually being sanitized without actually being escaped or cleaned up right so I'm taking the raw user data and stuffing it straight into the database probably not a good idea if this were my code I would want to get that cleaned up so I'm gonna go back and just look briefly at the code smells I don't want to take time to go through all of these 261 code smells but I do want to point out the distribution of issues across the rules because this is a little bit interesting here so we've got a hundred and seven instances of duplicated string literals so that's certainly an opportunity for cleaning up we've got a number of cognitive complexity issues cognitive complexity is a method of measuring understandability that we invented here at sonar source and it can be really helpful to make your code more readable to reduce your cognitive complexity and then we've got a number of others collapsible if statements this is one of my perennial favorites so I'm not going to go through all of these but I just wanted to point that out now what you're not seeing in this list is hotspots you know we gave you four categories of rules but you're only seeing three of them here and that's because we do segregate hot spots into their own separate category we give you an entirely different interface because again we want to emphasize this is not necessarily a problem it's just something you need to look at and so here's the interface we give you to review those hot spots in the context of the code so here on the left is my review queue and then on the right I see the issue in context I've got the rule description to help me understand what could go wrong here if there actually is a problem I've got the criteria to help me understand whether this particular instance actually is a problem and if it is what I can do to make the problem go away now if I think that this particular instance is actually okay in this context what I can do is mark this safe and once I change the status it's going to take this one out of my queue because it no longer needs to be dealt with but if I think that it actually does need to be handled I can assign it to someone to handle now we're looking at a demo instance with no other users so that's why only administrator shows up here but that's a hotspot review and that's what I wanted to show you in the Sooner cube interface so now I'm going to jump back to the slide show and talk about additions a little bit so 95% of what we've talked about just now is in community edition which is free and open source it gives you the powerful fast accurate static analysis that you've just seen with all four issue types when you move up to developer edition which is the lowest commercial edition you add on taint analysis so that gives you the sequel injection issue that I just showed you as well as PR analysis and decoration the next edition is Enterprise Edition and this adds some management features so you get portfolio management executive reporting security reports so in summary with sonar cube Python static analysis you get a fast accurate static analysis it gives you valuable rules and issues it works out of the box with minimal or even no configuration that's what you just saw in the demo for developers we give you this static analysis in IDE with sonar Lentz in PR decorations with an excuse me with developer edition and above and four teams with sonar cube itself and that's it Nicola are there any questions we need to answer yes we have some questions about different editions so the first one would be are the rules updated in the community edition - yes absolutely so every edition every new version adds new rules no not every language gets new rules in every version the Python is one that we're actively working on and most the vast majority of the rules are available in Community Edition it's only those taint analysis rules that follow the untrusted user input from where it comes into the application to where it goes into things like files sequel that sort of thing that show up in developer edition and and I'm sorry I know I asked you for questions but as I was doing that my eyes fell on the time which is 11:30 once we're actually over time already it looks like we lingered lovingly on too many details here and I do have one more slide that I need to hit before we quit so I'm sorry I'm not going to give you time to give me any more questions Nicola I am just going to move on to the wrap-up so please please please take the survey that you're going to get in just a minute please tell me what we need to do better what you'd like to see in future webinars if you had a question that you posed that didn't get answered we are going to be following up with that you'll get an email with a link to the answers we post those in our community and you'll also get an email to a recording of this in case you want to watch it again or share it with your colleagues whatever you can find more information about our Python analysis at sonarqube dot org slash Python or you can just jump right in and download it at sonarqube dot org slash downloads thanks everyone for joining us and maybe I'll see you again at the next webinar",
+  "fetchedAt": "2026-03-14T09:25:43.095Z"
+}

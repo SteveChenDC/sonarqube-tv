@@ -1,0 +1,273 @@
+{
+  "videoId": "v144",
+  "youtubeId": "44Nj3n5vpUs",
+  "segments": [
+    {
+      "text": "hey folks welcome to this video on",
+      "offset": 280,
+      "duration": 3679
+    },
+    {
+      "text": "common Jango mistakes I'm your host",
+      "offset": 2159,
+      "duration": 4321
+    },
+    {
+      "text": "nafil Islam and I am going to be showing",
+      "offset": 3959,
+      "duration": 4760
+    },
+    {
+      "text": "you a few ways in which you might not",
+      "offset": 6480,
+      "duration": 4520
+    },
+    {
+      "text": "want to use Jango because it could lead",
+      "offset": 8719,
+      "duration": 5441
+    },
+    {
+      "text": "to some problems so up first we have",
+      "offset": 11000,
+      "duration": 5640
+    },
+    {
+      "text": "null is equal to true to demonstrate",
+      "offset": 14160,
+      "duration": 4480
+    },
+    {
+      "text": "this we're going to create a d Jango",
+      "offset": 16640,
+      "duration": 4240
+    },
+    {
+      "text": "model called article and it is going to",
+      "offset": 18640,
+      "duration": 4639
+    },
+    {
+      "text": "inherit from model stop model now we",
+      "offset": 20880,
+      "duration": 4280
+    },
+    {
+      "text": "have a name which is going to be a",
+      "offset": 23279,
+      "duration": 4840
+    },
+    {
+      "text": "charfield and this name can of course be",
+      "offset": 25160,
+      "duration": 5519
+    },
+    {
+      "text": "null now here's the thing about setting",
+      "offset": 28119,
+      "duration": 5161
+    },
+    {
+      "text": "null is to true in Django the way that",
+      "offset": 30679,
+      "duration": 5441
+    },
+    {
+      "text": "this is represented can either be null",
+      "offset": 33280,
+      "duration": 5720
+    },
+    {
+      "text": "which is a keyword or blank so to make",
+      "offset": 36120,
+      "duration": 5480
+    },
+    {
+      "text": "sure that our data is always consistent",
+      "offset": 39000,
+      "duration": 4559
+    },
+    {
+      "text": "we should set blank is equal to true",
+      "offset": 41600,
+      "duration": 4080
+    },
+    {
+      "text": "instead of null is equal to true all",
+      "offset": 43559,
+      "duration": 3761
+    },
+    {
+      "text": "right the next one is going to be about",
+      "offset": 45680,
+      "duration": 4559
+    },
+    {
+      "text": "mandating HTTP methods in order to",
+      "offset": 47320,
+      "duration": 4840
+    },
+    {
+      "text": "demonstrate this I'm going to quickly",
+      "offset": 50239,
+      "duration": 6721
+    },
+    {
+      "text": "import require undor getet from Jango",
+      "offset": 52160,
+      "duration": 7239
+    },
+    {
+      "text": "and I'm going to set it as a decorator",
+      "offset": 56960,
+      "duration": 4840
+    },
+    {
+      "text": "for my index",
+      "offset": 59399,
+      "duration": 4720
+    },
+    {
+      "text": "view this will mean that only get",
+      "offset": 61800,
+      "duration": 4359
+    },
+    {
+      "text": "requests are allowed for this particular",
+      "offset": 64119,
+      "duration": 5201
+    },
+    {
+      "text": "View and what that prevents is security",
+      "offset": 66159,
+      "duration": 5241
+    },
+    {
+      "text": "vulnerabilities where people might be",
+      "offset": 69320,
+      "duration": 3960
+    },
+    {
+      "text": "sending post requests or other things",
+      "offset": 71400,
+      "duration": 3880
+    },
+    {
+      "text": "that could get a weird response from",
+      "offset": 73280,
+      "duration": 2879
+    },
+    {
+      "text": "your",
+      "offset": 75280,
+      "duration": 3240
+    },
+    {
+      "text": "server lastly let's talk about a",
+      "offset": 76159,
+      "duration": 4481
+    },
+    {
+      "text": "security vulnerability this one is about",
+      "offset": 78520,
+      "duration": 5000
+    },
+    {
+      "text": "redirecting based on no sanitation of",
+      "offset": 80640,
+      "duration": 5720
+    },
+    {
+      "text": "user input and this gets flagged by",
+      "offset": 83520,
+      "duration": 5599
+    },
+    {
+      "text": "sonar Cloud which we are able to see in",
+      "offset": 86360,
+      "duration": 5399
+    },
+    {
+      "text": "the IDE because we have it linked so the",
+      "offset": 89119,
+      "duration": 3841
+    },
+    {
+      "text": "way that we're going to solve this is",
+      "offset": 91759,
+      "duration": 3161
+    },
+    {
+      "text": "we're going to have a bunch of allowed",
+      "offset": 92960,
+      "duration": 5680
+    },
+    {
+      "text": "sites and we are going to split that",
+      "offset": 94920,
+      "duration": 6360
+    },
+    {
+      "text": "based on space and what we're going to",
+      "offset": 98640,
+      "duration": 4880
+    },
+    {
+      "text": "do is we're going to parse the URL and",
+      "offset": 101280,
+      "duration": 5560
+    },
+    {
+      "text": "we're going to use URL parse to get it",
+      "offset": 103520,
+      "duration": 5480
+    },
+    {
+      "text": "and we are going to check that the",
+      "offset": 106840,
+      "duration": 5040
+    },
+    {
+      "text": "netlock is in allowed URLs because we",
+      "offset": 109000,
+      "duration": 6119
+    },
+    {
+      "text": "don't want to redirect to places that",
+      "offset": 111880,
+      "duration": 6680
+    },
+    {
+      "text": "might be sensitive security wise and",
+      "offset": 115119,
+      "duration": 6241
+    },
+    {
+      "text": "lastly if it's not just going to",
+      "offset": 118560,
+      "duration": 6839
+    },
+    {
+      "text": "redirect to the index page this way",
+      "offset": 121360,
+      "duration": 7160
+    },
+    {
+      "text": "we're preventing malicious user input",
+      "offset": 125399,
+      "duration": 4521
+    },
+    {
+      "text": "from affecting the way that our",
+      "offset": 128520,
+      "duration": 4560
+    },
+    {
+      "text": "application works",
+      "offset": 129920,
+      "duration": 3160
+    }
+  ],
+  "fullText": "hey folks welcome to this video on common Jango mistakes I'm your host nafil Islam and I am going to be showing you a few ways in which you might not want to use Jango because it could lead to some problems so up first we have null is equal to true to demonstrate this we're going to create a d Jango model called article and it is going to inherit from model stop model now we have a name which is going to be a charfield and this name can of course be null now here's the thing about setting null is to true in Django the way that this is represented can either be null which is a keyword or blank so to make sure that our data is always consistent we should set blank is equal to true instead of null is equal to true all right the next one is going to be about mandating HTTP methods in order to demonstrate this I'm going to quickly import require undor getet from Jango and I'm going to set it as a decorator for my index view this will mean that only get requests are allowed for this particular View and what that prevents is security vulnerabilities where people might be sending post requests or other things that could get a weird response from your server lastly let's talk about a security vulnerability this one is about redirecting based on no sanitation of user input and this gets flagged by sonar Cloud which we are able to see in the IDE because we have it linked so the way that we're going to solve this is we're going to have a bunch of allowed sites and we are going to split that based on space and what we're going to do is we're going to parse the URL and we're going to use URL parse to get it and we are going to check that the netlock is in allowed URLs because we don't want to redirect to places that might be sensitive security wise and lastly if it's not just going to redirect to the index page this way we're preventing malicious user input from affecting the way that our application works",
+  "fetchedAt": "2026-03-14T09:24:11.482Z"
+}

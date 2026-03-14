@@ -1,0 +1,523 @@
+{
+  "videoId": "v226",
+  "youtubeId": "u2dvQx08nXM",
+  "segments": [
+    {
+      "text": "hi everyone thanks for joining on Clint",
+      "offset": 0,
+      "duration": 6960
+    },
+    {
+      "text": "Cameron product marketing manager at",
+      "offset": 3870,
+      "duration": 6630
+    },
+    {
+      "text": "sonar source and in this video I'm going",
+      "offset": 6960,
+      "duration": 5520
+    },
+    {
+      "text": "to demonstrate how sonar cube integrates",
+      "offset": 10500,
+      "duration": 4799
+    },
+    {
+      "text": "into your gitlab workflow and how that's",
+      "offset": 12480,
+      "duration": 5280
+    },
+    {
+      "text": "valuable for your team developers love",
+      "offset": 15299,
+      "duration": 4621
+    },
+    {
+      "text": "to write better code and feedback is an",
+      "offset": 17760,
+      "duration": 4470
+    },
+    {
+      "text": "important part of that process they",
+      "offset": 19920,
+      "duration": 3689
+    },
+    {
+      "text": "asked for feedback from their teammates",
+      "offset": 22230,
+      "duration": 3299
+    },
+    {
+      "text": "to find problems and to improve their",
+      "offset": 23609,
+      "duration": 4260
+    },
+    {
+      "text": "code and of course they want minimal",
+      "offset": 25529,
+      "duration": 5400
+    },
+    {
+      "text": "distractions there's no doubt developers",
+      "offset": 27869,
+      "duration": 5341
+    },
+    {
+      "text": "spend a lot of time and get lab and they",
+      "offset": 30929,
+      "duration": 5040
+    },
+    {
+      "text": "use merge requests so this is where we",
+      "offset": 33210,
+      "duration": 5420
+    },
+    {
+      "text": "should add value",
+      "offset": 35969,
+      "duration": 2661
+    },
+    {
+      "text": "let's see firsthand house owner cube",
+      "offset": 38809,
+      "duration": 4721
+    },
+    {
+      "text": "integrates with git lab and what that",
+      "offset": 41160,
+      "duration": 4829
+    },
+    {
+      "text": "can do for your merge request please",
+      "offset": 43530,
+      "duration": 4110
+    },
+    {
+      "text": "note this feature is available starting",
+      "offset": 45989,
+      "duration": 3901
+    },
+    {
+      "text": "with sonar cube developer edition and",
+      "offset": 47640,
+      "duration": 4320
+    },
+    {
+      "text": "it's easy to request a free trial online",
+      "offset": 49890,
+      "duration": 5849
+    },
+    {
+      "text": "at sonar cube org now before we see that",
+      "offset": 51960,
+      "duration": 6869
+    },
+    {
+      "text": "live demo let's take a quick look at a",
+      "offset": 55739,
+      "duration": 5581
+    },
+    {
+      "text": "typical workflow and that starts with",
+      "offset": 58829,
+      "duration": 5431
+    },
+    {
+      "text": "sonar lint in your IDE sonar lint is a",
+      "offset": 61320,
+      "duration": 8369
+    },
+    {
+      "text": "free open-source ide extension that's",
+      "offset": 64260,
+      "duration": 10219
+    },
+    {
+      "text": "available for four popular ide s.vs code",
+      "offset": 69689,
+      "duration": 10201
+    },
+    {
+      "text": "Visual Studio Eclipse and IntelliJ okay",
+      "offset": 74479,
+      "duration": 8441
+    },
+    {
+      "text": "now we're done working with our code in",
+      "offset": 79890,
+      "duration": 6089
+    },
+    {
+      "text": "our IDE and we're ready to open a PR so",
+      "offset": 82920,
+      "duration": 6120
+    },
+    {
+      "text": "we go ahead and launch that that of",
+      "offset": 85979,
+      "duration": 4530
+    },
+    {
+      "text": "course is going to kick off our CI",
+      "offset": 89040,
+      "duration": 4980
+    },
+    {
+      "text": "system and that will automatically kick",
+      "offset": 90509,
+      "duration": 5881
+    },
+    {
+      "text": "off a sonar cube analysis and when that",
+      "offset": 94020,
+      "duration": 5639
+    },
+    {
+      "text": "analysis is complete any issues found",
+      "offset": 96390,
+      "duration": 5970
+    },
+    {
+      "text": "will get decorated right back into your",
+      "offset": 99659,
+      "duration": 6240
+    },
+    {
+      "text": "git lab merge request ok let's see that",
+      "offset": 102360,
+      "duration": 8579
+    },
+    {
+      "text": "demo here I have an open merge request",
+      "offset": 105899,
+      "duration": 7201
+    },
+    {
+      "text": "in get lab and you can see that we have",
+      "offset": 110939,
+      "duration": 4890
+    },
+    {
+      "text": "a failed quality gate and the reason for",
+      "offset": 113100,
+      "duration": 4650
+    },
+    {
+      "text": "that failure is right here we have a",
+      "offset": 115829,
+      "duration": 5161
+    },
+    {
+      "text": "security hot spot that is unreviewed so",
+      "offset": 117750,
+      "duration": 4829
+    },
+    {
+      "text": "it's less than 100 percent the",
+      "offset": 120990,
+      "duration": 3449
+    },
+    {
+      "text": "particular quality gate that we're using",
+      "offset": 122579,
+      "duration": 4290
+    },
+    {
+      "text": "for this demo requires 100 percent",
+      "offset": 124439,
+      "duration": 6001
+    },
+    {
+      "text": "review on all security hotspots found so",
+      "offset": 126869,
+      "duration": 4911
+    },
+    {
+      "text": "we have a little bit of work to do",
+      "offset": 130440,
+      "duration": 3420
+    },
+    {
+      "text": "that's easy enough to",
+      "offset": 131780,
+      "duration": 4510
+    },
+    {
+      "text": "find out the details we click here which",
+      "offset": 133860,
+      "duration": 5490
+    },
+    {
+      "text": "will then take us right into sonar queue",
+      "offset": 136290,
+      "duration": 4950
+    },
+    {
+      "text": "you can see we have the same metrics",
+      "offset": 139350,
+      "duration": 3870
+    },
+    {
+      "text": "here in sonar cube as what we had in",
+      "offset": 141240,
+      "duration": 4500
+    },
+    {
+      "text": "that merge request and get lab and so",
+      "offset": 143220,
+      "duration": 5010
+    },
+    {
+      "text": "here's that security hot spot let's take",
+      "offset": 145740,
+      "duration": 4530
+    },
+    {
+      "text": "a closer look this takes us to our",
+      "offset": 148230,
+      "duration": 6240
+    },
+    {
+      "text": "security hot spot UI it's a dedicated",
+      "offset": 150270,
+      "duration": 7050
+    },
+    {
+      "text": "interface that is designed to allow you",
+      "offset": 154470,
+      "duration": 5370
+    },
+    {
+      "text": "to quickly and accurately review any",
+      "offset": 157320,
+      "duration": 5820
+    },
+    {
+      "text": "security hot spots now what we have",
+      "offset": 159840,
+      "duration": 5280
+    },
+    {
+      "text": "flagged here is across a potential",
+      "offset": 163140,
+      "duration": 5940
+    },
+    {
+      "text": "cross-site request forgery so it needs",
+      "offset": 165120,
+      "duration": 5940
+    },
+    {
+      "text": "some analysis and need some review to",
+      "offset": 169080,
+      "duration": 4650
+    },
+    {
+      "text": "determine so as a developer I would make",
+      "offset": 171060,
+      "duration": 5370
+    },
+    {
+      "text": "that determination and then potentially",
+      "offset": 173730,
+      "duration": 4920
+    },
+    {
+      "text": "change the status either to review fixed",
+      "offset": 176430,
+      "duration": 3870
+    },
+    {
+      "text": "in this case we're going to go ahead and",
+      "offset": 178650,
+      "duration": 5120
+    },
+    {
+      "text": "set that to safe change our status and",
+      "offset": 180300,
+      "duration": 7560
+    },
+    {
+      "text": "boom no more security hotspots to review",
+      "offset": 183770,
+      "duration": 7270
+    },
+    {
+      "text": "and in fact if we go back and then take",
+      "offset": 187860,
+      "duration": 7080
+    },
+    {
+      "text": "a look at that pull request sorry",
+      "offset": 191040,
+      "duration": 6510
+    },
+    {
+      "text": "merge request we can see that we now",
+      "offset": 194940,
+      "duration": 7170
+    },
+    {
+      "text": "have a passing quality gate it's great",
+      "offset": 197550,
+      "duration": 7140
+    },
+    {
+      "text": "so now we can merge the code that we",
+      "offset": 202110,
+      "duration": 5070
+    },
+    {
+      "text": "created with confidence knowing that we",
+      "offset": 204690,
+      "duration": 7320
+    },
+    {
+      "text": "have clean quality code okay so forget",
+      "offset": 207180,
+      "duration": 6150
+    },
+    {
+      "text": "lab you can see that we bring a",
+      "offset": 212010,
+      "duration": 3780
+    },
+    {
+      "text": "consistent valuable feature set with",
+      "offset": 213330,
+      "duration": 4350
+    },
+    {
+      "text": "every merge request and that starts with",
+      "offset": 215790,
+      "duration": 3660
+    },
+    {
+      "text": "the right information at the right place",
+      "offset": 217680,
+      "duration": 4860
+    },
+    {
+      "text": "at the right time and you can see that",
+      "offset": 219450,
+      "duration": 5430
+    },
+    {
+      "text": "we give you quality gate status as well",
+      "offset": 222540,
+      "duration": 4410
+    },
+    {
+      "text": "as metrics right in your merge request",
+      "offset": 224880,
+      "duration": 3690
+    },
+    {
+      "text": "you could also see that we're able to",
+      "offset": 226950,
+      "duration": 4890
+    },
+    {
+      "text": "block a merge when we have that read",
+      "offset": 228570,
+      "duration": 4139
+    },
+    {
+      "text": "quality gate",
+      "offset": 231840,
+      "duration": 2940
+    },
+    {
+      "text": "you could also could see how we were",
+      "offset": 232709,
+      "duration": 4261
+    },
+    {
+      "text": "able to drill down into the issue right",
+      "offset": 234780,
+      "duration": 4230
+    },
+    {
+      "text": "into sonar cube and then when we made a",
+      "offset": 236970,
+      "duration": 4950
+    },
+    {
+      "text": "change to that issue status it live",
+      "offset": 239010,
+      "duration": 6000
+    },
+    {
+      "text": "updated right back to get lab we have",
+      "offset": 241920,
+      "duration": 5490
+    },
+    {
+      "text": "support for get lab comm as well as get",
+      "offset": 245010,
+      "duration": 5910
+    },
+    {
+      "text": "lab self managed there's a lot more to",
+      "offset": 247410,
+      "duration": 5820
+    },
+    {
+      "text": "discover in the product drop down on the",
+      "offset": 250920,
+      "duration": 4379
+    },
+    {
+      "text": "sonar cube home page including a page",
+      "offset": 253230,
+      "duration": 6689
+    },
+    {
+      "text": "dedicated to our git lab integration now",
+      "offset": 255299,
+      "duration": 6331
+    },
+    {
+      "text": "that's it for the demo at sonar source",
+      "offset": 259919,
+      "duration": 4051
+    },
+    {
+      "text": "we're not done adding value future sonar",
+      "offset": 261630,
+      "duration": 4020
+    },
+    {
+      "text": "cube versions will add even more good",
+      "offset": 263970,
+      "duration": 3720
+    },
+    {
+      "text": "vibes to keep you writing",
+      "offset": 265650,
+      "duration": 5730
+    },
+    {
+      "text": "clean safe code and please be sure to",
+      "offset": 267690,
+      "duration": 5520
+    },
+    {
+      "text": "check out the rest of our YouTube videos",
+      "offset": 271380,
+      "duration": 4530
+    },
+    {
+      "text": "and subscribe to our channel thank you",
+      "offset": 273210,
+      "duration": 5270
+    },
+    {
+      "text": "for watching",
+      "offset": 275910,
+      "duration": 2570
+    }
+  ],
+  "fullText": "hi everyone thanks for joining on Clint Cameron product marketing manager at sonar source and in this video I'm going to demonstrate how sonar cube integrates into your gitlab workflow and how that's valuable for your team developers love to write better code and feedback is an important part of that process they asked for feedback from their teammates to find problems and to improve their code and of course they want minimal distractions there's no doubt developers spend a lot of time and get lab and they use merge requests so this is where we should add value let's see firsthand house owner cube integrates with git lab and what that can do for your merge request please note this feature is available starting with sonar cube developer edition and it's easy to request a free trial online at sonar cube org now before we see that live demo let's take a quick look at a typical workflow and that starts with sonar lint in your IDE sonar lint is a free open-source ide extension that's available for four popular ide s.vs code Visual Studio Eclipse and IntelliJ okay now we're done working with our code in our IDE and we're ready to open a PR so we go ahead and launch that that of course is going to kick off our CI system and that will automatically kick off a sonar cube analysis and when that analysis is complete any issues found will get decorated right back into your git lab merge request ok let's see that demo here I have an open merge request in get lab and you can see that we have a failed quality gate and the reason for that failure is right here we have a security hot spot that is unreviewed so it's less than 100 percent the particular quality gate that we're using for this demo requires 100 percent review on all security hotspots found so we have a little bit of work to do that's easy enough to find out the details we click here which will then take us right into sonar queue you can see we have the same metrics here in sonar cube as what we had in that merge request and get lab and so here's that security hot spot let's take a closer look this takes us to our security hot spot UI it's a dedicated interface that is designed to allow you to quickly and accurately review any security hot spots now what we have flagged here is across a potential cross-site request forgery so it needs some analysis and need some review to determine so as a developer I would make that determination and then potentially change the status either to review fixed in this case we're going to go ahead and set that to safe change our status and boom no more security hotspots to review and in fact if we go back and then take a look at that pull request sorry merge request we can see that we now have a passing quality gate it's great so now we can merge the code that we created with confidence knowing that we have clean quality code okay so forget lab you can see that we bring a consistent valuable feature set with every merge request and that starts with the right information at the right place at the right time and you can see that we give you quality gate status as well as metrics right in your merge request you could also see that we're able to block a merge when we have that read quality gate you could also could see how we were able to drill down into the issue right into sonar cube and then when we made a change to that issue status it live updated right back to get lab we have support for get lab comm as well as get lab self managed there's a lot more to discover in the product drop down on the sonar cube home page including a page dedicated to our git lab integration now that's it for the demo at sonar source we're not done adding value future sonar cube versions will add even more good vibes to keep you writing clean safe code and please be sure to check out the rest of our YouTube videos and subscribe to our channel thank you for watching",
+  "fetchedAt": "2026-03-14T09:25:50.191Z"
+}

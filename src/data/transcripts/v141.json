@@ -1,0 +1,148 @@
+{
+  "videoId": "v141",
+  "youtubeId": "gFaPDrVGdUo",
+  "segments": [
+    {
+      "text": "let's see how can we detect SQL",
+      "offset": 280,
+      "duration": 5519
+    },
+    {
+      "text": "injection issues in our code in this",
+      "offset": 2960,
+      "duration": 5520
+    },
+    {
+      "text": "case we are using a string",
+      "offset": 5799,
+      "duration": 5641
+    },
+    {
+      "text": "concatenation that can be attacked using",
+      "offset": 8480,
+      "duration": 6319
+    },
+    {
+      "text": "SQL injection we should see an issue",
+      "offset": 11440,
+      "duration": 6520
+    },
+    {
+      "text": "here but sunar lint is not detecting",
+      "offset": 14799,
+      "duration": 6121
+    },
+    {
+      "text": "these issues what are we going to do to",
+      "offset": 17960,
+      "duration": 7520
+    },
+    {
+      "text": "solve it connect our sunar lint to our",
+      "offset": 20920,
+      "duration": 8080
+    },
+    {
+      "text": "sonar Cloud instance that has already",
+      "offset": 25480,
+      "duration": 6639
+    },
+    {
+      "text": "analyzed the",
+      "offset": 29000,
+      "duration": 3119
+    },
+    {
+      "text": "code here we have the project key we",
+      "offset": 34879,
+      "duration": 8520
+    },
+    {
+      "text": "will connect sonar link and sonar",
+      "offset": 39440,
+      "duration": 7360
+    },
+    {
+      "text": "cloud and now we see that here we have",
+      "offset": 43399,
+      "duration": 6480
+    },
+    {
+      "text": "an issue it says change this code to not",
+      "offset": 46800,
+      "duration": 5559
+    },
+    {
+      "text": "construct SQL queries directly from your",
+      "offset": 49879,
+      "duration": 4961
+    },
+    {
+      "text": "Control",
+      "offset": 52359,
+      "duration": 2481
+    },
+    {
+      "text": "Data let's",
+      "offset": 57120,
+      "duration": 4800
+    },
+    {
+      "text": "see",
+      "offset": 58920,
+      "duration": 3000
+    },
+    {
+      "text": "the",
+      "offset": 62079,
+      "duration": 4881
+    },
+    {
+      "text": "issue and explains why this is an",
+      "offset": 63519,
+      "duration": 6920
+    },
+    {
+      "text": "issue and how can we fix",
+      "offset": 66960,
+      "duration": 8199
+    },
+    {
+      "text": "it we already have here the",
+      "offset": 70439,
+      "duration": 4720
+    },
+    {
+      "text": "code and we are going to",
+      "offset": 75479,
+      "duration": 3960
+    },
+    {
+      "text": "replace the code with prepare",
+      "offset": 82920,
+      "duration": 5320
+    },
+    {
+      "text": "statements",
+      "offset": 88840,
+      "duration": 3000
+    },
+    {
+      "text": "now we can see that no longer we have",
+      "offset": 98640,
+      "duration": 6560
+    },
+    {
+      "text": "the",
+      "offset": 102840,
+      "duration": 2360
+    },
+    {
+      "text": "issue",
+      "offset": 112799,
+      "duration": 3000
+    }
+  ],
+  "fullText": "let's see how can we detect SQL injection issues in our code in this case we are using a string concatenation that can be attacked using SQL injection we should see an issue here but sunar lint is not detecting these issues what are we going to do to solve it connect our sunar lint to our sonar Cloud instance that has already analyzed the code here we have the project key we will connect sonar link and sonar cloud and now we see that here we have an issue it says change this code to not construct SQL queries directly from your Control Data let's see the issue and explains why this is an issue and how can we fix it we already have here the code and we are going to replace the code with prepare statements now we can see that no longer we have the issue",
+  "fetchedAt": "2026-03-14T09:24:04.393Z"
+}

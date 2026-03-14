@@ -1,0 +1,2093 @@
+{
+  "videoId": "v38",
+  "youtubeId": "m3NFhJTTMdc",
+  "segments": [
+    {
+      "text": "Hello, I'm John Clifton and I'm a product manager at Sonar. Now, AI has been part of our lives as developers for",
+      "offset": 17000,
+      "duration": 5000
+    },
+    {
+      "text": "a very long time. It's been suggesting fixes. It's been helping you refactor. It's been completing functions for you.",
+      "offset": 22000,
+      "duration": 5000
+    },
+    {
+      "text": "But more than ever, it's becoming a larger part of our life. But as an autonomous developer, more and more now,",
+      "offset": 27000,
+      "duration": 6000
+    },
+    {
+      "text": "we can delegate work to agents and leave them running for minutes, hours, even days. And this is becoming exciting, but",
+      "offset": 33000,
+      "duration": 7000
+    },
+    {
+      "text": "at the same time, how do you really see the benefits? As an enterprise, you can't just ship these things that are coming out the door. They need to be",
+      "offset": 40000,
+      "duration": 6000
+    },
+    {
+      "text": "verified. They need to be proven to be production grade. This is a big problem. But luckily, I've got two people who can",
+      "offset": 46000,
+      "duration": 5000
+    },
+    {
+      "text": "talk to us about how we can address this. I'm very pleased to welcome VB who leads developer experience and community",
+      "offset": 51000,
+      "duration": 6000
+    },
+    {
+      "text": "initiatives for Codex and Amir. He's been instrumental in bringing GPT 5.3 Codex, Codex app and Codex Spark to",
+      "offset": 57000,
+      "duration": 6000
+    },
+    {
+      "text": "millions of developers across the globe. Prior to OpenAI, he led developer experience at Hugging Face. And joining",
+      "offset": 63000,
+      "duration": 5000
+    },
+    {
+      "text": "us is Tom Howlet. He's the product director for code quality at Sonar. His team is responsible for developing Sonar's analysis engine and bringing",
+      "offset": 68000,
+      "duration": 7000
+    },
+    {
+      "text": "that into the Agentic workflow. This represents the deterministic bedrock that provides the ground truth enabling",
+      "offset": 75000,
+      "duration": 5000
+    },
+    {
+      "text": "agents to verify their own work. So let's get started. Now OpenAI with Codex is helping us build these agentic",
+      "offset": 80000,
+      "duration": 6000
+    },
+    {
+      "text": "workflows. But even more than that, OpenAI is one of these enterprises that is having to build in this agentic world. So the big question to start with",
+      "offset": 86000,
+      "duration": 7000
+    },
+    {
+      "text": "is how on earth are you doing it? How's how are you getting to production with this technology? I'm glad you asked that question. To",
+      "offset": 93000,
+      "duration": 6000
+    },
+    {
+      "text": "be honest it's it's really hard to imagine OpenAI functioning at the speed as it does and shipping features at the",
+      "offset": 99000,
+      "duration": 6000
+    },
+    {
+      "text": "speed of practically like at this point without having Codex deeply ingrained in its developer workflows",
+      "offset": 105000,
+      "duration": 8000
+    },
+    {
+      "text": "even you know product designers PMs and like everyone has their own",
+      "offset": 113000,
+      "duration": 6000
+    },
+    {
+      "text": "workflows around Codex the app IDE CLI and so on and so forth and and",
+      "offset": 119000,
+      "duration": 6000
+    },
+    {
+      "text": "and there are some quite interesting ways in which people use it. First",
+      "offset": 125000,
+      "duration": 5000
+    },
+    {
+      "text": "of all, all the code within OpenAI 100% is reviewed by Codex, right? All",
+      "offset": 130000,
+      "duration": 6000
+    },
+    {
+      "text": "pull requests are reviewed by Codex. None of the pull requests are merged without a review. Second of all,",
+      "offset": 136000,
+      "duration": 7000
+    },
+    {
+      "text": "majority of the code written by the developers is assisted by Codex either",
+      "offset": 143000,
+      "duration": 6000
+    },
+    {
+      "text": "within the with the Codex app or with the Codex CLI or with the Codex IDE",
+      "offset": 149000,
+      "duration": 5000
+    },
+    {
+      "text": "extension. within like Cursor, VS Code and so on and so forth.",
+      "offset": 154000,
+      "duration": 6000
+    },
+    {
+      "text": "At the same point Codex has been quite instrumental for the research team",
+      "offset": 160000,
+      "duration": 5000
+    },
+    {
+      "text": "itself to to help build Codex 5.3 which is which is the recent model",
+      "offset": 165000,
+      "duration": 5000
+    },
+    {
+      "text": "that we just released wherein Codex acted as like an on call support",
+      "offset": 170000,
+      "duration": 6000
+    },
+    {
+      "text": "agent not only babysitting training runs but also trying to find config mismatches trying to figure out where things might go wrong and alert team where",
+      "offset": 176000,
+      "duration": 7000
+    },
+    {
+      "text": "it thought that the that it needed it needed the support from the team itself.\nLast but not the least like one of the things that that still amazes me is that product designers use Codex",
+      "offset": 183000,
+      "duration": 10000
+    },
+    {
+      "text": "with Figma to to create you know nice UIs, nice sort of assets and",
+      "offset": 193000,
+      "duration": 8000
+    },
+    {
+      "text": "then again use Codex to to convert these these assets into actual",
+      "offset": 201000,
+      "duration": 8000
+    },
+    {
+      "text": "code. And last but not the least, one of the examples that I wanted to",
+      "offset": 209000,
+      "duration": 6000
+    },
+    {
+      "text": "share was someone from my team, Brent, who is a video producer. He recently use",
+      "offset": 215000,
+      "duration": 6000
+    },
+    {
+      "text": "Codex to edit videos. And the way he did that was by literally asking Codex,",
+      "offset": 221000,
+      "duration": 6000
+    },
+    {
+      "text": "here are some some video snippets and I want it to be synced to certain specific",
+      "offset": 227000,
+      "duration": 7000
+    },
+    {
+      "text": "transcript or I want you to create like YouTube shots out of this or Instagram shots out of this and so on and so",
+      "offset": 234000,
+      "duration": 6000
+    },
+    {
+      "text": "forth. And Codex ended up doing was literally creating a bridge between Codex and Adobe Premiere Pro.",
+      "offset": 240000,
+      "duration": 6000
+    },
+    {
+      "text": "And then using that to create out different segments of videos",
+      "offset": 246000,
+      "duration": 7000
+    },
+    {
+      "text": "also suggesting proactively suggesting where to cut what kind of snippets are interesting and so on and so forth.",
+      "offset": 253000,
+      "duration": 7000
+    },
+    {
+      "text": "And this led to you know all the all the video videos that you saw on OpenAI for",
+      "offset": 260000,
+      "duration": 6000
+    },
+    {
+      "text": "developers for the Codex app were leveraged Codex and this",
+      "offset": 266000,
+      "duration": 5000
+    },
+    {
+      "text": "bridge. Can I just jump in because you said about Codex reviewing the code? Yeah.",
+      "offset": 271000,
+      "duration": 6000
+    },
+    {
+      "text": "Is there also a human review? Is there any other review as well on top of the the Codex doing review? Right.",
+      "offset": 277000,
+      "duration": 5000
+    },
+    {
+      "text": "Of course there are like varying criticalities of code, right? code that is shipped directly on on",
+      "offset": 282000,
+      "duration": 6000
+    },
+    {
+      "text": "devices or on the web. All of those do get like a human review as",
+      "offset": 288000,
+      "duration": 6000
+    },
+    {
+      "text": "well just to make sure that none of the nothing is missed because of",
+      "offset": 294000,
+      "duration": 6000
+    },
+    {
+      "text": "lack of context for the agent or just generally to make sure that the code being merged has like",
+      "offset": 300000,
+      "duration": 5000
+    },
+    {
+      "text": "meets the quality that we expect. At the same point there are some non-critical areas. For example, I like",
+      "offset": 305000,
+      "duration": 7000
+    },
+    {
+      "text": "to use Codex to try out different skills or to try out different automations. In those cases, I would",
+      "offset": 312000,
+      "duration": 6000
+    },
+    {
+      "text": "just trust Codex and its and its review that it works the way it does, right? And of course like when we when",
+      "offset": 318000,
+      "duration": 7000
+    },
+    {
+      "text": "we push things to production, we want to make sure that it it meets the quality bar. And of course in those",
+      "offset": 325000,
+      "duration": 6000
+    },
+    {
+      "text": "cases we would leverage a steady suite of test cases or and also just",
+      "offset": 331000,
+      "duration": 6000
+    },
+    {
+      "text": "like human intuition and so on. Okay. So you're really kind of changing the process depending on the risk profile of the application that you're",
+      "offset": 337000,
+      "duration": 8000
+    },
+    {
+      "text": "putting out. Yeah, that makes sense. Cool. And can I ask you so you talked about how I mean different people seem to have",
+      "offset": 345000,
+      "duration": 7000
+    },
+    {
+      "text": "really creative ways of using Codex. How do how do the teams share those ideas so that everybody's learning from",
+      "offset": 352000,
+      "duration": 6000
+    },
+    {
+      "text": "each other? That is a very good question. So we have this we have this channel within Slack. It's",
+      "offset": 358000,
+      "duration": 6000
+    },
+    {
+      "text": "called Codex hot tips and it's it's brimming with developer excitement. You know there are people",
+      "offset": 364000,
+      "duration": 6000
+    },
+    {
+      "text": "who are sharing how they're using Codex with Slack. For example I use Slack via Codex quite a bit right.",
+      "offset": 370000,
+      "duration": 7000
+    },
+    {
+      "text": "I I use it to prepare my morning briefing of like all right these are the channels that I want to look at. Here is",
+      "offset": 377000,
+      "duration": 8000
+    },
+    {
+      "text": "a summary of what has happened in the past 24 hours. Especially this is quite important given that we're a globally",
+      "offset": 385000,
+      "duration": 6000
+    },
+    {
+      "text": "distributed team. I'm based in Paris and you know rest of my team is based in in the US. Some are based in Singapore and",
+      "offset": 391000,
+      "duration": 5000
+    },
+    {
+      "text": "so on. So Codex heads me in this case to sort of give me like a summary. At the same time you know",
+      "offset": 396000,
+      "duration": 6000
+    },
+    {
+      "text": "people are doing all sorts of novel things. For example, someone yesterday posted about about a PR",
+      "offset": 402000,
+      "duration": 7000
+    },
+    {
+      "text": "review skill which is actually part of the open source",
+      "offset": 409000,
+      "duration": 6000
+    },
+    {
+      "text": "Codex GitHub repo. It's called babyset PRs. And what it does is as",
+      "offset": 415000,
+      "duration": 6000
+    },
+    {
+      "text": "and when your PR is open it would continue polling the PR to check if",
+      "offset": 421000,
+      "duration": 5000
+    },
+    {
+      "text": "there are any issues. Okay. And if there are any issues it would flag it to the to the end user itself and",
+      "offset": 426000,
+      "duration": 6000
+    },
+    {
+      "text": "of course in most cases it would just see the issue and it would you know fix that issue and you don't even have",
+      "offset": 432000,
+      "duration": 8000
+    },
+    {
+      "text": "to worry about but in some cases maybe it's missing some sort of an access token and so on. So this is where the",
+      "offset": 440000,
+      "duration": 7000
+    },
+    {
+      "text": "agent proactively tells you what to do, right? And you know this extends",
+      "offset": 447000,
+      "duration": 5000
+    },
+    {
+      "text": "across like all of our CI systems as well. wherein whenever I'm pushing something to our production code base and and like the CI",
+      "offset": 452000,
+      "duration": 6000
+    },
+    {
+      "text": "is complaining I honestly cannot be bothered to like look at the logs and why is this not working? What should I do and so on. So, I have a skill in this case which would",
+      "offset": 458000,
+      "duration": 11000
+    },
+    {
+      "text": "just look at the CI logs and would just fix it, right? And so far it has not let me down. Wow. Yeah. Yeah. That's just so much making the life of a developer easier, right? So those painful bits that slow",
+      "offset": 469000,
+      "duration": 12000
+    },
+    {
+      "text": "you down. Nice. And I think I mean that's one of the things we we we ran a survey recently and I think we saw I think the number was 96% of developers don't trust the code that that's that they own. It's being produced by a but AI but they're",
+      "offset": 481000,
+      "duration": 13000
+    },
+    {
+      "text": "responsible for it. How I I understand that you've got sort of different levels of of checking in place. How do we go",
+      "offset": 494000,
+      "duration": 5000
+    },
+    {
+      "text": "about helping our developers be confident that the thing they're going to get called about called up at 3:00 in the morning about is going to be good",
+      "offset": 499000,
+      "duration": 7000
+    },
+    {
+      "text": "enough that they can they can sleep soundly. So I mean I guess I guess from our",
+      "offset": 506000,
+      "duration": 6000
+    },
+    {
+      "text": "perspective at Sonar, right, the Codex is producing some amazing code. It's really high quality, but you never quite",
+      "offset": 512000,
+      "duration": 7000
+    },
+    {
+      "text": "know what you're going to get, right? You need to verify and you need to verify deterministically. And we were talking a bit earlier about this about",
+      "offset": 519000,
+      "duration": 5000
+    },
+    {
+      "text": "how you have these these checks that that Codex must do to ensure that it's correct. So at Sonar we've been doing",
+      "offset": 524000,
+      "duration": 6000
+    },
+    {
+      "text": "static analysis for a long time. We've been verifying code deterministically to make sure it hasn't got certain bugs or",
+      "offset": 530000,
+      "duration": 6000
+    },
+    {
+      "text": "it's maintainable or it's secure. So we can do that same thing now with Codex, right? So by using our MCP the",
+      "offset": 536000,
+      "duration": 7000
+    },
+    {
+      "text": "MCP can call out to code the Codex can call out to Sonar and say are there",
+      "offset": 543000,
+      "duration": 5000
+    },
+    {
+      "text": "any issues on my code in the same way? And I think these these checks are absolutely key and and you know they",
+      "offset": 548000,
+      "duration": 7000
+    },
+    {
+      "text": "have to be deterministic and the more deterministic checks you can do, the safer that code is, the more we can",
+      "offset": 555000,
+      "duration": 5000
+    },
+    {
+      "text": "build confidence with the developers and the less work they have to do in verifying the code themselves, right? Because if they're verifying every line of production code in an enterprise, it it's going to slow us down so much we're",
+      "offset": 560000,
+      "duration": 8000
+    },
+    {
+      "text": "not going to see the benefits from AI. So we need to do as much as we possibly can for the developer to make that",
+      "offset": 568000,
+      "duration": 5000
+    },
+    {
+      "text": "efficient and really see the gains that we expect from AI. And I think like determinism here is is",
+      "offset": 573000,
+      "duration": 6000
+    },
+    {
+      "text": "kind of the key, right? Like because I see this all the time like every time especially for like open source",
+      "offset": 579000,
+      "duration": 5000
+    },
+    {
+      "text": "projects like Codex itself. If something is not working, one of the key things is the ability to reproduce the reason why it's not working, right? And if you have these deterministic tests, it just makes it so much more easier to find the root cause of a problem, right? Like often times we would see engineering teams not just within OpenAI like across the globe complaining that hey like I have this flaky test within within within my CI and like you know",
+      "offset": 584000,
+      "duration": 18000
+    },
+    {
+      "text": "you just you you you cannot really do anything except just like rerun the CI and you know hope that the flaky test",
+      "offset": 602000,
+      "duration": 6000
+    },
+    {
+      "text": "pass, right? And I think this is where sort of tools like Sonar come in and and sort of like help you with the deterministic tests that just work.",
+      "offset": 608000,
+      "duration": 7000
+    },
+    {
+      "text": "Yeah. Yeah. It's all about giving the agent as much data as possible, right? And whether that's from logs or whether it's from from other checks coming",
+      "offset": 615000,
+      "duration": 10000
+    },
+    {
+      "text": "through then we can really enable the agents to do a good job. I think we kind of expect the agent to be perfect kind\nof running blind, right? Which isn't isn't realistic, is it?",
+      "offset": 625000,
+      "duration": 8000
+    },
+    {
+      "text": "It needs to have visibility of all these things and this is stuff that we would run anyway and so let's give the agent the same visibility that the developer had",
+      "offset": 633000,
+      "duration": 7000
+    },
+    {
+      "text": "in the first place but it can process it so much faster. That's the beauty. That's the addictive nature of this stuff.\nWell, that's the thing, isn't it? So, how do you balance you you want to go as fast as possible. You want to give your your teams the autonomy to try out crazy",
+      "offset": 640000,
+      "duration": 8000
+    },
+    {
+      "text": "stuff because the the sort of the ability to deliver quickly and at high quality is a competitive advantage. Now,",
+      "offset": 648000,
+      "duration": 6000
+    },
+    {
+      "text": "how do you how do you balance helping people letting people go fast, try things, break stuff with the the real",
+      "offset": 654000,
+      "duration": 6000
+    },
+    {
+      "text": "needs of real companies, which is this thing has to be good enough to go into production? How how do you have that that sort of almost double standard?",
+      "offset": 660000,
+      "duration": 6000
+    },
+    {
+      "text": "Yeah, I think it's like so like a quick anecdote from some of the things that I was doing quite recently is we released the Codex app, right? And",
+      "offset": 666000,
+      "duration": 6000
+    },
+    {
+      "text": "it's it's been widely acclaimed and a lot of developers are using it today. And part of this Codex app we we",
+      "offset": 672000,
+      "duration": 8000
+    },
+    {
+      "text": "released maybe 15 20 set of curated skills which users can use to then",
+      "offset": 680000,
+      "duration": 5000
+    },
+    {
+      "text": "augment what they do with Codex as of today, right? And so these skills are are something like how do you connect",
+      "offset": 685000,
+      "duration": 7000
+    },
+    {
+      "text": "with Figma, how do you take a screenshot, how do you control a browser and or like how do you interact with",
+      "offset": 692000,
+      "duration": 7000
+    },
+    {
+      "text": "GitHub and so on and so forth. But then again like these skills itself",
+      "offset": 699000,
+      "duration": 5000
+    },
+    {
+      "text": "you cannot just prompt an agent to create a skill, right? You need like some sort of a clear way to test these",
+      "offset": 704000,
+      "duration": 7000
+    },
+    {
+      "text": "skills out in a way that you have like a full coverage of not just user",
+      "offset": 711000,
+      "duration": 7000
+    },
+    {
+      "text": "systems platforms and also just like different edge cases that you might",
+      "offset": 718000,
+      "duration": 6000
+    },
+    {
+      "text": "face, right? And so as part of that sort of trial and error and like coming",
+      "offset": 724000,
+      "duration": 5000
+    },
+    {
+      "text": "up with these with these skills and like how they how they work and so on what I ended up doing was like prompting",
+      "offset": 729000,
+      "duration": 6000
+    },
+    {
+      "text": "Codex to create like a suite of test cases and these test cases",
+      "offset": 735000,
+      "duration": 7000
+    },
+    {
+      "text": "would would essentially be would try and like sort of prompt the skill in different ways right and and and",
+      "offset": 742000,
+      "duration": 7000
+    },
+    {
+      "text": "try and see whether it gives like a deterministic output that I expected right and then it just run this on a CI",
+      "offset": 749000,
+      "duration": 7000
+    },
+    {
+      "text": "and like continue like every time I would make a change to the skill it would continue running these test cases and so this way we effectively run",
+      "offset": 756000,
+      "duration": 6000
+    },
+    {
+      "text": "like evaluation for all of these skills right and and and hence we",
+      "offset": 762000,
+      "duration": 6000
+    },
+    {
+      "text": "were sure that these skills would work across different systems different user profiles for different needs and so",
+      "offset": 768000,
+      "duration": 6000
+    },
+    {
+      "text": "on and so forth. Oh that's great. So actually your you've got tests around your tooling to make sure your tooling is working then you",
+      "offset": 774000,
+      "duration": 4000
+    },
+    {
+      "text": "give that to the agent. Yes. Yeah. That's fantastic. But be using the agent to do the test for the tooling, too. So,",
+      "offset": 778000,
+      "duration": 4000
+    },
+    {
+      "text": "that's perfect. Yeah, I need to do that with the skills I've been using. I mean, that's what I was going to ask actually. I mean, it's really two",
+      "offset": 782000,
+      "duration": 5000
+    },
+    {
+      "text": "things. So, you talked about connecting to to different skills. I think one of the things that's that's becoming more",
+      "offset": 787000,
+      "duration": 5000
+    },
+    {
+      "text": "and more frightening is how much how much power an agent has to do do so many",
+      "offset": 792000,
+      "duration": 5000
+    },
+    {
+      "text": "different things. But at the same time, do you want to give it all that freedom to go on a rampage? How how how do you",
+      "offset": 797000,
+      "duration": 6000
+    },
+    {
+      "text": "recommend or how does Codex help people run in a safe environment and still move fast with agents?\nLook, the the demand for Codex is insatiable at this point, right? Like since",
+      "offset": 803000,
+      "duration": 8000
+    },
+    {
+      "text": "the start of the year, we have tripled the amount of developers building on Codex, right? Across different",
+      "offset": 811000,
+      "duration": 6000
+    },
+    {
+      "text": "surfaces, the app CLI, IDE, extension and so on and so forth, right? Which",
+      "offset": 817000,
+      "duration": 6000
+    },
+    {
+      "text": "essentially means that people want to build, right? people just want to build and they want to try and experiment things. We're literally limited by creativity at this point, right? And",
+      "offset": 823000,
+      "duration": 8000
+    },
+    {
+      "text": "at the same point this sort of throws the liability of making sure what Codex you",
+      "offset": 831000,
+      "duration": 6000
+    },
+    {
+      "text": "know produces and the way it produces onto the harness itself, right? And",
+      "offset": 837000,
+      "duration": 7000
+    },
+    {
+      "text": "the way we do it is by is by providing a few options to the developer",
+      "offset": 844000,
+      "duration": 7000
+    },
+    {
+      "text": "itself. For example, we have a nice sandbox and and you can you can set",
+      "offset": 851000,
+      "duration": 5000
+    },
+    {
+      "text": "your network rules. For example, if you want Codex to use web search, you",
+      "offset": 856000,
+      "duration": 5000
+    },
+    {
+      "text": "can allow it to use web search. If if you think it's not safe enough for it to use web search, then you can just",
+      "offset": 861000,
+      "duration": 5000
+    },
+    {
+      "text": "disallow Codex to use it. You can also define rules for what kind of",
+      "offset": 866000,
+      "duration": 6000
+    },
+    {
+      "text": "CLI commands or what kind of bash commands is it is it allowed to run. Is Codex allowed to commit on your",
+      "offset": 872000,
+      "duration": 5000
+    },
+    {
+      "text": "behalf? Is Codex allowed to open a pull request on your behalf or is Codex allowed to rm -rf on your behalf or not?",
+      "offset": 877000,
+      "duration": 6000
+    },
+    {
+      "text": "Right? At the same point you can you can decide whether Codex has the ability to write or does it does it",
+      "offset": 883000,
+      "duration": 7000
+    },
+    {
+      "text": "only have the ability to read, right? And and and not just that like you",
+      "offset": 890000,
+      "duration": 8000
+    },
+    {
+      "text": "can if you're an enterprise you can sort of like set up these granular settings for your for your entire",
+      "offset": 898000,
+      "duration": 7000
+    },
+    {
+      "text": "company or for developers who are using within your company on what's allowed and what's not allowed as well. That's great. I think I mean one of the",
+      "offset": 905000,
+      "duration": 5000
+    },
+    {
+      "text": "questions that's always very interesting is is how much of the responsibility of making good choices is on me as a",
+      "offset": 910000,
+      "duration": 6000
+    },
+    {
+      "text": "developer versus how much is it on on Codex to give us help us make good choices or give us guard rails to work",
+      "offset": 916000,
+      "duration": 5000
+    },
+    {
+      "text": "inside. And that's I mean that's is that something we we can talk about what sort of how Sonar plays in that?",
+      "offset": 921000,
+      "duration": 5000
+    },
+    {
+      "text": "Yeah I mean even beyond Sonar I think you have to start with the organization right. So if you're",
+      "offset": 926000,
+      "duration": 5000
+    },
+    {
+      "text": "developing code with with Codex you need to go it needs to be at the same standard. It needs to be secure reliable",
+      "offset": 931000,
+      "duration": 6000
+    },
+    {
+      "text": "maintainable as it was when humans were developing it. The hope is that we can do it much much faster. So you need to",
+      "offset": 937000,
+      "duration": 6000
+    },
+    {
+      "text": "put all of those same constraints, all of those same checks and verifications that you had before with human",
+      "offset": 943000,
+      "duration": 7000
+    },
+    {
+      "text": "developers and somehow replicate that in an agent environment that can that can help us increase productivity. That's",
+      "offset": 950000,
+      "duration": 5000
+    },
+    {
+      "text": "the actual thing. So I think you know with organizations I'm talking to they want to apply the same policies they",
+      "offset": 955000,
+      "duration": 5000
+    },
+    {
+      "text": "always had. They don't want to make any compromises for this speed and they can't right. They've still got the same risk with the applications that they",
+      "offset": 960000,
+      "duration": 5000
+    },
+    {
+      "text": "launch. So, so it's perfect that you give that granularity of control and",
+      "offset": 965000,
+      "duration": 7000
+    },
+    {
+      "text": "it's a lot of onus on the organization to make sure that they're they're putting the same control in but enabling",
+      "offset": 972000,
+      "duration": 5000
+    },
+    {
+      "text": "their developers to go faster. Now, Sonar, we're making sure we're building our tools so they can interact",
+      "offset": 977000,
+      "duration": 6000
+    },
+    {
+      "text": "directly with the agent and that enables the agent to do that work and not have to have a human in the loop all the",
+      "offset": 983000,
+      "duration": 5000
+    },
+    {
+      "text": "time. I think that's the key, right? The more we can enable the agent, the better. but absolutely a standard",
+      "offset": 988000,
+      "duration": 6000
+    },
+    {
+      "text": "shouldn't be compromised and but we want to unleash this amazing capability.",
+      "offset": 994000,
+      "duration": 6000
+    },
+    {
+      "text": "And so it's really a matter of tooling I think more than anything else and but also good policies in the same sense",
+      "offset": 1000000,
+      "duration": 6000
+    },
+    {
+      "text": "and not compromising on the policies but how can we apply those policies in this new world and I guess to some extent that you you",
+      "offset": 1006000,
+      "duration": 5000
+    },
+    {
+      "text": "it's not when we talk about developers here we don't necessarily mean proper professional developers that have been developing 24 hours a day let's not get into that but the idea is it's it's now other people developers you've got are people",
+      "offset": 1011000,
+      "duration": 11000
+    },
+    {
+      "text": "like me so I used to be a developer in the distant past and I want to get back into it again. And it's it's one of those things where I won't necessarily know about SQL injection. I won't necessarily know about cross-site scripting problems and",
+      "offset": 1022000,
+      "duration": 10000
+    },
+    {
+      "text": "it becomes even more important to have guard rails that that will be applied and that will make sense even for",
+      "offset": 1032000,
+      "duration": 7000
+    },
+    {
+      "text": "someone who has good intentions but probably doesn't have the background to be totally rock solid. And that's how",
+      "offset": 1039000,
+      "duration": 6000
+    },
+    {
+      "text": "does that work from a from a Codex point of view? Who are you designing for? Codex definitely is for everyone, right?",
+      "offset": 1045000,
+      "duration": 5000
+    },
+    {
+      "text": "like we want users to to develop to build things with Codex and we of course want to want them to have the confidence",
+      "offset": 1050000,
+      "duration": 7000
+    },
+    {
+      "text": "of building things with Codex, right? So one of my favorite examples of Codex in the wild is is our pull",
+      "offset": 1057000,
+      "duration": 5000
+    },
+    {
+      "text": "request review, right? where Codex of course would look at the diff of all the changes that it has done that you have made within the pull",
+      "offset": 1062000,
+      "duration": 8000
+    },
+    {
+      "text": "request and it would contextualize it with the with the rest of the files in the in the repository. So you're not",
+      "offset": 1070000,
+      "duration": 6000
+    },
+    {
+      "text": "just bounded by whatever changes you've done but but by the overall context of the repository and sometimes that",
+      "offset": 1076000,
+      "duration": 6000
+    },
+    {
+      "text": "it would it would flag issues which which may not be caused which may come up as a consequence of your pull",
+      "offset": 1082000,
+      "duration": 7000
+    },
+    {
+      "text": "request. And also like you know which are just some gotchas that you should know about. And especially for large",
+      "offset": 1089000,
+      "duration": 8000
+    },
+    {
+      "text": "code bases, this is this is really important because this gives a developer the confidence that you",
+      "offset": 1097000,
+      "duration": 6000
+    },
+    {
+      "text": "can be sure that whatever you're merging is is secure and it it it works the way it does.\nAs an example of this like recently Codex recently we released Codex 5.3 Spark which is our which is our fastest model",
+      "offset": 1103000,
+      "duration": 15000
+    },
+    {
+      "text": "thanks to our partnership with Cerebras and Codex by default writes the docs for itself because you know why not and",
+      "offset": 1118000,
+      "duration": 10000
+    },
+    {
+      "text": "so Codex wrote the docs and it opened a pull request and I was reviewing the pull request And we have a lot of surfaces which developers would sort of interact with when it comes to the docs, right? So there would be docs about IDE docs about",
+      "offset": 1128000,
+      "duration": 13000
+    },
+    {
+      "text": "the app and so on and so forth. And this particular model at the time that we that we launched it was only",
+      "offset": 1141000,
+      "duration": 7000
+    },
+    {
+      "text": "launched for pro subscribers. And for some reason Codex Spark",
+      "offset": 1148000,
+      "duration": 7000
+    },
+    {
+      "text": "didn't really make that you know change and so when I prompted it to",
+      "offset": 1155000,
+      "duration": 7000
+    },
+    {
+      "text": "sort of fix it automatically the Codex review on the pull request flag that I should also sort of make this",
+      "offset": 1162000,
+      "duration": 7000
+    },
+    {
+      "text": "node on the on the app docs also on the CLI docs just so that you know",
+      "offset": 1169000,
+      "duration": 6000
+    },
+    {
+      "text": "everyone is aware that this is how you use it or these are the are the segments of user who should use it right",
+      "offset": 1175000,
+      "duration": 6000
+    },
+    {
+      "text": "and this is pure Clearly like the only reason why it was able to flag this was because it had the contextual knowledge",
+      "offset": 1181000,
+      "duration": 6000
+    },
+    {
+      "text": "of the rest of the repo and the rest of the docs. Yeah, it's really nice to hear that how complimentary the two are, right? So",
+      "offset": 1187000,
+      "duration": 6000
+    },
+    {
+      "text": "Codex comes up with a certain type of issues that are very kind of contextual over what's being built. It understands",
+      "offset": 1193000,
+      "duration": 5000
+    },
+    {
+      "text": "different things and then Sonar is coming up with issues that are contextual as well, right? We're not",
+      "offset": 1198000,
+      "duration": 6000
+    },
+    {
+      "text": "just analyzing the code that's there. We we've got aware of the whole repo, the whole build, everything that's been the thing. But they're different types of issues where they'll kind of the sea and I think together the two really complement each other to give good",
+      "offset": 1204000,
+      "duration": 8000
+    },
+    {
+      "text": "security. I think you know your point around developers could be all sorts of different people going forward. Right.",
+      "offset": 1212000,
+      "duration": 6000
+    },
+    {
+      "text": "It's it's not it's not quite the same skill set that's necessarily required really increases that need for that",
+      "offset": 1218000,
+      "duration": 7000
+    },
+    {
+      "text": "check and those and that tooling to make sure that everything is is is good. And obviously things like taint analysis where injection attacks and things like that can be found are some of the most",
+      "offset": 1225000,
+      "duration": 8000
+    },
+    {
+      "text": "critical ones and our analyzers can go in and sort of deterministically follow the piles and make sure that those all",
+      "offset": 1233000,
+      "duration": 6000
+    },
+    {
+      "text": "those paths are safe. And that's something that we invest a lot in as well as kind of other issues like,",
+      "offset": 1239000,
+      "duration": 7000
+    },
+    {
+      "text": "you know, things like your null reference checks and stuff like that which are super hard just to see if you're looking at a single file, but if you can follow",
+      "offset": 1246000,
+      "duration": 7000
+    },
+    {
+      "text": "the path all the way through the files, which our analyzers do, and understand all the different types that",
+      "offset": 1253000,
+      "duration": 7000
+    },
+    {
+      "text": "are in there. So, you know, we we use the artifacts from a build as part of our analysis. And that's a new analysis",
+      "offset": 1260000,
+      "duration": 6000
+    },
+    {
+      "text": "service that's available in MCP is effectively doing that. It's joining up the code you've just written with the",
+      "offset": 1266000,
+      "duration": 7000
+    },
+    {
+      "text": "last build it seam and it's kind of together it can do a really deep analysis and find those issues which thing and I think together they find a good set a good set of issues and keep us keep us a bit safer in an",
+      "offset": 1273000,
+      "duration": 8000
+    },
+    {
+      "text": "increasingly risky world and I think that's the thing it's it's interesting because it's it's not just",
+      "offset": 1281000,
+      "duration": 5000
+    },
+    {
+      "text": "about is this particular piece of code good enough to kind of production at this point it's almost like an educational thing both in terms of me as",
+      "offset": 1286000,
+      "duration": 6000
+    },
+    {
+      "text": "someone coming back into development helping me understand some of the the technology that perhaps I haven't touched before but also making the agent",
+      "offset": 1292000,
+      "duration": 7000
+    },
+    {
+      "text": "smarter for the next time around. So I guess you get this virtuous cycle of where things get faster and faster and",
+      "offset": 1299000,
+      "duration": 7000
+    },
+    {
+      "text": "smarter and smarter when the alternative is if you don't have those checks things can diverge and that can get",
+      "offset": 1306000,
+      "duration": 5000
+    },
+    {
+      "text": "exponentially worse over time. You mentioned how Codex is is good as a doc",
+      "offset": 1311000,
+      "duration": 5000
+    },
+    {
+      "text": "writer. I wanted to touch on sub agents. Do you how does sub agents or maybe different personalities of agent",
+      "offset": 1316000,
+      "duration": 7000
+    },
+    {
+      "text": "come into play when it comes to Codex? Definitely this is this is currently in experimental. So we recently add in",
+      "offset": 1323000,
+      "duration": 5000
+    },
+    {
+      "text": "support for sub agents which effectively allow you to sort of parallelize whatever task",
+      "offset": 1328000,
+      "duration": 8000
+    },
+    {
+      "text": "you're doing with Codex right and so you can have like different",
+      "offset": 1336000,
+      "duration": 6000
+    },
+    {
+      "text": "personas for these for these agents. So one could be a test runner, one",
+      "offset": 1342000,
+      "duration": 5000
+    },
+    {
+      "text": "could be a reviewer, one could be, you know, someone who's who's who's",
+      "offset": 1347000,
+      "duration": 5000
+    },
+    {
+      "text": "responsible for writing docs, and one could be who's just polling the server for a response, right? And",
+      "offset": 1352000,
+      "duration": 7000
+    },
+    {
+      "text": "effectively what this allows Codex to do is to essentially spin up these agents as it thinks an agent should be should be spawned and should do the task. And this this helps you sort of",
+      "offset": 1359000,
+      "duration": 7000
+    },
+    {
+      "text": "achieve the same task in not only like a faster way but but also in a more",
+      "offset": 1366000,
+      "duration": 7000
+    },
+    {
+      "text": "secure way because now you have like an an agent which is effectively just",
+      "offset": 1373000,
+      "duration": 7000
+    },
+    {
+      "text": "focused on solving one task, right? And so I can I can actually see this play quite nicely with with like Sonar MCP",
+      "offset": 1380000,
+      "duration": 6000
+    },
+    {
+      "text": "wherein you can have one agent which is dedicated to the Sonar MCP and is like essentially just continuously polling",
+      "offset": 1386000,
+      "duration": 7000
+    },
+    {
+      "text": "Sonar MCP to check if there are any new issues with respect to what has",
+      "offset": 1393000,
+      "duration": 6000
+    },
+    {
+      "text": "been added into the into the workspace so far and and play quite nicely with the with the other",
+      "offset": 1399000,
+      "duration": 6000
+    },
+    {
+      "text": "agents thereby like driving much more confidence in the I I think we're going to see verification agent agents, interacting with the main engines working as sub agents, increasingly. And doesn't have to just",
+      "offset": 1405000,
+      "duration": 8000
+    },
+    {
+      "text": "be the Sonar checks. It can be other checks as well that you put in in your organization. I think that's, it's going to be something we're going",
+      "offset": 1413000,
+      "duration": 7000
+    },
+    {
+      "text": "to see emerge very quickly. See, this is it feels like it's it's very much an evolving way of working because I think I mean, we talked a",
+      "offset": 1420000,
+      "duration": 6000
+    },
+    {
+      "text": "little bit earlier and you were saying, in the Codex team, you're running agents for sometimes hours,",
+      "offset": 1426000,
+      "duration": 5000
+    },
+    {
+      "text": "sometimes even longer unsupervised and they're producing really, really solid results. How do you how do you",
+      "offset": 1431000,
+      "duration": 7000
+    },
+    {
+      "text": "recommend people break up work into chunks into how do they know what the right size chunk is to to attack and get",
+      "offset": 1438000,
+      "duration": 5000
+    },
+    {
+      "text": "the best possible results? I think it's I don't think there's like a right answer to this, right? At the same",
+      "offset": 1443000,
+      "duration": 6000
+    },
+    {
+      "text": "time like I think you can use like the current tooling quite to your advantage. In this case for example typically if I am",
+      "offset": 1449000,
+      "duration": 7000
+    },
+    {
+      "text": "embarking on a complex task what I would do is switch Codex to plan mode and then",
+      "offset": 1456000,
+      "duration": 6000
+    },
+    {
+      "text": "like ask Codex to sort of like think through what are the possible ways to sort of build this particular feature",
+      "offset": 1462000,
+      "duration": 6000
+    },
+    {
+      "text": "that I want to add. Right. A concrete example of this would be when we created the the docs MCP server for",
+      "offset": 1468000,
+      "duration": 6000
+    },
+    {
+      "text": "developers.ai.com, right? That was also one of my first projects at OpenAI and I just gave",
+      "offset": 1474000,
+      "duration": 7000
+    },
+    {
+      "text": "Codex an open-ended task that I want to build an MCP server. How do I build it? Right? And in an in an",
+      "offset": 1481000,
+      "duration": 7000
+    },
+    {
+      "text": "environment which I had no clue about, right? I had just freshly gotten into OpenAI. didn't know how everything",
+      "offset": 1488000,
+      "duration": 6000
+    },
+    {
+      "text": "worked but I wanted to get a good understanding of how the overall sort of code base is structured",
+      "offset": 1494000,
+      "duration": 6000
+    },
+    {
+      "text": "right and so then it it went through like it it gave me some suggestions that maybe I can use this",
+      "offset": 1500000,
+      "duration": 6000
+    },
+    {
+      "text": "framework maybe I can use framework Y maybe I can have like a like a standalone repository for for the MCP",
+      "offset": 1506000,
+      "duration": 6000
+    },
+    {
+      "text": "server or just have it as a as a microservice as part of our main sort of developers doc server and",
+      "offset": 1512000,
+      "duration": 6000
+    },
+    {
+      "text": "eventually we settle down on a plan and then I asked Codex to create test cases for us just so that like it has something to verify it results",
+      "offset": 1518000,
+      "duration": 9000
+    },
+    {
+      "text": "and this is also something that we've seen that Codex excels when it has test cases to hill climb against or",
+      "offset": 1527000,
+      "duration": 7000
+    },
+    {
+      "text": "verify it work its work against and yeah like after some iteration it just went",
+      "offset": 1534000,
+      "duration": 6000
+    },
+    {
+      "text": "went on like created a proof of concept tested it kept on like iterating on that and",
+      "offset": 1540000,
+      "duration": 6000
+    },
+    {
+      "text": "after a couple hours we had a really nice doc MCP server ready right and of course then we went through like internal dog",
+      "offset": 1546000,
+      "duration": 6000
+    },
+    {
+      "text": "fooding and so on and so forth and we uncovered some some issues with that and we fixed that and so on but at the",
+      "offset": 1552000,
+      "duration": 7000
+    },
+    {
+      "text": "same time like you know you can you can like use like these agents for planning your task quite well and then once you",
+      "offset": 1559000,
+      "duration": 5000
+    },
+    {
+      "text": "have a nice plan you can leave it up to the agent to either divide that into chunks or use sub agents or use",
+      "offset": 1564000,
+      "duration": 6000
+    },
+    {
+      "text": "background processes to run certain things and so on and so forth as long as you you're sure that whatever task you're embarking on can be verified that",
+      "offset": 1570000,
+      "duration": 7000
+    },
+    {
+      "text": "it is the way I think that's key isn't it and it goes back to what you said earlier on depending on the risk profile of what you're building you might want to let it",
+      "offset": 1577000,
+      "duration": 7000
+    },
+    {
+      "text": "let it loose for longer or let it loose for shorter and I think if you've got something that's very critical you got that plan which is",
+      "offset": 1584000,
+      "duration": 7000
+    },
+    {
+      "text": "fantastic but you can tell it to stop at any point in that plan and and do a review. You could do your deterministic",
+      "offset": 1591000,
+      "duration": 6000
+    },
+    {
+      "text": "checks at any point. And it's like any development, right? The earlier the feedback loop is, the faster that you",
+      "offset": 1597000,
+      "duration": 5000
+    },
+    {
+      "text": "find problems, the less problem, the less there is to fix later sense. So the longer you let it go before the",
+      "offset": 1602000,
+      "duration": 6000
+    },
+    {
+      "text": "verification, the harder it's going to be for it to do things, the more it's got to rework in a sense. And I think if",
+      "offset": 1608000,
+      "duration": 5000
+    },
+    {
+      "text": "you've got a very critical application, then putting in breaks quite often. And even even if that's just a like",
+      "offset": 1613000,
+      "duration": 5000
+    },
+    {
+      "text": "deterministic verification using tools or whether it's human verification okay is it doing what I asked it to do and",
+      "offset": 1618000,
+      "duration": 8000
+    },
+    {
+      "text": "actually maybe even you know reviewing every line of code in some situations right is this some high-risk code that I really want to",
+      "offset": 1626000,
+      "duration": 6000
+    },
+    {
+      "text": "review carefully before we move on I think that's going to be the key for enterprises to be able to embrace that",
+      "offset": 1632000,
+      "duration": 6000
+    },
+    {
+      "text": "kind of flexibility and experience I think that's where experienced developers really come in as",
+      "offset": 1638000,
+      "duration": 6000
+    },
+    {
+      "text": "well they know where the risk is they know where we need to slow down and really check everything through.",
+      "offset": 1644000,
+      "duration": 6000
+    },
+    {
+      "text": "Where a junior developer might just kind of put the plan in and go that looks great and go for it and and and push the PR kind of thing. So, I",
+      "offset": 1650000,
+      "duration": 7000
+    },
+    {
+      "text": "think this is why we still need those experienced developers and it's the same problems as we have with human",
+      "offset": 1657000,
+      "duration": 5000
+    },
+    {
+      "text": "developers. It's just it's just coming at you faster now, right? It's like it's less time actually",
+      "offset": 1662000,
+      "duration": 6000
+    },
+    {
+      "text": "writing the code and more time going, okay, let me stop and think, is this right? Can I move on to the next step?",
+      "offset": 1668000,
+      "duration": 5000
+    },
+    {
+      "text": "And I think that's going to be key in the workflows. And I guess one of the great things about this is the feedback loop is so fast. So you can build out",
+      "offset": 1673000,
+      "duration": 6000
+    },
+    {
+      "text": "that intuition even even if it's if it's me coming back into development. I can I can quite quickly get a sense of",
+      "offset": 1679000,
+      "duration": 6000
+    },
+    {
+      "text": "what isn't going to work, what is going to work, and you get that intuition for yeah, it's time to run the static analysis now before we move on. One",
+      "offset": 1685000,
+      "duration": 7000
+    },
+    {
+      "text": "thing you mentioned about how you can use Codex to help you sort of understand the codebase. We know that AI",
+      "offset": 1692000,
+      "duration": 6000
+    },
+    {
+      "text": "tools are amazing when it comes to a blank page or with to a relatively young",
+      "offset": 1698000,
+      "duration": 5000
+    },
+    {
+      "text": "codebase where you've got sort of one consistent best practice pattern. Can you talk a little bit about how you would recommend people get good results",
+      "offset": 1703000,
+      "duration": 6000
+    },
+    {
+      "text": "if they've got an older codebase that perhaps has gone through sort of several levels of of best practice? So maybe there are different examples spread",
+      "offset": 1709000,
+      "duration": 7000
+    },
+    {
+      "text": "everywhere. Yeah. I mean like I often times would sort of deal with code bases which",
+      "offset": 1716000,
+      "duration": 7000
+    },
+    {
+      "text": "I haven't contributed to. Right. and and and most of the times like the way I would start it is by just spinning up",
+      "offset": 1723000,
+      "duration": 7000
+    },
+    {
+      "text": "Codex opening that workspace and then like ask it to sort of you know walk me through like a particular",
+      "offset": 1730000,
+      "duration": 7000
+    },
+    {
+      "text": "functionality within that particular codebase right so and then like we would like I would ask questions and",
+      "offset": 1737000,
+      "duration": 7000
+    },
+    {
+      "text": "most of the times I would ask like really stupid questions you know because of course like I don't I don't want to make a fool of myself with the",
+      "offset": 1744000,
+      "duration": 5000
+    },
+    {
+      "text": "with the engineering team or like with everyone who's actually like building on that on that codebase,",
+      "offset": 1749000,
+      "duration": 7000
+    },
+    {
+      "text": "right? And so I would ask like, \"Okay, why are we doing this? And if I was to add like this functionality, how would that look like?\" And just, you know,",
+      "offset": 1756000,
+      "duration": 7000
+    },
+    {
+      "text": "what were some of the design decisions? What were some of the you know decisions for testing? How do you make",
+      "offset": 1763000,
+      "duration": 5000
+    },
+    {
+      "text": "sure that this is this is correct or not? And you can you can really go as far as as possible with this, right? As",
+      "offset": 1768000,
+      "duration": 7000
+    },
+    {
+      "text": "someone who who wears like multiple hats within the team like this is quite important to sort of get",
+      "offset": 1775000,
+      "duration": 6000
+    },
+    {
+      "text": "an intuition of even like newer like like features which are coming in really hot within Codex just to get",
+      "offset": 1781000,
+      "duration": 7000
+    },
+    {
+      "text": "like a good understanding of it. Of course there are also cases wherein I'm just like I even don't have",
+      "offset": 1788000,
+      "duration": 7000
+    },
+    {
+      "text": "like good understanding of how to even set up this particular codebase to be able to sort of interact with it. In",
+      "offset": 1795000,
+      "duration": 7000
+    },
+    {
+      "text": "those cases, I would just, you know, also like ask Codex is like if I were to set this up, how what would be the",
+      "offset": 1802000,
+      "duration": 6000
+    },
+    {
+      "text": "steps, right? walk me through through those steps and you know I",
+      "offset": 1808000,
+      "duration": 5000
+    },
+    {
+      "text": "would either I would myself like execute those steps or like ask Codex to go step by step and like execute it for me",
+      "offset": 1813000,
+      "duration": 6000
+    },
+    {
+      "text": "just so that like I have a working playground to go around and we see",
+      "offset": 1819000,
+      "duration": 7000
+    },
+    {
+      "text": "the same pattern like within teams at OpenAI as well you know",
+      "offset": 1826000,
+      "duration": 5000
+    },
+    {
+      "text": "from like product designers try to get an understanding of how how the app functions right and how some of their",
+      "offset": 1831000,
+      "duration": 7000
+    },
+    {
+      "text": "designs can be integrated to you know PMs who are looking at code bases",
+      "offset": 1838000,
+      "duration": 6000
+    },
+    {
+      "text": "looking at Linear logs and you know Linear issues to see like how the pro like how the progress is going to",
+      "offset": 1844000,
+      "duration": 7000
+    },
+    {
+      "text": "you know like to to cross functional people like me who who are essentially keeping track of like what's happening",
+      "offset": 1851000,
+      "duration": 6000
+    },
+    {
+      "text": "where it's happening and and so on and so forth. One of the things I love about agents is getting the agent to read the",
+      "offset": 1857000,
+      "duration": 6000
+    },
+    {
+      "text": "documentation for me. I'm I've never enjoyed reading the documentation, but I",
+      "offset": 1863000,
+      "duration": 6000
+    },
+    {
+      "text": "think I mean it's really interesting the with legacy applications. I mean",
+      "offset": 1869000,
+      "duration": 5000
+    },
+    {
+      "text": "partly it's going to be down to whether there's good unit tests on it, right? And and you know the agent can work relatively safely if it's well covered",
+      "offset": 1874000,
+      "duration": 6000
+    },
+    {
+      "text": "with unit tests. One of the things Sonar does is a lot of people really use it for is to check that the code coverage",
+      "offset": 1880000,
+      "duration": 5000
+    },
+    {
+      "text": "is good whenever people check in code. And with an agent, it's pretty easy to say, okay, increase the code coverage",
+      "offset": 1885000,
+      "duration": 6000
+    },
+    {
+      "text": "this and create the test. But it's one of those where the human needs to be checking that actually that is the behavior. If you're retrofitting tests,",
+      "offset": 1891000,
+      "duration": 7000
+    },
+    {
+      "text": "is that the behavior I actually expect or not kind of thing because the agent may just create tests that it'll know",
+      "offset": 1898000,
+      "duration": 6000
+    },
+    {
+      "text": "will pass based on the current code. And I think this is this is going to be a bit of an art as well of looking working",
+      "offset": 1904000,
+      "duration": 5000
+    },
+    {
+      "text": "on legacy systems, but we've probably got to relearn with an agent. But a lot of the old principles still apply and",
+      "offset": 1909000,
+      "duration": 6000
+    },
+    {
+      "text": "making sure that you know you're covering that old code base with tests well and so that whenever you change",
+      "offset": 1915000,
+      "duration": 6000
+    },
+    {
+      "text": "something you're not going to get something unexpected because you generally haven't got super maintainable code that's easy to understand",
+      "offset": 1921000,
+      "duration": 6000
+    },
+    {
+      "text": "right and and and and I think like you know historically if you if you sort of see like what I've seen is that",
+      "offset": 1927000,
+      "duration": 8000
+    },
+    {
+      "text": "a lot of people would would often sort of you know discount testing or discount",
+      "offset": 1935000,
+      "duration": 6000
+    },
+    {
+      "text": "like these these sort of processes as being slow, right? And like or like adding to the overhead of like",
+      "offset": 1941000,
+      "duration": 7000
+    },
+    {
+      "text": "developing faster. But as these agents are becoming faster, for example,",
+      "offset": 1948000,
+      "duration": 5000
+    },
+    {
+      "text": "Codex 5.3 is 60% faster on the basis of number of tokens it produces and so on. As compared to Codex 5.2 which means that you can you can do the same task with the same confidence but much faster, right?",
+      "offset": 1953000,
+      "duration": 12000
+    },
+    {
+      "text": "You like the sort of excuse of like running these test cases or like running these these",
+      "offset": 1965000,
+      "duration": 6000
+    },
+    {
+      "text": "sort of checks and and like balances kind of disappears right",
+      "offset": 1971000,
+      "duration": 6000
+    },
+    {
+      "text": "because like now you're you are not the one who who has to wait for your agent to sort of like figure out the",
+      "offset": 1977000,
+      "duration": 6000
+    },
+    {
+      "text": "like what kind of tests it has to run what kind of files it has to run and like the the overhead sort of like",
+      "offset": 1983000,
+      "duration": 7000
+    },
+    {
+      "text": "decreases considerably. Yeah. Yeah. I mean, I love the way agents are really good at TDD. They",
+      "offset": 1990000,
+      "duration": 5000
+    },
+    {
+      "text": "can do test first really nicely, but it's still up to that developer to actually run through and make sure the",
+      "offset": 1995000,
+      "duration": 6000
+    },
+    {
+      "text": "tests that are being created are actually what's expected. But but you know, they're well written tests that are easy to understand and",
+      "offset": 2001000,
+      "duration": 5000
+    },
+    {
+      "text": "you can kind of you can verify that relatively quickly and then you know you're kind of you've you've created that safe environment to then do the",
+      "offset": 2006000,
+      "duration": 6000
+    },
+    {
+      "text": "fast coding with. So we talked about a lot of a lot of ways of working. Let's let's get into some concrete examples. So Tom, do you",
+      "offset": 2012000,
+      "duration": 7000
+    },
+    {
+      "text": "do you have some examples of of how a real customer is working in this way",
+      "offset": 2019000,
+      "duration": 6000
+    },
+    {
+      "text": "in production? Sure. Yeah. So I mean I think our big enterprise customers, they're still really working out. This this world is",
+      "offset": 2025000,
+      "duration": 6000
+    },
+    {
+      "text": "changing so fast and they're generally a little bit slower to move, but I'm seeing people moving really quickly and",
+      "offset": 2031000,
+      "duration": 6000
+    },
+    {
+      "text": "and the kind of way they're doing that is experimenting. So even large financials, they are they're kind of",
+      "offset": 2037000,
+      "duration": 6000
+    },
+    {
+      "text": "they're finding teams where that could work with these tools and they're giving them the freedom to work. I think",
+      "offset": 2043000,
+      "duration": 5000
+    },
+    {
+      "text": "doing that the first problem they've got for that c those teams to solve is how do we code at the with the same standard",
+      "offset": 2048000,
+      "duration": 7000
+    },
+    {
+      "text": "that our company has at the moment right and so they have to start building in those verification strategies into the",
+      "offset": 2055000,
+      "duration": 6000
+    },
+    {
+      "text": "tools now they're probably going to start on less critical applications right not the most mission critical",
+      "offset": 2061000,
+      "duration": 7000
+    },
+    {
+      "text": "trading applications just yet but you can learn on lower risk applications but",
+      "offset": 2068000,
+      "duration": 5000
+    },
+    {
+      "text": "still apply the same standards as you would do on a mission critical application to build that infrastructure and and what VB was saying",
+      "offset": 2073000,
+      "duration": 6000
+    },
+    {
+      "text": "about the tooling and creating the skills and things like that they can then be used anywhere across the",
+      "offset": 2079000,
+      "duration": 6000
+    },
+    {
+      "text": "application so I think what we're seeing is people experimenting they're kind of starting to build the infrastructure",
+      "offset": 2085000,
+      "duration": 5000
+    },
+    {
+      "text": "around that and then growing that out to more teams as they see success and as they become confident that they can do",
+      "offset": 2090000,
+      "duration": 6000
+    },
+    {
+      "text": "this safely and securely I think that's I mean that's the critical thing for the enterprise great and I mean you you talked about",
+      "offset": 2096000,
+      "duration": 6000
+    },
+    {
+      "text": "this with the difference between 5.2 and 5.3 the the pace of change and the the capability of the agents I it's",
+      "offset": 2102000,
+      "duration": 6000
+    },
+    {
+      "text": "increasing incredibly fast and it's changing wildly. So something that you might consider impossible today in a",
+      "offset": 2108000,
+      "duration": 7000
+    },
+    {
+      "text": "week's time is very very doable. How how do people how do you recommend companies",
+      "offset": 2115000,
+      "duration": 7000
+    },
+    {
+      "text": "keep an eye on this and really understand what the art of the possible is? I'm a firm believer of just like testing",
+      "offset": 2122000,
+      "duration": 5000
+    },
+    {
+      "text": "things, right? So I feel like as long as you you have a safe sandbox and",
+      "offset": 2127000,
+      "duration": 7000
+    },
+    {
+      "text": "you have the ability to make sure that your agent doesn't mess up",
+      "offset": 2134000,
+      "duration": 6000
+    },
+    {
+      "text": "right I I think like the first step should be to just download for",
+      "offset": 2140000,
+      "duration": 7000
+    },
+    {
+      "text": "example Codex right and just give it a task that you that you want to do and",
+      "offset": 2147000,
+      "duration": 5000
+    },
+    {
+      "text": "just try and see like how it how it tries to solve the task in a lot",
+      "offset": 2152000,
+      "duration": 7000
+    },
+    {
+      "text": "of cases what might be beneficial is to is to create an agents.md file like",
+      "offset": 2159000,
+      "duration": 5000
+    },
+    {
+      "text": "agents.md file is like think of it as like the soul of your",
+      "offset": 2164000,
+      "duration": 6000
+    },
+    {
+      "text": "project right so you can have here are like certain folders this is what the folder does and here are every time you do a task run these tests and here are some rules for",
+      "offset": 2170000,
+      "duration": 6000
+    },
+    {
+      "text": "whatever it is that you want to do and for certain specific tasks and so on. And if you're using tools like",
+      "offset": 2176000,
+      "duration": 8000
+    },
+    {
+      "text": "Codex, you can you can just create this agents.md with Codex itself, right? And",
+      "offset": 2184000,
+      "duration": 6000
+    },
+    {
+      "text": "every so often, for example, on our developers website, what we do is",
+      "offset": 2190000,
+      "duration": 7000
+    },
+    {
+      "text": "we have like the skill it's its task is to make sure that none",
+      "offset": 2197000,
+      "duration": 6000
+    },
+    {
+      "text": "of the typos, none of the you know like the language of the of the docs and so on are uniform across, right? And",
+      "offset": 2203000,
+      "duration": 6000
+    },
+    {
+      "text": "you know this was a was a suggestion which came from Codex and then Codex helped build this into a skill and then",
+      "offset": 2209000,
+      "duration": 6000
+    },
+    {
+      "text": "of course like we iterated a bit and this has now run on each and every change right and so like the best",
+      "offset": 2215000,
+      "duration": 8000
+    },
+    {
+      "text": "thing to do is to sort of like you know try and pick up such such use cases for either a new project or an existing",
+      "offset": 2223000,
+      "duration": 6000
+    },
+    {
+      "text": "project and just like work with the agent to figure out what are the boundaries of what is possible right now right and this is something which I do",
+      "offset": 2229000,
+      "duration": 8000
+    },
+    {
+      "text": "with like every new model as well. Back in December we had Codex 5.2 and",
+      "offset": 2237000,
+      "duration": 6000
+    },
+    {
+      "text": "you know there were certain tasks which were possible back then and certain tasks which were not possible. But at the same time today like we have Codex 5.3 we have Codex 5.3 Spark which is our faster model and",
+      "offset": 2243000,
+      "duration": 12000
+    },
+    {
+      "text": "each of these like unlocks like certain new tasks and you know also at the same time makes previous tasks faster",
+      "offset": 2255000,
+      "duration": 8000
+    },
+    {
+      "text": "and you know like it's really like you just you just like iterate with these models try and give them your problem try and give them the ability to verify what they're building and and and then just like riff off of that. Yeah. Yeah. I think that's really important. I think I mean the agents.md is is the entry point in I",
+      "offset": 2263000,
+      "duration": 18000
+    },
+    {
+      "text": "think you know to start with let's think about the project you're working on. What are the standards you want to set for that project and they're probably",
+      "offset": 2281000,
+      "duration": 7000
+    },
+    {
+      "text": "partly organizational. They're partly contextual to that project. Put those into the agents.md to start. And",
+      "offset": 2288000,
+      "duration": 8000
+    },
+    {
+      "text": "you know the agent would do a pretty good job of following those standards from the outset right from the beginning. But then you've got to remember that that's",
+      "offset": 2296000,
+      "duration": 6000
+    },
+    {
+      "text": "not necessarily deterministic. That if it's not using tools it will do its best to follow those standards. But you can't",
+      "offset": 2302000,
+      "duration": 6000
+    },
+    {
+      "text": "guarantee that it will. So if I think the next step is then to start thinking okay how can we enforce those standards",
+      "offset": 2308000,
+      "duration": 6000
+    },
+    {
+      "text": "in a deterministic way and therefore by using tools. You can then start in installing MCP using CLIs. So we",
+      "offset": 2314000,
+      "duration": 6000
+    },
+    {
+      "text": "know we sort of seeing a little bit of a move from MCP to CLIs because it could be a little bit more deterministic.",
+      "offset": 2320000,
+      "duration": 6000
+    },
+    {
+      "text": "And we're building that Sonar now. but you know at the moment there's the Sonar MCP server that you can use today.",
+      "offset": 2326000,
+      "duration": 7000
+    },
+    {
+      "text": "It will already do those checks. You can already check the SonarQube status. So you can quickly build your standard",
+      "offset": 2333000,
+      "duration": 6000
+    },
+    {
+      "text": "process that the developers have been full like using potentially for years straight into the agent process and make",
+      "offset": 2339000,
+      "duration": 5000
+    },
+    {
+      "text": "that efficient from the outset and then as it just build on sophistication in the same way as we've always done with",
+      "offset": 2344000,
+      "duration": 6000
+    },
+    {
+      "text": "CI pipelines right they generally start off really simple and over time you add more checks you add more controls and",
+      "offset": 2350000,
+      "duration": 6000
+    },
+    {
+      "text": "they get more sophisticated hopefully don't get too slow and they're still fast but and keep the keep the team",
+      "offset": 2356000,
+      "duration": 5000
+    },
+    {
+      "text": "going and it's just the same thing but we're just now building that into the agent workflow and I think it's you",
+      "offset": 2361000,
+      "duration": 6000
+    },
+    {
+      "text": "can also do it in in sort of different cadences as well. It's and correct me if I'm wrong you",
+      "offset": 2367000,
+      "duration": 7000
+    },
+    {
+      "text": "can have sort of like oneoff or like recurring sort of jobs which are which are essentially looking at your",
+      "offset": 2374000,
+      "duration": 7000
+    },
+    {
+      "text": "codebase outside of PRs outside of you know all the commits and so on just like a cron job for example we have this",
+      "offset": 2381000,
+      "duration": 6000
+    },
+    {
+      "text": "ability within the Codex app that you can set up automations I can I can I can see this quite nicely play with",
+      "offset": 2387000,
+      "duration": 7000
+    },
+    {
+      "text": "the Sonar MCP wherein like every day at let's say 11:59 p.m. Codex",
+      "offset": 2394000,
+      "duration": 7000
+    },
+    {
+      "text": "wakes up and runs the Sonar",
+      "offset": 2341000,
+      "duration": 66000
+    },
+    {
+      "text": "MCP through like all that has been added in the last one day and verify it against",
+      "offset": 2407000,
+      "duration": 6000
+    },
+    {
+      "text": "all the logic that that the team has has defined and try and sort of like think outside the box and like find what could be improved",
+      "offset": 2413000,
+      "duration": 7000
+    },
+    {
+      "text": "what what should be kept as as is and so on and so forth right and you can you can truly use this in like in like",
+      "offset": 2420000,
+      "duration": 7000
+    },
+    {
+      "text": "different ways as well like if let's say the Sonar MCP finds an issue, you can ask",
+      "offset": 2427000,
+      "duration": 7000
+    },
+    {
+      "text": "in this case Codex to open a proactive pull request and then next day when when Tom",
+      "offset": 2434000,
+      "duration": 7000
+    },
+    {
+      "text": "wakes up, Tom can review these pull requests. And I feel like this way you have the you have the",
+      "offset": 2441000,
+      "duration": 7000
+    },
+    {
+      "text": "confidence that even if let's say by 1% something is missed by these these",
+      "offset": 2448000,
+      "duration": 6000
+    },
+    {
+      "text": "agents you are able to still sort of solve for that 1% use cases.",
+      "offset": 2454000,
+      "duration": 6000
+    },
+    {
+      "text": "Yeah. I mean some things we can build super fast and you can get immediate feedback within a second. We can do most of our analysis like that. But some",
+      "offset": 2460000,
+      "duration": 6000
+    },
+    {
+      "text": "things are longer running and you might just want to run them nightly. That's absolutely fine. Just like we always did",
+      "offset": 2466000,
+      "duration": 6000
+    },
+    {
+      "text": "with with with sort of long running tests and things like that, right? So, so yeah, it's very much the same principles. think about is this",
+      "offset": 2472000,
+      "duration": 6000
+    },
+    {
+      "text": "something that I can check fast in which case you might want to do it like really regularly within the agent workflow or is it something we just do in a PR or is it something I might do nightly and do a really long running check and yeah",
+      "offset": 2478000,
+      "duration": 8000
+    },
+    {
+      "text": "there's there's so much possibilities and the fact you don't need a human there to sit and watch it is is kind of opens up all sorts of possibilities and",
+      "offset": 2486000,
+      "duration": 8000
+    },
+    {
+      "text": "I think we can get to a point where we have a higher coding standard with agents than we do with humans. So I think at the moment we're talking about\nokay how do we get to the same but I think we'll get we'll soon be thinking okay let's we've now got these",
+      "offset": 2494000,
+      "duration": 8000
+    },
+    {
+      "text": "capabilities we can go further than we ever did on quality which will be good for software in general 100%. Yeah, absolutely. It does seem like there's there are so many different levers you could pull on ways of working with AI. And I think",
+      "offset": 2502000,
+      "duration": 9000
+    },
+    {
+      "text": "it's it's it's great that Codex can be part of that, but also you can go to Codex and say, \"Hey, what should I be",
+      "offset": 2511000,
+      "duration": 7000
+    },
+    {
+      "text": "doing now? How can I what other checks could I have in place?\" And and your idea about the cron job running running nightly and being able to build that out",
+      "offset": 2518000,
+      "duration": 6000
+    },
+    {
+      "text": "through Codex is is hugely powerful. So as we move towards the the last",
+      "offset": 2524000,
+      "duration": 5000
+    },
+    {
+      "text": "question then we're just getting close to some really really concrete things for people to do. If we if we think",
+      "offset": 2529000,
+      "duration": 7000
+    },
+    {
+      "text": "about right now, so for for people who are watching and they're they're excited about getting their teams going, getting",
+      "offset": 2536000,
+      "duration": 6000
+    },
+    {
+      "text": "their whole organizations working in this manner. What are some concrete first one two three steps they should be",
+      "offset": 2542000,
+      "duration": 6000
+    },
+    {
+      "text": "be jumping on right now? Well first obviously agent running in",
+      "offset": 2548000,
+      "duration": 6000
+    },
+    {
+      "text": "in a team that's relatively low risk. I think we covered that. Then MCP is your friend, right? So work out what",
+      "offset": 2554000,
+      "duration": 6000
+    },
+    {
+      "text": "MCPs you need to be working with that can do the checks that the agent can interact with to actually make it",
+      "offset": 2560000,
+      "duration": 6000
+    },
+    {
+      "text": "capable. An agent without other tools is is really limited. And I think I think",
+      "offset": 2566000,
+      "duration": 6000
+    },
+    {
+      "text": "in your organization you're going to have various things that you need you know it needs to interact with and",
+      "offset": 2572000,
+      "duration": 6000
+    },
+    {
+      "text": "they're generally available in MCP. You'd get that going straight away. start start relatively simple and and",
+      "offset": 2578000,
+      "duration": 6000
+    },
+    {
+      "text": "actually agents.md is a super easy way to start saying these are the standards I want you to code at and then start",
+      "offset": 2584000,
+      "duration": 4000
+    },
+    {
+      "text": "tooling you know adding the tooling into that process and just slowly increasing in sophistication and then once you get a certain level of sophistication you'll feel confident to go out to more kind of critical critical applications",
+      "offset": 2588000,
+      "duration": 8000
+    },
+    {
+      "text": "yeah and I think you know just to sort of add on I would say like just start simple right like no task is a",
+      "offset": 2596000,
+      "duration": 8000
+    },
+    {
+      "text": "small task for an agent, right? Like even if it's just like fix a typo in readme.md, just like try and delegate it",
+      "offset": 2604000,
+      "duration": 6000
+    },
+    {
+      "text": "to an agent and and and the worst things that's going to happen is like it",
+      "offset": 2610000,
+      "duration": 6000
+    },
+    {
+      "text": "opens a pull request, right? And you can always close it or like you know just as long as you you know that whatever it is",
+      "offset": 2616000,
+      "duration": 6000
+    },
+    {
+      "text": "whatever playground you've given to the agent is secure enough just try and start with like simple tasks that you",
+      "offset": 2622000,
+      "duration": 6000
+    },
+    {
+      "text": "can you know delegate and then like work your way from there right",
+      "offset": 2628000,
+      "duration": 6000
+    },
+    {
+      "text": "layer in like the MCDs the skills the tooling web search like all the things that you think is going to help the agent get the context the",
+      "offset": 2634000,
+      "duration": 9000
+    },
+    {
+      "text": "core knowledge of your company, your organization principles, directives and so on. Yeah, and just like work",
+      "offset": 2643000,
+      "duration": 7000
+    },
+    {
+      "text": "piece by piece, remove what doesn't work and like add what works and so on. I think it's I think it's important to",
+      "offset": 2650000,
+      "duration": 6000
+    },
+    {
+      "text": "have the right expectations for your teams adopting these tools as well. I mean, if your expectation is they're going to have a 20x productivity",
+      "offset": 2656000,
+      "duration": 6000
+    },
+    {
+      "text": "improvement overnight, they're probably not putting these checks in place and and you're probably taking a lot of",
+      "offset": 2662000,
+      "duration": 6000
+    },
+    {
+      "text": "risks. I think you know if people are you know the team is building the tooling working on the process correctly initially they're probably not going to be much faster and and that won't won't be kind of give you instant satisfaction",
+      "offset": 2668000,
+      "duration": 7000
+    },
+    {
+      "text": "but you know that they are investing in what's the future of software development and over time though that",
+      "offset": 2675000,
+      "duration": 7000
+    },
+    {
+      "text": "will start paying off and you'll quickly see the performance improvements in the teams. Brilliant. I think that I think that",
+      "offset": 2682000,
+      "duration": 6000
+    },
+    {
+      "text": "that rounds it up really nicely. It's the agents and everything that comes around that becomes this this",
+      "offset": 2688000,
+      "duration": 6000
+    },
+    {
+      "text": "supercharged engine of your racing car and then the deterministic checking is the thing that keeps you on the road.",
+      "offset": 2694000,
+      "duration": 6000
+    },
+    {
+      "text": "And with that, thank you very much, gentlemen. That was that was fascinating. Thank you for having me. Thanks, John. Thanks.",
+      "offset": 2700000,
+      "duration": 6000
+    }
+  ],
+  "fullText": "Hello, I'm John Clifton and I'm a product manager at Sonar. Now, AI has been part of our lives as developers for a very long time. It's been suggesting fixes. It's been helping you refactor. It's been completing functions for you. But more than ever, it's becoming a larger part of our life. But as an autonomous developer, more and more now, we can delegate work to agents and leave them running for minutes, hours, even days. And this is becoming exciting, but at the same time, how do you really see the benefits? As an enterprise, you can't just ship these things that are coming out the door. They need to be verified. They need to be proven to be production grade. This is a big problem. But luckily, I've got two people who can talk to us about how we can address this. I'm very pleased to welcome VB who leads developer experience and community initiatives for Codex and Amir. He's been instrumental in bringing GPT 5.3 Codex, Codex app and Codex Spark to millions of developers across the globe. Prior to OpenAI, he led developer experience at Hugging Face. And joining us is Tom Howlet. He's the product director for code quality at Sonar. His team is responsible for developing Sonar's analysis engine and bringing that into the Agentic workflow. This represents the deterministic bedrock that provides the ground truth enabling agents to verify their own work. So let's get started. Now OpenAI with Codex is helping us build these agentic workflows. But even more than that, OpenAI is one of these enterprises that is having to build in this agentic world. So the big question to start with is how on earth are you doing it? How's how are you getting to production with this technology? I'm glad you asked that question. To be honest it's it's really hard to imagine OpenAI functioning at the speed as it does and shipping features at the speed of practically like at this point without having Codex deeply ingrained in its developer workflows even you know product designers PMs and like everyone has their own workflows around Codex the app IDE CLI and so on and so forth and and and there are some quite interesting ways in which people use it. First of all, all the code within OpenAI 100% is reviewed by Codex, right? All pull requests are reviewed by Codex. None of the pull requests are merged without a review. Second of all, majority of the code written by the developers is assisted by Codex either within the with the Codex app or with the Codex CLI or with the Codex IDE extension. within like Cursor, VS Code and so on and so forth. At the same point Codex has been quite instrumental for the research team itself to to help build Codex 5.3 which is which is the recent model that we just released wherein Codex acted as like an on call support agent not only babysitting training runs but also trying to find config mismatches trying to figure out where things might go wrong and alert team where it thought that the that it needed it needed the support from the team itself.\nLast but not the least like one of the things that that still amazes me is that product designers use Codex with Figma to to create you know nice UIs, nice sort of assets and then again use Codex to to convert these these assets into actual code. And last but not the least, one of the examples that I wanted to share was someone from my team, Brent, who is a video producer. He recently use Codex to edit videos. And the way he did that was by literally asking Codex, here are some some video snippets and I want it to be synced to certain specific transcript or I want you to create like YouTube shots out of this or Instagram shots out of this and so on and so forth. And Codex ended up doing was literally creating a bridge between Codex and Adobe Premiere Pro. And then using that to create out different segments of videos also suggesting proactively suggesting where to cut what kind of snippets are interesting and so on and so forth. And this led to you know all the all the video videos that you saw on OpenAI for developers for the Codex app were leveraged Codex and this bridge. Can I just jump in because you said about Codex reviewing the code? Yeah. Is there also a human review? Is there any other review as well on top of the the Codex doing review? Right. Of course there are like varying criticalities of code, right? code that is shipped directly on on devices or on the web. All of those do get like a human review as well just to make sure that none of the nothing is missed because of lack of context for the agent or just generally to make sure that the code being merged has like meets the quality that we expect. At the same point there are some non-critical areas. For example, I like to use Codex to try out different skills or to try out different automations. In those cases, I would just trust Codex and its and its review that it works the way it does, right? And of course like when we when we push things to production, we want to make sure that it it meets the quality bar. And of course in those cases we would leverage a steady suite of test cases or and also just like human intuition and so on. Okay. So you're really kind of changing the process depending on the risk profile of the application that you're putting out. Yeah, that makes sense. Cool. And can I ask you so you talked about how I mean different people seem to have really creative ways of using Codex. How do how do the teams share those ideas so that everybody's learning from each other? That is a very good question. So we have this we have this channel within Slack. It's called Codex hot tips and it's it's brimming with developer excitement. You know there are people who are sharing how they're using Codex with Slack. For example I use Slack via Codex quite a bit right. I I use it to prepare my morning briefing of like all right these are the channels that I want to look at. Here is a summary of what has happened in the past 24 hours. Especially this is quite important given that we're a globally distributed team. I'm based in Paris and you know rest of my team is based in in the US. Some are based in Singapore and so on. So Codex heads me in this case to sort of give me like a summary. At the same time you know people are doing all sorts of novel things. For example, someone yesterday posted about about a PR review skill which is actually part of the open source Codex GitHub repo. It's called babyset PRs. And what it does is as and when your PR is open it would continue polling the PR to check if there are any issues. Okay. And if there are any issues it would flag it to the to the end user itself and of course in most cases it would just see the issue and it would you know fix that issue and you don't even have to worry about but in some cases maybe it's missing some sort of an access token and so on. So this is where the agent proactively tells you what to do, right? And you know this extends across like all of our CI systems as well. wherein whenever I'm pushing something to our production code base and and like the CI is complaining I honestly cannot be bothered to like look at the logs and why is this not working? What should I do and so on. So, I have a skill in this case which would just look at the CI logs and would just fix it, right? And so far it has not let me down. Wow. Yeah. Yeah. That's just so much making the life of a developer easier, right? So those painful bits that slow you down. Nice. And I think I mean that's one of the things we we we ran a survey recently and I think we saw I think the number was 96% of developers don't trust the code that that's that they own. It's being produced by a but AI but they're responsible for it. How I I understand that you've got sort of different levels of of checking in place. How do we go about helping our developers be confident that the thing they're going to get called about called up at 3:00 in the morning about is going to be good enough that they can they can sleep soundly. So I mean I guess I guess from our perspective at Sonar, right, the Codex is producing some amazing code. It's really high quality, but you never quite know what you're going to get, right? You need to verify and you need to verify deterministically. And we were talking a bit earlier about this about how you have these these checks that that Codex must do to ensure that it's correct. So at Sonar we've been doing static analysis for a long time. We've been verifying code deterministically to make sure it hasn't got certain bugs or it's maintainable or it's secure. So we can do that same thing now with Codex, right? So by using our MCP the MCP can call out to code the Codex can call out to Sonar and say are there any issues on my code in the same way? And I think these these checks are absolutely key and and you know they have to be deterministic and the more deterministic checks you can do, the safer that code is, the more we can build confidence with the developers and the less work they have to do in verifying the code themselves, right? Because if they're verifying every line of production code in an enterprise, it it's going to slow us down so much we're not going to see the benefits from AI. So we need to do as much as we possibly can for the developer to make that efficient and really see the gains that we expect from AI. And I think like determinism here is is kind of the key, right? Like because I see this all the time like every time especially for like open source projects like Codex itself. If something is not working, one of the key things is the ability to reproduce the reason why it's not working, right? And if you have these deterministic tests, it just makes it so much more easier to find the root cause of a problem, right? Like often times we would see engineering teams not just within OpenAI like across the globe complaining that hey like I have this flaky test within within within my CI and like you know you just you you you cannot really do anything except just like rerun the CI and you know hope that the flaky test pass, right? And I think this is where sort of tools like Sonar come in and and sort of like help you with the deterministic tests that just work. Yeah. Yeah. It's all about giving the agent as much data as possible, right? And whether that's from logs or whether it's from from other checks coming through then we can really enable the agents to do a good job. I think we kind of expect the agent to be perfect kind\nof running blind, right? Which isn't isn't realistic, is it? It needs to have visibility of all these things and this is stuff that we would run anyway and so let's give the agent the same visibility that the developer had in the first place but it can process it so much faster. That's the beauty. That's the addictive nature of this stuff.\nWell, that's the thing, isn't it? So, how do you balance you you want to go as fast as possible. You want to give your your teams the autonomy to try out crazy stuff because the the sort of the ability to deliver quickly and at high quality is a competitive advantage. Now, how do you how do you balance helping people letting people go fast, try things, break stuff with the the real needs of real companies, which is this thing has to be good enough to go into production? How how do you have that that sort of almost double standard? Yeah, I think it's like so like a quick anecdote from some of the things that I was doing quite recently is we released the Codex app, right? And it's it's been widely acclaimed and a lot of developers are using it today. And part of this Codex app we we released maybe 15 20 set of curated skills which users can use to then augment what they do with Codex as of today, right? And so these skills are are something like how do you connect with Figma, how do you take a screenshot, how do you control a browser and or like how do you interact with GitHub and so on and so forth. But then again like these skills itself you cannot just prompt an agent to create a skill, right? You need like some sort of a clear way to test these skills out in a way that you have like a full coverage of not just user systems platforms and also just like different edge cases that you might face, right? And so as part of that sort of trial and error and like coming up with these with these skills and like how they how they work and so on what I ended up doing was like prompting Codex to create like a suite of test cases and these test cases would would essentially be would try and like sort of prompt the skill in different ways right and and and try and see whether it gives like a deterministic output that I expected right and then it just run this on a CI and like continue like every time I would make a change to the skill it would continue running these test cases and so this way we effectively run like evaluation for all of these skills right and and and hence we were sure that these skills would work across different systems different user profiles for different needs and so on and so forth. Oh that's great. So actually your you've got tests around your tooling to make sure your tooling is working then you give that to the agent. Yes. Yeah. That's fantastic. But be using the agent to do the test for the tooling, too. So, that's perfect. Yeah, I need to do that with the skills I've been using. I mean, that's what I was going to ask actually. I mean, it's really two things. So, you talked about connecting to to different skills. I think one of the things that's that's becoming more and more frightening is how much how much power an agent has to do do so many different things. But at the same time, do you want to give it all that freedom to go on a rampage? How how how do you recommend or how does Codex help people run in a safe environment and still move fast with agents?\nLook, the the demand for Codex is insatiable at this point, right? Like since the start of the year, we have tripled the amount of developers building on Codex, right? Across different surfaces, the app CLI, IDE, extension and so on and so forth, right? Which essentially means that people want to build, right? people just want to build and they want to try and experiment things. We're literally limited by creativity at this point, right? And at the same point this sort of throws the liability of making sure what Codex you know produces and the way it produces onto the harness itself, right? And the way we do it is by is by providing a few options to the developer itself. For example, we have a nice sandbox and and you can you can set your network rules. For example, if you want Codex to use web search, you can allow it to use web search. If if you think it's not safe enough for it to use web search, then you can just disallow Codex to use it. You can also define rules for what kind of CLI commands or what kind of bash commands is it is it allowed to run. Is Codex allowed to commit on your behalf? Is Codex allowed to open a pull request on your behalf or is Codex allowed to rm -rf on your behalf or not? Right? At the same point you can you can decide whether Codex has the ability to write or does it does it only have the ability to read, right? And and and not just that like you can if you're an enterprise you can sort of like set up these granular settings for your for your entire company or for developers who are using within your company on what's allowed and what's not allowed as well. That's great. I think I mean one of the questions that's always very interesting is is how much of the responsibility of making good choices is on me as a developer versus how much is it on on Codex to give us help us make good choices or give us guard rails to work inside. And that's I mean that's is that something we we can talk about what sort of how Sonar plays in that? Yeah I mean even beyond Sonar I think you have to start with the organization right. So if you're developing code with with Codex you need to go it needs to be at the same standard. It needs to be secure reliable maintainable as it was when humans were developing it. The hope is that we can do it much much faster. So you need to put all of those same constraints, all of those same checks and verifications that you had before with human developers and somehow replicate that in an agent environment that can that can help us increase productivity. That's the actual thing. So I think you know with organizations I'm talking to they want to apply the same policies they always had. They don't want to make any compromises for this speed and they can't right. They've still got the same risk with the applications that they launch. So, so it's perfect that you give that granularity of control and it's a lot of onus on the organization to make sure that they're they're putting the same control in but enabling their developers to go faster. Now, Sonar, we're making sure we're building our tools so they can interact directly with the agent and that enables the agent to do that work and not have to have a human in the loop all the time. I think that's the key, right? The more we can enable the agent, the better. but absolutely a standard shouldn't be compromised and but we want to unleash this amazing capability. And so it's really a matter of tooling I think more than anything else and but also good policies in the same sense and not compromising on the policies but how can we apply those policies in this new world and I guess to some extent that you you it's not when we talk about developers here we don't necessarily mean proper professional developers that have been developing 24 hours a day let's not get into that but the idea is it's it's now other people developers you've got are people like me so I used to be a developer in the distant past and I want to get back into it again. And it's it's one of those things where I won't necessarily know about SQL injection. I won't necessarily know about cross-site scripting problems and it becomes even more important to have guard rails that that will be applied and that will make sense even for someone who has good intentions but probably doesn't have the background to be totally rock solid. And that's how does that work from a from a Codex point of view? Who are you designing for? Codex definitely is for everyone, right? like we want users to to develop to build things with Codex and we of course want to want them to have the confidence of building things with Codex, right? So one of my favorite examples of Codex in the wild is is our pull request review, right? where Codex of course would look at the diff of all the changes that it has done that you have made within the pull request and it would contextualize it with the with the rest of the files in the in the repository. So you're not just bounded by whatever changes you've done but but by the overall context of the repository and sometimes that it would it would flag issues which which may not be caused which may come up as a consequence of your pull request. And also like you know which are just some gotchas that you should know about. And especially for large code bases, this is this is really important because this gives a developer the confidence that you can be sure that whatever you're merging is is secure and it it it works the way it does.\nAs an example of this like recently Codex recently we released Codex 5.3 Spark which is our which is our fastest model thanks to our partnership with Cerebras and Codex by default writes the docs for itself because you know why not and so Codex wrote the docs and it opened a pull request and I was reviewing the pull request And we have a lot of surfaces which developers would sort of interact with when it comes to the docs, right? So there would be docs about IDE docs about the app and so on and so forth. And this particular model at the time that we that we launched it was only launched for pro subscribers. And for some reason Codex Spark didn't really make that you know change and so when I prompted it to sort of fix it automatically the Codex review on the pull request flag that I should also sort of make this node on the on the app docs also on the CLI docs just so that you know everyone is aware that this is how you use it or these are the are the segments of user who should use it right and this is pure Clearly like the only reason why it was able to flag this was because it had the contextual knowledge of the rest of the repo and the rest of the docs. Yeah, it's really nice to hear that how complimentary the two are, right? So Codex comes up with a certain type of issues that are very kind of contextual over what's being built. It understands different things and then Sonar is coming up with issues that are contextual as well, right? We're not just analyzing the code that's there. We we've got aware of the whole repo, the whole build, everything that's been the thing. But they're different types of issues where they'll kind of the sea and I think together the two really complement each other to give good security. I think you know your point around developers could be all sorts of different people going forward. Right. It's it's not it's not quite the same skill set that's necessarily required really increases that need for that check and those and that tooling to make sure that everything is is is good. And obviously things like taint analysis where injection attacks and things like that can be found are some of the most critical ones and our analyzers can go in and sort of deterministically follow the piles and make sure that those all those paths are safe. And that's something that we invest a lot in as well as kind of other issues like, you know, things like your null reference checks and stuff like that which are super hard just to see if you're looking at a single file, but if you can follow the path all the way through the files, which our analyzers do, and understand all the different types that are in there. So, you know, we we use the artifacts from a build as part of our analysis. And that's a new analysis service that's available in MCP is effectively doing that. It's joining up the code you've just written with the last build it seam and it's kind of together it can do a really deep analysis and find those issues which thing and I think together they find a good set a good set of issues and keep us keep us a bit safer in an increasingly risky world and I think that's the thing it's it's interesting because it's it's not just about is this particular piece of code good enough to kind of production at this point it's almost like an educational thing both in terms of me as someone coming back into development helping me understand some of the the technology that perhaps I haven't touched before but also making the agent smarter for the next time around. So I guess you get this virtuous cycle of where things get faster and faster and smarter and smarter when the alternative is if you don't have those checks things can diverge and that can get exponentially worse over time. You mentioned how Codex is is good as a doc writer. I wanted to touch on sub agents. Do you how does sub agents or maybe different personalities of agent come into play when it comes to Codex? Definitely this is this is currently in experimental. So we recently add in support for sub agents which effectively allow you to sort of parallelize whatever task you're doing with Codex right and so you can have like different personas for these for these agents. So one could be a test runner, one could be a reviewer, one could be, you know, someone who's who's who's responsible for writing docs, and one could be who's just polling the server for a response, right? And effectively what this allows Codex to do is to essentially spin up these agents as it thinks an agent should be should be spawned and should do the task. And this this helps you sort of achieve the same task in not only like a faster way but but also in a more secure way because now you have like an an agent which is effectively just focused on solving one task, right? And so I can I can actually see this play quite nicely with with like Sonar MCP wherein you can have one agent which is dedicated to the Sonar MCP and is like essentially just continuously polling Sonar MCP to check if there are any new issues with respect to what has been added into the into the workspace so far and and play quite nicely with the with the other agents thereby like driving much more confidence in the I I think we're going to see verification agent agents, interacting with the main engines working as sub agents, increasingly. And doesn't have to just be the Sonar checks. It can be other checks as well that you put in in your organization. I think that's, it's going to be something we're going to see emerge very quickly. See, this is it feels like it's it's very much an evolving way of working because I think I mean, we talked a little bit earlier and you were saying, in the Codex team, you're running agents for sometimes hours, sometimes even longer unsupervised and they're producing really, really solid results. How do you how do you recommend people break up work into chunks into how do they know what the right size chunk is to to attack and get the best possible results? I think it's I don't think there's like a right answer to this, right? At the same time like I think you can use like the current tooling quite to your advantage. In this case for example typically if I am embarking on a complex task what I would do is switch Codex to plan mode and then like ask Codex to sort of like think through what are the possible ways to sort of build this particular feature that I want to add. Right. A concrete example of this would be when we created the the docs MCP server for developers.ai.com, right? That was also one of my first projects at OpenAI and I just gave Codex an open-ended task that I want to build an MCP server. How do I build it? Right? And in an in an environment which I had no clue about, right? I had just freshly gotten into OpenAI. didn't know how everything worked but I wanted to get a good understanding of how the overall sort of code base is structured right and so then it it went through like it it gave me some suggestions that maybe I can use this framework maybe I can use framework Y maybe I can have like a like a standalone repository for for the MCP server or just have it as a as a microservice as part of our main sort of developers doc server and eventually we settle down on a plan and then I asked Codex to create test cases for us just so that like it has something to verify it results and this is also something that we've seen that Codex excels when it has test cases to hill climb against or verify it work its work against and yeah like after some iteration it just went went on like created a proof of concept tested it kept on like iterating on that and after a couple hours we had a really nice doc MCP server ready right and of course then we went through like internal dog fooding and so on and so forth and we uncovered some some issues with that and we fixed that and so on but at the same time like you know you can you can like use like these agents for planning your task quite well and then once you have a nice plan you can leave it up to the agent to either divide that into chunks or use sub agents or use background processes to run certain things and so on and so forth as long as you you're sure that whatever task you're embarking on can be verified that it is the way I think that's key isn't it and it goes back to what you said earlier on depending on the risk profile of what you're building you might want to let it let it loose for longer or let it loose for shorter and I think if you've got something that's very critical you got that plan which is fantastic but you can tell it to stop at any point in that plan and and do a review. You could do your deterministic checks at any point. And it's like any development, right? The earlier the feedback loop is, the faster that you find problems, the less problem, the less there is to fix later sense. So the longer you let it go before the verification, the harder it's going to be for it to do things, the more it's got to rework in a sense. And I think if you've got a very critical application, then putting in breaks quite often. And even even if that's just a like deterministic verification using tools or whether it's human verification okay is it doing what I asked it to do and actually maybe even you know reviewing every line of code in some situations right is this some high-risk code that I really want to review carefully before we move on I think that's going to be the key for enterprises to be able to embrace that kind of flexibility and experience I think that's where experienced developers really come in as well they know where the risk is they know where we need to slow down and really check everything through. Where a junior developer might just kind of put the plan in and go that looks great and go for it and and and push the PR kind of thing. So, I think this is why we still need those experienced developers and it's the same problems as we have with human developers. It's just it's just coming at you faster now, right? It's like it's less time actually writing the code and more time going, okay, let me stop and think, is this right? Can I move on to the next step? And I think that's going to be key in the workflows. And I guess one of the great things about this is the feedback loop is so fast. So you can build out that intuition even even if it's if it's me coming back into development. I can I can quite quickly get a sense of what isn't going to work, what is going to work, and you get that intuition for yeah, it's time to run the static analysis now before we move on. One thing you mentioned about how you can use Codex to help you sort of understand the codebase. We know that AI tools are amazing when it comes to a blank page or with to a relatively young codebase where you've got sort of one consistent best practice pattern. Can you talk a little bit about how you would recommend people get good results if they've got an older codebase that perhaps has gone through sort of several levels of of best practice? So maybe there are different examples spread everywhere. Yeah. I mean like I often times would sort of deal with code bases which I haven't contributed to. Right. and and and most of the times like the way I would start it is by just spinning up Codex opening that workspace and then like ask it to sort of you know walk me through like a particular functionality within that particular codebase right so and then like we would like I would ask questions and most of the times I would ask like really stupid questions you know because of course like I don't I don't want to make a fool of myself with the with the engineering team or like with everyone who's actually like building on that on that codebase, right? And so I would ask like, \"Okay, why are we doing this? And if I was to add like this functionality, how would that look like?\" And just, you know, what were some of the design decisions? What were some of the you know decisions for testing? How do you make sure that this is this is correct or not? And you can you can really go as far as as possible with this, right? As someone who who wears like multiple hats within the team like this is quite important to sort of get an intuition of even like newer like like features which are coming in really hot within Codex just to get like a good understanding of it. Of course there are also cases wherein I'm just like I even don't have like good understanding of how to even set up this particular codebase to be able to sort of interact with it. In those cases, I would just, you know, also like ask Codex is like if I were to set this up, how what would be the steps, right? walk me through through those steps and you know I would either I would myself like execute those steps or like ask Codex to go step by step and like execute it for me just so that like I have a working playground to go around and we see the same pattern like within teams at OpenAI as well you know from like product designers try to get an understanding of how how the app functions right and how some of their designs can be integrated to you know PMs who are looking at code bases looking at Linear logs and you know Linear issues to see like how the pro like how the progress is going to you know like to to cross functional people like me who who are essentially keeping track of like what's happening where it's happening and and so on and so forth. One of the things I love about agents is getting the agent to read the documentation for me. I'm I've never enjoyed reading the documentation, but I think I mean it's really interesting the with legacy applications. I mean partly it's going to be down to whether there's good unit tests on it, right? And and you know the agent can work relatively safely if it's well covered with unit tests. One of the things Sonar does is a lot of people really use it for is to check that the code coverage is good whenever people check in code. And with an agent, it's pretty easy to say, okay, increase the code coverage this and create the test. But it's one of those where the human needs to be checking that actually that is the behavior. If you're retrofitting tests, is that the behavior I actually expect or not kind of thing because the agent may just create tests that it'll know will pass based on the current code. And I think this is this is going to be a bit of an art as well of looking working on legacy systems, but we've probably got to relearn with an agent. But a lot of the old principles still apply and making sure that you know you're covering that old code base with tests well and so that whenever you change something you're not going to get something unexpected because you generally haven't got super maintainable code that's easy to understand right and and and and I think like you know historically if you if you sort of see like what I've seen is that a lot of people would would often sort of you know discount testing or discount like these these sort of processes as being slow, right? And like or like adding to the overhead of like developing faster. But as these agents are becoming faster, for example, Codex 5.3 is 60% faster on the basis of number of tokens it produces and so on. As compared to Codex 5.2 which means that you can you can do the same task with the same confidence but much faster, right? You like the sort of excuse of like running these test cases or like running these these sort of checks and and like balances kind of disappears right because like now you're you are not the one who who has to wait for your agent to sort of like figure out the like what kind of tests it has to run what kind of files it has to run and like the the overhead sort of like decreases considerably. Yeah. Yeah. I mean, I love the way agents are really good at TDD. They can do test first really nicely, but it's still up to that developer to actually run through and make sure the tests that are being created are actually what's expected. But but you know, they're well written tests that are easy to understand and you can kind of you can verify that relatively quickly and then you know you're kind of you've you've created that safe environment to then do the fast coding with. So we talked about a lot of a lot of ways of working. Let's let's get into some concrete examples. So Tom, do you do you have some examples of of how a real customer is working in this way in production? Sure. Yeah. So I mean I think our big enterprise customers, they're still really working out. This this world is changing so fast and they're generally a little bit slower to move, but I'm seeing people moving really quickly and and the kind of way they're doing that is experimenting. So even large financials, they are they're kind of they're finding teams where that could work with these tools and they're giving them the freedom to work. I think doing that the first problem they've got for that c those teams to solve is how do we code at the with the same standard that our company has at the moment right and so they have to start building in those verification strategies into the tools now they're probably going to start on less critical applications right not the most mission critical trading applications just yet but you can learn on lower risk applications but still apply the same standards as you would do on a mission critical application to build that infrastructure and and what VB was saying about the tooling and creating the skills and things like that they can then be used anywhere across the application so I think what we're seeing is people experimenting they're kind of starting to build the infrastructure around that and then growing that out to more teams as they see success and as they become confident that they can do this safely and securely I think that's I mean that's the critical thing for the enterprise great and I mean you you talked about this with the difference between 5.2 and 5.3 the the pace of change and the the capability of the agents I it's increasing incredibly fast and it's changing wildly. So something that you might consider impossible today in a week's time is very very doable. How how do people how do you recommend companies keep an eye on this and really understand what the art of the possible is? I'm a firm believer of just like testing things, right? So I feel like as long as you you have a safe sandbox and you have the ability to make sure that your agent doesn't mess up right I I think like the first step should be to just download for example Codex right and just give it a task that you that you want to do and just try and see like how it how it tries to solve the task in a lot of cases what might be beneficial is to is to create an agents.md file like agents.md file is like think of it as like the soul of your project right so you can have here are like certain folders this is what the folder does and here are every time you do a task run these tests and here are some rules for whatever it is that you want to do and for certain specific tasks and so on. And if you're using tools like Codex, you can you can just create this agents.md with Codex itself, right? And every so often, for example, on our developers website, what we do is we have like the skill it's its task is to make sure that none of the typos, none of the you know like the language of the of the docs and so on are uniform across, right? And you know this was a was a suggestion which came from Codex and then Codex helped build this into a skill and then of course like we iterated a bit and this has now run on each and every change right and so like the best thing to do is to sort of like you know try and pick up such such use cases for either a new project or an existing project and just like work with the agent to figure out what are the boundaries of what is possible right now right and this is something which I do with like every new model as well. Back in December we had Codex 5.2 and you know there were certain tasks which were possible back then and certain tasks which were not possible. But at the same time today like we have Codex 5.3 we have Codex 5.3 Spark which is our faster model and each of these like unlocks like certain new tasks and you know also at the same time makes previous tasks faster and you know like it's really like you just you just like iterate with these models try and give them your problem try and give them the ability to verify what they're building and and and then just like riff off of that. Yeah. Yeah. I think that's really important. I think I mean the agents.md is is the entry point in I think you know to start with let's think about the project you're working on. What are the standards you want to set for that project and they're probably partly organizational. They're partly contextual to that project. Put those into the agents.md to start. And you know the agent would do a pretty good job of following those standards from the outset right from the beginning. But then you've got to remember that that's not necessarily deterministic. That if it's not using tools it will do its best to follow those standards. But you can't guarantee that it will. So if I think the next step is then to start thinking okay how can we enforce those standards in a deterministic way and therefore by using tools. You can then start in installing MCP using CLIs. So we know we sort of seeing a little bit of a move from MCP to CLIs because it could be a little bit more deterministic. And we're building that Sonar now. but you know at the moment there's the Sonar MCP server that you can use today. It will already do those checks. You can already check the SonarQube status. So you can quickly build your standard process that the developers have been full like using potentially for years straight into the agent process and make that efficient from the outset and then as it just build on sophistication in the same way as we've always done with CI pipelines right they generally start off really simple and over time you add more checks you add more controls and they get more sophisticated hopefully don't get too slow and they're still fast but and keep the keep the team going and it's just the same thing but we're just now building that into the agent workflow and I think it's you can also do it in in sort of different cadences as well. It's and correct me if I'm wrong you can have sort of like oneoff or like recurring sort of jobs which are which are essentially looking at your codebase outside of PRs outside of you know all the commits and so on just like a cron job for example we have this ability within the Codex app that you can set up automations I can I can I can see this quite nicely play with the Sonar MCP wherein like every day at let's say 11:59 p.m. Codex wakes up and runs the Sonar MCP through like all that has been added in the last one day and verify it against all the logic that that the team has has defined and try and sort of like think outside the box and like find what could be improved what what should be kept as as is and so on and so forth right and you can you can truly use this in like in like different ways as well like if let's say the Sonar MCP finds an issue, you can ask in this case Codex to open a proactive pull request and then next day when when Tom wakes up, Tom can review these pull requests. And I feel like this way you have the you have the confidence that even if let's say by 1% something is missed by these these agents you are able to still sort of solve for that 1% use cases. Yeah. I mean some things we can build super fast and you can get immediate feedback within a second. We can do most of our analysis like that. But some things are longer running and you might just want to run them nightly. That's absolutely fine. Just like we always did with with with sort of long running tests and things like that, right? So, so yeah, it's very much the same principles. think about is this something that I can check fast in which case you might want to do it like really regularly within the agent workflow or is it something we just do in a PR or is it something I might do nightly and do a really long running check and yeah there's there's so much possibilities and the fact you don't need a human there to sit and watch it is is kind of opens up all sorts of possibilities and I think we can get to a point where we have a higher coding standard with agents than we do with humans. So I think at the moment we're talking about\nokay how do we get to the same but I think we'll get we'll soon be thinking okay let's we've now got these capabilities we can go further than we ever did on quality which will be good for software in general 100%. Yeah, absolutely. It does seem like there's there are so many different levers you could pull on ways of working with AI. And I think it's it's it's great that Codex can be part of that, but also you can go to Codex and say, \"Hey, what should I be doing now? How can I what other checks could I have in place?\" And and your idea about the cron job running running nightly and being able to build that out through Codex is is hugely powerful. So as we move towards the the last question then we're just getting close to some really really concrete things for people to do. If we if we think about right now, so for for people who are watching and they're they're excited about getting their teams going, getting their whole organizations working in this manner. What are some concrete first one two three steps they should be be jumping on right now? Well first obviously agent running in in a team that's relatively low risk. I think we covered that. Then MCP is your friend, right? So work out what MCPs you need to be working with that can do the checks that the agent can interact with to actually make it capable. An agent without other tools is is really limited. And I think I think in your organization you're going to have various things that you need you know it needs to interact with and they're generally available in MCP. You'd get that going straight away. start start relatively simple and and actually agents.md is a super easy way to start saying these are the standards I want you to code at and then start tooling you know adding the tooling into that process and just slowly increasing in sophistication and then once you get a certain level of sophistication you'll feel confident to go out to more kind of critical critical applications yeah and I think you know just to sort of add on I would say like just start simple right like no task is a small task for an agent, right? Like even if it's just like fix a typo in readme.md, just like try and delegate it to an agent and and and the worst things that's going to happen is like it opens a pull request, right? And you can always close it or like you know just as long as you you know that whatever it is whatever playground you've given to the agent is secure enough just try and start with like simple tasks that you can you know delegate and then like work your way from there right layer in like the MCDs the skills the tooling web search like all the things that you think is going to help the agent get the context the core knowledge of your company, your organization principles, directives and so on. Yeah, and just like work piece by piece, remove what doesn't work and like add what works and so on. I think it's I think it's important to have the right expectations for your teams adopting these tools as well. I mean, if your expectation is they're going to have a 20x productivity improvement overnight, they're probably not putting these checks in place and and you're probably taking a lot of risks. I think you know if people are you know the team is building the tooling working on the process correctly initially they're probably not going to be much faster and and that won't won't be kind of give you instant satisfaction but you know that they are investing in what's the future of software development and over time though that will start paying off and you'll quickly see the performance improvements in the teams. Brilliant. I think that I think that that rounds it up really nicely. It's the agents and everything that comes around that becomes this this supercharged engine of your racing car and then the deterministic checking is the thing that keeps you on the road. And with that, thank you very much, gentlemen. That was that was fascinating. Thank you for having me. Thanks, John. Thanks.",
+  "fetchedAt": "2026-03-14T09:22:04.734Z"
+}

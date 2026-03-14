@@ -1,0 +1,1363 @@
+{
+  "videoId": "v9",
+  "youtubeId": "p4hVlXCD6Lg",
+  "segments": [
+    {
+      "text": "Hello, I'm Antonio. I'm a senior staff",
+      "offset": 17039,
+      "duration": 7521
+    },
+    {
+      "text": "engineer at Sonar. I'm uh leading the uh",
+      "offset": 20560,
+      "duration": 7039
+    },
+    {
+      "text": "uh Sonar context augmentation project",
+      "offset": 24560,
+      "duration": 6160
+    },
+    {
+      "text": "and um we're going to talk about how",
+      "offset": 27599,
+      "duration": 5601
+    },
+    {
+      "text": "Soner does context augmentation for",
+      "offset": 30720,
+      "duration": 5920
+    },
+    {
+      "text": "large language models. So here is the uh",
+      "offset": 33200,
+      "duration": 7199
+    },
+    {
+      "text": "agenda. We are first uh going to uh say",
+      "offset": 36640,
+      "duration": 7439
+    },
+    {
+      "text": "what is um sonar context augmentation.",
+      "offset": 40399,
+      "duration": 6320
+    },
+    {
+      "text": "uh then we're going to um uh talk in",
+      "offset": 44079,
+      "duration": 6241
+    },
+    {
+      "text": "general uh about what is context",
+      "offset": 46719,
+      "duration": 6480
+    },
+    {
+      "text": "augmentation for large language models",
+      "offset": 50320,
+      "duration": 6320
+    },
+    {
+      "text": "uh before digging into the details. how",
+      "offset": 53199,
+      "duration": 6081
+    },
+    {
+      "text": "Sonar Kag does this context augmentation",
+      "offset": 56640,
+      "duration": 4559
+    },
+    {
+      "text": "and we're going to talk about model",
+      "offset": 59280,
+      "duration": 4079
+    },
+    {
+      "text": "context protocol",
+      "offset": 61199,
+      "duration": 5841
+    },
+    {
+      "text": "um and uh the details so the type of",
+      "offset": 63359,
+      "duration": 7281
+    },
+    {
+      "text": "context augmentation that we uh we do uh",
+      "offset": 67040,
+      "duration": 6000
+    },
+    {
+      "text": "in particular context augmentation for",
+      "offset": 70640,
+      "duration": 5440
+    },
+    {
+      "text": "guidelines and for architecture",
+      "offset": 73040,
+      "duration": 5680
+    },
+    {
+      "text": "um we're going to see uh the tool in",
+      "offset": 76080,
+      "duration": 5200
+    },
+    {
+      "text": "action so how uh sonar context",
+      "offset": 78720,
+      "duration": 5840
+    },
+    {
+      "text": "augmentation can uh avoid architectural",
+      "offset": 81280,
+      "duration": 4400
+    },
+    {
+      "text": "violation",
+      "offset": 84560,
+      "duration": 2960
+    },
+    {
+      "text": "uh some results from our internal",
+      "offset": 85680,
+      "duration": 3920
+    },
+    {
+      "text": "benchmarking and then we we will draw",
+      "offset": 87520,
+      "duration": 5440
+    },
+    {
+      "text": "conclusions. So okay let's start by",
+      "offset": 89600,
+      "duration": 6080
+    },
+    {
+      "text": "talking about what is uh sonar context",
+      "offset": 92960,
+      "duration": 5920
+    },
+    {
+      "text": "augmentation uh is essentially a service",
+      "offset": 95680,
+      "duration": 7520
+    },
+    {
+      "text": "uh which um um bridge the gap between",
+      "offset": 98880,
+      "duration": 9040
+    },
+    {
+      "text": "the uh coding agents so such as uh um",
+      "offset": 103200,
+      "duration": 8080
+    },
+    {
+      "text": "cloud code and uh um and cursor and the",
+      "offset": 107920,
+      "duration": 7280
+    },
+    {
+      "text": "user repository. So um the idea is that",
+      "offset": 111280,
+      "duration": 8879
+    },
+    {
+      "text": "um uh we want to use sonar uh analyzers",
+      "offset": 115200,
+      "duration": 7279
+    },
+    {
+      "text": "and uh uh the analysis the static",
+      "offset": 120159,
+      "duration": 5280
+    },
+    {
+      "text": "analysis of the user to inject",
+      "offset": 122479,
+      "duration": 5920
+    },
+    {
+      "text": "information uh from uh the local",
+      "offset": 125439,
+      "duration": 5520
+    },
+    {
+      "text": "repository information that cannot be",
+      "offset": 128399,
+      "duration": 6881
+    },
+    {
+      "text": "accessed directly by the um by the LLM",
+      "offset": 130959,
+      "duration": 7681
+    },
+    {
+      "text": "with the simple tools and to uh to",
+      "offset": 135280,
+      "duration": 7440
+    },
+    {
+      "text": "expand uh expand augment the uh LLM",
+      "offset": 138640,
+      "duration": 6480
+    },
+    {
+      "text": "context with with it and while doing",
+      "offset": 142720,
+      "duration": 5040
+    },
+    {
+      "text": "that we want to maintain the correctness",
+      "offset": 145120,
+      "duration": 6960
+    },
+    {
+      "text": "and the speed of the tool. Okay. So um",
+      "offset": 147760,
+      "duration": 7440
+    },
+    {
+      "text": "some words about what is uh in general",
+      "offset": 152080,
+      "duration": 6400
+    },
+    {
+      "text": "context augmentation for LM. Uh the",
+      "offset": 155200,
+      "duration": 6640
+    },
+    {
+      "text": "context is an agent such as cursor and",
+      "offset": 158480,
+      "duration": 6560
+    },
+    {
+      "text": "code and this agent is the one that",
+      "offset": 161840,
+      "duration": 6240
+    },
+    {
+      "text": "keeps an LLM context. The LLM because",
+      "offset": 165040,
+      "duration": 6240
+    },
+    {
+      "text": "the LLM is stateless. it does not have",
+      "offset": 168080,
+      "duration": 6560
+    },
+    {
+      "text": "uh memory of a conversation. So uh the",
+      "offset": 171280,
+      "duration": 6160
+    },
+    {
+      "text": "len context contains the user prompt. So",
+      "offset": 174640,
+      "duration": 5920
+    },
+    {
+      "text": "what the user uh provides when there is",
+      "offset": 177440,
+      "duration": 6400
+    },
+    {
+      "text": "a code generation task and also and the",
+      "offset": 180560,
+      "duration": 6959
+    },
+    {
+      "text": "um the agent uh add adds to the context",
+      "offset": 183840,
+      "duration": 6240
+    },
+    {
+      "text": "information such as the user code or",
+      "offset": 187519,
+      "duration": 5601
+    },
+    {
+      "text": "part of it and the environment.",
+      "offset": 190080,
+      "duration": 4960
+    },
+    {
+      "text": "And what we want to do is to do",
+      "offset": 193120,
+      "duration": 4320
+    },
+    {
+      "text": "augmentation of this context. So provide",
+      "offset": 195040,
+      "duration": 5440
+    },
+    {
+      "text": "additional information for the LLM to",
+      "offset": 197440,
+      "duration": 6719
+    },
+    {
+      "text": "use when it needs to generate some code.",
+      "offset": 200480,
+      "duration": 10000
+    },
+    {
+      "text": "Okay. Now um uh Sarag um does uh context",
+      "offset": 204159,
+      "duration": 9761
+    },
+    {
+      "text": "augmentation using MCP tools. uh in",
+      "offset": 210480,
+      "duration": 6800
+    },
+    {
+      "text": "particular uh it uh those tools which",
+      "offset": 213920,
+      "duration": 5520
+    },
+    {
+      "text": "are for architecture and for guidelines",
+      "offset": 217280,
+      "duration": 5200
+    },
+    {
+      "text": "take information for son from sonar cube",
+      "offset": 219440,
+      "duration": 5600
+    },
+    {
+      "text": "uh information like uh architectural",
+      "offset": 222480,
+      "duration": 5839
+    },
+    {
+      "text": "analysis the rules from sonar and the",
+      "offset": 225040,
+      "duration": 5680
+    },
+    {
+      "text": "issues that are generated by the",
+      "offset": 228319,
+      "duration": 6881
+    },
+    {
+      "text": "analyzer uh that detect um issues like",
+      "offset": 230720,
+      "duration": 7760
+    },
+    {
+      "text": "uh violations of those rules and uh",
+      "offset": 235200,
+      "duration": 7119
+    },
+    {
+      "text": "those MCP tools are exposed to the LLM",
+      "offset": 238480,
+      "duration": 8479
+    },
+    {
+      "text": "which then will call uh the tools uh",
+      "offset": 242319,
+      "duration": 8241
+    },
+    {
+      "text": "when they are needed. So the MCP the",
+      "offset": 246959,
+      "duration": 6321
+    },
+    {
+      "text": "model context protocol is the mechanism",
+      "offset": 250560,
+      "duration": 5679
+    },
+    {
+      "text": "the delivery mechanism for context that",
+      "offset": 253280,
+      "duration": 7120
+    },
+    {
+      "text": "allow the LLM to query for context ask",
+      "offset": 256239,
+      "duration": 8001
+    },
+    {
+      "text": "for context when the context is needed.",
+      "offset": 260400,
+      "duration": 8480
+    },
+    {
+      "text": "Okay, just a um short um uh description",
+      "offset": 264240,
+      "duration": 8239
+    },
+    {
+      "text": "of how the model context protocol works.",
+      "offset": 268880,
+      "duration": 7360
+    },
+    {
+      "text": "Um essentially u the model context",
+      "offset": 272479,
+      "duration": 7361
+    },
+    {
+      "text": "protocol is a protocol that allow the um",
+      "offset": 276240,
+      "duration": 6959
+    },
+    {
+      "text": "agent to be extended with additional",
+      "offset": 279840,
+      "duration": 7280
+    },
+    {
+      "text": "tools on top of the one which are uh",
+      "offset": 283199,
+      "duration": 7921
+    },
+    {
+      "text": "available u to the agent by default and",
+      "offset": 287120,
+      "duration": 6799
+    },
+    {
+      "text": "uh which are exposed by an MCP server.",
+      "offset": 291120,
+      "duration": 5760
+    },
+    {
+      "text": "So the agent will start an MCP server",
+      "offset": 293919,
+      "duration": 7361
+    },
+    {
+      "text": "and ask for MCP tools. uh the MCP server",
+      "offset": 296880,
+      "duration": 7920
+    },
+    {
+      "text": "will reply with a list of MCP tools uh",
+      "offset": 301280,
+      "duration": 6160
+    },
+    {
+      "text": "and those MCP tools are added to the LLM",
+      "offset": 304800,
+      "duration": 5360
+    },
+    {
+      "text": "context and during the conversation the",
+      "offset": 307440,
+      "duration": 6160
+    },
+    {
+      "text": "LLM will ask uh to run some specific",
+      "offset": 310160,
+      "duration": 6240
+    },
+    {
+      "text": "tool depending on the task that uh the",
+      "offset": 313600,
+      "duration": 6720
+    },
+    {
+      "text": "LLM is um is executing. Uh so the",
+      "offset": 316400,
+      "duration": 6720
+    },
+    {
+      "text": "context will be provided on demand and",
+      "offset": 320320,
+      "duration": 4800
+    },
+    {
+      "text": "uh uh the agent will receive this",
+      "offset": 323120,
+      "duration": 4799
+    },
+    {
+      "text": "request from the LLM run the tool which",
+      "offset": 325120,
+      "duration": 4960
+    },
+    {
+      "text": "will produce a result and the result",
+      "offset": 327919,
+      "duration": 4481
+    },
+    {
+      "text": "will be added to the conversation so",
+      "offset": 330080,
+      "duration": 6080
+    },
+    {
+      "text": "that the LLM can use the information.",
+      "offset": 332400,
+      "duration": 9120
+    },
+    {
+      "text": "All right. So um now uh how do we uh uh",
+      "offset": 336160,
+      "duration": 7680
+    },
+    {
+      "text": "what do we do in those tool for uh",
+      "offset": 341520,
+      "duration": 4560
+    },
+    {
+      "text": "guidelines and architecture. So for",
+      "offset": 343840,
+      "duration": 5919
+    },
+    {
+      "text": "guidelines the goal is to provide some",
+      "offset": 346080,
+      "duration": 6720
+    },
+    {
+      "text": "um some uh coding standards uh for",
+      "offset": 349759,
+      "duration": 7041
+    },
+    {
+      "text": "security for quality of the of the code",
+      "offset": 352800,
+      "duration": 6640
+    },
+    {
+      "text": "and those guidelines should be relevant",
+      "offset": 356800,
+      "duration": 5839
+    },
+    {
+      "text": "for the task at hand. So the uh the the",
+      "offset": 359440,
+      "duration": 7599
+    },
+    {
+      "text": "task that the LLM is um is executing and",
+      "offset": 362639,
+      "duration": 6961
+    },
+    {
+      "text": "we use two different techniques. We base",
+      "offset": 367039,
+      "duration": 6160
+    },
+    {
+      "text": "our guidelines on the user prompt. Uh so",
+      "offset": 369600,
+      "duration": 7439
+    },
+    {
+      "text": "for example if the user ask to have um",
+      "offset": 373199,
+      "duration": 7041
+    },
+    {
+      "text": "to to implement uh for the LLM to",
+      "offset": 377039,
+      "duration": 5681
+    },
+    {
+      "text": "implement a task that involves access to",
+      "offset": 380240,
+      "duration": 6560
+    },
+    {
+      "text": "the database we include guidelines so uh",
+      "offset": 382720,
+      "duration": 7840
+    },
+    {
+      "text": "rule about bugs vulnerabilities smell uh",
+      "offset": 386800,
+      "duration": 5760
+    },
+    {
+      "text": "about database",
+      "offset": 390560,
+      "duration": 6400
+    },
+    {
+      "text": "and uh if um the LLM plans to modify a",
+      "offset": 392560,
+      "duration": 7440
+    },
+    {
+      "text": "specific file for example a file called",
+      "offset": 396960,
+      "duration": 6640
+    },
+    {
+      "text": "db storage Java uh then we include the",
+      "offset": 400000,
+      "duration": 7600
+    },
+    {
+      "text": "guidelines um that comes from past issue",
+      "offset": 403600,
+      "duration": 7200
+    },
+    {
+      "text": "on on on that file specifically. So",
+      "offset": 407600,
+      "duration": 4800
+    },
+    {
+      "text": "essentially we take an historical",
+      "offset": 410800,
+      "duration": 5440
+    },
+    {
+      "text": "perspective on the uh issues and in uh",
+      "offset": 412400,
+      "duration": 5760
+    },
+    {
+      "text": "using this we we use these two",
+      "offset": 416240,
+      "duration": 6239
+    },
+    {
+      "text": "techniques to get uh um guidelines which",
+      "offset": 418160,
+      "duration": 6319
+    },
+    {
+      "text": "are relevant for the context and then we",
+      "offset": 422479,
+      "duration": 4481
+    },
+    {
+      "text": "combine them and we augment the context",
+      "offset": 424479,
+      "duration": 5440
+    },
+    {
+      "text": "with this information.",
+      "offset": 426960,
+      "duration": 6160
+    },
+    {
+      "text": "And now for architecture, we focus on",
+      "offset": 429919,
+      "duration": 5680
+    },
+    {
+      "text": "three different um on three different",
+      "offset": 433120,
+      "duration": 6560
+    },
+    {
+      "text": "areas. We want to uh help the LLM build",
+      "offset": 435599,
+      "duration": 8241
+    },
+    {
+      "text": "the right thing, which means um um align",
+      "offset": 439680,
+      "duration": 6880
+    },
+    {
+      "text": "uh aligning with uh uh with the user",
+      "offset": 443840,
+      "duration": 5359
+    },
+    {
+      "text": "goals and avoiding mistakes by",
+      "offset": 446560,
+      "duration": 5520
+    },
+    {
+      "text": "generating the code. uh essentially uh",
+      "offset": 449199,
+      "duration": 6321
+    },
+    {
+      "text": "we want to have less chance of the LLM",
+      "offset": 452080,
+      "duration": 7119
+    },
+    {
+      "text": "building code that doesn't uh work or",
+      "offset": 455520,
+      "duration": 6399
+    },
+    {
+      "text": "that doesn't pass the test and uh but",
+      "offset": 459199,
+      "duration": 6241
+    },
+    {
+      "text": "also we want the LLM to build the uh the",
+      "offset": 461919,
+      "duration": 6641
+    },
+    {
+      "text": "thing right which means uh we want uh",
+      "offset": 465440,
+      "duration": 7440
+    },
+    {
+      "text": "that the LLM generates code that u is in",
+      "offset": 468560,
+      "duration": 6319
+    },
+    {
+      "text": "line with the architecture. So if the",
+      "offset": 472880,
+      "duration": 5999
+    },
+    {
+      "text": "architect has defined on Sona cube cloud",
+      "offset": 474879,
+      "duration": 6320
+    },
+    {
+      "text": "uh the intended architecture for the",
+      "offset": 478879,
+      "duration": 5040
+    },
+    {
+      "text": "project, we want the LLM to respect this",
+      "offset": 481199,
+      "duration": 6641
+    },
+    {
+      "text": "architecture. And the third um the third",
+      "offset": 483919,
+      "duration": 7680
+    },
+    {
+      "text": "um uh type of augmentation is about",
+      "offset": 487840,
+      "duration": 6320
+    },
+    {
+      "text": "remediation of architectural problems.",
+      "offset": 491599,
+      "duration": 5040
+    },
+    {
+      "text": "So when some problem already exist for",
+      "offset": 494160,
+      "duration": 5360
+    },
+    {
+      "text": "example the code has tangles has areas",
+      "offset": 496639,
+      "duration": 6081
+    },
+    {
+      "text": "where uh classes are interconnected with",
+      "offset": 499520,
+      "duration": 5119
+    },
+    {
+      "text": "each other and it's difficult to",
+      "offset": 502720,
+      "duration": 5120
+    },
+    {
+      "text": "separate them. Uh we don't want the LM",
+      "offset": 504639,
+      "duration": 7041
+    },
+    {
+      "text": "to make the situation worse. Uh for uh",
+      "offset": 507840,
+      "duration": 5999
+    },
+    {
+      "text": "this to work we required a connection to",
+      "offset": 511680,
+      "duration": 4719
+    },
+    {
+      "text": "sonar cube cloud and a recent analysis",
+      "offset": 513839,
+      "duration": 5120
+    },
+    {
+      "text": "so that uh we have architectural",
+      "offset": 516399,
+      "duration": 5601
+    },
+    {
+      "text": "analysis on the project and optionally",
+      "offset": 518959,
+      "duration": 5361
+    },
+    {
+      "text": "the user needs to provide an intended",
+      "offset": 522000,
+      "duration": 6320
+    },
+    {
+      "text": "architecture for the project. Okay. So",
+      "offset": 524320,
+      "duration": 8400
+    },
+    {
+      "text": "um the tool that we uh provide are um",
+      "offset": 528320,
+      "duration": 7040
+    },
+    {
+      "text": "for intended architecture. So uh",
+      "offset": 532720,
+      "duration": 7200
+    },
+    {
+      "text": "building uh the um the right thing um",
+      "offset": 535360,
+      "duration": 7840
+    },
+    {
+      "text": "and uh actually building the thing right",
+      "offset": 539920,
+      "duration": 5520
+    },
+    {
+      "text": "in this case and building the right",
+      "offset": 543200,
+      "duration": 5360
+    },
+    {
+      "text": "thing is about code structure code flow",
+      "offset": 545440,
+      "duration": 5360
+    },
+    {
+      "text": "uh and semantic search. So uh the",
+      "offset": 548560,
+      "duration": 5040
+    },
+    {
+      "text": "hierarchy of the project uh of a",
+      "offset": 550800,
+      "duration": 5520
+    },
+    {
+      "text": "provided class, the references, the code",
+      "offset": 553600,
+      "duration": 5679
+    },
+    {
+      "text": "flow, so what is calling what and then a",
+      "offset": 556320,
+      "duration": 5760
+    },
+    {
+      "text": "feature of semantic search which allow",
+      "offset": 559279,
+      "duration": 7680
+    },
+    {
+      "text": "the LLM to search for a specific uh",
+      "offset": 562080,
+      "duration": 8480
+    },
+    {
+      "text": "method or classes or fields by patterns",
+      "offset": 566959,
+      "duration": 6481
+    },
+    {
+      "text": "and this return a fully qualified name",
+      "offset": 570560,
+      "duration": 6560
+    },
+    {
+      "text": "of those objects uh which are really",
+      "offset": 573440,
+      "duration": 8399
+    },
+    {
+      "text": "specific to the um to the um uh to the",
+      "offset": 577120,
+      "duration": 8159
+    },
+    {
+      "text": "code uh and to the object which is being",
+      "offset": 581839,
+      "duration": 6481
+    },
+    {
+      "text": "retrieved. And this is uh in general",
+      "offset": 585279,
+      "duration": 6000
+    },
+    {
+      "text": "more powerful than a text search tool",
+      "offset": 588320,
+      "duration": 5360
+    },
+    {
+      "text": "that are provided by default uh by the",
+      "offset": 591279,
+      "duration": 6240
+    },
+    {
+      "text": "LLM like grap that does a text search uh",
+      "offset": 593680,
+      "duration": 7360
+    },
+    {
+      "text": "or similar tools that don't understand",
+      "offset": 597519,
+      "duration": 6320
+    },
+    {
+      "text": "uh the differences between uh overload",
+      "offset": 601040,
+      "duration": 4880
+    },
+    {
+      "text": "methods or method in a hierarchy that",
+      "offset": 603839,
+      "duration": 4641
+    },
+    {
+      "text": "have the same name but uh different",
+      "offset": 605920,
+      "duration": 4320
+    },
+    {
+      "text": "semantic.",
+      "offset": 608480,
+      "duration": 7120
+    },
+    {
+      "text": "Okay. So uh here we have a demo of how",
+      "offset": 610240,
+      "duration": 9200
+    },
+    {
+      "text": "uh sonar code context can help to uh to",
+      "offset": 615600,
+      "duration": 7280
+    },
+    {
+      "text": "avoid architectural v violation in code",
+      "offset": 619440,
+      "duration": 7680
+    },
+    {
+      "text": "generation. And uh uh we can see that uh",
+      "offset": 622880,
+      "duration": 8320
+    },
+    {
+      "text": "we um in this um in this execution of",
+      "offset": 627120,
+      "duration": 7279
+    },
+    {
+      "text": "cursor we enrich the list of tools with",
+      "offset": 631200,
+      "duration": 6319
+    },
+    {
+      "text": "our tools such as get neighbor uh and",
+      "offset": 634399,
+      "duration": 5601
+    },
+    {
+      "text": "get intended architecture",
+      "offset": 637519,
+      "duration": 5201
+    },
+    {
+      "text": "um that gives the uh references and the",
+      "offset": 640000,
+      "duration": 5600
+    },
+    {
+      "text": "intended architecture and the user is",
+      "offset": 642720,
+      "duration": 6400
+    },
+    {
+      "text": "asking to perform a certain operation on",
+      "offset": 645600,
+      "duration": 6160
+    },
+    {
+      "text": "a class and this operation requires some",
+      "offset": 649120,
+      "duration": 4640
+    },
+    {
+      "text": "architectural changes. So the first",
+      "offset": 651760,
+      "duration": 4800
+    },
+    {
+      "text": "things the LLM will do is to use our",
+      "offset": 653760,
+      "duration": 7519
+    },
+    {
+      "text": "search tool um to look um to understand",
+      "offset": 656560,
+      "duration": 6959
+    },
+    {
+      "text": "uh where those things where those",
+      "offset": 661279,
+      "duration": 4881
+    },
+    {
+      "text": "objects are located in particular a",
+      "offset": 663519,
+      "duration": 6081
+    },
+    {
+      "text": "class called var varent input stream and",
+      "offset": 666160,
+      "duration": 6640
+    },
+    {
+      "text": "after identifying the object it uh we",
+      "offset": 669600,
+      "duration": 5840
+    },
+    {
+      "text": "will ask for the intended architecture",
+      "offset": 672800,
+      "duration": 5360
+    },
+    {
+      "text": "to get the uh architecture and then it",
+      "offset": 675440,
+      "duration": 6639
+    },
+    {
+      "text": "realizes that um the change that the",
+      "offset": 678160,
+      "duration": 6960
+    },
+    {
+      "text": "it's about to make uh it doesn't comply",
+      "offset": 682079,
+      "duration": 4801
+    },
+    {
+      "text": "with the intended architecture of the",
+      "offset": 685120,
+      "duration": 5040
+    },
+    {
+      "text": "project. So it will um it will propose",
+      "offset": 686880,
+      "duration": 4880
+    },
+    {
+      "text": "to the user because here we are in",
+      "offset": 690160,
+      "duration": 5520
+    },
+    {
+      "text": "planning mode uh uh several options to",
+      "offset": 691760,
+      "duration": 5600
+    },
+    {
+      "text": "respect to be compliant with the",
+      "offset": 695680,
+      "duration": 4719
+    },
+    {
+      "text": "architecture. The user will select one",
+      "offset": 697360,
+      "duration": 7200
+    },
+    {
+      "text": "of those options. Uh and uh the uh LLM",
+      "offset": 700399,
+      "duration": 6801
+    },
+    {
+      "text": "will continue the analysis using more",
+      "offset": 704560,
+      "duration": 5200
+    },
+    {
+      "text": "tool in part more tools in particular",
+      "offset": 707200,
+      "duration": 5840
+    },
+    {
+      "text": "the uh upstream call flow to get the",
+      "offset": 709760,
+      "duration": 8319
+    },
+    {
+      "text": "dependencies of uh of the uh uh of this",
+      "offset": 713040,
+      "duration": 8640
+    },
+    {
+      "text": "particular class. And uh once it gets a",
+      "offset": 718079,
+      "duration": 5681
+    },
+    {
+      "text": "comprehensive picture of what needs to",
+      "offset": 721680,
+      "duration": 5200
+    },
+    {
+      "text": "be modified, it will produce a report",
+      "offset": 723760,
+      "duration": 6639
+    },
+    {
+      "text": "plan uh with a list of changes that need",
+      "offset": 726880,
+      "duration": 6560
+    },
+    {
+      "text": "to be done to implement the feature but",
+      "offset": 730399,
+      "duration": 6560
+    },
+    {
+      "text": "keeps uh keep architectural compliancy.",
+      "offset": 733440,
+      "duration": 6800
+    },
+    {
+      "text": "And here we can see the steps uh to",
+      "offset": 736959,
+      "duration": 6801
+    },
+    {
+      "text": "perform the change. And at the bottom uh",
+      "offset": 740240,
+      "duration": 7039
+    },
+    {
+      "text": "the um the architectural compliance that",
+      "offset": 743760,
+      "duration": 9199
+    },
+    {
+      "text": "the LLM um that the LLM respect uh by",
+      "offset": 747279,
+      "duration": 9120
+    },
+    {
+      "text": "looking at the intended architecture.",
+      "offset": 752959,
+      "duration": 7201
+    },
+    {
+      "text": "All right. So uh now some results",
+      "offset": 756399,
+      "duration": 7201
+    },
+    {
+      "text": "um uh that we get uh from internal uh",
+      "offset": 760160,
+      "duration": 6960
+    },
+    {
+      "text": "benchmarking. So by using this uh tool",
+      "offset": 763600,
+      "duration": 6640
+    },
+    {
+      "text": "um we see a better adherance to intended",
+      "offset": 767120,
+      "duration": 5440
+    },
+    {
+      "text": "architecture when the architect defines",
+      "offset": 770240,
+      "duration": 5520
+    },
+    {
+      "text": "this architecture in sonar cube cloud um",
+      "offset": 772560,
+      "duration": 6000
+    },
+    {
+      "text": "and we also see a slightly better build",
+      "offset": 775760,
+      "duration": 6800
+    },
+    {
+      "text": "and test pass rate. So uh the um the",
+      "offset": 778560,
+      "duration": 7120
+    },
+    {
+      "text": "presence of the tool uh improves uh",
+      "offset": 782560,
+      "duration": 7360
+    },
+    {
+      "text": "slightly the uh correctness and uh the",
+      "offset": 785680,
+      "duration": 7040
+    },
+    {
+      "text": "um the ability of the LM to come up with",
+      "offset": 789920,
+      "duration": 5440
+    },
+    {
+      "text": "code that works. uh but the biggest",
+      "offset": 792720,
+      "duration": 5119
+    },
+    {
+      "text": "improvement we see in performance. There",
+      "offset": 795360,
+      "duration": 6640
+    },
+    {
+      "text": "is a 10% stable reduction in cost uh",
+      "offset": 797839,
+      "duration": 7281
+    },
+    {
+      "text": "tokens and MCP tool calls and also",
+      "offset": 802000,
+      "duration": 6240
+    },
+    {
+      "text": "reduction in duplicated lines for",
+      "offset": 805120,
+      "duration": 6719
+    },
+    {
+      "text": "complex cases like agentic analysis for",
+      "offset": 808240,
+      "duration": 6080
+    },
+    {
+      "text": "vulnerabilities where the code flow is",
+      "offset": 811839,
+      "duration": 4881
+    },
+    {
+      "text": "important and it's not easy to detect",
+      "offset": 814320,
+      "duration": 6480
+    },
+    {
+      "text": "with the basic tool we see um a 30%",
+      "offset": 816720,
+      "duration": 7119
+    },
+    {
+      "text": "reduction. So a a big reduction uh in",
+      "offset": 820800,
+      "duration": 6719
+    },
+    {
+      "text": "token and tool calls and uh just to uh",
+      "offset": 823839,
+      "duration": 8000
+    },
+    {
+      "text": "conclude um and to recap. So the um",
+      "offset": 827519,
+      "duration": 7201
+    },
+    {
+      "text": "engineering the prompt is important but",
+      "offset": 831839,
+      "duration": 5841
+    },
+    {
+      "text": "it's not enough to ensure that the um",
+      "offset": 834720,
+      "duration": 5520
+    },
+    {
+      "text": "quality and security of the generated",
+      "offset": 837680,
+      "duration": 6240
+    },
+    {
+      "text": "code is uh good enough. So we need to go",
+      "offset": 840240,
+      "duration": 6080
+    },
+    {
+      "text": "beyond prompt engineering. We need uh",
+      "offset": 843920,
+      "duration": 4560
+    },
+    {
+      "text": "context engineering to get the best",
+      "offset": 846320,
+      "duration": 5759
+    },
+    {
+      "text": "result and Sonar can augment the LLM",
+      "offset": 848480,
+      "duration": 5840
+    },
+    {
+      "text": "context with information coming from the",
+      "offset": 852079,
+      "duration": 5681
+    },
+    {
+      "text": "analyzers uh such as the guidelines to",
+      "offset": 854320,
+      "duration": 5519
+    },
+    {
+      "text": "follow while generating code and the",
+      "offset": 857760,
+      "duration": 4000
+    },
+    {
+      "text": "architectural conraint constraint to",
+      "offset": 859839,
+      "duration": 5440
+    },
+    {
+      "text": "respect and uh uh that leads to a better",
+      "offset": 861760,
+      "duration": 6480
+    },
+    {
+      "text": "architecture overall and also a reduced",
+      "offset": 865279,
+      "duration": 5601
+    },
+    {
+      "text": "cost. So we don't we don't compromise",
+      "offset": 868240,
+      "duration": 4959
+    },
+    {
+      "text": "the performance and we don't compromise",
+      "offset": 870880,
+      "duration": 4880
+    },
+    {
+      "text": "the functionality of the generated code.",
+      "offset": 873199,
+      "duration": 6121
+    },
+    {
+      "text": "Thanks for watching.",
+      "offset": 875760,
+      "duration": 3560
+    }
+  ],
+  "fullText": "Hello, I'm Antonio. I'm a senior staff engineer at Sonar. I'm uh leading the uh uh Sonar context augmentation project and um we're going to talk about how Soner does context augmentation for large language models. So here is the uh agenda. We are first uh going to uh say what is um sonar context augmentation. uh then we're going to um uh talk in general uh about what is context augmentation for large language models uh before digging into the details. how Sonar Kag does this context augmentation and we're going to talk about model context protocol um and uh the details so the type of context augmentation that we uh we do uh in particular context augmentation for guidelines and for architecture um we're going to see uh the tool in action so how uh sonar context augmentation can uh avoid architectural violation uh some results from our internal benchmarking and then we we will draw conclusions. So okay let's start by talking about what is uh sonar context augmentation uh is essentially a service uh which um um bridge the gap between the uh coding agents so such as uh um cloud code and uh um and cursor and the user repository. So um the idea is that um uh we want to use sonar uh analyzers and uh uh the analysis the static analysis of the user to inject information uh from uh the local repository information that cannot be accessed directly by the um by the LLM with the simple tools and to uh to expand uh expand augment the uh LLM context with with it and while doing that we want to maintain the correctness and the speed of the tool. Okay. So um some words about what is uh in general context augmentation for LM. Uh the context is an agent such as cursor and code and this agent is the one that keeps an LLM context. The LLM because the LLM is stateless. it does not have uh memory of a conversation. So uh the len context contains the user prompt. So what the user uh provides when there is a code generation task and also and the um the agent uh add adds to the context information such as the user code or part of it and the environment. And what we want to do is to do augmentation of this context. So provide additional information for the LLM to use when it needs to generate some code. Okay. Now um uh Sarag um does uh context augmentation using MCP tools. uh in particular uh it uh those tools which are for architecture and for guidelines take information for son from sonar cube uh information like uh architectural analysis the rules from sonar and the issues that are generated by the analyzer uh that detect um issues like uh violations of those rules and uh those MCP tools are exposed to the LLM which then will call uh the tools uh when they are needed. So the MCP the model context protocol is the mechanism the delivery mechanism for context that allow the LLM to query for context ask for context when the context is needed. Okay, just a um short um uh description of how the model context protocol works. Um essentially u the model context protocol is a protocol that allow the um agent to be extended with additional tools on top of the one which are uh available u to the agent by default and uh which are exposed by an MCP server. So the agent will start an MCP server and ask for MCP tools. uh the MCP server will reply with a list of MCP tools uh and those MCP tools are added to the LLM context and during the conversation the LLM will ask uh to run some specific tool depending on the task that uh the LLM is um is executing. Uh so the context will be provided on demand and uh uh the agent will receive this request from the LLM run the tool which will produce a result and the result will be added to the conversation so that the LLM can use the information. All right. So um now uh how do we uh uh what do we do in those tool for uh guidelines and architecture. So for guidelines the goal is to provide some um some uh coding standards uh for security for quality of the of the code and those guidelines should be relevant for the task at hand. So the uh the the task that the LLM is um is executing and we use two different techniques. We base our guidelines on the user prompt. Uh so for example if the user ask to have um to to implement uh for the LLM to implement a task that involves access to the database we include guidelines so uh rule about bugs vulnerabilities smell uh about database and uh if um the LLM plans to modify a specific file for example a file called db storage Java uh then we include the guidelines um that comes from past issue on on on that file specifically. So essentially we take an historical perspective on the uh issues and in uh using this we we use these two techniques to get uh um guidelines which are relevant for the context and then we combine them and we augment the context with this information. And now for architecture, we focus on three different um on three different areas. We want to uh help the LLM build the right thing, which means um um align uh aligning with uh uh with the user goals and avoiding mistakes by generating the code. uh essentially uh we want to have less chance of the LLM building code that doesn't uh work or that doesn't pass the test and uh but also we want the LLM to build the uh the thing right which means uh we want uh that the LLM generates code that u is in line with the architecture. So if the architect has defined on Sona cube cloud uh the intended architecture for the project, we want the LLM to respect this architecture. And the third um the third um uh type of augmentation is about remediation of architectural problems. So when some problem already exist for example the code has tangles has areas where uh classes are interconnected with each other and it's difficult to separate them. Uh we don't want the LM to make the situation worse. Uh for uh this to work we required a connection to sonar cube cloud and a recent analysis so that uh we have architectural analysis on the project and optionally the user needs to provide an intended architecture for the project. Okay. So um the tool that we uh provide are um for intended architecture. So uh building uh the um the right thing um and uh actually building the thing right in this case and building the right thing is about code structure code flow uh and semantic search. So uh the hierarchy of the project uh of a provided class, the references, the code flow, so what is calling what and then a feature of semantic search which allow the LLM to search for a specific uh method or classes or fields by patterns and this return a fully qualified name of those objects uh which are really specific to the um to the um uh to the code uh and to the object which is being retrieved. And this is uh in general more powerful than a text search tool that are provided by default uh by the LLM like grap that does a text search uh or similar tools that don't understand uh the differences between uh overload methods or method in a hierarchy that have the same name but uh different semantic. Okay. So uh here we have a demo of how uh sonar code context can help to uh to avoid architectural v violation in code generation. And uh uh we can see that uh we um in this um in this execution of cursor we enrich the list of tools with our tools such as get neighbor uh and get intended architecture um that gives the uh references and the intended architecture and the user is asking to perform a certain operation on a class and this operation requires some architectural changes. So the first things the LLM will do is to use our search tool um to look um to understand uh where those things where those objects are located in particular a class called var varent input stream and after identifying the object it uh we will ask for the intended architecture to get the uh architecture and then it realizes that um the change that the it's about to make uh it doesn't comply with the intended architecture of the project. So it will um it will propose to the user because here we are in planning mode uh uh several options to respect to be compliant with the architecture. The user will select one of those options. Uh and uh the uh LLM will continue the analysis using more tool in part more tools in particular the uh upstream call flow to get the dependencies of uh of the uh uh of this particular class. And uh once it gets a comprehensive picture of what needs to be modified, it will produce a report plan uh with a list of changes that need to be done to implement the feature but keeps uh keep architectural compliancy. And here we can see the steps uh to perform the change. And at the bottom uh the um the architectural compliance that the LLM um that the LLM respect uh by looking at the intended architecture. All right. So uh now some results um uh that we get uh from internal uh benchmarking. So by using this uh tool um we see a better adherance to intended architecture when the architect defines this architecture in sonar cube cloud um and we also see a slightly better build and test pass rate. So uh the um the presence of the tool uh improves uh slightly the uh correctness and uh the um the ability of the LM to come up with code that works. uh but the biggest improvement we see in performance. There is a 10% stable reduction in cost uh tokens and MCP tool calls and also reduction in duplicated lines for complex cases like agentic analysis for vulnerabilities where the code flow is important and it's not easy to detect with the basic tool we see um a 30% reduction. So a a big reduction uh in token and tool calls and uh just to uh conclude um and to recap. So the um engineering the prompt is important but it's not enough to ensure that the um quality and security of the generated code is uh good enough. So we need to go beyond prompt engineering. We need uh context engineering to get the best result and Sonar can augment the LLM context with information coming from the analyzers uh such as the guidelines to follow while generating code and the architectural conraint constraint to respect and uh uh that leads to a better architecture overall and also a reduced cost. So we don't we don't compromise the performance and we don't compromise the functionality of the generated code. Thanks for watching.",
+  "fetchedAt": "2026-03-14T09:18:46.340Z"
+}

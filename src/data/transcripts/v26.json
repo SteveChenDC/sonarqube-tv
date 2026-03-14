@@ -1,0 +1,348 @@
+{
+  "videoId": "v26",
+  "youtubeId": "5_6QTa0BMXE",
+  "segments": [
+    {
+      "text": "Hello everyone. My name is Edgar Kusssberg. I'm director of product management here at Sonar.",
+      "offset": 17000,
+      "duration": 6000
+    },
+    {
+      "text": "For the last decade, our industry has been obsessed with one thing: detection. Find the bug. Find the vulnerability. Find the code smell.",
+      "offset": 23000,
+      "duration": 7000
+    },
+    {
+      "text": "Shift left. Scan earlier. Scan faster. And we got very, very good at it, I'm telling you.",
+      "offset": 30000,
+      "duration": 6000
+    },
+    {
+      "text": "But here's the uncomfortable truth: detection is only half of the battle. Resolution is actually the victory.",
+      "offset": 36000,
+      "duration": 7000
+    },
+    {
+      "text": "Security isn't just a vulnerability in your backlog. Maintainability isn't simply a code smell in some dashboard.",
+      "offset": 43000,
+      "duration": 7000
+    },
+    {
+      "text": "Or quality isn't merely just a red flag somewhere in your CI/CD pipeline. True value is only realized when the issue gets fixed.",
+      "offset": 50000,
+      "duration": 7000
+    },
+    {
+      "text": "In today's high-velocity development environments, fixing the issue is often the biggest bottleneck. Modern teams are shipping faster than ever.",
+      "offset": 57000,
+      "duration": 7000
+    },
+    {
+      "text": "AI helps generate the code. PRs are larger, release cycles are shorter. So what usually happens when issues are detected?",
+      "offset": 64000,
+      "duration": 7000
+    },
+    {
+      "text": "Developers context switch. They interpret the issue. They understand the rule. They reason about the side effects.",
+      "offset": 71000,
+      "duration": 7000
+    },
+    {
+      "text": "They need to rewrite the code. Then they validate the fix and they rerun the pipelines. All of that is pure cognitive overhead.",
+      "offset": 78000,
+      "duration": 10000
+    },
+    {
+      "text": "Multiply that by thousands of issues across your enterprise. It becomes clear: detection scales, but remediation doesn't. Until today.",
+      "offset": 88000,
+      "duration": 9000
+    },
+    {
+      "text": "At Sonar, we posed the fundamental question: what would it look like if resolving issues felt effortless for developers?",
+      "offset": 97000,
+      "duration": 8000
+    },
+    {
+      "text": "What if the system that can detect the problem also understands the context surrounding code, the framework, the data flow,",
+      "offset": 105000,
+      "duration": 8000
+    },
+    {
+      "text": "and proposes a verified safe fix directly in the developer's workflow? That's what we built together with the Autocoder team from Singapore.",
+      "offset": 113000,
+      "duration": 8000
+    },
+    {
+      "text": "We have built the SonarQube Remediation Agent. Not a generic code assistant, not a blind LLM rewrite,",
+      "offset": 121000,
+      "duration": 7000
+    },
+    {
+      "text": "but a system grounded in Sonar's semantic analysis, company's coding standards, project-specific context, and verified fix patterns.",
+      "offset": 128000,
+      "duration": 8000
+    },
+    {
+      "text": "This is about AI that understands code quality and security at an enterprise level. In large organizations, remediation is not just about speed.",
+      "offset": 136000,
+      "duration": 8000
+    },
+    {
+      "text": "It's about consistency, policy compliance, reducing technical debt, lowering MTTR for vulnerabilities, and avoiding regressions.",
+      "offset": 144000,
+      "duration": 6000
+    },
+    {
+      "text": "You don't want creative fixes; you want correct fixes. You want fixes aligned with your standards, your architecture, and your risk posture.",
+      "offset": 150000,
+      "duration": 8000
+    },
+    {
+      "text": "The Remediation Agent operates inside of that boundary. It doesn't just suggest code; it proposes context-aware, rule-aligned, reviewable fixes.",
+      "offset": 158000,
+      "duration": 8000
+    },
+    {
+      "text": "Integrated into IDE workflows and enterprise pipelines, the Remediation Agent isn't a standalone feature. It's the next step in a journey we've been building for years.",
+      "offset": 166000,
+      "duration": 12000
+    },
+    {
+      "text": "We started with deterministic quick fixes—precise, rule-based corrections grounded in static analysis.",
+      "offset": 178000,
+      "duration": 6000
+    },
+    {
+      "text": "We expanded this capability into AI CodeFix, bringing intelligent assistance directly into developer workflows.",
+      "offset": 184000,
+      "duration": 6000
+    },
+    {
+      "text": "And now we're going further with the Remediation Agent. At the developer level, it fixes issues whenever they happen in the pull request.",
+      "offset": 190000,
+      "duration": 9000
+    },
+    {
+      "text": "A check fails, the agent kicks in, proposes a fix—no context switch, no hunting through dashboards.",
+      "offset": 199000,
+      "duration": 7000
+    },
+    {
+      "text": "At the organizational level, it scales remediation across SonarQube holistically. Teams can assign issues to the agent; backlogs become actionable.",
+      "offset": 206000,
+      "duration": 8000
+    },
+    {
+      "text": "So instead of teams drowning in findings, they move toward automated resolution loops. Instead of \"here are 500 new issues,\" it becomes:",
+      "offset": 214000,
+      "duration": 8000
+    },
+    {
+      "text": "\"We have 500 issues, 420 can be safely fixed automatically, 60 need to be reviewed, and 20 need architectural decisions.\"",
+      "offset": 222000,
+      "duration": 6000
+    },
+    {
+      "text": "Autonomous remediation practically eliminates all the verification debt, changing the game. That's the leverage. Let's see it in action.",
+      "offset": 228000,
+      "duration": 19000
+    },
+    {
+      "text": "Thanks, Edgar, for the introduction. I'm Alexander, product manager for remediation solutions at Sonar.",
+      "offset": 247000,
+      "duration": 6000
+    },
+    {
+      "text": "I'm super happy to be here to present our latest functionality. Our approach and vision at Sonar is to help developers in any part of the lifecycle.",
+      "offset": 253000,
+      "duration": 8000
+    },
+    {
+      "text": "It starts from the left with our plugin, SonarQube for IDE, allowing users to identify and solve issues as they write code.",
+      "offset": 261000,
+      "duration": 7000
+    },
+    {
+      "text": "Thanks to our integration with multiple SCM platforms, we offer the ability to detect issues, code coverage, and code duplication.",
+      "offset": 268000,
+      "duration": 8000
+    },
+    {
+      "text": "We offer solutions to remediate them. Our main objective is to provide guidance, verifying code generated by agents or humans.",
+      "offset": 276000,
+      "duration": 7000
+    },
+    {
+      "text": "We help them solve findings to mitigate risks faster. AI CodeFix isn't just a standalone tool; it's an integrated ecosystem.",
+      "offset": 283000,
+      "duration": 23000
+    },
+    {
+      "text": "Whether you are using SonarQube Server, SonarQube Cloud, or working directly in your IDE, the fix is right there while you code.",
+      "offset": 306000,
+      "duration": 7000
+    },
+    {
+      "text": "Currently, we support all of our flagship languages, covering over 50% of the most common issues developers face daily.",
+      "offset": 313000,
+      "duration": 9000
+    },
+    {
+      "text": "It doesn't just tell you what's wrong; it suggests the exact code change needed to make it right.",
+      "offset": 322000,
+      "duration": 9000
+    },
+    {
+      "text": "We know that in the enterprise world, AI can be scary for security teams. That's why we are prioritizing compliance and flexibility.",
+      "offset": 331000,
+      "duration": 8000
+    },
+    {
+      "text": "On-premise power users can connect AI CodeFix to Azure On-Prem Open AI, keeping your data footprint exactly where you want it.",
+      "offset": 339000,
+      "duration": 8000
+    },
+    {
+      "text": "Privacy first. You get the speed of the LLM with the governance of the existing infrastructure. We aren't stopping at cloud-connected fixes.",
+      "offset": 347000,
+      "duration": 13000
+    },
+    {
+      "text": "Our immediate roadmap includes model-agnostic connectivity. Plug in the LLM of your choice. Air-gap support.",
+      "offset": 360000,
+      "duration": 9000
+    },
+    {
+      "text": "Bring AI remediation to the most secure, isolated environments. We are relentlessly adding more rules and deeper language support.",
+      "offset": 369000,
+      "duration": 7000
+    },
+    {
+      "text": "So now I will jump into the demo. Let's take this example of a project that contains a lot of issues that need to be solved.",
+      "offset": 376000,
+      "duration": 8000
+    },
+    {
+      "text": "Now with AI CodeFix, you have the ability to generate a patch by clicking just one button.",
+      "offset": 384000,
+      "duration": 21000
+    },
+    {
+      "text": "Let's take this issue which represents an SQL query that is not constructed well. I will generate a fix by clicking this button.",
+      "offset": 405000,
+      "duration": 5000
+    },
+    {
+      "text": "Generally, it takes 30 minutes for developers to solve these issues. But with AI CodeFix, you have the ability to have a suggestion in a couple of seconds.",
+      "offset": 410000,
+      "duration": 17000
+    },
+    {
+      "text": "Once the patch has been generated, you will see the code diff inside the web app with an explanation. Inside the IDE, you can also apply a fix directly.",
+      "offset": 427000,
+      "duration": 11000
+    },
+    {
+      "text": "By clicking Quick Fixes, you can fix this issue introduced with AI CodeFix functionality. It states the fix was generated by AI CodeFix.",
+      "offset": 438000,
+      "duration": 10000
+    },
+    {
+      "text": "When it's done, you will see a seamless change within the IDE directly. You can apply or discard a fix proposed by the feature.",
+      "offset": 448000,
+      "duration": 14000
+    },
+    {
+      "text": "That's it for the AI CodeFix demo. We've moved beyond simple suggestions. The next frontier isn't just an AI that helps you code.",
+      "offset": 462000,
+      "duration": 21000
+    },
+    {
+      "text": "It's an agent that handles maintenance, security, and technical debt for you so developers can stay focused on building new features.",
+      "offset": 483000,
+      "duration": 8000
+    },
+    {
+      "text": "The most powerful application is the PR Quality Gate. Imagine a developer submits a PR and it fails the quality gate.",
+      "offset": 491000,
+      "duration": 8000
+    },
+    {
+      "text": "Instead of just blocking the dev, the agent instantly gathers context, analyzes the root cause, generates a patch, and opens a new pull request automatically.",
+      "offset": 499000,
+      "duration": 8000
+    },
+    {
+      "text": "It turns a stop sign into a fast pass for code reviews. We are also solving the backlog nightmare.",
+      "offset": 507000,
+      "duration": 12000
+    },
+    {
+      "text": "You can manually assign legacy issues to an agent or set up automated remediation. By letting the agent chip away at technical debt in the background,",
+      "offset": 519000,
+      "duration": 10000
+    },
+    {
+      "text": "you improve your codebases and security without sacrificing velocity. It's continuous improvement on autopilot.",
+      "offset": 529000,
+      "duration": 15000
+    },
+    {
+      "text": "Let's deep dive into the demo. This feature is currently in beta and called the SonarQube Remediation Agent.",
+      "offset": 544000,
+      "duration": 13000
+    },
+    {
+      "text": "Let's take this project containing issues we want to solve. The first functionality is to delegate tasks to the agent.",
+      "offset": 557000,
+      "duration": 12000
+    },
+    {
+      "text": "You can select issues on your main branch and assign them to the agent. The agent will create a PR that needs to be reviewed by developers.",
+      "offset": 569000,
+      "duration": 9000
+    },
+    {
+      "text": "It will drastically reduce your technical debt backlog. Here, I assigned two issues to the agent, and it will create a pull request directly in your DevOps platform.",
+      "offset": 578000,
+      "duration": 10000
+    },
+    {
+      "text": "Here is the PR created by the SonarQube agent with the issues it's trying to fix. The developer reviews them and merges the PR to accept the changes.",
+      "offset": 588000,
+      "duration": 18000
+    },
+    {
+      "text": "Another use case is on new code. When you create a PR and have a failed quality gate introducing new issues, the agent is automatically triggered.",
+      "offset": 606000,
+      "duration": 13000
+    },
+    {
+      "text": "It generates suggestions for developers to review. In this case, I have a failed quality gate containing new issues. The agent proposes fixes for these issues.",
+      "offset": 619000,
+      "duration": 11000
+    },
+    {
+      "text": "You can review them as part of the pull request and view the issue directly in SonarQube Cloud.",
+      "offset": 630000,
+      "duration": 8000
+    },
+    {
+      "text": "The agent creates a separate PR to review the fixes all at once. If I click on the link, I can review all the fixes the agent is trying to solve.",
+      "offset": 638000,
+      "duration": 23000
+    },
+    {
+      "text": "I can pull the branch, run tests locally, and check the CI/CD status. Then I can merge the pull request into the initial pull request.",
+      "offset": 661000,
+      "duration": 11000
+    },
+    {
+      "text": "And that's it for the Remediation Agent demo. Thank you for watching.",
+      "offset": 672000,
+      "duration": 46000
+    }
+  ],
+  "fullText": "Hello everyone. My name is Edgar Kusssberg. I'm director of product management here at Sonar. For the last decade, our industry has been obsessed with one thing: detection. Find the bug. Find the vulnerability. Find the code smell. Shift left. Scan earlier. Scan faster. And we got very, very good at it, I'm telling you. But here's the uncomfortable truth: detection is only half of the battle. Resolution is actually the victory. Security isn't just a vulnerability in your backlog. Maintainability isn't simply a code smell in some dashboard. Or quality isn't merely just a red flag somewhere in your CI/CD pipeline. True value is only realized when the issue gets fixed. In today's high-velocity development environments, fixing the issue is often the biggest bottleneck. Modern teams are shipping faster than ever. AI helps generate the code. PRs are larger, release cycles are shorter. So what usually happens when issues are detected? Developers context switch. They interpret the issue. They understand the rule. They reason about the side effects. They need to rewrite the code. Then they validate the fix and they rerun the pipelines. All of that is pure cognitive overhead. Multiply that by thousands of issues across your enterprise. It becomes clear: detection scales, but remediation doesn't. Until today. At Sonar, we posed the fundamental question: what would it look like if resolving issues felt effortless for developers? What if the system that can detect the problem also understands the context surrounding code, the framework, the data flow, and proposes a verified safe fix directly in the developer's workflow? That's what we built together with the Autocoder team from Singapore. We have built the SonarQube Remediation Agent. Not a generic code assistant, not a blind LLM rewrite, but a system grounded in Sonar's semantic analysis, company's coding standards, project-specific context, and verified fix patterns. This is about AI that understands code quality and security at an enterprise level. In large organizations, remediation is not just about speed. It's about consistency, policy compliance, reducing technical debt, lowering MTTR for vulnerabilities, and avoiding regressions. You don't want creative fixes; you want correct fixes. You want fixes aligned with your standards, your architecture, and your risk posture. The Remediation Agent operates inside of that boundary. It doesn't just suggest code; it proposes context-aware, rule-aligned, reviewable fixes. Integrated into IDE workflows and enterprise pipelines, the Remediation Agent isn't a standalone feature. It's the next step in a journey we've been building for years. We started with deterministic quick fixes—precise, rule-based corrections grounded in static analysis. We expanded this capability into AI CodeFix, bringing intelligent assistance directly into developer workflows. And now we're going further with the Remediation Agent. At the developer level, it fixes issues whenever they happen in the pull request. A check fails, the agent kicks in, proposes a fix—no context switch, no hunting through dashboards. At the organizational level, it scales remediation across SonarQube holistically. Teams can assign issues to the agent; backlogs become actionable. So instead of teams drowning in findings, they move toward automated resolution loops. Instead of \"here are 500 new issues,\" it becomes: \"We have 500 issues, 420 can be safely fixed automatically, 60 need to be reviewed, and 20 need architectural decisions.\" Autonomous remediation practically eliminates all the verification debt, changing the game. That's the leverage. Let's see it in action. Thanks, Edgar, for the introduction. I'm Alexander, product manager for remediation solutions at Sonar. I'm super happy to be here to present our latest functionality. Our approach and vision at Sonar is to help developers in any part of the lifecycle. It starts from the left with our plugin, SonarQube for IDE, allowing users to identify and solve issues as they write code. Thanks to our integration with multiple SCM platforms, we offer the ability to detect issues, code coverage, and code duplication. We offer solutions to remediate them. Our main objective is to provide guidance, verifying code generated by agents or humans. We help them solve findings to mitigate risks faster. AI CodeFix isn't just a standalone tool; it's an integrated ecosystem. Whether you are using SonarQube Server, SonarQube Cloud, or working directly in your IDE, the fix is right there while you code. Currently, we support all of our flagship languages, covering over 50% of the most common issues developers face daily. It doesn't just tell you what's wrong; it suggests the exact code change needed to make it right. We know that in the enterprise world, AI can be scary for security teams. That's why we are prioritizing compliance and flexibility. On-premise power users can connect AI CodeFix to Azure On-Prem Open AI, keeping your data footprint exactly where you want it. Privacy first. You get the speed of the LLM with the governance of the existing infrastructure. We aren't stopping at cloud-connected fixes. Our immediate roadmap includes model-agnostic connectivity. Plug in the LLM of your choice. Air-gap support. Bring AI remediation to the most secure, isolated environments. We are relentlessly adding more rules and deeper language support. So now I will jump into the demo. Let's take this example of a project that contains a lot of issues that need to be solved. Now with AI CodeFix, you have the ability to generate a patch by clicking just one button. Let's take this issue which represents an SQL query that is not constructed well. I will generate a fix by clicking this button. Generally, it takes 30 minutes for developers to solve these issues. But with AI CodeFix, you have the ability to have a suggestion in a couple of seconds. Once the patch has been generated, you will see the code diff inside the web app with an explanation. Inside the IDE, you can also apply a fix directly. By clicking Quick Fixes, you can fix this issue introduced with AI CodeFix functionality. It states the fix was generated by AI CodeFix. When it's done, you will see a seamless change within the IDE directly. You can apply or discard a fix proposed by the feature. That's it for the AI CodeFix demo. We've moved beyond simple suggestions. The next frontier isn't just an AI that helps you code. It's an agent that handles maintenance, security, and technical debt for you so developers can stay focused on building new features. The most powerful application is the PR Quality Gate. Imagine a developer submits a PR and it fails the quality gate. Instead of just blocking the dev, the agent instantly gathers context, analyzes the root cause, generates a patch, and opens a new pull request automatically. It turns a stop sign into a fast pass for code reviews. We are also solving the backlog nightmare. You can manually assign legacy issues to an agent or set up automated remediation. By letting the agent chip away at technical debt in the background, you improve your codebases and security without sacrificing velocity. It's continuous improvement on autopilot. Let's deep dive into the demo. This feature is currently in beta and called the SonarQube Remediation Agent. Let's take this project containing issues we want to solve. The first functionality is to delegate tasks to the agent. You can select issues on your main branch and assign them to the agent. The agent will create a PR that needs to be reviewed by developers. It will drastically reduce your technical debt backlog. Here, I assigned two issues to the agent, and it will create a pull request directly in your DevOps platform. Here is the PR created by the SonarQube agent with the issues it's trying to fix. The developer reviews them and merges the PR to accept the changes. Another use case is on new code. When you create a PR and have a failed quality gate introducing new issues, the agent is automatically triggered. It generates suggestions for developers to review. In this case, I have a failed quality gate containing new issues. The agent proposes fixes for these issues. You can review them as part of the pull request and view the issue directly in SonarQube Cloud. The agent creates a separate PR to review the fixes all at once. If I click on the link, I can review all the fixes the agent is trying to solve. I can pull the branch, run tests locally, and check the CI/CD status. Then I can merge the pull request into the initial pull request. And that's it for the Remediation Agent demo. Thank you for watching.",
+  "fetchedAt": "2026-03-14T09:21:55.955Z"
+}

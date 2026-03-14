@@ -1,0 +1,5793 @@
+{
+  "videoId": "v212",
+  "youtubeId": "el9OKGrqU6o",
+  "segments": [
+    {
+      "text": "all right hello and welcome to",
+      "offset": 1120,
+      "duration": 4000
+    },
+    {
+      "text": "refactoring with cognitive complexity",
+      "offset": 2879,
+      "duration": 3761
+    },
+    {
+      "text": "thanks for joining us",
+      "offset": 5120,
+      "duration": 4080
+    },
+    {
+      "text": "i'll get started now i'm going to start",
+      "offset": 6640,
+      "duration": 3039
+    },
+    {
+      "text": "with",
+      "offset": 9200,
+      "duration": 3200
+    },
+    {
+      "text": "some housekeeping details first this",
+      "offset": 9679,
+      "duration": 4801
+    },
+    {
+      "text": "will be a 45-minute session including",
+      "offset": 12400,
+      "duration": 3040
+    },
+    {
+      "text": "demo and q",
+      "offset": 14480,
+      "duration": 3600
+    },
+    {
+      "text": "a please don't go ahead and cue your",
+      "offset": 15440,
+      "duration": 4960
+    },
+    {
+      "text": "questions in the q a box",
+      "offset": 18080,
+      "duration": 5039
+    },
+    {
+      "text": "we've got colin and aaron from the sonar",
+      "offset": 20400,
+      "duration": 4400
+    },
+    {
+      "text": "source services",
+      "offset": 23119,
+      "duration": 5521
+    },
+    {
+      "text": "group to cue your questions",
+      "offset": 24800,
+      "duration": 6160
+    },
+    {
+      "text": "triage them and feed them to me at the",
+      "offset": 28640,
+      "duration": 3200
+    },
+    {
+      "text": "end",
+      "offset": 30960,
+      "duration": 3119
+    },
+    {
+      "text": "we are recording this presentation and",
+      "offset": 31840,
+      "duration": 4000
+    },
+    {
+      "text": "in a few days you'll get an email with a",
+      "offset": 34079,
+      "duration": 3281
+    },
+    {
+      "text": "link to the recording",
+      "offset": 35840,
+      "duration": 3840
+    },
+    {
+      "text": "and all the q a so even if i don't get",
+      "offset": 37360,
+      "duration": 3280
+    },
+    {
+      "text": "to your question",
+      "offset": 39680,
+      "duration": 4000
+    },
+    {
+      "text": "live you will get a link to the answer",
+      "offset": 40640,
+      "duration": 5759
+    },
+    {
+      "text": "afterwards and finally once the webinar",
+      "offset": 43680,
+      "duration": 4640
+    },
+    {
+      "text": "ends you'll get a feedback survey",
+      "offset": 46399,
+      "duration": 3840
+    },
+    {
+      "text": "please do take the survey please tell me",
+      "offset": 48320,
+      "duration": 3759
+    },
+    {
+      "text": "how i did tell me what you liked what i",
+      "offset": 50239,
+      "duration": 3121
+    },
+    {
+      "text": "need to work on",
+      "offset": 52079,
+      "duration": 3601
+    },
+    {
+      "text": "and what sonar source should cover in",
+      "offset": 53360,
+      "duration": 4320
+    },
+    {
+      "text": "future webinars",
+      "offset": 55680,
+      "duration": 3920
+    },
+    {
+      "text": "okay so the agenda is i'll start with",
+      "offset": 57680,
+      "duration": 3440
+    },
+    {
+      "text": "some introductions",
+      "offset": 59600,
+      "duration": 3520
+    },
+    {
+      "text": "i'll talk about why we formulated",
+      "offset": 61120,
+      "duration": 3999
+    },
+    {
+      "text": "cognitive complexity then we'll look at",
+      "offset": 63120,
+      "duration": 4240
+    },
+    {
+      "text": "what cognitive complexity is",
+      "offset": 65119,
+      "duration": 4000
+    },
+    {
+      "text": "we'll talk about the validation that's",
+      "offset": 67360,
+      "duration": 3680
+    },
+    {
+      "text": "out there then we'll get into",
+      "offset": 69119,
+      "duration": 2881
+    },
+    {
+      "text": "refactoring why",
+      "offset": 71040,
+      "duration": 2800
+    },
+    {
+      "text": "we're all here and then we'll talk about",
+      "offset": 72000,
+      "duration": 3680
+    },
+    {
+      "text": "what's next",
+      "offset": 73840,
+      "duration": 4160
+    },
+    {
+      "text": "so my name is anne campbell i am the",
+      "offset": 75680,
+      "duration": 5040
+    },
+    {
+      "text": "primary author of cognitive complexity i",
+      "offset": 78000,
+      "duration": 3360
+    },
+    {
+      "text": "have coded",
+      "offset": 80720,
+      "duration": 2640
+    },
+    {
+      "text": "in a number of languages and i brought",
+      "offset": 81360,
+      "duration": 3759
+    },
+    {
+      "text": "all of that experience along with the",
+      "offset": 83360,
+      "duration": 3840
+    },
+    {
+      "text": "experience of my colleagues",
+      "offset": 85119,
+      "duration": 6000
+    },
+    {
+      "text": "into writing cognitive complexity",
+      "offset": 87200,
+      "duration": 6160
+    },
+    {
+      "text": "now if you're familiar with complexity",
+      "offset": 91119,
+      "duration": 4320
+    },
+    {
+      "text": "in a programming context you're probably",
+      "offset": 93360,
+      "duration": 3360
+    },
+    {
+      "text": "most familiar",
+      "offset": 95439,
+      "duration": 4161
+    },
+    {
+      "text": "and have most used cyclomatic complexity",
+      "offset": 96720,
+      "duration": 3280
+    },
+    {
+      "text": "that was",
+      "offset": 99600,
+      "duration": 3240
+    },
+    {
+      "text": "released in or published in december of",
+      "offset": 100000,
+      "duration": 5040
+    },
+    {
+      "text": "1976",
+      "offset": 102840,
+      "duration": 5639
+    },
+    {
+      "text": "and its aim was to measure",
+      "offset": 105040,
+      "duration": 5920
+    },
+    {
+      "text": "understandability what it really does",
+      "offset": 108479,
+      "duration": 3201
+    },
+    {
+      "text": "well is",
+      "offset": 110960,
+      "duration": 2960
+    },
+    {
+      "text": "measure the number of test cases that",
+      "offset": 111680,
+      "duration": 3119
+    },
+    {
+      "text": "you need",
+      "offset": 113920,
+      "duration": 4080
+    },
+    {
+      "text": "to fully unit test a section of code",
+      "offset": 114799,
+      "duration": 5041
+    },
+    {
+      "text": "what it really doesn't get at is",
+      "offset": 118000,
+      "duration": 3439
+    },
+    {
+      "text": "understandability",
+      "offset": 119840,
+      "duration": 3680
+    },
+    {
+      "text": "and at center source we really felt a",
+      "offset": 121439,
+      "duration": 4081
+    },
+    {
+      "text": "need for a metric that would help us",
+      "offset": 123520,
+      "duration": 3199
+    },
+    {
+      "text": "gauge that",
+      "offset": 125520,
+      "duration": 3760
+    },
+    {
+      "text": "so that's why we undertook cognitive",
+      "offset": 126719,
+      "duration": 3441
+    },
+    {
+      "text": "complexity",
+      "offset": 129280,
+      "duration": 4000
+    },
+    {
+      "text": "now i want to illustrate that with a",
+      "offset": 130160,
+      "duration": 4480
+    },
+    {
+      "text": "couple of examples here",
+      "offset": 133280,
+      "duration": 4240
+    },
+    {
+      "text": "so first we start with sum of primes and",
+      "offset": 134640,
+      "duration": 4480
+    },
+    {
+      "text": "these are examples are straight from the",
+      "offset": 137520,
+      "duration": 2560
+    },
+    {
+      "text": "white paper",
+      "offset": 139120,
+      "duration": 4479
+    },
+    {
+      "text": "so sum of primes um has a cyclomatic",
+      "offset": 140080,
+      "duration": 4720
+    },
+    {
+      "text": "complexity of four",
+      "offset": 143599,
+      "duration": 3761
+    },
+    {
+      "text": "so plus one for the method structure",
+      "offset": 144800,
+      "duration": 4079
+    },
+    {
+      "text": "plus one for each four",
+      "offset": 147360,
+      "duration": 4480
+    },
+    {
+      "text": "and plus one for the if total of four",
+      "offset": 148879,
+      "duration": 4720
+    },
+    {
+      "text": "now contrast that with",
+      "offset": 151840,
+      "duration": 4880
+    },
+    {
+      "text": "get words so again plus one for the",
+      "offset": 153599,
+      "duration": 4481
+    },
+    {
+      "text": "method structure and then",
+      "offset": 156720,
+      "duration": 4480
+    },
+    {
+      "text": "plus one for each case in the switch for",
+      "offset": 158080,
+      "duration": 4720
+    },
+    {
+      "text": "cyclomatic complexity of",
+      "offset": 161200,
+      "duration": 4399
+    },
+    {
+      "text": "four so these two methods have equal",
+      "offset": 162800,
+      "duration": 4400
+    },
+    {
+      "text": "cyclomatic complexity",
+      "offset": 165599,
+      "duration": 3441
+    },
+    {
+      "text": "um but i think it's obvious that they",
+      "offset": 167200,
+      "duration": 3240
+    },
+    {
+      "text": "don't have equal",
+      "offset": 169040,
+      "duration": 4080
+    },
+    {
+      "text": "understandability and that's why we felt",
+      "offset": 170440,
+      "duration": 3640
+    },
+    {
+      "text": "the need to",
+      "offset": 173120,
+      "duration": 4399
+    },
+    {
+      "text": "create something else now cyclomatic",
+      "offset": 174080,
+      "duration": 4400
+    },
+    {
+      "text": "complexity",
+      "offset": 177519,
+      "duration": 4321
+    },
+    {
+      "text": "uh it works off of mathematical formulas",
+      "offset": 178480,
+      "duration": 5920
+    },
+    {
+      "text": "and so i think you see here that for",
+      "offset": 181840,
+      "duration": 3160
+    },
+    {
+      "text": "judging",
+      "offset": 184400,
+      "duration": 3520
+    },
+    {
+      "text": "understandability mathematical formulas",
+      "offset": 185000,
+      "duration": 5480
+    },
+    {
+      "text": "don't really do it so instead",
+      "offset": 187920,
+      "duration": 4720
+    },
+    {
+      "text": "cognitive complexity has guiding",
+      "offset": 190480,
+      "duration": 3440
+    },
+    {
+      "text": "principles",
+      "offset": 192640,
+      "duration": 3360
+    },
+    {
+      "text": "so the first guiding principle is to",
+      "offset": 193920,
+      "duration": 4319
+    },
+    {
+      "text": "ignore structures that allow multiple",
+      "offset": 196000,
+      "duration": 4480
+    },
+    {
+      "text": "statements to be readably shorthanded",
+      "offset": 198239,
+      "duration": 5121
+    },
+    {
+      "text": "into one statement the primary example",
+      "offset": 200480,
+      "duration": 4800
+    },
+    {
+      "text": "of that is the method structure itself",
+      "offset": 203360,
+      "duration": 3840
+    },
+    {
+      "text": "assuming you put a good name on your",
+      "offset": 205280,
+      "duration": 2640
+    },
+    {
+      "text": "method",
+      "offset": 207200,
+      "duration": 2560
+    },
+    {
+      "text": "then that's what you've done when you",
+      "offset": 207920,
+      "duration": 3599
+    },
+    {
+      "text": "create a method so we're not going to",
+      "offset": 209760,
+      "duration": 3360
+    },
+    {
+      "text": "increment for the method",
+      "offset": 211519,
+      "duration": 3841
+    },
+    {
+      "text": "we also don't increment for things like",
+      "offset": 213120,
+      "duration": 4160
+    },
+    {
+      "text": "the null coalescing operator that some",
+      "offset": 215360,
+      "duration": 3680
+    },
+    {
+      "text": "languages have",
+      "offset": 217280,
+      "duration": 3440
+    },
+    {
+      "text": "that that's once you understand the",
+      "offset": 219040,
+      "duration": 4160
+    },
+    {
+      "text": "syntax that's really easy to read",
+      "offset": 220720,
+      "duration": 5280
+    },
+    {
+      "text": "and so we don't increment for it we do",
+      "offset": 223200,
+      "duration": 3440
+    },
+    {
+      "text": "increment",
+      "offset": 226000,
+      "duration": 2799
+    },
+    {
+      "text": "for each break in the linear flow of the",
+      "offset": 226640,
+      "duration": 4480
+    },
+    {
+      "text": "code the idea here is that",
+      "offset": 228799,
+      "duration": 4481
+    },
+    {
+      "text": "ideally you would be able to read code",
+      "offset": 231120,
+      "duration": 3440
+    },
+    {
+      "text": "like a novel",
+      "offset": 233280,
+      "duration": 3280
+    },
+    {
+      "text": "top to bottom left to right in an",
+      "offset": 234560,
+      "duration": 4000
+    },
+    {
+      "text": "unbroken flow",
+      "offset": 236560,
+      "duration": 4160
+    },
+    {
+      "text": "when that flow is broken when you have",
+      "offset": 238560,
+      "duration": 4080
+    },
+    {
+      "text": "to do something other than",
+      "offset": 240720,
+      "duration": 4159
+    },
+    {
+      "text": "top to bottom left to right then we",
+      "offset": 242640,
+      "duration": 3920
+    },
+    {
+      "text": "increment for that because it makes you",
+      "offset": 244879,
+      "duration": 3601
+    },
+    {
+      "text": "work harder",
+      "offset": 246560,
+      "duration": 4000
+    },
+    {
+      "text": "we also increment when flow breaking",
+      "offset": 248480,
+      "duration": 3920
+    },
+    {
+      "text": "structures are nested",
+      "offset": 250560,
+      "duration": 4239
+    },
+    {
+      "text": "so i think it's intuitively obvious here",
+      "offset": 252400,
+      "duration": 3520
+    },
+    {
+      "text": "that if i have five",
+      "offset": 254799,
+      "duration": 3921
+    },
+    {
+      "text": "if statements in a row that's easier to",
+      "offset": 255920,
+      "duration": 3680
+    },
+    {
+      "text": "understand",
+      "offset": 258720,
+      "duration": 3600
+    },
+    {
+      "text": "than if i have those five if statements",
+      "offset": 259600,
+      "duration": 4560
+    },
+    {
+      "text": "successively nested",
+      "offset": 262320,
+      "duration": 4240
+    },
+    {
+      "text": "and that heart that that extra work that",
+      "offset": 264160,
+      "duration": 3920
+    },
+    {
+      "text": "you have to do to understand that",
+      "offset": 266560,
+      "duration": 2400
+    },
+    {
+      "text": "nesting",
+      "offset": 268080,
+      "duration": 2160
+    },
+    {
+      "text": "is what we're trying to take into",
+      "offset": 268960,
+      "duration": 3120
+    },
+    {
+      "text": "account when we increment",
+      "offset": 270240,
+      "duration": 4959
+    },
+    {
+      "text": "for those for the nesting now a lot of",
+      "offset": 272080,
+      "duration": 4559
+    },
+    {
+      "text": "people want to know okay well",
+      "offset": 275199,
+      "duration": 3440
+    },
+    {
+      "text": "give me the specification so really",
+      "offset": 276639,
+      "duration": 4241
+    },
+    {
+      "text": "quickly here i'm going to go through it",
+      "offset": 278639,
+      "duration": 4161
+    },
+    {
+      "text": "we increment four breaks in the linear",
+      "offset": 280880,
+      "duration": 3280
+    },
+    {
+      "text": "flow for",
+      "offset": 282800,
+      "duration": 3920
+    },
+    {
+      "text": "branches so if else if else ternary",
+      "offset": 284160,
+      "duration": 4000
+    },
+    {
+      "text": "catch and switch",
+      "offset": 286720,
+      "duration": 3759
+    },
+    {
+      "text": "for loops so four for each while do",
+      "offset": 288160,
+      "duration": 4640
+    },
+    {
+      "text": "while and each method in a recursion",
+      "offset": 290479,
+      "duration": 3361
+    },
+    {
+      "text": "cycle",
+      "offset": 292800,
+      "duration": 3119
+    },
+    {
+      "text": "yes recursion is a loop it's sort of a",
+      "offset": 293840,
+      "duration": 3680
+    },
+    {
+      "text": "metal loop but it's a loop",
+      "offset": 295919,
+      "duration": 5041
+    },
+    {
+      "text": "we take that into account we increment",
+      "offset": 297520,
+      "duration": 6640
+    },
+    {
+      "text": "four jumps to labels so go to break and",
+      "offset": 300960,
+      "duration": 4880
+    },
+    {
+      "text": "continue to a label",
+      "offset": 304160,
+      "duration": 4800
+    },
+    {
+      "text": "and we increment for sequences of like",
+      "offset": 305840,
+      "duration": 4240
+    },
+    {
+      "text": "binary logical",
+      "offset": 308960,
+      "duration": 4560
+    },
+    {
+      "text": "operators for nesting",
+      "offset": 310080,
+      "duration": 5280
+    },
+    {
+      "text": "these are the things that increment the",
+      "offset": 313520,
+      "duration": 3440
+    },
+    {
+      "text": "nesting level",
+      "offset": 315360,
+      "duration": 4880
+    },
+    {
+      "text": "so if else if else ternary catch switch",
+      "offset": 316960,
+      "duration": 6640
+    },
+    {
+      "text": "four four each wild do while and nested",
+      "offset": 320240,
+      "duration": 5600
+    },
+    {
+      "text": "methods and method like structures such",
+      "offset": 323600,
+      "duration": 4240
+    },
+    {
+      "text": "as lambdas now again we don't increment",
+      "offset": 325840,
+      "duration": 3440
+    },
+    {
+      "text": "for having a method",
+      "offset": 327840,
+      "duration": 3280
+    },
+    {
+      "text": "but when you have a method inside of a",
+      "offset": 329280,
+      "duration": 4160
+    },
+    {
+      "text": "method or a lambda inside of a method",
+      "offset": 331120,
+      "duration": 5440
+    },
+    {
+      "text": "then we start counting the nesting",
+      "offset": 333440,
+      "duration": 4640
+    },
+    {
+      "text": "these are the things that receive a",
+      "offset": 336560,
+      "duration": 3280
+    },
+    {
+      "text": "nesting increment",
+      "offset": 338080,
+      "duration": 5200
+    },
+    {
+      "text": "if ternary switch catch four for each",
+      "offset": 339840,
+      "duration": 4079
+    },
+    {
+      "text": "while",
+      "offset": 343280,
+      "duration": 3120
+    },
+    {
+      "text": "do while this will all make a little bit",
+      "offset": 343919,
+      "duration": 4481
+    },
+    {
+      "text": "more sense when we start looking at",
+      "offset": 346400,
+      "duration": 6000
+    },
+    {
+      "text": "code there are exceptions to these rules",
+      "offset": 348400,
+      "duration": 6320
+    },
+    {
+      "text": "so for instance cobalt does not have an",
+      "offset": 352400,
+      "duration": 4079
+    },
+    {
+      "text": "elsif structure typically what you'll",
+      "offset": 354720,
+      "duration": 2080
+    },
+    {
+      "text": "see",
+      "offset": 356479,
+      "duration": 3601
+    },
+    {
+      "text": "in cobalt is an if with an else",
+      "offset": 356800,
+      "duration": 4880
+    },
+    {
+      "text": "and there's nothing inside the else but",
+      "offset": 360080,
+      "duration": 3679
+    },
+    {
+      "text": "another if with an else",
+      "offset": 361680,
+      "duration": 3600
+    },
+    {
+      "text": "and there's nothing inside the else but",
+      "offset": 363759,
+      "duration": 3521
+    },
+    {
+      "text": "another if with an else",
+      "offset": 365280,
+      "duration": 3919
+    },
+    {
+      "text": "so not having that structure doesn't",
+      "offset": 367280,
+      "duration": 3840
+    },
+    {
+      "text": "mean that cobalt programmers don't have",
+      "offset": 369199,
+      "duration": 3201
+    },
+    {
+      "text": "the need",
+      "offset": 371120,
+      "duration": 3199
+    },
+    {
+      "text": "they have to work around the limitations",
+      "offset": 372400,
+      "duration": 3280
+    },
+    {
+      "text": "of their language",
+      "offset": 374319,
+      "duration": 4481
+    },
+    {
+      "text": "and if we incremented in cobol for that",
+      "offset": 375680,
+      "duration": 5120
+    },
+    {
+      "text": "type of structure",
+      "offset": 378800,
+      "duration": 3839
+    },
+    {
+      "text": "it would really just be unfair so we're",
+      "offset": 380800,
+      "duration": 4239
+    },
+    {
+      "text": "not going to penalize cobalt developers",
+      "offset": 382639,
+      "duration": 3840
+    },
+    {
+      "text": "because of what their language doesn't",
+      "offset": 385039,
+      "duration": 4401
+    },
+    {
+      "text": "have so there's an exception for that",
+      "offset": 386479,
+      "duration": 5761
+    },
+    {
+      "text": "similarly up until relatively recently",
+      "offset": 389440,
+      "duration": 3759
+    },
+    {
+      "text": "javascript",
+      "offset": 392240,
+      "duration": 2799
+    },
+    {
+      "text": "didn't have a class structure and so",
+      "offset": 393199,
+      "duration": 3440
+    },
+    {
+      "text": "javascript programmers",
+      "offset": 395039,
+      "duration": 4081
+    },
+    {
+      "text": "used sort of a pseudo-class structure",
+      "offset": 396639,
+      "duration": 4161
+    },
+    {
+      "text": "even today there's a lot of excellent",
+      "offset": 399120,
+      "duration": 3840
+    },
+    {
+      "text": "code that uses that pseudo cluster",
+      "offset": 400800,
+      "duration": 4399
+    },
+    {
+      "text": "class structure and there are a number",
+      "offset": 402960,
+      "duration": 4640
+    },
+    {
+      "text": "of frameworks that still today require",
+      "offset": 405199,
+      "duration": 2801
+    },
+    {
+      "text": "you to",
+      "offset": 407600,
+      "duration": 3039
+    },
+    {
+      "text": "program with a pseudo class structure",
+      "offset": 408000,
+      "duration": 3360
+    },
+    {
+      "text": "and so there's",
+      "offset": 410639,
+      "duration": 4801
+    },
+    {
+      "text": "a specific exception for javascript",
+      "offset": 411360,
+      "duration": 6160
+    },
+    {
+      "text": "similarly there's an exception for",
+      "offset": 415440,
+      "duration": 4159
+    },
+    {
+      "text": "decorators in python",
+      "offset": 417520,
+      "duration": 5200
+    },
+    {
+      "text": "and we consider additional exceptions",
+      "offset": 419599,
+      "duration": 5440
+    },
+    {
+      "text": "as we come across needs in specific",
+      "offset": 422720,
+      "duration": 4560
+    },
+    {
+      "text": "languages but all of the exceptions are",
+      "offset": 425039,
+      "duration": 6160
+    },
+    {
+      "text": "language specific what's not included in",
+      "offset": 427280,
+      "duration": 5280
+    },
+    {
+      "text": "cognitive complexity",
+      "offset": 431199,
+      "duration": 4321
+    },
+    {
+      "text": "is hard language features such as",
+      "offset": 432560,
+      "duration": 4240
+    },
+    {
+      "text": "pointer and direction",
+      "offset": 435520,
+      "duration": 2959
+    },
+    {
+      "text": "templates and generics multiple",
+      "offset": 436800,
+      "duration": 4720
+    },
+    {
+      "text": "inheritance etc",
+      "offset": 438479,
+      "duration": 6000
+    },
+    {
+      "text": "the reason for this is that that way",
+      "offset": 441520,
+      "duration": 5119
+    },
+    {
+      "text": "lies religious wars",
+      "offset": 444479,
+      "duration": 5041
+    },
+    {
+      "text": "so i used to program c for me two levels",
+      "offset": 446639,
+      "duration": 3361
+    },
+    {
+      "text": "of pointer",
+      "offset": 449520,
+      "duration": 3600
+    },
+    {
+      "text": "and direction is routine",
+      "offset": 450000,
+      "duration": 5120
+    },
+    {
+      "text": "once you start getting into four and",
+      "offset": 453120,
+      "duration": 3919
+    },
+    {
+      "text": "more then it starts getting hard",
+      "offset": 455120,
+      "duration": 5199
+    },
+    {
+      "text": "but deciding where it gets hard",
+      "offset": 457039,
+      "duration": 6000
+    },
+    {
+      "text": "is really very much a judgment call and",
+      "offset": 460319,
+      "duration": 4401
+    },
+    {
+      "text": "we just didn't want to get into that so",
+      "offset": 463039,
+      "duration": 3521
+    },
+    {
+      "text": "hard language features",
+      "offset": 464720,
+      "duration": 5360
+    },
+    {
+      "text": "are not included in cognitive complexity",
+      "offset": 466560,
+      "duration": 6079
+    },
+    {
+      "text": "because cognitive complexity is about",
+      "offset": 470080,
+      "duration": 3519
+    },
+    {
+      "text": "control flow",
+      "offset": 472639,
+      "duration": 3921
+    },
+    {
+      "text": "so this is really about how hard is the",
+      "offset": 473599,
+      "duration": 4720
+    },
+    {
+      "text": "control flow of your code",
+      "offset": 476560,
+      "duration": 5120
+    },
+    {
+      "text": "to understand so coming back to my",
+      "offset": 478319,
+      "duration": 4000
+    },
+    {
+      "text": "examples",
+      "offset": 481680,
+      "duration": 2320
+    },
+    {
+      "text": "and and i said that this would start to",
+      "offset": 482319,
+      "duration": 3041
+    },
+    {
+      "text": "make sense once we",
+      "offset": 484000,
+      "duration": 4560
+    },
+    {
+      "text": "could started applying this to code so",
+      "offset": 485360,
+      "duration": 5040
+    },
+    {
+      "text": "coming back to sum of primes let's look",
+      "offset": 488560,
+      "duration": 3759
+    },
+    {
+      "text": "at the cognitive complexity",
+      "offset": 490400,
+      "duration": 4560
+    },
+    {
+      "text": "so we've got this first for loop which",
+      "offset": 492319,
+      "duration": 4641
+    },
+    {
+      "text": "is plus one for the four",
+      "offset": 494960,
+      "duration": 4000
+    },
+    {
+      "text": "then we've inside that we've got another",
+      "offset": 496960,
+      "duration": 3120
+    },
+    {
+      "text": "for loop nested",
+      "offset": 498960,
+      "duration": 3760
+    },
+    {
+      "text": "so that's plus two one for the four one",
+      "offset": 500080,
+      "duration": 3760
+    },
+    {
+      "text": "for the nesting",
+      "offset": 502720,
+      "duration": 3440
+    },
+    {
+      "text": "then inside of that we've got an if",
+      "offset": 503840,
+      "duration": 4320
+    },
+    {
+      "text": "that's plus three one for the if",
+      "offset": 506160,
+      "duration": 4800
+    },
+    {
+      "text": "two for the nesting we don't do nesting",
+      "offset": 508160,
+      "duration": 3120
+    },
+    {
+      "text": "on",
+      "offset": 510960,
+      "duration": 2400
+    },
+    {
+      "text": "the jump tool label so our continue to",
+      "offset": 511280,
+      "duration": 3999
+    },
+    {
+      "text": "the out label is just plus",
+      "offset": 513360,
+      "duration": 4479
+    },
+    {
+      "text": "one and that gives us a total cognitive",
+      "offset": 515279,
+      "duration": 5521
+    },
+    {
+      "text": "complexity on this method of seven",
+      "offset": 517839,
+      "duration": 6000
+    },
+    {
+      "text": "now contrast that with get words where",
+      "offset": 520800,
+      "duration": 3599
+    },
+    {
+      "text": "we've got",
+      "offset": 523839,
+      "duration": 3601
+    },
+    {
+      "text": "a switch and three cases and a default",
+      "offset": 524399,
+      "duration": 4560
+    },
+    {
+      "text": "and that's plus one",
+      "offset": 527440,
+      "duration": 3760
+    },
+    {
+      "text": "for the switch in all its cases and so",
+      "offset": 528959,
+      "duration": 4241
+    },
+    {
+      "text": "we have a total cognitive complexity on",
+      "offset": 531200,
+      "duration": 4000
+    },
+    {
+      "text": "this method of one",
+      "offset": 533200,
+      "duration": 4079
+    },
+    {
+      "text": "and so now just looking at the numbers i",
+      "offset": 535200,
+      "duration": 4000
+    },
+    {
+      "text": "can understand immediately",
+      "offset": 537279,
+      "duration": 3841
+    },
+    {
+      "text": "which of these is going to be more",
+      "offset": 539200,
+      "duration": 4079
+    },
+    {
+      "text": "difficult to understand",
+      "offset": 541120,
+      "duration": 3760
+    },
+    {
+      "text": "and that's what we were trying to get at",
+      "offset": 543279,
+      "duration": 4801
+    },
+    {
+      "text": "with cognitive complexity",
+      "offset": 544880,
+      "duration": 6959
+    },
+    {
+      "text": "so validation um up until last summer",
+      "offset": 548080,
+      "duration": 6480
+    },
+    {
+      "text": "you could have very um validly said to",
+      "offset": 551839,
+      "duration": 3201
+    },
+    {
+      "text": "me",
+      "offset": 554560,
+      "duration": 2800
+    },
+    {
+      "text": "it's just your opinion you know how do",
+      "offset": 555040,
+      "duration": 3680
+    },
+    {
+      "text": "you know that this",
+      "offset": 557360,
+      "duration": 4240
+    },
+    {
+      "text": "that this works um so i was very",
+      "offset": 558720,
+      "duration": 4320
+    },
+    {
+      "text": "relieved last summer",
+      "offset": 561600,
+      "duration": 3679
+    },
+    {
+      "text": "to see that a paper was published which",
+      "offset": 563040,
+      "duration": 4160
+    },
+    {
+      "text": "actually looked at the validity of",
+      "offset": 565279,
+      "duration": 3680
+    },
+    {
+      "text": "cognitive complexity",
+      "offset": 567200,
+      "duration": 3600
+    },
+    {
+      "text": "and the authors found that it is",
+      "offset": 568959,
+      "duration": 3921
+    },
+    {
+      "text": "actually a good measure of source code",
+      "offset": 570800,
+      "duration": 3680
+    },
+    {
+      "text": "understandability i've listed some",
+      "offset": 572880,
+      "duration": 4000
+    },
+    {
+      "text": "quotes from the paper here",
+      "offset": 574480,
+      "duration": 4080
+    },
+    {
+      "text": "so the authors found that cognitive",
+      "offset": 576880,
+      "duration": 3840
+    },
+    {
+      "text": "complexity is a good indicator of how",
+      "offset": 578560,
+      "duration": 4080
+    },
+    {
+      "text": "long it takes developers to understand a",
+      "offset": 580720,
+      "duration": 3040
+    },
+    {
+      "text": "piece of code",
+      "offset": 582640,
+      "duration": 2800
+    },
+    {
+      "text": "and that code snippets with higher",
+      "offset": 583760,
+      "duration": 3040
+    },
+    {
+      "text": "cognitive complexity",
+      "offset": 585440,
+      "duration": 3680
+    },
+    {
+      "text": "are rated by developers as more",
+      "offset": 586800,
+      "duration": 4719
+    },
+    {
+      "text": "difficult to understand",
+      "offset": 589120,
+      "duration": 4560
+    },
+    {
+      "text": "they also said that since developers",
+      "offset": 591519,
+      "duration": 3440
+    },
+    {
+      "text": "spend a large time",
+      "offset": 593680,
+      "duration": 2960
+    },
+    {
+      "text": "a large portion of their time in",
+      "offset": 594959,
+      "duration": 3601
+    },
+    {
+      "text": "maintenance very few of us get to write",
+      "offset": 596640,
+      "duration": 3280
+    },
+    {
+      "text": "greenfield code",
+      "offset": 598560,
+      "duration": 4160
+    },
+    {
+      "text": "that it's worthwhile to make the code",
+      "offset": 599920,
+      "duration": 4560
+    },
+    {
+      "text": "easier to understand",
+      "offset": 602720,
+      "duration": 4000
+    },
+    {
+      "text": "and that cognitive complexity can help",
+      "offset": 604480,
+      "duration": 4080
+    },
+    {
+      "text": "you find the pieces of code that need",
+      "offset": 606720,
+      "duration": 3359
+    },
+    {
+      "text": "work",
+      "offset": 608560,
+      "duration": 5279
+    },
+    {
+      "text": "they also said that it's not proven yet",
+      "offset": 610079,
+      "duration": 6000
+    },
+    {
+      "text": "how much cognitive complexity is too",
+      "offset": 613839,
+      "duration": 4321
+    },
+    {
+      "text": "much cognitive complexity",
+      "offset": 616079,
+      "duration": 3841
+    },
+    {
+      "text": "personally i'm very much looking forward",
+      "offset": 618160,
+      "duration": 3440
+    },
+    {
+      "text": "to someone taking this topic up and",
+      "offset": 619920,
+      "duration": 3599
+    },
+    {
+      "text": "publishing a follow-up paper",
+      "offset": 621600,
+      "duration": 5040
+    },
+    {
+      "text": "fingers crossed so now",
+      "offset": 623519,
+      "duration": 6401
+    },
+    {
+      "text": "what we're all here for refactoring",
+      "offset": 626640,
+      "duration": 5600
+    },
+    {
+      "text": "so the reason that this is mainly",
+      "offset": 629920,
+      "duration": 4880
+    },
+    {
+      "text": "focused on refactoring is that",
+      "offset": 632240,
+      "duration": 5120
+    },
+    {
+      "text": "i personally don't find it particularly",
+      "offset": 634800,
+      "duration": 4320
+    },
+    {
+      "text": "helpful to be able to point at something",
+      "offset": 637360,
+      "duration": 2719
+    },
+    {
+      "text": "and say",
+      "offset": 639120,
+      "duration": 3520
+    },
+    {
+      "text": "that's bad without knowing how to make",
+      "offset": 640079,
+      "duration": 3921
+    },
+    {
+      "text": "it better",
+      "offset": 642640,
+      "duration": 3520
+    },
+    {
+      "text": "so that's why that's the primary focus",
+      "offset": 644000,
+      "duration": 4399
+    },
+    {
+      "text": "here in the years since we published",
+      "offset": 646160,
+      "duration": 3919
+    },
+    {
+      "text": "cognitive complexity",
+      "offset": 648399,
+      "duration": 3440
+    },
+    {
+      "text": "i've come up with a few different",
+      "offset": 650079,
+      "duration": 3841
+    },
+    {
+      "text": "patterns that are seem to be the best",
+      "offset": 651839,
+      "duration": 2801
+    },
+    {
+      "text": "ways to",
+      "offset": 653920,
+      "duration": 3359
+    },
+    {
+      "text": "approach reducing cognitive complexity",
+      "offset": 654640,
+      "duration": 4480
+    },
+    {
+      "text": "and therefore making the code easier to",
+      "offset": 657279,
+      "duration": 2481
+    },
+    {
+      "text": "read",
+      "offset": 659120,
+      "duration": 3120
+    },
+    {
+      "text": "so the first is invert a condition and",
+      "offset": 659760,
+      "duration": 4480
+    },
+    {
+      "text": "use an early exit",
+      "offset": 662240,
+      "duration": 4240
+    },
+    {
+      "text": "sort of corollary to that is eliminating",
+      "offset": 664240,
+      "duration": 4000
+    },
+    {
+      "text": "the else clause",
+      "offset": 666480,
+      "duration": 4160
+    },
+    {
+      "text": "these two things help you reduce a lot",
+      "offset": 668240,
+      "duration": 3920
+    },
+    {
+      "text": "of nesting",
+      "offset": 670640,
+      "duration": 3680
+    },
+    {
+      "text": "the next thing is structural collapse",
+      "offset": 672160,
+      "duration": 3600
+    },
+    {
+      "text": "now this is not what happens in an",
+      "offset": 674320,
+      "duration": 2959
+    },
+    {
+      "text": "earthquake",
+      "offset": 675760,
+      "duration": 3600
+    },
+    {
+      "text": "this is when you have an if with nothing",
+      "offset": 677279,
+      "duration": 4560
+    },
+    {
+      "text": "inside it but another if",
+      "offset": 679360,
+      "duration": 4240
+    },
+    {
+      "text": "and potentially even more than that and",
+      "offset": 681839,
+      "duration": 3521
+    },
+    {
+      "text": "so what you can do",
+      "offset": 683600,
+      "duration": 5120
+    },
+    {
+      "text": "is and those conditions together",
+      "offset": 685360,
+      "duration": 5520
+    },
+    {
+      "text": "and only have a single if makes it",
+      "offset": 688720,
+      "duration": 3840
+    },
+    {
+      "text": "easier to understand",
+      "offset": 690880,
+      "duration": 5199
+    },
+    {
+      "text": "um the next one is extracting methods",
+      "offset": 692560,
+      "duration": 6240
+    },
+    {
+      "text": "so sometimes you're looking at a method",
+      "offset": 696079,
+      "duration": 3361
+    },
+    {
+      "text": "with",
+      "offset": 698800,
+      "duration": 2560
+    },
+    {
+      "text": "a gnarly piece of code in the middle",
+      "offset": 699440,
+      "duration": 3280
+    },
+    {
+      "text": "that you can't do much",
+      "offset": 701360,
+      "duration": 5280
+    },
+    {
+      "text": "with except extract it to a new method",
+      "offset": 702720,
+      "duration": 6880
+    },
+    {
+      "text": "and put a readable name on it so again",
+      "offset": 706640,
+      "duration": 4080
+    },
+    {
+      "text": "do",
+      "offset": 709600,
+      "duration": 3520
+    },
+    {
+      "text": "readably shorthand multiple lines into",
+      "offset": 710720,
+      "duration": 5200
+    },
+    {
+      "text": "one that can be very helpful sometimes",
+      "offset": 713120,
+      "duration": 4560
+    },
+    {
+      "text": "similarly if you're doing the same thing",
+      "offset": 715920,
+      "duration": 3280
+    },
+    {
+      "text": "over and over again",
+      "offset": 717680,
+      "duration": 4080
+    },
+    {
+      "text": "then that's a cause for extracting a",
+      "offset": 719200,
+      "duration": 4000
+    },
+    {
+      "text": "helper method",
+      "offset": 721760,
+      "duration": 3920
+    },
+    {
+      "text": "and finally language features so there's",
+      "offset": 723200,
+      "duration": 4319
+    },
+    {
+      "text": "nothing specific here this is about",
+      "offset": 725680,
+      "duration": 3599
+    },
+    {
+      "text": "knowing what the features are in your",
+      "offset": 727519,
+      "duration": 2721
+    },
+    {
+      "text": "language",
+      "offset": 729279,
+      "duration": 3841
+    },
+    {
+      "text": "that are easier to understand than other",
+      "offset": 730240,
+      "duration": 4719
+    },
+    {
+      "text": "ways of doing it you know as programmers",
+      "offset": 733120,
+      "duration": 2880
+    },
+    {
+      "text": "we know that there's",
+      "offset": 734959,
+      "duration": 3440
+    },
+    {
+      "text": "very often multiple different ways to",
+      "offset": 736000,
+      "duration": 3600
+    },
+    {
+      "text": "write the code",
+      "offset": 738399,
+      "duration": 2880
+    },
+    {
+      "text": "and so this final one isn't about",
+      "offset": 739600,
+      "duration": 3600
+    },
+    {
+      "text": "knowing which ways",
+      "offset": 741279,
+      "duration": 4081
+    },
+    {
+      "text": "are easier for the person who comes",
+      "offset": 743200,
+      "duration": 5439
+    },
+    {
+      "text": "behind you to understand",
+      "offset": 745360,
+      "duration": 6400
+    },
+    {
+      "text": "so it's time to get into refactoring",
+      "offset": 748639,
+      "duration": 6561
+    },
+    {
+      "text": "my job here is to make things wait this",
+      "offset": 751760,
+      "duration": 5360
+    },
+    {
+      "text": "is the wrong gift my job is not to make",
+      "offset": 755200,
+      "duration": 2800
+    },
+    {
+      "text": "things as difficult",
+      "offset": 757120,
+      "duration": 3200
+    },
+    {
+      "text": "as possible my job is in fact to make",
+      "offset": 758000,
+      "duration": 4480
+    },
+    {
+      "text": "things as easy as possible",
+      "offset": 760320,
+      "duration": 5759
+    },
+    {
+      "text": "so let's do this so i'm going to first",
+      "offset": 762480,
+      "duration": 7039
+    },
+    {
+      "text": "jump into whoops did not mean to do that",
+      "offset": 766079,
+      "duration": 7200
+    },
+    {
+      "text": "sonar cloud so central cloud is",
+      "offset": 769519,
+      "duration": 7201
+    },
+    {
+      "text": "an online service to provide static",
+      "offset": 773279,
+      "duration": 4481
+    },
+    {
+      "text": "analysis",
+      "offset": 776720,
+      "duration": 3440
+    },
+    {
+      "text": "to help you improve the code quality and",
+      "offset": 777760,
+      "duration": 3840
+    },
+    {
+      "text": "code security of your",
+      "offset": 780160,
+      "duration": 4880
+    },
+    {
+      "text": "projects and i'm looking at",
+      "offset": 781600,
+      "duration": 5760
+    },
+    {
+      "text": "an issue in an open source project sonar",
+      "offset": 785040,
+      "duration": 5039
+    },
+    {
+      "text": "cloud is free for open source projects",
+      "offset": 787360,
+      "duration": 4640
+    },
+    {
+      "text": "and i've got an issue here a cognitive",
+      "offset": 790079,
+      "duration": 3760
+    },
+    {
+      "text": "complexity issue",
+      "offset": 792000,
+      "duration": 4079
+    },
+    {
+      "text": "and i've got secondary locations to help",
+      "offset": 793839,
+      "duration": 3921
+    },
+    {
+      "text": "me understand",
+      "offset": 796079,
+      "duration": 3521
+    },
+    {
+      "text": "where the cognitive complexity is coming",
+      "offset": 797760,
+      "duration": 4000
+    },
+    {
+      "text": "from so for instance there's plus one",
+      "offset": 799600,
+      "duration": 5120
+    },
+    {
+      "text": "on this else else's don't receive an sc",
+      "offset": 801760,
+      "duration": 4240
+    },
+    {
+      "text": "increment we've already paid that",
+      "offset": 804720,
+      "duration": 2720
+    },
+    {
+      "text": "penalty on the if",
+      "offset": 806000,
+      "duration": 4320
+    },
+    {
+      "text": "so this if is plus four one for the f3",
+      "offset": 807440,
+      "duration": 4079
+    },
+    {
+      "text": "for the nesting",
+      "offset": 810320,
+      "duration": 3360
+    },
+    {
+      "text": "all the way down here to secondary",
+      "offset": 811519,
+      "duration": 3841
+    },
+    {
+      "text": "location number 20",
+      "offset": 813680,
+      "duration": 3520
+    },
+    {
+      "text": "which is plus 10. and so i've got a",
+      "offset": 815360,
+      "duration": 3760
+    },
+    {
+      "text": "total cognitive complexity on this",
+      "offset": 817200,
+      "duration": 2800
+    },
+    {
+      "text": "method",
+      "offset": 819120,
+      "duration": 3360
+    },
+    {
+      "text": "that's 65 and when i look at what the",
+      "offset": 820000,
+      "duration": 3440
+    },
+    {
+      "text": "method is",
+      "offset": 822480,
+      "duration": 2880
+    },
+    {
+      "text": "i see i start with an if and i have an",
+      "offset": 823440,
+      "duration": 3759
+    },
+    {
+      "text": "else with nothing in the else but",
+      "offset": 825360,
+      "duration": 2640
+    },
+    {
+      "text": "another if",
+      "offset": 827199,
+      "duration": 2880
+    },
+    {
+      "text": "and an else with nothing in the else but",
+      "offset": 828000,
+      "duration": 3360
+    },
+    {
+      "text": "another if",
+      "offset": 830079,
+      "duration": 4961
+    },
+    {
+      "text": "and so on and so um that pattern may",
+      "offset": 831360,
+      "duration": 5440
+    },
+    {
+      "text": "sound familiar to you from when i was",
+      "offset": 835040,
+      "duration": 5359
+    },
+    {
+      "text": "talking about the exception in cobol",
+      "offset": 836800,
+      "duration": 5200
+    },
+    {
+      "text": "because in cobalt you don't have the",
+      "offset": 840399,
+      "duration": 3120
+    },
+    {
+      "text": "elsif structure",
+      "offset": 842000,
+      "duration": 4480
+    },
+    {
+      "text": "but this is java and you do have the lcf",
+      "offset": 843519,
+      "duration": 4641
+    },
+    {
+      "text": "structure and so there's no exception",
+      "offset": 846480,
+      "duration": 2880
+    },
+    {
+      "text": "and so",
+      "offset": 848160,
+      "duration": 2880
+    },
+    {
+      "text": "we count up all of this cognitive",
+      "offset": 849360,
+      "duration": 4560
+    },
+    {
+      "text": "complexity and it adds up really fast",
+      "offset": 851040,
+      "duration": 5280
+    },
+    {
+      "text": "so this is a great example and they're",
+      "offset": 853920,
+      "duration": 4320
+    },
+    {
+      "text": "not usually this clear-cut",
+      "offset": 856320,
+      "duration": 4160
+    },
+    {
+      "text": "this is a great example of a place where",
+      "offset": 858240,
+      "duration": 4399
+    },
+    {
+      "text": "structural collapse can really help what",
+      "offset": 860480,
+      "duration": 2560
+    },
+    {
+      "text": "we",
+      "offset": 862639,
+      "duration": 2241
+    },
+    {
+      "text": "what you can do here is turn this all",
+      "offset": 863040,
+      "duration": 4799
+    },
+    {
+      "text": "into a single if else if tree",
+      "offset": 864880,
+      "duration": 5519
+    },
+    {
+      "text": "and i counted it up once i think it adds",
+      "offset": 867839,
+      "duration": 3201
+    },
+    {
+      "text": "up to",
+      "offset": 870399,
+      "duration": 3201
+    },
+    {
+      "text": "13 if you were to collapse this all into",
+      "offset": 871040,
+      "duration": 3680
+    },
+    {
+      "text": "a single tree",
+      "offset": 873600,
+      "duration": 3120
+    },
+    {
+      "text": "and that includes the plus one for our",
+      "offset": 874720,
+      "duration": 5200
+    },
+    {
+      "text": "binary logical operator sequence",
+      "offset": 876720,
+      "duration": 4720
+    },
+    {
+      "text": "so that's what i wanted to show you in",
+      "offset": 879920,
+      "duration": 3200
+    },
+    {
+      "text": "the browser now i'm going to jump into",
+      "offset": 881440,
+      "duration": 4160
+    },
+    {
+      "text": "the ide",
+      "offset": 883120,
+      "duration": 7839
+    },
+    {
+      "text": "here so first i am in intellij's idea",
+      "offset": 885600,
+      "duration": 8720
+    },
+    {
+      "text": "and i'm using sonar lens centerlint is a",
+      "offset": 890959,
+      "duration": 6320
+    },
+    {
+      "text": "free and open source ide plugin it's",
+      "offset": 894320,
+      "duration": 4240
+    },
+    {
+      "text": "available for",
+      "offset": 897279,
+      "duration": 4081
+    },
+    {
+      "text": "most of the intellij ides as well as",
+      "offset": 898560,
+      "duration": 6079
+    },
+    {
+      "text": "eclipse visual studio and vs code",
+      "offset": 901360,
+      "duration": 4960
+    },
+    {
+      "text": "so down here at the bottom i've got the",
+      "offset": 904639,
+      "duration": 3200
+    },
+    {
+      "text": "sonar lint pane open",
+      "offset": 906320,
+      "duration": 3759
+    },
+    {
+      "text": "and it's showing me all of the current",
+      "offset": 907839,
+      "duration": 3201
+    },
+    {
+      "text": "all of the issues",
+      "offset": 910079,
+      "duration": 4320
+    },
+    {
+      "text": "that are in my current file so i'm going",
+      "offset": 911040,
+      "duration": 5359
+    },
+    {
+      "text": "to click on my cognitive complexity",
+      "offset": 914399,
+      "duration": 3120
+    },
+    {
+      "text": "issue",
+      "offset": 916399,
+      "duration": 3680
+    },
+    {
+      "text": "and it takes me to the issue in the code",
+      "offset": 917519,
+      "duration": 4961
+    },
+    {
+      "text": "and it highlights my secondary locations",
+      "offset": 920079,
+      "duration": 4481
+    },
+    {
+      "text": "for me it also shows me my secondary",
+      "offset": 922480,
+      "duration": 3599
+    },
+    {
+      "text": "locations here",
+      "offset": 924560,
+      "duration": 4560
+    },
+    {
+      "text": "on the right now by default",
+      "offset": 926079,
+      "duration": 4880
+    },
+    {
+      "text": "the first tab in this part of the pane",
+      "offset": 929120,
+      "duration": 4000
+    },
+    {
+      "text": "is the rule itself in case i don't",
+      "offset": 930959,
+      "duration": 4240
+    },
+    {
+      "text": "understand quite what's going on",
+      "offset": 933120,
+      "duration": 4320
+    },
+    {
+      "text": "but i can also have easy access to the",
+      "offset": 935199,
+      "duration": 4161
+    },
+    {
+      "text": "secondary locations",
+      "offset": 937440,
+      "duration": 3759
+    },
+    {
+      "text": "and i can see the message for each",
+      "offset": 939360,
+      "duration": 3279
+    },
+    {
+      "text": "location i can also",
+      "offset": 941199,
+      "duration": 4320
+    },
+    {
+      "text": "see the message if i mouse over it so",
+      "offset": 942639,
+      "duration": 5521
+    },
+    {
+      "text": "here at this first four it's plus one",
+      "offset": 945519,
+      "duration": 5361
+    },
+    {
+      "text": "by the time i get down here to this if",
+      "offset": 948160,
+      "duration": 3039
+    },
+    {
+      "text": "it's",
+      "offset": 950880,
+      "duration": 3920
+    },
+    {
+      "text": "plus five now this issue",
+      "offset": 951199,
+      "duration": 6961
+    },
+    {
+      "text": "i'm at 16 versus the 15 threshold",
+      "offset": 954800,
+      "duration": 4800
+    },
+    {
+      "text": "allowed that's the default threshold",
+      "offset": 958160,
+      "duration": 4320
+    },
+    {
+      "text": "that we set in the rule for java",
+      "offset": 959600,
+      "duration": 5760
+    },
+    {
+      "text": "and anytime you have a rule that",
+      "offset": 962480,
+      "duration": 5520
+    },
+    {
+      "text": "includes a numeric threshold",
+      "offset": 965360,
+      "duration": 4000
+    },
+    {
+      "text": "the threshold is going to be somewhat",
+      "offset": 968000,
+      "duration": 3199
+    },
+    {
+      "text": "arbitrary and so",
+      "offset": 969360,
+      "duration": 4560
+    },
+    {
+      "text": "it would be really easy to look at this",
+      "offset": 971199,
+      "duration": 3921
+    },
+    {
+      "text": "and say",
+      "offset": 973920,
+      "duration": 4880
+    },
+    {
+      "text": "well 16 isn't that much worse than 15.",
+      "offset": 975120,
+      "duration": 6159
+    },
+    {
+      "text": "do we really need to do something here",
+      "offset": 978800,
+      "duration": 3360
+    },
+    {
+      "text": "and you know",
+      "offset": 981279,
+      "duration": 2401
+    },
+    {
+      "text": "sometimes that's going to be the best",
+      "offset": 982160,
+      "duration": 4000
+    },
+    {
+      "text": "answer but it's worth looking at it",
+      "offset": 983680,
+      "duration": 4480
+    },
+    {
+      "text": "first to see if there's something simple",
+      "offset": 986160,
+      "duration": 2640
+    },
+    {
+      "text": "you can do",
+      "offset": 988160,
+      "duration": 4320
+    },
+    {
+      "text": "to clean it up before you move on and so",
+      "offset": 988800,
+      "duration": 6080
+    },
+    {
+      "text": "when i look at this method and i look at",
+      "offset": 992480,
+      "duration": 4159
+    },
+    {
+      "text": "where the cognitive complexity is coming",
+      "offset": 994880,
+      "duration": 3199
+    },
+    {
+      "text": "from i see",
+      "offset": 996639,
+      "duration": 4961
+    },
+    {
+      "text": "this deeply nested indenting here",
+      "offset": 998079,
+      "duration": 5680
+    },
+    {
+      "text": "um and and here in the secondary",
+      "offset": 1001600,
+      "duration": 4320
+    },
+    {
+      "text": "locations list i see that",
+      "offset": 1003759,
+      "duration": 3921
+    },
+    {
+      "text": "most of the cognitive complexity is",
+      "offset": 1005920,
+      "duration": 4000
+    },
+    {
+      "text": "coming from nesting and so if i can",
+      "offset": 1007680,
+      "duration": 4560
+    },
+    {
+      "text": "reduce some of that nesting",
+      "offset": 1009920,
+      "duration": 4479
+    },
+    {
+      "text": "i can very easily get below the",
+      "offset": 1012240,
+      "duration": 3599
+    },
+    {
+      "text": "threshold",
+      "offset": 1014399,
+      "duration": 3120
+    },
+    {
+      "text": "and so i start here at the top with a",
+      "offset": 1015839,
+      "duration": 3920
+    },
+    {
+      "text": "for loop",
+      "offset": 1017519,
+      "duration": 4161
+    },
+    {
+      "text": "there's not a lot i can do with this for",
+      "offset": 1019759,
+      "duration": 3281
+    },
+    {
+      "text": "loop so",
+      "offset": 1021680,
+      "duration": 2720
+    },
+    {
+      "text": "you know a lot of times when you're",
+      "offset": 1023040,
+      "duration": 3840
+    },
+    {
+      "text": "dealing with loops your best option",
+      "offset": 1024400,
+      "duration": 5679
+    },
+    {
+      "text": "is to extract the code inside",
+      "offset": 1026880,
+      "duration": 5919
+    },
+    {
+      "text": "to another method but this is already",
+      "offset": 1030079,
+      "duration": 4480
+    },
+    {
+      "text": "you know a nice compact",
+      "offset": 1032799,
+      "duration": 4801
+    },
+    {
+      "text": "method this is not a huge method",
+      "offset": 1034559,
+      "duration": 5201
+    },
+    {
+      "text": "it's just that there's a lot of nesting",
+      "offset": 1037600,
+      "duration": 3680
+    },
+    {
+      "text": "here",
+      "offset": 1039760,
+      "duration": 4079
+    },
+    {
+      "text": "you know maybe i could invert this",
+      "offset": 1041280,
+      "duration": 3679
+    },
+    {
+      "text": "condition",
+      "offset": 1043839,
+      "duration": 3600
+    },
+    {
+      "text": "and do an early return that's an option",
+      "offset": 1044959,
+      "duration": 4481
+    },
+    {
+      "text": "here",
+      "offset": 1047439,
+      "duration": 5041
+    },
+    {
+      "text": "but i also noticed that at the bottom",
+      "offset": 1049440,
+      "duration": 3440
+    },
+    {
+      "text": "here",
+      "offset": 1052480,
+      "duration": 2960
+    },
+    {
+      "text": "with the highest level of nesting i've",
+      "offset": 1052880,
+      "duration": 3200
+    },
+    {
+      "text": "got an",
+      "offset": 1055440,
+      "duration": 3280
+    },
+    {
+      "text": "if and there's nothing inside it but",
+      "offset": 1056080,
+      "duration": 4080
+    },
+    {
+      "text": "another if",
+      "offset": 1058720,
+      "duration": 4800
+    },
+    {
+      "text": "and so that's a prime candidate",
+      "offset": 1060160,
+      "duration": 6800
+    },
+    {
+      "text": "for structural collapse so if i just",
+      "offset": 1063520,
+      "duration": 6480
+    },
+    {
+      "text": "and these two conditions together",
+      "offset": 1066960,
+      "duration": 6640
+    },
+    {
+      "text": "and let me clean up the curly braces",
+      "offset": 1070000,
+      "duration": 6320
+    },
+    {
+      "text": "and whoops i also have to clean up the",
+      "offset": 1073600,
+      "duration": 3840
+    },
+    {
+      "text": "if",
+      "offset": 1076320,
+      "duration": 3599
+    },
+    {
+      "text": "and if i out dent this just to make it",
+      "offset": 1077440,
+      "duration": 4640
+    },
+    {
+      "text": "clear what's going on here",
+      "offset": 1079919,
+      "duration": 4401
+    },
+    {
+      "text": "then i've already dropped enough",
+      "offset": 1082080,
+      "duration": 3599
+    },
+    {
+      "text": "complexity",
+      "offset": 1084320,
+      "duration": 3359
+    },
+    {
+      "text": "to get me below the threshold so i could",
+      "offset": 1085679,
+      "duration": 4081
+    },
+    {
+      "text": "happily move on here",
+      "offset": 1087679,
+      "duration": 5201
+    },
+    {
+      "text": "if i wanted to go further i could invert",
+      "offset": 1089760,
+      "duration": 4960
+    },
+    {
+      "text": "this condition",
+      "offset": 1092880,
+      "duration": 5360
+    },
+    {
+      "text": "now i can't do an early return here",
+      "offset": 1094720,
+      "duration": 6400
+    },
+    {
+      "text": "but i could do",
+      "offset": 1098240,
+      "duration": 2880
+    },
+    {
+      "text": "a continue",
+      "offset": 1101840,
+      "duration": 2719
+    },
+    {
+      "text": "and let me out dent this",
+      "offset": 1106960,
+      "duration": 8320
+    },
+    {
+      "text": "and clean up the curly braces oops",
+      "offset": 1111600,
+      "duration": 7199
+    },
+    {
+      "text": "went a little too far there and",
+      "offset": 1115280,
+      "duration": 6399
+    },
+    {
+      "text": "hopefully you'll agree that this code is",
+      "offset": 1118799,
+      "duration": 3201
+    },
+    {
+      "text": "a lot",
+      "offset": 1121679,
+      "duration": 4081
+    },
+    {
+      "text": "clearer just with those small changes",
+      "offset": 1122000,
+      "duration": 5360
+    },
+    {
+      "text": "so that's what i wanted to show you",
+      "offset": 1125760,
+      "duration": 3760
+    },
+    {
+      "text": "there moving on",
+      "offset": 1127360,
+      "duration": 4400
+    },
+    {
+      "text": "so i've got two issues in this file i'm",
+      "offset": 1129520,
+      "duration": 4240
+    },
+    {
+      "text": "going to start with the second one",
+      "offset": 1131760,
+      "duration": 4880
+    },
+    {
+      "text": "so i click on the issue takes center",
+      "offset": 1133760,
+      "duration": 4480
+    },
+    {
+      "text": "lint takes me to the issue and code",
+      "offset": 1136640,
+      "duration": 4480
+    },
+    {
+      "text": "highlights my secondary issues",
+      "offset": 1138240,
+      "duration": 6400
+    },
+    {
+      "text": "and with this one i see that i'm at",
+      "offset": 1141120,
+      "duration": 6960
+    },
+    {
+      "text": "19 versus the 15 threshold if i look at",
+      "offset": 1144640,
+      "duration": 5360
+    },
+    {
+      "text": "the secondary locations",
+      "offset": 1148080,
+      "duration": 3839
+    },
+    {
+      "text": "i see that i've got a lot of nesting",
+      "offset": 1150000,
+      "duration": 3440
+    },
+    {
+      "text": "points here so plus 3",
+      "offset": 1151919,
+      "duration": 4561
+    },
+    {
+      "text": "plus 4 plus 4 3 4. so",
+      "offset": 1153440,
+      "duration": 5040
+    },
+    {
+      "text": "again if i can reduce some of that",
+      "offset": 1156480,
+      "duration": 4559
+    },
+    {
+      "text": "nesting that's going to go a long way to",
+      "offset": 1158480,
+      "duration": 4400
+    },
+    {
+      "text": "cleaning this up",
+      "offset": 1161039,
+      "duration": 3361
+    },
+    {
+      "text": "so then i come back and i look at the",
+      "offset": 1162880,
+      "duration": 3919
+    },
+    {
+      "text": "code and i see that basically the first",
+      "offset": 1164400,
+      "duration": 3680
+    },
+    {
+      "text": "thing i have",
+      "offset": 1166799,
+      "duration": 5201
+    },
+    {
+      "text": "in this method is an if so let's see",
+      "offset": 1168080,
+      "duration": 5920
+    },
+    {
+      "text": "and it turns out that nothing happens in",
+      "offset": 1172000,
+      "duration": 4400
+    },
+    {
+      "text": "this method outside of the if",
+      "offset": 1174000,
+      "duration": 4880
+    },
+    {
+      "text": "so this is a really great case for",
+      "offset": 1176400,
+      "duration": 4399
+    },
+    {
+      "text": "invert the condition and do an early",
+      "offset": 1178880,
+      "duration": 3280
+    },
+    {
+      "text": "return",
+      "offset": 1180799,
+      "duration": 3841
+    },
+    {
+      "text": "so if wait a minute did i just do that",
+      "offset": 1182160,
+      "duration": 3280
+    },
+    {
+      "text": "right",
+      "offset": 1184640,
+      "duration": 4320
+    },
+    {
+      "text": "it was already at not whoops sorry",
+      "offset": 1185440,
+      "duration": 5840
+    },
+    {
+      "text": "i'm moving a little too fast here all",
+      "offset": 1188960,
+      "duration": 6240
+    },
+    {
+      "text": "right so let's invert the condition so",
+      "offset": 1191280,
+      "duration": 6320
+    },
+    {
+      "text": "equals null so if the tag equals null i",
+      "offset": 1195200,
+      "duration": 4960
+    },
+    {
+      "text": "want to go ahead and return",
+      "offset": 1197600,
+      "duration": 6640
+    },
+    {
+      "text": "otherwise i can do the method",
+      "offset": 1200160,
+      "duration": 4080
+    },
+    {
+      "text": "let's out this and",
+      "offset": 1204880,
+      "duration": 6720
+    },
+    {
+      "text": "clean up the curly braces all right",
+      "offset": 1208000,
+      "duration": 6960
+    },
+    {
+      "text": "and so already i think it's a lot",
+      "offset": 1211600,
+      "duration": 4959
+    },
+    {
+      "text": "clearer what's actually happening in",
+      "offset": 1214960,
+      "duration": 2240
+    },
+    {
+      "text": "this method",
+      "offset": 1216559,
+      "duration": 3841
+    },
+    {
+      "text": "if i have a null tag return otherwise",
+      "offset": 1217200,
+      "duration": 5359
+    },
+    {
+      "text": "do these things i could try to go a",
+      "offset": 1220400,
+      "duration": 3600
+    },
+    {
+      "text": "little bit further here but",
+      "offset": 1222559,
+      "duration": 4161
+    },
+    {
+      "text": "i think this is enough so now moving on",
+      "offset": 1224000,
+      "duration": 5039
+    },
+    {
+      "text": "to the next example",
+      "offset": 1226720,
+      "duration": 5120
+    },
+    {
+      "text": "here i'm also at 19 versus the 15",
+      "offset": 1229039,
+      "duration": 4081
+    },
+    {
+      "text": "threshold",
+      "offset": 1231840,
+      "duration": 3280
+    },
+    {
+      "text": "and when i look at the secondary",
+      "offset": 1233120,
+      "duration": 3840
+    },
+    {
+      "text": "locations i see i've got a lot of plus",
+      "offset": 1235120,
+      "duration": 2400
+    },
+    {
+      "text": "fours",
+      "offset": 1236960,
+      "duration": 2719
+    },
+    {
+      "text": "plus three so again we're looking at",
+      "offset": 1237520,
+      "duration": 4720
+    },
+    {
+      "text": "nesting up i can reduce the nesting here",
+      "offset": 1239679,
+      "duration": 4641
+    },
+    {
+      "text": "it's going to simplify the code make it",
+      "offset": 1242240,
+      "duration": 4319
+    },
+    {
+      "text": "easier to understand",
+      "offset": 1244320,
+      "duration": 5520
+    },
+    {
+      "text": "so when i look at the code itself i see",
+      "offset": 1246559,
+      "duration": 5120
+    },
+    {
+      "text": "that i'm starting with a four",
+      "offset": 1249840,
+      "duration": 3839
+    },
+    {
+      "text": "now i there's no way that i can invert",
+      "offset": 1251679,
+      "duration": 3681
+    },
+    {
+      "text": "this and do an early return",
+      "offset": 1253679,
+      "duration": 4880
+    },
+    {
+      "text": "um so there's my favorite trick out the",
+      "offset": 1255360,
+      "duration": 4240
+    },
+    {
+      "text": "window",
+      "offset": 1258559,
+      "duration": 2721
+    },
+    {
+      "text": "but if i look a little bit further at",
+      "offset": 1259600,
+      "duration": 4800
+    },
+    {
+      "text": "the code i see that i have",
+      "offset": 1261280,
+      "duration": 6720
+    },
+    {
+      "text": "inside the 4 an if and nothing happens",
+      "offset": 1264400,
+      "duration": 4399
+    },
+    {
+      "text": "outside that",
+      "offset": 1268000,
+      "duration": 4240
+    },
+    {
+      "text": "if and i've got another if",
+      "offset": 1268799,
+      "duration": 5601
+    },
+    {
+      "text": "and nothing happens outside that if so",
+      "offset": 1272240,
+      "duration": 3200
+    },
+    {
+      "text": "i've got two",
+      "offset": 1274400,
+      "duration": 3279
+    },
+    {
+      "text": "things that i can apply here so first of",
+      "offset": 1275440,
+      "duration": 4880
+    },
+    {
+      "text": "all i can do a structural collapse here",
+      "offset": 1277679,
+      "duration": 6880
+    },
+    {
+      "text": "i can and these conditions together",
+      "offset": 1280320,
+      "duration": 8320
+    },
+    {
+      "text": "and let's clean that up and",
+      "offset": 1284559,
+      "duration": 9441
+    },
+    {
+      "text": "clean that up out dent it just to",
+      "offset": 1288640,
+      "duration": 5360
+    },
+    {
+      "text": "be clear on what's happening all right",
+      "offset": 1294480,
+      "duration": 5600
+    },
+    {
+      "text": "and so that already makes it a little",
+      "offset": 1297520,
+      "duration": 3600
+    },
+    {
+      "text": "simpler",
+      "offset": 1300080,
+      "duration": 3599
+    },
+    {
+      "text": "and then i also have this if and nothing",
+      "offset": 1301120,
+      "duration": 4240
+    },
+    {
+      "text": "happens outside the if",
+      "offset": 1303679,
+      "duration": 3521
+    },
+    {
+      "text": "now i can't do an early return here i",
+      "offset": 1305360,
+      "duration": 3439
+    },
+    {
+      "text": "don't want to return early because we've",
+      "offset": 1307200,
+      "duration": 2640
+    },
+    {
+      "text": "got to test",
+      "offset": 1308799,
+      "duration": 4000
+    },
+    {
+      "text": "the next value in the for loop but i can",
+      "offset": 1309840,
+      "duration": 6800
+    },
+    {
+      "text": "do an early exit out of the loop",
+      "offset": 1312799,
+      "duration": 7841
+    },
+    {
+      "text": "t i t-i-n-u-e let's pretend i can spell",
+      "offset": 1316640,
+      "duration": 8399
+    },
+    {
+      "text": "um so let me out-dent this",
+      "offset": 1320640,
+      "duration": 4399
+    },
+    {
+      "text": "and clean up the curly braces",
+      "offset": 1325360,
+      "duration": 5760
+    },
+    {
+      "text": "all right and so now i'm well below the",
+      "offset": 1328799,
+      "duration": 3521
+    },
+    {
+      "text": "threshold",
+      "offset": 1331120,
+      "duration": 4880
+    },
+    {
+      "text": "with an easier to understand method",
+      "offset": 1332320,
+      "duration": 6800
+    },
+    {
+      "text": "so moving on to the next one",
+      "offset": 1336000,
+      "duration": 6960
+    },
+    {
+      "text": "i've got one issue in this file and",
+      "offset": 1339120,
+      "duration": 6480
+    },
+    {
+      "text": "when i look at it in the secondary",
+      "offset": 1342960,
+      "duration": 5120
+    },
+    {
+      "text": "locations here i see plus two three four",
+      "offset": 1345600,
+      "duration": 5360
+    },
+    {
+      "text": "five so that tells me that i've got a",
+      "offset": 1348080,
+      "duration": 5040
+    },
+    {
+      "text": "successive nesting here",
+      "offset": 1350960,
+      "duration": 3680
+    },
+    {
+      "text": "and so then i come back and i look at",
+      "offset": 1353120,
+      "duration": 3679
+    },
+    {
+      "text": "the code and we start with an",
+      "offset": 1354640,
+      "duration": 5360
+    },
+    {
+      "text": "if and then an else and then",
+      "offset": 1356799,
+      "duration": 6000
+    },
+    {
+      "text": "let's see nothing happens outside the",
+      "offset": 1360000,
+      "duration": 3520
+    },
+    {
+      "text": "else",
+      "offset": 1362799,
+      "duration": 3841
+    },
+    {
+      "text": "so let me come back here if",
+      "offset": 1363520,
+      "duration": 6720
+    },
+    {
+      "text": "this this condition set result",
+      "offset": 1366640,
+      "duration": 7279
+    },
+    {
+      "text": "and then we return the result okay so",
+      "offset": 1370240,
+      "duration": 5919
+    },
+    {
+      "text": "why don't we go ahead and return",
+      "offset": 1373919,
+      "duration": 6561
+    },
+    {
+      "text": "the result instead of setting it so",
+      "offset": 1376159,
+      "duration": 7841
+    },
+    {
+      "text": "return all right so now if the condition",
+      "offset": 1380480,
+      "duration": 4000
+    },
+    {
+      "text": "is met",
+      "offset": 1384000,
+      "duration": 2720
+    },
+    {
+      "text": "i'm going to return so i leave the",
+      "offset": 1384480,
+      "duration": 4240
+    },
+    {
+      "text": "method that means that i no longer need",
+      "offset": 1386720,
+      "duration": 3760
+    },
+    {
+      "text": "this else clause",
+      "offset": 1388720,
+      "duration": 4319
+    },
+    {
+      "text": "to guard the rest of this logic so let",
+      "offset": 1390480,
+      "duration": 3040
+    },
+    {
+      "text": "me",
+      "offset": 1393039,
+      "duration": 5681
+    },
+    {
+      "text": "clean up the curly braces out dent this",
+      "offset": 1393520,
+      "duration": 5200
+    },
+    {
+      "text": "and there we are then i look a little",
+      "offset": 1400159,
+      "duration": 4640
+    },
+    {
+      "text": "bit further and i see that",
+      "offset": 1402720,
+      "duration": 4079
+    },
+    {
+      "text": "over and over again what we're doing in",
+      "offset": 1404799,
+      "duration": 3120
+    },
+    {
+      "text": "this method",
+      "offset": 1406799,
+      "duration": 4161
+    },
+    {
+      "text": "is setting result",
+      "offset": 1407919,
+      "duration": 6081
+    },
+    {
+      "text": "and then nothing happens after the set",
+      "offset": 1410960,
+      "duration": 5520
+    },
+    {
+      "text": "except that we finally return it so i",
+      "offset": 1414000,
+      "duration": 4400
+    },
+    {
+      "text": "can start sort of from the inside out",
+      "offset": 1416480,
+      "duration": 2800
+    },
+    {
+      "text": "here",
+      "offset": 1418400,
+      "duration": 4159
+    },
+    {
+      "text": "let's go ahead and return this one",
+      "offset": 1419280,
+      "duration": 5920
+    },
+    {
+      "text": "and then i no longer need this else to",
+      "offset": 1422559,
+      "duration": 3120
+    },
+    {
+      "text": "guard",
+      "offset": 1425200,
+      "duration": 4000
+    },
+    {
+      "text": "the rest of this code and i can go ahead",
+      "offset": 1425679,
+      "duration": 4401
+    },
+    {
+      "text": "and",
+      "offset": 1429200,
+      "duration": 4000
+    },
+    {
+      "text": "return this one and",
+      "offset": 1430080,
+      "duration": 5360
+    },
+    {
+      "text": "so then everything that happens in this",
+      "offset": 1433200,
+      "duration": 3599
+    },
+    {
+      "text": "if every path",
+      "offset": 1435440,
+      "duration": 4239
+    },
+    {
+      "text": "ends with a return and so i no longer",
+      "offset": 1436799,
+      "duration": 4161
+    },
+    {
+      "text": "need this else",
+      "offset": 1439679,
+      "duration": 5841
+    },
+    {
+      "text": "to guard the code",
+      "offset": 1440960,
+      "duration": 7120
+    },
+    {
+      "text": "and so on so i'm not going to do that",
+      "offset": 1445520,
+      "duration": 3920
+    },
+    {
+      "text": "for every",
+      "offset": 1448080,
+      "duration": 3199
+    },
+    {
+      "text": "path through this code i think you see",
+      "offset": 1449440,
+      "duration": 4640
+    },
+    {
+      "text": "the pattern here at this point",
+      "offset": 1451279,
+      "duration": 5201
+    },
+    {
+      "text": "but if we went ahead and turned all of",
+      "offset": 1454080,
+      "duration": 3520
+    },
+    {
+      "text": "these sets",
+      "offset": 1456480,
+      "duration": 4240
+    },
+    {
+      "text": "into returns then that's going to",
+      "offset": 1457600,
+      "duration": 5600
+    },
+    {
+      "text": "greatly simplify the structure of this",
+      "offset": 1460720,
+      "duration": 4559
+    },
+    {
+      "text": "code",
+      "offset": 1463200,
+      "duration": 5599
+    },
+    {
+      "text": "okay so moving on to oh well i'm still",
+      "offset": 1465279,
+      "duration": 4241
+    },
+    {
+      "text": "at 16",
+      "offset": 1468799,
+      "duration": 3281
+    },
+    {
+      "text": "okay i'm going to do it one more time",
+      "offset": 1469520,
+      "duration": 6560
+    },
+    {
+      "text": "just so i can get below the threshold",
+      "offset": 1472080,
+      "duration": 4000
+    },
+    {
+      "text": "and that should take us below the",
+      "offset": 1481520,
+      "duration": 3279
+    },
+    {
+      "text": "threshold issue goes away",
+      "offset": 1483039,
+      "duration": 3441
+    },
+    {
+      "text": "there's still a little bit more work to",
+      "offset": 1484799,
+      "duration": 3041
+    },
+    {
+      "text": "be done",
+      "offset": 1486480,
+      "duration": 4640
+    },
+    {
+      "text": "all right so moving on to the next one",
+      "offset": 1487840,
+      "duration": 5920
+    },
+    {
+      "text": "so when i looked at this file i saw that",
+      "offset": 1491120,
+      "duration": 3360
+    },
+    {
+      "text": "i had two",
+      "offset": 1493760,
+      "duration": 4640
+    },
+    {
+      "text": "issues here one at 41 and one at 42. so",
+      "offset": 1494480,
+      "duration": 7600
+    },
+    {
+      "text": "i start by looking at the first one",
+      "offset": 1498400,
+      "duration": 6000
+    },
+    {
+      "text": "and i see that we start with an early",
+      "offset": 1502080,
+      "duration": 3040
+    },
+    {
+      "text": "return",
+      "offset": 1504400,
+      "duration": 3360
+    },
+    {
+      "text": "that's good i've got some binary logical",
+      "offset": 1505120,
+      "duration": 5600
+    },
+    {
+      "text": "operators here",
+      "offset": 1507760,
+      "duration": 2960
+    },
+    {
+      "text": "then some more binary logical operators",
+      "offset": 1511120,
+      "duration": 4320
+    },
+    {
+      "text": "and another early return early returns",
+      "offset": 1513360,
+      "duration": 2720
+    },
+    {
+      "text": "are good",
+      "offset": 1515440,
+      "duration": 3920
+    },
+    {
+      "text": "another early return okay so then i come",
+      "offset": 1516080,
+      "duration": 7440
+    },
+    {
+      "text": "here and all right nothing happens",
+      "offset": 1519360,
+      "duration": 7679
+    },
+    {
+      "text": "outside of this if so i could",
+      "offset": 1523520,
+      "duration": 5200
+    },
+    {
+      "text": "invert this condition and do an early",
+      "offset": 1527039,
+      "duration": 3041
+    },
+    {
+      "text": "return",
+      "offset": 1528720,
+      "duration": 4079
+    },
+    {
+      "text": "i've also got nothing inside this if but",
+      "offset": 1530080,
+      "duration": 3199
+    },
+    {
+      "text": "another",
+      "offset": 1532799,
+      "duration": 4321
+    },
+    {
+      "text": "if so if i wanted to move these sets to",
+      "offset": 1533279,
+      "duration": 5280
+    },
+    {
+      "text": "outside of this if i could do a",
+      "offset": 1537120,
+      "duration": 3039
+    },
+    {
+      "text": "structural collapse here but there's",
+      "offset": 1538559,
+      "duration": 3201
+    },
+    {
+      "text": "probably a reason it's structured like",
+      "offset": 1540159,
+      "duration": 2000
+    },
+    {
+      "text": "this",
+      "offset": 1541760,
+      "duration": 2799
+    },
+    {
+      "text": "maybe for readability so i'll just leave",
+      "offset": 1542159,
+      "duration": 5201
+    },
+    {
+      "text": "that alone for a second",
+      "offset": 1544559,
+      "duration": 5600
+    },
+    {
+      "text": "so i could i could do an early return",
+      "offset": 1547360,
+      "duration": 4559
+    },
+    {
+      "text": "early returns are really helpful",
+      "offset": 1550159,
+      "duration": 5921
+    },
+    {
+      "text": "when you're well it makes things clearer",
+      "offset": 1551919,
+      "duration": 6000
+    },
+    {
+      "text": "but in terms of refactoring for",
+      "offset": 1556080,
+      "duration": 3920
+    },
+    {
+      "text": "cognitive complexity",
+      "offset": 1557919,
+      "duration": 5681
+    },
+    {
+      "text": "it helps to reduce nesting but really",
+      "offset": 1560000,
+      "duration": 5520
+    },
+    {
+      "text": "most of the complexity in this method",
+      "offset": 1563600,
+      "duration": 3520
+    },
+    {
+      "text": "and i'm just going to expand the pain",
+      "offset": 1565520,
+      "duration": 2720
+    },
+    {
+      "text": "down here",
+      "offset": 1567120,
+      "duration": 3360
+    },
+    {
+      "text": "comes from all of these binary logical",
+      "offset": 1568240,
+      "duration": 3520
+    },
+    {
+      "text": "operators i have",
+      "offset": 1570480,
+      "duration": 5360
+    },
+    {
+      "text": "38 secondary locations one for",
+      "offset": 1571760,
+      "duration": 6480
+    },
+    {
+      "text": "almost one for each time the operator",
+      "offset": 1575840,
+      "duration": 4000
+    },
+    {
+      "text": "changes",
+      "offset": 1578240,
+      "duration": 4720
+    },
+    {
+      "text": "and so even if i invert this condition",
+      "offset": 1579840,
+      "duration": 4959
+    },
+    {
+      "text": "and do an early return",
+      "offset": 1582960,
+      "duration": 4480
+    },
+    {
+      "text": "that's not going to do a lot to get me",
+      "offset": 1584799,
+      "duration": 3360
+    },
+    {
+      "text": "from",
+      "offset": 1587440,
+      "duration": 3920
+    },
+    {
+      "text": "41 to below the threshold so probably i",
+      "offset": 1588159,
+      "duration": 5041
+    },
+    {
+      "text": "need to figure out what to do",
+      "offset": 1591360,
+      "duration": 3760
+    },
+    {
+      "text": "with all of these binary logical",
+      "offset": 1593200,
+      "duration": 4240
+    },
+    {
+      "text": "operators and i'll be honest with you",
+      "offset": 1595120,
+      "duration": 4799
+    },
+    {
+      "text": "when i was first evaluating this file to",
+      "offset": 1597440,
+      "duration": 3920
+    },
+    {
+      "text": "see if i wanted to include it in this",
+      "offset": 1599919,
+      "duration": 2321
+    },
+    {
+      "text": "webinar",
+      "offset": 1601360,
+      "duration": 3840
+    },
+    {
+      "text": "i looked at this and i said i'll come",
+      "offset": 1602240,
+      "duration": 4160
+    },
+    {
+      "text": "back to this",
+      "offset": 1605200,
+      "duration": 4640
+    },
+    {
+      "text": "and i went to the next method and so i",
+      "offset": 1606400,
+      "duration": 4800
+    },
+    {
+      "text": "started looking at",
+      "offset": 1609840,
+      "duration": 5920
+    },
+    {
+      "text": "the next method and i found",
+      "offset": 1611200,
+      "duration": 6479
+    },
+    {
+      "text": "binary logical operators with an early",
+      "offset": 1615760,
+      "duration": 5279
+    },
+    {
+      "text": "return we've got a try",
+      "offset": 1617679,
+      "duration": 5681
+    },
+    {
+      "text": "another early return another early",
+      "offset": 1621039,
+      "duration": 3921
+    },
+    {
+      "text": "return",
+      "offset": 1623360,
+      "duration": 3679
+    },
+    {
+      "text": "and then i found this chunk of code",
+      "offset": 1624960,
+      "duration": 5120
+    },
+    {
+      "text": "which looked very familiar to me",
+      "offset": 1627039,
+      "duration": 6561
+    },
+    {
+      "text": "to the point that i put the file",
+      "offset": 1630080,
+      "duration": 6000
+    },
+    {
+      "text": "two copies of the file side by side so",
+      "offset": 1633600,
+      "duration": 4720
+    },
+    {
+      "text": "that i could verify that it was actually",
+      "offset": 1636080,
+      "duration": 3599
+    },
+    {
+      "text": "two different methods",
+      "offset": 1638320,
+      "duration": 4479
+    },
+    {
+      "text": "and that something hadn't gone wrong in",
+      "offset": 1639679,
+      "duration": 4401
+    },
+    {
+      "text": "sonar lint",
+      "offset": 1642799,
+      "duration": 3360
+    },
+    {
+      "text": "and it was showing me the same thing",
+      "offset": 1644080,
+      "duration": 3040
+    },
+    {
+      "text": "twice",
+      "offset": 1646159,
+      "duration": 2880
+    },
+    {
+      "text": "this is actually two different methods",
+      "offset": 1647120,
+      "duration": 3200
+    },
+    {
+      "text": "the logic is",
+      "offset": 1649039,
+      "duration": 3120
+    },
+    {
+      "text": "slightly different between the two so",
+      "offset": 1650320,
+      "duration": 3280
+    },
+    {
+      "text": "there's a reason there are two different",
+      "offset": 1652159,
+      "duration": 2321
+    },
+    {
+      "text": "methods",
+      "offset": 1653600,
+      "duration": 4400
+    },
+    {
+      "text": "um but what i come to is that i have",
+      "offset": 1654480,
+      "duration": 6559
+    },
+    {
+      "text": "this big chunk of gnarly logic",
+      "offset": 1658000,
+      "duration": 5919
+    },
+    {
+      "text": "in the middle here um that you know",
+      "offset": 1661039,
+      "duration": 3281
+    },
+    {
+      "text": "there's",
+      "offset": 1663919,
+      "duration": 2161
+    },
+    {
+      "text": "not a lot useful i can do with this",
+      "offset": 1664320,
+      "duration": 3599
+    },
+    {
+      "text": "except maybe extract it to another",
+      "offset": 1666080,
+      "duration": 2880
+    },
+    {
+      "text": "method",
+      "offset": 1667919,
+      "duration": 3681
+    },
+    {
+      "text": "so i'm going to do that in this one",
+      "offset": 1668960,
+      "duration": 4480
+    },
+    {
+      "text": "because of the signatures of the",
+      "offset": 1671600,
+      "duration": 3679
+    },
+    {
+      "text": "variables",
+      "offset": 1673440,
+      "duration": 6000
+    },
+    {
+      "text": "so if i extract this",
+      "offset": 1675279,
+      "duration": 4161
+    },
+    {
+      "text": "and i did my homework a good name for",
+      "offset": 1680080,
+      "duration": 3040
+    },
+    {
+      "text": "this is",
+      "offset": 1681840,
+      "duration": 6480
+    },
+    {
+      "text": "is co-linear overlapping",
+      "offset": 1683120,
+      "duration": 7679
+    },
+    {
+      "text": "now if this were actually my code base",
+      "offset": 1688320,
+      "duration": 4239
+    },
+    {
+      "text": "this is a code base that i found on",
+      "offset": 1690799,
+      "duration": 3201
+    },
+    {
+      "text": "sonar cloud",
+      "offset": 1692559,
+      "duration": 2961
+    },
+    {
+      "text": "if this were actually my code base i",
+      "offset": 1694000,
+      "duration": 4799
+    },
+    {
+      "text": "might have an even better name for this",
+      "offset": 1695520,
+      "duration": 6480
+    },
+    {
+      "text": "but based on some of the names in the",
+      "offset": 1698799,
+      "duration": 4961
+    },
+    {
+      "text": "code that seemed like a decent name",
+      "offset": 1702000,
+      "duration": 5600
+    },
+    {
+      "text": "so now i can take that method call",
+      "offset": 1703760,
+      "duration": 6880
+    },
+    {
+      "text": "and drop it in here in this other",
+      "offset": 1707600,
+      "duration": 5920
+    },
+    {
+      "text": "cop copy of the logic because it is the",
+      "offset": 1710640,
+      "duration": 5440
+    },
+    {
+      "text": "same logic twice",
+      "offset": 1713520,
+      "duration": 5840
+    },
+    {
+      "text": "and now sonarlint recalculates and",
+      "offset": 1716080,
+      "duration": 6760
+    },
+    {
+      "text": "i've eliminated one of my original",
+      "offset": 1719360,
+      "duration": 4799
+    },
+    {
+      "text": "methods",
+      "offset": 1722840,
+      "duration": 4439
+    },
+    {
+      "text": "and the other one is down to 16. now",
+      "offset": 1724159,
+      "duration": 5201
+    },
+    {
+      "text": "that one's down to 16",
+      "offset": 1727279,
+      "duration": 4400
+    },
+    {
+      "text": "because it has this extra try-catch and",
+      "offset": 1729360,
+      "duration": 3600
+    },
+    {
+      "text": "we do increment",
+      "offset": 1731679,
+      "duration": 5360
+    },
+    {
+      "text": "for the catch so in this case",
+      "offset": 1732960,
+      "duration": 6319
+    },
+    {
+      "text": "um you know i still have the option well",
+      "offset": 1737039,
+      "duration": 4000
+    },
+    {
+      "text": "no i can't invert this condition into an",
+      "offset": 1739279,
+      "duration": 3361
+    },
+    {
+      "text": "early return because i'm already early",
+      "offset": 1741039,
+      "duration": 2880
+    },
+    {
+      "text": "returning here",
+      "offset": 1742640,
+      "duration": 5680
+    },
+    {
+      "text": "um so in this case i would say you know",
+      "offset": 1743919,
+      "duration": 6721
+    },
+    {
+      "text": "16 isn't that much worse than 15. i'm",
+      "offset": 1748320,
+      "duration": 3920
+    },
+    {
+      "text": "just going to leave this alone at this",
+      "offset": 1750640,
+      "duration": 2800
+    },
+    {
+      "text": "point",
+      "offset": 1752240,
+      "duration": 4799
+    },
+    {
+      "text": "but i do still have this 24",
+      "offset": 1753440,
+      "duration": 5200
+    },
+    {
+      "text": "i'm going to pull it up in the left hand",
+      "offset": 1757039,
+      "duration": 3921
+    },
+    {
+      "text": "pane and",
+      "offset": 1758640,
+      "duration": 5759
+    },
+    {
+      "text": "you know if i could reduce this 24",
+      "offset": 1760960,
+      "duration": 5280
+    },
+    {
+      "text": "i would feel even better about the",
+      "offset": 1764399,
+      "duration": 3601
+    },
+    {
+      "text": "refactoring i've done",
+      "offset": 1766240,
+      "duration": 4240
+    },
+    {
+      "text": "and really again it's down to all of",
+      "offset": 1768000,
+      "duration": 4640
+    },
+    {
+      "text": "these binary logical operators",
+      "offset": 1770480,
+      "duration": 5199
+    },
+    {
+      "text": "um and so i stared at this for a while",
+      "offset": 1772640,
+      "duration": 4960
+    },
+    {
+      "text": "and i realized there was a pattern and",
+      "offset": 1775679,
+      "duration": 3921
+    },
+    {
+      "text": "i'm going to rearrange this just a",
+      "offset": 1777600,
+      "duration": 4000
+    },
+    {
+      "text": "little bit to hopefully make the pattern",
+      "offset": 1779600,
+      "duration": 4799
+    },
+    {
+      "text": "a little bit clearer to you",
+      "offset": 1781600,
+      "duration": 6319
+    },
+    {
+      "text": "so the pattern i saw was that",
+      "offset": 1784399,
+      "duration": 6721
+    },
+    {
+      "text": "we've got pairs of comparisons",
+      "offset": 1787919,
+      "duration": 6640
+    },
+    {
+      "text": "so i've got x-axis one",
+      "offset": 1791120,
+      "duration": 5679
+    },
+    {
+      "text": "and i'm looking to see if it's between",
+      "offset": 1794559,
+      "duration": 3360
+    },
+    {
+      "text": "x-axis",
+      "offset": 1796799,
+      "duration": 5201
+    },
+    {
+      "text": "three or x-axis four whether",
+      "offset": 1797919,
+      "duration": 7441
+    },
+    {
+      "text": "three is first or four is first so",
+      "offset": 1802000,
+      "duration": 6960
+    },
+    {
+      "text": "this set of comparisons is to see if one",
+      "offset": 1805360,
+      "duration": 5360
+    },
+    {
+      "text": "is between three and four",
+      "offset": 1808960,
+      "duration": 3920
+    },
+    {
+      "text": "and then this one is to see if two is",
+      "offset": 1810720,
+      "duration": 4079
+    },
+    {
+      "text": "between three and four",
+      "offset": 1812880,
+      "duration": 5039
+    },
+    {
+      "text": "and then if to see three is between",
+      "offset": 1814799,
+      "duration": 5921
+    },
+    {
+      "text": "uh one and two and then we do that with",
+      "offset": 1817919,
+      "duration": 4801
+    },
+    {
+      "text": "the y's",
+      "offset": 1820720,
+      "duration": 4079
+    },
+    {
+      "text": "and so here we're doing the same thing",
+      "offset": 1822720,
+      "duration": 3280
+    },
+    {
+      "text": "over and over again",
+      "offset": 1824799,
+      "duration": 5041
+    },
+    {
+      "text": "and so that's a case for a helper method",
+      "offset": 1826000,
+      "duration": 5520
+    },
+    {
+      "text": "and so rather than making you watch me",
+      "offset": 1829840,
+      "duration": 4000
+    },
+    {
+      "text": "type that i did it ahead of time",
+      "offset": 1831520,
+      "duration": 5200
+    },
+    {
+      "text": "and so here's what that turns into so is",
+      "offset": 1833840,
+      "duration": 4640
+    },
+    {
+      "text": "collinear and overlapping a slightly",
+      "offset": 1836720,
+      "duration": 2800
+    },
+    {
+      "text": "better name than",
+      "offset": 1838480,
+      "duration": 4400
+    },
+    {
+      "text": "than the first one um with a calls to",
+      "offset": 1839520,
+      "duration": 5279
+    },
+    {
+      "text": "the helper method and so",
+      "offset": 1842880,
+      "duration": 4080
+    },
+    {
+      "text": "now with a really good name on that",
+      "offset": 1844799,
+      "duration": 3600
+    },
+    {
+      "text": "logic that i've extracted",
+      "offset": 1846960,
+      "duration": 4719
+    },
+    {
+      "text": "into the helper method this this",
+      "offset": 1848399,
+      "duration": 6000
+    },
+    {
+      "text": "operation here this logic becomes a lot",
+      "offset": 1851679,
+      "duration": 3281
+    },
+    {
+      "text": "clearer",
+      "offset": 1854399,
+      "duration": 2640
+    },
+    {
+      "text": "now it's not just this massive",
+      "offset": 1854960,
+      "duration": 4240
+    },
+    {
+      "text": "comparisons that i have to read one by",
+      "offset": 1857039,
+      "duration": 3281
+    },
+    {
+      "text": "one",
+      "offset": 1859200,
+      "duration": 3120
+    },
+    {
+      "text": "now i understand that i'm looking to see",
+      "offset": 1860320,
+      "duration": 3680
+    },
+    {
+      "text": "if x1 is between",
+      "offset": 1862320,
+      "duration": 5920
+    },
+    {
+      "text": "3 and 4 and x2 is between 3 and 4",
+      "offset": 1864000,
+      "duration": 7360
+    },
+    {
+      "text": "and or excuse me not n but or x3 is",
+      "offset": 1868240,
+      "duration": 4640
+    },
+    {
+      "text": "between 1 and 2",
+      "offset": 1871360,
+      "duration": 4559
+    },
+    {
+      "text": "and then the same with the y's and so",
+      "offset": 1872880,
+      "duration": 6560
+    },
+    {
+      "text": "hopefully if i put these side by side so",
+      "offset": 1875919,
+      "duration": 6640
+    },
+    {
+      "text": "here's where i'm calling my a version of",
+      "offset": 1879440,
+      "duration": 5599
+    },
+    {
+      "text": "my helper method so let's just switch to",
+      "offset": 1882559,
+      "duration": 5600
+    },
+    {
+      "text": "the one with a better name",
+      "offset": 1885039,
+      "duration": 5201
+    },
+    {
+      "text": "hopefully you'll under you'll agree that",
+      "offset": 1888159,
+      "duration": 3041
+    },
+    {
+      "text": "this is",
+      "offset": 1890240,
+      "duration": 3520
+    },
+    {
+      "text": "far easier to read and understand what's",
+      "offset": 1891200,
+      "duration": 3680
+    },
+    {
+      "text": "going on",
+      "offset": 1893760,
+      "duration": 3360
+    },
+    {
+      "text": "which is the whole point what we're",
+      "offset": 1894880,
+      "duration": 3760
+    },
+    {
+      "text": "trying to get to",
+      "offset": 1897120,
+      "duration": 3760
+    },
+    {
+      "text": "now i've got one more example for you",
+      "offset": 1898640,
+      "duration": 3919
+    },
+    {
+      "text": "that's in a different project again i",
+      "offset": 1900880,
+      "duration": 4000
+    },
+    {
+      "text": "found this project on sonar cloud",
+      "offset": 1902559,
+      "duration": 5681
+    },
+    {
+      "text": "open source project and i've got",
+      "offset": 1904880,
+      "duration": 5519
+    },
+    {
+      "text": "one method in this excuse me one issue",
+      "offset": 1908240,
+      "duration": 3200
+    },
+    {
+      "text": "in this file",
+      "offset": 1910399,
+      "duration": 5041
+    },
+    {
+      "text": "let me pull this up on the left",
+      "offset": 1911440,
+      "duration": 5680
+    },
+    {
+      "text": "just because i prefer to work on the",
+      "offset": 1915440,
+      "duration": 3040
+    },
+    {
+      "text": "left so",
+      "offset": 1917120,
+      "duration": 4880
+    },
+    {
+      "text": "here here so i've got one issue in this",
+      "offset": 1918480,
+      "duration": 4559
+    },
+    {
+      "text": "file",
+      "offset": 1922000,
+      "duration": 3200
+    },
+    {
+      "text": "and if i look at the secondary locations",
+      "offset": 1923039,
+      "duration": 4081
+    },
+    {
+      "text": "i see i've got a plus one then i've got",
+      "offset": 1925200,
+      "duration": 4240
+    },
+    {
+      "text": "a series of plus twos",
+      "offset": 1927120,
+      "duration": 4960
+    },
+    {
+      "text": "and then some plus ones with one more",
+      "offset": 1929440,
+      "duration": 4560
+    },
+    {
+      "text": "nested something here",
+      "offset": 1932080,
+      "duration": 5120
+    },
+    {
+      "text": "so then if i come back to the code i see",
+      "offset": 1934000,
+      "duration": 6240
+    },
+    {
+      "text": "i've got an if and then inside that i've",
+      "offset": 1937200,
+      "duration": 6240
+    },
+    {
+      "text": "got a series of nested ifs",
+      "offset": 1940240,
+      "duration": 6640
+    },
+    {
+      "text": "and then and then",
+      "offset": 1943440,
+      "duration": 5520
+    },
+    {
+      "text": "and and all of these nested ifs do an",
+      "offset": 1946880,
+      "duration": 3120
+    },
+    {
+      "text": "early return",
+      "offset": 1948960,
+      "duration": 3520
+    },
+    {
+      "text": "that's not bad and then i've got sort of",
+      "offset": 1950000,
+      "duration": 3760
+    },
+    {
+      "text": "a default case so",
+      "offset": 1952480,
+      "duration": 3840
+    },
+    {
+      "text": "if if i fell into this first if and none",
+      "offset": 1953760,
+      "duration": 3840
+    },
+    {
+      "text": "of these others worked",
+      "offset": 1956320,
+      "duration": 3599
+    },
+    {
+      "text": "then i do this last thing and then i've",
+      "offset": 1957600,
+      "duration": 3199
+    },
+    {
+      "text": "got",
+      "offset": 1959919,
+      "duration": 2961
+    },
+    {
+      "text": "a series of else's so i've got an if",
+      "offset": 1960799,
+      "duration": 3841
+    },
+    {
+      "text": "else of tree",
+      "offset": 1962880,
+      "duration": 3600
+    },
+    {
+      "text": "and a lot of my complexity here is",
+      "offset": 1964640,
+      "duration": 3120
+    },
+    {
+      "text": "coming from this",
+      "offset": 1966480,
+      "duration": 4880
+    },
+    {
+      "text": "series of nested ifs inside of",
+      "offset": 1967760,
+      "duration": 7360
+    },
+    {
+      "text": "the first if so",
+      "offset": 1971360,
+      "duration": 5360
+    },
+    {
+      "text": "looking at this trying to figure out if",
+      "offset": 1975120,
+      "duration": 2880
+    },
+    {
+      "text": "there's something i could do you know my",
+      "offset": 1976720,
+      "duration": 2160
+    },
+    {
+      "text": "first thought is",
+      "offset": 1978000,
+      "duration": 3039
+    },
+    {
+      "text": "is there a way to to make this part of",
+      "offset": 1978880,
+      "duration": 3600
+    },
+    {
+      "text": "the top level",
+      "offset": 1981039,
+      "duration": 4801
+    },
+    {
+      "text": "if else if tree i realized there wasn't",
+      "offset": 1982480,
+      "duration": 5199
+    },
+    {
+      "text": "really a good way to do that",
+      "offset": 1985840,
+      "duration": 3360
+    },
+    {
+      "text": "but looking a little bit more closely",
+      "offset": 1987679,
+      "duration": 3360
+    },
+    {
+      "text": "what i realized is that each one of",
+      "offset": 1989200,
+      "duration": 2240
+    },
+    {
+      "text": "these",
+      "offset": 1991039,
+      "duration": 4161
+    },
+    {
+      "text": "ifs tests the same variable",
+      "offset": 1991440,
+      "duration": 7920
+    },
+    {
+      "text": "against a different hard-coded value",
+      "offset": 1995200,
+      "duration": 6880
+    },
+    {
+      "text": "well that's kind of the description of a",
+      "offset": 1999360,
+      "duration": 3760
+    },
+    {
+      "text": "switch statement",
+      "offset": 2002080,
+      "duration": 3520
+    },
+    {
+      "text": "and as a java coder i know that since",
+      "offset": 2003120,
+      "duration": 5360
+    },
+    {
+      "text": "java 7 i can switch on a string",
+      "offset": 2005600,
+      "duration": 6240
+    },
+    {
+      "text": "and cognitive complexity counts",
+      "offset": 2008480,
+      "duration": 6880
+    },
+    {
+      "text": "each if individually it increments",
+      "offset": 2011840,
+      "duration": 6160
+    },
+    {
+      "text": "each time for each else if in an",
+      "offset": 2015360,
+      "duration": 4400
+    },
+    {
+      "text": "if-elsif tree",
+      "offset": 2018000,
+      "duration": 4640
+    },
+    {
+      "text": "but for a switch it increments one for a",
+      "offset": 2019760,
+      "duration": 3600
+    },
+    {
+      "text": "switch",
+      "offset": 2022640,
+      "duration": 3519
+    },
+    {
+      "text": "and all its cases the reason for that is",
+      "offset": 2023360,
+      "duration": 4480
+    },
+    {
+      "text": "that switches are easy a switch",
+      "offset": 2026159,
+      "duration": 4880
+    },
+    {
+      "text": "tests one variable against a set of",
+      "offset": 2027840,
+      "duration": 4719
+    },
+    {
+      "text": "hard-coded values",
+      "offset": 2031039,
+      "duration": 5041
+    },
+    {
+      "text": "versus all of these ifs which i have to",
+      "offset": 2032559,
+      "duration": 4161
+    },
+    {
+      "text": "read",
+      "offset": 2036080,
+      "duration": 2479
+    },
+    {
+      "text": "every single one to understand what's",
+      "offset": 2036720,
+      "duration": 3280
+    },
+    {
+      "text": "going on if",
+      "offset": 2038559,
+      "duration": 3681
+    },
+    {
+      "text": "if i look here i still have to read",
+      "offset": 2040000,
+      "duration": 3919
+    },
+    {
+      "text": "every single one now",
+      "offset": 2042240,
+      "duration": 4559
+    },
+    {
+      "text": "it happens in this if-else if tree that",
+      "offset": 2043919,
+      "duration": 4480
+    },
+    {
+      "text": "they all seem to be testing",
+      "offset": 2046799,
+      "duration": 5040
+    },
+    {
+      "text": "the same variable but i don't know that",
+      "offset": 2048399,
+      "duration": 5200
+    },
+    {
+      "text": "until i read it because",
+      "offset": 2051839,
+      "duration": 3601
+    },
+    {
+      "text": "it doesn't have to work that way it",
+      "offset": 2053599,
+      "duration": 4721
+    },
+    {
+      "text": "could test entirely unrelated things or",
+      "offset": 2055440,
+      "duration": 5120
+    },
+    {
+      "text": "it could test additional conditions",
+      "offset": 2058320,
+      "duration": 5200
+    },
+    {
+      "text": "but a switch tests one variable against",
+      "offset": 2060560,
+      "duration": 4400
+    },
+    {
+      "text": "a series of values",
+      "offset": 2063520,
+      "duration": 4720
+    },
+    {
+      "text": "and so i can convert this series of ifs",
+      "offset": 2064960,
+      "duration": 5840
+    },
+    {
+      "text": "into a switch i've done that here on the",
+      "offset": 2068240,
+      "duration": 3200
+    },
+    {
+      "text": "right",
+      "offset": 2070800,
+      "duration": 3440
+    },
+    {
+      "text": "so on the right i've got a rewritten",
+      "offset": 2071440,
+      "duration": 3520
+    },
+    {
+      "text": "version",
+      "offset": 2074240,
+      "duration": 4000
+    },
+    {
+      "text": "of the original method that had the",
+      "offset": 2074960,
+      "duration": 4399
+    },
+    {
+      "text": "issue in it",
+      "offset": 2078240,
+      "duration": 4320
+    },
+    {
+      "text": "and so i turn this into a switch and i",
+      "offset": 2079359,
+      "duration": 4161
+    },
+    {
+      "text": "realize",
+      "offset": 2082560,
+      "duration": 3599
+    },
+    {
+      "text": "that i'm able to extract some of the",
+      "offset": 2083520,
+      "duration": 4559
+    },
+    {
+      "text": "common operations so",
+      "offset": 2086159,
+      "duration": 5281
+    },
+    {
+      "text": "the creation of the exception that i'm",
+      "offset": 2088079,
+      "duration": 4401
+    },
+    {
+      "text": "going to throw",
+      "offset": 2091440,
+      "duration": 4399
+    },
+    {
+      "text": "in setting some of the common values now",
+      "offset": 2092480,
+      "duration": 5119
+    },
+    {
+      "text": "i'll be honest with you in doing this",
+      "offset": 2095839,
+      "duration": 3921
+    },
+    {
+      "text": "refactoring i went a little bit further",
+      "offset": 2097599,
+      "duration": 4721
+    },
+    {
+      "text": "than pure cognitive complexity would",
+      "offset": 2099760,
+      "duration": 4160
+    },
+    {
+      "text": "have led me to do",
+      "offset": 2102320,
+      "duration": 4640
+    },
+    {
+      "text": "because as i worked on this sonar lint",
+      "offset": 2103920,
+      "duration": 4560
+    },
+    {
+      "text": "prompted me with things like",
+      "offset": 2106960,
+      "duration": 4159
+    },
+    {
+      "text": "hey these two cases have exactly the",
+      "offset": 2108480,
+      "duration": 5680
+    },
+    {
+      "text": "same body maybe you should combine them",
+      "offset": 2111119,
+      "duration": 5201
+    },
+    {
+      "text": "and so that's what i've done so i ended",
+      "offset": 2114160,
+      "duration": 3600
+    },
+    {
+      "text": "up with",
+      "offset": 2116320,
+      "duration": 4240
+    },
+    {
+      "text": "a really clean switch here that's i",
+      "offset": 2117760,
+      "duration": 3359
+    },
+    {
+      "text": "think far",
+      "offset": 2120560,
+      "duration": 3840
+    },
+    {
+      "text": "easier to understand than the original",
+      "offset": 2121119,
+      "duration": 4401
+    },
+    {
+      "text": "code",
+      "offset": 2124400,
+      "duration": 4320
+    },
+    {
+      "text": "which again is the point so",
+      "offset": 2125520,
+      "duration": 6880
+    },
+    {
+      "text": "those are all the um examples that i",
+      "offset": 2128720,
+      "duration": 5359
+    },
+    {
+      "text": "wanted to show you and i'm going to jump",
+      "offset": 2132400,
+      "duration": 2160
+    },
+    {
+      "text": "now",
+      "offset": 2134079,
+      "duration": 2641
+    },
+    {
+      "text": "back to the slides because i have a few",
+      "offset": 2134560,
+      "duration": 3920
+    },
+    {
+      "text": "more of them",
+      "offset": 2136720,
+      "duration": 5520
+    },
+    {
+      "text": "and here we go so",
+      "offset": 2138480,
+      "duration": 5840
+    },
+    {
+      "text": "uh the first thing to say here is that",
+      "offset": 2142240,
+      "duration": 3520
+    },
+    {
+      "text": "what you've seen me do",
+      "offset": 2144320,
+      "duration": 4720
+    },
+    {
+      "text": "is dig into old code to",
+      "offset": 2145760,
+      "duration": 6400
+    },
+    {
+      "text": "find things that i could clean up now",
+      "offset": 2149040,
+      "duration": 5600
+    },
+    {
+      "text": "at sonarsource that is typically not the",
+      "offset": 2152160,
+      "duration": 3600
+    },
+    {
+      "text": "way",
+      "offset": 2154640,
+      "duration": 5439
+    },
+    {
+      "text": "we advise you to operate",
+      "offset": 2155760,
+      "duration": 7599
+    },
+    {
+      "text": "instead what we really think is the best",
+      "offset": 2160079,
+      "duration": 4481
+    },
+    {
+      "text": "way to go",
+      "offset": 2163359,
+      "duration": 4641
+    },
+    {
+      "text": "is to clean as you code so don't dig up",
+      "offset": 2164560,
+      "duration": 5680
+    },
+    {
+      "text": "old issues to fix them i had to do that",
+      "offset": 2168000,
+      "duration": 5040
+    },
+    {
+      "text": "to find good examples to show you",
+      "offset": 2170240,
+      "duration": 4480
+    },
+    {
+      "text": "but generally you know when you're",
+      "offset": 2173040,
+      "duration": 4079
+    },
+    {
+      "text": "looking at refactoring yourself",
+      "offset": 2174720,
+      "duration": 4160
+    },
+    {
+      "text": "wait until you actually have to work on",
+      "offset": 2177119,
+      "duration": 3121
+    },
+    {
+      "text": "the code",
+      "offset": 2178880,
+      "duration": 4239
+    },
+    {
+      "text": "and then look at refactoring it because",
+      "offset": 2180240,
+      "duration": 3680
+    },
+    {
+      "text": "let's face it",
+      "offset": 2183119,
+      "duration": 2801
+    },
+    {
+      "text": "to be able to work in the code you had",
+      "offset": 2183920,
+      "duration": 3600
+    },
+    {
+      "text": "to understand the code",
+      "offset": 2185920,
+      "duration": 4320
+    },
+    {
+      "text": "and now you're in a great position to do",
+      "offset": 2187520,
+      "duration": 5680
+    },
+    {
+      "text": "any refactoring that needs to be done",
+      "offset": 2190240,
+      "duration": 5440
+    },
+    {
+      "text": "alternately when you're working in code",
+      "offset": 2193200,
+      "duration": 4560
+    },
+    {
+      "text": "and sonar lint raises a brand new",
+      "offset": 2195680,
+      "duration": 4000
+    },
+    {
+      "text": "cognitive complexity issue",
+      "offset": 2197760,
+      "duration": 4400
+    },
+    {
+      "text": "the code is fresh in your head and that",
+      "offset": 2199680,
+      "duration": 4720
+    },
+    {
+      "text": "is when you want to fix any newly",
+      "offset": 2202160,
+      "duration": 4959
+    },
+    {
+      "text": "emerging cognitive complexity issues",
+      "offset": 2204400,
+      "duration": 5679
+    },
+    {
+      "text": "so ideally rather than digging it",
+      "offset": 2207119,
+      "duration": 4881
+    },
+    {
+      "text": "digging up old issues",
+      "offset": 2210079,
+      "duration": 3681
+    },
+    {
+      "text": "you're going to be refactoring with",
+      "offset": 2212000,
+      "duration": 3920
+    },
+    {
+      "text": "cognitive complexity in sonar lent as",
+      "offset": 2213760,
+      "duration": 3520
+    },
+    {
+      "text": "you code",
+      "offset": 2215920,
+      "duration": 4159
+    },
+    {
+      "text": "or maybe in your pr analysis before you",
+      "offset": 2217280,
+      "duration": 3280
+    },
+    {
+      "text": "merge",
+      "offset": 2220079,
+      "duration": 4081
+    },
+    {
+      "text": "into the main branch or even before you",
+      "offset": 2220560,
+      "duration": 5360
+    },
+    {
+      "text": "release into production that's a little",
+      "offset": 2224160,
+      "duration": 2560
+    },
+    {
+      "text": "bit later but",
+      "offset": 2225920,
+      "duration": 3600
+    },
+    {
+      "text": "still in a good place while the code is",
+      "offset": 2226720,
+      "duration": 4879
+    },
+    {
+      "text": "still new and it's still owned by",
+      "offset": 2229520,
+      "duration": 5440
+    },
+    {
+      "text": "you you can go in and fix what was there",
+      "offset": 2231599,
+      "duration": 6401
+    },
+    {
+      "text": "so i needed to say that to you so now",
+      "offset": 2234960,
+      "duration": 4720
+    },
+    {
+      "text": "what's next",
+      "offset": 2238000,
+      "duration": 4320
+    },
+    {
+      "text": "so here are some of the resources that",
+      "offset": 2239680,
+      "duration": 3120
+    },
+    {
+      "text": "i've",
+      "offset": 2242320,
+      "duration": 2480
+    },
+    {
+      "text": "referred to there's the white paper and",
+      "offset": 2242800,
+      "duration": 3920
+    },
+    {
+      "text": "again you'll get these",
+      "offset": 2244800,
+      "duration": 4160
+    },
+    {
+      "text": "links in the email that you get as a",
+      "offset": 2246720,
+      "duration": 4080
+    },
+    {
+      "text": "follow-up in a few days",
+      "offset": 2248960,
+      "duration": 4320
+    },
+    {
+      "text": "i've also given you the link to the",
+      "offset": 2250800,
+      "duration": 4400
+    },
+    {
+      "text": "study that i referenced in case you want",
+      "offset": 2253280,
+      "duration": 3600
+    },
+    {
+      "text": "to read that yourselves",
+      "offset": 2255200,
+      "duration": 3760
+    },
+    {
+      "text": "and a link to a blog that i wrote on the",
+      "offset": 2256880,
+      "duration": 4000
+    },
+    {
+      "text": "clean as you code methodology so if",
+      "offset": 2258960,
+      "duration": 4639
+    },
+    {
+      "text": "you're not already familiar with this",
+      "offset": 2260880,
+      "duration": 5600
+    },
+    {
+      "text": "please go familiarize yourself and then",
+      "offset": 2263599,
+      "duration": 4480
+    },
+    {
+      "text": "you know drop into the sonar source",
+      "offset": 2266480,
+      "duration": 2560
+    },
+    {
+      "text": "community",
+      "offset": 2268079,
+      "duration": 2881
+    },
+    {
+      "text": "which i didn't give you a link to here",
+      "offset": 2269040,
+      "duration": 4079
+    },
+    {
+      "text": "but i will in the email",
+      "offset": 2270960,
+      "duration": 3920
+    },
+    {
+      "text": "and let let me know if you have any",
+      "offset": 2273119,
+      "duration": 4240
+    },
+    {
+      "text": "questions about it",
+      "offset": 2274880,
+      "duration": 4479
+    },
+    {
+      "text": "the next thing to do would be to",
+      "offset": 2277359,
+      "duration": 4081
+    },
+    {
+      "text": "actually get started in your code so you",
+      "offset": 2279359,
+      "duration": 3000
+    },
+    {
+      "text": "can go to",
+      "offset": 2281440,
+      "duration": 4320
+    },
+    {
+      "text": "sonarlund.org to learn about sonarlint",
+      "offset": 2282359,
+      "duration": 6681
+    },
+    {
+      "text": "or you can go to your ide's marketplace",
+      "offset": 2285760,
+      "duration": 5920
+    },
+    {
+      "text": "to go ahead and get it installed and you",
+      "offset": 2289040,
+      "duration": 5200
+    },
+    {
+      "text": "can get started with sonar cloud",
+      "offset": 2291680,
+      "duration": 5439
+    },
+    {
+      "text": "which is what we looked at earlier which",
+      "offset": 2294240,
+      "duration": 3359
+    },
+    {
+      "text": "is",
+      "offset": 2297119,
+      "duration": 2480
+    },
+    {
+      "text": "in the cloud and then center cube which",
+      "offset": 2297599,
+      "duration": 3681
+    },
+    {
+      "text": "is an on-premise",
+      "offset": 2299599,
+      "duration": 3681
+    },
+    {
+      "text": "option for code quality and code",
+      "offset": 2301280,
+      "duration": 4160
+    },
+    {
+      "text": "security all three of those have",
+      "offset": 2303280,
+      "duration": 5680
+    },
+    {
+      "text": "fully implemented cognitive complexity",
+      "offset": 2305440,
+      "duration": 6560
+    },
+    {
+      "text": "and now it's time for questions if",
+      "offset": 2308960,
+      "duration": 5840
+    },
+    {
+      "text": "there are any",
+      "offset": 2312000,
+      "duration": 2800
+    },
+    {
+      "text": "hey and yeah we have a couple of",
+      "offset": 2315119,
+      "duration": 3841
+    },
+    {
+      "text": "questions from the audience",
+      "offset": 2316960,
+      "duration": 4480
+    },
+    {
+      "text": "um here's one that was really",
+      "offset": 2318960,
+      "duration": 4720
+    },
+    {
+      "text": "interesting from amare",
+      "offset": 2321440,
+      "duration": 3919
+    },
+    {
+      "text": "what's the main reason to consider",
+      "offset": 2323680,
+      "duration": 3200
+    },
+    {
+      "text": "simple ternary",
+      "offset": 2325359,
+      "duration": 4401
+    },
+    {
+      "text": "and if else structures as equivalent in",
+      "offset": 2326880,
+      "duration": 5040
+    },
+    {
+      "text": "complexity",
+      "offset": 2329760,
+      "duration": 5680
+    },
+    {
+      "text": "uh well because they do the same thing",
+      "offset": 2331920,
+      "duration": 7280
+    },
+    {
+      "text": "really a ternary structure is",
+      "offset": 2335440,
+      "duration": 6960
+    },
+    {
+      "text": "an if else if structure um just with",
+      "offset": 2339200,
+      "duration": 4240
+    },
+    {
+      "text": "different syntax",
+      "offset": 2342400,
+      "duration": 5040
+    },
+    {
+      "text": "and and honestly um",
+      "offset": 2343440,
+      "duration": 7040
+    },
+    {
+      "text": "if i could increment extra for a ternary",
+      "offset": 2347440,
+      "duration": 5200
+    },
+    {
+      "text": "i would and okay i'm the primary author",
+      "offset": 2350480,
+      "duration": 4160
+    },
+    {
+      "text": "i could have but um",
+      "offset": 2352640,
+      "duration": 4640
+    },
+    {
+      "text": "we we agreed to only you know not do",
+      "offset": 2354640,
+      "duration": 4400
+    },
+    {
+      "text": "partial increments or double increments",
+      "offset": 2357280,
+      "duration": 2079
+    },
+    {
+      "text": "it's",
+      "offset": 2359040,
+      "duration": 3840
+    },
+    {
+      "text": "it's plus one um but really",
+      "offset": 2359359,
+      "duration": 6161
+    },
+    {
+      "text": "um you know what we're looking at is",
+      "offset": 2362880,
+      "duration": 5440
+    },
+    {
+      "text": "measuring when the code is not",
+      "offset": 2365520,
+      "duration": 5920
+    },
+    {
+      "text": "readable understandable",
+      "offset": 2368320,
+      "duration": 5279
+    },
+    {
+      "text": "as an incentive to making it more",
+      "offset": 2371440,
+      "duration": 3440
+    },
+    {
+      "text": "understandable",
+      "offset": 2373599,
+      "duration": 4321
+    },
+    {
+      "text": "and a ternary operator i personally find",
+      "offset": 2374880,
+      "duration": 3680
+    },
+    {
+      "text": "to be even",
+      "offset": 2377920,
+      "duration": 3600
+    },
+    {
+      "text": "less readable than a normal if else",
+      "offset": 2378560,
+      "duration": 4000
+    },
+    {
+      "text": "structure",
+      "offset": 2381520,
+      "duration": 4319
+    },
+    {
+      "text": "so hopefully that answers it",
+      "offset": 2382560,
+      "duration": 3279
+    },
+    {
+      "text": "awesome thank you and then we've got",
+      "offset": 2389359,
+      "duration": 3841
+    },
+    {
+      "text": "another one here",
+      "offset": 2391520,
+      "duration": 3120
+    },
+    {
+      "text": "uh from georgios i think this is",
+      "offset": 2393200,
+      "duration": 3280
+    },
+    {
+      "text": "something you touched on but uh he had",
+      "offset": 2394640,
+      "duration": 3360
+    },
+    {
+      "text": "an interesting way of asking the",
+      "offset": 2396480,
+      "duration": 2720
+    },
+    {
+      "text": "question",
+      "offset": 2398000,
+      "duration": 3040
+    },
+    {
+      "text": "would it make would it make sense to",
+      "offset": 2399200,
+      "duration": 3919
+    },
+    {
+      "text": "lower every statement to its base",
+      "offset": 2401040,
+      "duration": 4559
+    },
+    {
+      "text": "form i.e instead of a switch or a",
+      "offset": 2403119,
+      "duration": 3361
+    },
+    {
+      "text": "sequence of",
+      "offset": 2405599,
+      "duration": 4240
+    },
+    {
+      "text": "of uh if else instead of a ternary",
+      "offset": 2406480,
+      "duration": 4720
+    },
+    {
+      "text": "operator and if else",
+      "offset": 2409839,
+      "duration": 5681
+    },
+    {
+      "text": "essentially removing syntactic sugar",
+      "offset": 2411200,
+      "duration": 4320
+    },
+    {
+      "text": "um if i if i understand the question",
+      "offset": 2416160,
+      "duration": 7840
+    },
+    {
+      "text": "correctly um",
+      "offset": 2420079,
+      "duration": 7441
+    },
+    {
+      "text": "is going to make sense to use the most",
+      "offset": 2424000,
+      "duration": 6560
+    },
+    {
+      "text": "readable form now in terms of syntactic",
+      "offset": 2427520,
+      "duration": 4079
+    },
+    {
+      "text": "sugar",
+      "offset": 2430560,
+      "duration": 4000
+    },
+    {
+      "text": "i think a null coalescing operator is a",
+      "offset": 2431599,
+      "duration": 3681
+    },
+    {
+      "text": "really",
+      "offset": 2434560,
+      "duration": 3759
+    },
+    {
+      "text": "good argument against that",
+      "offset": 2435280,
+      "duration": 6960
+    },
+    {
+      "text": "um because a null coalescing operator",
+      "offset": 2438319,
+      "duration": 7520
+    },
+    {
+      "text": "is is basically um",
+      "offset": 2442240,
+      "duration": 6320
+    },
+    {
+      "text": "let's see i should have opened this tab",
+      "offset": 2445839,
+      "duration": 3071
+    },
+    {
+      "text": "um",
+      "offset": 2448560,
+      "duration": 1840
+    },
+    {
+      "text": "[Music]",
+      "offset": 2448910,
+      "duration": 3890
+    },
+    {
+      "text": "and i don't have my bookmarks available",
+      "offset": 2450400,
+      "duration": 3439
+    },
+    {
+      "text": "um",
+      "offset": 2452800,
+      "duration": 3840
+    },
+    {
+      "text": "so so basically with a null coalescing",
+      "offset": 2453839,
+      "duration": 4480
+    },
+    {
+      "text": "operator i say",
+      "offset": 2456640,
+      "duration": 5760
+    },
+    {
+      "text": "variable a equals null if condition",
+      "offset": 2458319,
+      "duration": 7361
+    },
+    {
+      "text": "um set a to some some value",
+      "offset": 2462400,
+      "duration": 5840
+    },
+    {
+      "text": "right and a null coalescing operator",
+      "offset": 2465680,
+      "duration": 4480
+    },
+    {
+      "text": "allows me to condense that into one",
+      "offset": 2468240,
+      "duration": 3680
+    },
+    {
+      "text": "statement and once you understand the",
+      "offset": 2470160,
+      "duration": 2800
+    },
+    {
+      "text": "syntax",
+      "offset": 2471920,
+      "duration": 3360
+    },
+    {
+      "text": "and you read it like this versus having",
+      "offset": 2472960,
+      "duration": 3280
+    },
+    {
+      "text": "to actually read",
+      "offset": 2475280,
+      "duration": 3280
+    },
+    {
+      "text": "okay variable set to null do the test",
+      "offset": 2476240,
+      "duration": 3839
+    },
+    {
+      "text": "set to a value",
+      "offset": 2478560,
+      "duration": 4000
+    },
+    {
+      "text": "right so that syntactic sugar is",
+      "offset": 2480079,
+      "duration": 3520
+    },
+    {
+      "text": "actually",
+      "offset": 2482560,
+      "duration": 3920
+    },
+    {
+      "text": "easier to read than the basic form and",
+      "offset": 2483599,
+      "duration": 3921
+    },
+    {
+      "text": "so",
+      "offset": 2486480,
+      "duration": 3920
+    },
+    {
+      "text": "i don't think that there's uh a blanket",
+      "offset": 2487520,
+      "duration": 3520
+    },
+    {
+      "text": "argument",
+      "offset": 2490400,
+      "duration": 2959
+    },
+    {
+      "text": "for reducing things to their to their",
+      "offset": 2491040,
+      "duration": 4960
+    },
+    {
+      "text": "lowest forms",
+      "offset": 2493359,
+      "duration": 6720
+    },
+    {
+      "text": "personally so what's next aaron",
+      "offset": 2496000,
+      "duration": 5760
+    },
+    {
+      "text": "okay we've got i've saved the",
+      "offset": 2500079,
+      "duration": 3681
+    },
+    {
+      "text": "provocative question for last",
+      "offset": 2501760,
+      "duration": 6559
+    },
+    {
+      "text": "is cyclomatic complexity obsolete",
+      "offset": 2503760,
+      "duration": 9120
+    },
+    {
+      "text": "so um it depends on what you want to do",
+      "offset": 2508319,
+      "duration": 7841
+    },
+    {
+      "text": "um as i said earlier cyclomatic",
+      "offset": 2512880,
+      "duration": 4880
+    },
+    {
+      "text": "complexity if you read the original",
+      "offset": 2516160,
+      "duration": 3280
+    },
+    {
+      "text": "paper",
+      "offset": 2517760,
+      "duration": 4559
+    },
+    {
+      "text": "was formulated in an attempt to measure",
+      "offset": 2519440,
+      "duration": 5040
+    },
+    {
+      "text": "understandability and that's not quite",
+      "offset": 2522319,
+      "duration": 5280
+    },
+    {
+      "text": "what it ended up doing so",
+      "offset": 2524480,
+      "duration": 6480
+    },
+    {
+      "text": "in that context yes at the same time",
+      "offset": 2527599,
+      "duration": 6000
+    },
+    {
+      "text": "it's not without value it does give you",
+      "offset": 2530960,
+      "duration": 4399
+    },
+    {
+      "text": "an understanding of",
+      "offset": 2533599,
+      "duration": 4881
+    },
+    {
+      "text": "how many tests you need and so",
+      "offset": 2535359,
+      "duration": 5441
+    },
+    {
+      "text": "there are contexts when it's still",
+      "offset": 2538480,
+      "duration": 3680
+    },
+    {
+      "text": "valuable",
+      "offset": 2540800,
+      "duration": 4080
+    },
+    {
+      "text": "on the other hand we've got really good",
+      "offset": 2542160,
+      "duration": 4159
+    },
+    {
+      "text": "tooling today",
+      "offset": 2544880,
+      "duration": 4959
+    },
+    {
+      "text": "versus in december 1976",
+      "offset": 2546319,
+      "duration": 7121
+    },
+    {
+      "text": "four tests right so it's",
+      "offset": 2549839,
+      "duration": 6641
+    },
+    {
+      "text": "super easy now to understand what parts",
+      "offset": 2553440,
+      "duration": 5040
+    },
+    {
+      "text": "of code are uncovered",
+      "offset": 2556480,
+      "duration": 5040
+    },
+    {
+      "text": "how covered how well covered things are",
+      "offset": 2558480,
+      "duration": 6400
+    },
+    {
+      "text": "and so um",
+      "offset": 2561520,
+      "duration": 6000
+    },
+    {
+      "text": "i i'm i'm reluctant to throw shade on",
+      "offset": 2564880,
+      "duration": 4239
+    },
+    {
+      "text": "another author's work but i think",
+      "offset": 2567520,
+      "duration": 2160
+    },
+    {
+      "text": "there's",
+      "offset": 2569119,
+      "duration": 3281
+    },
+    {
+      "text": "there's less need for cyclomatic",
+      "offset": 2569680,
+      "duration": 4320
+    },
+    {
+      "text": "complexity today than",
+      "offset": 2572400,
+      "duration": 6160
+    },
+    {
+      "text": "than there was in 1976",
+      "offset": 2574000,
+      "duration": 6240
+    },
+    {
+      "text": "so you said you saved the provocative",
+      "offset": 2578560,
+      "duration": 3600
+    },
+    {
+      "text": "question for last aaron does that mean",
+      "offset": 2580240,
+      "duration": 4480
+    },
+    {
+      "text": "there aren't any more questions",
+      "offset": 2582160,
+      "duration": 6959
+    },
+    {
+      "text": "i think that's it okay",
+      "offset": 2584720,
+      "duration": 4399
+    }
+  ],
+  "fullText": "all right hello and welcome to refactoring with cognitive complexity thanks for joining us i'll get started now i'm going to start with some housekeeping details first this will be a 45-minute session including demo and q a please don't go ahead and cue your questions in the q a box we've got colin and aaron from the sonar source services group to cue your questions triage them and feed them to me at the end we are recording this presentation and in a few days you'll get an email with a link to the recording and all the q a so even if i don't get to your question live you will get a link to the answer afterwards and finally once the webinar ends you'll get a feedback survey please do take the survey please tell me how i did tell me what you liked what i need to work on and what sonar source should cover in future webinars okay so the agenda is i'll start with some introductions i'll talk about why we formulated cognitive complexity then we'll look at what cognitive complexity is we'll talk about the validation that's out there then we'll get into refactoring why we're all here and then we'll talk about what's next so my name is anne campbell i am the primary author of cognitive complexity i have coded in a number of languages and i brought all of that experience along with the experience of my colleagues into writing cognitive complexity now if you're familiar with complexity in a programming context you're probably most familiar and have most used cyclomatic complexity that was released in or published in december of 1976 and its aim was to measure understandability what it really does well is measure the number of test cases that you need to fully unit test a section of code what it really doesn't get at is understandability and at center source we really felt a need for a metric that would help us gauge that so that's why we undertook cognitive complexity now i want to illustrate that with a couple of examples here so first we start with sum of primes and these are examples are straight from the white paper so sum of primes um has a cyclomatic complexity of four so plus one for the method structure plus one for each four and plus one for the if total of four now contrast that with get words so again plus one for the method structure and then plus one for each case in the switch for cyclomatic complexity of four so these two methods have equal cyclomatic complexity um but i think it's obvious that they don't have equal understandability and that's why we felt the need to create something else now cyclomatic complexity uh it works off of mathematical formulas and so i think you see here that for judging understandability mathematical formulas don't really do it so instead cognitive complexity has guiding principles so the first guiding principle is to ignore structures that allow multiple statements to be readably shorthanded into one statement the primary example of that is the method structure itself assuming you put a good name on your method then that's what you've done when you create a method so we're not going to increment for the method we also don't increment for things like the null coalescing operator that some languages have that that's once you understand the syntax that's really easy to read and so we don't increment for it we do increment for each break in the linear flow of the code the idea here is that ideally you would be able to read code like a novel top to bottom left to right in an unbroken flow when that flow is broken when you have to do something other than top to bottom left to right then we increment for that because it makes you work harder we also increment when flow breaking structures are nested so i think it's intuitively obvious here that if i have five if statements in a row that's easier to understand than if i have those five if statements successively nested and that heart that that extra work that you have to do to understand that nesting is what we're trying to take into account when we increment for those for the nesting now a lot of people want to know okay well give me the specification so really quickly here i'm going to go through it we increment four breaks in the linear flow for branches so if else if else ternary catch and switch for loops so four for each while do while and each method in a recursion cycle yes recursion is a loop it's sort of a metal loop but it's a loop we take that into account we increment four jumps to labels so go to break and continue to a label and we increment for sequences of like binary logical operators for nesting these are the things that increment the nesting level so if else if else ternary catch switch four four each wild do while and nested methods and method like structures such as lambdas now again we don't increment for having a method but when you have a method inside of a method or a lambda inside of a method then we start counting the nesting these are the things that receive a nesting increment if ternary switch catch four for each while do while this will all make a little bit more sense when we start looking at code there are exceptions to these rules so for instance cobalt does not have an elsif structure typically what you'll see in cobalt is an if with an else and there's nothing inside the else but another if with an else and there's nothing inside the else but another if with an else so not having that structure doesn't mean that cobalt programmers don't have the need they have to work around the limitations of their language and if we incremented in cobol for that type of structure it would really just be unfair so we're not going to penalize cobalt developers because of what their language doesn't have so there's an exception for that similarly up until relatively recently javascript didn't have a class structure and so javascript programmers used sort of a pseudo-class structure even today there's a lot of excellent code that uses that pseudo cluster class structure and there are a number of frameworks that still today require you to program with a pseudo class structure and so there's a specific exception for javascript similarly there's an exception for decorators in python and we consider additional exceptions as we come across needs in specific languages but all of the exceptions are language specific what's not included in cognitive complexity is hard language features such as pointer and direction templates and generics multiple inheritance etc the reason for this is that that way lies religious wars so i used to program c for me two levels of pointer and direction is routine once you start getting into four and more then it starts getting hard but deciding where it gets hard is really very much a judgment call and we just didn't want to get into that so hard language features are not included in cognitive complexity because cognitive complexity is about control flow so this is really about how hard is the control flow of your code to understand so coming back to my examples and and i said that this would start to make sense once we could started applying this to code so coming back to sum of primes let's look at the cognitive complexity so we've got this first for loop which is plus one for the four then we've inside that we've got another for loop nested so that's plus two one for the four one for the nesting then inside of that we've got an if that's plus three one for the if two for the nesting we don't do nesting on the jump tool label so our continue to the out label is just plus one and that gives us a total cognitive complexity on this method of seven now contrast that with get words where we've got a switch and three cases and a default and that's plus one for the switch in all its cases and so we have a total cognitive complexity on this method of one and so now just looking at the numbers i can understand immediately which of these is going to be more difficult to understand and that's what we were trying to get at with cognitive complexity so validation um up until last summer you could have very um validly said to me it's just your opinion you know how do you know that this that this works um so i was very relieved last summer to see that a paper was published which actually looked at the validity of cognitive complexity and the authors found that it is actually a good measure of source code understandability i've listed some quotes from the paper here so the authors found that cognitive complexity is a good indicator of how long it takes developers to understand a piece of code and that code snippets with higher cognitive complexity are rated by developers as more difficult to understand they also said that since developers spend a large time a large portion of their time in maintenance very few of us get to write greenfield code that it's worthwhile to make the code easier to understand and that cognitive complexity can help you find the pieces of code that need work they also said that it's not proven yet how much cognitive complexity is too much cognitive complexity personally i'm very much looking forward to someone taking this topic up and publishing a follow-up paper fingers crossed so now what we're all here for refactoring so the reason that this is mainly focused on refactoring is that i personally don't find it particularly helpful to be able to point at something and say that's bad without knowing how to make it better so that's why that's the primary focus here in the years since we published cognitive complexity i've come up with a few different patterns that are seem to be the best ways to approach reducing cognitive complexity and therefore making the code easier to read so the first is invert a condition and use an early exit sort of corollary to that is eliminating the else clause these two things help you reduce a lot of nesting the next thing is structural collapse now this is not what happens in an earthquake this is when you have an if with nothing inside it but another if and potentially even more than that and so what you can do is and those conditions together and only have a single if makes it easier to understand um the next one is extracting methods so sometimes you're looking at a method with a gnarly piece of code in the middle that you can't do much with except extract it to a new method and put a readable name on it so again do readably shorthand multiple lines into one that can be very helpful sometimes similarly if you're doing the same thing over and over again then that's a cause for extracting a helper method and finally language features so there's nothing specific here this is about knowing what the features are in your language that are easier to understand than other ways of doing it you know as programmers we know that there's very often multiple different ways to write the code and so this final one isn't about knowing which ways are easier for the person who comes behind you to understand so it's time to get into refactoring my job here is to make things wait this is the wrong gift my job is not to make things as difficult as possible my job is in fact to make things as easy as possible so let's do this so i'm going to first jump into whoops did not mean to do that sonar cloud so central cloud is an online service to provide static analysis to help you improve the code quality and code security of your projects and i'm looking at an issue in an open source project sonar cloud is free for open source projects and i've got an issue here a cognitive complexity issue and i've got secondary locations to help me understand where the cognitive complexity is coming from so for instance there's plus one on this else else's don't receive an sc increment we've already paid that penalty on the if so this if is plus four one for the f3 for the nesting all the way down here to secondary location number 20 which is plus 10. and so i've got a total cognitive complexity on this method that's 65 and when i look at what the method is i see i start with an if and i have an else with nothing in the else but another if and an else with nothing in the else but another if and so on and so um that pattern may sound familiar to you from when i was talking about the exception in cobol because in cobalt you don't have the elsif structure but this is java and you do have the lcf structure and so there's no exception and so we count up all of this cognitive complexity and it adds up really fast so this is a great example and they're not usually this clear-cut this is a great example of a place where structural collapse can really help what we what you can do here is turn this all into a single if else if tree and i counted it up once i think it adds up to 13 if you were to collapse this all into a single tree and that includes the plus one for our binary logical operator sequence so that's what i wanted to show you in the browser now i'm going to jump into the ide here so first i am in intellij's idea and i'm using sonar lens centerlint is a free and open source ide plugin it's available for most of the intellij ides as well as eclipse visual studio and vs code so down here at the bottom i've got the sonar lint pane open and it's showing me all of the current all of the issues that are in my current file so i'm going to click on my cognitive complexity issue and it takes me to the issue in the code and it highlights my secondary locations for me it also shows me my secondary locations here on the right now by default the first tab in this part of the pane is the rule itself in case i don't understand quite what's going on but i can also have easy access to the secondary locations and i can see the message for each location i can also see the message if i mouse over it so here at this first four it's plus one by the time i get down here to this if it's plus five now this issue i'm at 16 versus the 15 threshold allowed that's the default threshold that we set in the rule for java and anytime you have a rule that includes a numeric threshold the threshold is going to be somewhat arbitrary and so it would be really easy to look at this and say well 16 isn't that much worse than 15. do we really need to do something here and you know sometimes that's going to be the best answer but it's worth looking at it first to see if there's something simple you can do to clean it up before you move on and so when i look at this method and i look at where the cognitive complexity is coming from i see this deeply nested indenting here um and and here in the secondary locations list i see that most of the cognitive complexity is coming from nesting and so if i can reduce some of that nesting i can very easily get below the threshold and so i start here at the top with a for loop there's not a lot i can do with this for loop so you know a lot of times when you're dealing with loops your best option is to extract the code inside to another method but this is already you know a nice compact method this is not a huge method it's just that there's a lot of nesting here you know maybe i could invert this condition and do an early return that's an option here but i also noticed that at the bottom here with the highest level of nesting i've got an if and there's nothing inside it but another if and so that's a prime candidate for structural collapse so if i just and these two conditions together and let me clean up the curly braces and whoops i also have to clean up the if and if i out dent this just to make it clear what's going on here then i've already dropped enough complexity to get me below the threshold so i could happily move on here if i wanted to go further i could invert this condition now i can't do an early return here but i could do a continue and let me out dent this and clean up the curly braces oops went a little too far there and hopefully you'll agree that this code is a lot clearer just with those small changes so that's what i wanted to show you there moving on so i've got two issues in this file i'm going to start with the second one so i click on the issue takes center lint takes me to the issue and code highlights my secondary issues and with this one i see that i'm at 19 versus the 15 threshold if i look at the secondary locations i see that i've got a lot of nesting points here so plus 3 plus 4 plus 4 3 4. so again if i can reduce some of that nesting that's going to go a long way to cleaning this up so then i come back and i look at the code and i see that basically the first thing i have in this method is an if so let's see and it turns out that nothing happens in this method outside of the if so this is a really great case for invert the condition and do an early return so if wait a minute did i just do that right it was already at not whoops sorry i'm moving a little too fast here all right so let's invert the condition so equals null so if the tag equals null i want to go ahead and return otherwise i can do the method let's out this and clean up the curly braces all right and so already i think it's a lot clearer what's actually happening in this method if i have a null tag return otherwise do these things i could try to go a little bit further here but i think this is enough so now moving on to the next example here i'm also at 19 versus the 15 threshold and when i look at the secondary locations i see i've got a lot of plus fours plus three so again we're looking at nesting up i can reduce the nesting here it's going to simplify the code make it easier to understand so when i look at the code itself i see that i'm starting with a four now i there's no way that i can invert this and do an early return um so there's my favorite trick out the window but if i look a little bit further at the code i see that i have inside the 4 an if and nothing happens outside that if and i've got another if and nothing happens outside that if so i've got two things that i can apply here so first of all i can do a structural collapse here i can and these conditions together and let's clean that up and clean that up out dent it just to be clear on what's happening all right and so that already makes it a little simpler and then i also have this if and nothing happens outside the if now i can't do an early return here i don't want to return early because we've got to test the next value in the for loop but i can do an early exit out of the loop t i t-i-n-u-e let's pretend i can spell um so let me out-dent this and clean up the curly braces all right and so now i'm well below the threshold with an easier to understand method so moving on to the next one i've got one issue in this file and when i look at it in the secondary locations here i see plus two three four five so that tells me that i've got a successive nesting here and so then i come back and i look at the code and we start with an if and then an else and then let's see nothing happens outside the else so let me come back here if this this condition set result and then we return the result okay so why don't we go ahead and return the result instead of setting it so return all right so now if the condition is met i'm going to return so i leave the method that means that i no longer need this else clause to guard the rest of this logic so let me clean up the curly braces out dent this and there we are then i look a little bit further and i see that over and over again what we're doing in this method is setting result and then nothing happens after the set except that we finally return it so i can start sort of from the inside out here let's go ahead and return this one and then i no longer need this else to guard the rest of this code and i can go ahead and return this one and so then everything that happens in this if every path ends with a return and so i no longer need this else to guard the code and so on so i'm not going to do that for every path through this code i think you see the pattern here at this point but if we went ahead and turned all of these sets into returns then that's going to greatly simplify the structure of this code okay so moving on to oh well i'm still at 16 okay i'm going to do it one more time just so i can get below the threshold and that should take us below the threshold issue goes away there's still a little bit more work to be done all right so moving on to the next one so when i looked at this file i saw that i had two issues here one at 41 and one at 42. so i start by looking at the first one and i see that we start with an early return that's good i've got some binary logical operators here then some more binary logical operators and another early return early returns are good another early return okay so then i come here and all right nothing happens outside of this if so i could invert this condition and do an early return i've also got nothing inside this if but another if so if i wanted to move these sets to outside of this if i could do a structural collapse here but there's probably a reason it's structured like this maybe for readability so i'll just leave that alone for a second so i could i could do an early return early returns are really helpful when you're well it makes things clearer but in terms of refactoring for cognitive complexity it helps to reduce nesting but really most of the complexity in this method and i'm just going to expand the pain down here comes from all of these binary logical operators i have 38 secondary locations one for almost one for each time the operator changes and so even if i invert this condition and do an early return that's not going to do a lot to get me from 41 to below the threshold so probably i need to figure out what to do with all of these binary logical operators and i'll be honest with you when i was first evaluating this file to see if i wanted to include it in this webinar i looked at this and i said i'll come back to this and i went to the next method and so i started looking at the next method and i found binary logical operators with an early return we've got a try another early return another early return and then i found this chunk of code which looked very familiar to me to the point that i put the file two copies of the file side by side so that i could verify that it was actually two different methods and that something hadn't gone wrong in sonar lint and it was showing me the same thing twice this is actually two different methods the logic is slightly different between the two so there's a reason there are two different methods um but what i come to is that i have this big chunk of gnarly logic in the middle here um that you know there's not a lot useful i can do with this except maybe extract it to another method so i'm going to do that in this one because of the signatures of the variables so if i extract this and i did my homework a good name for this is is co-linear overlapping now if this were actually my code base this is a code base that i found on sonar cloud if this were actually my code base i might have an even better name for this but based on some of the names in the code that seemed like a decent name so now i can take that method call and drop it in here in this other cop copy of the logic because it is the same logic twice and now sonarlint recalculates and i've eliminated one of my original methods and the other one is down to 16. now that one's down to 16 because it has this extra try-catch and we do increment for the catch so in this case um you know i still have the option well no i can't invert this condition into an early return because i'm already early returning here um so in this case i would say you know 16 isn't that much worse than 15. i'm just going to leave this alone at this point but i do still have this 24 i'm going to pull it up in the left hand pane and you know if i could reduce this 24 i would feel even better about the refactoring i've done and really again it's down to all of these binary logical operators um and so i stared at this for a while and i realized there was a pattern and i'm going to rearrange this just a little bit to hopefully make the pattern a little bit clearer to you so the pattern i saw was that we've got pairs of comparisons so i've got x-axis one and i'm looking to see if it's between x-axis three or x-axis four whether three is first or four is first so this set of comparisons is to see if one is between three and four and then this one is to see if two is between three and four and then if to see three is between uh one and two and then we do that with the y's and so here we're doing the same thing over and over again and so that's a case for a helper method and so rather than making you watch me type that i did it ahead of time and so here's what that turns into so is collinear and overlapping a slightly better name than than the first one um with a calls to the helper method and so now with a really good name on that logic that i've extracted into the helper method this this operation here this logic becomes a lot clearer now it's not just this massive comparisons that i have to read one by one now i understand that i'm looking to see if x1 is between 3 and 4 and x2 is between 3 and 4 and or excuse me not n but or x3 is between 1 and 2 and then the same with the y's and so hopefully if i put these side by side so here's where i'm calling my a version of my helper method so let's just switch to the one with a better name hopefully you'll under you'll agree that this is far easier to read and understand what's going on which is the whole point what we're trying to get to now i've got one more example for you that's in a different project again i found this project on sonar cloud open source project and i've got one method in this excuse me one issue in this file let me pull this up on the left just because i prefer to work on the left so here here so i've got one issue in this file and if i look at the secondary locations i see i've got a plus one then i've got a series of plus twos and then some plus ones with one more nested something here so then if i come back to the code i see i've got an if and then inside that i've got a series of nested ifs and then and then and and all of these nested ifs do an early return that's not bad and then i've got sort of a default case so if if i fell into this first if and none of these others worked then i do this last thing and then i've got a series of else's so i've got an if else of tree and a lot of my complexity here is coming from this series of nested ifs inside of the first if so looking at this trying to figure out if there's something i could do you know my first thought is is there a way to to make this part of the top level if else if tree i realized there wasn't really a good way to do that but looking a little bit more closely what i realized is that each one of these ifs tests the same variable against a different hard-coded value well that's kind of the description of a switch statement and as a java coder i know that since java 7 i can switch on a string and cognitive complexity counts each if individually it increments each time for each else if in an if-elsif tree but for a switch it increments one for a switch and all its cases the reason for that is that switches are easy a switch tests one variable against a set of hard-coded values versus all of these ifs which i have to read every single one to understand what's going on if if i look here i still have to read every single one now it happens in this if-else if tree that they all seem to be testing the same variable but i don't know that until i read it because it doesn't have to work that way it could test entirely unrelated things or it could test additional conditions but a switch tests one variable against a series of values and so i can convert this series of ifs into a switch i've done that here on the right so on the right i've got a rewritten version of the original method that had the issue in it and so i turn this into a switch and i realize that i'm able to extract some of the common operations so the creation of the exception that i'm going to throw in setting some of the common values now i'll be honest with you in doing this refactoring i went a little bit further than pure cognitive complexity would have led me to do because as i worked on this sonar lint prompted me with things like hey these two cases have exactly the same body maybe you should combine them and so that's what i've done so i ended up with a really clean switch here that's i think far easier to understand than the original code which again is the point so those are all the um examples that i wanted to show you and i'm going to jump now back to the slides because i have a few more of them and here we go so uh the first thing to say here is that what you've seen me do is dig into old code to find things that i could clean up now at sonarsource that is typically not the way we advise you to operate instead what we really think is the best way to go is to clean as you code so don't dig up old issues to fix them i had to do that to find good examples to show you but generally you know when you're looking at refactoring yourself wait until you actually have to work on the code and then look at refactoring it because let's face it to be able to work in the code you had to understand the code and now you're in a great position to do any refactoring that needs to be done alternately when you're working in code and sonar lint raises a brand new cognitive complexity issue the code is fresh in your head and that is when you want to fix any newly emerging cognitive complexity issues so ideally rather than digging it digging up old issues you're going to be refactoring with cognitive complexity in sonar lent as you code or maybe in your pr analysis before you merge into the main branch or even before you release into production that's a little bit later but still in a good place while the code is still new and it's still owned by you you can go in and fix what was there so i needed to say that to you so now what's next so here are some of the resources that i've referred to there's the white paper and again you'll get these links in the email that you get as a follow-up in a few days i've also given you the link to the study that i referenced in case you want to read that yourselves and a link to a blog that i wrote on the clean as you code methodology so if you're not already familiar with this please go familiarize yourself and then you know drop into the sonar source community which i didn't give you a link to here but i will in the email and let let me know if you have any questions about it the next thing to do would be to actually get started in your code so you can go to sonarlund.org to learn about sonarlint or you can go to your ide's marketplace to go ahead and get it installed and you can get started with sonar cloud which is what we looked at earlier which is in the cloud and then center cube which is an on-premise option for code quality and code security all three of those have fully implemented cognitive complexity and now it's time for questions if there are any hey and yeah we have a couple of questions from the audience um here's one that was really interesting from amare what's the main reason to consider simple ternary and if else structures as equivalent in complexity uh well because they do the same thing really a ternary structure is an if else if structure um just with different syntax and and honestly um if i could increment extra for a ternary i would and okay i'm the primary author i could have but um we we agreed to only you know not do partial increments or double increments it's it's plus one um but really um you know what we're looking at is measuring when the code is not readable understandable as an incentive to making it more understandable and a ternary operator i personally find to be even less readable than a normal if else structure so hopefully that answers it awesome thank you and then we've got another one here uh from georgios i think this is something you touched on but uh he had an interesting way of asking the question would it make would it make sense to lower every statement to its base form i.e instead of a switch or a sequence of of uh if else instead of a ternary operator and if else essentially removing syntactic sugar um if i if i understand the question correctly um is going to make sense to use the most readable form now in terms of syntactic sugar i think a null coalescing operator is a really good argument against that um because a null coalescing operator is is basically um let's see i should have opened this tab um [Music] and i don't have my bookmarks available um so so basically with a null coalescing operator i say variable a equals null if condition um set a to some some value right and a null coalescing operator allows me to condense that into one statement and once you understand the syntax and you read it like this versus having to actually read okay variable set to null do the test set to a value right so that syntactic sugar is actually easier to read than the basic form and so i don't think that there's uh a blanket argument for reducing things to their to their lowest forms personally so what's next aaron okay we've got i've saved the provocative question for last is cyclomatic complexity obsolete so um it depends on what you want to do um as i said earlier cyclomatic complexity if you read the original paper was formulated in an attempt to measure understandability and that's not quite what it ended up doing so in that context yes at the same time it's not without value it does give you an understanding of how many tests you need and so there are contexts when it's still valuable on the other hand we've got really good tooling today versus in december 1976 four tests right so it's super easy now to understand what parts of code are uncovered how covered how well covered things are and so um i i'm i'm reluctant to throw shade on another author's work but i think there's there's less need for cyclomatic complexity today than than there was in 1976 so you said you saved the provocative question for last aaron does that mean there aren't any more questions i think that's it okay",
+  "fetchedAt": "2026-03-14T09:25:32.077Z"
+}

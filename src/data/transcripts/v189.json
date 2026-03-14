@@ -1,0 +1,913 @@
+{
+  "videoId": "v189",
+  "youtubeId": "_mqCs7C5UeY",
+  "segments": [
+    {
+      "text": "foreign",
+      "offset": 359,
+      "duration": 5671
+    },
+    {
+      "text": "[Music]",
+      "offset": 2250,
+      "duration": 3780
+    },
+    {
+      "text": "Campbell and today I'm going to talk",
+      "offset": 7940,
+      "duration": 4779
+    },
+    {
+      "text": "about the key features of sonar Cube 9.8",
+      "offset": 9780,
+      "duration": 5279
+    },
+    {
+      "text": "faster analysis has been a theme in the",
+      "offset": 12719,
+      "duration": 4381
+    },
+    {
+      "text": "nine series and in 9.8 we bring you",
+      "offset": 15059,
+      "duration": 4501
+    },
+    {
+      "text": "faster kotlin PRS with the addition of",
+      "offset": 17100,
+      "duration": 4320
+    },
+    {
+      "text": "the same analysis cache that we've added",
+      "offset": 19560,
+      "duration": 4139
+    },
+    {
+      "text": "previously for other languages this",
+      "offset": 21420,
+      "duration": 4140
+    },
+    {
+      "text": "server-side analysis cache means that",
+      "offset": 23699,
+      "duration": 3601
+    },
+    {
+      "text": "unchanged files don't have to be",
+      "offset": 25560,
+      "duration": 4799
+    },
+    {
+      "text": "reanalyzed in your PR unfortunately I",
+      "offset": 27300,
+      "duration": 5459
+    },
+    {
+      "text": "don't have numbers on that we've also",
+      "offset": 30359,
+      "duration": 4141
+    },
+    {
+      "text": "enabled parallel analysis report",
+      "offset": 32759,
+      "duration": 4140
+    },
+    {
+      "text": "processing for PRS from the same project",
+      "offset": 34500,
+      "duration": 5160
+    },
+    {
+      "text": "in Enterprise Edition and above now",
+      "offset": 36899,
+      "duration": 4680
+    },
+    {
+      "text": "Enterprise Edition already had the",
+      "offset": 39660,
+      "duration": 3960
+    },
+    {
+      "text": "ability to parallel process analysis",
+      "offset": 41579,
+      "duration": 4221
+    },
+    {
+      "text": "reports from different projects",
+      "offset": 43620,
+      "duration": 4919
+    },
+    {
+      "text": "unfortunately PR's and branches from the",
+      "offset": 45800,
+      "duration": 4500
+    },
+    {
+      "text": "same project were blocking each other",
+      "offset": 48539,
+      "duration": 4981
+    },
+    {
+      "text": "we've fixed that in 9.8 so PR is from",
+      "offset": 50300,
+      "duration": 5200
+    },
+    {
+      "text": "the same project can be processed in",
+      "offset": 53520,
+      "duration": 3960
+    },
+    {
+      "text": "parallel with each other and with",
+      "offset": 55500,
+      "duration": 3960
+    },
+    {
+      "text": "branches from that same project",
+      "offset": 57480,
+      "duration": 4140
+    },
+    {
+      "text": "and now I want to jump into the UI to",
+      "offset": 59460,
+      "duration": 4079
+    },
+    {
+      "text": "show you something else we did for PR's",
+      "offset": 61620,
+      "duration": 6060
+    },
+    {
+      "text": "file move detection so here I am in 9.7",
+      "offset": 63539,
+      "duration": 6241
+    },
+    {
+      "text": "on my local host on a project that I've",
+      "offset": 67680,
+      "duration": 4740
+    },
+    {
+      "text": "analyzed locally and I want to jump into",
+      "offset": 69780,
+      "duration": 6120
+    },
+    {
+      "text": "the issues and point out the issues in",
+      "offset": 72420,
+      "duration": 6720
+    },
+    {
+      "text": "two particular files so in this file",
+      "offset": 75900,
+      "duration": 7500
+    },
+    {
+      "text": "here version test I have 22 issues",
+      "offset": 79140,
+      "duration": 6500
+    },
+    {
+      "text": "and then here in Update Center",
+      "offset": 83400,
+      "duration": 5700
+    },
+    {
+      "text": "serializer I have 15 issues now I've",
+      "offset": 85640,
+      "duration": 6220
+    },
+    {
+      "text": "created a PR and analyzed it that up",
+      "offset": 89100,
+      "duration": 6360
+    },
+    {
+      "text": "that renames both of these files let's",
+      "offset": 91860,
+      "duration": 5880
+    },
+    {
+      "text": "see what analysis report processing in",
+      "offset": 95460,
+      "duration": 4740
+    },
+    {
+      "text": "9.7 does with that",
+      "offset": 97740,
+      "duration": 5339
+    },
+    {
+      "text": "so here we have 39 issues you'll",
+      "offset": 100200,
+      "duration": 4980
+    },
+    {
+      "text": "recognize most of them you see that I",
+      "offset": 103079,
+      "duration": 4680
+    },
+    {
+      "text": "did rename the file I just stuck a 2 on",
+      "offset": 105180,
+      "duration": 5880
+    },
+    {
+      "text": "there and it re-raises all of the old",
+      "offset": 107759,
+      "duration": 6540
+    },
+    {
+      "text": "issues in my moved files as new issues",
+      "offset": 111060,
+      "duration": 4680
+    },
+    {
+      "text": "in the pr",
+      "offset": 114299,
+      "duration": 5100
+    },
+    {
+      "text": "well in 9.8 we fix that so here I have",
+      "offset": 115740,
+      "duration": 7260
+    },
+    {
+      "text": "my two renamed files with only the two",
+      "offset": 119399,
+      "duration": 6241
+    },
+    {
+      "text": "issues that were actually added in this",
+      "offset": 123000,
+      "duration": 3780
+    },
+    {
+      "text": "PR",
+      "offset": 125640,
+      "duration": 2819
+    },
+    {
+      "text": "yay",
+      "offset": 126780,
+      "duration": 4080
+    },
+    {
+      "text": "so now let's move on to rules we've",
+      "offset": 128459,
+      "duration": 4381
+    },
+    {
+      "text": "added as usual a whole bunch of new",
+      "offset": 130860,
+      "duration": 3720
+    },
+    {
+      "text": "rules for you this time",
+      "offset": 132840,
+      "duration": 3539
+    },
+    {
+      "text": "so let's start with JavaScript and",
+      "offset": 134580,
+      "duration": 4440
+    },
+    {
+      "text": "typescript last time we added a bunch of",
+      "offset": 136379,
+      "duration": 4381
+    },
+    {
+      "text": "new rules to help python developers",
+      "offset": 139020,
+      "duration": 5280
+    },
+    {
+      "text": "Master the AWS cdk in a 9.8 we've made",
+      "offset": 140760,
+      "duration": 5160
+    },
+    {
+      "text": "those available to JavaScript and",
+      "offset": 144300,
+      "duration": 3840
+    },
+    {
+      "text": "typescript developers so we've added",
+      "offset": 145920,
+      "duration": 4380
+    },
+    {
+      "text": "nine rules about encryption at Reston",
+      "offset": 148140,
+      "duration": 4319
+    },
+    {
+      "text": "and Transit four rules for Public Access",
+      "offset": 150300,
+      "duration": 5040
+    },
+    {
+      "text": "Network and firewalls and three rules",
+      "offset": 152459,
+      "duration": 6181
+    },
+    {
+      "text": "around permissions and access controls",
+      "offset": 155340,
+      "duration": 5700
+    },
+    {
+      "text": "for Java and kotlin we've added two",
+      "offset": 158640,
+      "duration": 4679
+    },
+    {
+      "text": "rules around block Cipher mode and this",
+      "offset": 161040,
+      "duration": 5520
+    },
+    {
+      "text": "expands our coverage of oasp asvsv4",
+      "offset": 163319,
+      "duration": 5700
+    },
+    {
+      "text": "which is Access Control",
+      "offset": 166560,
+      "duration": 6060
+    },
+    {
+      "text": "we've also ported 17 rules from java to",
+      "offset": 169019,
+      "duration": 5281
+    },
+    {
+      "text": "kotlin so we've got to set around",
+      "offset": 172620,
+      "duration": 3119
+    },
+    {
+      "text": "collections",
+      "offset": 174300,
+      "duration": 4019
+    },
+    {
+      "text": "some for equals and hash code some for",
+      "offset": 175739,
+      "duration": 4561
+    },
+    {
+      "text": "files and streams",
+      "offset": 178319,
+      "duration": 4441
+    },
+    {
+      "text": "one for database interaction two for",
+      "offset": 180300,
+      "duration": 4799
+    },
+    {
+      "text": "data classes and several that I couldn't",
+      "offset": 182760,
+      "duration": 3960
+    },
+    {
+      "text": "categorize so I jumbled them here",
+      "offset": 185099,
+      "duration": 2881
+    },
+    {
+      "text": "together",
+      "offset": 186720,
+      "duration": 4620
+    },
+    {
+      "text": "in addition for C plus plus 20 we've got",
+      "offset": 187980,
+      "duration": 5700
+    },
+    {
+      "text": "six new rules to help you use Concepts",
+      "offset": 191340,
+      "duration": 4800
+    },
+    {
+      "text": "well so two rules to help you update",
+      "offset": 193680,
+      "duration": 5699
+    },
+    {
+      "text": "existing code to use Concepts two rules",
+      "offset": 196140,
+      "duration": 5340
+    },
+    {
+      "text": "about using Concepts and requires with",
+      "offset": 199379,
+      "duration": 4741
+    },
+    {
+      "text": "templates and two rules on properly",
+      "offset": 201480,
+      "duration": 5039
+    },
+    {
+      "text": "writing your own Concepts now I want to",
+      "offset": 204120,
+      "duration": 4380
+    },
+    {
+      "text": "jump into the UI and show you an example",
+      "offset": 206519,
+      "duration": 4860
+    },
+    {
+      "text": "of an issue from this last rule",
+      "offset": 208500,
+      "duration": 5760
+    },
+    {
+      "text": "so here we've highlighted the requires",
+      "offset": 211379,
+      "duration": 3841
+    },
+    {
+      "text": "keyword",
+      "offset": 214260,
+      "duration": 3180
+    },
+    {
+      "text": "with secondary locations on these two",
+      "offset": 215220,
+      "duration": 4680
+    },
+    {
+      "text": "uses of decal valve now let's jump into",
+      "offset": 217440,
+      "duration": 4920
+    },
+    {
+      "text": "the rule description we put a lot of",
+      "offset": 219900,
+      "duration": 3780
+    },
+    {
+      "text": "effort into making these rule",
+      "offset": 222360,
+      "duration": 2760
+    },
+    {
+      "text": "descriptions helpful so that you",
+      "offset": 223680,
+      "duration": 3540
+    },
+    {
+      "text": "understand not just what you should",
+      "offset": 225120,
+      "duration": 4380
+    },
+    {
+      "text": "change but why you should change it so",
+      "offset": 227220,
+      "duration": 4500
+    },
+    {
+      "text": "that you write the code better next time",
+      "offset": 229500,
+      "duration": 4379
+    },
+    {
+      "text": "and with this rule description what we",
+      "offset": 231720,
+      "duration": 4680
+    },
+    {
+      "text": "learn is that not only is the new syntax",
+      "offset": 233879,
+      "duration": 4981
+    },
+    {
+      "text": "easier to read as we see here in the",
+      "offset": 236400,
+      "duration": 3839
+    },
+    {
+      "text": "compliance solution",
+      "offset": 238860,
+      "duration": 3659
+    },
+    {
+      "text": "but also that if you're using the old",
+      "offset": 240239,
+      "duration": 5220
+    },
+    {
+      "text": "syntax it's possible that you will get a",
+      "offset": 242519,
+      "duration": 4681
+    },
+    {
+      "text": "type that's not quite what you're",
+      "offset": 245459,
+      "duration": 4261
+    },
+    {
+      "text": "expecting so if you're already compiling",
+      "offset": 247200,
+      "duration": 4500
+    },
+    {
+      "text": "to C plus plus 20 you probably want to",
+      "offset": 249720,
+      "duration": 4320
+    },
+    {
+      "text": "go ahead and update your syntax to use",
+      "offset": 251700,
+      "duration": 4319
+    },
+    {
+      "text": "the new stuff and our rules can help you",
+      "offset": 254040,
+      "duration": 3300
+    },
+    {
+      "text": "do that",
+      "offset": 256019,
+      "duration": 4741
+    },
+    {
+      "text": "also in rules I want to point out that",
+      "offset": 257340,
+      "duration": 6680
+    },
+    {
+      "text": "for PHP python JavaScript and typescript",
+      "offset": 260760,
+      "duration": 8159
+    },
+    {
+      "text": "we've vastly expanded and improved the",
+      "offset": 264020,
+      "duration": 6880
+    },
+    {
+      "text": "rule descriptions for the 10 analysis",
+      "offset": 268919,
+      "duration": 5641
+    },
+    {
+      "text": "rules security can be tough we",
+      "offset": 270900,
+      "duration": 6000
+    },
+    {
+      "text": "understand that so we've added a lot of",
+      "offset": 274560,
+      "duration": 5100
+    },
+    {
+      "text": "context and content to help you",
+      "offset": 276900,
+      "duration": 6000
+    },
+    {
+      "text": "understand what could go wrong why this",
+      "offset": 279660,
+      "duration": 6900
+    },
+    {
+      "text": "is an issue and more importantly when",
+      "offset": 282900,
+      "duration": 5820
+    },
+    {
+      "text": "you need to fix it",
+      "offset": 286560,
+      "duration": 4260
+    },
+    {
+      "text": "guidance that's specific to your",
+      "offset": 288720,
+      "duration": 4560
+    },
+    {
+      "text": "framework to help you do the right fix",
+      "offset": 290820,
+      "duration": 4800
+    },
+    {
+      "text": "in the right place",
+      "offset": 293280,
+      "duration": 4560
+    },
+    {
+      "text": "while I'm on rules I want to point out",
+      "offset": 295620,
+      "duration": 4799
+    },
+    {
+      "text": "that as a supporter of sarif we have",
+      "offset": 297840,
+      "duration": 4560
+    },
+    {
+      "text": "implemented tariff so if you have other",
+      "offset": 300419,
+      "duration": 4141
+    },
+    {
+      "text": "tools that are producing tariff reports",
+      "offset": 302400,
+      "duration": 4140
+    },
+    {
+      "text": "you can now import those in sonar Cube",
+      "offset": 304560,
+      "duration": 3660
+    },
+    {
+      "text": "9.8",
+      "offset": 306540,
+      "duration": 3780
+    },
+    {
+      "text": "moving on to projects I want to talk",
+      "offset": 308220,
+      "duration": 4320
+    },
+    {
+      "text": "about project creation so for a while",
+      "offset": 310320,
+      "duration": 4980
+    },
+    {
+      "text": "now when we've imported projects from a",
+      "offset": 312540,
+      "duration": 5520
+    },
+    {
+      "text": "devops platform we automatically read",
+      "offset": 315300,
+      "duration": 5100
+    },
+    {
+      "text": "and honored the name of the main branch",
+      "offset": 318060,
+      "duration": 4500
+    },
+    {
+      "text": "from that project",
+      "offset": 320400,
+      "duration": 4260
+    },
+    {
+      "text": "there were a couple of cases though",
+      "offset": 322560,
+      "duration": 4320
+    },
+    {
+      "text": "where we weren't properly picking up",
+      "offset": 324660,
+      "duration": 4259
+    },
+    {
+      "text": "because we couldn't the name of the main",
+      "offset": 326880,
+      "duration": 4620
+    },
+    {
+      "text": "branch so one is manual project creation",
+      "offset": 328919,
+      "duration": 5220
+    },
+    {
+      "text": "here through the interface when you're",
+      "offset": 331500,
+      "duration": 5280
+    },
+    {
+      "text": "filling in the values yourself so we've",
+      "offset": 334139,
+      "duration": 4620
+    },
+    {
+      "text": "added here an input so you can provide",
+      "offset": 336780,
+      "duration": 4800
+    },
+    {
+      "text": "the main branch name in addition to the",
+      "offset": 338759,
+      "duration": 4561
+    },
+    {
+      "text": "project display name and the project key",
+      "offset": 341580,
+      "duration": 4260
+    },
+    {
+      "text": "as you see it defaults to main but you",
+      "offset": 343320,
+      "duration": 5159
+    },
+    {
+      "text": "can change it to whatever is appropriate",
+      "offset": 345840,
+      "duration": 4620
+    },
+    {
+      "text": "for your project so maybe it should be",
+      "offset": 348479,
+      "duration": 3961
+    },
+    {
+      "text": "developing",
+      "offset": 350460,
+      "duration": 4440
+    },
+    {
+      "text": "and there we go we would set that up now",
+      "offset": 352440,
+      "duration": 5039
+    },
+    {
+      "text": "that still doesn't address when projects",
+      "offset": 354900,
+      "duration": 4139
+    },
+    {
+      "text": "are created automatically by your",
+      "offset": 357479,
+      "duration": 4381
+    },
+    {
+      "text": "pipelines so we've set that up as well",
+      "offset": 359039,
+      "duration": 5821
+    },
+    {
+      "text": "here in global Administration where the",
+      "offset": 361860,
+      "duration": 5460
+    },
+    {
+      "text": "global administrator can set the default",
+      "offset": 364860,
+      "duration": 6360
+    },
+    {
+      "text": "main branch name for the entire instance",
+      "offset": 367320,
+      "duration": 6780
+    },
+    {
+      "text": "in addition we've added one more thing",
+      "offset": 371220,
+      "duration": 5220
+    },
+    {
+      "text": "which is a login message now people have",
+      "offset": 374100,
+      "duration": 4500
+    },
+    {
+      "text": "been asking for this for quite a very",
+      "offset": 376440,
+      "duration": 5280
+    },
+    {
+      "text": "long time the use for this is when you",
+      "offset": 378600,
+      "duration": 6060
+    },
+    {
+      "text": "have multiple different systems so as a",
+      "offset": 381720,
+      "duration": 4979
+    },
+    {
+      "text": "user I might be confused when I come to",
+      "offset": 384660,
+      "duration": 4500
+    },
+    {
+      "text": "the center Cube login screen and not",
+      "offset": 386699,
+      "duration": 4861
+    },
+    {
+      "text": "know which credentials to use so an",
+      "offset": 389160,
+      "duration": 4460
+    },
+    {
+      "text": "administrator might type something like",
+      "offset": 391560,
+      "duration": 6780
+    },
+    {
+      "text": "use your ldap credentials",
+      "offset": 393620,
+      "duration": 7600
+    },
+    {
+      "text": "and if I save this",
+      "offset": 398340,
+      "duration": 5760
+    },
+    {
+      "text": "if I enable it there are two steps to",
+      "offset": 401220,
+      "duration": 5940
+    },
+    {
+      "text": "this and I log out",
+      "offset": 404100,
+      "duration": 5219
+    },
+    {
+      "text": "and I log in again",
+      "offset": 407160,
+      "duration": 4020
+    },
+    {
+      "text": "there's my message",
+      "offset": 409319,
+      "duration": 4081
+    },
+    {
+      "text": "now I want to end with two more Ops",
+      "offset": 411180,
+      "duration": 3900
+    },
+    {
+      "text": "advances so",
+      "offset": 413400,
+      "duration": 4019
+    },
+    {
+      "text": "on the theme of user management we've",
+      "offset": 415080,
+      "duration": 4440
+    },
+    {
+      "text": "enabled skim user provisioning and",
+      "offset": 417419,
+      "duration": 5821
+    },
+    {
+      "text": "deprovisioning for saml OCTA the big",
+      "offset": 419520,
+      "duration": 7220
+    },
+    {
+      "text": "part here is that when a user is removed",
+      "offset": 423240,
+      "duration": 6140
+    },
+    {
+      "text": "sonar Cube will get the message",
+      "offset": 426740,
+      "duration": 6340
+    },
+    {
+      "text": "deactivate the user and all the users",
+      "offset": 429380,
+      "duration": 5259
+    },
+    {
+      "text": "tokens",
+      "offset": 433080,
+      "duration": 4140
+    },
+    {
+      "text": "and finally now you can run the server",
+      "offset": 434639,
+      "duration": 6601
+    },
+    {
+      "text": "with Java 17 which is the Java LTS",
+      "offset": 437220,
+      "duration": 5699
+    },
+    {
+      "text": "and that's all I've got for you today",
+      "offset": 441240,
+      "duration": 6260
+    },
+    {
+      "text": "thanks for listening see you next time",
+      "offset": 442919,
+      "duration": 4581
+    },
+    {
+      "text": "[Music]",
+      "offset": 447730,
+      "duration": 3789
+    }
+  ],
+  "fullText": "foreign [Music] Campbell and today I'm going to talk about the key features of sonar Cube 9.8 faster analysis has been a theme in the nine series and in 9.8 we bring you faster kotlin PRS with the addition of the same analysis cache that we've added previously for other languages this server-side analysis cache means that unchanged files don't have to be reanalyzed in your PR unfortunately I don't have numbers on that we've also enabled parallel analysis report processing for PRS from the same project in Enterprise Edition and above now Enterprise Edition already had the ability to parallel process analysis reports from different projects unfortunately PR's and branches from the same project were blocking each other we've fixed that in 9.8 so PR is from the same project can be processed in parallel with each other and with branches from that same project and now I want to jump into the UI to show you something else we did for PR's file move detection so here I am in 9.7 on my local host on a project that I've analyzed locally and I want to jump into the issues and point out the issues in two particular files so in this file here version test I have 22 issues and then here in Update Center serializer I have 15 issues now I've created a PR and analyzed it that up that renames both of these files let's see what analysis report processing in 9.7 does with that so here we have 39 issues you'll recognize most of them you see that I did rename the file I just stuck a 2 on there and it re-raises all of the old issues in my moved files as new issues in the pr well in 9.8 we fix that so here I have my two renamed files with only the two issues that were actually added in this PR yay so now let's move on to rules we've added as usual a whole bunch of new rules for you this time so let's start with JavaScript and typescript last time we added a bunch of new rules to help python developers Master the AWS cdk in a 9.8 we've made those available to JavaScript and typescript developers so we've added nine rules about encryption at Reston and Transit four rules for Public Access Network and firewalls and three rules around permissions and access controls for Java and kotlin we've added two rules around block Cipher mode and this expands our coverage of oasp asvsv4 which is Access Control we've also ported 17 rules from java to kotlin so we've got to set around collections some for equals and hash code some for files and streams one for database interaction two for data classes and several that I couldn't categorize so I jumbled them here together in addition for C plus plus 20 we've got six new rules to help you use Concepts well so two rules to help you update existing code to use Concepts two rules about using Concepts and requires with templates and two rules on properly writing your own Concepts now I want to jump into the UI and show you an example of an issue from this last rule so here we've highlighted the requires keyword with secondary locations on these two uses of decal valve now let's jump into the rule description we put a lot of effort into making these rule descriptions helpful so that you understand not just what you should change but why you should change it so that you write the code better next time and with this rule description what we learn is that not only is the new syntax easier to read as we see here in the compliance solution but also that if you're using the old syntax it's possible that you will get a type that's not quite what you're expecting so if you're already compiling to C plus plus 20 you probably want to go ahead and update your syntax to use the new stuff and our rules can help you do that also in rules I want to point out that for PHP python JavaScript and typescript we've vastly expanded and improved the rule descriptions for the 10 analysis rules security can be tough we understand that so we've added a lot of context and content to help you understand what could go wrong why this is an issue and more importantly when you need to fix it guidance that's specific to your framework to help you do the right fix in the right place while I'm on rules I want to point out that as a supporter of sarif we have implemented tariff so if you have other tools that are producing tariff reports you can now import those in sonar Cube 9.8 moving on to projects I want to talk about project creation so for a while now when we've imported projects from a devops platform we automatically read and honored the name of the main branch from that project there were a couple of cases though where we weren't properly picking up because we couldn't the name of the main branch so one is manual project creation here through the interface when you're filling in the values yourself so we've added here an input so you can provide the main branch name in addition to the project display name and the project key as you see it defaults to main but you can change it to whatever is appropriate for your project so maybe it should be developing and there we go we would set that up now that still doesn't address when projects are created automatically by your pipelines so we've set that up as well here in global Administration where the global administrator can set the default main branch name for the entire instance in addition we've added one more thing which is a login message now people have been asking for this for quite a very long time the use for this is when you have multiple different systems so as a user I might be confused when I come to the center Cube login screen and not know which credentials to use so an administrator might type something like use your ldap credentials and if I save this if I enable it there are two steps to this and I log out and I log in again there's my message now I want to end with two more Ops advances so on the theme of user management we've enabled skim user provisioning and deprovisioning for saml OCTA the big part here is that when a user is removed sonar Cube will get the message deactivate the user and all the users tokens and finally now you can run the server with Java 17 which is the Java LTS and that's all I've got for you today thanks for listening see you next time [Music]",
+  "fetchedAt": "2026-03-14T09:24:59.126Z"
+}

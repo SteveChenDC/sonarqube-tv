@@ -1,0 +1,1823 @@
+{
+  "videoId": "v65",
+  "youtubeId": "ZoayHEiXrZY",
+  "segments": [
+    {
+      "text": "I guess. Hello and welcome and thank you \nfor joining our webinar. Introducing Sona",
+      "offset": 9040,
+      "duration": 8240
+    },
+    {
+      "text": "Cube MCP server. Bring code quality \nand security into your AI workflow.",
+      "offset": 17280,
+      "duration": 7120
+    },
+    {
+      "text": "If you've joined any of our previous \nwebinars, hello again and welcome back.",
+      "offset": 24400,
+      "duration": 4960
+    },
+    {
+      "text": "And today we will be asking as AI tools \naccelerate our coding, how do we solve the",
+      "offset": 30400,
+      "duration": 6800
+    },
+    {
+      "text": "engineering productivity paradox, eliminating \nthat new verification bottleneck and bring code",
+      "offset": 37200,
+      "duration": 7360
+    },
+    {
+      "text": "quality and security directly into the AI assisted \nworkflow. I'm Andrew and I'll be your moderator",
+      "offset": 44560,
+      "duration": 7440
+    },
+    {
+      "text": "today. And I'm excited to have Manish Kapoor \nand President Saka with us today as presenters.",
+      "offset": 52000,
+      "duration": 6160
+    },
+    {
+      "text": "So just before we begin, I just want to go over \na couple of bits of housekeeping. Uh the session",
+      "offset": 58160,
+      "duration": 5120
+    },
+    {
+      "text": "will be about 30 to 45 minutes and we'll have Q&A \nat the end, but you are invited to submit your",
+      "offset": 63280,
+      "duration": 6880
+    },
+    {
+      "text": "questions at any time during the webinar via the \nQ&A tab in the panel which should be above on your",
+      "offset": 70160,
+      "duration": 7200
+    },
+    {
+      "text": "screen at the right. And we'll endeavor to answer \nas many of these questions as possible during the",
+      "offset": 77360,
+      "duration": 4800
+    },
+    {
+      "text": "webinar. So do feel free to submit your questions \nat any time and don't wait until the end. Plus you",
+      "offset": 82160,
+      "duration": 6480
+    },
+    {
+      "text": "can upvote any questions you particularly like \nto see answered. Uh we will record the session",
+      "offset": 88640,
+      "duration": 6240
+    },
+    {
+      "text": "and we will send out a link via email to this \nrecording in the coming days. Finally um towards",
+      "offset": 94880,
+      "duration": 6480
+    },
+    {
+      "text": "the end actually no from the start we'll have \na brief four question survey available to you",
+      "offset": 101360,
+      "duration": 5360
+    },
+    {
+      "text": "uh to take at any time. So your input will help us \nimprove and we appreciate your feedback. Now I'm",
+      "offset": 106720,
+      "duration": 6560
+    },
+    {
+      "text": "in I'm pleased to introduce our first presenter \nManish. If you'd like to move to the next slide",
+      "offset": 113280,
+      "duration": 10800
+    },
+    {
+      "text": "and we should see that come up now. And yes, \nManish with his strong background in everything",
+      "offset": 124080,
+      "duration": 4400
+    },
+    {
+      "text": "from strategy to developer relations truly \nbridges the gap between the product and the",
+      "offset": 128480,
+      "duration": 5920
+    },
+    {
+      "text": "people who use it. He joins us from Austin today. \nAnd we're also joined by Presenjit who is also a",
+      "offset": 134400,
+      "duration": 8480
+    },
+    {
+      "text": "seasoned technology and product leader from our \nteam at Sonar who has a passion for building and",
+      "offset": 142880,
+      "duration": 6480
+    },
+    {
+      "text": "scaling innovative AI products. But starting with \nManish over to you. Thank you Andrew. Next slide.",
+      "offset": 149360,
+      "duration": 11200
+    },
+    {
+      "text": "A very warm welcome to all of you for joining \nthe webinar today. Thanks for taking the time.",
+      "offset": 160560,
+      "duration": 5200
+    },
+    {
+      "text": "My name is Manish and I'm going to kick things off \nwith the with some introduction to SonarCube MCP",
+      "offset": 165760,
+      "duration": 6160
+    },
+    {
+      "text": "server. We launched our Sonar Cube MCP server just \nabout three or four weeks back and I'm excited to",
+      "offset": 171920,
+      "duration": 7120
+    },
+    {
+      "text": "share uh what it is and how it works and how \nyou can benefit from it, how you can integrate",
+      "offset": 179040,
+      "duration": 5360
+    },
+    {
+      "text": "it with our with your AI native ids and agents. \nSo let's get started. Next slide. All right, the",
+      "offset": 184400,
+      "duration": 9200
+    },
+    {
+      "text": "plan for today is really simple just three things, \nright? So we will start with uh understanding what",
+      "offset": 193600,
+      "duration": 7600
+    },
+    {
+      "text": "MCP or model context protocol is just to set \nthe context. It'll be real quick introduction",
+      "offset": 201200,
+      "duration": 5040
+    },
+    {
+      "text": "to model context protocol protocol. Next I'll \ntalk about SonoCube MCP server. Uh what it is,",
+      "offset": 206240,
+      "duration": 7600
+    },
+    {
+      "text": "how you can use it and things like that. what the \nuse cases it enables for you when you start using",
+      "offset": 213840,
+      "duration": 4480
+    },
+    {
+      "text": "AI native SDS uh ids and agents and next we'll \nfollow it up with a demo. So let's get started.",
+      "offset": 218320,
+      "duration": 11840
+    },
+    {
+      "text": "So almost all of us are using AI uh to write \ncode today. It is helping us turbocharge our",
+      "offset": 230160,
+      "duration": 8240
+    },
+    {
+      "text": "software development. It is helping us write code \nfaster than ever before. uh it seems that we are",
+      "offset": 238400,
+      "duration": 6800
+    },
+    {
+      "text": "becoming very productive but we are also seeing \nsome challenges that come with faster speed of",
+      "offset": 245200,
+      "duration": 5760
+    },
+    {
+      "text": "uh code generation. We are seeing that time saved \nwriting code is essentially lost in some of the",
+      "offset": 250960,
+      "duration": 6640
+    },
+    {
+      "text": "other ch tasks that we do as developers. Those \ntasks are like verifying the code that AI has",
+      "offset": 257600,
+      "duration": 5600
+    },
+    {
+      "text": "written and then sometimes uh you have to switch \nworkflows. you have to switch context between your",
+      "offset": 263200,
+      "duration": 6560
+    },
+    {
+      "text": "uh ID and your from your agent into your Sono cube \nor whatever tool that you're using to analyze your",
+      "offset": 269760,
+      "duration": 5120
+    },
+    {
+      "text": "code to verify your code and then there is you \nknow uh integration with your rest of the tools",
+      "offset": 274880,
+      "duration": 5200
+    },
+    {
+      "text": "in the AISDLC like Jira and other tools that you \nuse how do you integrate with them and how do you",
+      "offset": 280080,
+      "duration": 5920
+    },
+    {
+      "text": "make it all work seamlessly and then of obviously \nthere are code that AI produces is similar to",
+      "offset": 286000,
+      "duration": 6720
+    },
+    {
+      "text": "what we produce as developers it contains bugs and \nsecurity issues So on the right hand side it this",
+      "offset": 292720,
+      "duration": 6400
+    },
+    {
+      "text": "depicts what's happening in the world today. We \nare seeing the blue line shows the pace at which",
+      "offset": 299120,
+      "duration": 5520
+    },
+    {
+      "text": "AI is writing code. It's the velocity at which \ncode is being produced by AI tools is phenomenally",
+      "offset": 304640,
+      "duration": 6560
+    },
+    {
+      "text": "phenomenally high. Uh but on the flip side what \nis happening is there are bottlenecks that are",
+      "offset": 311200,
+      "duration": 6160
+    },
+    {
+      "text": "being introduced. One big bottleneck that we we \nare seeing from our customers and hearing from",
+      "offset": 317360,
+      "duration": 4560
+    },
+    {
+      "text": "our customers is code verification. Automatic code \nreviews and manual code reviews. They have to be",
+      "offset": 321920,
+      "duration": 6480
+    },
+    {
+      "text": "part of your uh you know verification layer. \nAnd if the code velocity is very very high,",
+      "offset": 328400,
+      "duration": 5680
+    },
+    {
+      "text": "it's not easy to uh we are seeing that customer \nare customers are finding it hard to verify the",
+      "offset": 334080,
+      "duration": 5120
+    },
+    {
+      "text": "code at the pace at which it's being written. \nSo there's a gap between verification and",
+      "offset": 339200,
+      "duration": 4320
+    },
+    {
+      "text": "and the pace at which AI is writing code. So \nwe'll talk about how we are going to address",
+      "offset": 343520,
+      "duration": 4880
+    },
+    {
+      "text": "this and how some of these challenges will be \nresolved today with the MCP server. Next slide.",
+      "offset": 348400,
+      "duration": 9600
+    },
+    {
+      "text": "So let's take a step back. Uh let's look \nat what is model context protocol also",
+      "offset": 358000,
+      "duration": 4880
+    },
+    {
+      "text": "known as MCP. Uh actually model context protocol \nsurprisingly was announced in November of 2024",
+      "offset": 362880,
+      "duration": 9760
+    },
+    {
+      "text": "uh by Anthropic. It's a a pro protocol which \nbecame very popular suddenly in March or April",
+      "offset": 372640,
+      "duration": 7760
+    },
+    {
+      "text": "time frame of this year. For the first couple of \nmonths, it was not noticed by most developers. But",
+      "offset": 380400,
+      "duration": 5040
+    },
+    {
+      "text": "eventually when people found it, when they started \nusing it, they started realizing the benefits of",
+      "offset": 385440,
+      "duration": 4960
+    },
+    {
+      "text": "it. It has gained so much traction that today \nwe have over 2,000 3,000 model context protocol",
+      "offset": 390400,
+      "duration": 6400
+    },
+    {
+      "text": "servers out there which are uh available for \nyou to use as part of your uh AI development",
+      "offset": 396800,
+      "duration": 5200
+    },
+    {
+      "text": "chip tool chain. So what is it? It's basically a \nuniversal translator between your AI agents and",
+      "offset": 402000,
+      "duration": 6880
+    },
+    {
+      "text": "external tools. And external tools, when I say \nexternal tools, it's bringing the context from",
+      "offset": 408880,
+      "duration": 6000
+    },
+    {
+      "text": "the external services and products such as MySQL \ndatabase or GitHub or Sona Cube into your agent to",
+      "offset": 414880,
+      "duration": 8320
+    },
+    {
+      "text": "provide them with the rich context that they need \nto uh produce better coding code for you. Right?",
+      "offset": 423200,
+      "duration": 6320
+    },
+    {
+      "text": "So it's essentially a bridge providing the uh \na standard way of interfacing with resources",
+      "offset": 429520,
+      "duration": 7200
+    },
+    {
+      "text": "uh and you know the resources are that you want \nto use with your agent to make it perform better",
+      "offset": 436720,
+      "duration": 5680
+    },
+    {
+      "text": "right that's what model context protocol does \nit's a standard protocol so uh it's a universal",
+      "offset": 442400,
+      "duration": 5520
+    },
+    {
+      "text": "standard which is uh defined by anthropic uh \nit's one protocol that you use for your different",
+      "offset": 447920,
+      "duration": 5840
+    },
+    {
+      "text": "integrations it is it relies on natural language \nso on one side you start quering your resources",
+      "offset": 453760,
+      "duration": 7200
+    },
+    {
+      "text": "with natural language and you in your AI native \nids and then on the other side you're talking to",
+      "offset": 460960,
+      "duration": 6160
+    },
+    {
+      "text": "tools that you're connected to and it works across \nAI assistants and ids and it's a vendor neutral uh",
+      "offset": 467120,
+      "duration": 6480
+    },
+    {
+      "text": "protocol right so pretty much everyone is using \nthe same protocol to talk to agents and for the",
+      "offset": 473600,
+      "duration": 6080
+    },
+    {
+      "text": "agents to communicate with uh the resources \nthere's also another protocol which we'll not",
+      "offset": 479680,
+      "duration": 4560
+    },
+    {
+      "text": "be talking about is between agents how do you \ntalk that's called agent to agent protocol But",
+      "offset": 484240,
+      "duration": 4320
+    },
+    {
+      "text": "that's not the scope in scope today. Today we'll \nfocus on model context protocol and we'll see how",
+      "offset": 488560,
+      "duration": 5760
+    },
+    {
+      "text": "it works and how Sona cube has implemented \nit and what benefits you get. Next slide.",
+      "offset": 494320,
+      "duration": 8880
+    },
+    {
+      "text": "So a little bit more about model context protocol \nbefore we get into SonoCube MCP server. So what",
+      "offset": 503200,
+      "duration": 6720
+    },
+    {
+      "text": "are the key functions of an MCP server? It's \nbasically is a way protocol that helps you connect",
+      "offset": 509920,
+      "duration": 6720
+    },
+    {
+      "text": "your LLMs to external resources. And I like like \nI mentioned resources can be anything. It can be",
+      "offset": 516640,
+      "duration": 6240
+    },
+    {
+      "text": "a MySQL database, it can be an Oracle database, it \ncan be external API, it can be Sona cube, it can",
+      "offset": 522880,
+      "duration": 5840
+    },
+    {
+      "text": "be uh any of the tools that you want to use with \nyour LLMs, right? So it simplifies the interaction",
+      "offset": 528720,
+      "duration": 6320
+    },
+    {
+      "text": "between LLMs and the to resources that you want \nto speak with. uh there's a API uh implementation",
+      "offset": 535040,
+      "duration": 7280
+    },
+    {
+      "text": "uh that it enables. Uh so on the left side you \nbasically use the MCP protocol. If you look at the",
+      "offset": 542320,
+      "duration": 6560
+    },
+    {
+      "text": "diagram on the left side you have different MCP \nclients sitting inside the MCP host. They're using",
+      "offset": 548880,
+      "duration": 4880
+    },
+    {
+      "text": "the MCP protocol to and uh sending the requests \nto the MCP server which then translates those",
+      "offset": 553760,
+      "duration": 6400
+    },
+    {
+      "text": "requests to talk to the uh resources. So in case \nof uh you know if you're talking to a database and",
+      "offset": 560160,
+      "duration": 6800
+    },
+    {
+      "text": "you want to use TCP communications it translates \nyour natural language uh prompts into TCP protocol",
+      "offset": 566960,
+      "duration": 6480
+    },
+    {
+      "text": "and sends those requests to MySQL database. \nIn case of Sona cube uh basically you send API",
+      "offset": 573440,
+      "duration": 6800
+    },
+    {
+      "text": "requests you access make calls to the sonou API \nvia the MCP client using the MCP server. So in",
+      "offset": 580240,
+      "duration": 7120
+    },
+    {
+      "text": "in a sense what it is doing is it is getting \nthe context from Sona cube or your database",
+      "offset": 587360,
+      "duration": 4960
+    },
+    {
+      "text": "or whatever resource you are working with and \nbringing that context to the agents and helping",
+      "offset": 592320,
+      "duration": 5760
+    },
+    {
+      "text": "them improve their output reduce hallucinations \nproduce better output and things like that right",
+      "offset": 598080,
+      "duration": 7200
+    },
+    {
+      "text": "so it's a standardized communication which \nuh you can again uh connect with different",
+      "offset": 605280,
+      "duration": 4160
+    },
+    {
+      "text": "resources tools are basically defined as \nthe interactions uh or the API calls that",
+      "offset": 609440,
+      "duration": 5440
+    },
+    {
+      "text": "you perform to access the resources that you're \nuh connecting to and then there are prompts. So",
+      "offset": 614880,
+      "duration": 5360
+    },
+    {
+      "text": "those are the three key pieces uh when it comes \nto uh an MCP server implementation. Next slide.",
+      "offset": 620240,
+      "duration": 10640
+    },
+    {
+      "text": "So I'm super excited to talk about MCP server. \nSonar cube MCP server. Like I said we announced",
+      "offset": 630880,
+      "duration": 6000
+    },
+    {
+      "text": "it earlier this uh in October. Uh it's basically a \nfree uh product, free solution. We have the source",
+      "offset": 636880,
+      "duration": 7600
+    },
+    {
+      "text": "code available for it on our GitHub repository. \nUh so you have the source code. It is free. It is",
+      "offset": 644480,
+      "duration": 6160
+    },
+    {
+      "text": "the official implementation of the model context \nprotocol. It is basically designed to be a bridge",
+      "offset": 650640,
+      "duration": 6720
+    },
+    {
+      "text": "between your AI agents and your AI native IDs and \nSona cubes trusted code analysis. So what does",
+      "offset": 657360,
+      "duration": 6800
+    },
+    {
+      "text": "it do? So it's it's basically uh enabling you to \nwrite uh get better code outputs from your agentic",
+      "offset": 664160,
+      "duration": 9520
+    },
+    {
+      "text": "uh ids. So as a developer if you're using cursor \nor winds surf or github copilot or any of these",
+      "offset": 673680,
+      "duration": 6000
+    },
+    {
+      "text": "ids you can have you can connect those ids \nwith sonube mcp server and then you can have",
+      "offset": 679680,
+      "duration": 6320
+    },
+    {
+      "text": "a conversational integration between the two. So \nyou can ask questions to uh Sona cube once the",
+      "offset": 686000,
+      "duration": 5840
+    },
+    {
+      "text": "integration is in done and you can get real-time \ncode quality analysis and feedback for the code",
+      "offset": 691840,
+      "duration": 5600
+    },
+    {
+      "text": "that you're writing inside your ids. It's a \nstandardized way. It's a scalable solution.",
+      "offset": 697440,
+      "duration": 5440
+    },
+    {
+      "text": "What this means is you don't have to context \nswitch. For example, if there was no MCP server,",
+      "offset": 702880,
+      "duration": 5280
+    },
+    {
+      "text": "what would you how would your workflow look like? \nIt would be basically you start typing code in",
+      "offset": 708160,
+      "duration": 5280
+    },
+    {
+      "text": "uh creating code in your cursor ID and if you \nwant to evaluate it you would have to submit a",
+      "offset": 713440,
+      "duration": 5440
+    },
+    {
+      "text": "pull request and then the pull request would uh \nget analyzed by sonar cube and the results would",
+      "offset": 718880,
+      "duration": 5200
+    },
+    {
+      "text": "show back would come back and you would have to \ninterpret those. So you had to do little bit of",
+      "offset": 724080,
+      "duration": 4160
+    },
+    {
+      "text": "a context switching if you were to use it without \nthe MCP server. With the MCP server integration,",
+      "offset": 728240,
+      "duration": 5760
+    },
+    {
+      "text": "you don't have to leave your ID interface \nor in case of CLIs if you're using command",
+      "offset": 734000,
+      "duration": 4480
+    },
+    {
+      "text": "line interface. You can stay within \nthe interface and start proactively",
+      "offset": 738480,
+      "duration": 5040
+    },
+    {
+      "text": "uh you know looking at your code and asking \nsonube to analyze it and tell you about it and",
+      "offset": 743520,
+      "duration": 5600
+    },
+    {
+      "text": "uh you know it'll respond back with \neverything that it knows about your code.",
+      "offset": 749120,
+      "duration": 4080
+    },
+    {
+      "text": "So this is a docker uh based deployment. It's \nbasically a single click do docker deployment",
+      "offset": 753200,
+      "duration": 6560
+    },
+    {
+      "text": "that you will uh uh do of your uh MCP server. You \nconfigure it in one step uh one or two steps and",
+      "offset": 759760,
+      "duration": 7120
+    },
+    {
+      "text": "you're up and running. It can connect with both \nSonocube server as well as Sonocube cloud. uh all",
+      "offset": 766880,
+      "duration": 6400
+    },
+    {
+      "text": "you need to do is uh provide it with uh tokens \nuh so that it can access the MCP server has the",
+      "offset": 773280,
+      "duration": 6640
+    },
+    {
+      "text": "uh access control uh permissions uh to access \nyour server and cloud environment and then it",
+      "offset": 779920,
+      "duration": 5760
+    },
+    {
+      "text": "runs as a lightweight local container in your \nuh development environment. So typically the",
+      "offset": 785680,
+      "duration": 5040
+    },
+    {
+      "text": "de way developers work is they sit on their \nworkstations. We all have our own laptops or",
+      "offset": 790720,
+      "duration": 5520
+    },
+    {
+      "text": "workstations and we run a local uh desktop uh on \non a local docker container on our environment.",
+      "offset": 796240,
+      "duration": 7520
+    },
+    {
+      "text": "Configure it once and then you you're using cursor \nor windsurf or github copilot or any CLI once it's",
+      "offset": 803760,
+      "duration": 5840
+    },
+    {
+      "text": "configured you can start communicating \nwith sonocube MCP server. Next slide.",
+      "offset": 809600,
+      "duration": 9520
+    },
+    {
+      "text": "So let's uh take a look a deeper look at at the \nnext layer as to how it actually does uh work",
+      "offset": 819120,
+      "duration": 6080
+    },
+    {
+      "text": "right. So on the right hand side is a illustration \nuh a diagram that shows how it works. So you have",
+      "offset": 825200,
+      "duration": 4560
+    },
+    {
+      "text": "an MCP client which can be claude code or cursor \nor Devon or VSURF or any of the CLI tools that",
+      "offset": 829760,
+      "duration": 6000
+    },
+    {
+      "text": "you're using AI AI agents or AI native ids or CLIs \nthat you're using uh you have that configured to",
+      "offset": 835760,
+      "duration": 8560
+    },
+    {
+      "text": "uh use configure them to use the sonorube MCP \nserver and then MCP server will make calls",
+      "offset": 844320,
+      "duration": 5440
+    },
+    {
+      "text": "to solon cloud or server whatever you're \nusing and get your code quality and code",
+      "offset": 849760,
+      "duration": 4720
+    },
+    {
+      "text": "uh security analysis done within your MCP \nclient inside your cloud code or cursor.",
+      "offset": 854480,
+      "duration": 4480
+    },
+    {
+      "text": "So an example here would be the agent query would \nbe a natural language prompt inside your AI native",
+      "offset": 859520,
+      "duration": 5840
+    },
+    {
+      "text": "ID. Uh it could be an example here says are there \nany new vulnerabilities in my code file that I'm",
+      "offset": 865360,
+      "duration": 6400
+    },
+    {
+      "text": "working on? this translation this uh uh this \nnatural language prompt is uh sent to the MCP",
+      "offset": 871760,
+      "duration": 6160
+    },
+    {
+      "text": "server and it's basically converting that uh to an \nuh Sonocube API request and makes that request on",
+      "offset": 877920,
+      "duration": 6880
+    },
+    {
+      "text": "behalf of you and then translates the results \nback and sends it back to the user. So uh you",
+      "offset": 884800,
+      "duration": 6320
+    },
+    {
+      "text": "know you you could say uh once once you s submit \nthat prompt what it happens is behind the tool the",
+      "offset": 891120,
+      "duration": 5520
+    },
+    {
+      "text": "tool call that it makes is search sonar issues \nin projects and return me the vulnerabilities",
+      "offset": 896640,
+      "duration": 5280
+    },
+    {
+      "text": "in this code file. So it gets the context of the \nfile it uh speaks with sonar cube server and then",
+      "offset": 901920,
+      "duration": 6880
+    },
+    {
+      "text": "uh it returns your results inside your editor \nwithout having you to leave your workflow at",
+      "offset": 908800,
+      "duration": 4400
+    },
+    {
+      "text": "all. So that's a highle quick in uh information \nabout how it works. Let's get to the next slide.",
+      "offset": 913200,
+      "duration": 8880
+    },
+    {
+      "text": "So what does this enable us to do? Basically what \nare the use cases it opens up for us. Uh there are",
+      "offset": 922080,
+      "duration": 5840
+    },
+    {
+      "text": "four broad use cases and this is not uh you know \nthe exhaustive list but these are four highle key",
+      "offset": 927920,
+      "duration": 5520
+    },
+    {
+      "text": "use cases that it opens up for us. You can do \nan ondemand code analysis before you make your",
+      "offset": 933440,
+      "duration": 6160
+    },
+    {
+      "text": "code commits before you submit your pull request \nfor uh commits. Right? Uh number one. Number two,",
+      "offset": 939600,
+      "duration": 6160
+    },
+    {
+      "text": "you can also check the project health of your \nSonoCube projects that you're analyzing using",
+      "offset": 945760,
+      "duration": 5600
+    },
+    {
+      "text": "your natural language prompt inside your AI native \nID. Number three, you can do a comprehensive code",
+      "offset": 951360,
+      "duration": 6160
+    },
+    {
+      "text": "quality and code security assessment of your uh \nproject. You can you can ask it for uh all the",
+      "offset": 957520,
+      "duration": 5760
+    },
+    {
+      "text": "things that you want to know about your code base \nuh by using a simple natural language uh prompt,",
+      "offset": 963280,
+      "duration": 5360
+    },
+    {
+      "text": "right? And last software composition analysis. \nThis is uh something which is differentiated for",
+      "offset": 968640,
+      "duration": 5520
+    },
+    {
+      "text": "us and something which we have added on top of \nthe standard thing. If you uh remember a couple",
+      "offset": 974160,
+      "duration": 5280
+    },
+    {
+      "text": "of months back we announced advanced security \nsonou advanced security. With son cube advanced",
+      "offset": 979440,
+      "duration": 6080
+    },
+    {
+      "text": "security you get sonar uh software composition \nanalysis as well as advanced SAS. So the results",
+      "offset": 985520,
+      "duration": 7280
+    },
+    {
+      "text": "of software composition analysis can also be uh \nyou know uh you can catch the details of your uh",
+      "offset": 992800,
+      "duration": 6480
+    },
+    {
+      "text": "you know scar results inside your AI native ID. \nA good example uh will be coming up in the next",
+      "offset": 999280,
+      "duration": 6800
+    },
+    {
+      "text": "slide. I'll talk about it how how we can use \nit with the scar as well. Uh so next slide.",
+      "offset": 1006080,
+      "duration": 8320
+    },
+    {
+      "text": "So here getting a a bit more uh into the use \ncases. What are the features and key capabilities",
+      "offset": 1014400,
+      "duration": 6080
+    },
+    {
+      "text": "of SonoCube MCP server? It's basically a a way for \nyou to ensure the code health to for you to make",
+      "offset": 1020480,
+      "duration": 7520
+    },
+    {
+      "text": "sure that your code quality and code security for \nthe AI generated code is not compromised. Right?",
+      "offset": 1028000,
+      "duration": 6080
+    },
+    {
+      "text": "So there are five or six things listed here and \nthere's more you can do with it but I'm calling",
+      "offset": 1034080,
+      "duration": 4400
+    },
+    {
+      "text": "out five or six things. You can actually look at \nour GitHub repo and the docs and see what else",
+      "offset": 1038480,
+      "duration": 4400
+    },
+    {
+      "text": "it can do for you. Uh but it essentially if you \nsend a tool request saying analyze code snippet",
+      "offset": 1042880,
+      "duration": 6240
+    },
+    {
+      "text": "the code snippet that you're working on in your \nID can be analyzed for code quality and code",
+      "offset": 1049120,
+      "duration": 4160
+    },
+    {
+      "text": "security issues. You can search for issues and \ndo some project management work with respect to",
+      "offset": 1053280,
+      "duration": 5200
+    },
+    {
+      "text": "your projects that you have on SonoCube which are \nconfigured for analysis. You can get quality gate",
+      "offset": 1058480,
+      "duration": 5760
+    },
+    {
+      "text": "information directly from your ID and check the \nstatus status of your quality gates and check the",
+      "offset": 1064240,
+      "duration": 6560
+    },
+    {
+      "text": "uh you know retrieve some metrics like code \ncoverage and duplication and things like that",
+      "offset": 1070800,
+      "duration": 4480
+    },
+    {
+      "text": "right within your IDE. Uh advanced security is \nwhat I've just talked about. If you have advanced",
+      "offset": 1075280,
+      "duration": 6080
+    },
+    {
+      "text": "security enabled on your son server and cloud \nyou can also search for your dependency risks.",
+      "offset": 1081360,
+      "duration": 6720
+    },
+    {
+      "text": "So assuming your project is using some open source \nlibraries whether they are vulnerable or not you",
+      "offset": 1088080,
+      "duration": 6000
+    },
+    {
+      "text": "can get that information directly in your ID \nas part of uh query that you make to Sona cube",
+      "offset": 1094080,
+      "duration": 5280
+    },
+    {
+      "text": "using the MCP server and then there a couple \nof other things that you could do like instant",
+      "offset": 1099360,
+      "duration": 4720
+    },
+    {
+      "text": "administration uh instance administration as well \nas exploring a code code rules and getting some",
+      "offset": 1104080,
+      "duration": 6160
+    },
+    {
+      "text": "more information about your source code etc from \nSonocube. Uh there's a whole some more tools that",
+      "offset": 1110240,
+      "duration": 5360
+    },
+    {
+      "text": "are available. you can look at them once you get a \nchance to play with it or install with it. Uh but",
+      "offset": 1115600,
+      "duration": 5520
+    },
+    {
+      "text": "uh yeah, so it's it's a pretty powerful tool, \nsimple, easy to use. Set it up once and start",
+      "offset": 1121120,
+      "duration": 6400
+    },
+    {
+      "text": "uh making your code better. Right? \nSo that's all it in terms of your",
+      "offset": 1127520,
+      "duration": 5200
+    },
+    {
+      "text": "uh highle overview of what SonoCube MCP \nserver is. Let's go to the next slide.",
+      "offset": 1132720,
+      "duration": 8640
+    },
+    {
+      "text": "And yes uh it does work with pretty much all the \ntools and platforms that are out there that you",
+      "offset": 1141360,
+      "duration": 5440
+    },
+    {
+      "text": "might be using. I this is not a comprehensive \nlist. We keep adding more and more support.",
+      "offset": 1146800,
+      "duration": 5280
+    },
+    {
+      "text": "But today we do support uh AI assistants like the \nentire cloud family including cloud code and cloud",
+      "offset": 1152080,
+      "duration": 6400
+    },
+    {
+      "text": "desktop. We support GitHub copilot obviously we \nsupport Amazon Q developer and then uh Devon the",
+      "offset": 1158480,
+      "duration": 6640
+    },
+    {
+      "text": "AI engineer is also supported. Uh in terms of AI \nnative ids, we do support cursor, winds, serve,",
+      "offset": 1165120,
+      "duration": 6560
+    },
+    {
+      "text": "uh zed, ko and some of the other ids that might be \ncoming out. We'll be uh we'll be ready to add more",
+      "offset": 1171680,
+      "duration": 5840
+    },
+    {
+      "text": "support as you need. If there's anything missing, \ndo let us know and we can uh you know build",
+      "offset": 1177520,
+      "duration": 4720
+    },
+    {
+      "text": "integrations very easily for those uh agentic \ntools that you're using for these days command",
+      "offset": 1182240,
+      "duration": 5680
+    },
+    {
+      "text": "line interfaces are getting extremely popular. In \nparticular, Codex CLI is getting a lot of traction",
+      "offset": 1187920,
+      "duration": 5920
+    },
+    {
+      "text": "and a lot of our customers are asking for asked \nfor Codex CLI support and we added it recently to",
+      "offset": 1193840,
+      "duration": 6000
+    },
+    {
+      "text": "the MCP server. So now we have Codex CLI, Gemini \nCLI as well as GitHub copilot CLI all supported",
+      "offset": 1199840,
+      "duration": 7120
+    },
+    {
+      "text": "uh with our MCP server. And the best thing is you \ncan get this uh MCP server from uh several places.",
+      "offset": 1206960,
+      "duration": 7200
+    },
+    {
+      "text": "You can get it from uh our uh GitHub repository. \nYou can build your own uh you know image if you",
+      "offset": 1214160,
+      "duration": 6080
+    },
+    {
+      "text": "like to. It's the source code is available. But \nthe easiest option for you is to go to the Docker",
+      "offset": 1220240,
+      "duration": 5040
+    },
+    {
+      "text": "MCP hub and just run the Docker container with \na single command and just pass it the tokens and",
+      "offset": 1225280,
+      "duration": 5200
+    },
+    {
+      "text": "you're good to go. It's also available from the \nanthropic MCP marketplace as well as MCP.So if",
+      "offset": 1230480,
+      "duration": 5920
+    },
+    {
+      "text": "you want to if you're using those marketplaces. \nNext slide. All right, I have uh gone through",
+      "offset": 1236400,
+      "duration": 9280
+    },
+    {
+      "text": "the slides quickly. I think the best part is when \nyou see it in action and I have my colleague here",
+      "offset": 1245680,
+      "duration": 6240
+    },
+    {
+      "text": "Prasanjit Sakar who will give a live demo of this \ntool. Uh so fingers crossed the live demo works.",
+      "offset": 1251920,
+      "duration": 7440
+    },
+    {
+      "text": "Uh you know how things are uh but let's take \nit away Pasit. Sure. Okay. Thank you Manish. So",
+      "offset": 1259360,
+      "duration": 9120
+    },
+    {
+      "text": "um I'll be unsharing this and then sharing couple \nof other tabs. Um so share the screen and yeah so",
+      "offset": 1268480,
+      "duration": 15440
+    },
+    {
+      "text": "um first thing first how um how we need to um \nyou know how we need to navigate uh for the",
+      "offset": 1283920,
+      "duration": 8160
+    },
+    {
+      "text": "deployment as uh Manish mentioned that there's \na pretty um quick way to get started and I just",
+      "offset": 1292080,
+      "duration": 7680
+    },
+    {
+      "text": "want to start from the docs itself like how do \nyou get started from the docs. So this is our",
+      "offset": 1299760,
+      "duration": 5360
+    },
+    {
+      "text": "sonarource.com website. Um from there I can just \nclick on the product and in the high level I have",
+      "offset": 1305120,
+      "duration": 6640
+    },
+    {
+      "text": "this MCP server right there. Click on the right \nmcp server. So this our you know landing page for",
+      "offset": 1311760,
+      "duration": 5520
+    },
+    {
+      "text": "the MCP server. You just have the deploy for free \nand which is going to take you to the doc site. So",
+      "offset": 1317280,
+      "duration": 5280
+    },
+    {
+      "text": "clicking on that is going to take you to the doc \nsite and then you know if you just scroll down",
+      "offset": 1322560,
+      "duration": 5600
+    },
+    {
+      "text": "then you have all your documentation right there \nbuilt in. Um the good news is that we have uh the",
+      "offset": 1328160,
+      "duration": 6960
+    },
+    {
+      "text": "setup command also built in right there um within \nthis platform itself. So you see this MCP server",
+      "offset": 1335120,
+      "duration": 6880
+    },
+    {
+      "text": "set up in your IDE and then you see this you know \nset up in the cloud code or codeex CLI cursor",
+      "offset": 1342000,
+      "duration": 5280
+    },
+    {
+      "text": "and you know all the other stuff that Manish \nmentioned. Um so for today's demo I'm going to",
+      "offset": 1347280,
+      "duration": 5920
+    },
+    {
+      "text": "use cursor as an you know AI native IDE to install \nMCP server and configure and then you know show",
+      "offset": 1353200,
+      "duration": 7520
+    },
+    {
+      "text": "you how exactly do you need to inte uh you know um \ninteract with that. Um so expand this uh setup in",
+      "offset": 1360720,
+      "duration": 6720
+    },
+    {
+      "text": "cursor and then you have two options. One is you \ncan connect it uh you can connect and install it",
+      "offset": 1367440,
+      "duration": 6560
+    },
+    {
+      "text": "or configure it um with the sonar cube cloud or \nyou can do it in the sonar cube server as well.",
+      "offset": 1374000,
+      "duration": 5440
+    },
+    {
+      "text": "Um, so I'm going to do it with a sonar cube cloud. \nSo you see this link in right there. If you have",
+      "offset": 1379440,
+      "duration": 6320
+    },
+    {
+      "text": "cursor installed, you see this command uh is built \nin right there. So you just click on that. It will",
+      "offset": 1385760,
+      "duration": 6000
+    },
+    {
+      "text": "open up the cursor window which I will show you um \nin a second. Uh I need to unshare and share that",
+      "offset": 1391760,
+      "duration": 7600
+    },
+    {
+      "text": "again. So unshare. And now I'll be going to the \ncursor here. Yeah. So uh now you see this cursor",
+      "offset": 1399360,
+      "duration": 10000
+    },
+    {
+      "text": "screen. So here you have the you know MCP MCP \nname which is uh sonar cube mcp server um and",
+      "offset": 1409360,
+      "duration": 7520
+    },
+    {
+      "text": "here's the command uh that uh you know Manish uh \nmentioned about it. So you put down this command",
+      "offset": 1416880,
+      "duration": 5760
+    },
+    {
+      "text": "um here you have uh sonar cube token. So this \nis the token that you get it from your uh sonar",
+      "offset": 1422640,
+      "duration": 6240
+    },
+    {
+      "text": "cube cloud uh you know administration window. Um \nand then you also need to pass on your org name.",
+      "offset": 1428880,
+      "duration": 5760
+    },
+    {
+      "text": "So um I'm not going to do it right now um because \nyou know these two are sensitive information. So",
+      "offset": 1434640,
+      "duration": 5360
+    },
+    {
+      "text": "you know you just need to replace that and \nclick on install. When you click on install",
+      "offset": 1440000,
+      "duration": 4320
+    },
+    {
+      "text": "uh you'll be seeing the the tools is going \nto be enabled right here. I'm sorry. Um so",
+      "offset": 1444320,
+      "duration": 7680
+    },
+    {
+      "text": "you see that's our QMCB server. Then there are 13 \ndifferent tools which are enabled. Um I'm going to",
+      "offset": 1452000,
+      "duration": 5360
+    },
+    {
+      "text": "click on click on cancel and I'm going to show you \nexpand uh expanding this. So you see this all of",
+      "offset": 1457360,
+      "duration": 6160
+    },
+    {
+      "text": "these different commands Manish mentioned which \nis like hey I can change the sonar issue status",
+      "offset": 1463520,
+      "duration": 6400
+    },
+    {
+      "text": "I can you know figure it out what is my you know \nquality gate status and all of that and these are",
+      "offset": 1469920,
+      "duration": 5520
+    },
+    {
+      "text": "the calls that will be um that will be called uh \nfrom the uh you know from from the agentic stuff.",
+      "offset": 1475440,
+      "duration": 6960
+    },
+    {
+      "text": "Um now let me close it down and let me open up \na project. So I'm going to open up a deeper SAS",
+      "offset": 1482400,
+      "duration": 6000
+    },
+    {
+      "text": "demo for um yeah so is okay. So you see this I \nopened up this one um this project. So this is my",
+      "offset": 1488400,
+      "duration": 12640
+    },
+    {
+      "text": "file user controller Java. Um my tools are already \nenabled that you have seen um and okay it's asking",
+      "offset": 1501040,
+      "duration": 9600
+    },
+    {
+      "text": "me to do the configure binding. That's fine. I'm \ngoing to do the binding. So this is binded uh",
+      "offset": 1510640,
+      "duration": 4720
+    },
+    {
+      "text": "there. Now I'm going to open up uh this chat and \nthen say can you list the vulner vulnerabilities",
+      "offset": 1515360,
+      "duration": 15600
+    },
+    {
+      "text": "in this file using sonar and I just clicked \nenter and it's going to planning the next move.",
+      "offset": 1530960,
+      "duration": 10640
+    },
+    {
+      "text": "going to find out that okay it does \nhave the you know sonar mcp and",
+      "offset": 1541600,
+      "duration": 6640
+    },
+    {
+      "text": "uh yeah so I need to add this uh search \nsonar uh c sonar cube project to allow",
+      "offset": 1548240,
+      "duration": 6160
+    },
+    {
+      "text": "list I'm going to set a yes add so it found \nout that there are six different projects",
+      "offset": 1554400,
+      "duration": 7440
+    },
+    {
+      "text": "uh enabled in my uh you know org but you know it \nfound out that this is the project um so now it's",
+      "offset": 1561840,
+      "duration": 6320
+    },
+    {
+      "text": "add the mcp list um mcp tool to the allow test. \nI'm going to click on that and now it is analyzing",
+      "offset": 1568160,
+      "duration": 9280
+    },
+    {
+      "text": "and finding it out that where I mean if there are \nany uh you know problem uh in this in this code",
+      "offset": 1577440,
+      "duration": 16240
+    },
+    {
+      "text": "it's taking unusual time but yeah it \nfound out um two uh two issues in here",
+      "offset": 1593680,
+      "duration": 15600
+    },
+    {
+      "text": "and you see that it has analyzed and it \nis giving me all the information about it.",
+      "offset": 1609280,
+      "duration": 7600
+    },
+    {
+      "text": "So um it has thought for like 13 different 13 \nseconds. it uh told me that I analyzed this um",
+      "offset": 1616880,
+      "duration": 7280
+    },
+    {
+      "text": "and you know there are uh issues that you know it \nfound out that you know two different uh issues",
+      "offset": 1624160,
+      "duration": 5680
+    },
+    {
+      "text": "and in here I can click on show more and I can see \nthat there are issues uh with the rule key is Java",
+      "offset": 1629840,
+      "duration": 7520
+    },
+    {
+      "text": "uh you know S1598 um and it's a critical severity \nuh critical severity problem and then I have found",
+      "offset": 1637360,
+      "duration": 9360
+    },
+    {
+      "text": "two different issues which are critical now I \nI saw this and then what I can do is I can use",
+      "offset": 1646720,
+      "duration": 8240
+    },
+    {
+      "text": "uh I can I can chat more like for \nexample um can you tell me the",
+      "offset": 1654960,
+      "duration": 11600
+    },
+    {
+      "text": "quality gate status for this project using sonar.",
+      "offset": 1666560,
+      "duration": 6160
+    },
+    {
+      "text": "is fetching that. I'm going to \nadd this into the allow list.",
+      "offset": 1681520,
+      "duration": 2880
+    },
+    {
+      "text": "So it's going to create a tool call and \nquality state gate status is showing none",
+      "offset": 1684400,
+      "duration": 5200
+    },
+    {
+      "text": "uh for the deeper sales demo project. \nUm so now there's no quality gate state",
+      "offset": 1689600,
+      "duration": 5600
+    },
+    {
+      "text": "u that is configured or associated with \nthat and that's why it's showing me none.",
+      "offset": 1695200,
+      "duration": 3920
+    },
+    {
+      "text": "Um so I can chat like this you know continuously \nand I can figure it out what's going on in there.",
+      "offset": 1699120,
+      "duration": 5680
+    },
+    {
+      "text": "Now I can change the status of let's say I can \nchange the status of one particular critical",
+      "offset": 1704800,
+      "duration": 5440
+    },
+    {
+      "text": "vulnerability saying that it is accepted and \nI am accepting that yes this is a problem. Um,",
+      "offset": 1710240,
+      "duration": 5280
+    },
+    {
+      "text": "so I can figure it out that hey, there is \nuh this rule key and I'm going to say that",
+      "offset": 1715520,
+      "duration": 10240
+    },
+    {
+      "text": "can you change the status",
+      "offset": 1725760,
+      "duration": 6880
+    },
+    {
+      "text": "of this issue as accepted in sonar.",
+      "offset": 1732640,
+      "duration": 9920
+    },
+    {
+      "text": "It's doing a new move. Changing the \nchanging the status and you see that",
+      "offset": 1749120,
+      "duration": 4560
+    },
+    {
+      "text": "it's actually trying to search \nfor the project to the allow list",
+      "offset": 1753680,
+      "duration": 6800
+    },
+    {
+      "text": "found eight different issues find out uh the \nissue status and I'm going to click on allow",
+      "offset": 1760480,
+      "duration": 6720
+    },
+    {
+      "text": "to change the status of that particular issue. So \nit is going to be uh treated as accepted. Now here",
+      "offset": 1767200,
+      "duration": 6400
+    },
+    {
+      "text": "you see a little uh popup saying that uh it has \nchanged the quality gauge is now green and it's",
+      "offset": 1773600,
+      "duration": 6480
+    },
+    {
+      "text": "now showing up and you can click on this and you \ncan see the status of this in the Sonar Cube cloud",
+      "offset": 1780080,
+      "duration": 6320
+    },
+    {
+      "text": "as well. It will show you as accepted uh into \ninto when you go to the issue tab. Um so yeah",
+      "offset": 1786400,
+      "duration": 6000
+    },
+    {
+      "text": "this is the way that you can you can you can chat \nwith it and as you have seen that it's pretty easy",
+      "offset": 1792400,
+      "duration": 6240
+    },
+    {
+      "text": "to install just one command and you just need \nto supply the the the you know the the sonar",
+      "offset": 1798640,
+      "duration": 5600
+    },
+    {
+      "text": "cube clouds token and the org ID um and that's it \nyou're done uh with the one docker command um it's",
+      "offset": 1804240,
+      "duration": 7520
+    },
+    {
+      "text": "up and running 13 different tools and then you can \nstart chatting here um and it's just that one ID",
+      "offset": 1811760,
+      "duration": 5520
+    },
+    {
+      "text": "but you can do the same thing with you know let's \nsay cloud code or codeex cla or ji cla or other",
+      "offset": 1817280,
+      "duration": 4720
+    },
+    {
+      "text": "CLAs as well uh where we have support for um so \nyeah it is it is the that I you know overall this",
+      "offset": 1822000,
+      "duration": 6400
+    },
+    {
+      "text": "agent ids uh where we do have our MCP support and \nyou don't need to switch uh back and forth to your",
+      "offset": 1828400,
+      "duration": 7040
+    },
+    {
+      "text": "sonar window saying is you know trying to see what \nare the different issues how do I search for that",
+      "offset": 1835440,
+      "duration": 5760
+    },
+    {
+      "text": "uh rather than you know if you're using um you \nknow if you're if you're trying to generate the",
+      "offset": 1841200,
+      "duration": 5040
+    },
+    {
+      "text": "comm gen the code um from the ID itself you can \njust do it from the command I You can do it from",
+      "offset": 1846240,
+      "duration": 5600
+    },
+    {
+      "text": "the chat window itself. All right. So with that \nI am going to stop the share and going back to",
+      "offset": 1851840,
+      "duration": 11280
+    },
+    {
+      "text": "the the one I'm going to share it one more time. \nShare screen. Uh and there you go. So Manish over",
+      "offset": 1863120,
+      "duration": 12800
+    },
+    {
+      "text": "to you. You do you want to wrap it up? It's fine. \nor I can do it. Okay, fair enough. Yeah. Okay. Um,",
+      "offset": 1875920,
+      "duration": 6400
+    },
+    {
+      "text": "so yeah, you know, so you we have all of \nthese resources available. You can see that",
+      "offset": 1882320,
+      "duration": 5760
+    },
+    {
+      "text": "uh we do have as manage mentioned that you know \nour docker image is right there in in dockerhub",
+      "offset": 1888080,
+      "duration": 4480
+    },
+    {
+      "text": "which is mcpson cube. Um our documentation \nwebsite is docs.ssonsource.com and then you",
+      "offset": 1892560,
+      "duration": 6640
+    },
+    {
+      "text": "can see that main p from the main page you \ncan navigate to the mcb server documentation.",
+      "offset": 1899200,
+      "duration": 4800
+    },
+    {
+      "text": "um or as Manish also mentioned that if you find \nout that there is any problem or if you want any",
+      "offset": 1904000,
+      "duration": 5760
+    },
+    {
+      "text": "more uh you know tool support um for example or \nany other new ID support or CLI support you can",
+      "offset": 1909760,
+      "duration": 7520
+    },
+    {
+      "text": "open up an issue in our GitHub um so that's \ngithub.com/sunosource cube and MCP server",
+      "offset": 1917280,
+      "duration": 6400
+    },
+    {
+      "text": "um our product web page is right there uh in \nsonasource.com go to the products and then",
+      "offset": 1923680,
+      "duration": 4720
+    },
+    {
+      "text": "you know MCP server um we do have our blog as \nwell for the for you know sonar cube uh server",
+      "offset": 1928400,
+      "duration": 7280
+    },
+    {
+      "text": "our community is very uh you know active uh in in \nterms of other stuff so it's community sonarus.com",
+      "offset": 1935680,
+      "duration": 6320
+    },
+    {
+      "text": "so yeah and as I said you know reiterating \nthe same thing uh install the docker image get",
+      "offset": 1942000,
+      "duration": 5280
+    },
+    {
+      "text": "the token run the MCP server and configure your \nassistant that's it that's how you just start so",
+      "offset": 1947280,
+      "duration": 5120
+    },
+    {
+      "text": "it's four different steps very small like within \ncouple of minutes your MCP is up and running and",
+      "offset": 1952400,
+      "duration": 4880
+    },
+    {
+      "text": "then you start chatting away with that uh you \ncan probably do a lot of automation with that",
+      "offset": 1957280,
+      "duration": 5040
+    },
+    {
+      "text": "uh and run some automation and you know figure it \nout uh that you know how what are the different I",
+      "offset": 1962320,
+      "duration": 4960
+    },
+    {
+      "text": "mean what is my quality gate with the new code \nthat I have integrated within that and that's",
+      "offset": 1967280,
+      "duration": 4000
+    },
+    {
+      "text": "what Manish mentioned that you know you don't \nneed to do a uh you know PR to figure it out",
+      "offset": 1971280,
+      "duration": 4320
+    },
+    {
+      "text": "that okay what's going on I mean you can do a \nI mean you can chat in your IDE or you can the",
+      "offset": 1975600,
+      "duration": 6160
+    },
+    {
+      "text": "same chat in your uh you know CLI as well and you \ncan ask that you know what's the status of this",
+      "offset": 1981760,
+      "duration": 5440
+    },
+    {
+      "text": "uh what are the different vulnerabilities in \nhere and then obviously because of the you know",
+      "offset": 1987200,
+      "duration": 4400
+    },
+    {
+      "text": "uh the the the code either overall code \nor new code we are continuously analyzing",
+      "offset": 1991600,
+      "duration": 4480
+    },
+    {
+      "text": "the code that you are generating as well. \nSo it's like you know a live system where",
+      "offset": 1996080,
+      "duration": 4640
+    },
+    {
+      "text": "you can get the feedback uh right within the \ndeveloper environment where you are right now.",
+      "offset": 2000720,
+      "duration": 7680
+    },
+    {
+      "text": "Yep. Uh thank you Pasenjit for the demo and uh \nand have any questions? Yeah thanks Presenett.",
+      "offset": 2008400,
+      "duration": 7520
+    },
+    {
+      "text": "Thanks Manish. Um thanks to you both. Um and yes \nwe had a lot of questions actually. Um I'll just",
+      "offset": 2015920,
+      "duration": 8400
+    },
+    {
+      "text": "try and summarize some of them. So there were \na lot of questions about you know what are the",
+      "offset": 2024320,
+      "duration": 4480
+    },
+    {
+      "text": "prerequisites um and obviously you know the the \nversion of sonar cube cloud is fine but people",
+      "offset": 2028800,
+      "duration": 7200
+    },
+    {
+      "text": "were talking about which plan is it available on \nand also the sonar cube server version as well.",
+      "offset": 2036000,
+      "duration": 4960
+    },
+    {
+      "text": "I don't know if you want to address those. Yeah \nfirst of all. Yeah. Uh, Passenger, keep me honest",
+      "offset": 2040960,
+      "duration": 5040
+    },
+    {
+      "text": "and correct me if I'm uh misspeaking. Uh, but MCP \nserver like I mentioned at the top of the call,",
+      "offset": 2046000,
+      "duration": 7120
+    },
+    {
+      "text": "uh, MCP protocol was announced in November 2024. \nUh, so you should use, we haven't tested the",
+      "offset": 2053120,
+      "duration": 8160
+    },
+    {
+      "text": "older versions of SonoCube server uh, beyond \nuh, the newer versions which we released this",
+      "offset": 2061280,
+      "duration": 4880
+    },
+    {
+      "text": "year. So if you want to use with Sonocube \nserver, I would encourage you to be on uh,",
+      "offset": 2066160,
+      "duration": 4800
+    },
+    {
+      "text": "the newer versions 2025. uh 3 and later preferably \nI believe 2025.1 and later work uh we haven't",
+      "offset": 2070960,
+      "duration": 6720
+    },
+    {
+      "text": "tested it with the older versions they may work \nthey may not work I'm not sure uh but officially",
+      "offset": 2077680,
+      "duration": 4880
+    },
+    {
+      "text": "if you want to get support from us and uh you know \nthen you have to be on uh a newer version which",
+      "offset": 2082560,
+      "duration": 6080
+    },
+    {
+      "text": "is post the announcement of the MCP protocol uh \nin terms of cloud it works with uh the free tier",
+      "offset": 2088640,
+      "duration": 6880
+    },
+    {
+      "text": "uh free plan as well as uh the team and enterprise \nplans same with uh Sonocube server it works with",
+      "offset": 2095520,
+      "duration": 6400
+    },
+    {
+      "text": "developer edition enterprise edition as well as \nuh data center edition or so. So it works with",
+      "offset": 2101920,
+      "duration": 6160
+    },
+    {
+      "text": "all of them. The calls that you can make to the m \nuh to with the MCP server to sona cube will depend",
+      "offset": 2108080,
+      "duration": 7280
+    },
+    {
+      "text": "uh I mean you know certain calls will not work \nif you don't have advanced security. So if you",
+      "offset": 2115360,
+      "duration": 5040
+    },
+    {
+      "text": "try to search for scar risks or c uh dependency \nrisks and if you don't have advanced security",
+      "offset": 2120400,
+      "duration": 6000
+    },
+    {
+      "text": "which is available on top of enterprise plans \nthen obviously that that call will not work. uh",
+      "offset": 2126400,
+      "duration": 5360
+    },
+    {
+      "text": "but the ones that are supported within your plan, \nwhichever plan you're using, uh should work just",
+      "offset": 2131760,
+      "duration": 4880
+    },
+    {
+      "text": "fine. Uh in terms of requirements, it's a Docker \nimage, so fairly light. You can uh it's it's not",
+      "offset": 2136640,
+      "duration": 7440
+    },
+    {
+      "text": "uh too uh expensive on resources, you can run it \non your laptops. Uh so it's fairly light. It is",
+      "offset": 2144080,
+      "duration": 7040
+    },
+    {
+      "text": "built using Java and it does if you build your own \nimage and things like that, you will need JDK21",
+      "offset": 2151120,
+      "duration": 5600
+    },
+    {
+      "text": "and later. Uh did I miss anything? No, just one \nquick um I just answered one other question which",
+      "offset": 2156720,
+      "duration": 7680
+    },
+    {
+      "text": "is aligned with the uh with with with the answer \nthat you just said. Um so um as of now this MCV",
+      "offset": 2164400,
+      "duration": 6880
+    },
+    {
+      "text": "server is self-hosted means individual developer \nwill run the docker image on their own laptop",
+      "offset": 2171280,
+      "duration": 5600
+    },
+    {
+      "text": "um and uh you know have the sonar cube token to \ntalk to the cloud or the server. uh but you know",
+      "offset": 2176880,
+      "duration": 6000
+    },
+    {
+      "text": "we are also actively looking to see if there is \na you know better way to support it which means",
+      "offset": 2182880,
+      "duration": 4800
+    },
+    {
+      "text": "that remote MCP server which is you know probably \nwill be hosted um uh somewhere and then you can",
+      "offset": 2187680,
+      "duration": 6240
+    },
+    {
+      "text": "you know a central repository and then developers \ncan just consume u from there. So yeah we are we",
+      "offset": 2193920,
+      "duration": 5360
+    },
+    {
+      "text": "are looking through that option as well. So it's \na it's a good feedback that you have asked for.",
+      "offset": 2199280,
+      "duration": 3920
+    },
+    {
+      "text": "Um but as of now yeah as of now it's self-hosted \nbut we are looking to uh we are looking at the",
+      "offset": 2203200,
+      "duration": 5120
+    },
+    {
+      "text": "remote option as well. Cool. Great. Um maybe just \na final question uh for either of you perhaps if",
+      "offset": 2208320,
+      "duration": 7520
+    },
+    {
+      "text": "there was one thing you'd want people to take \naway from today's webinar. Um what would it be?",
+      "offset": 2215840,
+      "duration": 6240
+    },
+    {
+      "text": "Uh we at Sonar we believe in vibe then verify \nuh you know so you should use AI to help you",
+      "offset": 2223200,
+      "duration": 8960
+    },
+    {
+      "text": "write code improve your speed of and improve \nyour productivity 100% no doubt about that but",
+      "offset": 2232160,
+      "duration": 6640
+    },
+    {
+      "text": "uh we have done a lot of evaluation of all the \nLLMs and you can find uh the evaluation of LLM",
+      "offset": 2238800,
+      "duration": 5760
+    },
+    {
+      "text": "that we have done on our website there's a state \nof LLM report or personality report for LLMs",
+      "offset": 2244560,
+      "duration": 5200
+    },
+    {
+      "text": "where we evaluated each of the state-of-the-art \nmodels uh despite being very good and very fast",
+      "offset": 2249760,
+      "duration": 6400
+    },
+    {
+      "text": "in writing code, they do introduce uh issues in \ntheir code. There are security issues, there are",
+      "offset": 2256160,
+      "duration": 6640
+    },
+    {
+      "text": "uh you know dependencies that they add which are \neither obsolete or not appropriate for the task",
+      "offset": 2262800,
+      "duration": 6480
+    },
+    {
+      "text": "or there are code quality issues, there are bugs \nin it. So you do want to verify everything that",
+      "offset": 2269280,
+      "duration": 5280
+    },
+    {
+      "text": "you're uh writing and I think uh that's where \nuh that's where sonar cube and sonar uh cube",
+      "offset": 2274560,
+      "duration": 5600
+    },
+    {
+      "text": "mcp server and server and cloud and everything \nelse comes in right we do want to make sure that",
+      "offset": 2280160,
+      "duration": 4400
+    },
+    {
+      "text": "the work that you're doing uh doesn't end up \nin more work for you two months down the line",
+      "offset": 2284560,
+      "duration": 5920
+    },
+    {
+      "text": "by increasing technical depth or trying to figure \nout u things that AI broke which looked apparently",
+      "offset": 2290480,
+      "duration": 6320
+    },
+    {
+      "text": "uh to be good but they they had some serious \nissues in it. So make sure you verify the code",
+      "offset": 2296800,
+      "duration": 5040
+    },
+    {
+      "text": "that you're working on. So uh whichever tool you \nuse that's a fundamental belief you know verify",
+      "offset": 2301840,
+      "duration": 5840
+    },
+    {
+      "text": "everything that you AI is producing at at least \nas of today. So vibe then verify that's a that's",
+      "offset": 2307680,
+      "duration": 7680
+    },
+    {
+      "text": "a great message to finish on Manish. Uh so thank \nyou thank you everybody for joining today. Um we",
+      "offset": 2315360,
+      "duration": 5840
+    },
+    {
+      "text": "had a lot of questions. Uh we answered as many \nas we could. If there's anything that you still",
+      "offset": 2321200,
+      "duration": 4560
+    },
+    {
+      "text": "want answered, then as um Prazen mentioned, head \nto our community. It's a very active community",
+      "offset": 2325760,
+      "duration": 5920
+    },
+    {
+      "text": "where there'll be lots of people happy to answer \nyour questions or to help you out if you have",
+      "offset": 2331680,
+      "duration": 4800
+    },
+    {
+      "text": "technical difficulties. Um but yeah, thanks again \nfor attending. Um thanks for completing the survey",
+      "offset": 2336480,
+      "duration": 7440
+    },
+    {
+      "text": "and we really appreciate your time uh and feedback \nand thanks and see you next time. Goodbye.",
+      "offset": 2343920,
+      "duration": 8480
+    }
+  ],
+  "fullText": "I guess. Hello and welcome and thank you \nfor joining our webinar. Introducing Sona Cube MCP server. Bring code quality \nand security into your AI workflow. If you've joined any of our previous \nwebinars, hello again and welcome back. And today we will be asking as AI tools \naccelerate our coding, how do we solve the engineering productivity paradox, eliminating \nthat new verification bottleneck and bring code quality and security directly into the AI assisted \nworkflow. I'm Andrew and I'll be your moderator today. And I'm excited to have Manish Kapoor \nand President Saka with us today as presenters. So just before we begin, I just want to go over \na couple of bits of housekeeping. Uh the session will be about 30 to 45 minutes and we'll have Q&A \nat the end, but you are invited to submit your questions at any time during the webinar via the \nQ&A tab in the panel which should be above on your screen at the right. And we'll endeavor to answer \nas many of these questions as possible during the webinar. So do feel free to submit your questions \nat any time and don't wait until the end. Plus you can upvote any questions you particularly like \nto see answered. Uh we will record the session and we will send out a link via email to this \nrecording in the coming days. Finally um towards the end actually no from the start we'll have \na brief four question survey available to you uh to take at any time. So your input will help us \nimprove and we appreciate your feedback. Now I'm in I'm pleased to introduce our first presenter \nManish. If you'd like to move to the next slide and we should see that come up now. And yes, \nManish with his strong background in everything from strategy to developer relations truly \nbridges the gap between the product and the people who use it. He joins us from Austin today. \nAnd we're also joined by Presenjit who is also a seasoned technology and product leader from our \nteam at Sonar who has a passion for building and scaling innovative AI products. But starting with \nManish over to you. Thank you Andrew. Next slide. A very warm welcome to all of you for joining \nthe webinar today. Thanks for taking the time. My name is Manish and I'm going to kick things off \nwith the with some introduction to SonarCube MCP server. We launched our Sonar Cube MCP server just \nabout three or four weeks back and I'm excited to share uh what it is and how it works and how \nyou can benefit from it, how you can integrate it with our with your AI native ids and agents. \nSo let's get started. Next slide. All right, the plan for today is really simple just three things, \nright? So we will start with uh understanding what MCP or model context protocol is just to set \nthe context. It'll be real quick introduction to model context protocol protocol. Next I'll \ntalk about SonoCube MCP server. Uh what it is, how you can use it and things like that. what the \nuse cases it enables for you when you start using AI native SDS uh ids and agents and next we'll \nfollow it up with a demo. So let's get started. So almost all of us are using AI uh to write \ncode today. It is helping us turbocharge our software development. It is helping us write code \nfaster than ever before. uh it seems that we are becoming very productive but we are also seeing \nsome challenges that come with faster speed of uh code generation. We are seeing that time saved \nwriting code is essentially lost in some of the other ch tasks that we do as developers. Those \ntasks are like verifying the code that AI has written and then sometimes uh you have to switch \nworkflows. you have to switch context between your uh ID and your from your agent into your Sono cube \nor whatever tool that you're using to analyze your code to verify your code and then there is you \nknow uh integration with your rest of the tools in the AISDLC like Jira and other tools that you \nuse how do you integrate with them and how do you make it all work seamlessly and then of obviously \nthere are code that AI produces is similar to what we produce as developers it contains bugs and \nsecurity issues So on the right hand side it this depicts what's happening in the world today. We \nare seeing the blue line shows the pace at which AI is writing code. It's the velocity at which \ncode is being produced by AI tools is phenomenally phenomenally high. Uh but on the flip side what \nis happening is there are bottlenecks that are being introduced. One big bottleneck that we we \nare seeing from our customers and hearing from our customers is code verification. Automatic code \nreviews and manual code reviews. They have to be part of your uh you know verification layer. \nAnd if the code velocity is very very high, it's not easy to uh we are seeing that customer \nare customers are finding it hard to verify the code at the pace at which it's being written. \nSo there's a gap between verification and and the pace at which AI is writing code. So \nwe'll talk about how we are going to address this and how some of these challenges will be \nresolved today with the MCP server. Next slide. So let's take a step back. Uh let's look \nat what is model context protocol also known as MCP. Uh actually model context protocol \nsurprisingly was announced in November of 2024 uh by Anthropic. It's a a pro protocol which \nbecame very popular suddenly in March or April time frame of this year. For the first couple of \nmonths, it was not noticed by most developers. But eventually when people found it, when they started \nusing it, they started realizing the benefits of it. It has gained so much traction that today \nwe have over 2,000 3,000 model context protocol servers out there which are uh available for \nyou to use as part of your uh AI development chip tool chain. So what is it? It's basically a \nuniversal translator between your AI agents and external tools. And external tools, when I say \nexternal tools, it's bringing the context from the external services and products such as MySQL \ndatabase or GitHub or Sona Cube into your agent to provide them with the rich context that they need \nto uh produce better coding code for you. Right? So it's essentially a bridge providing the uh \na standard way of interfacing with resources uh and you know the resources are that you want \nto use with your agent to make it perform better right that's what model context protocol does \nit's a standard protocol so uh it's a universal standard which is uh defined by anthropic uh \nit's one protocol that you use for your different integrations it is it relies on natural language \nso on one side you start quering your resources with natural language and you in your AI native \nids and then on the other side you're talking to tools that you're connected to and it works across \nAI assistants and ids and it's a vendor neutral uh protocol right so pretty much everyone is using \nthe same protocol to talk to agents and for the agents to communicate with uh the resources \nthere's also another protocol which we'll not be talking about is between agents how do you \ntalk that's called agent to agent protocol But that's not the scope in scope today. Today we'll \nfocus on model context protocol and we'll see how it works and how Sona cube has implemented \nit and what benefits you get. Next slide. So a little bit more about model context protocol \nbefore we get into SonoCube MCP server. So what are the key functions of an MCP server? It's \nbasically is a way protocol that helps you connect your LLMs to external resources. And I like like \nI mentioned resources can be anything. It can be a MySQL database, it can be an Oracle database, it \ncan be external API, it can be Sona cube, it can be uh any of the tools that you want to use with \nyour LLMs, right? So it simplifies the interaction between LLMs and the to resources that you want \nto speak with. uh there's a API uh implementation uh that it enables. Uh so on the left side you \nbasically use the MCP protocol. If you look at the diagram on the left side you have different MCP \nclients sitting inside the MCP host. They're using the MCP protocol to and uh sending the requests \nto the MCP server which then translates those requests to talk to the uh resources. So in case \nof uh you know if you're talking to a database and you want to use TCP communications it translates \nyour natural language uh prompts into TCP protocol and sends those requests to MySQL database. \nIn case of Sona cube uh basically you send API requests you access make calls to the sonou API \nvia the MCP client using the MCP server. So in in a sense what it is doing is it is getting \nthe context from Sona cube or your database or whatever resource you are working with and \nbringing that context to the agents and helping them improve their output reduce hallucinations \nproduce better output and things like that right so it's a standardized communication which \nuh you can again uh connect with different resources tools are basically defined as \nthe interactions uh or the API calls that you perform to access the resources that you're \nuh connecting to and then there are prompts. So those are the three key pieces uh when it comes \nto uh an MCP server implementation. Next slide. So I'm super excited to talk about MCP server. \nSonar cube MCP server. Like I said we announced it earlier this uh in October. Uh it's basically a \nfree uh product, free solution. We have the source code available for it on our GitHub repository. \nUh so you have the source code. It is free. It is the official implementation of the model context \nprotocol. It is basically designed to be a bridge between your AI agents and your AI native IDs and \nSona cubes trusted code analysis. So what does it do? So it's it's basically uh enabling you to \nwrite uh get better code outputs from your agentic uh ids. So as a developer if you're using cursor \nor winds surf or github copilot or any of these ids you can have you can connect those ids \nwith sonube mcp server and then you can have a conversational integration between the two. So \nyou can ask questions to uh Sona cube once the integration is in done and you can get real-time \ncode quality analysis and feedback for the code that you're writing inside your ids. It's a \nstandardized way. It's a scalable solution. What this means is you don't have to context \nswitch. For example, if there was no MCP server, what would you how would your workflow look like? \nIt would be basically you start typing code in uh creating code in your cursor ID and if you \nwant to evaluate it you would have to submit a pull request and then the pull request would uh \nget analyzed by sonar cube and the results would show back would come back and you would have to \ninterpret those. So you had to do little bit of a context switching if you were to use it without \nthe MCP server. With the MCP server integration, you don't have to leave your ID interface \nor in case of CLIs if you're using command line interface. You can stay within \nthe interface and start proactively uh you know looking at your code and asking \nsonube to analyze it and tell you about it and uh you know it'll respond back with \neverything that it knows about your code. So this is a docker uh based deployment. It's \nbasically a single click do docker deployment that you will uh uh do of your uh MCP server. You \nconfigure it in one step uh one or two steps and you're up and running. It can connect with both \nSonocube server as well as Sonocube cloud. uh all you need to do is uh provide it with uh tokens \nuh so that it can access the MCP server has the uh access control uh permissions uh to access \nyour server and cloud environment and then it runs as a lightweight local container in your \nuh development environment. So typically the de way developers work is they sit on their \nworkstations. We all have our own laptops or workstations and we run a local uh desktop uh on \non a local docker container on our environment. Configure it once and then you you're using cursor \nor windsurf or github copilot or any CLI once it's configured you can start communicating \nwith sonocube MCP server. Next slide. So let's uh take a look a deeper look at at the \nnext layer as to how it actually does uh work right. So on the right hand side is a illustration \nuh a diagram that shows how it works. So you have an MCP client which can be claude code or cursor \nor Devon or VSURF or any of the CLI tools that you're using AI AI agents or AI native ids or CLIs \nthat you're using uh you have that configured to uh use configure them to use the sonorube MCP \nserver and then MCP server will make calls to solon cloud or server whatever you're \nusing and get your code quality and code uh security analysis done within your MCP \nclient inside your cloud code or cursor. So an example here would be the agent query would \nbe a natural language prompt inside your AI native ID. Uh it could be an example here says are there \nany new vulnerabilities in my code file that I'm working on? this translation this uh uh this \nnatural language prompt is uh sent to the MCP server and it's basically converting that uh to an \nuh Sonocube API request and makes that request on behalf of you and then translates the results \nback and sends it back to the user. So uh you know you you could say uh once once you s submit \nthat prompt what it happens is behind the tool the tool call that it makes is search sonar issues \nin projects and return me the vulnerabilities in this code file. So it gets the context of the \nfile it uh speaks with sonar cube server and then uh it returns your results inside your editor \nwithout having you to leave your workflow at all. So that's a highle quick in uh information \nabout how it works. Let's get to the next slide. So what does this enable us to do? Basically what \nare the use cases it opens up for us. Uh there are four broad use cases and this is not uh you know \nthe exhaustive list but these are four highle key use cases that it opens up for us. You can do \nan ondemand code analysis before you make your code commits before you submit your pull request \nfor uh commits. Right? Uh number one. Number two, you can also check the project health of your \nSonoCube projects that you're analyzing using your natural language prompt inside your AI native \nID. Number three, you can do a comprehensive code quality and code security assessment of your uh \nproject. You can you can ask it for uh all the things that you want to know about your code base \nuh by using a simple natural language uh prompt, right? And last software composition analysis. \nThis is uh something which is differentiated for us and something which we have added on top of \nthe standard thing. If you uh remember a couple of months back we announced advanced security \nsonou advanced security. With son cube advanced security you get sonar uh software composition \nanalysis as well as advanced SAS. So the results of software composition analysis can also be uh \nyou know uh you can catch the details of your uh you know scar results inside your AI native ID. \nA good example uh will be coming up in the next slide. I'll talk about it how how we can use \nit with the scar as well. Uh so next slide. So here getting a a bit more uh into the use \ncases. What are the features and key capabilities of SonoCube MCP server? It's basically a a way for \nyou to ensure the code health to for you to make sure that your code quality and code security for \nthe AI generated code is not compromised. Right? So there are five or six things listed here and \nthere's more you can do with it but I'm calling out five or six things. You can actually look at \nour GitHub repo and the docs and see what else it can do for you. Uh but it essentially if you \nsend a tool request saying analyze code snippet the code snippet that you're working on in your \nID can be analyzed for code quality and code security issues. You can search for issues and \ndo some project management work with respect to your projects that you have on SonoCube which are \nconfigured for analysis. You can get quality gate information directly from your ID and check the \nstatus status of your quality gates and check the uh you know retrieve some metrics like code \ncoverage and duplication and things like that right within your IDE. Uh advanced security is \nwhat I've just talked about. If you have advanced security enabled on your son server and cloud \nyou can also search for your dependency risks. So assuming your project is using some open source \nlibraries whether they are vulnerable or not you can get that information directly in your ID \nas part of uh query that you make to Sona cube using the MCP server and then there a couple \nof other things that you could do like instant administration uh instance administration as well \nas exploring a code code rules and getting some more information about your source code etc from \nSonocube. Uh there's a whole some more tools that are available. you can look at them once you get a \nchance to play with it or install with it. Uh but uh yeah, so it's it's a pretty powerful tool, \nsimple, easy to use. Set it up once and start uh making your code better. Right? \nSo that's all it in terms of your uh highle overview of what SonoCube MCP \nserver is. Let's go to the next slide. And yes uh it does work with pretty much all the \ntools and platforms that are out there that you might be using. I this is not a comprehensive \nlist. We keep adding more and more support. But today we do support uh AI assistants like the \nentire cloud family including cloud code and cloud desktop. We support GitHub copilot obviously we \nsupport Amazon Q developer and then uh Devon the AI engineer is also supported. Uh in terms of AI \nnative ids, we do support cursor, winds, serve, uh zed, ko and some of the other ids that might be \ncoming out. We'll be uh we'll be ready to add more support as you need. If there's anything missing, \ndo let us know and we can uh you know build integrations very easily for those uh agentic \ntools that you're using for these days command line interfaces are getting extremely popular. In \nparticular, Codex CLI is getting a lot of traction and a lot of our customers are asking for asked \nfor Codex CLI support and we added it recently to the MCP server. So now we have Codex CLI, Gemini \nCLI as well as GitHub copilot CLI all supported uh with our MCP server. And the best thing is you \ncan get this uh MCP server from uh several places. You can get it from uh our uh GitHub repository. \nYou can build your own uh you know image if you like to. It's the source code is available. But \nthe easiest option for you is to go to the Docker MCP hub and just run the Docker container with \na single command and just pass it the tokens and you're good to go. It's also available from the \nanthropic MCP marketplace as well as MCP.So if you want to if you're using those marketplaces. \nNext slide. All right, I have uh gone through the slides quickly. I think the best part is when \nyou see it in action and I have my colleague here Prasanjit Sakar who will give a live demo of this \ntool. Uh so fingers crossed the live demo works. Uh you know how things are uh but let's take \nit away Pasit. Sure. Okay. Thank you Manish. So um I'll be unsharing this and then sharing couple \nof other tabs. Um so share the screen and yeah so um first thing first how um how we need to um \nyou know how we need to navigate uh for the deployment as uh Manish mentioned that there's \na pretty um quick way to get started and I just want to start from the docs itself like how do \nyou get started from the docs. So this is our sonarource.com website. Um from there I can just \nclick on the product and in the high level I have this MCP server right there. Click on the right \nmcp server. So this our you know landing page for the MCP server. You just have the deploy for free \nand which is going to take you to the doc site. So clicking on that is going to take you to the doc \nsite and then you know if you just scroll down then you have all your documentation right there \nbuilt in. Um the good news is that we have uh the setup command also built in right there um within \nthis platform itself. So you see this MCP server set up in your IDE and then you see this you know \nset up in the cloud code or codeex CLI cursor and you know all the other stuff that Manish \nmentioned. Um so for today's demo I'm going to use cursor as an you know AI native IDE to install \nMCP server and configure and then you know show you how exactly do you need to inte uh you know um \ninteract with that. Um so expand this uh setup in cursor and then you have two options. One is you \ncan connect it uh you can connect and install it or configure it um with the sonar cube cloud or \nyou can do it in the sonar cube server as well. Um, so I'm going to do it with a sonar cube cloud. \nSo you see this link in right there. If you have cursor installed, you see this command uh is built \nin right there. So you just click on that. It will open up the cursor window which I will show you um \nin a second. Uh I need to unshare and share that again. So unshare. And now I'll be going to the \ncursor here. Yeah. So uh now you see this cursor screen. So here you have the you know MCP MCP \nname which is uh sonar cube mcp server um and here's the command uh that uh you know Manish uh \nmentioned about it. So you put down this command um here you have uh sonar cube token. So this \nis the token that you get it from your uh sonar cube cloud uh you know administration window. Um \nand then you also need to pass on your org name. So um I'm not going to do it right now um because \nyou know these two are sensitive information. So you know you just need to replace that and \nclick on install. When you click on install uh you'll be seeing the the tools is going \nto be enabled right here. I'm sorry. Um so you see that's our QMCB server. Then there are 13 \ndifferent tools which are enabled. Um I'm going to click on click on cancel and I'm going to show you \nexpand uh expanding this. So you see this all of these different commands Manish mentioned which \nis like hey I can change the sonar issue status I can you know figure it out what is my you know \nquality gate status and all of that and these are the calls that will be um that will be called uh \nfrom the uh you know from from the agentic stuff. Um now let me close it down and let me open up \na project. So I'm going to open up a deeper SAS demo for um yeah so is okay. So you see this I \nopened up this one um this project. So this is my file user controller Java. Um my tools are already \nenabled that you have seen um and okay it's asking me to do the configure binding. That's fine. I'm \ngoing to do the binding. So this is binded uh there. Now I'm going to open up uh this chat and \nthen say can you list the vulner vulnerabilities in this file using sonar and I just clicked \nenter and it's going to planning the next move. going to find out that okay it does \nhave the you know sonar mcp and uh yeah so I need to add this uh search \nsonar uh c sonar cube project to allow list I'm going to set a yes add so it found \nout that there are six different projects uh enabled in my uh you know org but you know it \nfound out that this is the project um so now it's add the mcp list um mcp tool to the allow test. \nI'm going to click on that and now it is analyzing and finding it out that where I mean if there are \nany uh you know problem uh in this in this code it's taking unusual time but yeah it \nfound out um two uh two issues in here and you see that it has analyzed and it \nis giving me all the information about it. So um it has thought for like 13 different 13 \nseconds. it uh told me that I analyzed this um and you know there are uh issues that you know it \nfound out that you know two different uh issues and in here I can click on show more and I can see \nthat there are issues uh with the rule key is Java uh you know S1598 um and it's a critical severity \nuh critical severity problem and then I have found two different issues which are critical now I \nI saw this and then what I can do is I can use uh I can I can chat more like for \nexample um can you tell me the quality gate status for this project using sonar. is fetching that. I'm going to \nadd this into the allow list. So it's going to create a tool call and \nquality state gate status is showing none uh for the deeper sales demo project. \nUm so now there's no quality gate state u that is configured or associated with \nthat and that's why it's showing me none. Um so I can chat like this you know continuously \nand I can figure it out what's going on in there. Now I can change the status of let's say I can \nchange the status of one particular critical vulnerability saying that it is accepted and \nI am accepting that yes this is a problem. Um, so I can figure it out that hey, there is \nuh this rule key and I'm going to say that can you change the status of this issue as accepted in sonar. It's doing a new move. Changing the \nchanging the status and you see that it's actually trying to search \nfor the project to the allow list found eight different issues find out uh the \nissue status and I'm going to click on allow to change the status of that particular issue. So \nit is going to be uh treated as accepted. Now here you see a little uh popup saying that uh it has \nchanged the quality gauge is now green and it's now showing up and you can click on this and you \ncan see the status of this in the Sonar Cube cloud as well. It will show you as accepted uh into \ninto when you go to the issue tab. Um so yeah this is the way that you can you can you can chat \nwith it and as you have seen that it's pretty easy to install just one command and you just need \nto supply the the the you know the the sonar cube clouds token and the org ID um and that's it \nyou're done uh with the one docker command um it's up and running 13 different tools and then you can \nstart chatting here um and it's just that one ID but you can do the same thing with you know let's \nsay cloud code or codeex cla or ji cla or other CLAs as well uh where we have support for um so \nyeah it is it is the that I you know overall this agent ids uh where we do have our MCP support and \nyou don't need to switch uh back and forth to your sonar window saying is you know trying to see what \nare the different issues how do I search for that uh rather than you know if you're using um you \nknow if you're if you're trying to generate the comm gen the code um from the ID itself you can \njust do it from the command I You can do it from the chat window itself. All right. So with that \nI am going to stop the share and going back to the the one I'm going to share it one more time. \nShare screen. Uh and there you go. So Manish over to you. You do you want to wrap it up? It's fine. \nor I can do it. Okay, fair enough. Yeah. Okay. Um, so yeah, you know, so you we have all of \nthese resources available. You can see that uh we do have as manage mentioned that you know \nour docker image is right there in in dockerhub which is mcpson cube. Um our documentation \nwebsite is docs.ssonsource.com and then you can see that main p from the main page you \ncan navigate to the mcb server documentation. um or as Manish also mentioned that if you find \nout that there is any problem or if you want any more uh you know tool support um for example or \nany other new ID support or CLI support you can open up an issue in our GitHub um so that's \ngithub.com/sunosource cube and MCP server um our product web page is right there uh in \nsonasource.com go to the products and then you know MCP server um we do have our blog as \nwell for the for you know sonar cube uh server our community is very uh you know active uh in in \nterms of other stuff so it's community sonarus.com so yeah and as I said you know reiterating \nthe same thing uh install the docker image get the token run the MCP server and configure your \nassistant that's it that's how you just start so it's four different steps very small like within \ncouple of minutes your MCP is up and running and then you start chatting away with that uh you \ncan probably do a lot of automation with that uh and run some automation and you know figure it \nout uh that you know how what are the different I mean what is my quality gate with the new code \nthat I have integrated within that and that's what Manish mentioned that you know you don't \nneed to do a uh you know PR to figure it out that okay what's going on I mean you can do a \nI mean you can chat in your IDE or you can the same chat in your uh you know CLI as well and you \ncan ask that you know what's the status of this uh what are the different vulnerabilities in \nhere and then obviously because of the you know uh the the the code either overall code \nor new code we are continuously analyzing the code that you are generating as well. \nSo it's like you know a live system where you can get the feedback uh right within the \ndeveloper environment where you are right now. Yep. Uh thank you Pasenjit for the demo and uh \nand have any questions? Yeah thanks Presenett. Thanks Manish. Um thanks to you both. Um and yes \nwe had a lot of questions actually. Um I'll just try and summarize some of them. So there were \na lot of questions about you know what are the prerequisites um and obviously you know the the \nversion of sonar cube cloud is fine but people were talking about which plan is it available on \nand also the sonar cube server version as well. I don't know if you want to address those. Yeah \nfirst of all. Yeah. Uh, Passenger, keep me honest and correct me if I'm uh misspeaking. Uh, but MCP \nserver like I mentioned at the top of the call, uh, MCP protocol was announced in November 2024. \nUh, so you should use, we haven't tested the older versions of SonoCube server uh, beyond \nuh, the newer versions which we released this year. So if you want to use with Sonocube \nserver, I would encourage you to be on uh, the newer versions 2025. uh 3 and later preferably \nI believe 2025.1 and later work uh we haven't tested it with the older versions they may work \nthey may not work I'm not sure uh but officially if you want to get support from us and uh you know \nthen you have to be on uh a newer version which is post the announcement of the MCP protocol uh \nin terms of cloud it works with uh the free tier uh free plan as well as uh the team and enterprise \nplans same with uh Sonocube server it works with developer edition enterprise edition as well as \nuh data center edition or so. So it works with all of them. The calls that you can make to the m \nuh to with the MCP server to sona cube will depend uh I mean you know certain calls will not work \nif you don't have advanced security. So if you try to search for scar risks or c uh dependency \nrisks and if you don't have advanced security which is available on top of enterprise plans \nthen obviously that that call will not work. uh but the ones that are supported within your plan, \nwhichever plan you're using, uh should work just fine. Uh in terms of requirements, it's a Docker \nimage, so fairly light. You can uh it's it's not uh too uh expensive on resources, you can run it \non your laptops. Uh so it's fairly light. It is built using Java and it does if you build your own \nimage and things like that, you will need JDK21 and later. Uh did I miss anything? No, just one \nquick um I just answered one other question which is aligned with the uh with with with the answer \nthat you just said. Um so um as of now this MCV server is self-hosted means individual developer \nwill run the docker image on their own laptop um and uh you know have the sonar cube token to \ntalk to the cloud or the server. uh but you know we are also actively looking to see if there is \na you know better way to support it which means that remote MCP server which is you know probably \nwill be hosted um uh somewhere and then you can you know a central repository and then developers \ncan just consume u from there. So yeah we are we are looking through that option as well. So it's \na it's a good feedback that you have asked for. Um but as of now yeah as of now it's self-hosted \nbut we are looking to uh we are looking at the remote option as well. Cool. Great. Um maybe just \na final question uh for either of you perhaps if there was one thing you'd want people to take \naway from today's webinar. Um what would it be? Uh we at Sonar we believe in vibe then verify \nuh you know so you should use AI to help you write code improve your speed of and improve \nyour productivity 100% no doubt about that but uh we have done a lot of evaluation of all the \nLLMs and you can find uh the evaluation of LLM that we have done on our website there's a state \nof LLM report or personality report for LLMs where we evaluated each of the state-of-the-art \nmodels uh despite being very good and very fast in writing code, they do introduce uh issues in \ntheir code. There are security issues, there are uh you know dependencies that they add which are \neither obsolete or not appropriate for the task or there are code quality issues, there are bugs \nin it. So you do want to verify everything that you're uh writing and I think uh that's where \nuh that's where sonar cube and sonar uh cube mcp server and server and cloud and everything \nelse comes in right we do want to make sure that the work that you're doing uh doesn't end up \nin more work for you two months down the line by increasing technical depth or trying to figure \nout u things that AI broke which looked apparently uh to be good but they they had some serious \nissues in it. So make sure you verify the code that you're working on. So uh whichever tool you \nuse that's a fundamental belief you know verify everything that you AI is producing at at least \nas of today. So vibe then verify that's a that's a great message to finish on Manish. Uh so thank \nyou thank you everybody for joining today. Um we had a lot of questions. Uh we answered as many \nas we could. If there's anything that you still want answered, then as um Prazen mentioned, head \nto our community. It's a very active community where there'll be lots of people happy to answer \nyour questions or to help you out if you have technical difficulties. Um but yeah, thanks again \nfor attending. Um thanks for completing the survey and we really appreciate your time uh and feedback \nand thanks and see you next time. Goodbye.",
+  "fetchedAt": "2026-03-14T09:22:28.825Z"
+}
