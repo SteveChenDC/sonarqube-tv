@@ -88,7 +88,7 @@ export default async function WatchPage({
               {video.duration}
             </span>
           </div>
-          <div className="mt-4 border-t border-n8/40 pt-4">
+          <div className="mt-5 border-t border-n8/40 pt-5">
             <p className="text-base leading-7 text-n4">
               {video.description}
             </p>

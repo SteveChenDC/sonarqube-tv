@@ -140,7 +140,7 @@ export default function HomeContent({
         />
 
         {topRowVideos.length > 0 && (
-          <div className="pt-6">
+          <div className="pt-10">
             <VideoRow
               title={sortBy === "oldest" ? "Oldest" : "Latest"}
               videos={topRowVideos}
@@ -148,7 +148,7 @@ export default function HomeContent({
           </div>
         )}
 
-        <div id="categories" className="space-y-4 pt-6 pb-16">
+        <div id="categories" className="space-y-4 pt-8 pb-16">
           {categories.map((category) => {
             const categoryVideos = getVideosByCategory(category.slug);
             if (categoryVideos.length === 0 && hasActiveFilters) return null;
