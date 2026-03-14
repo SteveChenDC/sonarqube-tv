@@ -46,7 +46,7 @@ export default function VideoRow({ title, categorySlug, videos }: Readonly<Video
             </Link>
             <Link
               href={`/category/${categorySlug}`}
-              className="font-heading text-sm text-n1 transition-colors hover:text-n6"
+              className="font-heading text-sm text-n4 transition-colors hover:text-n1"
             >
               See All
             </Link>
