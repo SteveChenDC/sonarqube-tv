@@ -16,20 +16,38 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sonarqube-tv.vercel.app"),
+  metadataBase: new URL("https://stevechendc.github.io/sonarqube-tv"),
   title: {
-    default: "SonarQube.tv",
+    default: "SonarQube.tv — Video Tutorials for Code Quality & Security",
     template: "%s | SonarQube.tv",
   },
   description:
     "Video tutorials, webinars, and demos for code verification, code quality, and code security with SonarQube.",
+  keywords: [
+    "SonarQube",
+    "code quality",
+    "code security",
+    "static analysis",
+    "clean code",
+    "tutorials",
+    "webinars",
+  ],
   openGraph: {
     type: "website",
     siteName: "SonarQube.tv",
     locale: "en_US",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "SonarQube.tv — Video tutorials for code quality & security",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/og-image.png"],
   },
 };
 

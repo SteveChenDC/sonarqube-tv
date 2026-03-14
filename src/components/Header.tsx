@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import { categories } from "@/data/videos";
@@ -54,6 +54,25 @@ export default function Header() {
     };
   }, []);
 
+  // Animation state: keep dropdown mounted during exit transition
+  const [dropdownMounted, setDropdownMounted] = useState(false);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+
+  useEffect(() => {
+    if (menuOpen) {
+      setDropdownMounted(true);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => setDropdownVisible(true));
+      });
+    } else {
+      setDropdownVisible(false);
+    }
+  }, [menuOpen]);
+
+  const handleDropdownTransitionEnd = useCallback(() => {
+    if (!dropdownVisible) setDropdownMounted(false);
+  }, [dropdownVisible]);
+
   const handleMouseEnter = () => {
     clearTimeout(timeoutRef.current);
     setMenuOpen(true);
@@ -104,8 +123,15 @@ export default function Header() {
               </svg>
             </button>
 
-            {menuOpen && (
-              <div className="fixed inset-x-4 top-[72px] z-50 rounded-xl border border-n8 bg-n9/95 p-4 shadow-2xl backdrop-blur-md sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-2 sm:w-[720px] sm:p-6">
+            {dropdownMounted && (
+              <div
+                className={`fixed inset-x-4 top-[72px] z-50 rounded-xl border border-n8 bg-n9/95 p-4 shadow-2xl backdrop-blur-md transition-all duration-200 sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-2 sm:w-[720px] sm:p-6 ${
+                  dropdownVisible
+                    ? "scale-100 opacity-100"
+                    : "pointer-events-none scale-95 opacity-0"
+                }`}
+                onTransitionEnd={handleDropdownTransitionEnd}
+              >
                 <div className="mb-4 flex items-center justify-between">
                   <h3 className="font-heading text-sm font-semibold uppercase tracking-wider text-n6">
                     Browse by Category
