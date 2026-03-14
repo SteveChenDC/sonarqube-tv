@@ -183,6 +183,23 @@ describe("HomeContent", () => {
     expect(tutorialTitles).toEqual(["Medium Tutorial", "Short Tutorial"]);
   });
 
+  it("sorts videos newest first by default", () => {
+    const { container } = render(
+      <HomeContent
+        categories={categories}
+        videos={videos}
+        featuredVideo={featuredVideo}
+      />
+    );
+
+    const headings = Array.from(container.querySelectorAll("h3"));
+    const tutorialTitles = headings
+      .map((h) => h.textContent)
+      .filter((t) => t === "Short Tutorial" || t === "Medium Tutorial");
+    // short-vid (2025-12) should come before medium-vid (2025-06) in newest-first
+    expect(tutorialTitles).toEqual(["Short Tutorial", "Medium Tutorial"]);
+  });
+
   it("shows empty state when all videos are filtered out", () => {
     const oldVideos = [
       makeVideo({

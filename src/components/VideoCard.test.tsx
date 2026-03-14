@@ -81,6 +81,31 @@ describe("VideoCard", () => {
     expect(container.querySelector(".bg-sonar-purple\\/30")).toBeNull();
   });
 
+  it("shows 'New' badge for a video published within the last 7 days with no progress", () => {
+    const recentDate = new Date("2026-03-13T00:00:00Z").toISOString();
+    const { getByText } = render(
+      <VideoCard video={videoWithDate(recentDate)} />
+    );
+    expect(getByText("New")).toBeTruthy();
+  });
+
+  it("hides 'New' badge for a video published more than 7 days ago", () => {
+    const oldDate = new Date("2026-03-01T00:00:00Z").toISOString();
+    const { queryByText } = render(
+      <VideoCard video={videoWithDate(oldDate)} />
+    );
+    expect(queryByText("New")).toBeNull();
+  });
+
+  it("hides 'New' badge when video has watch progress even if recent", () => {
+    setProgress("vid1", 30);
+    const recentDate = new Date("2026-03-13T00:00:00Z").toISOString();
+    const recentVideo = { ...mockVideo, publishedAt: recentDate };
+    const { queryByText } = render(<VideoCard video={recentVideo} />);
+    // Wait for effect to set progress
+    expect(queryByText("New")).toBeNull();
+  });
+
   describe("timeAgo rendering", () => {
     it("shows 'Just now' for a video published seconds ago", () => {
       const { getByText } = render(
