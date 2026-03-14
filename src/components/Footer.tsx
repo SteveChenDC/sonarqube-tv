@@ -1,6 +1,7 @@
 export default function Footer() {
   return (
     <footer className="relative border-t border-n8/50 bg-n9 px-4 py-12 sm:px-6">
+      <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-transparent via-sonar-red to-transparent" />
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 sm:flex-row sm:justify-between">
         <div className="flex flex-col items-center gap-2 sm:items-start">
           <span className="font-heading text-lg font-semibold text-n1">

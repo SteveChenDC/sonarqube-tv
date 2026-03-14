@@ -52,10 +52,12 @@ export default function VideoPlayer({ youtubeId, title, videoId }: Readonly<Vide
         />
       </div>
       <div className="h-1 w-full bg-n8 rounded-b-lg overflow-hidden">
-        <div
-          className="h-full bg-sonar-red transition-all duration-300"
-          style={{ width: `${Math.min(progress, 100)}%` }}
-        />
+        {progress > 0 && (
+          <div
+            className="h-full bg-sonar-red transition-all duration-300"
+            style={{ width: `${Math.min(progress, 100)}%` }}
+          />
+        )}
       </div>
     </div>
   );
