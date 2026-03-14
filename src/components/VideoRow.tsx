@@ -26,8 +26,8 @@ export default function VideoRow({ title, categorySlug, videos }: Readonly<Video
   if (videos.length === 0) return null;
 
   return (
-    <section className="relative py-4">
-      <div className="mx-4 mb-4 border-t border-n8/50 sm:mx-6" />
+    <section className="relative py-5">
+      <div className="mx-4 mb-5 border-t border-n8/70 sm:mx-6" />
       <div className="mb-3 flex items-center justify-between px-4 sm:px-6">
         <h2 className="font-heading text-lg font-semibold text-n1 sm:text-xl">
             {title}

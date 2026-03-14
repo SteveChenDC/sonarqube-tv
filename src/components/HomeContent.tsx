@@ -9,6 +9,7 @@ import FilterBar, {
   DurationFilter,
   SortBy,
 } from "./FilterBar";
+import ScrollToTop from "./ScrollToTop";
 import { Video, Category } from "@/types";
 
 function parseDurationMinutes(duration: string): number {
@@ -127,7 +128,7 @@ export default function HomeContent({
           onOpenChange={setFilterOpen}
         />
 
-        <div className="space-y-6 pt-4 pb-12">
+        <div className="space-y-8 pt-6 pb-16">
           {categories.map((category) => {
             const categoryVideos = getVideosByCategory(category.slug);
             if (categoryVideos.length === 0 && hasActiveFilters) return null;
@@ -156,6 +157,7 @@ export default function HomeContent({
           )}
         </div>
       </div>
+      <ScrollToTop />
     </div>
   );
 }
