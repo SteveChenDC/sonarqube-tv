@@ -76,12 +76,6 @@ const videos: Video[] = [
   }),
 ];
 
-const featuredVideo = makeVideo({
-  id: "featured",
-  title: "Featured Highlight",
-  category: "tutorials",
-  publishedAt: "2025-11-01T00:00:00Z",
-});
 
 function openFilters() {
   fireEvent.click(screen.getByRole("button", { name: "Filters" }));
@@ -98,22 +92,20 @@ describe("HomeContent", () => {
       <HomeContent
         categories={categories}
         videos={videos}
-        featuredVideo={featuredVideo}
       />
     );
     expect(screen.getByText("Tutorials")).toBeTruthy();
     expect(screen.getByText("Webinars")).toBeTruthy();
-    expect(screen.getByText("Short Tutorial")).toBeTruthy();
-    expect(screen.getByText("Medium Tutorial")).toBeTruthy();
-    expect(screen.getByText("Long Webinar")).toBeTruthy();
+    expect(screen.getAllByText("Short Tutorial").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText("Medium Tutorial").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText("Long Webinar").length).toBeGreaterThanOrEqual(1);
   });
 
   it("filters videos by short duration (under 4 min)", () => {
-    render(
+    const { container } = render(
       <HomeContent
         categories={categories}
         videos={videos}
-        featuredVideo={featuredVideo}
       />
     );
 
@@ -121,17 +113,17 @@ describe("HomeContent", () => {
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
 
-    expect(screen.getByText("Short Tutorial")).toBeTruthy();
-    expect(screen.queryByText("Medium Tutorial")).toBeNull();
-    expect(screen.queryByText("Long Webinar")).toBeNull();
+    const cardTitles = Array.from(container.querySelectorAll("h3")).map((h) => h.textContent);
+    expect(cardTitles.some((t) => t === "Short Tutorial")).toBe(true);
+    expect(cardTitles.some((t) => t === "Medium Tutorial")).toBe(false);
+    expect(cardTitles.some((t) => t === "Long Webinar")).toBe(false);
   });
 
   it("filters videos by medium duration (4–20 min)", () => {
-    render(
+    const { container } = render(
       <HomeContent
         categories={categories}
         videos={videos}
-        featuredVideo={featuredVideo}
       />
     );
 
@@ -139,17 +131,17 @@ describe("HomeContent", () => {
     fireEvent.click(screen.getByText("4–20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
-    expect(screen.queryByText("Short Tutorial")).toBeNull();
-    expect(screen.getByText("Medium Tutorial")).toBeTruthy();
-    expect(screen.queryByText("Long Webinar")).toBeNull();
+    const cardTitles = Array.from(container.querySelectorAll("h3")).map((h) => h.textContent);
+    expect(cardTitles.some((t) => t === "Short Tutorial")).toBe(false);
+    expect(cardTitles.some((t) => t === "Medium Tutorial")).toBe(true);
+    expect(cardTitles.some((t) => t === "Long Webinar")).toBe(false);
   });
 
   it("filters videos by long duration (over 20 min)", () => {
-    render(
+    const { container } = render(
       <HomeContent
         categories={categories}
         videos={videos}
-        featuredVideo={featuredVideo}
       />
     );
 
@@ -157,9 +149,10 @@ describe("HomeContent", () => {
     fireEvent.click(screen.getByText("Over 20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
-    expect(screen.queryByText("Short Tutorial")).toBeNull();
-    expect(screen.queryByText("Medium Tutorial")).toBeNull();
-    expect(screen.getByText("Long Webinar")).toBeTruthy();
+    const cardTitles = Array.from(container.querySelectorAll("h3")).map((h) => h.textContent);
+    expect(cardTitles.some((t) => t === "Short Tutorial")).toBe(false);
+    expect(cardTitles.some((t) => t === "Medium Tutorial")).toBe(false);
+    expect(cardTitles.some((t) => t === "Long Webinar")).toBe(true);
   });
 
   it("sorts videos oldest first", () => {
@@ -167,7 +160,7 @@ describe("HomeContent", () => {
       <HomeContent
         categories={categories}
         videos={videos}
-        featuredVideo={featuredVideo}
+
       />
     );
 
@@ -195,7 +188,7 @@ describe("HomeContent", () => {
       <HomeContent
         categories={categories}
         videos={videos}
-        featuredVideo={featuredVideo}
+
       />
     );
 
@@ -221,7 +214,7 @@ describe("HomeContent", () => {
       <HomeContent
         categories={categories}
         videos={oldVideos}
-        featuredVideo={oldVideos[0]}
+
       />
     );
 
@@ -246,7 +239,7 @@ describe("HomeContent", () => {
       <HomeContent
         categories={categories}
         videos={oldVideos}
-        featuredVideo={oldVideos[0]}
+
       />
     );
 
@@ -270,7 +263,7 @@ describe("HomeContent", () => {
       <HomeContent
         categories={categories}
         videos={videos}
-        featuredVideo={featuredVideo}
+
       />
     );
 
@@ -309,7 +302,7 @@ describe("HomeContent", () => {
       <HomeContent
         categories={categories}
         videos={boundaryVideos}
-        featuredVideo={boundaryVideos[0]}
+
       />
     );
 
@@ -326,7 +319,7 @@ describe("HomeContent", () => {
       <HomeContent
         categories={categories}
         videos={videos}
-        featuredVideo={featuredVideo}
+
       />
     );
 
