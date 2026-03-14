@@ -25,7 +25,7 @@ function timeAgo(dateString: string): string {
   return "Just now";
 }
 
-export default function VideoCard({ video }: Readonly<{ video: Video }>) {
+export default function VideoCard({ video, fluid = false }: Readonly<{ video: Video; fluid?: boolean }>) {
   const [progress, setProgressState] = useState(0);
   const categoryTitle = categories.find((c) => c.slug === video.category)?.title;
 
@@ -38,7 +38,7 @@ export default function VideoCard({ video }: Readonly<{ video: Video }>) {
       href={`/watch/${video.id}`}
       className="group flex-shrink-0 snap-start"
     >
-      <div className="relative aspect-video w-[280px] overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 sm:w-[320px]">
+      <div className={`relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 ${fluid ? "w-full" : "w-[280px] sm:w-[320px]"}`}>
         <Image
           src={video.thumbnail}
           alt={video.title}
@@ -81,13 +81,13 @@ export default function VideoCard({ video }: Readonly<{ video: Video }>) {
           </>
         )}
       </div>
-      <h3 className="mt-3 line-clamp-2 w-[280px] font-heading text-sm font-medium leading-snug text-n3 transition-colors group-hover:text-n1 sm:w-[320px]">
+      <h3 className={`mt-3 line-clamp-2 font-heading font-medium leading-snug text-n3 transition-colors group-hover:text-n1 ${fluid ? "text-base" : "w-[280px] text-sm sm:w-[320px]"}`}>
         {video.title}
       </h3>
-      <div className="mt-1.5 flex w-[280px] items-center gap-2 sm:w-[320px]">
+      <div className={`mt-1.5 flex items-center gap-2 ${fluid ? "" : "w-[280px] sm:w-[320px]"}`}>
         <span className="text-xs text-n6">{timeAgo(video.publishedAt)}</span>
         {categoryTitle && (
-          <span className="rounded bg-sonar-purple/30 px-1.5 py-0.5 text-[11px] font-medium text-n6">
+          <span className="rounded bg-sonar-purple/30 px-1.5 py-0.5 text-[11px] font-medium text-n4">
             {categoryTitle}
           </span>
         )}

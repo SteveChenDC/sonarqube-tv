@@ -128,7 +128,7 @@ export default function HomeContent({
           onOpenChange={setFilterOpen}
         />
 
-        <div className="space-y-8 pt-6 pb-16">
+        <div id="categories" className="space-y-8 pt-6 pb-16">
           {categories.map((category) => {
             const categoryVideos = getVideosByCategory(category.slug);
             if (categoryVideos.length === 0 && hasActiveFilters) return null;
