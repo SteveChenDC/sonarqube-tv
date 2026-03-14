@@ -12,6 +12,7 @@ import FilterBar, {
 } from "./FilterBar";
 import ScrollToTop from "./ScrollToTop";
 import { Video, Category } from "@/types";
+import { featuredYoutubeIds } from "@/data/videos";
 
 function parseDurationMinutes(duration: string): number {
   const parts = duration.split(":").map(Number);
@@ -58,14 +59,16 @@ function matchesDuration(duration: string, filter: DurationFilter): boolean {
 interface HomeContentProps {
   categories: Category[];
   videos: Video[];
-  featuredVideo: Video;
 }
 
 export default function HomeContent({
   categories,
   videos,
-  featuredVideo,
 }: Readonly<HomeContentProps>) {
+  const [featuredVideo] = useState<Video>(() => {
+    const ytId = featuredYoutubeIds[Math.floor(Math.random() * featuredYoutubeIds.length)];
+    return videos.find((v) => v.youtubeId === ytId) ?? videos[0];
+  });
   const [uploadDate, setUploadDate] = useState<UploadDateFilter>("anytime");
   const [duration, setDuration] = useState<DurationFilter>("any");
   const [sortBy, setSortBy] = useState<SortBy>("newest");

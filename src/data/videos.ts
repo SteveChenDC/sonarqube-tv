@@ -2353,7 +2353,7 @@ export function getCategoryBySlug(slug: string): Category | undefined {
   return categories.find((c) => c.slug === slug);
 }
 
-const featuredYoutubeIds = [
+export const featuredYoutubeIds = [
   "F1F_CVD33WI", // Seven habits of highly effective AI coding (Erin Kouri)
   "el9OKGrqU6o", // Refactoring with Cognitive Complexity (Ann Campbell)
   "DiF4VfW4zco", // Customer Stories | Modino.io (Blazej Pawlak)
