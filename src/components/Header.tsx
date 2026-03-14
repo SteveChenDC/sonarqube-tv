@@ -53,7 +53,7 @@ export default function Header() {
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => setMenuOpen(false), 200);
+    timeoutRef.current = setTimeout(() => setMenuOpen(false), 3000);
   };
 
   // Split categories into 3 columns
@@ -75,12 +75,6 @@ export default function Header() {
           </span>
         </Link>
         <nav className="flex items-center gap-1">
-          <Link
-            href="/"
-            className={`rounded-lg px-3 py-2 font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
-          >
-            Home
-          </Link>
           <div
             ref={menuRef}
             className="relative"
@@ -123,7 +117,7 @@ export default function Header() {
                       {col.map((cat) => (
                         <Link
                           key={cat.slug}
-                          href={`/#categories`}
+                          href={`/#${cat.slug}`}
                           onClick={() => setMenuOpen(false)}
                           className="group block rounded-lg p-2.5 transition-colors hover:bg-n8/50"
                         >

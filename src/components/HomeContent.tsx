@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Hero from "./Hero";
 import VideoRow from "./VideoRow";
+import { getAllProgress } from "@/lib/watchProgress";
 import FilterBar, {
   FilterTrigger,
   UploadDateFilter,
@@ -108,6 +109,19 @@ export default function HomeContent({
     setSortBy("newest");
   };
 
+  const [continueWatchingVideos, setContinueWatchingVideos] = useState<Video[]>([]);
+
+  useEffect(() => {
+    const progress = getAllProgress();
+    const inProgress = videos
+      .filter((v) => {
+        const p = progress[v.id];
+        return p !== undefined && p > 0 && p < 100;
+      })
+      .sort((a, b) => (progress[b.id] ?? 0) - (progress[a.id] ?? 0));
+    setContinueWatchingVideos(inProgress);
+  }, [videos]);
+
   const activeFilterCount = [
     uploadDate !== "anytime",
     duration !== "any",
@@ -140,8 +154,17 @@ export default function HomeContent({
           onOpenChange={setFilterOpen}
         />
 
+        {continueWatchingVideos.length > 0 && (
+          <div className="border-t border-n8/70 pt-10">
+            <VideoRow
+              title="Continue Watching"
+              videos={continueWatchingVideos}
+            />
+          </div>
+        )}
+
         {topRowVideos.length > 0 && (
-          <div className="pt-10">
+          <div className="border-t border-n8/70 pt-10">
             <VideoRow
               title={sortBy === "oldest" ? "Oldest" : "Latest"}
               videos={topRowVideos}

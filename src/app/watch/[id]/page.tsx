@@ -13,6 +13,8 @@ import {
   getCategoryBySlug,
   videos,
 } from "@/data/videos";
+import { getArticleByVideoId, getTranscriptByVideoId } from "@/data/articles";
+import ArticleTabs from "@/components/ArticleTabs";
 
 export function generateStaticParams() {
   return videos.map((video) => ({ id: video.id }));
@@ -181,6 +183,17 @@ export default async function WatchPage({
             </p>
           </div>
         </div>
+
+        {(() => {
+          const article = getArticleByVideoId(video.id);
+          const transcript = getTranscriptByVideoId(video.id);
+          if (!article && !transcript) return null;
+          return (
+            <div className="mt-6">
+              <ArticleTabs article={article} transcript={transcript} />
+            </div>
+          );
+        })()}
 
         <Suspense>
           <PlaylistQueue currentVideoId={video.id} allVideos={videos} />

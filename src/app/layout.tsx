@@ -16,9 +16,35 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SonarQube.tv",
+  metadataBase: new URL("https://sonarqube-tv.vercel.app"),
+  title: {
+    default: "SonarQube.tv",
+    template: "%s | SonarQube.tv",
+  },
   description:
-    "A Netflix-style video showcase for SonarSource content — tutorials, webinars, and more.",
+    "Video tutorials, webinars, and demos for code verification, code quality, and code security with SonarQube.",
+  openGraph: {
+    type: "website",
+    siteName: "SonarQube.tv",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "SonarSource",
+  url: "https://www.sonarsource.com",
+  logo: "https://www.sonarsource.com/favicon.ico",
+  sameAs: [
+    "https://www.youtube.com/c/SonarSource",
+    "https://twitter.com/SonarSource",
+    "https://www.linkedin.com/company/sonarsource",
+    "https://github.com/SonarSource",
+  ],
 };
 
 export default function RootLayout({
@@ -32,6 +58,12 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('sonarqube-tv-theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}else{document.documentElement.classList.remove('dark')}}catch(e){document.documentElement.classList.add('dark')}})()`,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
           }}
         />
       </head>

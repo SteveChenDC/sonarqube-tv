@@ -14,3 +14,26 @@ export interface Category {
   title: string;
   description: string;
 }
+
+export interface TranscriptSegment {
+  text: string;
+  offset: number;
+  duration: number;
+}
+
+export interface Transcript {
+  videoId: string;
+  youtubeId: string;
+  segments: TranscriptSegment[];
+  fullText: string;
+  fetchedAt: string;
+}
+
+export interface Article {
+  videoId: string;
+  title: string;
+  markdown: string;
+  keyTakeaways: string[];
+  generatedAt: string;
+  wordCount: number;
+}

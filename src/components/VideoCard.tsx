@@ -55,12 +55,12 @@ export default function VideoCard({ video, fluid = false }: Readonly<{ video: Vi
             <path d="M8 5v14l11-7z" />
           </svg>
         </div>
-        <span className="absolute bottom-2 right-2 rounded bg-n9/80 px-1.5 py-0.5 text-xs font-medium text-n1">
+        <span className="absolute bottom-2 right-2 rounded bg-black/80 px-1.5 py-0.5 text-xs font-medium text-white">
           {video.duration}
         </span>
 
         {Date.now() - new Date(video.publishedAt).getTime() < 7 * 24 * 60 * 60 * 1000 && progress === 0 && (
-          <span className="absolute top-2 left-2 rounded bg-sonar-red px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-n1">
+          <span className="absolute top-2 left-2 rounded bg-sonar-red px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-white">
             New
           </span>
         )}
@@ -68,7 +68,7 @@ export default function VideoCard({ video, fluid = false }: Readonly<{ video: Vi
         {progress > 0 && (
           <>
             {/* Progress percentage badge - visible on hover */}
-            <span className="absolute top-2 left-2 rounded bg-n9/90 px-1.5 py-0.5 text-xs font-medium text-n2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <span className="absolute top-2 left-2 rounded bg-black/90 px-1.5 py-0.5 text-xs font-medium text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               {progress}% watched
             </span>
             {/* Progress bar - always visible */}
@@ -87,7 +87,7 @@ export default function VideoCard({ video, fluid = false }: Readonly<{ video: Vi
       <div className={`mt-1.5 flex items-center gap-2 ${fluid ? "" : "w-[280px] sm:w-[320px]"}`}>
         <span className="text-xs text-n6">{timeAgo(video.publishedAt)}</span>
         {categoryTitle && (
-          <span className="rounded bg-sonar-purple/30 px-2 py-0.5 text-xs font-medium text-n4">
+          <span className="rounded bg-n8/60 px-2 py-0.5 text-xs font-medium text-n5">
             {categoryTitle}
           </span>
         )}

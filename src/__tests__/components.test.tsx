@@ -97,41 +97,13 @@ describe("VideoRow", () => {
     expect(container.innerHTML).toBe("");
   });
 
-  it("renders a See All link to the category page", () => {
+  it("renders a View All link to the category page", () => {
     const videos = makeVideos(2);
     render(
       <VideoRow title="Clean Code" categorySlug="clean-code" videos={videos} />
     );
-    const seeAll = screen.getByText("See All");
-    expect(seeAll.closest("a")).toHaveAttribute("href", "/category/clean-code");
-  });
-
-  it("renders a Watch All link that starts a playlist", () => {
-    const videos = makeVideos(3);
-    render(
-      <VideoRow title="Clean Code" categorySlug="clean-code" videos={videos} />
-    );
-    const watchAll = screen.getByText("Watch All");
-    expect(watchAll.closest("a")).toHaveAttribute(
-      "href",
-      "/watch/v1?playlist=clean-code"
-    );
-  });
-
-  it("Watch All links to the first video in the list", () => {
-    const videos = makeVideos(5, "sonar-summit");
-    render(
-      <VideoRow
-        title="Sonar Summit"
-        categorySlug="sonar-summit"
-        videos={videos}
-      />
-    );
-    const watchAll = screen.getByText("Watch All");
-    expect(watchAll.closest("a")).toHaveAttribute(
-      "href",
-      "/watch/v1?playlist=sonar-summit"
-    );
+    const viewAll = screen.getByText("View All");
+    expect(viewAll.closest("a")).toHaveAttribute("href", "/category/clean-code");
   });
 });
 

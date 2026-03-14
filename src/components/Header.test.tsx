@@ -15,10 +15,10 @@ describe("Header", () => {
     expect(homeLink).toHaveAttribute("href", "/");
   });
 
-  it("renders Categories navigation link pointing to /#categories", () => {
+  it("renders Categories dropdown button", () => {
     render(<Header />);
-    const categoriesLink = screen.getByRole("link", { name: /categories/i });
-    expect(categoriesLink).toHaveAttribute("href", "/#categories");
+    const categoriesBtn = screen.getByRole("button", { name: /categories/i });
+    expect(categoriesBtn).toBeTruthy();
   });
 
   it("renders brand text with correct segments", () => {

@@ -35,20 +35,16 @@ describe("VideoRow", () => {
     expect(container.innerHTML).toBe("");
   });
 
-  it("renders title, See All link, Watch All link, and all video cards", () => {
+  it("renders title, View All link, and all video cards", () => {
     const videos = [makeVideo("v1"), makeVideo("v2"), makeVideo("v3")];
     const { getByText, container } = render(
       <VideoRow title="Tutorials" categorySlug="tutorials" videos={videos} />
     );
     expect(getByText("Tutorials")).toBeTruthy();
-    expect(getByText("See All")).toBeTruthy();
-    expect(getByText("Watch All")).toBeTruthy();
-    // See All links to category page
-    const seeAllLink = container.querySelector('a[href="/category/tutorials"]');
-    expect(seeAllLink).toBeTruthy();
-    // Watch All links to first video with playlist param
-    const watchAllLink = container.querySelector('a[href="/watch/v1?playlist=tutorials"]');
-    expect(watchAllLink).toBeTruthy();
+    expect(getByText("View All")).toBeTruthy();
+    // View All links to category page
+    const viewAllLink = container.querySelector('a[href="/category/tutorials"]');
+    expect(viewAllLink).toBeTruthy();
     // All video cards rendered
     expect(getByText("Video v1")).toBeTruthy();
     expect(getByText("Video v2")).toBeTruthy();

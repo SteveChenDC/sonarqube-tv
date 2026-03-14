@@ -26,31 +26,19 @@ export default function VideoRow({ title, categorySlug, videos }: Readonly<Video
   if (videos.length === 0) return null;
 
   return (
-    <section className="relative py-8">
+    <section id={categorySlug} className="relative scroll-mt-20 py-8">
       <div className="mb-4 flex items-center justify-between px-4 sm:px-6">
         <h2 className="font-heading text-lg font-semibold text-n1 sm:text-xl">
             {title}
             <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">{videos.length}</span>
           </h2>
         {categorySlug && (
-          <div className="flex items-center gap-4">
-            <Link
-              href={`/watch/${videos[0].id}?playlist=${categorySlug}`}
-              className="inline-flex items-center gap-1.5 font-heading text-sm text-n3 transition-colors hover:text-n1"
-            >
-              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" opacity=".5" />
-                <path d="M15 12l5 3.5V8.5z" />
-              </svg>
-              Watch All
-            </Link>
-            <Link
-              href={`/category/${categorySlug}`}
-              className="font-heading text-sm text-n6 transition-colors hover:text-n1"
-            >
-              See All
-            </Link>
-          </div>
+          <Link
+            href={`/category/${categorySlug}`}
+            className="font-heading text-sm text-n3 transition-colors hover:text-n1"
+          >
+            View All
+          </Link>
         )}
       </div>
 
