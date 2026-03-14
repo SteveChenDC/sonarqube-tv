@@ -86,10 +86,10 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${poppins.variable} ${inter.variable} min-h-screen bg-background font-body antialiased`}
+        className={`${poppins.variable} ${inter.variable} flex min-h-screen flex-col bg-background font-body antialiased`}
       >
         <Header />
-        <main>{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>
