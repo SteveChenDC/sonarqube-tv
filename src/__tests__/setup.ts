@@ -3,7 +3,7 @@ import { cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/vitest";
 
 // Mock matchMedia for theme detection in tests
-Object.defineProperty(window, "matchMedia", {
+Object.defineProperty(globalThis, "matchMedia", {
   writable: true,
   value: (query: string) => ({
     matches: query === "(prefers-color-scheme: dark)",

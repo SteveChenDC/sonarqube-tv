@@ -5,7 +5,7 @@ import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import { categories } from "@/data/videos";
 
-function SonarWhaleMark({ className }: { className?: string }) {
+function SonarWhaleMark({ className }: Readonly<{ className?: string }>) {
   return (
     <svg
       className={className}

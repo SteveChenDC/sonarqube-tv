@@ -157,20 +157,18 @@ export default function HomeContent({
         {(continueWatchingVideos.length > 0 || topRowVideos.length > 0) && (
           <div className="border-t border-n8/70 pt-6">
             <VideoRow
-              title={
-                continueWatchingVideos.length > 0
-                  ? "Continue Watching"
-                  : sortBy === "oldest"
-                    ? "Oldest"
-                    : "Latest"
-              }
-              videos={
-                continueWatchingVideos.length > 0 && topRowVideos.length > 0
-                  ? [...continueWatchingVideos, ...topRowVideos.filter(v => !continueWatchingVideos.some(cw => cw.id === v.id))]
-                  : continueWatchingVideos.length > 0
-                    ? continueWatchingVideos
-                    : topRowVideos
-              }
+              title={(() => {
+                if (continueWatchingVideos.length > 0) return "Continue Watching";
+                if (sortBy === "oldest") return "Oldest";
+                return "Latest";
+              })()}
+              videos={(() => {
+                if (continueWatchingVideos.length > 0 && topRowVideos.length > 0) {
+                  return [...continueWatchingVideos, ...topRowVideos.filter(v => !continueWatchingVideos.some(cw => cw.id === v.id))];
+                }
+                if (continueWatchingVideos.length > 0) return continueWatchingVideos;
+                return topRowVideos;
+              })()}
               hideHeader={continueWatchingVideos.length > 0 && topRowVideos.length > 0}
               dividerAfterIndex={
                 continueWatchingVideos.length > 0 && topRowVideos.length > 0

@@ -149,11 +149,16 @@ export default function FilterBar({
     <>
       {mounted && (
         <div
+          role="dialog"
+          aria-modal="true"
           className={`fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm transition-colors duration-200 ${
             visible ? "bg-black/60" : "bg-black/0"
           }`}
           onClick={(e) => {
             if (e.target === e.currentTarget) setIsOpen(false);
+          }}
+          onKeyDown={(e) => {
+            if (e.key === "Escape") setIsOpen(false);
           }}
           onTransitionEnd={handleTransitionEnd}
         >
