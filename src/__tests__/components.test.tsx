@@ -97,13 +97,13 @@ describe("VideoRow", () => {
     expect(container.innerHTML).toBe("");
   });
 
-  it("renders a View All link to the category page", () => {
+  it("renders a See All link to the category page", () => {
     const videos = makeVideos(2);
     render(
       <VideoRow title="Clean Code" categorySlug="clean-code" videos={videos} />
     );
-    const viewAll = screen.getByText("View All");
-    expect(viewAll.closest("a")).toHaveAttribute("href", "/category/clean-code");
+    const seeAll = screen.getByText("See All");
+    expect(seeAll.closest("a")).toHaveAttribute("href", "/category/clean-code");
   });
 });
 

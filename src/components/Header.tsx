@@ -43,8 +43,15 @@ export default function Header() {
         setMenuOpen(false);
       }
     }
+    function handleEscape(e: KeyboardEvent) {
+      if (e.key === "Escape") setMenuOpen(false);
+    }
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
+    };
   }, []);
 
   const handleMouseEnter = () => {
@@ -71,7 +78,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2">
           <SonarWhaleMark className={`h-7 w-auto transition-colors duration-300 ${scrolled ? "text-n1" : "text-white"}`} />
           <span className="font-heading text-2xl font-bold tracking-tight">
-            <span className={`transition-colors duration-300 ${scrolled ? "text-n1" : "text-white"}`}>Sonar</span><span className={`transition-colors duration-300 ${scrolled ? "text-n6" : "text-white/50"}`}>.tv</span>
+            <span className={`transition-colors duration-300 ${scrolled ? "text-n1" : "text-white"}`}>Sonar</span><span className="text-qube-blue">Qube</span><span className={`transition-colors duration-300 ${scrolled ? "text-n6" : "text-white/50"}`}>.tv</span>
           </span>
         </Link>
         <nav className="flex items-center gap-1">
@@ -98,7 +105,7 @@ export default function Header() {
             </button>
 
             {menuOpen && (
-              <div className="absolute right-0 top-full mt-2 w-[720px] rounded-xl border border-n8 bg-n9/95 p-6 shadow-2xl backdrop-blur-md">
+              <div className="fixed inset-x-4 top-[72px] z-50 rounded-xl border border-n8 bg-n9/95 p-4 shadow-2xl backdrop-blur-md sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-2 sm:w-[720px] sm:p-6">
                 <div className="mb-4 flex items-center justify-between">
                   <h3 className="font-heading text-sm font-semibold uppercase tracking-wider text-n6">
                     Browse by Category
@@ -106,19 +113,32 @@ export default function Header() {
                   <Link
                     href="/#categories"
                     onClick={() => setMenuOpen(false)}
-                    className="font-heading text-xs font-medium text-qube-blue transition-colors hover:text-qube-blue/80"
+                    className="group/link inline-flex items-center gap-1 font-heading text-xs font-medium text-qube-blue transition-colors hover:text-qube-blue/80"
                   >
-                    View All &rarr;
+                    See All
+                    <svg
+                      className="h-3 w-3 transition-transform duration-200 group-hover/link:translate-x-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
                   </Link>
                 </div>
-                <div className="grid grid-cols-3 gap-x-6 gap-y-1">
+                <div className="grid grid-cols-1 gap-x-6 gap-y-1 sm:grid-cols-3">
                   {[col1, col2, col3].map((col, colIdx) => (
                     <div key={colIdx} className="space-y-1">
                       {col.map((cat) => (
-                        <Link
+                        <a
                           key={cat.slug}
-                          href={`/#${cat.slug}`}
-                          onClick={() => setMenuOpen(false)}
+                          href={`#${cat.slug}`}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setMenuOpen(false);
+                            document.getElementById(cat.slug)?.scrollIntoView({ behavior: "smooth" });
+                          }}
                           className="group block rounded-lg p-2.5 transition-colors hover:bg-n8/50"
                         >
                           <span className="font-heading text-sm font-semibold text-qube-blue group-hover:text-qube-blue/80">
@@ -127,7 +147,7 @@ export default function Header() {
                           <p className="mt-0.5 line-clamp-2 text-xs leading-relaxed text-n6">
                             {cat.description}
                           </p>
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   ))}

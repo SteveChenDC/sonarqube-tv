@@ -9,7 +9,7 @@ vi.mock("next/link", () => ({
 }));
 
 describe("Header", () => {
-  it("renders the Sonar.tv brand logo linking to home", () => {
+  it("renders the SonarQube.tv brand logo linking to home", () => {
     render(<Header />);
     const homeLink = screen.getByRole("link", { name: /sonar/i });
     expect(homeLink).toHaveAttribute("href", "/");

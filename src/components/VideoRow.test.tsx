@@ -35,14 +35,14 @@ describe("VideoRow", () => {
     expect(container.innerHTML).toBe("");
   });
 
-  it("renders title, View All link, and all video cards", () => {
+  it("renders title, See All link, and all video cards", () => {
     const videos = [makeVideo("v1"), makeVideo("v2"), makeVideo("v3")];
     const { getByText, container } = render(
       <VideoRow title="Tutorials" categorySlug="tutorials" videos={videos} />
     );
     expect(getByText("Tutorials")).toBeTruthy();
-    expect(getByText("View All")).toBeTruthy();
-    // View All links to category page
+    expect(getByText("See All")).toBeTruthy();
+    // See All links to category page
     const viewAllLink = container.querySelector('a[href="/category/tutorials"]');
     expect(viewAllLink).toBeTruthy();
     // All video cards rendered

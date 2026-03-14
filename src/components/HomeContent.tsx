@@ -154,20 +154,40 @@ export default function HomeContent({
           onOpenChange={setFilterOpen}
         />
 
-        {continueWatchingVideos.length > 0 && (
-          <div className="border-t border-n8/70 pt-10">
+        {(continueWatchingVideos.length > 0 || topRowVideos.length > 0) && (
+          <div className="border-t border-n8/70 pt-6">
             <VideoRow
-              title="Continue Watching"
-              videos={continueWatchingVideos}
-            />
-          </div>
-        )}
-
-        {topRowVideos.length > 0 && (
-          <div className="border-t border-n8/70 pt-10">
-            <VideoRow
-              title={sortBy === "oldest" ? "Oldest" : "Latest"}
-              videos={topRowVideos}
+              title={
+                continueWatchingVideos.length > 0
+                  ? "Continue Watching"
+                  : sortBy === "oldest"
+                    ? "Oldest"
+                    : "Latest"
+              }
+              videos={
+                continueWatchingVideos.length > 0 && topRowVideos.length > 0
+                  ? [...continueWatchingVideos, ...topRowVideos]
+                  : continueWatchingVideos.length > 0
+                    ? continueWatchingVideos
+                    : topRowVideos
+              }
+              hideHeader={continueWatchingVideos.length > 0 && topRowVideos.length > 0}
+              dividerAfterIndex={
+                continueWatchingVideos.length > 0 && topRowVideos.length > 0
+                  ? continueWatchingVideos.length
+                  : undefined
+              }
+              sectionLabels={
+                continueWatchingVideos.length > 0 && topRowVideos.length > 0
+                  ? {
+                      firstLabel: "Continue Watching",
+                      firstCount: continueWatchingVideos.length,
+                      secondLabel: sortBy === "oldest" ? "Oldest" : "Latest",
+                      secondCount: topRowVideos.length,
+                      splitAt: continueWatchingVideos.length,
+                    }
+                  : undefined
+              }
             />
           </div>
         )}
