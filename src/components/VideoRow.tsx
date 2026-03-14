@@ -20,9 +20,10 @@ interface VideoRowProps {
   hideHeader?: boolean;
   dividerAfterIndex?: number;
   sectionLabels?: SectionLabels;
+  onRemoveVideo?: (videoId: string) => void;
 }
 
-export default function VideoRow({ title, categorySlug, videos, hideHeader, dividerAfterIndex, sectionLabels }: Readonly<VideoRowProps>) {
+export default function VideoRow({ title, categorySlug, videos, hideHeader, dividerAfterIndex, sectionLabels, onRemoveVideo }: Readonly<VideoRowProps>) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -97,7 +98,7 @@ export default function VideoRow({ title, categorySlug, videos, hideHeader, divi
                 {renderLabel(sectionLabels.firstLabel, sectionLabels.firstCount)}
                 <div className="flex gap-4">
                   {videos.slice(0, sectionLabels.splitAt).map((video) => (
-                    <VideoCard key={video.id} video={video} />
+                    <VideoCard key={video.id} video={video} onRemove={onRemoveVideo ? () => onRemoveVideo(video.id) : undefined} />
                   ))}
                 </div>
               </div>
@@ -119,7 +120,7 @@ export default function VideoRow({ title, categorySlug, videos, hideHeader, divi
             </>
           ) : (
             videos.map((video) => (
-              <VideoCard key={video.id} video={video} />
+              <VideoCard key={video.id} video={video} onRemove={onRemoveVideo ? () => onRemoveVideo(video.id) : undefined} />
             ))
           )}
         </div>

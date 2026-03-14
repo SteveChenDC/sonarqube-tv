@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from "react";
 import Hero from "./Hero";
 import VideoRow from "./VideoRow";
-import { getAllProgress } from "@/lib/watchProgress";
+import { getAllProgress, removeProgress } from "@/lib/watchProgress";
 import FilterBar, {
   FilterTrigger,
   UploadDateFilter,
@@ -188,6 +188,10 @@ export default function HomeContent({
                     }
                   : undefined
               }
+              onRemoveVideo={continueWatchingVideos.length > 0 ? (videoId) => {
+                removeProgress(videoId);
+                setContinueWatchingVideos((prev) => prev.filter((v) => v.id !== videoId));
+              } : undefined}
             />
           </div>
         )}
