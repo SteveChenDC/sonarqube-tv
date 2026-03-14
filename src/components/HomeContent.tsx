@@ -176,7 +176,9 @@ export default function HomeContent({
         />
 
         {(continueWatchingVideos.length > 0 || topRowVideos.length > 0) && (
-          <div className="border-t border-n8/70 pt-6">
+          <div className="relative pt-8">
+            {/* Gradient section divider */}
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-n7/60 to-transparent" />
             <VideoRow
               title={(() => {
                 if (continueWatchingVideos.length > 0) return "Continue Watching";
@@ -220,7 +222,8 @@ export default function HomeContent({
             const categoryVideos = getVideosByCategory(category.slug);
             if (categoryVideos.length === 0 && hasActiveFilters) return null;
             return (
-              <div key={category.slug} className="border-t border-n8/40 pt-6">
+              <div key={category.slug} className="relative pt-6">
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-n8/50 to-transparent" />
                 <VideoRow
                   title={category.title}
                   categorySlug={category.slug}
