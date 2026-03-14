@@ -175,12 +175,19 @@ describe("HomeContent", () => {
     fireEvent.click(screen.getByText("Oldest"));
     fireEvent.click(screen.getByText("Apply"));
 
+    // "Oldest" top row should appear instead of "Latest"
+    const rowHeadings = Array.from(container.querySelectorAll("h2"));
+    const rowTitles = rowHeadings.map((h) => h.textContent);
+    expect(rowTitles.some((t) => t?.startsWith("Oldest"))).toBe(true);
+    expect(rowTitles.some((t) => t?.startsWith("Latest"))).toBe(false);
+
     const headings = Array.from(container.querySelectorAll("h3"));
     const tutorialTitles = headings
       .map((h) => h.textContent)
       .filter((t) => t === "Short Tutorial" || t === "Medium Tutorial");
     // medium-vid (2025-06) should come before short-vid (2025-12) in oldest-first
-    expect(tutorialTitles).toEqual(["Medium Tutorial", "Short Tutorial"]);
+    // They appear in both the Oldest row and the Tutorials category row
+    expect(tutorialTitles[0]).toBe("Medium Tutorial");
   });
 
   it("sorts videos newest first by default", () => {

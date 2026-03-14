@@ -12,8 +12,8 @@ BUDGET=3
 QA_BUDGET=3
 QA_TURNS=15
 MAX_TURNS=30
-SLEEP=30
-BACKOFF=300  # 5 min backoff when rate limited
+SLEEP=120    # 2 min between runs — paces usage across 5hr session window
+BACKOFF=600  # 10 min backoff when rate limited — gentler retry
 
 # Create or switch to the improvement branch
 git checkout -b "$BRANCH" 2>/dev/null || git checkout "$BRANCH"
@@ -47,12 +47,24 @@ tmux send-keys -t ralphs:loop "while true; do
   if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
   sleep $SLEEP
 
+  echo '=== [Changelog] Logging cycle... ==='
+  mkdir -p ralph-logs
+  NEW_COMMITS=\$(git log --oneline --since='30 minutes ago' 2>/dev/null)
+  if [ -n \"\$NEW_COMMITS\" ]; then
+    echo \"\" >> ralph-logs/changelog.md
+    echo \"## \$(date '+%Y-%m-%d %H:%M')\" >> ralph-logs/changelog.md
+    echo \"\$NEW_COMMITS\" | while read -r line; do echo \"- \$line\" >> ralph-logs/changelog.md; done
+    echo '=== Changelog updated ==='
+  else
+    echo '=== No new commits this cycle ==='
+  fi
+
   echo '=== Cycle complete. Next cycle in ${SLEEP}s... ==='
 done" Enter
 
 # Go back to rc window
 tmux select-window -t ralphs:rc
-tmux send-keys -t ralphs:rc "echo '=== Ralph RC — Control Center ===' && echo 'Sequential mode: Testing → Design → QA' && echo 'Budget: \$3/run | Sleep: 30s between runs' && echo 'Ctrl+B, 1 = watch loop | Ctrl+B, 0 = rc' && echo 'tmux kill-session -t ralphs to stop'" Enter
+tmux send-keys -t ralphs:rc "echo '=== Ralph RC — Control Center ===' && echo 'Sequential: Design → Polish → QA → bash changelog' && echo 'Budget: \$3/run | Changelog: free' && echo 'Ctrl+B, 1 = watch loop | Ctrl+B, 0 = rc' && echo 'tmux kill-session -t ralphs to stop'" Enter
 
 # Attach to session
 tmux attach -t ralphs
