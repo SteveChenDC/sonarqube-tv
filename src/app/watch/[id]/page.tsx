@@ -58,7 +58,7 @@ export default async function WatchPage({
 
         <VideoPlayer youtubeId={video.youtubeId} title={video.title} videoId={video.id} />
 
-        <div className="mt-8">
+        <div className="mt-6 rounded-xl border border-n8/60 bg-n9/40 p-5 sm:p-6">
           {category && (
             <Link
               href={`/category/${category.slug}`}
@@ -88,9 +88,11 @@ export default async function WatchPage({
               {video.duration}
             </span>
           </div>
-          <p className="mt-5 text-base leading-7 text-n4">
-            {video.description}
-          </p>
+          <div className="mt-4 border-t border-n8/40 pt-4">
+            <p className="text-base leading-7 text-n4">
+              {video.description}
+            </p>
+          </div>
         </div>
 
         <Suspense>
