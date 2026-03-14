@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Use class-based dark mode (.dark on <html>) instead of prefers-color-scheme */
+@variant dark (&:where(.dark, .dark *));
+
 /* Dark theme (default) */
 :root {
   --background: #0a0a0a;
