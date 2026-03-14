@@ -100,7 +100,7 @@ export default async function CategoryPage({
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {categoryVideos.map((video) => (
-            <VideoCard key={video.id} video={video} fluid />
+            <VideoCard key={video.id} video={video} fluid hideCategory />
           ))}
         </div>
       </div>
