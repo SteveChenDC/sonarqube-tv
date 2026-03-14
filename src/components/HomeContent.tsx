@@ -90,6 +90,17 @@ export default function HomeContent({
   const getVideosByCategory = (slug: string) =>
     filteredVideos.filter((v) => v.category === slug);
 
+  const topRowVideos = useMemo(() => {
+    if (sortBy === "oldest") {
+      return filteredVideos.slice(0, 20);
+    }
+    const thirtyDaysAgo = new Date();
+    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+    return filteredVideos.filter(
+      (v) => new Date(v.publishedAt) >= thirtyDaysAgo
+    );
+  }, [filteredVideos, sortBy]);
+
   const reset = () => {
     setUploadDate("anytime");
     setDuration("any");
@@ -128,7 +139,16 @@ export default function HomeContent({
           onOpenChange={setFilterOpen}
         />
 
-        <div id="categories" className="space-y-8 pt-6 pb-16">
+        {topRowVideos.length > 0 && (
+          <div className="pt-6">
+            <VideoRow
+              title={sortBy === "oldest" ? "Oldest" : "Latest"}
+              videos={topRowVideos}
+            />
+          </div>
+        )}
+
+        <div id="categories" className="space-y-6 pt-6 pb-16">
           {categories.map((category) => {
             const categoryVideos = getVideosByCategory(category.slug);
             if (categoryVideos.length === 0 && hasActiveFilters) return null;

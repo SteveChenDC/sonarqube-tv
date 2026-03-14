@@ -7,7 +7,7 @@ import VideoCard from "./VideoCard";
 
 interface VideoRowProps {
   title: string;
-  categorySlug: string;
+  categorySlug?: string;
   videos: Video[];
 }
 
@@ -26,31 +26,32 @@ export default function VideoRow({ title, categorySlug, videos }: Readonly<Video
   if (videos.length === 0) return null;
 
   return (
-    <section className="relative py-5">
-      <div className="mx-4 mb-5 border-t border-n8/70 sm:mx-6" />
-      <div className="mb-3 flex items-center justify-between px-4 sm:px-6">
+    <section className="relative py-4">
+      <div className="mb-4 flex items-center justify-between px-4 sm:px-6">
         <h2 className="font-heading text-lg font-semibold text-n1 sm:text-xl">
             {title}
             <span className="ml-2 text-sm font-normal text-n7">{videos.length}</span>
           </h2>
-        <div className="flex items-center gap-4">
-          <Link
-            href={`/watch/${videos[0].id}?playlist=${categorySlug}`}
-            className="inline-flex items-center gap-1.5 font-heading text-sm text-n6 transition-colors hover:text-n1"
-          >
-            <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" opacity=".5" />
-              <path d="M15 12l5 3.5V8.5z" />
-            </svg>
-            Watch All
-          </Link>
-          <Link
-            href={`/category/${categorySlug}`}
-            className="font-heading text-sm text-n1 transition-colors hover:text-n6"
-          >
-            See All
-          </Link>
-        </div>
+        {categorySlug && (
+          <div className="flex items-center gap-4">
+            <Link
+              href={`/watch/${videos[0].id}?playlist=${categorySlug}`}
+              className="inline-flex items-center gap-1.5 font-heading text-sm text-n6 transition-colors hover:text-n1"
+            >
+              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" opacity=".5" />
+                <path d="M15 12l5 3.5V8.5z" />
+              </svg>
+              Watch All
+            </Link>
+            <Link
+              href={`/category/${categorySlug}`}
+              className="font-heading text-sm text-n1 transition-colors hover:text-n6"
+            >
+              See All
+            </Link>
+          </div>
+        )}
       </div>
 
       <div className="group/row relative">

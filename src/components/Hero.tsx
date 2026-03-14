@@ -23,7 +23,7 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
         <div className="mx-auto max-w-7xl">
           <div className="max-w-2xl">
             <div className="mb-3 flex flex-wrap items-center gap-2">
-              <span className="inline-block rounded bg-qube-blue/20 px-3 py-1 font-heading text-sm font-medium text-qube-blue">
+              <span className="inline-block rounded bg-qube-blue px-3 py-1 font-heading text-sm font-medium text-n1">
                 Featured
               </span>
               {category && (
@@ -42,7 +42,7 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
             <h1 className="mb-4 font-heading text-3xl font-bold text-n1 sm:text-5xl">
               {video.title}
             </h1>
-            <p className="mb-6 line-clamp-2 text-base text-n5 sm:text-lg">
+            <p className="mb-6 line-clamp-3 text-base leading-relaxed text-n4 sm:text-lg">
               {video.description}
             </p>
           </div>
