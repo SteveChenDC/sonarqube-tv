@@ -93,6 +93,15 @@ describe("FilterBar", () => {
     expect(props.onOpenChange).toHaveBeenCalledWith(false);
   });
 
+  it("calls onOpenChange(false) when the close (X) button is clicked", () => {
+    const { props } = renderFilterBar();
+    // The close button is inside the modal header, next to the "Filters" heading
+    const closeButton = screen.getByText("Filters").parentElement!.querySelector("button");
+    expect(closeButton).not.toBeNull();
+    fireEvent.click(closeButton!);
+    expect(props.onOpenChange).toHaveBeenCalledWith(false);
+  });
+
   it("calls onOpenChange(false) when Escape is pressed", () => {
     const { props } = renderFilterBar();
     fireEvent.keyDown(document, { key: "Escape" });

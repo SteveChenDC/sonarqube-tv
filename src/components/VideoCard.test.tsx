@@ -68,6 +68,19 @@ describe("VideoCard", () => {
     expect(queryByText(/watched/)).toBeNull();
   });
 
+  it("shows category badge for a known category slug", () => {
+    const knownCatVideo: Video = { ...mockVideo, category: "getting-started" };
+    const { getByText } = render(<VideoCard video={knownCatVideo} />);
+    expect(getByText("Getting Started")).toBeTruthy();
+  });
+
+  it("hides category badge for an unknown category slug", () => {
+    const unknownCatVideo: Video = { ...mockVideo, category: "nonexistent-slug" };
+    const { container } = render(<VideoCard video={unknownCatVideo} />);
+    // No badge with bg-sonar-purple should render
+    expect(container.querySelector(".bg-sonar-purple\\/30")).toBeNull();
+  });
+
   describe("timeAgo rendering", () => {
     it("shows 'Just now' for a video published seconds ago", () => {
       const { getByText } = render(

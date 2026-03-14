@@ -144,6 +144,18 @@ describe("VideoPlayer", () => {
     });
   });
 
+  it("caps progress bar at 100% even when reported progress exceeds 100", async () => {
+    setProgress("vid1", 150);
+    const { container } = render(
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+    );
+    await waitFor(() => {
+      const bar = container.querySelector(".bg-sonar-red") as HTMLElement;
+      expect(bar).toBeTruthy();
+      expect(bar.style.width).toBe("100%");
+    });
+  });
+
   it("ignores postMessage from non-YouTube origins", async () => {
     const { container } = render(
       <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
