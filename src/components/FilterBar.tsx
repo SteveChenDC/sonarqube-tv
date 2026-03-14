@@ -87,7 +87,7 @@ function FilterGroup<T extends string>({
             onClick={() => onChange(opt.value)}
             className={`rounded-full px-3 py-1.5 font-heading text-xs font-medium transition-colors ${
               value === opt.value
-                ? "bg-qube-blue text-n1"
+                ? "bg-qube-blue text-white"
                 : "bg-n8 text-n4 hover:bg-n7 hover:text-n2"
             }`}
           >
@@ -234,7 +234,7 @@ export function FilterTrigger({
     <button
       onClick={onClick}
       aria-label="Filters"
-      className="flex items-center gap-2 rounded-lg border border-n8 bg-n9/80 px-4 py-2 font-heading text-sm font-medium text-n3 backdrop-blur-sm transition-colors hover:border-n7 hover:bg-n8/80"
+      className="flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-5 py-2.5 font-heading text-sm font-semibold text-white shadow-md backdrop-blur-md transition-all hover:border-white/40 hover:bg-white/20 hover:shadow-lg"
     >
       <span>Filters</span>
       <SlidersIcon />

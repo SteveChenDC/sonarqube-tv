@@ -24,8 +24,18 @@ function SonarWhaleMark({ className }: { className?: string }) {
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 10);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -51,19 +61,23 @@ export default function Header() {
   const col2 = categories.slice(4, 8);
   const col3 = categories.slice(8);
 
+  const navText = scrolled
+    ? "text-n6 hover:bg-n8/50 hover:text-n1"
+    : "text-white/70 hover:bg-white/10 hover:text-white";
+
   return (
-    <header className="fixed top-0 z-50 w-full bg-gradient-to-b from-n9/90 to-transparent backdrop-blur-sm">
+    <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled ? "border-b border-n8/30 bg-background/95 shadow-sm backdrop-blur-md" : "border-b border-transparent bg-gradient-to-b from-black/70 to-transparent"}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <SonarWhaleMark className="h-7 w-auto text-n1" />
+          <SonarWhaleMark className={`h-7 w-auto transition-colors duration-300 ${scrolled ? "text-n1" : "text-white"}`} />
           <span className="font-heading text-2xl font-bold tracking-tight">
-            <span className="text-n1">Sonar</span><span className="text-n6">.tv</span>
+            <span className={`transition-colors duration-300 ${scrolled ? "text-n1" : "text-white"}`}>Sonar</span><span className={`transition-colors duration-300 ${scrolled ? "text-n6" : "text-white/50"}`}>.tv</span>
           </span>
         </Link>
         <nav className="flex items-center gap-1">
           <Link
             href="/"
-            className="rounded-lg px-3 py-2 font-heading text-sm font-medium text-n6 transition-colors hover:bg-n8/50 hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
+            className={`rounded-lg px-3 py-2 font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
           >
             Home
           </Link>
@@ -75,7 +89,7 @@ export default function Header() {
           >
             <button
               onClick={() => setMenuOpen((prev) => !prev)}
-              className="flex items-center gap-1 rounded-lg px-3 py-2 font-heading text-sm font-medium text-n6 transition-colors hover:bg-n8/50 hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
+              className={`flex items-center gap-1 rounded-lg px-3 py-2 font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
             >
               Categories
               <svg
@@ -127,7 +141,7 @@ export default function Header() {
               </div>
             )}
           </div>
-          <ThemeToggle />
+          <ThemeToggle className={scrolled ? "text-n6 hover:bg-n8/50 hover:text-n1" : "text-white/70 hover:bg-white/10 hover:text-white"} />
         </nav>
       </div>
     </header>
