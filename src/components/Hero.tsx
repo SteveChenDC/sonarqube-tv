@@ -19,8 +19,9 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
       />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-sonar-purple/40 to-transparent" />
-      {/* Extra scrim ensures white text stays readable in both themes */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent" />
+      {/* Dark scrim ensures white text stays readable in both themes;
+          light mode needs heavier opacity since from-background is near-white */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-black/15 dark:from-black/40 dark:via-black/20 dark:to-transparent" />
 
       <div className="absolute bottom-0 left-0 right-0 px-4 pb-16 sm:px-6">
         <div className="mx-auto max-w-7xl">
