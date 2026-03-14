@@ -157,14 +157,10 @@ export default function Header() {
                   {[col1, col2, col3].map((col) => (
                     <div key={col[0]?.slug ?? "empty"} className="space-y-1">
                       {col.map((cat) => (
-                        <a
+                        <Link
                           key={cat.slug}
-                          href={`#${cat.slug}`}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setMenuOpen(false);
-                            document.getElementById(cat.slug)?.scrollIntoView({ behavior: "smooth" });
-                          }}
+                          href={`/category/${cat.slug}`}
+                          onClick={() => setMenuOpen(false)}
                           className="group block rounded-lg p-2.5 transition-colors hover:bg-n8/50"
                         >
                           <span className="font-heading text-sm font-semibold text-qube-blue group-hover:text-qube-blue/80">
@@ -173,7 +169,7 @@ export default function Header() {
                           <p className="mt-0.5 line-clamp-2 text-xs leading-relaxed text-n6">
                             {cat.description}
                           </p>
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   ))}
