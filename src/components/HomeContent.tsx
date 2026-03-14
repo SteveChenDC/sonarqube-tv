@@ -95,16 +95,15 @@ export default function HomeContent({
   const getVideosByCategory = (slug: string) =>
     filteredVideos.filter((v) => v.category === slug);
 
-  const topRowVideos = useMemo(() => {
+  const { topRowVideos, topRowTotalCount } = useMemo(() => {
     const MAX_TOP_ROW = 15;
     if (sortBy === "oldest") {
-      return filteredVideos.slice(0, MAX_TOP_ROW);
+      return { topRowVideos: filteredVideos.slice(0, MAX_TOP_ROW), topRowTotalCount: filteredVideos.length };
     }
     const thirtyDaysAgo = new Date();
     thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-    return filteredVideos
-      .filter((v) => new Date(v.publishedAt) >= thirtyDaysAgo)
-      .slice(0, MAX_TOP_ROW);
+    const recentVideos = filteredVideos.filter((v) => new Date(v.publishedAt) >= thirtyDaysAgo);
+    return { topRowVideos: recentVideos.slice(0, MAX_TOP_ROW), topRowTotalCount: recentVideos.length };
   }, [filteredVideos, sortBy]);
 
   const reset = () => {
@@ -204,11 +203,12 @@ export default function HomeContent({
                       firstLabel: "Continue Watching",
                       firstCount: continueWatchingVideos.length,
                       secondLabel: sortBy === "oldest" ? "Oldest" : "Latest",
-                      secondCount: topRowVideos.filter(v => !continueWatchingVideos.some(cw => cw.id === v.id)).length,
+                      secondCount: topRowTotalCount,
                       splitAt: continueWatchingVideos.length,
                     }
                   : undefined
               }
+              totalCount={continueWatchingVideos.length === 0 ? topRowTotalCount : undefined}
               onRemoveVideo={continueWatchingVideos.length > 0 ? (videoId) => {
                 removeProgress(videoId);
                 setContinueWatchingVideos((prev) => prev.filter((v) => v.id !== videoId));
