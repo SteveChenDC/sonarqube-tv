@@ -36,7 +36,7 @@ export default function VideoRow({ title, categorySlug, videos }: Readonly<Video
           <div className="flex items-center gap-4">
             <Link
               href={`/watch/${videos[0].id}?playlist=${categorySlug}`}
-              className="inline-flex items-center gap-1.5 font-heading text-sm text-n6 transition-colors hover:text-n1"
+              className="inline-flex items-center gap-1.5 font-heading text-sm text-n3 transition-colors hover:text-n1"
             >
               <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" opacity=".5" />
@@ -46,7 +46,7 @@ export default function VideoRow({ title, categorySlug, videos }: Readonly<Video
             </Link>
             <Link
               href={`/category/${categorySlug}`}
-              className="font-heading text-sm text-n4 transition-colors hover:text-n1"
+              className="font-heading text-sm text-n6 transition-colors hover:text-n1"
             >
               See All
             </Link>

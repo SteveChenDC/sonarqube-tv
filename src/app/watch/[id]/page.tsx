@@ -58,7 +58,7 @@ export default async function WatchPage({
 
         <VideoPlayer youtubeId={video.youtubeId} title={video.title} videoId={video.id} />
 
-        <div className="mt-6 rounded-xl border border-n8/60 bg-n9/40 p-5 sm:p-6">
+        <div className="mt-6 rounded-xl border border-n8 bg-n8/15 p-5 sm:p-6">
           {category && (
             <Link
               href={`/category/${category.slug}`}

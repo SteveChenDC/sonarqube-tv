@@ -36,7 +36,7 @@ export default function VideoCard({ video, fluid = false }: Readonly<{ video: Vi
   return (
     <Link
       href={`/watch/${video.id}`}
-      className="group flex-shrink-0 snap-start"
+      className="group flex-shrink-0 snap-start rounded-lg"
     >
       <div className={`relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 ${fluid ? "w-full" : "w-[280px] sm:w-[320px]"}`}>
         <Image
