@@ -1870,6 +1870,16 @@ export const videos: Video[] = [
     publishedAt: "2024-03-13",
   },
   {
+    id: "v183",
+    title: "Sonar Customer Stories | Modino.io",
+    description: "Discover how Modino.io leveraged SonarQube to raise code quality standards, reduce technical debt, and ship more reliable software faster.",
+    youtubeId: "DiF4VfW4zco",
+    thumbnail: "https://img.youtube.com/vi/DiF4VfW4zco/maxresdefault.jpg",
+    category: "customer-stories",
+    duration: "2:28",
+    publishedAt: "2024-03-13",
+  },
+  {
     id: "v184",
     title: "Sonar Customer Stories | Siemens AG",
     description: "See how Siemens AG uses Sonar's static analysis capabilities to maintain code quality and security governance at enterprise scale across global engineering teams.",
@@ -2346,6 +2356,7 @@ export function getCategoryBySlug(slug: string): Category | undefined {
 export const featuredYoutubeIds = [
   "F1F_CVD33WI", // Seven habits of highly effective AI coding (Erin Kouri)
   "el9OKGrqU6o", // Refactoring with Cognitive Complexity (Ann Campbell)
+  "DiF4VfW4zco", // Customer Stories | Modino.io (Blazej Pawlak)
   "g6BqDORtdkE", // Fireside chat with DATEV (two people)
   "ACZqTrM5Frs", // Interview - Product Manager
   "2jYXRu9dOJM", // Interview - Software Engineer

@@ -157,7 +157,7 @@ export default function Header() {
                       {col.map((cat) => (
                         <Link
                           key={cat.slug}
-                          href={`/category/${cat.slug}`}
+                          href={`/#${cat.slug}`}
                           onClick={() => setMenuOpen(false)}
                           className="group block rounded-lg p-2.5 transition-colors hover:bg-n8/50"
                         >

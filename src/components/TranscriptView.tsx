@@ -22,24 +22,22 @@ function SegmentRow({
   activeRef?: React.Ref<HTMLDivElement>;
 }>) {
   return (
-    <div
+    <button
       ref={isActive ? activeRef : undefined}
-      className={`flex gap-3 rounded p-1.5 transition-colors duration-200 ${
+      onClick={() => onSeek(seg.offset)}
+      className={`flex w-full cursor-pointer gap-3 rounded p-1.5 text-left transition-colors duration-200 ${
         isActive
           ? "bg-qube-blue/15 border-l-2 border-qube-blue"
           : "hover:bg-n8/30"
       }`}
     >
-      <button
-        onClick={() => onSeek(seg.offset)}
-        className="shrink-0 font-mono text-xs text-qube-blue hover:underline"
-      >
+      <span className="shrink-0 font-mono text-xs text-qube-blue">
         {formatTime(seg.offset)}
-      </button>
+      </span>
       <span className={`text-sm leading-relaxed ${isActive ? "text-n1" : "text-n4"}`}>
         {seg.text}
       </span>
-    </div>
+    </button>
   );
 }
 
