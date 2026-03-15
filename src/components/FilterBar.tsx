@@ -154,14 +154,18 @@ export default function FilterBar({
           className={`m-0 max-h-none max-w-none border-none bg-transparent p-0 fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm transition-colors duration-200 ${
             visible ? "bg-black/60" : "bg-black/0"
           }`}
-          onClick={(e) => {
-            if (e.target === e.currentTarget) setIsOpen(false);
-          }}
           onTransitionEnd={handleTransitionEnd}
         >
+          <button
+            type="button"
+            className="fixed inset-0 -z-10 cursor-default appearance-none border-none bg-transparent p-0"
+            onClick={() => setIsOpen(false)}
+            aria-label="Close filters"
+            tabIndex={-1}
+          />
           <div
             ref={modalRef}
-            className={`mx-4 w-full max-w-md rounded-xl border border-n8 bg-background p-6 shadow-2xl transition-all duration-200 ${
+            className={`relative mx-4 w-full max-w-md rounded-xl border border-n8 bg-background p-6 shadow-2xl transition-all duration-200 ${
               visible
                 ? "scale-100 opacity-100"
                 : "scale-95 opacity-0"

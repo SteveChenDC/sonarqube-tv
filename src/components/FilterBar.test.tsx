@@ -96,9 +96,9 @@ describe("FilterBar", () => {
   it("calls onOpenChange(false) when the close (X) button is clicked", () => {
     const { props } = renderFilterBar();
     // The close button is inside the modal header, next to the "Filters" heading
-    const closeButton = screen.getByText("Filters").parentElement!.querySelector("button");
-    expect(closeButton).not.toBeNull();
-    fireEvent.click(closeButton!);
+    const closeButton = screen.getByText("Filters").parentElement?.querySelector("button");
+    if (!closeButton) throw new Error("Close button not found");
+    fireEvent.click(closeButton);
     expect(props.onOpenChange).toHaveBeenCalledWith(false);
   });
 
@@ -111,9 +111,9 @@ describe("FilterBar", () => {
   it("calls onOpenChange(false) when clicking the backdrop", () => {
     const { props } = renderFilterBar();
     // The backdrop is the outer fixed div
-    const backdrop = screen.getByText("Filters").closest(".fixed");
-    expect(backdrop).not.toBeNull();
-    fireEvent.click(backdrop!);
+    const backdrop = screen.getByText("Filters").closest(".fixed")?.querySelector("button[aria-label='Close filters']");
+    if (!backdrop) throw new Error("Backdrop button not found");
+    fireEvent.click(backdrop);
     expect(props.onOpenChange).toHaveBeenCalledWith(false);
   });
 });

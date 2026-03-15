@@ -113,10 +113,10 @@ describe("HomeContent", () => {
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
 
-    const cardTitles = Array.from(container.querySelectorAll("h3")).map((h) => h.textContent);
-    expect(cardTitles.includes("Short Tutorial")).toBe(true);
-    expect(cardTitles.includes("Medium Tutorial")).toBe(false);
-    expect(cardTitles.includes("Long Webinar")).toBe(false);
+    const cardTitles = new Set(Array.from(container.querySelectorAll("h3")).map((h) => h.textContent));
+    expect(cardTitles.has("Short Tutorial")).toBe(true);
+    expect(cardTitles.has("Medium Tutorial")).toBe(false);
+    expect(cardTitles.has("Long Webinar")).toBe(false);
   });
 
   it("filters videos by medium duration (4–20 min)", () => {
@@ -131,10 +131,10 @@ describe("HomeContent", () => {
     fireEvent.click(screen.getByText("4–20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
-    const cardTitles = Array.from(container.querySelectorAll("h3")).map((h) => h.textContent);
-    expect(cardTitles.includes("Short Tutorial")).toBe(false);
-    expect(cardTitles.includes("Medium Tutorial")).toBe(true);
-    expect(cardTitles.includes("Long Webinar")).toBe(false);
+    const cardTitles = new Set(Array.from(container.querySelectorAll("h3")).map((h) => h.textContent));
+    expect(cardTitles.has("Short Tutorial")).toBe(false);
+    expect(cardTitles.has("Medium Tutorial")).toBe(true);
+    expect(cardTitles.has("Long Webinar")).toBe(false);
   });
 
   it("filters videos by long duration (over 20 min)", () => {
@@ -149,10 +149,10 @@ describe("HomeContent", () => {
     fireEvent.click(screen.getByText("Over 20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
-    const cardTitles = Array.from(container.querySelectorAll("h3")).map((h) => h.textContent);
-    expect(cardTitles.includes("Short Tutorial")).toBe(false);
-    expect(cardTitles.includes("Medium Tutorial")).toBe(false);
-    expect(cardTitles.includes("Long Webinar")).toBe(true);
+    const cardTitles = new Set(Array.from(container.querySelectorAll("h3")).map((h) => h.textContent));
+    expect(cardTitles.has("Short Tutorial")).toBe(false);
+    expect(cardTitles.has("Medium Tutorial")).toBe(false);
+    expect(cardTitles.has("Long Webinar")).toBe(true);
   });
 
   it("sorts videos oldest first", () => {
