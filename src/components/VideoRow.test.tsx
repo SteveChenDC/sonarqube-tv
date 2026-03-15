@@ -11,14 +11,14 @@ describe("VideoRow", () => {
     expect(container.innerHTML).toBe("");
   });
 
-  it("renders title as a link to the category page with all video cards", () => {
+  it("renders title as heading with all video cards", () => {
     const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" }), makeVideo({ id: "v3" })];
     const { getByText, getAllByText } = render(
       <VideoRow title="Tutorials" categorySlug="tutorials" videos={videos} />
     );
-    // Title is a clickable link to the category page
+    // Title is a heading inside a section with anchor id
     const titleEl = getByText("Tutorials");
-    expect(titleEl.closest("a")).toHaveAttribute("href", "/category/tutorials");
+    expect(titleEl.closest("section")?.id).toBe("tutorials");
     // All video cards rendered (may appear in both mobile + desktop layouts)
     expect(getAllByText("Video v1").length).toBeGreaterThanOrEqual(1);
     expect(getAllByText("Video v2").length).toBeGreaterThanOrEqual(1);
