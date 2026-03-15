@@ -12,8 +12,8 @@ BUDGET=3
 QA_BUDGET=3
 QA_TURNS=15
 MAX_TURNS=30
-SLEEP=600    # 10 min between runs — targets ~50% of 5hr session window
-BACKOFF=900  # 15 min backoff when rate limited
+SLEEP=120    # 2 min between runs — maximize throughput in 5hr window
+BACKOFF=300  # 5 min backoff when rate limited
 MOBILE_FLAG="/tmp/ralph-mobile-focus.timestamp"
 
 # --mobile: activate 12-hour mobile focus mode
