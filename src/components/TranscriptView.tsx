@@ -25,16 +25,16 @@ function SegmentRow({
     <button
       ref={isActive ? activeRef : undefined}
       onClick={() => onSeek(seg.offset)}
-      className={`flex w-full cursor-pointer gap-3 rounded p-1.5 text-left transition-colors duration-200 ${
+      className={`flex w-full cursor-pointer gap-3 rounded-md p-2 text-left transition-colors duration-200 ${
         isActive
-          ? "bg-qube-blue/15 border-l-2 border-qube-blue"
+          ? "bg-qube-blue/20 ring-1 ring-qube-blue/40 border-l-[3px] border-qube-blue dark:bg-qube-blue/15 dark:ring-qube-blue/30"
           : "hover:bg-n8/30"
       }`}
     >
       <span className="shrink-0 font-mono text-xs text-qube-blue">
         {formatTime(seg.offset)}
       </span>
-      <span className={`text-sm leading-relaxed ${isActive ? "text-n1" : "text-n4"}`}>
+      <span className={`text-sm leading-relaxed ${isActive ? "font-medium text-n1" : "text-n4"}`}>
         {seg.text}
       </span>
     </button>
