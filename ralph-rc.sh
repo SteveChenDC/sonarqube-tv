@@ -12,7 +12,7 @@ BUDGET=3
 QA_BUDGET=3
 QA_TURNS=15
 MAX_TURNS=30
-SLEEP=120    # 2 min between runs — maximize throughput in 5hr window
+SLEEP=180    # 3 min between runs — saturate Max 5x weekly limit efficiently
 BACKOFF=300  # 5 min backoff when rate limited
 MOBILE_FLAG="/tmp/ralph-mobile-focus.timestamp"
 
