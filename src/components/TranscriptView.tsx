@@ -19,7 +19,7 @@ function SegmentRow({
   seg: TranscriptSegment;
   isActive: boolean;
   onSeek: (ms: number) => void;
-  activeRef?: React.Ref<HTMLDivElement>;
+  activeRef?: React.Ref<HTMLButtonElement>;
 }>) {
   return (
     <button
@@ -67,7 +67,7 @@ function useActiveSegment(segments: TranscriptSegment[]) {
 
 function useAutoScroll(activeOffset: number) {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const activeElRef = useRef<HTMLDivElement>(null);
+  const activeElRef = useRef<HTMLButtonElement>(null);
   const userScrolledRef = useRef(false);
   const programmaticScrollRef = useRef(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);

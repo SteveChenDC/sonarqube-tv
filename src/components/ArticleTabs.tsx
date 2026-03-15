@@ -5,6 +5,36 @@ import type { Article, Transcript } from "@/types";
 import TranscriptView from "./TranscriptView";
 import { extractChapters } from "@/lib/extractChapters";
 
+/** Parse inline markdown (**bold**, *italic*, `code`) into React nodes. */
+function parseInline(text: string): React.ReactNode[] {
+  const nodes: React.ReactNode[] = [];
+  // Match **bold**, *italic*, or `code`
+  const re = /(\*\*(.+?)\*\*|\*(.+?)\*|`(.+?)`)/g;
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let k = 0;
+
+  while ((match = re.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      nodes.push(text.slice(lastIndex, match.index));
+    }
+    if (match[2]) {
+      nodes.push(<strong key={k++} className="font-semibold text-n1">{match[2]}</strong>);
+    } else if (match[3]) {
+      nodes.push(<em key={k++}>{match[3]}</em>);
+    } else if (match[4]) {
+      nodes.push(<code key={k++} className="rounded bg-n8 px-1 py-0.5 text-xs text-n2">{match[4]}</code>);
+    }
+    lastIndex = match.index + match[0].length;
+  }
+
+  if (lastIndex < text.length) {
+    nodes.push(text.slice(lastIndex));
+  }
+
+  return nodes.length > 0 ? nodes : [text];
+}
+
 function renderMarkdown(md: string) {
   const lines = md.split("\n");
   const elements: React.ReactNode[] = [];
@@ -17,31 +47,31 @@ function renderMarkdown(md: string) {
     } else if (trimmed.startsWith("### ")) {
       elements.push(
         <h3 key={key++} className="mb-2 mt-5 font-heading text-base font-semibold text-n1 first:mt-0">
-          {trimmed.slice(4)}
+          {parseInline(trimmed.slice(4))}
         </h3>
       );
     } else if (trimmed.startsWith("## ")) {
       elements.push(
         <h2 key={key++} className="mb-3 mt-6 font-heading text-lg font-semibold text-n1 first:mt-0">
-          {trimmed.slice(3)}
+          {parseInline(trimmed.slice(3))}
         </h2>
       );
     } else if (trimmed.startsWith("# ")) {
       elements.push(
         <h1 key={key++} className="mb-4 mt-6 font-heading text-xl font-bold text-n1 first:mt-0">
-          {trimmed.slice(2)}
+          {parseInline(trimmed.slice(2))}
         </h1>
       );
     } else if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) {
       elements.push(
         <li key={key++} className="ml-4 list-disc text-sm leading-relaxed text-n3">
-          {trimmed.slice(2)}
+          {parseInline(trimmed.slice(2))}
         </li>
       );
     } else {
       elements.push(
         <p key={key++} className="text-sm leading-relaxed text-n3">
-          {trimmed}
+          {parseInline(trimmed)}
         </p>
       );
     }
