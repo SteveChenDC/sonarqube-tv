@@ -87,17 +87,15 @@ export default function Header() {
   const col2 = categories.slice(4, 8);
   const col3 = categories.slice(8);
 
-  const navText = scrolled
-    ? "text-n9/70 hover:bg-n3/50 hover:text-n9 dark:text-n1/70 dark:hover:bg-n8/50 dark:hover:text-n1"
-    : "text-n9/80 hover:bg-n9/10 hover:text-n9 dark:text-white/80 dark:hover:bg-white/10 dark:hover:text-white";
+  const navText = "text-n1/70 hover:bg-n1/10 hover:text-n1";
 
   return (
-    <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled ? "border-b border-n7/30 bg-background/95 shadow-lg shadow-black/10 backdrop-blur-md dark:border-n8/50 dark:shadow-black/5" : "border-b border-black/15 bg-background shadow-sm shadow-black/5 dark:border-n8/50"}`}>
+    <header className={`fixed top-0 z-50 w-full border-b border-n1/10 bg-background transition-all duration-300 ${scrolled ? "shadow-sm" : ""}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <SonarWhaleMark className={`h-7 w-auto transition-colors duration-300 ${scrolled ? "text-n9 dark:text-n1" : "text-n9 dark:text-white"}`} />
+          <SonarWhaleMark className="h-7 w-auto text-n1" />
           <span className="font-heading text-2xl font-bold tracking-tight">
-            <span className={`transition-colors duration-300 ${scrolled ? "text-n9 dark:text-n1" : "text-n9 dark:text-white"}`}>Sonar</span><span className="text-qube-blue">Qube</span><span className={`transition-colors duration-300 ${scrolled ? "text-n9/50 dark:text-n1/50" : "text-n9/60 dark:text-white/60"}`}>.tv</span>
+            <span className="text-n1">Sonar</span><span className="text-qube-blue">Qube</span><span className="text-n1/50">.tv</span>
           </span>
         </Link>
         <nav className="flex items-center gap-1">
@@ -177,7 +175,7 @@ export default function Header() {
               </div>
             )}
           </div>
-          <ThemeToggle className={scrolled ? "text-n9/70 hover:bg-n3/50 hover:text-n9 dark:text-n1/70 dark:hover:bg-n8/50 dark:hover:text-n1" : "text-n9/80 hover:bg-n9/10 hover:text-n9 dark:text-white/80 dark:hover:bg-white/10 dark:hover:text-white"} />
+          <ThemeToggle className="text-n1/70 hover:bg-n1/10 hover:text-n1" />
         </nav>
       </div>
     </header>

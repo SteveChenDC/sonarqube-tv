@@ -7,6 +7,9 @@ interface VideoPlayerProps {
   youtubeId: string;
   title: string;
   videoId: string;
+  playerId?: string;
+  autoPlay?: boolean;
+  compact?: boolean;
 }
 
 declare global {
@@ -32,7 +35,7 @@ interface YTPlayer {
   destroy(): void;
 }
 
-export default function VideoPlayer({ youtubeId, title, videoId }: Readonly<VideoPlayerProps>) {
+export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-player", autoPlay, compact }: Readonly<VideoPlayerProps>) {
   const containerRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YTPlayer | null>(null);
   const [progress, setProgressState] = useState(0);
@@ -44,17 +47,18 @@ export default function VideoPlayer({ youtubeId, title, videoId }: Readonly<Vide
   const initPlayer = useCallback(() => {
     if (!globalThis.window?.YT || !containerRef.current) return;
     playerRef.current?.destroy();
-    playerRef.current = new globalThis.window.YT.Player("yt-player", {
+    playerRef.current = new globalThis.window.YT.Player(playerId, {
       videoId: youtubeId,
       playerVars: {
         rel: 0,
         modestbranding: 1,
         enablejsapi: 1,
         origin: globalThis.location.origin,
+        ...(autoPlay ? { autoplay: 1 } : {}),
       },
       events: {},
     });
-  }, [youtubeId]);
+  }, [youtubeId, playerId, autoPlay]);
 
   useEffect(() => {
     // Load YT API script if not loaded yet
@@ -91,11 +95,14 @@ export default function VideoPlayer({ youtubeId, title, videoId }: Readonly<Vide
           const percent = (current / duration) * 100;
           setProgress(videoId, percent);
           setProgressState(percent);
+          globalThis.dispatchEvent(
+            new CustomEvent("yt-time", { detail: current * 1000 })
+          );
         }
       } catch {
         // player not ready yet
       }
-    }, 2000);
+    }, 500);
     return () => clearInterval(interval);
   }, [videoId]);
 
@@ -112,16 +119,18 @@ export default function VideoPlayer({ youtubeId, title, videoId }: Readonly<Vide
   return (
     <div className="w-full">
       <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-n8 bg-n9" ref={containerRef}>
-        <div id="yt-player" className="absolute inset-0 h-full w-full" title={title} />
+        <div id={playerId} className="absolute inset-0 h-full w-full" title={title} />
       </div>
-      <div className="h-1 w-full bg-n8 rounded-b-lg overflow-hidden">
-        {progress > 0 && (
-          <div
-            className="h-full bg-sonar-red transition-all duration-300"
-            style={{ width: `${Math.min(progress, 100)}%` }}
-          />
-        )}
-      </div>
+      {!compact && (
+        <div className="h-1 w-full bg-n8 rounded-b-lg overflow-hidden">
+          {progress > 0 && (
+            <div
+              className="h-full bg-sonar-red transition-all duration-300"
+              style={{ width: `${Math.min(progress, 100)}%` }}
+            />
+          )}
+        </div>
+      )}
     </div>
   );
 }

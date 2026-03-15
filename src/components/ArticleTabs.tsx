@@ -57,7 +57,7 @@ export default function ArticleTabs({
   article: Article | null;
   transcript: Transcript | null;
 }>) {
-  const [tab, setTab] = useState<"article" | "transcript">(article ? "article" : "transcript");
+  const [tab, setTab] = useState<"article" | "transcript">(transcript ? "transcript" : "article");
 
   const chapters = useMemo(() => {
     if (!article || !transcript) return [];
