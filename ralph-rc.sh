@@ -10,11 +10,29 @@ set -e
 BRANCH="ralph-wiggum-improvements"
 BUDGET=3
 QA_BUDGET=3
-QA_TURNS=15
+QA_TURNS=10
 MAX_TURNS=30
-SLEEP=180    # 3 min between runs — saturate Max 5x weekly limit efficiently
 BACKOFF=300  # 5 min backoff when rate limited
 MOBILE_FLAG="/tmp/ralph-mobile-focus.timestamp"
+
+# Double usage promo: 2x limits outside 8AM-2PM ET through March 27, 2026
+PROMO_END="2026-03-28"
+SLEEP_OFFPEAK=90   # 1.5 min — maximize 2x window
+SLEEP_PEAK=480     # 8 min — conserve during 1x window
+SLEEP_NORMAL=180   # 3 min — post-promo default
+
+get_sleep() {
+  if [[ "$(date +%Y-%m-%d)" > "$PROMO_END" ]]; then
+    echo $SLEEP_NORMAL
+    return
+  fi
+  local hour=$(TZ="America/New_York" date +%H | sed 's/^0//')
+  if [ "$hour" -ge 8 ] && [ "$hour" -lt 14 ]; then
+    echo $SLEEP_PEAK
+  else
+    echo $SLEEP_OFFPEAK
+  fi
+}
 
 # --mobile: activate 12-hour mobile focus mode
 if [ "$1" = "--mobile" ]; then
@@ -64,7 +82,15 @@ tmux new-session -d -s ralphs -n rc
 # Sequential loop — one Ralph at a time
 ##############################
 tmux new-window -t ralphs -n loop
-tmux send-keys -t ralphs:loop "while true; do
+tmux send-keys -t ralphs:loop "
+get_sleep() {
+  if [[ \\\"\\\$(date +%Y-%m-%d)\\\" > \\\"$PROMO_END\\\" ]]; then echo $SLEEP_NORMAL; return; fi
+  local hour=\\\$(TZ=America/New_York date +%H | sed 's/^0//')
+  if [ \\\"\\\$hour\\\" -ge 8 ] && [ \\\"\\\$hour\\\" -lt 14 ]; then echo $SLEEP_PEAK; else echo $SLEEP_OFFPEAK; fi
+}
+while true; do
+  CSLEEP=\$(get_sleep)
+  echo \"=== Cycle start — sleep=\${CSLEEP}s (\$(TZ=America/New_York date '+%H:%M ET')) ===\"
   # Check mobile focus mode
   if [ -f \"$MOBILE_FLAG\" ]; then
     EXPIRY=\$(cat \"$MOBILE_FLAG\")
@@ -87,15 +113,22 @@ tmux send-keys -t ralphs:loop "while true; do
   mkdir -p ralph-logs
 
   echo '=== [Design Ralph] Starting... ==='
+  BEFORE_SHA=\$(git rev-parse HEAD 2>/dev/null)
   OUTPUT=\$(claude -p \"\$DESIGN_PROMPT\" --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $MAX_TURNS --max-budget-usd $BUDGET 2>&1)
   echo \"\$OUTPUT\"
   if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
+  AFTER_SHA=\$(git rev-parse HEAD 2>/dev/null)
   LATEST=\$(git log --oneline -1 2>/dev/null)
   echo \"\" >> ralph-logs/changelog.md
   echo \"### \$(date '+%Y-%m-%d %H:%M') — Design Ralph\" >> ralph-logs/changelog.md
   echo \"- \$LATEST\" >> ralph-logs/changelog.md
   echo \"=== [Design Ralph] Done: \$LATEST ===\"
-  sleep $SLEEP
+  if [ \"\$BEFORE_SHA\" = \"\$AFTER_SHA\" ]; then
+    echo '=== No changes made this cycle. Skipping Polish/QA/Visual QA to save tokens. ==='
+    sleep \$CSLEEP
+    continue
+  fi
+  sleep \$CSLEEP
 
   echo '=== [Polish Ralph] Starting... ==='
   OUTPUT=\$(claude -p \"\$POLISH_PROMPT_VAR\" --model sonnet --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $MAX_TURNS --max-budget-usd $BUDGET 2>&1)
@@ -106,10 +139,10 @@ tmux send-keys -t ralphs:loop "while true; do
   echo \"### \$(date '+%Y-%m-%d %H:%M') — Polish Ralph\" >> ralph-logs/changelog.md
   echo \"- \$LATEST\" >> ralph-logs/changelog.md
   echo \"=== [Polish Ralph] Done: \$LATEST ===\"
-  sleep $SLEEP
+  sleep \$CSLEEP
 
   echo '=== [QA Ralph] Starting... ==='
-  OUTPUT=\$(claude -p 'You are a QA engineer for the sonarqube-tv app. CLAUDE.md has the full project map — do NOT re-read files unless you need to edit them. Run npm run build and npm test. If anything is broken, fix it and commit. If everything passes, exit cleanly.' --model sonnet --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $QA_TURNS --max-budget-usd $QA_BUDGET 2>&1)
+  OUTPUT=\$(claude -p 'You are a QA engineer for the sonarqube-tv app. CLAUDE.md has the full project map — do NOT re-read files unless you need to edit them. Run npm run build and npm test. If anything is broken, fix it and commit. If everything passes, exit cleanly.' --model haiku --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $QA_TURNS --max-budget-usd $QA_BUDGET 2>&1)
   echo \"\$OUTPUT\"
   if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
   LATEST=\$(git log --oneline -1 2>/dev/null)
@@ -117,7 +150,7 @@ tmux send-keys -t ralphs:loop "while true; do
   echo \"### \$(date '+%Y-%m-%d %H:%M') — QA Ralph\" >> ralph-logs/changelog.md
   echo \"- \$LATEST\" >> ralph-logs/changelog.md
   echo \"=== [QA Ralph] Done: \$LATEST ===\"
-  sleep $SLEEP
+  sleep \$CSLEEP
 
   echo '=== [Visual QA Ralph] Taking screenshots... ==='
   node scripts/visual-qa.mjs 2>&1
@@ -139,14 +172,14 @@ If you find a visual bug, fix it in the source code, run npm run build to verify
   echo \"### \$(date '+%Y-%m-%d %H:%M') — Visual QA Ralph\" >> ralph-logs/changelog.md
   echo \"- \$LATEST\" >> ralph-logs/changelog.md
   echo \"=== [Visual QA Ralph] Done: \$LATEST ===\"
-  sleep $SLEEP
+  sleep \$CSLEEP
 
   echo '=== Cycle complete. Next cycle in ${SLEEP}s... ==='
 done" Enter
 
 # Go back to rc window
 tmux select-window -t ralphs:rc
-tmux send-keys -t ralphs:rc "echo '=== Ralph RC — Control Center ===' && echo 'Sequential: Design → Polish → QA → bash changelog' && echo 'Budget: \$3/run | Changelog: free' && echo 'Ctrl+B, 1 = watch loop | Ctrl+B, 0 = rc' && echo 'tmux kill-session -t ralphs to stop'" Enter
+tmux send-keys -t ralphs:rc "echo '=== Ralph RC — Control Center ===' && echo 'Sequential: Design(opus) → Polish(sonnet) → QA(haiku) → VisualQA(sonnet)' && echo '2x promo: off-peak(2PM-8AM ET)=90s | peak(8AM-2PM ET)=480s' && echo 'Ctrl+B, 1 = watch loop | Ctrl+B, 0 = rc' && echo 'tmux kill-session -t ralphs to stop'" Enter
 
 # Attach to session
 tmux attach -t ralphs
