@@ -148,17 +148,17 @@ export default function FilterBar({
   return (
     <>
       {mounted && (
-        <dialog
-          open={mounted || undefined}
+        <div
+          role="dialog"
           aria-modal="true"
-          className={`m-0 max-h-none max-w-none border-none bg-transparent p-0 fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm transition-colors duration-200 ${
+          className={`fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm transition-colors duration-200 ${
             visible ? "bg-black/60" : "bg-black/0"
           }`}
           onTransitionEnd={handleTransitionEnd}
         >
           <button
             type="button"
-            className="fixed inset-0 -z-10 cursor-default appearance-none border-none bg-transparent p-0"
+            className="absolute inset-0 -z-10 cursor-default appearance-none border-none bg-transparent p-0"
             onClick={() => setIsOpen(false)}
             aria-label="Close filters"
             tabIndex={-1}
@@ -228,7 +228,7 @@ export default function FilterBar({
               )}
             </div>
           </div>
-        </dialog>
+        </div>
       )}
     </>
   );
