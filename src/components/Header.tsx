@@ -73,6 +73,17 @@ export default function Header() {
     if (!dropdownVisible) setDropdownMounted(false);
   }, [dropdownVisible]);
 
+  // Lock body scroll on mobile when dropdown is open
+  useEffect(() => {
+    if (!menuOpen) return;
+    const isMobile = window.matchMedia("(max-width: 639px)").matches;
+    if (!isMobile) return;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
   const handleMouseEnter = () => {
     clearTimeout(timeoutRef.current);
     setMenuOpen(true);
@@ -123,7 +134,7 @@ export default function Header() {
 
             {dropdownMounted && (
               <div
-                className={`fixed inset-x-4 top-[72px] z-50 rounded-xl border border-n8 bg-n9/95 p-4 shadow-2xl backdrop-blur-md transition-all duration-200 sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-2 sm:w-[720px] sm:p-6 ${
+                className={`fixed inset-x-4 top-[72px] z-50 max-h-[calc(100dvh-80px)] overflow-y-auto overscroll-contain rounded-xl border border-n8 bg-n9/95 p-4 shadow-2xl backdrop-blur-md transition-all duration-200 sm:max-h-none sm:overflow-y-visible sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-2 sm:w-[720px] sm:p-6 ${
                   dropdownVisible
                     ? "scale-100 opacity-100"
                     : "pointer-events-none scale-95 opacity-0"
