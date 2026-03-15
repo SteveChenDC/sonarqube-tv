@@ -87,16 +87,19 @@ export default async function CategoryPage({
           Back
         </Link>
 
-        <div className="mb-3 flex items-baseline gap-3">
-          <h1 className="font-heading text-3xl font-bold text-n1 sm:text-4xl">
-            {category.title}
-          </h1>
-          <span className="font-heading text-lg text-n6">{categoryVideos.length} videos</span>
+        <div className="mb-10 rounded-xl border border-n8 bg-n8/15 p-5 sm:p-6">
+          <div className="flex items-baseline gap-3">
+            <h1 className="font-heading text-3xl font-bold text-n1 sm:text-4xl">
+              {category.title}
+            </h1>
+            <span className="rounded-full bg-n8/60 px-2.5 py-0.5 font-heading text-sm font-medium text-n5">
+              {categoryVideos.length} {categoryVideos.length === 1 ? "video" : "videos"}
+            </span>
+          </div>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-n4">
+            {category.description}
+          </p>
         </div>
-        <p className="max-w-2xl text-base leading-relaxed text-n4">
-          {category.description}
-        </p>
-        <div className="mb-10 mt-8 border-t border-n8/40" />
 
         {categoryVideos.length > 0 ? (
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
