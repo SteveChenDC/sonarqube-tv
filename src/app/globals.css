@@ -88,6 +88,17 @@ html.theme-transitioning *::after {
   animation: fade-in 0.2s ease-out both;
 }
 
+@keyframes fade-in-out {
+  0% { opacity: 0; transform: translateY(4px); }
+  10% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(0); }
+}
+
+@utility animate-fade-in-out {
+  animation: fade-in-out 3s ease-out both;
+}
+
 /* Hide scrollbar for horizontal scroll rows */
 .scrollbar-hide {
   -ms-overflow-style: none;
