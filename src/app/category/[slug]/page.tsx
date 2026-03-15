@@ -91,18 +91,41 @@ export default async function CategoryPage({
           <h1 className="font-heading text-3xl font-bold text-n1 sm:text-4xl">
             {category.title}
           </h1>
-          <span className="font-heading text-lg text-n6">{categoryVideos.length} videos</span>
+          <span className="font-heading text-lg text-n6">{categoryVideos.length} {categoryVideos.length === 1 ? "video" : "videos"}</span>
         </div>
         <p className="max-w-2xl text-base leading-relaxed text-n4">
           {category.description}
         </p>
         <div className="mb-10 mt-8 border-t border-n8/40" />
 
-        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {categoryVideos.map((video) => (
-            <VideoCard key={video.id} video={video} fluid hideCategory />
-          ))}
-        </div>
+        {categoryVideos.length > 0 ? (
+          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {categoryVideos.map((video) => (
+              <VideoCard key={video.id} video={video} fluid hideCategory />
+            ))}
+          </div>
+        ) : (
+          <div className="py-20 text-center">
+            <svg
+              className="mx-auto h-12 w-12 text-n7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="1.5"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
+            </svg>
+            <p className="mt-4 font-heading text-lg text-n4">
+              No videos in this category yet.
+            </p>
+            <Link
+              href="/"
+              className="mt-3 inline-block font-heading text-sm text-qube-blue hover:underline"
+            >
+              Browse all videos
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
