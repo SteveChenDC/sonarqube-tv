@@ -27,9 +27,29 @@ MOBILE_PROMPT='You are a mobile-focused design critic for the sonarqube-tv app. 
 
 MOBILE_POLISH_PROMPT='You are a mobile-focused polish critic for the sonarqube-tv app. CLAUDE.md has the full project map. Check git log --oneline -10 to see what has already been fixed. Pick ONE mobile polish issue — do NOT pick one already fixed: (1) Touch targets ≥44px on all interactive elements, (2) Text legibility at 375px width, (3) Mobile grid card spacing consistency, (4) Hero mobile card visual polish, (5) Grid column alignment edge cases, (6) Filter modal mobile layout, (7) Mobile video player controls, (8) Prevent horizontal scroll overflow, (9) FAB positioning on small screens. Verify with npm run build. Commit with a descriptive message.'
 
-NORMAL_PROMPT='You are a design critic for the sonarqube-tv app. CLAUDE.md has the full project map. Check git log --oneline -10 to see what has already been fixed. Pick ONE of these known issues and fix it: (1) Hero description duplicates title — write a real summary or remove it, (2) Light mode hero has contrast problems — badges unreadable on light purple gradient, needs darker overlay in light mode, (3) Header nav invisible in light mode over hero — add border-bottom or shadow, (4) Latest row shows 67 videos — cap at 15 most recent, (5) No section divider above Latest row, (6) Card titles truncate awkwardly — use 2-line clamp, (7) ScrollToTop button shows N instead of arrow icon, (8) Watch All vs See All distinction unclear — simplify to one action, (9) Footer unreachable on long pages — check scroll. Also consider: theme toggle animation, continue watching row, filter button visibility. Verify with npm run build. Commit with a descriptive message.'
+NORMAL_PROMPT='You are a design critic for the sonarqube-tv app. CLAUDE.md has the full project map. Check git log --oneline -10 to see what has already been fixed. Pick ONE issue from ANY page and fix it — do NOT pick one already fixed in a recent commit.
 
-NORMAL_POLISH_PROMPT='You are a design critic for the sonarqube-tv app. CLAUDE.md has the full project map. Check git log --oneline -10 to see what has already been fixed. Pick ONE of these known issues and fix it — do NOT pick one that was already fixed in a recent commit: (1) Hero description duplicates title, (2) Light mode hero contrast — badges unreadable, (3) Header nav invisible in light mode over hero, (4) Latest row shows too many videos — cap at 15, (5) Missing section divider above Latest, (6) Card titles need 2-line clamp not single-line truncation, (7) ScrollToTop button shows wrong icon, (8) Simplify Watch All / See All into one action, (9) Footer unreachable — check scroll issues. Also: add smooth transition to theme toggle icon, make filter button more prominent. Verify with npm run build. Commit with a descriptive message.'
+HOME PAGE: (1) Hero description duplicates title — write a real summary or remove it, (2) Light mode hero contrast — badges unreadable on light purple gradient, (3) Card titles truncate awkwardly — use 2-line clamp, (4) Footer unreachable on long pages, (5) Theme toggle animation smoothness, (6) Continue watching row polish, (7) Filter button visibility and prominence.
+
+WATCH PAGE (/watch/[id]): (8) Transcript active highlight contrast — ensure the blue highlight is clearly visible in both themes, (9) Transcript auto-scroll indicator — show user when auto-scroll is paused, (10) AI Summary tab icon alignment and spacing, (11) PlaylistQueue active item styling and navigation, (12) Video player progress bar visibility, (13) Watch page metadata layout — date, duration, category badges, (14) Resume-from-progress toast or indicator when video resumes.
+
+CATEGORY PAGE (/category/[slug]): (15) Category header description readability, (16) Video grid spacing and alignment consistency, (17) Empty state if category has no videos, (18) Category page breadcrumb or back navigation.
+
+GLOBAL: (19) Header nav in light mode over hero, (20) ScrollToTop button icon, (21) Section dividers between content areas.
+
+Verify with npm run build. Commit with a descriptive message.'
+
+NORMAL_POLISH_PROMPT='You are a design polish critic for the sonarqube-tv app. CLAUDE.md has the full project map. Check git log --oneline -10 to see what has already been fixed. Pick ONE polish issue from ANY page — do NOT pick one already fixed.
+
+HOME: (1) Hero description, (2) Light mode contrast, (3) Card title clamp, (4) Footer reachability, (5) Filter button prominence.
+
+WATCH (/watch/[id]): (6) Transcript highlight visibility in both themes, (7) AI Summary tab styling, (8) PlaylistQueue item hover/active states, (9) Video metadata spacing and readability, (10) Transcript chapter header sticky styling.
+
+CATEGORY (/category/[slug]): (11) Category header polish, (12) Grid card alignment, (13) Back navigation styling.
+
+GLOBAL: (14) Theme toggle transition, (15) ScrollToTop icon, (16) Section divider consistency, (17) Focus-visible ring styling.
+
+Verify with npm run build. Commit with a descriptive message.'
 
 # Create or switch to the improvement branch
 git checkout -b "$BRANCH" 2>/dev/null || git checkout "$BRANCH"
@@ -64,35 +84,40 @@ tmux send-keys -t ralphs:loop "while true; do
     POLISH_PROMPT_VAR='$NORMAL_POLISH_PROMPT'
   fi
 
+  mkdir -p ralph-logs
+
   echo '=== [Design Ralph] Starting... ==='
   OUTPUT=\$(claude -p \"\$DESIGN_PROMPT\" --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $MAX_TURNS --max-budget-usd $BUDGET 2>&1)
   echo \"\$OUTPUT\"
   if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
+  LATEST=\$(git log --oneline -1 2>/dev/null)
+  echo \"\" >> ralph-logs/changelog.md
+  echo \"### \$(date '+%Y-%m-%d %H:%M') — Design Ralph\" >> ralph-logs/changelog.md
+  echo \"- \$LATEST\" >> ralph-logs/changelog.md
+  echo \"=== [Design Ralph] Done: \$LATEST ===\"
   sleep $SLEEP
 
   echo '=== [Polish Ralph] Starting... ==='
   OUTPUT=\$(claude -p \"\$POLISH_PROMPT_VAR\" --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $MAX_TURNS --max-budget-usd $BUDGET 2>&1)
   echo \"\$OUTPUT\"
   if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
+  LATEST=\$(git log --oneline -1 2>/dev/null)
+  echo \"\" >> ralph-logs/changelog.md
+  echo \"### \$(date '+%Y-%m-%d %H:%M') — Polish Ralph\" >> ralph-logs/changelog.md
+  echo \"- \$LATEST\" >> ralph-logs/changelog.md
+  echo \"=== [Polish Ralph] Done: \$LATEST ===\"
   sleep $SLEEP
 
   echo '=== [QA Ralph] Starting... ==='
   OUTPUT=\$(claude -p 'You are a QA engineer for the sonarqube-tv app. CLAUDE.md has the full project map — do NOT re-read files unless you need to edit them. Run npm run build and npm test. If anything is broken, fix it and commit. If everything passes, exit cleanly.' --model sonnet --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $QA_TURNS --max-budget-usd $QA_BUDGET 2>&1)
   echo \"\$OUTPUT\"
   if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
+  LATEST=\$(git log --oneline -1 2>/dev/null)
+  echo \"\" >> ralph-logs/changelog.md
+  echo \"### \$(date '+%Y-%m-%d %H:%M') — QA Ralph\" >> ralph-logs/changelog.md
+  echo \"- \$LATEST\" >> ralph-logs/changelog.md
+  echo \"=== [QA Ralph] Done: \$LATEST ===\"
   sleep $SLEEP
-
-  echo '=== [Changelog] Logging cycle... ==='
-  mkdir -p ralph-logs
-  NEW_COMMITS=\$(git log --oneline --since='30 minutes ago' 2>/dev/null)
-  if [ -n \"\$NEW_COMMITS\" ]; then
-    echo \"\" >> ralph-logs/changelog.md
-    echo \"## \$(date '+%Y-%m-%d %H:%M')\" >> ralph-logs/changelog.md
-    echo \"\$NEW_COMMITS\" | while read -r line; do echo \"- \$line\" >> ralph-logs/changelog.md; done
-    echo '=== Changelog updated ==='
-  else
-    echo '=== No new commits this cycle ==='
-  fi
 
   echo '=== Cycle complete. Next cycle in ${SLEEP}s... ==='
 done" Enter
