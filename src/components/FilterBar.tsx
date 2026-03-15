@@ -165,11 +165,11 @@ export default function FilterBar({
           />
           <div
             ref={modalRef}
-            className={`relative w-full bg-background shadow-2xl transition-all duration-200 sm:mx-4 sm:max-w-md sm:rounded-xl sm:border sm:border-n8 ${
+            className={`w-full bg-background shadow-2xl transition-all duration-200 sm:mx-4 sm:max-w-md sm:rounded-xl sm:border sm:border-n8 ${
               visible
                 ? "max-sm:translate-y-0 sm:scale-100 opacity-100"
                 : "max-sm:translate-y-full sm:scale-95 opacity-0"
-            } fixed inset-x-0 bottom-0 rounded-t-2xl p-6 sm:static sm:rounded-t-xl`}
+            } max-sm:fixed max-sm:inset-x-0 max-sm:bottom-0 rounded-t-2xl p-6 sm:rounded-xl`}
           >
             {/* Mobile drag handle */}
             <div className="mb-4 flex justify-center sm:hidden">
