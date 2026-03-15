@@ -116,8 +116,8 @@ export default function PlaylistQueue({
             href={`/watch/${video.id}?playlist=${playlistSlug}`}
             className={`group flex items-center gap-3 py-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:ring-inset ${
               video.id === currentVideoId
-                ? "border-l-2 border-sonar-red bg-n8/70 pl-[14px] pr-4"
-                : "border-l-2 border-transparent px-4 hover:bg-n8/50 hover:border-n6"
+                ? "border-l-2 border-sonar-red bg-n8/70 pl-[14px] pr-4 hover:bg-n8/90 active:bg-n8"
+                : "border-l-2 border-transparent px-4 hover:bg-n8/50 hover:border-qube-blue active:scale-[0.99] active:bg-n8/70"
             }`}
           >
             <span className="w-5 shrink-0 text-right font-heading text-xs text-n6">
@@ -142,7 +142,7 @@ export default function PlaylistQueue({
                 src={video.thumbnail}
                 alt=""
                 fill
-                className="object-cover transition-[filter] duration-200 group-hover:brightness-110"
+                className="object-cover transition-[filter,transform] duration-200 group-hover:scale-105 group-hover:brightness-110"
                 sizes="72px"
               />
             </div>
@@ -156,7 +156,11 @@ export default function PlaylistQueue({
               >
                 {video.title}
               </p>
-              <p className="font-body text-xs text-n5 group-hover:text-n4">
+              <p className={`font-body text-xs transition-colors ${
+                  video.id === currentVideoId
+                    ? "text-n6"
+                    : "text-n5 group-hover:text-n4"
+                }`}>
                 {video.duration}
               </p>
             </div>
