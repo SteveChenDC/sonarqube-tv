@@ -114,10 +114,10 @@ export default function PlaylistQueue({
           <Link
             key={video.id}
             href={`/watch/${video.id}?playlist=${playlistSlug}`}
-            className={`flex items-center gap-3 py-2 transition-all duration-200 hover:bg-n8/50 ${
+            className={`group flex items-center gap-3 py-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:ring-inset ${
               video.id === currentVideoId
                 ? "border-l-2 border-sonar-red bg-n8/70 pl-[14px] pr-4"
-                : "border-l-2 border-transparent px-4"
+                : "border-l-2 border-transparent px-4 hover:bg-n8/50 active:bg-n8/80"
             }`}
           >
             <span className="w-5 shrink-0 text-right font-heading text-xs text-n6">
@@ -144,15 +144,15 @@ export default function PlaylistQueue({
             </div>
             <div className="min-w-0 flex-1">
               <p
-                className={`truncate font-heading text-xs ${
+                className={`truncate font-heading text-xs transition-colors ${
                   video.id === currentVideoId
                     ? "font-semibold text-n1"
-                    : "text-n3"
+                    : "text-n3 group-hover:text-n1"
                 }`}
               >
                 {video.title}
               </p>
-              <p className="font-body text-xs text-n5">
+              <p className="font-body text-xs text-n5 transition-colors group-hover:text-n4">
                 {video.duration}
               </p>
             </div>
