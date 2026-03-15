@@ -86,7 +86,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${poppins.variable} ${inter.variable} flex min-h-screen flex-col bg-background font-body antialiased`}
+        className={`${poppins.variable} ${inter.variable} flex min-h-screen flex-col overflow-x-hidden bg-background font-body antialiased`}
       >
         <Header />
         <main className="flex-1">{children}</main>
