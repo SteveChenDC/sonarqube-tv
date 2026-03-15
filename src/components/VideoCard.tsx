@@ -72,12 +72,14 @@ export default function VideoCard({ video, fluid = false, onRemove, hideCategory
               e.stopPropagation();
               onRemove();
             }}
-            className="absolute top-2 right-2 z-10 flex h-6 w-6 items-center justify-center rounded-full bg-black/80 text-n5 opacity-0 transition-all duration-200 hover:bg-sonar-red hover:text-white group-hover:opacity-100"
+            className="absolute -top-1 -right-1 z-10 flex h-11 w-11 items-center justify-center rounded-full text-n5 opacity-0 transition-all duration-200 hover:text-white group-hover:opacity-100"
             aria-label={`Remove ${video.title} from continue watching`}
           >
-            <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-              <path d="M18 6L6 18M6 6l12 12" />
-            </svg>
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black/80 transition-colors hover:bg-sonar-red">
+              <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </span>
           </button>
         )}
 

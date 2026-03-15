@@ -25,7 +25,7 @@ function SegmentRow({
     <button
       ref={isActive ? activeRef : undefined}
       onClick={() => onSeek(seg.offset)}
-      className={`flex w-full cursor-pointer gap-3 rounded p-1.5 text-left transition-colors duration-200 ${
+      className={`flex w-full cursor-pointer gap-3 rounded px-2 py-2.5 text-left transition-colors duration-200 ${
         isActive
           ? "bg-qube-blue/15 border-l-2 border-qube-blue"
           : "hover:bg-n8/30"
