@@ -90,7 +90,7 @@ export default function Header() {
   const navText = "text-n1/70 hover:bg-n1/10 hover:text-n1";
 
   return (
-    <header className={`fixed top-0 z-50 w-full border-b border-n1/10 bg-background transition-all duration-300 ${scrolled ? "shadow-sm" : ""}`}>
+    <header className={`fixed top-0 z-50 w-full border-b border-n1/10 bg-background shadow-[0_1px_3px_rgba(0,0,0,0.08)] transition-all duration-300 dark:shadow-none ${scrolled ? "shadow-[0_2px_8px_rgba(0,0,0,0.12)] dark:shadow-sm" : ""}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2">
           <SonarWhaleMark className="h-7 w-auto text-n1" />
