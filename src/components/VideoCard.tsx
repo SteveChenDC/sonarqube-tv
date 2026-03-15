@@ -26,11 +26,11 @@ function timeAgo(dateString: string): string {
 }
 
 export default function VideoCard({ video, fluid = false, onRemove, hideCategory = false }: Readonly<{ video: Video; fluid?: boolean; onRemove?: () => void; hideCategory?: boolean }>) {
-  const [progress, setProgressState] = useState(0);
+  const [progress, setProgress] = useState(0);
   const categoryTitle = categories.find((c) => c.slug === video.category)?.title;
 
   useEffect(() => {
-    setProgressState(getProgress(video.id));
+    setProgress(getProgress(video.id));
   }, [video.id]);
 
   return (

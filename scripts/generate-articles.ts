@@ -1,6 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
-import * as fs from "fs";
-import * as path from "path";
+import * as fs from "node:fs";
+import * as path from "node:path";
 
 const TRANSCRIPTS_DIR = path.join(__dirname, "../src/data/transcripts");
 const ARTICLES_DIR = path.join(__dirname, "../src/data/articles");
@@ -75,7 +75,7 @@ Rules:
   const takeaways = takeawaySection
     .split("\n")
     .filter((l) => l.trim().startsWith("-") || l.trim().startsWith("*"))
-    .map((l) => l.replace(/^[\s\-\*]+/, "").trim())
+    .map((l) => l.replace(/^[\s\-*]+/, "").trim())
     .filter(Boolean);
 
   return {
@@ -181,4 +181,4 @@ async function main() {
   console.log(`\nDone: ${success} success, ${failed} failed`);
 }
 
-main().catch(console.error);
+await main().catch(console.error);

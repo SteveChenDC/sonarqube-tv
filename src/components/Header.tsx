@@ -76,7 +76,7 @@ export default function Header() {
   // Lock body scroll on mobile when dropdown is open
   useEffect(() => {
     if (!menuOpen) return;
-    const isMobile = window.matchMedia("(max-width: 639px)").matches;
+    const isMobile = globalThis.matchMedia("(max-width: 639px)").matches;
     if (!isMobile) return;
     document.body.style.overflow = "hidden";
     return () => {
@@ -112,6 +112,7 @@ export default function Header() {
         <nav className="flex items-center gap-1">
           <div
             ref={menuRef}
+            role="group"
             className="relative"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}

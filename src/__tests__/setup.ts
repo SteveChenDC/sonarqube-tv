@@ -19,9 +19,9 @@ Object.defineProperty(globalThis, "matchMedia", {
 
 // Mock IntersectionObserver for jsdom (used by HomeContent floating filter)
 class MockIntersectionObserver {
-  observe() {}
-  unobserve() {}
-  disconnect() {}
+  observe() { /* no-op for test mock */ }
+  unobserve() { /* no-op for test mock */ }
+  disconnect() { /* no-op for test mock */ }
 }
 Object.defineProperty(globalThis, "IntersectionObserver", {
   writable: true,

@@ -8,19 +8,19 @@ import {
 } from "@/lib/theme";
 
 export default function ThemeToggle({ className }: Readonly<{ className?: string }>) {
-  const [theme, setThemeState] = useState<"light" | "dark">("dark");
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    setThemeState(getEffectiveTheme());
-    const unsub = subscribeToSystemTheme((t) => setThemeState(t));
+    setTheme(getEffectiveTheme());
+    const unsub = subscribeToSystemTheme((t) => setTheme(t));
     return unsub;
   }, []);
 
   function handleToggle() {
     const next = toggleTheme();
-    setThemeState(next);
+    setTheme(next);
   }
 
   if (!mounted) {

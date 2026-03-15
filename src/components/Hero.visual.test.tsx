@@ -30,22 +30,22 @@ const mockVideo: Video = {
 describe("Hero visual snapshots", () => {
   it("mobile card layout matches snapshot", () => {
     const { container } = render(<Hero video={mockVideo} />);
-    const mobileLayout = container.querySelector(".sm\\:hidden");
+    const mobileLayout = container.querySelector(String.raw`.sm\:hidden`);
     expect(mobileLayout).toBeTruthy();
     expect(mobileLayout).toMatchSnapshot();
   });
 
   it("desktop hero layout matches snapshot", () => {
     const { container } = render(<Hero video={mockVideo} />);
-    const desktopLayout = container.querySelector(".hidden.sm\\:block");
+    const desktopLayout = container.querySelector(String.raw`.hidden.sm\:block`);
     expect(desktopLayout).toBeTruthy();
     expect(desktopLayout).toMatchSnapshot();
   });
 
   it("both layouts render the same video data", () => {
     const { container } = render(<Hero video={mockVideo} />);
-    const mobileLayout = container.querySelector(".sm\\:hidden")!;
-    const desktopLayout = container.querySelector(".hidden.sm\\:block")!;
+    const mobileLayout = container.querySelector(String.raw`.sm\:hidden`)!;
+    const desktopLayout = container.querySelector(String.raw`.hidden.sm\:block`)!;
 
     // Both show the title
     expect(mobileLayout.querySelector("h1")?.textContent).toBe(mockVideo.title);

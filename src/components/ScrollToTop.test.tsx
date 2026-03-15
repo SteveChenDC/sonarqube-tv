@@ -4,8 +4,8 @@ import ScrollToTop from "./ScrollToTop";
 
 describe("ScrollToTop", () => {
   beforeEach(() => {
-    Object.defineProperty(window, "scrollY", { value: 0, writable: true });
-    window.scrollTo = vi.fn();
+    Object.defineProperty(globalThis, "scrollY", { value: 0, writable: true });
+    globalThis.scrollTo = vi.fn();
   });
 
   afterEach(() => {
@@ -26,21 +26,21 @@ describe("ScrollToTop", () => {
 
   it("becomes visible (opacity-100) when scrollY > 600", () => {
     render(<ScrollToTop />);
-    Object.defineProperty(window, "scrollY", { value: 700, writable: true });
-    fireEvent.scroll(window);
+    Object.defineProperty(globalThis, "scrollY", { value: 700, writable: true });
+    fireEvent.scroll(globalThis);
 
     const button = screen.getByRole("button", { name: "Scroll to top" });
     expect(button.className).toContain("opacity-100");
     expect(button.className).not.toContain("pointer-events-none");
   });
 
-  it("calls window.scrollTo with top: 0 when clicked", () => {
+  it("calls globalThis.scrollTo with top: 0 when clicked", () => {
     render(<ScrollToTop />);
     // Make visible first
-    Object.defineProperty(window, "scrollY", { value: 700, writable: true });
-    fireEvent.scroll(window);
+    Object.defineProperty(globalThis, "scrollY", { value: 700, writable: true });
+    fireEvent.scroll(globalThis);
 
     fireEvent.click(screen.getByRole("button", { name: "Scroll to top" }));
-    expect(window.scrollTo).toHaveBeenCalledWith({ top: 0, behavior: "smooth" });
+    expect(globalThis.scrollTo).toHaveBeenCalledWith({ top: 0, behavior: "smooth" });
   });
 });

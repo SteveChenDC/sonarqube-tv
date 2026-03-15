@@ -37,7 +37,7 @@ describe("VideoRow", () => {
 
   it("renders title as a link to the category page with all video cards", () => {
     const videos = [makeVideo("v1"), makeVideo("v2"), makeVideo("v3")];
-    const { getByText, getAllByText, container } = render(
+    const { getByText, getAllByText } = render(
       <VideoRow title="Tutorials" categorySlug="tutorials" videos={videos} />
     );
     // Title is a clickable link to the category page

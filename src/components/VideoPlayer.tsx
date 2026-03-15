@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { getProgress, setProgress } from "@/lib/watchProgress";
+import { getProgress, setProgress as saveProgress } from "@/lib/watchProgress";
 
 interface VideoPlayerProps {
   youtubeId: string;
@@ -38,10 +38,10 @@ interface YTPlayer {
 export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-player", autoPlay, compact }: Readonly<VideoPlayerProps>) {
   const containerRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YTPlayer | null>(null);
-  const [progress, setProgressState] = useState(0);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    setProgressState(getProgress(videoId));
+    setProgress(getProgress(videoId));
   }, [videoId]);
 
   const initPlayer = useCallback(() => {
@@ -104,8 +104,8 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
         const duration = player.getDuration();
         if (duration > 0 && current > 0) {
           const percent = (current / duration) * 100;
-          setProgress(videoId, percent);
-          setProgressState(percent);
+          saveProgress(videoId, percent);
+          setProgress(percent);
           globalThis.dispatchEvent(
             new CustomEvent("yt-time", { detail: current * 1000 })
           );

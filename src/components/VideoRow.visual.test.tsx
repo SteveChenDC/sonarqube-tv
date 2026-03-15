@@ -40,7 +40,7 @@ describe("VideoRow visual snapshots", () => {
     const { container } = render(
       <VideoRow title="Test Row" categorySlug="tutorials" videos={videos} />
     );
-    const mobileLayout = container.querySelector(".sm\\:hidden");
+    const mobileLayout = container.querySelector(String.raw`.sm\:hidden`);
     expect(mobileLayout).toBeTruthy();
     expect(mobileLayout).toMatchSnapshot();
   });
@@ -49,7 +49,7 @@ describe("VideoRow visual snapshots", () => {
     const { container } = render(
       <VideoRow title="Test Row" categorySlug="tutorials" videos={videos} />
     );
-    const desktopLayout = container.querySelector(".hidden.sm\\:block");
+    const desktopLayout = container.querySelector(String.raw`.hidden.sm\:block`);
     expect(desktopLayout).toBeTruthy();
     expect(desktopLayout).toMatchSnapshot();
   });
@@ -58,7 +58,7 @@ describe("VideoRow visual snapshots", () => {
     const { container } = render(
       <VideoRow title="Test Row" categorySlug="tutorials" videos={videos} />
     );
-    const mobileLayout = container.querySelector(".sm\\:hidden");
+    const mobileLayout = container.querySelector(String.raw`.sm\:hidden`);
     const grid = mobileLayout?.querySelector(".grid-cols-2");
     expect(grid).toBeTruthy();
   });
@@ -67,7 +67,7 @@ describe("VideoRow visual snapshots", () => {
     const { container } = render(
       <VideoRow title="Test Row" categorySlug="tutorials" videos={videos} />
     );
-    const mobileLayout = container.querySelector(".sm\\:hidden")!;
+    const mobileLayout = container.querySelector(String.raw`.sm\:hidden`)!;
     const cardContainers = mobileLayout.querySelectorAll(".w-full");
     expect(cardContainers.length).toBeGreaterThan(0);
   });
@@ -76,7 +76,7 @@ describe("VideoRow visual snapshots", () => {
     const { container } = render(
       <VideoRow title="Test Row" categorySlug="tutorials" videos={videos} />
     );
-    const mobileLayout = container.querySelector(".sm\\:hidden")!;
+    const mobileLayout = container.querySelector(String.raw`.sm\:hidden`)!;
     const grid = mobileLayout.querySelector(".grid-cols-2")!;
     // 8 videos but only 6 rendered in mobile grid (each VideoCard is an <a> tag)
     const cards = grid.querySelectorAll(":scope > a");

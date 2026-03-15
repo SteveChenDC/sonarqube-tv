@@ -17,7 +17,7 @@ BACKOFF=900  # 15 min backoff when rate limited
 MOBILE_FLAG="/tmp/ralph-mobile-focus.timestamp"
 
 # --mobile: activate 12-hour mobile focus mode
-if [ "$1" = "--mobile" ]; then
+if [[ "$1" = "--mobile" ]]; then
   EXPIRY=$(( $(date +%s) + 43200 ))  # 12 hours from now
   echo "$EXPIRY" > "$MOBILE_FLAG"
   echo "=== Mobile focus activated until $(date -r "$EXPIRY" '+%Y-%m-%d %H:%M') ==="

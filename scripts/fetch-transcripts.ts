@@ -1,6 +1,6 @@
 import { YoutubeTranscript } from "youtube-transcript";
-import * as fs from "fs";
-import * as path from "path";
+import * as fs from "node:fs";
+import * as path from "node:path";
 
 const TRANSCRIPTS_DIR = path.join(__dirname, "../src/data/transcripts");
 const VIDEOS_PATH = path.join(__dirname, "../src/data/videos.ts");
@@ -105,4 +105,4 @@ async function main() {
   console.log(`\nDone: ${success} success, ${failed} failed`);
 }
 
-main().catch(console.error);
+await main().catch(console.error);

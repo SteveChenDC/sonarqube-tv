@@ -114,9 +114,9 @@ describe("HomeContent", () => {
     fireEvent.click(screen.getByText("Apply"));
 
     const cardTitles = Array.from(container.querySelectorAll("h3")).map((h) => h.textContent);
-    expect(cardTitles.some((t) => t === "Short Tutorial")).toBe(true);
-    expect(cardTitles.some((t) => t === "Medium Tutorial")).toBe(false);
-    expect(cardTitles.some((t) => t === "Long Webinar")).toBe(false);
+    expect(cardTitles.includes("Short Tutorial")).toBe(true);
+    expect(cardTitles.includes("Medium Tutorial")).toBe(false);
+    expect(cardTitles.includes("Long Webinar")).toBe(false);
   });
 
   it("filters videos by medium duration (4–20 min)", () => {
@@ -132,9 +132,9 @@ describe("HomeContent", () => {
     fireEvent.click(screen.getByText("Apply"));
 
     const cardTitles = Array.from(container.querySelectorAll("h3")).map((h) => h.textContent);
-    expect(cardTitles.some((t) => t === "Short Tutorial")).toBe(false);
-    expect(cardTitles.some((t) => t === "Medium Tutorial")).toBe(true);
-    expect(cardTitles.some((t) => t === "Long Webinar")).toBe(false);
+    expect(cardTitles.includes("Short Tutorial")).toBe(false);
+    expect(cardTitles.includes("Medium Tutorial")).toBe(true);
+    expect(cardTitles.includes("Long Webinar")).toBe(false);
   });
 
   it("filters videos by long duration (over 20 min)", () => {
@@ -150,9 +150,9 @@ describe("HomeContent", () => {
     fireEvent.click(screen.getByText("Apply"));
 
     const cardTitles = Array.from(container.querySelectorAll("h3")).map((h) => h.textContent);
-    expect(cardTitles.some((t) => t === "Short Tutorial")).toBe(false);
-    expect(cardTitles.some((t) => t === "Medium Tutorial")).toBe(false);
-    expect(cardTitles.some((t) => t === "Long Webinar")).toBe(true);
+    expect(cardTitles.includes("Short Tutorial")).toBe(false);
+    expect(cardTitles.includes("Medium Tutorial")).toBe(false);
+    expect(cardTitles.includes("Long Webinar")).toBe(true);
   });
 
   it("sorts videos oldest first", () => {
@@ -175,12 +175,11 @@ describe("HomeContent", () => {
     expect(rowTitles.some((t) => t?.startsWith("Latest"))).toBe(false);
 
     const headings = Array.from(container.querySelectorAll("h3"));
-    const tutorialTitles = headings
+    const firstTutorial = headings
       .map((h) => h.textContent)
-      .filter((t) => t === "Short Tutorial" || t === "Medium Tutorial");
+      .find((t) => t === "Short Tutorial" || t === "Medium Tutorial");
     // medium-vid (2025-06) should come before short-vid (2025-12) in oldest-first
-    // They appear in both the Oldest row and the Tutorials category row
-    expect(tutorialTitles[0]).toBe("Medium Tutorial");
+    expect(firstTutorial).toBe("Medium Tutorial");
   });
 
   it("sorts videos newest first by default", () => {
@@ -193,7 +192,7 @@ describe("HomeContent", () => {
     );
 
     // Scope to desktop layout to avoid duplicate mobile cards
-    const desktopRows = container.querySelectorAll(".hidden.sm\\:block");
+    const desktopRows = container.querySelectorAll(String.raw`.hidden.sm\:block`);
     const headings = Array.from(desktopRows).flatMap((row) => Array.from(row.querySelectorAll("h3")));
     const tutorialTitles = headings
       .map((h) => h.textContent)

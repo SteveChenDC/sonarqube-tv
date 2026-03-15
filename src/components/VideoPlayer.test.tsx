@@ -22,7 +22,7 @@ describe("VideoPlayer", () => {
     mockPlayer = createMockPlayer();
 
     // Mock YT API — must use function() for new-ability
-    (window as unknown as Record<string, unknown>).YT = {
+    (globalThis as unknown as Record<string, unknown>).YT = {
       Player: vi.fn().mockImplementation(function (this: unknown) {
         Object.assign(this as object, mockPlayer);
         return this;
@@ -32,7 +32,7 @@ describe("VideoPlayer", () => {
 
   afterEach(() => {
     vi.useRealTimers();
-    delete (window as unknown as Record<string, unknown>).YT;
+    delete (globalThis as unknown as Record<string, unknown>).YT;
   });
 
   it("renders player container with title", () => {
@@ -103,7 +103,7 @@ describe("VideoPlayer", () => {
     );
 
     act(() => {
-      window.dispatchEvent(new CustomEvent("yt-seek", { detail: 45 }));
+      globalThis.dispatchEvent(new CustomEvent("yt-seek", { detail: 45 }));
     });
 
     expect(mockPlayer.seekTo).toHaveBeenCalledWith(45, true);

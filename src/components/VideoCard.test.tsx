@@ -78,7 +78,7 @@ describe("VideoCard", () => {
     const unknownCatVideo: Video = { ...mockVideo, category: "nonexistent-slug" };
     const { container } = render(<VideoCard video={unknownCatVideo} />);
     // No badge with bg-sonar-purple should render
-    expect(container.querySelector(".bg-sonar-purple\\/30")).toBeNull();
+    expect(container.querySelector(String.raw`.bg-sonar-purple\/30`)).toBeNull();
   });
 
   it("shows 'New' badge for a video published within the last 7 days with no progress", () => {
