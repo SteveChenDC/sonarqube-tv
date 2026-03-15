@@ -95,7 +95,7 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
         <div className="group/row relative">
           <button
             onClick={() => scroll("left")}
-            className="absolute left-0 top-0 z-10 flex h-full w-10 items-center justify-center bg-gradient-to-r from-background/80 to-transparent opacity-0 transition-opacity duration-300 group-hover/row:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
+            className="absolute left-0 top-0 z-10 flex h-full w-10 items-center justify-center bg-gradient-to-r from-background/80 to-transparent opacity-70 transition-opacity duration-300 hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
             aria-label="Scroll left"
           >
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-n9/70 backdrop-blur-sm">
@@ -145,7 +145,7 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
 
           <button
             onClick={() => scroll("right")}
-            className="absolute right-0 top-0 z-10 flex h-full w-10 items-center justify-center bg-gradient-to-l from-background/80 to-transparent opacity-0 transition-opacity duration-300 group-hover/row:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
+            className="absolute right-0 top-0 z-10 flex h-full w-10 items-center justify-center bg-gradient-to-l from-background/80 to-transparent opacity-70 transition-opacity duration-300 hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
             aria-label="Scroll right"
           >
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-n9/70 backdrop-blur-sm">
