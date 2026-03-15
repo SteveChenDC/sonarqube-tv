@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://stevechendc.github.io/sonarqube-tv"),
+  metadataBase: new URL("https://stevechen.me"),
   title: {
     default: "SonarQube.tv — Video Tutorials for Code Quality & Security",
     template: "%s | SonarQube.tv",
