@@ -37,16 +37,16 @@ describe("VideoRow", () => {
 
   it("renders title as a link to the category page with all video cards", () => {
     const videos = [makeVideo("v1"), makeVideo("v2"), makeVideo("v3")];
-    const { getByText, container } = render(
+    const { getByText, getAllByText, container } = render(
       <VideoRow title="Tutorials" categorySlug="tutorials" videos={videos} />
     );
     // Title is a clickable link to the category page
     const titleEl = getByText("Tutorials");
     expect(titleEl.closest("a")).toHaveAttribute("href", "/category/tutorials");
-    // All video cards rendered
-    expect(getByText("Video v1")).toBeTruthy();
-    expect(getByText("Video v2")).toBeTruthy();
-    expect(getByText("Video v3")).toBeTruthy();
+    // All video cards rendered (may appear in both mobile + desktop layouts)
+    expect(getAllByText("Video v1").length).toBeGreaterThanOrEqual(1);
+    expect(getAllByText("Video v2").length).toBeGreaterThanOrEqual(1);
+    expect(getAllByText("Video v3").length).toBeGreaterThanOrEqual(1);
   });
 
   it("scroll buttons call scrollBy on the container", () => {

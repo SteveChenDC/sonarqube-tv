@@ -78,7 +78,7 @@ const videos: Video[] = [
 
 
 function openFilters() {
-  fireEvent.click(screen.getByRole("button", { name: "Filters" }));
+  fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
 }
 
 describe("HomeContent", () => {
@@ -192,7 +192,9 @@ describe("HomeContent", () => {
       />
     );
 
-    const headings = Array.from(container.querySelectorAll("h3"));
+    // Scope to desktop layout to avoid duplicate mobile cards
+    const desktopRows = container.querySelectorAll(".hidden.sm\\:block");
+    const headings = Array.from(desktopRows).flatMap((row) => Array.from(row.querySelectorAll("h3")));
     const tutorialTitles = headings
       .map((h) => h.textContent)
       .filter((t) => t === "Short Tutorial" || t === "Medium Tutorial");
@@ -331,7 +333,7 @@ describe("HomeContent", () => {
     openFilters();
     fireEvent.click(screen.getByText("Reset all"));
 
-    expect(screen.getByText("Medium Tutorial")).toBeTruthy();
-    expect(screen.getByText("Long Webinar")).toBeTruthy();
+    expect(screen.getAllByText("Medium Tutorial").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText("Long Webinar").length).toBeGreaterThanOrEqual(1);
   });
 });

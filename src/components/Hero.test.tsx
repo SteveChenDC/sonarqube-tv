@@ -29,35 +29,35 @@ const mockVideo: Video = {
 
 describe("Hero", () => {
   it("renders video title, description, duration, and Watch Now link", () => {
-    const { getByText, container } = render(<Hero video={mockVideo} />);
-    expect(getByText("SonarQube for Enterprise")).toBeTruthy();
-    expect(getByText("Learn how to deploy SonarQube at scale")).toBeTruthy();
-    expect(getByText("45:00")).toBeTruthy();
-    expect(getByText("Watch Now")).toBeTruthy();
+    const { getAllByText, container } = render(<Hero video={mockVideo} />);
+    expect(getAllByText("SonarQube for Enterprise").length).toBeGreaterThanOrEqual(1);
+    expect(getAllByText("Learn how to deploy SonarQube at scale").length).toBeGreaterThanOrEqual(1);
+    expect(getAllByText("45:00").length).toBeGreaterThanOrEqual(1);
+    expect(getAllByText("Watch Now").length).toBeGreaterThanOrEqual(1);
     const link = container.querySelector('a[href="/watch/hero-1"]');
     expect(link).toBeTruthy();
   });
 
   it("shows category badge when video category matches a known category", () => {
-    const { getByText } = render(<Hero video={mockVideo} />);
-    expect(getByText("Getting Started")).toBeTruthy();
-    expect(getByText("Featured")).toBeTruthy();
+    const { getAllByText } = render(<Hero video={mockVideo} />);
+    expect(getAllByText("Getting Started").length).toBeGreaterThanOrEqual(1);
+    expect(getAllByText("Featured").length).toBeGreaterThanOrEqual(1);
   });
 
   it("omits category badge for an unknown category slug", () => {
     const unknownCatVideo: Video = { ...mockVideo, category: "nonexistent-slug" };
-    const { queryByText, getByText } = render(<Hero video={unknownCatVideo} />);
+    const { queryByText, getAllByText } = render(<Hero video={unknownCatVideo} />);
     // Featured badge still shows
-    expect(getByText("Featured")).toBeTruthy();
+    expect(getAllByText("Featured").length).toBeGreaterThanOrEqual(1);
     // But no category badge should appear (Getting Started should not be rendered)
     expect(queryByText("Getting Started")).toBeNull();
   });
 
   it("renders custom actions content when provided", () => {
-    const { getByText } = render(
+    const { getAllByText } = render(
       <Hero video={mockVideo} actions={<button>Custom Action</button>} />
     );
-    expect(getByText("Custom Action")).toBeTruthy();
+    expect(getAllByText("Custom Action").length).toBeGreaterThanOrEqual(1);
   });
 
   it("renders without actions when none are provided", () => {
@@ -67,9 +67,9 @@ describe("Hero", () => {
 
   it("hides description when it exactly matches the title", () => {
     const dupeVideo: Video = { ...mockVideo, description: mockVideo.title };
-    const { queryByText } = render(<Hero video={dupeVideo} />);
-    // Title still shows as h1
-    expect(queryByText(mockVideo.title)).toBeTruthy();
+    const { container } = render(<Hero video={dupeVideo} />);
+    // Title still shows as h1 (in both layouts)
+    expect(container.querySelectorAll("h1").length).toBeGreaterThanOrEqual(1);
     // Description paragraph should not render (same text as title)
     const paragraphs = document.querySelectorAll("p");
     const descP = Array.from(paragraphs).find((p) => p.textContent === mockVideo.title);
@@ -87,7 +87,7 @@ describe("Hero", () => {
   });
 
   it("shows description when it is meaningfully different from the title", () => {
-    const { getByText } = render(<Hero video={mockVideo} />);
-    expect(getByText("Learn how to deploy SonarQube at scale")).toBeTruthy();
+    const { getAllByText } = render(<Hero video={mockVideo} />);
+    expect(getAllByText("Learn how to deploy SonarQube at scale").length).toBeGreaterThanOrEqual(1);
   });
 });
