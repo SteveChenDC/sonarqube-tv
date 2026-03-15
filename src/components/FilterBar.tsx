@@ -39,7 +39,7 @@ const sortOptions: { value: SortBy; label: string }[] = [
   { value: "oldest", label: "Oldest" },
 ];
 
-function SlidersIcon() {
+export function SlidersIcon() {
   return (
     <svg
       width="18"

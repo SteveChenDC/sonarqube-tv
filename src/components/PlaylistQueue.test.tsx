@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import PlaylistQueue from "./PlaylistQueue";
-import type { Video } from "@/types";
+import { makeVideo } from "@/__tests__/factories";
 
 // Mock next/navigation
 const mockSearchParams = new URLSearchParams();
@@ -9,55 +9,11 @@ vi.mock("next/navigation", () => ({
   useSearchParams: () => mockSearchParams,
 }));
 
-vi.mock("next/link", () => ({
-  default: ({
-    href,
-    children,
-    ...props
-  }: {
-    href: string;
-    children: React.ReactNode;
-    [key: string]: unknown;
-  }) => (
-    <a href={href} {...props}>
-      {children}
-    </a>
-  ),
-}));
-
-vi.mock("next/image", () => ({
-  default: ({
-    src,
-    alt,
-    ...props
-  }: {
-    src: string;
-    alt: string;
-    [key: string]: unknown;
-  }) => (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img src={src} alt={alt} {...props} />
-  ),
-}));
-
-function makeVideo(id: string, category: string, title: string): Video {
-  return {
-    id,
-    title,
-    description: "desc",
-    youtubeId: `yt-${id}`,
-    thumbnail: `/thumb-${id}.jpg`,
-    category,
-    duration: "5:00",
-    publishedAt: "2025-01-01T00:00:00Z",
-  };
-}
-
-const videos: Video[] = [
-  makeVideo("v1", "tutorials", "First Tutorial"),
-  makeVideo("v2", "tutorials", "Second Tutorial"),
-  makeVideo("v3", "tutorials", "Third Tutorial"),
-  makeVideo("v4", "webinars", "A Webinar"),
+const videos = [
+  makeVideo({ id: "v1", category: "tutorials", title: "First Tutorial" }),
+  makeVideo({ id: "v2", category: "tutorials", title: "Second Tutorial" }),
+  makeVideo({ id: "v3", category: "tutorials", title: "Third Tutorial" }),
+  makeVideo({ id: "v4", category: "webinars", title: "A Webinar" }),
 ];
 
 describe("PlaylistQueue", () => {

@@ -1,31 +1,7 @@
 import { describe, it, expect, vi } from "vitest";
 import { render, fireEvent } from "@testing-library/react";
 import VideoRow from "./VideoRow";
-import type { Video } from "@/types";
-
-vi.mock("next/link", () => ({
-  default: ({ href, children, ...props }: { href: string; children: React.ReactNode; [key: string]: unknown }) => (
-    <a href={href} {...props}>{children}</a>
-  ),
-}));
-
-vi.mock("next/image", () => ({
-  default: ({ src, alt, ...props }: { src: string; alt: string; [key: string]: unknown }) => (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img src={src} alt={alt} {...props} />
-  ),
-}));
-
-const makeVideo = (id: string): Video => ({
-  id,
-  title: `Video ${id}`,
-  description: "desc",
-  youtubeId: `yt-${id}`,
-  thumbnail: `/thumb-${id}.jpg`,
-  category: "tutorials",
-  duration: "10:00",
-  publishedAt: "2025-01-01T00:00:00Z",
-});
+import { makeVideo } from "@/__tests__/factories";
 
 describe("VideoRow", () => {
   it("renders nothing when videos array is empty", () => {
@@ -36,7 +12,7 @@ describe("VideoRow", () => {
   });
 
   it("renders title as a link to the category page with all video cards", () => {
-    const videos = [makeVideo("v1"), makeVideo("v2"), makeVideo("v3")];
+    const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" }), makeVideo({ id: "v3" })];
     const { getByText, getAllByText } = render(
       <VideoRow title="Tutorials" categorySlug="tutorials" videos={videos} />
     );
@@ -50,7 +26,7 @@ describe("VideoRow", () => {
   });
 
   it("scroll buttons call scrollBy on the container", () => {
-    const videos = [makeVideo("v1")];
+    const videos = [makeVideo({ id: "v1" })];
     const scrollBySpy = vi.fn();
     // Mock scrollBy on the scroll container
     const originalCreateElement = document.createElement.bind(document);

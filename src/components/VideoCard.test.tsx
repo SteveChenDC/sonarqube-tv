@@ -4,19 +4,6 @@ import VideoCard from "./VideoCard";
 import { setProgress } from "@/lib/watchProgress";
 import type { Video } from "@/types";
 
-vi.mock("next/link", () => ({
-  default: ({ href, children, ...props }: { href: string; children: React.ReactNode; [key: string]: unknown }) => (
-    <a href={href} {...props}>{children}</a>
-  ),
-}));
-
-vi.mock("next/image", () => ({
-  default: ({ src, alt, ...props }: { src: string; alt: string; [key: string]: unknown }) => (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img src={src} alt={alt} {...props} />
-  ),
-}));
-
 const mockVideo: Video = {
   id: "vid1",
   title: "Getting Started with SonarQube",

@@ -1,58 +1,15 @@
-import { describe, it, expect, beforeEach, vi } from "vitest";
+import { describe, it, expect, beforeEach } from "vitest";
 import { render, screen, cleanup, fireEvent } from "@testing-library/react";
 import HomeContent from "./HomeContent";
-import type { Video, Category } from "@/types";
-
-vi.mock("next/link", () => ({
-  default: ({
-    href,
-    children,
-    ...props
-  }: {
-    href: string;
-    children: React.ReactNode;
-    [key: string]: unknown;
-  }) => (
-    <a href={href} {...props}>
-      {children}
-    </a>
-  ),
-}));
-
-vi.mock("next/image", () => ({
-  default: ({
-    src,
-    alt,
-    ...props
-  }: {
-    src: string;
-    alt: string;
-    [key: string]: unknown;
-  }) => (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img src={src} alt={alt} {...props} />
-  ),
-}));
+import type { Category } from "@/types";
+import { makeVideo } from "@/__tests__/factories";
 
 const categories: Category[] = [
   { slug: "tutorials", title: "Tutorials", description: "Tutorial videos" },
   { slug: "webinars", title: "Webinars", description: "Webinar recordings" },
 ];
 
-function makeVideo(overrides: Partial<Video> & { id: string }): Video {
-  return {
-    title: `Video ${overrides.id}`,
-    description: "desc",
-    youtubeId: `yt-${overrides.id}`,
-    thumbnail: `/thumb-${overrides.id}.jpg`,
-    category: "tutorials",
-    duration: "10:00",
-    publishedAt: "2025-06-15T00:00:00Z",
-    ...overrides,
-  };
-}
-
-const videos: Video[] = [
+const videos = [
   makeVideo({
     id: "short-vid",
     title: "Short Tutorial",
