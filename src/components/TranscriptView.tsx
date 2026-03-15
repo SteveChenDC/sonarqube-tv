@@ -25,7 +25,7 @@ function SegmentRow({
     <button
       ref={isActive ? activeRef : undefined}
       onClick={() => onSeek(seg.offset)}
-      className={`flex w-full gap-3 rounded p-1.5 text-left transition-colors duration-200 cursor-pointer ${
+      className={`flex w-full cursor-pointer gap-3 rounded p-1.5 text-left transition-colors duration-200 ${
         isActive
           ? "bg-qube-blue/15 border-l-2 border-qube-blue"
           : "hover:bg-n8/30"
@@ -71,22 +71,22 @@ function useAutoScroll(activeOffset: number) {
   const userScrolledRef = useRef(false);
   const programmaticScrollRef = useRef(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
-  const [paused, setPaused] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
 
   const resume = useCallback(() => {
     userScrolledRef.current = false;
     clearTimeout(timeoutRef.current);
-    setPaused(false);
+    setIsPaused(false);
   }, []);
 
   const handleScroll = useCallback(() => {
     if (programmaticScrollRef.current) return;
     userScrolledRef.current = true;
-    setPaused(true);
+    setIsPaused(true);
     clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => {
       userScrolledRef.current = false;
-      setPaused(false);
+      setIsPaused(false);
     }, 5000);
   }, []);
 
@@ -119,7 +119,7 @@ function useAutoScroll(activeOffset: number) {
     }, 500);
   }, [activeOffset]);
 
-  return { scrollRef, activeElRef, paused, resume };
+  return { scrollRef, activeElRef, isPaused, resume };
 }
 
 export default function TranscriptView({
@@ -127,22 +127,24 @@ export default function TranscriptView({
   chapters = [],
 }: Readonly<{ segments: TranscriptSegment[]; chapters?: TranscriptChapter[] }>) {
   const activeOffset = useActiveSegment(segments);
-  const { scrollRef, activeElRef, paused, resume } = useAutoScroll(activeOffset);
+  const { scrollRef, activeElRef, isPaused, resume } = useAutoScroll(activeOffset);
 
   const handleSeek = (offsetMs: number) => {
     globalThis.dispatchEvent(new CustomEvent("yt-seek", { detail: offsetMs / 1000 }));
   };
 
-  const scrollPausedBanner = paused && activeOffset >= 0 && (
-    <button
-      onClick={resume}
-      className="absolute bottom-2 left-1/2 z-20 -translate-x-1/2 flex items-center gap-1.5 rounded-full bg-qube-blue px-3 py-1.5 text-xs font-medium text-white shadow-lg transition-all hover:bg-qube-blue/90"
-    >
-      <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-      </svg>
-      Auto-scroll paused
-    </button>
+  const pausedIndicator = isPaused && activeOffset >= 0 && (
+    <div className="absolute bottom-2 left-1/2 z-20 -translate-x-1/2 animate-fade-in">
+      <button
+        onClick={resume}
+        className="flex items-center gap-1.5 rounded-full bg-n8 px-3 py-1.5 text-xs font-medium text-n3 shadow-lg transition-colors hover:bg-qube-blue hover:text-white"
+      >
+        <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+        Auto-scroll paused
+      </button>
+    </div>
   );
 
   // No chapters — flat list
@@ -160,7 +162,7 @@ export default function TranscriptView({
             />
           ))}
         </div>
-        {scrollPausedBanner}
+        {pausedIndicator}
       </div>
     );
   }
@@ -216,7 +218,7 @@ export default function TranscriptView({
           </div>
         ))}
       </div>
-      {scrollPausedBanner}
+      {pausedIndicator}
     </div>
   );
 }

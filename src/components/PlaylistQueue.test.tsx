@@ -105,6 +105,7 @@ describe("PlaylistQueue", () => {
     // Other titles should have the inactive class
     const otherTitle = screen.getByText("First Tutorial");
     expect(otherTitle.className).toContain("text-n3");
-    expect(otherTitle.className).not.toMatch(/(?<!\S)text-n1(?!\S)/);
+    expect(otherTitle.className).not.toMatch(/(?<![:\w])text-n1(?![\w-])/);
+
   });
 });
