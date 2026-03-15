@@ -85,7 +85,7 @@ function FilterGroup<T extends string>({
           <button
             key={opt.value}
             onClick={() => onChange(opt.value)}
-            className={`rounded-full px-3 py-1.5 font-heading text-xs font-medium transition-colors ${
+            className={`rounded-full px-4 py-2.5 sm:px-3 sm:py-1.5 font-heading text-sm sm:text-xs font-medium transition-colors ${
               value === opt.value
                 ? "bg-qube-blue text-white"
                 : "bg-n8 text-n4 hover:bg-n7 hover:text-n2"
@@ -165,12 +165,16 @@ export default function FilterBar({
           />
           <div
             ref={modalRef}
-            className={`relative mx-4 w-full max-w-md rounded-xl border border-n8 bg-background p-6 shadow-2xl transition-all duration-200 ${
+            className={`relative w-full bg-background shadow-2xl transition-all duration-200 sm:mx-4 sm:max-w-md sm:rounded-xl sm:border sm:border-n8 ${
               visible
-                ? "scale-100 opacity-100"
-                : "scale-95 opacity-0"
-            }`}
+                ? "max-sm:translate-y-0 sm:scale-100 opacity-100"
+                : "max-sm:translate-y-full sm:scale-95 opacity-0"
+            } fixed inset-x-0 bottom-0 rounded-t-2xl p-6 sm:static sm:rounded-t-xl`}
           >
+            {/* Mobile drag handle */}
+            <div className="mb-4 flex justify-center sm:hidden">
+              <div className="h-1 w-10 rounded-full bg-n7" />
+            </div>
             <div className="mb-6 flex items-center justify-between">
               <h2 className="font-heading text-lg font-semibold text-n1">
                 Filters
@@ -207,23 +211,21 @@ export default function FilterBar({
               />
             </div>
 
-            <div className="mt-6 flex items-center justify-between border-t border-n8 pt-4">
-              {hasActiveFilters ? (
-                <button
-                  onClick={onReset}
-                  className="font-heading text-sm font-medium text-n6 transition-colors hover:text-n3"
-                >
-                  Reset all
-                </button>
-              ) : (
-                <span />
-              )}
+            <div className="mt-6 flex flex-col gap-3 border-t border-n8 pt-4 sm:flex-row sm:items-center sm:justify-between">
               <button
                 onClick={() => setIsOpen(false)}
-                className="rounded-lg bg-qube-blue px-5 py-2 font-heading text-sm font-medium text-white transition-colors hover:bg-qube-blue/80"
+                className="w-full rounded-lg bg-qube-blue px-5 py-3 font-heading text-sm font-medium text-white transition-colors hover:bg-qube-blue/80 sm:order-2 sm:w-auto sm:py-2"
               >
                 Apply
               </button>
+              {hasActiveFilters && (
+                <button
+                  onClick={onReset}
+                  className="w-full rounded-lg py-2 font-heading text-sm font-medium text-n6 transition-colors hover:text-n3 sm:order-1 sm:w-auto sm:py-0"
+                >
+                  Reset all
+                </button>
+              )}
             </div>
           </div>
         </dialog>

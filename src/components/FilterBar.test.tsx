@@ -110,8 +110,7 @@ describe("FilterBar", () => {
 
   it("calls onOpenChange(false) when clicking the backdrop", () => {
     const { props } = renderFilterBar();
-    // The backdrop is the outer fixed div
-    const backdrop = screen.getByText("Filters").closest(".fixed")?.querySelector("button[aria-label='Close filters']");
+    const backdrop = screen.getByLabelText("Close filters");
     if (!backdrop) throw new Error("Backdrop button not found");
     fireEvent.click(backdrop);
     expect(props.onOpenChange).toHaveBeenCalledWith(false);
