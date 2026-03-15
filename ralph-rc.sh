@@ -8,8 +8,8 @@
 set -e
 
 BRANCH="ralph-wiggum-improvements"
-BUDGET=3
-QA_BUDGET=3
+BUDGET=2
+QA_BUDGET=2
 QA_TURNS=10
 MAX_TURNS=30
 BACKOFF=300  # 5 min backoff when rate limited
@@ -20,6 +20,8 @@ PROMO_END="2026-03-28"
 SLEEP_OFFPEAK=90   # 1.5 min — maximize 2x window
 SLEEP_PEAK=480     # 8 min — conserve during 1x window
 SLEEP_NORMAL=180   # 3 min — post-promo default
+BUDGET_OFFPEAK=5   # Higher budget during 2x limits
+BUDGET_PEAK=3      # Standard budget during peak
 
 get_sleep() {
   if [[ "$(date +%Y-%m-%d)" > "$PROMO_END" ]]; then
@@ -34,6 +36,19 @@ get_sleep() {
   fi
 }
 
+get_budget() {
+  if [[ "$(date +%Y-%m-%d)" > "$PROMO_END" ]]; then
+    echo $BUDGET
+    return
+  fi
+  local hour=$(TZ="America/New_York" date +%H | sed 's/^0//')
+  if [ "$hour" -ge 8 ] && [ "$hour" -lt 14 ]; then
+    echo $BUDGET_PEAK
+  else
+    echo $BUDGET_OFFPEAK
+  fi
+}
+
 # --mobile: activate 12-hour mobile focus mode
 if [ "$1" = "--mobile" ]; then
   EXPIRY=$(( $(date +%s) + 43200 ))  # 12 hours from now
@@ -44,30 +59,6 @@ fi
 MOBILE_PROMPT='You are a mobile-focused design critic for the sonarqube-tv app. CLAUDE.md has the full project map. Check git log --oneline -10 to see what has already been fixed. Pick ONE mobile issue and fix it: (1) Touch targets under 44px — buttons, links, cards must be ≥44px tap area, (2) Text sizing on narrow viewports — ensure readability at 375px, (3) Card spacing/density on mobile — 2-col grid gaps and padding, (4) Hero card rendering below 640px — check the sm:hidden mobile card layout, (5) 2-col grid alignment — ensure even columns in VideoRow mobile grid, (6) Filter modal mobile UX — full-screen on small viewports, easy dismiss, (7) Watch page responsive player — YouTube iframe sizing on mobile, (8) Horizontal overflow at 375px — no content should bleed off-screen, (9) Floating button positioning — filter FAB should not overlap content on mobile. Verify with npm run build. Commit with a descriptive message.'
 
 MOBILE_POLISH_PROMPT='You are a mobile-focused polish critic for the sonarqube-tv app. CLAUDE.md has the full project map. Check git log --oneline -10 to see what has already been fixed. Pick ONE mobile polish issue — do NOT pick one already fixed: (1) Touch targets ≥44px on all interactive elements, (2) Text legibility at 375px width, (3) Mobile grid card spacing consistency, (4) Hero mobile card visual polish, (5) Grid column alignment edge cases, (6) Filter modal mobile layout, (7) Mobile video player controls, (8) Prevent horizontal scroll overflow, (9) FAB positioning on small screens. Verify with npm run build. Commit with a descriptive message.'
-
-NORMAL_PROMPT='You are a design critic for the sonarqube-tv app. CLAUDE.md has the full project map. Check git log --oneline -10 to see what has already been fixed. Pick ONE issue from ANY page and fix it — do NOT pick one already fixed in a recent commit.
-
-HOME PAGE: (1) Hero description duplicates title — write a real summary or remove it, (2) Light mode hero contrast — badges unreadable on light purple gradient, (3) Card titles truncate awkwardly — use 2-line clamp, (4) Footer unreachable on long pages, (5) Theme toggle animation smoothness, (6) Continue watching row polish, (7) Filter button visibility and prominence.
-
-WATCH PAGE (/watch/[id]): (8) Transcript active highlight contrast — ensure the blue highlight is clearly visible in both themes, (9) Transcript auto-scroll indicator — show user when auto-scroll is paused, (10) AI Summary tab icon alignment and spacing, (11) PlaylistQueue active item styling and navigation, (12) Video player progress bar visibility, (13) Watch page metadata layout — date, duration, category badges, (14) Resume-from-progress toast or indicator when video resumes.
-
-CATEGORY PAGE (/category/[slug]): (15) Category header description readability, (16) Video grid spacing and alignment consistency, (17) Empty state if category has no videos, (18) Category page breadcrumb or back navigation.
-
-GLOBAL: (19) Header nav in light mode over hero, (20) ScrollToTop button icon, (21) Section dividers between content areas.
-
-Verify with npm run build. Commit with a descriptive message.'
-
-NORMAL_POLISH_PROMPT='You are a design polish critic for the sonarqube-tv app. CLAUDE.md has the full project map. Check git log --oneline -10 to see what has already been fixed. Pick ONE polish issue from ANY page — do NOT pick one already fixed.
-
-HOME: (1) Hero description, (2) Light mode contrast, (3) Card title clamp, (4) Footer reachability, (5) Filter button prominence.
-
-WATCH (/watch/[id]): (6) Transcript highlight visibility in both themes, (7) AI Summary tab styling, (8) PlaylistQueue item hover/active states, (9) Video metadata spacing and readability, (10) Transcript chapter header sticky styling.
-
-CATEGORY (/category/[slug]): (11) Category header polish, (12) Grid card alignment, (13) Back navigation styling.
-
-GLOBAL: (14) Theme toggle transition, (15) ScrollToTop icon, (16) Section divider consistency, (17) Focus-visible ring styling.
-
-Verify with npm run build. Commit with a descriptive message.'
 
 # Create or switch to the improvement branch
 git checkout -b "$BRANCH" 2>/dev/null || git checkout "$BRANCH"
@@ -88,33 +79,41 @@ get_sleep() {
   local hour=\\\$(TZ=America/New_York date +%H | sed 's/^0//')
   if [ \\\"\\\$hour\\\" -ge 8 ] && [ \\\"\\\$hour\\\" -lt 14 ]; then echo $SLEEP_PEAK; else echo $SLEEP_OFFPEAK; fi
 }
+get_budget() {
+  if [[ \\\"\\\$(date +%Y-%m-%d)\\\" > \\\"$PROMO_END\\\" ]]; then echo $BUDGET; return; fi
+  local hour=\\\$(TZ=America/New_York date +%H | sed 's/^0//')
+  if [ \\\"\\\$hour\\\" -ge 8 ] && [ \\\"\\\$hour\\\" -lt 14 ]; then echo $BUDGET_PEAK; else echo $BUDGET_OFFPEAK; fi
+}
+CYCLE=0
 while true; do
+  CYCLE=\$((CYCLE + 1))
   CSLEEP=\$(get_sleep)
-  echo \"=== Cycle start — sleep=\${CSLEEP}s (\$(TZ=America/New_York date '+%H:%M ET')) ===\"
+  CBUDGET=\$(get_budget)
+  echo \"=== Cycle start — sleep=\${CSLEEP}s budget=\\\$\${CBUDGET} (\$(TZ=America/New_York date '+%H:%M ET')) ===\"
+
   # Check mobile focus mode
+  IS_MOBILE=0
   if [ -f \"$MOBILE_FLAG\" ]; then
     EXPIRY=\$(cat \"$MOBILE_FLAG\")
     NOW=\$(date +%s)
     if [ \"\$NOW\" -lt \"\$EXPIRY\" ]; then
-      DESIGN_PROMPT='$MOBILE_PROMPT'
-      POLISH_PROMPT_VAR='$MOBILE_POLISH_PROMPT'
+      IS_MOBILE=1
       echo '=== Mobile focus mode ACTIVE ==='
     else
       rm -f \"$MOBILE_FLAG\"
-      DESIGN_PROMPT='$NORMAL_PROMPT'
-      POLISH_PROMPT_VAR='$NORMAL_POLISH_PROMPT'
       echo '=== Mobile focus expired, reverting to normal mode ==='
     fi
-  else
-    DESIGN_PROMPT='$NORMAL_PROMPT'
-    POLISH_PROMPT_VAR='$NORMAL_POLISH_PROMPT'
   fi
 
   mkdir -p ralph-logs
 
   echo '=== [Design Ralph] Starting... ==='
   BEFORE_SHA=\$(git rev-parse HEAD 2>/dev/null)
-  OUTPUT=\$(claude -p \"\$DESIGN_PROMPT\" --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $MAX_TURNS --max-budget-usd $BUDGET 2>&1)
+  if [ \"\$IS_MOBILE\" = \"1\" ]; then
+    OUTPUT=\$(claude -p '$MOBILE_PROMPT' --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $MAX_TURNS --max-budget-usd \$CBUDGET 2>&1)
+  else
+    OUTPUT=\$(claude -a design-ralph --model sonnet --max-turns $MAX_TURNS --max-budget-usd \$CBUDGET 2>&1)
+  fi
   echo \"\$OUTPUT\"
   if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
   AFTER_SHA=\$(git rev-parse HEAD 2>/dev/null)
@@ -131,7 +130,11 @@ while true; do
   sleep \$CSLEEP
 
   echo '=== [Polish Ralph] Starting... ==='
-  OUTPUT=\$(claude -p \"\$POLISH_PROMPT_VAR\" --model sonnet --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $MAX_TURNS --max-budget-usd $BUDGET 2>&1)
+  if [ \"\$IS_MOBILE\" = \"1\" ]; then
+    OUTPUT=\$(claude -p '$MOBILE_POLISH_PROMPT' --model sonnet --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $MAX_TURNS --max-budget-usd \$CBUDGET 2>&1)
+  else
+    OUTPUT=\$(claude -a polish-ralph --max-turns $MAX_TURNS --max-budget-usd \$CBUDGET 2>&1)
+  fi
   echo \"\$OUTPUT\"
   if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
   LATEST=\$(git log --oneline -1 2>/dev/null)
@@ -142,7 +145,7 @@ while true; do
   sleep \$CSLEEP
 
   echo '=== [QA Ralph] Starting... ==='
-  OUTPUT=\$(claude -p 'You are a QA engineer for the sonarqube-tv app. CLAUDE.md has the full project map — do NOT re-read files unless you need to edit them. Run npm run build and npm test. If anything is broken, fix it and commit. If everything passes, exit cleanly.' --model haiku --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $QA_TURNS --max-budget-usd $QA_BUDGET 2>&1)
+  OUTPUT=\$(claude -a qa-ralph --max-turns $QA_TURNS --max-budget-usd $QA_BUDGET 2>&1)
   echo \"\$OUTPUT\"
   if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
   LATEST=\$(git log --oneline -1 2>/dev/null)
@@ -152,34 +155,29 @@ while true; do
   echo \"=== [QA Ralph] Done: \$LATEST ===\"
   sleep \$CSLEEP
 
-  echo '=== [Visual QA Ralph] Taking screenshots... ==='
-  node scripts/visual-qa.mjs 2>&1
-  echo '=== [Visual QA Ralph] Analyzing screenshots... ==='
-  OUTPUT=\$(claude -p 'You are a visual QA engineer for the sonarqube-tv app. CLAUDE.md has the full project map and DESIGN_GUIDELINES.md has the brand guide. Screenshots of the app have been saved to ralph-logs/screenshots/. Read each screenshot file to visually inspect the app. Check these pages at both desktop (1280px) and mobile (375px):
+  if [ \$((CYCLE % 2)) -eq 0 ]; then
+    echo '=== [Visual QA Ralph] Taking screenshots... ==='
+    node scripts/visual-qa.mjs 2>&1
+    echo '=== [Visual QA Ralph] Analyzing screenshots... ==='
+    OUTPUT=\$(claude -a visual-qa-ralph --max-turns $MAX_TURNS --max-budget-usd \$CBUDGET 2>&1)
+    echo \"\$OUTPUT\"
+    if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
+    LATEST=\$(git log --oneline -1 2>/dev/null)
+    echo \"\" >> ralph-logs/changelog.md
+    echo \"### \$(date '+%Y-%m-%d %H:%M') — Visual QA Ralph\" >> ralph-logs/changelog.md
+    echo \"- \$LATEST\" >> ralph-logs/changelog.md
+    echo \"=== [Visual QA Ralph] Done: \$LATEST ===\"
+    sleep \$CSLEEP
+  else
+    echo '=== [Visual QA Ralph] Skipped (odd cycle \$CYCLE) ==='
+  fi
 
-1. HOME: Hero rendering, video card alignment, section headers, spacing, theme colors
-2. HOME-BOTTOM: Footer, last category rows, scroll-to-top button
-3. WATCH: Video player, playlist queue, metadata layout
-4. CATEGORY: Header, video grid, spacing
-
-Look for: broken layouts, misaligned elements, overlapping content, unreadable text, wrong colors per DESIGN_GUIDELINES.md, images not loading, horizontal overflow on mobile, elements cut off at viewport edges.
-
-If you find a visual bug, fix it in the source code, run npm run build to verify, and commit. If everything looks good, exit cleanly. Do NOT fix things that are just stylistic preferences — only fix actual visual bugs.' --model sonnet --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $MAX_TURNS --max-budget-usd $BUDGET 2>&1)
-  echo \"\$OUTPUT\"
-  if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
-  LATEST=\$(git log --oneline -1 2>/dev/null)
-  echo \"\" >> ralph-logs/changelog.md
-  echo \"### \$(date '+%Y-%m-%d %H:%M') — Visual QA Ralph\" >> ralph-logs/changelog.md
-  echo \"- \$LATEST\" >> ralph-logs/changelog.md
-  echo \"=== [Visual QA Ralph] Done: \$LATEST ===\"
-  sleep \$CSLEEP
-
-  echo '=== Cycle complete. Next cycle in ${SLEEP}s... ==='
+  echo '=== Cycle complete. Next cycle in \${CSLEEP}s... ==='
 done" Enter
 
 # Go back to rc window
 tmux select-window -t ralphs:rc
-tmux send-keys -t ralphs:rc "echo '=== Ralph RC — Control Center ===' && echo 'Sequential: Design(opus) → Polish(sonnet) → QA(haiku) → VisualQA(sonnet)' && echo '2x promo: off-peak(2PM-8AM ET)=90s | peak(8AM-2PM ET)=480s' && echo 'Ctrl+B, 1 = watch loop | Ctrl+B, 0 = rc' && echo 'tmux kill-session -t ralphs to stop'" Enter
+tmux send-keys -t ralphs:rc "echo '=== Ralph RC — Control Center ===' && echo 'Agents: Design(sonnet) → Polish(sonnet) → QA(sonnet) → VisualQA(sonnet, every 2nd cycle)' && echo 'Memory: .claude/agents/ — persists across runs' && echo '2x promo: off-peak(2PM-8AM ET)=90s/\$5 | peak(8AM-2PM ET)=480s/\$2' && echo 'Ctrl+B, 1 = watch loop | Ctrl+B, 0 = rc' && echo 'tmux kill-session -t ralphs to stop'" Enter
 
 # Attach to session
 tmux attach -t ralphs
