@@ -1,7 +1,7 @@
 import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
-  testMatch: "**/*.anchor.test.tsx",
+  testDir: "./e2e",
   use: {
     baseURL: "http://localhost:3000",
     headless: true,
