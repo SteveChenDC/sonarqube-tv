@@ -82,6 +82,13 @@ This file is the single source of truth for Design Ralph. All UI changes MUST co
 - Do NOT change the logo colors
 - Do NOT modify or accessorize the logo
 
+### Naming Conventions
+- **Sonar** — the brand/company (use in logo, brand-level references)
+- **SonarQube** — the product family (SonarQube Server, SonarQube Cloud, SonarQube for IDE)
+- **Sonar.tv** — this app (the logo renders as "Sonar" in white + ".tv" in Qube Blue)
+- **SonarSource** — the company entity (legal, footer links)
+- Do NOT use "SonarQube" in the app logo — use "Sonar.tv"
+
 ---
 
 ## Tailwind Class Reference

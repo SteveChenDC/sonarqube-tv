@@ -95,7 +95,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2">
           <SonarWhaleMark className="h-7 w-auto text-n1" />
           <span className="font-heading text-2xl font-bold tracking-tight">
-            <span className="text-n1">Sonar</span><span className="text-qube-blue">Qube</span><span className="text-n1/50">.tv</span>
+            <span className="text-n1">Sonar</span><span className="text-qube-blue">.tv</span>
           </span>
         </Link>
         <nav className="flex items-center gap-1">
