@@ -157,7 +157,22 @@ export default function Header() {
                   </h3>
                   <Link
                     href="/#categories"
-                    onClick={() => setMenuOpen(false)}
+                    onClick={(e) => {
+                      setMenuOpen(false);
+                      if (window.location.pathname === "/" || window.location.pathname.endsWith("/sonarqube-tv/") || window.location.pathname.endsWith("/sonarqube-tv")) {
+                        e.preventDefault();
+                        const el = document.getElementById("categories");
+                        if (el) {
+                          el.scrollIntoView({ behavior: "smooth" });
+                          window.history.pushState(null, "", "/#categories");
+                        }
+                      } else {
+                        setTimeout(() => {
+                          const el = document.getElementById("categories");
+                          if (el) el.scrollIntoView({ behavior: "smooth" });
+                        }, 500);
+                      }
+                    }}
                     className="group/link inline-flex items-center gap-1 font-heading text-xs font-medium text-qube-blue transition-colors hover:text-qube-blue/80"
                   >
                     All Categories
@@ -179,7 +194,25 @@ export default function Header() {
                         <Link
                           key={cat.slug}
                           href={`/#${cat.slug}`}
-                          onClick={() => setMenuOpen(false)}
+                          onClick={(e) => {
+                            setMenuOpen(false);
+                            // If already on home page, scroll manually since Next.js
+                            // client-side navigation doesn't handle hash scrolling
+                            if (window.location.pathname === "/" || window.location.pathname.endsWith("/sonarqube-tv/") || window.location.pathname.endsWith("/sonarqube-tv")) {
+                              e.preventDefault();
+                              const el = document.getElementById(cat.slug);
+                              if (el) {
+                                el.scrollIntoView({ behavior: "smooth" });
+                                window.history.pushState(null, "", `/#${cat.slug}`);
+                              }
+                            } else {
+                              // Cross-page: let Next.js navigate, then scroll after load
+                              setTimeout(() => {
+                                const el = document.getElementById(cat.slug);
+                                if (el) el.scrollIntoView({ behavior: "smooth" });
+                              }, 500);
+                            }
+                          }}
                           className="group block rounded-lg p-2.5 transition-colors hover:bg-n8/50"
                         >
                           <span className="font-heading text-sm font-semibold text-qube-blue group-hover:text-qube-blue/80">
