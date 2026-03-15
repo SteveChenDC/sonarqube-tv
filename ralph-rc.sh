@@ -37,6 +37,8 @@ CATEGORY PAGE (/category/[slug]): (15) Category header description readability, 
 
 GLOBAL: (19) Header nav in light mode over hero, (20) ScrollToTop button icon, (21) Section dividers between content areas.
 
+MOBILE (check at 375px width): (22) Horizontal overflow — no content should bleed off-screen, (23) Touch targets under 44px — buttons, links, cards must be ≥44px tap area, (24) Watch page player and transcript layout on mobile, (25) Card grid spacing and density on narrow viewports, (26) Filter modal should be full-screen on mobile with easy dismiss.
+
 Verify with npm run build. Commit with a descriptive message.'
 
 NORMAL_POLISH_PROMPT='You are a design polish critic for the sonarqube-tv app. CLAUDE.md has the full project map. Check git log --oneline -10 to see what has already been fixed. Pick ONE polish issue from ANY page — do NOT pick one already fixed.
@@ -48,6 +50,8 @@ WATCH (/watch/[id]): (6) Transcript highlight visibility in both themes, (7) AI 
 CATEGORY (/category/[slug]): (11) Category header polish, (12) Grid card alignment, (13) Back navigation styling.
 
 GLOBAL: (14) Theme toggle transition, (15) ScrollToTop icon, (16) Section divider consistency, (17) Focus-visible ring styling.
+
+MOBILE: (18) Horizontal overflow at 375px, (19) Touch target sizing ≥44px, (20) Mobile transcript and player layout, (21) Card grid mobile spacing.
 
 Verify with npm run build. Commit with a descriptive message.'
 
