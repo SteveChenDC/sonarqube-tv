@@ -58,6 +58,7 @@ export default function ArticleTabs({
   transcript: Transcript | null;
 }>) {
   const [tab, setTab] = useState<"article" | "transcript">(transcript ? "transcript" : "article");
+  const [collapsed, setCollapsed] = useState(false);
 
   const chapters = useMemo(() => {
     if (!article || !transcript) return [];
@@ -67,7 +68,7 @@ export default function ArticleTabs({
   if (!article && !transcript) return null;
 
   const tabs: { key: "article" | "transcript"; label: React.ReactNode }[] = [
-    ...(article ? [{ key: "article" as const, label: <span className="inline-flex items-center gap-1.5"><svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/></svg>AI Summary</span> }] : []),
+    ...(article ? [{ key: "article" as const, label: <span className="inline-flex items-center gap-1.5"><svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/></svg>Summary</span> }] : []),
     ...(transcript ? [{ key: "transcript" as const, label: "Transcript" }] : []),
   ];
 
@@ -77,26 +78,40 @@ export default function ArticleTabs({
         {tabs.map((t) => (
           <button
             key={t.key}
-            onClick={() => setTab(t.key)}
-            className={`px-5 py-3 font-heading text-sm font-medium transition-colors ${
+            onClick={() => {
+              if (tab === t.key) {
+                setCollapsed((c) => !c);
+              } else {
+                setTab(t.key);
+                setCollapsed(false);
+              }
+            }}
+            className={`flex items-center gap-1.5 px-5 py-3 font-heading text-sm font-medium transition-colors ${
               tab === t.key
                 ? "border-b-2 border-qube-blue text-n1"
                 : "text-n6 hover:text-n3"
             }`}
           >
             {t.label}
+            {tab === t.key && (
+              <svg className={`h-3 w-3 transition-transform duration-200 ${collapsed ? "" : "rotate-180"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            )}
           </button>
         ))}
       </div>
 
-      <div className="p-5 sm:p-6">
-        {tab === "article" && article && (
-          <div>{renderMarkdown(article.markdown)}</div>
-        )}
-        {tab === "transcript" && transcript && (
-          <TranscriptView segments={transcript.segments} chapters={chapters} />
-        )}
-      </div>
+      {!collapsed && (
+        <div className="p-5 sm:p-6">
+          {tab === "article" && article && (
+            <div>{renderMarkdown(article.markdown)}</div>
+          )}
+          {tab === "transcript" && transcript && (
+            <TranscriptView segments={transcript.segments} chapters={chapters} />
+          )}
+        </div>
+      )}
     </div>
   );
 }

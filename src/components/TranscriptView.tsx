@@ -19,27 +19,25 @@ function SegmentRow({
   seg: TranscriptSegment;
   isActive: boolean;
   onSeek: (ms: number) => void;
-  activeRef?: React.Ref<HTMLDivElement>;
+  activeRef?: React.Ref<HTMLButtonElement>;
 }>) {
   return (
-    <div
+    <button
       ref={isActive ? activeRef : undefined}
-      className={`flex gap-3 rounded p-1.5 transition-colors duration-200 ${
+      onClick={() => onSeek(seg.offset)}
+      className={`flex w-full gap-3 rounded p-1.5 text-left transition-colors duration-200 cursor-pointer ${
         isActive
           ? "bg-qube-blue/15 border-l-2 border-qube-blue"
           : "hover:bg-n8/30"
       }`}
     >
-      <button
-        onClick={() => onSeek(seg.offset)}
-        className="shrink-0 font-mono text-xs text-qube-blue hover:underline"
-      >
+      <span className="shrink-0 font-mono text-xs text-qube-blue">
         {formatTime(seg.offset)}
-      </button>
+      </span>
       <span className={`text-sm leading-relaxed ${isActive ? "text-n1" : "text-n4"}`}>
         {seg.text}
       </span>
-    </div>
+    </button>
   );
 }
 
@@ -69,7 +67,7 @@ function useActiveSegment(segments: TranscriptSegment[]) {
 
 function useAutoScroll(activeOffset: number) {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const activeElRef = useRef<HTMLDivElement>(null);
+  const activeElRef = useRef<HTMLButtonElement>(null);
   const userScrolledRef = useRef(false);
   const programmaticScrollRef = useRef(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
