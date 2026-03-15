@@ -54,6 +54,14 @@ html:not(.dark) {
   --color-n9: var(--n9);
   --font-heading: var(--font-poppins);
   --font-body: var(--font-inter);
+  --animate-fade-in-out: fade-in-out 3s ease-in-out forwards;
+}
+
+@keyframes fade-in-out {
+  0% { opacity: 0; transform: translateY(-8px); }
+  10% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-8px); }
 }
 
 body {

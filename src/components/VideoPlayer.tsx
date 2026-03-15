@@ -39,6 +39,7 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
   const containerRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YTPlayer | null>(null);
   const [progress, setProgress] = useState(0);
+  const [resumeToast, setResumeToast] = useState<number | null>(null);
 
   useEffect(() => {
     setProgress(getProgress(videoId));
@@ -64,6 +65,8 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
             const duration = event.target.getDuration();
             if (duration > 0) {
               event.target.seekTo((savedProgress / 100) * duration, true);
+              setResumeToast(Math.round(savedProgress));
+              setTimeout(() => setResumeToast(null), 3000);
             }
           }
         },
@@ -131,6 +134,16 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
     <div className="w-full">
       <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-n8 bg-n9" ref={containerRef}>
         <div id={playerId} className="absolute inset-0 h-full w-full" title={title} />
+        {resumeToast !== null && (
+          <div className="absolute top-4 left-1/2 z-10 -translate-x-1/2 animate-fade-in-out rounded-lg bg-black/85 px-4 py-2 shadow-lg backdrop-blur-sm">
+            <span className="flex items-center gap-2 text-sm font-medium text-white">
+              <svg className="h-4 w-4 text-sonar-red" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              Resumed from {resumeToast}%
+            </span>
+          </div>
+        )}
       </div>
       {!compact && (
         <div className="h-1 w-full bg-n8 rounded-b-lg overflow-hidden">
