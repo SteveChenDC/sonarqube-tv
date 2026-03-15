@@ -98,7 +98,7 @@ tmux send-keys -t ralphs:loop "while true; do
   sleep $SLEEP
 
   echo '=== [Polish Ralph] Starting... ==='
-  OUTPUT=\$(claude -p \"\$POLISH_PROMPT_VAR\" --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $MAX_TURNS --max-budget-usd $BUDGET 2>&1)
+  OUTPUT=\$(claude -p \"\$POLISH_PROMPT_VAR\" --model sonnet --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $MAX_TURNS --max-budget-usd $BUDGET 2>&1)
   echo \"\$OUTPUT\"
   if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
   LATEST=\$(git log --oneline -1 2>/dev/null)
@@ -117,6 +117,28 @@ tmux send-keys -t ralphs:loop "while true; do
   echo \"### \$(date '+%Y-%m-%d %H:%M') — QA Ralph\" >> ralph-logs/changelog.md
   echo \"- \$LATEST\" >> ralph-logs/changelog.md
   echo \"=== [QA Ralph] Done: \$LATEST ===\"
+  sleep $SLEEP
+
+  echo '=== [Visual QA Ralph] Taking screenshots... ==='
+  node scripts/visual-qa.mjs 2>&1
+  echo '=== [Visual QA Ralph] Analyzing screenshots... ==='
+  OUTPUT=\$(claude -p 'You are a visual QA engineer for the sonarqube-tv app. CLAUDE.md has the full project map and DESIGN_GUIDELINES.md has the brand guide. Screenshots of the app have been saved to ralph-logs/screenshots/. Read each screenshot file to visually inspect the app. Check these pages at both desktop (1280px) and mobile (375px):
+
+1. HOME: Hero rendering, video card alignment, section headers, spacing, theme colors
+2. HOME-BOTTOM: Footer, last category rows, scroll-to-top button
+3. WATCH: Video player, playlist queue, metadata layout
+4. CATEGORY: Header, video grid, spacing
+
+Look for: broken layouts, misaligned elements, overlapping content, unreadable text, wrong colors per DESIGN_GUIDELINES.md, images not loading, horizontal overflow on mobile, elements cut off at viewport edges.
+
+If you find a visual bug, fix it in the source code, run npm run build to verify, and commit. If everything looks good, exit cleanly. Do NOT fix things that are just stylistic preferences — only fix actual visual bugs.' --model sonnet --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $MAX_TURNS --max-budget-usd $BUDGET 2>&1)
+  echo \"\$OUTPUT\"
+  if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
+  LATEST=\$(git log --oneline -1 2>/dev/null)
+  echo \"\" >> ralph-logs/changelog.md
+  echo \"### \$(date '+%Y-%m-%d %H:%M') — Visual QA Ralph\" >> ralph-logs/changelog.md
+  echo \"- \$LATEST\" >> ralph-logs/changelog.md
+  echo \"=== [Visual QA Ralph] Done: \$LATEST ===\"
   sleep $SLEEP
 
   echo '=== Cycle complete. Next cycle in ${SLEEP}s... ==='
