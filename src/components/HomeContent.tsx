@@ -65,10 +65,14 @@ export default function HomeContent({
   categories,
   videos,
 }: Readonly<HomeContentProps>) {
-  const [featuredVideo] = useState<Video>(() => {
+  const [featuredVideo, setFeaturedVideo] = useState<Video>(
+    () => videos.find((v) => v.youtubeId === featuredYoutubeIds[0]) ?? videos[0]
+  );
+  useEffect(() => {
     const ytId = featuredYoutubeIds[Math.floor(Math.random() * featuredYoutubeIds.length)];
-    return videos.find((v) => v.youtubeId === ytId) ?? videos[0];
-  });
+    const picked = videos.find((v) => v.youtubeId === ytId);
+    if (picked) setFeaturedVideo(picked);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   const [uploadDate, setUploadDate] = useState<UploadDateFilter>("anytime");
   const [duration, setDuration] = useState<DurationFilter>("any");
   const [sortBy, setSortBy] = useState<SortBy>("newest");

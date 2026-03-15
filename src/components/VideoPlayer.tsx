@@ -47,6 +47,7 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
   const initPlayer = useCallback(() => {
     if (!globalThis.window?.YT || !containerRef.current) return;
     playerRef.current?.destroy();
+    const savedProgress = getProgress(videoId);
     playerRef.current = new globalThis.window.YT.Player(playerId, {
       videoId: youtubeId,
       playerVars: {
@@ -56,9 +57,19 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
         origin: globalThis.location.origin,
         ...(autoPlay ? { autoplay: 1 } : {}),
       },
-      events: {},
+      events: {
+        onReady: (e: unknown) => {
+          const event = e as { target: YTPlayer };
+          if (savedProgress > 0 && savedProgress < 95) {
+            const duration = event.target.getDuration();
+            if (duration > 0) {
+              event.target.seekTo((savedProgress / 100) * duration, true);
+            }
+          }
+        },
+      },
     });
-  }, [youtubeId, playerId, autoPlay]);
+  }, [youtubeId, playerId, autoPlay, videoId]);
 
   useEffect(() => {
     // Load YT API script if not loaded yet
