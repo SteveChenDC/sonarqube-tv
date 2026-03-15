@@ -25,16 +25,16 @@ function SegmentRow({
     <button
       ref={isActive ? activeRef : undefined}
       onClick={() => onSeek(seg.offset)}
-      className={`flex w-full cursor-pointer gap-3 rounded px-2 py-2.5 text-left transition-colors duration-200 ${
+      className={`flex w-full cursor-pointer gap-3 rounded-md p-2 text-left transition-colors duration-200 ${
         isActive
-          ? "bg-qube-blue/15 border-l-2 border-qube-blue"
+          ? "bg-qube-blue/20 ring-1 ring-qube-blue/40 border-l-[3px] border-qube-blue dark:bg-qube-blue/15 dark:ring-qube-blue/30"
           : "hover:bg-n8/30"
       }`}
     >
       <span className="shrink-0 font-mono text-xs text-qube-blue">
         {formatTime(seg.offset)}
       </span>
-      <span className={`text-sm leading-relaxed ${isActive ? "text-n1" : "text-n4"}`}>
+      <span className={`text-sm leading-relaxed ${isActive ? "font-medium text-n1" : "text-n4"}`}>
         {seg.text}
       </span>
     </button>
@@ -195,14 +195,17 @@ export default function TranscriptView({
           <div key={group.title} className={gi > 0 ? "mt-4" : ""}>
             <button
               onClick={() => handleSeek(group.startTime)}
-              className="sticky top-0 z-10 flex w-full items-center gap-2 bg-n9/95 backdrop-blur-sm px-2 py-2 text-left"
+              className="sticky top-0 z-10 flex w-full items-center gap-2 border-b border-n8/60 bg-n9 px-2 py-2 text-left transition-colors hover:bg-n8/60 group"
             >
               <span className="font-mono text-xs text-qube-blue">
                 {formatTime(group.startTime)}
               </span>
-              <span className="font-heading text-sm font-semibold text-n1">
+              <span className="flex-1 font-heading text-sm font-semibold text-n2 group-hover:text-n1 transition-colors">
                 {group.title}
               </span>
+              <svg className="h-3 w-3 shrink-0 text-n7 group-hover:text-n4 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <polygon points="5 3 19 12 5 21 5 3" />
+              </svg>
             </button>
             <div className="space-y-1 pl-2">
               {group.segments.map((seg) => (

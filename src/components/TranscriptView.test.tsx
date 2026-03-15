@@ -60,10 +60,10 @@ describe("TranscriptView", () => {
     fireEvent(globalThis, new CustomEvent("yt-time", { detail: 6000 }));
 
     const activeRow = screen.getByText("Let's talk about code quality").closest("button");
-    expect(activeRow?.className).toContain("bg-qube-blue/15");
+    expect(activeRow?.className).toContain("bg-qube-blue/20");
 
     const inactiveRow = screen.getByText("Welcome to the video").closest("button");
-    expect(inactiveRow?.className).not.toContain("bg-qube-blue/15");
+    expect(inactiveRow?.className).not.toContain("bg-qube-blue/20");
   });
 
   it("renders chapter headings when chapters are provided", () => {

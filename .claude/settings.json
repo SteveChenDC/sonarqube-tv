@@ -10,5 +10,19 @@
       "Bash(git branch*)",
       "Bash(tmux *)"
     ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npm test --reporter=dot 2>&1 | tail -5",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
   }
 }

@@ -5,8 +5,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 sm:flex-row sm:justify-between">
         <div className="flex flex-col items-center gap-2 sm:items-start">
           <span className="font-heading text-lg font-semibold text-n1">
-            Sonar<span className="text-qube-blue">Qube</span>
-            <span className="text-n6">.tv</span>
+            Sonar<span className="text-qube-blue">.tv</span>
           </span>
           <p className="text-sm text-n6">
             A video showcase for{" "}

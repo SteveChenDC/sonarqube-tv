@@ -18,11 +18,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://stevechendc.github.io/sonarqube-tv"),
   title: {
-    default: "SonarQube.tv — Video Tutorials for Code Quality & Security",
-    template: "%s | SonarQube.tv",
+    default: "Sonar.tv — Video Tutorials for Code Quality & Security",
+    template: "%s | Sonar.tv",
   },
   description:
-    "Video tutorials, webinars, and demos for code verification, code quality, and code security with SonarQube.",
+    "Video tutorials, webinars, and demos for code verification, code quality, and code security with Sonar.",
   keywords: [
     "SonarQube",
     "code quality",
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    siteName: "SonarQube.tv",
+    siteName: "Sonar.tv",
     locale: "en_US",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "SonarQube.tv — Video tutorials for code quality & security",
+        alt: "Sonar.tv — Video tutorials for code quality & security",
       },
     ],
   },

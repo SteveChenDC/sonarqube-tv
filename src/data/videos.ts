@@ -58,7 +58,7 @@ export const categories: Category[] = [
   {
     slug: "customer-stories",
     title: "Customer Stories",
-    description: "How organizations use Sonar to improve code quality and security at scale.",
+    description: "How organizations use SonarQube to improve code quality and security at scale.",
   },
 ];
 

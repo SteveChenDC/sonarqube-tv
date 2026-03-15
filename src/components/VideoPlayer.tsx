@@ -38,11 +38,11 @@ interface YTPlayer {
 export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-player", autoPlay, compact }: Readonly<VideoPlayerProps>) {
   const containerRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YTPlayer | null>(null);
-  const [progress, setProgress] = useState(0);
-  const [resumeToast, setResumeToast] = useState<number | null>(null);
+  const [progress, setProgressState] = useState(0);
+  const [resumeToast, setResumeToast] = useState<string | null>(null);
 
   useEffect(() => {
-    setProgress(getProgress(videoId));
+    setProgressState(getProgress(videoId));
   }, [videoId]);
 
   const initPlayer = useCallback(() => {
@@ -65,7 +65,7 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
             const duration = event.target.getDuration();
             if (duration > 0) {
               event.target.seekTo((savedProgress / 100) * duration, true);
-              setResumeToast(Math.round(savedProgress));
+              setResumeToast(`Resuming from ${Math.round(savedProgress)}%`);
               setTimeout(() => setResumeToast(null), 3000);
             }
           }
@@ -108,7 +108,7 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
         if (duration > 0 && current > 0) {
           const percent = (current / duration) * 100;
           saveProgress(videoId, percent);
-          setProgress(percent);
+          setProgressState(percent);
           globalThis.dispatchEvent(
             new CustomEvent("yt-time", { detail: current * 1000 })
           );
@@ -134,14 +134,12 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
     <div className="w-full">
       <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-n8 bg-n9" ref={containerRef}>
         <div id={playerId} className="absolute inset-0 h-full w-full" title={title} />
-        {resumeToast !== null && (
-          <div className="absolute top-4 left-1/2 z-10 -translate-x-1/2 animate-fade-in-out rounded-lg bg-black/85 px-4 py-2 shadow-lg backdrop-blur-sm">
-            <span className="flex items-center gap-2 text-sm font-medium text-white">
-              <svg className="h-4 w-4 text-sonar-red" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-              Resumed from {resumeToast}%
-            </span>
+        {resumeToast && (
+          <div className="absolute bottom-4 left-4 z-10 flex items-center gap-2 rounded-lg bg-black/80 px-3 py-2 text-sm text-n1 shadow-lg backdrop-blur-sm animate-fade-in-out">
+            <svg className="h-4 w-4 text-qube-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            {resumeToast}
           </div>
         )}
       </div>

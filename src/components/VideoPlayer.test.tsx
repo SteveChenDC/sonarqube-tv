@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, vi, afterEach } from "vitest";
-import { render, act, waitFor } from "@testing-library/react";
+import { render, act, waitFor, screen } from "@testing-library/react";
 import VideoPlayer from "./VideoPlayer";
 import { setProgress } from "@/lib/watchProgress";
 
@@ -8,23 +8,30 @@ function createMockPlayer() {
   return {
     seekTo: vi.fn(),
     getCurrentTime: vi.fn(() => 0),
-    getDuration: vi.fn(() => 0),
+    getDuration: vi.fn(() => 100),
     destroy: vi.fn(),
   };
 }
 
 describe("VideoPlayer", () => {
   let mockPlayer: ReturnType<typeof createMockPlayer>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let capturedEvents: Record<string, (e: unknown) => void>;
 
   beforeEach(() => {
     localStorage.clear();
     vi.useFakeTimers({ shouldAdvanceTime: true });
     mockPlayer = createMockPlayer();
+    capturedEvents = {};
 
     // Mock YT API — must use function() for new-ability
-    (globalThis as unknown as Record<string, unknown>).YT = {
-      Player: vi.fn().mockImplementation(function (this: unknown) {
+    (window as unknown as Record<string, unknown>).YT = {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      Player: vi.fn().mockImplementation(function (this: unknown, _id: string, opts: any) {
         Object.assign(this as object, mockPlayer);
+        if (opts?.events) {
+          Object.assign(capturedEvents, opts.events);
+        }
         return this;
       }),
     };
@@ -136,5 +143,58 @@ describe("VideoPlayer", () => {
 
     // Should not crash and should not show progress
     expect(container.querySelector(".bg-sonar-red")).toBeNull();
+  });
+
+  it("shows resume toast when video resumes from saved progress", async () => {
+    setProgress("vid1", 42);
+
+    render(
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+    );
+
+    // Trigger the onReady callback
+    act(() => {
+      capturedEvents.onReady?.({ target: mockPlayer });
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText("Resuming from 42%")).toBeTruthy();
+    });
+  });
+
+  it("hides resume toast after 3 seconds", async () => {
+    setProgress("vid1", 75);
+
+    render(
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+    );
+
+    act(() => {
+      capturedEvents.onReady?.({ target: mockPlayer });
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText("Resuming from 75%")).toBeTruthy();
+    });
+
+    act(() => {
+      vi.advanceTimersByTime(3100);
+    });
+
+    await waitFor(() => {
+      expect(screen.queryByText("Resuming from 75%")).toBeNull();
+    });
+  });
+
+  it("does not show resume toast when no saved progress", () => {
+    render(
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+    );
+
+    act(() => {
+      capturedEvents.onReady?.({ target: mockPlayer });
+    });
+
+    expect(screen.queryByText(/Resuming from/)).toBeNull();
   });
 });
