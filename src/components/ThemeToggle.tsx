@@ -37,7 +37,7 @@ export default function ThemeToggle({ className }: Readonly<{ className?: string
     >
       <span className="relative block h-5 w-5">
         <svg
-          className={`absolute inset-0 h-5 w-5 transition-all duration-300 ${isDark ? "rotate-0 scale-100 opacity-100" : "rotate-90 scale-0 opacity-0"}`}
+          className={`absolute inset-0 h-5 w-5 transition-[transform,opacity] duration-500 ease-in-out ${isDark ? "rotate-0 scale-100 opacity-100" : "rotate-180 scale-0 opacity-0"}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -56,7 +56,7 @@ export default function ThemeToggle({ className }: Readonly<{ className?: string
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
         </svg>
         <svg
-          className={`absolute inset-0 h-5 w-5 transition-all duration-300 ${isDark ? "-rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"}`}
+          className={`absolute inset-0 h-5 w-5 transition-[transform,opacity] duration-500 ease-in-out ${isDark ? "-rotate-180 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

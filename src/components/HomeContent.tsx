@@ -192,9 +192,12 @@ export default function HomeContent({
         />
 
         {(continueWatchingVideos.length > 0 || topRowVideos.length > 0) && (
-          <div className="relative pt-8">
-            {/* Gradient section divider */}
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-n7/60 to-transparent" />
+          <div className="relative pt-10">
+            {/* Section divider between hero and content */}
+            <div className="absolute top-0 left-0 right-0 flex flex-col items-center">
+              <div className="h-px w-full bg-gradient-to-r from-transparent via-n6/40 to-transparent" />
+              <div className="h-px w-3/4 bg-gradient-to-r from-transparent via-qube-blue/20 to-transparent" />
+            </div>
             <VideoRow
               title={(() => {
                 if (continueWatchingVideos.length > 0) return "Continue Watching";
