@@ -129,7 +129,7 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
 
           <div
             ref={scrollRef}
-            className="flex gap-4 overflow-x-auto scroll-smooth px-12 scrollbar-hide snap-x snap-mandatory sm:px-14 lg:px-16"
+            className="flex gap-4 overflow-x-auto scroll-smooth px-4 scrollbar-hide snap-x snap-mandatory sm:px-6"
           >
             {sectionLabels ? (
               <>
