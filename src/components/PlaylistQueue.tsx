@@ -114,23 +114,27 @@ export default function PlaylistQueue({
           <Link
             key={video.id}
             href={`/watch/${video.id}?playlist=${playlistSlug}`}
-            className={`group flex items-center gap-3 py-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:ring-inset ${
+            className={`group flex items-center gap-3 py-2.5 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:ring-inset ${
               video.id === currentVideoId
                 ? "border-l-2 border-sonar-red bg-n8/70 pl-[14px] pr-4"
-                : "border-l-2 border-transparent px-4 hover:bg-n8/50 active:bg-n8/80"
+                : "border-l-2 border-transparent px-4 hover:border-n6 hover:bg-n8/50 active:bg-n8/80"
             }`}
           >
             <span className="w-5 shrink-0 text-right font-heading text-xs text-n6">
               {video.id === currentVideoId ? (
-                <svg
-                  className="inline h-3 w-3 text-sonar-red"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
+                <span className="inline-flex animate-pulse">
+                  <svg
+                    className="inline h-3 w-3 text-sonar-red"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </span>
               ) : (
-                index + 1
+                <span className="transition-colors group-hover:text-n4">
+                  {index + 1}
+                </span>
               )}
             </span>
             <div className="relative h-10 w-[72px] shrink-0 overflow-hidden rounded">
@@ -138,7 +142,7 @@ export default function PlaylistQueue({
                 src={video.thumbnail}
                 alt=""
                 fill
-                className="object-cover"
+                className="object-cover transition-[filter] duration-200 group-hover:brightness-110"
                 sizes="72px"
               />
             </div>
