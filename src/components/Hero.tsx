@@ -25,7 +25,7 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
     <>
       {/* Mobile card layout */}
       <section className="pt-20 px-4 sm:hidden">
-        <div className="overflow-hidden rounded-xl bg-n9">
+        <div className="overflow-hidden rounded-xl bg-n9 border border-n8/60 shadow-xl shadow-black/40">
           <div className="relative aspect-video">
             <Image
               src={video.thumbnail}
@@ -89,9 +89,9 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
           fetchPriority="high"
         />
         {/* Bottom-up gradient: smooth cinematic rise from solid at the text zone, dissolving naturally to transparent */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 via-[35%] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 via-[35%] to-transparent dark:from-background dark:via-background/55" />
         {/* Left-side brand gradient: frames the text column without overpowering the right side of the thumbnail */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-sonar-purple/15 via-[45%] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-sonar-purple/15 via-[45%] to-transparent dark:from-background/70" />
 
         <div className="absolute bottom-0 left-0 right-0 px-4 pb-16 sm:px-6">
           <div className="mx-auto max-w-7xl">
