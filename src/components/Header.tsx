@@ -310,7 +310,7 @@ export default function Header() {
           </div>
           <div
             ref={menuRef}
-            className="relative"
+            className={`relative ${searchOpen ? "hidden sm:block" : ""}`}
           >
             <button
               onClick={() => setMenuOpen((prev) => !prev)}
