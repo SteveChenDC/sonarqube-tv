@@ -169,7 +169,7 @@ export default function FilterBar({
               visible
                 ? "max-sm:translate-y-0 sm:scale-100 opacity-100"
                 : "max-sm:translate-y-full sm:scale-95 opacity-0"
-            } max-sm:fixed max-sm:inset-x-0 max-sm:bottom-0 rounded-t-2xl p-6 sm:rounded-xl`}
+            } max-sm:fixed max-sm:inset-x-0 max-sm:bottom-0 max-sm:max-h-[90dvh] max-sm:overflow-y-auto rounded-t-2xl max-sm:px-6 max-sm:pt-6 max-sm:pb-safe sm:p-6 sm:rounded-xl`}
           >
             {/* Mobile drag handle */}
             <div className="mb-4 flex justify-center sm:hidden">
