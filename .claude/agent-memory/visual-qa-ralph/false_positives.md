@@ -22,8 +22,16 @@ type: feedback
 
 ---
 
-## Mobile 2-column video card grid
+## Mobile horizontal carousel (previously 2-column grid)
 
-**What it looks like:** On mobile, video rows show as a 2-column grid instead of the horizontal scroll seen on desktop.
+**What it looks like:** On mobile, video rows show as a horizontal scroll carousel with large cards and prev/next arrow buttons — same pattern as desktop.
 
-**Why it's NOT a bug:** This is **intentional design** in VideoRow.tsx — `sm:hidden` div renders a `grid grid-cols-2 gap-3` layout, while `hidden sm:block` renders horizontal scroll. The mobile grid caps at 6 videos (`MOBILE_CAP = 6`).
+**Why it's NOT a bug:** VideoRow.tsx was refactored (as of 2026-03-16) to use a single horizontal scroll layout for **all viewports**. The old `sm:hidden` 2-col grid and `hidden sm:block` scroll split no longer exists. The carousel on mobile is intentional.
+
+---
+
+## Large black empty area at top of mobile-home-bottom.png
+
+**What it looks like:** A large (~40% viewport height) solid black space appears at the top of the mobile-home-bottom screenshot, before the fixed header and DevOps & CI/CD section.
+
+**Why it's NOT a bug:** This is a screenshot capture artifact. The black area is likely Sonar Summit section cards with unloaded thumbnails blending into the `#0a0a0a` background color, combined with the lazy-loading IntersectionObserver not triggering in the headless browser. Real users see proper thumbnails and content.

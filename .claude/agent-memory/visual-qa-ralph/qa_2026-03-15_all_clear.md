@@ -4,6 +4,28 @@ description: Running log of full visual QA passes — most recent at top
 type: project
 ---
 
+## 2026-03-16 (Pass #12)
+
+Ran full visual QA on 2026-03-16 (twelfth run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
+
+**Result: All clear — no visual bugs found. No regressions from baseline.**
+
+Specific checks:
+- Dark theme correctly applied everywhere (`#0a0a0a` background)
+- Brand colors correct: Qube Blue (`#126ED3`) "6 videos" / "1h 8m total" badges, Sonar Red (`#D3121D`) "Newest" active sort button
+- Desktop Home: featured marquee row + Getting Started + Sonar Summit sections — dark theme, aligned cards, correct colors
+- Desktop Home Bottom: CI/CD row + SonarQube for IDE section — duration badges visible, clean layout
+- Desktop Watch: YouTube player centered, Back nav, Share button, title card below — correct
+- Desktop Category: "Getting Started" header + "6 videos" + "1h 8m total" badges, Newest active in Sonar Red, 4-col grid — correct
+- Mobile Home: horizontal carousel (intentional — VideoRow.tsx refactored to single scroll layout for all viewports), featured row + Getting Started + Sonar Summit sections — no horizontal overflow
+- Mobile Home Bottom: large black area at top = screenshot artifact (unloaded thumbnails, lazy-load not triggered in headless browser), DevOps & CI/CD + SonarQube for IDE carousels clean
+- Mobile Watch: full-width player, title, SonarQube Cloud + March 12th 2026 tags, duration/share, description, Summary/Transcript tabs — all within viewport
+- Mobile Category: "SORT BY" + all 4 sort buttons on one row at 375px, 2-col video grid — clean
+- "N" bottom-left artifact present — confirmed false positive (Next.js route announcer)
+- VideoRow mobile layout change confirmed intentional: old `sm:hidden` 2-col grid removed, now single `overflow-x-auto` scroll for all viewports
+
+---
+
 ## 2026-03-16 (Pass #11)
 
 Ran full visual QA on 2026-03-16 (eleventh run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
