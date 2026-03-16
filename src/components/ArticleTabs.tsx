@@ -55,10 +55,18 @@ function renderMarkdown(md: string) {
     return { type: "p", content: trimmed };
   });
 
+  // Detect if the article opens with an h1 — if so, skip it.
+  // The video title is already shown prominently above the tab panel,
+  // so repeating it as a markdown heading creates a double-header.
+  const firstContentIndex = tokens.findIndex((t) => t.type !== "blank");
+  const startsWithH1 = firstContentIndex >= 0 && tokens[firstContentIndex].type === "h1";
+
   // Second pass: group consecutive list items into <ul> blocks
   const elements: React.ReactNode[] = [];
   let key = 0;
   let i = 0;
+  // Track whether we've rendered the first paragraph yet (for lead styling)
+  let firstParaSeen = false;
 
   while (i < tokens.length) {
     const tok = tokens[i];
@@ -85,29 +93,44 @@ function renderMarkdown(md: string) {
       );
     } else if (tok.type === "h3") {
       elements.push(
-        <h3 key={key++} className="mb-1.5 mt-6 font-heading text-base font-semibold text-n1 first:mt-0">
+        <h3 key={key++} className="mb-2 mt-6 font-heading text-base font-semibold text-n1 first:mt-0">
           {parseInline(tok.content)}
         </h3>
       );
       i++;
     } else if (tok.type === "h2") {
       elements.push(
-        <h2 key={key++} className="mb-3 mt-8 border-l-2 border-qube-blue/70 pl-3 font-heading text-lg font-semibold text-n1 first:mt-0">
+        <h2 key={key++} className="mb-3 mt-8 border-l-2 border-qube-blue/60 pl-3 font-heading text-lg font-semibold text-n1 first:mt-0">
           {parseInline(tok.content)}
         </h2>
       );
       i++;
     } else if (tok.type === "h1") {
-      elements.push(
-        <h1 key={key++} className="mb-4 mt-6 pb-3 font-heading text-xl font-bold text-n1 first:mt-0 border-b border-n8/60">
-          {parseInline(tok.content)}
-        </h1>
-      );
-      i++;
+      // Skip the opening h1 — it duplicates the video title shown above.
+      // Non-opening h1s (rare) render normally.
+      if (startsWithH1 && i === firstContentIndex) {
+        i++;
+      } else {
+        elements.push(
+          <h1 key={key++} className="mb-4 mt-6 pb-3 font-heading text-xl font-bold text-n1 first:mt-0 border-b border-n8/60">
+            {parseInline(tok.content)}
+          </h1>
+        );
+        i++;
+      }
     } else {
-      // paragraph
+      // paragraph — first paragraph gets "lead" treatment
+      const isLead = !firstParaSeen;
+      firstParaSeen = true;
       elements.push(
-        <p key={key++} className="mb-3 mt-0 text-[15px] leading-7 text-n3 first:mt-0">
+        <p
+          key={key++}
+          className={
+            isLead
+              ? "mb-5 mt-0 text-[16px] leading-[1.75] text-n2 first:mt-0"
+              : "mb-4 mt-0 text-[15px] leading-7 text-n3 first:mt-0"
+          }
+        >
           {parseInline((tok as { type: "p"; content: string }).content)}
         </p>
       );
