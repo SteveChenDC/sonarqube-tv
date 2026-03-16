@@ -88,10 +88,10 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
           sizes="100vw"
           fetchPriority="high"
         />
-        {/* Bottom-up gradient: smooth cinematic rise from solid at the text zone, dissolving naturally to transparent */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 via-[35%] to-transparent" />
-        {/* Left-side brand gradient: frames the text column without overpowering the right side of the thumbnail */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-sonar-purple/15 via-[45%] to-transparent" />
+        {/* Bottom-up gradient: always cinematic dark so hero text is readable in both light & dark mode */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 from-[18%] via-black/55 via-[40%] to-transparent" />
+        {/* Left-side brand gradient: frames the text column without darkening the whole frame */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-sonar-purple/20 to-transparent" />
 
         <div className="absolute bottom-0 left-0 right-0 px-4 pb-16 sm:px-6">
           <div className="mx-auto max-w-7xl">
@@ -101,11 +101,11 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
                   Featured
                 </span>
                 {category && (
-                  <span className="inline-block rounded bg-black/80 px-3 py-1 font-heading text-sm font-medium text-white dark:bg-black/60">
+                  <span className="inline-block rounded bg-black/70 px-3 py-1 font-heading text-sm font-medium text-white">
                     {category.title}
                   </span>
                 )}
-                <span className="inline-flex items-center gap-1 rounded bg-black/90 px-3 py-1 font-heading text-sm font-medium text-white dark:bg-black/80">
+                <span className="inline-flex items-center gap-1 rounded bg-black/80 px-3 py-1 font-heading text-sm font-medium text-white">
                   <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <circle cx="12" cy="12" r="10" />
                     <polyline points="12 6 12 12 16 14" />
@@ -117,7 +117,7 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
                 {video.title}
               </h1>
               {showDescription && (
-                <p className="mb-6 line-clamp-3 text-base leading-relaxed text-white/80 sm:text-lg">
+                <p className="mb-6 line-clamp-3 text-base leading-relaxed text-white/85 sm:text-lg">
                   {video.description}
                 </p>
               )}
