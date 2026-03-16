@@ -143,7 +143,17 @@ export default function ArticleTabs({
   return (
     <div className="rounded-xl border border-n8 bg-n8/15 overflow-hidden">
       <div className="flex items-center border-b border-n8">
-        <div className="flex flex-1">
+        <div className="relative flex flex-1">
+          {/* Sliding active indicator */}
+          {tabs.length > 1 && (
+            <span
+              className="pointer-events-none absolute bottom-0 h-0.5 bg-qube-blue transition-[left] duration-200 ease-out"
+              style={{
+                width: `${100 / tabs.length}%`,
+                left: `${(tabs.findIndex((t) => t.key === tab) / tabs.length) * 100}%`,
+              }}
+            />
+          )}
           {tabs.map((t) => (
             <button
               key={t.key}
@@ -157,7 +167,7 @@ export default function ArticleTabs({
               }}
               className={`flex items-center gap-1.5 px-5 py-3 font-heading text-sm font-medium transition-colors ${
                 tab === t.key
-                  ? "border-b-2 border-qube-blue text-n1"
+                  ? `text-n1 ${tabs.length === 1 ? "border-b-2 border-qube-blue" : ""}`
                   : "text-n6 hover:text-n3"
               }`}
             >
