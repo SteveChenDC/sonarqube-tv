@@ -132,8 +132,8 @@ export default function ArticleTabs({
         ))}
       </div>
 
-      {!collapsed && (
-        <div className="p-5 sm:p-6">
+      <div className="p-5 sm:p-6">
+        <div key={tab} className="animate-fade-in">
           {tab === "article" && article && (
             <div>{renderMarkdown(article.markdown)}</div>
           )}
@@ -141,7 +141,7 @@ export default function ArticleTabs({
             <TranscriptView segments={transcript.segments} chapters={chapters} />
           )}
         </div>
-      )}
+      </div>
     </div>
   );
 }

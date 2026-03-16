@@ -93,6 +93,38 @@ describe("VideoCard", () => {
     expect(queryByText("New")).toBeNull();
   });
 
+  describe("duration badge color coding", () => {
+    it("uses qube-blue badge for short videos (<4 min)", () => {
+      const shortVideo: Video = { ...mockVideo, duration: "3:45" };
+      const { container } = render(<VideoCard video={shortVideo} />);
+      expect(container.querySelector(".bg-qube-blue\\/80")).toBeTruthy();
+    });
+
+    it("uses black badge for medium videos (4-20 min)", () => {
+      const medVideo: Video = { ...mockVideo, duration: "12:34" };
+      const { container } = render(<VideoCard video={medVideo} />);
+      expect(container.querySelector(".bg-black\\/80")).toBeTruthy();
+    });
+
+    it("uses sonar-purple badge for long videos (>20 min)", () => {
+      const longVideo: Video = { ...mockVideo, duration: "45:00" };
+      const { container } = render(<VideoCard video={longVideo} />);
+      expect(container.querySelector(".bg-sonar-purple\\/80")).toBeTruthy();
+    });
+
+    it("uses qube-blue badge for very short videos (1:30)", () => {
+      const shortVideo: Video = { ...mockVideo, duration: "1:30" };
+      const { container } = render(<VideoCard video={shortVideo} />);
+      expect(container.querySelector(".bg-qube-blue\\/80")).toBeTruthy();
+    });
+
+    it("uses sonar-purple badge for H:MM:SS format over 20 min", () => {
+      const longVideo: Video = { ...mockVideo, duration: "1:05:00" };
+      const { container } = render(<VideoCard video={longVideo} />);
+      expect(container.querySelector(".bg-sonar-purple\\/80")).toBeTruthy();
+    });
+  });
+
   describe("timeAgo rendering", () => {
     it("shows 'Just now' for a video published seconds ago", () => {
       const { getByText } = render(

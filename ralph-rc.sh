@@ -70,114 +70,31 @@ tmux kill-session -t ralphs 2>/dev/null || true
 tmux new-session -d -s ralphs -n rc
 
 ##############################
-# Sequential loop — one Ralph at a time
+# Write config and launch loop in tmux
 ##############################
+cat > /tmp/ralph-env.sh <<ENVEOF
+export BUDGET=$BUDGET
+export QA_BUDGET=$QA_BUDGET
+export QA_TURNS=$QA_TURNS
+export MAX_TURNS=$MAX_TURNS
+export BACKOFF=$BACKOFF
+export PROMO_END=$PROMO_END
+export SLEEP_OFFPEAK=$SLEEP_OFFPEAK
+export SLEEP_PEAK=$SLEEP_PEAK
+export SLEEP_NORMAL=$SLEEP_NORMAL
+export BUDGET_OFFPEAK=$BUDGET_OFFPEAK
+export BUDGET_PEAK=$BUDGET_PEAK
+export MOBILE_FLAG='$MOBILE_FLAG'
+export MOBILE_PROMPT='$MOBILE_PROMPT'
+export MOBILE_POLISH_PROMPT='$MOBILE_POLISH_PROMPT'
+ENVEOF
+
 tmux new-window -t ralphs -n loop
-tmux send-keys -t ralphs:loop "
-get_sleep() {
-  if [[ \\\"\\\$(date +%Y-%m-%d)\\\" > \\\"$PROMO_END\\\" ]]; then echo $SLEEP_NORMAL; return; fi
-  local hour=\\\$(TZ=America/New_York date +%H | sed 's/^0//')
-  if [ \\\"\\\$hour\\\" -ge 8 ] && [ \\\"\\\$hour\\\" -lt 14 ]; then echo $SLEEP_PEAK; else echo $SLEEP_OFFPEAK; fi
-}
-get_budget() {
-  if [[ \\\"\\\$(date +%Y-%m-%d)\\\" > \\\"$PROMO_END\\\" ]]; then echo $BUDGET; return; fi
-  local hour=\\\$(TZ=America/New_York date +%H | sed 's/^0//')
-  if [ \\\"\\\$hour\\\" -ge 8 ] && [ \\\"\\\$hour\\\" -lt 14 ]; then echo $BUDGET_PEAK; else echo $BUDGET_OFFPEAK; fi
-}
-CYCLE=0
-while true; do
-  CYCLE=\$((CYCLE + 1))
-  CSLEEP=\$(get_sleep)
-  CBUDGET=\$(get_budget)
-  echo \"=== Cycle start — sleep=\${CSLEEP}s budget=\\\$\${CBUDGET} (\$(TZ=America/New_York date '+%H:%M ET')) ===\"
-
-  # Check mobile focus mode
-  IS_MOBILE=0
-  if [ -f \"$MOBILE_FLAG\" ]; then
-    EXPIRY=\$(cat \"$MOBILE_FLAG\")
-    NOW=\$(date +%s)
-    if [ \"\$NOW\" -lt \"\$EXPIRY\" ]; then
-      IS_MOBILE=1
-      echo '=== Mobile focus mode ACTIVE ==='
-    else
-      rm -f \"$MOBILE_FLAG\"
-      echo '=== Mobile focus expired, reverting to normal mode ==='
-    fi
-  fi
-
-  mkdir -p ralph-logs
-
-  echo '=== [Design Ralph] Starting... ==='
-  BEFORE_SHA=\$(git rev-parse HEAD 2>/dev/null)
-  if [ \"\$IS_MOBILE\" = \"1\" ]; then
-    OUTPUT=\$(claude -p '$MOBILE_PROMPT' --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $MAX_TURNS --max-budget-usd \$CBUDGET 2>&1)
-  else
-    OUTPUT=\$(claude -a design-ralph --model sonnet --max-turns $MAX_TURNS --max-budget-usd \$CBUDGET 2>&1)
-  fi
-  echo \"\$OUTPUT\"
-  if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
-  AFTER_SHA=\$(git rev-parse HEAD 2>/dev/null)
-  LATEST=\$(git log --oneline -1 2>/dev/null)
-  echo \"\" >> ralph-logs/changelog.md
-  echo \"### \$(date '+%Y-%m-%d %H:%M') — Design Ralph\" >> ralph-logs/changelog.md
-  echo \"- \$LATEST\" >> ralph-logs/changelog.md
-  echo \"=== [Design Ralph] Done: \$LATEST ===\"
-  if [ \"\$BEFORE_SHA\" = \"\$AFTER_SHA\" ]; then
-    echo '=== No changes made this cycle. Skipping Polish/QA/Visual QA to save tokens. ==='
-    sleep \$CSLEEP
-    continue
-  fi
-  sleep \$CSLEEP
-
-  echo '=== [Polish Ralph] Starting... ==='
-  if [ \"\$IS_MOBILE\" = \"1\" ]; then
-    OUTPUT=\$(claude -p '$MOBILE_POLISH_PROMPT' --model sonnet --allowedTools 'Bash,Read,Edit,Write,Grep,Glob' --max-turns $MAX_TURNS --max-budget-usd \$CBUDGET 2>&1)
-  else
-    OUTPUT=\$(claude -a polish-ralph --max-turns $MAX_TURNS --max-budget-usd \$CBUDGET 2>&1)
-  fi
-  echo \"\$OUTPUT\"
-  if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
-  LATEST=\$(git log --oneline -1 2>/dev/null)
-  echo \"\" >> ralph-logs/changelog.md
-  echo \"### \$(date '+%Y-%m-%d %H:%M') — Polish Ralph\" >> ralph-logs/changelog.md
-  echo \"- \$LATEST\" >> ralph-logs/changelog.md
-  echo \"=== [Polish Ralph] Done: \$LATEST ===\"
-  sleep \$CSLEEP
-
-  echo '=== [QA Ralph] Starting... ==='
-  OUTPUT=\$(claude -a qa-ralph --max-turns $QA_TURNS --max-budget-usd $QA_BUDGET 2>&1)
-  echo \"\$OUTPUT\"
-  if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
-  LATEST=\$(git log --oneline -1 2>/dev/null)
-  echo \"\" >> ralph-logs/changelog.md
-  echo \"### \$(date '+%Y-%m-%d %H:%M') — QA Ralph\" >> ralph-logs/changelog.md
-  echo \"- \$LATEST\" >> ralph-logs/changelog.md
-  echo \"=== [QA Ralph] Done: \$LATEST ===\"
-  sleep \$CSLEEP
-
-  if [ \$((CYCLE % 2)) -eq 0 ]; then
-    echo '=== [Visual QA Ralph] Taking screenshots... ==='
-    node scripts/visual-qa.mjs 2>&1
-    echo '=== [Visual QA Ralph] Analyzing screenshots... ==='
-    OUTPUT=\$(claude -a visual-qa-ralph --max-turns $MAX_TURNS --max-budget-usd \$CBUDGET 2>&1)
-    echo \"\$OUTPUT\"
-    if echo \"\$OUTPUT\" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
-    LATEST=\$(git log --oneline -1 2>/dev/null)
-    echo \"\" >> ralph-logs/changelog.md
-    echo \"### \$(date '+%Y-%m-%d %H:%M') — Visual QA Ralph\" >> ralph-logs/changelog.md
-    echo \"- \$LATEST\" >> ralph-logs/changelog.md
-    echo \"=== [Visual QA Ralph] Done: \$LATEST ===\"
-    sleep \$CSLEEP
-  else
-    echo '=== [Visual QA Ralph] Skipped (odd cycle \$CYCLE) ==='
-  fi
-
-  echo '=== Cycle complete. Next cycle in \${CSLEEP}s... ==='
-done" Enter
+tmux send-keys -t ralphs:loop "source /tmp/ralph-env.sh && bash ralph-loop.sh" Enter
 
 # Go back to rc window
 tmux select-window -t ralphs:rc
-tmux send-keys -t ralphs:rc "echo '=== Ralph RC — Control Center ===' && echo 'Agents: Design(sonnet) → Polish(sonnet) → QA(sonnet) → VisualQA(sonnet, every 2nd cycle)' && echo 'Memory: .claude/agents/ — persists across runs' && echo '2x promo: off-peak(2PM-8AM ET)=90s/\$5 | peak(8AM-2PM ET)=480s/\$2' && echo 'Ctrl+B, 1 = watch loop | Ctrl+B, 0 = rc' && echo 'tmux kill-session -t ralphs to stop'" Enter
+tmux send-keys -t ralphs:rc "echo '=== Ralph RC — Control Center ===' && echo 'Agents: [Design+Polish](parallel worktrees) → QA → VisualQA(every 2nd cycle) — all Sonnet' && echo 'Memory: .claude/agents/ — persists across runs' && echo '2x promo: off-peak(2PM-8AM ET)=90s/\$5 | peak(8AM-2PM ET)=480s/\$2' && echo 'Ctrl+B, 1 = watch loop | Ctrl+B, 0 = rc' && echo 'tmux kill-session -t ralphs to stop'" Enter
 
 # Attach to session
 tmux attach -t ralphs

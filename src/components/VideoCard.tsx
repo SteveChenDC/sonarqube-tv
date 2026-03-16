@@ -7,6 +7,23 @@ import { Video } from "@/types";
 import { categories } from "@/data/videos";
 import { getProgress } from "@/lib/watchProgress";
 
+function parseDurationToMinutes(duration: string): number {
+  const parts = duration.split(":").map(Number);
+  if (parts.length === 3) {
+    // H:MM:SS
+    return parts[0] * 60 + parts[1] + parts[2] / 60;
+  }
+  // MM:SS or M:SS
+  return parts[0] + (parts[1] ?? 0) / 60;
+}
+
+function getDurationBadgeClass(duration: string): string {
+  const minutes = parseDurationToMinutes(duration);
+  if (minutes < 4) return "bg-qube-blue/80";
+  if (minutes <= 20) return "bg-black/80";
+  return "bg-sonar-purple/80";
+}
+
 function timeAgo(dateString: string): string {
   const now = new Date();
   const date = new Date(dateString);
@@ -55,7 +72,7 @@ export default function VideoCard({ video, fluid = false, onRemove, hideCategory
             <path d="M8 5v14l11-7z" />
           </svg>
         </div>
-        <span className="absolute bottom-2 right-2 rounded bg-black/80 px-1.5 py-0.5 text-xs font-medium text-white">
+        <span className={`absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white ${getDurationBadgeClass(video.duration)}`}>
           {video.duration}
         </span>
 

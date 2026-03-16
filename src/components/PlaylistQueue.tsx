@@ -1,6 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Video } from "@/types";
@@ -16,13 +17,17 @@ export default function PlaylistQueue({
 }: Readonly<PlaylistQueueProps>) {
   const searchParams = useSearchParams();
   const playlistSlug = searchParams.get("playlist");
+  const playlistVideos = allVideos.filter((v) => v.category === playlistSlug);
+  const currentIndex = playlistVideos.findIndex((v) => v.id === currentVideoId);
+  const activeItemRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    activeItemRef.current?.scrollIntoView?.({ block: "nearest", behavior: "instant" });
+  }, [currentVideoId]);
 
   if (!playlistSlug) return null;
-
-  const playlistVideos = allVideos.filter((v) => v.category === playlistSlug);
   if (playlistVideos.length === 0) return null;
 
-  const currentIndex = playlistVideos.findIndex((v) => v.id === currentVideoId);
   const nextVideo =
     currentIndex < playlistVideos.length - 1
       ? playlistVideos[currentIndex + 1]
@@ -113,6 +118,7 @@ export default function PlaylistQueue({
         {playlistVideos.map((video, index) => (
           <Link
             key={video.id}
+            ref={video.id === currentVideoId ? activeItemRef : null}
             href={`/watch/${video.id}?playlist=${playlistSlug}`}
             className={`group flex items-center gap-3 py-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:ring-inset ${
               video.id === currentVideoId
