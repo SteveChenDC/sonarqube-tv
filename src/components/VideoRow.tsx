@@ -11,16 +11,16 @@ function RowSkeleton({ hideHeader }: { hideHeader?: boolean }) {
     <div aria-hidden="true">
       {!hideHeader && (
         <div className="mb-4 flex items-center gap-3 px-4 sm:px-6">
-          <div className="h-5 w-1 shrink-0 rounded-full bg-n8/60 animate-pulse" />
-          <div className="h-6 w-40 rounded-full bg-n8/60 animate-pulse" />
+          <div className="h-5 w-1 shrink-0 rounded-full bg-n7/50 animate-pulse" />
+          <div className="h-6 w-40 rounded-full bg-n7/50 animate-pulse" />
         </div>
       )}
       <div className="flex gap-4 overflow-hidden px-4 sm:px-6">
         {[0, 1, 2, 3].map((i) => (
           <div key={i} className="flex-shrink-0 w-[280px] sm:w-[320px]">
-            <div className="aspect-video w-full rounded-lg bg-n8/60 animate-pulse" />
-            <div className="mt-3 h-4 w-4/5 rounded bg-n8/50 animate-pulse" />
-            <div className="mt-2 h-3 w-2/5 rounded bg-n8/40 animate-pulse" />
+            <div className="aspect-video w-full rounded-lg bg-n7/50 animate-pulse" />
+            <div className="mt-3 h-4 w-4/5 rounded bg-n7/40 animate-pulse" />
+            <div className="mt-2 h-3 w-2/5 rounded bg-n7/30 animate-pulse" />
           </div>
         ))}
       </div>

@@ -125,6 +125,19 @@ html.theme-transitioning *::after {
   animation: shimmer 1.8s ease-in-out infinite;
 }
 
+/* Light-mode shimmer — n8/n7 are too close to the light background (#F4F7FB),
+   so override with visibly darker shades (n7/n6) for adequate contrast. */
+html:not(.dark) .animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-n7) 0%,
+    var(--color-n6) 40%,
+    var(--color-n7) 60%,
+    var(--color-n7) 100%
+  );
+  background-size: 200% 100%;
+}
+
 @keyframes fade-in-out {
   0% { opacity: 0; transform: translateY(4px); }
   10% { opacity: 1; transform: translateY(0); }
