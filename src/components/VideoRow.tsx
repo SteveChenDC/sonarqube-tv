@@ -102,6 +102,35 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
     });
   };
 
+  /** Move focus between video cards with arrow keys. */
+  const handleKeyDown = useCallback((e: React.KeyboardEvent<HTMLDivElement>) => {
+    const container = scrollRef.current;
+    if (!container) return;
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(e.key)) return;
+
+    const cards = Array.from(
+      container.querySelectorAll<HTMLAnchorElement>("a[href]")
+    );
+    if (cards.length === 0) return;
+
+    const focusedIndex = cards.findIndex(
+      (el) => el === document.activeElement || el.contains(document.activeElement)
+    );
+    if (focusedIndex === -1) return; // no card focused — don't intercept
+
+    let nextIndex = focusedIndex;
+    if (e.key === "ArrowRight") nextIndex = Math.min(focusedIndex + 1, cards.length - 1);
+    else if (e.key === "ArrowLeft") nextIndex = Math.max(focusedIndex - 1, 0);
+    else if (e.key === "Home") nextIndex = 0;
+    else if (e.key === "End") nextIndex = cards.length - 1;
+
+    if (nextIndex !== focusedIndex) {
+      e.preventDefault();
+      cards[nextIndex].focus();
+      cards[nextIndex].scrollIntoView?.({ behavior: "smooth", block: "nearest", inline: "nearest" });
+    }
+  }, []);
+
   if (videos.length === 0) return null;
 
   function renderLabel(label: string, count: number) {
@@ -171,6 +200,9 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
 
           <div
             ref={scrollRef}
+            role="region"
+            aria-label={`${title} — use arrow keys to browse`}
+            onKeyDown={handleKeyDown}
             className="flex gap-4 overflow-x-auto scroll-smooth px-4 scrollbar-hide snap-x snap-mandatory sm:px-6"
           >
             {sectionLabels ? (

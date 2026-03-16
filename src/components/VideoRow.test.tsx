@@ -63,4 +63,61 @@ describe("VideoRow", () => {
     expect(queryByLabelText("Scroll left")).toBeNull();
     expect(queryByLabelText("Scroll right")).toBeNull();
   });
+
+  it("ArrowRight moves focus to the next card", () => {
+    const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" }), makeVideo({ id: "v3" })];
+    const { container } = render(
+      <VideoRow title="Row" categorySlug="cat" videos={videos} />
+    );
+
+    const links = container.querySelectorAll<HTMLAnchorElement>("a[href*='/watch/']");
+    expect(links.length).toBeGreaterThanOrEqual(2);
+
+    // Focus the first card and fire ArrowRight
+    links[0].focus();
+    expect(document.activeElement).toBe(links[0]);
+
+    fireEvent.keyDown(links[0].closest("[role='region']")!, { key: "ArrowRight" });
+    expect(document.activeElement).toBe(links[1]);
+  });
+
+  it("ArrowLeft moves focus to the previous card", () => {
+    const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+    const { container } = render(
+      <VideoRow title="Row" categorySlug="cat" videos={videos} />
+    );
+
+    const links = container.querySelectorAll<HTMLAnchorElement>("a[href*='/watch/']");
+    links[1].focus();
+    expect(document.activeElement).toBe(links[1]);
+
+    fireEvent.keyDown(links[1].closest("[role='region']")!, { key: "ArrowLeft" });
+    expect(document.activeElement).toBe(links[0]);
+  });
+
+  it("ArrowLeft does not go before the first card", () => {
+    const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+    const { container } = render(
+      <VideoRow title="Row" categorySlug="cat" videos={videos} />
+    );
+
+    const links = container.querySelectorAll<HTMLAnchorElement>("a[href*='/watch/']");
+    links[0].focus();
+
+    fireEvent.keyDown(links[0].closest("[role='region']")!, { key: "ArrowLeft" });
+    expect(document.activeElement).toBe(links[0]);
+  });
+
+  it("End key moves focus to the last card", () => {
+    const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" }), makeVideo({ id: "v3" })];
+    const { container } = render(
+      <VideoRow title="Row" categorySlug="cat" videos={videos} />
+    );
+
+    const links = container.querySelectorAll<HTMLAnchorElement>("a[href*='/watch/']");
+    links[0].focus();
+
+    fireEvent.keyDown(links[0].closest("[role='region']")!, { key: "End" });
+    expect(document.activeElement).toBe(links[links.length - 1]);
+  });
 });

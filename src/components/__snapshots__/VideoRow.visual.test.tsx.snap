@@ -2,7 +2,9 @@
 
 exports[`VideoRow visual snapshots > scroll layout matches snapshot 1`] = `
 <div
+  aria-label="Test Row — use arrow keys to browse"
   class="flex gap-4 overflow-x-auto scroll-smooth px-4 scrollbar-hide snap-x snap-mandatory sm:px-6"
+  role="region"
 >
   <a
     class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
