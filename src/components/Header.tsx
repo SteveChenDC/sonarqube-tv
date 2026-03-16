@@ -231,11 +231,13 @@ export default function Header() {
                         searchInputRef.current?.focus();
                       }}
                       aria-label="Clear search"
-                      className="absolute right-2 top-1/2 -translate-y-1/2 flex h-4 w-4 items-center justify-center rounded-full bg-n7 text-n3 transition-colors hover:bg-n6 hover:text-n1"
+                      className="absolute right-0 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center text-n3 transition-colors hover:text-n1"
                     >
-                      <svg viewBox="0 0 12 12" className="h-2 w-2" aria-hidden="true">
-                        <path d="M1 1l10 10M11 1L1 11" stroke="currentColor" strokeWidth={2} strokeLinecap="round" fill="none" />
-                      </svg>
+                      <span className="flex h-4 w-4 items-center justify-center rounded-full bg-n7 transition-colors hover:bg-n6">
+                        <svg viewBox="0 0 12 12" className="h-2 w-2" aria-hidden="true">
+                          <path d="M1 1l10 10M11 1L1 11" stroke="currentColor" strokeWidth={2} strokeLinecap="round" fill="none" />
+                        </svg>
+                      </span>
                     </button>
                   )}
                 </div>

@@ -181,7 +181,7 @@ export default function FilterBar({
               </h2>
               <button
                 onClick={() => setIsOpen(false)}
-                className="rounded-lg p-1 text-n6 transition-colors hover:bg-n8 hover:text-n3"
+                className="flex h-11 w-11 items-center justify-center rounded-lg text-n6 transition-colors hover:bg-n8 hover:text-n3"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="18" y1="6" x2="6" y2="18" />

@@ -24,7 +24,7 @@ export default function ThemeToggle({ className }: Readonly<{ className?: string
   }
 
   if (!mounted) {
-    return <div className="h-9 w-9" />;
+    return <div className="h-11 w-11" />;
   }
 
   const isDark = theme === "dark";
@@ -33,7 +33,7 @@ export default function ThemeToggle({ className }: Readonly<{ className?: string
     <button
       onClick={handleToggle}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      className={`rounded-lg p-2 transition-all duration-300 active:scale-90 ${className ?? "text-n6 hover:bg-n8/50 hover:text-n1"}`}
+      className={`flex h-11 w-11 items-center justify-center rounded-lg transition-all duration-300 active:scale-90 ${className ?? "text-n6 hover:bg-n8/50 hover:text-n1"}`}
     >
       <span className="relative block h-5 w-5">
         <svg
