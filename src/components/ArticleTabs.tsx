@@ -23,7 +23,7 @@ function parseInline(text: string): React.ReactNode[] {
     } else if (match[3]) {
       nodes.push(<em key={k++}>{match[3]}</em>);
     } else if (match[4]) {
-      nodes.push(<code key={k++} className="rounded bg-n8 px-1 py-0.5 text-xs text-n2">{match[4]}</code>);
+      nodes.push(<code key={k++} className="rounded border border-n7/40 bg-n8/70 px-1.5 py-0.5 font-mono text-xs text-qube-blue">{match[4]}</code>);
     }
     lastIndex = match.index + match[0].length;
   }
@@ -72,34 +72,34 @@ function renderMarkdown(md: string) {
       while (i < tokens.length && tokens[i].type === "li") {
         const liTok = tokens[i] as { type: "li"; content: string };
         items.push(
-          <li key={key++} className="leading-7 text-[15px] text-n3">
+          <li key={key++} className="pl-1 leading-7 text-[15px] text-n3">
             {parseInline(liTok.content)}
           </li>
         );
         i++;
       }
       elements.push(
-        <ul key={key++} className="my-3 ml-5 list-disc space-y-1 marker:text-n6">
+        <ul key={key++} className="my-4 ml-4 list-disc space-y-1.5 marker:text-qube-blue">
           {items}
         </ul>
       );
     } else if (tok.type === "h3") {
       elements.push(
-        <h3 key={key++} className="mb-2 mt-5 font-heading text-base font-semibold text-n1 first:mt-0">
+        <h3 key={key++} className="mb-1.5 mt-6 font-heading text-base font-semibold text-n1 first:mt-0">
           {parseInline(tok.content)}
         </h3>
       );
       i++;
     } else if (tok.type === "h2") {
       elements.push(
-        <h2 key={key++} className="mb-2 mt-6 font-heading text-lg font-semibold text-n1 first:mt-0">
+        <h2 key={key++} className="mb-3 mt-8 border-l-2 border-qube-blue/70 pl-3 font-heading text-lg font-semibold text-n1 first:mt-0">
           {parseInline(tok.content)}
         </h2>
       );
       i++;
     } else if (tok.type === "h1") {
       elements.push(
-        <h1 key={key++} className="mb-3 mt-6 font-heading text-xl font-bold text-n1 first:mt-0">
+        <h1 key={key++} className="mb-4 mt-6 pb-3 font-heading text-xl font-bold text-n1 first:mt-0 border-b border-n8/60">
           {parseInline(tok.content)}
         </h1>
       );
@@ -107,7 +107,7 @@ function renderMarkdown(md: string) {
     } else {
       // paragraph
       elements.push(
-        <p key={key++} className="my-3 text-[15px] leading-7 text-n3 first:mt-0">
+        <p key={key++} className="mb-3 mt-0 text-[15px] leading-7 text-n3 first:mt-0">
           {parseInline((tok as { type: "p"; content: string }).content)}
         </p>
       );
