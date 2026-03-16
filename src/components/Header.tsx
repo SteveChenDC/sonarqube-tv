@@ -190,7 +190,7 @@ export default function Header() {
         </Link>
         <nav className="flex items-center gap-1">
           {/* Netflix-style expandable search */}
-          <div className="relative flex items-center">
+          <div className={`relative flex items-center${searchOpen ? " max-sm:flex-1 max-sm:min-w-0" : ""}`}>
             {!searchOpen && (
               <button
                 onClick={() => setSearchOpen(true)}
@@ -221,7 +221,7 @@ export default function Header() {
                     onBlur={handleSearchBlur}
                     placeholder="Search videos…"
                     aria-label="Search videos"
-                    className="w-36 rounded-lg border border-n7/60 bg-n9/80 py-1.5 pr-8 pl-8 font-body text-sm text-n2 placeholder-n6 transition-all duration-200 focus:w-52 focus:border-qube-blue/70 focus:ring-1 focus:ring-qube-blue/30 focus:outline-none sm:w-44 sm:focus:w-64"
+                    className="w-full rounded-lg border border-n7/60 bg-n9/80 py-1.5 pr-8 pl-8 font-body text-sm text-n2 placeholder-n6 transition-all duration-200 focus:border-qube-blue/70 focus:ring-1 focus:ring-qube-blue/30 focus:outline-none sm:w-44 sm:focus:w-64"
                   />
                   {searchQuery && (
                     <button
