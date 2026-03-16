@@ -4,7 +4,7 @@ description: Build and test baseline as of 2026-03-16 — what passes, known war
 type: project
 ---
 
-As of 2026-03-16 (twenty-fourth QA run), `npm run build` and `npm test` both pass clean. All 217 tests pass.
+As of 2026-03-16 (twenty-fifth QA run), `npm run build` and `npm test` both pass clean. All 219 tests pass.
 
 **Build**: Next.js 16.1.6 (Turbopack), 243 static pages generated (SSG), no errors.
 - Known non-fatal warning: "Next.js inferred your workspace root" due to multiple lockfiles at `/Users/stevec/package-lock.json` and project root. Safe to ignore; does not affect build output.
@@ -42,7 +42,7 @@ As of 2026-03-16 (twenty-fourth QA run), `npm run build` and `npm test` both pas
 - Fix applied to tests (not component): Assert `aria-hidden="true"` on the panel wrapper div instead of checking DOM presence.
 - Pattern: When a component uses CSS-only show/hide (grid rows, opacity, height), test the semantic attribute (`aria-hidden`) rather than DOM presence.
 
-**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (run 19, stable)
+**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (runs 19–24, stable) → 219 (run 25, net +2 new tests)
 **Page count history**: 242 → 243 (stable)
 
 **Why:** Ongoing QA baseline tracking.
