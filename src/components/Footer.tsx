@@ -2,8 +2,8 @@ export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="relative border-t border-n7/40 bg-n9 px-4 pt-10 pb-8 sm:px-6">
-      {/* Accent gradient line */}
-      <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-transparent via-sonar-red/80 to-transparent" />
+      {/* Accent gradient line — qube-blue → sonar-red → qube-blue for brand identity */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-qube-blue/60 via-40% via-sonar-red/80 via-60% to-transparent" />
 
       <div className="mx-auto max-w-7xl">
         {/* Main row */}
@@ -27,13 +27,13 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Links with icons */}
+          {/* Links with icons — each has its own brand accent on hover */}
           <div className="flex items-center gap-1">
             <a
               href="https://www.youtube.com/c/SonarSource"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-[44px] items-center gap-2 rounded-lg px-3 py-2 font-heading text-sm text-n6 transition-colors hover:bg-n8/40 hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
+              className="group inline-flex min-h-[44px] items-center gap-2 rounded-lg px-3 py-2 font-heading text-sm text-n6 transition-colors hover:bg-sonar-red/10 hover:text-sonar-red focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
               aria-label="SonarSource on YouTube"
             >
               {/* YouTube icon */}
@@ -47,7 +47,7 @@ export default function Footer() {
               href="https://github.com/SonarSource"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-[44px] items-center gap-2 rounded-lg px-3 py-2 font-heading text-sm text-n6 transition-colors hover:bg-n8/40 hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
+              className="group inline-flex min-h-[44px] items-center gap-2 rounded-lg px-3 py-2 font-heading text-sm text-n6 transition-colors hover:bg-n8/40 hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
               aria-label="SonarSource on GitHub"
             >
               {/* GitHub icon */}
@@ -61,7 +61,7 @@ export default function Footer() {
               href="https://www.sonarsource.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-[44px] items-center gap-2 rounded-lg px-3 py-2 font-heading text-sm text-n6 transition-colors hover:bg-n8/40 hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
+              className="group inline-flex min-h-[44px] items-center gap-2 rounded-lg px-3 py-2 font-heading text-sm text-n6 transition-colors hover:bg-qube-blue/10 hover:text-qube-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
               aria-label="SonarSource website"
             >
               {/* Globe icon */}
