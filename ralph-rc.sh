@@ -17,7 +17,7 @@ MOBILE_FLAG="/tmp/ralph-mobile-focus.timestamp"
 
 # Double usage promo: 2x limits outside 8AM-2PM ET through March 27, 2026
 PROMO_END="2026-03-28"
-SLEEP_OFFPEAK=90   # 1.5 min — maximize 2x window
+SLEEP_OFFPEAK=60   # 1 min — rotated cycles reduce invocations, safe to lower
 SLEEP_PEAK=480     # 8 min — conserve during 1x window
 SLEEP_NORMAL=180   # 3 min — post-promo default
 BUDGET_OFFPEAK=5   # Higher budget during 2x limits
@@ -94,7 +94,7 @@ tmux send-keys -t ralphs:loop "source /tmp/ralph-env.sh && bash ralph-loop.sh" E
 
 # Go back to rc window
 tmux select-window -t ralphs:rc
-tmux send-keys -t ralphs:rc "echo '=== Ralph RC — Control Center ===' && echo 'Agents: [Design+Polish](parallel worktrees) → QA → VisualQA(every 2nd cycle) — all Sonnet' && echo 'Memory: .claude/agents/ — persists across runs' && echo '2x promo: off-peak(2PM-8AM ET)=90s/\$5 | peak(8AM-2PM ET)=480s/\$2' && echo 'Ctrl+B, 1 = watch loop | Ctrl+B, 0 = rc' && echo 'tmux kill-session -t ralphs to stop'" Enter
+tmux send-keys -t ralphs:rc "echo '=== Ralph RC — Control Center ===' && echo 'Agents: 3-cycle rotation — C0:design+test C1:polish+test C2:seo+test→perf → QA → VisualQA(every 3rd)' && echo 'Off-peak: 2 parallel (primary+test) | Peak: 1 (primary only)' && echo 'Memory: .claude/agents/ — persists across runs' && echo '2x promo: off-peak(2PM-8AM ET)=60s/\$5 | peak(8AM-2PM ET)=480s/\$3' && echo 'Ctrl+B, 1 = watch loop | Ctrl+B, 0 = rc' && echo 'tmux kill-session -t ralphs to stop'" Enter
 
 # Attach to session
 tmux attach -t ralphs

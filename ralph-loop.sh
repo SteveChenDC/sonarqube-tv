@@ -19,10 +19,18 @@ get_budget() {
   if [ "$hour" -ge 8 ] && [ "$hour" -lt 14 ]; then echo $BUDGET_PEAK; else echo $BUDGET_OFFPEAK; fi
 }
 
+is_offpeak() {
+  if [[ "$(date +%Y-%m-%d)" > "$PROMO_END" ]]; then echo 0; return; fi
+  local hour=$(TZ=America/New_York date +%H | sed 's/^0//')
+  if [ "$hour" -ge 8 ] && [ "$hour" -lt 14 ]; then echo 0; else echo 1; fi
+}
+
 cleanup_worktrees() {
   git worktree remove /tmp/ralph-design-wt --force 2>/dev/null || true
   git worktree remove /tmp/ralph-polish-wt --force 2>/dev/null || true
-  git branch -D ralph-design-tmp ralph-polish-tmp 2>/dev/null || true
+  git worktree remove /tmp/ralph-seo-wt --force 2>/dev/null || true
+  git worktree remove /tmp/ralph-test-wt --force 2>/dev/null || true
+  git branch -D ralph-design-tmp ralph-polish-tmp ralph-seo-tmp ralph-test-tmp 2>/dev/null || true
 }
 
 CYCLE=0
@@ -30,7 +38,9 @@ while true; do
   CYCLE=$((CYCLE + 1))
   CSLEEP=$(get_sleep)
   CBUDGET=$(get_budget)
-  echo "=== Cycle $CYCLE — sleep=${CSLEEP}s budget=\$${CBUDGET} ($(TZ=America/New_York date '+%H:%M ET')) ==="
+  OFFPEAK=$(is_offpeak)
+  ROTATION=$((CYCLE % 3))
+  echo "=== Cycle $CYCLE (rot=$ROTATION offpeak=$OFFPEAK) — sleep=${CSLEEP}s budget=\$${CBUDGET} ($(TZ=America/New_York date '+%H:%M ET')) ==="
 
   # Check mobile focus mode
   IS_MOBILE=0
@@ -85,65 +95,90 @@ while true; do
 
   else
     ##############################
-    # Normal mode: Design + Polish in parallel worktrees
+    # Normal mode: 3-cycle rotation with parallel worktrees
     ##############################
+
+    # Determine primary agent for this cycle
+    case $ROTATION in
+      0) PRIMARY_AGENT="design-ralph" ; PRIMARY_WT="/tmp/ralph-design-wt" ; PRIMARY_BRANCH="ralph-design-tmp" ;;
+      1) PRIMARY_AGENT="polish-ralph" ; PRIMARY_WT="/tmp/ralph-polish-wt" ; PRIMARY_BRANCH="ralph-polish-tmp" ;;
+      2) PRIMARY_AGENT="seo-ralph"    ; PRIMARY_WT="/tmp/ralph-seo-wt"    ; PRIMARY_BRANCH="ralph-seo-tmp" ;;
+    esac
+
     cleanup_worktrees
 
-    echo '=== [Design + Polish] Starting in parallel worktrees... ==='
-    git worktree add /tmp/ralph-design-wt -b ralph-design-tmp HEAD 2>/dev/null
-    git worktree add /tmp/ralph-polish-wt -b ralph-polish-tmp HEAD 2>/dev/null
+    # Create primary worktree
+    git worktree add "$PRIMARY_WT" -b "$PRIMARY_BRANCH" HEAD 2>/dev/null
 
-    # Run both agents in parallel
-    (cd /tmp/ralph-design-wt && claude -p 'Go' --agent design-ralph --model sonnet --dangerously-skip-permissions --max-turns $MAX_TURNS --max-budget-usd $CBUDGET 2>&1) > /tmp/ralph-design.log 2>&1 &
-    DESIGN_PID=$!
-    (cd /tmp/ralph-polish-wt && claude -p 'Go' --agent polish-ralph --dangerously-skip-permissions --max-turns $MAX_TURNS --max-budget-usd $CBUDGET 2>&1) > /tmp/ralph-polish.log 2>&1 &
-    POLISH_PID=$!
+    # Launch primary agent
+    echo "=== [$PRIMARY_AGENT] Starting in worktree... ==="
+    (cd "$PRIMARY_WT" && claude -p 'Go' --agent "$PRIMARY_AGENT" --model sonnet --dangerously-skip-permissions --max-turns $MAX_TURNS --max-budget-usd $CBUDGET 2>&1) > "/tmp/ralph-${PRIMARY_AGENT}.log" 2>&1 &
+    PRIMARY_PID=$!
 
-    echo "=== Waiting for Design (PID $DESIGN_PID) + Polish (PID $POLISH_PID)... ==="
-    wait $DESIGN_PID 2>/dev/null || true
-    wait $POLISH_PID 2>/dev/null || true
+    # Launch test-ralph in parallel during off-peak (zero conflict risk — only creates .test.tsx files)
+    TEST_PID=""
+    if [ "$OFFPEAK" = "1" ]; then
+      git worktree add /tmp/ralph-test-wt -b ralph-test-tmp HEAD 2>/dev/null
+      echo '=== [test-ralph] Starting in parallel worktree... ==='
+      (cd /tmp/ralph-test-wt && claude -p 'Go' --agent test-ralph --model sonnet --dangerously-skip-permissions --max-turns $MAX_TURNS --max-budget-usd $CBUDGET 2>&1) > /tmp/ralph-test-ralph.log 2>&1 &
+      TEST_PID=$!
+      echo "=== Waiting for $PRIMARY_AGENT (PID $PRIMARY_PID) + test-ralph (PID $TEST_PID)... ==="
+    else
+      echo "=== Peak mode: skipping test-ralph parallel slot. Waiting for $PRIMARY_AGENT (PID $PRIMARY_PID)... ==="
+    fi
 
-    echo '=== [Design Ralph] Output: ==='
-    cat /tmp/ralph-design.log 2>/dev/null || true
-    echo '=== [Polish Ralph] Output: ==='
-    cat /tmp/ralph-polish.log 2>/dev/null || true
+    # Wait for all agents
+    wait $PRIMARY_PID 2>/dev/null || true
+    [ -n "$TEST_PID" ] && { wait $TEST_PID 2>/dev/null || true; }
 
-    # Check for rate limiting in either output
-    if grep -q 'out of extra usage' /tmp/ralph-design.log /tmp/ralph-polish.log 2>/dev/null; then
+    echo "=== [$PRIMARY_AGENT] Output: ==="
+    cat "/tmp/ralph-${PRIMARY_AGENT}.log" 2>/dev/null || true
+    if [ -n "$TEST_PID" ]; then
+      echo '=== [test-ralph] Output: ==='
+      cat /tmp/ralph-test-ralph.log 2>/dev/null || true
+    fi
+
+    # Check for rate limiting in any output
+    RATE_LIMITED=0
+    if grep -q 'out of extra usage' "/tmp/ralph-${PRIMARY_AGENT}.log" 2>/dev/null; then RATE_LIMITED=1; fi
+    if [ -n "$TEST_PID" ] && grep -q 'out of extra usage' /tmp/ralph-test-ralph.log 2>/dev/null; then RATE_LIMITED=1; fi
+    if [ "$RATE_LIMITED" = "1" ]; then
       echo '=== Rate limited. Cleaning up and backing off 5m... ==='
       cleanup_worktrees
       sleep $BACKOFF
       continue
     fi
 
-    # Merge Design Ralph changes
-    DESIGN_SHA=$(cd /tmp/ralph-design-wt && git rev-parse HEAD 2>/dev/null)
-    if [ "$DESIGN_SHA" != "$BEFORE_SHA" ]; then
-      git merge ralph-design-tmp --no-edit 2>&1
-      LATEST=$(git log --oneline -1 2>/dev/null)
-      echo "" >> ralph-logs/changelog.md
-      echo "### $(date '+%Y-%m-%d %H:%M') — Design Ralph" >> ralph-logs/changelog.md
-      echo "- $LATEST" >> ralph-logs/changelog.md
-      echo "=== [Design Ralph] Merged: $LATEST ==="
-    else
-      echo '=== [Design Ralph] No changes ==='
-    fi
-
-    # Merge Polish Ralph changes
-    POLISH_SHA=$(cd /tmp/ralph-polish-wt && git rev-parse HEAD 2>/dev/null)
-    if [ "$POLISH_SHA" != "$BEFORE_SHA" ]; then
-      if git merge ralph-polish-tmp --no-edit 2>&1; then
+    # Merge test-ralph first (guaranteed clean — only creates new .test.tsx files)
+    if [ -n "$TEST_PID" ]; then
+      TEST_SHA=$(cd /tmp/ralph-test-wt && git rev-parse HEAD 2>/dev/null)
+      if [ "$TEST_SHA" != "$BEFORE_SHA" ]; then
+        git merge ralph-test-tmp --no-edit 2>&1
         LATEST=$(git log --oneline -1 2>/dev/null)
         echo "" >> ralph-logs/changelog.md
-        echo "### $(date '+%Y-%m-%d %H:%M') — Polish Ralph" >> ralph-logs/changelog.md
+        echo "### $(date '+%Y-%m-%d %H:%M') — Test Ralph" >> ralph-logs/changelog.md
         echo "- $LATEST" >> ralph-logs/changelog.md
-        echo "=== [Polish Ralph] Merged: $LATEST ==="
+        echo "=== [test-ralph] Merged: $LATEST ==="
       else
-        echo '=== [Polish Ralph] Merge conflict — aborting polish merge ==='
+        echo '=== [test-ralph] No changes ==='
+      fi
+    fi
+
+    # Merge primary agent changes
+    PRIMARY_SHA=$(cd "$PRIMARY_WT" && git rev-parse HEAD 2>/dev/null)
+    if [ "$PRIMARY_SHA" != "$BEFORE_SHA" ]; then
+      if git merge "$PRIMARY_BRANCH" --no-edit 2>&1; then
+        LATEST=$(git log --oneline -1 2>/dev/null)
+        echo "" >> ralph-logs/changelog.md
+        echo "### $(date '+%Y-%m-%d %H:%M') — ${PRIMARY_AGENT}" >> ralph-logs/changelog.md
+        echo "- $LATEST" >> ralph-logs/changelog.md
+        echo "=== [$PRIMARY_AGENT] Merged: $LATEST ==="
+      else
+        echo "=== [$PRIMARY_AGENT] Merge conflict — aborting merge ==="
         git merge --abort 2>/dev/null || true
       fi
     else
-      echo '=== [Polish Ralph] No changes ==='
+      echo "=== [$PRIMARY_AGENT] No changes ==="
     fi
 
     cleanup_worktrees
@@ -172,27 +207,48 @@ while true; do
   sleep $CSLEEP
 
   ##############################
-  # Visual QA Ralph (every other cycle)
+  # Perf Ralph — runs after QA on seo cycles (rotation==2)
   ##############################
-  if [ $((CYCLE % 2)) -eq 0 ]; then
-    if [ ! -f scripts/visual-qa.mjs ]; then
-      echo '=== [Visual QA Ralph] Skipped (scripts/visual-qa.mjs not found) ==='
-    else
-    echo '=== [Visual QA Ralph] Taking screenshots... ==='
-    node scripts/visual-qa.mjs 2>&1
-    echo '=== [Visual QA Ralph] Analyzing screenshots... ==='
-    OUTPUT=$(claude -p 'Go' --agent visual-qa-ralph --dangerously-skip-permissions --max-turns $MAX_TURNS --max-budget-usd $CBUDGET 2>&1)
+  if [ "$ROTATION" = "2" ]; then
+    echo '=== [Perf Ralph] Starting (seo cycle follow-up)... ==='
+    OUTPUT=$(claude -p 'Go' --agent perf-ralph --model sonnet --dangerously-skip-permissions --max-turns $MAX_TURNS --max-budget-usd $CBUDGET 2>&1)
     echo "$OUTPUT"
     if echo "$OUTPUT" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
     LATEST=$(git log --oneline -1 2>/dev/null)
     echo "" >> ralph-logs/changelog.md
-    echo "### $(date '+%Y-%m-%d %H:%M') — Visual QA Ralph" >> ralph-logs/changelog.md
+    echo "### $(date '+%Y-%m-%d %H:%M') — Perf Ralph" >> ralph-logs/changelog.md
     echo "- $LATEST" >> ralph-logs/changelog.md
-    echo "=== [Visual QA Ralph] Done: $LATEST ==="
+    echo "=== [Perf Ralph] Done: $LATEST ==="
     sleep $CSLEEP
+  fi
+
+  ##############################
+  # Visual QA Ralph — every 3rd cycle (off-peak) or every 4th (peak)
+  ##############################
+  if [ "$OFFPEAK" = "1" ]; then
+    VQA_FREQ=3
+  else
+    VQA_FREQ=4
+  fi
+  if [ $((CYCLE % VQA_FREQ)) -eq 0 ]; then
+    if [ ! -f scripts/visual-qa.mjs ]; then
+      echo '=== [Visual QA Ralph] Skipped (scripts/visual-qa.mjs not found) ==='
+    else
+      echo '=== [Visual QA Ralph] Taking screenshots... ==='
+      node scripts/visual-qa.mjs 2>&1
+      echo '=== [Visual QA Ralph] Analyzing screenshots... ==='
+      OUTPUT=$(claude -p 'Go' --agent visual-qa-ralph --dangerously-skip-permissions --max-turns $MAX_TURNS --max-budget-usd $CBUDGET 2>&1)
+      echo "$OUTPUT"
+      if echo "$OUTPUT" | grep -q 'out of extra usage'; then echo '=== Rate limited. Backing off 5m... ==='; sleep $BACKOFF; continue; fi
+      LATEST=$(git log --oneline -1 2>/dev/null)
+      echo "" >> ralph-logs/changelog.md
+      echo "### $(date '+%Y-%m-%d %H:%M') — Visual QA Ralph" >> ralph-logs/changelog.md
+      echo "- $LATEST" >> ralph-logs/changelog.md
+      echo "=== [Visual QA Ralph] Done: $LATEST ==="
+      sleep $CSLEEP
     fi
   else
-    echo "=== [Visual QA Ralph] Skipped (odd cycle $CYCLE) ==="
+    echo "=== [Visual QA Ralph] Skipped (cycle $CYCLE, every ${VQA_FREQ}th) ==="
   fi
 
   echo "=== Cycle $CYCLE complete. Next cycle in ${CSLEEP}s... ==="
