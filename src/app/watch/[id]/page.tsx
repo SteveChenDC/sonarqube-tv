@@ -175,8 +175,8 @@ export default async function WatchPage({
                 {category.title}
               </Link>
             )}
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-n7/30 bg-n8/50 px-3 py-1 font-heading text-xs font-medium text-n5">
-              <svg className="h-3 w-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-n7/30 bg-n8/50 px-3 py-1 font-heading text-xs font-medium text-n4">
+              <svg className="h-3 w-3 shrink-0 text-qube-blue/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
                 <line x1="16" y1="2" x2="16" y2="6" />
                 <line x1="8" y1="2" x2="8" y2="6" />
@@ -184,8 +184,8 @@ export default async function WatchPage({
               </svg>
               {formatDate(video.publishedAt)}
             </span>
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-n7/30 bg-n8/50 px-3 py-1 font-heading text-xs font-medium text-n5">
-              <svg className="h-3 w-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-n7/30 bg-n8/50 px-3 py-1 font-heading text-xs font-medium text-n4">
+              <svg className="h-3 w-3 shrink-0 text-sonar-red/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                 <circle cx="12" cy="12" r="10" />
                 <polyline points="12 6 12 12 16 14" />
               </svg>

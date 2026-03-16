@@ -92,7 +92,7 @@ export default async function CategoryPage({
             <h1 className="font-heading text-3xl font-bold text-n1 sm:text-4xl">
               {category.title}
             </h1>
-            <span className="inline-flex items-center rounded-full border border-n7/50 bg-n8/60 px-2.5 py-1 font-heading text-xs font-medium text-n5">
+            <span className="inline-flex items-center rounded-full border border-qube-blue/25 bg-qube-blue/10 px-2.5 py-1 font-heading text-xs font-medium text-qube-blue/80">
               {categoryVideos.length} {categoryVideos.length === 1 ? "video" : "videos"}
             </span>
           </div>
