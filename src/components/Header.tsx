@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback, useMemo } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
-import { categories } from "@/data/videos";
+import { categories, videos } from "@/data/videos";
 import { useSearch } from "./SearchContext";
 
 function SonarWhaleMark({ className }: Readonly<{ className?: string }>) {
@@ -118,10 +118,42 @@ export default function Header() {
     }
   }, [searchOpen]);
 
-  const handleSearchBlur = useCallback(() => {
-    // Only close if empty
+  // Search results
+  const searchResults = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return [];
+    return videos.filter(
+      (v) =>
+        v.title.toLowerCase().includes(q) ||
+        v.description.toLowerCase().includes(q)
+    );
+  }, [searchQuery]);
+
+  const searchResultsRef = useRef<HTMLDivElement>(null);
+  const showResults = searchOpen && searchQuery.trim().length > 0;
+  const displayedResults = searchResults.slice(0, 8);
+
+  const handleSearchBlur = useCallback((e: React.FocusEvent) => {
+    // Don't close if focus moves to the results dropdown
+    const related = e.relatedTarget as Node | null;
+    if (searchResultsRef.current?.contains(related)) return;
     if (!searchQuery) setSearchOpen(false);
   }, [searchQuery]);
+
+  // Close search results on click outside
+  useEffect(() => {
+    if (!showResults) return;
+    function onMouseDown(e: MouseEvent) {
+      const target = e.target as Node;
+      if (
+        searchResultsRef.current?.contains(target) ||
+        searchInputRef.current?.contains(target)
+      ) return;
+      onSearchChange("");
+    }
+    document.addEventListener("mousedown", onMouseDown);
+    return () => document.removeEventListener("mousedown", onMouseDown);
+  }, [showResults, onSearchChange]);
 
   // Keyboard shortcut: "/" to open search
   useEffect(() => {
@@ -209,6 +241,70 @@ export default function Header() {
                 </div>
               </div>
             )}
+
+            {/* Search results dropdown */}
+            {showResults && (
+              <div
+                ref={searchResultsRef}
+                className="fixed inset-x-4 top-[72px] z-50 max-h-[calc(100dvh-80px)] overflow-y-auto overscroll-contain rounded-xl border border-n8 bg-n9/95 shadow-2xl backdrop-blur-md sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-2 sm:w-96 sm:max-h-[480px]"
+              >
+                <div className="border-b border-n8 px-4 py-2.5">
+                  <span className="font-heading text-xs font-medium text-n5">
+                    {searchResults.length === 0
+                      ? "No results"
+                      : `${displayedResults.length} of ${searchResults.length} result${searchResults.length === 1 ? "" : "s"}`}
+                  </span>
+                </div>
+                {searchResults.length === 0 ? (
+                  <div className="px-4 py-8 text-center">
+                    <svg className="mx-auto mb-2 h-6 w-6 text-n6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                      <circle cx="11" cy="11" r="8" />
+                      <path strokeLinecap="round" d="M21 21l-4.35-4.35" />
+                    </svg>
+                    <p className="font-heading text-sm font-medium text-n4">
+                      No videos match &ldquo;{searchQuery.trim()}&rdquo;
+                    </p>
+                  </div>
+                ) : (
+                  <ul className="py-1">
+                    {displayedResults.map((video) => {
+                      const cat = categories.find((c) => c.slug === video.category);
+                      return (
+                        <li key={video.id}>
+                          <Link
+                            href={`/watch/${video.id}`}
+                            onClick={() => {
+                              onSearchChange("");
+                              setSearchOpen(false);
+                            }}
+                            className="flex items-center gap-3 px-4 py-2.5 transition-colors hover:bg-n8/50 focus-visible:bg-n8/50 focus-visible:outline-none"
+                          >
+                            <img
+                              src={video.thumbnail}
+                              alt=""
+                              className="h-12 w-[85px] shrink-0 rounded-md object-cover"
+                            />
+                            <div className="min-w-0 flex-1">
+                              <p className="truncate font-heading text-sm font-medium text-n2">
+                                {video.title}
+                              </p>
+                              <div className="mt-0.5 flex items-center gap-2">
+                                {cat && (
+                                  <span className="truncate rounded bg-qube-blue/15 px-1.5 py-0.5 font-heading text-[10px] font-semibold text-qube-blue">
+                                    {cat.title}
+                                  </span>
+                                )}
+                                <span className="shrink-0 text-xs text-n5">{video.duration}</span>
+                              </div>
+                            </div>
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+              </div>
+            )}
           </div>
           <div
             ref={menuRef}
@@ -216,9 +312,6 @@ export default function Header() {
           >
             <button
               onClick={() => setMenuOpen((prev) => !prev)}
-              aria-haspopup="true"
-              aria-expanded={menuOpen}
-              aria-controls="categories-dropdown"
               className={`flex items-center gap-1 rounded-lg px-3 py-2 font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
             >
               Categories
@@ -235,9 +328,6 @@ export default function Header() {
 
             {dropdownMounted && (
               <div
-                id="categories-dropdown"
-                role="region"
-                aria-label="Browse by Category"
                 className={`fixed inset-x-4 top-[72px] z-50 max-h-[calc(100dvh-80px)] overflow-y-auto overscroll-contain rounded-xl border border-n8 bg-n9/95 p-4 shadow-2xl backdrop-blur-md transition-all duration-200 sm:max-h-none sm:overflow-y-visible sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-2 sm:w-[720px] sm:p-6 ${
                   dropdownVisible
                     ? "scale-100 opacity-100"

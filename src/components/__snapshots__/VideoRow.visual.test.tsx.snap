@@ -1,770 +1,416 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`VideoRow visual snapshots > desktop scroll layout matches snapshot 1`] = `
+exports[`VideoRow visual snapshots > scroll layout matches snapshot 1`] = `
 <div
-  class="hidden sm:block"
+  class="flex gap-4 overflow-x-auto scroll-smooth px-4 scrollbar-hide snap-x snap-mandatory sm:px-6"
 >
-  <div
-    class="group/row relative"
+  <a
+    class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
+    href="/watch/v1"
   >
     <div
-      aria-label="Test Row — use arrow keys to browse"
-      class="flex gap-4 overflow-x-auto scroll-smooth px-4 scrollbar-hide snap-x snap-mandatory sm:px-6"
+      class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
     >
-      <a
-        class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
-        href="/watch/v1"
+      <div
+        aria-hidden="true"
+        class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+      />
+      <img
+        alt="Video v1"
+        class="object-cover transition-transform duration-300 group-hover:scale-105"
+        sizes="320px"
+        src="/thumb-v1.jpg"
+      />
+      <div
+        class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
       >
-        <div
-          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
+        <svg
+          class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
+          fill="currentColor"
+          viewBox="0 0 24 24"
         >
-          <div
-            aria-hidden="true"
-            class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+          <path
+            d="M8 5v14l11-7z"
           />
-          <img
-            alt="Video v1"
-            class="object-cover transition-transform duration-300 group-hover:scale-105"
-            sizes="320px"
-            src="/thumb-v1.jpg"
-          />
-          <div
-            aria-hidden="true"
-            class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
-          >
-            <svg
-              aria-hidden="true"
-              class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M8 5v14l11-7z"
-              />
-            </svg>
-          </div>
-          <span
-            class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
-          >
-            10:00
-          </span>
-        </div>
-        <h3
-          class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 w-[280px] text-[15px] sm:w-[320px]"
-        >
-          Video v1
-        </h3>
-        <div
-          class="mt-1.5 flex items-center gap-2 w-[280px] sm:w-[320px]"
-        >
-          <span
-            class="text-xs text-n6"
-          >
-            9 months ago
-          </span>
-        </div>
-      </a>
-      <a
-        class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
-        href="/watch/v2"
+        </svg>
+      </div>
+      <span
+        class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
       >
-        <div
-          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
-        >
-          <div
-            aria-hidden="true"
-            class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
-          />
-          <img
-            alt="Video v2"
-            class="object-cover transition-transform duration-300 group-hover:scale-105"
-            sizes="320px"
-            src="/thumb-v2.jpg"
-          />
-          <div
-            aria-hidden="true"
-            class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
-          >
-            <svg
-              aria-hidden="true"
-              class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M8 5v14l11-7z"
-              />
-            </svg>
-          </div>
-          <span
-            class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
-          >
-            10:00
-          </span>
-        </div>
-        <h3
-          class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 w-[280px] text-[15px] sm:w-[320px]"
-        >
-          Video v2
-        </h3>
-        <div
-          class="mt-1.5 flex items-center gap-2 w-[280px] sm:w-[320px]"
-        >
-          <span
-            class="text-xs text-n6"
-          >
-            9 months ago
-          </span>
-        </div>
-      </a>
-      <a
-        class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
-        href="/watch/v3"
-      >
-        <div
-          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
-        >
-          <div
-            aria-hidden="true"
-            class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
-          />
-          <img
-            alt="Video v3"
-            class="object-cover transition-transform duration-300 group-hover:scale-105"
-            sizes="320px"
-            src="/thumb-v3.jpg"
-          />
-          <div
-            aria-hidden="true"
-            class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
-          >
-            <svg
-              aria-hidden="true"
-              class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M8 5v14l11-7z"
-              />
-            </svg>
-          </div>
-          <span
-            class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
-          >
-            10:00
-          </span>
-        </div>
-        <h3
-          class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 w-[280px] text-[15px] sm:w-[320px]"
-        >
-          Video v3
-        </h3>
-        <div
-          class="mt-1.5 flex items-center gap-2 w-[280px] sm:w-[320px]"
-        >
-          <span
-            class="text-xs text-n6"
-          >
-            9 months ago
-          </span>
-        </div>
-      </a>
-      <a
-        class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
-        href="/watch/v4"
-      >
-        <div
-          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
-        >
-          <div
-            aria-hidden="true"
-            class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
-          />
-          <img
-            alt="Video v4"
-            class="object-cover transition-transform duration-300 group-hover:scale-105"
-            sizes="320px"
-            src="/thumb-v4.jpg"
-          />
-          <div
-            aria-hidden="true"
-            class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
-          >
-            <svg
-              aria-hidden="true"
-              class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M8 5v14l11-7z"
-              />
-            </svg>
-          </div>
-          <span
-            class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
-          >
-            10:00
-          </span>
-        </div>
-        <h3
-          class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 w-[280px] text-[15px] sm:w-[320px]"
-        >
-          Video v4
-        </h3>
-        <div
-          class="mt-1.5 flex items-center gap-2 w-[280px] sm:w-[320px]"
-        >
-          <span
-            class="text-xs text-n6"
-          >
-            9 months ago
-          </span>
-        </div>
-      </a>
-      <a
-        class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
-        href="/watch/v5"
-      >
-        <div
-          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
-        >
-          <div
-            aria-hidden="true"
-            class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
-          />
-          <img
-            alt="Video v5"
-            class="object-cover transition-transform duration-300 group-hover:scale-105"
-            sizes="320px"
-            src="/thumb-v5.jpg"
-          />
-          <div
-            aria-hidden="true"
-            class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
-          >
-            <svg
-              aria-hidden="true"
-              class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M8 5v14l11-7z"
-              />
-            </svg>
-          </div>
-          <span
-            class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
-          >
-            10:00
-          </span>
-        </div>
-        <h3
-          class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 w-[280px] text-[15px] sm:w-[320px]"
-        >
-          Video v5
-        </h3>
-        <div
-          class="mt-1.5 flex items-center gap-2 w-[280px] sm:w-[320px]"
-        >
-          <span
-            class="text-xs text-n6"
-          >
-            9 months ago
-          </span>
-        </div>
-      </a>
-      <a
-        class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
-        href="/watch/v6"
-      >
-        <div
-          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
-        >
-          <div
-            aria-hidden="true"
-            class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
-          />
-          <img
-            alt="Video v6"
-            class="object-cover transition-transform duration-300 group-hover:scale-105"
-            sizes="320px"
-            src="/thumb-v6.jpg"
-          />
-          <div
-            aria-hidden="true"
-            class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
-          >
-            <svg
-              aria-hidden="true"
-              class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M8 5v14l11-7z"
-              />
-            </svg>
-          </div>
-          <span
-            class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
-          >
-            10:00
-          </span>
-        </div>
-        <h3
-          class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 w-[280px] text-[15px] sm:w-[320px]"
-        >
-          Video v6
-        </h3>
-        <div
-          class="mt-1.5 flex items-center gap-2 w-[280px] sm:w-[320px]"
-        >
-          <span
-            class="text-xs text-n6"
-          >
-            9 months ago
-          </span>
-        </div>
-      </a>
-      <a
-        class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
-        href="/watch/v7"
-      >
-        <div
-          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
-        >
-          <div
-            aria-hidden="true"
-            class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
-          />
-          <img
-            alt="Video v7"
-            class="object-cover transition-transform duration-300 group-hover:scale-105"
-            sizes="320px"
-            src="/thumb-v7.jpg"
-          />
-          <div
-            aria-hidden="true"
-            class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
-          >
-            <svg
-              aria-hidden="true"
-              class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M8 5v14l11-7z"
-              />
-            </svg>
-          </div>
-          <span
-            class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
-          >
-            10:00
-          </span>
-        </div>
-        <h3
-          class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 w-[280px] text-[15px] sm:w-[320px]"
-        >
-          Video v7
-        </h3>
-        <div
-          class="mt-1.5 flex items-center gap-2 w-[280px] sm:w-[320px]"
-        >
-          <span
-            class="text-xs text-n6"
-          >
-            9 months ago
-          </span>
-        </div>
-      </a>
-      <a
-        class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
-        href="/watch/v8"
-      >
-        <div
-          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
-        >
-          <div
-            aria-hidden="true"
-            class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
-          />
-          <img
-            alt="Video v8"
-            class="object-cover transition-transform duration-300 group-hover:scale-105"
-            sizes="320px"
-            src="/thumb-v8.jpg"
-          />
-          <div
-            aria-hidden="true"
-            class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
-          >
-            <svg
-              aria-hidden="true"
-              class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M8 5v14l11-7z"
-              />
-            </svg>
-          </div>
-          <span
-            class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
-          >
-            10:00
-          </span>
-        </div>
-        <h3
-          class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 w-[280px] text-[15px] sm:w-[320px]"
-        >
-          Video v8
-        </h3>
-        <div
-          class="mt-1.5 flex items-center gap-2 w-[280px] sm:w-[320px]"
-        >
-          <span
-            class="text-xs text-n6"
-          >
-            9 months ago
-          </span>
-        </div>
-      </a>
+        10:00
+      </span>
     </div>
-  </div>
-</div>
-`;
-
-exports[`VideoRow visual snapshots > mobile grid layout matches snapshot 1`] = `
-<div
-  class="sm:hidden px-4"
->
-  <div
-    class="grid grid-cols-2 gap-3"
+    <h3
+      class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 w-[280px] text-[15px] sm:w-[320px]"
+    >
+      Video v1
+    </h3>
+    <div
+      class="mt-1.5 flex items-center gap-2 w-[280px] sm:w-[320px]"
+    >
+      <span
+        class="text-xs text-n6"
+      >
+        9 months ago
+      </span>
+    </div>
+  </a>
+  <a
+    class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
+    href="/watch/v2"
   >
-    <a
-      class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
-      href="/watch/v1"
+    <div
+      class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
     >
       <div
-        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-full"
-      >
-        <div
-          aria-hidden="true"
-          class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
-        />
-        <img
-          alt="Video v1"
-          class="object-cover transition-transform duration-300 group-hover:scale-105"
-          sizes="320px"
-          src="/thumb-v1.jpg"
-        />
-        <div
-          aria-hidden="true"
-          class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
-        >
-          <svg
-            aria-hidden="true"
-            class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M8 5v14l11-7z"
-            />
-          </svg>
-        </div>
-        <span
-          class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
-        >
-          10:00
-        </span>
-      </div>
-      <h3
-        class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 text-base"
-      >
-        Video v1
-      </h3>
+        aria-hidden="true"
+        class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+      />
+      <img
+        alt="Video v2"
+        class="object-cover transition-transform duration-300 group-hover:scale-105"
+        sizes="320px"
+        src="/thumb-v2.jpg"
+      />
       <div
-        class="mt-1.5 flex items-center gap-2 "
+        class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
       >
-        <span
-          class="text-xs text-n6"
+        <svg
+          class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
+          fill="currentColor"
+          viewBox="0 0 24 24"
         >
-          9 months ago
-        </span>
+          <path
+            d="M8 5v14l11-7z"
+          />
+        </svg>
       </div>
-    </a>
-    <a
-      class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
-      href="/watch/v2"
+      <span
+        class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
+      >
+        10:00
+      </span>
+    </div>
+    <h3
+      class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 w-[280px] text-[15px] sm:w-[320px]"
+    >
+      Video v2
+    </h3>
+    <div
+      class="mt-1.5 flex items-center gap-2 w-[280px] sm:w-[320px]"
+    >
+      <span
+        class="text-xs text-n6"
+      >
+        9 months ago
+      </span>
+    </div>
+  </a>
+  <a
+    class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
+    href="/watch/v3"
+  >
+    <div
+      class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
     >
       <div
-        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-full"
-      >
-        <div
-          aria-hidden="true"
-          class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
-        />
-        <img
-          alt="Video v2"
-          class="object-cover transition-transform duration-300 group-hover:scale-105"
-          sizes="320px"
-          src="/thumb-v2.jpg"
-        />
-        <div
-          aria-hidden="true"
-          class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
-        >
-          <svg
-            aria-hidden="true"
-            class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M8 5v14l11-7z"
-            />
-          </svg>
-        </div>
-        <span
-          class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
-        >
-          10:00
-        </span>
-      </div>
-      <h3
-        class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 text-base"
-      >
-        Video v2
-      </h3>
+        aria-hidden="true"
+        class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+      />
+      <img
+        alt="Video v3"
+        class="object-cover transition-transform duration-300 group-hover:scale-105"
+        sizes="320px"
+        src="/thumb-v3.jpg"
+      />
       <div
-        class="mt-1.5 flex items-center gap-2 "
+        class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
       >
-        <span
-          class="text-xs text-n6"
+        <svg
+          class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
+          fill="currentColor"
+          viewBox="0 0 24 24"
         >
-          9 months ago
-        </span>
+          <path
+            d="M8 5v14l11-7z"
+          />
+        </svg>
       </div>
-    </a>
-    <a
-      class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
-      href="/watch/v3"
+      <span
+        class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
+      >
+        10:00
+      </span>
+    </div>
+    <h3
+      class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 w-[280px] text-[15px] sm:w-[320px]"
+    >
+      Video v3
+    </h3>
+    <div
+      class="mt-1.5 flex items-center gap-2 w-[280px] sm:w-[320px]"
+    >
+      <span
+        class="text-xs text-n6"
+      >
+        9 months ago
+      </span>
+    </div>
+  </a>
+  <a
+    class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
+    href="/watch/v4"
+  >
+    <div
+      class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
     >
       <div
-        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-full"
-      >
-        <div
-          aria-hidden="true"
-          class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
-        />
-        <img
-          alt="Video v3"
-          class="object-cover transition-transform duration-300 group-hover:scale-105"
-          sizes="320px"
-          src="/thumb-v3.jpg"
-        />
-        <div
-          aria-hidden="true"
-          class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
-        >
-          <svg
-            aria-hidden="true"
-            class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M8 5v14l11-7z"
-            />
-          </svg>
-        </div>
-        <span
-          class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
-        >
-          10:00
-        </span>
-      </div>
-      <h3
-        class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 text-base"
-      >
-        Video v3
-      </h3>
+        aria-hidden="true"
+        class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+      />
+      <img
+        alt="Video v4"
+        class="object-cover transition-transform duration-300 group-hover:scale-105"
+        sizes="320px"
+        src="/thumb-v4.jpg"
+      />
       <div
-        class="mt-1.5 flex items-center gap-2 "
+        class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
       >
-        <span
-          class="text-xs text-n6"
+        <svg
+          class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
+          fill="currentColor"
+          viewBox="0 0 24 24"
         >
-          9 months ago
-        </span>
+          <path
+            d="M8 5v14l11-7z"
+          />
+        </svg>
       </div>
-    </a>
-    <a
-      class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
-      href="/watch/v4"
+      <span
+        class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
+      >
+        10:00
+      </span>
+    </div>
+    <h3
+      class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 w-[280px] text-[15px] sm:w-[320px]"
+    >
+      Video v4
+    </h3>
+    <div
+      class="mt-1.5 flex items-center gap-2 w-[280px] sm:w-[320px]"
+    >
+      <span
+        class="text-xs text-n6"
+      >
+        9 months ago
+      </span>
+    </div>
+  </a>
+  <a
+    class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
+    href="/watch/v5"
+  >
+    <div
+      class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
     >
       <div
-        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-full"
-      >
-        <div
-          aria-hidden="true"
-          class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
-        />
-        <img
-          alt="Video v4"
-          class="object-cover transition-transform duration-300 group-hover:scale-105"
-          sizes="320px"
-          src="/thumb-v4.jpg"
-        />
-        <div
-          aria-hidden="true"
-          class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
-        >
-          <svg
-            aria-hidden="true"
-            class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M8 5v14l11-7z"
-            />
-          </svg>
-        </div>
-        <span
-          class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
-        >
-          10:00
-        </span>
-      </div>
-      <h3
-        class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 text-base"
-      >
-        Video v4
-      </h3>
+        aria-hidden="true"
+        class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+      />
+      <img
+        alt="Video v5"
+        class="object-cover transition-transform duration-300 group-hover:scale-105"
+        sizes="320px"
+        src="/thumb-v5.jpg"
+      />
       <div
-        class="mt-1.5 flex items-center gap-2 "
+        class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
       >
-        <span
-          class="text-xs text-n6"
+        <svg
+          class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
+          fill="currentColor"
+          viewBox="0 0 24 24"
         >
-          9 months ago
-        </span>
+          <path
+            d="M8 5v14l11-7z"
+          />
+        </svg>
       </div>
-    </a>
-    <a
-      class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
-      href="/watch/v5"
+      <span
+        class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
+      >
+        10:00
+      </span>
+    </div>
+    <h3
+      class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 w-[280px] text-[15px] sm:w-[320px]"
+    >
+      Video v5
+    </h3>
+    <div
+      class="mt-1.5 flex items-center gap-2 w-[280px] sm:w-[320px]"
+    >
+      <span
+        class="text-xs text-n6"
+      >
+        9 months ago
+      </span>
+    </div>
+  </a>
+  <a
+    class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
+    href="/watch/v6"
+  >
+    <div
+      class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
     >
       <div
-        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-full"
-      >
-        <div
-          aria-hidden="true"
-          class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
-        />
-        <img
-          alt="Video v5"
-          class="object-cover transition-transform duration-300 group-hover:scale-105"
-          sizes="320px"
-          src="/thumb-v5.jpg"
-        />
-        <div
-          aria-hidden="true"
-          class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
-        >
-          <svg
-            aria-hidden="true"
-            class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M8 5v14l11-7z"
-            />
-          </svg>
-        </div>
-        <span
-          class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
-        >
-          10:00
-        </span>
-      </div>
-      <h3
-        class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 text-base"
-      >
-        Video v5
-      </h3>
+        aria-hidden="true"
+        class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+      />
+      <img
+        alt="Video v6"
+        class="object-cover transition-transform duration-300 group-hover:scale-105"
+        sizes="320px"
+        src="/thumb-v6.jpg"
+      />
       <div
-        class="mt-1.5 flex items-center gap-2 "
+        class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
       >
-        <span
-          class="text-xs text-n6"
+        <svg
+          class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
+          fill="currentColor"
+          viewBox="0 0 24 24"
         >
-          9 months ago
-        </span>
+          <path
+            d="M8 5v14l11-7z"
+          />
+        </svg>
       </div>
-    </a>
-    <a
-      class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
-      href="/watch/v6"
+      <span
+        class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
+      >
+        10:00
+      </span>
+    </div>
+    <h3
+      class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 w-[280px] text-[15px] sm:w-[320px]"
+    >
+      Video v6
+    </h3>
+    <div
+      class="mt-1.5 flex items-center gap-2 w-[280px] sm:w-[320px]"
+    >
+      <span
+        class="text-xs text-n6"
+      >
+        9 months ago
+      </span>
+    </div>
+  </a>
+  <a
+    class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
+    href="/watch/v7"
+  >
+    <div
+      class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
     >
       <div
-        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-full"
-      >
-        <div
-          aria-hidden="true"
-          class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
-        />
-        <img
-          alt="Video v6"
-          class="object-cover transition-transform duration-300 group-hover:scale-105"
-          sizes="320px"
-          src="/thumb-v6.jpg"
-        />
-        <div
-          aria-hidden="true"
-          class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
-        >
-          <svg
-            aria-hidden="true"
-            class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M8 5v14l11-7z"
-            />
-          </svg>
-        </div>
-        <span
-          class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
-        >
-          10:00
-        </span>
-      </div>
-      <h3
-        class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 text-base"
-      >
-        Video v6
-      </h3>
+        aria-hidden="true"
+        class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+      />
+      <img
+        alt="Video v7"
+        class="object-cover transition-transform duration-300 group-hover:scale-105"
+        sizes="320px"
+        src="/thumb-v7.jpg"
+      />
       <div
-        class="mt-1.5 flex items-center gap-2 "
+        class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
       >
-        <span
-          class="text-xs text-n6"
+        <svg
+          class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
+          fill="currentColor"
+          viewBox="0 0 24 24"
         >
-          9 months ago
-        </span>
+          <path
+            d="M8 5v14l11-7z"
+          />
+        </svg>
       </div>
-    </a>
-  </div>
+      <span
+        class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
+      >
+        10:00
+      </span>
+    </div>
+    <h3
+      class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 w-[280px] text-[15px] sm:w-[320px]"
+    >
+      Video v7
+    </h3>
+    <div
+      class="mt-1.5 flex items-center gap-2 w-[280px] sm:w-[320px]"
+    >
+      <span
+        class="text-xs text-n6"
+      >
+        9 months ago
+      </span>
+    </div>
+  </a>
+  <a
+    class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
+    href="/watch/v8"
+  >
+    <div
+      class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
+    >
+      <div
+        aria-hidden="true"
+        class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+      />
+      <img
+        alt="Video v8"
+        class="object-cover transition-transform duration-300 group-hover:scale-105"
+        sizes="320px"
+        src="/thumb-v8.jpg"
+      />
+      <div
+        class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30"
+      >
+        <svg
+          class="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M8 5v14l11-7z"
+          />
+        </svg>
+      </div>
+      <span
+        class="absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white bg-black/80"
+      >
+        10:00
+      </span>
+    </div>
+    <h3
+      class="mt-3 min-h-[2.75em] line-clamp-2 font-heading font-medium leading-snug text-n2 transition-colors group-hover:text-n1 w-[280px] text-[15px] sm:w-[320px]"
+    >
+      Video v8
+    </h3>
+    <div
+      class="mt-1.5 flex items-center gap-2 w-[280px] sm:w-[320px]"
+    >
+      <span
+        class="text-xs text-n6"
+      >
+        9 months ago
+      </span>
+    </div>
+  </a>
 </div>
 `;

@@ -148,9 +148,7 @@ describe("HomeContent", () => {
       />
     );
 
-    // Scope to desktop layout to avoid duplicate mobile cards
-    const desktopRows = container.querySelectorAll(String.raw`.hidden.sm\:block`);
-    const headings = Array.from(desktopRows).flatMap((row) => Array.from(row.querySelectorAll("h3")));
+    const headings = Array.from(container.querySelectorAll("h3"));
     const tutorialTitles = headings
       .map((h) => h.textContent)
       .filter((t) => t === "Short Tutorial" || t === "Medium Tutorial");

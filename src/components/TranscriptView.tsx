@@ -151,7 +151,7 @@ export default function TranscriptView({
   if (chapters.length === 0) {
     return (
       <div className="relative">
-        <div ref={scrollRef} className="max-h-60 space-y-1 overflow-y-auto scrollbar-hide sm:max-h-96">
+        <div ref={scrollRef} className="max-h-96 space-y-1 overflow-y-auto scrollbar-hide">
           {segments.map((seg) => (
             <SegmentRow
               key={seg.offset}
@@ -190,7 +190,7 @@ export default function TranscriptView({
 
   return (
     <div className="relative">
-      <div ref={scrollRef} className="max-h-72 overflow-y-auto scrollbar-hide sm:max-h-[32rem]">
+      <div ref={scrollRef} className="max-h-[32rem] overflow-y-auto scrollbar-hide">
         {groups.map((group, gi) => (
           <div key={group.title} className={gi > 0 ? "mt-4" : ""}>
             <button

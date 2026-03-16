@@ -79,7 +79,8 @@ export default function HomeContent({
   const [duration, setDuration] = useState<DurationFilter>("any");
   const [sortBy, setSortBy] = useState<SortBy>("newest");
   const [filterOpen, setFilterOpen] = useState(false);
-  const { query: searchQuery, clearQuery: clearSearch } = useSearch();
+  const { query: searchQuery } = useSearch();
+  const isSearching = searchQuery.trim().length > 0;
 
   const hasActiveFilters =
     uploadDate !== "anytime" || duration !== "any" || sortBy !== "newest";
@@ -97,17 +98,6 @@ export default function HomeContent({
     });
     return result;
   }, [videos, uploadDate, duration, sortBy]);
-
-  const isSearching = searchQuery.trim().length > 0;
-  const searchResults = useMemo(() => {
-    if (!isSearching) return [];
-    const q = searchQuery.trim().toLowerCase();
-    return filteredVideos.filter(
-      (v) =>
-        v.title.toLowerCase().includes(q) ||
-        (v.description ?? "").toLowerCase().includes(q)
-    );
-  }, [filteredVideos, searchQuery, isSearching]);
 
   const MAX_CATEGORY_ROW = 15;
   const getVideosByCategory = (slug: string) =>
@@ -251,44 +241,7 @@ export default function HomeContent({
           </div>
         )}
 
-        <div id="categories" className="pt-8 pb-16">
-          {isSearching ? (
-            /* Search results view */
-            <div className="relative pt-6">
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-n8/50 to-transparent" />
-              {searchResults.length > 0 ? (
-                <VideoRow
-                  title="Search Results"
-                  videos={searchResults}
-                  totalCount={searchResults.length}
-                />
-              ) : (
-                <div className="px-4 py-20 text-center sm:px-6">
-                  <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-n7/40 bg-n8/60">
-                    <svg className="h-8 w-8 text-n6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-                      <circle cx="11" cy="11" r="8" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 11h6M11 8v6" />
-                    </svg>
-                  </div>
-                  <p className="font-heading text-xl font-semibold text-n2">
-                    No results found
-                  </p>
-                  <p className="mt-2 text-sm text-n5">
-                    No videos match &ldquo;{searchQuery.trim()}&rdquo;. Try a different search term.
-                  </p>
-                  <button
-                    onClick={clearSearch}
-                    className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-qube-blue/40 bg-qube-blue/10 px-4 py-2 font-heading text-sm font-medium text-qube-blue transition-colors hover:border-qube-blue/70 hover:bg-qube-blue/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
-                  >
-                    Clear search
-                  </button>
-                </div>
-              )}
-            </div>
-          ) : (
-            /* Normal category rows */
-            <>
+        <div id="categories" className={`pt-8 pb-16${isSearching ? " hidden" : ""}`}>
               {categories.map((category) => {
                 const categoryVideos = getVideosByCategory(category.slug);
                 if (categoryVideos.length === 0 && hasActiveFilters) return null;
@@ -326,8 +279,6 @@ export default function HomeContent({
                   </button>
                 </div>
               )}
-            </>
-          )}
         </div>
       </div>
       {/* Floating filter button — appears when hero's inline trigger scrolls out of view */}

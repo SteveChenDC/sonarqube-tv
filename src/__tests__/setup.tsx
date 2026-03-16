@@ -59,9 +59,6 @@ Object.defineProperty(globalThis, "IntersectionObserver", {
   value: MockIntersectionObserver,
 });
 
-// Mock scrollIntoView for jsdom (used by VideoRow keyboard navigation)
-window.HTMLElement.prototype.scrollIntoView = () => { /* no-op */ };
-
 afterEach(() => {
   cleanup();
 });

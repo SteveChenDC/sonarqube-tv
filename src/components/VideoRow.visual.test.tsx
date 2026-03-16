@@ -36,50 +36,37 @@ describe("VideoRow visual snapshots", () => {
     localStorage.clear();
   });
 
-  it("mobile grid layout matches snapshot", () => {
+  it("renders a horizontal scroll container with all videos", () => {
     const { container } = render(
       <VideoRow title="Test Row" categorySlug="tutorials" videos={videos} />
     );
-    const mobileLayout = container.querySelector(String.raw`.sm\:hidden`);
-    expect(mobileLayout).toBeTruthy();
-    expect(mobileLayout).toMatchSnapshot();
+    const scrollContainer = container.querySelector(".overflow-x-auto");
+    expect(scrollContainer).toBeTruthy();
+    // All 8 videos rendered (each VideoCard is an <a> tag)
+    const cards = scrollContainer!.querySelectorAll(":scope > a");
+    expect(cards.length).toBe(8);
   });
 
-  it("desktop scroll layout matches snapshot", () => {
+  it("cards use fixed width (not fluid)", () => {
     const { container } = render(
       <VideoRow title="Test Row" categorySlug="tutorials" videos={videos} />
     );
-    const desktopLayout = container.querySelector(String.raw`.hidden.sm\:block`);
-    expect(desktopLayout).toBeTruthy();
-    expect(desktopLayout).toMatchSnapshot();
+    const scrollContainer = container.querySelector(".overflow-x-auto")!;
+    const cards = scrollContainer.querySelectorAll(":scope > a");
+    // Cards should have the fixed-width thumbnail container, not fluid w-full
+    for (const card of cards) {
+      const thumbnail = card.querySelector(".aspect-video");
+      expect(thumbnail).toBeTruthy();
+      expect(thumbnail!.className).not.toContain("w-full");
+    }
   });
 
-  it("mobile grid uses grid-cols-2 class", () => {
+  it("scroll layout matches snapshot", () => {
     const { container } = render(
       <VideoRow title="Test Row" categorySlug="tutorials" videos={videos} />
     );
-    const mobileLayout = container.querySelector(String.raw`.sm\:hidden`);
-    const grid = mobileLayout?.querySelector(".grid-cols-2");
-    expect(grid).toBeTruthy();
-  });
-
-  it("mobile grid cards have fluid width (w-full)", () => {
-    const { container } = render(
-      <VideoRow title="Test Row" categorySlug="tutorials" videos={videos} />
-    );
-    const mobileLayout = container.querySelector(String.raw`.sm\:hidden`)!;
-    const cardContainers = mobileLayout.querySelectorAll(".w-full");
-    expect(cardContainers.length).toBeGreaterThan(0);
-  });
-
-  it("mobile grid caps at 6 cards", () => {
-    const { container } = render(
-      <VideoRow title="Test Row" categorySlug="tutorials" videos={videos} />
-    );
-    const mobileLayout = container.querySelector(String.raw`.sm\:hidden`)!;
-    const grid = mobileLayout.querySelector(".grid-cols-2")!;
-    // 8 videos but only 6 rendered in mobile grid (each VideoCard is an <a> tag)
-    const cards = grid.querySelectorAll(":scope > a");
-    expect(cards.length).toBe(6);
+    const scrollContainer = container.querySelector(".overflow-x-auto");
+    expect(scrollContainer).toBeTruthy();
+    expect(scrollContainer).toMatchSnapshot();
   });
 });

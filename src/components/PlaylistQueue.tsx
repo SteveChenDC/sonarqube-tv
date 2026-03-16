@@ -114,7 +114,7 @@ export default function PlaylistQueue({
         </div>
       </div>
 
-      <div className="max-h-52 overflow-y-auto sm:max-h-80">
+      <div className="max-h-[60vh] overflow-y-auto sm:max-h-80">
         {playlistVideos.map((video, index) => (
           <Link
             key={video.id}

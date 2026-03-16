@@ -1,15 +1,23 @@
 ---
 name: project_qa_baseline
-description: Build and test baseline as of 2026-03-15 — what passes, known warnings
+description: Build and test baseline as of 2026-03-16 — what passes, known warnings
 type: project
 ---
 
-As of 2026-03-15 (sixteenth QA run), `npm run build` and `npm test` both pass clean. All 218 tests pass.
+As of 2026-03-16 (twenty-fourth QA run), `npm run build` and `npm test` both pass clean. All 217 tests pass.
 
 **Build**: Next.js 16.1.6 (Turbopack), 243 static pages generated (SSG), no errors.
 - Known non-fatal warning: "Next.js inferred your workspace root" due to multiple lockfiles at `/Users/stevec/package-lock.json` and project root. Safe to ignore; does not affect build output.
 
-**Tests**: Vitest 4.1.0 — 24 test files, 218 tests. All 218 PASSING.
+**Tests**: Vitest 4.1.0 — 24 test files, 217 tests. All 217 PASSING.
+
+**Fixed in run 19**: `src/components/__snapshots__/Hero.visual.test.tsx.snap` — 1 stale snapshot.
+- Test: "desktop hero layout matches snapshot"
+- Root cause: Commit 62d16c2 ("Polish hero gradient: smooth cinematic overlay, reduce flat bottom band") changed gradient CSS classes on two overlay divs in Hero.tsx. The vertical gradient lost `from-[18%]` and changed `via-background/60 via-[40%]` → `via-background/55 via-[35%]`. The horizontal gradient changed `from-background/80 via-sonar-purple/20` → `from-background/70 via-sonar-purple/15 via-[45%]`.
+- Fix: `npx vitest run -u` to refresh snapshot. Committed as 9e36649.
+- Pattern: Any CSS gradient polish to Hero.tsx overlays will stale Hero.visual.test.tsx snapshot. Fix with `-u`.
+
+**Count change run 17→18**: 218 → 217. Caused by commit 3982cec ("Polish category header: promote description to header with Sonar Red accent bar") removing the `description` prop from `CategoryContent.tsx` and trimming the matching test assertions in `CategoryContent.test.tsx`. Net -1 test. Intentional, not a regression.
 
 **Fixed in run 13**: `src/components/HomeContent.test.tsx` — 2 failing tests.
 - Tests: "shows empty state when all videos are filtered out" and "resets filters via empty-state Reset filters button"
@@ -34,8 +42,8 @@ As of 2026-03-15 (sixteenth QA run), `npm run build` and `npm test` both pass cl
 - Fix applied to tests (not component): Assert `aria-hidden="true"` on the panel wrapper div instead of checking DOM presence.
 - Pattern: When a component uses CSS-only show/hide (grid rows, opacity, height), test the semantic attribute (`aria-hidden`) rather than DOM presence.
 
-**Test count history**: 193 → 203 → 211 → 212 → 218 (stable across runs 9–13)
+**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (run 19, stable)
 **Page count history**: 242 → 243 (stable)
 
 **Why:** Ongoing QA baseline tracking.
-**How to apply:** If VideoRow.visual snapshots fail, first check if a new persistent DOM element was added to VideoCard (shimmer, overlay, badge) — stale snapshot is likely the culprit, fix with `npx vitest run -u`. If Footer link tests fail, check whether `aria-label` attributes on social/nav links were changed. If ArticleTabs collapse tests fail again, check whether the component changed from CSS-based to conditional rendering and align test strategy accordingly. If HomeContent empty-state tests fail, check whether the heading copy in HomeContent.tsx changed (exact text, punctuation included).
+**How to apply:** If Hero.visual.test.tsx snapshot fails, check if gradient overlay CSS classes in Hero.tsx changed — update with `npx vitest run -u`. If VideoRow.visual snapshots fail, first check if a new persistent DOM element was added to VideoCard (shimmer, overlay, badge) — stale snapshot is likely the culprit, fix with `npx vitest run -u`. If Footer link tests fail, check whether `aria-label` attributes on social/nav links were changed. If ArticleTabs collapse tests fail again, check whether the component changed from CSS-based to conditional rendering and align test strategy accordingly. If HomeContent empty-state tests fail, check whether the heading copy in HomeContent.tsx changed (exact text, punctuation included). If CategoryContent test count drops/changes, check if props were removed from the component — the test file is kept in sync with the component interface.
