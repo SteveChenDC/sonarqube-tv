@@ -44,6 +44,7 @@ function timeAgo(dateString: string): string {
 
 export default function VideoCard({ video, fluid = false, onRemove, hideCategory = false }: Readonly<{ video: Video; fluid?: boolean; onRemove?: () => void; hideCategory?: boolean }>) {
   const [progress, setProgress] = useState(0);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const categoryTitle = categories.find((c) => c.slug === video.category)?.title;
 
   useEffect(() => {
@@ -53,15 +54,21 @@ export default function VideoCard({ video, fluid = false, onRemove, hideCategory
   return (
     <Link
       href={`/watch/${video.id}`}
-      className="group flex-shrink-0 snap-start rounded-lg"
+      className="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
     >
-      <div className={`relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 ${fluid ? "w-full" : "w-[280px] sm:w-[320px]"}`}>
+      <div className={`relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 ${fluid ? "w-full" : "w-[280px] sm:w-[320px]"}`}>
+        {/* Shimmer skeleton — visible until thumbnail loads */}
+        <div
+          className={`absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 ${imageLoaded ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+          aria-hidden="true"
+        />
         <Image
           src={video.thumbnail}
           alt={video.title}
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-105"
           sizes="320px"
+          onLoad={() => setImageLoaded(true)}
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30">
           <svg
@@ -122,9 +129,12 @@ export default function VideoCard({ video, fluid = false, onRemove, hideCategory
       <div className={`mt-1.5 flex items-center gap-2 ${fluid ? "" : "w-[280px] sm:w-[320px]"}`}>
         <span className="text-xs text-n6">{timeAgo(video.publishedAt)}</span>
         {categoryTitle && !hideCategory && (
-          <span className="rounded bg-n8/60 px-2 py-0.5 text-xs font-medium text-n5">
-            {categoryTitle}
-          </span>
+          <>
+            <span className="h-1 w-1 shrink-0 rounded-full bg-n7" aria-hidden="true" />
+            <span className="rounded-full border border-n7/40 bg-n8/50 px-2.5 py-0.5 font-heading text-xs font-medium text-n5 transition-colors group-hover:border-n6/50 group-hover:text-n4">
+              {categoryTitle}
+            </span>
+          </>
         )}
       </div>
     </Link>

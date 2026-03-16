@@ -95,6 +95,24 @@ html.theme-transitioning *::after {
   animation: fade-in 0.2s ease-out both;
 }
 
+/* Shimmer skeleton animation for loading placeholders */
+@keyframes shimmer {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+@utility animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-n8) 0%,
+    var(--color-n7) 40%,
+    var(--color-n8) 60%,
+    var(--color-n8) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
 @keyframes fade-in-out {
   0% { opacity: 0; transform: translateY(4px); }
   10% { opacity: 1; transform: translateY(0); }
@@ -104,6 +122,16 @@ html.theme-transitioning *::after {
 
 @utility animate-fade-in-out {
   animation: fade-in-out 3s ease-out both;
+}
+
+@keyframes tab-in {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@utility animate-tab-in {
+  animation: tab-in 0.22s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transform-origin: top center;
 }
 
 /* Hide scrollbar for horizontal scroll rows */

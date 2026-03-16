@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { categories, getCategoryBySlug, getVideosByCategory } from "@/data/videos";
-import VideoCard from "@/components/VideoCard";
+import CategoryContent from "@/components/CategoryContent";
 
 export function generateStaticParams() {
   return categories.map((cat) => ({ slug: cat.slug }));
@@ -94,13 +94,7 @@ export default async function CategoryPage({
           <span className="font-heading text-lg text-n6">{categoryVideos.length} {categoryVideos.length === 1 ? "video" : "videos"}</span>
         </div>
 
-        {categoryVideos.length > 0 ? (
-          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {categoryVideos.map((video) => (
-              <VideoCard key={video.id} video={video} fluid hideCategory />
-            ))}
-          </div>
-        ) : (
+        {categoryVideos.length === 0 ? (
           <div className="py-20 text-center">
             <svg
               className="mx-auto h-12 w-12 text-n7"
@@ -121,6 +115,8 @@ export default async function CategoryPage({
               Browse all videos
             </Link>
           </div>
+        ) : (
+          <CategoryContent videos={categoryVideos} description={category.description} />
         )}
       </div>
     </div>

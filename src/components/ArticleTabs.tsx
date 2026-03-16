@@ -104,42 +104,56 @@ export default function ArticleTabs({
 
   return (
     <div className="rounded-xl border border-n8 bg-n8/15 overflow-hidden">
-      <div className="flex border-b border-n8">
-        {tabs.map((t) => (
-          <button
-            key={t.key}
-            onClick={() => {
-              if (tab === t.key) {
-                setCollapsed((c) => !c);
-              } else {
-                setTab(t.key);
-                setCollapsed(false);
-              }
-            }}
-            className={`flex items-center gap-1.5 px-5 py-3 font-heading text-sm font-medium transition-colors ${
-              tab === t.key
-                ? "border-b-2 border-qube-blue text-n1"
-                : "text-n6 hover:text-n3"
-            }`}
-          >
-            {t.label}
-            {tab === t.key && (
-              <svg className={`h-3 w-3 transition-transform duration-200 ${collapsed ? "" : "rotate-180"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            )}
-          </button>
-        ))}
+      <div className="flex items-center border-b border-n8">
+        <div className="flex flex-1">
+          {tabs.map((t) => (
+            <button
+              key={t.key}
+              onClick={() => {
+                if (tab === t.key) {
+                  setCollapsed((c) => !c);
+                } else {
+                  setTab(t.key);
+                  setCollapsed(false);
+                }
+              }}
+              className={`flex items-center gap-1.5 px-5 py-3 font-heading text-sm font-medium transition-colors ${
+                tab === t.key
+                  ? "border-b-2 border-qube-blue text-n1"
+                  : "text-n6 hover:text-n3"
+              }`}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+        <button
+          onClick={() => setCollapsed((c) => !c)}
+          aria-label={collapsed ? "Expand panel" : "Collapse panel"}
+          className="mr-3 flex h-7 w-7 items-center justify-center rounded-md text-n5 transition-colors hover:bg-n8 hover:text-n3"
+        >
+          <svg className={`h-4 w-4 transition-transform duration-200 ${collapsed ? "" : "rotate-180"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
       </div>
 
-      <div className="p-5 sm:p-6">
-        <div key={tab} className="animate-fade-in">
-          {tab === "article" && article && (
-            <div>{renderMarkdown(article.markdown)}</div>
-          )}
-          {tab === "transcript" && transcript && (
-            <TranscriptView segments={transcript.segments} chapters={chapters} />
-          )}
+      <div
+        className="grid transition-[grid-template-rows] duration-300 ease-in-out"
+        style={{ gridTemplateRows: collapsed ? "0fr" : "1fr" }}
+        aria-hidden={collapsed}
+      >
+        <div className="overflow-hidden">
+          <div className="p-5 sm:p-6">
+            <div key={tab} className="animate-tab-in">
+              {tab === "article" && article && (
+                <div>{renderMarkdown(article.markdown)}</div>
+              )}
+              {tab === "transcript" && transcript && (
+                <TranscriptView segments={transcript.segments} chapters={chapters} />
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>

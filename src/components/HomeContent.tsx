@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect, useRef } from "react";
+import { useState, useMemo, useEffect, useRef, useCallback } from "react";
 import Hero from "./Hero";
 import VideoRow from "./VideoRow";
 import { getAllProgress, removeProgress } from "@/lib/watchProgress";
@@ -14,6 +14,22 @@ import FilterBar, {
 import ScrollToTop from "./ScrollToTop";
 import { Video, Category } from "@/types";
 import { featuredYoutubeIds } from "@/data/videos";
+
+function SearchIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="h-4 w-4 shrink-0 text-n5"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <circle cx="11" cy="11" r="8" />
+      <path strokeLinecap="round" d="M21 21l-4.35-4.35" />
+    </svg>
+  );
+}
 
 function parseDurationMinutes(duration: string): number {
   const parts = duration.split(":").map(Number);
@@ -78,6 +94,8 @@ export default function HomeContent({
   const [duration, setDuration] = useState<DurationFilter>("any");
   const [sortBy, setSortBy] = useState<SortBy>("newest");
   const [filterOpen, setFilterOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   const hasActiveFilters =
     uploadDate !== "anytime" || duration !== "any" || sortBy !== "newest";
@@ -95,6 +113,22 @@ export default function HomeContent({
     });
     return result;
   }, [videos, uploadDate, duration, sortBy]);
+
+  const isSearching = searchQuery.trim().length > 0;
+  const searchResults = useMemo(() => {
+    if (!isSearching) return [];
+    const q = searchQuery.trim().toLowerCase();
+    return filteredVideos.filter(
+      (v) =>
+        v.title.toLowerCase().includes(q) ||
+        (v.description ?? "").toLowerCase().includes(q)
+    );
+  }, [filteredVideos, searchQuery, isSearching]);
+
+  const clearSearch = useCallback(() => {
+    setSearchQuery("");
+    searchInputRef.current?.focus();
+  }, []);
 
   const MAX_CATEGORY_ROW = 15;
   const getVideosByCategory = (slug: string) =>
@@ -179,6 +213,35 @@ export default function HomeContent({
       </div>
 
       <div className="relative z-10 px-4 sm:px-6 lg:px-8">
+        {/* Search bar */}
+        <div className="mx-auto mt-6 mb-2 max-w-2xl">
+          <div className="relative flex items-center">
+            <span className="pointer-events-none absolute left-3.5 z-10">
+              <SearchIcon />
+            </span>
+            <input
+              ref={searchInputRef}
+              type="search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search videos…"
+              aria-label="Search videos"
+              className="w-full rounded-full border border-n7/60 bg-n9/80 py-2.5 pr-10 pl-10 font-body text-sm text-n2 placeholder-n6 backdrop-blur-sm transition-colors duration-150 focus:border-qube-blue/70 focus:bg-n9 focus:ring-2 focus:ring-qube-blue/30 focus:outline-none"
+            />
+            {isSearching && (
+              <button
+                onClick={clearSearch}
+                aria-label="Clear search"
+                className="absolute right-3 flex h-5 w-5 items-center justify-center rounded-full bg-n7 text-n3 transition-colors hover:bg-n6 hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue"
+              >
+                <svg aria-hidden="true" viewBox="0 0 12 12" fill="currentColor" className="h-2.5 w-2.5">
+                  <path d="M1 1l10 10M11 1L1 11" stroke="currentColor" strokeWidth={2} strokeLinecap="round" fill="none" />
+                </svg>
+              </button>
+            )}
+          </div>
+        </div>
+
         <FilterBar
           uploadDate={uploadDate}
           duration={duration}
@@ -239,34 +302,63 @@ export default function HomeContent({
         )}
 
         <div id="categories" className="pt-8 pb-16">
-          {categories.map((category) => {
-            const categoryVideos = getVideosByCategory(category.slug);
-            if (categoryVideos.length === 0 && hasActiveFilters) return null;
-            return (
-              <div key={category.slug} className="relative pt-6">
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-n8/50 to-transparent" />
+          {isSearching ? (
+            /* Search results view */
+            <div className="relative pt-6">
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-n8/50 to-transparent" />
+              {searchResults.length > 0 ? (
                 <VideoRow
-                  title={category.title}
-                  categorySlug={category.slug}
-                  videos={categoryVideos.slice(0, MAX_CATEGORY_ROW)}
-                  totalCount={categoryVideos.length}
+                  title="Search Results"
+                  videos={searchResults}
+                  totalCount={searchResults.length}
                 />
-              </div>
-            );
-          })}
-
-          {hasActiveFilters && filteredVideos.length === 0 && (
-            <div className="px-4 py-16 text-center sm:px-6">
-              <p className="font-heading text-lg text-n4">
-                No videos match your filters.
-              </p>
-              <button
-                onClick={reset}
-                className="mt-3 font-heading text-sm text-qube-blue hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 rounded"
-              >
-                Reset filters
-              </button>
+              ) : (
+                <div className="px-4 py-16 text-center sm:px-6">
+                  <p className="font-heading text-lg text-n4">
+                    No videos match &ldquo;{searchQuery.trim()}&rdquo;.
+                  </p>
+                  <button
+                    onClick={clearSearch}
+                    className="mt-3 font-heading text-sm text-qube-blue hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 rounded"
+                  >
+                    Clear search
+                  </button>
+                </div>
+              )}
             </div>
+          ) : (
+            /* Normal category rows */
+            <>
+              {categories.map((category) => {
+                const categoryVideos = getVideosByCategory(category.slug);
+                if (categoryVideos.length === 0 && hasActiveFilters) return null;
+                return (
+                  <div key={category.slug} className="relative pt-6">
+                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-n8/50 to-transparent" />
+                    <VideoRow
+                      title={category.title}
+                      categorySlug={category.slug}
+                      videos={categoryVideos.slice(0, MAX_CATEGORY_ROW)}
+                      totalCount={categoryVideos.length}
+                    />
+                  </div>
+                );
+              })}
+
+              {hasActiveFilters && filteredVideos.length === 0 && (
+                <div className="px-4 py-16 text-center sm:px-6">
+                  <p className="font-heading text-lg text-n4">
+                    No videos match your filters.
+                  </p>
+                  <button
+                    onClick={reset}
+                    className="mt-3 font-heading text-sm text-qube-blue hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 rounded"
+                  >
+                    Reset filters
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>

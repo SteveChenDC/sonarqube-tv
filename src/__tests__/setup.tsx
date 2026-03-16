@@ -31,6 +31,17 @@ Object.defineProperty(globalThis, "matchMedia", {
   }),
 });
 
+// Mock ResizeObserver for jsdom (used by VideoRow scroll arrows)
+class MockResizeObserver {
+  observe() { /* no-op */ }
+  unobserve() { /* no-op */ }
+  disconnect() { /* no-op */ }
+}
+Object.defineProperty(globalThis, "ResizeObserver", {
+  writable: true,
+  value: MockResizeObserver,
+});
+
 // Mock IntersectionObserver for jsdom (used by HomeContent floating filter)
 class MockIntersectionObserver {
   observe() { /* no-op for test mock */ }

@@ -7,38 +7,20 @@ exports[`VideoRow visual snapshots > desktop scroll layout matches snapshot 1`] 
   <div
     class="group/row relative"
   >
-    <button
-      aria-label="Scroll left"
-      class="absolute left-0 top-0 z-10 flex h-full w-10 items-center justify-center bg-gradient-to-r from-background/80 to-transparent opacity-70 transition-opacity duration-300 hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
-    >
-      <span
-        class="flex h-8 w-8 items-center justify-center rounded-full bg-n9/70 backdrop-blur-sm"
-      >
-        <svg
-          class="h-5 w-5 text-n1 drop-shadow-md"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M15 19l-7-7 7-7"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-          />
-        </svg>
-      </span>
-    </button>
     <div
       class="flex gap-4 overflow-x-auto scroll-smooth px-4 scrollbar-hide snap-x snap-mandatory sm:px-6"
     >
       <a
-        class="group flex-shrink-0 snap-start rounded-lg"
+        class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
         href="/watch/v1"
       >
         <div
-          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 w-[280px] sm:w-[320px]"
+          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
         >
+          <div
+            aria-hidden="true"
+            class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+          />
           <img
             alt="Video v1"
             class="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -80,12 +62,16 @@ exports[`VideoRow visual snapshots > desktop scroll layout matches snapshot 1`] 
         </div>
       </a>
       <a
-        class="group flex-shrink-0 snap-start rounded-lg"
+        class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
         href="/watch/v2"
       >
         <div
-          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 w-[280px] sm:w-[320px]"
+          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
         >
+          <div
+            aria-hidden="true"
+            class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+          />
           <img
             alt="Video v2"
             class="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -127,12 +113,16 @@ exports[`VideoRow visual snapshots > desktop scroll layout matches snapshot 1`] 
         </div>
       </a>
       <a
-        class="group flex-shrink-0 snap-start rounded-lg"
+        class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
         href="/watch/v3"
       >
         <div
-          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 w-[280px] sm:w-[320px]"
+          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
         >
+          <div
+            aria-hidden="true"
+            class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+          />
           <img
             alt="Video v3"
             class="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -174,12 +164,16 @@ exports[`VideoRow visual snapshots > desktop scroll layout matches snapshot 1`] 
         </div>
       </a>
       <a
-        class="group flex-shrink-0 snap-start rounded-lg"
+        class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
         href="/watch/v4"
       >
         <div
-          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 w-[280px] sm:w-[320px]"
+          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
         >
+          <div
+            aria-hidden="true"
+            class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+          />
           <img
             alt="Video v4"
             class="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -221,12 +215,16 @@ exports[`VideoRow visual snapshots > desktop scroll layout matches snapshot 1`] 
         </div>
       </a>
       <a
-        class="group flex-shrink-0 snap-start rounded-lg"
+        class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
         href="/watch/v5"
       >
         <div
-          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 w-[280px] sm:w-[320px]"
+          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
         >
+          <div
+            aria-hidden="true"
+            class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+          />
           <img
             alt="Video v5"
             class="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -268,12 +266,16 @@ exports[`VideoRow visual snapshots > desktop scroll layout matches snapshot 1`] 
         </div>
       </a>
       <a
-        class="group flex-shrink-0 snap-start rounded-lg"
+        class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
         href="/watch/v6"
       >
         <div
-          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 w-[280px] sm:w-[320px]"
+          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
         >
+          <div
+            aria-hidden="true"
+            class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+          />
           <img
             alt="Video v6"
             class="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -315,12 +317,16 @@ exports[`VideoRow visual snapshots > desktop scroll layout matches snapshot 1`] 
         </div>
       </a>
       <a
-        class="group flex-shrink-0 snap-start rounded-lg"
+        class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
         href="/watch/v7"
       >
         <div
-          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 w-[280px] sm:w-[320px]"
+          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
         >
+          <div
+            aria-hidden="true"
+            class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+          />
           <img
             alt="Video v7"
             class="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -362,12 +368,16 @@ exports[`VideoRow visual snapshots > desktop scroll layout matches snapshot 1`] 
         </div>
       </a>
       <a
-        class="group flex-shrink-0 snap-start rounded-lg"
+        class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
         href="/watch/v8"
       >
         <div
-          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 w-[280px] sm:w-[320px]"
+          class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-[280px] sm:w-[320px]"
         >
+          <div
+            aria-hidden="true"
+            class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+          />
           <img
             alt="Video v8"
             class="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -409,28 +419,6 @@ exports[`VideoRow visual snapshots > desktop scroll layout matches snapshot 1`] 
         </div>
       </a>
     </div>
-    <button
-      aria-label="Scroll right"
-      class="absolute right-0 top-0 z-10 flex h-full w-10 items-center justify-center bg-gradient-to-l from-background/80 to-transparent opacity-70 transition-opacity duration-300 hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
-    >
-      <span
-        class="flex h-8 w-8 items-center justify-center rounded-full bg-n9/70 backdrop-blur-sm"
-      >
-        <svg
-          class="h-5 w-5 text-n1 drop-shadow-md"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M9 5l7 7-7 7"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-          />
-        </svg>
-      </span>
-    </button>
   </div>
 </div>
 `;
@@ -443,12 +431,16 @@ exports[`VideoRow visual snapshots > mobile grid layout matches snapshot 1`] = `
     class="grid grid-cols-2 gap-3"
   >
     <a
-      class="group flex-shrink-0 snap-start rounded-lg"
+      class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
       href="/watch/v1"
     >
       <div
-        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 w-full"
+        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-full"
       >
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+        />
         <img
           alt="Video v1"
           class="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -490,12 +482,16 @@ exports[`VideoRow visual snapshots > mobile grid layout matches snapshot 1`] = `
       </div>
     </a>
     <a
-      class="group flex-shrink-0 snap-start rounded-lg"
+      class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
       href="/watch/v2"
     >
       <div
-        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 w-full"
+        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-full"
       >
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+        />
         <img
           alt="Video v2"
           class="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -537,12 +533,16 @@ exports[`VideoRow visual snapshots > mobile grid layout matches snapshot 1`] = `
       </div>
     </a>
     <a
-      class="group flex-shrink-0 snap-start rounded-lg"
+      class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
       href="/watch/v3"
     >
       <div
-        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 w-full"
+        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-full"
       >
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+        />
         <img
           alt="Video v3"
           class="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -584,12 +584,16 @@ exports[`VideoRow visual snapshots > mobile grid layout matches snapshot 1`] = `
       </div>
     </a>
     <a
-      class="group flex-shrink-0 snap-start rounded-lg"
+      class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
       href="/watch/v4"
     >
       <div
-        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 w-full"
+        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-full"
       >
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+        />
         <img
           alt="Video v4"
           class="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -631,12 +635,16 @@ exports[`VideoRow visual snapshots > mobile grid layout matches snapshot 1`] = `
       </div>
     </a>
     <a
-      class="group flex-shrink-0 snap-start rounded-lg"
+      class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
       href="/watch/v5"
     >
       <div
-        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 w-full"
+        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-full"
       >
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+        />
         <img
           alt="Video v5"
           class="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -678,12 +686,16 @@ exports[`VideoRow visual snapshots > mobile grid layout matches snapshot 1`] = `
       </div>
     </a>
     <a
-      class="group flex-shrink-0 snap-start rounded-lg"
+      class="group flex-shrink-0 snap-start rounded-lg transition-transform duration-300 hover:-translate-y-1"
       href="/watch/v6"
     >
       <div
-        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent transition-shadow duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 w-full"
+        class="relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 w-full"
       >
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
+        />
         <img
           alt="Video v6"
           class="object-cover transition-transform duration-300 group-hover:scale-105"

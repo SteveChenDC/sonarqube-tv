@@ -28,12 +28,15 @@ describe("VideoRow", () => {
   it("scroll buttons call scrollBy on the container", () => {
     const videos = [makeVideo({ id: "v1" })];
     const scrollBySpy = vi.fn();
-    // Mock scrollBy on the scroll container
+    // Mock scrollBy and dimensions on scroll containers to simulate overflow
     const originalCreateElement = document.createElement.bind(document);
     vi.spyOn(document, "createElement").mockImplementation((tag: string, options?: ElementCreationOptions) => {
       const el = originalCreateElement(tag, options);
       if (tag === "div") {
         Object.defineProperty(el, "scrollBy", { value: scrollBySpy, writable: true });
+        Object.defineProperty(el, "scrollWidth", { value: 2000, configurable: true });
+        Object.defineProperty(el, "clientWidth", { value: 800, configurable: true });
+        Object.defineProperty(el, "scrollLeft", { value: 100, writable: true, configurable: true });
       }
       return el;
     });
@@ -49,5 +52,15 @@ describe("VideoRow", () => {
     expect(scrollBySpy).toHaveBeenCalledWith({ left: -340, behavior: "smooth" });
 
     vi.restoreAllMocks();
+  });
+
+  it("hides scroll arrows when content does not overflow", () => {
+    const videos = [makeVideo({ id: "v1" })];
+    // In jsdom, scrollWidth === clientWidth === 0, so no overflow
+    const { queryByLabelText } = render(
+      <VideoRow title="Row" categorySlug="cat" videos={videos} />
+    );
+    expect(queryByLabelText("Scroll left")).toBeNull();
+    expect(queryByLabelText("Scroll right")).toBeNull();
   });
 });
