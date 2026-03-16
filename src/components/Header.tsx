@@ -216,6 +216,9 @@ export default function Header() {
           >
             <button
               onClick={() => setMenuOpen((prev) => !prev)}
+              aria-haspopup="true"
+              aria-expanded={menuOpen}
+              aria-controls="categories-dropdown"
               className={`flex items-center gap-1 rounded-lg px-3 py-2 font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
             >
               Categories
@@ -232,6 +235,9 @@ export default function Header() {
 
             {dropdownMounted && (
               <div
+                id="categories-dropdown"
+                role="region"
+                aria-label="Browse by Category"
                 className={`fixed inset-x-4 top-[72px] z-50 max-h-[calc(100dvh-80px)] overflow-y-auto overscroll-contain rounded-xl border border-n8 bg-n9/95 p-4 shadow-2xl backdrop-blur-md transition-all duration-200 sm:max-h-none sm:overflow-y-visible sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-2 sm:w-[720px] sm:p-6 ${
                   dropdownVisible
                     ? "scale-100 opacity-100"

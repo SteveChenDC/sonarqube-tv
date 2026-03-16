@@ -70,11 +70,12 @@ export default function VideoCard({ video, fluid = false, onRemove, hideCategory
           sizes="320px"
           onLoad={() => setImageLoaded(true)}
         />
-        <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30">
+        <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30" aria-hidden="true">
           <svg
             className="h-12 w-12 scale-75 text-n1 opacity-0 drop-shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
             fill="currentColor"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             <path d="M8 5v14l11-7z" />
           </svg>
@@ -116,6 +117,11 @@ export default function VideoCard({ video, fluid = false, onRemove, hideCategory
             {/* Progress bar - always visible */}
             <div className="absolute bottom-0 left-0 right-0 h-1 bg-n8/60">
               <div
+                role="progressbar"
+                aria-valuenow={progress}
+                aria-valuemin={0}
+                aria-valuemax={100}
+                aria-label={`${progress}% watched`}
                 className="h-full bg-sonar-red transition-all duration-300"
                 style={{ width: `${progress}%` }}
               />
