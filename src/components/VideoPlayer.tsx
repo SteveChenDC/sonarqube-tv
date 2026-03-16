@@ -229,7 +229,7 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
 
         {/* Keyboard shortcuts hint — briefly shown on load */}
         {!compact && shortcutsHint && (
-          <div className="absolute bottom-4 right-4 z-10 flex items-center gap-1.5 rounded-lg bg-black/60 px-2.5 py-1.5 text-xs text-n4 backdrop-blur-sm transition-opacity duration-500">
+          <div className="absolute bottom-4 right-4 z-10 hidden sm:flex items-center gap-1.5 rounded-lg bg-black/60 px-2.5 py-1.5 text-xs text-n4 backdrop-blur-sm transition-opacity duration-500">
             <kbd className="rounded bg-n7/60 px-1 py-0.5 font-mono text-[10px] text-n3">?</kbd>
             <span>keyboard shortcuts</span>
           </div>
