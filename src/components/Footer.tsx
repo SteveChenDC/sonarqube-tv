@@ -77,7 +77,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-8 border-t border-n8/50 pt-6 text-center sm:text-left">
-          <p className="font-body text-xs text-n7">
+          <p className="font-body text-xs text-n6">
             &copy; {year} SonarSource SA. All rights reserved.
           </p>
         </div>
