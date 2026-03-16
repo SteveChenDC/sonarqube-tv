@@ -163,8 +163,8 @@ export default async function WatchPage({
         <VideoPlayer youtubeId={video.youtubeId} title={video.title} videoId={video.id} />
         <NowPlayingBar title={video.title} />
 
-        <div className="mt-6 rounded-xl border border-n8 bg-n8/15 p-5 sm:p-6">
-          <h1 className="font-heading text-2xl font-bold leading-tight text-n1 sm:text-3xl">
+        <div className="mt-6 rounded-xl border border-n8 bg-n8/15 p-4 sm:p-6">
+          <h1 className="font-heading text-xl font-bold leading-tight text-n1 sm:text-2xl lg:text-3xl hyphens-auto break-words">
             {video.title}
           </h1>
           <div className="mt-4 flex flex-wrap items-center gap-2">
@@ -192,7 +192,10 @@ export default async function WatchPage({
               </svg>
               {video.duration}
             </span>
-            <ShareButton />
+            {/* On mobile, ShareButton sits on its own row (ml-auto pushes it right on wider screens) */}
+            <span className="ml-auto">
+              <ShareButton />
+            </span>
           </div>
           <div className="mt-5 border-t border-n8/40 pt-5">
             <p className="text-base leading-7 text-n3">

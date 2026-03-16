@@ -34,7 +34,7 @@ export default function ShareButton() {
     <button
       onClick={handleShare}
       aria-label="Copy video link to clipboard"
-      className={`relative inline-flex items-center gap-1.5 rounded px-2.5 py-1 text-sm transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${
+      className={`relative inline-flex min-h-[36px] items-center gap-1.5 rounded px-3 py-1.5 text-sm transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${
         copied
           ? "bg-qube-blue/20 text-qube-blue"
           : "bg-n8/60 text-n4 hover:bg-n8 hover:text-n2"
