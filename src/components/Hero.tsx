@@ -88,10 +88,10 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
           sizes="100vw"
           fetchPriority="high"
         />
-        {/* Bottom-up gradient: strong at the text zone, fading to clear at top to preserve thumbnail */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background from-[18%] via-background/60 via-[40%] to-transparent" />
-        {/* Left-side brand gradient: frames the text column without darkening the whole frame */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-sonar-purple/20 to-transparent" />
+        {/* Bottom-up gradient: smooth cinematic rise from solid at the text zone, dissolving naturally to transparent */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 via-[35%] to-transparent" />
+        {/* Left-side brand gradient: frames the text column without overpowering the right side of the thumbnail */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-sonar-purple/15 via-[45%] to-transparent" />
 
         <div className="absolute bottom-0 left-0 right-0 px-4 pb-16 sm:px-6">
           <div className="mx-auto max-w-7xl">
