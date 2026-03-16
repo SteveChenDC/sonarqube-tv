@@ -146,6 +146,17 @@ html.theme-transitioning *::after {
   transform-origin: top center;
 }
 
+/* Mobile swipe-hint nudge: chevron bounces right 3× then rests */
+@keyframes nudge {
+  0%   { transform: translateX(0); }
+  30%  { transform: translateX(4px); }
+  50%  { transform: translateX(0); }
+  70%  { transform: translateX(3px); }
+  85%  { transform: translateX(0); }
+  95%  { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}
+
 /* iOS safe-area bottom padding — used by the filter bottom sheet */
 @utility pb-safe {
   padding-bottom: max(1.5rem, env(safe-area-inset-bottom));

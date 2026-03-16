@@ -54,6 +54,7 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
   const [isRevealed, setIsRevealed] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   // Lazy-reveal: only render full row content when section scrolls near viewport.
   // rootMargin: "400px" preloads one screen-height before the row becomes visible.
@@ -80,18 +81,23 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
     setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 1);
   }, []);
 
+  const handleScroll = useCallback(() => {
+    updateScrollState();
+    if (!hasScrolled) setHasScrolled(true);
+  }, [updateScrollState, hasScrolled]);
+
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
     updateScrollState();
-    el.addEventListener("scroll", updateScrollState, { passive: true });
+    el.addEventListener("scroll", handleScroll, { passive: true });
     const ro = new ResizeObserver(updateScrollState);
     ro.observe(el);
     return () => {
-      el.removeEventListener("scroll", updateScrollState);
+      el.removeEventListener("scroll", handleScroll);
       ro.disconnect();
     };
-  }, [updateScrollState, videos, isRevealed]);
+  }, [handleScroll, updateScrollState, videos, isRevealed]);
 
   const scroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return;
@@ -160,24 +166,44 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
               <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">{totalCount ?? videos.length}</span>
             </h2>
           </div>
-          {categorySlug && totalCount !== undefined && totalCount > videos.length && (
-            <Link
-              href={`/category/${categorySlug}`}
-              className="group inline-flex items-center gap-1 font-heading text-xs font-medium text-n5 transition-colors hover:text-n2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
-            >
-              View all
-              <svg
-                className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2.5}
+          <div className="flex items-center gap-2">
+            {/* Mobile-only swipe hint — visible until user scrolls for the first time */}
+            {canScrollRight && !hasScrolled && (
+              <span
                 aria-hidden="true"
+                className="sm:hidden inline-flex items-center gap-1 rounded-full border border-n7/40 bg-n8/50 px-2 py-0.5 font-heading text-[10px] font-medium text-n5 transition-opacity duration-500"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          )}
+                Swipe
+                <svg
+                  className="h-3 w-3 animate-[nudge_1.4s_ease-in-out_3]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            )}
+            {categorySlug && totalCount !== undefined && totalCount > videos.length && (
+              <Link
+                href={`/category/${categorySlug}`}
+                className="group inline-flex items-center gap-1 font-heading text-xs font-medium text-n5 transition-colors hover:text-n2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
+              >
+                View all
+                <svg
+                  className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            )}
+          </div>
         </div>
       )}
 
