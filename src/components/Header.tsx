@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import { categories } from "@/data/videos";
+import { useSearch } from "./SearchContext";
 
 function SonarWhaleMark({ className }: Readonly<{ className?: string }>) {
   return (
@@ -23,6 +24,7 @@ function SonarWhaleMark({ className }: Readonly<{ className?: string }>) {
 }
 
 export default function Header() {
+  const { query: searchQuery, setQuery: onSearchChange } = useSearch();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -105,6 +107,39 @@ export default function Header() {
     };
   }, [handleMouseEnter, handleMouseLeave]);
 
+  const [searchOpen, setSearchOpen] = useState(false);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (searchOpen) {
+      // Small delay to let the width transition start before focusing
+      const t = setTimeout(() => searchInputRef.current?.focus(), 50);
+      return () => clearTimeout(t);
+    }
+  }, [searchOpen]);
+
+  const handleSearchBlur = useCallback(() => {
+    // Only close if empty
+    if (!searchQuery) setSearchOpen(false);
+  }, [searchQuery]);
+
+  // Keyboard shortcut: "/" to open search
+  useEffect(() => {
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "/" && !searchOpen && !(e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement)) {
+        e.preventDefault();
+        setSearchOpen(true);
+      }
+      if (e.key === "Escape" && searchOpen) {
+        onSearchChange("");
+        setSearchOpen(false);
+        searchInputRef.current?.blur();
+      }
+    }
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [searchOpen, onSearchChange]);
+
   // Split categories into 3 columns
   const col1 = categories.slice(0, 4);
   const col2 = categories.slice(4, 8);
@@ -122,6 +157,59 @@ export default function Header() {
           </span>
         </Link>
         <nav className="flex items-center gap-1">
+          {/* Netflix-style expandable search */}
+          <div className="relative flex items-center">
+            {!searchOpen && (
+              <button
+                onClick={() => setSearchOpen(true)}
+                aria-label="Search videos"
+                className={`flex items-center gap-1 rounded-lg px-3 py-2 font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
+              >
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <circle cx="11" cy="11" r="8" />
+                  <path strokeLinecap="round" d="M21 21l-4.35-4.35" />
+                </svg>
+                <span className="hidden sm:inline">Search</span>
+              </button>
+            )}
+            {searchOpen && (
+              <div className="flex items-center">
+                <div className="relative">
+                  <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2">
+                    <svg className="h-3.5 w-3.5 text-n5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <circle cx="11" cy="11" r="8" />
+                      <path strokeLinecap="round" d="M21 21l-4.35-4.35" />
+                    </svg>
+                  </span>
+                  <input
+                    ref={searchInputRef}
+                    type="search"
+                    value={searchQuery}
+                    onChange={(e) => onSearchChange(e.target.value)}
+                    onBlur={handleSearchBlur}
+                    placeholder="Search videos…"
+                    aria-label="Search videos"
+                    className="w-36 rounded-lg border border-n7/60 bg-n9/80 py-1.5 pr-8 pl-8 font-body text-sm text-n2 placeholder-n6 transition-all duration-200 focus:w-52 focus:border-qube-blue/70 focus:ring-1 focus:ring-qube-blue/30 focus:outline-none sm:w-44 sm:focus:w-64"
+                  />
+                  {searchQuery && (
+                    <button
+                      onMouseDown={(e) => e.preventDefault()}
+                      onClick={() => {
+                        onSearchChange("");
+                        searchInputRef.current?.focus();
+                      }}
+                      aria-label="Clear search"
+                      className="absolute right-2 top-1/2 -translate-y-1/2 flex h-4 w-4 items-center justify-center rounded-full bg-n7 text-n3 transition-colors hover:bg-n6 hover:text-n1"
+                    >
+                      <svg viewBox="0 0 12 12" className="h-2 w-2" aria-hidden="true">
+                        <path d="M1 1l10 10M11 1L1 11" stroke="currentColor" strokeWidth={2} strokeLinecap="round" fill="none" />
+                      </svg>
+                    </button>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
           <div
             ref={menuRef}
             className="relative"

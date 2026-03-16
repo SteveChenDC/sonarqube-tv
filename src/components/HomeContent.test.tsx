@@ -180,7 +180,7 @@ describe("HomeContent", () => {
     fireEvent.click(screen.getByText("Today"));
     fireEvent.click(screen.getByText("Apply"));
 
-    expect(screen.getByText("No videos match your filters.")).toBeTruthy();
+    expect(screen.getByText("No videos match your filters")).toBeTruthy();
   });
 
   it("resets filters via empty-state Reset filters button", () => {
@@ -205,7 +205,7 @@ describe("HomeContent", () => {
     fireEvent.click(screen.getByText("Today"));
     fireEvent.click(screen.getByText("Apply"));
 
-    expect(screen.getByText("No videos match your filters.")).toBeTruthy();
+    expect(screen.getByText("No videos match your filters")).toBeTruthy();
     const resetButton = screen.getByText("Reset filters");
     expect(resetButton).toBeTruthy();
 
@@ -213,7 +213,7 @@ describe("HomeContent", () => {
 
     // After reset, the video should be visible again and the empty state gone
     expect(screen.getAllByText("Ancient Video").length).toBeGreaterThanOrEqual(1);
-    expect(screen.queryByText("No videos match your filters.")).toBeNull();
+    expect(screen.queryByText("No videos match your filters")).toBeNull();
   });
 
   it("hides category rows with no matching videos when filters are active", () => {

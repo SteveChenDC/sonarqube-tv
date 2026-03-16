@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SearchProvider } from "@/components/SearchContext";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -88,9 +89,11 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${inter.variable} flex min-h-screen flex-col overflow-x-hidden bg-background font-body antialiased`}
       >
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <SearchProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </SearchProvider>
       </body>
     </html>
   );

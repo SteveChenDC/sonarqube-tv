@@ -35,7 +35,7 @@ export default function PlaylistQueue({
   const prevVideo = currentIndex > 0 ? playlistVideos[currentIndex - 1] : null;
 
   return (
-    <div className="mt-8 rounded-lg border border-n8 bg-n9/50">
+    <div className="mt-8 rounded-xl border border-n8 bg-n9/50">
       <div className="flex items-center justify-between border-b border-n8 px-4 py-3">
         <div className="flex items-center gap-2">
           <svg
@@ -143,7 +143,7 @@ export default function PlaylistQueue({
                 </span>
               )}
             </span>
-            <div className="relative h-10 w-[72px] shrink-0 overflow-hidden rounded">
+            <div className="relative h-10 w-[72px] shrink-0 overflow-hidden rounded-md">
               <Image
                 src={video.thumbnail}
                 alt=""

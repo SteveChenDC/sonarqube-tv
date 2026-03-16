@@ -25,13 +25,13 @@ function SegmentRow({
     <button
       ref={isActive ? activeRef : undefined}
       onClick={() => onSeek(seg.offset)}
-      className={`flex w-full cursor-pointer gap-3 rounded-md p-2 text-left transition-colors duration-200 ${
+      className={`flex w-full cursor-pointer items-baseline gap-3 rounded-md p-2 text-left transition-colors duration-200 ${
         isActive
           ? "bg-qube-blue/20 ring-1 ring-qube-blue/40 border-l-[3px] border-qube-blue dark:bg-qube-blue/15 dark:ring-qube-blue/30"
           : "hover:bg-n8/30"
       }`}
     >
-      <span className="shrink-0 font-mono text-xs text-qube-blue">
+      <span className="min-w-[2.75rem] shrink-0 font-mono text-xs tabular-nums text-qube-blue">
         {formatTime(seg.offset)}
       </span>
       <span className={`text-sm leading-relaxed ${isActive ? "font-medium text-n1" : "text-n4"}`}>
@@ -197,7 +197,7 @@ export default function TranscriptView({
               onClick={() => handleSeek(group.startTime)}
               className="sticky top-0 z-10 flex w-full items-center gap-2 border-b border-n8/60 bg-n9 px-2 py-2 text-left transition-colors hover:bg-n8/60 group"
             >
-              <span className="font-mono text-xs text-qube-blue">
+              <span className="min-w-[2.75rem] shrink-0 font-mono text-xs tabular-nums text-qube-blue">
                 {formatTime(group.startTime)}
               </span>
               <span className="flex-1 font-heading text-sm font-semibold text-n2 group-hover:text-n1 transition-colors">

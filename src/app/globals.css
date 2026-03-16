@@ -64,6 +64,18 @@ html:not(.dark) {
   100% { opacity: 0; transform: translateY(-8px); }
 }
 
+/* Anchor scroll offset — keeps targets clear of the 80px fixed header */
+html {
+  scroll-padding-top: 5rem;
+}
+
+/* Smooth scroll — only when the user hasn't requested reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

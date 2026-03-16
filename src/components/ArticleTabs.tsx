@@ -37,43 +37,81 @@ function parseInline(text: string): React.ReactNode[] {
 
 function renderMarkdown(md: string) {
   const lines = md.split("\n");
+
+  // First pass: parse each line into typed tokens
+  type Token =
+    | { type: "blank" }
+    | { type: "h1" | "h2" | "h3"; content: string }
+    | { type: "li"; content: string }
+    | { type: "p"; content: string };
+
+  const tokens: Token[] = lines.map((line) => {
+    const trimmed = line.trim();
+    if (!trimmed) return { type: "blank" };
+    if (trimmed.startsWith("### ")) return { type: "h3", content: trimmed.slice(4) };
+    if (trimmed.startsWith("## ")) return { type: "h2", content: trimmed.slice(3) };
+    if (trimmed.startsWith("# ")) return { type: "h1", content: trimmed.slice(2) };
+    if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) return { type: "li", content: trimmed.slice(2) };
+    return { type: "p", content: trimmed };
+  });
+
+  // Second pass: group consecutive list items into <ul> blocks
   const elements: React.ReactNode[] = [];
   let key = 0;
+  let i = 0;
 
-  for (const line of lines) {
-    const trimmed = line.trim();
-    if (!trimmed) {
-      elements.push(<div key={key++} className="h-3" />);
-    } else if (trimmed.startsWith("### ")) {
+  while (i < tokens.length) {
+    const tok = tokens[i];
+
+    if (tok.type === "blank") {
+      // skip blank lines — spacing comes from element margins
+      i++;
+    } else if (tok.type === "li") {
+      // Collect all consecutive list items
+      const items: React.ReactNode[] = [];
+      while (i < tokens.length && tokens[i].type === "li") {
+        const liTok = tokens[i] as { type: "li"; content: string };
+        items.push(
+          <li key={key++} className="leading-7 text-[15px] text-n3">
+            {parseInline(liTok.content)}
+          </li>
+        );
+        i++;
+      }
+      elements.push(
+        <ul key={key++} className="my-3 ml-5 list-disc space-y-1 marker:text-n6">
+          {items}
+        </ul>
+      );
+    } else if (tok.type === "h3") {
       elements.push(
         <h3 key={key++} className="mb-2 mt-5 font-heading text-base font-semibold text-n1 first:mt-0">
-          {parseInline(trimmed.slice(4))}
+          {parseInline(tok.content)}
         </h3>
       );
-    } else if (trimmed.startsWith("## ")) {
+      i++;
+    } else if (tok.type === "h2") {
       elements.push(
-        <h2 key={key++} className="mb-3 mt-6 font-heading text-lg font-semibold text-n1 first:mt-0">
-          {parseInline(trimmed.slice(3))}
+        <h2 key={key++} className="mb-2 mt-6 font-heading text-lg font-semibold text-n1 first:mt-0">
+          {parseInline(tok.content)}
         </h2>
       );
-    } else if (trimmed.startsWith("# ")) {
+      i++;
+    } else if (tok.type === "h1") {
       elements.push(
-        <h1 key={key++} className="mb-4 mt-6 font-heading text-xl font-bold text-n1 first:mt-0">
-          {parseInline(trimmed.slice(2))}
+        <h1 key={key++} className="mb-3 mt-6 font-heading text-xl font-bold text-n1 first:mt-0">
+          {parseInline(tok.content)}
         </h1>
       );
-    } else if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) {
-      elements.push(
-        <li key={key++} className="ml-4 list-disc text-sm leading-relaxed text-n3">
-          {parseInline(trimmed.slice(2))}
-        </li>
-      );
+      i++;
     } else {
+      // paragraph
       elements.push(
-        <p key={key++} className="text-sm leading-relaxed text-n3">
-          {parseInline(trimmed)}
+        <p key={key++} className="my-3 text-[15px] leading-7 text-n3 first:mt-0">
+          {parseInline((tok as { type: "p"; content: string }).content)}
         </p>
       );
+      i++;
     }
   }
 

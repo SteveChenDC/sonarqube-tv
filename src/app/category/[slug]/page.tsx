@@ -87,11 +87,20 @@ export default async function CategoryPage({
           Back
         </Link>
 
-        <div className="mb-3 flex items-baseline gap-3">
-          <h1 className="font-heading text-3xl font-bold text-n1 sm:text-4xl">
-            {category.title}
-          </h1>
-          <span className="font-heading text-lg text-n6">{categoryVideos.length} {categoryVideos.length === 1 ? "video" : "videos"}</span>
+        <div className="mb-8 border-l-[3px] border-sonar-red pl-4">
+          <div className="flex items-center gap-3">
+            <h1 className="font-heading text-3xl font-bold text-n1 sm:text-4xl">
+              {category.title}
+            </h1>
+            <span className="inline-flex items-center rounded-full border border-n7/50 bg-n8/60 px-2.5 py-1 font-heading text-xs font-medium text-n5">
+              {categoryVideos.length} {categoryVideos.length === 1 ? "video" : "videos"}
+            </span>
+          </div>
+          {category.description && (
+            <p className="mt-2 max-w-2xl font-body text-base leading-relaxed text-n4">
+              {category.description}
+            </p>
+          )}
         </div>
 
         {categoryVideos.length === 0 ? (
@@ -116,7 +125,7 @@ export default async function CategoryPage({
             </Link>
           </div>
         ) : (
-          <CategoryContent videos={categoryVideos} description={category.description} />
+          <CategoryContent videos={categoryVideos} />
         )}
       </div>
     </div>

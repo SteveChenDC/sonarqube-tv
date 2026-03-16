@@ -45,10 +45,8 @@ function sortVideos(videos: Video[], sort: SortOption): Video[] {
 
 export default function CategoryContent({
   videos,
-  description,
 }: Readonly<{
   videos: Video[];
-  description: string;
 }>) {
   const [sort, setSort] = useState<SortOption>("newest");
 
@@ -60,12 +58,6 @@ export default function CategoryContent({
 
   return (
     <div>
-      {description && (
-        <p className="mb-6 max-w-2xl font-body text-sm leading-relaxed text-n5">
-          {description}
-        </p>
-      )}
-
       {/* Sort controls */}
       <div className="mb-6 flex items-center gap-2">
         <span className="font-body text-xs font-medium uppercase tracking-wider text-n6">

@@ -6,6 +6,7 @@ import {
   getVideosByCategory,
   getCategoryBySlug,
   getFeaturedVideo,
+  getRelatedVideosFromOtherCategories,
 } from "./videos";
 
 describe("video data utilities", () => {
@@ -63,6 +64,45 @@ describe("video data utilities", () => {
       ];
       const featured = getFeaturedVideo();
       expect(featuredIds).toContain(featured.youtubeId);
+    });
+  });
+
+  describe("getRelatedVideosFromOtherCategories", () => {
+    it("returns at most the requested count", () => {
+      const video = videos[0];
+      const result = getRelatedVideosFromOtherCategories(video.id, video.category, 4);
+      expect(result.length).toBeLessThanOrEqual(4);
+    });
+
+    it("never includes the current video", () => {
+      const video = videos[0];
+      const result = getRelatedVideosFromOtherCategories(video.id, video.category, 4);
+      expect(result.every((v) => v.id !== video.id)).toBe(true);
+    });
+
+    it("never includes a video from the excluded category", () => {
+      const video = videos[0];
+      const result = getRelatedVideosFromOtherCategories(video.id, video.category, 4);
+      expect(result.every((v) => v.category !== video.category)).toBe(true);
+    });
+
+    it("returns videos from distinct categories", () => {
+      const video = videos[0];
+      const result = getRelatedVideosFromOtherCategories(video.id, video.category, 4);
+      const cats = result.map((v) => v.category);
+      expect(new Set(cats).size).toBe(cats.length);
+    });
+
+    it("is deterministic — same input always produces same output", () => {
+      const video = videos[5];
+      const a = getRelatedVideosFromOtherCategories(video.id, video.category, 4);
+      const b = getRelatedVideosFromOtherCategories(video.id, video.category, 4);
+      expect(a.map((v) => v.id)).toEqual(b.map((v) => v.id));
+    });
+
+    it("returns empty array for unknown videoId", () => {
+      const result = getRelatedVideosFromOtherCategories("nonexistent", "getting-started", 4);
+      expect(result.every((v) => v.category !== "getting-started")).toBe(true);
     });
   });
 

@@ -11,11 +11,13 @@ import {
   getVideoById,
   getVideosByCategory,
   getCategoryBySlug,
+  getRelatedVideosFromOtherCategories,
   videos,
 } from "@/data/videos";
 import { getArticleByVideoId, getTranscriptByVideoId } from "@/data/articles";
 import ArticleTabs from "@/components/ArticleTabs";
 import ShareButton from "@/components/ShareButton";
+import NowPlayingBar from "@/components/NowPlayingBar";
 
 export function generateStaticParams() {
   return videos.map((video) => ({ id: video.id }));
@@ -64,6 +66,11 @@ export default async function WatchPage({
   const category = getCategoryBySlug(video.category);
   const relatedVideos = getVideosByCategory(video.category).filter(
     (v) => v.id !== video.id
+  );
+  const youMightAlsoLike = getRelatedVideosFromOtherCategories(
+    video.id,
+    video.category,
+    4
   );
 
   const videoJsonLd = {
@@ -153,6 +160,7 @@ export default async function WatchPage({
         </Link>
 
         <VideoPlayer youtubeId={video.youtubeId} title={video.title} videoId={video.id} />
+        <NowPlayingBar title={video.title} />
 
         <div className="mt-6 rounded-xl border border-n8 bg-n8/15 p-5 sm:p-6">
           <h1 className="font-heading text-2xl font-bold leading-tight text-n1 sm:text-3xl">
@@ -215,6 +223,15 @@ export default async function WatchPage({
             categorySlug={video.category}
             videos={relatedVideos.slice(0, 15)}
             totalCount={relatedVideos.length}
+          />
+        </div>
+      )}
+
+      {youMightAlsoLike.length >= 2 && (
+        <div className="mt-8">
+          <VideoRow
+            title="You Might Also Like"
+            videos={youMightAlsoLike}
           />
         </div>
       )}

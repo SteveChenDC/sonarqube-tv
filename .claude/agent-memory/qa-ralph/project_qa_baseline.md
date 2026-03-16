@@ -4,12 +4,24 @@ description: Build and test baseline as of 2026-03-15 — what passes, known war
 type: project
 ---
 
-As of 2026-03-15 (eighth QA run), `npm run build` and `npm test` both pass clean. All 212 tests pass.
+As of 2026-03-15 (sixteenth QA run), `npm run build` and `npm test` both pass clean. All 218 tests pass.
 
 **Build**: Next.js 16.1.6 (Turbopack), 243 static pages generated (SSG), no errors.
 - Known non-fatal warning: "Next.js inferred your workspace root" due to multiple lockfiles at `/Users/stevec/package-lock.json` and project root. Safe to ignore; does not affect build output.
 
-**Tests**: Vitest 4.1.0 — 24 test files, 211 tests. All 211 PASSING.
+**Tests**: Vitest 4.1.0 — 24 test files, 218 tests. All 218 PASSING.
+
+**Fixed in run 13**: `src/components/HomeContent.test.tsx` — 2 failing tests.
+- Tests: "shows empty state when all videos are filtered out" and "resets filters via empty-state Reset filters button"
+- Root cause: Commit 2d6cb91 ("Polish empty state: icon, hierarchy, and pill CTA") removed the trailing period from the empty-state heading — changed "No videos match your filters." to "No videos match your filters". Three assertions in the test file still matched the old string with the period.
+- Fix: Updated all three test assertions to use "No videos match your filters" (no period). Committed as 3955fe6.
+- Pattern: When the empty-state copy in HomeContent changes (heading or body text), HomeContent.test.tsx assertions will break. Check for exact-text queries with `getByText` and `queryByText`.
+
+**Fixed in run 9**: `src/components/Footer.test.tsx` — 1 failing test.
+- Test: "renders YouTube, GitHub, and SonarSource navigation links"
+- Root cause: Commit d5b2a2e ("Polish footer: add brand icons, copyright, and improved layout") updated Footer social link `aria-label` attributes from short names (`"YouTube"`, `"GitHub"`) to descriptive names (`"SonarSource on YouTube"`, `"SonarSource on GitHub"`). The test still queried by the old short names.
+- Fix: Updated test queries to use the new full accessible names.
+- Pattern: When Footer social link aria-labels change, Footer.test.tsx queries must be updated to match. Always check `aria-label` on Footer links — the component uses them for all three social/nav links.
 
 **Resolved in run 7**: `src/components/VideoRow.visual.test.tsx` — 2 stale snapshots.
 - Tests: "mobile grid layout matches snapshot" and "desktop scroll layout matches snapshot"
@@ -22,8 +34,8 @@ As of 2026-03-15 (eighth QA run), `npm run build` and `npm test` both pass clean
 - Fix applied to tests (not component): Assert `aria-hidden="true"` on the panel wrapper div instead of checking DOM presence.
 - Pattern: When a component uses CSS-only show/hide (grid rows, opacity, height), test the semantic attribute (`aria-hidden`) rather than DOM presence.
 
-**Test count history**: 193 → 203 → 211 → 212 (stable at 212 total as of run 8)
+**Test count history**: 193 → 203 → 211 → 212 → 218 (stable across runs 9–13)
 **Page count history**: 242 → 243 (stable)
 
 **Why:** Ongoing QA baseline tracking.
-**How to apply:** If VideoRow.visual snapshots fail, first check if a new persistent DOM element was added to VideoCard (shimmer, overlay, badge) — stale snapshot is likely the culprit, fix with --update-snapshots. If ArticleTabs collapse tests fail again, check whether the component changed from CSS-based to conditional rendering and align test strategy accordingly.
+**How to apply:** If VideoRow.visual snapshots fail, first check if a new persistent DOM element was added to VideoCard (shimmer, overlay, badge) — stale snapshot is likely the culprit, fix with `npx vitest run -u`. If Footer link tests fail, check whether `aria-label` attributes on social/nav links were changed. If ArticleTabs collapse tests fail again, check whether the component changed from CSS-based to conditional rendering and align test strategy accordingly. If HomeContent empty-state tests fail, check whether the heading copy in HomeContent.tsx changed (exact text, punctuation included).

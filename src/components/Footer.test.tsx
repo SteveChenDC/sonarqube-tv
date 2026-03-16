@@ -20,14 +20,14 @@ describe("Footer", () => {
     // 4 links total: inline SonarSource + YouTube, GitHub, SonarSource nav
     expect(links).toHaveLength(4);
 
-    const youtube = screen.getByRole("link", { name: "YouTube" });
+    const youtube = screen.getByRole("link", { name: "SonarSource on YouTube" });
     expect(youtube).toHaveAttribute(
       "href",
       "https://www.youtube.com/c/SonarSource"
     );
     expect(youtube).toHaveAttribute("target", "_blank");
 
-    const github = screen.getByRole("link", { name: "GitHub" });
+    const github = screen.getByRole("link", { name: "SonarSource on GitHub" });
     expect(github).toHaveAttribute("href", "https://github.com/SonarSource");
     expect(github).toHaveAttribute("target", "_blank");
   });

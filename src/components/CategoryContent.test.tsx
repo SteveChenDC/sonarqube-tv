@@ -31,7 +31,7 @@ const videos = [
 
 describe("CategoryContent", () => {
   it("renders sort buttons", () => {
-    render(<CategoryContent videos={videos} description="Test category" />);
+    render(<CategoryContent videos={videos} />);
     expect(screen.getByRole("button", { name: "Newest" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Oldest" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Shortest" })).toBeInTheDocument();
@@ -39,30 +39,25 @@ describe("CategoryContent", () => {
   });
 
   it("shows all videos by default", () => {
-    render(<CategoryContent videos={videos} description="" />);
+    render(<CategoryContent videos={videos} />);
     expect(screen.getByText("Alpha Video")).toBeInTheDocument();
     expect(screen.getByText("Beta Video")).toBeInTheDocument();
     expect(screen.getByText("Gamma Video")).toBeInTheDocument();
   });
 
   it("defaults to Newest sort (aria-pressed=true)", () => {
-    render(<CategoryContent videos={videos} description="" />);
+    render(<CategoryContent videos={videos} />);
     const newestBtn = screen.getByRole("button", { name: "Newest" });
     expect(newestBtn).toHaveAttribute("aria-pressed", "true");
   });
 
-  it("shows description when provided", () => {
-    render(<CategoryContent videos={videos} description="My category description" />);
-    expect(screen.getByText("My category description")).toBeInTheDocument();
-  });
-
   it("renders nothing when videos array is empty", () => {
-    const { container } = render(<CategoryContent videos={[]} description="Empty" />);
+    const { container } = render(<CategoryContent videos={[]} />);
     expect(container.firstChild).toBeNull();
   });
 
   it("changes active sort button when clicked", () => {
-    render(<CategoryContent videos={videos} description="" />);
+    render(<CategoryContent videos={videos} />);
     const oldestBtn = screen.getByRole("button", { name: "Oldest" });
     fireEvent.click(oldestBtn);
     expect(oldestBtn).toHaveAttribute("aria-pressed", "true");
@@ -70,7 +65,7 @@ describe("CategoryContent", () => {
   });
 
   it("sorts by shortest duration first", () => {
-    render(<CategoryContent videos={videos} description="" />);
+    render(<CategoryContent videos={videos} />);
     fireEvent.click(screen.getByRole("button", { name: "Shortest" }));
     const links = screen.getAllByRole("link");
     const titles = links.map((l) => l.querySelector("h3")?.textContent);
@@ -81,7 +76,7 @@ describe("CategoryContent", () => {
   });
 
   it("sorts by longest duration first", () => {
-    render(<CategoryContent videos={videos} description="" />);
+    render(<CategoryContent videos={videos} />);
     fireEvent.click(screen.getByRole("button", { name: "Longest" }));
     const links = screen.getAllByRole("link");
     const titles = links.map((l) => l.querySelector("h3")?.textContent);

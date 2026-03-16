@@ -4,6 +4,29 @@ import React, { useRef, useState, useEffect, useCallback } from "react";
 import { Video } from "@/types";
 import VideoCard from "./VideoCard";
 
+/** Placeholder shown for off-screen rows before they're lazy-loaded */
+function RowSkeleton({ hideHeader }: { hideHeader?: boolean }) {
+  return (
+    <div aria-hidden="true">
+      {!hideHeader && (
+        <div className="mb-4 flex items-center gap-3 px-4 sm:px-6">
+          <div className="h-5 w-1 shrink-0 rounded-full bg-n8/60 animate-pulse" />
+          <div className="h-6 w-40 rounded-full bg-n8/60 animate-pulse" />
+        </div>
+      )}
+      <div className="flex gap-4 overflow-hidden px-4 sm:px-6">
+        {[0, 1, 2, 3].map((i) => (
+          <div key={i} className="flex-shrink-0 w-[280px] sm:w-[320px]">
+            <div className="aspect-video w-full rounded-lg bg-n8/60 animate-pulse" />
+            <div className="mt-3 h-4 w-4/5 rounded bg-n8/50 animate-pulse" />
+            <div className="mt-2 h-3 w-2/5 rounded bg-n8/40 animate-pulse" />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 interface SectionLabels {
   firstLabel: string;
   firstCount: number;
@@ -26,8 +49,28 @@ interface VideoRowProps {
 export default function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, dividerAfterIndex, sectionLabels, onRemoveVideo }: Readonly<VideoRowProps>) {
   const hideCategoryBadge = !!categorySlug;
   const scrollRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const [isRevealed, setIsRevealed] = useState(false);
+
+  // Lazy-reveal: only render full row content when section scrolls near viewport.
+  // rootMargin: "400px" preloads one screen-height before the row becomes visible.
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsRevealed(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "400px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   const updateScrollState = useCallback(() => {
     const el = scrollRef.current;
@@ -47,7 +90,7 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
       el.removeEventListener("scroll", updateScrollState);
       ro.disconnect();
     };
-  }, [updateScrollState, videos]);
+  }, [updateScrollState, videos, isRevealed]);
 
   const scroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return;
@@ -65,23 +108,31 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
 
   function renderLabel(label: string, count: number) {
     return (
-      <h2 className="font-heading text-lg font-semibold text-n1 whitespace-nowrap sm:text-xl">
-        {label}
-        <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">
-          {count}
-        </span>
-      </h2>
+      <div className="flex items-center gap-3">
+        <span className="inline-block h-5 w-1 shrink-0 rounded-full bg-sonar-red" aria-hidden="true" />
+        <h2 className="font-heading text-lg font-semibold text-n1 whitespace-nowrap sm:text-xl">
+          {label}
+          <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">
+            {count}
+          </span>
+        </h2>
+      </div>
     );
   }
 
   return (
-    <section id={categorySlug} className="relative scroll-mt-20 py-8">
+    <section ref={sectionRef} id={categorySlug} className="relative scroll-mt-20 py-8">
+      {!isRevealed ? <RowSkeleton hideHeader={hideHeader} /> : (
+      <>
       {!hideHeader && (
         <div className="mb-4 flex items-center justify-between px-4 sm:px-6">
-          <h2 className="font-heading text-lg font-semibold text-n1 sm:text-xl">
-            {title}
-            <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">{totalCount ?? videos.length}</span>
-          </h2>
+          <div className="flex items-center gap-3">
+            <span className="inline-block h-5 w-1 shrink-0 rounded-full bg-sonar-red" aria-hidden="true" />
+            <h2 className="font-heading text-lg font-semibold text-n1 sm:text-xl">
+              {title}
+              <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">{totalCount ?? videos.length}</span>
+            </h2>
+          </div>
         </div>
       )}
 
@@ -182,6 +233,8 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
           )}
         </div>
       </div>
+      </>
+      )}
     </section>
   );
 }

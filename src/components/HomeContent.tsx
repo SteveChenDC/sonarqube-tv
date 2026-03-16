@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect, useRef, useCallback } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import Hero from "./Hero";
 import VideoRow from "./VideoRow";
 import { getAllProgress, removeProgress } from "@/lib/watchProgress";
@@ -14,22 +14,7 @@ import FilterBar, {
 import ScrollToTop from "./ScrollToTop";
 import { Video, Category } from "@/types";
 import { featuredYoutubeIds } from "@/data/videos";
-
-function SearchIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      className="h-4 w-4 shrink-0 text-n5"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <circle cx="11" cy="11" r="8" />
-      <path strokeLinecap="round" d="M21 21l-4.35-4.35" />
-    </svg>
-  );
-}
+import { useSearch } from "./SearchContext";
 
 function parseDurationMinutes(duration: string): number {
   const parts = duration.split(":").map(Number);
@@ -94,8 +79,7 @@ export default function HomeContent({
   const [duration, setDuration] = useState<DurationFilter>("any");
   const [sortBy, setSortBy] = useState<SortBy>("newest");
   const [filterOpen, setFilterOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const searchInputRef = useRef<HTMLInputElement>(null);
+  const { query: searchQuery, clearQuery: clearSearch } = useSearch();
 
   const hasActiveFilters =
     uploadDate !== "anytime" || duration !== "any" || sortBy !== "newest";
@@ -124,11 +108,6 @@ export default function HomeContent({
         (v.description ?? "").toLowerCase().includes(q)
     );
   }, [filteredVideos, searchQuery, isSearching]);
-
-  const clearSearch = useCallback(() => {
-    setSearchQuery("");
-    searchInputRef.current?.focus();
-  }, []);
 
   const MAX_CATEGORY_ROW = 15;
   const getVideosByCategory = (slug: string) =>
@@ -213,35 +192,6 @@ export default function HomeContent({
       </div>
 
       <div className="relative z-10 px-4 sm:px-6 lg:px-8">
-        {/* Search bar */}
-        <div className="mx-auto mt-6 mb-2 max-w-2xl">
-          <div className="relative flex items-center">
-            <span className="pointer-events-none absolute left-3.5 z-10">
-              <SearchIcon />
-            </span>
-            <input
-              ref={searchInputRef}
-              type="search"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search videos…"
-              aria-label="Search videos"
-              className="w-full rounded-full border border-n7/60 bg-n9/80 py-2.5 pr-10 pl-10 font-body text-sm text-n2 placeholder-n6 backdrop-blur-sm transition-colors duration-150 focus:border-qube-blue/70 focus:bg-n9 focus:ring-2 focus:ring-qube-blue/30 focus:outline-none"
-            />
-            {isSearching && (
-              <button
-                onClick={clearSearch}
-                aria-label="Clear search"
-                className="absolute right-3 flex h-5 w-5 items-center justify-center rounded-full bg-n7 text-n3 transition-colors hover:bg-n6 hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue"
-              >
-                <svg aria-hidden="true" viewBox="0 0 12 12" fill="currentColor" className="h-2.5 w-2.5">
-                  <path d="M1 1l10 10M11 1L1 11" stroke="currentColor" strokeWidth={2} strokeLinecap="round" fill="none" />
-                </svg>
-              </button>
-            )}
-          </div>
-        </div>
-
         <FilterBar
           uploadDate={uploadDate}
           duration={duration}
@@ -313,13 +263,23 @@ export default function HomeContent({
                   totalCount={searchResults.length}
                 />
               ) : (
-                <div className="px-4 py-16 text-center sm:px-6">
-                  <p className="font-heading text-lg text-n4">
-                    No videos match &ldquo;{searchQuery.trim()}&rdquo;.
+                <div className="px-4 py-20 text-center sm:px-6">
+                  <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-n7/40 bg-n8/60">
+                    <svg className="h-8 w-8 text-n6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                      <circle cx="11" cy="11" r="8" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 11h6M11 8v6" />
+                    </svg>
+                  </div>
+                  <p className="font-heading text-xl font-semibold text-n2">
+                    No results found
+                  </p>
+                  <p className="mt-2 text-sm text-n5">
+                    No videos match &ldquo;{searchQuery.trim()}&rdquo;. Try a different search term.
                   </p>
                   <button
                     onClick={clearSearch}
-                    className="mt-3 font-heading text-sm text-qube-blue hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 rounded"
+                    className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-qube-blue/40 bg-qube-blue/10 px-4 py-2 font-heading text-sm font-medium text-qube-blue transition-colors hover:border-qube-blue/70 hover:bg-qube-blue/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
                   >
                     Clear search
                   </button>
@@ -346,13 +306,21 @@ export default function HomeContent({
               })}
 
               {hasActiveFilters && filteredVideos.length === 0 && (
-                <div className="px-4 py-16 text-center sm:px-6">
-                  <p className="font-heading text-lg text-n4">
-                    No videos match your filters.
+                <div className="px-4 py-20 text-center sm:px-6">
+                  <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-n7/40 bg-n8/60">
+                    <svg className="h-8 w-8 text-n6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z" />
+                    </svg>
+                  </div>
+                  <p className="font-heading text-xl font-semibold text-n2">
+                    No videos match your filters
+                  </p>
+                  <p className="mt-2 text-sm text-n5">
+                    Try adjusting or removing some filters to find what you&rsquo;re looking for.
                   </p>
                   <button
                     onClick={reset}
-                    className="mt-3 font-heading text-sm text-qube-blue hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 rounded"
+                    className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-qube-blue/40 bg-qube-blue/10 px-4 py-2 font-heading text-sm font-medium text-qube-blue transition-colors hover:border-qube-blue/70 hover:bg-qube-blue/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
                   >
                     Reset filters
                   </button>

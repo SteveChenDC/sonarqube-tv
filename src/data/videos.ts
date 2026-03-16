@@ -2173,3 +2173,37 @@ export function getFeaturedVideo(): Video {
   const id = featuredYoutubeIds[Math.floor(Math.random() * featuredYoutubeIds.length)];
   return videos.find((v) => v.youtubeId === id) ?? videos[0];
 }
+
+/**
+ * Returns videos from categories other than the given one.
+ * Deterministic: uses the current video's index as a rotation offset so
+ * every watch page shows a different but stable selection across SSG builds.
+ */
+export function getRelatedVideosFromOtherCategories(
+  videoId: string,
+  excludeCategory: string,
+  count: number = 4
+): Video[] {
+  const videoIndex = videos.findIndex((v) => v.id === videoId);
+  const offset = videoIndex >= 0 ? videoIndex : 0;
+
+  // All videos except the current one that are in a different category
+  const pool = videos.filter(
+    (v) => v.id !== videoId && v.category !== excludeCategory
+  );
+
+  // Collect one video per category for variety
+  const seenCategories = new Set<string>();
+  const picked: Video[] = [];
+
+  for (let i = 0; i < pool.length && picked.length < count; i++) {
+    const idx = (offset + i) % pool.length;
+    const candidate = pool[idx];
+    if (!seenCategories.has(candidate.category)) {
+      seenCategories.add(candidate.category);
+      picked.push(candidate);
+    }
+  }
+
+  return picked;
+}

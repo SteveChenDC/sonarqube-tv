@@ -42,11 +42,17 @@ Object.defineProperty(globalThis, "ResizeObserver", {
   value: MockResizeObserver,
 });
 
-// Mock IntersectionObserver for jsdom (used by HomeContent floating filter)
+// Mock IntersectionObserver for jsdom
+// Immediately fires the callback with isIntersecting: true so lazy-loaded
+// components (VideoRow, HomeContent floating filter) reveal their content in tests.
 class MockIntersectionObserver {
-  observe() { /* no-op for test mock */ }
-  unobserve() { /* no-op for test mock */ }
-  disconnect() { /* no-op for test mock */ }
+  private cb: IntersectionObserverCallback;
+  constructor(cb: IntersectionObserverCallback) { this.cb = cb; }
+  observe(target: Element) {
+    this.cb([{ isIntersecting: true, target } as IntersectionObserverEntry], this as unknown as IntersectionObserver);
+  }
+  unobserve() { /* no-op */ }
+  disconnect() { /* no-op */ }
 }
 Object.defineProperty(globalThis, "IntersectionObserver", {
   writable: true,
