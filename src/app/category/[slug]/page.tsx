@@ -26,6 +26,23 @@ export async function generateMetadata({
   };
 }
 
+function parseDurationToSeconds(duration: string): number {
+  const parts = duration.split(":").map(Number);
+  if (parts.length === 3) {
+    return parts[0] * 3600 + parts[1] * 60 + parts[2];
+  }
+  return (parts[0] ?? 0) * 60 + (parts[1] ?? 0);
+}
+
+function formatTotalDuration(totalSeconds: number): string {
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  if (hours >= 1) {
+    return `${hours}h ${minutes}m total`;
+  }
+  return `${minutes}m total`;
+}
+
 export default async function CategoryPage({
   params,
 }: Readonly<{
@@ -39,6 +56,10 @@ export default async function CategoryPage({
   }
 
   const categoryVideos = getVideosByCategory(slug);
+  const totalSeconds = categoryVideos.reduce(
+    (sum, v) => sum + parseDurationToSeconds(v.duration),
+    0
+  );
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -87,17 +108,32 @@ export default async function CategoryPage({
           Back
         </Link>
 
-        <div className="mb-8 border-l-[3px] border-sonar-red pl-4">
-          <div className="flex items-center gap-3">
-            <h1 className="font-heading text-3xl font-bold text-n1 sm:text-4xl">
+        <div className="mb-8 border-b border-n8/60 pb-8">
+          <div className="flex flex-wrap items-center gap-3 mb-3">
+            <h1 className="font-heading text-2xl font-bold text-n1 break-words hyphens-auto sm:text-3xl lg:text-4xl">
               {category.title}
             </h1>
-            <span className="inline-flex items-center rounded-full border border-qube-blue/25 bg-qube-blue/10 px-2.5 py-1 font-heading text-xs font-medium text-qube-blue/80">
-              {categoryVideos.length} {categoryVideos.length === 1 ? "video" : "videos"}
-            </span>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-n7/50 bg-n8/60 px-2.5 py-1 font-heading text-xs font-medium text-n5">
+                <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                  <rect x="3" y="7" width="18" height="13" rx="2" />
+                  <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+                </svg>
+                {categoryVideos.length} {categoryVideos.length === 1 ? "video" : "videos"}
+              </span>
+              {totalSeconds > 0 && (
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-n7/50 bg-n8/60 px-2.5 py-1 font-heading text-xs font-medium text-n5">
+                  <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  {formatTotalDuration(totalSeconds)}
+                </span>
+              )}
+            </div>
           </div>
           {category.description && (
-            <p className="mt-2 max-w-2xl font-body text-base leading-relaxed text-n4">
+            <p className="max-w-2xl font-body text-sm leading-relaxed text-n5">
               {category.description}
             </p>
           )}
@@ -125,7 +161,7 @@ export default async function CategoryPage({
             </Link>
           </div>
         ) : (
-          <CategoryContent videos={categoryVideos} />
+          <CategoryContent videos={categoryVideos} description={category.description} />
         )}
       </div>
     </div>

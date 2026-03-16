@@ -45,8 +45,11 @@ function sortVideos(videos: Video[], sort: SortOption): Video[] {
 
 export default function CategoryContent({
   videos,
+  description: _description,
 }: Readonly<{
   videos: Video[];
+  /** @deprecated Description is now rendered in the page-level header. This prop is retained for API compatibility. */
+  description?: string;
 }>) {
   const [sort, setSort] = useState<SortOption>("newest");
 
@@ -58,12 +61,13 @@ export default function CategoryContent({
 
   return (
     <div>
+
       {/* Sort controls */}
-      <div className="mb-6 flex items-center gap-2">
-        <span className="font-body text-xs font-medium uppercase tracking-wider text-n6">
+      <div className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-2">
+        <span className="font-body text-xs font-medium uppercase tracking-wider text-n6 shrink-0">
           Sort by
         </span>
-        <div className="flex rounded-lg border border-n7/50 bg-n9/40 p-0.5 gap-0.5">
+        <div className="flex flex-wrap rounded-lg border border-n7/50 bg-n9/40 p-0.5 gap-0.5">
           {SORT_OPTIONS.map((option) => (
             <button
               key={option.value}
@@ -81,7 +85,7 @@ export default function CategoryContent({
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid grid-cols-2 gap-x-3 gap-y-8 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 xl:grid-cols-4">
         {sorted.map((video) => (
           <VideoCard key={video.id} video={video} fluid hideCategory />
         ))}
