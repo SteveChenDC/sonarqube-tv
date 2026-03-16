@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useState, useEffect, useCallback } from "react";
+import Link from "next/link";
 import { Video } from "@/types";
 import VideoCard from "./VideoCard";
 
@@ -133,6 +134,24 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
               <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">{totalCount ?? videos.length}</span>
             </h2>
           </div>
+          {categorySlug && totalCount !== undefined && totalCount > videos.length && (
+            <Link
+              href={`/category/${categorySlug}`}
+              className="group inline-flex items-center gap-1 font-heading text-xs font-medium text-n5 transition-colors hover:text-n2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
+            >
+              View all
+              <svg
+                className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2.5}
+                aria-hidden="true"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          )}
         </div>
       )}
 
