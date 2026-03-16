@@ -211,7 +211,7 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
         <div id={playerId} className="absolute inset-0 h-full w-full" title={title} />
 
         {resumeToast && (
-          <div className="absolute bottom-4 left-4 z-10 flex items-center gap-2 rounded-lg bg-black/80 px-3 py-2 text-sm text-n1 shadow-lg backdrop-blur-sm animate-fade-in-out">
+          <div className="absolute bottom-4 left-4 z-10 flex items-center gap-2 rounded-lg bg-black/80 px-3 py-2 text-sm text-white shadow-lg backdrop-blur-sm animate-fade-in-out">
             <svg className="h-4 w-4 text-qube-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
@@ -221,7 +221,7 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
 
         {seekToast && (
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="rounded-xl bg-black/70 px-4 py-2 font-heading text-lg font-semibold text-n1 backdrop-blur-sm animate-fade-in-out">
+            <div className="rounded-xl bg-black/70 px-4 py-2 font-heading text-lg font-semibold text-white backdrop-blur-sm animate-fade-in-out">
               {seekToast}
             </div>
           </div>
@@ -229,7 +229,7 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
 
         {/* Keyboard shortcuts hint — briefly shown on load */}
         {!compact && shortcutsHint && (
-          <div className="absolute bottom-4 right-4 z-10 hidden sm:flex items-center gap-1.5 rounded-lg bg-black/60 px-2.5 py-1.5 text-xs text-n4 backdrop-blur-sm transition-opacity duration-500">
+          <div className="absolute bottom-4 right-4 z-10 hidden sm:flex items-center gap-1.5 rounded-lg bg-black/60 px-2.5 py-1.5 text-xs text-white/70 backdrop-blur-sm transition-opacity duration-500">
             <kbd className="rounded bg-n7/60 px-1 py-0.5 font-mono text-[10px] text-n3">?</kbd>
             <span>keyboard shortcuts</span>
           </div>
