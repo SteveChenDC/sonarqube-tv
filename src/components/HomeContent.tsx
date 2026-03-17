@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect, useRef } from "react";
+import { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import Hero from "./Hero";
 import VideoRow from "./VideoRow";
 import { getAllProgress, removeProgress } from "@/lib/watchProgress";
@@ -100,8 +100,16 @@ export default function HomeContent({
   }, [videos, uploadDate, duration, sortBy]);
 
   const MAX_CATEGORY_ROW = 15;
-  const getVideosByCategory = (slug: string) =>
-    filteredVideos.filter((v) => v.category === slug);
+
+  /** Stable map of category slug → { sliced videos for the row, total count }. */
+  const videosByCategory = useMemo(() => {
+    const map = new Map<string, { videos: Video[]; total: number }>();
+    for (const category of categories) {
+      const all = filteredVideos.filter((v) => v.category === category.slug);
+      map.set(category.slug, { videos: all.slice(0, MAX_CATEGORY_ROW), total: all.length });
+    }
+    return map;
+  }, [categories, filteredVideos]);
 
   const { topRowVideos, topRowTotalCount } = useMemo(() => {
     const MAX_TOP_ROW = 15;
@@ -114,16 +122,20 @@ export default function HomeContent({
     return { topRowVideos: recentVideos.slice(0, MAX_TOP_ROW), topRowTotalCount: recentVideos.length };
   }, [filteredVideos, sortBy]);
 
-  const reset = () => {
+  const reset = useCallback(() => {
     setUploadDate("anytime");
     setDuration("any");
     setSortBy("newest");
-  };
+  }, []);
 
-  const [coursesRowHidden, setCoursesRowHidden] = useState(() => {
-    if (globalThis.window === undefined) return false;
-    try { return localStorage.getItem("sonarqube-tv-hide-courses") === "1"; } catch { return false; }
-  });
+  const [coursesRowHidden, setCoursesRowHidden] = useState(false);
+  useEffect(() => {
+    try {
+      if (localStorage.getItem("sonarqube-tv-hide-courses") === "1") {
+        setCoursesRowHidden(true);
+      }
+    } catch { /* noop */ }
+  }, []);
 
   const [continueWatchingVideos, setContinueWatchingVideos] = useState<Video[]>([]);
 
@@ -137,6 +149,35 @@ export default function HomeContent({
       .sort((a, b) => (progress[b.id] ?? 0) - (progress[a.id] ?? 0));
     setContinueWatchingVideos(inProgress);
   }, [videos]);
+
+  /** Stable callback for removing a video from the Continue Watching row. */
+  const handleRemoveVideo = useCallback((videoId: string) => {
+    removeProgress(videoId);
+    setContinueWatchingVideos((prev) => prev.filter((v) => v.id !== videoId));
+  }, []);
+
+  /** Stable merged videos list for the top row (Continue Watching + Latest/Oldest). */
+  const topRowMergedVideos = useMemo(() => {
+    if (continueWatchingVideos.length > 0 && topRowVideos.length > 0) {
+      return [...continueWatchingVideos, ...topRowVideos.filter((v) => !continueWatchingVideos.some((cw) => cw.id === v.id))];
+    }
+    if (continueWatchingVideos.length > 0) return continueWatchingVideos;
+    return topRowVideos;
+  }, [continueWatchingVideos, topRowVideos]);
+
+  /** Stable sectionLabels object — only defined when both sections are non-empty. */
+  const topRowSectionLabels = useMemo(() => {
+    if (continueWatchingVideos.length > 0 && topRowVideos.length > 0) {
+      return {
+        firstLabel: "Continue Watching",
+        firstCount: continueWatchingVideos.length,
+        secondLabel: sortBy === "oldest" ? "Oldest" : "Latest",
+        secondCount: topRowTotalCount,
+        splitAt: continueWatchingVideos.length,
+      };
+    }
+    return undefined;
+  }, [continueWatchingVideos, topRowVideos, sortBy, topRowTotalCount]);
 
   const activeFilterCount = [
     uploadDate !== "anytime",
@@ -208,40 +249,23 @@ export default function HomeContent({
               <div className="h-px w-3/4 bg-gradient-to-r from-transparent via-qube-blue/20 to-transparent" />
             </div>
             <VideoRow
-              title={(() => {
-                if (continueWatchingVideos.length > 0) return "Continue Watching";
-                if (sortBy === "oldest") return "Oldest";
-                return "Latest";
-              })()}
-              videos={(() => {
-                if (continueWatchingVideos.length > 0 && topRowVideos.length > 0) {
-                  return [...continueWatchingVideos, ...topRowVideos.filter(v => !continueWatchingVideos.some(cw => cw.id === v.id))];
-                }
-                if (continueWatchingVideos.length > 0) return continueWatchingVideos;
-                return topRowVideos;
-              })()}
+              title={
+                continueWatchingVideos.length > 0
+                  ? "Continue Watching"
+                  : sortBy === "oldest"
+                    ? "Oldest"
+                    : "Latest"
+              }
+              videos={topRowMergedVideos}
               hideHeader={continueWatchingVideos.length > 0 && topRowVideos.length > 0}
               dividerAfterIndex={
                 continueWatchingVideos.length > 0 && topRowVideos.length > 0
                   ? continueWatchingVideos.length
                   : undefined
               }
-              sectionLabels={
-                continueWatchingVideos.length > 0 && topRowVideos.length > 0
-                  ? {
-                      firstLabel: "Continue Watching",
-                      firstCount: continueWatchingVideos.length,
-                      secondLabel: sortBy === "oldest" ? "Oldest" : "Latest",
-                      secondCount: topRowTotalCount,
-                      splitAt: continueWatchingVideos.length,
-                    }
-                  : undefined
-              }
+              sectionLabels={topRowSectionLabels}
               totalCount={continueWatchingVideos.length === 0 ? topRowTotalCount : undefined}
-              onRemoveVideo={continueWatchingVideos.length > 0 ? (videoId) => {
-                removeProgress(videoId);
-                setContinueWatchingVideos((prev) => prev.filter((v) => v.id !== videoId));
-              } : undefined}
+              onRemoveVideo={continueWatchingVideos.length > 0 ? handleRemoveVideo : undefined}
             />
           </div>
         )}
@@ -288,16 +312,18 @@ export default function HomeContent({
 
         <div id="categories" className={`pt-8 pb-16${isSearching ? " hidden" : ""}`}>
               {categories.map((category) => {
-                const categoryVideos = getVideosByCategory(category.slug);
-                if (categoryVideos.length === 0 && hasActiveFilters) return null;
+                const entry = videosByCategory.get(category.slug);
+                const categoryVideos = entry?.videos ?? [];
+                const categoryTotal = entry?.total ?? 0;
+                if (categoryTotal === 0 && hasActiveFilters) return null;
                 return (
                   <div key={category.slug} className="relative pt-6">
                     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-n8/50 to-transparent" />
                     <VideoRow
                       title={category.title}
                       categorySlug={category.slug}
-                      videos={categoryVideos.slice(0, MAX_CATEGORY_ROW)}
-                      totalCount={categoryVideos.length}
+                      videos={categoryVideos}
+                      totalCount={categoryTotal}
                     />
                   </div>
                 );

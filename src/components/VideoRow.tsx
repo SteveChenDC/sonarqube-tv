@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useEffect, useCallback } from "react";
+import React, { useRef, useState, useEffect, useCallback, memo } from "react";
 import Link from "next/link";
 import { Video } from "@/types";
 import VideoCard from "./VideoCard";
@@ -47,7 +47,7 @@ interface VideoRowProps {
   onRemoveVideo?: (videoId: string) => void;
 }
 
-export default function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, dividerAfterIndex, sectionLabels, onRemoveVideo }: Readonly<VideoRowProps>) {
+function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, dividerAfterIndex, sectionLabels, onRemoveVideo }: Readonly<VideoRowProps>) {
   const hideCategoryBadge = !!categorySlug;
   const scrollRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -285,3 +285,5 @@ export default function VideoRow({ title, categorySlug, videos, totalCount, hide
     </section>
   );
 }
+
+export default memo(VideoRow);

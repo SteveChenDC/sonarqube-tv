@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Video } from "@/types";
@@ -42,7 +42,7 @@ function timeAgo(dateString: string): string {
   return "Just now";
 }
 
-export default function VideoCard({ video, fluid = false, onRemove, hideCategory = false }: Readonly<{ video: Video; fluid?: boolean; onRemove?: () => void; hideCategory?: boolean }>) {
+function VideoCard({ video, fluid = false, onRemove, hideCategory = false }: Readonly<{ video: Video; fluid?: boolean; onRemove?: () => void; hideCategory?: boolean }>) {
   const [progress, setProgress] = useState(0);
   const [imageLoaded, setImageLoaded] = useState(false);
   const categoryTitle = categories.find((c) => c.slug === video.category)?.title;
@@ -140,3 +140,5 @@ export default function VideoCard({ video, fluid = false, onRemove, hideCategory
     </Link>
   );
 }
+
+export default memo(VideoCard);
