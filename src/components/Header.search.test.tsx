@@ -205,6 +205,78 @@ describe("Header — search results", () => {
     const link = screen.getByText("SonarQube Introduction").closest("a");
     expect(link?.getAttribute("href")).toBe("/watch/hdr-vid-1");
   });
+
+  it("matches a video whose description contains the query even when the title does not", () => {
+    renderHeader();
+    openSearch();
+    // "Deep dive" appears in video 2's description ("Deep dive tutorial into code analysis")
+    // but NOT in its title ("Advanced Analysis") — tests the description branch of the filter
+    fireEvent.change(searchInput(), { target: { value: "Deep dive" } });
+    expect(screen.getByText("Advanced Analysis")).toBeInTheDocument();
+    expect(screen.queryByText("SonarQube Introduction")).toBeNull();
+  });
+
+  it("result items include a category badge with the category name", () => {
+    renderHeader();
+    openSearch();
+    fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
+    // Both test videos belong to "getting-started" which maps to "Getting Started"
+    expect(screen.getByText("Getting Started")).toBeInTheDocument();
+  });
+
+  it("clicking a result link clears the query and closes search", () => {
+    renderHeader();
+    openSearch();
+    fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
+    expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument();
+
+    const resultLink = screen.getByText("SonarQube Introduction").closest("a")!;
+    fireEvent.click(resultLink);
+
+    // onClick calls onSearchChange("") and setSearchOpen(false)
+    // → no input, no results
+    expect(screen.queryByRole("searchbox")).toBeNull();
+    expect(screen.queryByText("SonarQube Introduction")).toBeNull();
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Search — blur and click-outside behaviours
+// ─────────────────────────────────────────────────────────────────────────────
+describe("Header — search blur / click-outside", () => {
+  it("blurring the input when query is empty closes the search bar", () => {
+    renderHeader();
+    openSearch();
+    // Input is open but query is still empty — blur should close
+    expect(searchInput()).toBeInTheDocument();
+    fireEvent.blur(searchInput());
+    expect(screen.queryByRole("searchbox")).toBeNull();
+    expect(screen.getByRole("button", { name: "Search videos" })).toBeInTheDocument();
+  });
+
+  it("blurring the input when query is non-empty does NOT close search", () => {
+    renderHeader();
+    openSearch();
+    fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
+    fireEvent.blur(searchInput());
+    // Query is non-empty → handleSearchBlur guards against close
+    expect(searchInput()).toBeInTheDocument();
+  });
+
+  it("clicking outside the results area while results are visible clears the query", () => {
+    renderHeader();
+    openSearch();
+    fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
+    expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument();
+
+    // mousedown on document body (outside input and results ref)
+    act(() => {
+      fireEvent.mouseDown(document.body);
+    });
+
+    // The showResults mousedown handler calls onSearchChange("") → results vanish
+    expect(screen.queryByText("SonarQube Introduction")).toBeNull();
+  });
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
