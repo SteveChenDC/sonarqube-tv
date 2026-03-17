@@ -150,6 +150,64 @@ describe("FilterBar — accessibility & active state", () => {
   });
 });
 
+describe("FilterBar — animation state lifecycle (mounted/visible)", () => {
+  it("modal stays mounted in the DOM immediately after isOpen transitions from true to false", () => {
+    // Open the modal first
+    const { props, rerender } = renderFilterBar({ isOpen: true });
+    expect(document.querySelector("[role='dialog']")).not.toBeNull();
+
+    // Close the modal — mounted stays true while exit animation plays
+    rerender(<FilterBar {...props} isOpen={false} />);
+
+    // Modal must still be in the DOM — handleTransitionEnd hasn't fired yet
+    expect(document.querySelector("[role='dialog']")).not.toBeNull();
+  });
+
+  it("modal unmounts from the DOM after transitionend fires when closing", () => {
+    const { props, rerender } = renderFilterBar({ isOpen: true });
+
+    // Transition to closed state
+    rerender(<FilterBar {...props} isOpen={false} />);
+
+    // Confirm still mounted during exit animation
+    const dialog = document.querySelector("[role='dialog']")!;
+    expect(dialog).not.toBeNull();
+
+    // Simulate CSS transition completing — should trigger handleTransitionEnd → setMounted(false)
+    fireEvent.transitionEnd(dialog);
+
+    // Modal should now be fully unmounted
+    expect(document.querySelector("[role='dialog']")).toBeNull();
+  });
+
+  it("backdrop has transparent class when isOpen transitions to false (visible=false)", () => {
+    const { props, rerender } = renderFilterBar({ isOpen: true });
+
+    rerender(<FilterBar {...props} isOpen={false} />);
+
+    const dialog = document.querySelector("[role='dialog']")!;
+    // visible=false → backdrop should use the transparent class, not the opaque one
+    expect(dialog.className).toContain("bg-black/0");
+    expect(dialog.className).not.toContain("bg-black/60");
+  });
+
+  it("re-opening the modal after close re-mounts and shows content", () => {
+    const { props, rerender } = renderFilterBar({ isOpen: true });
+
+    // Close
+    rerender(<FilterBar {...props} isOpen={false} />);
+    const dialog = document.querySelector("[role='dialog']")!;
+    fireEvent.transitionEnd(dialog); // fully unmount
+
+    expect(document.querySelector("[role='dialog']")).toBeNull();
+
+    // Re-open
+    rerender(<FilterBar {...props} isOpen={true} />);
+    expect(document.querySelector("[role='dialog']")).not.toBeNull();
+    expect(screen.getByText("Filters")).toBeInTheDocument();
+  });
+});
+
 describe("FilterTrigger", () => {
   it("renders the Filters button", () => {
     render(<FilterTrigger activeCount={0} onClick={vi.fn()} />);
