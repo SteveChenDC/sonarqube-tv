@@ -10,11 +10,31 @@ import type { UploadDateFilter, DurationFilter, SortBy } from "./FilterBar";
 import ScrollToTop from "./ScrollToTop";
 
 const FilterBar = dynamic(() => import("./FilterBar"), { ssr: false });
+
+// CourseCard pulls in @/lib/courseProgress (~96 lines of localStorage logic) eagerly.
+// Dynamically importing it defers that code out of the initial HomeContent bundle;
+// the skeleton prevents CLS while the tiny chunk fetches.
+function CourseCardSkeleton() {
+  return (
+    <div className="flex w-[300px] shrink-0 flex-col overflow-hidden rounded-xl border border-n8 bg-n9/60 sm:w-[320px]">
+      <div className="h-36 animate-pulse bg-n8" />
+      <div className="flex flex-col gap-2 p-4">
+        <div className="h-3 w-16 animate-pulse rounded-full bg-n8" />
+        <div className="h-4 w-40 animate-pulse rounded bg-n8" />
+        <div className="h-3 w-28 animate-pulse rounded bg-n8" />
+        <div className="mt-auto h-8 w-full animate-pulse rounded-lg bg-n8" />
+      </div>
+    </div>
+  );
+}
+const CourseCard = dynamic(() => import("./CourseCard"), {
+  loading: () => <CourseCardSkeleton />,
+});
+
 import { Video, Category } from "@/types";
 import { featuredYoutubeIds } from "@/data/videos";
 import { courses } from "@/data/courses";
 import { useIsSearching } from "./SearchContext";
-import CourseCard from "./CourseCard";
 
 function parseDurationMinutes(duration: string): number {
   const parts = duration.split(":").map(Number);
