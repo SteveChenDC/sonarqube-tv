@@ -150,6 +150,7 @@ export default function ArticleTabs({
 }>) {
   const [tab, setTab] = useState<"article" | "transcript">(transcript ? "transcript" : "article");
   const [collapsed, setCollapsed] = useState(false);
+  const [slideDirection, setSlideDirection] = useState<"right" | "left" | null>(null);
 
   const chapters = useMemo(() => {
     if (!article || !transcript) return [];
@@ -184,6 +185,9 @@ export default function ArticleTabs({
                 if (tab === t.key) {
                   setCollapsed((c) => !c);
                 } else {
+                  const currentIndex = tabs.findIndex((x) => x.key === tab);
+                  const nextIndex = tabs.findIndex((x) => x.key === t.key);
+                  setSlideDirection(nextIndex > currentIndex ? "right" : "left");
                   setTab(t.key);
                   setCollapsed(false);
                 }
@@ -216,7 +220,16 @@ export default function ArticleTabs({
       >
         <div className="overflow-hidden">
           <div className="p-5 sm:p-6">
-            <div key={tab} className="animate-tab-in">
+            <div
+              key={tab}
+              className={
+                slideDirection === "right"
+                  ? "animate-tab-slide-right"
+                  : slideDirection === "left"
+                  ? "animate-tab-slide-left"
+                  : "animate-tab-in"
+              }
+            >
               {tab === "article" && article && (
                 <div>{renderMarkdown(article.markdown)}</div>
               )}
