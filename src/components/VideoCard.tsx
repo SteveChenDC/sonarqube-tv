@@ -4,7 +4,7 @@ import { useState, useEffect, memo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Video } from "@/types";
-import { categories } from "@/data/videos";
+import { categories } from "@/data/categories";
 import { getProgress } from "@/lib/watchProgress";
 
 function parseDurationToMinutes(duration: string): number {

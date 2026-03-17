@@ -1214,6 +1214,118 @@ describe("HomeContent — top row Latest/Oldest logic", () => {
     expect(allH2Text.some((t) => t.startsWith("Latest"))).toBe(true);
   });
 
+  // ---------------------------------------------------------------------------
+  // CW+topRow deduplication
+  // When a video is both in-progress (CW) AND recent (within 30 days), the
+  // merged VideoRow should contain it exactly once — not duplicated.
+  // Logic: topRowVideos.filter(v => !continueWatchingVideos.some(cw => cw.id === v.id))
+  // ---------------------------------------------------------------------------
+
+  it("CW+topRow dedup: in-progress recent video appears only once in the merged top row", async () => {
+    // sharedVideo is in-progress (→ CW) AND recent (→ topRow) — overlap candidate
+    const sharedVideo = makeVideo({
+      id: "shared-dedup",
+      title: "Shared Dedup Video",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(), // 5 days ago
+    });
+    // pureRecent is only recent (not in CW) — ensures topRow is non-empty
+    const pureRecent = makeVideo({
+      id: "pure-recent-dedup",
+      title: "Pure Recent Dedup Video",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000).toISOString(), // 10 days ago
+    });
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ "shared-dedup": 45 }));
+
+    const { container } = render(
+      <HomeContent categories={CAT} videos={[sharedVideo, pureRecent]} />
+    );
+    await act(async () => {});
+
+    // The top row is wrapped in the div with class "relative pt-10"
+    // sharedVideo would be duplicated without the dedup filter
+    const topRowSection = container.querySelector(".pt-10");
+    expect(topRowSection).not.toBeNull();
+
+    const topRowH3s = Array.from(topRowSection!.querySelectorAll("h3")).map(
+      (h) => h.textContent ?? ""
+    );
+    const sharedCount = topRowH3s.filter((t) => t === "Shared Dedup Video").length;
+    // Must appear exactly once — not twice (once from CW + once from topRow)
+    expect(sharedCount).toBe(1);
+  });
+
+  it("CW+topRow dedup: non-CW recent video still appears in the merged top row after dedup", async () => {
+    const cwVideo = makeVideo({
+      id: "cw-only-dedup",
+      title: "CW Only Video",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+    const recentOnlyVideo = makeVideo({
+      id: "recent-only-dedup",
+      title: "Recent Only Video",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+
+    // cwVideo is in progress; recentOnlyVideo is not
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ "cw-only-dedup": 60 }));
+
+    const { container } = render(
+      <HomeContent categories={CAT} videos={[cwVideo, recentOnlyVideo]} />
+    );
+    await act(async () => {});
+
+    const topRowSection = container.querySelector(".pt-10");
+    expect(topRowSection).not.toBeNull();
+
+    const topRowH3s = Array.from(topRowSection!.querySelectorAll("h3")).map(
+      (h) => h.textContent ?? ""
+    );
+    // CW video appears once (from CW section)
+    expect(topRowH3s.filter((t) => t === "CW Only Video").length).toBe(1);
+    // Recent-only video appears once (from Latest section, not filtered out)
+    expect(topRowH3s.filter((t) => t === "Recent Only Video").length).toBe(1);
+  });
+
+  it("CW+topRow dedup: when every topRow video is also in CW, merged row has no duplicates", async () => {
+    // Both videos are in-progress AND recent
+    const vid1 = makeVideo({
+      id: "all-cw-1",
+      title: "All CW Video One",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+    const vid2 = makeVideo({
+      id: "all-cw-2",
+      title: "All CW Video Two",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 6 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ "all-cw-1": 40, "all-cw-2": 70 }));
+
+    const { container } = render(
+      <HomeContent categories={CAT} videos={[vid1, vid2]} />
+    );
+    await act(async () => {});
+
+    const topRowSection = container.querySelector(".pt-10");
+    expect(topRowSection).not.toBeNull();
+
+    const topRowH3s = Array.from(topRowSection!.querySelectorAll("h3")).map(
+      (h) => h.textContent ?? ""
+    );
+    // Each video appears exactly once — no duplicate from the topRow overlap
+    expect(topRowH3s.filter((t) => t === "All CW Video One").length).toBe(1);
+    expect(topRowH3s.filter((t) => t === "All CW Video Two").length).toBe(1);
+    // Total unique card count in the merged row is exactly 2
+    expect(topRowH3s.length).toBe(2);
+  });
+
   it("Oldest sort: top row shows all filtered videos (not just recent ones)", async () => {
     const oldVideo = makeVideo({
       id: "oldest-old",

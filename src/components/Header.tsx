@@ -3,10 +3,15 @@
 import { useState, useRef, useEffect, useCallback, useMemo } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
-import { categories, videos } from "@/data/videos";
-import { courses } from "@/data/courses";
-import { getCourseVideos, getCourseTotalDuration } from "@/data/courses";
+import { categories } from "@/data/categories";
 import { useSearch } from "./SearchContext";
+import type { Video, Course } from "@/types";
+
+type CoursesModule = {
+  courses: Course[];
+  getCourseVideos: (c: Course) => Video[];
+  getCourseTotalDuration: (c: Course) => string;
+};
 
 function SonarWhaleMark({ className }: Readonly<{ className?: string }>) {
   return (
@@ -164,6 +169,37 @@ export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
+  // Lazy-load video search data the first time search is opened.
+  // videos.ts is ~95 KB — deferring it keeps it off the initial bundle.
+  const [searchVideos, setSearchVideos] = useState<Video[]>([]);
+  const searchDataLoaded = useRef(false);
+
+  useEffect(() => {
+    if (!searchOpen || searchDataLoaded.current) return;
+    searchDataLoaded.current = true;
+    import("@/data/videos").then(({ videos: vids }) => {
+      setSearchVideos(vids);
+    });
+  }, [searchOpen]);
+
+  // Lazy-load courses data the first time the Courses dropdown is opened.
+  // courses.ts transitively imports videos.ts (~95 KB) — deferring keeps
+  // both off the initial bundle on every non-home page.
+  const [coursesModule, setCoursesModule] = useState<CoursesModule | null>(null);
+  const coursesModuleLoaded = useRef(false);
+
+  useEffect(() => {
+    if (!coursesOpen || coursesModuleLoaded.current) return;
+    coursesModuleLoaded.current = true;
+    import("@/data/courses").then((mod) => {
+      setCoursesModule({
+        courses: mod.courses,
+        getCourseVideos: mod.getCourseVideos,
+        getCourseTotalDuration: mod.getCourseTotalDuration,
+      });
+    });
+  }, [coursesOpen]);
+
   useEffect(() => {
     if (searchOpen) {
       // Small delay to let the width transition start before focusing
@@ -176,12 +212,12 @@ export default function Header() {
   const searchResults = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
     if (!q) return [];
-    return videos.filter(
+    return searchVideos.filter(
       (v) =>
         v.title.toLowerCase().includes(q) ||
         v.description.toLowerCase().includes(q)
     );
-  }, [searchQuery]);
+  }, [searchQuery, searchVideos]);
 
   const searchResultsRef = useRef<HTMLDivElement>(null);
   const showResults = searchOpen && searchQuery.trim().length > 0;
@@ -430,36 +466,51 @@ export default function Header() {
                   </Link>
                 </div>
                 <div className="space-y-1">
-                  {courses.map((course) => {
-                    const totalVids = getCourseVideos(course).length;
-                    const dur = getCourseTotalDuration(course);
-                    return (
-                      <Link
-                        key={course.id}
-                        href={`/courses/${course.slug}`}
-                        onClick={() => setCoursesOpen(false)}
-                        className="group flex items-start gap-3 rounded-lg p-2.5 transition-colors hover:bg-n8/50"
-                      >
-                        <img
-                          src={`/courses/${course.id}.png`}
-                          alt={course.title}
-                          className="mt-0.5 h-8 w-14 shrink-0 rounded object-cover"
-                        />
-                        <div className="min-w-0 flex-1">
-                          <span className="font-heading text-sm font-semibold text-n2 group-hover:text-n1">
-                            {course.title}
-                          </span>
-                          <div className="mt-0.5 flex items-center gap-2 text-xs text-n5">
-                            <span>{totalVids} videos</span>
-                            <span className="text-n7">&middot;</span>
-                            <span>{dur}</span>
-                            <span className="text-n7">&middot;</span>
-                            <span className="capitalize">{course.difficulty}</span>
+                  {coursesModule
+                    ? coursesModule.courses.map((course) => {
+                        const totalVids = coursesModule.getCourseVideos(course).length;
+                        const dur = coursesModule.getCourseTotalDuration(course);
+                        return (
+                          <Link
+                            key={course.id}
+                            href={`/courses/${course.slug}`}
+                            onClick={() => setCoursesOpen(false)}
+                            className="group flex items-start gap-3 rounded-lg p-2.5 transition-colors hover:bg-n8/50"
+                          >
+                            <img
+                              src={`/courses/${course.id}.png`}
+                              alt={course.title}
+                              className="mt-0.5 h-8 w-14 shrink-0 rounded object-cover"
+                            />
+                            <div className="min-w-0 flex-1">
+                              <span className="font-heading text-sm font-semibold text-n2 group-hover:text-n1">
+                                {course.title}
+                              </span>
+                              <div className="mt-0.5 flex items-center gap-2 text-xs text-n5">
+                                <span>{totalVids} videos</span>
+                                <span className="text-n7">&middot;</span>
+                                <span>{dur}</span>
+                                <span className="text-n7">&middot;</span>
+                                <span className="capitalize">{course.difficulty}</span>
+                              </div>
+                            </div>
+                          </Link>
+                        );
+                      })
+                    : /* Loading skeleton — shown for the ~ms before the dynamic import resolves */
+                      Array.from({ length: 3 }).map((_, i) => (
+                        <div
+                          key={i}
+                          className="flex items-start gap-3 rounded-lg p-2.5"
+                          aria-hidden="true"
+                        >
+                          <div className="mt-0.5 h-8 w-14 shrink-0 animate-pulse rounded bg-n8" />
+                          <div className="min-w-0 flex-1 space-y-1.5">
+                            <div className="h-3.5 w-3/4 animate-pulse rounded bg-n8" />
+                            <div className="h-3 w-1/2 animate-pulse rounded bg-n8/70" />
                           </div>
                         </div>
-                      </Link>
-                    );
-                  })}
+                      ))}
                 </div>
               </div>
             )}

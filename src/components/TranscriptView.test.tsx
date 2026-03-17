@@ -326,4 +326,63 @@ describe("TranscriptView — auto-scroll paused indicator", () => {
 
     expect(screen.queryByText("Auto-scroll paused")).toBeNull();
   });
+
+  it("does NOT show paused indicator when user scrolls but no segment is active (activeOffset=-1)", () => {
+    // No yt-time event fired → activeOffset stays -1.
+    // Even if isPaused becomes true from the scroll, the guard
+    // `isPaused && activeOffset >= 0` keeps the indicator hidden.
+    const { container } = render(<TranscriptView segments={segments} />);
+
+    const scrollContainer = container.querySelector('[class*="overflow-y-auto"]');
+    fireEvent.scroll(scrollContainer!);
+
+    expect(screen.queryByText("Auto-scroll paused")).toBeNull();
+  });
+
+  it("programmatic auto-scroll does NOT trigger the paused indicator", () => {
+    // When activeOffset changes, the auto-scroll effect fires:
+    //   programmaticScrollRef.current = true → scrollTo() → setTimeout(reset, 500)
+    // A scroll event fired BEFORE the 500ms reset should be swallowed by
+    // `if (programmaticScrollRef.current) return` in handleScroll.
+    const { container } = render(<TranscriptView segments={segments} />);
+
+    // Activate segment 1 (offset=5000ms is within 5000–8999ms)
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: 6000 }));
+    });
+    // Do NOT advance time — programmaticScrollRef is still true here.
+
+    const scrollContainer = container.querySelector('[class*="overflow-y-auto"]');
+    fireEvent.scroll(scrollContainer!);
+
+    // Scroll was blocked by programmatic guard → isPaused stays false → no indicator
+    expect(screen.queryByText("Auto-scroll paused")).toBeNull();
+  });
+
+  it("paused indicator disappears when active segment ends and activeOffset falls to -1", () => {
+    // Confirm the guard holds even when isPaused is already true but there is
+    // suddenly no active segment (time jumps past all segments).
+    const { container } = render(<TranscriptView segments={segments} />);
+
+    // Step 1: activate a segment
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: 6000 }));
+    });
+    // Step 2: clear the programmatic-scroll guard
+    act(() => {
+      vi.advanceTimersByTime(600);
+    });
+    // Step 3: user scrolls → isPaused = true, indicator visible
+    const scrollContainer = container.querySelector('[class*="overflow-y-auto"]');
+    fireEvent.scroll(scrollContainer!);
+    expect(screen.getByText("Auto-scroll paused")).toBeTruthy();
+
+    // Step 4: time advances past all segments (last ends at 18000ms)
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: 20000 }));
+    });
+
+    // activeOffset is now -1 → indicator should disappear despite isPaused still being true
+    expect(screen.queryByText("Auto-scroll paused")).toBeNull();
+  });
 });

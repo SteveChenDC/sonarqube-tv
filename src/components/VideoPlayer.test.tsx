@@ -197,6 +197,19 @@ describe("VideoPlayer", () => {
 
     expect(screen.queryByText(/Resuming from/)).toBeNull();
   });
+
+  it("calls player.destroy() when the component unmounts", () => {
+    const { unmount } = render(
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+    );
+
+    // Player is initialized (YT is available in beforeEach)
+    expect(mockPlayer.destroy).not.toHaveBeenCalled();
+
+    unmount();
+
+    expect(mockPlayer.destroy).toHaveBeenCalledTimes(1);
+  });
 });
 
 describe("VideoPlayer — keyboard shortcuts overlay", () => {
@@ -430,6 +443,24 @@ describe("VideoPlayer — keyboard seek shortcuts", () => {
     // seekTo should NOT be called since key came from an input
     expect(mockPlayer.seekTo).not.toHaveBeenCalled();
   });
+
+  it("keyboard shortcuts are ignored when focus is on a TEXTAREA element", () => {
+    render(
+      <>
+        <textarea data-testid="text-area" />
+        <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      </>
+    );
+
+    const textarea = screen.getByTestId("text-area");
+    act(() => {
+      fireEvent.keyDown(textarea, { key: "ArrowLeft" });
+    });
+
+    // seekTo should NOT be called since key came from a textarea
+    expect(mockPlayer.seekTo).not.toHaveBeenCalled();
+  });
+
 });
 
 describe("VideoPlayer — autoPlay and playerId props", () => {

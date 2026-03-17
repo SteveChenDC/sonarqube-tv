@@ -32,8 +32,26 @@ const CourseCard = dynamic(() => import("./CourseCard"), {
 });
 
 import { Video, Category } from "@/types";
-import { featuredYoutubeIds } from "@/data/videos";
-import { courses } from "@/data/courses";
+// Import from courses-data (no videos.ts dependency) rather than courses.ts,
+// so the 228-video array (~86 KB) stays out of the initial HomeContent bundle.
+import { courses } from "@/data/courses-data";
+
+// Inlined from @/data/videos — avoids importing the full 228-video module
+// (101 KB) into the initial client bundle just for these 12 IDs.
+const featuredYoutubeIds = [
+  "F1F_CVD33WI", // Seven habits of highly effective AI coding (Erin Kouri)
+  "el9OKGrqU6o", // Refactoring with Cognitive Complexity (Ann Campbell)
+  "g6BqDORtdkE", // Fireside chat with DATEV (two people)
+  "ACZqTrM5Frs", // Interview - Product Manager
+  "2jYXRu9dOJM", // Interview - Software Engineer
+  "i95lJmsWEHc", // Interview - Python Developer
+  "D-ycv935v64", // Live with ISMG
+  "cPxwIpV6VBI", // SecurityGuy TV (three people)
+  "doEikRO9GF8", // MISRA C++ 2023 (Phil Nash & Andreas Weis)
+  "4Ya5K95pmKQ", // MS Build 2024 (Manish Kapur)
+  "kfu0M0G591s", // Linux Foundation (two people)
+  "vGfM3FInXTQ", // Supercharge your developers (three people)
+];
 import { useIsSearching } from "./SearchContext";
 
 function parseDurationMinutes(duration: string): number {

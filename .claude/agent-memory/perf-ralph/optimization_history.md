@@ -43,9 +43,21 @@ type: project
 - Hero image has `priority` + `fetchPriority="high"` for LCP
 - `images: { unoptimized: true }` in next.config.ts (static export — server-side optimization not available)
 
+### 2026-03-17 — Split SearchContext to eliminate HomeContent re-renders on keystrokes
+- **Commit**: `perf: split SearchContext so HomeContent only re-renders on search toggle`
+- **What**: Refactored `SearchContext` into two separate React contexts: `SearchQueryContext` (raw string + mutators, consumed by `Header`) and `SearchIsSearchingContext` (boolean, consumed by `HomeContent`). Added new `useIsSearching()` hook. Updated `HomeContent` to call `useIsSearching()` instead of `useSearch()`.
+- **Impact**: `HomeContent` (11 VideoRows + CourseCard children) previously re-rendered on every keystroke during search. Now it only re-renders when the user starts or stops searching — eliminating N−2 reconciliation cycles per session where N = characters typed.
+
+### 2026-03-17 — Dynamic import CourseCard in HomeContent
+- **Commit**: `perf: dynamic import CourseCard to defer courseProgress from initial bundle`
+- **What**: Replaced static `CourseCard` import in `HomeContent.tsx` with `next/dynamic`. Added `CourseCardSkeleton` (skeleton matching card dimensions) as the loading fallback to prevent CLS.
+- **Impact**: Deferred ~183 lines of CourseCard + ~96 lines of `@/lib/courseProgress` (localStorage logic) out of the initial HomeContent bundle into a lazy-loaded chunk. CourseCards are below the hero + first VideoRow — not on the critical render path.
+
 ## Potential Next Opportunities
 
 1. **`CourseCard` double-render** — uses `useState(false)` + `useEffect(() => setMounted(true))` pattern to gate localStorage reads. This causes every CourseCard to render twice. The pattern is necessary to avoid hydration mismatches — localStorage isn't available at SSR/build time. The only way to eliminate it would be cookies (available during SSR). Low priority.
 2. **`VideoCard` double-render** — same `useState(0)` + `useEffect` pattern for watch progress. Same caveat as above. Low priority since progress bar appears after hydration.
 3. **Debounce search input** — the `SearchContext` does not debounce; if search filtering is expensive, debouncing at 150ms could help. Current search is over static in-memory data so likely fast enough. Low priority.
-4. **Pre-existing test failures** — `ArticleTabs.test.tsx`, `HomeContent.test.tsx`, `FilterBar.test.tsx`, `WatchPage.test.tsx` have 29 pre-existing failing tests (not caused by perf-ralph). Do NOT count these as regressions from optimizations.
+4. **Header bundles full `videos` array** — `Header.tsx` imports `{ categories, videos }` for search. All 228 video objects are bundled client-side. A lean search-index file with only (id, title, description, category, thumbnail, duration) would reduce bundle size. Complex refactor but meaningful for clients with slow connections.
+5. **CategoryContent as server component** — The sort UI requires client state. If sort was moved to URL params (searchParams), CategoryContent could become a server component. Significant architecture change.
+6. **Pre-existing test failures** — `ArticleTabs.test.tsx`, `HomeContent.test.tsx`, `FilterBar.test.tsx`, `WatchPage.test.tsx` have ~31 pre-existing failing tests (not caused by perf-ralph). Do NOT count these as regressions from optimizations.

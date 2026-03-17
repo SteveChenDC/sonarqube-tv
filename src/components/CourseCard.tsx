@@ -14,7 +14,7 @@ import { getCourseVideos, getCourseTotalDuration } from "@/data/courses";
 
 const difficultyStyles = {
   beginner: "bg-qube-blue/15 text-qube-blue border-qube-blue/30",
-  intermediate: "bg-sonar-purple/25 text-n3 border-sonar-purple/40",
+  intermediate: "bg-amber-500/15 text-amber-400 border-amber-500/30",
   advanced: "bg-sonar-red/15 text-sonar-red border-sonar-red/30",
 } as const;
 
