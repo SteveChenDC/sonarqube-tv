@@ -152,6 +152,25 @@ export default function ArticleTabs({
   const [collapsed, setCollapsed] = useState(false);
   const [slideDirection, setSlideDirection] = useState<"right" | "left" | null>(null);
 
+  /** Move focus to the previous/next tab via arrow keys (ARIA tab pattern). */
+  function handleTabKeyDown(e: React.KeyboardEvent, currentIndex: number) {
+    const tabKeys = ["article", "transcript"].filter((k) =>
+      k === "article" ? !!article : !!transcript
+    ) as ("article" | "transcript")[];
+    let next = currentIndex;
+    if (e.key === "ArrowRight") next = (currentIndex + 1) % tabKeys.length;
+    else if (e.key === "ArrowLeft") next = (currentIndex - 1 + tabKeys.length) % tabKeys.length;
+    else if (e.key === "Home") next = 0;
+    else if (e.key === "End") next = tabKeys.length - 1;
+    else return;
+    e.preventDefault();
+    const nextKey = tabKeys[next];
+    document.getElementById(`tab-${nextKey}`)?.focus();
+    setSlideDirection(next > currentIndex ? "right" : "left");
+    setTab(nextKey);
+    setCollapsed(false);
+  }
+
   const chapters = useMemo(() => {
     if (!article || !transcript) return [];
     return extractChapters(article.markdown, transcript.segments);
@@ -167,7 +186,7 @@ export default function ArticleTabs({
   return (
     <div className="rounded-xl border border-n8 bg-n8/15 overflow-hidden">
       <div className="flex items-center border-b border-n8">
-        <div className="relative flex flex-1">
+        <div role="tablist" aria-label="Video content tabs" className="relative flex flex-1">
           {/* Sliding active indicator */}
           {tabs.length > 1 && (
             <span
@@ -178,9 +197,15 @@ export default function ArticleTabs({
               }}
             />
           )}
-          {tabs.map((t) => (
+          {tabs.map((t, i) => (
             <button
               key={t.key}
+              id={`tab-${t.key}`}
+              role="tab"
+              aria-selected={tab === t.key}
+              aria-controls="tab-panel"
+              tabIndex={tab === t.key ? 0 : -1}
+              onKeyDown={(e) => handleTabKeyDown(e, i)}
               onClick={() => {
                 if (tab === t.key) {
                   setCollapsed((c) => !c);
@@ -214,6 +239,9 @@ export default function ArticleTabs({
       </div>
 
       <div
+        id="tab-panel"
+        role="tabpanel"
+        aria-labelledby={`tab-${tab}`}
         className="grid transition-[grid-template-rows] duration-300 ease-in-out"
         style={{ gridTemplateRows: collapsed ? "0fr" : "1fr" }}
         aria-hidden={collapsed}
