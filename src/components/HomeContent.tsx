@@ -301,14 +301,27 @@ export default function HomeContent({
                 <span className="inline-block h-5 w-1 shrink-0 rounded-full bg-sonar-red" aria-hidden="true" />
                 <h2 className="font-heading text-lg font-semibold text-n1 sm:text-xl">
                   Certification Courses
+                  <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">
+                    {courses.length}
+                  </span>
                 </h2>
               </div>
               <div className="flex items-center gap-3">
                 <a
                   href="/courses"
-                  className="font-heading text-xs font-medium text-qube-blue transition-colors hover:text-qube-blue/80"
+                  className="group/link inline-flex items-center gap-1 font-heading text-xs font-medium text-qube-blue transition-colors hover:text-qube-blue/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
                 >
                   View all
+                  <svg
+                    className="h-3.5 w-3.5 transition-transform duration-200 group-hover/link:translate-x-0.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2.5}
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
                 </a>
                 <button
                   onClick={() => {
