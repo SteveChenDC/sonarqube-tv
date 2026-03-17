@@ -1,7 +1,6 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { render, screen, cleanup, fireEvent } from "@testing-library/react";
-import FilterBar from "./FilterBar";
-import { FilterTrigger } from "./FilterTrigger";
+import FilterBar, { FilterTrigger } from "./FilterBar";
 
 afterEach(cleanup);
 
@@ -115,6 +114,39 @@ describe("FilterBar", () => {
     if (!backdrop) throw new Error("Backdrop button not found");
     fireEvent.click(backdrop);
     expect(props.onOpenChange).toHaveBeenCalledWith(false);
+  });
+});
+
+describe("FilterBar — accessibility & active state", () => {
+  it("modal has role='dialog' and aria-modal='true' when open", () => {
+    renderFilterBar();
+    const dialog = document.querySelector("[role='dialog']");
+    expect(dialog).not.toBeNull();
+    expect(dialog).toHaveAttribute("aria-modal", "true");
+  });
+
+  it("active upload date button has highlight class (bg-qube-blue)", () => {
+    renderFilterBar({ uploadDate: "this-week" });
+    const activeBtn = screen.getByText("This week");
+    expect(activeBtn.className).toContain("bg-qube-blue");
+  });
+
+  it("inactive upload date buttons do NOT have the highlight class", () => {
+    renderFilterBar({ uploadDate: "this-week" });
+    const inactiveBtn = screen.getByText("Any time");
+    expect(inactiveBtn.className).not.toContain("bg-qube-blue");
+  });
+
+  it("active duration button has highlight class", () => {
+    renderFilterBar({ duration: "short" });
+    const activeBtn = screen.getByText("Under 4 min");
+    expect(activeBtn.className).toContain("bg-qube-blue");
+  });
+
+  it("active sort button has highlight class", () => {
+    renderFilterBar({ sortBy: "oldest" });
+    const activeBtn = screen.getByText("Oldest");
+    expect(activeBtn.className).toContain("bg-qube-blue");
   });
 });
 

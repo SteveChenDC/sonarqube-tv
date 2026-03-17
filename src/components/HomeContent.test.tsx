@@ -989,4 +989,78 @@ describe("HomeContent — upload date filters", () => {
     expect(titles.has("Ancient Video")).toBe(true);
     expect(titles.has("Fresh Video")).toBe(true);
   });
+
+  it("'Today' shows a video published 6 hours ago", () => {
+    const sixHoursAgo = makeVideo({
+      id: "today-6h",
+      title: "Six Hours Ago",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 6 * 60 * 60 * 1000).toISOString(),
+    });
+    const oldVideo = makeVideo({
+      id: "today-old",
+      title: "Old Today Video",
+      category: "tutorials",
+      publishedAt: "2020-01-01T00:00:00Z",
+    });
+
+    const container = renderWithVideos([sixHoursAgo, oldVideo]);
+    applyDateFilter("Today", container);
+
+    const titles = visibleTitles(container);
+    expect(titles.has("Six Hours Ago")).toBe(true);
+    expect(titles.has("Old Today Video")).toBe(false);
+  });
+
+  it("'Today' excludes a video published exactly 25 hours ago", () => {
+    const twentyFiveHoursAgo = makeVideo({
+      id: "today-25h",
+      title: "Twenty Five Hours Ago",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 25 * 60 * 60 * 1000).toISOString(),
+    });
+
+    const container = renderWithVideos([twentyFiveHoursAgo]);
+    applyDateFilter("Today", container);
+
+    expect(screen.getByText("No videos match your filters")).toBeTruthy();
+  });
+
+  it("combined 'Today' + 'Under 4 min': keeps recent-short, drops recent-long and old-short", () => {
+    const recentShort = makeVideo({
+      id: "td-combo-rs",
+      title: "Today Short Video",
+      category: "tutorials",
+      duration: "2:00",
+      publishedAt: new Date(Date.now() - 3 * 60 * 60 * 1000).toISOString(),
+    });
+    const recentLong = makeVideo({
+      id: "td-combo-rl",
+      title: "Today Long Video",
+      category: "tutorials",
+      duration: "30:00",
+      publishedAt: new Date(Date.now() - 3 * 60 * 60 * 1000).toISOString(),
+    });
+    const oldShort = makeVideo({
+      id: "td-combo-os",
+      title: "Old Short Video",
+      category: "tutorials",
+      duration: "2:00",
+      publishedAt: "2022-01-01T00:00:00Z",
+    });
+
+    render(<HomeContent categories={CAT} videos={[recentShort, recentLong, oldShort]} />);
+
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+    fireEvent.click(screen.getByText("Today"));
+    fireEvent.click(screen.getByText("Under 4 min"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    const titles = new Set(
+      Array.from(document.querySelectorAll("h3")).map((h) => h.textContent)
+    );
+    expect(titles.has("Today Short Video")).toBe(true);
+    expect(titles.has("Today Long Video")).toBe(false);
+    expect(titles.has("Old Short Video")).toBe(false);
+  });
 });
