@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
-import { render, waitFor, cleanup } from "@testing-library/react";
+import { render, waitFor, cleanup, fireEvent } from "@testing-library/react";
 import VideoCard from "./VideoCard";
 import { setProgress } from "@/lib/watchProgress";
 import type { Video } from "@/types";
@@ -122,6 +122,76 @@ describe("VideoCard", () => {
       const longVideo: Video = { ...mockVideo, duration: "1:05:00" };
       const { container } = render(<VideoCard video={longVideo} />);
       expect(container.querySelector(".bg-sonar-purple\\/80")).toBeTruthy();
+    });
+  });
+
+  describe("onRemove prop", () => {
+    it("renders a remove button with accessible label when onRemove is provided", () => {
+      const onRemove = vi.fn();
+      const { getByLabelText } = render(<VideoCard video={mockVideo} onRemove={onRemove} />);
+      const btn = getByLabelText("Remove Getting Started with SonarQube from continue watching");
+      expect(btn).toBeTruthy();
+    });
+
+    it("calls onRemove when the remove button is clicked", () => {
+      const onRemove = vi.fn();
+      const { getByLabelText } = render(<VideoCard video={mockVideo} onRemove={onRemove} />);
+      fireEvent.click(getByLabelText("Remove Getting Started with SonarQube from continue watching"));
+      expect(onRemove).toHaveBeenCalledTimes(1);
+    });
+
+    it("does not navigate to watch page when remove button is clicked (prevents default)", () => {
+      const onRemove = vi.fn();
+      const { getByLabelText } = render(<VideoCard video={mockVideo} onRemove={onRemove} />);
+      const btn = getByLabelText("Remove Getting Started with SonarQube from continue watching");
+      const clickEvent = new MouseEvent("click", { bubbles: true, cancelable: true });
+      btn.dispatchEvent(clickEvent);
+      expect(onRemove).toHaveBeenCalled();
+    });
+
+    it("does not render a remove button when onRemove is not provided", () => {
+      const { queryByLabelText } = render(<VideoCard video={mockVideo} />);
+      expect(queryByLabelText(/Remove.*from continue watching/)).toBeNull();
+    });
+  });
+
+  describe("hideCategory prop", () => {
+    it("hides the category badge when hideCategory is true", () => {
+      const catVideo: Video = { ...mockVideo, category: "getting-started" };
+      const { queryByText } = render(<VideoCard video={catVideo} hideCategory />);
+      expect(queryByText("Getting Started")).toBeNull();
+    });
+
+    it("shows the category badge when hideCategory is false (default)", () => {
+      const catVideo: Video = { ...mockVideo, category: "getting-started" };
+      const { getByText } = render(<VideoCard video={catVideo} />);
+      expect(getByText("Getting Started")).toBeTruthy();
+    });
+  });
+
+  describe("fluid prop", () => {
+    it("applies w-full to the thumbnail container when fluid is true", () => {
+      const { container } = render(<VideoCard video={mockVideo} fluid />);
+      const thumbDiv = container.querySelector(".aspect-video");
+      expect(thumbDiv?.className).toContain("w-full");
+    });
+
+    it("applies fixed width class to the thumbnail container when fluid is false (default)", () => {
+      const { container } = render(<VideoCard video={mockVideo} />);
+      const thumbDiv = container.querySelector(".aspect-video");
+      expect(thumbDiv?.className).toContain("w-[280px]");
+    });
+
+    it("applies text-base to title when fluid is true", () => {
+      const { container } = render(<VideoCard video={mockVideo} fluid />);
+      const heading = container.querySelector("h3");
+      expect(heading?.className).toContain("text-base");
+    });
+
+    it("applies fixed width class to title when fluid is false (default)", () => {
+      const { container } = render(<VideoCard video={mockVideo} />);
+      const heading = container.querySelector("h3");
+      expect(heading?.className).toContain("w-[280px]");
     });
   });
 
