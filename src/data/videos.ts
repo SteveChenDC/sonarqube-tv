@@ -2084,9 +2084,13 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   }
 ];
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export const videos: Video[] = rawVideos.map((v) => ({
   ...v,
-  thumbnail: v.thumbnail ?? ytThumbnail(v.youtubeId),
+  thumbnail: v.thumbnail
+    ? `${basePath}${v.thumbnail}`
+    : ytThumbnail(v.youtubeId),
 }));
 
 export function getVideoById(id: string): Video | undefined {
