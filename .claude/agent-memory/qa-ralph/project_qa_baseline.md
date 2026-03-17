@@ -4,12 +4,28 @@ description: Build and test baseline as of 2026-03-16 — what passes, known war
 type: project
 ---
 
-As of 2026-03-16 (thirty-ninth QA run), `npm run build` and `npm test` both pass clean. All 372 tests pass (39 test files).
+As of 2026-03-16 (forty-fourth QA run), `npm run build` and `npm test` both pass clean. All 385 tests pass (41 test files).
 
 **Build**: Next.js 16.1.6 (Turbopack), 250 static pages generated (SSG), no errors.
 - Known non-fatal warning: "Next.js inferred your workspace root" due to multiple lockfiles at `/Users/stevec/package-lock.json` and project root. Safe to ignore; does not affect build output.
 
-**Tests**: Vitest 4.1.0 — 39 test files, 372 tests. All 372 PASSING.
+**Tests**: Vitest 4.1.0 — 41 test files, 385 tests. All 385 PASSING.
+
+**Run 44 (2026-03-16)**: 3 failures in `Hero.visual.test.tsx`.
+- Error: Snapshot mismatches — expected `src="https://img.youtube.com/vi/snap123/maxresdefault.jpg"`, received `src="/snap-thumb.jpg"`. Third test ("both layouts render the same video data") also failed asserting the old YouTube maxresdefault URL.
+- Root cause: `Hero.tsx` was updated to use `video.thumbnail` directly (`const heroSrc = video.thumbnail;`) instead of constructing the YouTube maxresdefault URL from `youtubeId`. The test still referenced the old pattern.
+- Fix: Updated assertion comment and URL in test 3 to use `mockVideo.thumbnail` directly. Ran `npx vitest run -u` to refresh 2 stale snapshots. Committed as 187daf8.
+- Pattern: If Hero.visual.test.tsx fails with a src URL mismatch (YouTube maxresdefault vs direct thumbnail), check whether Hero.tsx changed from deriving the URL from `youtubeId` to using `video.thumbnail` directly. Fix by updating the assertion to use `mockVideo.thumbnail` and refresh snapshots with `-u`.
+
+**Run 43 (2026-03-16)**: Clean pass. 41 files, 385 tests. Count dropped from 42/398 due to unstaged work-in-progress deletions (`src/app/watch/[id]/page.test.tsx`, `src/components/__tests__/ArticleTabs.test.tsx` removed) and two new untracked test files added (`src/app/page.test.tsx`, `src/data/articles.test.ts`). No action needed — all tests pass.
+
+**Run 41 (2026-03-16)**: `src/app/layout.test.tsx` — "includes Organization JSON-LD script in the document" test was failing.
+- Error: `SyntaxError: Unexpected non-whitespace character after JSON at position 328` at `JSON.parse(jsonLdContent)`.
+- Root cause: A second JSON-LD script (WebSite schema) was added to layout.tsx. The test joined all `script[type="application/ld+json"]` textContent with `"\n"` and called `JSON.parse()` on the concatenation — two JSON objects separated by `\n` is not valid JSON.
+- Fix: Changed to parse each script individually with `JSON.parse()` and use `.find()` to locate the one with `@type === "Organization"`. Committed as 5516475.
+- Pattern: If layout.test.tsx JSON-LD test fails with a JSON parse error, check if additional JSON-LD scripts were added to layout.tsx. The fix is to parse scripts individually and find by `@type`, not join all scripts into one parse call.
+
+**Run 40**: `npm run build` and `npm test` both passed clean. 372 tests (39 files), 250 pages.
 
 **Run 39**: `src/components/CourseCard.test.tsx` — "shows short title in header" test was failing (searching for "TC" shortTitle text not rendered by the component). File was concurrently modified before fix applied, correcting the test to "shows course image in header" using `getByAltText`. All tests now pass.
 - Pattern: CourseCard does NOT render `course.shortTitle` — the field exists on the `Course` type but is not displayed in the card UI. Tests should not assert on `shortTitle` text in CourseCard.
@@ -61,8 +77,8 @@ As of 2026-03-16 (thirty-ninth QA run), `npm run build` and `npm test` both pass
 - Fix applied to tests (not component): Assert `aria-hidden="true"` on the panel wrapper div instead of checking DOM presence.
 - Pattern: When a component uses CSS-only show/hide (grid rows, opacity, height), test the semantic attribute (`aria-hidden`) rather than DOM presence.
 
-**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (runs 19–24, stable) → 219 (run 25, stable) → 219 (runs 26–36, stable) → 245 (run 37, 27 test files) → 318 (run 38, 36 test files) → 372 (run 39, 39 test files)
-**Page count history**: 242 → 243 → 250 (run 38–39)
+**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (runs 19–24, stable) → 219 (run 25, stable) → 219 (runs 26–36, stable) → 245 (run 37, 27 test files) → 318 (run 38, 36 test files) → 372 (run 39, 39 test files) → 398 (run 41, 42 test files) → 385 (run 43–44, 41 test files)
+**Page count history**: 242 → 243 → 250 (run 38–44)
 
 **Why:** Ongoing QA baseline tracking.
-**How to apply:** If Hero.visual.test.tsx snapshot fails, check if gradient overlay CSS classes in Hero.tsx changed (including light/dark variant additions) — update with `npx vitest run -u`. If VideoRow.visual snapshots fail, first check if a new persistent DOM element was added to VideoCard (shimmer, overlay, badge) — stale snapshot is likely the culprit, fix with `npx vitest run -u`. If Footer link tests fail, check whether `aria-label` attributes on social/nav links were changed. If ArticleTabs collapse tests fail again, check whether the component changed from CSS-based to conditional rendering and align test strategy accordingly. If HomeContent empty-state tests fail, check whether the heading copy in HomeContent.tsx changed (exact text, punctuation included). If CategoryContent test count drops/changes, check if props were removed from the component — the test file is kept in sync with the component interface. If a new test file fails to parse (0 tests, transform error), check for `}[]` postfix array syntax in TypeScript type annotations inside vi.fn() callbacks — replace with `Array<{...}>` form. If CourseCard tests fail on shortTitle/TC text, note that CourseCard does NOT render shortTitle — fix the test to use the full title or image alt text.
+**How to apply:** If Hero.visual.test.tsx fails with a src URL mismatch (YouTube maxresdefault URL vs `/snap-thumb.jpg`), check whether Hero.tsx changed to use `video.thumbnail` directly — fix by updating test assertion to `mockVideo.thumbnail` and refresh snapshots with `npx vitest run -u`. If layout.test.tsx JSON-LD test fails with a JSON parse error, check if additional JSON-LD scripts were added to layout.tsx — fix by parsing each script individually and using `.find()` by `@type`. If Hero.visual.test.tsx snapshot fails due to CSS changes, update with `npx vitest run -u`. If VideoRow.visual snapshots fail, first check if a new persistent DOM element was added to VideoCard (shimmer, overlay, badge) — stale snapshot is likely the culprit, fix with `npx vitest run -u`. If Footer link tests fail, check whether `aria-label` attributes on social/nav links were changed. If ArticleTabs collapse tests fail again, check whether the component changed from CSS-based to conditional rendering and align test strategy accordingly. If HomeContent empty-state tests fail, check whether the heading copy in HomeContent.tsx changed (exact text, punctuation included). If CategoryContent test count drops/changes, check if props were removed from the component — the test file is kept in sync with the component interface. If a new test file fails to parse (0 tests, transform error), check for `}[]` postfix array syntax in TypeScript type annotations inside vi.fn() callbacks — replace with `Array<{...}>` form. If CourseCard tests fail on shortTitle/TC text, note that CourseCard does NOT render shortTitle — fix the test to use the full title or image alt text.

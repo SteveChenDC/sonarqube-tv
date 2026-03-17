@@ -17,15 +17,10 @@ function isDescriptionRedundant(title: string, description: string): boolean {
   return false;
 }
 
-/** Full-resolution YouTube thumbnail for hero/LCP use (1280×720). */
-function heroThumbnail(youtubeId: string): string {
-  return `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
-}
-
 export default function Hero({ video, actions }: Readonly<{ video: Video; actions?: ReactNode }>) {
   const category = categories.find((c) => c.slug === video.category);
   const showDescription = video.description && !isDescriptionRedundant(video.title, video.description);
-  const heroSrc = heroThumbnail(video.youtubeId);
+  const heroSrc = video.thumbnail;
 
   return (
     <>

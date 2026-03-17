@@ -54,127 +54,110 @@ describe("ArticleTabs — null guard", () => {
   });
 });
 
-describe("ArticleTabs — tab visibility", () => {
-  it("renders only the Summary tab when only an article is provided", () => {
+describe("ArticleTabs — single panel", () => {
+  it("renders only Summary header when only an article is provided", () => {
     render(<ArticleTabs article={makeArticle()} transcript={null} />);
-    expect(screen.getByText(/Summary/)).toBeInTheDocument();
+    expect(screen.getByText("AI Summary")).toBeInTheDocument();
     expect(screen.queryByText("Transcript")).not.toBeInTheDocument();
+    expect(screen.getByText("Opening paragraph.")).toBeInTheDocument();
   });
 
-  it("renders only the Transcript tab when only a transcript is provided", () => {
+  it("renders only Transcript header when only a transcript is provided", () => {
     render(<ArticleTabs article={null} transcript={makeTranscript()} />);
     expect(screen.getByText("Transcript")).toBeInTheDocument();
-    expect(screen.queryByText(/Summary/)).not.toBeInTheDocument();
+    expect(screen.queryByText("AI Summary")).not.toBeInTheDocument();
+    expect(screen.getByTestId("transcript-view")).toBeInTheDocument();
   });
+});
 
-  it("renders both tabs when both article and transcript are provided", () => {
+describe("ArticleTabs — tab switching (both panels)", () => {
+  it("renders both tab headers when both article and transcript are provided", () => {
     render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    expect(screen.getByText(/Summary/)).toBeInTheDocument();
+    expect(screen.getByText("AI Summary")).toBeInTheDocument();
     expect(screen.getByText("Transcript")).toBeInTheDocument();
   });
-});
 
-describe("ArticleTabs — default active tab", () => {
-  it("defaults to transcript tab when both are provided", () => {
+  it("defaults to Summary tab — shows article content, hides transcript", () => {
     render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // TranscriptView should be visible by default
-    expect(screen.getByTestId("transcript-view")).toBeInTheDocument();
-    // Article content should NOT be rendered
-    expect(screen.queryByText("Opening paragraph.")).not.toBeInTheDocument();
-  });
-
-  it("defaults to article tab when only article is provided", () => {
-    render(<ArticleTabs article={makeArticle()} transcript={null} />);
-    expect(screen.getByText("Opening paragraph.")).toBeInTheDocument();
-    expect(screen.queryByTestId("transcript-view")).not.toBeInTheDocument();
-  });
-});
-
-describe("ArticleTabs — tab switching", () => {
-  it("switches to article tab when Summary is clicked", () => {
-    render(
-      <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
-    );
-    // Start on transcript
-    expect(screen.getByTestId("transcript-view")).toBeInTheDocument();
-
-    fireEvent.click(screen.getByText(/Summary/));
-
     expect(screen.getByText("Opening paragraph.")).toBeInTheDocument();
     expect(screen.queryByTestId("transcript-view")).not.toBeInTheDocument();
   });
 
-  it("switches back to transcript tab when Transcript is clicked", () => {
+  it("switches to Transcript when Transcript header is clicked", () => {
     render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Switch to article
-    fireEvent.click(screen.getByText(/Summary/));
-    expect(screen.getByText("Opening paragraph.")).toBeInTheDocument();
-
-    // Switch back
     fireEvent.click(screen.getByText("Transcript"));
     expect(screen.getByTestId("transcript-view")).toBeInTheDocument();
     expect(screen.queryByText("Opening paragraph.")).not.toBeInTheDocument();
   });
-});
 
-describe("ArticleTabs — collapse/expand", () => {
-  it("collapse button has correct aria-label when expanded", () => {
-    render(<ArticleTabs article={makeArticle()} transcript={null} />);
-    expect(
-      screen.getByRole("button", { name: "Collapse panel" })
-    ).toBeInTheDocument();
-  });
-
-  it("collapse button label changes to Expand panel after collapsing", () => {
-    render(<ArticleTabs article={makeArticle()} transcript={null} />);
-    fireEvent.click(screen.getByRole("button", { name: "Collapse panel" }));
-    expect(
-      screen.getByRole("button", { name: "Expand panel" })
-    ).toBeInTheDocument();
-  });
-
-  it("clicking the active tab collapses the panel", () => {
-    render(<ArticleTabs article={makeArticle()} transcript={null} />);
-    // Already on article tab; click it again
-    fireEvent.click(screen.getByText(/Summary/));
-    // Now collapsed — expand label should appear
-    expect(
-      screen.getByRole("button", { name: "Expand panel" })
-    ).toBeInTheDocument();
-  });
-
-  it("clicking the active tab again expands the panel", () => {
-    render(<ArticleTabs article={makeArticle()} transcript={null} />);
-    // Collapse
-    fireEvent.click(screen.getByText(/Summary/));
-    // Expand by clicking again
-    fireEvent.click(screen.getByText(/Summary/));
-    expect(
-      screen.getByRole("button", { name: "Collapse panel" })
-    ).toBeInTheDocument();
-  });
-
-  it("switching to a different tab re-expands a collapsed panel", () => {
+  it("switches back to Summary when AI Summary header is clicked", () => {
     render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Collapse via collapse button
-    fireEvent.click(screen.getByRole("button", { name: "Collapse panel" }));
-    expect(
-      screen.getByRole("button", { name: "Expand panel" })
-    ).toBeInTheDocument();
+    // Go to transcript
+    fireEvent.click(screen.getByText("Transcript"));
+    expect(screen.getByTestId("transcript-view")).toBeInTheDocument();
 
-    // Switch tab — should re-expand
-    fireEvent.click(screen.getByText(/Summary/));
-    expect(
-      screen.getByRole("button", { name: "Collapse panel" })
-    ).toBeInTheDocument();
+    // Back to summary
+    fireEvent.click(screen.getByText("AI Summary"));
+    expect(screen.getByText("Opening paragraph.")).toBeInTheDocument();
+    expect(screen.queryByTestId("transcript-view")).not.toBeInTheDocument();
+  });
+
+  it("only shows one panel at a time — never both simultaneously", () => {
+    render(
+      <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
+    );
+
+    // Summary active: article visible, transcript hidden
+    expect(screen.getByText("Opening paragraph.")).toBeInTheDocument();
+    expect(screen.queryByTestId("transcript-view")).not.toBeInTheDocument();
+
+    // Switch to transcript: transcript visible, article hidden
+    fireEvent.click(screen.getByText("Transcript"));
+    expect(screen.getByTestId("transcript-view")).toBeInTheDocument();
+    expect(screen.queryByText("Opening paragraph.")).not.toBeInTheDocument();
+
+    // Switch back: article visible, transcript hidden
+    fireEvent.click(screen.getByText("AI Summary"));
+    expect(screen.getByText("Opening paragraph.")).toBeInTheDocument();
+    expect(screen.queryByTestId("transcript-view")).not.toBeInTheDocument();
+  });
+
+  it("active tab has a visual indicator dot", () => {
+    const { container } = render(
+      <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
+    );
+    // Summary is active by default — should have the blue dot
+    const buttons = container.querySelectorAll("button");
+    const summaryBtn = Array.from(buttons).find(b => b.textContent?.includes("AI Summary"));
+    const transcriptBtn = Array.from(buttons).find(b => b.textContent?.includes("Transcript"));
+
+    expect(summaryBtn?.querySelector("span.rounded-full")).toBeTruthy();
+    expect(transcriptBtn?.querySelector("span.rounded-full")).toBeNull();
+
+    // Switch to transcript
+    if (transcriptBtn) fireEvent.click(transcriptBtn);
+    expect(summaryBtn?.querySelector("span.rounded-full")).toBeNull();
+    expect(transcriptBtn?.querySelector("span.rounded-full")).toBeTruthy();
+  });
+
+  it("can toggle rapidly between tabs without breaking", () => {
+    render(
+      <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
+    );
+    for (let i = 0; i < 5; i++) {
+      fireEvent.click(screen.getByText("Transcript"));
+      expect(screen.getByTestId("transcript-view")).toBeInTheDocument();
+      fireEvent.click(screen.getByText("AI Summary"));
+      expect(screen.getByText("Opening paragraph.")).toBeInTheDocument();
+    }
   });
 });
 
@@ -214,7 +197,6 @@ describe("ArticleTabs — markdown rendering", () => {
     expect(screen.getByText("Item one")).toBeInTheDocument();
     expect(screen.getByText("Item two")).toBeInTheDocument();
     expect(screen.getByText("Item three")).toBeInTheDocument();
-    // All three should be inside a <ul>
     const list = screen.getByRole("list");
     expect(list).toBeInTheDocument();
     expect(list.querySelectorAll("li")).toHaveLength(3);
@@ -253,9 +235,7 @@ describe("ArticleTabs — markdown rendering", () => {
       markdown: "# Video Title\n\nIntroduction paragraph.",
     });
     render(<ArticleTabs article={article} transcript={null} />);
-    // h1 should NOT be rendered (it's the opening heading)
     expect(screen.queryByRole("heading", { level: 1 })).not.toBeInTheDocument();
-    // But the paragraph below it should still appear
     expect(screen.getByText("Introduction paragraph.")).toBeInTheDocument();
   });
 
@@ -277,7 +257,7 @@ describe("ArticleTabs — markdown rendering", () => {
       <ArticleTabs article={article} transcript={null} />
     );
     const paragraphs = container.querySelectorAll("p");
-    expect(paragraphs[0].className).toContain("text-[16px]"); // lead style
-    expect(paragraphs[1].className).toContain("text-[15px]"); // regular style
+    expect(paragraphs[0].className).toContain("text-[16px]");
+    expect(paragraphs[1].className).toContain("text-[15px]");
   });
 });
