@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -50,9 +50,15 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: ["/og-image.png"],
   },
-  other: {
-    "theme-color": "#D3121D",
-  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#D3121D" },
+    { media: "(prefers-color-scheme: light)", color: "#D3121D" },
+  ],
 };
 
 const BASE_URL = "https://stevechendc.github.io/sonarqube-tv";
