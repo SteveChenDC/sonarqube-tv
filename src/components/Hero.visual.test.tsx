@@ -42,8 +42,8 @@ describe("Hero visual snapshots", () => {
     expect(mobileLayout.querySelector(`a[href="/watch/${mockVideo.id}"]`)).toBeTruthy();
     expect(desktopLayout.querySelector(`a[href="/watch/${mockVideo.id}"]`)).toBeTruthy();
 
-    // Hero uses maxresdefault for quality — derived from youtubeId, not video.thumbnail
-    const heroImgSrc = `https://img.youtube.com/vi/${mockVideo.youtubeId}/maxresdefault.jpg`;
+    // Hero uses video.thumbnail directly as the image src
+    const heroImgSrc = mockVideo.thumbnail;
     expect(mobileLayout.querySelector(`img[src="${heroImgSrc}"]`)).toBeTruthy();
     expect(desktopLayout.querySelector(`img[src="${heroImgSrc}"]`)).toBeTruthy();
   });
