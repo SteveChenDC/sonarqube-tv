@@ -201,7 +201,7 @@ export default async function WatchPage({
             {/* Category tag — interactive navigation pill, larger to signal clickability */}
             {category && (
               <Link
-                href={`/#${category.slug}`}
+                href={`/category/${category.slug}`}
                 className="inline-flex items-center gap-1.5 rounded-full border border-qube-blue/40 bg-qube-blue/10 px-3 py-1 font-heading text-xs font-medium text-qube-blue transition-colors hover:border-qube-blue/70 hover:bg-qube-blue/20 active:scale-95"
               >
                 {category.title}

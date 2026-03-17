@@ -63,9 +63,36 @@ const totalVideos = courses.reduce(
   0
 );
 
+const BASE_URL = "https://stevechendc.github.io/sonarqube-tv";
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: BASE_URL,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Certification Courses",
+      item: `${BASE_URL}/courses`,
+    },
+  ],
+};
+
 export default function CoursesPage() {
   return (
     <div className="pt-20 pb-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
       {/* Hero banner */}
       <div className="relative overflow-hidden border-b border-n8/50">
         <div className="absolute inset-0 bg-gradient-to-br from-sonar-red/8 via-transparent to-qube-blue/8" />
