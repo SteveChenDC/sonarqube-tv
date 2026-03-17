@@ -337,7 +337,7 @@ export default function Header() {
                           >
                             <img
                               src={video.thumbnail}
-                              alt=""
+                              alt={video.title}
                               className="h-12 w-[85px] shrink-0 rounded-md object-cover"
                             />
                             <div className="min-w-0 flex-1">
@@ -425,7 +425,7 @@ export default function Header() {
                       >
                         <img
                           src={`/courses/${course.id}.png`}
-                          alt=""
+                          alt={course.title}
                           className="mt-0.5 h-8 w-14 shrink-0 rounded object-cover"
                         />
                         <div className="min-w-0 flex-1">

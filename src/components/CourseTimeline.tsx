@@ -119,7 +119,7 @@ function ModuleAccordion({
                   <div className="relative ml-4 h-10 w-[72px] shrink-0 overflow-hidden rounded-md sm:h-12 sm:w-[85px]">
                     <Image
                       src={video.thumbnail}
-                      alt=""
+                      alt={video.title}
                       fill
                       className="object-cover transition-transform duration-200 group-hover:scale-105"
                       sizes="85px"

@@ -146,7 +146,7 @@ export default function PlaylistQueue({
             <div className="relative h-10 w-[72px] shrink-0 overflow-hidden rounded-md">
               <Image
                 src={video.thumbnail}
-                alt=""
+                alt={video.title}
                 fill
                 className="object-cover transition-[filter,transform] duration-200 group-hover:scale-105 group-hover:brightness-110"
                 sizes="72px"
