@@ -159,6 +159,25 @@ html:not(.dark) .animate-shimmer {
   transform-origin: top center;
 }
 
+/* Direction-aware tab transitions — content slides in from the side of the clicked tab */
+@keyframes tab-slide-in-right {
+  from { opacity: 0; transform: translateX(18px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes tab-slide-in-left {
+  from { opacity: 0; transform: translateX(-18px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@utility animate-tab-slide-right {
+  animation: tab-slide-in-right 0.22s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility animate-tab-slide-left {
+  animation: tab-slide-in-left 0.22s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 /* Mobile swipe-hint nudge: chevron bounces right 3× then rests */
 @keyframes nudge {
   0%   { transform: translateX(0); }
@@ -177,6 +196,8 @@ html:not(.dark) .animate-shimmer {
   /* Custom keyframe utilities */
   .animate-shimmer,
   .animate-tab-in,
+  .animate-tab-slide-right,
+  .animate-tab-slide-left,
   .animate-fade-in,
   .animate-fade-in-out {
     animation: none !important;
