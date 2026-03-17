@@ -84,6 +84,34 @@ const breadcrumbJsonLd = {
   ],
 };
 
+// ItemList enumerates each course so Google can surface individual courses
+// in rich carousels from the collection page URL.
+const courseListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "SonarQube Certification Courses",
+  description:
+    "Structured learning paths for SonarQube certification prep — covering code quality, security, DevOps integration, and enterprise architecture.",
+  url: `${BASE_URL}/courses`,
+  numberOfItems: courses.length,
+  itemListElement: courses.map((course, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Course",
+      name: course.title,
+      description: course.description,
+      url: `${BASE_URL}/courses/${course.slug}`,
+      provider: {
+        "@type": "Organization",
+        name: "SonarSource",
+        url: "https://www.sonarsource.com",
+      },
+      educationalLevel: course.difficulty.charAt(0).toUpperCase() + course.difficulty.slice(1),
+    },
+  })),
+};
+
 export default function CoursesPage() {
   return (
     <div className="pt-20 pb-16">
@@ -91,6 +119,12 @@ export default function CoursesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(courseListJsonLd),
         }}
       />
       {/* Hero banner */}
