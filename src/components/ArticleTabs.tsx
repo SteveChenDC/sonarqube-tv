@@ -43,6 +43,8 @@ function renderMarkdown(md: string) {
     | { type: "blank" }
     | { type: "h1" | "h2" | "h3"; content: string }
     | { type: "li"; content: string }
+    | { type: "oli"; content: string; num: number }
+    | { type: "blockquote"; content: string }
     | { type: "p"; content: string };
 
   const tokens: Token[] = lines.map((line) => {
@@ -52,6 +54,9 @@ function renderMarkdown(md: string) {
     if (trimmed.startsWith("## ")) return { type: "h2", content: trimmed.slice(3) };
     if (trimmed.startsWith("# ")) return { type: "h1", content: trimmed.slice(2) };
     if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) return { type: "li", content: trimmed.slice(2) };
+    if (trimmed.startsWith("> ")) return { type: "blockquote", content: trimmed.slice(2) };
+    const olMatch = trimmed.match(/^(\d+)\.\s+(.*)/);
+    if (olMatch) return { type: "oli", content: olMatch[2], num: parseInt(olMatch[1], 10) };
     return { type: "p", content: trimmed };
   });
 
@@ -59,7 +64,7 @@ function renderMarkdown(md: string) {
   const firstContentIndex = tokens.findIndex((t) => t.type !== "blank");
   const startsWithH1 = firstContentIndex >= 0 && tokens[firstContentIndex].type === "h1";
 
-  // Second pass: group consecutive list items into <ul> blocks
+  // Second pass: group consecutive list items into <ul>/<ol> blocks
   const elements: React.ReactNode[] = [];
   let key = 0;
   let i = 0;
@@ -86,9 +91,42 @@ function renderMarkdown(md: string) {
           {items}
         </ul>
       );
+    } else if (tok.type === "oli") {
+      const items: React.ReactNode[] = [];
+      while (i < tokens.length && tokens[i].type === "oli") {
+        const liTok = tokens[i] as { type: "oli"; content: string; num: number };
+        items.push(
+          <li key={key++} className="pl-1 leading-7 text-[15px] text-n3">
+            {parseInline(liTok.content)}
+          </li>
+        );
+        i++;
+      }
+      elements.push(
+        <ol key={key++} className="my-4 ml-4 list-decimal space-y-1.5 marker:font-heading marker:text-xs marker:font-semibold marker:text-qube-blue">
+          {items}
+        </ol>
+      );
+    } else if (tok.type === "blockquote") {
+      const lines: React.ReactNode[] = [];
+      while (i < tokens.length && tokens[i].type === "blockquote") {
+        const bqTok = tokens[i] as { type: "blockquote"; content: string };
+        lines.push(
+          <span key={key++} className="block">
+            {parseInline(bqTok.content)}
+          </span>
+        );
+        i++;
+      }
+      elements.push(
+        <blockquote key={key++} className="my-4 border-l-2 border-qube-blue/40 pl-4 py-0.5 text-[14px] italic leading-relaxed text-n5">
+          {lines}
+        </blockquote>
+      );
     } else if (tok.type === "h3") {
       elements.push(
-        <h3 key={key++} className="mb-2 mt-6 font-heading text-base font-semibold text-n1 first:mt-0">
+        <h3 key={key++} className="mb-2 mt-5 flex items-center gap-2 font-heading text-[15px] font-semibold text-n1 first:mt-0">
+          <span className="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-qube-blue/70" aria-hidden="true" />
           {parseInline(tok.content)}
         </h3>
       );
