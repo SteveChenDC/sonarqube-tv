@@ -187,15 +187,21 @@ describe("video data utilities", () => {
       expect(new Set(youtubeIds).size).toBe(youtubeIds.length);
     });
 
-    it("all thumbnail URLs are valid YouTube thumbnail URLs for the video's youtubeId", () => {
+    it("all thumbnail URLs are valid YouTube thumbnail URLs or local paths for the video's youtubeId", () => {
       // Some videos use sddefault.jpg when maxresdefault is not available —
       // both are legitimate YouTube thumbnail formats.
+      // Some videos use locally hosted thumbnails under /thumbnails/*.jpg.
       const validFormats = ["maxresdefault.jpg", "sddefault.jpg", "hqdefault.jpg", "mqdefault.jpg", "default.jpg"];
       videos.forEach((v) => {
         const expectedBase = `https://img.youtube.com/vi/${v.youtubeId}/`;
-        expect(v.thumbnail.startsWith(expectedBase)).toBe(true);
-        const format = v.thumbnail.slice(expectedBase.length);
-        expect(validFormats).toContain(format);
+        if (v.thumbnail.startsWith("/thumbnails/")) {
+          // Local thumbnail — must be a .jpg file
+          expect(v.thumbnail).toMatch(/^\/thumbnails\/.+\.jpg$/);
+        } else {
+          expect(v.thumbnail.startsWith(expectedBase)).toBe(true);
+          const format = v.thumbnail.slice(expectedBase.length);
+          expect(validFormats).toContain(format);
+        }
       });
     });
 
