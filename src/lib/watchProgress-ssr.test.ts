@@ -37,4 +37,13 @@ describe("watchProgress SSR safety", () => {
     expect(() => setProgress("vid1", 50)).not.toThrow();
     expect(getAllProgress()).toEqual({});
   });
+
+  it("removeProgress is a no-op when window is undefined", async () => {
+    // @ts-expect-error simulate SSR
+    delete globalThis.window;
+    const { removeProgress, getAllProgress } = await import("./watchProgress");
+    // Should not throw
+    expect(() => removeProgress("vid1")).not.toThrow();
+    expect(getAllProgress()).toEqual({});
+  });
 });
