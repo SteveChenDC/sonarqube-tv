@@ -46,7 +46,7 @@ export default function CourseCard({
     : 0;
 
   return (
-    <div className="group relative flex w-[300px] shrink-0 flex-col overflow-hidden rounded-xl border border-n8 bg-n9/60 transition-all duration-200 hover:border-n7 hover:bg-n8/30 sm:w-[320px]">
+    <div className="group relative flex w-[300px] shrink-0 flex-col overflow-hidden rounded-xl border border-n8 bg-n9/60 transition-all duration-200 hover:-translate-y-1 hover:border-sonar-red/30 hover:bg-n8/30 hover:shadow-lg hover:shadow-sonar-red/20 sm:w-[320px]">
       {/* Course image header */}
       <div className="relative h-36 overflow-hidden">
         <Image
