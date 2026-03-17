@@ -4,6 +4,27 @@ description: Running log of full visual QA passes — most recent at top
 type: project
 ---
 
+## 2026-03-16 (Pass #20)
+
+Ran full visual QA on 2026-03-16 (twentieth run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
+
+**Result: All clear — no visual bugs found. No regressions from baseline.**
+
+Specific checks:
+- Dark theme correctly applied everywhere (`#0a0a0a` background)
+- Brand colors correct: Qube Blue (`#126ED3`) duration/count badges, Sonar Red (`#D3121D`) "Newest" active sort + "Start Course" buttons
+- Desktop Home: Marquee row at top + Certification Courses section (SCD, SCSE, SCDE, SCAVS cards with BEGINNER/INTERMEDIATE badges, red Start Course buttons) + Getting Started (badge 6) — clean
+- Desktop Home Bottom: large black area at top = known screenshot artifact; DevOps & CI/CD carousel (1:57, 0:59, 46:48 duration badges) + SonarQube for IDE section starting — clean
+- Desktop Watch: YouTube player with blue thumbnail, Back nav, title card below — correct
+- Desktop Category: "Getting Started" header + "6 videos" + "1h 8m total" Qube Blue badges, Newest active Sonar Red, 4-col grid + partial second row — correct
+- Mobile Home: Certification Courses card fills 375px width (BEGINNER badge, progress dots, Start Course button); Getting Started badge 6 below; Filters + scroll-to-top buttons — no horizontal overflow
+- Mobile Home Bottom: completely black = known screenshot artifact (unloaded thumbnails in headless browser)
+- Mobile Watch: full-width player, Back nav, title, SonarQube Cloud + March 12th 2026 tags, 0:41/Part of SCDE/Share, description, Summary/Transcript tabs — all within viewport
+- Mobile Category: "Longest" wraps to second line at 375px (expected flex-wrap), 2-col video grid clean
+- "N" bottom-left artifact present — confirmed false positive (Next.js route announcer)
+
+---
+
 ## 2026-03-16 (Pass #19)
 
 Ran full visual QA on 2026-03-16 (nineteenth run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
