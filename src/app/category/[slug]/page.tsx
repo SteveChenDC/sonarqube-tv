@@ -102,6 +102,38 @@ export default async function CategoryPage({
     ],
   };
 
+  // ItemList enumerates each video so Google can surface individual videos
+  // in rich carousels when users search for content in this category.
+  const videoListJsonLd = categoryVideos.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: `${category.title} — SonarQube Video Tutorials`,
+        description: category.description,
+        url: `${BASE_URL}/category/${slug}`,
+        numberOfItems: categoryVideos.length,
+        itemListElement: categoryVideos.map((video, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          item: {
+            "@type": "VideoObject",
+            name: video.title,
+            description: video.description,
+            thumbnailUrl: `https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`,
+            uploadDate: video.publishedAt,
+            contentUrl: `https://www.youtube.com/watch?v=${video.youtubeId}`,
+            embedUrl: `https://www.youtube.com/embed/${video.youtubeId}`,
+            url: `${BASE_URL}/watch/${video.id}`,
+            publisher: {
+              "@type": "Organization",
+              name: "SonarSource",
+              url: "https://www.sonarsource.com",
+            },
+          },
+        })),
+      }
+    : null;
+
   return (
     <div className="pt-20 pb-12">
       <script
@@ -110,6 +142,14 @@ export default async function CategoryPage({
           __html: JSON.stringify(breadcrumbJsonLd),
         }}
       />
+      {videoListJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(videoListJsonLd),
+          }}
+        />
+      )}
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Link
           href="/"
