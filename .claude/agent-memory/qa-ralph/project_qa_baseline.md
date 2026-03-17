@@ -4,12 +4,23 @@ description: Build and test baseline as of 2026-03-16 — what passes, known war
 type: project
 ---
 
-As of 2026-03-16 (twenty-fifth QA run), `npm run build` and `npm test` both pass clean. All 219 tests pass.
+As of 2026-03-16 (thirty-sixth QA run), `npm run build` and `npm test` both pass clean. All 219 tests pass.
 
 **Build**: Next.js 16.1.6 (Turbopack), 243 static pages generated (SSG), no errors.
 - Known non-fatal warning: "Next.js inferred your workspace root" due to multiple lockfiles at `/Users/stevec/package-lock.json` and project root. Safe to ignore; does not affect build output.
 
-**Tests**: Vitest 4.1.0 — 24 test files, 217 tests. All 217 PASSING.
+**Tests**: Vitest 4.1.0 — 24 test files, 219 tests. All 219 PASSING.
+
+**Fixed in run 28**: `src/components/__snapshots__/Hero.visual.test.tsx.snap` — 1 stale snapshot ("mobile card layout matches snapshot").
+- Root cause: Mobile Hero card `bg-n9` div had polish CSS added: `border border-n8/60 shadow-xl shadow-black/40`.
+- Fix: `npx vitest run -u`. Committed as e30f7b2.
+- Pattern: Confirmed again — any CSS class addition to Hero card wrappers stales Hero.visual.test.tsx snapshots.
+
+**Fixed in run 26**: `src/components/__snapshots__/Hero.visual.test.tsx.snap` — 1 stale snapshot.
+- Test: "desktop hero layout matches snapshot"
+- Root cause: Hero.tsx gradient overlay CSS changed from `from-background` / `from-background/70` to `from-black dark:from-background` / `from-black/70 dark:from-background/70` (added light-mode `black` fallbacks with `dark:` variants for compatibility).
+- Fix: `npx vitest run -u` to refresh snapshot. Committed as bb71d72.
+- Pattern: Any CSS gradient polish to Hero.tsx overlays will stale Hero.visual.test.tsx snapshot. Fix with `-u`.
 
 **Fixed in run 19**: `src/components/__snapshots__/Hero.visual.test.tsx.snap` — 1 stale snapshot.
 - Test: "desktop hero layout matches snapshot"
@@ -42,8 +53,8 @@ As of 2026-03-16 (twenty-fifth QA run), `npm run build` and `npm test` both pass
 - Fix applied to tests (not component): Assert `aria-hidden="true"` on the panel wrapper div instead of checking DOM presence.
 - Pattern: When a component uses CSS-only show/hide (grid rows, opacity, height), test the semantic attribute (`aria-hidden`) rather than DOM presence.
 
-**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (runs 19–24, stable) → 219 (run 25, net +2 new tests)
+**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (runs 19–24, stable) → 219 (run 25, stable) → 219 (runs 26–28, stable)
 **Page count history**: 242 → 243 (stable)
 
 **Why:** Ongoing QA baseline tracking.
-**How to apply:** If Hero.visual.test.tsx snapshot fails, check if gradient overlay CSS classes in Hero.tsx changed — update with `npx vitest run -u`. If VideoRow.visual snapshots fail, first check if a new persistent DOM element was added to VideoCard (shimmer, overlay, badge) — stale snapshot is likely the culprit, fix with `npx vitest run -u`. If Footer link tests fail, check whether `aria-label` attributes on social/nav links were changed. If ArticleTabs collapse tests fail again, check whether the component changed from CSS-based to conditional rendering and align test strategy accordingly. If HomeContent empty-state tests fail, check whether the heading copy in HomeContent.tsx changed (exact text, punctuation included). If CategoryContent test count drops/changes, check if props were removed from the component — the test file is kept in sync with the component interface.
+**How to apply:** If Hero.visual.test.tsx snapshot fails, check if gradient overlay CSS classes in Hero.tsx changed (including light/dark variant additions) — update with `npx vitest run -u`. If VideoRow.visual snapshots fail, first check if a new persistent DOM element was added to VideoCard (shimmer, overlay, badge) — stale snapshot is likely the culprit, fix with `npx vitest run -u`. If Footer link tests fail, check whether `aria-label` attributes on social/nav links were changed. If ArticleTabs collapse tests fail again, check whether the component changed from CSS-based to conditional rendering and align test strategy accordingly. If HomeContent empty-state tests fail, check whether the heading copy in HomeContent.tsx changed (exact text, punctuation included). If CategoryContent test count drops/changes, check if props were removed from the component — the test file is kept in sync with the component interface.

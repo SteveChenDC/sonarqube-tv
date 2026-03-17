@@ -4,6 +4,132 @@ description: Running log of full visual QA passes — most recent at top
 type: project
 ---
 
+## 2026-03-16 (Pass #18)
+
+Ran full visual QA on 2026-03-16 (eighteenth run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
+
+**Result: All clear — no visual bugs found. No regressions from baseline.**
+
+Specific checks:
+- Dark theme correctly applied everywhere (`#0a0a0a` background)
+- Brand colors correct: Qube Blue (`#126ED3`) duration badges + "6 videos" / "1h 8m total" badges, Sonar Red (`#D3121D`) "Newest" active sort button
+- Desktop Home: featured marquee row + Getting Started (badge 8) + Sonar Summit sections — dark theme, aligned cards, correct colors
+- Desktop Home Bottom: SonarQube for IDE row with duration badges (2:33, 1:41, 9:23) clean; large black area at top = known screenshot artifact
+- Desktop Watch: YouTube player centered, Back nav, Share button, keyboard shortcuts label, title card below — correct
+- Desktop Category: "Getting Started" header + "6 videos" + "1h 8m total" Qube Blue badges, Newest active Sonar Red, 4-col grid + partial second row — correct
+- Mobile Home: horizontal carousel (intentional), Getting Started + Sonar Summit sections — no horizontal overflow; Filters button visible
+- Mobile Home Bottom: large black area at top = known screenshot artifact; SonarQube for IDE (badge 16) + Swipe hint + cards with duration badges — clean
+- Mobile Watch: full-width player, Back nav, title, SonarQube Cloud + March 12th 2026 tags, 0:41 duration/share, description, Summary/Transcript tabs — all within viewport
+- Mobile Category: "Longest" wraps to second line at 375px (expected flex-wrap), 2-col video grid clean
+- "N" bottom-left artifact present — confirmed false positive (Next.js route announcer)
+
+---
+
+## 2026-03-16 (Pass #17)
+
+Ran full visual QA on 2026-03-16 (seventeenth run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
+
+**Result: All clear — no visual bugs found. No regressions from baseline.**
+
+Specific checks:
+- Dark theme correctly applied everywhere (`#0a0a0a` background)
+- Brand colors correct: Qube Blue (`#126ED3`) duration badges + "6 videos" / "1h 8m total" badges, Sonar Red (`#D3121D`) "Newest" active sort button
+- Desktop Home: featured marquee row + Getting Started (badge 8) + Sonar Summit sections — dark theme, aligned cards, correct colors
+- Desktop Home Bottom: Architecture & Governance carousel (badge 6) with duration badges (46:07, 2:21, 5:49) + prev/next arrows — large black area at top = known screenshot artifact
+- Desktop Watch: YouTube player centered, Back nav, Share button, keyboard shortcuts label, title card below — correct
+- Desktop Category: "Getting Started" header + "6 videos" + "1h 8m total" Qube Blue badges, Newest active Sonar Red, 4-col grid — correct
+- Mobile Home: horizontal carousel (intentional), Getting Started + Sonar Summit sections — no horizontal overflow
+- Mobile Home Bottom: large black area at top = known screenshot artifact; DevOps & CI/CD (badge 16) + SonarQube for IDE carousels clean; Qube Blue duration badges visible
+- Mobile Watch: full-width player, title, SonarQube Cloud + March 12th 2026 tags, 0:41 duration/share, description, Summary/Transcript tabs — all within viewport
+- Mobile Category: "Longest" wraps to second line at 375px (expected flex-wrap, consistent with all prior passes), 2-col grid clean
+- "N" bottom-left artifact present — confirmed false positive (Next.js route announcer)
+
+---
+
+## 2026-03-16 (Pass #16)
+
+Ran full visual QA on 2026-03-16 (sixteenth run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
+
+**Result: All clear — no visual bugs found. No regressions from baseline.**
+
+Specific checks:
+- Dark theme correctly applied everywhere (`#0a0a0a` background)
+- Brand colors correct: Qube Blue (`#126ED3`) "6 videos" / "1h 8m total" badges, Sonar Red (`#D3121D`) "Newest" active sort button
+- Desktop Home: featured marquee row with thumbnails + "Getting Started" (badge 8) + Sonar Summit sections — dark theme, aligned cards, correct colors
+- Desktop Home Bottom: large black area at top = known screenshot artifact; DevOps & CI/CD + SonarQube for IDE rows clean
+- Desktop Watch: YouTube player centered, Back nav, Share button, keyboard shortcuts label, title card below — correct
+- Desktop Category: "Getting Started" header + "6 videos" + "1h 8m total" Qube Blue badges, Newest active Sonar Red, 4-col grid + partial second row — correct
+- Mobile Home: horizontal carousel (intentional), Getting Started + Sonar Summit sections — no horizontal overflow
+- Mobile Home Bottom: large black area at top = known screenshot artifact; "Swipe ›" hint visible on mobile only (sm:hidden correctly hides on desktop); DevOps & CI/CD + SonarQube for IDE carousels clean
+- Mobile Watch: full-width player, title, SonarQube Cloud + March 12th 2026 tags, 0:41 duration/share, description, Summary/Transcript tabs — all within viewport
+- Mobile Category: "Longest" wraps to second line at 375px (expected flex-wrap, consistent with all prior passes), 2-col grid clean
+- "N" bottom-left artifact present — confirmed false positive (Next.js route announcer)
+
+---
+
+## 2026-03-16 (Pass #15)
+
+Ran full visual QA on 2026-03-16 (fifteenth run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
+
+**Result: All clear — no visual bugs found. No regressions from baseline.**
+
+Specific checks:
+- Dark theme correctly applied everywhere (`#0a0a0a` background)
+- Brand colors correct: Qube Blue (`#126ED3`) "6 videos" / "1h 8m total" badges, Sonar Red (`#D3121D`) "Newest" active sort button
+- Desktop Home: featured marquee row with thumbnails + "Getting Started" (badge 8) + Sonar Summit sections — dark theme, aligned cards, correct colors
+- Desktop Home Bottom: DevOps & CI/CD + SonarQube for IDE (badge 16) rows clean, duration badges visible
+- Desktop Watch: YouTube player centered, Back nav, Share button, keyboard shortcuts label, title card below — correct
+- Desktop Category: "Getting Started" header + "6 videos" + "1h 8m total" Qube Blue badges, Newest active Sonar Red, 4-col grid — correct
+- Mobile Home: horizontal carousel (intentional), Getting Started + Sonar Summit sections — no horizontal overflow
+- Mobile Home Bottom: large black area at top = known screenshot artifact, DevOps & CI/CD + SonarQube for IDE carousels clean
+- Mobile Watch: full-width player, title, SonarQube Cloud + March 12th 2026 tags, 0:41 duration/share, description, Summary/Transcript tabs — all within viewport
+- Mobile Category: "Longest" wraps to second line at 375px (expected flex-wrap, consistent with prior passes), 2-col grid clean
+- "N" bottom-left artifact present — confirmed false positive (Next.js route announcer)
+
+---
+
+## 2026-03-16 (Pass #14)
+
+Ran full visual QA on 2026-03-16 (fourteenth run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
+
+**Result: All clear — no visual bugs found. No regressions from baseline.**
+
+Specific checks:
+- Dark theme correctly applied everywhere (`#0a0a0a` background)
+- Brand colors correct: Qube Blue (`#126ED3`) "6 videos" / "1h 8m total" badges, Sonar Red (`#D3121D`) "Newest" active sort button
+- Desktop Home: featured marquee row with thumbnails + "Getting Started" (badge 8) + Sonar Summit sections — dark theme, aligned cards, correct colors
+- Desktop Home Bottom: DevOps & CI/CD + SonarQube for IDE (badge 16) rows clean, duration badges visible
+- Desktop Watch: YouTube player centered, Back nav, Share button, keyboard shortcuts label, title card below — correct
+- Desktop Category: "Getting Started" header + "6 videos" + "1h 8m total" Qube Blue badges, Newest active Sonar Red, 4-col grid — correct
+- Mobile Home: horizontal carousel (intentional), Getting Started + Sonar Summit sections — no horizontal overflow
+- Mobile Home Bottom: large black area at top = known screenshot artifact, DevOps & CI/CD + SonarQube for IDE carousels clean
+- Mobile Watch: full-width player, title, SonarQube Cloud + March 12th 2026 tags, duration/share, description, Summary/Transcript tabs — all within viewport
+- Mobile Category: "Longest" wraps to second line at 375px (expected flex-wrap, seen in prior passes), 2-col grid clean
+- "N" bottom-left artifact present — confirmed false positive (Next.js route announcer)
+
+---
+
+## 2026-03-16 (Pass #13)
+
+Ran full visual QA on 2026-03-16 (thirteenth run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
+
+**Result: All clear — no visual bugs found. No regressions from baseline.**
+
+Specific checks:
+- Dark theme correctly applied everywhere (`#0a0a0a` background)
+- Brand colors correct: Qube Blue (`#126ED3`) "6 videos" / "1h 8m total" badges, Sonar Red (`#D3121D`) "Newest" active sort button
+- Desktop Home: featured marquee row + Getting Started (badge 8) + Sonar Summit sections — dark theme, aligned cards, correct colors
+- Desktop Home Bottom: DevOps & CI/CD + SonarQube for IDE (badge 16) rows clean, duration badges visible
+- Desktop Watch: YouTube player centered, Back nav, Share button, keyboard shortcuts label, title card below — correct
+- Desktop Category: "Getting Started" header + "6 videos" + "1h 8m total" Qube Blue badges, Newest active Sonar Red, 4-col grid — correct
+- Mobile Home: horizontal carousel (intentional), Getting Started + Sonar Summit sections — no horizontal overflow
+- Mobile Home Bottom: large black area at top = known screenshot artifact (false positive), DevOps & CI/CD + SonarQube for IDE carousels clean
+- Mobile Watch: full-width player, title, SonarQube Cloud + March 12th 2026 tags, duration/share, description, Summary/Transcript tabs — all within viewport
+- Mobile Category: SORT BY + all 4 sort buttons on one row at 375px, 2-col grid, thumbnails loading — clean
+- "N" bottom-left artifact present — confirmed false positive (Next.js route announcer)
+
+---
+
 ## 2026-03-16 (Pass #12)
 
 Ran full visual QA on 2026-03-16 (twelfth run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
