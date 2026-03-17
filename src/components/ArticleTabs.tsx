@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import type { Article, Transcript } from "@/types";
 import TranscriptView from "./TranscriptView";
 import { extractChapters } from "@/lib/extractChapters";
@@ -181,6 +181,8 @@ export default function ArticleTabs({
   const [activeTab, setActiveTab] = useState<"summary" | "transcript">(
     article ? "summary" : "transcript"
   );
+  // Track whether the user has ever switched tabs — suppress the slide animation on first render
+  const hasSwitchedRef = useRef(false);
 
   const chapters = useMemo(() => {
     if (!article || !transcript) return [];
@@ -198,12 +200,12 @@ export default function ArticleTabs({
         <div className="flex items-center gap-2 border-b border-n8 px-5 py-3">
           {article ? (
             <h3 className="font-heading text-sm font-semibold text-n1 flex items-center gap-2">
-              <SummaryIcon />
+              <SummaryIcon active />
               AI Summary
             </h3>
           ) : (
             <h3 className="font-heading text-sm font-semibold text-n1 flex items-center gap-2">
-              <TranscriptIcon />
+              <TranscriptIcon active />
               Transcript
             </h3>
           )}
@@ -219,43 +221,60 @@ export default function ArticleTabs({
   // Both available — side-by-side on desktop, tabs on mobile
   return (
     <div className="overflow-hidden rounded-xl border border-n8 bg-n8/15">
-      {/* Header row — 50/50 centered tab buttons */}
-      <div className="grid grid-cols-2 border-b border-n8">
+      {/* Header row — 50/50 centered tab buttons with sliding indicator */}
+      <div className="relative grid grid-cols-2 border-b border-n8">
         <button
-          onClick={() => setActiveTab("summary")}
-          className={`flex items-center justify-center gap-2 py-3 border-r border-n8 font-heading text-sm font-semibold transition-colors ${
+          onClick={() => {
+            hasSwitchedRef.current = true;
+            setActiveTab("summary");
+          }}
+          className={`flex items-center justify-center gap-2 py-3 border-r border-n8 font-heading text-sm font-semibold transition-colors duration-200 ${
             activeTab === "summary"
               ? "text-n1 bg-n8/20"
               : "text-n5 hover:text-n3 hover:bg-n8/10"
           }`}
+          aria-selected={activeTab === "summary"}
+          role="tab"
         >
-          <SummaryIcon />
+          <SummaryIcon active={activeTab === "summary"} />
           AI Summary
-          {activeTab === "summary" && (
-            <span className="ml-1 h-1.5 w-1.5 rounded-full bg-qube-blue" />
-          )}
         </button>
         <button
-          onClick={() => setActiveTab("transcript")}
-          className={`flex items-center justify-center gap-2 py-3 font-heading text-sm font-semibold transition-colors ${
+          onClick={() => {
+            hasSwitchedRef.current = true;
+            setActiveTab("transcript");
+          }}
+          className={`flex items-center justify-center gap-2 py-3 font-heading text-sm font-semibold transition-colors duration-200 ${
             activeTab === "transcript"
               ? "text-n1 bg-n8/20"
               : "text-n5 hover:text-n3 hover:bg-n8/10"
           }`}
+          aria-selected={activeTab === "transcript"}
+          role="tab"
         >
-          <TranscriptIcon />
+          <TranscriptIcon active={activeTab === "transcript"} />
           Transcript
-          {activeTab === "transcript" && (
-            <span className="ml-1 h-1.5 w-1.5 rounded-full bg-qube-blue" />
-          )}
         </button>
+        {/* Sliding active indicator bar — translates from left to right half */}
+        <span
+          className={`pointer-events-none absolute bottom-0 h-0.5 w-1/2 bg-qube-blue transition-transform duration-300 ease-out ${
+            activeTab === "transcript" ? "translate-x-full" : "translate-x-0"
+          }`}
+          aria-hidden="true"
+        />
       </div>
 
       {/* Content — show one panel at a time, full width */}
       <div className="overflow-hidden">
         <div
           key={activeTab}
-          className={`p-5 sm:p-6 ${activeTab === "summary" ? "animate-tab-slide-left" : "animate-tab-slide-right"}`}
+          className={`p-5 sm:p-6 ${
+            hasSwitchedRef.current
+              ? activeTab === "summary"
+                ? "animate-tab-slide-left"
+                : "animate-tab-slide-right"
+              : ""
+          }`}
         >
           {activeTab === "summary" && article && (
             <div>{renderMarkdown(article.markdown)}</div>
@@ -269,9 +288,9 @@ export default function ArticleTabs({
   );
 }
 
-function SummaryIcon() {
+function SummaryIcon({ active }: { active?: boolean }) {
   return (
-    <svg className="h-4 w-4 text-qube-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg className={`h-4 w-4 transition-colors duration-200 ${active ? "text-qube-blue" : "text-n6"}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
       <path d="M20 3v4"/>
       <path d="M22 5h-4"/>
@@ -279,9 +298,9 @@ function SummaryIcon() {
   );
 }
 
-function TranscriptIcon() {
+function TranscriptIcon({ active }: { active?: boolean }) {
   return (
-    <svg className="h-4 w-4 text-qube-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg className={`h-4 w-4 transition-colors duration-200 ${active ? "text-qube-blue" : "text-n6"}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
       <line x1="8" y1="9" x2="16" y2="9"/>
       <line x1="8" y1="13" x2="14" y2="13"/>
