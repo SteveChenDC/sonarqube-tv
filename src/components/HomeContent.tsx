@@ -251,9 +251,12 @@ export default function HomeContent({
           <div className="relative pt-8">
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-n8/50 to-transparent" />
             <div className="mb-4 flex items-center justify-between px-4 sm:px-6 lg:px-8">
-              <h2 className="font-heading text-lg font-bold text-n1 sm:text-xl">
-                Certification Courses
-              </h2>
+              <div className="flex items-center gap-3">
+                <span className="inline-block h-5 w-1 shrink-0 rounded-full bg-sonar-red" aria-hidden="true" />
+                <h2 className="font-heading text-lg font-semibold text-n1 sm:text-xl">
+                  Certification Courses
+                </h2>
+              </div>
               <div className="flex items-center gap-3">
                 <a
                   href="/courses"
