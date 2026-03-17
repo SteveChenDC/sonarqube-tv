@@ -17,9 +17,15 @@ function isDescriptionRedundant(title: string, description: string): boolean {
   return false;
 }
 
+/** Full-resolution YouTube thumbnail for hero/LCP use (1280×720). */
+function heroThumbnail(youtubeId: string): string {
+  return `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
+}
+
 export default function Hero({ video, actions }: Readonly<{ video: Video; actions?: ReactNode }>) {
   const category = categories.find((c) => c.slug === video.category);
   const showDescription = video.description && !isDescriptionRedundant(video.title, video.description);
+  const heroSrc = heroThumbnail(video.youtubeId);
 
   return (
     <>
@@ -28,7 +34,7 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
         <div className="overflow-hidden rounded-xl bg-n9 border border-n8/60 shadow-xl shadow-black/40">
           <div className="relative aspect-video">
             <Image
-              src={video.thumbnail}
+              src={heroSrc}
               alt={video.title}
               className="object-cover"
               priority
@@ -80,7 +86,7 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
       {/* Desktop full-bleed hero */}
       <section className="relative hidden h-[70vh] min-h-[500px] w-full sm:block">
         <Image
-          src={video.thumbnail}
+          src={heroSrc}
           alt={video.title}
           fill
           className="object-cover"

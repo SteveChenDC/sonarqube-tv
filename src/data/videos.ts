@@ -1,7 +1,9 @@
 import { Video, Category } from "@/types";
 
 function ytThumbnail(youtubeId: string): string {
-  return `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
+  // hqdefault (480×360, ~20–30 KB) is adequate for VideoCard at 280–320 px.
+  // Hero uses maxresdefault separately via video.youtubeId for full quality.
+  return `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
 }
 
 export const categories: Category[] = [

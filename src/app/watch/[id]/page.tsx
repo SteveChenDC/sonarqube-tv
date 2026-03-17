@@ -34,18 +34,21 @@ export async function generateMetadata({
   const video = getVideoById(id);
   if (!video) return {};
 
+  // Use maxresdefault for OG/social sharing where full resolution matters.
+  const ogImage = `https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`;
+
   return {
     title: video.title,
     description: video.description,
     openGraph: {
-      images: [{ url: video.thumbnail, width: 1280, height: 720, alt: video.title }],
+      images: [{ url: ogImage, width: 1280, height: 720, alt: video.title }],
       type: "video.other",
     },
     twitter: {
       card: "summary_large_image",
       title: video.title,
       description: video.description,
-      images: [video.thumbnail],
+      images: [ogImage],
     },
     alternates: {
       canonical: `/watch/${id}`,
@@ -75,12 +78,15 @@ export default async function WatchPage({
     4
   );
 
+  // Use maxresdefault for structured data — schema.org recommends high-res thumbnails.
+  const maxResThumbnail = `https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`;
+
   const videoJsonLd = {
     "@context": "https://schema.org",
     "@type": "VideoObject",
     name: video.title,
     description: video.description,
-    thumbnailUrl: video.thumbnail,
+    thumbnailUrl: maxResThumbnail,
     uploadDate: video.publishedAt,
     duration: durationToISO(video.duration),
     contentUrl: `https://www.youtube.com/watch?v=${video.youtubeId}`,
