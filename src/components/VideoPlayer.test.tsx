@@ -739,3 +739,118 @@ describe("VideoPlayer — compact mode", () => {
     });
   });
 });
+
+describe("VideoPlayer — async YT API load path (window.YT not ready at mount)", () => {
+  let mockPlayer: ReturnType<typeof createMockPlayer>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let MockYTPlayer: ReturnType<typeof vi.fn>;
+
+  function setupYT() {
+    mockPlayer = createMockPlayer();
+    MockYTPlayer = vi.fn().mockImplementation(function (this: unknown, _id: string, opts: any) {
+      Object.assign(this as object, mockPlayer);
+      if (opts?.events) {}
+      return this;
+    });
+    (window as unknown as Record<string, unknown>).YT = { Player: MockYTPlayer };
+  }
+
+  beforeEach(() => {
+    localStorage.clear();
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+    // Ensure no YT API is present at mount time
+    delete (globalThis as unknown as Record<string, unknown>).YT;
+    delete (globalThis as unknown as Record<string, unknown>).onYouTubeIframeAPIReady;
+    // Remove any previously injected YT script tags
+    document.querySelectorAll('script[src*="youtube.com/iframe_api"]').forEach((s) => s.remove());
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+    delete (globalThis as unknown as Record<string, unknown>).YT;
+    delete (globalThis as unknown as Record<string, unknown>).onYouTubeIframeAPIReady;
+    document.querySelectorAll('script[src*="youtube.com/iframe_api"]').forEach((s) => s.remove());
+  });
+
+  it("injects a YouTube API script tag when window.YT is not available", () => {
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+
+    const script = document.querySelector('script[src*="youtube.com/iframe_api"]');
+    expect(script).toBeTruthy();
+    expect(script?.getAttribute("src")).toContain("youtube.com/iframe_api");
+  });
+
+  it("does not inject a duplicate script if one already exists", () => {
+    // Pre-inject the script tag
+    const existing = document.createElement("script");
+    existing.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(existing);
+
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+
+    const scripts = document.querySelectorAll('script[src*="youtube.com/iframe_api"]');
+    expect(scripts).toHaveLength(1);
+  });
+
+  it("sets window.onYouTubeIframeAPIReady when window.YT is absent", () => {
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+
+    expect(typeof globalThis.window.onYouTubeIframeAPIReady).toBe("function");
+  });
+
+  it("calls initPlayer (creates YT.Player) when onYouTubeIframeAPIReady fires", () => {
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+
+    // Simulate the YT API loading: set window.YT then fire the callback
+    setupYT();
+    act(() => {
+      globalThis.window.onYouTubeIframeAPIReady!();
+    });
+
+    expect(MockYTPlayer).toHaveBeenCalledTimes(1);
+    expect(MockYTPlayer).toHaveBeenCalledWith("yt-player", expect.objectContaining({ videoId: "abc123" }));
+  });
+
+  it("chains a pre-existing onYouTubeIframeAPIReady — calls prev handler before initPlayer", () => {
+    const prevHandler = vi.fn();
+    (globalThis.window as unknown as Record<string, unknown>).onYouTubeIframeAPIReady = prevHandler;
+
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+
+    // The component should have wrapped the existing handler
+    setupYT();
+    act(() => {
+      globalThis.window.onYouTubeIframeAPIReady!();
+    });
+
+    // Both the previous handler and initPlayer should have run
+    expect(prevHandler).toHaveBeenCalledTimes(1);
+    expect(MockYTPlayer).toHaveBeenCalledTimes(1);
+  });
+
+  it("chains multiple components — all previous handlers are called", () => {
+    // Simulate two VideoPlayer instances mounting before YT loads
+    // (second mount wraps the first component's registered handler)
+    const { unmount: unmount1 } = render(
+      <VideoPlayer youtubeId="abc123" title="Video 1" videoId="vid1" playerId="player-1" />
+    );
+    const handlerAfterFirst = globalThis.window.onYouTubeIframeAPIReady;
+
+    render(
+      <VideoPlayer youtubeId="def456" title="Video 2" videoId="vid2" playerId="player-2" />
+    );
+
+    // The second component's handler should wrap the first
+    expect(globalThis.window.onYouTubeIframeAPIReady).not.toBe(handlerAfterFirst);
+
+    setupYT();
+    act(() => {
+      globalThis.window.onYouTubeIframeAPIReady!();
+    });
+
+    // Both players should have been initialised
+    expect(MockYTPlayer).toHaveBeenCalledTimes(2);
+
+    unmount1();
+  });
+});
