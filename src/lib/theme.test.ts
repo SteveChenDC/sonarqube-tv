@@ -247,4 +247,109 @@ describe("subscribeToSystemTheme", () => {
 
     expect(callback).not.toHaveBeenCalled();
   });
+
+  it("also applies dark class to documentElement when system switches to dark", () => {
+    const mql = makeMQL(false); // start light
+    vi.spyOn(globalThis, "matchMedia").mockReturnValue(mql as unknown as MediaQueryList);
+
+    subscribeToSystemTheme(vi.fn());
+    mql._fire(true); // system switches to dark
+
+    expect(document.documentElement.classList.contains("dark")).toBe(true);
+  });
+
+  it("also removes dark class from documentElement when system switches to light", () => {
+    document.documentElement.classList.add("dark");
+    const mql = makeMQL(true); // start dark
+    vi.spyOn(globalThis, "matchMedia").mockReturnValue(mql as unknown as MediaQueryList);
+
+    subscribeToSystemTheme(vi.fn());
+    mql._fire(false); // system switches to light
+
+    expect(document.documentElement.classList.contains("dark")).toBe(false);
+  });
+
+  it("does NOT apply theme to DOM when a stored preference overrides the system change", () => {
+    localStorage.setItem(STORAGE_KEY, "light");
+    document.documentElement.classList.remove("dark"); // currently light
+
+    const mql = makeMQL(false);
+    vi.spyOn(globalThis, "matchMedia").mockReturnValue(mql as unknown as MediaQueryList);
+
+    subscribeToSystemTheme(vi.fn());
+    mql._fire(true); // system switches to dark — but stored pref should block this
+
+    // DOM should remain unchanged (no dark class added)
+    expect(document.documentElement.classList.contains("dark")).toBe(false);
+  });
+});
+
+// ─── toggleTheme transition cleanup ──────────────────────────────────────────
+
+describe("toggleTheme transition cleanup", () => {
+  beforeEach(() => {
+    vi.spyOn(globalThis, "matchMedia").mockImplementation((query: string) => {
+      // Not reduced-motion → animations enabled
+      if (query === "(prefers-reduced-motion: reduce)") return makeMQL(false) as unknown as MediaQueryList;
+      return makeMQL(true) as unknown as MediaQueryList;
+    });
+  });
+
+  it("removes theme-transitioning class after transitionend fires on documentElement", () => {
+    document.documentElement.classList.add("dark");
+    toggleTheme();
+
+    expect(document.documentElement.classList.contains("theme-transitioning")).toBe(true);
+
+    // Simulate the CSS transition finishing
+    document.documentElement.dispatchEvent(new Event("transitionend"));
+
+    expect(document.documentElement.classList.contains("theme-transitioning")).toBe(false);
+  });
+
+  it("removes theme-transitioning class via fallback setTimeout when transitionend never fires", () => {
+    vi.useFakeTimers();
+    document.documentElement.classList.add("dark");
+    toggleTheme();
+
+    expect(document.documentElement.classList.contains("theme-transitioning")).toBe(true);
+
+    // Advance past the 600ms fallback
+    vi.advanceTimersByTime(600);
+
+    expect(document.documentElement.classList.contains("theme-transitioning")).toBe(false);
+
+    vi.useRealTimers();
+  });
+});
+
+// ─── SSR safety ───────────────────────────────────────────────────────────────
+
+describe("SSR safety (window === undefined)", () => {
+  let originalWindow: typeof globalThis.window;
+
+  beforeEach(() => {
+    originalWindow = globalThis.window;
+    // @ts-expect-error simulate server-side rendering environment
+    delete globalThis.window;
+  });
+
+  afterEach(() => {
+    globalThis.window = originalWindow;
+    vi.restoreAllMocks();
+  });
+
+  it("getEffectiveTheme returns 'dark' when window is undefined (SSR default)", () => {
+    expect(getEffectiveTheme()).toBe("dark");
+  });
+
+  it("getEffectiveTheme still returns 'dark' even when localStorage has a value (no localStorage in SSR)", () => {
+    // localStorage is unavailable in SSR — the stored theme cannot be read
+    // so getStoredTheme() returns null and getSystemTheme() returns "dark"
+    expect(getEffectiveTheme()).toBe("dark");
+  });
+
+  it("getEffectiveTheme does not throw when window is undefined", () => {
+    expect(() => getEffectiveTheme()).not.toThrow();
+  });
 });
