@@ -6,6 +6,17 @@ type: project
 
 ## Already Done (do NOT duplicate)
 
+### 2026-03-17 — Dynamic import CourseIndexCards, CourseTimeline, CourseSidebar
+- **Commit**: `perf: dynamic import CourseIndexCards, CourseTimeline, CourseSidebar`
+- **What**: Dynamically imported `CourseIndexCards` (225 lines) in `courses/page.tsx`, and `CourseTimeline` (256 lines) + `CourseSidebar` (141 lines) in `courses/[slug]/page.tsx`. Each has a skeleton loading fallback.
+- **Impact**: ~622 lines of client JS split into deferred chunks. Hero/header content on both courses pages becomes interactive immediately while interactive sections load separately.
+
+### 2026-03-17 — Dynamic import CourseNavBar and NowPlayingBar on watch page
+- **Commit**: `perf: dynamic import CourseNavBar and NowPlayingBar on watch page`
+- **What**: Converted static imports of `CourseNavBar` and `NowPlayingBar` in `watch/[id]/page.tsx` to `next/dynamic()` calls. `CourseNavBar` (162 lines) only renders when `?course=` is in the URL; `NowPlayingBar` (63 lines) is mobile-only and only visible after scroll.
+- **Note**: `ssr: false` cannot be used in Server Components with `next/dynamic` — omit it there; it only works inside Client Components.
+- **Impact**: ~225 lines of client logic split into deferred chunks, reducing initial JS on all 228 statically generated watch pages.
+
 ### 2026-03-16 — React.memo + stable props to eliminate scroll-driven re-renders
 - **Commit**: `perf: memo VideoCard/VideoRow and stabilize HomeContent props to eliminate redundant re-renders`
 - **What**: Wrapped `VideoCard` and `VideoRow` with `React.memo`. In `HomeContent`, replaced inline `getVideosByCategory()` (new array each render) with a `useMemo` Map; memoized the merged top-row videos array, `sectionLabels` object, `handleRemoveVideo` callback, and `reset` callback.
@@ -34,8 +45,7 @@ type: project
 
 ## Potential Next Opportunities
 
-1. **`CourseCard` double-render** — uses `useState(false)` + `useEffect(() => setMounted(true))` pattern to gate localStorage reads. This causes every CourseCard to render twice (once with no progress, once with actual progress). The pattern is *necessary* to avoid hydration mismatches — localStorage isn't available at SSR/build time. The only way to eliminate it would be cookies (available during SSR). Low priority.
+1. **`CourseCard` double-render** — uses `useState(false)` + `useEffect(() => setMounted(true))` pattern to gate localStorage reads. This causes every CourseCard to render twice. The pattern is necessary to avoid hydration mismatches — localStorage isn't available at SSR/build time. The only way to eliminate it would be cookies (available during SSR). Low priority.
 2. **`VideoCard` double-render** — same `useState(0)` + `useEffect` pattern for watch progress. Same caveat as above. Low priority since progress bar appears after hydration.
-3. **`CourseCard` React.memo** — `CourseCard` is not memoized. The Certification Courses row in `HomeContent` renders 5 CourseCards that could be memoized to avoid re-renders during filter state changes. However, since the courses row is hidden when `isSearching` is true and the CourseCard has no expensive deps (static course data + localStorage), the ROI is low.
-4. **`VideoCard` `sizes` attribute** — currently `sizes="320px"` for all cards. Since `images: { unoptimized: true }` is set for the static export, Next.js's image optimization server is not running — the `sizes` attribute only affects the browser's preload scanner. Minor.
-5. **Debounce search input** — the `SearchContext` does not debounce; if search filtering is expensive, debouncing at 150ms could help. Current search is over static in-memory data so likely fast enough.
+3. **Debounce search input** — the `SearchContext` does not debounce; if search filtering is expensive, debouncing at 150ms could help. Current search is over static in-memory data so likely fast enough. Low priority.
+4. **Pre-existing test failures** — `ArticleTabs.test.tsx`, `HomeContent.test.tsx`, `FilterBar.test.tsx`, `WatchPage.test.tsx` have 29 pre-existing failing tests (not caused by perf-ralph). Do NOT count these as regressions from optimizations.

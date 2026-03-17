@@ -4,6 +4,48 @@ description: Running log of full visual QA passes — most recent at top
 type: project
 ---
 
+## 2026-03-17 (Pass #23)
+
+Ran full visual QA on 2026-03-17 (twenty-third run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
+
+**Result: All clear — no visual bugs found. No regressions from baseline.**
+
+Specific checks:
+- Dark theme correctly applied everywhere (`#0a0a0a` background)
+- Brand colors correct: Qube Blue (`#126ED3`) duration/count badges, Sonar Red (`#D3121D`) "Newest" active sort + "Start Course" buttons
+- Desktop Home: Marquee row → Certification Courses (DEVELOPER/SECURITY/DEVOPS/AI CODE cards with BEGINNER/INTERMEDIATE badges, red Start Course buttons) → Getting Started (badge 6) — clean
+- Desktop Home Bottom: large black area at top = known screenshot artifact; DevOps & CI/CD (badge 16) cards (1:57, 0:59, 46:48); SonarQube for IDE section — clean
+- Desktop Watch: YouTube player with blue thumbnail, Back nav, title card "Auto import of GitHub repos to SonarQube Cloud in action." — correct
+- Desktop Category: "Getting Started" + "6 videos" + "1h 8m total" Qube Blue badges, Newest active Sonar Red, 4-col grid + partial second row — correct
+- Mobile Home: Certification Courses DEVELOPER card fills 375px width (BEGINNER badge, 4 modules · 15 videos · 2h 58m, progress dots, Start Course button); Getting Started badge 6; Filters + scroll-to-top — no horizontal overflow
+- Mobile Home Bottom: large black area at top = known screenshot artifact; DevOps & CI/CD 16 + SonarQube for IDE 16 rows — clean
+- Mobile Watch: full-width player, Back nav, title, SonarQube Cloud + March 12th 2026 tags, 0:41/Part of SCDK/Share, description, AI Summary/Transcript tabs — all within viewport
+- Mobile Category: "Longest" wraps to second line at 375px (expected flex-wrap), 2-col grid with thumbnails — clean
+- "N" bottom-left artifact present — confirmed false positive (Next.js route announcer)
+
+---
+
+## 2026-03-17 (Pass #22)
+
+Ran full visual QA on 2026-03-17 (twenty-second run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
+
+**Result: All clear — no visual bugs found. No regressions from baseline.**
+
+Specific checks:
+- Dark theme correctly applied everywhere (`#0a0a0a` background)
+- Brand colors correct: Qube Blue (`#126ED3`) duration/count badges, Sonar Red (`#D3121D`) "Newest" active sort + "Start Course" buttons
+- Desktop Home: Marquee row → Certification Courses (DEVELOPER/SECURITY/DEVOPS/AI CODE cards with BEGINNER/INTERMEDIATE badges, red Start Course buttons) → Getting Started (badge 6) — clean
+- Desktop Home Bottom: large black area at top = known screenshot artifact; DevOps & CI/CD (badge 16) cards (1:57, 0:59, 46:48); SonarQube for IDE section — clean
+- Desktop Watch: YouTube player with blue thumbnail, Back nav, title card "Auto import of GitHub repos to SonarQube Cloud in action." — correct
+- Desktop Category: "Getting Started" + "6 videos" + "1h 8m total" Qube Blue badges, Newest active Sonar Red, 4-col grid + partial second row — correct
+- Mobile Home: Certification Courses DEVELOPER card fills 375px width (BEGINNER badge, 4 modules · 15 videos · 2h 58m, progress dots, Start Course button); Getting Started badge 6; Filters + scroll-to-top — no horizontal overflow
+- Mobile Home Bottom: large black area at top = known screenshot artifact; DevOps & CI/CD 16 + SonarQube for IDE 16 rows — clean
+- Mobile Watch: full-width player, Back nav, title, SonarQube Cloud + March 12th 2026 tags, 0:41/Part of SCDC/Share, description, AI Summary/Transcript tabs — all within viewport
+- Mobile Category: "Longest" wraps to second line at 375px (expected flex-wrap), 2-col grid with thumbnails — clean
+- "N" bottom-left artifact present — confirmed false positive (Next.js route announcer)
+
+---
+
 ## 2026-03-16 (Pass #21)
 
 Ran full visual QA on 2026-03-16 (twenty-first run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
