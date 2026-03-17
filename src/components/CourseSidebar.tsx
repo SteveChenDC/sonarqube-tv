@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Course } from "@/types";
 import { getCourseVideos, getCourseTotalDuration } from "@/data/courses";
 import {
@@ -60,10 +61,14 @@ export default function CourseSidebar({
               </div>
             </div>
           ) : (
-            <div className="flex h-28 w-28 items-center justify-center rounded-full bg-n8/60">
-              <span className="font-heading text-3xl font-black text-n1/30">
-                {course.shortTitle}
-              </span>
+            <div className="relative h-28 w-full overflow-hidden rounded-lg">
+              <Image
+                src={`/courses/${course.id}.png`}
+                alt={course.title}
+                fill
+                className="object-cover"
+                sizes="320px"
+              />
             </div>
           )}
         </div>

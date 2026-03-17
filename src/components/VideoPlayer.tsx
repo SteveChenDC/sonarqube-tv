@@ -3,6 +3,11 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { getProgress, setProgress as saveProgress } from "@/lib/watchProgress";
 
+/** YouTube thumbnail URL — hqdefault (480×360) is always available. */
+function ytThumbnail(youtubeId: string): string {
+  return `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
+}
+
 interface VideoPlayerProps {
   youtubeId: string;
   title: string;
@@ -50,6 +55,8 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
   const [showShortcutsOverlay, setShowShortcutsOverlay] = useState(false);
   const [shortcutsHint, setShortcutsHint] = useState(true);
   const [seekToast, setSeekToast] = useState<string | null>(null);
+  // Lazy-load: only activate the YouTube iframe when user clicks play (or autoPlay is set).
+  const [activated, setActivated] = useState(!!autoPlay);
 
   useEffect(() => {
     setProgressState(getProgress(videoId));
@@ -85,6 +92,7 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
   }, [youtubeId, playerId, autoPlay, videoId]);
 
   useEffect(() => {
+    if (!activated) return; // Don't load YouTube until user clicks play
     // Load YT API script if not loaded yet
     if (globalThis.window?.YT) {
       initPlayer();
@@ -105,7 +113,7 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
       playerRef.current?.destroy();
       playerRef.current = null;
     };
-  }, [initPlayer]);
+  }, [initPlayer, activated]);
 
   // Track progress
   useEffect(() => {
@@ -204,6 +212,36 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
     document.addEventListener("keydown", handleKey);
     return () => document.removeEventListener("keydown", handleKey);
   }, [showShortcutsOverlay]);
+
+  // Before user clicks play: show thumbnail + play button, no YouTube API loaded.
+  if (!activated) {
+    return (
+      <div className="w-full">
+        <button
+          type="button"
+          aria-label={`Play ${title}`}
+          onClick={() => setActivated(true)}
+          className="group relative flex aspect-video w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-n8 bg-n9 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={ytThumbnail(youtubeId)}
+            alt={title}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          {/* Darken overlay */}
+          <div className="absolute inset-0 bg-black/30 transition-opacity duration-200 group-hover:bg-black/45" />
+          {/* Play button */}
+          <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-sonar-red shadow-lg shadow-sonar-red/50 transition-transform duration-200 group-hover:scale-110">
+            <svg className="ml-1 h-7 w-7 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </button>
+        {!compact && <div className="h-1 w-full rounded-b-lg bg-n8" />}
+      </div>
+    );
+  }
 
   return (
     <div className="w-full">

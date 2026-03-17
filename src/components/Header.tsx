@@ -416,11 +416,6 @@ export default function Header() {
                   {courses.map((course) => {
                     const totalVids = getCourseVideos(course).length;
                     const dur = getCourseTotalDuration(course);
-                    const diffColor = course.difficulty === "beginner"
-                      ? "bg-qube-blue/15 text-qube-blue"
-                      : course.difficulty === "intermediate"
-                        ? "bg-amber-500/15 text-amber-400"
-                        : "bg-sonar-red/15 text-sonar-red";
                     return (
                       <Link
                         key={course.id}
@@ -428,9 +423,11 @@ export default function Header() {
                         onClick={() => setCoursesOpen(false)}
                         className="group flex items-start gap-3 rounded-lg p-2.5 transition-colors hover:bg-n8/50"
                       >
-                        <span className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg font-heading text-xs font-black ${diffColor}`}>
-                          {course.shortTitle.slice(0, 2)}
-                        </span>
+                        <img
+                          src={`/courses/${course.id}.png`}
+                          alt=""
+                          className="mt-0.5 h-8 w-14 shrink-0 rounded object-cover"
+                        />
                         <div className="min-w-0 flex-1">
                           <span className="font-heading text-sm font-semibold text-n2 group-hover:text-n1">
                             {course.title}

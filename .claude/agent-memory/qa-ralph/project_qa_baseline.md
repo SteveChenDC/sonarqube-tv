@@ -4,12 +4,20 @@ description: Build and test baseline as of 2026-03-16 — what passes, known war
 type: project
 ---
 
-As of 2026-03-16 (thirty-sixth QA run), `npm run build` and `npm test` both pass clean. All 219 tests pass.
+As of 2026-03-16 (thirty-ninth QA run), `npm run build` and `npm test` both pass clean. All 372 tests pass (39 test files).
 
-**Build**: Next.js 16.1.6 (Turbopack), 243 static pages generated (SSG), no errors.
+**Build**: Next.js 16.1.6 (Turbopack), 250 static pages generated (SSG), no errors.
 - Known non-fatal warning: "Next.js inferred your workspace root" due to multiple lockfiles at `/Users/stevec/package-lock.json` and project root. Safe to ignore; does not affect build output.
 
-**Tests**: Vitest 4.1.0 — 24 test files, 219 tests. All 219 PASSING.
+**Tests**: Vitest 4.1.0 — 39 test files, 372 tests. All 372 PASSING.
+
+**Run 39**: `src/components/CourseCard.test.tsx` — "shows short title in header" test was failing (searching for "TC" shortTitle text not rendered by the component). File was concurrently modified before fix applied, correcting the test to "shows course image in header" using `getByAltText`. All tests now pass.
+- Pattern: CourseCard does NOT render `course.shortTitle` — the field exists on the `Course` type but is not displayed in the card UI. Tests should not assert on `shortTitle` text in CourseCard.
+
+**Fixed in run 38**: `src/components/CourseTimeline.test.tsx` — parse error (0 tests ran).
+- Error: "Unexpected token" at line 38, col 1 (`}));`) — oxc parser choked on postfix `[]` after closing `}` in TypeScript type annotation: `(course: { modules: { videoIds: string[] }[] })`.
+- Fix: Changed to `Array<{ videoIds: string[] }>` generic form. Committed as d93f1a7.
+- Pattern: oxc (Vitest 4.1.0's transformer) does NOT support `}[]` postfix array syntax on TypeScript type annotations inside `vi.fn()` callbacks. Use `Array<{...}>` instead of `{...}[]` for inline types in mock factory parameters.
 
 **Fixed in run 28**: `src/components/__snapshots__/Hero.visual.test.tsx.snap` — 1 stale snapshot ("mobile card layout matches snapshot").
 - Root cause: Mobile Hero card `bg-n9` div had polish CSS added: `border border-n8/60 shadow-xl shadow-black/40`.
@@ -53,8 +61,8 @@ As of 2026-03-16 (thirty-sixth QA run), `npm run build` and `npm test` both pass
 - Fix applied to tests (not component): Assert `aria-hidden="true"` on the panel wrapper div instead of checking DOM presence.
 - Pattern: When a component uses CSS-only show/hide (grid rows, opacity, height), test the semantic attribute (`aria-hidden`) rather than DOM presence.
 
-**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (runs 19–24, stable) → 219 (run 25, stable) → 219 (runs 26–28, stable)
-**Page count history**: 242 → 243 (stable)
+**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (runs 19–24, stable) → 219 (run 25, stable) → 219 (runs 26–36, stable) → 245 (run 37, 27 test files) → 318 (run 38, 36 test files) → 372 (run 39, 39 test files)
+**Page count history**: 242 → 243 → 250 (run 38–39)
 
 **Why:** Ongoing QA baseline tracking.
-**How to apply:** If Hero.visual.test.tsx snapshot fails, check if gradient overlay CSS classes in Hero.tsx changed (including light/dark variant additions) — update with `npx vitest run -u`. If VideoRow.visual snapshots fail, first check if a new persistent DOM element was added to VideoCard (shimmer, overlay, badge) — stale snapshot is likely the culprit, fix with `npx vitest run -u`. If Footer link tests fail, check whether `aria-label` attributes on social/nav links were changed. If ArticleTabs collapse tests fail again, check whether the component changed from CSS-based to conditional rendering and align test strategy accordingly. If HomeContent empty-state tests fail, check whether the heading copy in HomeContent.tsx changed (exact text, punctuation included). If CategoryContent test count drops/changes, check if props were removed from the component — the test file is kept in sync with the component interface.
+**How to apply:** If Hero.visual.test.tsx snapshot fails, check if gradient overlay CSS classes in Hero.tsx changed (including light/dark variant additions) — update with `npx vitest run -u`. If VideoRow.visual snapshots fail, first check if a new persistent DOM element was added to VideoCard (shimmer, overlay, badge) — stale snapshot is likely the culprit, fix with `npx vitest run -u`. If Footer link tests fail, check whether `aria-label` attributes on social/nav links were changed. If ArticleTabs collapse tests fail again, check whether the component changed from CSS-based to conditional rendering and align test strategy accordingly. If HomeContent empty-state tests fail, check whether the heading copy in HomeContent.tsx changed (exact text, punctuation included). If CategoryContent test count drops/changes, check if props were removed from the component — the test file is kept in sync with the component interface. If a new test file fails to parse (0 tests, transform error), check for `}[]` postfix array syntax in TypeScript type annotations inside vi.fn() callbacks — replace with `Array<{...}>` form. If CourseCard tests fail on shortTitle/TC text, note that CourseCard does NOT render shortTitle — fix the test to use the full title or image alt text.

@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, vi, afterEach } from "vitest";
-import { render, act, waitFor, screen } from "@testing-library/react";
+import { render, act, waitFor, screen, fireEvent } from "@testing-library/react";
 import VideoPlayer from "./VideoPlayer";
 import { setProgress } from "@/lib/watchProgress";
 
@@ -42,9 +42,35 @@ describe("VideoPlayer", () => {
     delete (globalThis as unknown as Record<string, unknown>).YT;
   });
 
+  // --- Lazy-load overlay tests ---
+
+  it("shows thumbnail overlay before activation", () => {
+    render(
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+    );
+    // Overlay play button should be visible
+    expect(screen.getByRole("button", { name: /play test video/i })).toBeTruthy();
+    // Thumbnail image should be rendered
+    expect(screen.getByAltText("Test Video")).toBeTruthy();
+    // Player container should NOT be in DOM yet
+    expect(document.querySelector("#yt-player")).toBeNull();
+  });
+
+  it("activates player when overlay is clicked", async () => {
+    render(
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+    );
+    fireEvent.click(screen.getByRole("button", { name: /play test video/i }));
+    await waitFor(() => {
+      expect(document.querySelector("#yt-player")).toBeTruthy();
+    });
+  });
+
+  // --- Player functionality tests (autoPlay skips overlay) ---
+
   it("renders player container with title", () => {
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
     const div = container.querySelector("#yt-player");
     expect(div).toBeTruthy();
@@ -54,7 +80,7 @@ describe("VideoPlayer", () => {
   it("shows progress bar when localStorage has existing progress", async () => {
     setProgress("vid1", 50);
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
     await waitFor(() => {
       expect(container.querySelector(".bg-sonar-red")).toBeTruthy();
@@ -63,14 +89,14 @@ describe("VideoPlayer", () => {
 
   it("no progress bar when no progress exists", () => {
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
     expect(container.querySelector(".bg-sonar-red")).toBeNull();
   });
 
   it("updates progress bar via polling interval", async () => {
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
 
     mockPlayer.getCurrentTime.mockReturnValue(30);
@@ -89,7 +115,7 @@ describe("VideoPlayer", () => {
 
   it("does not show progress when currentTime is zero", async () => {
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
 
     mockPlayer.getCurrentTime.mockReturnValue(0);
@@ -106,7 +132,7 @@ describe("VideoPlayer", () => {
 
   it("seeks when yt-seek custom event is dispatched", () => {
     render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
 
     act(() => {
@@ -119,7 +145,7 @@ describe("VideoPlayer", () => {
   it("caps progress bar at 100% even when reported progress exceeds 100", async () => {
     setProgress("vid1", 150);
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
     await waitFor(() => {
       const bar = container.querySelector(".bg-sonar-red") as HTMLElement;
@@ -130,7 +156,7 @@ describe("VideoPlayer", () => {
 
   it("handles player errors gracefully during polling", async () => {
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
 
     mockPlayer.getCurrentTime.mockImplementation(() => {
@@ -149,7 +175,7 @@ describe("VideoPlayer", () => {
     setProgress("vid1", 42);
 
     render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
 
     // Trigger the onReady callback
@@ -166,7 +192,7 @@ describe("VideoPlayer", () => {
     setProgress("vid1", 75);
 
     render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
 
     act(() => {
@@ -188,7 +214,7 @@ describe("VideoPlayer", () => {
 
   it("does not show resume toast when no saved progress", () => {
     render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
 
     act(() => {

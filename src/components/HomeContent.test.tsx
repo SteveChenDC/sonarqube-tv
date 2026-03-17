@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { render, screen, cleanup, fireEvent } from "@testing-library/react";
+import { render, screen, cleanup, fireEvent, act, waitFor } from "@testing-library/react";
 import HomeContent from "./HomeContent";
 import type { Category } from "@/types";
 import { makeVideo } from "@/__tests__/factories";
@@ -34,8 +34,15 @@ const videos = [
 ];
 
 
-function openFilters() {
-  fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+async function openFilters() {
+  await act(async () => {
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+  });
+  // FilterBar uses requestAnimationFrame to trigger mount animation —
+  // flush two rAF frames so the modal content renders in jsdom
+  await act(async () => {
+    await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+  });
 }
 
 describe("HomeContent", () => {
@@ -58,7 +65,7 @@ describe("HomeContent", () => {
     expect(screen.getAllByText("Long Webinar").length).toBeGreaterThanOrEqual(1);
   });
 
-  it("filters videos by short duration (under 4 min)", () => {
+  it("filters videos by short duration (under 4 min)", async () => {
     const { container } = render(
       <HomeContent
         categories={categories}
@@ -66,7 +73,7 @@ describe("HomeContent", () => {
       />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -76,7 +83,7 @@ describe("HomeContent", () => {
     expect(cardTitles.has("Long Webinar")).toBe(false);
   });
 
-  it("filters videos by medium duration (4–20 min)", () => {
+  it("filters videos by medium duration (4–20 min)", async () => {
     const { container } = render(
       <HomeContent
         categories={categories}
@@ -84,7 +91,7 @@ describe("HomeContent", () => {
       />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("4–20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -94,7 +101,7 @@ describe("HomeContent", () => {
     expect(cardTitles.has("Long Webinar")).toBe(false);
   });
 
-  it("filters videos by long duration (over 20 min)", () => {
+  it("filters videos by long duration (over 20 min)", async () => {
     const { container } = render(
       <HomeContent
         categories={categories}
@@ -102,7 +109,7 @@ describe("HomeContent", () => {
       />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Over 20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -112,7 +119,7 @@ describe("HomeContent", () => {
     expect(cardTitles.has("Long Webinar")).toBe(true);
   });
 
-  it("sorts videos oldest first", () => {
+  it("sorts videos oldest first", async () => {
     const { container } = render(
       <HomeContent
         categories={categories}
@@ -121,7 +128,7 @@ describe("HomeContent", () => {
       />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Oldest"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -156,7 +163,7 @@ describe("HomeContent", () => {
     expect(tutorialTitles).toEqual(["Short Tutorial", "Medium Tutorial"]);
   });
 
-  it("shows empty state when all videos are filtered out", () => {
+  it("shows empty state when all videos are filtered out", async () => {
     const oldVideos = [
       makeVideo({
         id: "old",
@@ -174,14 +181,14 @@ describe("HomeContent", () => {
       />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Today"));
     fireEvent.click(screen.getByText("Apply"));
 
     expect(screen.getByText("No videos match your filters")).toBeTruthy();
   });
 
-  it("resets filters via empty-state Reset filters button", () => {
+  it("resets filters via empty-state Reset filters button", async () => {
     const oldVideos = [
       makeVideo({
         id: "old",
@@ -199,7 +206,7 @@ describe("HomeContent", () => {
       />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Today"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -214,7 +221,7 @@ describe("HomeContent", () => {
     expect(screen.queryByText("No videos match your filters")).toBeNull();
   });
 
-  it("hides category rows with no matching videos when filters are active", () => {
+  it("hides category rows with no matching videos when filters are active", async () => {
     render(
       <HomeContent
         categories={categories}
@@ -228,7 +235,7 @@ describe("HomeContent", () => {
     expect(screen.getByText("Webinars")).toBeTruthy();
 
     // Apply "Under 4 min" filter — only short-vid (tutorials) matches
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -238,7 +245,7 @@ describe("HomeContent", () => {
     expect(screen.queryByText("Long Webinar")).toBeNull();
   });
 
-  it("treats exactly 20 minutes as medium duration", () => {
+  it("treats exactly 20 minutes as medium duration", async () => {
     const boundaryVideos = [
       makeVideo({
         id: "exact-20",
@@ -262,7 +269,7 @@ describe("HomeContent", () => {
       />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("4–20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -270,7 +277,7 @@ describe("HomeContent", () => {
     expect(screen.queryByText("Twenty One Min")).toBeNull();
   });
 
-  it("resets filters and shows all videos again", () => {
+  it("resets filters and shows all videos again", async () => {
     render(
       <HomeContent
         categories={categories}
@@ -279,12 +286,12 @@ describe("HomeContent", () => {
       />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
     expect(screen.queryByText("Medium Tutorial")).toBeNull();
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Reset all"));
 
     expect(screen.getAllByText("Medium Tutorial").length).toBeGreaterThanOrEqual(1);

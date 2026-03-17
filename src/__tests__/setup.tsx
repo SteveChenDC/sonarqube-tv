@@ -1,6 +1,22 @@
 import { afterEach, vi } from "vitest";
 import { cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/vitest";
+import React from "react";
+
+// Mock next/dynamic so lazy-loaded components render synchronously in tests.
+// Uses React.lazy + Suspense; callers must wrap render in act(async () => {...}).
+vi.mock("next/dynamic", () => ({
+  default: (importFn: () => Promise<{ default: React.ComponentType }>) => {
+    const LazyComp = React.lazy(importFn);
+    return function DynamicComponent(props: Record<string, unknown>) {
+      return React.createElement(
+        React.Suspense,
+        { fallback: null },
+        React.createElement(LazyComp, props)
+      );
+    };
+  },
+}));
 
 // Global mocks for Next.js components used across all test files
 vi.mock("next/link", () => ({

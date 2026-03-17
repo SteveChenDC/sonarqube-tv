@@ -4,6 +4,28 @@ description: Running log of full visual QA passes — most recent at top
 type: project
 ---
 
+## 2026-03-16 (Pass #19)
+
+Ran full visual QA on 2026-03-16 (nineteenth run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
+
+**Result: All clear — no visual bugs found. No regressions from baseline.**
+
+Specific checks:
+- Dark theme correctly applied everywhere (`#0a0a0a` background)
+- Brand colors correct: Qube Blue (`#126ED3`) duration/count badges, Sonar Red (`#D3121D`) "Newest" active sort + "Start Course" buttons
+- New **Certification Courses** section (SCD, SCSE, SCDE, SCA cards) renders cleanly on both desktop and mobile — dark blue thumbnails, BEGINNER badges, progress dots, full-width on mobile
+- Desktop Home: Certification Courses section above Getting Started (badge 6) — clean horizontal scroll layout, no overflow
+- Desktop Home Bottom: Architecture & Governance (badge 6) with duration badges (46:07, 2:21, 5:49) — large black area at top = known screenshot artifact
+- Desktop Watch: YouTube player centered, Back nav, Share button, keyboard shortcuts label, title card below — correct
+- Desktop Category: "Getting Started" header + "6 videos" + "1h 8m total" Qube Blue badges, Newest active Sonar Red, 4-col grid + partial second row — correct
+- Mobile Home: Certification Courses card fills 375px width cleanly (progress dots + Start Course button visible); Getting Started section below with badge 6 — no horizontal overflow
+- Mobile Home Bottom: large black area at top = known screenshot artifact; SonarQube for IDE (badge 16) + Swipe hint + 1:57/2:33 duration badges — clean
+- Mobile Watch: full-width player, Back nav, title, SonarQube Cloud + March 12th 2026 tags, 0:41 duration/Part of OSCT/Share, description, Summary/Transcript tabs — all within viewport
+- Mobile Category: "Longest" wraps to second line at 375px (expected flex-wrap), 2-col video grid clean
+- "N" bottom-left artifact present — confirmed false positive (Next.js route announcer)
+
+---
+
 ## 2026-03-16 (Pass #18)
 
 Ran full visual QA on 2026-03-16 (eighteenth run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).

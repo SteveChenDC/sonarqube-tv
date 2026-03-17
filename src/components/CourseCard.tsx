@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Course } from "@/types";
 import {
   getCourseProgress,
@@ -21,12 +22,6 @@ const difficultyLabels = {
   beginner: "Beginner",
   intermediate: "Intermediate",
   advanced: "Advanced",
-} as const;
-
-const accentGradients = {
-  "sonar-red": "from-sonar-red/20 to-sonar-red/5",
-  "qube-blue": "from-qube-blue/20 to-qube-blue/5",
-  "sonar-purple": "from-sonar-purple/20 to-sonar-purple/5",
 } as const;
 
 export default function CourseCard({
@@ -52,13 +47,15 @@ export default function CourseCard({
 
   return (
     <div className="group relative flex w-[300px] shrink-0 flex-col overflow-hidden rounded-xl border border-n8 bg-n9/60 transition-all duration-200 hover:border-n7 hover:bg-n8/30 sm:w-[320px]">
-      {/* Gradient header area */}
-      <div
-        className={`relative flex h-36 items-center justify-center bg-gradient-to-br ${accentGradients[course.accentColor]}`}
-      >
-        <span className="font-heading text-4xl font-black tracking-tight text-n1/20">
-          {course.shortTitle}
-        </span>
+      {/* Course image header */}
+      <div className="relative h-36 overflow-hidden">
+        <Image
+          src={`/courses/${course.id}.png`}
+          alt={course.title}
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          sizes="320px"
+        />
 
         {/* Completion badge overlay */}
         {completed && (

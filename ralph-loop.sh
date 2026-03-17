@@ -207,6 +207,13 @@ while true; do
   sleep $CSLEEP
 
   ##############################
+  # Report Ralph — cycle summary (read-only, no commits)
+  ##############################
+  echo '=== [Report Ralph] Generating cycle report... ==='
+  claude -p 'Go' --agent report-ralph --model sonnet --dangerously-skip-permissions --max-turns 5 --max-budget-usd 0.50 2>&1
+  echo '=== [Report Ralph] Done ==='
+
+  ##############################
   # Perf Ralph — runs after QA on seo cycles (rotation==2)
   ##############################
   if [ "$ROTATION" = "2" ]; then

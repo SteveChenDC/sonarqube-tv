@@ -57,9 +57,9 @@ describe("CourseCard", () => {
     expect(screen.getByText(/45m/)).toBeTruthy();
   });
 
-  it("shows short title in header", () => {
+  it("shows course image in header", () => {
     render(<CourseCard course={mockCourse} />);
-    expect(screen.getByText("TC")).toBeTruthy();
+    expect(screen.getByAltText("Test Certification Course")).toBeTruthy();
   });
 
   it("renders a start/continue CTA link", () => {
