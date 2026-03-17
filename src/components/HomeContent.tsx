@@ -13,7 +13,7 @@ const FilterBar = dynamic(() => import("./FilterBar"), { ssr: false });
 import { Video, Category } from "@/types";
 import { featuredYoutubeIds } from "@/data/videos";
 import { courses } from "@/data/courses";
-import { useSearch } from "./SearchContext";
+import { useIsSearching } from "./SearchContext";
 import CourseCard from "./CourseCard";
 
 function parseDurationMinutes(duration: string): number {
@@ -79,8 +79,10 @@ export default function HomeContent({
   const [duration, setDuration] = useState<DurationFilter>("any");
   const [sortBy, setSortBy] = useState<SortBy>("newest");
   const [filterOpen, setFilterOpen] = useState(false);
-  const { query: searchQuery } = useSearch();
-  const isSearching = searchQuery.trim().length > 0;
+  // Subscribe only to the isSearching boolean, not the raw query string.
+  // This prevents HomeContent (and its 11 VideoRows) from re-rendering on
+  // every keystroke — it only re-renders when the user starts/stops searching.
+  const isSearching = useIsSearching();
 
   const hasActiveFilters =
     uploadDate !== "anytime" || duration !== "any" || sortBy !== "newest";
