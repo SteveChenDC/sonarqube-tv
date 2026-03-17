@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
@@ -10,9 +12,9 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-between">
           {/* Brand */}
           <div className="flex flex-col items-center gap-2 sm:items-start">
-            <span className="font-heading text-lg font-semibold text-n1">
+            <Link href="/" className="font-heading text-lg font-semibold text-n1 transition-colors hover:text-qube-blue">
               Sonar<span className="text-qube-blue">.tv</span>
-            </span>
+            </Link>
             <p className="max-w-xs text-center text-sm leading-relaxed text-n6 sm:text-left">
               A video showcase for{" "}
               <a
@@ -26,6 +28,45 @@ export default function Footer() {
               tutorials and demos.
             </p>
           </div>
+
+          {/* Internal site navigation — helps search engines discover all key sections */}
+          <nav aria-label="Site sections">
+            <p className="mb-3 text-center font-heading text-xs font-semibold uppercase tracking-wider text-n6 sm:text-left">
+              Browse
+            </p>
+            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 sm:flex-col sm:gap-x-0 sm:gap-y-2">
+              <li>
+                <Link href="/" className="font-body text-sm text-n5 transition-colors hover:text-n1">
+                  All Videos
+                </Link>
+              </li>
+              <li>
+                <Link href="/courses" className="font-body text-sm text-n5 transition-colors hover:text-n1">
+                  Certification Courses
+                </Link>
+              </li>
+              <li>
+                <Link href="/category/getting-started" className="font-body text-sm text-n5 transition-colors hover:text-n1">
+                  Getting Started
+                </Link>
+              </li>
+              <li>
+                <Link href="/category/code-security" className="font-body text-sm text-n5 transition-colors hover:text-n1">
+                  Code Security
+                </Link>
+              </li>
+              <li>
+                <Link href="/category/ai-code-quality" className="font-body text-sm text-n5 transition-colors hover:text-n1">
+                  AI &amp; Code Verification
+                </Link>
+              </li>
+              <li>
+                <Link href="/category/devops-cicd" className="font-body text-sm text-n5 transition-colors hover:text-n1">
+                  DevOps &amp; CI/CD
+                </Link>
+              </li>
+            </ul>
+          </nav>
 
           {/* Links with icons — each has its own brand accent on hover */}
           <div className="flex items-center gap-1">
