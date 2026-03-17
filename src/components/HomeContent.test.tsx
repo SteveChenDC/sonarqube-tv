@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { render, screen, cleanup, fireEvent, act } from "@testing-library/react";
 import { useEffect } from "react";
 import HomeContent from "./HomeContent";
@@ -502,5 +502,491 @@ describe("HomeContent — onRemove wiring", () => {
 
     const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "{}");
     expect(stored["removable2"]).toBeUndefined();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Floating filter button (visibility controlled by IntersectionObserver)
+// ---------------------------------------------------------------------------
+
+describe("HomeContent — floating filter button", () => {
+  type IntersectionObserverCb = (entries: IntersectionObserverEntry[]) => void;
+  let heroObserverCb: IntersectionObserverCb | null = null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let savedIntersectionObserver: any;
+
+  beforeEach(() => {
+    cleanup();
+    localStorage.clear();
+    heroObserverCb = null;
+
+    // Save the original, then override via direct assignment.
+    // Object.defineProperty cannot redefine a non-configurable property even
+    // when writable:true; direct assignment is the only safe path here.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    savedIntersectionObserver = (globalThis as any).IntersectionObserver;
+
+    class ControllableIntersectionObserver {
+      constructor(cb: IntersectionObserverCb) {
+        // Always overwrite — React fires child effects before parent effects, so
+        // VideoRow's IntersectionObservers are created first. HomeContent's hero
+        // observer is created LAST (parent effect runs after children), so the
+        // final assignment is the one we want to trigger manually in tests.
+        heroObserverCb = cb;
+      }
+      observe = vi.fn();
+      disconnect = vi.fn();
+      unobserve = vi.fn();
+    }
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (globalThis as any).IntersectionObserver = ControllableIntersectionObserver;
+  });
+
+  afterEach(() => {
+    // Restore so other test files get the setup.tsx global mock back
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (globalThis as any).IntersectionObserver = savedIntersectionObserver;
+  });
+
+  function triggerHeroOutOfView() {
+    act(() => {
+      heroObserverCb?.([{ isIntersecting: false } as IntersectionObserverEntry]);
+    });
+  }
+
+  function triggerHeroInView() {
+    act(() => {
+      heroObserverCb?.([{ isIntersecting: true } as IntersectionObserverEntry]);
+    });
+  }
+
+  it("floating filter button is initially hidden (opacity-0, pointer-events-none)", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+    const btn = screen.getByRole("button", { name: "Open filters" });
+    expect(btn.className).toContain("opacity-0");
+    expect(btn.className).toContain("pointer-events-none");
+  });
+
+  it("floating filter button becomes visible when hero scrolls out of view", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+    triggerHeroOutOfView();
+    const btn = screen.getByRole("button", { name: "Open filters" });
+    expect(btn.className).toContain("opacity-100");
+    expect(btn.className).not.toContain("pointer-events-none");
+  });
+
+  it("floating filter button hides again when hero re-enters the viewport", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+    triggerHeroOutOfView();
+    triggerHeroInView();
+    const btn = screen.getByRole("button", { name: "Open filters" });
+    expect(btn.className).toContain("opacity-0");
+    expect(btn.className).toContain("pointer-events-none");
+  });
+
+  it("clicking the floating filter button opens the filter panel", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+    triggerHeroOutOfView();
+    const floatingBtn = screen.getByRole("button", { name: "Open filters" });
+    fireEvent.click(floatingBtn);
+    // Filter panel should now be open — check for filter-specific content
+    expect(screen.getByText("Upload date")).toBeTruthy();
+    expect(screen.getByText("Duration")).toBeTruthy();
+  });
+
+  it("floating filter button shows active filter count badge when filters are applied", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+    triggerHeroOutOfView();
+
+    // Apply a filter via the hero-inline Filters button
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+    fireEvent.click(screen.getByText("Under 4 min"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    // The floating button should now contain the count "1"
+    const floatingBtn = screen.getByRole("button", { name: "Open filters" });
+    expect(floatingBtn.textContent).toContain("1");
+  });
+
+  it("floating filter button badge count reflects multiple active filters", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+    triggerHeroOutOfView();
+
+    // Apply two filters: duration + sort
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+    fireEvent.click(screen.getByText("Under 4 min"));
+    fireEvent.click(screen.getByText("Oldest"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    const floatingBtn = screen.getByRole("button", { name: "Open filters" });
+    expect(floatingBtn.textContent).toContain("2");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// footerInView — hides floating filter button + ScrollToTop when footer enters view
+// ---------------------------------------------------------------------------
+
+describe("HomeContent — footerInView hides floating button and ScrollToTop", () => {
+  type IOCb = (entries: IntersectionObserverEntry[]) => void;
+
+  interface TrackedObserver {
+    cb: IOCb;
+    el: Element | null;
+    disconnectFn: ReturnType<typeof vi.fn>;
+  }
+
+  let observed: TrackedObserver[] = [];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let savedIO: any;
+  let footerEl: HTMLElement;
+
+  beforeEach(() => {
+    cleanup();
+    localStorage.clear();
+    observed = [];
+    savedIO = (globalThis as any).IntersectionObserver;
+
+    // Add a real <footer> so HomeContent's footer observer is created
+    footerEl = document.createElement("footer");
+    document.body.appendChild(footerEl);
+
+    class TrackingIO {
+      private _record: TrackedObserver;
+      constructor(cb: IOCb) {
+        this._record = { cb, el: null, disconnectFn: vi.fn() };
+        observed.push(this._record);
+      }
+      observe(el: Element) {
+        this._record.el = el;
+      }
+      disconnect() {
+        this._record.disconnectFn();
+      }
+      unobserve(_el: Element) {}
+    }
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (globalThis as any).IntersectionObserver = TrackingIO;
+  });
+
+  afterEach(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (globalThis as any).IntersectionObserver = savedIO;
+    footerEl.remove();
+  });
+
+  function getFooterObserver(): TrackedObserver | undefined {
+    // The footer observer always observes the <footer> element we injected
+    return observed.find((o) => o.el === footerEl);
+  }
+
+  function getHeroObserver(): TrackedObserver | undefined {
+    // React fires child effects before parent effects, so execution order is:
+    //   VideoRow effects → HomeContent hero effect → HomeContent footer effect
+    // With the footer in the DOM, the footer observer is last; hero is second-to-last.
+    const footerIdx = observed.indexOf(getFooterObserver()!);
+    return footerIdx > 0 ? observed[footerIdx - 1] : undefined;
+  }
+
+  function triggerHeroOut() {
+    act(() => {
+      getHeroObserver()?.cb([{ isIntersecting: false } as IntersectionObserverEntry]);
+    });
+  }
+
+  function triggerFooterIn() {
+    act(() => {
+      getFooterObserver()?.cb([{ isIntersecting: true } as IntersectionObserverEntry]);
+    });
+  }
+
+  function triggerFooterOut() {
+    act(() => {
+      getFooterObserver()?.cb([{ isIntersecting: false } as IntersectionObserverEntry]);
+    });
+  }
+
+  it("footer observer is created and observes the <footer> element", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+    expect(getFooterObserver()).toBeDefined();
+    expect(getFooterObserver()?.el?.tagName).toBe("FOOTER");
+  });
+
+  it("floating button hides when footer enters view even if hero is out of view", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+
+    // Hero scrolls out → button should appear
+    triggerHeroOut();
+    const btn = screen.getByRole("button", { name: "Open filters" });
+    expect(btn.className).toContain("opacity-100");
+
+    // Footer scrolls in → button hides again
+    triggerFooterIn();
+    expect(btn.className).toContain("opacity-0");
+    expect(btn.className).toContain("pointer-events-none");
+  });
+
+  it("floating button reappears when footer leaves view again (hero still out of view)", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+
+    triggerHeroOut();
+    triggerFooterIn();
+
+    // Footer scrolls out again
+    triggerFooterOut();
+    const btn = screen.getByRole("button", { name: "Open filters" });
+    expect(btn.className).toContain("opacity-100");
+    expect(btn.className).not.toContain("pointer-events-none");
+  });
+
+  it("ScrollToTop is hidden when footer enters view", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+
+    triggerFooterIn();
+
+    // ScrollToTop should receive hidden={true}; it renders a button with opacity-0
+    const scrollBtn = screen.getByRole("button", { name: "Scroll to top" });
+    expect(scrollBtn.className).toContain("opacity-0");
+    expect(scrollBtn.className).toContain("pointer-events-none");
+  });
+
+  it("ScrollToTop is not force-hidden when footer is out of view", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+
+    // Footer out of view → hidden={false}; ScrollToTop visibility depends on scrollY only
+    triggerFooterOut();
+
+    // With scrollY=0 it stays invisible (not scrolled), but the hidden prop isn't suppressing it
+    // Simulate scrolling so we can verify hidden=false allows it to appear
+    Object.defineProperty(globalThis, "scrollY", { value: 700, writable: true });
+    fireEvent.scroll(globalThis);
+
+    const scrollBtn = screen.getByRole("button", { name: "Scroll to top" });
+    expect(scrollBtn.className).toContain("opacity-100");
+
+    // Restore
+    Object.defineProperty(globalThis, "scrollY", { value: 0, writable: true });
+  });
+
+  it("footer observer is disconnected on unmount", () => {
+    const { unmount } = render(<HomeContent categories={categories} videos={videos} />);
+    const footerObs = getFooterObserver();
+    expect(footerObs).toBeDefined();
+
+    unmount();
+    expect(footerObs?.disconnectFn).toHaveBeenCalled();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Upload date filter integration tests
+// ---------------------------------------------------------------------------
+
+describe("HomeContent — upload date filters", () => {
+  const CAT: Category[] = [
+    { slug: "tutorials", title: "Tutorials", description: "Tutorial videos" },
+  ];
+
+  beforeEach(() => {
+    cleanup();
+    localStorage.clear();
+    // Fix "now" to 2026-03-17T12:00:00Z for deterministic date math
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-03-17T12:00:00Z"));
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
+  function renderWithVideos(testVideos: ReturnType<typeof makeVideo>[]) {
+    const { container } = render(
+      <HomeContent categories={CAT} videos={testVideos} />
+    );
+    return container;
+  }
+
+  function applyDateFilter(label: string, container: HTMLElement) {
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+    fireEvent.click(screen.getByText(label));
+    fireEvent.click(screen.getByText("Apply"));
+    return container;
+  }
+
+  function visibleTitles(container: HTMLElement) {
+    return new Set(
+      Array.from(container.querySelectorAll("h3")).map((h) => h.textContent)
+    );
+  }
+
+  it("'This week' shows a video published 3 days ago", () => {
+    const recentVideo = makeVideo({
+      id: "wk-recent",
+      title: "Recent This Week",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+    const oldVideo = makeVideo({
+      id: "wk-old",
+      title: "Old This Week",
+      category: "tutorials",
+      publishedAt: "2024-01-01T00:00:00Z",
+    });
+
+    const container = renderWithVideos([recentVideo, oldVideo]);
+    applyDateFilter("This week", container);
+
+    const titles = visibleTitles(container);
+    expect(titles.has("Recent This Week")).toBe(true);
+    expect(titles.has("Old This Week")).toBe(false);
+  });
+
+  it("'This week' excludes a video published exactly 8 days ago", () => {
+    const eightDaysAgo = makeVideo({
+      id: "wk-8",
+      title: "Eight Days Ago",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 8 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+
+    const container = renderWithVideos([eightDaysAgo]);
+    applyDateFilter("This week", container);
+
+    expect(screen.getByText("No videos match your filters")).toBeTruthy();
+  });
+
+  it("'This month' shows a video published 20 days ago", () => {
+    const recent = makeVideo({
+      id: "mo-recent",
+      title: "Recent This Month",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 20 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+    const old = makeVideo({
+      id: "mo-old",
+      title: "Old This Month",
+      category: "tutorials",
+      publishedAt: "2023-01-01T00:00:00Z",
+    });
+
+    const container = renderWithVideos([recent, old]);
+    applyDateFilter("This month", container);
+
+    const titles = visibleTitles(container);
+    expect(titles.has("Recent This Month")).toBe(true);
+    expect(titles.has("Old This Month")).toBe(false);
+  });
+
+  it("'This month' excludes a video published 31 days ago", () => {
+    const thirtyOneDaysAgo = makeVideo({
+      id: "mo-31",
+      title: "Thirty One Days Ago",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 31 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+
+    const container = renderWithVideos([thirtyOneDaysAgo]);
+    applyDateFilter("This month", container);
+
+    expect(screen.getByText("No videos match your filters")).toBeTruthy();
+  });
+
+  it("'This year' shows a video published 100 days ago", () => {
+    const recent = makeVideo({
+      id: "yr-recent",
+      title: "Recent This Year",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 100 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+    const old = makeVideo({
+      id: "yr-old",
+      title: "Old This Year",
+      category: "tutorials",
+      publishedAt: "2020-01-01T00:00:00Z",
+    });
+
+    const container = renderWithVideos([recent, old]);
+    applyDateFilter("This year", container);
+
+    const titles = visibleTitles(container);
+    expect(titles.has("Recent This Year")).toBe(true);
+    expect(titles.has("Old This Year")).toBe(false);
+  });
+
+  it("'This year' excludes a video published exactly 366 days ago", () => {
+    const tooOld = makeVideo({
+      id: "yr-366",
+      title: "Three Sixty Six Days Ago",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 366 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+
+    const container = renderWithVideos([tooOld]);
+    applyDateFilter("This year", container);
+
+    expect(screen.getByText("No videos match your filters")).toBeTruthy();
+  });
+
+  it("combined date + duration filter: 'This week' + 'Under 4 min' keeps only matching videos", () => {
+    const recentShort = makeVideo({
+      id: "combo-rs",
+      title: "Recent Short",
+      category: "tutorials",
+      duration: "3:00",
+      publishedAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+    const recentLong = makeVideo({
+      id: "combo-rl",
+      title: "Recent Long",
+      category: "tutorials",
+      duration: "25:00",
+      publishedAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+    const oldShort = makeVideo({
+      id: "combo-os",
+      title: "Old Short",
+      category: "tutorials",
+      duration: "3:00",
+      publishedAt: "2022-01-01T00:00:00Z",
+    });
+
+    render(<HomeContent categories={CAT} videos={[recentShort, recentLong, oldShort]} />);
+
+    // Open filters and set both date and duration
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+    fireEvent.click(screen.getByText("This week"));
+    fireEvent.click(screen.getByText("Under 4 min"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    const titles = new Set(
+      Array.from(document.querySelectorAll("h3")).map((h) => h.textContent)
+    );
+    expect(titles.has("Recent Short")).toBe(true);
+    expect(titles.has("Recent Long")).toBe(false);
+    expect(titles.has("Old Short")).toBe(false);
+  });
+
+  it("'Any time' (default) shows all videos regardless of age", () => {
+    const ancient = makeVideo({
+      id: "ancient",
+      title: "Ancient Video",
+      category: "tutorials",
+      publishedAt: "2000-01-01T00:00:00Z",
+    });
+    const fresh = makeVideo({
+      id: "fresh",
+      title: "Fresh Video",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 1 * 60 * 60 * 1000).toISOString(),
+    });
+
+    const container = renderWithVideos([ancient, fresh]);
+
+    // No filter applied — default is "anytime"
+    const titles = visibleTitles(container);
+    expect(titles.has("Ancient Video")).toBe(true);
+    expect(titles.has("Fresh Video")).toBe(true);
   });
 });
