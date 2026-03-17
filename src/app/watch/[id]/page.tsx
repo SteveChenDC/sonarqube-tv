@@ -17,8 +17,6 @@ import {
 import { getArticleByVideoId, getTranscriptByVideoId } from "@/data/articles";
 
 import ShareButton from "@/components/ShareButton";
-import NowPlayingBar from "@/components/NowPlayingBar";
-import CourseNavBar from "@/components/CourseNavBar";
 import CourseBadge from "@/components/CourseBadge";
 
 // Dynamically import below-fold client components to reduce initial JS bundle.
@@ -28,6 +26,15 @@ const ArticleTabs = dynamic(() => import("@/components/ArticleTabs"));
 
 // PlaylistQueue only renders when ?playlist= is in the URL; defer its JS accordingly.
 const PlaylistQueue = dynamic(() => import("@/components/PlaylistQueue"));
+
+// NowPlayingBar: mobile-only sticky bar, invisible until user scrolls past the player.
+// Deferred into its own chunk — not needed for initial paint on any viewport.
+const NowPlayingBar = dynamic(() => import("@/components/NowPlayingBar"));
+
+// CourseNavBar: only renders when ?course= is in the URL (most visits don't have it).
+// Already wrapped in <Suspense> at the call site; deferred here to keep it out of
+// the initial bundle for the ~228 statically generated watch pages.
+const CourseNavBar = dynamic(() => import("@/components/CourseNavBar"));
 
 export function generateStaticParams() {
   return videos.map((video) => ({ id: video.id }));
