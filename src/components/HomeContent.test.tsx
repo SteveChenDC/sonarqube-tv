@@ -1064,3 +1064,181 @@ describe("HomeContent — upload date filters", () => {
     expect(titles.has("Old Short Video")).toBe(false);
   });
 });
+
+// ---------------------------------------------------------------------------
+// Top row ("Latest" / "Oldest") behavior tests
+// ---------------------------------------------------------------------------
+
+describe("HomeContent — top row Latest/Oldest logic", () => {
+  const CAT: Category[] = [
+    { slug: "tutorials", title: "Tutorials", description: "Tutorial videos" },
+  ];
+
+  const STORAGE_KEY = "sonarqube-tv-watch-progress";
+
+  beforeEach(() => {
+    cleanup();
+    localStorage.clear();
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-03-17T12:00:00Z"));
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
+  it("shows 'Latest' row heading when sortBy=newest and there are recent videos", async () => {
+    const recentVideo = makeVideo({
+      id: "latest-1",
+      title: "Very Recent Video",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(), // 5 days ago
+    });
+
+    const { container } = render(
+      <HomeContent categories={CAT} videos={[recentVideo]} />
+    );
+    await act(async () => {});
+
+    const h2s = Array.from(container.querySelectorAll("h2")).map((h) => h.textContent ?? "");
+    expect(h2s.some((t) => t.startsWith("Latest"))).toBe(true);
+  });
+
+  it("does not show top row when all videos are older than 30 days and sortBy=newest", async () => {
+    const oldVideo = makeVideo({
+      id: "old-1",
+      title: "Old Video",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000).toISOString(), // 60 days ago
+    });
+
+    const { container } = render(
+      <HomeContent categories={CAT} videos={[oldVideo]} />
+    );
+    await act(async () => {});
+
+    const h2s = Array.from(container.querySelectorAll("h2")).map((h) => h.textContent ?? "");
+    // No "Latest" row because no videos are within 30 days
+    expect(h2s.some((t) => t.startsWith("Latest"))).toBe(false);
+    // No "Oldest" row either because sortBy=newest
+    expect(h2s.some((t) => t.startsWith("Oldest"))).toBe(false);
+  });
+
+  it("Latest row count badge reflects only recent videos (excludes videos older than 30 days)", async () => {
+    const recentA = makeVideo({
+      id: "recent-a",
+      title: "Recent A",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(), // 5 days ago
+    });
+    const recentB = makeVideo({
+      id: "recent-b",
+      title: "Recent B",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000).toISOString(), // 10 days ago
+    });
+    const oldVideo = makeVideo({
+      id: "old-x",
+      title: "Old X",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 90 * 24 * 60 * 60 * 1000).toISOString(), // 90 days ago
+    });
+
+    const { container } = render(
+      <HomeContent categories={CAT} videos={[recentA, recentB, oldVideo]} />
+    );
+    await act(async () => {});
+
+    const latestH2 = Array.from(container.querySelectorAll("h2")).find((h) =>
+      (h.textContent ?? "").startsWith("Latest")
+    );
+    // Count badge should show 2, not 3 — only the 2 recent videos qualify
+    expect(latestH2).toBeDefined();
+    expect(latestH2?.textContent).toContain("2");
+  });
+
+  it("video published exactly 30 days ago is excluded from Latest row (boundary)", async () => {
+    // exactly 30 days ago is NOT < 30 days, so it should be excluded
+    const thirtyDaysAgo = makeVideo({
+      id: "boundary-30",
+      title: "Thirty Days Ago",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+    const twentyNineDaysAgo = makeVideo({
+      id: "boundary-29",
+      title: "Twenty Nine Days Ago",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 29 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+
+    const { container } = render(
+      <HomeContent categories={CAT} videos={[thirtyDaysAgo, twentyNineDaysAgo]} />
+    );
+    await act(async () => {});
+
+    const latestH2 = Array.from(container.querySelectorAll("h2")).find((h) =>
+      (h.textContent ?? "").startsWith("Latest")
+    );
+    // Only the 29-day-old video appears in Latest; 30-day is excluded
+    expect(latestH2).toBeDefined();
+    expect(latestH2?.textContent).toContain("1");
+  });
+
+  it("combined CW+Latest: both 'Continue Watching' and 'Latest' labels appear in the merged row", async () => {
+    // cwVideo is in-progress AND recent — appears in CW section
+    const cwVideo = makeVideo({
+      id: "cw-merged",
+      title: "In Progress Video",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+    // recentVideo is only recent (not in progress) — appears in Latest section
+    const recentVideo = makeVideo({
+      id: "recent-merged",
+      title: "Recent Only Video",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ "cw-merged": 55 }));
+
+    const { container } = render(
+      <HomeContent categories={CAT} videos={[cwVideo, recentVideo]} />
+    );
+    await act(async () => {});
+
+    // In sectionLabels mode both labels render as h2 headings inside the scroll row
+    const allH2Text = Array.from(container.querySelectorAll("h2")).map((h) => h.textContent ?? "");
+    expect(allH2Text.some((t) => t.startsWith("Continue Watching"))).toBe(true);
+    expect(allH2Text.some((t) => t.startsWith("Latest"))).toBe(true);
+  });
+
+  it("Oldest sort: top row shows all filtered videos (not just recent ones)", async () => {
+    const oldVideo = makeVideo({
+      id: "oldest-old",
+      title: "Old But Visible",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000).toISOString(), // 60 days ago
+    });
+
+    const { container } = render(
+      <HomeContent categories={CAT} videos={[oldVideo]} />
+    );
+    await act(async () => {});
+
+    // With default (newest) sortBy and a video older than 30 days, no top row
+    const h2sBefore = Array.from(container.querySelectorAll("h2")).map((h) => h.textContent ?? "");
+    expect(h2sBefore.some((t) => t.startsWith("Latest"))).toBe(false);
+
+    // Switch to Oldest sort — the 30-day filter is bypassed
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+    fireEvent.click(screen.getByText("Oldest"));
+    fireEvent.click(screen.getByText("Apply"));
+    await act(async () => {});
+
+    const h2sAfter = Array.from(container.querySelectorAll("h2")).map((h) => h.textContent ?? "");
+    expect(h2sAfter.some((t) => t.startsWith("Oldest"))).toBe(true);
+    expect(h2sAfter.some((t) => t.startsWith("Latest"))).toBe(false);
+  });
+});
