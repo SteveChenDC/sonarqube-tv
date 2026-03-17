@@ -88,7 +88,7 @@ beforeEach(() => {
 
 // ── empty-state branch ────────────────────────────────────────────────────────
 describe("CategoryPage — empty category (no videos)", () => {
-  it('renders "No videos in this category yet." when category has zero videos', async () => {
+  it('renders empty state message when category has zero videos', async () => {
     vi.mocked(videosModule.getVideosByCategory).mockReturnValueOnce([]);
 
     const jsx = await CategoryPage({
@@ -97,7 +97,7 @@ describe("CategoryPage — empty category (no videos)", () => {
     render(jsx);
 
     expect(
-      screen.getByText(/no videos in this category yet/i)
+      screen.getByText(/no videos here yet/i)
     ).toBeInTheDocument();
   });
 

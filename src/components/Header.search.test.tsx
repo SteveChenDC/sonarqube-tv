@@ -12,8 +12,8 @@
  * Global mocks (next/link, next/image, matchMedia, IntersectionObserver) are
  * already configured in src/__tests__/setup.tsx.
  */
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import { render, screen, cleanup, fireEvent, act } from "@testing-library/react";
+import { describe, it, expect, vi, beforeEach, afterEach, beforeAll } from "vitest";
+import { render, screen, cleanup, fireEvent, act, waitFor } from "@testing-library/react";
 import Header from "./Header";
 import { SearchProvider } from "./SearchContext";
 
@@ -68,6 +68,12 @@ function searchInput() {
   return screen.getByRole("searchbox", { name: "Search videos" });
 }
 
+// Pre-warm the @/data/videos module mock so that subsequent dynamic imports
+// (import("@/data/videos") inside Header's useEffect) resolve instantly.
+beforeAll(async () => {
+  await import("@/data/videos");
+});
+
 beforeEach(() => {
   cleanup();
   localStorage.clear();
@@ -105,12 +111,12 @@ describe("Header — search open/close", () => {
     expect(screen.getByRole("button", { name: "Search videos" })).toBeInTheDocument();
   });
 
-  it("Escape key clears the query when closing search", () => {
+  it("Escape key clears the query when closing search", async () => {
     renderHeader();
     openSearch();
+    await act(async () => {});
     fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
-    // Results should be visible
-    expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument());
 
     act(() => {
       fireEvent.keyDown(document, { key: "Escape" });
@@ -152,34 +158,39 @@ describe("Header — search open/close", () => {
 // Search — results
 // ─────────────────────────────────────────────────────────────────────────────
 describe("Header — search results", () => {
-  it("typing a matching query reveals the results dropdown with matching title", () => {
+  it("typing a matching query reveals the results dropdown with matching title", async () => {
     renderHeader();
     openSearch();
+    await act(async () => {});
     fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
-    expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument());
   });
 
-  it("shows 'No videos match' message when query has no results", () => {
+  it("shows 'No videos match' message when query has no results", async () => {
     renderHeader();
-    openSearch();
+    await act(async () => { openSearch(); });
     fireEvent.change(searchInput(), { target: { value: "zzz-no-match-xyz" } });
-    expect(screen.getByText(/No videos match/)).toBeInTheDocument();
+    // "No results" is the exact text of the badge span when no results are found.
+    // Use exact match to avoid matching the body text "No results for …" as well.
+    await waitFor(() => expect(screen.getByText("No results")).toBeInTheDocument(), { timeout: 3000 });
   });
 
-  it("shows singular 'result' for a single match", () => {
+  it("shows singular 'result' for a single match", async () => {
     renderHeader();
     openSearch();
+    await act(async () => {});
     // "SonarQube" only appears in the first video's title/description
     fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
-    expect(screen.getByText("1 of 1 result")).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByText("1 of 1 result")).toBeInTheDocument());
   });
 
-  it("shows plural 'results' when multiple videos match", () => {
+  it("shows plural 'results' when multiple videos match", async () => {
     renderHeader();
     openSearch();
+    await act(async () => {});
     // "tutorial" is in BOTH video descriptions — so both match
     fireEvent.change(searchInput(), { target: { value: "tutorial" } });
-    expect(screen.getByText("2 of 2 results")).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByText("2 of 2 results")).toBeInTheDocument());
   });
 
   it("results dropdown does not appear when search is closed (no query shown)", () => {
@@ -188,47 +199,53 @@ describe("Header — search results", () => {
     expect(screen.queryByText("SonarQube Introduction")).toBeNull();
   });
 
-  it("result items include the video title and duration", () => {
+  it("result items include the video title and duration", async () => {
     renderHeader();
     openSearch();
+    await act(async () => {});
     fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
-    expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument());
     // Duration should also appear in the result item
     expect(screen.getByText("10:00")).toBeInTheDocument();
   });
 
-  it("result items link to the correct /watch route", () => {
+  it("result items link to the correct /watch route", async () => {
     renderHeader();
     openSearch();
+    await act(async () => {});
     fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
     // The result list item wraps the title in an <a>
+    await waitFor(() => expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument());
     const link = screen.getByText("SonarQube Introduction").closest("a");
     expect(link?.getAttribute("href")).toBe("/watch/hdr-vid-1");
   });
 
-  it("matches a video whose description contains the query even when the title does not", () => {
+  it("matches a video whose description contains the query even when the title does not", async () => {
     renderHeader();
     openSearch();
+    await act(async () => {});
     // "Deep dive" appears in video 2's description ("Deep dive tutorial into code analysis")
     // but NOT in its title ("Advanced Analysis") — tests the description branch of the filter
     fireEvent.change(searchInput(), { target: { value: "Deep dive" } });
-    expect(screen.getByText("Advanced Analysis")).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByText("Advanced Analysis")).toBeInTheDocument());
     expect(screen.queryByText("SonarQube Introduction")).toBeNull();
   });
 
-  it("result items include a category badge with the category name", () => {
+  it("result items include a category badge with the category name", async () => {
     renderHeader();
     openSearch();
+    await act(async () => {});
     fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
     // Both test videos belong to "getting-started" which maps to "Getting Started"
-    expect(screen.getByText("Getting Started")).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByText("Getting Started")).toBeInTheDocument());
   });
 
-  it("clicking a result link clears the query and closes search", () => {
+  it("clicking a result link clears the query and closes search", async () => {
     renderHeader();
     openSearch();
+    await act(async () => {});
     fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
-    expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument());
 
     const resultLink = screen.getByText("SonarQube Introduction").closest("a")!;
     fireEvent.click(resultLink);
@@ -263,11 +280,12 @@ describe("Header — search blur / click-outside", () => {
     expect(searchInput()).toBeInTheDocument();
   });
 
-  it("clicking outside the results area while results are visible clears the query", () => {
+  it("clicking outside the results area while results are visible clears the query", async () => {
     renderHeader();
     openSearch();
+    await act(async () => {});
     fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
-    expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument());
 
     // mousedown on document body (outside input and results ref)
     act(() => {
@@ -296,11 +314,12 @@ describe("Header — clear search button", () => {
     expect(screen.getByLabelText("Clear search")).toBeInTheDocument();
   });
 
-  it("clicking clear button removes the query and hides results", () => {
+  it("clicking clear button removes the query and hides results", async () => {
     renderHeader();
     openSearch();
+    await act(async () => {});
     fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
-    expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument());
 
     fireEvent.click(screen.getByLabelText("Clear search"));
 

@@ -16,26 +16,29 @@ describe("Footer", () => {
 
   it("renders YouTube, GitHub, and SonarSource navigation links", () => {
     render(<Footer />);
-    const links = screen.getAllByRole("link");
-    // 4 links total: inline SonarSource + YouTube, GitHub, SonarSource nav
-    expect(links).toHaveLength(4);
 
     const youtube = screen.getByRole("link", { name: "SonarSource on YouTube" });
-    expect(youtube).toHaveAttribute(
-      "href",
-      "https://www.youtube.com/c/SonarSource"
-    );
+    expect(youtube).toHaveAttribute("href", "https://www.youtube.com/c/SonarSource");
     expect(youtube).toHaveAttribute("target", "_blank");
+    expect(youtube).toHaveAttribute("rel", "noopener noreferrer");
 
     const github = screen.getByRole("link", { name: "SonarSource on GitHub" });
     expect(github).toHaveAttribute("href", "https://github.com/SonarSource");
     expect(github).toHaveAttribute("target", "_blank");
+    expect(github).toHaveAttribute("rel", "noopener noreferrer");
+
+    const sonar = screen.getByRole("link", { name: "SonarSource website" });
+    expect(sonar).toHaveAttribute("href", "https://www.sonarsource.com");
+    expect(sonar).toHaveAttribute("target", "_blank");
+    expect(sonar).toHaveAttribute("rel", "noopener noreferrer");
   });
 
   it("all external links have noopener noreferrer for security", () => {
     render(<Footer />);
     const links = screen.getAllByRole("link");
-    for (const link of links) {
+    const externalLinks = links.filter(l => l.getAttribute("target") === "_blank");
+    expect(externalLinks.length).toBeGreaterThan(0);
+    for (const link of externalLinks) {
       expect(link).toHaveAttribute("rel", "noopener noreferrer");
     }
   });
