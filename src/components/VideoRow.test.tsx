@@ -347,6 +347,73 @@ describe("VideoRow", () => {
     });
   });
 
+  describe("Swipe hint — mobile scroll affordance", () => {
+    // Helper: mock all new divs to report overflow dimensions so canScrollRight becomes true
+    function withScrollOverflow(fn: () => void) {
+      const originalCreateElement = document.createElement.bind(document);
+      vi.spyOn(document, "createElement").mockImplementation((tag: string, options?: ElementCreationOptions) => {
+        const el = originalCreateElement(tag, options);
+        if (tag === "div") {
+          Object.defineProperty(el, "scrollWidth", { value: 2000, configurable: true });
+          Object.defineProperty(el, "clientWidth", { value: 800, configurable: true });
+          Object.defineProperty(el, "scrollLeft", { value: 0, writable: true, configurable: true });
+        }
+        return el;
+      });
+      fn();
+      vi.restoreAllMocks();
+    }
+
+    it("shows swipe hint when content overflows and user has not yet scrolled", () => {
+      withScrollOverflow(() => {
+        const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+        const { container } = render(
+          <VideoRow title="Row" categorySlug="cat" videos={videos} />
+        );
+        const hint = container.querySelector('[class*="sm:hidden"]');
+        expect(hint).not.toBeNull();
+        expect(hint?.textContent).toContain("Swipe");
+      });
+    });
+
+    it("does not show swipe hint when content does not overflow", () => {
+      // Default jsdom: scrollWidth === clientWidth === 0, so canScrollRight is false
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+      const { container } = render(
+        <VideoRow title="Row" categorySlug="cat" videos={videos} />
+      );
+      expect(container.querySelector('[class*="sm:hidden"]')).toBeNull();
+    });
+
+    it("swipe hint disappears after the user first scrolls", () => {
+      withScrollOverflow(() => {
+        const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+        const { container } = render(
+          <VideoRow title="Row" categorySlug="cat" videos={videos} />
+        );
+        // Hint is visible before any scroll
+        expect(container.querySelector('[class*="sm:hidden"]')).not.toBeNull();
+
+        // Simulate the user scrolling the row
+        const region = container.querySelector("[role='region']")!;
+        fireEvent.scroll(region);
+
+        // Hint must be gone — hasScrolled is now true
+        expect(container.querySelector('[class*="sm:hidden"]')).toBeNull();
+      });
+    });
+
+    it("does not show swipe hint when hideHeader is true (hint lives in the header)", () => {
+      withScrollOverflow(() => {
+        const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+        const { container } = render(
+          <VideoRow title="Row" categorySlug="cat" videos={videos} hideHeader />
+        );
+        expect(container.querySelector('[class*="sm:hidden"]')).toBeNull();
+      });
+    });
+  });
+
   describe("RowSkeleton — before IntersectionObserver fires", () => {
     useNonFiringIntersectionObserver();
 
