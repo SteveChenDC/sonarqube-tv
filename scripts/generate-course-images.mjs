@@ -45,6 +45,12 @@ const courses = [
     bgDark: "#1a002e",
   },
   {
+    id: "scps",
+    label: "PUBLIC SECTOR",
+    bg: BLUE,
+    bgDark: "#0d5aad",
+  },
+  {
     id: "scea",
     label: "ARCHITECT",
     bg: RED,

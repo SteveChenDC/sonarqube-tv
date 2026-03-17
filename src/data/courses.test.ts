@@ -10,8 +10,8 @@ import {
 import { getVideoById } from "./videos";
 
 describe("courses data", () => {
-  it("exports 5 courses", () => {
-    expect(courses).toHaveLength(5);
+  it("exports 6 courses", () => {
+    expect(courses).toHaveLength(6);
   });
 
   it("each course has unique slug and id", () => {

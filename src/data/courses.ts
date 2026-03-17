@@ -193,6 +193,55 @@ export const courses: Course[] = [
     ],
   },
   {
+    id: "scps",
+    slug: "sonarqube-certified-public-sector",
+    title: "SonarQube Certified Public Sector Specialist",
+    shortTitle: "SCPS",
+    description:
+      "Navigate SonarQube in regulated environments — FedRAMP readiness, audit logging, SIEM integration, and governance at agency scale.",
+    difficulty: "intermediate",
+    targetAudience:
+      "US Federal employees, government contractors, ISSOs, compliance officers, and public sector engineering leads",
+    learningOutcomes: [
+      "Understand SonarQube's FedRAMP-ready enterprise capabilities",
+      "Configure audit logging and export to SIEM (Splunk)",
+      "Deploy quality gates and portfolio governance at agency scale",
+      "Apply SAST, secrets detection, and taint analysis for ATO readiness",
+      "Scale code quality across large regulated development teams",
+    ],
+    accentColor: "qube-blue",
+    modules: [
+      {
+        id: "scps-m1",
+        title: "SonarQube for Government",
+        description:
+          "Enterprise capabilities for federal agencies and regulated environments",
+        videoIds: ["v104", "v131", "v102"],
+      },
+      {
+        id: "scps-m2",
+        title: "Compliance & Audit",
+        description:
+          "Audit logging, SIEM integration, and security in regulated landscapes",
+        videoIds: ["v68", "v50", "v29"],
+      },
+      {
+        id: "scps-m3",
+        title: "Security for Regulated Code",
+        description:
+          "SAST, secrets detection, and code security for ATO readiness",
+        videoIds: ["v21", "v70", "v14"],
+      },
+      {
+        id: "scps-m4",
+        title: "Governance at Scale",
+        description:
+          "Portfolio reporting, quality gates, and scaling across the enterprise",
+        videoIds: ["v97", "v110", "v31", "v180"],
+      },
+    ],
+  },
+  {
     id: "scea",
     slug: "sonarqube-certified-enterprise-architect",
     title: "SonarQube Certified Enterprise Architect",
