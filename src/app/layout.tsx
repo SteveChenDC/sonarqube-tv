@@ -52,6 +52,8 @@ export const metadata: Metadata = {
   },
 };
 
+const BASE_URL = "https://stevechendc.github.io/sonarqube-tv";
+
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -64,6 +66,28 @@ const organizationJsonLd = {
     "https://www.linkedin.com/company/sonarsource",
     "https://github.com/SonarSource",
   ],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Sonar.tv",
+  url: BASE_URL,
+  description:
+    "Video tutorials, webinars, and demos for code verification, code quality, and code security with Sonar.",
+  publisher: {
+    "@type": "Organization",
+    name: "SonarSource",
+    url: "https://www.sonarsource.com",
+  },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${BASE_URL}/?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
 };
 
 export default function RootLayout({
@@ -83,6 +107,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
           }}
         />
       </head>
