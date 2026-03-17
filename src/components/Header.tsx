@@ -4,6 +4,8 @@ import { useState, useRef, useEffect, useCallback, useMemo } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import { categories, videos } from "@/data/videos";
+import { courses } from "@/data/courses";
+import { getCourseVideos, getCourseTotalDuration } from "@/data/courses";
 import { useSearch } from "./SearchContext";
 
 function SonarWhaleMark({ className }: Readonly<{ className?: string }>) {
@@ -26,9 +28,12 @@ function SonarWhaleMark({ className }: Readonly<{ className?: string }>) {
 export default function Header() {
   const { query: searchQuery, setQuery: onSearchChange } = useSearch();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [coursesOpen, setCoursesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const coursesRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const coursesTimeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   useEffect(() => {
     function onScroll() {
@@ -44,9 +49,15 @@ export default function Header() {
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
         setMenuOpen(false);
       }
+      if (coursesRef.current && !coursesRef.current.contains(e.target as Node)) {
+        setCoursesOpen(false);
+      }
     }
     function handleEscape(e: KeyboardEvent) {
-      if (e.key === "Escape") setMenuOpen(false);
+      if (e.key === "Escape") {
+        setMenuOpen(false);
+        setCoursesOpen(false);
+      }
     }
     document.addEventListener("mousedown", handleClickOutside);
     document.addEventListener("keydown", handleEscape);
@@ -75,20 +86,41 @@ export default function Header() {
     if (!dropdownVisible) setDropdownMounted(false);
   }, [dropdownVisible]);
 
+  // Courses dropdown animation state
+  const [coursesDropdownMounted, setCoursesDropdownMounted] = useState(false);
+  const [coursesDropdownVisible, setCoursesDropdownVisible] = useState(false);
+
+  useEffect(() => {
+    if (coursesOpen) {
+      setCoursesDropdownMounted(true);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => setCoursesDropdownVisible(true));
+      });
+    } else {
+      setCoursesDropdownVisible(false);
+    }
+  }, [coursesOpen]);
+
+  const handleCoursesTransitionEnd = useCallback(() => {
+    if (!coursesDropdownVisible) setCoursesDropdownMounted(false);
+  }, [coursesDropdownVisible]);
+
   // Lock body scroll on mobile when dropdown is open
   useEffect(() => {
-    if (!menuOpen) return;
+    if (!menuOpen && !coursesOpen) return;
     const isMobile = globalThis.matchMedia("(max-width: 639px)").matches;
     if (!isMobile) return;
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = "";
     };
-  }, [menuOpen]);
+  }, [menuOpen, coursesOpen]);
 
   const handleMouseEnter = useCallback(() => {
     clearTimeout(timeoutRef.current);
+    clearTimeout(coursesTimeoutRef.current);
     setMenuOpen(true);
+    setCoursesOpen(false);
   }, []);
 
   const handleMouseLeave = useCallback(() => {
@@ -106,6 +138,28 @@ export default function Header() {
       el.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, [handleMouseEnter, handleMouseLeave]);
+
+  const handleCoursesMouseEnter = useCallback(() => {
+    clearTimeout(coursesTimeoutRef.current);
+    clearTimeout(timeoutRef.current);
+    setCoursesOpen(true);
+    setMenuOpen(false);
+  }, []);
+
+  const handleCoursesMouseLeave = useCallback(() => {
+    coursesTimeoutRef.current = setTimeout(() => setCoursesOpen(false), 3000);
+  }, []);
+
+  useEffect(() => {
+    const el = coursesRef.current;
+    if (!el) return;
+    el.addEventListener("mouseenter", handleCoursesMouseEnter);
+    el.addEventListener("mouseleave", handleCoursesMouseLeave);
+    return () => {
+      el.removeEventListener("mouseenter", handleCoursesMouseEnter);
+      el.removeEventListener("mouseleave", handleCoursesMouseLeave);
+    };
+  }, [handleCoursesMouseEnter, handleCoursesMouseLeave]);
 
   const [searchOpen, setSearchOpen] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -309,11 +363,99 @@ export default function Header() {
             )}
           </div>
           <div
+            ref={coursesRef}
+            className={`relative ${searchOpen ? "hidden sm:block" : ""}`}
+          >
+            <button
+              onClick={() => { setCoursesOpen((prev) => !prev); setMenuOpen(false); }}
+              className={`flex items-center gap-1 rounded-lg px-3 py-2 font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
+            >
+              Courses
+              <svg
+                className={`h-3.5 w-3.5 transition-transform duration-200 ${coursesOpen ? "rotate-180" : ""}`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2.5"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {coursesDropdownMounted && (
+              <div
+                className={`fixed inset-x-4 top-[72px] z-50 max-h-[calc(100dvh-80px)] overflow-y-auto overscroll-contain rounded-xl border border-n8 bg-n9/95 p-4 shadow-2xl backdrop-blur-md transition-all duration-200 sm:max-h-none sm:overflow-y-visible sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-2 sm:w-[480px] sm:p-5 ${
+                  coursesDropdownVisible
+                    ? "scale-100 opacity-100"
+                    : "pointer-events-none scale-95 opacity-0"
+                }`}
+                onTransitionEnd={handleCoursesTransitionEnd}
+              >
+                <div className="mb-3 flex items-center justify-between">
+                  <h3 className="font-heading text-sm font-semibold uppercase tracking-wider text-n6">
+                    Certification Courses
+                  </h3>
+                  <Link
+                    href="/courses"
+                    onClick={() => setCoursesOpen(false)}
+                    className="group/link inline-flex items-center gap-1 font-heading text-xs font-medium text-qube-blue transition-colors hover:text-qube-blue/80"
+                  >
+                    View all
+                    <svg
+                      className="h-3 w-3 transition-transform duration-200 group-hover/link:translate-x-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+                <div className="space-y-1">
+                  {courses.map((course) => {
+                    const totalVids = getCourseVideos(course).length;
+                    const dur = getCourseTotalDuration(course);
+                    const diffColor = course.difficulty === "beginner"
+                      ? "bg-qube-blue/15 text-qube-blue"
+                      : course.difficulty === "intermediate"
+                        ? "bg-amber-500/15 text-amber-400"
+                        : "bg-sonar-red/15 text-sonar-red";
+                    return (
+                      <Link
+                        key={course.id}
+                        href={`/courses/${course.slug}`}
+                        onClick={() => setCoursesOpen(false)}
+                        className="group flex items-start gap-3 rounded-lg p-2.5 transition-colors hover:bg-n8/50"
+                      >
+                        <span className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg font-heading text-xs font-black ${diffColor}`}>
+                          {course.shortTitle.slice(0, 2)}
+                        </span>
+                        <div className="min-w-0 flex-1">
+                          <span className="font-heading text-sm font-semibold text-n2 group-hover:text-n1">
+                            {course.title}
+                          </span>
+                          <div className="mt-0.5 flex items-center gap-2 text-xs text-n5">
+                            <span>{totalVids} videos</span>
+                            <span className="text-n7">&middot;</span>
+                            <span>{dur}</span>
+                            <span className="text-n7">&middot;</span>
+                            <span className="capitalize">{course.difficulty}</span>
+                          </div>
+                        </div>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+          </div>
+          <div
             ref={menuRef}
             className={`relative ${searchOpen ? "hidden sm:block" : ""}`}
           >
             <button
-              onClick={() => setMenuOpen((prev) => !prev)}
+              onClick={() => { setMenuOpen((prev) => !prev); setCoursesOpen(false); }}
               className={`flex items-center gap-1 rounded-lg px-3 py-2 font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
             >
               Categories

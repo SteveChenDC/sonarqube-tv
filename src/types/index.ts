@@ -42,3 +42,23 @@ export interface TranscriptChapter {
   title: string;
   startIndex: number;
 }
+
+export interface CourseModule {
+  id: string;
+  title: string;
+  description: string;
+  videoIds: string[];
+}
+
+export interface Course {
+  id: string;
+  slug: string;
+  title: string;
+  shortTitle: string;
+  description: string;
+  difficulty: "beginner" | "intermediate" | "advanced";
+  targetAudience: string;
+  learningOutcomes: string[];
+  modules: CourseModule[];
+  accentColor: "sonar-red" | "qube-blue" | "sonar-purple";
+}

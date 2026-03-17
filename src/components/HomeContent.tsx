@@ -4,17 +4,17 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import Hero from "./Hero";
 import VideoRow from "./VideoRow";
 import { getAllProgress, removeProgress } from "@/lib/watchProgress";
-import FilterBar, {
-  FilterTrigger,
-  SlidersIcon,
-  UploadDateFilter,
-  DurationFilter,
-  SortBy,
-} from "./FilterBar";
+import dynamic from "next/dynamic";
+import { FilterTrigger, SlidersIcon } from "./FilterTrigger";
+import type { UploadDateFilter, DurationFilter, SortBy } from "./FilterBar";
 import ScrollToTop from "./ScrollToTop";
+
+const FilterBar = dynamic(() => import("./FilterBar"), { ssr: false });
 import { Video, Category } from "@/types";
 import { featuredYoutubeIds } from "@/data/videos";
+import { courses } from "@/data/courses";
 import { useSearch } from "./SearchContext";
+import CourseCard from "./CourseCard";
 
 function parseDurationMinutes(duration: string): number {
   const parts = duration.split(":").map(Number);
@@ -119,6 +119,11 @@ export default function HomeContent({
     setDuration("any");
     setSortBy("newest");
   };
+
+  const [coursesRowHidden, setCoursesRowHidden] = useState(() => {
+    if (globalThis.window === undefined) return false;
+    try { return localStorage.getItem("sonarqube-tv-hide-courses") === "1"; } catch { return false; }
+  });
 
   const [continueWatchingVideos, setContinueWatchingVideos] = useState<Video[]>([]);
 
@@ -238,6 +243,43 @@ export default function HomeContent({
                 setContinueWatchingVideos((prev) => prev.filter((v) => v.id !== videoId));
               } : undefined}
             />
+          </div>
+        )}
+
+        {/* Certification Courses row */}
+        {!isSearching && !coursesRowHidden && (
+          <div className="relative pt-8">
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-n8/50 to-transparent" />
+            <div className="mb-4 flex items-center justify-between px-4 sm:px-6 lg:px-8">
+              <h2 className="font-heading text-lg font-bold text-n1 sm:text-xl">
+                Certification Courses
+              </h2>
+              <div className="flex items-center gap-3">
+                <a
+                  href="/courses"
+                  className="font-heading text-xs font-medium text-qube-blue transition-colors hover:text-qube-blue/80"
+                >
+                  View all
+                </a>
+                <button
+                  onClick={() => {
+                    setCoursesRowHidden(true);
+                    try { localStorage.setItem("sonarqube-tv-hide-courses", "1"); } catch { /* noop */ }
+                  }}
+                  aria-label="Hide certification courses row"
+                  className="flex h-7 w-7 items-center justify-center rounded-full text-n6 transition-colors hover:bg-n8 hover:text-n3"
+                >
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div className="flex gap-4 overflow-x-auto px-4 pb-4 sm:px-6 lg:px-8 scrollbar-hide">
+              {courses.map((course) => (
+                <CourseCard key={course.id} course={course} />
+              ))}
+            </div>
           </div>
         )}
 
