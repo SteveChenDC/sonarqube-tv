@@ -4,9 +4,9 @@ import Link from "next/link";
 import { formatDate } from "@/lib/formatDate";
 import { durationToISO } from "@/lib/durationToISO";
 import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import VideoPlayer from "@/components/VideoPlayer";
 import VideoRow from "@/components/VideoRow";
-import PlaylistQueue from "@/components/PlaylistQueue";
 import {
   getVideoById,
   getVideosByCategory,
@@ -15,11 +15,19 @@ import {
   videos,
 } from "@/data/videos";
 import { getArticleByVideoId, getTranscriptByVideoId } from "@/data/articles";
-import ArticleTabs from "@/components/ArticleTabs";
+
 import ShareButton from "@/components/ShareButton";
 import NowPlayingBar from "@/components/NowPlayingBar";
 import CourseNavBar from "@/components/CourseNavBar";
 import CourseBadge from "@/components/CourseBadge";
+
+// Dynamically import below-fold client components to reduce initial JS bundle.
+// ArticleTabs pulls in the markdown parser, TranscriptView, and extractChapters
+// (~630 lines of client logic) — none of it needed until the page body is visible.
+const ArticleTabs = dynamic(() => import("@/components/ArticleTabs"));
+
+// PlaylistQueue only renders when ?playlist= is in the URL; defer its JS accordingly.
+const PlaylistQueue = dynamic(() => import("@/components/PlaylistQueue"));
 
 export function generateStaticParams() {
   return videos.map((video) => ({ id: video.id }));
