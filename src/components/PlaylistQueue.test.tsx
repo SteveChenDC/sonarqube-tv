@@ -108,4 +108,73 @@ describe("PlaylistQueue", () => {
     expect(otherTitle.className).not.toMatch(/(?<![:\w])text-n1(?![\w-])/);
 
   });
+
+  it("disabled prev span has aria-label 'No previous video' on first video", () => {
+    mockSearchParams.set("playlist", "tutorials");
+    render(<PlaylistQueue currentVideoId="v1" allVideos={videos} />);
+    const disabledPrev = screen.getByLabelText("No previous video");
+    expect(disabledPrev).toBeInTheDocument();
+    expect(disabledPrev.tagName.toLowerCase()).toBe("span");
+    expect(disabledPrev).toHaveAttribute("aria-disabled", "true");
+  });
+
+  it("disabled next span has aria-label 'No next video' on last video", () => {
+    mockSearchParams.set("playlist", "tutorials");
+    render(<PlaylistQueue currentVideoId="v3" allVideos={videos} />);
+    const disabledNext = screen.getByLabelText("No next video");
+    expect(disabledNext).toBeInTheDocument();
+    expect(disabledNext.tagName.toLowerCase()).toBe("span");
+    expect(disabledNext).toHaveAttribute("aria-disabled", "true");
+  });
+
+  it("shows video duration for each playlist item", () => {
+    const videosWithDurations = [
+      makeVideo({ id: "d1", category: "tutorials", title: "Short Video", duration: "3:30" }),
+      makeVideo({ id: "d2", category: "tutorials", title: "Long Video", duration: "45:00" }),
+    ];
+    mockSearchParams.set("playlist", "tutorials");
+    render(<PlaylistQueue currentVideoId="d1" allVideos={videosWithDurations} />);
+    expect(screen.getByText("3:30")).toBeInTheDocument();
+    expect(screen.getByText("45:00")).toBeInTheDocument();
+  });
+
+  it("each playlist list item is a link with the correct watch URL", () => {
+    mockSearchParams.set("playlist", "tutorials");
+    render(<PlaylistQueue currentVideoId="v1" allVideos={videos} />);
+
+    // All 3 tutorial videos should have list item links
+    const links = screen.getAllByRole("link");
+    const hrefs = links.map((l) => l.getAttribute("href"));
+    expect(hrefs).toContain("/watch/v1?playlist=tutorials");
+    expect(hrefs).toContain("/watch/v2?playlist=tutorials");
+    expect(hrefs).toContain("/watch/v3?playlist=tutorials");
+    // Webinar video (different category) should not appear
+    expect(hrefs).not.toContain("/watch/v4?playlist=tutorials");
+  });
+
+  it("shows animate-pulse play icon for the current video instead of its index number", () => {
+    mockSearchParams.set("playlist", "tutorials");
+    const { container } = render(<PlaylistQueue currentVideoId="v2" allVideos={videos} />);
+
+    // The current video's index cell should have the animate-pulse span
+    const pulseSpan = container.querySelector(".animate-pulse");
+    expect(pulseSpan).not.toBeNull();
+
+    // The number "2" (index of current video) should NOT appear as a plain text node
+    // The first video shows "1" and third shows "3", but "2" is replaced by the icon
+    expect(screen.getByText("1")).toBeInTheDocument();
+    expect(screen.getByText("3")).toBeInTheDocument();
+    expect(screen.queryByText("2")).toBeNull();
+  });
+
+  it("currentVideoId not in playlist shows position 0 / N and only next nav", () => {
+    mockSearchParams.set("playlist", "tutorials");
+    render(<PlaylistQueue currentVideoId="not-in-list" allVideos={videos} />);
+
+    // currentIndex = -1, so counter shows 0 / 3
+    expect(screen.getByText("0 / 3")).toBeInTheDocument();
+    // prevVideo = null (−1 > 0 is false), nextVideo = playlistVideos[0]
+    expect(screen.queryByLabelText("Previous video")).toBeNull();
+    expect(screen.getByLabelText("Next video")).toBeInTheDocument();
+  });
 });
