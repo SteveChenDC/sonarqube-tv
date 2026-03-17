@@ -1242,3 +1242,175 @@ describe("HomeContent — top row Latest/Oldest logic", () => {
     expect(h2sAfter.some((t) => t.startsWith("Latest"))).toBe(false);
   });
 });
+
+// ---------------------------------------------------------------------------
+// Search edge case — whitespace-only query
+// ---------------------------------------------------------------------------
+
+describe("HomeContent — search whitespace edge case", () => {
+  beforeEach(() => {
+    cleanup();
+    localStorage.clear();
+  });
+
+  it("whitespace-only query does NOT hide the categories div (isSearching uses .trim())", async () => {
+    // " " is truthy so setQuery is called, but " ".trim().length === 0 → isSearching = false
+    const { container } = renderWithSearch("   ");
+    await act(async () => {});
+    const categoriesDiv = container.querySelector("#categories");
+    expect(categoriesDiv).toBeTruthy();
+    expect(categoriesDiv?.className).not.toContain("hidden");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// MAX_CATEGORY_ROW = 15 truncation
+// ---------------------------------------------------------------------------
+
+describe("HomeContent — MAX_CATEGORY_ROW truncation", () => {
+  const CAT: Category[] = [
+    { slug: "tutorials", title: "Tutorials", description: "Tutorial videos" },
+  ];
+
+  beforeEach(() => {
+    cleanup();
+    localStorage.clear();
+  });
+
+  it("renders exactly 15 video cards when a category has 16 videos", () => {
+    // All videos more than 30 days old so the "Latest" top row stays empty
+    const manyVideos = Array.from({ length: 16 }, (_, i) =>
+      makeVideo({ id: `vid-${i}`, category: "tutorials", publishedAt: "2024-01-01T00:00:00Z" })
+    );
+    const { container } = render(<HomeContent categories={CAT} videos={manyVideos} />);
+    // Only the category row renders (no top row — all videos are older than 30 days)
+    const cards = container.querySelectorAll("h3");
+    expect(cards.length).toBe(15);
+  });
+
+  it("shows 'View all' link when totalCount exceeds the rendered 15 cards", () => {
+    const manyVideos = Array.from({ length: 16 }, (_, i) =>
+      makeVideo({ id: `vid-${i}`, category: "tutorials", publishedAt: "2024-01-01T00:00:00Z" })
+    );
+    render(<HomeContent categories={CAT} videos={manyVideos} />);
+    // VideoRow receives videos.slice(0,15) but totalCount=16 → shows "View all"
+    const viewAll = screen.getByText("View all");
+    expect(viewAll).toBeTruthy();
+    expect(viewAll.closest("a")?.getAttribute("href")).toBe("/category/tutorials");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Per-category row visibility under active filters
+// (tests the `if (categoryVideos.length === 0 && hasActiveFilters) return null` branch)
+// ---------------------------------------------------------------------------
+
+describe("HomeContent — per-category row visibility with active filters", () => {
+  // Two categories: tutorials (short + medium videos), webinars (long video)
+  const multiCatCategories: Category[] = [
+    { slug: "tutorials", title: "Tutorials", description: "Tutorial videos" },
+    { slug: "webinars", title: "Webinars", description: "Webinar recordings" },
+  ];
+
+  const multiCatVideos = [
+    makeVideo({
+      id: "short-t",
+      title: "Short Tutorial",
+      duration: "2:30",
+      category: "tutorials",
+      publishedAt: "2024-01-01T00:00:00Z",
+    }),
+    makeVideo({
+      id: "medium-t",
+      title: "Medium Tutorial",
+      duration: "10:00",
+      category: "tutorials",
+      publishedAt: "2024-01-01T00:00:00Z",
+    }),
+    makeVideo({
+      id: "long-w",
+      title: "Long Webinar",
+      duration: "1:05:00",
+      category: "webinars",
+      publishedAt: "2024-01-01T00:00:00Z",
+    }),
+  ];
+
+  beforeEach(() => {
+    cleanup();
+    localStorage.clear();
+  });
+
+  it("hides the Tutorials category row when 'Over 20 min' filter has no matching tutorials", () => {
+    const { container } = render(
+      <HomeContent categories={multiCatCategories} videos={multiCatVideos} />
+    );
+
+    openFilters();
+    fireEvent.click(screen.getByText("Over 20 min"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    // Tutorials h2 should NOT be present — category has no long videos
+    const h2Texts = Array.from(container.querySelectorAll("h2")).map((h) => h.textContent);
+    expect(h2Texts.some((t) => t?.includes("Tutorials"))).toBe(false);
+  });
+
+  it("keeps the Webinars category row visible when it has matching long videos", () => {
+    const { container } = render(
+      <HomeContent categories={multiCatCategories} videos={multiCatVideos} />
+    );
+
+    openFilters();
+    fireEvent.click(screen.getByText("Over 20 min"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    // Webinars row should still render
+    const h2Texts = Array.from(container.querySelectorAll("h2")).map((h) => h.textContent);
+    expect(h2Texts.some((t) => t?.includes("Webinars"))).toBe(true);
+    // And the long webinar card should appear
+    expect(screen.getByText("Long Webinar")).toBeTruthy();
+  });
+
+  it("does NOT show the global empty state when at least one category still has matching videos", () => {
+    render(
+      <HomeContent categories={multiCatCategories} videos={multiCatVideos} />
+    );
+
+    openFilters();
+    fireEvent.click(screen.getByText("Over 20 min"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    // Empty state should NOT appear — Webinars still has videos
+    expect(screen.queryByText("No videos match your filters")).toBeNull();
+  });
+
+  it("hides the Webinars category row when 'Under 4 min' filter has no matching webinars", () => {
+    const { container } = render(
+      <HomeContent categories={multiCatCategories} videos={multiCatVideos} />
+    );
+
+    openFilters();
+    fireEvent.click(screen.getByText("Under 4 min"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    // Webinars h2 should NOT be present — no webinar videos are short
+    const h2Texts = Array.from(container.querySelectorAll("h2")).map((h) => h.textContent);
+    expect(h2Texts.some((t) => t?.includes("Webinars"))).toBe(false);
+  });
+
+  it("keeps Tutorials row visible when it has videos matching the short duration filter", () => {
+    render(
+      <HomeContent categories={multiCatCategories} videos={multiCatVideos} />
+    );
+
+    openFilters();
+    fireEvent.click(screen.getByText("Under 4 min"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    // Only Short Tutorial (2:30) survives; Tutorials row should still render
+    expect(screen.getByText("Tutorials")).toBeTruthy();
+    expect(screen.getAllByText("Short Tutorial").length).toBeGreaterThanOrEqual(1);
+    // Medium Tutorial is filtered out
+    expect(screen.queryByText("Medium Tutorial")).toBeNull();
+  });
+});
