@@ -80,6 +80,8 @@ export default async function CategoryPage({
     0
   );
 
+  const BASE_URL = "https://stevechendc.github.io/sonarqube-tv";
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -88,12 +90,13 @@ export default async function CategoryPage({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://sonarqube-tv.vercel.app",
+        item: BASE_URL,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: category.title,
+        item: `${BASE_URL}/category/${slug}`,
       },
     ],
   };

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { videos, categories } from "@/data/videos";
+import { courses } from "@/data/courses";
 
 export const dynamic = "force-static";
 
@@ -32,5 +33,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...home, ...categoryUrls, ...videoUrls];
+  // Courses index page
+  const coursesIndex: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/courses`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+  ];
+
+  // Individual course detail pages
+  const courseUrls: MetadataRoute.Sitemap = courses.map((course) => ({
+    url: `${BASE_URL}/courses/${course.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  return [...home, ...categoryUrls, ...coursesIndex, ...courseUrls, ...videoUrls];
 }

@@ -26,6 +26,28 @@ export async function generateMetadata({
   return {
     title: `${course.title} | Sonar.tv`,
     description: course.description,
+    openGraph: {
+      title: `${course.title} | Sonar.tv`,
+      description: course.description,
+      type: "website",
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: `${course.title} — SonarQube certification course on Sonar.tv`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${course.title} | Sonar.tv`,
+      description: course.description,
+      images: ["/og-image.png"],
+    },
+    alternates: {
+      canonical: `/courses/${slug}`,
+    },
   };
 }
 

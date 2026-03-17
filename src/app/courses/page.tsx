@@ -7,6 +7,30 @@ export const metadata: Metadata = {
   title: "Certification Courses | Sonar.tv",
   description:
     "Structured learning paths for SonarQube certification prep. Master code quality, security, DevOps integration, AI code verification, and enterprise architecture.",
+  openGraph: {
+    title: "Certification Courses | Sonar.tv",
+    description:
+      "Structured learning paths for SonarQube certification prep. Master code quality, security, DevOps integration, AI code verification, and enterprise architecture.",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "SonarQube Certification Courses on Sonar.tv",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Certification Courses | Sonar.tv",
+    description:
+      "Structured learning paths for SonarQube certification prep. Master code quality, security, DevOps integration, AI code verification, and enterprise architecture.",
+    images: ["/og-image.png"],
+  },
+  alternates: {
+    canonical: "/courses",
+  },
 };
 
 const totalVideos = courses.reduce(
