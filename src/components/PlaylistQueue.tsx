@@ -60,7 +60,7 @@ export default function PlaylistQueue({
           {prevVideo ? (
             <Link
               href={`/watch/${prevVideo.id}?playlist=${playlistSlug}`}
-              className="flex h-11 w-11 items-center justify-center rounded text-n6 transition-colors hover:bg-n8 hover:text-n1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue"
+              className="flex h-11 w-11 items-center justify-center rounded-lg text-n6 transition-colors hover:bg-n8 hover:text-n1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue"
               aria-label="Previous video"
             >
               <svg
@@ -78,7 +78,7 @@ export default function PlaylistQueue({
               </svg>
             </Link>
           ) : (
-            <span className="flex h-11 w-11 cursor-not-allowed items-center justify-center rounded text-n7" aria-disabled="true" aria-label="No previous video">
+            <span className="flex h-11 w-11 cursor-not-allowed items-center justify-center rounded-lg text-n7" aria-disabled="true" aria-label="No previous video">
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
               </svg>
@@ -87,7 +87,7 @@ export default function PlaylistQueue({
           {nextVideo ? (
             <Link
               href={`/watch/${nextVideo.id}?playlist=${playlistSlug}`}
-              className="flex h-11 w-11 items-center justify-center rounded text-n6 transition-colors hover:bg-n8 hover:text-n1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue"
+              className="flex h-11 w-11 items-center justify-center rounded-lg text-n6 transition-colors hover:bg-n8 hover:text-n1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue"
               aria-label="Next video"
             >
               <svg
@@ -105,7 +105,7 @@ export default function PlaylistQueue({
               </svg>
             </Link>
           ) : (
-            <span className="flex h-11 w-11 cursor-not-allowed items-center justify-center rounded text-n7" aria-disabled="true" aria-label="No next video">
+            <span className="flex h-11 w-11 cursor-not-allowed items-center justify-center rounded-lg text-n7" aria-disabled="true" aria-label="No next video">
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
