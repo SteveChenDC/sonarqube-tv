@@ -63,6 +63,14 @@ const difficultyLabels = {
   advanced: "Advanced",
 } as const;
 
+const BASE_URL = "https://stevechendc.github.io/sonarqube-tv";
+
+const educationalLevelMap: Record<string, string> = {
+  beginner: "Beginner",
+  intermediate: "Intermediate",
+  advanced: "Advanced",
+};
+
 export default async function CourseDetailPage({
   params,
 }: Readonly<{
@@ -78,8 +86,76 @@ export default async function CourseDetailPage({
   const totalVideos = getCourseVideos(course).length;
   const duration = getCourseTotalDuration(course);
 
+  const courseJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: course.title,
+    description: course.description,
+    url: `${BASE_URL}/courses/${course.slug}`,
+    educationalLevel: educationalLevelMap[course.difficulty] ?? course.difficulty,
+    teaches: course.learningOutcomes,
+    numberOfCredits: totalVideos,
+    audience: {
+      "@type": "Audience",
+      audienceType: course.targetAudience,
+    },
+    provider: {
+      "@type": "Organization",
+      name: "SonarSource",
+      url: "https://www.sonarsource.com",
+    },
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "online",
+      courseWorkload: `PT${duration.replace(/h\s*/, "H").replace(/m$/, "M")}`,
+      instructor: {
+        "@type": "Organization",
+        name: "SonarSource",
+        url: "https://www.sonarsource.com",
+      },
+    },
+    syllabusSections: course.modules.map((module) => ({
+      "@type": "Syllabus",
+      name: module.title,
+      description: module.description,
+    })),
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: BASE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Courses",
+        item: `${BASE_URL}/courses`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: course.title,
+        item: `${BASE_URL}/courses/${course.slug}`,
+      },
+    ],
+  };
+
   return (
     <div className="pt-20 pb-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Link
           href="/courses"
