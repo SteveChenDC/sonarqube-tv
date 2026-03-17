@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
@@ -7,8 +8,29 @@ import {
   getCourseVideos,
   getCourseTotalDuration,
 } from "@/data/courses";
-import CourseTimeline from "@/components/CourseTimeline";
-import CourseSidebar from "@/components/CourseSidebar";
+
+const CourseTimeline = dynamic(() => import("@/components/CourseTimeline"), {
+  loading: () => (
+    <div className="space-y-3">
+      {[...Array(4)].map((_, i) => (
+        <div key={i} className="animate-pulse rounded-xl border border-n8/50 bg-n9/40 p-4">
+          <div className="mb-2 h-4 w-1/4 rounded bg-n8/60" />
+          <div className="h-5 w-2/3 rounded bg-n8/50" />
+        </div>
+      ))}
+    </div>
+  ),
+});
+
+const CourseSidebar = dynamic(() => import("@/components/CourseSidebar"), {
+  loading: () => (
+    <div className="animate-pulse rounded-xl border border-n8/50 bg-n9/40 p-6">
+      <div className="mx-auto mb-4 h-24 w-24 rounded-full bg-n8/60" />
+      <div className="mx-auto mb-3 h-5 w-1/2 rounded bg-n8/60" />
+      <div className="h-10 w-full rounded-lg bg-n8/50" />
+    </div>
+  ),
+});
 
 export function generateStaticParams() {
   return courses.map((course) => ({ slug: course.slug }));

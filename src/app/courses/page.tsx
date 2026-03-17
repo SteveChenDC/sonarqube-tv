@@ -1,7 +1,31 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { courses, getCourseVideos, getCourseTotalDuration } from "@/data/courses";
-import CourseIndexCards from "@/components/CourseIndexCards";
+
+const CourseIndexCards = dynamic(() => import("@/components/CourseIndexCards"), {
+  loading: () => (
+    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      {/* Filter skeleton */}
+      <div className="mb-6 flex flex-wrap gap-2">
+        {[...Array(4)].map((_, i) => (
+          <div key={i} className="h-8 w-24 animate-pulse rounded-full bg-n8/60" />
+        ))}
+      </div>
+      {/* Card skeletons */}
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {[...Array(6)].map((_, i) => (
+          <div key={i} className="animate-pulse rounded-xl border border-n8/50 bg-n9/40 p-5">
+            <div className="mb-3 h-4 w-1/3 rounded bg-n8/60" />
+            <div className="mb-2 h-5 w-3/4 rounded bg-n8/60" />
+            <div className="h-4 w-full rounded bg-n8/40" />
+            <div className="mt-4 h-4 w-1/2 rounded bg-n8/40" />
+          </div>
+        ))}
+      </div>
+    </div>
+  ),
+});
 
 export const metadata: Metadata = {
   title: "Certification Courses | Sonar.tv",
