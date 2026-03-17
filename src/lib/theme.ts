@@ -42,18 +42,27 @@ export function toggleTheme(): Theme {
     : "light";
   const next: Theme = current === "dark" ? "light" : "dark";
 
-  // Enable smooth color transition only during intentional toggle,
-  // not on page load or navigation
-  document.documentElement.classList.add("theme-transitioning");
+  // Only apply the smooth color transition when the user has NOT opted out of motion.
+  // prefers-reduced-motion: reduce → instant swap, no cross-fade.
+  const prefersReducedMotion = globalThis.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (!prefersReducedMotion) {
+    // Enable smooth color transition only during intentional toggle,
+    // not on page load or navigation
+    document.documentElement.classList.add("theme-transitioning");
+  }
+
   setTheme(next);
 
-  // Remove after transition completes to avoid unwanted transitions elsewhere
-  const cleanup = () => {
-    document.documentElement.classList.remove("theme-transitioning");
-  };
-  document.documentElement.addEventListener("transitionend", cleanup, { once: true });
-  // Fallback in case transitionend doesn't fire
-  setTimeout(cleanup, 600);
+  if (!prefersReducedMotion) {
+    // Remove after transition completes to avoid unwanted transitions elsewhere
+    const cleanup = () => {
+      document.documentElement.classList.remove("theme-transitioning");
+    };
+    document.documentElement.addEventListener("transitionend", cleanup, { once: true });
+    // Fallback in case transitionend doesn't fire
+    setTimeout(cleanup, 600);
+  }
 
   return next;
 }

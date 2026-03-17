@@ -170,6 +170,47 @@ html:not(.dark) .animate-shimmer {
   100% { transform: translateX(0); }
 }
 
+/* ─── Reduced-motion: disable all decorative animations ─────────────────── */
+/* Respects the user's OS "reduce motion" preference by stopping every        */
+/* custom animation and the intentional theme-toggle color transition.        */
+@media (prefers-reduced-motion: reduce) {
+  /* Custom keyframe utilities */
+  .animate-shimmer,
+  .animate-tab-in,
+  .animate-fade-in,
+  .animate-fade-in-out {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Tailwind built-in animations used in this project */
+  .animate-pulse,
+  .animate-ping,
+  .animate-spin,
+  .animate-bounce {
+    animation: none !important;
+  }
+
+  /* Intentional theme-toggle color transition */
+  html.theme-transitioning,
+  html.theme-transitioning *,
+  html.theme-transitioning *::before,
+  html.theme-transitioning *::after {
+    transition: none !important;
+  }
+
+  /* CSS custom property transitions on interactive elements */
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* iOS safe-area bottom padding — used by the filter bottom sheet */
 @utility pb-safe {
   padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
