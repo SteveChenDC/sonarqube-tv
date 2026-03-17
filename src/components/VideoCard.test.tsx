@@ -195,6 +195,65 @@ describe("VideoCard", () => {
     });
   });
 
+  describe("shimmer skeleton loading state", () => {
+    it("renders the shimmer overlay before image loads (opacity-100)", () => {
+      const { container } = render(<VideoCard video={mockVideo} />);
+      // The shimmer div is aria-hidden and initially has opacity-100 (image not yet loaded)
+      const shimmer = container.querySelector("[aria-hidden='true'].animate-shimmer");
+      expect(shimmer).toBeTruthy();
+      expect(shimmer?.className).toContain("opacity-100");
+      expect(shimmer?.className).not.toContain("opacity-0");
+    });
+
+    it("hides the shimmer overlay after image onLoad fires (opacity-0)", () => {
+      const { container } = render(<VideoCard video={mockVideo} />);
+      const img = container.querySelector("img")!;
+      // Simulate image load
+      fireEvent.load(img);
+      const shimmer = container.querySelector("[aria-hidden='true'].animate-shimmer");
+      expect(shimmer?.className).toContain("opacity-0");
+      expect(shimmer?.className).not.toContain("opacity-100");
+    });
+
+    it("adds pointer-events-none to shimmer after image loads", () => {
+      const { container } = render(<VideoCard video={mockVideo} />);
+      const img = container.querySelector("img")!;
+      fireEvent.load(img);
+      const shimmer = container.querySelector("[aria-hidden='true'].animate-shimmer");
+      expect(shimmer?.className).toContain("pointer-events-none");
+    });
+  });
+
+  describe("duration badge boundary conditions", () => {
+    it("uses black badge for a video at exactly 4:00 (first medium boundary)", () => {
+      const video: Video = { ...mockVideo, duration: "4:00" };
+      const { container } = render(<VideoCard video={video} />);
+      expect(container.querySelector(".bg-black\\/80")).toBeTruthy();
+      expect(container.querySelector(".bg-qube-blue\\/80")).toBeNull();
+    });
+
+    it("uses black badge for a video at exactly 20:00 (last medium boundary)", () => {
+      const video: Video = { ...mockVideo, duration: "20:00" };
+      const { container } = render(<VideoCard video={video} />);
+      expect(container.querySelector(".bg-black\\/80")).toBeTruthy();
+      expect(container.querySelector(".bg-sonar-purple\\/80")).toBeNull();
+    });
+
+    it("uses sonar-purple badge for a video at 20:01 (first long boundary)", () => {
+      const video: Video = { ...mockVideo, duration: "20:01" };
+      const { container } = render(<VideoCard video={video} />);
+      expect(container.querySelector(".bg-sonar-purple\\/80")).toBeTruthy();
+      expect(container.querySelector(".bg-black\\/80")).toBeNull();
+    });
+
+    it("uses qube-blue badge for a video at 3:59 (last short boundary)", () => {
+      const video: Video = { ...mockVideo, duration: "3:59" };
+      const { container } = render(<VideoCard video={video} />);
+      expect(container.querySelector(".bg-qube-blue\\/80")).toBeTruthy();
+      expect(container.querySelector(".bg-black\\/80")).toBeNull();
+    });
+  });
+
   describe("timeAgo rendering", () => {
     it("shows 'Just now' for a video published seconds ago", () => {
       const { getByText } = render(
