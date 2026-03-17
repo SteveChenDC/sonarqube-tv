@@ -49,6 +49,9 @@ export async function generateMetadata({
     title: video.title,
     description: video.description,
     openGraph: {
+      title: video.title,
+      description: video.description,
+      url: `/watch/${id}`,
       images: [{ url: ogImage, width: 1280, height: 720, alt: video.title }],
       type: "video.other",
     },

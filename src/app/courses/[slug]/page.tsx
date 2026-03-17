@@ -29,6 +29,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${course.title} | Sonar.tv`,
       description: course.description,
+      url: `/courses/${slug}`,
       type: "website",
       images: [
         {
