@@ -312,14 +312,31 @@ export default function Header() {
                   </span>
                 </div>
                 {searchResults.length === 0 ? (
-                  <div className="px-4 py-8 text-center">
-                    <svg className="mx-auto mb-2 h-6 w-6 text-n6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-                      <circle cx="11" cy="11" r="8" />
-                      <path strokeLinecap="round" d="M21 21l-4.35-4.35" />
-                    </svg>
-                    <p className="font-heading text-sm font-medium text-n4">
-                      No videos match &ldquo;{searchQuery.trim()}&rdquo;
+                  <div className="px-5 py-10 text-center">
+                    {/* Icon container — sonar-red tint with search icon */}
+                    <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-sonar-red/20 bg-sonar-red/8">
+                      <svg className="h-7 w-7 text-sonar-red/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8" />
+                        <path strokeLinecap="round" d="M21 21l-4.35-4.35" />
+                      </svg>
+                    </div>
+                    <p className="font-heading text-sm font-semibold text-n2">
+                      No results for{" "}
+                      <span className="text-sonar-red">&ldquo;{searchQuery.trim()}&rdquo;</span>
                     </p>
+                    <p className="mt-1.5 text-xs text-n6">
+                      Try different keywords, or browse by category below.
+                    </p>
+                    <Link
+                      href="/#categories"
+                      onClick={() => { onSearchChange(""); setSearchOpen(false); }}
+                      className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-qube-blue/30 bg-qube-blue/8 px-4 py-1.5 font-heading text-xs font-medium text-qube-blue transition-colors hover:border-qube-blue/60 hover:bg-qube-blue/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
+                    >
+                      Browse categories
+                      <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
                   </div>
                 ) : (
                   <ul className="py-1">
