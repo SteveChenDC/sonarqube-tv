@@ -478,7 +478,7 @@ export default function Header() {
                             className="group flex items-start gap-3 rounded-lg p-2.5 transition-colors hover:bg-n8/50"
                           >
                             <img
-                              src={`/courses/${course.id}.png`}
+                              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/courses/${course.id}.png`}
                               alt={course.title}
                               className="mt-0.5 h-8 w-14 shrink-0 rounded object-cover"
                             />

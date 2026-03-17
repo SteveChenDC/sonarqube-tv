@@ -69,6 +69,7 @@ function VideoCard({ video, fluid = false, onRemove, hideCategory = false }: Rea
           className="object-cover transition-transform duration-300 group-hover:scale-105"
           sizes="320px"
           onLoad={() => setImageLoaded(true)}
+          onError={() => setImageLoaded(true)}
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30">
           <svg

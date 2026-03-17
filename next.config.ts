@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isProd ? "/sonarqube-tv" : "",
+  },
 };
 
 export default nextConfig;
