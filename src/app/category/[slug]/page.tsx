@@ -20,6 +20,25 @@ export async function generateMetadata({
   return {
     title: category.title,
     description: category.description,
+    openGraph: {
+      title: `${category.title} | Sonar.tv`,
+      description: category.description,
+      type: "website",
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: `${category.title} — SonarQube video tutorials`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${category.title} | Sonar.tv`,
+      description: category.description,
+      images: ["/og-image.png"],
+    },
     alternates: {
       canonical: `/category/${slug}`,
     },
