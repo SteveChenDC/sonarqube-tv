@@ -85,7 +85,7 @@ export default function CategoryContent({
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-x-3 gap-y-8 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid grid-cols-2 gap-x-3 gap-y-8 sm:gap-x-6 sm:gap-y-10 md:grid-cols-3 xl:grid-cols-4">
         {sorted.map((video) => (
           <VideoCard key={video.id} video={video} fluid hideCategory />
         ))}
