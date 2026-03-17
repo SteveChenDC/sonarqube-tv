@@ -214,13 +214,18 @@ export default function ArticleTabs({
       </div>
 
       {/* Content — show one panel at a time, full width */}
-      <div className="p-5 sm:p-6">
-        {activeTab === "summary" && article && (
-          <div>{renderMarkdown(article.markdown)}</div>
-        )}
-        {activeTab === "transcript" && transcript && (
-          <TranscriptView segments={transcript.segments} chapters={chapters} />
-        )}
+      <div className="overflow-hidden">
+        <div
+          key={activeTab}
+          className={`p-5 sm:p-6 ${activeTab === "summary" ? "animate-tab-slide-left" : "animate-tab-slide-right"}`}
+        >
+          {activeTab === "summary" && article && (
+            <div>{renderMarkdown(article.markdown)}</div>
+          )}
+          {activeTab === "transcript" && transcript && (
+            <TranscriptView segments={transcript.segments} chapters={chapters} />
+          )}
+        </div>
       </div>
     </div>
   );
