@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     title: "Certification Courses | Sonar.tv",
     description:
       "Structured learning paths for SonarQube certification prep. Master code quality, security, DevOps integration, AI code verification, and enterprise architecture.",
+    url: "/courses",
     type: "website",
     images: [
       {
