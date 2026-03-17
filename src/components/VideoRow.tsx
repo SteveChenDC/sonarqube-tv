@@ -188,7 +188,7 @@ function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, divider
             {categorySlug && totalCount !== undefined && totalCount > videos.length && (
               <Link
                 href={`/category/${categorySlug}`}
-                className="group inline-flex items-center gap-1 font-heading text-xs font-medium text-n5 transition-colors hover:text-n2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
+                className="group inline-flex items-center gap-1 font-heading text-xs font-medium text-qube-blue transition-colors hover:text-qube-blue/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
               >
                 View all
                 <svg
