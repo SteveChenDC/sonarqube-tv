@@ -56,9 +56,12 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
                 {video.duration}
               </span>
             </div>
-            <h1 className="mb-2 font-heading text-xl font-bold text-n1">
+            {/* h2: the desktop section already renders an h1 with the same title.
+                Using h2 here avoids duplicate h1 in the DOM (both sections are
+                always present; CSS merely hides one). Crawlers see a single h1. */}
+            <h2 className="mb-2 font-heading text-xl font-bold text-n1">
               {video.title}
-            </h1>
+            </h2>
             {showDescription && (
               <p className="mb-4 text-sm leading-relaxed text-n4 line-clamp-2">
                 {video.description}
