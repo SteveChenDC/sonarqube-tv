@@ -50,6 +50,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: ["/og-image.png"],
   },
+  other: {
+    "theme-color": "#D3121D",
+  },
 };
 
 const BASE_URL = "https://stevechendc.github.io/sonarqube-tv";
