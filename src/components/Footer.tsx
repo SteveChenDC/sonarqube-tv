@@ -68,52 +68,58 @@ export default function Footer() {
             </ul>
           </nav>
 
-          {/* Links with icons — each has its own brand accent on hover */}
-          <div className="flex items-center gap-1">
-            <a
-              href="https://www.youtube.com/c/SonarSource"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex min-h-[44px] items-center gap-2 rounded-lg px-3 py-2 font-heading text-sm text-n6 transition-colors hover:bg-sonar-red/10 hover:text-sonar-red focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
-              aria-label="SonarSource on YouTube"
-            >
-              {/* YouTube icon */}
-              <svg className="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-              </svg>
-              <span>YouTube</span>
-            </a>
-
-            <a
-              href="https://github.com/SonarSource"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex min-h-[44px] items-center gap-2 rounded-lg px-3 py-2 font-heading text-sm text-n6 transition-colors hover:bg-n8/40 hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
-              aria-label="SonarSource on GitHub"
-            >
-              {/* GitHub icon */}
-              <svg className="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-              </svg>
-              <span>GitHub</span>
-            </a>
-
-            <a
-              href="https://www.sonarsource.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex min-h-[44px] items-center gap-2 rounded-lg px-3 py-2 font-heading text-sm text-n6 transition-colors hover:bg-qube-blue/10 hover:text-qube-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
-              aria-label="SonarSource website"
-            >
-              {/* Globe icon */}
-              <svg className="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="2" y1="12" x2="22" y2="12"/>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-              </svg>
-              <span>SonarSource</span>
-            </a>
-          </div>
+          {/* Connect links — vertically stacked to mirror the Browse column */}
+          <nav aria-label="External links">
+            <p className="mb-3 text-center font-heading text-xs font-semibold uppercase tracking-wider text-n6 sm:text-left">
+              Connect
+            </p>
+            <ul className="flex flex-wrap justify-center gap-x-2 gap-y-1 sm:flex-col sm:gap-x-0 sm:gap-y-1">
+              <li>
+                <a
+                  href="https://www.youtube.com/c/SonarSource"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex min-h-[44px] items-center gap-2 rounded-lg px-3 py-2 font-body text-sm text-n5 transition-colors hover:bg-sonar-red/10 hover:text-sonar-red focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 sm:min-h-0 sm:py-1"
+                  aria-label="SonarSource on YouTube"
+                >
+                  <svg className="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                  <span>YouTube</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/SonarSource"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex min-h-[44px] items-center gap-2 rounded-lg px-3 py-2 font-body text-sm text-n5 transition-colors hover:bg-n8/40 hover:text-n1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 sm:min-h-0 sm:py-1"
+                  aria-label="SonarSource on GitHub"
+                >
+                  <svg className="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.sonarsource.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex min-h-[44px] items-center gap-2 rounded-lg px-3 py-2 font-body text-sm text-n5 transition-colors hover:bg-qube-blue/10 hover:text-qube-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 sm:min-h-0 sm:py-1"
+                  aria-label="SonarSource website"
+                >
+                  <svg className="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                  </svg>
+                  <span>SonarSource</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
 
         {/* Copyright */}
