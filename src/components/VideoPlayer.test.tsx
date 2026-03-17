@@ -44,7 +44,7 @@ describe("VideoPlayer", () => {
 
   it("renders player container with title", () => {
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
     const div = container.querySelector("#yt-player");
     expect(div).toBeTruthy();
@@ -54,7 +54,7 @@ describe("VideoPlayer", () => {
   it("shows progress bar when localStorage has existing progress", async () => {
     setProgress("vid1", 50);
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
     await waitFor(() => {
       expect(container.querySelector(".bg-sonar-red")).toBeTruthy();
@@ -63,14 +63,14 @@ describe("VideoPlayer", () => {
 
   it("no progress bar when no progress exists", () => {
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
     expect(container.querySelector(".bg-sonar-red")).toBeNull();
   });
 
   it("updates progress bar via polling interval", async () => {
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
 
     mockPlayer.getCurrentTime.mockReturnValue(30);
@@ -89,7 +89,7 @@ describe("VideoPlayer", () => {
 
   it("does not show progress when currentTime is zero", async () => {
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
 
     mockPlayer.getCurrentTime.mockReturnValue(0);
@@ -106,7 +106,7 @@ describe("VideoPlayer", () => {
 
   it("seeks when yt-seek custom event is dispatched", () => {
     render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
 
     act(() => {
@@ -119,7 +119,7 @@ describe("VideoPlayer", () => {
   it("caps progress bar at 100% even when reported progress exceeds 100", async () => {
     setProgress("vid1", 150);
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
     await waitFor(() => {
       const bar = container.querySelector(".bg-sonar-red") as HTMLElement;
@@ -130,7 +130,7 @@ describe("VideoPlayer", () => {
 
   it("handles player errors gracefully during polling", async () => {
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
 
     mockPlayer.getCurrentTime.mockImplementation(() => {
@@ -149,7 +149,7 @@ describe("VideoPlayer", () => {
     setProgress("vid1", 42);
 
     render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
 
     // Trigger the onReady callback
@@ -166,7 +166,7 @@ describe("VideoPlayer", () => {
     setProgress("vid1", 75);
 
     render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
 
     act(() => {
@@ -188,7 +188,7 @@ describe("VideoPlayer", () => {
 
   it("does not show resume toast when no saved progress", () => {
     render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
 
     act(() => {
@@ -225,7 +225,7 @@ describe("VideoPlayer — keyboard shortcuts overlay", () => {
   });
 
   it("pressing ? opens the keyboard shortcuts overlay", () => {
-    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />);
     expect(screen.queryByRole("dialog")).toBeNull();
 
     act(() => {
@@ -236,7 +236,7 @@ describe("VideoPlayer — keyboard shortcuts overlay", () => {
   });
 
   it("pressing ? again closes the shortcuts overlay", () => {
-    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />);
 
     act(() => { fireEvent.keyDown(document, { key: "?" }); });
     expect(screen.getByRole("dialog")).toBeInTheDocument();
@@ -246,7 +246,7 @@ describe("VideoPlayer — keyboard shortcuts overlay", () => {
   });
 
   it("pressing Escape closes an open shortcuts overlay", () => {
-    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />);
 
     act(() => { fireEvent.keyDown(document, { key: "?" }); });
     expect(screen.getByRole("dialog")).toBeInTheDocument();
@@ -256,7 +256,7 @@ describe("VideoPlayer — keyboard shortcuts overlay", () => {
   });
 
   it("clicking the overlay backdrop closes the shortcuts dialog", () => {
-    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />);
 
     act(() => { fireEvent.keyDown(document, { key: "?" }); });
     const overlay = screen.getByRole("dialog");
@@ -268,7 +268,7 @@ describe("VideoPlayer — keyboard shortcuts overlay", () => {
   });
 
   it("clicking the close button inside the overlay closes it", () => {
-    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />);
 
     act(() => { fireEvent.keyDown(document, { key: "?" }); });
     expect(screen.getByRole("dialog")).toBeInTheDocument();
@@ -278,7 +278,7 @@ describe("VideoPlayer — keyboard shortcuts overlay", () => {
   });
 
   it("overlay lists all 5 keyboard shortcuts", () => {
-    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />);
 
     act(() => { fireEvent.keyDown(document, { key: "?" }); });
 
@@ -316,7 +316,7 @@ describe("VideoPlayer — keyboard seek shortcuts", () => {
   });
 
   it("ArrowLeft seeks back 10 seconds and shows seek toast", async () => {
-    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />);
 
     act(() => { fireEvent.keyDown(document, { key: "ArrowLeft" }); });
 
@@ -325,7 +325,7 @@ describe("VideoPlayer — keyboard seek shortcuts", () => {
   });
 
   it("j key also seeks back 10 seconds", () => {
-    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />);
 
     act(() => { fireEvent.keyDown(document, { key: "j" }); });
 
@@ -333,7 +333,7 @@ describe("VideoPlayer — keyboard seek shortcuts", () => {
   });
 
   it("ArrowRight seeks forward 10 seconds and shows seek toast", async () => {
-    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />);
 
     act(() => { fireEvent.keyDown(document, { key: "ArrowRight" }); });
 
@@ -342,7 +342,7 @@ describe("VideoPlayer — keyboard seek shortcuts", () => {
   });
 
   it("l key also seeks forward 10 seconds", () => {
-    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />);
 
     act(() => { fireEvent.keyDown(document, { key: "l" }); });
 
@@ -350,7 +350,7 @@ describe("VideoPlayer — keyboard seek shortcuts", () => {
   });
 
   it("seek toast disappears after 1.2 seconds", async () => {
-    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />);
 
     act(() => { fireEvent.keyDown(document, { key: "ArrowRight" }); });
     await waitFor(() => expect(screen.getByText("+10s")).toBeInTheDocument());
@@ -361,7 +361,7 @@ describe("VideoPlayer — keyboard seek shortcuts", () => {
 
   it("ArrowLeft clamps seek to 0 at the start of video", () => {
     mockPlayer.getCurrentTime = vi.fn(() => 5); // Only 5s in
-    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />);
 
     act(() => { fireEvent.keyDown(document, { key: "ArrowLeft" }); });
 
@@ -371,7 +371,7 @@ describe("VideoPlayer — keyboard seek shortcuts", () => {
   it("ArrowRight clamps seek to duration at end of video", () => {
     mockPlayer.getCurrentTime = vi.fn(() => 95);
     mockPlayer.getDuration = vi.fn(() => 100);
-    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />);
 
     act(() => { fireEvent.keyDown(document, { key: "ArrowRight" }); });
 
@@ -389,7 +389,7 @@ describe("VideoPlayer — keyboard seek shortcuts", () => {
       }),
     };
 
-    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />);
     act(() => { fireEvent.keyDown(document, { key: " " }); });
 
     expect(mockPlayer.playVideo).toHaveBeenCalledTimes(1);
@@ -407,7 +407,7 @@ describe("VideoPlayer — keyboard seek shortcuts", () => {
       }),
     };
 
-    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />);
+    render(<VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />);
     act(() => { fireEvent.keyDown(document, { key: "k" }); });
 
     expect(mockPlayer.pauseVideo).toHaveBeenCalledTimes(1);
@@ -418,7 +418,7 @@ describe("VideoPlayer — keyboard seek shortcuts", () => {
     render(
       <>
         <input data-testid="search-input" />
-        <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+        <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
       </>
     );
 
@@ -458,7 +458,7 @@ describe("VideoPlayer — compact mode", () => {
   it("hides the progress bar in compact mode", async () => {
     setProgress("vid1", 60);
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" compact />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" compact autoPlay />
     );
     // The progress bar container (h-1 div below the player) should not exist
     await waitFor(() => {
@@ -469,7 +469,7 @@ describe("VideoPlayer — compact mode", () => {
 
   it("shortcuts hint is hidden in compact mode", () => {
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" compact />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" compact autoPlay />
     );
     // The hint div with "keyboard shortcuts" text should not exist
     expect(container.querySelector('[class*="bottom-4"][class*="right-4"]')).toBeNull();
@@ -477,7 +477,7 @@ describe("VideoPlayer — compact mode", () => {
 
   it("shortcuts hint auto-dismisses after 4 seconds in normal mode", async () => {
     const { container } = render(
-      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" autoPlay />
     );
 
     // Initially the hint is visible (hidden sm:flex — it's in the DOM but sm:hidden on mobile)
