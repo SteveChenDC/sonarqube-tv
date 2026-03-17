@@ -96,27 +96,32 @@ export default async function WatchPage({
     4
   );
 
+  const BASE_URL = "https://stevechendc.github.io/sonarqube-tv";
+
   // Use maxresdefault for structured data — schema.org recommends high-res thumbnails.
   const maxResThumbnail = `https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`;
+
+  const watchPageUrl = `${BASE_URL}/watch/${id}`;
 
   const videoJsonLd = {
     "@context": "https://schema.org",
     "@type": "VideoObject",
+    "@id": watchPageUrl,
     name: video.title,
     description: video.description,
     thumbnailUrl: maxResThumbnail,
     uploadDate: video.publishedAt,
     duration: durationToISO(video.duration),
+    url: watchPageUrl,
     contentUrl: `https://www.youtube.com/watch?v=${video.youtubeId}`,
     embedUrl: `https://www.youtube.com/embed/${video.youtubeId}`,
+    isAccessibleForFree: true,
     publisher: {
       "@type": "Organization",
       name: "SonarSource",
       url: "https://www.sonarsource.com",
     },
   };
-
-  const BASE_URL = "https://stevechendc.github.io/sonarqube-tv";
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
