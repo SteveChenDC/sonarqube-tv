@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { render, screen, cleanup, fireEvent } from "@testing-library/react";
-import FilterBar, { FilterTrigger } from "./FilterBar";
+import FilterBar from "./FilterBar";
+import { FilterTrigger } from "./FilterTrigger";
 
 afterEach(cleanup);
 
