@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { render, screen, cleanup, act } from "@testing-library/react";
+import { render, screen, cleanup } from "@testing-library/react";
 import React from "react";
 
 // Must mock before importing the page module
@@ -68,6 +68,7 @@ vi.mock("@/data/articles", () => ({
 
 import WatchPage, { generateStaticParams, generateMetadata } from "./page";
 import { videos } from "@/data/videos";
+import { durationToISO } from "@/lib/durationToISO";
 
 beforeEach(() => {
   cleanup();
@@ -219,14 +220,14 @@ describe("WatchPage", () => {
     expect(screen.getByText(video.duration)).toBeInTheDocument();
   });
 
-  it("renders a category badge linking to /category/category-slug", async () => {
-    const video = videos[0];
+  it("renders a category badge linking to /#category-slug", async () => {
+    const video = videos[0]; // v1 is in sonarqube-cloud
     const jsx = await WatchPage({ params: Promise.resolve({ id: video.id }) });
     render(jsx);
-    // Category link points to /category/sonarqube-cloud
+    // Category link points to /#sonarqube-cloud
     const links = screen.getAllByRole("link");
     const categoryLink = links.find(
-      (l) => l.getAttribute("href") === `/category/${video.category}`
+      (l) => l.getAttribute("href") === `/#${video.category}`
     );
     expect(categoryLink).toBeTruthy();
   });
@@ -271,7 +272,7 @@ describe("WatchPage", () => {
       sections: [],
     } as never);
     const jsx = await WatchPage({ params: Promise.resolve({ id: "v1" }) });
-    await act(async () => { render(jsx); });
+    render(jsx);
     expect(screen.getByTestId("article-tabs")).toBeInTheDocument();
   });
 
@@ -348,5 +349,119 @@ describe("WatchPage", () => {
       .find((c) => c.includes("VideoObject"));
     const parsed = JSON.parse(videoLd!);
     expect(parsed.publisher.name).toBe("SonarSource");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// generateMetadata — openGraph image details (previously untested fields)
+// ---------------------------------------------------------------------------
+describe("generateMetadata — openGraph image details", () => {
+  it("og.images[0].url equals the video thumbnail URL", async () => {
+    const video = videos[0];
+    const meta = await generateMetadata({
+      params: Promise.resolve({ id: video.id }),
+    });
+    const og = meta.openGraph as {
+      images?: { url: string; width?: number; height?: number; alt?: string }[];
+    } | undefined;
+    expect(og?.images?.[0].url).toBe(video.thumbnail);
+  });
+
+  it("og.images[0].width is 1280", async () => {
+    const meta = await generateMetadata({
+      params: Promise.resolve({ id: "v1" }),
+    });
+    const og = meta.openGraph as {
+      images?: { url: string; width?: number; height?: number; alt?: string }[];
+    } | undefined;
+    expect(og?.images?.[0].width).toBe(1280);
+  });
+
+  it("og.images[0].height is 720", async () => {
+    const meta = await generateMetadata({
+      params: Promise.resolve({ id: "v1" }),
+    });
+    const og = meta.openGraph as {
+      images?: { url: string; width?: number; height?: number; alt?: string }[];
+    } | undefined;
+    expect(og?.images?.[0].height).toBe(720);
+  });
+
+  it("og.images[0].alt equals the video title", async () => {
+    const video = videos[0];
+    const meta = await generateMetadata({
+      params: Promise.resolve({ id: video.id }),
+    });
+    const og = meta.openGraph as {
+      images?: { url: string; alt?: string }[];
+    } | undefined;
+    expect(og?.images?.[0].alt).toBe(video.title);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// WatchPage — videoJsonLd structured data fields (previously untested)
+// ---------------------------------------------------------------------------
+describe("WatchPage — videoJsonLd structured data fields", () => {
+  const getVideoLd = async (id: string) => {
+    const jsx = await WatchPage({ params: Promise.resolve({ id }) });
+    const { container } = render(jsx);
+    const scripts = container.querySelectorAll('script[type="application/ld+json"]');
+    const raw = Array.from(scripts)
+      .map((s) => s.textContent ?? "")
+      .find((c) => c.includes("VideoObject"));
+    return JSON.parse(raw!);
+  };
+
+  it("videoJsonLd.name equals the video title", async () => {
+    const video = videos[0];
+    const ld = await getVideoLd(video.id);
+    expect(ld.name).toBe(video.title);
+  });
+
+  it("videoJsonLd.description equals the video description", async () => {
+    const video = videos[0];
+    const ld = await getVideoLd(video.id);
+    expect(ld.description).toBe(video.description);
+  });
+
+  it("videoJsonLd.uploadDate equals the video publishedAt date string", async () => {
+    const video = videos[0];
+    const ld = await getVideoLd(video.id);
+    expect(ld.uploadDate).toBe(video.publishedAt);
+  });
+
+  it("videoJsonLd.thumbnailUrl equals the video thumbnail URL", async () => {
+    const video = videos[0];
+    const ld = await getVideoLd(video.id);
+    expect(ld.thumbnailUrl).toBe(video.thumbnail);
+  });
+
+  it("videoJsonLd.duration matches durationToISO output for the video duration", async () => {
+    const video = videos[0];
+    const ld = await getVideoLd(video.id);
+    expect(ld.duration).toBe(durationToISO(video.duration));
+  });
+});
+
+// ---------------------------------------------------------------------------
+// WatchPage — breadcrumb JSON-LD category item URL
+// ---------------------------------------------------------------------------
+describe("WatchPage — breadcrumb category item URL", () => {
+  it("category breadcrumb item has correct URL when category exists", async () => {
+    // v1 is in sonarqube-cloud — category exists → 3-item breadcrumb
+    const jsx = await WatchPage({ params: Promise.resolve({ id: "v1" }) });
+    const { container } = render(jsx);
+    const scripts = container.querySelectorAll('script[type="application/ld+json"]');
+    const breadcrumbLd = Array.from(scripts)
+      .map((s) => s.textContent ?? "")
+      .find((c) => c.includes("BreadcrumbList"));
+    const parsed = JSON.parse(breadcrumbLd!);
+    // Position 2 is the category item; its item URL should contain the category slug
+    const categoryItem = parsed.itemListElement.find(
+      (el: { position: number }) => el.position === 2
+    );
+    expect(categoryItem?.item).toContain("sonarqube-cloud");
+    expect(categoryItem?.item).toContain("/category/");
   });
 });
