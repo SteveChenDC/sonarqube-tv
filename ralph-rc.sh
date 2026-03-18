@@ -1,27 +1,132 @@
 #!/bin/bash
 # Ralph Wiggum Autonomous Improvement Loop
-# Usage: ./ralph-rc.sh [--mobile]
+# Usage: ./ralph-rc.sh [command]
+# Commands: start, peek, status, stop, pause, log, diff, cost, health, attach
 # Control: tmux attach -t ralphs
 #   Kill:   tmux kill-session -t ralphs
 #   Pause:  tmux send-keys -t ralphs:loop C-c
 
 set -e
 
+CMD="${1:-start}"
+
+# ── Subcommands that don't need tmux launch ──
+case "$CMD" in
+  peek)
+    echo "=== Ralph Peek — $(date '+%Y-%m-%d %H:%M:%S %Z') ==="
+    if [ -f ralph-logs/changelog.md ]; then
+      tail -80 ralph-logs/changelog.md
+    else
+      echo "(no changelog yet, showing git log)"
+      git log --oneline -10
+    fi
+    exit 0
+    ;;
+  status)
+    tmux list-windows -t ralphs 2>/dev/null || echo "Ralphs not running"
+    exit 0
+    ;;
+  stop|kill)
+    tmux kill-session -t ralphs 2>/dev/null && echo "Ralphs stopped." || echo "Ralphs not running."
+    exit 0
+    ;;
+  pause)
+    tmux send-keys -t ralphs:loop C-c 2>/dev/null && echo "Loop paused." || echo "Ralphs not running."
+    exit 0
+    ;;
+  log)
+    git log --oneline -20
+    exit 0
+    ;;
+  diff)
+    git diff HEAD~5 --stat
+    exit 0
+    ;;
+  cost)
+    COMMITS=$(git log --since="24 hours ago" --oneline | wc -l | tr -d ' ')
+    TODAY=$(date '+%Y-%m-%d')
+    if [ -f ralph-logs/cost.log ]; then
+      TODAY_BUDGET=$(grep "^$TODAY" ralph-logs/cost.log | awk '{gsub(/\$/,"",$4); sum+=$4} END {printf "%.2f", sum}')
+      TOTAL_BUDGET=$(awk '{gsub(/\$/,"",$4); sum+=$4} END {printf "%.2f", sum}' ralph-logs/cost.log)
+      echo "Today ($TODAY): \$${TODAY_BUDGET} allocated across $(grep -c "^$TODAY" ralph-logs/cost.log) agent runs"
+      echo "All time: \$${TOTAL_BUDGET} allocated"
+      echo ""
+      echo "Today's breakdown:"
+      grep "^$TODAY" ralph-logs/cost.log | awk '{print $4, $3}' | sort | uniq -c | sort -rn
+    else
+      echo "(no cost.log yet — estimated from commits)"
+      echo "~${COMMITS} commits in last 24h, estimated cost: ~\$$(( COMMITS * 2 ))"
+    fi
+    exit 0
+    ;;
+  health)
+    if [ ! -f /tmp/ralph-heartbeat ]; then
+      echo "No heartbeat found — loop has never run or file was cleaned up."
+      exit 1
+    fi
+    BEAT=$(cat /tmp/ralph-heartbeat)
+    NOW=$(date +%s)
+    AGE=$(( NOW - BEAT ))
+    AGE_MIN=$(( AGE / 60 ))
+    if [ "$AGE" -gt 3600 ]; then
+      echo "WARNING: Heartbeat is ${AGE_MIN}m old — loop may be dead!"
+      echo "Last beat: $(date -r "$BEAT" '+%Y-%m-%d %H:%M:%S')"
+      exit 1
+    else
+      echo "Heartbeat OK — ${AGE_MIN}m ago ($(date -r "$BEAT" '+%H:%M:%S'))"
+      # Show noop counters
+      NOOPS=$(ls /tmp/ralph-noop-*.count 2>/dev/null)
+      if [ -n "$NOOPS" ]; then
+        echo ""
+        echo "No-op counters:"
+        for f in /tmp/ralph-noop-*.count; do
+          AGENT=$(basename "$f" | sed 's/ralph-noop-//;s/\.count//')
+          echo "  $AGENT: $(cat "$f") consecutive"
+        done
+      fi
+      exit 0
+    fi
+    ;;
+  attach)
+    tmux attach -t ralphs
+    exit 0
+    ;;
+  start|--mobile)
+    ;; # fall through to launch logic below
+  *)
+    echo "Usage: ./ralph-rc.sh [command]"
+    echo ""
+    echo "Commands:"
+    echo "  start    Launch the Ralph loop in tmux (default)"
+    echo "  peek     Show recent changelog entries"
+    echo "  status   Show tmux session status"
+    echo "  stop     Kill the Ralph session"
+    echo "  pause    Pause the loop"
+    echo "  log      Show last 20 commits"
+    echo "  diff     Show diff of last 5 commits"
+    echo "  cost     Show budget allocation from cost.log"
+    echo "  health   Check loop heartbeat and noop counters"
+    echo "  attach   Attach to the tmux session"
+    echo "  --mobile Activate 12-hour mobile focus mode"
+    exit 0
+    ;;
+esac
+
 BRANCH="ralph-wiggum-improvements"
 BUDGET=2
-QA_BUDGET=2
-QA_TURNS=10
-MAX_TURNS=30
+QA_BUDGET=3
+QA_TURNS=15
+MAX_TURNS=50
 BACKOFF=300  # 5 min backoff when rate limited
 MOBILE_FLAG="/tmp/ralph-mobile-focus.timestamp"
 
 # Double usage promo: 2x limits outside 8AM-2PM ET through March 27, 2026
 PROMO_END="2026-03-28"
-SLEEP_OFFPEAK=60   # 1 min — rotated cycles reduce invocations, safe to lower
-SLEEP_PEAK=480     # 8 min — conserve during 1x window
+SLEEP_OFFPEAK=30   # 30s — max throughput while 2x promo active
+SLEEP_PEAK=60      # 1 min — cranked up for promo period
 SLEEP_NORMAL=180   # 3 min — post-promo default
-BUDGET_OFFPEAK=5   # Higher budget during 2x limits
-BUDGET_PEAK=3      # Standard budget during peak
+BUDGET_OFFPEAK=10  # Max budget during 2x limits
+BUDGET_PEAK=5      # Higher budget during peak
 
 get_sleep() {
   if [[ "$(date +%Y-%m-%d)" > "$PROMO_END" ]]; then
@@ -50,7 +155,7 @@ get_budget() {
 }
 
 # --mobile: activate 12-hour mobile focus mode
-if [[ "$1" = "--mobile" ]]; then
+if [[ "$CMD" = "--mobile" ]]; then
   EXPIRY=$(( $(date +%s) + 43200 ))  # 12 hours from now
   echo "$EXPIRY" > "$MOBILE_FLAG"
   echo "=== Mobile focus activated until $(date -r "$EXPIRY" '+%Y-%m-%d %H:%M') ==="
@@ -94,7 +199,7 @@ tmux send-keys -t ralphs:loop "source /tmp/ralph-env.sh && bash ralph-loop.sh" E
 
 # Go back to rc window
 tmux select-window -t ralphs:rc
-tmux send-keys -t ralphs:rc "echo '=== Ralph RC — Control Center ===' && echo 'Agents: 3-cycle rotation — C0:design+test C1:polish+test C2:seo+test→perf → QA → VisualQA(every 3rd)' && echo 'Off-peak: 2 parallel (primary+test) | Peak: 1 (primary only)' && echo 'Memory: .claude/agents/ — persists across runs' && echo '2x promo: off-peak(2PM-8AM ET)=60s/\$5 | peak(8AM-2PM ET)=480s/\$3' && echo 'Ctrl+B, 1 = watch loop | Ctrl+B, 0 = rc' && echo 'tmux kill-session -t ralphs to stop'" Enter
+tmux send-keys -t ralphs:rc "echo '=== Ralph RC — Control Center ===' && echo 'Agents: 8-cycle rotation' && echo '  Core (full budget):  C0:design C1:polish C2:seo' && echo '  Secondary (half $):  C3:a11y C4:content C5:mobile C6:security C7:dx' && echo '  + test-ralph parallel off-peak | QA every cycle | perf after seo | visual-qa every 3rd' && echo 'Off-peak: 2 parallel (primary+test) | Peak: 1 (primary only)' && echo '2x promo: off-peak(2PM-8AM ET)=30s/\$10 | peak(8AM-2PM ET)=60s/\$5' && echo 'Ctrl+B, 1 = watch loop | Ctrl+B, 0 = rc' && echo 'tmux kill-session -t ralphs to stop'" Enter
 
 # Attach to session
 tmux attach -t ralphs

@@ -35,7 +35,10 @@ describe("VideoRow", () => {
     );
     // Title is a heading inside a section with anchor id
     const titleEl = getByText("Tutorials");
-    expect(titleEl.closest("section")?.id).toBe("tutorials");
+    const section = titleEl.closest("section");
+    expect(section?.id).toBe("tutorials");
+    // scroll-mt-20 ensures fixed header doesn't overlap anchor targets
+    expect(section?.className).toContain("scroll-mt-20");
     // All video cards rendered (may appear in both mobile + desktop layouts)
     expect(getAllByText("Video v1").length).toBeGreaterThanOrEqual(1);
     expect(getAllByText("Video v2").length).toBeGreaterThanOrEqual(1);

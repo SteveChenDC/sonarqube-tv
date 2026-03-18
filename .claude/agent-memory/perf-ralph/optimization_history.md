@@ -6,6 +6,11 @@ type: project
 
 ## Already Done (do NOT duplicate)
 
+### 2026-03-17 — useSyncExternalStore in CourseCard eliminates mount double-render
+- **Commit**: `perf: useSyncExternalStore in CourseCard to eliminate mount double-render`
+- **What**: Replaced `useState(false)` + `useEffect(() => setMounted(true), [])` with `useSyncExternalStore(() => () => {}, () => true, () => false)`. Reads client-side state synchronously on first render; no second render cycle needed.
+- **Impact**: Eliminates 6 extra React reconciliation cycles per page load (one per CourseCard on courses page + home row). 673 tests pass, build clean.
+
 ### 2026-03-17 — Dynamic import CourseIndexCards, CourseTimeline, CourseSidebar
 - **Commit**: `perf: dynamic import CourseIndexCards, CourseTimeline, CourseSidebar`
 - **What**: Dynamically imported `CourseIndexCards` (225 lines) in `courses/page.tsx`, and `CourseTimeline` (256 lines) + `CourseSidebar` (141 lines) in `courses/[slug]/page.tsx`. Each has a skeleton loading fallback.
@@ -53,11 +58,16 @@ type: project
 - **What**: Replaced static `CourseCard` import in `HomeContent.tsx` with `next/dynamic`. Added `CourseCardSkeleton` (skeleton matching card dimensions) as the loading fallback to prevent CLS.
 - **Impact**: Deferred ~183 lines of CourseCard + ~96 lines of `@/lib/courseProgress` (localStorage logic) out of the initial HomeContent bundle into a lazy-loaded chunk. CourseCards are below the hero + first VideoRow — not on the critical render path.
 
+### 2026-03-17 — useSyncExternalStore in VideoCard eliminates double-render
+- **Commit**: `perf: use useSyncExternalStore in VideoCard to eliminate double-render`
+- **What**: Replaced `useState(0)` + `useEffect(() => setProgress())` with `useSyncExternalStore`. The hook reads localStorage synchronously on the first client render, eliminating the extra re-render needed by the `useEffect` approach. `getServerSnapshot` returns `0` (safe SSR fallback — no hydration mismatch).
+- **Impact**: ~88 VideoCards on the home page (11 rows × ~8 cards). Each previously rendered twice on mount. This eliminates ~88 extra React reconciliation cycles per page load.
+- **Tests**: All 663 tests pass, build succeeds.
+
 ## Potential Next Opportunities
 
-1. **`CourseCard` double-render** — uses `useState(false)` + `useEffect(() => setMounted(true))` pattern to gate localStorage reads. This causes every CourseCard to render twice. The pattern is necessary to avoid hydration mismatches — localStorage isn't available at SSR/build time. The only way to eliminate it would be cookies (available during SSR). Low priority.
-2. **`VideoCard` double-render** — same `useState(0)` + `useEffect` pattern for watch progress. Same caveat as above. Low priority since progress bar appears after hydration.
-3. **Debounce search input** — the `SearchContext` does not debounce; if search filtering is expensive, debouncing at 150ms could help. Current search is over static in-memory data so likely fast enough. Low priority.
-4. **Header bundles full `videos` array** — `Header.tsx` imports `{ categories, videos }` for search. All 228 video objects are bundled client-side. A lean search-index file with only (id, title, description, category, thumbnail, duration) would reduce bundle size. Complex refactor but meaningful for clients with slow connections.
-5. **CategoryContent as server component** — The sort UI requires client state. If sort was moved to URL params (searchParams), CategoryContent could become a server component. Significant architecture change.
-6. **Pre-existing test failures** — `ArticleTabs.test.tsx`, `HomeContent.test.tsx`, `FilterBar.test.tsx`, `WatchPage.test.tsx` have ~31 pre-existing failing tests (not caused by perf-ralph). Do NOT count these as regressions from optimizations.
+1. **Debounce search input** — `SearchContext` does not debounce; if search filtering is expensive, debouncing at 150ms could help. Current search is over static in-memory data so likely fast enough. Low priority.
+2. **CategoryContent as server component** — The sort UI requires client state. If sort was moved to URL params (searchParams), CategoryContent could become a server component. Significant architecture change. Medium priority.
+3. **`CourseSidebar` / `CourseTimeline` re-renders** — Worth checking if these use the same `useState + useEffect` mounted pattern for localStorage reads. Could apply useSyncExternalStore there too.
+4. **Header bundles full `videos` array** — ALREADY FIXED: Header.tsx lazy-loads `@/data/videos` and `@/data/courses` only when search/dropdown first opens.
+5. **Note on test suite**: All 673 tests pass as of 2026-03-17. No pre-existing failures remain in main suite.
