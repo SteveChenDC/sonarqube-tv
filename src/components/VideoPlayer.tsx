@@ -156,57 +156,37 @@ export default function VideoPlayer({ youtubeId, title, videoId, playerId = "yt-
 
   // Keyboard shortcuts
   useEffect(() => {
+    function togglePlayPause(player: YTPlayer) {
+      try {
+        if (player.getPlayerState() === YT_PLAYING) player.pauseVideo();
+        else player.playVideo();
+      } catch { /* player not ready */ }
+    }
+
+    function seekBy(player: YTPlayer, delta: number) {
+      try {
+        const t = delta < 0
+          ? Math.max(0, player.getCurrentTime() + delta)
+          : Math.min(player.getDuration(), player.getCurrentTime() + delta);
+        player.seekTo(t, true);
+        setSeekToast(`${delta < 0 ? "" : "+"}${delta}s`);
+        setTimeout(() => setSeekToast(null), 1200);
+      } catch { /* player not ready */ }
+    }
+
     function handleKey(e: KeyboardEvent) {
       const tag = (e.target as HTMLElement).tagName;
       if (tag === "INPUT" || tag === "TEXTAREA" || (e.target as HTMLElement).isContentEditable) return;
 
+      if (e.key === "?") { setShowShortcutsOverlay((v) => !v); setShortcutsHint(false); return; }
+      if (e.key === "Escape" && showShortcutsOverlay) { setShowShortcutsOverlay(false); return; }
+
       const player = playerRef.current;
-
-      if (e.key === "?") {
-        setShowShortcutsOverlay((v) => !v);
-        setShortcutsHint(false);
-        return;
-      }
-      if (e.key === "Escape" && showShortcutsOverlay) {
-        setShowShortcutsOverlay(false);
-        return;
-      }
-
       if (!player) return;
 
-      if (e.key === " " || e.key === "k") {
-        e.preventDefault();
-        try {
-          if (player.getPlayerState() === YT_PLAYING) {
-            player.pauseVideo();
-          } else {
-            player.playVideo();
-          }
-        } catch { /* player not ready */ }
-        return;
-      }
-
-      if (e.key === "ArrowLeft" || e.key === "j") {
-        e.preventDefault();
-        try {
-          const t = Math.max(0, player.getCurrentTime() - SEEK_SECONDS);
-          player.seekTo(t, true);
-          setSeekToast(`-${SEEK_SECONDS}s`);
-          setTimeout(() => setSeekToast(null), 1200);
-        } catch { /* player not ready */ }
-        return;
-      }
-
-      if (e.key === "ArrowRight" || e.key === "l") {
-        e.preventDefault();
-        try {
-          const t = Math.min(player.getDuration(), player.getCurrentTime() + SEEK_SECONDS);
-          player.seekTo(t, true);
-          setSeekToast(`+${SEEK_SECONDS}s`);
-          setTimeout(() => setSeekToast(null), 1200);
-        } catch { /* player not ready */ }
-        return;
-      }
+      if (e.key === " " || e.key === "k") { e.preventDefault(); togglePlayPause(player); return; }
+      if (e.key === "ArrowLeft" || e.key === "j") { e.preventDefault(); seekBy(player, -SEEK_SECONDS); return; }
+      if (e.key === "ArrowRight" || e.key === "l") { e.preventDefault(); seekBy(player, SEEK_SECONDS); return; }
     }
 
     document.addEventListener("keydown", handleKey);

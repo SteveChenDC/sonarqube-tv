@@ -664,7 +664,7 @@ describe("HomeContent — footerInView hides floating button and ScrollToTop", (
       disconnect() {
         this._record.disconnectFn();
       }
-      unobserve(_el: Element) {}
+      unobserve(_el: Element) { /* no-op: stub */ }
     }
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

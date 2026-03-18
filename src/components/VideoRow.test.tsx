@@ -10,9 +10,9 @@ function useNonFiringIntersectionObserver() {
   beforeEach(() => {
     original = globalThis.IntersectionObserver;
     globalThis.IntersectionObserver = class {
-      observe() { /* never fires */ }
-      unobserve() {}
-      disconnect() {}
+      observe() { /* no-op: never fires */ }
+      unobserve() { /* no-op: stub */ }
+      disconnect() { /* no-op: stub */ }
     } as unknown as typeof IntersectionObserver;
   });
   afterEach(() => {

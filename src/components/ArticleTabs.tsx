@@ -35,126 +35,90 @@ function parseInline(text: string): React.ReactNode[] {
   return nodes.length > 0 ? nodes : [text];
 }
 
-function renderMarkdown(md: string) {
-  const lines = md.split("\n");
+type Token =
+  | { type: "blank" }
+  | { type: "h1" | "h2" | "h3"; content: string }
+  | { type: "li"; content: string }
+  | { type: "oli"; content: string; num: number }
+  | { type: "blockquote"; content: string }
+  | { type: "p"; content: string };
 
-  // First pass: parse each line into typed tokens
-  type Token =
-    | { type: "blank" }
-    | { type: "h1" | "h2" | "h3"; content: string }
-    | { type: "li"; content: string }
-    | { type: "oli"; content: string; num: number }
-    | { type: "blockquote"; content: string }
-    | { type: "p"; content: string };
+function tokenizeLine(line: string): Token {
+  const trimmed = line.trim();
+  if (!trimmed) return { type: "blank" };
+  if (trimmed.startsWith("### ")) return { type: "h3", content: trimmed.slice(4) };
+  if (trimmed.startsWith("## ")) return { type: "h2", content: trimmed.slice(3) };
+  if (trimmed.startsWith("# ")) return { type: "h1", content: trimmed.slice(2) };
+  if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) return { type: "li", content: trimmed.slice(2) };
+  if (trimmed.startsWith("> ")) return { type: "blockquote", content: trimmed.slice(2) };
+  const olMatch = trimmed.match(/^(\d+)\.\s+(.*)/);
+  if (olMatch) return { type: "oli", content: olMatch[2], num: parseInt(olMatch[1], 10) };
+  return { type: "p", content: trimmed };
+}
 
-  const tokens: Token[] = lines.map((line) => {
-    const trimmed = line.trim();
-    if (!trimmed) return { type: "blank" };
-    if (trimmed.startsWith("### ")) return { type: "h3", content: trimmed.slice(4) };
-    if (trimmed.startsWith("## ")) return { type: "h2", content: trimmed.slice(3) };
-    if (trimmed.startsWith("# ")) return { type: "h1", content: trimmed.slice(2) };
-    if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) return { type: "li", content: trimmed.slice(2) };
-    if (trimmed.startsWith("> ")) return { type: "blockquote", content: trimmed.slice(2) };
-    const olMatch = trimmed.match(/^(\d+)\.\s+(.*)/);
-    if (olMatch) return { type: "oli", content: olMatch[2], num: parseInt(olMatch[1], 10) };
-    return { type: "p", content: trimmed };
-  });
+function collectListItems(tokens: Token[], start: number, type: "li" | "oli", key: { v: number }) {
+  const items: React.ReactNode[] = [];
+  let i = start;
+  while (i < tokens.length && tokens[i].type === type) {
+    const tok = tokens[i] as { content: string };
+    items.push(
+      <li key={key.v++} className="pl-1 leading-7 text-[15px] text-n3">
+        {parseInline(tok.content)}
+      </li>
+    );
+    i++;
+  }
+  return { items, nextIndex: i };
+}
 
-  // Detect if the article opens with an h1 — if so, skip it.
-  const firstContentIndex = tokens.findIndex((t) => t.type !== "blank");
-  const startsWithH1 = firstContentIndex >= 0 && tokens[firstContentIndex].type === "h1";
+function collectBlockquoteLines(tokens: Token[], start: number, key: { v: number }) {
+  const lines: React.ReactNode[] = [];
+  let i = start;
+  while (i < tokens.length && tokens[i].type === "blockquote") {
+    const tok = tokens[i] as { content: string };
+    lines.push(
+      <span key={key.v++} className="block">
+        {parseInline(tok.content)}
+      </span>
+    );
+    i++;
+  }
+  return { lines, nextIndex: i };
+}
 
-  // Second pass: group consecutive list items into <ul>/<ol> blocks
-  const elements: React.ReactNode[] = [];
-  let key = 0;
-  let i = 0;
-  let firstParaSeen = false;
-
-  while (i < tokens.length) {
-    const tok = tokens[i];
-
-    if (tok.type === "blank") {
-      i++;
-    } else if (tok.type === "li") {
-      const items: React.ReactNode[] = [];
-      while (i < tokens.length && tokens[i].type === "li") {
-        const liTok = tokens[i] as { type: "li"; content: string };
-        items.push(
-          <li key={key++} className="pl-1 leading-7 text-[15px] text-n3">
-            {parseInline(liTok.content)}
-          </li>
-        );
-        i++;
-      }
-      elements.push(
-        <ul key={key++} className="my-4 ml-4 list-disc space-y-1.5 marker:text-qube-blue">
-          {items}
-        </ul>
-      );
-    } else if (tok.type === "oli") {
-      const items: React.ReactNode[] = [];
-      while (i < tokens.length && tokens[i].type === "oli") {
-        const liTok = tokens[i] as { type: "oli"; content: string; num: number };
-        items.push(
-          <li key={key++} className="pl-1 leading-7 text-[15px] text-n3">
-            {parseInline(liTok.content)}
-          </li>
-        );
-        i++;
-      }
-      elements.push(
-        <ol key={key++} className="my-4 ml-4 list-decimal space-y-1.5 marker:font-heading marker:text-xs marker:font-semibold marker:text-qube-blue">
-          {items}
-        </ol>
-      );
-    } else if (tok.type === "blockquote") {
-      const lines: React.ReactNode[] = [];
-      while (i < tokens.length && tokens[i].type === "blockquote") {
-        const bqTok = tokens[i] as { type: "blockquote"; content: string };
-        lines.push(
-          <span key={key++} className="block">
-            {parseInline(bqTok.content)}
-          </span>
-        );
-        i++;
-      }
-      elements.push(
-        <blockquote key={key++} className="my-4 border-l-2 border-qube-blue/40 pl-4 py-0.5 text-[14px] italic leading-relaxed text-n5">
-          {lines}
-        </blockquote>
-      );
-    } else if (tok.type === "h3") {
-      elements.push(
-        <h3 key={key++} className="mb-2 mt-5 flex items-center gap-2 font-heading text-[15px] font-semibold text-n1 first:mt-0">
+function renderToken(
+  tok: Token,
+  key: { v: number },
+  firstParaSeen: { v: boolean },
+  skipH1: boolean,
+): React.ReactNode | null {
+  switch (tok.type) {
+    case "h3":
+      return (
+        <h3 key={key.v++} className="mb-2 mt-5 flex items-center gap-2 font-heading text-[15px] font-semibold text-n1 first:mt-0">
           <span className="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-qube-blue/70" aria-hidden="true" />
           {parseInline(tok.content)}
         </h3>
       );
-      i++;
-    } else if (tok.type === "h2") {
-      elements.push(
-        <h2 key={key++} className="mb-3 mt-8 border-l-2 border-qube-blue/60 pl-3 font-heading text-lg font-semibold text-n1 first:mt-0">
+    case "h2":
+      return (
+        <h2 key={key.v++} className="mb-3 mt-8 border-l-2 border-qube-blue/60 pl-3 font-heading text-lg font-semibold text-n1 first:mt-0">
           {parseInline(tok.content)}
         </h2>
       );
-      i++;
-    } else if (tok.type === "h1") {
-      if (startsWithH1 && i === firstContentIndex) {
-        i++;
-      } else {
-        elements.push(
-          <h1 key={key++} className="mb-4 mt-6 pb-3 font-heading text-xl font-bold text-n1 first:mt-0 border-b border-n8/60">
-            {parseInline(tok.content)}
-          </h1>
-        );
-        i++;
-      }
-    } else {
-      const isLead = !firstParaSeen;
-      firstParaSeen = true;
-      elements.push(
+    case "h1":
+      if (skipH1) return null;
+      return (
+        <h1 key={key.v++} className="mb-4 mt-6 pb-3 font-heading text-xl font-bold text-n1 first:mt-0 border-b border-n8/60">
+          {parseInline(tok.content)}
+        </h1>
+      );
+    default: {
+      const isLead = !firstParaSeen.v;
+      firstParaSeen.v = true;
+      return (
         <p
-          key={key++}
+          key={key.v++}
           className={
             isLead
               ? "mb-5 mt-0 text-[16px] leading-[1.75] text-n2 first:mt-0"
@@ -164,6 +128,51 @@ function renderMarkdown(md: string) {
           {parseInline((tok as { type: "p"; content: string }).content)}
         </p>
       );
+    }
+  }
+}
+
+function renderMarkdown(md: string) {
+  const tokens: Token[] = md.split("\n").map(tokenizeLine);
+
+  const firstContentIndex = tokens.findIndex((t) => t.type !== "blank");
+  const startsWithH1 = firstContentIndex >= 0 && tokens[firstContentIndex].type === "h1";
+
+  const elements: React.ReactNode[] = [];
+  const key = { v: 0 };
+  const firstParaSeen = { v: false };
+  let i = 0;
+
+  while (i < tokens.length) {
+    const tok = tokens[i];
+
+    if (tok.type === "blank") {
+      i++;
+      continue;
+    }
+
+    if (tok.type === "li") {
+      const { items, nextIndex } = collectListItems(tokens, i, "li", key);
+      elements.push(
+        <ul key={key.v++} className="my-4 ml-4 list-disc space-y-1.5 marker:text-qube-blue">{items}</ul>
+      );
+      i = nextIndex;
+    } else if (tok.type === "oli") {
+      const { items, nextIndex } = collectListItems(tokens, i, "oli", key);
+      elements.push(
+        <ol key={key.v++} className="my-4 ml-4 list-decimal space-y-1.5 marker:font-heading marker:text-xs marker:font-semibold marker:text-qube-blue">{items}</ol>
+      );
+      i = nextIndex;
+    } else if (tok.type === "blockquote") {
+      const { lines, nextIndex } = collectBlockquoteLines(tokens, i, key);
+      elements.push(
+        <blockquote key={key.v++} className="my-4 border-l-2 border-qube-blue/40 pl-4 py-0.5 text-[14px] italic leading-relaxed text-n5">{lines}</blockquote>
+      );
+      i = nextIndex;
+    } else {
+      const skipH1 = startsWithH1 && i === firstContentIndex;
+      const node = renderToken(tok, key, firstParaSeen, skipH1);
+      if (node) elements.push(node);
       i++;
     }
   }

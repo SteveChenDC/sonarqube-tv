@@ -29,14 +29,14 @@ describe("Home page", () => {
   it("passes a non-empty categories list to HomeContent", () => {
     render(<Home />);
     const el = screen.getByTestId("home-content");
-    const count = Number(el.getAttribute("data-category-count"));
+    const count = Number(el.dataset.categoryCount);
     expect(count).toBeGreaterThan(0);
   });
 
   it("passes a non-empty videos list to HomeContent", () => {
     render(<Home />);
     const el = screen.getByTestId("home-content");
-    const count = Number(el.getAttribute("data-video-count"));
+    const count = Number(el.dataset.videoCount);
     expect(count).toBeGreaterThan(0);
   });
 });
