@@ -84,6 +84,24 @@ describe("VideoCard", () => {
     expect(queryByText("New")).toBeNull();
   });
 
+  it("hides 'New' badge for a video published exactly 7 days ago (boundary: < not <=)", () => {
+    // 7 * 24 * 60 * 60 * 1000 = 604800000ms; condition is strict < so exactly 7 days = no badge
+    const exactly7DaysAgo = new Date("2026-03-07T12:00:00Z").toISOString(); // same HH:MM as mock "now"
+    const { queryByText } = render(
+      <VideoCard video={videoWithDate(exactly7DaysAgo)} />
+    );
+    expect(queryByText("New")).toBeNull();
+  });
+
+  it("shows 'New' badge for a video published 1 second shy of 7 days ago (boundary: just inside)", () => {
+    // 7 days - 1 second = still within the window
+    const justUnder7Days = new Date("2026-03-07T12:00:01Z").toISOString();
+    const { getByText } = render(
+      <VideoCard video={videoWithDate(justUnder7Days)} />
+    );
+    expect(getByText("New")).toBeTruthy();
+  });
+
   it("hides 'New' badge when video has watch progress even if recent", () => {
     setProgress("vid1", 30);
     const recentDate = new Date("2026-03-13T00:00:00Z").toISOString();
@@ -121,6 +139,15 @@ describe("VideoCard", () => {
     it("uses sonar-purple badge for H:MM:SS format over 20 min", () => {
       const longVideo: Video = { ...mockVideo, duration: "1:05:00" };
       const { container } = render(<VideoCard video={longVideo} />);
+      expect(container.querySelector(".bg-sonar-purple\\/80")).toBeTruthy();
+    });
+
+    it("uses sonar-purple badge for a no-colon duration string (parseDurationToMinutes ?? 0 guard)", () => {
+      // "45" has no colon → split(":") gives ["45"] → parts[1] is undefined
+      // parseDurationToMinutes: parts[0] + (parts[1] ?? 0) / 60 = 45 + 0 = 45 minutes
+      // 45 > 20 → long → bg-sonar-purple/80
+      const noColonVideo: Video = { ...mockVideo, duration: "45" };
+      const { container } = render(<VideoCard video={noColonVideo} />);
       expect(container.querySelector(".bg-sonar-purple\\/80")).toBeTruthy();
     });
   });
@@ -330,6 +357,60 @@ describe("VideoCard", () => {
         <VideoCard video={videoWithDate("2025-02-01T00:00:00Z")} />
       );
       expect(getByText("1 year ago")).toBeTruthy();
+    });
+  });
+
+  describe("progress === 100 (full completion)", () => {
+    it("shows '100% watched' badge when progress is 100", async () => {
+      setProgress("vid1", 100);
+      const { getByText } = render(<VideoCard video={mockVideo} />);
+      await waitFor(() => {
+        expect(getByText("100% watched")).toBeTruthy();
+      });
+    });
+
+    it("renders the progress bar at full width (width: 100%) when progress is 100", async () => {
+      setProgress("vid1", 100);
+      const { container } = render(<VideoCard video={mockVideo} />);
+      await waitFor(() => {
+        const bar = container.querySelector(".bg-sonar-red.h-full");
+        expect(bar).toBeTruthy();
+        expect((bar as HTMLElement).style.width).toBe("100%");
+      });
+    });
+
+    it("hides the 'New' badge for a recent video when progress is 100 (progress === 0 is false)", async () => {
+      setProgress("vid1", 100);
+      // Use a very recent video — within 7 days from the mocked "now" (2026-03-14)
+      const recentDate = new Date("2026-03-13T00:00:00Z").toISOString();
+      const recentVideo = { ...mockVideo, publishedAt: recentDate };
+      const { queryByText } = render(<VideoCard video={recentVideo} />);
+      await waitFor(() => {
+        // progress !== 0, so the New badge condition fails
+        expect(queryByText("New")).toBeNull();
+      });
+    });
+
+    it("shows progress bar at width 1% for the minimum non-zero progress boundary", async () => {
+      setProgress("vid1", 1);
+      const { container, getByText } = render(<VideoCard video={mockVideo} />);
+      await waitFor(() => {
+        expect(getByText("1% watched")).toBeTruthy();
+        const bar = container.querySelector(".bg-sonar-red.h-full");
+        expect(bar).toBeTruthy();
+        expect((bar as HTMLElement).style.width).toBe("1%");
+      });
+    });
+
+    it("shows progress bar at width 99% for near-complete videos", async () => {
+      setProgress("vid1", 99);
+      const { container, getByText } = render(<VideoCard video={mockVideo} />);
+      await waitFor(() => {
+        expect(getByText("99% watched")).toBeTruthy();
+        const bar = container.querySelector(".bg-sonar-red.h-full");
+        expect(bar).toBeTruthy();
+        expect((bar as HTMLElement).style.width).toBe("99%");
+      });
     });
   });
 });
