@@ -58,9 +58,11 @@ function renderHeader() {
   );
 }
 
-/** Open the search bar by clicking the search button. */
-function openSearch() {
+/** Open the search bar and flush the lazy-loaded @/data/videos Promise. */
+async function openSearch() {
   fireEvent.click(screen.getByRole("button", { name: "Search videos" }));
+  // Header lazy-loads @/data/videos on first open; flush the async import Promise
+  await act(async () => {});
 }
 
 /** Return the search input (assumes search bar is open). */
@@ -105,9 +107,9 @@ describe("Header — search open/close", () => {
     expect(screen.getByRole("button", { name: "Search videos" })).toBeInTheDocument();
   });
 
-  it("Escape key clears the query when closing search", () => {
+  it("Escape key clears the query when closing search", async () => {
     renderHeader();
-    openSearch();
+    await openSearch();
     fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
     // Results should be visible
     expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument();
@@ -132,10 +134,10 @@ describe("Header — search open/close", () => {
     expect(searchInput()).toBeInTheDocument();
   });
 
-  it("pressing '/' when search is already open does NOT close or re-open it (guard: !searchOpen)", () => {
+  it("pressing '/' when search is already open does NOT close or re-open it (guard: !searchOpen)", async () => {
     renderHeader();
     // Open search via button click
-    openSearch();
+    await openSearch();
     expect(searchInput()).toBeInTheDocument();
 
     // Type a query so results appear — ensures state is stable

@@ -1,36 +1,164 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sonar.tv
 
-## Getting Started
+Netflix-style video hub for SonarQube tutorials and certification courses. Browse 200+ videos by category, track watch progress, search, filter, and pick up where you left off.
 
-First, run the development server:
+**Live:** [sonar.tv](https://sonarqube-tv.vercel.app)
+
+## Tech Stack
+
+- **Next.js 16** (App Router, SSG via `generateStaticParams`)
+- **React 19** + TypeScript
+- **Tailwind CSS 4** with Sonar brand design tokens
+- **Vitest** — 890+ unit tests across 53 test files
+- **Playwright** — 28 E2E tests across 6 spec files
+
+## Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev       # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server |
+| `npm run build` | Production build |
+| `npm test` | Run unit tests (Vitest) |
+| `npm run test:watch` | Watch mode |
+| `npm run test:e2e` | Run Playwright E2E tests |
+| `npm run lint` | ESLint |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- **Video catalog** — 200+ SonarQube tutorials organized into 11 categories
+- **Certification courses** — Guided learning paths with progress tracking
+- **Watch progress** — Resume videos where you left off (localStorage)
+- **Search** — Header search with `/` keyboard shortcut and live results
+- **Filters** — Sort by date, duration, or relevance via modal filter panel
+- **Dark/light mode** — Theme toggle with system preference detection
+- **Transcript + articles** — AI-generated summaries and chapter-synced transcripts
+- **Responsive** — Mobile-first with 44px touch targets, swipe hints, and bottom sheets
+- **Keyboard shortcuts** — Video player controls (space, arrows, `f`, `m`, `?`)
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/                     # Next.js App Router pages
+│   ├── page.tsx             # Home page
+│   ├── watch/[id]/          # Video watch page (SSG)
+│   ├── category/[slug]/     # Category landing page
+│   └── courses/             # Certification course pages
+├── components/              # 24 React components
+│   ├── Hero.tsx             # Featured video banner
+│   ├── HomeContent.tsx      # Filter/sort state, renders video rows
+│   ├── VideoCard.tsx        # Card with progress bar + hover play
+│   ├── VideoPlayer.tsx      # YouTube iframe + progress tracking
+│   ├── Header.tsx           # Nav with search + dropdowns
+│   └── ...
+├── data/videos.ts           # Static video + category data
+├── lib/                     # Watch progress, theme utilities
+└── types/                   # TypeScript interfaces
+e2e/                         # Playwright E2E tests
+docs/                        # E2E test documentation
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Design System
 
-## Deploy on Vercel
+Follows the [Sonar brand guide](https://brand.sonarsource.com). Key tokens:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Persistence Purple | `#290042` | Accents, badges |
+| Sonar Red | `#D3121D` | CTAs, active states |
+| Qube Blue | `#126ED3` | Links, interactive |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Fonts: **Poppins** (headings) + **Inter** (body)
+
+## Organic Search Strategy
+
+Sonar already has 200+ video tutorials on YouTube. The problem: YouTube owns the search real estate. When a developer searches "SonarQube setup tutorial," YouTube gets the click and the engagement data — not sonarsource.com. Sonar.tv fixes this by giving every video its own page on a Sonar-owned domain.
+
+### What Google sees
+
+Every one of the 240+ pages emits structured data that qualifies for [Google Video rich results](https://developers.google.com/search/docs/appearance/structured-data/video):
+
+- **VideoObject JSON-LD** on each watch page — title, description, ISO 8601 duration, thumbnail, upload date, `WatchAction`, publisher (SonarSource), and `isAccessibleForFree`. This is the data Google needs to show video thumbnails with duration badges directly in search results.
+- **ItemList JSON-LD** on the home page — the 12 newest videos as a structured carousel. Google can surface this as a video pack from a single URL.
+- **BreadcrumbList JSON-LD** on watch and category pages — Home > Category > Video navigation paths displayed in SERPs.
+- **Organization JSON-LD** — SonarSource identity with logo and social links in the root layout.
+
+### Why this drives traffic
+
+| Without Sonar.tv | With Sonar.tv |
+|-------------------|---------------|
+| Developer searches "SonarQube CI/CD integration" | Same search |
+| YouTube result appears — click goes to youtube.com | Sonar.tv result appears with video thumbnail, duration, and date — click goes to a Sonar-branded domain |
+| Viewer watches on YouTube, leaves | Viewer watches on Sonar.tv, sees related tutorials, certification courses, category pages — deeper engagement |
+| No retargeting, no attribution | Full analytics, engagement tracking, progress data on your domain |
+
+Video rich results in Google Search have [significantly higher CTR](https://developers.google.com/search/docs/appearance/structured-data/video) than plain blue links. Sonar.tv creates 240+ new opportunities for Sonar to appear in search with rich thumbnails — on queries like "code quality static analysis tutorial," "SonarQube setup," "clean code practices," and "SAST tool comparison."
+
+### Sitemap and crawlability
+
+- Auto-generated `sitemap.xml` with all 240+ URLs — priority-weighted (home 1.0, categories 0.8, courses 0.7, videos 0.6) with real `lastModified` dates from publish timestamps.
+- Every page has unique `<title>`, `<meta description>`, Open Graph tags, Twitter card tags, and canonical URLs. Zero duplicate content signals.
+- All 11 category pages are linked from the footer on every page — no orphan pages, full crawl coverage.
+
+### Social sharing
+
+Watch pages use YouTube `maxresdefault` (1280x720) as the OG image. When someone shares a Sonar.tv link on Slack, Twitter, or LinkedIn, it renders a high-res video thumbnail with the Sonar-branded title — not a generic YouTube embed. The home page and category pages use a custom Sonar OG image.
+
+## Brand Consistency
+
+The entire site is built on the [Sonar brand guide](https://brand.sonarsource.com):
+
+- **Persistence Purple** (`#290042`), **Sonar Red** (`#D3121D`), **Qube Blue** (`#126ED3`), and the full n1-n9 neutral scale — no off-brand colors anywhere
+- **Poppins** for headings, **Inter** for body text — matching Sonar's typography system
+- Dark theme as default (background `#0a0a0a`) with light mode toggle
+- Every component, badge, button, and hover state uses design tokens from the brand guide
+
+This isn't a third-party platform with Sonar content on it. It's a Sonar-owned experience that looks and feels like the rest of the Sonar ecosystem.
+
+## Cost to Run
+
+The entire site is statically generated at build time. Every page is pre-rendered to HTML and served from a CDN. There is no server, no database, no API, and no runtime compute.
+
+| Line item | Cost |
+|-----------|------|
+| Hosting (Vercel / GitHub Pages / Cloudflare Pages) | **$0** — static sites are free tier on all major platforms |
+| CDN and bandwidth | **$0** — included in free tier; scales to millions of pageviews |
+| Database | **None** — all data is compiled into the build |
+| Server functions | **None** — fully static, no cold starts |
+| Video hosting | **$0** — videos stream from YouTube; Sonar.tv is a branded player wrapper |
+| Incremental cost per pageview | **$0** |
+
+**Compare to alternatives:**
+- A custom CMS (WordPress/Contentful) with video embedding would cost $50-500/mo in hosting plus ongoing maintenance.
+- A Wistia or Vidyard-style video marketing platform runs $300-1,000+/mo for 200+ videos with analytics.
+- Sonar.tv achieves the same outcome — branded video hub with search visibility, progress tracking, and structured data — at zero ongoing cost.
+
+Adding new videos requires only a data entry in a single TypeScript file and a rebuild. No CMS login, no media upload, no infrastructure changes.
+
+## Performance
+
+Fast pages rank higher and retain visitors longer. Sonar.tv is built for speed.
+
+- **All 240+ pages are pre-rendered** — no server-side rendering, no loading spinners. Every page loads instantly from CDN cache.
+- **Code splitting** — Below-fold components (transcript viewer, playlist queue, course navigation) load only when needed. The initial page load is lightweight.
+- **Optimized thumbnails** — Card grids use 480px thumbnails; only the hero and social previews use full 1280px. Cuts thumbnail bandwidth ~75% across the catalog.
+- **YouTube preconnect** — Browser begins connecting to YouTube servers before the user clicks play, shaving 100-300ms off video start time.
+- **Lazy-loaded sections** — Video rows below the fold render on scroll, keeping the home page fast even with 11+ category sections.
+- **Core Web Vitals optimized** — Largest Contentful Paint, Cumulative Layout Shift, and Interaction to Next Paint are all tuned. Google uses these as ranking signals.
+
+## Testing
+
+890+ unit tests and 28 end-to-end tests ensure nothing breaks when content is updated. Tests run automatically and cover navigation, search, filters, video playback, mobile interactions, and accessibility.
+
+See [`docs/e2e-tests.md`](docs/e2e-tests.md) for the full E2E test reference.
+
+## License
+
+Private

@@ -113,20 +113,20 @@ case "$CMD" in
 esac
 
 BRANCH="ralph-wiggum-improvements"
-BUDGET=2
-QA_BUDGET=3
-QA_TURNS=15
-MAX_TURNS=50
+BUDGET=5
+QA_BUDGET=5
+QA_TURNS=100
+MAX_TURNS=75
 BACKOFF=300  # 5 min backoff when rate limited
 MOBILE_FLAG="/tmp/ralph-mobile-focus.timestamp"
 
 # Double usage promo: 2x limits outside 8AM-2PM ET through March 27, 2026
 PROMO_END="2026-03-28"
 SLEEP_OFFPEAK=30   # 30s — max throughput while 2x promo active
-SLEEP_PEAK=60      # 1 min — cranked up for promo period
-SLEEP_NORMAL=180   # 3 min — post-promo default
-BUDGET_OFFPEAK=10  # Max budget during 2x limits
-BUDGET_PEAK=5      # Higher budget during peak
+SLEEP_PEAK=45      # 45s — faster during peak
+SLEEP_NORMAL=120   # 2 min — post-promo default
+BUDGET_OFFPEAK=15  # Max budget during 2x limits
+BUDGET_PEAK=10     # Higher budget during peak
 
 get_sleep() {
   if [[ "$(date +%Y-%m-%d)" > "$PROMO_END" ]]; then

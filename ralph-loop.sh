@@ -21,7 +21,7 @@ gate_worktree() {
 }
 
 # ── No-op tracking: skip agents with 3+ consecutive no-change cycles ──
-NOOP_THRESHOLD=3
+NOOP_THRESHOLD=5
 increment_noop() {
   local agent="$1"
   local f="/tmp/ralph-noop-${agent}.count"
@@ -85,7 +85,7 @@ get_secondary_budget() {
   local full=$(get_budget)
   echo $(( full / 2 ))
 }
-SECONDARY_TURNS=25  # Half of MAX_TURNS for new agents
+SECONDARY_TURNS=40  # Increased turns for secondary agents
 
 CYCLE=0
 while true; do
