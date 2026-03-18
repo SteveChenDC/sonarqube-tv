@@ -45,14 +45,18 @@ export default function Footer() {
                   Certification Courses
                 </Link>
               </li>
+            </ul>
+          </nav>
+
+          {/* Category links — complete list so every category page is one hop from any page */}
+          <nav aria-label="Video categories">
+            <p className="mb-3 text-center font-heading text-xs font-semibold uppercase tracking-wider text-n6 sm:text-left">
+              Categories
+            </p>
+            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 sm:flex-col sm:gap-x-0 sm:gap-y-2">
               <li>
                 <Link href="/category/getting-started" className="font-body text-sm text-n5 transition-colors hover:text-n1">
                   Getting Started
-                </Link>
-              </li>
-              <li>
-                <Link href="/category/code-security" className="font-body text-sm text-n5 transition-colors hover:text-n1">
-                  Code Security
                 </Link>
               </li>
               <li>
@@ -61,8 +65,48 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/category/code-security" className="font-body text-sm text-n5 transition-colors hover:text-n1">
+                  Code Security
+                </Link>
+              </li>
+              <li>
+                <Link href="/category/clean-code" className="font-body text-sm text-n5 transition-colors hover:text-n1">
+                  Clean Code
+                </Link>
+              </li>
+              <li>
                 <Link href="/category/devops-cicd" className="font-body text-sm text-n5 transition-colors hover:text-n1">
                   DevOps &amp; CI/CD
+                </Link>
+              </li>
+              <li>
+                <Link href="/category/sonarqube-cloud" className="font-body text-sm text-n5 transition-colors hover:text-n1">
+                  SonarQube Cloud
+                </Link>
+              </li>
+              <li>
+                <Link href="/category/sonarqube-for-ide" className="font-body text-sm text-n5 transition-colors hover:text-n1">
+                  SonarQube for IDE
+                </Link>
+              </li>
+              <li>
+                <Link href="/category/product-updates" className="font-body text-sm text-n5 transition-colors hover:text-n1">
+                  Product Updates
+                </Link>
+              </li>
+              <li>
+                <Link href="/category/architecture-governance" className="font-body text-sm text-n5 transition-colors hover:text-n1">
+                  Architecture &amp; Governance
+                </Link>
+              </li>
+              <li>
+                <Link href="/category/sonar-summit" className="font-body text-sm text-n5 transition-colors hover:text-n1">
+                  Sonar Summit
+                </Link>
+              </li>
+              <li>
+                <Link href="/category/customer-stories" className="font-body text-sm text-n5 transition-colors hover:text-n1">
+                  Customer Stories
                 </Link>
               </li>
             </ul>
