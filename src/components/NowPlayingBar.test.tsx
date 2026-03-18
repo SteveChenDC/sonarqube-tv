@@ -119,4 +119,26 @@ describe("NowPlayingBar", () => {
     expect(mockObserve).toHaveBeenCalledTimes(1);
     expect(observedElement).not.toBeNull();
   });
+
+  it("updates aria-label reactively when title prop changes while visible", () => {
+    const { rerender } = render(<NowPlayingBar title="Original Title" />);
+    triggerIntersection(false); // make visible
+    const bar = screen.getByRole("status");
+    expect(bar).toHaveAttribute("aria-label", "Now playing: Original Title");
+
+    rerender(<NowPlayingBar title="New Title" />);
+    // aria-label is a reactive expression — must reflect the updated title
+    expect(bar).toHaveAttribute("aria-label", "Now playing: New Title");
+  });
+
+  it("title prop change while hidden does not add an aria-label", () => {
+    const { rerender } = render(<NowPlayingBar title="Original Title" />);
+    // Not yet visible — no aria-label
+    const bar = screen.getByRole("status");
+    expect(bar).not.toHaveAttribute("aria-label");
+
+    rerender(<NowPlayingBar title="New Title" />);
+    // Still hidden — aria-label must remain absent
+    expect(bar).not.toHaveAttribute("aria-label");
+  });
 });

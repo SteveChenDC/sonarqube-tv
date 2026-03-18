@@ -4,6 +4,68 @@ description: Running log of full visual QA passes — most recent at top
 type: project
 ---
 
+## 2026-03-18 (Pass #32)
+
+Ran full visual QA on 2026-03-18 (thirty-second run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px). Also inspected newer qa-* screenshots.
+
+**Result: All clear — no new visual bugs found.**
+
+Screenshots from `desktop-*` / `mobile-*` sets are stale (Mar 17, pre-fix). The `qa-*` set is from Mar 18 04:53-54, still slightly before commit `171a73b` (04:59). All screenshot-visible issues have been cross-checked against current code.
+
+Specific checks:
+- Desktop Home: Marquee row, Certification Courses (4 cards), Getting Started — clean
+- Desktop Home Bottom: known black screenshot artifact; DevOps & CI/CD cards — clean
+- Desktop Watch (both desktop + qa-watch): player, back nav, title, article content — clean
+- Desktop Category (both desktop + qa-category): sort bar (all 4 buttons on one row), 4-col grid — clean
+- Mobile Home (desktop-mobile-home + qa-mobile-home): Hero with featured card + Watch Now/Filters, Certification Courses DEVELOPER card — clean
+- Mobile Home Bottom: known black area artifact; SonarQube Cloud + DevOps rows — clean
+- Mobile Watch: full-width player, metadata, tabs — within viewport
+- Mobile Category: **stale screenshot shows pre-fix wrapping** — confirmed fix `171a73b` is applied in current code; `flex flex-nowrap` prevents wrapping
+- Filters modal (qa-filters): white modal is correct — screenshot was captured in light mode (`html:not(.dark)` → `--background: #F4F7FB`)
+
+---
+
+## 2026-03-18 (Pass #31)
+
+Ran full visual QA on 2026-03-18 (thirty-first run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
+
+**Result: 1 bug found and fixed.**
+
+**Bug fixed:** Mobile Category page — sort buttons ("Newest Oldest Shortest / Longest") wrapped onto two lines on 375px viewports, leaving "Longest" orphaned on a second row. Root cause: `flex flex-wrap` on the inner button container + `flex flex-wrap items-center` on the outer container meant that at ~293px remaining width the 4 buttons couldn't all fit. Fix: outer container changed to `flex flex-col items-start sm:flex-row sm:flex-wrap sm:items-center`; inner button container changed to `flex flex-nowrap`. Committed: `171a73b`.
+
+Specific checks:
+- Desktop Home: Marquee row, Certification Courses (4 cards), Getting Started section — all clean
+- Desktop Home Bottom: large black area at top = known screenshot artifact; DevOps & CI/CD cards — clean
+- Desktop Watch: player, back nav, title — correct
+- Desktop Category: "Getting Started" header, sort bar (4 buttons on one row), 4-col grid — correct
+- Mobile Home: carousel, Certification Courses DEVELOPER card, Getting Started — no horizontal overflow
+- Mobile Home Bottom: known black area artifact; Marquee row, DevOps & CI/CD — clean
+- Mobile Watch: full-width player, metadata, tabs — within viewport
+- Mobile Category: **FIXED** sort buttons now stack below label (flex-col on mobile) — all 4 on one row
+
+---
+
+## 2026-03-18 (Pass #30)
+
+Ran full visual QA on 2026-03-18 (thirtieth run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).
+
+**Result: All clear — no visual bugs found. No regressions from baseline.**
+
+Specific checks:
+- Dark theme correctly applied everywhere (`#0a0a0a` background)
+- Brand colors correct: Qube Blue (`#126ED3`) duration/count badges, Sonar Red (`#D3121D`) "Newest" active sort + "Start Course" buttons
+- Desktop Home: Marquee row → Certification Courses (DEVELOPER/SECURITY/DEVOPS/AI CODE cards with BEGINNER/INTERMEDIATE badges, red Start Course buttons) → Getting Started (badge 6) — clean
+- Desktop Home Bottom: large black area at top = known screenshot artifact; DevOps & CI/CD (badge 16) cards (1:57, 0:59, 46:48); SonarQube for IDE section — clean
+- Desktop Watch: YouTube player with blue thumbnail, Back nav, title card "Auto import of GitHub repos to SonarQube Cloud in action." — correct
+- Desktop Category: "Getting Started" + "6 videos" + "1h 8m total" Qube Blue badges, Newest active Sonar Red, 4-col grid + partial second row — correct
+- Mobile Home: Marquee row with 0:41 duration; Certification Courses DEVELOPER card (BEGINNER badge, 4 modules · 15 videos · 2h 58m, progress dots, Start Course button); Getting Started section + Filters + scroll-to-top — no horizontal overflow
+- Mobile Home Bottom: large black area at top = known screenshot artifact; Marquee row blue thumbnail; DevOps & CI/CD (badge 16) with 1:57 duration badge — clean
+- Mobile Watch: full-width player, Back nav, title, SonarQube Cloud + March 12th 2026 tags, 0:41/Part of SCDK/Share, description, AI Summary/Transcript tabs — all within viewport
+- Mobile Category: "Longest" wraps to second line at 375px (expected flex-wrap), 2-col grid with thumbnails and duration badges — clean
+- "N" bottom-left artifact present — confirmed false positive (Next.js route announcer)
+
+---
+
 ## 2026-03-18 (Pass #29)
 
 Ran full visual QA on 2026-03-18 (twenty-ninth run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px).

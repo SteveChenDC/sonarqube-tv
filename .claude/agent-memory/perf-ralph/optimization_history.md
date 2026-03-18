@@ -6,6 +6,12 @@ type: project
 
 ## Already Done (do NOT duplicate)
 
+### 2026-03-18 — useSyncExternalStore in CourseNavBar and EnrichedCourseCard
+- **Commit**: `perf: useSyncExternalStore in CourseNavBar and EnrichedCourseCard to eliminate double-render`
+- **What**: `CourseNavBar` had `useState(0) + useEffect(() => setTick(1))` to force a client re-render for `getCourseProgress()`. `EnrichedCourseCard` (inside `CourseIndexCards.tsx`) had `useState(false) + useEffect(() => setMounted(true))` gating 4 localStorage reads. Both replaced with `useSyncExternalStore(() => () => {}, () => true, () => false)`.
+- **Impact**: Eliminates ~7 extra React reconciliation cycles per page load — 1 per CourseNavBar on course-linked watch pages, 6 per EnrichedCourseCard on the /courses page.
+- **Tests**: 837 pass, build clean.
+
 ### 2026-03-18 — useSyncExternalStore in CourseSidebar and CourseTimeline
 - **Commits**: `perf: useSyncExternalStore in CourseSidebar to eliminate mount double-render` + `perf: useSyncExternalStore in CourseSidebar and CourseTimeline to eliminate mount double-render`
 - **What**: `CourseSidebar` had `useState(false) + useEffect(() => setMounted(true))` gating 3 localStorage reads. `CourseTimeline` had `useState(0) + useEffect(() => setTick(1))` forcing a re-render to pick up localStorage data. Both replaced with `useSyncExternalStore(() => () => {}, () => true, () => false)`.
@@ -74,7 +80,7 @@ type: project
 
 1. **Debounce search input** — `SearchContext` does not debounce; if search filtering is expensive, debouncing at 150ms could help. Current search is over static in-memory data so likely fast enough. Low priority.
 2. **CategoryContent as server component** — The sort UI requires client state. If sort was moved to URL params (searchParams), CategoryContent could become a server component. Significant architecture change. Medium priority.
-3. **Static asset headers** — Ensure `public/` assets have cache-control headers set in next.config. Worth checking next.config for headers() configuration.
-4. **Header bundles full `videos` array** — ALREADY FIXED: Header.tsx lazy-loads `@/data/videos` and `@/data/courses` only when search/dropdown first opens.
-5. **Note on test suite**: 79 pre-existing test failures as of 2026-03-18 (ArticleTabs, Hero.visual, VideoPlayer suites). Not caused by perf-ralph changes.
+3. **Static asset headers** — NOTE: This app uses `output: "export"` (static export), so Next.js `headers()` config does NOT apply. Cache headers must be set at the CDN/hosting layer instead. Not a code-level fix.
+4. **ThemeToggle mounted guard** — `ThemeToggle.tsx` uses `useState(false)+useEffect(setMounted)` to avoid hydration mismatch (server="dark", client=actual preference). The `useSyncExternalStore` pattern COULD work here with `subscribeToSystemTheme` as the subscriber and `getEffectiveTheme` as snapshot. Risk: brief visual flash if user has light theme. Considered low priority / higher risk than other fixes.
+5. **Note on test suite**: 837 tests pass as of 2026-03-18.
 6. **Note on linter**: The Write tool may get reverted by a linter hook. Use `cat >` via Bash as a workaround when Write/Edit fail.
