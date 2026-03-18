@@ -213,10 +213,10 @@ function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, divider
           {canScrollLeft && (
             <button
               onClick={() => scroll("left")}
-              className="absolute left-0 top-0 z-10 flex h-full w-10 items-center justify-center bg-gradient-to-r from-background/80 to-transparent opacity-70 transition-opacity duration-300 hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
+              className="absolute left-0 top-0 z-10 flex h-full w-12 items-center justify-center bg-gradient-to-r from-background/90 to-transparent opacity-0 transition-opacity duration-300 group-hover/row:opacity-70 hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
               aria-label="Scroll left"
             >
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-n9/70 backdrop-blur-sm">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-n9/80 shadow-md backdrop-blur-sm transition-transform duration-200 hover:scale-110">
                 <svg className="h-5 w-5 text-n1 drop-shadow-md" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
@@ -268,10 +268,10 @@ function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, divider
           {canScrollRight && (
             <button
               onClick={() => scroll("right")}
-              className="absolute right-0 top-0 z-10 flex h-full w-10 items-center justify-center bg-gradient-to-l from-background/80 to-transparent opacity-70 transition-opacity duration-300 hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
+              className="absolute right-0 top-0 z-10 flex h-full w-12 items-center justify-center bg-gradient-to-l from-background/90 to-transparent opacity-0 transition-opacity duration-300 group-hover/row:opacity-70 hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
               aria-label="Scroll right"
             >
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-n9/70 backdrop-blur-sm">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-n9/80 shadow-md backdrop-blur-sm transition-transform duration-200 hover:scale-110">
                 <svg className="h-5 w-5 text-n1 drop-shadow-md" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
