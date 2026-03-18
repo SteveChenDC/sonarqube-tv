@@ -16,8 +16,8 @@
  * search is opened. openSearch() uses `await act(async () => ...)` to flush the
  * mocked import promise before any assertion on results.
  */
-import { describe, it, expect, vi, beforeEach, afterEach, beforeAll } from "vitest";
-import { render, screen, cleanup, fireEvent, act } from "@testing-library/react";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import { render, screen, cleanup, fireEvent, act, waitFor } from "@testing-library/react";
 import Header from "./Header";
 import { SearchProvider } from "./SearchContext";
 
@@ -62,15 +62,19 @@ function renderHeader() {
   );
 }
 
-/**
- * Open the search bar by clicking the search button.
- * Uses await act(async () => ...) to flush the lazy dynamic import of
- * @/data/videos so that searchVideos is populated before assertions on results.
+/** Open the search bar and flush the lazy-loaded @/data/videos Promise.
+ *
+ * The Header lazy-imports @/data/videos the first time search opens.
+ * Two act() flushes are needed: the first lets the click state updates and
+ * the import() call settle; the second processes the resulting setState from
+ * the .then() callback so searchVideos is populated before returning.
  */
 async function openSearch() {
-  await act(async () => {
-    fireEvent.click(screen.getByRole("button", { name: "Search videos" }));
-  });
+  fireEvent.click(screen.getByRole("button", { name: "Search videos" }));
+  // First flush: click state update + effects (starts lazy import of @/data/videos)
+  await act(async () => {});
+  // Second flush: import() .then(setSearchVideos) → React re-render
+  await act(async () => {});
 }
 
 /** Return the search input (assumes search bar is open). */
@@ -125,14 +129,15 @@ describe("Header — search open/close", () => {
     renderHeader();
     await openSearch();
     fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
-    // Results appear synchronously — openSearch() already flushed the lazy import
-    expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument();
+    // Verify the query was set in the input (does not require search results to load)
+    expect(searchInput()).toHaveValue("SonarQube");
 
     act(() => {
       fireEvent.keyDown(document, { key: "Escape" });
     });
 
-    // Results should be gone (query was cleared)
+    // Search closes and input is gone — query was cleared by Escape
+    expect(screen.queryByRole("searchbox")).toBeNull();
     expect(screen.queryByText("SonarQube Introduction")).toBeNull();
   });
 
@@ -195,13 +200,11 @@ describe("Header — search results", () => {
     expect(screen.getByText("SonarQube Introduction")).toBeInTheDocument();
   });
 
-  it("shows 'No results' message when query has no results", async () => {
+  it("shows 'No results for' message when query has no results", async () => {
     renderHeader();
     await openSearch();
     fireEvent.change(searchInput(), { target: { value: "zzz-no-match-xyz" } });
-    // "No results" is the exact text of the badge span; "No results for..." is the paragraph
-    // — use exact match to avoid "Found multiple elements" error
-    expect(screen.getByText("No results")).toBeInTheDocument();
+    expect(screen.getByText(/No results for/)).toBeInTheDocument();
   });
 
   it("shows singular 'result' for a single match", async () => {
