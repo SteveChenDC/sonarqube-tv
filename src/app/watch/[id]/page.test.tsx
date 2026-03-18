@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { render, screen, cleanup } from "@testing-library/react";
+import { render, screen, cleanup, act } from "@testing-library/react";
 import React from "react";
 
 // Must mock before importing the page module
@@ -220,14 +220,14 @@ describe("WatchPage", () => {
     expect(screen.getByText(video.duration)).toBeInTheDocument();
   });
 
-  it("renders a category badge linking to /#category-slug", async () => {
+  it("renders a category badge linking to /category/category-slug", async () => {
     const video = videos[0]; // v1 is in sonarqube-cloud
     const jsx = await WatchPage({ params: Promise.resolve({ id: video.id }) });
     render(jsx);
-    // Category link points to /#sonarqube-cloud
+    // Category link points to /category/sonarqube-cloud (category detail page)
     const links = screen.getAllByRole("link");
     const categoryLink = links.find(
-      (l) => l.getAttribute("href") === `/#${video.category}`
+      (l) => l.getAttribute("href") === `/category/${video.category}`
     );
     expect(categoryLink).toBeTruthy();
   });
@@ -272,7 +272,8 @@ describe("WatchPage", () => {
       sections: [],
     } as never);
     const jsx = await WatchPage({ params: Promise.resolve({ id: "v1" }) });
-    render(jsx);
+    // Wrap in async act so React.lazy (via next/dynamic mock) fully resolves
+    await act(async () => { render(jsx); });
     expect(screen.getByTestId("article-tabs")).toBeInTheDocument();
   });
 
