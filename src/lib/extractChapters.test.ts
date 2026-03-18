@@ -179,4 +179,93 @@ describe("extractChapters", () => {
       expect(typeof chapters[0].startIndex).toBe("number");
     });
   });
+
+  describe("section body requirements", () => {
+    it("skips a ## heading with no body text at the end of the markdown", () => {
+      // Section has a heading but no body → extractSections never adds it
+      const markdown = "## Introduction\nSonarQube analysis setup coverage.\n## EmptySection";
+      const segments = [seg("sonarqube analysis setup coverage", 0)];
+      const chapters = extractChapters(markdown, segments);
+      // Only the section with body text should produce a chapter
+      expect(chapters).toHaveLength(1);
+      expect(chapters[0].title).toBe("Introduction");
+    });
+
+    it("skips two consecutive ## headings with no body between them", () => {
+      // Neither heading accumulates body text, so both are excluded
+      const markdown = [
+        "## HeadingOne",
+        "## HeadingTwo",
+        "## RealSection",
+        "Detailed content about sonarqube scanning coverage analysis.",
+      ].join("\n");
+      const segments = [seg("sonarqube scanning coverage analysis detailed content", 0)];
+      const chapters = extractChapters(markdown, segments);
+      expect(chapters).toHaveLength(1);
+      expect(chapters[0].title).toBe("RealSection");
+    });
+  });
+
+  describe("zero-score sections", () => {
+    it("skips a section whose valid keywords do not appear anywhere in the transcript", () => {
+      // Section has real (non-stop-word) keywords but none exist in any segment
+      const markdown = "## Deployment Pipeline\nKubernetes helm charts orchestration microservices.";
+      const segments = [
+        seg("completely different words elephant umbrella bicycle", 0),
+        seg("another unrelated sentence about something else entirely", 5),
+      ];
+      // bestScore stays 0 for every window → section is excluded
+      const chapters = extractChapters(markdown, segments);
+      expect(chapters).toHaveLength(0);
+    });
+
+    it("only includes sections whose keywords actually match transcript content", () => {
+      const markdown = [
+        "## Matching Section",
+        "SonarQube scanner quality gate analysis detection.",
+        "## NoMatch Section",
+        "Xenolith tectonic volcanic basalt lithosphere igneous.",
+      ].join("\n");
+      const segments = [
+        seg("sonarqube scanner quality gate analysis detection", 0),
+        seg("completely different transcript content here today", 5),
+      ];
+      const chapters = extractChapters(markdown, segments);
+      // Only the matching section should produce a chapter
+      expect(chapters).toHaveLength(1);
+      expect(chapters[0].title).toBe("Matching Section");
+    });
+  });
+
+  describe("sub-headings (H3+) treated as body text", () => {
+    it("treats ### headings as section body text, not as chapter markers", () => {
+      const markdown = [
+        "## Main Section",
+        "### Sub Heading",
+        "SonarQube configuration analysis coverage scanning.",
+      ].join("\n");
+      const segments = [seg("sonarqube configuration analysis coverage scanning", 0)];
+      const chapters = extractChapters(markdown, segments);
+      // ### doesn't match "## " so it's body text — still 1 chapter from the ## section
+      expect(chapters).toHaveLength(1);
+      expect(chapters[0].title).toBe("Main Section");
+    });
+
+    it("H3 keyword text contributes to section keyword matching", () => {
+      // The ### heading line becomes body text, so its words are valid keywords
+      const markdown = [
+        "## Overview",
+        "### Pipeline Configuration",
+        "Additional setup notes.",
+      ].join("\n");
+      const segments = [
+        seg("pipeline configuration additional setup notes", 0),
+        seg("unrelated words over here", 5),
+      ];
+      const chapters = extractChapters(markdown, segments);
+      // "pipeline" and "configuration" from the ### line help match segment 0
+      expect(chapters).toHaveLength(1);
+      expect(chapters[0].startIndex).toBe(0);
+    });
+  });
 });
