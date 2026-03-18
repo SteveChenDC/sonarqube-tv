@@ -630,4 +630,57 @@ describe("VideoRow", () => {
       expect(skeleton!.querySelector(".w-40")).toBeNull();
     });
   });
+
+  describe("top-level header count badge (totalCount ?? videos.length)", () => {
+    it("shows videos.length in the count badge when totalCount is not provided", () => {
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" }), makeVideo({ id: "v3" })];
+      const { container } = render(<VideoRow title="My Row" videos={videos} />);
+      // The top-level h2 contains a <span> with the count value
+      const h2 = container.querySelector("h2");
+      expect(h2).not.toBeNull();
+      const countSpan = h2!.querySelector("span");
+      expect(countSpan?.textContent).toBe("3");
+    });
+
+    it("shows totalCount in the count badge when it exceeds the rendered video count", () => {
+      // 3 videos rendered, but totalCount=10 (the full category size)
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" }), makeVideo({ id: "v3" })];
+      const { container } = render(
+        <VideoRow title="My Row" videos={videos} totalCount={10} />
+      );
+      const h2 = container.querySelector("h2");
+      const countSpan = h2!.querySelector("span");
+      // Badge must reflect totalCount (10), not videos.length (3)
+      expect(countSpan?.textContent).toBe("10");
+    });
+
+    it("shows totalCount=1 when a single video is explicitly counted", () => {
+      const videos = [makeVideo({ id: "v1" })];
+      const { container } = render(
+        <VideoRow title="My Row" videos={videos} totalCount={1} />
+      );
+      const h2 = container.querySelector("h2");
+      const countSpan = h2!.querySelector("span");
+      expect(countSpan?.textContent).toBe("1");
+    });
+
+    it("falls back to videos.length=1 when totalCount is undefined and only one video exists", () => {
+      const videos = [makeVideo({ id: "v1" })];
+      const { container } = render(<VideoRow title="My Row" videos={videos} />);
+      const h2 = container.querySelector("h2");
+      const countSpan = h2!.querySelector("span");
+      expect(countSpan?.textContent).toBe("1");
+    });
+
+    it("count badge is absent from DOM when hideHeader=true", () => {
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+      const { container } = render(
+        <VideoRow title="My Row" videos={videos} hideHeader />
+      );
+      // With hideHeader, the top-level h2 (with its count span) is not rendered
+      // — the only h2 elements would be from sectionLabels (none provided here)
+      const h2s = container.querySelectorAll("h2");
+      expect(h2s).toHaveLength(0);
+    });
+  });
 });
