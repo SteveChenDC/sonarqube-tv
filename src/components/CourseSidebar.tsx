@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Course } from "@/types";
@@ -14,8 +14,7 @@ import {
 export default function CourseSidebar({
   course,
 }: Readonly<{ course: Course }>) {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  const mounted = useSyncExternalStore(() => () => {}, () => true, () => false);
 
   const totalVideos = getCourseVideos(course).length;
   const duration = getCourseTotalDuration(course);
