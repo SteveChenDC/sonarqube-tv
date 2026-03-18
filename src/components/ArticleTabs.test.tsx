@@ -77,14 +77,14 @@ describe("ArticleTabs — tab visibility", () => {
 });
 
 describe("ArticleTabs — default active tab", () => {
-  it("defaults to transcript tab when both are provided", () => {
+  it("defaults to summary tab when both are provided", () => {
     render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // TranscriptView should be visible by default
-    expect(screen.getByTestId("transcript-view")).toBeInTheDocument();
-    // Article content should NOT be rendered
-    expect(screen.queryByText("Opening paragraph.")).not.toBeInTheDocument();
+    // Article content should be visible by default
+    expect(screen.getByText("Opening paragraph.")).toBeInTheDocument();
+    // TranscriptView should NOT be rendered
+    expect(screen.queryByTestId("transcript-view")).not.toBeInTheDocument();
   });
 
   it("defaults to article tab when only article is provided", () => {
@@ -95,17 +95,17 @@ describe("ArticleTabs — default active tab", () => {
 });
 
 describe("ArticleTabs — tab switching", () => {
-  it("switches to article tab when Summary is clicked", () => {
+  it("switches to transcript tab when Transcript is clicked", () => {
     render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Start on transcript
-    expect(screen.getByTestId("transcript-view")).toBeInTheDocument();
-
-    fireEvent.click(screen.getByText(/Summary/));
-
-    expect(screen.getByText("Opening paragraph.")).toBeInTheDocument();
+    // Start on summary (default)
     expect(screen.queryByTestId("transcript-view")).not.toBeInTheDocument();
+
+    fireEvent.click(screen.getByText("Transcript"));
+
+    expect(screen.getByTestId("transcript-view")).toBeInTheDocument();
+    expect(screen.queryByText("Opening paragraph.")).not.toBeInTheDocument();
   });
 
   it("switches back to transcript tab when Transcript is clicked", () => {
@@ -123,58 +123,37 @@ describe("ArticleTabs — tab switching", () => {
   });
 });
 
-describe("ArticleTabs — collapse/expand", () => {
-  it("collapse button has correct aria-label when expanded", () => {
+describe("ArticleTabs — single vs dual tab rendering", () => {
+  it("renders an h3 header (not tab buttons) when only one panel is available", () => {
     render(<ArticleTabs article={makeArticle()} transcript={null} />);
+    // Single-tab layout uses an h3, not tab buttons
+    expect(screen.queryByRole("tab")).not.toBeInTheDocument();
     expect(
-      screen.getByRole("button", { name: "Collapse panel" })
+      screen.getByRole("heading", { level: 3, name: "AI Summary" })
     ).toBeInTheDocument();
   });
 
-  it("collapse button label changes to Expand panel after collapsing", () => {
-    render(<ArticleTabs article={makeArticle()} transcript={null} />);
-    fireEvent.click(screen.getByRole("button", { name: "Collapse panel" }));
-    expect(
-      screen.getByRole("button", { name: "Expand panel" })
-    ).toBeInTheDocument();
-  });
-
-  it("clicking the active tab collapses the panel", () => {
-    render(<ArticleTabs article={makeArticle()} transcript={null} />);
-    // Already on article tab; click it again
-    fireEvent.click(screen.getByText(/Summary/));
-    // Now collapsed — expand label should appear
-    expect(
-      screen.getByRole("button", { name: "Expand panel" })
-    ).toBeInTheDocument();
-  });
-
-  it("clicking the active tab again expands the panel", () => {
-    render(<ArticleTabs article={makeArticle()} transcript={null} />);
-    // Collapse
-    fireEvent.click(screen.getByText(/Summary/));
-    // Expand by clicking again
-    fireEvent.click(screen.getByText(/Summary/));
-    expect(
-      screen.getByRole("button", { name: "Collapse panel" })
-    ).toBeInTheDocument();
-  });
-
-  it("switching to a different tab re-expands a collapsed panel", () => {
+  it("renders tab buttons when both panels are available", () => {
     render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Collapse via collapse button
-    fireEvent.click(screen.getByRole("button", { name: "Collapse panel" }));
-    expect(
-      screen.getByRole("button", { name: "Expand panel" })
-    ).toBeInTheDocument();
+    expect(screen.getByRole("tab", { name: /Summary/ })).toBeInTheDocument();
+    expect(screen.getByRole("tab", { name: "Transcript" })).toBeInTheDocument();
+  });
 
-    // Switch tab — should re-expand
-    fireEvent.click(screen.getByText(/Summary/));
-    expect(
-      screen.getByRole("button", { name: "Collapse panel" })
-    ).toBeInTheDocument();
+  it("sets aria-selected=true on the active tab", () => {
+    render(
+      <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
+    );
+    // Default is summary
+    expect(screen.getByRole("tab", { name: /Summary/ })).toHaveAttribute(
+      "aria-selected",
+      "true"
+    );
+    expect(screen.getByRole("tab", { name: "Transcript" })).toHaveAttribute(
+      "aria-selected",
+      "false"
+    );
   });
 });
 
@@ -196,48 +175,46 @@ describe("ArticleTabs — sliding indicator", () => {
     expect(indicator).toBeInTheDocument();
   });
 
-  it("positions the sliding indicator at left=0% when Summary tab is active", () => {
+  it("positions the sliding indicator at translate-x-0 when Summary tab is active", () => {
     const { container } = render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Start on transcript; switch to Summary (index 0)
-    fireEvent.click(screen.getByText(/Summary/));
-    const indicator = container.querySelector<HTMLElement>("span.pointer-events-none.absolute");
-    // With 2 tabs, Summary is at index 0 → left = (0/2)*100 = 0%
-    expect(indicator?.style.left).toBe("0%");
-    expect(indicator?.style.width).toBe("50%");
+    // Default is summary
+    const indicator = container.querySelector<HTMLElement>(
+      "span.pointer-events-none.absolute"
+    );
+    expect(indicator?.className).toContain("translate-x-0");
   });
 
-  it("positions the sliding indicator at left=50% when Transcript tab is active", () => {
+  it("positions the sliding indicator at translate-x-full when Transcript tab is active", () => {
     const { container } = render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Default is transcript (index 1)
-    const indicator = container.querySelector<HTMLElement>("span.pointer-events-none.absolute");
-    // With 2 tabs, Transcript is at index 1 → left = (1/2)*100 = 50%
-    expect(indicator?.style.left).toBe("50%");
-    expect(indicator?.style.width).toBe("50%");
+    // Switch to transcript
+    fireEvent.click(screen.getByRole("tab", { name: "Transcript" }));
+    const indicator = container.querySelector<HTMLElement>(
+      "span.pointer-events-none.absolute"
+    );
+    expect(indicator?.className).toContain("translate-x-full");
   });
 });
 
 describe("ArticleTabs — tab animation classes", () => {
-  it("content div starts with animate-tab-in class on initial render", () => {
+  it("content div has no animation class on initial render", () => {
     const { container } = render(
       <ArticleTabs article={makeArticle()} transcript={null} />
     );
-    // The content wrapper div (keyed by tab) should have animate-tab-in
-    const contentDiv = container.querySelector(".animate-tab-in");
-    expect(contentDiv).toBeInTheDocument();
+    // On first render, no animation class is applied — only padding classes
+    const animatedDiv = container.querySelector("[class*='animate-']");
+    expect(animatedDiv).not.toBeInTheDocument();
   });
 
   it("adds animate-tab-slide-right when switching to a later tab (Summary → Transcript)", () => {
     const { container } = render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Start on Transcript, switch to Summary first to start at index 0
-    fireEvent.click(screen.getByText(/Summary/));
-    // Now switch to Transcript (index 1 > index 0 = "right")
-    fireEvent.click(screen.getByText("Transcript"));
+    // Start on Summary (default); switch to Transcript (later tab = slide right)
+    fireEvent.click(screen.getByRole("tab", { name: "Transcript" }));
     const contentDiv = container.querySelector(".animate-tab-slide-right");
     expect(contentDiv).toBeInTheDocument();
   });
@@ -246,54 +223,34 @@ describe("ArticleTabs — tab animation classes", () => {
     const { container } = render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Default is Transcript (index 1); switch to Summary (index 0 < index 1 = "left")
-    fireEvent.click(screen.getByText(/Summary/));
+    // Default is Summary; switch to Transcript first, then back to Summary (earlier = slide left)
+    fireEvent.click(screen.getByRole("tab", { name: "Transcript" }));
+    fireEvent.click(screen.getByRole("tab", { name: /Summary/ }));
     const contentDiv = container.querySelector(".animate-tab-slide-left");
     expect(contentDiv).toBeInTheDocument();
   });
 });
 
 describe("ArticleTabs — single-tab border styling", () => {
-  it("applies border-b-2 border-qube-blue to active tab button when only one tab exists", () => {
+  it("renders the single-tab header without border-b-2 active styling", () => {
     render(<ArticleTabs article={makeArticle()} transcript={null} />);
-    // Only Summary tab — should have border-b-2 class
-    const summaryBtn = screen.getByRole("button", { name: /Summary/ });
-    expect(summaryBtn.className).toContain("border-b-2");
-    expect(summaryBtn.className).toContain("border-qube-blue");
+    // Single-tab layout uses an h3 header — no tab buttons, no border-b-2
+    expect(screen.queryByRole("tab")).not.toBeInTheDocument();
+    // h3 header is present
+    const heading = screen.getByRole("heading", { level: 3, name: "AI Summary" });
+    expect(heading).toBeInTheDocument();
+    expect(heading.className).not.toContain("border-b-2");
   });
 
   it("does NOT apply border-b-2 to active tab button when two tabs exist (sliding indicator used instead)", () => {
     render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Switch to Summary so it's the active tab
-    fireEvent.click(screen.getByText(/Summary/));
-    const summaryBtn = screen.getByRole("button", { name: /Summary/ });
+    // Tab buttons use role="tab"; switch to Summary so it's the active tab
+    fireEvent.click(screen.getByRole("tab", { name: /Summary/ }));
+    const summaryTab = screen.getByRole("tab", { name: /Summary/ });
     // With 2 tabs, no border-b-2 — the sliding indicator handles active state
-    expect(summaryBtn.className).not.toContain("border-b-2");
-  });
-});
-
-describe("ArticleTabs — aria-hidden panel state", () => {
-  it("sets aria-hidden=false when panel is expanded (default)", () => {
-    render(<ArticleTabs article={makeArticle()} transcript={null} />);
-    const panel = document.querySelector("[aria-hidden]");
-    expect(panel).toHaveAttribute("aria-hidden", "false");
-  });
-
-  it("sets aria-hidden=true when panel is collapsed via collapse button", () => {
-    render(<ArticleTabs article={makeArticle()} transcript={null} />);
-    fireEvent.click(screen.getByRole("button", { name: "Collapse panel" }));
-    const panel = document.querySelector("[aria-hidden]");
-    expect(panel).toHaveAttribute("aria-hidden", "true");
-  });
-
-  it("restores aria-hidden=false when panel is re-expanded", () => {
-    render(<ArticleTabs article={makeArticle()} transcript={null} />);
-    fireEvent.click(screen.getByRole("button", { name: "Collapse panel" }));
-    fireEvent.click(screen.getByRole("button", { name: "Expand panel" }));
-    const panel = document.querySelector("[aria-hidden]");
-    expect(panel).toHaveAttribute("aria-hidden", "false");
+    expect(summaryTab.className).not.toContain("border-b-2");
   });
 });
 
@@ -446,9 +403,12 @@ describe("ArticleTabs — markdown rendering", () => {
       markdown: "### Run `npm test` daily",
     });
     render(<ArticleTabs article={article} transcript={null} />);
-    const h3 = screen.getByRole("heading", { level: 3 });
-    expect(h3).toBeInTheDocument();
-    expect(h3.querySelector("code")?.textContent).toBe("npm test");
+    // Single-tab mode renders an "AI Summary" h3 header plus the markdown h3
+    // Use getAllByRole and find the one that contains a <code> element
+    const headings = screen.getAllByRole("heading", { level: 3 });
+    const markdownH3 = headings.find((h) => h.querySelector("code"));
+    expect(markdownH3).toBeTruthy();
+    expect(markdownH3!.querySelector("code")?.textContent).toBe("npm test");
   });
 
   it("renders inline code inside a list item", () => {
