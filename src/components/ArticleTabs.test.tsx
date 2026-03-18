@@ -77,14 +77,14 @@ describe("ArticleTabs — tab visibility", () => {
 });
 
 describe("ArticleTabs — default active tab", () => {
-  it("defaults to summary tab when both are provided", () => {
+  it("defaults to transcript tab when both are provided", () => {
     render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Article content should be visible by default
-    expect(screen.getByText("Opening paragraph.")).toBeInTheDocument();
-    // TranscriptView should NOT be rendered
-    expect(screen.queryByTestId("transcript-view")).not.toBeInTheDocument();
+    // TranscriptView should be visible by default
+    expect(screen.getByTestId("transcript-view")).toBeInTheDocument();
+    // Article content should NOT be rendered
+    expect(screen.queryByText("Opening paragraph.")).not.toBeInTheDocument();
   });
 
   it("defaults to article tab when only article is provided", () => {
@@ -95,35 +95,88 @@ describe("ArticleTabs — default active tab", () => {
 });
 
 describe("ArticleTabs — tab switching", () => {
-  it("switches to transcript tab when Transcript is clicked", () => {
+  it("switches to article tab when Summary is clicked", () => {
     render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Start on summary
-    expect(screen.getByText("Opening paragraph.")).toBeInTheDocument();
-
-    fireEvent.click(screen.getByRole("tab", { name: /Transcript/ }));
-
-    expect(screen.getByTestId("transcript-view")).toBeInTheDocument();
-    expect(screen.queryByText("Opening paragraph.")).not.toBeInTheDocument();
-  });
-
-  it("switches back to summary tab when Summary is clicked", () => {
-    render(
-      <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
-    );
-    // Switch to transcript first
-    fireEvent.click(screen.getByRole("tab", { name: /Transcript/ }));
+    // Start on transcript
     expect(screen.getByTestId("transcript-view")).toBeInTheDocument();
 
-    // Switch back to summary
-    fireEvent.click(screen.getByRole("tab", { name: /Summary/ }));
+    fireEvent.click(screen.getByText(/Summary/));
+
     expect(screen.getByText("Opening paragraph.")).toBeInTheDocument();
     expect(screen.queryByTestId("transcript-view")).not.toBeInTheDocument();
   });
+
+  it("switches back to transcript tab when Transcript is clicked", () => {
+    render(
+      <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
+    );
+    // Switch to article
+    fireEvent.click(screen.getByText(/Summary/));
+    expect(screen.getByText("Opening paragraph.")).toBeInTheDocument();
+
+    // Switch back
+    fireEvent.click(screen.getByText("Transcript"));
+    expect(screen.getByTestId("transcript-view")).toBeInTheDocument();
+    expect(screen.queryByText("Opening paragraph.")).not.toBeInTheDocument();
+  });
 });
 
-// collapse/expand feature was removed from ArticleTabs
+describe("ArticleTabs — collapse/expand", () => {
+  it("collapse button has correct aria-label when expanded", () => {
+    render(<ArticleTabs article={makeArticle()} transcript={null} />);
+    expect(
+      screen.getByRole("button", { name: "Collapse panel" })
+    ).toBeInTheDocument();
+  });
+
+  it("collapse button label changes to Expand panel after collapsing", () => {
+    render(<ArticleTabs article={makeArticle()} transcript={null} />);
+    fireEvent.click(screen.getByRole("button", { name: "Collapse panel" }));
+    expect(
+      screen.getByRole("button", { name: "Expand panel" })
+    ).toBeInTheDocument();
+  });
+
+  it("clicking the active tab collapses the panel", () => {
+    render(<ArticleTabs article={makeArticle()} transcript={null} />);
+    // Already on article tab; click it again
+    fireEvent.click(screen.getByText(/Summary/));
+    // Now collapsed — expand label should appear
+    expect(
+      screen.getByRole("button", { name: "Expand panel" })
+    ).toBeInTheDocument();
+  });
+
+  it("clicking the active tab again expands the panel", () => {
+    render(<ArticleTabs article={makeArticle()} transcript={null} />);
+    // Collapse
+    fireEvent.click(screen.getByText(/Summary/));
+    // Expand by clicking again
+    fireEvent.click(screen.getByText(/Summary/));
+    expect(
+      screen.getByRole("button", { name: "Collapse panel" })
+    ).toBeInTheDocument();
+  });
+
+  it("switching to a different tab re-expands a collapsed panel", () => {
+    render(
+      <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
+    );
+    // Collapse via collapse button
+    fireEvent.click(screen.getByRole("button", { name: "Collapse panel" }));
+    expect(
+      screen.getByRole("button", { name: "Expand panel" })
+    ).toBeInTheDocument();
+
+    // Switch tab — should re-expand
+    fireEvent.click(screen.getByText(/Summary/));
+    expect(
+      screen.getByRole("button", { name: "Collapse panel" })
+    ).toBeInTheDocument();
+  });
+});
 
 describe("ArticleTabs — sliding indicator", () => {
   it("renders no sliding indicator when only one tab is shown", () => {
@@ -143,91 +196,106 @@ describe("ArticleTabs — sliding indicator", () => {
     expect(indicator).toBeInTheDocument();
   });
 
-  it("positions the sliding indicator for Summary tab (no translate)", () => {
+  it("positions the sliding indicator at left=0% when Summary tab is active", () => {
     const { container } = render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Default is summary — indicator at translate-x-0 (no translation = left half)
+    // Start on transcript; switch to Summary (index 0)
+    fireEvent.click(screen.getByText(/Summary/));
     const indicator = container.querySelector<HTMLElement>("span.pointer-events-none.absolute");
-    expect(indicator).toBeInTheDocument();
-    expect(indicator?.className).toContain("translate-x-0");
-    expect(indicator?.className).not.toContain("translate-x-full");
+    // With 2 tabs, Summary is at index 0 → left = (0/2)*100 = 0%
+    expect(indicator?.style.left).toBe("0%");
+    expect(indicator?.style.width).toBe("50%");
   });
 
-  it("positions the sliding indicator for Transcript tab (translate-x-full)", () => {
+  it("positions the sliding indicator at left=50% when Transcript tab is active", () => {
     const { container } = render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Switch to Transcript
-    fireEvent.click(screen.getByRole("tab", { name: /Transcript/ }));
+    // Default is transcript (index 1)
     const indicator = container.querySelector<HTMLElement>("span.pointer-events-none.absolute");
-    expect(indicator).toBeInTheDocument();
-    expect(indicator?.className).toContain("translate-x-full");
+    // With 2 tabs, Transcript is at index 1 → left = (1/2)*100 = 50%
+    expect(indicator?.style.left).toBe("50%");
+    expect(indicator?.style.width).toBe("50%");
   });
 });
 
 describe("ArticleTabs — tab animation classes", () => {
-  it("content div has no animation class on initial render", () => {
+  it("content div starts with animate-tab-in class on initial render", () => {
     const { container } = render(
       <ArticleTabs article={makeArticle()} transcript={null} />
     );
-    // On initial render, hasSwitchedRef.current = false, so no animation class
-    const contentDiv = container.querySelector("div.p-5");
+    // The content wrapper div (keyed by tab) should have animate-tab-in
+    const contentDiv = container.querySelector(".animate-tab-in");
     expect(contentDiv).toBeInTheDocument();
-    expect(contentDiv?.className).not.toContain("animate-tab-in");
-    expect(contentDiv?.className).not.toContain("animate-tab-slide");
   });
 
   it("adds animate-tab-slide-right when switching to a later tab (Summary → Transcript)", () => {
     const { container } = render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Default is summary (index 0); switch to Transcript (index 1 > index 0 = "right")
-    fireEvent.click(screen.getByRole("tab", { name: /Transcript/ }));
+    // Start on Transcript, switch to Summary first to start at index 0
+    fireEvent.click(screen.getByText(/Summary/));
+    // Now switch to Transcript (index 1 > index 0 = "right")
+    fireEvent.click(screen.getByText("Transcript"));
     const contentDiv = container.querySelector(".animate-tab-slide-right");
     expect(contentDiv).toBeInTheDocument();
   });
 
-  it("adds animate-tab-slide-left when switching from Transcript to Summary", () => {
+  it("adds animate-tab-slide-left when switching to an earlier tab (Transcript → Summary)", () => {
     const { container } = render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Switch to Transcript first
-    fireEvent.click(screen.getByRole("tab", { name: /Transcript/ }));
-    // Switch back to Summary (earlier tab = slide-left)
-    fireEvent.click(screen.getByRole("tab", { name: /Summary/ }));
+    // Default is Transcript (index 1); switch to Summary (index 0 < index 1 = "left")
+    fireEvent.click(screen.getByText(/Summary/));
     const contentDiv = container.querySelector(".animate-tab-slide-left");
     expect(contentDiv).toBeInTheDocument();
   });
 });
 
-describe("ArticleTabs — single-tab layout", () => {
-  it("renders a header with h3 when only one tab (article-only)", () => {
+describe("ArticleTabs — single-tab border styling", () => {
+  it("applies border-b-2 border-qube-blue to active tab button when only one tab exists", () => {
     render(<ArticleTabs article={makeArticle()} transcript={null} />);
-    // Single-tab layout: renders <h3> with "AI Summary" text, no tab buttons
-    expect(screen.getByRole("heading", { level: 3, name: /AI Summary/i })).toBeInTheDocument();
-    // No tab role buttons
-    expect(screen.queryByRole("tab")).not.toBeInTheDocument();
-  });
-
-  it("renders a header with h3 when only one tab (transcript-only)", () => {
-    render(<ArticleTabs article={null} transcript={makeTranscript()} />);
-    expect(screen.getByRole("heading", { level: 3, name: /Transcript/i })).toBeInTheDocument();
-    expect(screen.queryByRole("tab")).not.toBeInTheDocument();
+    // Only Summary tab — should have border-b-2 class
+    const summaryBtn = screen.getByRole("button", { name: /Summary/ });
+    expect(summaryBtn.className).toContain("border-b-2");
+    expect(summaryBtn.className).toContain("border-qube-blue");
   });
 
   it("does NOT apply border-b-2 to active tab button when two tabs exist (sliding indicator used instead)", () => {
     render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Summary is the active tab by default
-    const summaryBtn = screen.getByRole("tab", { name: /Summary/ });
+    // Switch to Summary so it's the active tab
+    fireEvent.click(screen.getByText(/Summary/));
+    const summaryBtn = screen.getByRole("button", { name: /Summary/ });
     // With 2 tabs, no border-b-2 — the sliding indicator handles active state
     expect(summaryBtn.className).not.toContain("border-b-2");
   });
 });
 
-// aria-hidden panel state feature was removed from ArticleTabs
+describe("ArticleTabs — aria-hidden panel state", () => {
+  it("sets aria-hidden=false when panel is expanded (default)", () => {
+    render(<ArticleTabs article={makeArticle()} transcript={null} />);
+    const panel = document.querySelector("[aria-hidden]");
+    expect(panel).toHaveAttribute("aria-hidden", "false");
+  });
+
+  it("sets aria-hidden=true when panel is collapsed via collapse button", () => {
+    render(<ArticleTabs article={makeArticle()} transcript={null} />);
+    fireEvent.click(screen.getByRole("button", { name: "Collapse panel" }));
+    const panel = document.querySelector("[aria-hidden]");
+    expect(panel).toHaveAttribute("aria-hidden", "true");
+  });
+
+  it("restores aria-hidden=false when panel is re-expanded", () => {
+    render(<ArticleTabs article={makeArticle()} transcript={null} />);
+    fireEvent.click(screen.getByRole("button", { name: "Collapse panel" }));
+    fireEvent.click(screen.getByRole("button", { name: "Expand panel" }));
+    const panel = document.querySelector("[aria-hidden]");
+    expect(panel).toHaveAttribute("aria-hidden", "false");
+  });
+});
 
 describe("ArticleTabs — markdown rendering", () => {
   it("renders plain paragraphs", () => {
@@ -237,6 +305,26 @@ describe("ArticleTabs — markdown rendering", () => {
     render(<ArticleTabs article={article} transcript={null} />);
     expect(screen.getByText("First paragraph.")).toBeInTheDocument();
     expect(screen.getByText("Second paragraph.")).toBeInTheDocument();
+  });
+
+  it("renders multiple consecutive blank lines without extra content", () => {
+    // Multiple blank lines should be treated the same as a single separator
+    const article = makeArticle({
+      markdown: "Para one.\n\n\n\nPara two.",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+    expect(screen.getByText("Para one.")).toBeInTheDocument();
+    expect(screen.getByText("Para two.")).toBeInTheDocument();
+    // No phantom elements — just the two expected paragraphs
+    const paragraphs = document.querySelectorAll("p");
+    expect(paragraphs).toHaveLength(2);
+  });
+
+  it("renders a paragraph that is entirely bold", () => {
+    const article = makeArticle({ markdown: "**Entire line is bold**" });
+    render(<ArticleTabs article={article} transcript={null} />);
+    const strong = document.querySelector("strong");
+    expect(strong?.textContent).toBe("Entire line is bold");
   });
 
   it("renders h2 headings", () => {
@@ -330,5 +418,69 @@ describe("ArticleTabs — markdown rendering", () => {
     const paragraphs = container.querySelectorAll("p");
     expect(paragraphs[0].className).toContain("text-[16px]"); // lead style
     expect(paragraphs[1].className).toContain("text-[15px]"); // regular style
+  });
+
+  it("renders multiple inline formats in a single paragraph", () => {
+    // parseInline must match multiple regex groups in one pass
+    const article = makeArticle({
+      markdown: "Use **bold** and *italic* and `code` together.",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+    expect(document.querySelector("strong")?.textContent).toBe("bold");
+    expect(document.querySelector("em")?.textContent).toBe("italic");
+    expect(document.querySelector("code")?.textContent).toBe("code");
+  });
+
+  it("renders inline bold inside an h2 heading", () => {
+    const article = makeArticle({
+      markdown: "## Heading with **bold** text",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+    const h2 = screen.getByRole("heading", { level: 2 });
+    expect(h2).toBeInTheDocument();
+    expect(h2.querySelector("strong")?.textContent).toBe("bold");
+  });
+
+  it("renders inline code inside an h3 heading", () => {
+    const article = makeArticle({
+      markdown: "### Run `npm test` daily",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+    const h3 = screen.getByRole("heading", { level: 3 });
+    expect(h3).toBeInTheDocument();
+    expect(h3.querySelector("code")?.textContent).toBe("npm test");
+  });
+
+  it("renders inline code inside a list item", () => {
+    const article = makeArticle({
+      markdown: "- Run `npm test` to check",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+    const li = document.querySelector("li");
+    expect(li?.querySelector("code")?.textContent).toBe("npm test");
+  });
+
+  it("renders inline bold and italic inside the same list item", () => {
+    const article = makeArticle({
+      markdown: "- **Bold** and *italic* item",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+    const li = document.querySelector("li");
+    expect(li?.querySelector("strong")?.textContent).toBe("Bold");
+    expect(li?.querySelector("em")?.textContent).toBe("italic");
+  });
+
+  it("renders plain text that has no inline formatting unchanged", () => {
+    // parseInline returns [text] when no regex matches — the fallback branch
+    const article = makeArticle({
+      markdown: "Plain text with no formatting markers.",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+    expect(
+      screen.getByText("Plain text with no formatting markers.")
+    ).toBeInTheDocument();
+    expect(document.querySelector("strong")).toBeNull();
+    expect(document.querySelector("em")).toBeNull();
+    expect(document.querySelector("code")).toBeNull();
   });
 });
