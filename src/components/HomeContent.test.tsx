@@ -1893,3 +1893,75 @@ describe("HomeContent — MAX_TOP_ROW=15 truncation", () => {
     expect(oldestH2?.textContent).toContain("16");
   });
 });
+
+// ---------------------------------------------------------------------------
+// activeFilterCount = 3 (all three filter groups active simultaneously)
+// The floating filter button badge should display 3 when uploadDate, duration,
+// AND sortBy are all set to non-default values.
+// ---------------------------------------------------------------------------
+
+describe("HomeContent — activeFilterCount = 3 (all filters active)", () => {
+  beforeEach(() => {
+    cleanup();
+    localStorage.clear();
+  });
+
+  it("floating filter button badge shows 3 when all three filters are non-default", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+
+    // Apply all three filters at once (uploadDate + duration + sortBy)
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+    fireEvent.click(screen.getByText("This week"));    // uploadDate → non-default
+    fireEvent.click(screen.getByText("Under 4 min")); // duration → non-default
+    fireEvent.click(screen.getByText("Oldest"));       // sortBy → non-default
+    fireEvent.click(screen.getByText("Apply"));
+
+    // The floating "Open filters" button is always in the DOM (just hidden via opacity).
+    // Its text content includes the badge digit when activeFilterCount > 0.
+    const floatingBtn = screen.getByRole("button", { name: "Open filters" });
+    expect(floatingBtn.textContent).toContain("3");
+  });
+
+  it("hero-inline FilterTrigger badge also shows 3 when all filters are active", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+    fireEvent.click(screen.getByText("This week"));
+    fireEvent.click(screen.getByText("Under 4 min"));
+    fireEvent.click(screen.getByText("Oldest"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    // The hero-inline trigger is the first Filters button in the DOM.
+    const heroBtns = screen.getAllByRole("button", { name: "Filters" });
+    // At least one trigger shows the count badge
+    const hasCount3 = heroBtns.some((btn) => btn.textContent?.includes("3"));
+    expect(hasCount3).toBe(true);
+  });
+
+  it("reset from all-3-filters clears the badge back to no count", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+
+    // Apply all 3 filters
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+    fireEvent.click(screen.getByText("This week"));
+    fireEvent.click(screen.getByText("Under 4 min"));
+    fireEvent.click(screen.getByText("Oldest"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    // Confirm badge is 3
+    const floatingBtn = screen.getByRole("button", { name: "Open filters" });
+    expect(floatingBtn.textContent).toContain("3");
+
+    // Now reset via the FilterBar's "Reset all" button
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+    expect(screen.getByText("Reset all")).toBeInTheDocument();
+    fireEvent.click(screen.getByText("Reset all"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    // Badge should be gone (no count after reset)
+    const updatedBtn = screen.getByRole("button", { name: "Open filters" });
+    expect(updatedBtn.textContent).not.toContain("3");
+    expect(updatedBtn.textContent).not.toContain("1");
+    expect(updatedBtn.textContent).not.toContain("2");
+  });
+});
