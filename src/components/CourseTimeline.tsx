@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Course } from "@/types";
@@ -171,10 +171,9 @@ function ModuleAccordion({
 export default function CourseTimeline({
   course,
 }: Readonly<{ course: Course }>) {
-  const [, setTick] = useState(0);
-  useEffect(() => {
-    setTick(1);
-  }, []);
+  // useSyncExternalStore transitions server→client synchronously during hydration,
+  // replacing the useState+useEffect setTick pattern to eliminate the extra render cycle.
+  useSyncExternalStore(() => () => {}, () => true, () => false);
 
   const completed = isCourseCompleted(course);
   const progress = getCourseProgress(course);

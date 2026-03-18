@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
-import { render, screen, cleanup, fireEvent, act, waitFor } from "@testing-library/react";
+import { render, screen, cleanup, fireEvent, act } from "@testing-library/react";
 import { useEffect } from "react";
 import HomeContent from "./HomeContent";
 import { SearchProvider, useSearch } from "./SearchContext";
@@ -60,7 +60,7 @@ describe("HomeContent", () => {
     expect(screen.getAllByText("Long Webinar").length).toBeGreaterThanOrEqual(1);
   });
 
-  it("filters videos by short duration (under 4 min)", async () => {
+  it("filters videos by short duration (under 4 min)", () => {
     const { container } = render(
       <HomeContent
         categories={categories}
@@ -68,9 +68,7 @@ describe("HomeContent", () => {
       />
     );
 
-    await act(async () => {});
     openFilters();
-    await waitFor(() => expect(screen.getByText("Under 4 min")).toBeInTheDocument());
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -80,7 +78,7 @@ describe("HomeContent", () => {
     expect(cardTitles.has("Long Webinar")).toBe(false);
   });
 
-  it("filters videos by medium duration (4–20 min)", async () => {
+  it("filters videos by medium duration (4–20 min)", () => {
     const { container } = render(
       <HomeContent
         categories={categories}
@@ -88,9 +86,7 @@ describe("HomeContent", () => {
       />
     );
 
-    await act(async () => {});
     openFilters();
-    await waitFor(() => expect(screen.getByText("4–20 min")).toBeInTheDocument());
     fireEvent.click(screen.getByText("4–20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -100,7 +96,7 @@ describe("HomeContent", () => {
     expect(cardTitles.has("Long Webinar")).toBe(false);
   });
 
-  it("filters videos by long duration (over 20 min)", async () => {
+  it("filters videos by long duration (over 20 min)", () => {
     const { container } = render(
       <HomeContent
         categories={categories}
@@ -108,9 +104,7 @@ describe("HomeContent", () => {
       />
     );
 
-    await act(async () => {});
     openFilters();
-    await waitFor(() => expect(screen.getByText("Over 20 min")).toBeInTheDocument());
     fireEvent.click(screen.getByText("Over 20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -120,7 +114,7 @@ describe("HomeContent", () => {
     expect(cardTitles.has("Long Webinar")).toBe(true);
   });
 
-  it("sorts videos oldest first", async () => {
+  it("sorts videos oldest first", () => {
     const { container } = render(
       <HomeContent
         categories={categories}
@@ -129,9 +123,7 @@ describe("HomeContent", () => {
       />
     );
 
-    await act(async () => {});
     openFilters();
-    await waitFor(() => expect(screen.getByText("Oldest")).toBeInTheDocument());
     fireEvent.click(screen.getByText("Oldest"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -166,7 +158,7 @@ describe("HomeContent", () => {
     expect(tutorialTitles).toEqual(["Short Tutorial", "Medium Tutorial"]);
   });
 
-  it("shows empty state when all videos are filtered out", async () => {
+  it("shows empty state when all videos are filtered out", () => {
     const oldVideos = [
       makeVideo({
         id: "old",
@@ -184,16 +176,14 @@ describe("HomeContent", () => {
       />
     );
 
-    await act(async () => {});
     openFilters();
-    await waitFor(() => expect(screen.getByText("Today")).toBeInTheDocument());
     fireEvent.click(screen.getByText("Today"));
     fireEvent.click(screen.getByText("Apply"));
 
     expect(screen.getByText("No videos match your filters")).toBeTruthy();
   });
 
-  it("resets filters via empty-state Reset filters button", async () => {
+  it("resets filters via empty-state Reset filters button", () => {
     const oldVideos = [
       makeVideo({
         id: "old",
@@ -211,9 +201,7 @@ describe("HomeContent", () => {
       />
     );
 
-    await act(async () => {});
     openFilters();
-    await waitFor(() => expect(screen.getByText("Today")).toBeInTheDocument());
     fireEvent.click(screen.getByText("Today"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -228,7 +216,7 @@ describe("HomeContent", () => {
     expect(screen.queryByText("No videos match your filters")).toBeNull();
   });
 
-  it("hides category rows with no matching videos when filters are active", async () => {
+  it("hides category rows with no matching videos when filters are active", () => {
     render(
       <HomeContent
         categories={categories}
@@ -242,9 +230,7 @@ describe("HomeContent", () => {
     expect(screen.getByText("Webinars")).toBeTruthy();
 
     // Apply "Under 4 min" filter — only short-vid (tutorials) matches
-    await act(async () => {});
     openFilters();
-    await waitFor(() => expect(screen.getByText("Under 4 min")).toBeInTheDocument());
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -254,7 +240,7 @@ describe("HomeContent", () => {
     expect(screen.queryByText("Long Webinar")).toBeNull();
   });
 
-  it("treats exactly 20 minutes as medium duration", async () => {
+  it("treats exactly 20 minutes as medium duration", () => {
     const boundaryVideos = [
       makeVideo({
         id: "exact-20",
@@ -278,9 +264,7 @@ describe("HomeContent", () => {
       />
     );
 
-    await act(async () => {});
     openFilters();
-    await waitFor(() => expect(screen.getByText("4–20 min")).toBeInTheDocument());
     fireEvent.click(screen.getByText("4–20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -288,7 +272,7 @@ describe("HomeContent", () => {
     expect(screen.queryByText("Twenty One Min")).toBeNull();
   });
 
-  it("resets filters and shows all videos again", async () => {
+  it("resets filters and shows all videos again", () => {
     render(
       <HomeContent
         categories={categories}
@@ -297,15 +281,12 @@ describe("HomeContent", () => {
       />
     );
 
-    await act(async () => {});
     openFilters();
-    await waitFor(() => expect(screen.getByText("Under 4 min")).toBeInTheDocument());
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
     expect(screen.queryByText("Medium Tutorial")).toBeNull();
 
     openFilters();
-    await waitFor(() => expect(screen.getByText("Reset all")).toBeInTheDocument());
     fireEvent.click(screen.getByText("Reset all"));
 
     expect(screen.getAllByText("Medium Tutorial").length).toBeGreaterThanOrEqual(1);
@@ -683,7 +664,7 @@ describe("HomeContent — footerInView hides floating button and ScrollToTop", (
       disconnect() {
         this._record.disconnectFn();
       }
-      unobserve(_el: Element) {}
+      unobserve(_el: Element) { /* no-op: stub */ }
     }
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -1415,9 +1396,7 @@ describe("HomeContent — MAX_CATEGORY_ROW truncation", () => {
     );
     const { container } = render(<HomeContent categories={CAT} videos={manyVideos} />);
     // Only the category row renders (no top row — all videos are older than 30 days)
-    // Query h3 elements only within the #categories section to avoid course h3s
-    const categoriesDiv = container.querySelector("#categories");
-    const cards = categoriesDiv?.querySelectorAll("h3") ?? [];
+    const cards = container.querySelectorAll("h3");
     expect(cards.length).toBe(15);
   });
 
@@ -1427,11 +1406,9 @@ describe("HomeContent — MAX_CATEGORY_ROW truncation", () => {
     );
     render(<HomeContent categories={CAT} videos={manyVideos} />);
     // VideoRow receives videos.slice(0,15) but totalCount=16 → shows "View all"
-    // Find the "View all" link pointing to /category/tutorials specifically
-    const viewAllItems = screen.getAllByText("View all");
-    const viewAll = viewAllItems.find(el => el.closest("a")?.getAttribute("href") === "/category/tutorials");
+    const viewAll = screen.getByText("View all");
     expect(viewAll).toBeTruthy();
-    expect(viewAll!.closest("a")?.getAttribute("href")).toBe("/category/tutorials");
+    expect(viewAll.closest("a")?.getAttribute("href")).toBe("/category/tutorials");
   });
 });
 
@@ -1547,5 +1524,444 @@ describe("HomeContent — per-category row visibility with active filters", () =
     expect(screen.getAllByText("Short Tutorial").length).toBeGreaterThanOrEqual(1);
     // Medium Tutorial is filtered out
     expect(screen.queryByText("Medium Tutorial")).toBeNull();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Exact boundary conditions for isWithinDateRange
+// The function uses strict < comparisons, so a video published at exactly the
+// cutoff (e.g. diffDays === 7 for "this-week") is EXCLUDED.
+// ---------------------------------------------------------------------------
+
+describe("HomeContent — date filter exact boundary conditions", () => {
+  const CAT: Category[] = [
+    { slug: "tutorials", title: "Tutorials", description: "Tutorial videos" },
+  ];
+
+  beforeEach(() => {
+    cleanup();
+    localStorage.clear();
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-03-17T12:00:00Z"));
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
+  function renderWithVideos(testVideos: ReturnType<typeof makeVideo>[]) {
+    const { container } = render(
+      <HomeContent categories={CAT} videos={testVideos} />
+    );
+    return container;
+  }
+
+  function applyDateFilter(label: string, container: HTMLElement) {
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+    fireEvent.click(screen.getByText(label));
+    fireEvent.click(screen.getByText("Apply"));
+    return container;
+  }
+
+  /**
+   * "Today" uses diffDays < 1.
+   * A video published exactly 24 hours ago has diffDays = 1.0 → 1 < 1 = false → EXCLUDED.
+   */
+  it("'Today' excludes a video published exactly 24 hours ago (diffDays = 1.0, condition is < 1)", () => {
+    const exactlyTwentyFourHours = makeVideo({
+      id: "exact-24h",
+      title: "Exactly Twenty Four Hours Ago",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString(),
+    });
+
+    const container = renderWithVideos([exactlyTwentyFourHours]);
+    applyDateFilter("Today", container);
+
+    expect(screen.getByText("No videos match your filters")).toBeTruthy();
+  });
+
+  /**
+   * "This week" uses diffDays < 7.
+   * A video published exactly 7 days ago has diffDays = 7.0 → 7 < 7 = false → EXCLUDED.
+   * (Existing test checks 8 days → excluded; this checks the exact cutoff.)
+   */
+  it("'This week' excludes a video published exactly 7 days ago (diffDays = 7.0, condition is < 7)", () => {
+    const exactlySevenDays = makeVideo({
+      id: "exact-7d",
+      title: "Exactly Seven Days Ago",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+
+    const container = renderWithVideos([exactlySevenDays]);
+    applyDateFilter("This week", container);
+
+    expect(screen.getByText("No videos match your filters")).toBeTruthy();
+  });
+
+  /**
+   * "This month" uses diffDays < 30.
+   * A video published exactly 30 days ago has diffDays = 30.0 → 30 < 30 = false → EXCLUDED.
+   * (Existing test checks 31 days → excluded; this checks the exact cutoff.)
+   */
+  it("'This month' excludes a video published exactly 30 days ago (diffDays = 30.0, condition is < 30)", () => {
+    const exactlyThirtyDays = makeVideo({
+      id: "exact-30d",
+      title: "Exactly Thirty Days Ago",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+
+    const container = renderWithVideos([exactlyThirtyDays]);
+    applyDateFilter("This month", container);
+
+    expect(screen.getByText("No videos match your filters")).toBeTruthy();
+  });
+
+  /**
+   * "This year" uses diffDays < 365.
+   * A video published exactly 365 days ago has diffDays = 365.0 → 365 < 365 = false → EXCLUDED.
+   * (Existing test checks 366 days → excluded; this checks the exact cutoff.)
+   */
+  it("'This year' excludes a video published exactly 365 days ago (diffDays = 365.0, condition is < 365)", () => {
+    const exactlyThreeSixtyFiveDays = makeVideo({
+      id: "exact-365d",
+      title: "Exactly Three Sixty Five Days Ago",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - 365 * 24 * 60 * 60 * 1000).toISOString(),
+    });
+
+    const container = renderWithVideos([exactlyThreeSixtyFiveDays]);
+    applyDateFilter("This year", container);
+
+    expect(screen.getByText("No videos match your filters")).toBeTruthy();
+  });
+
+  /**
+   * "This week" includes a video published 1 minute under 7 days ago.
+   * diffDays ≈ 6.9993 → 6.9993 < 7 = true → INCLUDED.
+   * Confirms the boundary is strict < (not ≤ 6).
+   */
+  it("'This week' includes a video published 1 minute under 7 days ago (diffDays just under 7.0)", () => {
+    const justUnderSevenDays = makeVideo({
+      id: "just-under-7d",
+      title: "Just Under Seven Days",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - (7 * 24 * 60 * 60 * 1000 - 60_000)).toISOString(),
+    });
+
+    const container = renderWithVideos([justUnderSevenDays]);
+    applyDateFilter("This week", container);
+
+    expect(screen.queryByText("No videos match your filters")).toBeNull();
+    // Video title appears in multiple places (Hero + VideoRow) — use getAllByText
+    expect(screen.getAllByText("Just Under Seven Days").length).toBeGreaterThanOrEqual(1);
+  });
+
+  /**
+   * "This month" includes a video published 1 minute under 30 days ago.
+   * diffDays ≈ 29.9993 → 29.9993 < 30 = true → INCLUDED.
+   * Confirms the boundary is strict < (not ≤ 29).
+   */
+  it("'This month' includes a video published 1 minute under 30 days ago (diffDays just under 30.0)", () => {
+    const justUnderThirtyDays = makeVideo({
+      id: "just-under-30d",
+      title: "Just Under Thirty Days",
+      category: "tutorials",
+      publishedAt: new Date(Date.now() - (30 * 24 * 60 * 60 * 1000 - 60_000)).toISOString(),
+    });
+
+    const container = renderWithVideos([justUnderThirtyDays]);
+    applyDateFilter("This month", container);
+
+    expect(screen.queryByText("No videos match your filters")).toBeNull();
+    // Video title appears in multiple places (Hero + VideoRow) — use getAllByText
+    expect(screen.getAllByText("Just Under Thirty Days").length).toBeGreaterThanOrEqual(1);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Duration filter lower boundary (exactly 4 minutes)
+// The matchesDuration helper uses: short = mins < 4, medium = mins >= 4 && mins <= 20
+// These tests guard the lower bound of the medium range.
+// ---------------------------------------------------------------------------
+
+describe("HomeContent — duration filter lower boundary (exactly 4 min)", () => {
+  const CAT: Category[] = [
+    { slug: "tutorials", title: "Tutorials", description: "Tutorial videos" },
+  ];
+
+  beforeEach(() => {
+    cleanup();
+    localStorage.clear();
+  });
+
+  it("'Under 4 min' excludes exactly 4:00 (4 >= 4 satisfies medium lower bound, not short)", () => {
+    const exact4 = makeVideo({
+      id: "lb-exact-4",
+      title: "Exactly Four Minutes",
+      duration: "4:00",
+      category: "tutorials",
+      publishedAt: "2024-01-01T00:00:00Z",
+    });
+
+    render(<HomeContent categories={CAT} videos={[exact4]} />);
+
+    openFilters();
+    fireEvent.click(screen.getByText("Under 4 min"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    // 4:00 = 4 minutes; 4 < 4 is false → not short → filtered out
+    expect(screen.getByText("No videos match your filters")).toBeTruthy();
+  });
+
+  it("'Under 4 min' includes exactly 3:59 (3.98 min < 4 → short)", () => {
+    const threeMin59 = makeVideo({
+      id: "lb-3-59",
+      title: "Three Fifty Nine",
+      duration: "3:59",
+      category: "tutorials",
+      publishedAt: "2024-01-01T00:00:00Z",
+    });
+
+    render(<HomeContent categories={CAT} videos={[threeMin59]} />);
+
+    openFilters();
+    fireEvent.click(screen.getByText("Under 4 min"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    // 3:59 = 3 + 59/60 ≈ 3.983 min < 4 → short → should appear
+    const h3s = Array.from(document.querySelectorAll("h3")).map((h) => h.textContent);
+    expect(h3s.some((t) => t === "Three Fifty Nine")).toBe(true);
+  });
+
+  it("'4–20 min' includes exactly 4:00 (lower bound of medium: 4 >= 4)", () => {
+    const exact4 = makeVideo({
+      id: "lb-exact-4-medium",
+      title: "Exactly Four Medium",
+      duration: "4:00",
+      category: "tutorials",
+      publishedAt: "2024-01-01T00:00:00Z",
+    });
+
+    render(<HomeContent categories={CAT} videos={[exact4]} />);
+
+    openFilters();
+    fireEvent.click(screen.getByText("4–20 min"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    // 4:00 = 4 minutes; 4 >= 4 && 4 <= 20 → medium → should appear
+    const h3s = Array.from(document.querySelectorAll("h3")).map((h) => h.textContent);
+    expect(h3s.some((t) => t === "Exactly Four Medium")).toBe(true);
+  });
+
+  it("'4–20 min' excludes exactly 3:59 (3.98 min < 4 → short, not medium)", () => {
+    const threeMin59 = makeVideo({
+      id: "lb-3-59-medium",
+      title: "Three Fifty Nine Medium",
+      duration: "3:59",
+      category: "tutorials",
+      publishedAt: "2024-01-01T00:00:00Z",
+    });
+
+    render(<HomeContent categories={CAT} videos={[threeMin59]} />);
+
+    openFilters();
+    fireEvent.click(screen.getByText("4–20 min"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    // 3:59 is short (< 4), not medium → filtered out
+    expect(screen.getByText("No videos match your filters")).toBeTruthy();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// MAX_TOP_ROW = 15 truncation
+// The top row (Latest / Oldest) renders at most 15 videos (MAX_TOP_ROW constant)
+// but the count badge shows the full untruncated total.
+// ---------------------------------------------------------------------------
+
+describe("HomeContent — MAX_TOP_ROW=15 truncation", () => {
+  const CAT: Category[] = [
+    { slug: "tutorials", title: "Tutorials", description: "Tutorial videos" },
+  ];
+
+  beforeEach(() => {
+    cleanup();
+    localStorage.clear();
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-03-17T12:00:00Z"));
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
+  it("Latest row shows exactly 15 cards when 16 recent videos exist (MAX_TOP_ROW cap)", async () => {
+    // All 16 videos are within 30 days → qualify for topRowVideos; sliced to 15 by MAX_TOP_ROW
+    const recentVideos = Array.from({ length: 16 }, (_, i) =>
+      makeVideo({
+        id: `tr-latest-${i}`,
+        title: `TR Latest ${i}`,
+        category: "tutorials",
+        publishedAt: new Date(Date.now() - (i + 1) * 24 * 60 * 60 * 1000).toISOString(),
+      })
+    );
+
+    const { container } = render(<HomeContent categories={CAT} videos={recentVideos} />);
+    await act(async () => {});
+
+    // The top row wrapper is the only div with class "pt-10" in HomeContent
+    const topRowSection = container.querySelector(".pt-10");
+    expect(topRowSection).not.toBeNull();
+
+    // Each VideoCard renders an h3 for the title; only 15 should be in the top row
+    const topRowCards = topRowSection!.querySelectorAll("h3");
+    expect(topRowCards.length).toBe(15);
+  });
+
+  it("Latest row count badge shows 16 (full count) even though only 15 cards render", async () => {
+    const recentVideos = Array.from({ length: 16 }, (_, i) =>
+      makeVideo({
+        id: `tr-badge-${i}`,
+        title: `TR Badge ${i}`,
+        category: "tutorials",
+        publishedAt: new Date(Date.now() - (i + 1) * 24 * 60 * 60 * 1000).toISOString(),
+      })
+    );
+
+    const { container } = render(<HomeContent categories={CAT} videos={recentVideos} />);
+    await act(async () => {});
+
+    const h2s = Array.from(container.querySelectorAll("h2"));
+    const latestH2 = h2s.find((h) => (h.textContent ?? "").startsWith("Latest"));
+    expect(latestH2).toBeDefined();
+    // Count badge (topRowTotalCount = 16) should exceed the rendered card count (15)
+    expect(latestH2?.textContent).toContain("16");
+  });
+
+  it("Oldest sort: top row shows exactly 15 cards when 16 videos exist (MAX_TOP_ROW cap)", async () => {
+    // All videos older than 30 days → no Latest top row in default newest mode
+    const oldVideos = Array.from({ length: 16 }, (_, i) =>
+      makeVideo({
+        id: `tr-oldest-${i}`,
+        title: `TR Oldest ${i}`,
+        category: "tutorials",
+        publishedAt: new Date(Date.now() - (60 + i) * 24 * 60 * 60 * 1000).toISOString(),
+      })
+    );
+
+    const { container } = render(<HomeContent categories={CAT} videos={oldVideos} />);
+    await act(async () => {});
+
+    // Switch to Oldest sort → top row uses ALL filteredVideos.slice(0, MAX_TOP_ROW) = 15
+    openFilters();
+    fireEvent.click(screen.getByText("Oldest"));
+    fireEvent.click(screen.getByText("Apply"));
+    await act(async () => {});
+
+    const topRowSection = container.querySelector(".pt-10");
+    expect(topRowSection).not.toBeNull();
+
+    const topRowCards = topRowSection!.querySelectorAll("h3");
+    expect(topRowCards.length).toBe(15);
+  });
+
+  it("Oldest sort: count badge shows 16 (full count) even though only 15 cards render", async () => {
+    const oldVideos = Array.from({ length: 16 }, (_, i) =>
+      makeVideo({
+        id: `tr-oldest-badge-${i}`,
+        title: `TR Old Badge ${i}`,
+        category: "tutorials",
+        publishedAt: new Date(Date.now() - (60 + i) * 24 * 60 * 60 * 1000).toISOString(),
+      })
+    );
+
+    const { container } = render(<HomeContent categories={CAT} videos={oldVideos} />);
+    await act(async () => {});
+
+    openFilters();
+    fireEvent.click(screen.getByText("Oldest"));
+    fireEvent.click(screen.getByText("Apply"));
+    await act(async () => {});
+
+    const h2s = Array.from(container.querySelectorAll("h2"));
+    const oldestH2 = h2s.find((h) => (h.textContent ?? "").startsWith("Oldest"));
+    expect(oldestH2).toBeDefined();
+    // topRowTotalCount = filteredVideos.length = 16
+    expect(oldestH2?.textContent).toContain("16");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// activeFilterCount = 3 (all three filter groups active simultaneously)
+// The floating filter button badge should display 3 when uploadDate, duration,
+// AND sortBy are all set to non-default values.
+// ---------------------------------------------------------------------------
+
+describe("HomeContent — activeFilterCount = 3 (all filters active)", () => {
+  beforeEach(() => {
+    cleanup();
+    localStorage.clear();
+  });
+
+  it("floating filter button badge shows 3 when all three filters are non-default", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+
+    // Apply all three filters at once (uploadDate + duration + sortBy)
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+    fireEvent.click(screen.getByText("This week"));    // uploadDate → non-default
+    fireEvent.click(screen.getByText("Under 4 min")); // duration → non-default
+    fireEvent.click(screen.getByText("Oldest"));       // sortBy → non-default
+    fireEvent.click(screen.getByText("Apply"));
+
+    // The floating "Open filters" button is always in the DOM (just hidden via opacity).
+    // Its text content includes the badge digit when activeFilterCount > 0.
+    const floatingBtn = screen.getByRole("button", { name: "Open filters" });
+    expect(floatingBtn.textContent).toContain("3");
+  });
+
+  it("hero-inline FilterTrigger badge also shows 3 when all filters are active", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+    fireEvent.click(screen.getByText("This week"));
+    fireEvent.click(screen.getByText("Under 4 min"));
+    fireEvent.click(screen.getByText("Oldest"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    // The hero-inline trigger is the first Filters button in the DOM.
+    const heroBtns = screen.getAllByRole("button", { name: "Filters" });
+    // At least one trigger shows the count badge
+    const hasCount3 = heroBtns.some((btn) => btn.textContent?.includes("3"));
+    expect(hasCount3).toBe(true);
+  });
+
+  it("reset from all-3-filters clears the badge back to no count", () => {
+    render(<HomeContent categories={categories} videos={videos} />);
+
+    // Apply all 3 filters
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+    fireEvent.click(screen.getByText("This week"));
+    fireEvent.click(screen.getByText("Under 4 min"));
+    fireEvent.click(screen.getByText("Oldest"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    // Confirm badge is 3
+    const floatingBtn = screen.getByRole("button", { name: "Open filters" });
+    expect(floatingBtn.textContent).toContain("3");
+
+    // Now reset via the FilterBar's "Reset all" button
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+    expect(screen.getByText("Reset all")).toBeInTheDocument();
+    fireEvent.click(screen.getByText("Reset all"));
+    fireEvent.click(screen.getByText("Apply"));
+
+    // Badge should be gone (no count after reset)
+    const updatedBtn = screen.getByRole("button", { name: "Open filters" });
+    expect(updatedBtn.textContent).not.toContain("3");
+    expect(updatedBtn.textContent).not.toContain("1");
+    expect(updatedBtn.textContent).not.toContain("2");
   });
 });
