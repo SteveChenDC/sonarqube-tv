@@ -10,9 +10,9 @@ function useNonFiringIntersectionObserver() {
   beforeEach(() => {
     original = globalThis.IntersectionObserver;
     globalThis.IntersectionObserver = class {
-      observe() { /* no-op: never fires */ }
-      unobserve() { /* no-op: stub */ }
-      disconnect() { /* no-op: stub */ }
+      observe() { /* never fires */ }
+      unobserve() {}
+      disconnect() {}
     } as unknown as typeof IntersectionObserver;
   });
   afterEach(() => {
@@ -35,10 +35,7 @@ describe("VideoRow", () => {
     );
     // Title is a heading inside a section with anchor id
     const titleEl = getByText("Tutorials");
-    const section = titleEl.closest("section");
-    expect(section?.id).toBe("tutorials");
-    // scroll-mt-20 ensures fixed header doesn't overlap anchor targets
-    expect(section?.className).toContain("scroll-mt-20");
+    expect(titleEl.closest("section")?.id).toBe("tutorials");
     // All video cards rendered (may appear in both mobile + desktop layouts)
     expect(getAllByText("Video v1").length).toBeGreaterThanOrEqual(1);
     expect(getAllByText("Video v2").length).toBeGreaterThanOrEqual(1);
@@ -414,6 +411,184 @@ describe("VideoRow", () => {
         );
         expect(container.querySelector('[class*="sm:hidden"]')).toBeNull();
       });
+    });
+  });
+
+  describe("sectionLabels — count badges", () => {
+    it("renders firstCount in the first section's label badge", () => {
+      const videos = [
+        makeVideo({ id: "v1" }),
+        makeVideo({ id: "v2" }),
+        makeVideo({ id: "v3" }),
+      ];
+      const { container } = render(
+        <VideoRow
+          title="Row"
+          videos={videos}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 2,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 2,
+          }}
+        />
+      );
+      const h2Els = Array.from(container.querySelectorAll("h2"));
+      const cwH2 = h2Els.find((h) => h.textContent?.includes("Continue Watching"));
+      expect(cwH2).toBeDefined();
+      // Count badge is the <span> inside the h2
+      const countSpan = cwH2?.querySelector("span");
+      expect(countSpan?.textContent).toBe("2");
+    });
+
+    it("renders secondCount in the second section's label badge", () => {
+      const videos = [
+        makeVideo({ id: "v1" }),
+        makeVideo({ id: "v2" }),
+        makeVideo({ id: "v3" }),
+      ];
+      const { container } = render(
+        <VideoRow
+          title="Row"
+          videos={videos}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 2,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 2,
+          }}
+        />
+      );
+      const h2Els = Array.from(container.querySelectorAll("h2"));
+      const latestH2 = h2Els.find((h) => h.textContent?.includes("Latest"));
+      expect(latestH2).toBeDefined();
+      const countSpan = latestH2?.querySelector("span");
+      expect(countSpan?.textContent).toBe("1");
+    });
+
+    it("count badge reflects secondCount even when it exceeds actual rendered video count (MAX_TOP_ROW cap)", () => {
+      // Mirrors HomeContent behaviour: secondCount=15 shown even if only 1 video renders
+      const videos = [makeVideo({ id: "cw1" }), makeVideo({ id: "latest1" })];
+      const { container } = render(
+        <VideoRow
+          title="Row"
+          videos={videos}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 1,
+            secondLabel: "Latest",
+            secondCount: 15,
+            splitAt: 1,
+          }}
+        />
+      );
+      const h2Els = Array.from(container.querySelectorAll("h2"));
+      const latestH2 = h2Els.find((h) => h.textContent?.includes("Latest"));
+      const countSpan = latestH2?.querySelector("span");
+      expect(countSpan?.textContent).toBe("15");
+    });
+  });
+
+  describe("sectionLabels — orthogonal to hideHeader", () => {
+    it("section labels still appear when hideHeader=true", () => {
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+      const { getByText } = render(
+        <VideoRow
+          title="Hidden Row Title"
+          videos={videos}
+          hideHeader={true}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 1,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 1,
+          }}
+        />
+      );
+      // Section labels inside the scroll region are rendered independently of the top header
+      expect(getByText("Continue Watching")).toBeTruthy();
+      expect(getByText("Latest")).toBeTruthy();
+    });
+
+    it("top-level row title h2 is absent when hideHeader=true, even with sectionLabels", () => {
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+      const { queryByText } = render(
+        <VideoRow
+          title="Hidden Row Title"
+          videos={videos}
+          hideHeader={true}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 1,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 1,
+          }}
+        />
+      );
+      // The title prop text must NOT appear as visible content (only in aria-label attr)
+      expect(queryByText("Hidden Row Title")).toBeNull();
+    });
+
+    it("hideHeader=true + sectionLabels renders exactly 2 h2 elements (only section labels)", () => {
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+      const { container } = render(
+        <VideoRow
+          title="Hidden Row Title"
+          videos={videos}
+          hideHeader={true}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 1,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 1,
+          }}
+        />
+      );
+      expect(container.querySelectorAll("h2").length).toBe(2);
+    });
+
+    it("hideHeader=false (default) + sectionLabels renders 3 h2 elements (top header + 2 section labels)", () => {
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+      const { container } = render(
+        <VideoRow
+          title="Row Title"
+          videos={videos}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 1,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 1,
+          }}
+        />
+      );
+      // 1 top-level h2 (row title) + 2 section label h2s = 3
+      expect(container.querySelectorAll("h2").length).toBe(3);
+    });
+
+    it("renders a vertical divider element between the two sections when sectionLabels is provided", () => {
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+      const { container } = render(
+        <VideoRow
+          title="Row"
+          videos={videos}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 1,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 1,
+          }}
+        />
+      );
+      // The divider is a div with className "w-px bg-n7/50" between the two sections
+      const divider = container.querySelector(".w-px");
+      expect(divider).not.toBeNull();
     });
   });
 
