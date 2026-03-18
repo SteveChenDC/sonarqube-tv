@@ -1,10 +1,17 @@
-import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
-import { render, screen, cleanup, fireEvent, act } from "@testing-library/react";
+import { describe, it, expect, beforeAll, beforeEach, afterEach, vi } from "vitest";
+import { render, screen, cleanup, fireEvent, act, waitFor } from "@testing-library/react";
 import { useEffect } from "react";
 import HomeContent from "./HomeContent";
 import { SearchProvider, useSearch } from "./SearchContext";
 import type { Category } from "@/types";
 import { makeVideo } from "@/__tests__/factories";
+
+// Pre-load FilterBar so React.lazy resolves synchronously in all tests.
+// Without this, the first test triggering FilterBar would need multiple
+// event-loop ticks to resolve the lazy import.
+beforeAll(async () => {
+  await import("./FilterBar");
+});
 
 const categories: Category[] = [
   { slug: "tutorials", title: "Tutorials", description: "Tutorial videos" },
@@ -36,8 +43,18 @@ const videos = [
 ];
 
 
-function openFilters() {
-  fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+async function openFilters() {
+  // FilterBar is dynamically imported via next/dynamic (mocked as React.lazy).
+  // The lazy import resolves as a microtask; act(async) flushes it.
+  // The double rAF for enter animation also needs to fire synchronously.
+  vi.spyOn(window, "requestAnimationFrame").mockImplementation((cb: FrameRequestCallback) => { cb(0); return 0; });
+  await act(async () => {
+    fireEvent.click(screen.getAllByRole("button", { name: "Filters" })[0]);
+  });
+  // Second act flush ensures effects triggered after the lazy component resolves
+  // (like FilterBar's double-rAF enter animation) are fully processed.
+  await act(async () => {});
+  vi.mocked(window.requestAnimationFrame).mockRestore();
 }
 
 describe("HomeContent", () => {
@@ -60,7 +77,7 @@ describe("HomeContent", () => {
     expect(screen.getAllByText("Long Webinar").length).toBeGreaterThanOrEqual(1);
   });
 
-  it("filters videos by short duration (under 4 min)", () => {
+  it("filters videos by short duration (under 4 min)", async () => {
     const { container } = render(
       <HomeContent
         categories={categories}
@@ -68,7 +85,7 @@ describe("HomeContent", () => {
       />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -78,7 +95,7 @@ describe("HomeContent", () => {
     expect(cardTitles.has("Long Webinar")).toBe(false);
   });
 
-  it("filters videos by medium duration (4–20 min)", () => {
+  it("filters videos by medium duration (4–20 min)", async () => {
     const { container } = render(
       <HomeContent
         categories={categories}
@@ -86,7 +103,7 @@ describe("HomeContent", () => {
       />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("4–20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -96,7 +113,7 @@ describe("HomeContent", () => {
     expect(cardTitles.has("Long Webinar")).toBe(false);
   });
 
-  it("filters videos by long duration (over 20 min)", () => {
+  it("filters videos by long duration (over 20 min)", async () => {
     const { container } = render(
       <HomeContent
         categories={categories}
@@ -104,7 +121,7 @@ describe("HomeContent", () => {
       />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Over 20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -114,7 +131,7 @@ describe("HomeContent", () => {
     expect(cardTitles.has("Long Webinar")).toBe(true);
   });
 
-  it("sorts videos oldest first", () => {
+  it("sorts videos oldest first", async () => {
     const { container } = render(
       <HomeContent
         categories={categories}
@@ -123,7 +140,7 @@ describe("HomeContent", () => {
       />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Oldest"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -158,7 +175,7 @@ describe("HomeContent", () => {
     expect(tutorialTitles).toEqual(["Short Tutorial", "Medium Tutorial"]);
   });
 
-  it("shows empty state when all videos are filtered out", () => {
+  it("shows empty state when all videos are filtered out", async () => {
     const oldVideos = [
       makeVideo({
         id: "old",
@@ -176,14 +193,14 @@ describe("HomeContent", () => {
       />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Today"));
     fireEvent.click(screen.getByText("Apply"));
 
     expect(screen.getByText("No videos match your filters")).toBeTruthy();
   });
 
-  it("resets filters via empty-state Reset filters button", () => {
+  it("resets filters via empty-state Reset filters button", async () => {
     const oldVideos = [
       makeVideo({
         id: "old",
@@ -201,7 +218,7 @@ describe("HomeContent", () => {
       />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Today"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -216,7 +233,7 @@ describe("HomeContent", () => {
     expect(screen.queryByText("No videos match your filters")).toBeNull();
   });
 
-  it("hides category rows with no matching videos when filters are active", () => {
+  it("hides category rows with no matching videos when filters are active", async () => {
     render(
       <HomeContent
         categories={categories}
@@ -230,7 +247,7 @@ describe("HomeContent", () => {
     expect(screen.getByText("Webinars")).toBeTruthy();
 
     // Apply "Under 4 min" filter — only short-vid (tutorials) matches
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -240,7 +257,7 @@ describe("HomeContent", () => {
     expect(screen.queryByText("Long Webinar")).toBeNull();
   });
 
-  it("treats exactly 20 minutes as medium duration", () => {
+  it("treats exactly 20 minutes as medium duration", async () => {
     const boundaryVideos = [
       makeVideo({
         id: "exact-20",
@@ -264,7 +281,7 @@ describe("HomeContent", () => {
       />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("4–20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -272,7 +289,7 @@ describe("HomeContent", () => {
     expect(screen.queryByText("Twenty One Min")).toBeNull();
   });
 
-  it("resets filters and shows all videos again", () => {
+  it("resets filters and shows all videos again", async () => {
     render(
       <HomeContent
         categories={categories}
@@ -281,12 +298,12 @@ describe("HomeContent", () => {
       />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
     expect(screen.queryByText("Medium Tutorial")).toBeNull();
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Reset all"));
 
     expect(screen.getAllByText("Medium Tutorial").length).toBeGreaterThanOrEqual(1);
@@ -1395,8 +1412,9 @@ describe("HomeContent — MAX_CATEGORY_ROW truncation", () => {
       makeVideo({ id: `vid-${i}`, category: "tutorials", publishedAt: "2024-01-01T00:00:00Z" })
     );
     const { container } = render(<HomeContent categories={CAT} videos={manyVideos} />);
-    // Only the category row renders (no top row — all videos are older than 30 days)
-    const cards = container.querySelectorAll("h3");
+    // Scope to #categories to exclude h3s from the courses row
+    const categoriesDiv = container.querySelector("#categories")!;
+    const cards = categoriesDiv.querySelectorAll("h3");
     expect(cards.length).toBe(15);
   });
 
@@ -1406,9 +1424,12 @@ describe("HomeContent — MAX_CATEGORY_ROW truncation", () => {
     );
     render(<HomeContent categories={CAT} videos={manyVideos} />);
     // VideoRow receives videos.slice(0,15) but totalCount=16 → shows "View all"
-    const viewAll = screen.getByText("View all");
-    expect(viewAll).toBeTruthy();
-    expect(viewAll.closest("a")?.getAttribute("href")).toBe("/category/tutorials");
+    const viewAllLinks = screen.getAllByText("View all");
+    expect(viewAllLinks.length).toBeGreaterThanOrEqual(1);
+    const tutorialsLink = viewAllLinks.find(
+      (el) => el.closest("a")?.getAttribute("href") === "/category/tutorials"
+    );
+    expect(tutorialsLink).toBeTruthy();
   });
 });
 
@@ -1453,12 +1474,12 @@ describe("HomeContent — per-category row visibility with active filters", () =
     localStorage.clear();
   });
 
-  it("hides the Tutorials category row when 'Over 20 min' filter has no matching tutorials", () => {
+  it("hides the Tutorials category row when 'Over 20 min' filter has no matching tutorials", async () => {
     const { container } = render(
       <HomeContent categories={multiCatCategories} videos={multiCatVideos} />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Over 20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -1467,12 +1488,12 @@ describe("HomeContent — per-category row visibility with active filters", () =
     expect(h2Texts.some((t) => t?.includes("Tutorials"))).toBe(false);
   });
 
-  it("keeps the Webinars category row visible when it has matching long videos", () => {
+  it("keeps the Webinars category row visible when it has matching long videos", async () => {
     const { container } = render(
       <HomeContent categories={multiCatCategories} videos={multiCatVideos} />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Over 20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -1483,12 +1504,12 @@ describe("HomeContent — per-category row visibility with active filters", () =
     expect(screen.getByText("Long Webinar")).toBeTruthy();
   });
 
-  it("does NOT show the global empty state when at least one category still has matching videos", () => {
+  it("does NOT show the global empty state when at least one category still has matching videos", async () => {
     render(
       <HomeContent categories={multiCatCategories} videos={multiCatVideos} />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Over 20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -1496,12 +1517,12 @@ describe("HomeContent — per-category row visibility with active filters", () =
     expect(screen.queryByText("No videos match your filters")).toBeNull();
   });
 
-  it("hides the Webinars category row when 'Under 4 min' filter has no matching webinars", () => {
+  it("hides the Webinars category row when 'Under 4 min' filter has no matching webinars", async () => {
     const { container } = render(
       <HomeContent categories={multiCatCategories} videos={multiCatVideos} />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -1510,12 +1531,12 @@ describe("HomeContent — per-category row visibility with active filters", () =
     expect(h2Texts.some((t) => t?.includes("Webinars"))).toBe(false);
   });
 
-  it("keeps Tutorials row visible when it has videos matching the short duration filter", () => {
+  it("keeps Tutorials row visible when it has videos matching the short duration filter", async () => {
     render(
       <HomeContent categories={multiCatCategories} videos={multiCatVideos} />
     );
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -1697,7 +1718,7 @@ describe("HomeContent — duration filter lower boundary (exactly 4 min)", () =>
     localStorage.clear();
   });
 
-  it("'Under 4 min' excludes exactly 4:00 (4 >= 4 satisfies medium lower bound, not short)", () => {
+  it("'Under 4 min' excludes exactly 4:00 (4 >= 4 satisfies medium lower bound, not short)", async () => {
     const exact4 = makeVideo({
       id: "lb-exact-4",
       title: "Exactly Four Minutes",
@@ -1708,7 +1729,7 @@ describe("HomeContent — duration filter lower boundary (exactly 4 min)", () =>
 
     render(<HomeContent categories={CAT} videos={[exact4]} />);
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -1716,7 +1737,7 @@ describe("HomeContent — duration filter lower boundary (exactly 4 min)", () =>
     expect(screen.getByText("No videos match your filters")).toBeTruthy();
   });
 
-  it("'Under 4 min' includes exactly 3:59 (3.98 min < 4 → short)", () => {
+  it("'Under 4 min' includes exactly 3:59 (3.98 min < 4 → short)", async () => {
     const threeMin59 = makeVideo({
       id: "lb-3-59",
       title: "Three Fifty Nine",
@@ -1727,7 +1748,7 @@ describe("HomeContent — duration filter lower boundary (exactly 4 min)", () =>
 
     render(<HomeContent categories={CAT} videos={[threeMin59]} />);
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -1736,7 +1757,7 @@ describe("HomeContent — duration filter lower boundary (exactly 4 min)", () =>
     expect(h3s.some((t) => t === "Three Fifty Nine")).toBe(true);
   });
 
-  it("'4–20 min' includes exactly 4:00 (lower bound of medium: 4 >= 4)", () => {
+  it("'4–20 min' includes exactly 4:00 (lower bound of medium: 4 >= 4)", async () => {
     const exact4 = makeVideo({
       id: "lb-exact-4-medium",
       title: "Exactly Four Medium",
@@ -1747,7 +1768,7 @@ describe("HomeContent — duration filter lower boundary (exactly 4 min)", () =>
 
     render(<HomeContent categories={CAT} videos={[exact4]} />);
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("4–20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -1756,7 +1777,7 @@ describe("HomeContent — duration filter lower boundary (exactly 4 min)", () =>
     expect(h3s.some((t) => t === "Exactly Four Medium")).toBe(true);
   });
 
-  it("'4–20 min' excludes exactly 3:59 (3.98 min < 4 → short, not medium)", () => {
+  it("'4–20 min' excludes exactly 3:59 (3.98 min < 4 → short, not medium)", async () => {
     const threeMin59 = makeVideo({
       id: "lb-3-59-medium",
       title: "Three Fifty Nine Medium",
@@ -1767,7 +1788,7 @@ describe("HomeContent — duration filter lower boundary (exactly 4 min)", () =>
 
     render(<HomeContent categories={CAT} videos={[threeMin59]} />);
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("4–20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -1856,7 +1877,7 @@ describe("HomeContent — MAX_TOP_ROW=15 truncation", () => {
     await act(async () => {});
 
     // Switch to Oldest sort → top row uses ALL filteredVideos.slice(0, MAX_TOP_ROW) = 15
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Oldest"));
     fireEvent.click(screen.getByText("Apply"));
     await act(async () => {});
@@ -1881,7 +1902,7 @@ describe("HomeContent — MAX_TOP_ROW=15 truncation", () => {
     const { container } = render(<HomeContent categories={CAT} videos={oldVideos} />);
     await act(async () => {});
 
-    openFilters();
+    await openFilters();
     fireEvent.click(screen.getByText("Oldest"));
     fireEvent.click(screen.getByText("Apply"));
     await act(async () => {});

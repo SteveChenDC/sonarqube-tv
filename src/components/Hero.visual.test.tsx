@@ -35,7 +35,7 @@ describe("Hero visual snapshots", () => {
     const desktopLayout = container.querySelector(String.raw`.hidden.sm\:block`)!;
 
     // Both show the title
-    expect(mobileLayout.querySelector("h1")?.textContent).toBe(mockVideo.title);
+    expect(mobileLayout.querySelector("h2")?.textContent).toBe(mockVideo.title);
     expect(desktopLayout.querySelector("h1")?.textContent).toBe(mockVideo.title);
 
     // Both link to the watch page
