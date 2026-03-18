@@ -1,7 +1,6 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { render, screen, cleanup, fireEvent } from "@testing-library/react";
-import FilterBar from "./FilterBar";
-import { FilterTrigger } from "./FilterTrigger";
+import FilterBar, { FilterTrigger } from "./FilterBar";
 
 afterEach(cleanup);
 
@@ -232,5 +231,107 @@ describe("FilterTrigger", () => {
     render(<FilterTrigger activeCount={0} onClick={onClick} />);
     fireEvent.click(screen.getByText("Filters"));
     expect(onClick).toHaveBeenCalledOnce();
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Complete upload-date callback coverage
+//
+// The existing suite tests "This week" → "this-week".  The remaining four
+// options are verified here so every value in the UploadDateFilter union is
+// confirmed to round-trip through the onChange handler.
+// ─────────────────────────────────────────────────────────────────────────────
+describe("FilterBar — all upload-date callback values", () => {
+  it('"Today" calls onUploadDateChange with "today"', () => {
+    const { props } = renderFilterBar();
+    fireEvent.click(screen.getByText("Today"));
+    expect(props.onUploadDateChange).toHaveBeenCalledWith("today");
+  });
+
+  it('"This month" calls onUploadDateChange with "this-month"', () => {
+    const { props } = renderFilterBar();
+    fireEvent.click(screen.getByText("This month"));
+    expect(props.onUploadDateChange).toHaveBeenCalledWith("this-month");
+  });
+
+  it('"This year" calls onUploadDateChange with "this-year"', () => {
+    const { props } = renderFilterBar();
+    fireEvent.click(screen.getByText("This year"));
+    expect(props.onUploadDateChange).toHaveBeenCalledWith("this-year");
+  });
+
+  it('"Any time" calls onUploadDateChange with "anytime"', () => {
+    // Start with a non-default selection so clicking "Any time" has a meaningful effect
+    const { props } = renderFilterBar({ uploadDate: "this-week" });
+    fireEvent.click(screen.getByText("Any time"));
+    expect(props.onUploadDateChange).toHaveBeenCalledWith("anytime");
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Complete duration callback coverage
+//
+// The existing suite tests "Under 4 min" → "short".  The remaining options
+// ("medium", "long", "any") are confirmed here.
+// ─────────────────────────────────────────────────────────────────────────────
+describe("FilterBar — all duration callback values", () => {
+  it('"4–20 min" calls onDurationChange with "medium"', () => {
+    const { props } = renderFilterBar();
+    // \u2013 is the en dash used in the option label
+    fireEvent.click(screen.getByText("4\u201320 min"));
+    expect(props.onDurationChange).toHaveBeenCalledWith("medium");
+  });
+
+  it('"Over 20 min" calls onDurationChange with "long"', () => {
+    const { props } = renderFilterBar();
+    fireEvent.click(screen.getByText("Over 20 min"));
+    expect(props.onDurationChange).toHaveBeenCalledWith("long");
+  });
+
+  it('"Any duration" calls onDurationChange with "any"', () => {
+    // Start with a non-default selection so the click has a visible effect
+    const { props } = renderFilterBar({ duration: "short" });
+    fireEvent.click(screen.getByText("Any duration"));
+    expect(props.onDurationChange).toHaveBeenCalledWith("any");
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Escape key cleanup during exit animation
+//
+// When isOpen transitions from true → false the useEffect([isOpen]) cleanup
+// removes the keydown listener and the new effect run returns early (the
+// `if (!isOpen) return;` guard).  Therefore pressing Escape while the modal is
+// still mounted (exit animation in progress) must NOT trigger onOpenChange.
+// ─────────────────────────────────────────────────────────────────────────────
+describe("FilterBar — Escape key cleanup during exit animation", () => {
+  it("pressing Escape while exit animation plays (isOpen=false, modal still mounted) does NOT call onOpenChange", () => {
+    const { props, rerender } = renderFilterBar({ isOpen: true });
+
+    // Transition to closed state — modal remains mounted while CSS transition plays
+    rerender(<FilterBar {...props} isOpen={false} />);
+
+    // Confirm the dialog is still in the DOM (exit animation not yet complete)
+    expect(document.querySelector("[role='dialog']")).not.toBeNull();
+
+    // Clear the call log from any interactions during the open/close cycle
+    vi.clearAllMocks();
+
+    // Simulate pressing Escape during the exit animation
+    fireEvent.keyDown(document, { key: "Escape" });
+
+    // The keydown handler was cleaned up when isOpen became false —
+    // onOpenChange must NOT be called a second time
+    expect(props.onOpenChange).not.toHaveBeenCalled();
+  });
+
+  it("pressing a non-Escape key during exit animation also does NOT call onOpenChange", () => {
+    const { props, rerender } = renderFilterBar({ isOpen: true });
+    rerender(<FilterBar {...props} isOpen={false} />);
+    vi.clearAllMocks();
+
+    fireEvent.keyDown(document, { key: "Enter" });
+
+    expect(props.onOpenChange).not.toHaveBeenCalled();
   });
 });
