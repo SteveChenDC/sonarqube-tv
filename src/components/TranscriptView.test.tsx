@@ -11,6 +11,46 @@ const segments: TranscriptSegment[] = [
 ];
 
 // ---------------------------------------------------------------------------
+// Empty segments edge cases
+// ---------------------------------------------------------------------------
+
+describe("TranscriptView — empty segments", () => {
+  it("renders without error when segments array is empty and no chapters", () => {
+    // Should render the flat-list container div without crashing
+    const { container } = render(<TranscriptView segments={[]} />);
+    // The outer container div should exist (not null)
+    expect(container.firstChild).not.toBeNull();
+    // No segment buttons should exist
+    expect(container.querySelectorAll("button").length).toBe(0);
+  });
+
+  it("renders chapter headings with no segment rows when segments is empty but chapters provided", () => {
+    const chapters: TranscriptChapter[] = [
+      { title: "Introduction", startIndex: 0 },
+      { title: "Main Content", startIndex: 0 }, // both start at 0 since no segments
+    ];
+    const { getByText } = render(<TranscriptView segments={[]} chapters={chapters} />);
+    // Chapter headings should still render even with empty segments
+    expect(getByText("Introduction")).toBeTruthy();
+    expect(getByText("Main Content")).toBeTruthy();
+  });
+
+  it("chapter heading startTime falls back to 0 when segments is empty", () => {
+    // segments[start]?.offset ?? 0 — optional chain returns undefined → falls back to 0
+    const chapters: TranscriptChapter[] = [
+      { title: "Only Chapter", startIndex: 0 },
+    ];
+    render(<TranscriptView segments={[]} chapters={chapters} />);
+    // The chapter heading timestamp should show "0:00"
+    const timestamps = document.querySelectorAll(".font-mono");
+    const hasZeroTimestamp = Array.from(timestamps).some(
+      (el) => el.textContent === "0:00"
+    );
+    expect(hasZeroTimestamp).toBe(true);
+  });
+});
+
+// ---------------------------------------------------------------------------
 // formatTime — timestamps ≥ 60 seconds
 // ---------------------------------------------------------------------------
 
@@ -384,5 +424,100 @@ describe("TranscriptView — auto-scroll paused indicator", () => {
 
     // activeOffset is now -1 → indicator should disappear despite isPaused still being true
     expect(screen.queryByText("Auto-scroll paused")).toBeNull();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Listener and timer cleanup on unmount
+// ---------------------------------------------------------------------------
+
+describe("TranscriptView — listener and timer cleanup on unmount", () => {
+  beforeEach(() => {
+    Element.prototype.scrollTo = vi.fn();
+  });
+
+  it("calls globalThis.removeEventListener('yt-time', ...) when unmounted", () => {
+    const removeSpy = vi.spyOn(globalThis, "removeEventListener");
+
+    const { unmount } = render(<TranscriptView segments={segments} />);
+    unmount();
+
+    // The yt-time listener registered in useActiveSegment must be cleaned up
+    const ytTimeRemovals = removeSpy.mock.calls.filter(([event]) => event === "yt-time");
+    expect(ytTimeRemovals.length).toBeGreaterThan(0);
+
+    removeSpy.mockRestore();
+  });
+
+  it("dispatching yt-time after unmount does not throw or cause errors", () => {
+    const { unmount } = render(<TranscriptView segments={segments} />);
+
+    // Confirm the listener is active before unmount
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: 6000 }));
+    });
+
+    unmount();
+
+    // After unmount, dispatching yt-time must be a safe no-op
+    expect(() => {
+      act(() => {
+        fireEvent(globalThis, new CustomEvent("yt-time", { detail: 9000 }));
+      });
+    }).not.toThrow();
+  });
+
+  it("clears the auto-resume timeout when unmounting during an active pause", () => {
+    vi.useFakeTimers();
+
+    const clearTimeoutSpy = vi.spyOn(globalThis, "clearTimeout");
+
+    const { container, unmount } = render(<TranscriptView segments={segments} />);
+
+    // Activate a segment so activeOffset >= 0
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: 6000 }));
+    });
+    // Advance past the 500ms programmatic-scroll guard set by the auto-scroll effect
+    act(() => {
+      vi.advanceTimersByTime(600);
+    });
+
+    // Simulate user scroll — starts the 5s auto-resume timeout
+    const scrollContainer = container.querySelector('[class*="overflow-y-auto"]')!;
+    fireEvent.scroll(scrollContainer);
+
+    clearTimeoutSpy.mockClear(); // reset: only count clearTimeout calls during unmount
+
+    unmount();
+
+    // useAutoScroll cleanup calls clearTimeout(timeoutRef.current) to cancel the 5s timer
+    expect(clearTimeoutSpy).toHaveBeenCalled();
+
+    clearTimeoutSpy.mockRestore();
+    vi.useRealTimers();
+  });
+
+  it("scrollTo is NOT invoked after unmount when yt-time fires post-unmount", () => {
+    const scrollToMock = vi.fn();
+    Element.prototype.scrollTo = scrollToMock;
+
+    const { unmount } = render(<TranscriptView segments={segments} />);
+
+    // Activate a segment so the auto-scroll effect is primed
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: 6000 }));
+    });
+
+    unmount();
+
+    const callsBefore = scrollToMock.mock.calls.length;
+
+    // Dispatch yt-time after unmount — must NOT trigger new scrollTo calls
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: 9000 }));
+    });
+
+    expect(scrollToMock.mock.calls.length).toBe(callsBefore);
   });
 });
