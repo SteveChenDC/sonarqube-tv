@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
-import { render, screen, cleanup, fireEvent, act } from "@testing-library/react";
+import { render, screen, cleanup, fireEvent, act, waitFor } from "@testing-library/react";
 import { useEffect } from "react";
 import HomeContent from "./HomeContent";
 import { SearchProvider, useSearch } from "./SearchContext";
@@ -60,7 +60,7 @@ describe("HomeContent", () => {
     expect(screen.getAllByText("Long Webinar").length).toBeGreaterThanOrEqual(1);
   });
 
-  it("filters videos by short duration (under 4 min)", () => {
+  it("filters videos by short duration (under 4 min)", async () => {
     const { container } = render(
       <HomeContent
         categories={categories}
@@ -68,7 +68,9 @@ describe("HomeContent", () => {
       />
     );
 
+    await act(async () => {});
     openFilters();
+    await waitFor(() => expect(screen.getByText("Under 4 min")).toBeInTheDocument());
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -78,7 +80,7 @@ describe("HomeContent", () => {
     expect(cardTitles.has("Long Webinar")).toBe(false);
   });
 
-  it("filters videos by medium duration (4–20 min)", () => {
+  it("filters videos by medium duration (4–20 min)", async () => {
     const { container } = render(
       <HomeContent
         categories={categories}
@@ -86,7 +88,9 @@ describe("HomeContent", () => {
       />
     );
 
+    await act(async () => {});
     openFilters();
+    await waitFor(() => expect(screen.getByText("4–20 min")).toBeInTheDocument());
     fireEvent.click(screen.getByText("4–20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -96,7 +100,7 @@ describe("HomeContent", () => {
     expect(cardTitles.has("Long Webinar")).toBe(false);
   });
 
-  it("filters videos by long duration (over 20 min)", () => {
+  it("filters videos by long duration (over 20 min)", async () => {
     const { container } = render(
       <HomeContent
         categories={categories}
@@ -104,7 +108,9 @@ describe("HomeContent", () => {
       />
     );
 
+    await act(async () => {});
     openFilters();
+    await waitFor(() => expect(screen.getByText("Over 20 min")).toBeInTheDocument());
     fireEvent.click(screen.getByText("Over 20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -114,7 +120,7 @@ describe("HomeContent", () => {
     expect(cardTitles.has("Long Webinar")).toBe(true);
   });
 
-  it("sorts videos oldest first", () => {
+  it("sorts videos oldest first", async () => {
     const { container } = render(
       <HomeContent
         categories={categories}
@@ -123,7 +129,9 @@ describe("HomeContent", () => {
       />
     );
 
+    await act(async () => {});
     openFilters();
+    await waitFor(() => expect(screen.getByText("Oldest")).toBeInTheDocument());
     fireEvent.click(screen.getByText("Oldest"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -158,7 +166,7 @@ describe("HomeContent", () => {
     expect(tutorialTitles).toEqual(["Short Tutorial", "Medium Tutorial"]);
   });
 
-  it("shows empty state when all videos are filtered out", () => {
+  it("shows empty state when all videos are filtered out", async () => {
     const oldVideos = [
       makeVideo({
         id: "old",
@@ -176,14 +184,16 @@ describe("HomeContent", () => {
       />
     );
 
+    await act(async () => {});
     openFilters();
+    await waitFor(() => expect(screen.getByText("Today")).toBeInTheDocument());
     fireEvent.click(screen.getByText("Today"));
     fireEvent.click(screen.getByText("Apply"));
 
     expect(screen.getByText("No videos match your filters")).toBeTruthy();
   });
 
-  it("resets filters via empty-state Reset filters button", () => {
+  it("resets filters via empty-state Reset filters button", async () => {
     const oldVideos = [
       makeVideo({
         id: "old",
@@ -201,7 +211,9 @@ describe("HomeContent", () => {
       />
     );
 
+    await act(async () => {});
     openFilters();
+    await waitFor(() => expect(screen.getByText("Today")).toBeInTheDocument());
     fireEvent.click(screen.getByText("Today"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -216,7 +228,7 @@ describe("HomeContent", () => {
     expect(screen.queryByText("No videos match your filters")).toBeNull();
   });
 
-  it("hides category rows with no matching videos when filters are active", () => {
+  it("hides category rows with no matching videos when filters are active", async () => {
     render(
       <HomeContent
         categories={categories}
@@ -230,7 +242,9 @@ describe("HomeContent", () => {
     expect(screen.getByText("Webinars")).toBeTruthy();
 
     // Apply "Under 4 min" filter — only short-vid (tutorials) matches
+    await act(async () => {});
     openFilters();
+    await waitFor(() => expect(screen.getByText("Under 4 min")).toBeInTheDocument());
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -240,7 +254,7 @@ describe("HomeContent", () => {
     expect(screen.queryByText("Long Webinar")).toBeNull();
   });
 
-  it("treats exactly 20 minutes as medium duration", () => {
+  it("treats exactly 20 minutes as medium duration", async () => {
     const boundaryVideos = [
       makeVideo({
         id: "exact-20",
@@ -264,7 +278,9 @@ describe("HomeContent", () => {
       />
     );
 
+    await act(async () => {});
     openFilters();
+    await waitFor(() => expect(screen.getByText("4–20 min")).toBeInTheDocument());
     fireEvent.click(screen.getByText("4–20 min"));
     fireEvent.click(screen.getByText("Apply"));
 
@@ -272,7 +288,7 @@ describe("HomeContent", () => {
     expect(screen.queryByText("Twenty One Min")).toBeNull();
   });
 
-  it("resets filters and shows all videos again", () => {
+  it("resets filters and shows all videos again", async () => {
     render(
       <HomeContent
         categories={categories}
@@ -281,12 +297,15 @@ describe("HomeContent", () => {
       />
     );
 
+    await act(async () => {});
     openFilters();
+    await waitFor(() => expect(screen.getByText("Under 4 min")).toBeInTheDocument());
     fireEvent.click(screen.getByText("Under 4 min"));
     fireEvent.click(screen.getByText("Apply"));
     expect(screen.queryByText("Medium Tutorial")).toBeNull();
 
     openFilters();
+    await waitFor(() => expect(screen.getByText("Reset all")).toBeInTheDocument());
     fireEvent.click(screen.getByText("Reset all"));
 
     expect(screen.getAllByText("Medium Tutorial").length).toBeGreaterThanOrEqual(1);
@@ -1396,7 +1415,9 @@ describe("HomeContent — MAX_CATEGORY_ROW truncation", () => {
     );
     const { container } = render(<HomeContent categories={CAT} videos={manyVideos} />);
     // Only the category row renders (no top row — all videos are older than 30 days)
-    const cards = container.querySelectorAll("h3");
+    // Query h3 elements only within the #categories section to avoid course h3s
+    const categoriesDiv = container.querySelector("#categories");
+    const cards = categoriesDiv?.querySelectorAll("h3") ?? [];
     expect(cards.length).toBe(15);
   });
 
@@ -1406,9 +1427,11 @@ describe("HomeContent — MAX_CATEGORY_ROW truncation", () => {
     );
     render(<HomeContent categories={CAT} videos={manyVideos} />);
     // VideoRow receives videos.slice(0,15) but totalCount=16 → shows "View all"
-    const viewAll = screen.getByText("View all");
+    // Find the "View all" link pointing to /category/tutorials specifically
+    const viewAllItems = screen.getAllByText("View all");
+    const viewAll = viewAllItems.find(el => el.closest("a")?.getAttribute("href") === "/category/tutorials");
     expect(viewAll).toBeTruthy();
-    expect(viewAll.closest("a")?.getAttribute("href")).toBe("/category/tutorials");
+    expect(viewAll!.closest("a")?.getAttribute("href")).toBe("/category/tutorials");
   });
 });
 

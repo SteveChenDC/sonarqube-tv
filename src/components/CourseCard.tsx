@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Course } from "@/types";
@@ -27,8 +27,14 @@ const difficultyLabels = {
 export default function CourseCard({
   course,
 }: Readonly<{ course: Course }>) {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  // useSyncExternalStore reads synchronously on the first client render —
+  // no extra re-render needed (unlike useState+useEffect which renders twice).
+  // getServerSnapshot returns false so SSR HTML shows no progress (no hydration mismatch).
+  const mounted = useSyncExternalStore(
+    () => () => {}, // subscribe: no-op — progress changes handled same-tab via setProgress
+    () => true,     // getSnapshot: always true on client
+    () => false,    // getServerSnapshot: false during SSR / static export
+  );
 
   const totalVideos = getCourseVideos(course).length;
   const duration = getCourseTotalDuration(course);

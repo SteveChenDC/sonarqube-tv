@@ -1,23 +1,33 @@
 ---
 name: project_qa_baseline
-description: Build and test baseline as of 2026-03-16 — what passes, known warnings
+description: Build and test baseline as of 2026-03-17 — what passes, known warnings
 type: project
 ---
 
-As of 2026-03-16 (forty-fourth QA run), `npm run build` and `npm test` both pass clean. All 385 tests pass (41 test files).
+As of 2026-03-18 (fiftieth QA run), `npm run build` and `npm test` both pass clean. All 767 tests pass (50 test files).
 
-**Build**: Next.js 16.1.6 (Turbopack), 250 static pages generated (SSG), no errors.
+**Build**: Next.js 16.1.6 (Turbopack), 252 static pages generated (SSG), no errors. (Stable since run 45.)
 - Known non-fatal warning: "Next.js inferred your workspace root" due to multiple lockfiles at `/Users/stevec/package-lock.json` and project root. Safe to ignore; does not affect build output.
 
-**Tests**: Vitest 4.1.0 — 41 test files, 385 tests. All 385 PASSING.
+**Tests**: Vitest 4.1.0 — 50 test files, 767 tests. All 767 PASSING.
+
+**Run 47 (2026-03-17)**: 17 failures in `src/components/ArticleTabs.test.tsx`.
+- Root cause: `ArticleTabs` component was redesigned — collapse/expand feature removed, default active tab changed from "transcript" to "summary" when article is present, tab buttons now have `role="tab"` (not default `role="button"`), sliding indicator uses CSS transform classes (`translate-x-0`/`translate-x-full`) instead of `style.left`/`style.width`, and single-tab layout uses an h3 header (not buttons).
+- Tests affected: default tab assumption, collapse/expand tests (8 tests), sliding indicator position, animate-tab-in class, aria-hidden panel state (3 tests), border-b-2 single-tab button, `getByRole("button")` on tab elements, `getByRole("heading", { level: 3 })` without name (multiple h3s in single-tab mode).
+- Fix: Updated all 17 failing tests: flipped default-tab assertions, removed collapse/expand and aria-hidden tests (feature gone), updated indicator tests to use `className.toContain("translate-x-...")`, fixed animation test flow to switch to transcript then back, updated `getByRole("button")` to `getByRole("tab")`, used `getAllByRole` + `.find(h => h.querySelector("code"))` for the multiple-h3 case. Committed as 5367415.
+- Pattern: When ArticleTabs collapses or expands its API (feature removal), tests must be audited for: (1) collapse/expand buttons no longer exist, (2) default tab is "summary" when article is provided, (3) single-tab uses h3 header not button, (4) tab buttons have role="tab" not role="button", (5) sliding indicator uses transform classes not inline styles, (6) single-tab adds an extra h3 "AI Summary" so `getByRole("heading", { level: 3 })` without a name will throw if markdown also has h3s.
+
+**Run 46 (2026-03-17)**: 1 failure in `src/data/videos.test.ts`.
+- Test: "all thumbnail URLs are valid YouTube thumbnail URLs for the video's youtubeId"
+- Root cause: Several videos in `videos.ts` now use locally hosted thumbnails at `/thumbnails/*.jpg` instead of YouTube CDN URLs. The test only allowed YouTube CDN base URLs.
+- Fix: Updated the test to allow both YouTube CDN URLs and local `/thumbnails/*.jpg` paths. Committed as 7a166bb.
+- Pattern: When new videos are added with local `/thumbnails/` paths, `src/data/videos.test.ts` thumbnail URL test will fail. The fix is to branch on `startsWith("/thumbnails/")` and validate with a `/^\/thumbnails\/.+\.jpg$/` regex instead.
 
 **Run 44 (2026-03-16)**: 3 failures in `Hero.visual.test.tsx`.
 - Error: Snapshot mismatches — expected `src="https://img.youtube.com/vi/snap123/maxresdefault.jpg"`, received `src="/snap-thumb.jpg"`. Third test ("both layouts render the same video data") also failed asserting the old YouTube maxresdefault URL.
 - Root cause: `Hero.tsx` was updated to use `video.thumbnail` directly (`const heroSrc = video.thumbnail;`) instead of constructing the YouTube maxresdefault URL from `youtubeId`. The test still referenced the old pattern.
 - Fix: Updated assertion comment and URL in test 3 to use `mockVideo.thumbnail` directly. Ran `npx vitest run -u` to refresh 2 stale snapshots. Committed as 187daf8.
-- Pattern: If Hero.visual.test.tsx fails with a src URL mismatch (YouTube maxresdefault vs direct thumbnail), check whether Hero.tsx changed from deriving the URL from `youtubeId` to using `video.thumbnail` directly. Fix by updating the assertion to use `mockVideo.thumbnail` and refresh snapshots with `-u`.
-
-**Run 43 (2026-03-16)**: Clean pass. 41 files, 385 tests. Count dropped from 42/398 due to unstaged work-in-progress deletions (`src/app/watch/[id]/page.test.tsx`, `src/components/__tests__/ArticleTabs.test.tsx` removed) and two new untracked test files added (`src/app/page.test.tsx`, `src/data/articles.test.ts`). No action needed — all tests pass.
+- Pattern: If Hero.visual.test.tsx fails with a src URL mismatch (YouTube maxresdefault vs direct thumbnail), check whether Hero.tsx changed to use `video.thumbnail` directly — fix by updating the assertion to use `mockVideo.thumbnail` and refresh snapshots with `-u`.
 
 **Run 41 (2026-03-16)**: `src/app/layout.test.tsx` — "includes Organization JSON-LD script in the document" test was failing.
 - Error: `SyntaxError: Unexpected non-whitespace character after JSON at position 328` at `JSON.parse(jsonLdContent)`.
@@ -41,44 +51,12 @@ As of 2026-03-16 (forty-fourth QA run), `npm run build` and `npm test` both pass
 - Pattern: Confirmed again — any CSS class addition to Hero card wrappers stales Hero.visual.test.tsx snapshots.
 
 **Fixed in run 26**: `src/components/__snapshots__/Hero.visual.test.tsx.snap` — 1 stale snapshot.
-- Test: "desktop hero layout matches snapshot"
-- Root cause: Hero.tsx gradient overlay CSS changed from `from-background` / `from-background/70` to `from-black dark:from-background` / `from-black/70 dark:from-background/70` (added light-mode `black` fallbacks with `dark:` variants for compatibility).
-- Fix: `npx vitest run -u` to refresh snapshot. Committed as bb71d72.
+- Root cause: Hero.tsx gradient overlay CSS changed from `from-background` / `from-background/70` to `from-black dark:from-background` / `from-black/70 dark:from-background/70`.
+- Fix: `npx vitest run -u`. Committed as bb71d72.
 - Pattern: Any CSS gradient polish to Hero.tsx overlays will stale Hero.visual.test.tsx snapshot. Fix with `-u`.
 
-**Fixed in run 19**: `src/components/__snapshots__/Hero.visual.test.tsx.snap` — 1 stale snapshot.
-- Test: "desktop hero layout matches snapshot"
-- Root cause: Commit 62d16c2 ("Polish hero gradient: smooth cinematic overlay, reduce flat bottom band") changed gradient CSS classes on two overlay divs in Hero.tsx. The vertical gradient lost `from-[18%]` and changed `via-background/60 via-[40%]` → `via-background/55 via-[35%]`. The horizontal gradient changed `from-background/80 via-sonar-purple/20` → `from-background/70 via-sonar-purple/15 via-[45%]`.
-- Fix: `npx vitest run -u` to refresh snapshot. Committed as 9e36649.
-- Pattern: Any CSS gradient polish to Hero.tsx overlays will stale Hero.visual.test.tsx snapshot. Fix with `-u`.
-
-**Count change run 17→18**: 218 → 217. Caused by commit 3982cec ("Polish category header: promote description to header with Sonar Red accent bar") removing the `description` prop from `CategoryContent.tsx` and trimming the matching test assertions in `CategoryContent.test.tsx`. Net -1 test. Intentional, not a regression.
-
-**Fixed in run 13**: `src/components/HomeContent.test.tsx` — 2 failing tests.
-- Tests: "shows empty state when all videos are filtered out" and "resets filters via empty-state Reset filters button"
-- Root cause: Commit 2d6cb91 ("Polish empty state: icon, hierarchy, and pill CTA") removed the trailing period from the empty-state heading — changed "No videos match your filters." to "No videos match your filters". Three assertions in the test file still matched the old string with the period.
-- Fix: Updated all three test assertions to use "No videos match your filters" (no period). Committed as 3955fe6.
-- Pattern: When the empty-state copy in HomeContent changes (heading or body text), HomeContent.test.tsx assertions will break. Check for exact-text queries with `getByText` and `queryByText`.
-
-**Fixed in run 9**: `src/components/Footer.test.tsx` — 1 failing test.
-- Test: "renders YouTube, GitHub, and SonarSource navigation links"
-- Root cause: Commit d5b2a2e ("Polish footer: add brand icons, copyright, and improved layout") updated Footer social link `aria-label` attributes from short names (`"YouTube"`, `"GitHub"`) to descriptive names (`"SonarSource on YouTube"`, `"SonarSource on GitHub"`). The test still queried by the old short names.
-- Fix: Updated test queries to use the new full accessible names.
-- Pattern: When Footer social link aria-labels change, Footer.test.tsx queries must be updated to match. Always check `aria-label` on Footer links — the component uses them for all three social/nav links.
-
-**Resolved in run 7**: `src/components/VideoRow.visual.test.tsx` — 2 stale snapshots.
-- Tests: "mobile grid layout matches snapshot" and "desktop scroll layout matches snapshot"
-- Root cause: Commit 60453f4 added card hover lift (`transition-transform duration-300 hover:-translate-y-1`) and ring glow (`ring-1 ring-transparent transition-all group-hover:ring-sonar-red/30`) micro-interactions to VideoCard. Changed `transition-shadow` to `transition-all`. Snapshots predated these CSS class changes.
-- Fix: `npx vitest run -u` (note: `--update-snapshots` long form does NOT work in Vitest 4.1.0 — use `-u` short flag).
-- Pattern: Any time CSS classes on the VideoCard `<a>` wrapper or thumbnail container change, VideoRow.visual.test.tsx snapshots go stale and need `-u` update.
-
-**Resolved regression (commit b742d6c)**: ArticleTabs.test.tsx had 3 failing collapse/expand tests.
-- Root cause: Tests used `not.toBeInTheDocument()` after collapse, but the component hides content via CSS grid animation (`gridTemplateRows: "0fr"`) — content stays in DOM.
-- Fix applied to tests (not component): Assert `aria-hidden="true"` on the panel wrapper div instead of checking DOM presence.
-- Pattern: When a component uses CSS-only show/hide (grid rows, opacity, height), test the semantic attribute (`aria-hidden`) rather than DOM presence.
-
-**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (runs 19–24, stable) → 219 (run 25, stable) → 219 (runs 26–36, stable) → 245 (run 37, 27 test files) → 318 (run 38, 36 test files) → 372 (run 39, 39 test files) → 398 (run 41, 42 test files) → 385 (run 43–44, 41 test files)
-**Page count history**: 242 → 243 → 250 (run 38–44)
+**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (runs 19–24, stable) → 219 (run 25, stable) → 219 (runs 26–36, stable) → 245 (run 37, 27 test files) → 318 (run 38, 36 test files) → 372 (run 39, 39 test files) → 398 (run 41, 42 test files) → 385 (run 43–44, 41 test files) → 652 (run 45, 46 test files) → 663 (run 46, 46 test files) → 673 (run 47, 46 test files) → 767 (run 49, 50 test files)
+**Page count history**: 242 → 243 → 250 (run 38–44) → 252 (run 45–47)
 
 **Why:** Ongoing QA baseline tracking.
-**How to apply:** If Hero.visual.test.tsx fails with a src URL mismatch (YouTube maxresdefault URL vs `/snap-thumb.jpg`), check whether Hero.tsx changed to use `video.thumbnail` directly — fix by updating test assertion to `mockVideo.thumbnail` and refresh snapshots with `npx vitest run -u`. If layout.test.tsx JSON-LD test fails with a JSON parse error, check if additional JSON-LD scripts were added to layout.tsx — fix by parsing each script individually and using `.find()` by `@type`. If Hero.visual.test.tsx snapshot fails due to CSS changes, update with `npx vitest run -u`. If VideoRow.visual snapshots fail, first check if a new persistent DOM element was added to VideoCard (shimmer, overlay, badge) — stale snapshot is likely the culprit, fix with `npx vitest run -u`. If Footer link tests fail, check whether `aria-label` attributes on social/nav links were changed. If ArticleTabs collapse tests fail again, check whether the component changed from CSS-based to conditional rendering and align test strategy accordingly. If HomeContent empty-state tests fail, check whether the heading copy in HomeContent.tsx changed (exact text, punctuation included). If CategoryContent test count drops/changes, check if props were removed from the component — the test file is kept in sync with the component interface. If a new test file fails to parse (0 tests, transform error), check for `}[]` postfix array syntax in TypeScript type annotations inside vi.fn() callbacks — replace with `Array<{...}>` form. If CourseCard tests fail on shortTitle/TC text, note that CourseCard does NOT render shortTitle — fix the test to use the full title or image alt text.
+**How to apply:** If `ArticleTabs.test.tsx` fails after component changes, check: (1) default tab is "summary" when article provided, (2) no collapse/expand buttons, (3) single-tab uses h3 not button, (4) tab buttons have role="tab", (5) indicator uses CSS transform classes, (6) `getByRole("heading", { level: 3 })` without name fails if markdown also has h3s — use `getAllByRole` + `.find(h => h.querySelector(...))`. If `src/data/videos.test.ts` thumbnail URL test fails, it likely means new videos use local `/thumbnails/*.jpg` paths — fix by branching on `startsWith("/thumbnails/")` and validating with `/^\/thumbnails\/.+\.jpg$/`. If Hero.visual.test.tsx fails with a src URL mismatch (YouTube maxresdefault URL vs `/snap-thumb.jpg`), check whether Hero.tsx changed to use `video.thumbnail` directly — fix by updating test assertion to `mockVideo.thumbnail` and refresh snapshots with `npx vitest run -u`. If layout.test.tsx JSON-LD test fails with a JSON parse error, check if additional JSON-LD scripts were added to layout.tsx — fix by parsing each script individually and using `.find()` by `@type`. If Hero.visual.test.tsx snapshot fails due to CSS changes, update with `npx vitest run -u`. If VideoRow.visual snapshots fail, first check if a new persistent DOM element was added to VideoCard (shimmer, overlay, badge) — stale snapshot is likely the culprit, fix with `npx vitest run -u`. If Footer link tests fail, check whether `aria-label` attributes on social/nav links were changed. If HomeContent empty-state tests fail, check whether the heading copy in HomeContent.tsx changed (exact text, punctuation included). If a new test file fails to parse (0 tests, transform error), check for `}[]` postfix array syntax in TypeScript type annotations inside vi.fn() callbacks — replace with `Array<{...}>` form. If CourseCard tests fail on shortTitle/TC text, note that CourseCard does NOT render shortTitle — fix the test to use the full title or image alt text.

@@ -6,6 +6,7 @@ import {
   getVideosByCategory,
   getCategoryBySlug,
   getFeaturedVideo,
+  getRelatedVideosFromOtherCategories,
 } from "@/data/videos";
 
 describe("Video data integrity", () => {
@@ -173,5 +174,124 @@ describe("Video data helper functions", () => {
     expect(featured).toBeDefined();
     expect(featured.id).toBeTruthy();
     expect(featured.youtubeId).toBeTruthy();
+  });
+});
+
+describe("getRelatedVideosFromOtherCategories", () => {
+  // Pick a real video to use as the base for most tests
+  const baseVideo = videos[0];
+  const baseCategory = baseVideo.category;
+
+  it("returns at most count videos (default count=4)", () => {
+    const result = getRelatedVideosFromOtherCategories(baseVideo.id, baseCategory);
+    expect(result.length).toBeLessThanOrEqual(4);
+  });
+
+  it("returns exactly count videos when the pool is large enough", () => {
+    // With 11 categories and many videos, there are always ≥ 4 other categories
+    const result = getRelatedVideosFromOtherCategories(baseVideo.id, baseCategory, 4);
+    expect(result).toHaveLength(4);
+  });
+
+  it("never includes a video from the excluded category", () => {
+    const result = getRelatedVideosFromOtherCategories(baseVideo.id, baseCategory);
+    for (const v of result) {
+      expect(v.category).not.toBe(baseCategory);
+    }
+  });
+
+  it("never includes the video itself in the results", () => {
+    const result = getRelatedVideosFromOtherCategories(baseVideo.id, baseCategory);
+    for (const v of result) {
+      expect(v.id).not.toBe(baseVideo.id);
+    }
+  });
+
+  it("returns at most one video per category (variety guarantee)", () => {
+    // Request up to 6 to exercise the deduplication path across multiple categories
+    const result = getRelatedVideosFromOtherCategories(baseVideo.id, baseCategory, 6);
+    const returnedCategories = result.map((v) => v.category);
+    // All categories in the result must be unique
+    expect(new Set(returnedCategories).size).toBe(returnedCategories.length);
+  });
+
+  it("respects the count override (count=2)", () => {
+    const result = getRelatedVideosFromOtherCategories(baseVideo.id, baseCategory, 2);
+    expect(result.length).toBeLessThanOrEqual(2);
+  });
+
+  it("returns an empty array when count=0", () => {
+    const result = getRelatedVideosFromOtherCategories(baseVideo.id, baseCategory, 0);
+    expect(result).toHaveLength(0);
+  });
+
+  it("returns valid Video objects with all required fields populated", () => {
+    const result = getRelatedVideosFromOtherCategories(baseVideo.id, baseCategory, 4);
+    for (const v of result) {
+      expect(v.id).toBeTruthy();
+      expect(v.title).toBeTruthy();
+      expect(v.youtubeId).toBeTruthy();
+      expect(v.category).toBeTruthy();
+      expect(v.duration).toBeTruthy();
+      expect(v.publishedAt).toBeTruthy();
+    }
+  });
+
+  it("falls back gracefully (offset=0) when videoId is not found", () => {
+    // Unknown videoId → videoIndex = -1 → offset = 0, same as videos[0]
+    // Pool differs only by ID exclusion: unknown excludes nothing extra by ID
+    // Key assertion: does not throw and returns valid results
+    const result = getRelatedVideosFromOtherCategories("nonexistent-video-id", baseCategory);
+    expect(result.length).toBeLessThanOrEqual(4);
+    for (const v of result) {
+      expect(v.category).not.toBe(baseCategory);
+      expect(v.id).toBeTruthy();
+    }
+  });
+
+  it("uses the video's index as rotation offset — two videos in the same category produce different selections", () => {
+    // Find at least two videos in the same category so the exclusion category is the same
+    const catSlug = baseCategory;
+    const sameCatVideos = videos.filter((v) => v.category === catSlug);
+    // Need at least 2 videos in the category to compare offsets
+    if (sameCatVideos.length < 2) return;
+
+    const v0 = sameCatVideos[0];
+    const v1 = sameCatVideos[1];
+    const idx0 = videos.findIndex((v) => v.id === v0.id); // offset for v0
+    const idx1 = videos.findIndex((v) => v.id === v1.id); // offset for v1
+
+    // Offsets must differ for this test to be meaningful
+    if (idx0 === idx1) return;
+
+    const resultA = getRelatedVideosFromOtherCategories(v0.id, catSlug, 4);
+    const resultB = getRelatedVideosFromOtherCategories(v1.id, catSlug, 4);
+
+    // Both results must be valid (no excluded category)
+    for (const v of resultA) expect(v.category).not.toBe(catSlug);
+    for (const v of resultB) expect(v.category).not.toBe(catSlug);
+
+    // Rotation should produce at least one different video between the two selections
+    const idsA = new Set(resultA.map((v) => v.id));
+    const idsB = new Set(resultB.map((v) => v.id));
+    const allSame = resultA.every((v) => idsB.has(v.id)) && resultA.length === resultB.length;
+    expect(allSame).toBe(false);
+  });
+
+  it("treats an unknown excludeCategory as excluding nothing — all non-self videos are candidates", () => {
+    const result = getRelatedVideosFromOtherCategories(baseVideo.id, "nonexistent-category", 4);
+    // The base video itself should still be excluded
+    for (const v of result) {
+      expect(v.id).not.toBe(baseVideo.id);
+    }
+    // Pool includes all categories, so result can span any category
+    expect(result.length).toBeLessThanOrEqual(4);
+    expect(result.length).toBeGreaterThan(0);
+  });
+
+  it("returned videos are all distinct (no duplicates)", () => {
+    const result = getRelatedVideosFromOtherCategories(baseVideo.id, baseCategory, 6);
+    const ids = result.map((v) => v.id);
+    expect(new Set(ids).size).toBe(ids.length);
   });
 });

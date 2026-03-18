@@ -307,6 +307,26 @@ describe("ArticleTabs — markdown rendering", () => {
     expect(screen.getByText("Second paragraph.")).toBeInTheDocument();
   });
 
+  it("renders multiple consecutive blank lines without extra content", () => {
+    // Multiple blank lines should be treated the same as a single separator
+    const article = makeArticle({
+      markdown: "Para one.\n\n\n\nPara two.",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+    expect(screen.getByText("Para one.")).toBeInTheDocument();
+    expect(screen.getByText("Para two.")).toBeInTheDocument();
+    // No phantom elements — just the two expected paragraphs
+    const paragraphs = document.querySelectorAll("p");
+    expect(paragraphs).toHaveLength(2);
+  });
+
+  it("renders a paragraph that is entirely bold", () => {
+    const article = makeArticle({ markdown: "**Entire line is bold**" });
+    render(<ArticleTabs article={article} transcript={null} />);
+    const strong = document.querySelector("strong");
+    expect(strong?.textContent).toBe("Entire line is bold");
+  });
+
   it("renders h2 headings", () => {
     const article = makeArticle({ markdown: "## Section Title\n\nBody text." });
     render(<ArticleTabs article={article} transcript={null} />);
@@ -398,5 +418,131 @@ describe("ArticleTabs — markdown rendering", () => {
     const paragraphs = container.querySelectorAll("p");
     expect(paragraphs[0].className).toContain("text-[16px]"); // lead style
     expect(paragraphs[1].className).toContain("text-[15px]"); // regular style
+  });
+
+  it("renders multiple inline formats in a single paragraph", () => {
+    // parseInline must match multiple regex groups in one pass
+    const article = makeArticle({
+      markdown: "Use **bold** and *italic* and `code` together.",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+    expect(document.querySelector("strong")?.textContent).toBe("bold");
+    expect(document.querySelector("em")?.textContent).toBe("italic");
+    expect(document.querySelector("code")?.textContent).toBe("code");
+  });
+
+  it("renders inline bold inside an h2 heading", () => {
+    const article = makeArticle({
+      markdown: "## Heading with **bold** text",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+    const h2 = screen.getByRole("heading", { level: 2 });
+    expect(h2).toBeInTheDocument();
+    expect(h2.querySelector("strong")?.textContent).toBe("bold");
+  });
+
+  it("renders inline code inside an h3 heading", () => {
+    const article = makeArticle({
+      markdown: "### Run `npm test` daily",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+    const h3 = screen.getByRole("heading", { level: 3 });
+    expect(h3).toBeInTheDocument();
+    expect(h3.querySelector("code")?.textContent).toBe("npm test");
+  });
+
+  it("renders inline code inside a list item", () => {
+    const article = makeArticle({
+      markdown: "- Run `npm test` to check",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+    const li = document.querySelector("li");
+    expect(li?.querySelector("code")?.textContent).toBe("npm test");
+  });
+
+  it("renders inline bold and italic inside the same list item", () => {
+    const article = makeArticle({
+      markdown: "- **Bold** and *italic* item",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+    const li = document.querySelector("li");
+    expect(li?.querySelector("strong")?.textContent).toBe("Bold");
+    expect(li?.querySelector("em")?.textContent).toBe("italic");
+  });
+
+  it("renders plain text that has no inline formatting unchanged", () => {
+    // parseInline returns [text] when no regex matches — the fallback branch
+    const article = makeArticle({
+      markdown: "Plain text with no formatting markers.",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+    expect(
+      screen.getByText("Plain text with no formatting markers.")
+    ).toBeInTheDocument();
+    expect(document.querySelector("strong")).toBeNull();
+    expect(document.querySelector("em")).toBeNull();
+    expect(document.querySelector("code")).toBeNull();
+  });
+
+  it("renders two separate list groups when a blank line separates them", () => {
+    // A blank line interrupts the consecutive-li collection loop, so each group
+    // becomes its own <ul> element.
+    const article = makeArticle({
+      markdown: "- First A\n- First B\n\n- Second A\n- Second B",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+    // Both groups of items should be in the document
+    expect(screen.getByText("First A")).toBeInTheDocument();
+    expect(screen.getByText("First B")).toBeInTheDocument();
+    expect(screen.getByText("Second A")).toBeInTheDocument();
+    expect(screen.getByText("Second B")).toBeInTheDocument();
+    // There should be exactly two <ul> elements
+    const lists = document.querySelectorAll("ul");
+    expect(lists).toHaveLength(2);
+    // Each list should contain exactly 2 items
+    expect(lists[0].querySelectorAll("li")).toHaveLength(2);
+    expect(lists[1].querySelectorAll("li")).toHaveLength(2);
+  });
+
+  it("skips an opening h1 even when preceded by leading blank lines", () => {
+    // firstContentIndex skips blank tokens, so blank lines before the h1
+    // should not prevent it from being detected as the opening heading.
+    const article = makeArticle({
+      markdown: "\n\n# Video Title\n\nBody paragraph.",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+    // The opening h1 should be skipped
+    expect(screen.queryByRole("heading", { level: 1 })).not.toBeInTheDocument();
+    // The paragraph below should still render
+    expect(screen.getByText("Body paragraph.")).toBeInTheDocument();
+  });
+
+  it("renders no content when markdown is an empty string", () => {
+    const article = makeArticle({ markdown: "" });
+    const { container } = render(
+      <ArticleTabs article={article} transcript={null} />
+    );
+    // The article tab panel content area renders but has no <p>, <h2>, <ul> etc.
+    expect(container.querySelectorAll("p")).toHaveLength(0);
+    expect(container.querySelectorAll("h1,h2,h3")).toHaveLength(0);
+    expect(container.querySelectorAll("ul")).toHaveLength(0);
+  });
+
+  it("renders no content when markdown consists entirely of blank lines", () => {
+    const article = makeArticle({ markdown: "\n\n\n" });
+    const { container } = render(
+      <ArticleTabs article={article} transcript={null} />
+    );
+    expect(container.querySelectorAll("p")).toHaveLength(0);
+    expect(container.querySelectorAll("ul")).toHaveLength(0);
+  });
+
+  it("renders bold immediately adjacent to italic without a space (**bold***italic*)", () => {
+    // parseInline uses a global regex with alternation — matches each format
+    // independently even when adjacent.
+    const article = makeArticle({ markdown: "**bold***italic*" });
+    render(<ArticleTabs article={article} transcript={null} />);
+    expect(document.querySelector("strong")?.textContent).toBe("bold");
+    expect(document.querySelector("em")?.textContent).toBe("italic");
   });
 });

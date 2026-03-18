@@ -134,11 +134,98 @@ describe("RootLayout", () => {
     const scripts = document.querySelectorAll(
       'script[type="application/ld+json"]'
     );
-    const parsed = Array.from(scripts)
-      .map((s) => JSON.parse(s.textContent ?? "{}"))
-      .find((obj) => obj["@type"] === "Organization");
-    expect(parsed).toBeDefined();
-    expect(parsed?.name).toBe("SonarSource");
-    expect(parsed?.url).toBe("https://www.sonarsource.com");
+    // There may be multiple JSON-LD scripts — find the Organization one
+    const parsedScripts = Array.from(scripts).map((s) =>
+      JSON.parse(s.textContent ?? "{}")
+    );
+    const org = parsedScripts.find((p) => p["@type"] === "Organization");
+    expect(org).toBeDefined();
+    expect(org.name).toBe("SonarSource");
+    expect(org.url).toBe("https://www.sonarsource.com");
+  });
+
+  it("JSON-LD Organization includes a logo field", () => {
+    render(
+      <RootLayout>
+        <div>content</div>
+      </RootLayout>
+    );
+    const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+    const parsedScripts = Array.from(scripts).map((s) =>
+      JSON.parse(s.textContent ?? "{}")
+    );
+    const org = parsedScripts.find((p) => p["@type"] === "Organization");
+    expect(org).toBeDefined();
+    expect(org.logo).toBeTruthy();
+    expect(org.logo).toContain("sonarsource.com");
+  });
+
+  it("JSON-LD Organization sameAs includes YouTube, Twitter, LinkedIn, and GitHub", () => {
+    render(
+      <RootLayout>
+        <div>content</div>
+      </RootLayout>
+    );
+    const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+    const parsedScripts = Array.from(scripts).map((s) =>
+      JSON.parse(s.textContent ?? "{}")
+    );
+    const org = parsedScripts.find((p) => p["@type"] === "Organization");
+    expect(org).toBeDefined();
+    const sameAs: string[] = org.sameAs;
+    expect(Array.isArray(sameAs)).toBe(true);
+    expect(sameAs.some((url) => url.includes("youtube.com"))).toBe(true);
+    expect(sameAs.some((url) => url.includes("twitter.com"))).toBe(true);
+    expect(sameAs.some((url) => url.includes("linkedin.com"))).toBe(true);
+    expect(sameAs.some((url) => url.includes("github.com"))).toBe(true);
+  });
+
+  it("includes WebSite JSON-LD script with SearchAction", () => {
+    render(
+      <RootLayout>
+        <div>content</div>
+      </RootLayout>
+    );
+    const scripts = document.querySelectorAll(
+      'script[type="application/ld+json"]'
+    );
+    const parsedScripts = Array.from(scripts).map((s) =>
+      JSON.parse(s.textContent ?? "{}")
+    );
+    const website = parsedScripts.find((p) => p["@type"] === "WebSite");
+    expect(website).toBeDefined();
+    expect(website.name).toBe("Sonar.tv");
+    expect(website.url).toContain("sonarqube-tv");
+  });
+
+  it("WebSite JSON-LD has potentialAction SearchAction with urlTemplate", () => {
+    render(
+      <RootLayout>
+        <div>content</div>
+      </RootLayout>
+    );
+    const scripts = document.querySelectorAll(
+      'script[type="application/ld+json"]'
+    );
+    const parsedScripts = Array.from(scripts).map((s) =>
+      JSON.parse(s.textContent ?? "{}")
+    );
+    const website = parsedScripts.find((p) => p["@type"] === "WebSite");
+    expect(website).toBeDefined();
+    expect(website.potentialAction).toBeDefined();
+    expect(website.potentialAction["@type"]).toBe("SearchAction");
+    expect(website.potentialAction.target.urlTemplate).toContain(
+      "{search_term_string}"
+    );
+  });
+
+  it("html element has lang='en' for accessibility", () => {
+    render(
+      <RootLayout>
+        <div>content</div>
+      </RootLayout>
+    );
+    // jsdom sets document.documentElement.lang from the lang attribute
+    expect(document.documentElement.lang).toBe("en");
   });
 });

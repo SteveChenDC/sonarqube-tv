@@ -121,6 +121,12 @@ export default async function WatchPage({
       name: "SonarSource",
       url: "https://www.sonarsource.com",
     },
+    // WatchAction signals to Google that this page lets users watch the video,
+    // qualifying it for video rich results (thumbnails in Google Search).
+    potentialAction: {
+      "@type": "WatchAction",
+      target: watchPageUrl,
+    },
   };
 
   const breadcrumbJsonLd = {

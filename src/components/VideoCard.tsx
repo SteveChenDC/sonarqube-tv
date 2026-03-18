@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, memo } from "react";
+import { useState, useSyncExternalStore, memo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Video } from "@/types";
@@ -43,13 +43,16 @@ function timeAgo(dateString: string): string {
 }
 
 function VideoCard({ video, fluid = false, onRemove, hideCategory = false }: Readonly<{ video: Video; fluid?: boolean; onRemove?: () => void; hideCategory?: boolean }>) {
-  const [progress, setProgress] = useState(0);
+  // useSyncExternalStore reads localStorage synchronously on the first client
+  // render — no extra re-render needed. getServerSnapshot returns 0 at SSR/build
+  // time to prevent hydration mismatches (localStorage isn't available there).
+  const progress = useSyncExternalStore(
+    () => () => {}, // subscribe: no-op — we don't need to react to external changes
+    () => getProgress(video.id), // getSnapshot: reads localStorage on client
+    () => 0, // getServerSnapshot: safe fallback for SSR/build
+  );
   const [imageLoaded, setImageLoaded] = useState(false);
   const categoryTitle = categories.find((c) => c.slug === video.category)?.title;
-
-  useEffect(() => {
-    setProgress(getProgress(video.id));
-  }, [video.id]);
 
   return (
     <Link

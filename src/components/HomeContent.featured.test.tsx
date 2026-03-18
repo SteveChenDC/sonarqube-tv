@@ -24,30 +24,28 @@ import HomeContent from "./HomeContent";
 import { makeVideo } from "@/__tests__/factories";
 import type { Category } from "@/types";
 
-// ── Mock @/data/videos — override featuredYoutubeIds only ────────────────────
-// Use the importActual pattern so all other exports (videos, categories, helpers)
-// remain intact. Hero imports `categories` directly from @/data/videos, so the
-// spread is critical for Hero to render without errors.
+// ── Mock @/data/videos — keep actual exports but no featuredYoutubeIds override
+// featuredYoutubeIds is now a LOCAL CONSTANT in HomeContent.tsx (not exported from @/data/videos),
+// so we cannot mock it. Instead, we use videos whose youtubeIds match the real featuredYoutubeIds.
 vi.mock("@/data/videos", async (importActual) => {
   const actual = await importActual<typeof import("@/data/videos")>();
   return {
     ...actual,
-    // Two test-friendly IDs that align with makeVideo({ id: "video-a" }) and
-    // makeVideo({ id: "video-b" }) which produce youtubeId "yt-video-a" / "yt-video-b".
-    featuredYoutubeIds: ["yt-video-a", "yt-video-b"],
   };
 });
 
 // ── Test data ────────────────────────────────────────────────────────────────
-// makeVideo factory: youtubeId = `yt-${id}` (see src/__tests__/factories.ts)
-const videoA = makeVideo({ id: "video-a", title: "Video Alpha", category: "getting-started" });
-// youtubeId: "yt-video-a"  →  matches featuredYoutubeIds[0]
+// The real featuredYoutubeIds in HomeContent.tsx:
+// [0] = "F1F_CVD33WI", [1] = "el9OKGrqU6o", ...
+// We create videos with youtubeIds matching these real IDs.
+const videoA = makeVideo({ id: "video-a", title: "Video Alpha", category: "getting-started", youtubeId: "F1F_CVD33WI" });
+// youtubeId: "F1F_CVD33WI"  →  matches featuredYoutubeIds[0]
 
-const videoB = makeVideo({ id: "video-b", title: "Video Beta", category: "getting-started" });
-// youtubeId: "yt-video-b"  →  matches featuredYoutubeIds[1]
+const videoB = makeVideo({ id: "video-b", title: "Video Beta", category: "getting-started", youtubeId: "el9OKGrqU6o" });
+// youtubeId: "el9OKGrqU6o"  →  matches featuredYoutubeIds[1]
 
-const videoC = makeVideo({ id: "video-c", title: "Video Gamma", category: "getting-started" });
-// youtubeId: "yt-video-c"  →  does NOT match either featuredYoutubeId
+const videoC = makeVideo({ id: "video-c", title: "Video Gamma", category: "getting-started", youtubeId: "yt-video-c" });
+// youtubeId: "yt-video-c"  →  does NOT match any featuredYoutubeId
 
 const categories: Category[] = [
   { slug: "getting-started", title: "Getting Started", description: "Intro videos" },
@@ -71,8 +69,8 @@ afterEach(() => {
 
 // ── Tests ────────────────────────────────────────────────────────────────────
 describe("HomeContent — featuredVideo randomization (useEffect on mount)", () => {
-  it("shows videoA when Math.random picks index 0 (featuredYoutubeIds[0] = yt-video-a)", () => {
-    // Math.floor(0 * 2) = 0  →  "yt-video-a"  →  videoA
+  it("shows videoA when Math.random picks index 0 (featuredYoutubeIds[0] = F1F_CVD33WI)", () => {
+    // Math.floor(0 * 12) = 0  →  "F1F_CVD33WI"  →  videoA
     vi.spyOn(Math, "random").mockReturnValue(0);
 
     render(<HomeContent categories={categories} videos={[videoA, videoB, videoC]} />);
@@ -81,11 +79,11 @@ describe("HomeContent — featuredVideo randomization (useEffect on mount)", () 
     expect(h1Texts.some((t) => t.includes("Video Alpha"))).toBe(true);
   });
 
-  it("shows videoB when Math.random picks index 1 (featuredYoutubeIds[1] = yt-video-b)", () => {
-    // Math.floor(0.5 * 2) = 1  →  "yt-video-b"  →  videoB
-    // Initial state uses featuredYoutubeIds[0] = "yt-video-a" → videoA, then
+  it("shows videoB when Math.random picks index 1 (featuredYoutubeIds[1] = el9OKGrqU6o)", () => {
+    // Math.floor(1/12 * 12) = Math.floor(1.0) = 1  →  "el9OKGrqU6o"  →  videoB
+    // Initial state uses featuredYoutubeIds[0] = "F1F_CVD33WI" → videoA, then
     // useEffect fires and overrides to videoB.
-    vi.spyOn(Math, "random").mockReturnValue(0.5);
+    vi.spyOn(Math, "random").mockReturnValue(1 / 12);
 
     render(<HomeContent categories={categories} videos={[videoA, videoB, videoC]} />);
 
@@ -96,9 +94,9 @@ describe("HomeContent — featuredVideo randomization (useEffect on mount)", () 
   });
 
   it("falls back to videos[0] for initial state when no video matches featuredYoutubeIds[0]", () => {
-    // Only videoC is in the list — youtubeId "yt-video-c" ≠ "yt-video-a".
-    // useState initializer: find(…"yt-video-a") → undefined → fallback: videos[0] = videoC.
-    // useEffect (index 0 → "yt-video-a") → not found → setFeaturedVideo NOT called.
+    // Only videoC is in the list — youtubeId "yt-video-c" ≠ "F1F_CVD33WI".
+    // useState initializer: find(…"F1F_CVD33WI") → undefined → fallback: videos[0] = videoC.
+    // useEffect (index 0 → "F1F_CVD33WI") → not found → setFeaturedVideo NOT called.
     vi.spyOn(Math, "random").mockReturnValue(0);
 
     render(<HomeContent categories={categories} videos={[videoC]} />);
@@ -109,11 +107,11 @@ describe("HomeContent — featuredVideo randomization (useEffect on mount)", () 
 
   it("leaves the featured video unchanged when the randomly-picked ID matches no video in the list", () => {
     // Videos: [videoA, videoC]  →  no videoB.
-    // Initial state: featuredYoutubeIds[0] = "yt-video-a" matches videoA → initial = videoA.
-    // useEffect: Math.random = 0.5 → index 1 → "yt-video-b" → not in [videoA, videoC]
+    // Initial state: featuredYoutubeIds[0] = "F1F_CVD33WI" matches videoA → initial = videoA.
+    // useEffect: Math.random = 1/12 → index 1 → "el9OKGrqU6o" → not in [videoA, videoC]
     //   → picked = undefined → if (picked) guard is FALSE → setFeaturedVideo not called.
     // Hero stays on videoA.
-    vi.spyOn(Math, "random").mockReturnValue(0.5);
+    vi.spyOn(Math, "random").mockReturnValue(1 / 12);
 
     render(<HomeContent categories={categories} videos={[videoA, videoC]} />);
 
