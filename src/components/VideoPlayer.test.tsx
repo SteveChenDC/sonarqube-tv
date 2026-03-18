@@ -1187,3 +1187,175 @@ describe("VideoPlayer — yt-seek listener cleanup on unmount", () => {
     expect(mockPlayer.seekTo).not.toHaveBeenCalled();
   });
 });
+
+describe("VideoPlayer — yt-time interval cleanup on unmount", () => {
+  /**
+   * The progress-tracking useEffect registers a setInterval at 500ms.
+   * Its cleanup function calls clearInterval to prevent a stale interval
+   * from firing after the component is gone (memory-leak / zombie interval).
+   * After unmount, no yt-time events should be dispatched and getCurrentTime
+   * should not be called.
+   */
+  let mockPlayer: ReturnType<typeof createMockPlayer>;
+
+  beforeEach(() => {
+    localStorage.clear();
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+    mockPlayer = {
+      seekTo: vi.fn(),
+      getCurrentTime: vi.fn(() => 45),
+      getDuration: vi.fn(() => 100),
+      destroy: vi.fn(),
+    };
+
+    (window as unknown as Record<string, unknown>).YT = {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      Player: vi.fn().mockImplementation(function (this: unknown, _id: string, opts: any) {
+        Object.assign(this as object, mockPlayer);
+        if (opts?.events) {}
+        return this;
+      }),
+    };
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+    delete (globalThis as unknown as Record<string, unknown>).YT;
+  });
+
+  it("yt-time events stop being dispatched after unmount", () => {
+    const events: number[] = [];
+    const handler = (e: Event) => events.push((e as CustomEvent<number>).detail);
+    globalThis.addEventListener("yt-time", handler);
+
+    const { unmount } = render(
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+    );
+
+    // Let the interval fire at least once — getCurrentTime=45 and getDuration=100,
+    // both > 0, so yt-time events should be dispatched
+    act(() => { vi.advanceTimersByTime(600); });
+    expect(events.length).toBeGreaterThan(0); // confirms events fired before unmount
+
+    unmount();
+    events.length = 0; // reset collected events
+
+    // Advance past several interval periods — clearInterval must prevent dispatch
+    act(() => { vi.advanceTimersByTime(2000); });
+    expect(events.length).toBe(0);
+
+    globalThis.removeEventListener("yt-time", handler);
+  });
+
+  it("getCurrentTime polling stops after unmount", () => {
+    const { unmount } = render(
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+    );
+
+    // Let the interval fire at least once
+    act(() => { vi.advanceTimersByTime(600); });
+    const callCountAtUnmount = (mockPlayer.getCurrentTime as ReturnType<typeof vi.fn>).mock.calls.length;
+    expect(callCountAtUnmount).toBeGreaterThan(0); // verify polling was active
+
+    unmount();
+
+    // Advance time after unmount — call count must not increase
+    act(() => { vi.advanceTimersByTime(2000); });
+    expect(mockPlayer.getCurrentTime).toHaveBeenCalledTimes(callCountAtUnmount);
+  });
+});
+
+describe("VideoPlayer — youtubeId prop change re-initializes player", () => {
+  /**
+   * The initPlayer callback is memoized with [youtubeId, playerId, autoPlay, videoId].
+   * When youtubeId changes, useCallback produces a new function reference, which
+   * causes the dependent useEffect to re-run: the old player is destroyed and a
+   * fresh YT.Player is created with the updated youtubeId.
+   */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let PlayerConstructor: ReturnType<typeof vi.fn>;
+  let playerInstances: Array<{
+    seekTo: ReturnType<typeof vi.fn>;
+    getCurrentTime: ReturnType<typeof vi.fn>;
+    getDuration: ReturnType<typeof vi.fn>;
+    destroy: ReturnType<typeof vi.fn>;
+    getPlayerState: ReturnType<typeof vi.fn>;
+    playVideo: ReturnType<typeof vi.fn>;
+    pauseVideo: ReturnType<typeof vi.fn>;
+  }>;
+
+  beforeEach(() => {
+    localStorage.clear();
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+    playerInstances = [];
+
+    PlayerConstructor = vi.fn().mockImplementation(function (this: unknown) {
+      const instance = {
+        seekTo: vi.fn(),
+        getCurrentTime: vi.fn(() => 0),
+        getDuration: vi.fn(() => 100),
+        destroy: vi.fn(),
+        getPlayerState: vi.fn(() => 2),
+        playVideo: vi.fn(),
+        pauseVideo: vi.fn(),
+      };
+      playerInstances.push(instance);
+      Object.assign(this as object, instance);
+      return this;
+    });
+
+    (window as unknown as Record<string, unknown>).YT = { Player: PlayerConstructor };
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+    delete (globalThis as unknown as Record<string, unknown>).YT;
+  });
+
+  it("creates a new YT.Player when youtubeId prop changes", () => {
+    const { rerender } = render(
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+    );
+    expect(PlayerConstructor).toHaveBeenCalledTimes(1);
+
+    rerender(<VideoPlayer youtubeId="def456" title="Test Video" videoId="vid1" />);
+
+    expect(PlayerConstructor).toHaveBeenCalledTimes(2);
+  });
+
+  it("second YT.Player call uses the updated youtubeId as the videoId option", () => {
+    const { rerender } = render(
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+    );
+
+    rerender(<VideoPlayer youtubeId="def456" title="Test Video" videoId="vid1" />);
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const secondCallOpts = PlayerConstructor.mock.calls[1][1] as any;
+    expect(secondCallOpts.videoId).toBe("def456");
+  });
+
+  it("the old player is destroyed when youtubeId changes", () => {
+    const { rerender } = render(
+      <VideoPlayer youtubeId="abc123" title="Test Video" videoId="vid1" />
+    );
+
+    rerender(<VideoPlayer youtubeId="def456" title="Test Video" videoId="vid1" />);
+
+    // React effect cleanup fires before the new effect — first player must be destroyed
+    expect(playerInstances[0].destroy).toHaveBeenCalled();
+  });
+
+  it("does NOT create a new player when only the title prop changes", () => {
+    // title is NOT in initPlayer's useCallback deps, so changing it should
+    // not cause a new YT.Player to be constructed.
+    const { rerender } = render(
+      <VideoPlayer youtubeId="abc123" title="Original Title" videoId="vid1" />
+    );
+    expect(PlayerConstructor).toHaveBeenCalledTimes(1);
+
+    rerender(<VideoPlayer youtubeId="abc123" title="Updated Title" videoId="vid1" />);
+
+    expect(PlayerConstructor).toHaveBeenCalledTimes(1);
+  });
+});
