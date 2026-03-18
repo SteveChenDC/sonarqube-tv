@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import Link from "next/link";
 import { getCourseBySlug, getCourseVideos, getVideoPositionInCourse } from "@/data/courses";
 import { getCourseProgress } from "@/lib/courseProgress";
@@ -13,9 +13,10 @@ interface CourseNavBarProps {
 export default function CourseNavBar({ videoId }: Readonly<CourseNavBarProps>) {
   const searchParams = useSearchParams();
   const courseSlug = searchParams.get("course");
-  const [, setTick] = useState(0);
-
-  useEffect(() => setTick(1), []);
+  // useSyncExternalStore eliminates the useState(0)+useEffect setTick double-render:
+  // getServerSnapshot returns false (SSR/static-gen), getSnapshot returns true (client).
+  // React transitions between them during hydration — no extra render cycle needed.
+  const mounted = useSyncExternalStore(() => () => {}, () => true, () => false);
 
   if (!courseSlug) return null;
 
@@ -29,7 +30,9 @@ export default function CourseNavBar({ videoId }: Readonly<CourseNavBarProps>) {
   const prevVideo = position.step > 1 ? allVideos[position.step - 2] : null;
   const nextVideo =
     position.step < position.total ? allVideos[position.step] : null;
-  const progress = getCourseProgress(course);
+  const progress = mounted
+    ? getCourseProgress(course)
+    : { percent: 0, completed: 0, total: 0, currentStep: 1 };
 
   return (
     <div className="mt-4 rounded-xl border border-n8 bg-n8/15 p-3 sm:p-4">
