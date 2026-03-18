@@ -105,4 +105,32 @@ describe("ThemeToggle", () => {
     const button = screen.getByRole("button");
     expect(button.className).toContain("custom-class");
   });
+
+  it("updates aria-label when the subscribeToSystemTheme callback fires with a new theme", () => {
+    // subscribeToSystemTheme is called with a callback (t) => setTheme(t).
+    // When the system theme changes, that callback fires and the component re-renders.
+    // Capture the callback so we can invoke it manually to simulate the OS preference change.
+    let capturedCallback: ((t: "light" | "dark") => void) | null = null;
+    mockSubscribeToSystemTheme.mockImplementation((cb) => {
+      capturedCallback = cb;
+      return vi.fn(); // unsubscribe fn
+    });
+    mockGetEffectiveTheme.mockReturnValue("dark");
+
+    render(<ThemeToggle />);
+    // Initial state: dark mode
+    expect(
+      screen.getByRole("button", { name: "Switch to light mode" })
+    ).toBeInTheDocument();
+
+    // OS switches to light — simulate by calling the captured subscriber callback
+    act(() => {
+      capturedCallback?.("light");
+    });
+
+    // Component must re-render with light-mode aria-label
+    expect(
+      screen.getByRole("button", { name: "Switch to dark mode" })
+    ).toBeInTheDocument();
+  });
 });

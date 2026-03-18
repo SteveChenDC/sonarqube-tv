@@ -77,14 +77,14 @@ describe("ArticleTabs — tab visibility", () => {
 });
 
 describe("ArticleTabs — default active tab", () => {
-  it("defaults to transcript tab when both are provided", () => {
+  it("defaults to summary tab when both are provided", () => {
     render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // TranscriptView should be visible by default
-    expect(screen.getByTestId("transcript-view")).toBeInTheDocument();
-    // Article content should NOT be rendered
-    expect(screen.queryByText("Opening paragraph.")).not.toBeInTheDocument();
+    // Article content should be visible by default (summary is the default tab)
+    expect(screen.getByText("Opening paragraph.")).toBeInTheDocument();
+    // TranscriptView should NOT be rendered
+    expect(screen.queryByTestId("transcript-view")).not.toBeInTheDocument();
   });
 
   it("defaults to article tab when only article is provided", () => {
@@ -99,9 +99,11 @@ describe("ArticleTabs — tab switching", () => {
     render(
       <ArticleTabs article={makeArticle()} transcript={makeTranscript()} />
     );
-    // Start on transcript
+    // Default is summary; switch to transcript first
+    fireEvent.click(screen.getByText("Transcript"));
     expect(screen.getByTestId("transcript-view")).toBeInTheDocument();
 
+    // Now click Summary to switch back to article
     fireEvent.click(screen.getByText(/Summary/));
 
     expect(screen.getByText("Opening paragraph.")).toBeInTheDocument();
