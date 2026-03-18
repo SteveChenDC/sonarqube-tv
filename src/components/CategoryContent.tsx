@@ -63,11 +63,11 @@ export default function CategoryContent({
     <div>
 
       {/* Sort controls */}
-      <div className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-2">
+      <div className="mb-6 flex flex-col items-start gap-x-2 gap-y-2 sm:flex-row sm:flex-wrap sm:items-center">
         <span className="font-body text-xs font-medium uppercase tracking-wider text-n6 shrink-0">
           Sort by
         </span>
-        <div className="flex flex-wrap rounded-lg border border-n7/50 bg-n9/40 p-0.5 gap-0.5">
+        <div className="flex flex-nowrap rounded-lg border border-n7/50 bg-n9/40 p-0.5 gap-0.5">
           {SORT_OPTIONS.map((option) => (
             <button
               key={option.value}

@@ -546,3 +546,149 @@ describe("ArticleTabs — markdown rendering", () => {
     expect(document.querySelector("em")?.textContent).toBe("italic");
   });
 });
+
+// ─────────────────────────────────────────────────────────────────────────────
+// renderMarkdown — opening-H1 skip & firstParaSeen tracking edge cases
+//
+// The renderMarkdown function tracks two pieces of state:
+//   1. startsWithH1: true when the first non-blank token is an h1.
+//      Only the *opening* h1 is skipped; subsequent h1s render normally.
+//   2. firstParaSeen: set to true only when a paragraph token is processed.
+//      Headings (h1, h2, h3) do NOT set firstParaSeen, so the first paragraph
+//      always receives "lead" styling regardless of what comes before it.
+//
+// The tests below cover combinations not exercised elsewhere.
+// ─────────────────────────────────────────────────────────────────────────────
+
+describe("ArticleTabs — renderMarkdown opening-H1 and firstParaSeen edge cases", () => {
+  it("renders a second h1 normally when the article opens with h1 (only the opening h1 is skipped)", () => {
+    // startsWithH1=true: firstContentIndex=0 (the opening h1) is skipped.
+    // A second h1 later (i !== firstContentIndex) must fall into the `else`
+    // branch and render — this combination was previously untested.
+    const article = makeArticle({
+      markdown: "# Opening Title\n\nSome paragraph.\n\n# Second Heading\n\nMore text.",
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+
+    // Opening h1 must NOT appear in the DOM (it is the duplicate of the video title)
+    expect(
+      screen.queryByRole("heading", { level: 1, name: "Opening Title" })
+    ).not.toBeInTheDocument();
+
+    // Second h1 (NOT at firstContentIndex) MUST render normally
+    expect(
+      screen.getByRole("heading", { level: 1, name: "Second Heading" })
+    ).toBeInTheDocument();
+
+    // Surrounding paragraphs should still be present
+    expect(screen.getByText("Some paragraph.")).toBeInTheDocument();
+    expect(screen.getByText("More text.")).toBeInTheDocument();
+  });
+
+  it("first paragraph after a skipped opening h1 still receives lead styling", () => {
+    // When the opening h1 is skipped, firstParaSeen is still false because
+    // the h1 token processing does NOT set firstParaSeen.  The very next
+    // paragraph therefore becomes the "lead" paragraph.
+    const article = makeArticle({
+      markdown: "# Video Title\n\nThis is the lead paragraph.\n\nThis is regular.",
+    });
+    const { container } = render(
+      <ArticleTabs article={article} transcript={null} />
+    );
+    const paragraphs = container.querySelectorAll("p");
+    // First paragraph following the skipped h1 → lead styling (text-[16px])
+    expect(paragraphs[0].className).toContain("text-[16px]");
+    // Second paragraph → regular styling (text-[15px])
+    expect(paragraphs[1].className).toContain("text-[15px]");
+  });
+
+  it("first paragraph after an h2 heading receives lead styling (h2 does not set firstParaSeen)", () => {
+    // Headings are processed without touching firstParaSeen, so the first
+    // paragraph encountered — even after one or more headings — is the lead.
+    const article = makeArticle({
+      markdown: "## Introduction\n\nFirst paragraph here.\n\nSecond paragraph here.",
+    });
+    const { container } = render(
+      <ArticleTabs article={article} transcript={null} />
+    );
+    // h2 renders
+    expect(
+      screen.getByRole("heading", { level: 2, name: "Introduction" })
+    ).toBeInTheDocument();
+    const paragraphs = container.querySelectorAll("p");
+    // First paragraph after h2 → lead styling
+    expect(paragraphs[0].className).toContain("text-[16px]");
+    // Second paragraph → regular styling
+    expect(paragraphs[1].className).toContain("text-[15px]");
+  });
+
+  it("renders a complete document with all element types (h2, h3, paragraphs, lists) in sequence", () => {
+    // Integration smoke test: verifies all token types render correctly when
+    // they appear together in a single document, including inline formatting.
+    const article = makeArticle({
+      markdown: [
+        "## Overview",
+        "",
+        "Lead paragraph with **bold** and `code`.",
+        "",
+        "### Details",
+        "",
+        "- First list item",
+        "- Second list item",
+        "",
+        "Regular paragraph with *italic* text.",
+      ].join("\n"),
+    });
+    render(<ArticleTabs article={article} transcript={null} />);
+
+    // Headings
+    expect(screen.getByRole("heading", { level: 2, name: "Overview" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 3, name: "Details" })).toBeInTheDocument();
+
+    // Inline formatting in lead paragraph
+    expect(document.querySelector("strong")?.textContent).toBe("bold");
+    expect(document.querySelector("code")?.textContent).toBe("code");
+
+    // List items
+    expect(screen.getByText("First list item")).toBeInTheDocument();
+    expect(screen.getByText("Second list item")).toBeInTheDocument();
+
+    // Inline italic in regular paragraph
+    expect(document.querySelector("em")?.textContent).toBe("italic");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// parseInline — unclosed marker fallback
+//
+// The regex requires matching pairs: `**...**`, `*...*`, `` `...` ``.
+// When a marker has no closing pair, the regex never matches and the entire
+// text string is returned unchanged as a plain text node.
+// ---------------------------------------------------------------------------
+
+describe("ArticleTabs — parseInline unclosed markers (graceful fallback)", () => {
+  it("renders text with an unclosed * asterisk as plain text — no <em> rendered", () => {
+    // "*unclosed" → `\*(.+?)\*` requires a closing * that never appears → no match
+    // parseInline returns [fullText] → renders as a plain text node
+    const article = makeArticle({ markdown: "This *unclosed asterisk here" });
+    render(<ArticleTabs article={article} transcript={null} />);
+    expect(screen.getByText("This *unclosed asterisk here")).toBeInTheDocument();
+    expect(document.querySelector("em")).toBeNull();
+  });
+
+  it("renders text with an unclosed ** double-asterisk as plain text — no <strong> rendered", () => {
+    // "**unclosed" → `\*\*(.+?)\*\*` requires a closing ** that never appears → no match
+    const article = makeArticle({ markdown: "**unclosed bold text" });
+    render(<ArticleTabs article={article} transcript={null} />);
+    expect(screen.getByText("**unclosed bold text")).toBeInTheDocument();
+    expect(document.querySelector("strong")).toBeNull();
+  });
+
+  it("renders text with an unclosed backtick as plain text — no <code> rendered", () => {
+    // "`unclosed" → backtick pattern requires a closing ` that never appears → no match
+    const article = makeArticle({ markdown: "`unclosed code here" });
+    render(<ArticleTabs article={article} transcript={null} />);
+    expect(screen.getByText("`unclosed code here")).toBeInTheDocument();
+    expect(document.querySelector("code")).toBeNull();
+  });
+});

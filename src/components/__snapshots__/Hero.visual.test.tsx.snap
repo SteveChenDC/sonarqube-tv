@@ -7,8 +7,6 @@ exports[`Hero visual snapshots > desktop hero layout matches snapshot 1`] = `
   <img
     alt="Visual Test Hero Video"
     class="object-cover"
-    fetchpriority="high"
-    sizes="100vw"
     src="/snap-thumb.jpg"
   />
   <div
@@ -112,8 +110,6 @@ exports[`Hero visual snapshots > mobile card layout matches snapshot 1`] = `
       <img
         alt="Visual Test Hero Video"
         class="object-cover"
-        fetchpriority="high"
-        sizes="100vw"
         src="/snap-thumb.jpg"
       />
     </div>
@@ -155,11 +151,11 @@ exports[`Hero visual snapshots > mobile card layout matches snapshot 1`] = `
           12:34
         </span>
       </div>
-      <h1
+      <h2
         class="mb-2 font-heading text-xl font-bold text-n1"
       >
         Visual Test Hero Video
-      </h1>
+      </h2>
       <p
         class="mb-4 text-sm leading-relaxed text-n4 line-clamp-2"
       >

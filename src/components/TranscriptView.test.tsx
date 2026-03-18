@@ -11,6 +11,46 @@ const segments: TranscriptSegment[] = [
 ];
 
 // ---------------------------------------------------------------------------
+// Empty segments edge cases
+// ---------------------------------------------------------------------------
+
+describe("TranscriptView — empty segments", () => {
+  it("renders without error when segments array is empty and no chapters", () => {
+    // Should render the flat-list container div without crashing
+    const { container } = render(<TranscriptView segments={[]} />);
+    // The outer container div should exist (not null)
+    expect(container.firstChild).not.toBeNull();
+    // No segment buttons should exist
+    expect(container.querySelectorAll("button").length).toBe(0);
+  });
+
+  it("renders chapter headings with no segment rows when segments is empty but chapters provided", () => {
+    const chapters: TranscriptChapter[] = [
+      { title: "Introduction", startIndex: 0 },
+      { title: "Main Content", startIndex: 0 }, // both start at 0 since no segments
+    ];
+    const { getByText } = render(<TranscriptView segments={[]} chapters={chapters} />);
+    // Chapter headings should still render even with empty segments
+    expect(getByText("Introduction")).toBeTruthy();
+    expect(getByText("Main Content")).toBeTruthy();
+  });
+
+  it("chapter heading startTime falls back to 0 when segments is empty", () => {
+    // segments[start]?.offset ?? 0 — optional chain returns undefined → falls back to 0
+    const chapters: TranscriptChapter[] = [
+      { title: "Only Chapter", startIndex: 0 },
+    ];
+    render(<TranscriptView segments={[]} chapters={chapters} />);
+    // The chapter heading timestamp should show "0:00"
+    const timestamps = document.querySelectorAll(".font-mono");
+    const hasZeroTimestamp = Array.from(timestamps).some(
+      (el) => el.textContent === "0:00"
+    );
+    expect(hasZeroTimestamp).toBe(true);
+  });
+});
+
+// ---------------------------------------------------------------------------
 // formatTime — timestamps ≥ 60 seconds
 // ---------------------------------------------------------------------------
 
@@ -384,5 +424,230 @@ describe("TranscriptView — auto-scroll paused indicator", () => {
 
     // activeOffset is now -1 → indicator should disappear despite isPaused still being true
     expect(screen.queryByText("Auto-scroll paused")).toBeNull();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Listener and timer cleanup on unmount
+// ---------------------------------------------------------------------------
+
+describe("TranscriptView — listener and timer cleanup on unmount", () => {
+  beforeEach(() => {
+    Element.prototype.scrollTo = vi.fn();
+  });
+
+  it("calls globalThis.removeEventListener('yt-time', ...) when unmounted", () => {
+    const removeSpy = vi.spyOn(globalThis, "removeEventListener");
+
+    const { unmount } = render(<TranscriptView segments={segments} />);
+    unmount();
+
+    // The yt-time listener registered in useActiveSegment must be cleaned up
+    const ytTimeRemovals = removeSpy.mock.calls.filter(([event]) => event === "yt-time");
+    expect(ytTimeRemovals.length).toBeGreaterThan(0);
+
+    removeSpy.mockRestore();
+  });
+
+  it("dispatching yt-time after unmount does not throw or cause errors", () => {
+    const { unmount } = render(<TranscriptView segments={segments} />);
+
+    // Confirm the listener is active before unmount
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: 6000 }));
+    });
+
+    unmount();
+
+    // After unmount, dispatching yt-time must be a safe no-op
+    expect(() => {
+      act(() => {
+        fireEvent(globalThis, new CustomEvent("yt-time", { detail: 9000 }));
+      });
+    }).not.toThrow();
+  });
+
+  it("clears the auto-resume timeout when unmounting during an active pause", () => {
+    vi.useFakeTimers();
+
+    const clearTimeoutSpy = vi.spyOn(globalThis, "clearTimeout");
+
+    const { container, unmount } = render(<TranscriptView segments={segments} />);
+
+    // Activate a segment so activeOffset >= 0
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: 6000 }));
+    });
+    // Advance past the 500ms programmatic-scroll guard set by the auto-scroll effect
+    act(() => {
+      vi.advanceTimersByTime(600);
+    });
+
+    // Simulate user scroll — starts the 5s auto-resume timeout
+    const scrollContainer = container.querySelector('[class*="overflow-y-auto"]')!;
+    fireEvent.scroll(scrollContainer);
+
+    clearTimeoutSpy.mockClear(); // reset: only count clearTimeout calls during unmount
+
+    unmount();
+
+    // useAutoScroll cleanup calls clearTimeout(timeoutRef.current) to cancel the 5s timer
+    expect(clearTimeoutSpy).toHaveBeenCalled();
+
+    clearTimeoutSpy.mockRestore();
+    vi.useRealTimers();
+  });
+
+  it("scrollTo is NOT invoked after unmount when yt-time fires post-unmount", () => {
+    const scrollToMock = vi.fn();
+    Element.prototype.scrollTo = scrollToMock;
+
+    const { unmount } = render(<TranscriptView segments={segments} />);
+
+    // Activate a segment so the auto-scroll effect is primed
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: 6000 }));
+    });
+
+    unmount();
+
+    const callsBefore = scrollToMock.mock.calls.length;
+
+    // Dispatch yt-time after unmount — must NOT trigger new scrollTo calls
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: 9000 }));
+    });
+
+    expect(scrollToMock.mock.calls.length).toBe(callsBefore);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// useActiveSegment exact boundary conditions
+//
+// The active-segment lookup uses:
+//   currentTimeMs >= seg.offset && currentTimeMs < seg.offset + seg.duration
+//
+// Key invariants:
+//   - "currentTimeMs >= 0" guard means negative time → activeOffset = -1
+//   - The upper bound is STRICT (<), so exactly at offset+duration → NOT active
+//   - The next segment becomes active at its exact offset (>=)
+//   - A time in a gap between non-contiguous segments → no segment active
+// ---------------------------------------------------------------------------
+
+describe("TranscriptView — useActiveSegment exact boundary conditions", () => {
+  beforeEach(() => {
+    Element.prototype.scrollTo = vi.fn();
+  });
+
+  it("first segment (offset=0) is active when yt-time fires with detail=0ms", () => {
+    // condition: 0 >= 0 (currentTimeMs guard passes) AND 0 >= 0 AND 0 < 0+5000 → active
+    render(<TranscriptView segments={segments} />);
+
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: 0 }));
+    });
+
+    const firstRow = screen.getByText("Welcome to the video").closest("button");
+    expect(firstRow?.className).toContain("bg-qube-blue/20");
+
+    const secondRow = screen.getByText("Let's talk about code quality").closest("button");
+    expect(secondRow?.className).not.toContain("bg-qube-blue/20");
+  });
+
+  it("first segment still active at time=4999ms (just inside upper bound offset+duration=5000ms)", () => {
+    // 4999 >= 0 (true) AND 4999 >= 0 AND 4999 < 5000 (true) → active
+    render(<TranscriptView segments={segments} />);
+
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: 4999 }));
+    });
+
+    const firstRow = screen.getByText("Welcome to the video").closest("button");
+    expect(firstRow?.className).toContain("bg-qube-blue/20");
+
+    const secondRow = screen.getByText("Let's talk about code quality").closest("button");
+    expect(secondRow?.className).not.toContain("bg-qube-blue/20");
+  });
+
+  it("second segment becomes active at time=5000ms (its exact offset); first segment inactive", () => {
+    // First segment:  5000 >= 0 AND 5000 < 0+5000=5000 → FALSE (strict <)
+    // Second segment: 5000 >= 5000 AND 5000 < 5000+4000=9000 → TRUE
+    render(<TranscriptView segments={segments} />);
+
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: 5000 }));
+    });
+
+    const firstRow = screen.getByText("Welcome to the video").closest("button");
+    expect(firstRow?.className).not.toContain("bg-qube-blue/20");
+
+    const secondRow = screen.getByText("Let's talk about code quality").closest("button");
+    expect(secondRow?.className).toContain("bg-qube-blue/20");
+  });
+
+  it("last segment is NOT active at time=18000ms (exactly at offset+duration = 15000+3000)", () => {
+    // Last segment: 18000 >= 15000 (true) AND 18000 < 15000+3000=18000 → FALSE (strict <)
+    // No other segment covers 18000ms → activeOffset = -1 → no highlight
+    render(<TranscriptView segments={segments} />);
+
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: 18000 }));
+    });
+
+    // None of the four segments should be highlighted
+    (
+      [
+        "Welcome to the video",
+        "Let's talk about code quality",
+        "Here is a demo",
+        "Thanks for watching",
+      ] as const
+    ).forEach((text) => {
+      const row = screen.getByText(text).closest("button");
+      expect(row?.className).not.toContain("bg-qube-blue/20");
+    });
+  });
+
+  it("no segment is active when yt-time fires with a negative detail value", () => {
+    // currentTimeMs = -5000 → currentTimeMs >= 0 is FALSE → activeOffset = -1
+    render(<TranscriptView segments={segments} />);
+
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: -5000 }));
+    });
+
+    (
+      [
+        "Welcome to the video",
+        "Let's talk about code quality",
+        "Here is a demo",
+        "Thanks for watching",
+      ] as const
+    ).forEach((text) => {
+      const row = screen.getByText(text).closest("button");
+      expect(row?.className).not.toContain("bg-qube-blue/20");
+    });
+  });
+
+  it("no segment is active when time falls in a gap between two non-contiguous segments", () => {
+    // seg1: offset=0, duration=5000 → active [0, 5000)
+    // seg2: offset=6000, duration=5000 → active [6000, 11000)
+    // Gap: [5000, 6000) — at t=5500, neither segment's condition is satisfied
+    const gappedSegments: TranscriptSegment[] = [
+      { text: "First segment", offset: 0, duration: 5000 },
+      { text: "Second segment", offset: 6000, duration: 5000 },
+    ];
+    render(<TranscriptView segments={gappedSegments} />);
+
+    act(() => {
+      fireEvent(globalThis, new CustomEvent("yt-time", { detail: 5500 }));
+    });
+
+    const firstRow = screen.getByText("First segment").closest("button");
+    expect(firstRow?.className).not.toContain("bg-qube-blue/20");
+
+    const secondRow = screen.getByText("Second segment").closest("button");
+    expect(secondRow?.className).not.toContain("bg-qube-blue/20");
   });
 });

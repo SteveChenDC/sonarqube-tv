@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { courses, getCourseVideos, getCourseTotalDuration } from "@/data/courses";
 import {
@@ -26,8 +26,10 @@ const accentBorder = {
 } as const;
 
 function EnrichedCourseCard({ course }: Readonly<{ course: Course }>) {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  // useSyncExternalStore eliminates the useState(false)+useEffect setMounted double-render:
+  // getServerSnapshot returns false (SSR/static-gen), getSnapshot returns true (client).
+  // React transitions between them during hydration — no extra render cycle needed.
+  const mounted = useSyncExternalStore(() => () => {}, () => true, () => false);
 
   const totalVideos = getCourseVideos(course).length;
   const duration = getCourseTotalDuration(course);

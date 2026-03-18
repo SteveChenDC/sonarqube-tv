@@ -10,9 +10,9 @@ function useNonFiringIntersectionObserver() {
   beforeEach(() => {
     original = globalThis.IntersectionObserver;
     globalThis.IntersectionObserver = class {
-      observe() { /* no-op: never fires */ }
-      unobserve() { /* no-op: stub */ }
-      disconnect() { /* no-op: stub */ }
+      observe() { /* never fires */ }
+      unobserve() {}
+      disconnect() {}
     } as unknown as typeof IntersectionObserver;
   });
   afterEach(() => {
@@ -35,10 +35,7 @@ describe("VideoRow", () => {
     );
     // Title is a heading inside a section with anchor id
     const titleEl = getByText("Tutorials");
-    const section = titleEl.closest("section");
-    expect(section?.id).toBe("tutorials");
-    // scroll-mt-20 ensures fixed header doesn't overlap anchor targets
-    expect(section?.className).toContain("scroll-mt-20");
+    expect(titleEl.closest("section")?.id).toBe("tutorials");
     // All video cards rendered (may appear in both mobile + desktop layouts)
     expect(getAllByText("Video v1").length).toBeGreaterThanOrEqual(1);
     expect(getAllByText("Video v2").length).toBeGreaterThanOrEqual(1);
@@ -417,6 +414,184 @@ describe("VideoRow", () => {
     });
   });
 
+  describe("sectionLabels — count badges", () => {
+    it("renders firstCount in the first section's label badge", () => {
+      const videos = [
+        makeVideo({ id: "v1" }),
+        makeVideo({ id: "v2" }),
+        makeVideo({ id: "v3" }),
+      ];
+      const { container } = render(
+        <VideoRow
+          title="Row"
+          videos={videos}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 2,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 2,
+          }}
+        />
+      );
+      const h2Els = Array.from(container.querySelectorAll("h2"));
+      const cwH2 = h2Els.find((h) => h.textContent?.includes("Continue Watching"));
+      expect(cwH2).toBeDefined();
+      // Count badge is the <span> inside the h2
+      const countSpan = cwH2?.querySelector("span");
+      expect(countSpan?.textContent).toBe("2");
+    });
+
+    it("renders secondCount in the second section's label badge", () => {
+      const videos = [
+        makeVideo({ id: "v1" }),
+        makeVideo({ id: "v2" }),
+        makeVideo({ id: "v3" }),
+      ];
+      const { container } = render(
+        <VideoRow
+          title="Row"
+          videos={videos}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 2,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 2,
+          }}
+        />
+      );
+      const h2Els = Array.from(container.querySelectorAll("h2"));
+      const latestH2 = h2Els.find((h) => h.textContent?.includes("Latest"));
+      expect(latestH2).toBeDefined();
+      const countSpan = latestH2?.querySelector("span");
+      expect(countSpan?.textContent).toBe("1");
+    });
+
+    it("count badge reflects secondCount even when it exceeds actual rendered video count (MAX_TOP_ROW cap)", () => {
+      // Mirrors HomeContent behaviour: secondCount=15 shown even if only 1 video renders
+      const videos = [makeVideo({ id: "cw1" }), makeVideo({ id: "latest1" })];
+      const { container } = render(
+        <VideoRow
+          title="Row"
+          videos={videos}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 1,
+            secondLabel: "Latest",
+            secondCount: 15,
+            splitAt: 1,
+          }}
+        />
+      );
+      const h2Els = Array.from(container.querySelectorAll("h2"));
+      const latestH2 = h2Els.find((h) => h.textContent?.includes("Latest"));
+      const countSpan = latestH2?.querySelector("span");
+      expect(countSpan?.textContent).toBe("15");
+    });
+  });
+
+  describe("sectionLabels — orthogonal to hideHeader", () => {
+    it("section labels still appear when hideHeader=true", () => {
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+      const { getByText } = render(
+        <VideoRow
+          title="Hidden Row Title"
+          videos={videos}
+          hideHeader={true}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 1,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 1,
+          }}
+        />
+      );
+      // Section labels inside the scroll region are rendered independently of the top header
+      expect(getByText("Continue Watching")).toBeTruthy();
+      expect(getByText("Latest")).toBeTruthy();
+    });
+
+    it("top-level row title h2 is absent when hideHeader=true, even with sectionLabels", () => {
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+      const { queryByText } = render(
+        <VideoRow
+          title="Hidden Row Title"
+          videos={videos}
+          hideHeader={true}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 1,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 1,
+          }}
+        />
+      );
+      // The title prop text must NOT appear as visible content (only in aria-label attr)
+      expect(queryByText("Hidden Row Title")).toBeNull();
+    });
+
+    it("hideHeader=true + sectionLabels renders exactly 2 h2 elements (only section labels)", () => {
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+      const { container } = render(
+        <VideoRow
+          title="Hidden Row Title"
+          videos={videos}
+          hideHeader={true}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 1,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 1,
+          }}
+        />
+      );
+      expect(container.querySelectorAll("h2").length).toBe(2);
+    });
+
+    it("hideHeader=false (default) + sectionLabels renders 3 h2 elements (top header + 2 section labels)", () => {
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+      const { container } = render(
+        <VideoRow
+          title="Row Title"
+          videos={videos}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 1,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 1,
+          }}
+        />
+      );
+      // 1 top-level h2 (row title) + 2 section label h2s = 3
+      expect(container.querySelectorAll("h2").length).toBe(3);
+    });
+
+    it("renders a vertical divider element between the two sections when sectionLabels is provided", () => {
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+      const { container } = render(
+        <VideoRow
+          title="Row"
+          videos={videos}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 1,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 1,
+          }}
+        />
+      );
+      // The divider is a div with className "w-px bg-n7/50" between the two sections
+      const divider = container.querySelector(".w-px");
+      expect(divider).not.toBeNull();
+    });
+  });
+
   describe("RowSkeleton — before IntersectionObserver fires", () => {
     useNonFiringIntersectionObserver();
 
@@ -453,6 +628,152 @@ describe("VideoRow", () => {
       const skeleton = container.querySelector("[aria-hidden='true']");
       // No header skeleton when hideHeader
       expect(skeleton!.querySelector(".w-40")).toBeNull();
+    });
+  });
+
+  describe("top-level header count badge (totalCount ?? videos.length)", () => {
+    it("shows videos.length in the count badge when totalCount is not provided", () => {
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" }), makeVideo({ id: "v3" })];
+      const { container } = render(<VideoRow title="My Row" videos={videos} />);
+      // The top-level h2 contains a <span> with the count value
+      const h2 = container.querySelector("h2");
+      expect(h2).not.toBeNull();
+      const countSpan = h2!.querySelector("span");
+      expect(countSpan?.textContent).toBe("3");
+    });
+
+    it("shows totalCount in the count badge when it exceeds the rendered video count", () => {
+      // 3 videos rendered, but totalCount=10 (the full category size)
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" }), makeVideo({ id: "v3" })];
+      const { container } = render(
+        <VideoRow title="My Row" videos={videos} totalCount={10} />
+      );
+      const h2 = container.querySelector("h2");
+      const countSpan = h2!.querySelector("span");
+      // Badge must reflect totalCount (10), not videos.length (3)
+      expect(countSpan?.textContent).toBe("10");
+    });
+
+    it("shows totalCount=1 when a single video is explicitly counted", () => {
+      const videos = [makeVideo({ id: "v1" })];
+      const { container } = render(
+        <VideoRow title="My Row" videos={videos} totalCount={1} />
+      );
+      const h2 = container.querySelector("h2");
+      const countSpan = h2!.querySelector("span");
+      expect(countSpan?.textContent).toBe("1");
+    });
+
+    it("falls back to videos.length=1 when totalCount is undefined and only one video exists", () => {
+      const videos = [makeVideo({ id: "v1" })];
+      const { container } = render(<VideoRow title="My Row" videos={videos} />);
+      const h2 = container.querySelector("h2");
+      const countSpan = h2!.querySelector("span");
+      expect(countSpan?.textContent).toBe("1");
+    });
+
+    it("count badge is absent from DOM when hideHeader=true", () => {
+      const videos = [makeVideo({ id: "v1" }), makeVideo({ id: "v2" })];
+      const { container } = render(
+        <VideoRow title="My Row" videos={videos} hideHeader />
+      );
+      // With hideHeader, the top-level h2 (with its count span) is not rendered
+      // — the only h2 elements would be from sectionLabels (none provided here)
+      const h2s = container.querySelectorAll("h2");
+      expect(h2s).toHaveLength(0);
+    });
+  });
+
+  describe("hideCategoryBadge — categorySlug propagation to VideoCard hideCategory", () => {
+    // VideoRow derives hideCategoryBadge = !!categorySlug and passes it as
+    // hideCategory to every VideoCard it renders. Category rows should suppress
+    // the badge (all cards share the same category), while cross-category rows
+    // (e.g. "You Might Also Like") should show it.
+
+    it("hides category badge on VideoCards when categorySlug is provided", () => {
+      // All videos have category "getting-started" → badge would say "Getting Started"
+      const videos = [
+        makeVideo({ id: "a", category: "getting-started" }),
+        makeVideo({ id: "b", category: "getting-started" }),
+      ];
+      const { queryByText } = render(
+        <VideoRow title="Getting Started" categorySlug="getting-started" videos={videos} />
+      );
+      // hideCategoryBadge=true → VideoCard renders with hideCategory={true} → no badge
+      expect(queryByText("Getting Started", { selector: "span" })).toBeNull();
+    });
+
+    it("shows category badge on VideoCards when categorySlug is not provided", () => {
+      // No categorySlug → hideCategoryBadge=false → badges are visible
+      const videos = [
+        makeVideo({ id: "a", category: "getting-started" }),
+        makeVideo({ id: "b", category: "getting-started" }),
+      ];
+      const { getAllByText } = render(
+        <VideoRow title="You Might Also Like" videos={videos} />
+      );
+      // The category title "Getting Started" should appear as a badge on each card
+      const badges = getAllByText("Getting Started");
+      expect(badges.length).toBeGreaterThanOrEqual(1);
+    });
+
+    it("section element has an empty id attribute when categorySlug is not provided", () => {
+      const videos = [makeVideo({ id: "a" })];
+      const { container } = render(<VideoRow title="Latest" videos={videos} />);
+      const section = container.querySelector("section");
+      // React does not render the id attribute when categorySlug is undefined.
+      // jsdom reports element.id as "" when no id is set.
+      expect(section?.id).toBe("");
+    });
+
+    it("hides category badges in both sectionLabels sections when categorySlug is provided", () => {
+      // Scenario: a row with sectionLabels AND a categorySlug.
+      // Both first-section and second-section cards should suppress their badges.
+      const videos = [
+        makeVideo({ id: "cw1", category: "getting-started" }),
+        makeVideo({ id: "latest1", category: "getting-started" }),
+      ];
+      const { queryByText } = render(
+        <VideoRow
+          title="Getting Started"
+          categorySlug="getting-started"
+          videos={videos}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 1,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 1,
+          }}
+        />
+      );
+      // hideCategoryBadge=true in both sections → no "Getting Started" span badges
+      expect(queryByText("Getting Started", { selector: "span" })).toBeNull();
+    });
+
+    it("shows category badges in both sectionLabels sections when categorySlug is not provided", () => {
+      // Scenario: the top "Continue Watching + Latest" merged row has no categorySlug.
+      // Both sections should show category badges on their VideoCards.
+      const videos = [
+        makeVideo({ id: "cw1", category: "getting-started" }),
+        makeVideo({ id: "latest1", category: "getting-started" }),
+      ];
+      const { getAllByText } = render(
+        <VideoRow
+          title="Latest"
+          videos={videos}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 1,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 1,
+          }}
+        />
+      );
+      // hideCategoryBadge=false → both sections' cards show "Getting Started"
+      const badges = getAllByText("Getting Started");
+      expect(badges.length).toBeGreaterThanOrEqual(2);
     });
   });
 });

@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 import PlaylistQueue from "./PlaylistQueue";
 import { makeVideo } from "@/__tests__/factories";
@@ -176,5 +176,80 @@ describe("PlaylistQueue", () => {
     // prevVideo = null (−1 > 0 is false), nextVideo = playlistVideos[0]
     expect(screen.queryByLabelText("Previous video")).toBeNull();
     expect(screen.getByLabelText("Next video")).toBeInTheDocument();
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// scrollIntoView — active item auto-scroll
+//
+// PlaylistQueue calls `activeItemRef.current?.scrollIntoView?.({ block: "nearest",
+// behavior: "instant" })` inside a useEffect([currentVideoId]) so that the
+// currently-playing item is always visible in the scroll container without
+// jarring smooth-scroll animation.
+// ─────────────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
+// scrollIntoView — active item auto-scroll
+//
+// PlaylistQueue calls `activeItemRef.current?.scrollIntoView?.({ block: "nearest",
+// behavior: "instant" })` inside a useEffect([currentVideoId]) so that the
+// currently-playing item is always visible in the scroll container without
+// jarring smooth-scroll animation.
+//
+// jsdom does NOT implement scrollIntoView, so we define it on
+// HTMLElement.prototype before each test and delete it after.
+// ─────────────────────────────────────────────────────────────────────────────
+describe("PlaylistQueue — scrollIntoView on active item", () => {
+  let scrollSpy: ReturnType<typeof vi.fn>;
+
+  beforeEach(() => {
+    scrollSpy = vi.fn();
+    // jsdom doesn't define scrollIntoView — install a mock so the optional-
+    // chain call `activeItemRef.current?.scrollIntoView?.({...})` fires.
+    HTMLElement.prototype.scrollIntoView = scrollSpy;
+  });
+
+  afterEach(() => {
+    // Remove the property so it doesn't leak into unrelated tests
+    // @ts-expect-error — intentionally deleting a property we added
+    delete HTMLElement.prototype.scrollIntoView;
+    vi.restoreAllMocks();
+  });
+
+  it("calls scrollIntoView on the active playlist item immediately after mount", () => {
+    mockSearchParams.set("playlist", "tutorials");
+
+    render(<PlaylistQueue currentVideoId="v2" allVideos={videos} />);
+
+    // useEffect fires after mount — the active item (v2) should be scrolled into view
+    expect(scrollSpy).toHaveBeenCalledWith({ block: "nearest", behavior: "instant" });
+  });
+
+  it("re-calls scrollIntoView when currentVideoId changes to a different playlist video", () => {
+    mockSearchParams.set("playlist", "tutorials");
+
+    const { rerender } = render(
+      <PlaylistQueue currentVideoId="v1" allVideos={videos} />
+    );
+
+    // Initial mount triggers one scroll call
+    const callsAfterMount = scrollSpy.mock.calls.length;
+    expect(callsAfterMount).toBeGreaterThanOrEqual(1);
+
+    // Navigate to a different video within the same playlist
+    rerender(<PlaylistQueue currentVideoId="v3" allVideos={videos} />);
+
+    // useEffect dependency [currentVideoId] re-fires — another scroll call expected
+    expect(scrollSpy.mock.calls.length).toBeGreaterThan(callsAfterMount);
+    expect(scrollSpy).toHaveBeenLastCalledWith({ block: "nearest", behavior: "instant" });
+  });
+
+  it("does NOT call scrollIntoView when currentVideoId is not in the playlist", () => {
+    // When no video matches currentVideoId, activeItemRef stays null.
+    // `null?.scrollIntoView?.({...})` short-circuits without calling the function.
+    mockSearchParams.set("playlist", "tutorials");
+
+    render(<PlaylistQueue currentVideoId="not-in-list" allVideos={videos} />);
+
+    expect(scrollSpy).not.toHaveBeenCalled();
   });
 });
