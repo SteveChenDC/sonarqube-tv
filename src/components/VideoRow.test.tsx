@@ -297,6 +297,98 @@ describe("VideoRow", () => {
     expect(document.activeElement).toBe(links[0]);
   });
 
+  // ─────────────────────────────────────────────────────────────────────────
+  // handleKeyDown — el.contains(document.activeElement) branch
+  //
+  // VideoCard renders an optional remove <button> nested INSIDE the outer <a>
+  // link element. When focus lands on that nested button, handleKeyDown must
+  // still correctly identify which card is "focused" via the
+  //   `el === document.activeElement || el.contains(document.activeElement)`
+  // check. The `el.contains()` branch is what handles this case.
+  // All existing keyboard-nav tests focus the <a> directly (the `el ===` branch).
+  // ─────────────────────────────────────────────────────────────────────────
+  describe("handleKeyDown — nested element focus (el.contains branch)", () => {
+    it("ArrowRight moves to the next card when focus is on a button nested inside the first card", () => {
+      const videos = [
+        makeVideo({ id: "n1", title: "Card One" }),
+        makeVideo({ id: "n2", title: "Card Two" }),
+        makeVideo({ id: "n3", title: "Card Three" }),
+      ];
+      const { container } = render(
+        <VideoRow title="Row" videos={videos} onRemoveVideo={vi.fn()} />
+      );
+
+      const links = container.querySelectorAll<HTMLAnchorElement>("a[href*='/watch/']");
+      // The remove button is a <button> nested INSIDE the first card's <a>
+      const removeBtn = container.querySelector<HTMLButtonElement>(
+        'button[aria-label="Remove Card One from continue watching"]'
+      );
+      expect(removeBtn).not.toBeNull();
+      // Confirm the button IS a descendant of the first card link
+      expect(links[0].contains(removeBtn)).toBe(true);
+
+      // Focus the nested button (not the <a> itself — exercises el.contains())
+      removeBtn!.focus();
+      expect(document.activeElement).toBe(removeBtn);
+
+      fireEvent.keyDown(container.querySelector("[role='region']")!, { key: "ArrowRight" });
+
+      // handleKeyDown identifies focusedIndex=0 via el.contains() → moves to card 1
+      expect(document.activeElement).toBe(links[1]);
+    });
+
+    it("ArrowLeft moves to the previous card when focus is on a nested button in the second card", () => {
+      const videos = [
+        makeVideo({ id: "n1", title: "Card One" }),
+        makeVideo({ id: "n2", title: "Card Two" }),
+        makeVideo({ id: "n3", title: "Card Three" }),
+      ];
+      const { container } = render(
+        <VideoRow title="Row" videos={videos} onRemoveVideo={vi.fn()} />
+      );
+
+      const links = container.querySelectorAll<HTMLAnchorElement>("a[href*='/watch/']");
+      const removeBtn = container.querySelector<HTMLButtonElement>(
+        'button[aria-label="Remove Card Two from continue watching"]'
+      );
+      expect(removeBtn).not.toBeNull();
+      expect(links[1].contains(removeBtn)).toBe(true);
+
+      removeBtn!.focus();
+      expect(document.activeElement).toBe(removeBtn);
+
+      fireEvent.keyDown(container.querySelector("[role='region']")!, { key: "ArrowLeft" });
+
+      // focusedIndex=1 via el.contains() → moves to card 0
+      expect(document.activeElement).toBe(links[0]);
+    });
+
+    it("End key moves focus to the last card when a nested button in the first card is focused", () => {
+      const videos = [
+        makeVideo({ id: "n1", title: "Card One" }),
+        makeVideo({ id: "n2", title: "Card Two" }),
+        makeVideo({ id: "n3", title: "Card Three" }),
+      ];
+      const { container } = render(
+        <VideoRow title="Row" videos={videos} onRemoveVideo={vi.fn()} />
+      );
+
+      const links = container.querySelectorAll<HTMLAnchorElement>("a[href*='/watch/']");
+      const removeBtn = container.querySelector<HTMLButtonElement>(
+        'button[aria-label="Remove Card One from continue watching"]'
+      );
+      expect(removeBtn).not.toBeNull();
+
+      removeBtn!.focus();
+      expect(document.activeElement).toBe(removeBtn);
+
+      fireEvent.keyDown(container.querySelector("[role='region']")!, { key: "End" });
+
+      // End key always jumps to the last card regardless of focusedIndex
+      expect(document.activeElement).toBe(links[links.length - 1]);
+    });
+  });
+
   describe("sectionLabels — remove button only on first section", () => {
     it("first-section cards get a remove button when onRemoveVideo is provided", () => {
       const videos = [
