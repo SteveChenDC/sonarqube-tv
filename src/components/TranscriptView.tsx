@@ -25,7 +25,7 @@ function SegmentRow({
     <button
       ref={isActive ? activeRef : undefined}
       onClick={() => onSeek(seg.offset)}
-      className={`flex w-full cursor-pointer items-baseline gap-3 rounded-md py-2 pr-2 text-left transition-colors duration-200 border-l-[3px] pl-[5px] ${
+      className={`flex w-full cursor-pointer items-start gap-3 rounded-md py-2 pr-2 text-left transition-colors duration-200 border-l-2 pl-2 ${
         isActive
           ? "border-qube-blue bg-qube-blue/20 ring-1 ring-qube-blue/40"
           : "border-transparent hover:bg-n8/30"
@@ -195,7 +195,7 @@ export default function TranscriptView({
           <div key={group.title} className={gi > 0 ? "mt-4" : ""}>
             <button
               onClick={() => handleSeek(group.startTime)}
-              className="sticky top-0 z-10 flex w-full items-center gap-2 border-b border-n8/60 bg-n9 px-2 py-2 text-left transition-colors hover:bg-n8/60 group"
+              className="sticky top-0 z-10 flex w-full items-center gap-2 border-b border-n8/60 bg-background px-2 py-2 text-left transition-colors hover:bg-n8/60 group"
             >
               <span className="min-w-[2.75rem] shrink-0 font-mono text-xs tabular-nums text-qube-blue">
                 {formatTime(group.startTime)}
