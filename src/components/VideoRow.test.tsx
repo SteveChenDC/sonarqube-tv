@@ -683,4 +683,97 @@ describe("VideoRow", () => {
       expect(h2s).toHaveLength(0);
     });
   });
+
+  describe("hideCategoryBadge — categorySlug propagation to VideoCard hideCategory", () => {
+    // VideoRow derives hideCategoryBadge = !!categorySlug and passes it as
+    // hideCategory to every VideoCard it renders. Category rows should suppress
+    // the badge (all cards share the same category), while cross-category rows
+    // (e.g. "You Might Also Like") should show it.
+
+    it("hides category badge on VideoCards when categorySlug is provided", () => {
+      // All videos have category "getting-started" → badge would say "Getting Started"
+      const videos = [
+        makeVideo({ id: "a", category: "getting-started" }),
+        makeVideo({ id: "b", category: "getting-started" }),
+      ];
+      const { queryByText } = render(
+        <VideoRow title="Getting Started" categorySlug="getting-started" videos={videos} />
+      );
+      // hideCategoryBadge=true → VideoCard renders with hideCategory={true} → no badge
+      expect(queryByText("Getting Started", { selector: "span" })).toBeNull();
+    });
+
+    it("shows category badge on VideoCards when categorySlug is not provided", () => {
+      // No categorySlug → hideCategoryBadge=false → badges are visible
+      const videos = [
+        makeVideo({ id: "a", category: "getting-started" }),
+        makeVideo({ id: "b", category: "getting-started" }),
+      ];
+      const { getAllByText } = render(
+        <VideoRow title="You Might Also Like" videos={videos} />
+      );
+      // The category title "Getting Started" should appear as a badge on each card
+      const badges = getAllByText("Getting Started");
+      expect(badges.length).toBeGreaterThanOrEqual(1);
+    });
+
+    it("section element has an empty id attribute when categorySlug is not provided", () => {
+      const videos = [makeVideo({ id: "a" })];
+      const { container } = render(<VideoRow title="Latest" videos={videos} />);
+      const section = container.querySelector("section");
+      // React does not render the id attribute when categorySlug is undefined.
+      // jsdom reports element.id as "" when no id is set.
+      expect(section?.id).toBe("");
+    });
+
+    it("hides category badges in both sectionLabels sections when categorySlug is provided", () => {
+      // Scenario: a row with sectionLabels AND a categorySlug.
+      // Both first-section and second-section cards should suppress their badges.
+      const videos = [
+        makeVideo({ id: "cw1", category: "getting-started" }),
+        makeVideo({ id: "latest1", category: "getting-started" }),
+      ];
+      const { queryByText } = render(
+        <VideoRow
+          title="Getting Started"
+          categorySlug="getting-started"
+          videos={videos}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 1,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 1,
+          }}
+        />
+      );
+      // hideCategoryBadge=true in both sections → no "Getting Started" span badges
+      expect(queryByText("Getting Started", { selector: "span" })).toBeNull();
+    });
+
+    it("shows category badges in both sectionLabels sections when categorySlug is not provided", () => {
+      // Scenario: the top "Continue Watching + Latest" merged row has no categorySlug.
+      // Both sections should show category badges on their VideoCards.
+      const videos = [
+        makeVideo({ id: "cw1", category: "getting-started" }),
+        makeVideo({ id: "latest1", category: "getting-started" }),
+      ];
+      const { getAllByText } = render(
+        <VideoRow
+          title="Latest"
+          videos={videos}
+          sectionLabels={{
+            firstLabel: "Continue Watching",
+            firstCount: 1,
+            secondLabel: "Latest",
+            secondCount: 1,
+            splitAt: 1,
+          }}
+        />
+      );
+      // hideCategoryBadge=false → both sections' cards show "Getting Started"
+      const badges = getAllByText("Getting Started");
+      expect(badges.length).toBeGreaterThanOrEqual(2);
+    });
+  });
 });
