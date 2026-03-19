@@ -1,7 +1,7 @@
 #!/bin/bash
 # Ralph Wiggum Autonomous Improvement Loop
 # Usage: ./ralph-rc.sh [command]
-# Commands: start, peek, status, stop, pause, log, diff, cost, health, attach
+# Commands: start, peek, status, stop, kill, pause, log, diff, cost, health, attach
 # Control: tmux attach -t ralphs
 #   Kill:   tmux kill-session -t ralphs
 #   Pause:  tmux send-keys -t ralphs:loop C-c
@@ -26,8 +26,19 @@ case "$CMD" in
     tmux list-windows -t ralphs 2>/dev/null || echo "Ralphs not running"
     exit 0
     ;;
-  stop|kill)
-    tmux kill-session -t ralphs 2>/dev/null && echo "Ralphs stopped." || echo "Ralphs not running."
+  stop)
+    if ! tmux has-session -t ralphs 2>/dev/null; then
+      echo "Ralphs not running."
+      exit 0
+    fi
+    touch /tmp/ralph-stop-requested
+    echo "Stop requested. Current agent will finish, then loop exits."
+    echo "Use './ralph-rc.sh kill' to force-stop immediately."
+    exit 0
+    ;;
+  kill)
+    tmux kill-session -t ralphs 2>/dev/null && echo "Ralphs force-killed." || echo "Ralphs not running."
+    rm -f /tmp/ralph-stop-requested
     exit 0
     ;;
   pause)
@@ -100,7 +111,8 @@ case "$CMD" in
     echo "  start    Launch the Ralph loop in tmux (default)"
     echo "  peek     Show recent changelog entries"
     echo "  status   Show tmux session status"
-    echo "  stop     Kill the Ralph session"
+    echo "  stop     Graceful stop (finish current agent, then exit)"
+    echo "  kill     Force-kill the Ralph session immediately"
     echo "  pause    Pause the loop"
     echo "  log      Show last 20 commits"
     echo "  diff     Show diff of last 5 commits"
