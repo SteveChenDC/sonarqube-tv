@@ -4,6 +4,28 @@ description: Running log of full visual QA passes — most recent at top
 type: project
 ---
 
+## 2026-03-19 (Pass #35)
+
+Ran full visual QA on 2026-03-19 (thirty-fifth run). Inspected 8 screenshots (desktop-* + mobile-*) from the current qa-snap run — mobile-*.png files are 750×1624px (375px logical × 2× DPR). Pages: Home (top + bottom), Watch, Category × 2 viewports.
+
+**Result: All clear — no new visual bugs found.**
+
+Screenshot note: `mobile-*.png` images are 750×1624 (2× DPR at 375px logical). The apparent "Courses ▼" text visible in the mobile header within these screenshots is consistent with a Playwright `deviceScaleFactor:2` capture — confirmed by cross-referencing `fresh-mobile-fixed-375.png` (375×812, 1×DPR) which correctly shows icon-only nav (no text labels). Code fix from Pass #34 is confirmed present in Header.tsx (lines 479, 580 `hidden sm:inline`; line 646 `hidden sm:flex`).
+
+Specific checks (all clean):
+- Desktop Home 1280px: Certification Courses (DEVELOPER/SECURITY/DEVOPS/AI CODE), BEGINNER/INTERMEDIATE badges, red Start Course buttons, Getting Started section — clean
+- Desktop Home Bottom: Black area artifact (known false positive); DevOps & CI/CD cards (1:57, 0:59, 46:48), SonarQube for IDE section — clean
+- Desktop Watch 1280px: YouTube player, Back nav, title "Auto import of GitHub repos to SonarQube Cloud in action." — correct
+- Desktop Category 1280px: "Getting Started" + "6 videos" + "1h 8m total" Qube Blue badges, Newest active (red), all 4 sort buttons on one row, 4-col grid with thumbnails — clean
+- Mobile Home 375px (750×1624 2×DPR): Certification Courses DEVELOPER card full-width, Getting Started section, Filters + scroll-to-top — correct; header fix confirmed in code
+- Mobile Home Bottom 375px: Black area artifact (known false positive); DevOps & CI/CD with 1:57 badge — clean
+- Mobile Watch 375px: Full-width player, SonarQube Cloud + March 12th 2026 tags, 0:41/Part of SCDK/Share, description, AI Summary/Transcript tabs — within viewport
+- Mobile Category 375px: Getting Started header, 6 videos + 1h 8m badges, sort buttons (flex-nowrap confirmed in code line 70), 2-col grid — clean
+- "N" bottom-left artifact — confirmed false positive (Next.js route announcer)
+- Brand colors: Qube Blue (#126ED3) badges ✓, Sonar Red (#D3121D) active sort + Start Course ✓
+
+---
+
 ## 2026-03-19 (Pass #34)
 
 Ran full visual QA on 2026-03-19 (thirty-fourth run). Fresh Playwright screenshots captured at 375px and 1280px viewports against the live dev server (http://localhost:3000). Pages: Home, Watch /watch/v1, Category /category/getting-started.

@@ -4,7 +4,11 @@ description: Build and test baseline as of 2026-03-18 — what passes, known war
 type: project
 ---
 
-As of 2026-03-19 (run 59), `npm run build` and `npm test` both pass clean.
+As of 2026-03-19 (run 61), `npm run build` and `npm test` both pass clean.
+
+**Run 61 (2026-03-19)**: Clean pass. No changes needed. 1039/1039 tests (61 files), 252 pages.
+
+**Run 60 (2026-03-19)**: Clean pass. No changes needed. 1024/1024 tests (60 files), 252 pages.
 
 **Run 59 (2026-03-19)**: Build broken due to stale `.next` dir from Next.js 16.1.6 after upgrade to 16.2.0. Fix: `rm -rf .next && npm run build`. 1020/1020 tests (59 files), 252 pages. No code changes needed.
 
@@ -91,7 +95,7 @@ As of 2026-03-19 (run 59), `npm run build` and `npm test` both pass clean.
 - Fix: `npx vitest run -u`. Committed as bb71d72.
 - Pattern: Any CSS gradient polish to Hero.tsx overlays will stale Hero.visual.test.tsx snapshot. Fix with `-u`.
 
-**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (runs 19–24, stable) → 219 (run 25, stable) → 219 (runs 26–36, stable) → 245 (run 37, 27 test files) → 318 (run 38, 36 test files) → 372 (run 39, 39 test files) → 398 (run 41, 42 test files) → 385 (run 43–44, 41 test files) → 652 (run 45, 46 test files) → 663 (run 46, 46 test files) → 673 (run 47, 46 test files) → 767 (run 49–50, 50 test files) → 923 (run 51–52, 54 test files) → 928 (run 53, 55 test files) → 963 (run 54–55, 56 test files) → 975 (run 56–57, 58 test files) → 994 (run 58, 59 test files) → 1020 (run 59, 59 test files)
+**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (runs 19–24, stable) → 219 (run 25, stable) → 219 (runs 26–36, stable) → 245 (run 37, 27 test files) → 318 (run 38, 36 test files) → 372 (run 39, 39 test files) → 398 (run 41, 42 test files) → 385 (run 43–44, 41 test files) → 652 (run 45, 46 test files) → 663 (run 46, 46 test files) → 673 (run 47, 46 test files) → 767 (run 49–50, 50 test files) → 923 (run 51–52, 54 test files) → 928 (run 53, 55 test files) → 963 (run 54–55, 56 test files) → 975 (run 56–57, 58 test files) → 994 (run 58, 59 test files) → 1020 (run 59, 59 test files) → 1024 (run 60, 60 test files) → 1039 (run 61, 61 test files)
 **Page count history**: 242 → 243 → 250 (run 38–44) → 252 (run 45–54)
 
 **Why:** Ongoing QA baseline tracking.
