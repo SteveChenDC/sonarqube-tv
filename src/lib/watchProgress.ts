@@ -8,7 +8,20 @@ export function getAllProgress(): WatchProgressMap {
   if (globalThis.window === undefined) return {};
   try {
     const data = localStorage.getItem(STORAGE_KEY);
-    return data ? JSON.parse(data) : {};
+    if (!data) return {};
+    const parsed: unknown = JSON.parse(data);
+    // Validate: must be a plain object (not array/null/primitive)
+    if (typeof parsed !== "object" || parsed === null || Array.isArray(parsed)) {
+      return {};
+    }
+    // Validate each entry: keys must be strings, values finite numbers clamped 0-100
+    const validated: WatchProgressMap = {};
+    for (const [key, value] of Object.entries(parsed)) {
+      if (typeof value === "number" && isFinite(value)) {
+        validated[key] = Math.min(100, Math.max(0, value));
+      }
+    }
+    return validated;
   } catch {
     return {};
   }
