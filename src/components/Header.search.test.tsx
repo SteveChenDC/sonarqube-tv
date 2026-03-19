@@ -360,9 +360,9 @@ describe("Header — search ARIA combobox", () => {
     renderHeader();
     await openSearch();
     fireEvent.change(searchInput(), { target: { value: "tutorial" } });
-    // "2 of 2 results" should be in the live region
+    // live region now says "N results found" (distinct from the visible "X of Y results" span)
     const liveRegion = document.querySelector('[role="status"][aria-live="polite"]');
-    expect(liveRegion?.textContent).toContain("2 of 2 results");
+    expect(liveRegion?.textContent).toContain("2 results found");
   });
 
   it("aria-live region announces 'No results' when query has no matches", async () => {
