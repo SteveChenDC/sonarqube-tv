@@ -4,6 +4,16 @@ description: Known non-bugs to skip or ignore during visual QA passes
 type: feedback
 ---
 
+## IMPORTANT: Mobile viewport must be 375px (not 390px)
+
+**What happened:** Passes #22–33 all used 390px for "mobile" screenshots (the `qa-mobile-home.png` was captured at 390×844 — confirmed by reading PNG IHDR dimensions). This caused a real bug (mobile header overflow) to be missed for many passes because at 390px "Categories" text was close to the edge but not obviously clipped, and the ThemeToggle clipping was not visually noticed.
+
+**Why this matters:** The prompt specifies "mobile (375px)" — always use exactly 375px for mobile screenshots to match iPhone SE and detect tight-layout bugs. Do NOT use 390px.
+
+**Action:** Always capture fresh screenshots at the exact viewports specified (375px for mobile). Do not rely on stale screenshots in the repository.
+
+---
+
 ## "N" character at bottom-left of all pages
 
 **What it looks like:** A tiny single letter "N" appears at the very bottom-left corner of the viewport in screenshots of every page (home, watch, category).

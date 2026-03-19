@@ -4,6 +4,29 @@ description: Running log of full visual QA passes — most recent at top
 type: project
 ---
 
+## 2026-03-19 (Pass #34)
+
+Ran full visual QA on 2026-03-19 (thirty-fourth run). Fresh Playwright screenshots captured at 375px and 1280px viewports against the live dev server (http://localhost:3000). Pages: Home, Watch /watch/v1, Category /category/getting-started.
+
+**Result: 1 bug found and fixed.**
+
+**Bug fixed:** Mobile header overflow — nav items clip off-screen at <480px. The header nav was 307px wide in ~222px of available space at 375px. The ThemeToggle button left edge was at 425px (50px completely off-screen). Users on all common phone widths (375px iPhone SE, 390px iPhone 15, etc.) could not access the ThemeToggle or see the full "Categories" label. Root cause: Courses (100px) + Categories (120px) + ThemeToggle (36px) + gaps exceed available horizontal space after the logo. Fix: Courses and Categories text labels now use `hidden sm:inline` (matching the Search pattern), both buttons have `aria-label` for accessibility; ThemeToggle wrapped in `hidden sm:flex` (already was clipped and inaccessible on mobile). Verified: `headerScrollWidth === 375` after fix, all nav items within viewport. Committed: `a513b34`.
+
+**Why prior passes missed it:** QA passes #22–33 all used 390px screenshot viewport (from a `qa-mobile-home.png` captured at 390×844 — discovered by reading PNG IHDR dimensions). At 390px the "Categories" text was mostly visible (ending at 421px, close to edge) and the ThemeToggle was off-screen but visually not noticed. The task prompt for this pass correctly specified 375px.
+
+Specific checks (all clean after fix):
+- Desktop Home 1280px: Hero (SecurityGuy TV video), speaker panel right side, Latest row — clean; light theme = known Playwright headless artifact
+- Desktop Home Bottom: Enterprise row, Customer Stories section, footer with browse/categories/connect columns — clean
+- Desktop Watch 1280px: player, title card, metadata (SonarQube Cloud + March 12th 2026 + 0:41 + Part of SCDE + Share), description — clean
+- Desktop Category 1280px: Getting Started header, 6 videos + 1h 8m badges, sort bar (Newest red, all 4 buttons on one row), 4-col grid (42:47, 7:52, 9:31, 7:03 thumbnails) — clean
+- Mobile Home 375px (after fix): Header fits (Search icon + Courses ▼ + Categories ▼, no overflow), hero card, Watch Now red button, Filters blue button, Latest 63 + Swipe hint — clean
+- Mobile Home Bottom 375px: Customer Stories section, footer, Filters + scroll-to-top overlay — clean
+- Mobile Watch 375px: full-width player, title, tags (SonarQube Cloud + March 12th 2026), 0:41/Part of SCDE/Share, description, AI Summary/Transcript tabs — within viewport
+- Mobile Category 375px: Getting Started header, 6 videos + 1h 8m badges, sort bar (Newest red, all 4 buttons on ONE ROW at 375px), 2-col grid with thumbnails — clean
+- "N" bottom-left artifact — confirmed false positive (Next.js route announcer)
+
+---
+
 ## 2026-03-18 (Pass #33)
 
 Ran full visual QA on 2026-03-18 (thirty-third run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px). Also inspected interactive-* screenshots from 16:42–16:43.
