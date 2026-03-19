@@ -64,7 +64,7 @@ export default function CategoryContent({
 
       {/* Sort controls */}
       <div className="mb-6 flex flex-col items-start gap-x-2 gap-y-2 sm:flex-row sm:flex-wrap sm:items-center">
-        <span className="font-body text-xs font-medium uppercase tracking-wider text-n6 shrink-0">
+        <span className="font-heading text-xs font-medium uppercase tracking-wider text-n6 shrink-0">
           Sort by
         </span>
         <div className="flex flex-nowrap rounded-lg border border-n7/50 bg-n9/40 p-0.5 gap-0.5">
@@ -72,7 +72,7 @@ export default function CategoryContent({
             <button
               key={option.value}
               onClick={() => setSort(option.value)}
-              className={`rounded-md px-4 py-2.5 font-heading text-sm font-medium transition-all duration-150 sm:px-3 sm:py-1.5 sm:text-xs ${
+              className={`rounded-md px-4 py-2.5 font-heading text-sm font-medium transition-all duration-200 sm:px-3 sm:py-1.5 sm:text-xs ${
                 sort === option.value
                   ? "bg-sonar-red text-white shadow-sm"
                   : "text-n5 hover:bg-n8/60 hover:text-n2"
@@ -85,9 +85,15 @@ export default function CategoryContent({
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-x-3 gap-y-8 sm:gap-x-6 sm:gap-y-10 md:grid-cols-3 xl:grid-cols-4">
-        {sorted.map((video) => (
-          <VideoCard key={video.id} video={video} fluid hideCategory />
+      <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-6 sm:gap-y-10 md:grid-cols-3 xl:grid-cols-4">
+        {sorted.map((video, index) => (
+          <div
+            key={video.id}
+            className="animate-tab-in"
+            style={{ animationDelay: `${Math.min(index * 0.03, 0.45)}s` }}
+          >
+            <VideoCard video={video} fluid hideCategory />
+          </div>
         ))}
       </div>
     </div>
