@@ -52,6 +52,8 @@ export async function generateMetadata({
   // Use maxresdefault for OG/social sharing where full resolution matters.
   const ogImage = `https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`;
 
+  const embedUrl = `https://www.youtube.com/embed/${video.youtubeId}`;
+
   return {
     title: video.title,
     description: video.description,
@@ -61,6 +63,18 @@ export async function generateMetadata({
       url: `/watch/${id}`,
       images: [{ url: ogImage, width: 1280, height: 720, alt: video.title }],
       type: "video.other",
+      // og:video signals to Facebook, LinkedIn, and Slack that this page has
+      // an embeddable video — they will render an inline player rather than
+      // a static thumbnail when the URL is shared.
+      videos: [
+        {
+          url: embedUrl,
+          secureUrl: embedUrl,
+          type: "text/html",
+          width: 1280,
+          height: 720,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
