@@ -342,7 +342,7 @@ export default function Header() {
                     {showResults
                       ? searchResults.length === 0
                         ? `No results for "${searchQuery.trim()}"`
-                        : `${displayedResults.length} of ${searchResults.length} result${searchResults.length === 1 ? "" : "s"}`
+                        : `${searchResults.length} result${searchResults.length === 1 ? "" : "s"} found`
                       : ""}
                   </div>
                   <input
