@@ -211,7 +211,7 @@ tmux send-keys -t ralphs:loop "source /tmp/ralph-env.sh && bash ralph-loop.sh" E
 
 # Go back to rc window
 tmux select-window -t ralphs:rc
-tmux send-keys -t ralphs:rc "echo '=== Ralph RC — Control Center ===' && echo 'Agents: 8-cycle rotation' && echo '  Core (full budget):  C0:design C1:polish C2:seo' && echo '  Secondary (half $):  C3:a11y C4:content C5:mobile C6:security C7:dx' && echo '  + test-ralph parallel off-peak | QA every cycle | perf after seo | visual-qa every 3rd' && echo 'Off-peak: 2 parallel (primary+test) | Peak: 1 (primary only)' && echo '2x promo: off-peak(2PM-8AM ET)=30s/\$10 | peak(8AM-2PM ET)=60s/\$5' && echo 'Ctrl+B, 1 = watch loop | Ctrl+B, 0 = rc' && echo 'tmux kill-session -t ralphs to stop'" Enter
+tmux send-keys -t ralphs:rc "echo '=== Ralph RC — Control Center ===' && echo 'Agents: 8-cycle rotation' && echo '  Core (full budget):  C0:design C1:polish C2:seo' && echo '  Secondary (half $):  C3:a11y C4:content C5:mobile C6:security C7:dx' && echo '  + test-ralph every 4th cycle (off-peak) | QA every cycle | perf after seo | visual-qa every 3rd' && echo 'Off-peak: 2 parallel (primary+test) | Peak: 1 (primary only)' && echo '2x promo: off-peak(2PM-8AM ET)=30s/\$10 | peak(8AM-2PM ET)=60s/\$5' && echo 'Ctrl+B, 1 = watch loop | Ctrl+B, 0 = rc' && echo 'tmux kill-session -t ralphs to stop'" Enter
 
 # Attach to session
 tmux attach -t ralphs

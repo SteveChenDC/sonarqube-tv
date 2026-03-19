@@ -70,8 +70,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/category/clean-code" className="font-body text-sm text-n5 transition-colors hover:text-n1">
-                  Clean Code
+                <Link href="/category/code-quality" className="font-body text-sm text-n5 transition-colors hover:text-n1">
+                  Code Quality
                 </Link>
               </li>
               <li>

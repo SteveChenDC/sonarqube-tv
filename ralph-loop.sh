@@ -252,7 +252,7 @@ while true; do
 
     # Launch test-ralph in parallel during off-peak (zero conflict risk — only creates .test.tsx files)
     TEST_PID=""
-    if [ "$OFFPEAK" = "1" ]; then
+    if [ "$OFFPEAK" = "1" ] && [ $((CYCLE % 4)) -eq 0 ]; then
       git worktree add /tmp/ralph-test-wt -b ralph-test-tmp HEAD 2>/dev/null
       echo '=== [test-ralph] Starting in parallel worktree... ==='
       (cd /tmp/ralph-test-wt && claude -p 'Go' --agent test-ralph --model sonnet --dangerously-skip-permissions --max-turns $MAX_TURNS --max-budget-usd $CBUDGET 2>&1) > /tmp/ralph-test-ralph.log 2>&1 &

@@ -28,8 +28,8 @@ export const categories: Category[] = [
     description: "SAST, taint analysis, secrets detection, SCA, vulnerability research, and secure coding practices.",
   },
   {
-    slug: "clean-code",
-    title: "Clean Code",
+    slug: "code-quality",
+    title: "Code Quality",
     description: "Code quality philosophy, language-specific best practices, and code quality fundamentals.",
   },
   {
