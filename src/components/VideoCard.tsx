@@ -19,9 +19,12 @@ function parseDurationToMinutes(duration: string): number {
 
 function getDurationBadgeClass(duration: string): string {
   const minutes = parseDurationToMinutes(duration);
-  if (minutes < 4) return "bg-qube-blue/80";
-  if (minutes <= 20) return "bg-black/80";
-  return "bg-sonar-purple/80";
+  // Short (<4 min): blue — quick, informational hit
+  if (minutes < 4) return "bg-qube-blue/80 text-white";
+  // Medium (4–20 min): neutral dark panel — visible on any thumbnail
+  if (minutes <= 20) return "bg-n8/90 text-n3";
+  // Long (>20 min): red — signals a substantial time investment
+  return "bg-sonar-red/70 text-white";
 }
 
 function timeAgo(dateString: string): string {
@@ -96,7 +99,7 @@ function VideoCard({ video, fluid = false, onRemove, hideCategory = false, prior
             <path d="M8 5v14l11-7z" />
           </svg>
         </div>
-        <span className={`absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium text-white ${getDurationBadgeClass(video.duration)}`}>
+        <span className={`absolute bottom-2 right-2 rounded px-1.5 py-0.5 text-xs font-medium ${getDurationBadgeClass(video.duration)}`}>
           {video.duration}
         </span>
 
