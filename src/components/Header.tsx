@@ -332,14 +332,32 @@ export default function Header() {
                       <path strokeLinecap="round" d="M21 21l-4.35-4.35" />
                     </svg>
                   </span>
+                  {/* Visually-hidden live region — announces result count to screen readers */}
+                  <div
+                    role="status"
+                    aria-live="polite"
+                    aria-atomic="true"
+                    className="sr-only"
+                  >
+                    {showResults
+                      ? searchResults.length === 0
+                        ? `No results for "${searchQuery.trim()}"`
+                        : `${displayedResults.length} of ${searchResults.length} result${searchResults.length === 1 ? "" : "s"}`
+                      : ""}
+                  </div>
                   <input
                     ref={searchInputRef}
                     type="search"
+                    role="combobox"
                     value={searchQuery}
                     onChange={(e) => onSearchChange(e.target.value)}
                     onBlur={handleSearchBlur}
                     placeholder="Search videos…"
                     aria-label="Search videos"
+                    aria-expanded={showResults}
+                    aria-haspopup="listbox"
+                    aria-autocomplete="list"
+                    aria-controls="header-search-listbox"
                     className="w-full rounded-lg border border-n7/60 bg-n9/80 py-1.5 pr-8 pl-8 font-body text-sm text-n2 placeholder-n6 transition-all duration-200 focus:border-qube-blue/70 focus:ring-1 focus:ring-qube-blue/30 focus:outline-none sm:w-44 sm:focus:w-64"
                   />
                   {searchQuery && (
@@ -404,11 +422,16 @@ export default function Header() {
                     </Link>
                   </div>
                 ) : (
-                  <ul className="py-1">
+                  <ul
+                    id="header-search-listbox"
+                    role="listbox"
+                    aria-label={`${displayedResults.length} of ${searchResults.length} search result${searchResults.length === 1 ? "" : "s"}`}
+                    className="py-1"
+                  >
                     {displayedResults.map((video) => {
                       const cat = categories.find((c) => c.slug === video.category);
                       return (
-                        <li key={video.id}>
+                        <li key={video.id} role="option" aria-selected="false">
                           <Link
                             href={`/watch/${video.id}`}
                             onClick={() => {
