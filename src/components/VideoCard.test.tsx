@@ -180,6 +180,14 @@ describe("VideoCard", () => {
       const { queryByLabelText } = render(<VideoCard video={mockVideo} />);
       expect(queryByLabelText(/Remove.*from continue watching/)).toBeNull();
     });
+
+    it("remove button has max-sm:opacity-100 class so it is always visible on mobile touch screens", () => {
+      const onRemove = vi.fn();
+      const { getByLabelText } = render(<VideoCard video={mockVideo} onRemove={onRemove} />);
+      const btn = getByLabelText("Remove Getting Started with SonarQube from continue watching");
+      // max-sm:opacity-100 ensures the button is visible on mobile (≤639px) where hover is unavailable
+      expect(btn.className).toContain("max-sm:opacity-100");
+    });
   });
 
   describe("hideCategory prop", () => {
