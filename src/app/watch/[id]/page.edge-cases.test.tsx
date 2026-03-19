@@ -260,14 +260,17 @@ describe("WatchPage — 'You Might Also Like' VideoRow visibility", () => {
 
 // ── generateMetadata — twitter images ────────────────────────────────────────
 describe("generateMetadata — twitter fields", () => {
-  it("twitter images array includes the video thumbnail", async () => {
+  it("twitter images array uses maxresdefault for social card quality", async () => {
     const video = videosModule.videos[0];
     const meta = await generateMetadata({
       params: Promise.resolve({ id: video.id }),
     });
     const twitter = meta.twitter as { images?: string[] } | undefined;
     expect(Array.isArray(twitter?.images)).toBe(true);
-    expect(twitter?.images?.[0]).toBe(video.thumbnail);
+    // Twitter cards use maxresdefault — independent of VideoCard hqdefault thumbnails.
+    expect(twitter?.images?.[0]).toBe(
+      `https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`
+    );
   });
 
   it("twitter title matches the video title", async () => {

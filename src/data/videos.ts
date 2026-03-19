@@ -5,7 +5,11 @@ export { categories } from "./categories";
 import { categories } from "./categories";
 
 function ytThumbnail(youtubeId: string): string {
-  return `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
+  // hqdefault.jpg (480×360, ~25 KB) is guaranteed to exist for every YouTube video.
+  // maxresdefault.jpg (1280×720, ~150 KB) only exists for HD uploads and 404s otherwise.
+  // For VideoCards (320px wide), hqdefault is more than sufficient resolution.
+  // Hero.tsx constructs its own maxresdefault URL for the LCP image.
+  return `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
 }
 
 const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
