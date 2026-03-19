@@ -42,7 +42,9 @@ describe("Hero visual snapshots", () => {
     expect(mobileLayout.querySelector(`a[href="/watch/${mockVideo.id}"]`)).toBeTruthy();
     expect(desktopLayout.querySelector(`a[href="/watch/${mockVideo.id}"]`)).toBeTruthy();
 
-    // Hero uses video.thumbnail directly as the image src
+    // Hero upgrades YouTube CDN thumbnails to maxresdefault for LCP quality,
+    // but local thumbnails (path starting with "/") are used as-is.
+    // This mock uses a local path so heroSrc equals mockVideo.thumbnail.
     const heroImgSrc = mockVideo.thumbnail;
     expect(mobileLayout.querySelector(`img[src="${heroImgSrc}"]`)).toBeTruthy();
     expect(desktopLayout.querySelector(`img[src="${heroImgSrc}"]`)).toBeTruthy();

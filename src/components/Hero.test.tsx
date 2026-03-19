@@ -77,4 +77,87 @@ describe("Hero", () => {
     const { getAllByText } = render(<Hero video={mockVideo} />);
     expect(getAllByText("Learn how to deploy SonarQube at scale").length).toBeGreaterThanOrEqual(1);
   });
+
+  // ── isDescriptionRedundant edge cases missing from this file ────────────────
+
+  it("hides description when the title appears in the middle of the description", () => {
+    // Tests the d.includes(t) branch — title is NOT at the start of description
+    const middleVideo: Video = {
+      ...mockVideo,
+      description: `Everything about ${mockVideo.title} in production environments.`,
+    };
+    const { container } = render(<Hero video={middleVideo} />);
+    // The `d.includes(t)` guard fires → showDescription = false → no <p>
+    expect(container.querySelectorAll("p").length).toBe(0);
+  });
+
+  it("hides description when it is an empty string", () => {
+    // `video.description && !isRedundant` — empty string is falsy, short-circuits
+    const emptyDescVideo: Video = { ...mockVideo, description: "" };
+    const { container } = render(<Hero video={emptyDescVideo} />);
+    expect(container.querySelectorAll("p").length).toBe(0);
+  });
+
+  it("hides description when it is the title in a different case (case-insensitive check)", () => {
+    // isDescriptionRedundant lowercases both sides before comparing
+    const upperDescVideo: Video = {
+      ...mockVideo,
+      description: mockVideo.title.toUpperCase(),
+    };
+    const { container } = render(<Hero video={upperDescVideo} />);
+    // d.toLowerCase() === t.toLowerCase() → redundant → no <p>
+    expect(container.querySelectorAll("p").length).toBe(0);
+  });
+
+  // ── heroSrc YouTube CDN upgrade logic ───────────────────────────────────────
+
+  it("upgrades a YouTube CDN thumbnail to maxresdefault URL for the hero image", () => {
+    // When video.thumbnail starts with "https://", Hero replaces it with
+    // `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg` for LCP quality.
+    const ytVideo: Video = {
+      ...mockVideo,
+      youtubeId: "myYtId",
+      thumbnail: "https://i.ytimg.com/vi/myYtId/hqdefault.jpg",
+    };
+    const { container } = render(<Hero video={ytVideo} />);
+    const imgs = Array.from(container.querySelectorAll("img")).filter(
+      (img) => img.getAttribute("alt") === mockVideo.title
+    );
+    // Both mobile and desktop sections render the hero image
+    expect(imgs.length).toBeGreaterThanOrEqual(2);
+    for (const img of imgs) {
+      expect(img.getAttribute("src")).toBe(
+        "https://img.youtube.com/vi/myYtId/maxresdefault.jpg"
+      );
+    }
+  });
+
+  it("uses video.youtubeId (not any ID inside the thumbnail URL) for maxresdefault", () => {
+    // Ensures the src is built from video.youtubeId, not parsed from the hqdefault URL
+    const ytVideo: Video = {
+      ...mockVideo,
+      youtubeId: "correctId",
+      thumbnail: "https://i.ytimg.com/vi/differentId/hqdefault.jpg",
+    };
+    const { container } = render(<Hero video={ytVideo} />);
+    const imgs = Array.from(container.querySelectorAll("img"));
+    const upgraded = imgs.find((img) =>
+      img.getAttribute("src")?.includes("maxresdefault")
+    );
+    expect(upgraded?.getAttribute("src")).toBe(
+      "https://img.youtube.com/vi/correctId/maxresdefault.jpg"
+    );
+  });
+
+  it("uses the local thumbnail path as-is when it does not start with https://", () => {
+    // mockVideo.thumbnail = "/hero-thumb.jpg" (local path — no upgrade)
+    const { container } = render(<Hero video={mockVideo} />);
+    const imgs = Array.from(container.querySelectorAll("img")).filter(
+      (img) => img.getAttribute("alt") === mockVideo.title
+    );
+    expect(imgs.length).toBeGreaterThanOrEqual(2);
+    for (const img of imgs) {
+      expect(img.getAttribute("src")).toBe("/hero-thumb.jpg");
+    }
+  });
 });

@@ -148,3 +148,52 @@ Defined in `src/app/globals.css`:
 5. Maintain consistent spacing and alignment across all components
 6. Responsive design: must work on large TV screens and standard monitors
 7. Accessibility: sufficient color contrast, keyboard navigation, ARIA labels
+
+---
+
+## Company Boilerplate
+
+> Sonar, the industry standard for code verification and automated code review, helps reduce outages, improve security, and lower risks associated with AI and agentic coding. As an independent verification platform, Sonar enables organizations to securely develop at the speed of AI. Sonar is the foundation for high performance software engineering, analyzing over 750 billion lines of code daily to ensure applications are secure, reliable, and maintainable. Rooted in the open source community, Sonar is trusted by 7M+ developers globally, including teams at Snowflake, Booking.com, Deutsche Bank, AstraZeneca, and Ford Motor Company.
+
+**Mission:** Supercharge developers to build better, faster.
+
+---
+
+## Terminology: Use This, Not That
+
+| Use this | Not this | Notes |
+|----------|----------|-------|
+| SonarQube Cloud | SonarCloud | Product rebrand |
+| SonarQube Server | SonarQube (when referring to self-hosted) | Deployment distinction |
+| SonarQube for IDE | SonarLint | Product rebrand |
+| SonarQube Community Build | Community Edition | Official name |
+| code quality / code health / code security | Clean Code (as branded term) | More precise and descriptive |
+| "improving code quality as you write" or "vibe, then verify" | Clean as You Code | Updated messaging framework |
+| developer-written and AI-generated code | human-generated code | Preferred phrasing |
+| open source (noun) / open-source (adjective before noun) | Open Source | Not a proper noun |
+| blog post | blog (for a single article) | "Blog" = the site, "blog post" = one article |
+
+### Product Names (always capitalized)
+- SonarQube Cloud
+- SonarQube Server
+- SonarQube for IDE
+- SonarQube Community Build
+- SonarQube Advanced Security
+- SonarQube Remediation Agent
+
+### Capabilities (never capitalized unless starting a sentence)
+- architecture management
+- secrets detection
+- code quality analysis
+- code security analysis
+- code reliability analysis
+- code maintainability
+
+---
+
+## Voice and Tone
+
+- **Authoritative, not arrogant** — We speak with confidence from 16+ years of trust with millions of developers
+- **Insightful, not abstract** — We connect tactical code issues to strategic business challenges
+- **Empowering, not prescriptive** — We help developers grow their skills and reduce toil
+- **"Vibe, then verify"** — Our approved messaging framework for AI-assisted development workflows

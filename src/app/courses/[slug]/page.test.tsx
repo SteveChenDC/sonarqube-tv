@@ -55,7 +55,7 @@ vi.mock("@/data/courses", () => {
     learningOutcomes: [
       "Install and configure SonarQube",
       "Run your first scan",
-      "Apply Clean as You Code",
+      "Apply code quality methodology",
     ],
     accentColor: "qube-blue",
     modules: [
@@ -223,7 +223,7 @@ describe("CourseDetailPage — learning outcomes", () => {
     await act(async () => { render(jsx); });
     expect(screen.getByText("Install and configure SonarQube")).toBeTruthy();
     expect(screen.getByText("Run your first scan")).toBeTruthy();
-    expect(screen.getByText("Apply Clean as You Code")).toBeTruthy();
+    expect(screen.getByText("Apply code quality methodology")).toBeTruthy();
   });
 
   it("renders the 'What you'll learn' section header", async () => {
@@ -324,5 +324,149 @@ describe("CourseDetailPage — JSON-LD", () => {
     const jsonLds = Array.from(scripts).map((s) => JSON.parse(s.innerHTML));
     const course = jsonLds.find((j) => j["@type"] === "Course");
     expect(course.hasCourseInstance.courseMode).toBe("online");
+  });
+});
+
+// ── generateMetadata — openGraph fields ───────────────────────────────────────
+describe("generateMetadata — openGraph fields", () => {
+  type OGImg = { url: string; width: number; height: number; alt: string };
+  type OG = { type: string; url: string; images: OGImg[] };
+
+  it("openGraph.type is website", async () => {
+    const meta = await generateMetadata({
+      params: Promise.resolve({ slug: "sonarqube-certified-developer" }),
+    });
+    expect((meta as { openGraph: OG }).openGraph.type).toBe("website");
+  });
+
+  it("openGraph.url is /courses/[slug]", async () => {
+    const meta = await generateMetadata({
+      params: Promise.resolve({ slug: "sonarqube-certified-developer" }),
+    });
+    expect((meta as { openGraph: OG }).openGraph.url).toBe(
+      "/courses/sonarqube-certified-developer"
+    );
+  });
+
+  it("openGraph.images[0].url is /og-image.png", async () => {
+    const meta = await generateMetadata({
+      params: Promise.resolve({ slug: "sonarqube-certified-developer" }),
+    });
+    const og = (meta as { openGraph: OG }).openGraph;
+    expect(og.images[0].url).toBe("/og-image.png");
+  });
+
+  it("openGraph.images[0] has width 1200 and height 630", async () => {
+    const meta = await generateMetadata({
+      params: Promise.resolve({ slug: "sonarqube-certified-developer" }),
+    });
+    const og = (meta as { openGraph: OG }).openGraph;
+    expect(og.images[0].width).toBe(1200);
+    expect(og.images[0].height).toBe(630);
+  });
+
+  it("openGraph.images[0].alt includes course title and certification course", async () => {
+    const meta = await generateMetadata({
+      params: Promise.resolve({ slug: "sonarqube-certified-developer" }),
+    });
+    const og = (meta as { openGraph: OG }).openGraph;
+    expect(og.images[0].alt).toContain("SonarQube Certified Developer");
+    expect(og.images[0].alt).toContain("certification course");
+  });
+});
+
+// ── generateMetadata — twitter fields ─────────────────────────────────────────
+describe("generateMetadata — twitter fields", () => {
+  type TW = { card: string; title: string; description: string; images: string[] };
+
+  it("twitter.card is summary_large_image", async () => {
+    const meta = await generateMetadata({
+      params: Promise.resolve({ slug: "sonarqube-certified-developer" }),
+    });
+    expect((meta as { twitter: TW }).twitter.card).toBe("summary_large_image");
+  });
+
+  it("twitter.title matches page title format", async () => {
+    const meta = await generateMetadata({
+      params: Promise.resolve({ slug: "sonarqube-certified-developer" }),
+    });
+    expect((meta as { twitter: TW }).twitter.title).toBe(
+      "SonarQube Certified Developer | Sonar.tv"
+    );
+  });
+
+  it("twitter.images[0] is /og-image.png", async () => {
+    const meta = await generateMetadata({
+      params: Promise.resolve({ slug: "sonarqube-certified-developer" }),
+    });
+    expect((meta as { twitter: TW }).twitter.images[0]).toBe("/og-image.png");
+  });
+});
+
+// ── CourseDetailPage — JSON-LD additional fields ───────────────────────────────
+describe("CourseDetailPage — JSON-LD additional fields", () => {
+  async function getCourseJsonLd() {
+    const jsx = await CourseDetailPage({
+      params: Promise.resolve({ slug: "sonarqube-certified-developer" }),
+    });
+    const { container } = render(jsx);
+    const scripts = container.querySelectorAll('script[type="application/ld+json"]');
+    const jsonLds = Array.from(scripts).map((s) => JSON.parse(s.innerHTML));
+    return jsonLds.find((j) => j["@type"] === "Course");
+  }
+
+  it("numberOfCredits equals total video count in the course", async () => {
+    const ld = await getCourseJsonLd();
+    // courseA mock: m1 has 2 videos + m2 has 1 video = 3 total
+    expect(ld.numberOfCredits).toBe(3);
+  });
+
+  it("provider.name is SonarSource", async () => {
+    const ld = await getCourseJsonLd();
+    expect(ld.provider.name).toBe("SonarSource");
+  });
+
+  it("syllabusSections maps to course modules with name and description", async () => {
+    const ld = await getCourseJsonLd();
+    expect(ld.syllabusSections).toHaveLength(2);
+    expect(ld.syllabusSections[0].name).toBe("Introduction");
+    expect(ld.syllabusSections[0]["@type"]).toBe("Syllabus");
+    expect(ld.syllabusSections[1].name).toBe("Deep Dive");
+  });
+
+  it("hasCourseInstance.courseWorkload is formatted as ISO 8601 duration (PT30M)", async () => {
+    const ld = await getCourseJsonLd();
+    // Mock getCourseTotalDuration returns "30m" for courseA → "PT30M"
+    expect(ld.hasCourseInstance.courseWorkload).toBe("PT30M");
+  });
+});
+
+// ── BreadcrumbList item URLs ───────────────────────────────────────────────────
+describe("CourseDetailPage — BreadcrumbList item URLs", () => {
+  async function getBreadcrumbJsonLd() {
+    const jsx = await CourseDetailPage({
+      params: Promise.resolve({ slug: "sonarqube-certified-developer" }),
+    });
+    const { container } = render(jsx);
+    const scripts = container.querySelectorAll('script[type="application/ld+json"]');
+    const jsonLds = Array.from(scripts).map((s) => JSON.parse(s.innerHTML));
+    return jsonLds.find((j) => j["@type"] === "BreadcrumbList");
+  }
+
+  it("breadcrumb item[0].item is the base URL (sonarqube-tv domain)", async () => {
+    const breadcrumb = await getBreadcrumbJsonLd();
+    expect(breadcrumb.itemListElement[0].item).toContain("sonarqube-tv");
+  });
+
+  it("breadcrumb item[1].item includes /courses path", async () => {
+    const breadcrumb = await getBreadcrumbJsonLd();
+    expect(breadcrumb.itemListElement[1].item).toContain("/courses");
+  });
+
+  it("breadcrumb item[2].item includes /courses/[slug] path", async () => {
+    const breadcrumb = await getBreadcrumbJsonLd();
+    expect(breadcrumb.itemListElement[2].item).toContain(
+      "/courses/sonarqube-certified-developer"
+    );
   });
 });

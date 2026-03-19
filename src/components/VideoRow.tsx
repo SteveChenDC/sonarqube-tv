@@ -238,7 +238,7 @@ function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, divider
                   {renderLabel(sectionLabels.firstLabel, sectionLabels.firstCount)}
                   <div className="flex gap-4">
                     {videos.slice(0, sectionLabels.splitAt).map((video) => (
-                      <VideoCard key={video.id} video={video} hideCategory={hideCategoryBadge} onRemove={onRemoveVideo ? () => onRemoveVideo(video.id) : undefined} />
+                      <VideoCard key={video.id} video={video} hideCategory={hideCategoryBadge} onRemove={onRemoveVideo} />
                     ))}
                   </div>
                 </div>
@@ -260,7 +260,7 @@ function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, divider
               </>
             ) : (
               videos.map((video) => (
-                <VideoCard key={video.id} video={video} hideCategory={hideCategoryBadge} onRemove={onRemoveVideo ? () => onRemoveVideo(video.id) : undefined} />
+                <VideoCard key={video.id} video={video} hideCategory={hideCategoryBadge} onRemove={onRemoveVideo} />
               ))
             )}
           </div>

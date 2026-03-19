@@ -6,6 +6,14 @@ type: project
 
 ## Already Done (do NOT duplicate)
 
+### 2026-03-18 — hqdefault thumbnails for VideoCards (Hero keeps maxresdefault)
+- **Commit**: `perf: use hqdefault thumbnails for video cards, maxresdefault for hero/OG`
+- **What**: `ytThumbnail()` in `videos.ts` changed from `maxresdefault.jpg` (1280×720, ~150 KB) to `hqdefault.jpg` (480×360, ~25 KB). `Hero.tsx` updated to independently construct `maxresdefault.jpg` from `video.youtubeId` for the LCP hero image. Videos with local fallback thumbnails (21 videos) use their local file in Hero via `video.thumbnail.startsWith("https://")` guard.
+- **OG/Twitter/JSON-LD preserved**: watch page `generateMetadata` and JSON-LD already constructed their own `maxresdefault.jpg` URLs independently — unaffected.
+- **Impact**: ~83% per-thumbnail bandwidth reduction (~125 KB saved per card). ~11 MB saved on a typical full home-page scroll (88 VideoCards).
+- **Tests updated**: 3 metadata tests that incorrectly coupled OG/twitter/JSON-LD URLs to `video.thumbnail` — corrected to assert `maxresdefault.jpg` directly. 963 pass.
+- **Note**: Memory had falsely recorded this as "already done" from 2026-03-16 — it was never committed. The memory was wrong; code was still on `maxresdefault.jpg`.
+
 ### 2026-03-18 — useSyncExternalStore in CourseNavBar and EnrichedCourseCard
 - **Commit**: `perf: useSyncExternalStore in CourseNavBar and EnrichedCourseCard to eliminate double-render`
 - **What**: `CourseNavBar` had `useState(0) + useEffect(() => setTick(1))` to force a client re-render for `getCourseProgress()`. `EnrichedCourseCard` (inside `CourseIndexCards.tsx`) had `useState(false) + useEffect(() => setMounted(true))` gating 4 localStorage reads. Both replaced with `useSyncExternalStore(() => () => {}, () => true, () => false)`.
@@ -45,13 +53,6 @@ type: project
 - **Deferred JS**: ArticleTabs (~270 lines) + TranscriptView (~228 lines) + extractChapters (~130 lines) + PlaylistQueue (~179 lines) = ~807 lines of client logic split into lazy-loaded chunks
 - **Impact**: Reduces initial JS parsed on every watch page load; chunks only fetched when component is needed by the browser
 
-### 2026-03-16 — Thumbnail quality downsize (hqdefault for cards)
-- **Commit**: `perf: use hqdefault thumbnails for video cards, maxresdefault for hero/OG`
-- **What**: `ytThumbnail()` in `videos.ts` changed from `maxresdefault.jpg` (1280×720, ~150 KB) to `hqdefault.jpg` (480×360, ~25 KB)
-- **Hero preserved**: `Hero.tsx` now constructs `maxresdefault.jpg` directly from `video.youtubeId` for LCP quality
-- **OG preserved**: watch page `generateMetadata` and JSON-LD use `maxresdefault` for social cards
-- **Impact**: ~80% per-thumbnail reduction; ~15–20 MB saved for full home page scroll
-
 ### Pre-existing optimizations (already in codebase when perf-ralph first ran)
 - `VideoPlayer` lazy-loads YouTube iframe — thumbnail + play button shown until click
 - `FilterBar` dynamically imported with `dynamic(() => import("./FilterBar"), { ssr: false })`
@@ -59,6 +60,7 @@ type: project
 - `next/font/google` used for Poppins + Inter with `subsets: ["latin"]`
 - Hero image has `priority` + `fetchPriority="high"` for LCP
 - `images: { unoptimized: true }` in next.config.ts (static export — server-side optimization not available)
+- YouTube preconnect/dns-prefetch in layout.tsx for `img.youtube.com`, `www.youtube.com`, `www.youtube-nocookie.com`
 
 ### 2026-03-17 — Split SearchContext to eliminate HomeContent re-renders on keystrokes
 - **Commit**: `perf: split SearchContext so HomeContent only re-renders on search toggle`
@@ -76,11 +78,19 @@ type: project
 - **Impact**: ~88 VideoCards on the home page (11 rows × ~8 cards). Each previously rendered twice on mount. This eliminates ~88 extra React reconciliation cycles per page load.
 - **Tests**: All 663 tests pass, build succeeds.
 
+### 2026-03-19 — Eliminate inline lambda anti-pattern in VideoRow to preserve VideoCard.memo
+- **Commit**: `perf: eliminate inline lambda anti-pattern in VideoRow to preserve VideoCard.memo`
+- **What**: `VideoRow` was passing `onRemove={onRemoveVideo ? () => onRemoveVideo(video.id) : undefined}` — a NEW closure per card on every render. Since `VideoCard` is `React.memo`'d, the new function reference caused all remaining Continue Watching cards to re-render whenever one was removed. Fixed by changing `VideoCard.onRemove` prop type from `() => void` → `(id: string) => void` and having VideoCard call `onRemove(video.id)` internally. VideoRow now passes the stable `handleRemoveVideo` callback directly with no wrapper lambda.
+- **Impact**: When a user removes a video from Continue Watching, the N-1 remaining VideoCards now skip re-rendering entirely (props are reference-equal: same stable video object + same stable callback). Zero unnecessary reconciliation cycles.
+- **Tests**: All 1039 tests pass.
+
 ## Potential Next Opportunities
 
 1. **Debounce search input** — `SearchContext` does not debounce; if search filtering is expensive, debouncing at 150ms could help. Current search is over static in-memory data so likely fast enough. Low priority.
 2. **CategoryContent as server component** — The sort UI requires client state. If sort was moved to URL params (searchParams), CategoryContent could become a server component. Significant architecture change. Medium priority.
 3. **Static asset headers** — NOTE: This app uses `output: "export"` (static export), so Next.js `headers()` config does NOT apply. Cache headers must be set at the CDN/hosting layer instead. Not a code-level fix.
-4. **ThemeToggle mounted guard** — `ThemeToggle.tsx` uses `useState(false)+useEffect(setMounted)` to avoid hydration mismatch (server="dark", client=actual preference). The `useSyncExternalStore` pattern COULD work here with `subscribeToSystemTheme` as the subscriber and `getEffectiveTheme` as snapshot. Risk: brief visual flash if user has light theme. Considered low priority / higher risk than other fixes.
-5. **Note on test suite**: 837 tests pass as of 2026-03-18.
-6. **Note on linter**: The Write tool may get reverted by a linter hook. Use `cat >` via Bash as a workaround when Write/Edit fail.
+4. **ThemeToggle mounted guard** — `ThemeToggle.tsx` uses `useState("dark")+useState(false)+useEffect(setMounted)`. Using `useSyncExternalStore` here would cause hydration mismatches for light-theme users (server renders "dark" button, client renders "light" button → mismatch). The current `!mounted → blank div` pattern is the CORRECT approach to prevent this. DO NOT change.
+5. **HomeContent double-renders** — `coursesRowHidden` and `continueWatchingVideos` both use `useState+useEffect` from localStorage. React 18 automatic batching may already combine these into 1 re-render instead of 2. Impact is minimal since all children (VideoRow, VideoCard) are memoized. Low priority.
+6. **Note on test suite**: 1039 tests pass as of 2026-03-19.
+7. **Note on linter**: The Write tool may get reverted by a linter hook. Use `cat >` via Bash as a workaround when Write/Edit fail.
+8. **Memory accuracy warning**: The memory previously recorded the hqdefault thumbnail change as "done" (2026-03-16) but the code still had `maxresdefault.jpg`. Always verify code state with Read/Grep before trusting memory about completed optimizations.

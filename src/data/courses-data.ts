@@ -18,13 +18,13 @@ export const courses: Course[] = [
     title: "SonarQube Certified Developer",
     shortTitle: "SCD",
     description:
-      "Master the fundamentals of SonarQube — from installation to your first scan, Clean Code methodology, and IDE integration.",
+      "Master the fundamentals of SonarQube — from installation to your first scan, code quality methodology, and IDE integration.",
     difficulty: "beginner",
     targetAudience: "Developers adopting SonarQube for the first time",
     learningOutcomes: [
       "Install and configure SonarQube Server from scratch",
       "Run your first static analysis scan on a real project",
-      "Apply Clean as You Code methodology to stop new debt",
+      "Apply code quality methodology to stop new debt",
       "Integrate SonarQube for IDE into VS Code and IntelliJ",
       "Interpret quality gate results and fix reported issues",
     ],
@@ -44,9 +44,9 @@ export const courses: Course[] = [
       },
       {
         id: "scd-m3",
-        title: "Clean Code Fundamentals",
+        title: "Code Quality Fundamentals",
         description:
-          "Learn Clean as You Code methodology and cognitive complexity",
+          "Learn code quality methodology and cognitive complexity",
         videoIds: ["v163", "v98", "v212", "v202"],
       },
       {

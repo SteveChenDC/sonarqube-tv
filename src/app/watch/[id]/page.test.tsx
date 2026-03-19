@@ -357,7 +357,7 @@ describe("WatchPage", () => {
 // generateMetadata — openGraph image details (previously untested fields)
 // ---------------------------------------------------------------------------
 describe("generateMetadata — openGraph image details", () => {
-  it("og.images[0].url equals the video thumbnail URL", async () => {
+  it("og.images[0].url uses maxresdefault for best social-card quality", async () => {
     const video = videos[0];
     const meta = await generateMetadata({
       params: Promise.resolve({ id: video.id }),
@@ -365,7 +365,11 @@ describe("generateMetadata — openGraph image details", () => {
     const og = meta.openGraph as {
       images?: { url: string; width?: number; height?: number; alt?: string }[];
     } | undefined;
-    expect(og?.images?.[0].url).toBe(video.thumbnail);
+    // OG images always use maxresdefault.jpg regardless of the VideoCard thumbnail
+    // quality (hqdefault) — social cards need full resolution.
+    expect(og?.images?.[0].url).toBe(
+      `https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`
+    );
   });
 
   it("og.images[0].width is 1280", async () => {
@@ -432,10 +436,14 @@ describe("WatchPage — videoJsonLd structured data fields", () => {
     expect(ld.uploadDate).toBe(video.publishedAt);
   });
 
-  it("videoJsonLd.thumbnailUrl equals the video thumbnail URL", async () => {
+  it("videoJsonLd.thumbnailUrl uses maxresdefault for structured data quality", async () => {
     const video = videos[0];
     const ld = await getVideoLd(video.id);
-    expect(ld.thumbnailUrl).toBe(video.thumbnail);
+    // JSON-LD thumbnailUrl always uses maxresdefault — schema.org recommends high-res
+    // thumbnails, separate from the hqdefault used in VideoCard for bandwidth savings.
+    expect(ld.thumbnailUrl).toBe(
+      `https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`
+    );
   });
 
   it("videoJsonLd.duration matches durationToISO output for the video duration", async () => {

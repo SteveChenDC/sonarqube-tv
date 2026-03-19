@@ -30,7 +30,7 @@ export const categories: Category[] = [
   {
     slug: "clean-code",
     title: "Clean Code",
-    description: "Clean Code philosophy, Clean as You Code methodology, language-specific best practices, and code quality fundamentals.",
+    description: "Code quality philosophy, language-specific best practices, and code quality fundamentals.",
   },
   {
     slug: "product-updates",
@@ -40,7 +40,7 @@ export const categories: Category[] = [
   {
     slug: "sonarqube-cloud",
     title: "SonarQube Cloud",
-    description: "SonarQube Cloud (formerly SonarCloud) features, setup, dashboards, and enterprise capabilities.",
+    description: "SonarQube Cloud features, setup, dashboards, and enterprise capabilities.",
   },
   {
     slug: "devops-cicd",
@@ -50,7 +50,7 @@ export const categories: Category[] = [
   {
     slug: "sonarqube-for-ide",
     title: "SonarQube for IDE",
-    description: "SonarQube for IDE (formerly SonarLint) extensions for VS Code, IntelliJ, Eclipse, Visual Studio, and CLion.",
+    description: "SonarQube for IDE extensions for VS Code, IntelliJ, Eclipse, Visual Studio, and CLion.",
   },
   {
     slug: "architecture-governance",

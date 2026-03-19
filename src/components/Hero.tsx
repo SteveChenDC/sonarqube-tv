@@ -20,7 +20,12 @@ function isDescriptionRedundant(title: string, description: string): boolean {
 export default function Hero({ video, actions }: Readonly<{ video: Video; actions?: ReactNode }>) {
   const category = categories.find((c) => c.slug === video.category);
   const showDescription = video.description && !isDescriptionRedundant(video.title, video.description);
-  const heroSrc = video.thumbnail;
+  // For LCP quality, upgrade YouTube CDN thumbnails to maxresdefault (1280×720).
+  // Videos with local fallback thumbnails (those that lacked maxresdefault) keep
+  // their local file instead — identified by their non-https:// thumbnail path.
+  const heroSrc = video.thumbnail.startsWith("https://")
+    ? `https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`
+    : video.thumbnail;
 
   return (
     <>

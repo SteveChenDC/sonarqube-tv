@@ -4,7 +4,23 @@ description: Build and test baseline as of 2026-03-18 — what passes, known war
 type: project
 ---
 
-As of 2026-03-18 (runs 51–53), `npm run build` and `npm test` both pass clean.
+As of 2026-03-19 (run 61), `npm run build` and `npm test` both pass clean.
+
+**Run 61 (2026-03-19)**: Clean pass. No changes needed. 1039/1039 tests (61 files), 252 pages.
+
+**Run 60 (2026-03-19)**: Clean pass. No changes needed. 1024/1024 tests (60 files), 252 pages.
+
+**Run 59 (2026-03-19)**: Build broken due to stale `.next` dir from Next.js 16.1.6 after upgrade to 16.2.0. Fix: `rm -rf .next && npm run build`. 1020/1020 tests (59 files), 252 pages. No code changes needed.
+
+**Run 58 (2026-03-18)**: Clean pass. No changes needed. 994/994 tests (59 files), 252 pages.
+
+**Run 57 (2026-03-18)**: Clean pass. No changes needed. 975/975 tests (58 files), 252 pages.
+
+**Run 56 (2026-03-18)**: Clean pass. No changes needed. 975/975 tests (58 files), 252 pages.
+
+**Run 55 (2026-03-18)**: Clean pass. No changes needed. 963/963 tests (56 files), 252 pages.
+
+**Run 54 (2026-03-18)**: 3 failures fixed in `src/components/HomeContent.test.tsx`. 963/963 tests (56 files), 252 pages. Committed as b4d2bd8.
 
 **Run 53 (2026-03-18)**: Clean pass. No changes needed. 928/928 tests (55 files), 252 pages.
 
@@ -79,8 +95,8 @@ As of 2026-03-18 (runs 51–53), `npm run build` and `npm test` both pass clean.
 - Fix: `npx vitest run -u`. Committed as bb71d72.
 - Pattern: Any CSS gradient polish to Hero.tsx overlays will stale Hero.visual.test.tsx snapshot. Fix with `-u`.
 
-**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (runs 19–24, stable) → 219 (run 25, stable) → 219 (runs 26–36, stable) → 245 (run 37, 27 test files) → 318 (run 38, 36 test files) → 372 (run 39, 39 test files) → 398 (run 41, 42 test files) → 385 (run 43–44, 41 test files) → 652 (run 45, 46 test files) → 663 (run 46, 46 test files) → 673 (run 47, 46 test files) → 767 (run 49–50, 50 test files) → 923 (run 51–52, 54 test files) → 928 (run 53, 55 test files)
-**Page count history**: 242 → 243 → 250 (run 38–44) → 252 (run 45–51)
+**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (runs 19–24, stable) → 219 (run 25, stable) → 219 (runs 26–36, stable) → 245 (run 37, 27 test files) → 318 (run 38, 36 test files) → 372 (run 39, 39 test files) → 398 (run 41, 42 test files) → 385 (run 43–44, 41 test files) → 652 (run 45, 46 test files) → 663 (run 46, 46 test files) → 673 (run 47, 46 test files) → 767 (run 49–50, 50 test files) → 923 (run 51–52, 54 test files) → 928 (run 53, 55 test files) → 963 (run 54–55, 56 test files) → 975 (run 56–57, 58 test files) → 994 (run 58, 59 test files) → 1020 (run 59, 59 test files) → 1024 (run 60, 60 test files) → 1039 (run 61, 61 test files)
+**Page count history**: 242 → 243 → 250 (run 38–44) → 252 (run 45–54)
 
 **Why:** Ongoing QA baseline tracking.
 **How to apply:**
@@ -97,6 +113,18 @@ If "category badge" test fails with wrong href, check if page.tsx changed the ca
 
 *ArticleTabs with next/dynamic (run 51 pattern):*
 If "renders ArticleTabs" test fails (outer div present but no testid), wrap `render(jsx)` in `await act(async () => { render(jsx); })`. The React.lazy (via next/dynamic mock) needs an async act flush to fully resolve on first render. Subsequent tests in the same suite pass because the module is cached.
+
+*HomeContent MAX_CATEGORY_ROW h3 count (run 54 pattern):*
+If "renders exactly 15 video cards when a category has 16 videos" fails with "expected 21 to be 15" (or similar), it means CourseCard h3s leaked into the h3 count. Root cause: CourseCard uses `useSyncExternalStore` which returns `mounted=true` synchronously on first client render (no useEffect double-render needed). If any prior test in the file triggers `await act(async () => {})`, CourseCard's React.lazy module is cached; subsequent sync renders also get all CourseCard h3s. Fix: scope the query to `#categories` and use `/watch/` links instead of h3s: `container.querySelector("#categories")!.querySelectorAll('a[href^="/watch/"]')`. This excludes both Hero /watch/ links (which are outside #categories) and CourseCard h3s (which are in the courses row above #categories).
+
+*HomeContent openFilters() without await (run 54 pattern):*
+If a HomeContent test calls `openFilters()` without `await` and fails with "Unable to find an element with the text: [FilterBar option]", add `await` before `openFilters()`. This is the same pattern as run 51 Header.search.test.tsx: floating async act() means the modal isn't open when the next assertion runs.
+
+*HomeContent FilterBar first-use lazy loading (run 54 pattern):*
+If "filters videos by short duration (under 4 min)" fails with "Unable to find an element with the text: Under 4 min", the issue is that this is the first test in its describe block to call `openFilters()`, and FilterBar's React.lazy import hasn't resolved yet. Fix: add `await act(async () => {})` between `render(...)` and `await openFilters()` to pre-flush the lazy import.
+
+*Stale .next after Next.js upgrade (run 59 pattern):*
+After a Next.js version bump, if `npm run build` fails with `Cannot find module 'next/types.js'` during the TypeScript check phase (after Turbopack compiles OK), the fix is `rm -rf .next && npm run build`. The stale `.next/types/validator.ts` and `.next/dev/types/validator.ts` from the previous version conflict with the new Next.js release. No code changes needed — regenerating `.next` fresh resolves it.
 
 *Other patterns:*
 If `ArticleTabs.test.tsx` fails after component changes, check: (1) default tab is "summary" when article provided, (2) no collapse/expand buttons, (3) single-tab uses h3 not button, (4) tab buttons have role="tab", (5) indicator uses CSS transform classes, (6) `getByRole("heading", { level: 3 })` without name fails if markdown also has h3s — use `getAllByRole` + `.find(h => h.querySelector(...))`. If `src/data/videos.test.ts` thumbnail URL test fails, it likely means new videos use local `/thumbnails/*.jpg` paths — fix by branching on `startsWith("/thumbnails/")` and validating with `/^\/thumbnails\/.+\.jpg$/`. If Hero.visual.test.tsx fails with a src URL mismatch (YouTube maxresdefault URL vs `/snap-thumb.jpg`), check whether Hero.tsx changed to use `video.thumbnail` directly — fix by updating test assertion to `mockVideo.thumbnail` and refresh snapshots with `npx vitest run -u`. If layout.test.tsx JSON-LD test fails with a JSON parse error, check if additional JSON-LD scripts were added to layout.tsx — fix by parsing each script individually and using `.find()` by `@type`. If Hero.visual.test.tsx snapshot fails due to CSS changes, update with `npx vitest run -u`. If VideoRow.visual snapshots fail, first check if a new persistent DOM element was added to VideoCard (shimmer, overlay, badge) — stale snapshot is likely the culprit, fix with `npx vitest run -u`. If Footer link tests fail, check whether `aria-label` attributes on social/nav links were changed. If HomeContent empty-state tests fail, check whether the heading copy in HomeContent.tsx changed (exact text, punctuation included). If a new test file fails to parse (0 tests, transform error), check for `}[]` postfix array syntax in TypeScript type annotations inside vi.fn() callbacks — replace with `Array<{...}>` form. If CourseCard tests fail on shortTitle/TC text, note that CourseCard does NOT render shortTitle — fix the test to use the full title or image alt text.

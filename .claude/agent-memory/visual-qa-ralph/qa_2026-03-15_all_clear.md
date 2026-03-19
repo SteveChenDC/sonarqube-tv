@@ -4,6 +4,76 @@ description: Running log of full visual QA passes — most recent at top
 type: project
 ---
 
+## 2026-03-19 (Pass #35)
+
+Ran full visual QA on 2026-03-19 (thirty-fifth run). Inspected 8 screenshots (desktop-* + mobile-*) from the current qa-snap run — mobile-*.png files are 750×1624px (375px logical × 2× DPR). Pages: Home (top + bottom), Watch, Category × 2 viewports.
+
+**Result: All clear — no new visual bugs found.**
+
+Screenshot note: `mobile-*.png` images are 750×1624 (2× DPR at 375px logical). The apparent "Courses ▼" text visible in the mobile header within these screenshots is consistent with a Playwright `deviceScaleFactor:2` capture — confirmed by cross-referencing `fresh-mobile-fixed-375.png` (375×812, 1×DPR) which correctly shows icon-only nav (no text labels). Code fix from Pass #34 is confirmed present in Header.tsx (lines 479, 580 `hidden sm:inline`; line 646 `hidden sm:flex`).
+
+Specific checks (all clean):
+- Desktop Home 1280px: Certification Courses (DEVELOPER/SECURITY/DEVOPS/AI CODE), BEGINNER/INTERMEDIATE badges, red Start Course buttons, Getting Started section — clean
+- Desktop Home Bottom: Black area artifact (known false positive); DevOps & CI/CD cards (1:57, 0:59, 46:48), SonarQube for IDE section — clean
+- Desktop Watch 1280px: YouTube player, Back nav, title "Auto import of GitHub repos to SonarQube Cloud in action." — correct
+- Desktop Category 1280px: "Getting Started" + "6 videos" + "1h 8m total" Qube Blue badges, Newest active (red), all 4 sort buttons on one row, 4-col grid with thumbnails — clean
+- Mobile Home 375px (750×1624 2×DPR): Certification Courses DEVELOPER card full-width, Getting Started section, Filters + scroll-to-top — correct; header fix confirmed in code
+- Mobile Home Bottom 375px: Black area artifact (known false positive); DevOps & CI/CD with 1:57 badge — clean
+- Mobile Watch 375px: Full-width player, SonarQube Cloud + March 12th 2026 tags, 0:41/Part of SCDK/Share, description, AI Summary/Transcript tabs — within viewport
+- Mobile Category 375px: Getting Started header, 6 videos + 1h 8m badges, sort buttons (flex-nowrap confirmed in code line 70), 2-col grid — clean
+- "N" bottom-left artifact — confirmed false positive (Next.js route announcer)
+- Brand colors: Qube Blue (#126ED3) badges ✓, Sonar Red (#D3121D) active sort + Start Course ✓
+
+---
+
+## 2026-03-19 (Pass #34)
+
+Ran full visual QA on 2026-03-19 (thirty-fourth run). Fresh Playwright screenshots captured at 375px and 1280px viewports against the live dev server (http://localhost:3000). Pages: Home, Watch /watch/v1, Category /category/getting-started.
+
+**Result: 1 bug found and fixed.**
+
+**Bug fixed:** Mobile header overflow — nav items clip off-screen at <480px. The header nav was 307px wide in ~222px of available space at 375px. The ThemeToggle button left edge was at 425px (50px completely off-screen). Users on all common phone widths (375px iPhone SE, 390px iPhone 15, etc.) could not access the ThemeToggle or see the full "Categories" label. Root cause: Courses (100px) + Categories (120px) + ThemeToggle (36px) + gaps exceed available horizontal space after the logo. Fix: Courses and Categories text labels now use `hidden sm:inline` (matching the Search pattern), both buttons have `aria-label` for accessibility; ThemeToggle wrapped in `hidden sm:flex` (already was clipped and inaccessible on mobile). Verified: `headerScrollWidth === 375` after fix, all nav items within viewport. Committed: `a513b34`.
+
+**Why prior passes missed it:** QA passes #22–33 all used 390px screenshot viewport (from a `qa-mobile-home.png` captured at 390×844 — discovered by reading PNG IHDR dimensions). At 390px the "Categories" text was mostly visible (ending at 421px, close to edge) and the ThemeToggle was off-screen but visually not noticed. The task prompt for this pass correctly specified 375px.
+
+Specific checks (all clean after fix):
+- Desktop Home 1280px: Hero (SecurityGuy TV video), speaker panel right side, Latest row — clean; light theme = known Playwright headless artifact
+- Desktop Home Bottom: Enterprise row, Customer Stories section, footer with browse/categories/connect columns — clean
+- Desktop Watch 1280px: player, title card, metadata (SonarQube Cloud + March 12th 2026 + 0:41 + Part of SCDE + Share), description — clean
+- Desktop Category 1280px: Getting Started header, 6 videos + 1h 8m badges, sort bar (Newest red, all 4 buttons on one row), 4-col grid (42:47, 7:52, 9:31, 7:03 thumbnails) — clean
+- Mobile Home 375px (after fix): Header fits (Search icon + Courses ▼ + Categories ▼, no overflow), hero card, Watch Now red button, Filters blue button, Latest 63 + Swipe hint — clean
+- Mobile Home Bottom 375px: Customer Stories section, footer, Filters + scroll-to-top overlay — clean
+- Mobile Watch 375px: full-width player, title, tags (SonarQube Cloud + March 12th 2026), 0:41/Part of SCDE/Share, description, AI Summary/Transcript tabs — within viewport
+- Mobile Category 375px: Getting Started header, 6 videos + 1h 8m badges, sort bar (Newest red, all 4 buttons on ONE ROW at 375px), 2-col grid with thumbnails — clean
+- "N" bottom-left artifact — confirmed false positive (Next.js route announcer)
+
+---
+
+## 2026-03-18 (Pass #33)
+
+Ran full visual QA on 2026-03-18 (thirty-third run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px). Also inspected interactive-* screenshots from 16:42–16:43.
+
+**Result: All clear — no new visual bugs found.**
+
+No commits since Pass #32. All fixes from prior passes remain in place.
+
+Specific checks:
+- Desktop Home: Marquee row, Certification Courses (DEVELOPER/SECURITY/DEVOPS/AI CODE cards, BEGINNER/INTERMEDIATE badges, red Start Course buttons), Getting Started — clean
+- Desktop Home Bottom: known black screenshot artifact; DevOps & CI/CD cards (1:57, 0:59, 46:48 duration badges) — clean
+- Desktop Watch: YouTube player, Back nav, title "Auto import of GitHub repos to SonarQube Cloud in action." — correct
+- Desktop Category: Sort bar (all 4 buttons on one row, Newest red/active), 4-col grid — correct
+- Mobile Home: carousel, Certification Courses DEVELOPER card full-width (BEGINNER badge, 4 modules · 15 videos · 2h 58m, progress dots, Start Course button), Filters + scroll-to-top — no overflow
+- Mobile Home Bottom: known black area artifact; DevOps & CI/CD row with 0:41 + 1:57 duration badges — clean
+- Mobile Watch: full-width player, Back nav, title, SonarQube Cloud + March 12th 2026 tags, 0:41/Part of SCDK/Share, description, AI Summary/Transcript tabs — within viewport
+- Mobile Category: screenshot is stale (Mar 17, pre-fix); confirmed `flex-nowrap` fix (commit 171a73b) still in CategoryContent.tsx line 70 — no regression
+- Interactive Home (Mar 18 16:42): Hero "Linux Foundation: Open-Source & Clean Code | Live with Sonar", Latest row, Certification Courses — clean; grey placeholder tiles = lazy-load artifact
+- Interactive Watch (Mar 18 16:42): Full watch page with long description and AI Summary/Transcript tabs, footer — clean
+- Interactive Category page (Mar 18 16:43): Getting Started page, sort bar all 4 buttons on one row, 4-col grid — clean
+- Interactive Filters (Mar 18 16:43): Filter modal open — white modal on dark page (consistent with prior passes, noted existing behavior)
+- "N" bottom-left artifact — confirmed false positive (Next.js route announcer)
+
+---
+
 ## 2026-03-18 (Pass #32)
 
 Ran full visual QA on 2026-03-18 (thirty-second run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px). Also inspected newer qa-* screenshots.

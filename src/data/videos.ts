@@ -5,7 +5,11 @@ export { categories } from "./categories";
 import { categories } from "./categories";
 
 function ytThumbnail(youtubeId: string): string {
-  return `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
+  // hqdefault.jpg (480×360, ~25 KB) is guaranteed to exist for every YouTube video.
+  // maxresdefault.jpg (1280×720, ~150 KB) only exists for HD uploads and 404s otherwise.
+  // For VideoCards (320px wide), hqdefault is more than sufficient resolution.
+  // Hero.tsx constructs its own maxresdefault URL for the LCP image.
+  return `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
 }
 
 const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
@@ -66,7 +70,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v7",
     title: "Sonar Summit 2026 | How Sonar keeps its culture of innovation, experimentation, and accountability",
-    description: "An inside look at how Sonar's engineering organization sustains a culture of rapid experimentation while maintaining code quality standards, Clean as You Code principles, and developer accountability.",
+    description: "An inside look at how Sonar's engineering organization sustains a culture of rapid experimentation while maintaining code quality standards, code quality principles, and developer accountability.",
     youtubeId: "y1CVkN6aLLE",
     category: "sonar-summit",
     duration: "5:45",
@@ -93,7 +97,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v10",
     title: "Sonar Summit 2026 | The evolved SDLC: How Cisco scales quality for thousands of developers",
-    description: "Discover how Cisco scaled SonarQube across thousands of developers, leveraging Quality Gates, Clean as You Code policies, and enterprise governance to maintain consistency at massive scale.",
+    description: "Discover how Cisco scaled SonarQube across thousands of developers, leveraging Quality Gates, code quality policies, and enterprise governance to maintain consistency at massive scale.",
     youtubeId: "ge15fXD2rNQ",
     category: "sonar-summit",
     duration: "37:57",
@@ -201,7 +205,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v22",
     title: "Learning in the AI Era | Future of Software Development | Sonar Summit 2026",
-    description: "A forward-looking Summit conversation on upskilling developers for an AI-assisted world, covering how tools like SonarQube's Clean as You Code methodology anchor learning to measurable quality outcomes.",
+    description: "A forward-looking Summit conversation on upskilling developers for an AI-assisted world, covering how tools like SonarQube's code quality methodology anchor learning to measurable quality outcomes.",
     youtubeId: "LReljR7vfe0",
     category: "sonar-summit",
     duration: "28:51",
@@ -273,7 +277,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v30",
     title: "How TD Bank Scaled Code Quality & Security with SonarQube | Sonar Summit 2026",
-    description: "A real-world case study on how TD Bank deployed SonarQube Enterprise to standardize code quality, enforce security policies, and scale Clean as You Code practices across a large, regulated engineering organization.",
+    description: "A real-world case study on how TD Bank deployed SonarQube Enterprise to standardize code quality, enforce security policies, and scale code quality practices across a large, regulated engineering organization.",
     youtubeId: "zi-ujR4FxJ0",
     category: "sonar-summit",
     duration: "10:01",
@@ -309,7 +313,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v34",
     title: "I'm Not Writing Code Anymore—Now What? | The 7-Step Workflow | Sonar Summit 2026",
-    description: "A practical seven-step workflow for developers transitioning from writing to reviewing and verifying AI-generated code, anchored in SonarQube's SAST findings, Quality Gates, and Clean as You Code principles.",
+    description: "A practical seven-step workflow for developers transitioning from writing to reviewing and verifying AI-generated code, anchored in SonarQube's SAST findings, Quality Gates, and code quality principles.",
     youtubeId: "oEXWxZpi-_0",
     category: "sonar-summit",
     duration: "26:20",
@@ -363,7 +367,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v40",
     title: "Developing with AI: Balancing Speed and Code Quality | Sonar Summit 2026",
-    description: "A practical Summit session on calibrating AI coding assistant usage to maintain code health, covering how SonarQube's Clean as You Code policy and Quality Gates keep velocity gains from becoming quality regressions.",
+    description: "A practical Summit session on calibrating AI coding assistant usage to maintain code health, covering how SonarQube's code quality policy and Quality Gates keep velocity gains from becoming quality regressions.",
     youtubeId: "dWwFZ3AHFUU",
     category: "sonar-summit",
     duration: "12:36",
@@ -426,7 +430,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v47",
     title: "Building Better Software: A New Blueprint for the Agentic SDLC | Sonar Summit 2026",
-    description: "A Summit blueprint for redesigning the software development lifecycle around agentic AI, with SonarQube Quality Gates, SAST, and Clean as You Code policies serving as the integrity backbone of the new SDLC.",
+    description: "A Summit blueprint for redesigning the software development lifecycle around agentic AI, with SonarQube Quality Gates, SAST, and code quality policies serving as the integrity backbone of the new SDLC.",
     youtubeId: "RFb_BZ-GXiw",
     category: "sonar-summit",
     duration: "22:07",
@@ -462,7 +466,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v51",
     title: "How Freshworks Scales Shift-Left Security with SonarQube | Sonar Summit 2026",
-    description: "A case study from Freshworks on rolling out SonarQube's SAST and Clean as You Code policies across a fast-growing engineering organization to enforce shift-left security without slowing development velocity.",
+    description: "A case study from Freshworks on rolling out SonarQube's SAST and code quality policies across a fast-growing engineering organization to enforce shift-left security without slowing development velocity.",
     youtubeId: "Ejn7yaFYHUA",
     category: "sonar-summit",
     duration: "22:13",
@@ -498,7 +502,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v55",
     title: "Scaling Software Quality at Xero with SonarQube Cloud | Sonar Summit 2026",
-    description: "How Xero's engineering team scaled SonarQube Cloud across a large, multi-language codebase, using Quality Gates, Clean as You Code policies, and portfolio dashboards to maintain quality as the organization grew.",
+    description: "How Xero's engineering team scaled SonarQube Cloud across a large, multi-language codebase, using Quality Gates, code quality policies, and portfolio dashboards to maintain quality as the organization grew.",
     youtubeId: "Mc05XFKewWM",
     category: "sonar-summit",
     duration: "16:00",
@@ -628,7 +632,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v69",
     title: "Setting up SonarQube with GitHub in 60 seconds",
-    description: "Get SonarQube connected to your GitHub repository in under a minute, enabling automatic pull request analysis and Clean Code feedback on every commit.",
+    description: "Get SonarQube connected to your GitHub repository in under a minute, enabling automatic pull request analysis and code quality feedback on every commit.",
     youtubeId: "K1zaFcmkARo",
     category: "devops-cicd",
     duration: "0:59",
@@ -693,7 +697,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v76",
     title: "The $2.41 trillion problem: unpacking the state of code reliability",
-    description: "Unpacking the massive economic cost of unreliable software, this session examines how SonarQube's reliability rules and Clean Code methodology help organizations reduce defect-driven financial loss.",
+    description: "Unpacking the massive economic cost of unreliable software, this session examines how SonarQube's reliability rules and code quality methodology help organizations reduce defect-driven financial loss.",
     youtubeId: "47zj4x0hp0c",
     thumbnail: "/thumbnails/47zj4x0hp0c.jpg",
     category: "clean-code",
@@ -721,7 +725,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v79",
     title: "Integrate Cursor & SonarQube MCP Server",
-    description: "A hands-on walkthrough of integrating Cursor with the SonarQube MCP Server, enabling the AI editor to query code quality findings and apply Sonar's Clean Code rules in real time.",
+    description: "A hands-on walkthrough of integrating Cursor with the SonarQube MCP Server, enabling the AI editor to query code quality findings and apply Sonar's code quality rules in real time.",
     youtubeId: "RO5c-g6aOY4",
     thumbnail: "/thumbnails/RO5c-g6aOY4.jpg",
     category: "ai-code-quality",
@@ -815,7 +819,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v89",
     title: "Build better, faster: Supercharge your developers in 2025",
-    description: "Strategies and tooling recommendations for accelerating developer output in 2025 without sacrificing code quality, leveraging SonarQube's Clean Code methodology alongside modern AI coding assistants.",
+    description: "Strategies and tooling recommendations for accelerating developer output in 2025 without sacrificing code quality, leveraging SonarQube's code quality methodology alongside modern AI coding assistants.",
     youtubeId: "vGfM3FInXTQ",
     thumbnail: "/thumbnails/vGfM3FInXTQ.jpg",
     category: "clean-code",
@@ -834,7 +838,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v91",
     title: "Discover the new Enterprise features for SonarCloud",
-    description: "A tour of SonarCloud's newest Enterprise capabilities, including portfolio-level reporting, advanced governance controls, and features designed to scale code quality across large engineering organizations.",
+    description: "A tour of SonarQube Cloud's newest Enterprise capabilities, including portfolio-level reporting, advanced governance controls, and features designed to scale code quality across large engineering organizations.",
     youtubeId: "WEYhvmoLK3g",
     category: "sonarqube-cloud",
     duration: "34:06",
@@ -871,7 +875,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v95",
     title: "Secure in Design: How Implementing Good Quality Methodology Delivers Better Software Security",
-    description: "An architectural perspective on how embedding security-by-design principles and Clean Code methodology from the start produces software that is measurably more secure and easier to audit.",
+    description: "An architectural perspective on how embedding security-by-design principles and code quality methodology from the start produces software that is measurably more secure and easier to audit.",
     youtubeId: "8sUrGwlffv0",
     category: "code-security",
     duration: "53:10",
@@ -889,7 +893,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v97",
     title: "From Community to Commercial: Why Upgrade to SonarQube Enterprise Edition",
-    description: "A business and technical case for moving from SonarQube Community Edition to Enterprise, highlighting portfolio management, advanced security analysis, and scalability features that justify the upgrade.",
+    description: "A business and technical case for moving from SonarQube Community Build to Enterprise, highlighting portfolio management, advanced security analysis, and scalability features that justify the upgrade.",
     youtubeId: "6qUxCKCtJ1M",
     category: "architecture-governance",
     duration: "46:07",
@@ -898,7 +902,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v98",
     title: "Clean as You Code: A Proactive Approach to Technical Debt",
-    description: "An actionable guide to adopting the Clean as You Code methodology, using SonarQube's new code focus to stop new technical debt from accumulating while systematically addressing legacy issues.",
+    description: "An actionable guide to adopting the code quality methodology, using SonarQube's new code focus to stop new technical debt from accumulating while systematically addressing legacy issues.",
     youtubeId: "t87V5bxUHRM",
     category: "clean-code",
     duration: "43:11",
@@ -916,7 +920,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v100",
     title: "Enhancing the Security and Quality of Copilot-Generated Code using Sonar | #CleanCodeTips",
-    description: "Learn how to integrate Sonar's Clean Code analysis into a GitHub Copilot workflow, catching quality and security issues in AI-generated code before they reach pull request review.",
+    description: "Learn how to integrate Sonar's code quality analysis into a GitHub Copilot workflow, catching quality and security issues in AI-generated code before they reach pull request review.",
     youtubeId: "_ua8Iz1RmV8",
     category: "ai-code-quality",
     duration: "11:09",
@@ -934,7 +938,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v102",
     title: "SonarCloud Enterprise Plan: Key Features",
-    description: "A concise overview of the key features included in SonarCloud's Enterprise Plan, covering portfolio dashboards, advanced governance controls, and priority support for large-scale development teams.",
+    description: "A concise overview of the key features included in SonarQube Cloud's Enterprise Plan, covering portfolio dashboards, advanced governance controls, and priority support for large-scale development teams.",
     youtubeId: "7neGGobzQJE",
     category: "sonarqube-cloud",
     duration: "2:10",
@@ -943,7 +947,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v103",
     title: "What is SonarCloud?",
-    description: "A brief explainer on what SonarCloud is, how it delivers cloud-native static analysis for code quality and security, and why teams choose it over self-hosted alternatives.",
+    description: "A brief explainer on what SonarQube Cloud is, how it delivers cloud-native static analysis for code quality and security, and why teams choose it over self-hosted alternatives.",
     youtubeId: "3R2stYMh-fk",
     category: "sonarqube-cloud",
     duration: "0:57",
@@ -961,7 +965,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v105",
     title: "Code Faster, Write Cleaner using AI Coding Assistants and Sonar",
-    description: "A practical session on combining AI coding assistants with SonarQube's Clean Code analysis, showing how teams ship faster without sacrificing the code quality and security standards that matter most.",
+    description: "A practical session on combining AI coding assistants with SonarQube's code quality analysis, showing how teams ship faster without sacrificing the code quality and security standards that matter most.",
     youtubeId: "mHx4fIpJ4f8",
     category: "ai-code-quality",
     duration: "53:54",
@@ -997,7 +1001,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v109",
     title: "Clean Code is the Base for a Well-functioning Dev Team | Sonar at QCon London 2024",
-    description: "A QCon London 2024 talk making the case for Clean Code as an organizational foundation, exploring how shared quality standards improve team velocity, reduce onboarding friction, and lower defect rates.",
+    description: "A QCon London 2024 talk making the case for code quality as an organizational foundation, exploring how shared quality standards improve team velocity, reduce onboarding friction, and lower defect rates.",
     youtubeId: "TUc77cOs9S0",
     category: "clean-code",
     duration: "54:03",
@@ -1015,7 +1019,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v111",
     title: "Achieve Clean Blazor Code with SonarQube and SonarCloud",
-    description: "A comprehensive walkthrough of achieving clean, idiomatic Blazor code using SonarQube and SonarCloud, covering C# analysis rules, quality gates, and CI integration for .NET web applications.",
+    description: "A comprehensive walkthrough of achieving clean, idiomatic Blazor code using SonarQube Server and SonarQube Cloud, covering C# analysis rules, quality gates, and CI integration for .NET web applications.",
     youtubeId: "_8L1jTr1CFM",
     category: "sonarqube-cloud",
     duration: "53:56",
@@ -1024,7 +1028,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v112",
     title: "Reality Check: Who determines what Clean Code is anyway?",
-    description: "A thought-provoking discussion on who defines Clean Code standards, examining how SonarQube's rule taxonomy balances community consensus, language idioms, and organizational quality policies.",
+    description: "A thought-provoking discussion on who defines code quality standards, examining how SonarQube's rule taxonomy balances community consensus, language idioms, and organizational quality policies.",
     youtubeId: "YZ8oVV-7_M4",
     category: "clean-code",
     duration: "47:35",
@@ -1033,7 +1037,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v113",
     title: "A Short Introduction to Django Ninja | Sonar Clean Code Tips",
-    description: "A developer-focused introduction to Django Ninja for building fast Python APIs, with Sonar's Clean Code tips highlighting the patterns that keep your endpoint logic readable and maintainable.",
+    description: "A developer-focused introduction to Django Ninja for building fast Python APIs, with Sonar's code quality tips highlighting the patterns that keep your endpoint logic readable and maintainable.",
     youtubeId: "RTJIwz84o74",
     category: "clean-code",
     duration: "7:30",
@@ -1060,7 +1064,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v116",
     title: "Clean Code with GitHub Copilot and Sonar | #CleanCodeTips",
-    description: "Explore how pairing GitHub Copilot with Sonar's Clean Code analysis creates a quality feedback loop that catches AI-generated issues early, keeping your codebase secure and maintainable.",
+    description: "Explore how pairing GitHub Copilot with Sonar's code quality analysis creates a quality feedback loop that catches AI-generated issues early, keeping your codebase secure and maintainable.",
     youtubeId: "qkyD7-Y6AYs",
     category: "ai-code-quality",
     duration: "13:04",
@@ -1078,7 +1082,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v118",
     title: "Sonar Clean Code Tips: Understanding Python's New JIT Compiler",
-    description: "A developer explainer on Python's new JIT compiler, examining what it means for performance-sensitive code and how Sonar's Clean Code tips apply to writing JIT-friendly Python.",
+    description: "A developer explainer on Python's new JIT compiler, examining what it means for performance-sensitive code and how Sonar's code quality tips apply to writing JIT-friendly Python.",
     youtubeId: "xtLVCy0o28Q",
     category: "clean-code",
     duration: "6:09",
@@ -1096,7 +1100,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v120",
     title: "Integrating Sonar Clean Code Practices in AWS CI/CD Workflows",
-    description: "A practical workshop on integrating Sonar's Clean Code practices into AWS CI/CD pipelines, covering CodeBuild configuration, quality gate enforcement, and keeping security analysis in sync with cloud-native delivery workflows.",
+    description: "A practical workshop on integrating Sonar's code quality practices into AWS CI/CD pipelines, covering CodeBuild configuration, quality gate enforcement, and keeping security analysis in sync with cloud-native delivery workflows.",
     youtubeId: "Hgb8ubDwGic",
     category: "devops-cicd",
     duration: "59:20",
@@ -1105,7 +1109,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v121",
     title: "SonarLint for Eclipse Overview | a free and open source IDE extension",
-    description: "A hands-on walkthrough of the SonarLint Eclipse plugin, showing how to catch bugs, code smells, and security hotspots directly in your IDE without leaving your development environment.",
+    description: "A hands-on walkthrough of the SonarQube for IDE Eclipse extension, showing how to catch bugs, code smells, and security hotspots directly in your IDE without leaving your development environment.",
     youtubeId: "DJkNl6Q5I5A",
     category: "sonarqube-for-ide",
     duration: "9:23",
@@ -1142,7 +1146,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v125",
     title: "Clean as You Code: No pain lots to gain",
-    description: "Learn how the Clean as You Code methodology lets teams incrementally improve code quality without disrupting existing workflows, focusing new standards on new and changed code only.",
+    description: "Learn how the code quality methodology lets teams incrementally improve code quality without disrupting existing workflows, focusing new standards on new and changed code only.",
     youtubeId: "uWmYvq2SoZU",
     category: "clean-code",
     duration: "43:34",
@@ -1151,7 +1155,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v126",
     title: "Joomla: Multiple XSS Vulnerabilities, detected with SonarCloud",
-    description: "Watch how SonarCloud's cross-file taint analysis detects multiple cross-site scripting vulnerabilities in the Joomla CMS, demonstrating the power of cloud-based static analysis on open-source projects.",
+    description: "Watch how SonarQube Cloud's cross-file taint analysis detects multiple cross-site scripting vulnerabilities in the Joomla CMS, demonstrating the power of cloud-based static analysis on open-source projects.",
     youtubeId: "4HmGMSWry_c",
     category: "sonarqube-cloud",
     duration: "2:34",
@@ -1160,7 +1164,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v127",
     title: "How SonarQube and SonarLint combine to help review and fix coding issues | #CleanCodeTips",
-    description: "See how SonarLint's IDE-level feedback integrates seamlessly with SonarQube server rules and quality gates, creating a continuous feedback loop from local development to CI/CD pipeline.",
+    description: "See how SonarQube for IDE's real-time feedback integrates seamlessly with SonarQube Server rules and quality gates, creating a continuous feedback loop from local development to CI/CD pipeline.",
     youtubeId: "PIWh-ro9Y2g",
     category: "sonarqube-for-ide",
     duration: "1:11",
@@ -1207,7 +1211,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v132",
     title: "Clean Code Principles and Practices Part II : Mastering Clean Code",
-    description: "The second installment in Sonar's Clean Code series, going deeper into naming conventions, function design, test quality, and how to apply clean code principles consistently across a team.",
+    description: "The second installment in Sonar's code quality series, going deeper into naming conventions, function design, test quality, and how to apply clean code principles consistently across a team.",
     youtubeId: "g7OlG7VFfzg",
     category: "clean-code",
     duration: "39:21",
@@ -1234,7 +1238,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v135",
     title: "pfSense Security Vulnerabilities: Discovery & Demonstration on test Instance with SonarCloud",
-    description: "A live demonstration of security vulnerabilities discovered in pfSense using SonarCloud, showing how cloud-based static analysis can uncover exploitable flaws in widely-deployed network software.",
+    description: "A live demonstration of security vulnerabilities discovered in pfSense using SonarQube Cloud, showing how cloud-based static analysis can uncover exploitable flaws in widely-deployed network software.",
     youtubeId: "w0WIqSlUlNY",
     category: "sonarqube-cloud",
     duration: "1:03",
@@ -1243,7 +1247,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v136",
     title: "Sonar Customer Stories | Vodafone",
-    description: "Vodafone's engineering team describes how adopting Sonar's Clean Code approach at scale reduced technical debt and improved developer confidence across their global software delivery organization.",
+    description: "Vodafone's engineering team describes how adopting Sonar's code quality approach at scale reduced technical debt and improved developer confidence across their global software delivery organization.",
     youtubeId: "5qH6BIbZ48k",
     category: "customer-stories",
     duration: "1:10",
@@ -1270,7 +1274,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v139",
     title: "SonarLint for Visual Studio Overview | a free and open source IDE extension",
-    description: "Get started with the SonarLint Visual Studio extension, a free plugin that surfaces code quality and security issues inline as you type, powered by the same rules engine as SonarQube.",
+    description: "Get started with the SonarQube for IDE Visual Studio extension, a free plugin that surfaces code quality and security issues inline as you type, powered by the same rules engine as SonarQube.",
     youtubeId: "nASTGaxYXOo",
     category: "sonarqube-for-ide",
     duration: "4:02",
@@ -1288,7 +1292,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v141",
     title: "SQL Injection with Java and SonarLint + SonarCloud",
-    description: "A concise demonstration of how SonarLint catches SQL injection vulnerabilities in Java code in real time, and how connecting to SonarCloud synchronizes shared security rules across your team.",
+    description: "A concise demonstration of how SonarQube for IDE catches SQL injection vulnerabilities in Java code in real time, and how connecting to SonarQube Cloud synchronizes shared security rules across your team.",
     youtubeId: "gFaPDrVGdUo",
     category: "sonarqube-for-ide",
     duration: "1:54",
@@ -1297,7 +1301,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v142",
     title: "Linux Foundation: Open-Source & Clean Code | Live with Sonar",
-    description: "A conversation with the Linux Foundation exploring the intersection of open-source development culture and Clean Code practices, and how tools like SonarQube help maintainers enforce consistent quality.",
+    description: "A conversation with the Linux Foundation exploring the intersection of open-source development culture and code quality practices, and how tools like SonarQube help maintainers enforce consistent quality.",
     youtubeId: "kfu0M0G591s",
     category: "clean-code",
     duration: "43:30",
@@ -1324,7 +1328,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v145",
     title: "SonarLint for IntelliJ and other JetBrains IDEs Overview | a free and open source IDE extension",
-    description: "A comprehensive overview of SonarLint for JetBrains IDEs including IntelliJ IDEA, showing connected mode setup, rule configuration, and how real-time analysis speeds up code review cycles.",
+    description: "A comprehensive overview of the SonarQube for IDE extension for JetBrains IDEs including IntelliJ IDEA, showing connected mode setup, rule configuration, and how real-time analysis speeds up code review cycles.",
     youtubeId: "6Bv1wmj0jZI",
     category: "sonarqube-for-ide",
     duration: "8:18",
@@ -1372,7 +1376,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v151",
     title: "SonarLint for PL/SQL Overview | a free and open source IDE extension",
-    description: "A brief introduction to SonarLint for PL/SQL developers, demonstrating how the plugin brings database code quality rules into the IDE to catch issues in stored procedures and SQL scripts early.",
+    description: "A brief introduction to the SonarQube for IDE extension for PL/SQL developers, demonstrating how it brings database code quality rules into the IDE to catch issues in stored procedures and SQL scripts early.",
     youtubeId: "MxH4PfiDx7Y",
     category: "sonarqube-for-ide",
     duration: "0:29",
@@ -1381,7 +1385,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v152",
     title: "Sonar Virtual Event: Clean Code Principles and Practices, Part 1",
-    description: "The first part of Sonar's virtual event on Clean Code Principles and Practices, establishing foundational concepts around consistency, intentionality, and adaptability in modern software development.",
+    description: "The first part of Sonar's virtual event on code quality principles and practices, establishing foundational concepts around consistency, intentionality, and adaptability in modern software development.",
     youtubeId: "AlK4Vir5fMQ",
     category: "clean-code",
     duration: "34:44",
@@ -1418,7 +1422,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v156",
     title: "Demonstration of Moodle vulnerabilities (CVE-2023-40320) on a test instance",
-    description: "A live proof-of-concept demonstrating CVE-2023-40320 in Moodle, showing how SonarCloud's vulnerability detection can identify the root cause of real-world CVEs in popular open-source platforms.",
+    description: "A live proof-of-concept demonstrating CVE-2023-40320 in Moodle, showing how SonarQube Cloud's vulnerability detection can identify the root cause of real-world CVEs in popular open-source platforms.",
     youtubeId: "njeXbu85yzM",
     category: "code-security",
     duration: "2:33",
@@ -1427,7 +1431,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v157",
     title: "Demonstration of Moodle vulnerabilities (CVE-2023-30943) on a test instance",
-    description: "A technical walkthrough of CVE-2023-30943 affecting Moodle, highlighting how SonarCloud's cross-file data flow analysis surfaces the vulnerability pattern in a controlled test environment.",
+    description: "A technical walkthrough of CVE-2023-30943 affecting Moodle, highlighting how SonarQube Cloud's cross-file data flow analysis surfaces the vulnerability pattern in a controlled test environment.",
     youtubeId: "pevHGKKOsqU",
     category: "code-security",
     duration: "1:13",
@@ -1436,7 +1440,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v158",
     title: "SonarLint for VS Code Overview | a free and open source IDE extension",
-    description: "A getting-started guide for SonarLint in VS Code, covering installation, connected mode configuration, and how the extension integrates with SonarQube or SonarCloud to enforce team-wide quality rules.",
+    description: "A getting-started guide for SonarQube for IDE in VS Code, covering installation, connected mode configuration, and how the extension integrates with SonarQube Server or SonarQube Cloud to enforce team-wide quality rules.",
     youtubeId: "m8sAdYCIWhY",
     category: "sonarqube-for-ide",
     duration: "6:32",
@@ -1454,7 +1458,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v160",
     title: "Clean Code for Python. what does this mean in practice?",
-    description: "A practical exploration of what Clean Code actually looks like in Python projects, covering Sonar's quality taxonomy of reliability, maintainability, and security applied to real Python codebases.",
+    description: "A practical exploration of what code quality actually looks like in Python projects, covering Sonar's quality taxonomy of reliability, maintainability, and security applied to real Python codebases.",
     youtubeId: "CZKvnTv0-a0",
     category: "clean-code",
     duration: "31:08",
@@ -1463,7 +1467,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v161",
     title: "Automatic Analysis for C and C++ | SonarCloud",
-    description: "A quick look at SonarCloud's automatic analysis support for C and C++ projects, enabling teams to get meaningful static analysis results without writing a single line of CI configuration.",
+    description: "A quick look at SonarQube Cloud's automatic analysis support for C and C++ projects, enabling teams to get meaningful static analysis results without writing a single line of CI configuration.",
     youtubeId: "_EhqQAMscTQ",
     category: "sonarqube-cloud",
     duration: "0:31",
@@ -1472,7 +1476,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v162",
     title: "The Clean as You Code Imperative, by Sonar CEO Olivier Gaudin | WeAreDevelopers Mainstage Talk",
-    description: "Sonar CEO Olivier Gaudin delivers a mainstage WeAreDevelopers keynote on why the Clean as You Code imperative is the most pragmatic path to sustainable software quality at scale.",
+    description: "Sonar CEO Olivier Gaudin delivers a mainstage WeAreDevelopers keynote on why the code quality imperative is the most pragmatic path to sustainable software quality at scale.",
     youtubeId: "9_1QZcisUFw",
     category: "clean-code",
     duration: "30:41",
@@ -1481,7 +1485,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v163",
     title: "Clean as You Code | Sonar's Unique Methodology for Clean Code",
-    description: "A concise explainer of Sonar's Clean as You Code methodology, showing how focusing quality enforcement on new and recently changed code makes continuous improvement achievable for any team.",
+    description: "A concise explainer of Sonar's code quality methodology, showing how focusing quality enforcement on new and recently changed code makes continuous improvement achievable for any team.",
     youtubeId: "VEBQrAVLm38",
     category: "clean-code",
     duration: "1:37",
@@ -1526,7 +1530,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v168",
     title: "SonarLint for Python: How to Get Started",
-    description: "Learn how to set up SonarLint for Python in your IDE of choice, with a walkthrough of rule customization, connected mode with SonarQube or SonarCloud, and detecting common Python anti-patterns.",
+    description: "Learn how to set up SonarQube for IDE for Python in your editor of choice, with a walkthrough of rule customization, connected mode with SonarQube Server or SonarQube Cloud, and detecting common Python anti-patterns.",
     youtubeId: "pAz9O_N1Vs8",
     category: "sonarqube-for-ide",
     duration: "3:18",
@@ -1733,7 +1737,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v191",
     title: "What is SonarQube for IDE? (Formerly SonarLint)",
-    description: "Learn how SonarQube for IDE (formerly SonarLint) delivers real-time, in-editor code quality and security feedback before issues ever reach your CI/CD pipeline.",
+    description: "Learn how SonarQube for IDE delivers real-time, in-editor code quality and security feedback before issues ever reach your CI/CD pipeline.",
     youtubeId: "Ks4Slmzb1qY",
     category: "sonarqube-for-ide",
     duration: "0:33",
@@ -1805,7 +1809,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v199",
     title: "Intro to C++ Quick Fixes in VS Code with SonarLint",
-    description: "A hands-on tutorial showing how SonarLint's C++ quick-fix suggestions work inside VS Code, letting developers resolve issues with a single click without leaving the editor.",
+    description: "A hands-on tutorial showing how SonarQube for IDE's C++ quick-fix suggestions work inside VS Code, letting developers resolve issues with a single click without leaving the editor.",
     youtubeId: "LO0mUe_YYY4",
     category: "sonarqube-for-ide",
     duration: "4:09",
@@ -1841,7 +1845,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v203",
     title: "Intro to C++ Quick Fixes in Visual Studio with SonarLint",
-    description: "Learn how to use SonarLint's automated C++ quick fixes inside Visual Studio to correct code issues on the spot without interrupting your development workflow.",
+    description: "Learn how to use SonarQube for IDE's automated C++ quick fixes inside Visual Studio to correct code issues on the spot without interrupting your development workflow.",
     youtubeId: "svzaGMRcfrU",
     category: "sonarqube-for-ide",
     duration: "4:14",
@@ -1859,7 +1863,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v205",
     title: "Intro to C++ Quick Fixes in CLion with SonarLint",
-    description: "Discover how SonarLint integrates with CLion to provide real-time C++ analysis and one-click quick fixes, helping JetBrains users write safer code from the start.",
+    description: "Discover how SonarQube for IDE integrates with CLion to provide real-time C++ analysis and one-click quick fixes, helping JetBrains users write safer code from the start.",
     youtubeId: "GBoTe9OmCeM",
     category: "sonarqube-for-ide",
     duration: "5:02",
@@ -1977,7 +1981,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   {
     id: "v218",
     title: "Multiple Issue Locations or Flows in SonarLint for Eclipse",
-    description: "See how SonarLint for Eclipse visualizes multi-location issues and data flows, making it easier to trace the root cause of complex bugs across multiple files.",
+    description: "See how SonarQube for IDE for Eclipse visualizes multi-location issues and data flows, making it easier to trace the root cause of complex bugs across multiple files.",
     youtubeId: "fty4Ofxcy9g",
     category: "sonarqube-for-ide",
     duration: "0:45",

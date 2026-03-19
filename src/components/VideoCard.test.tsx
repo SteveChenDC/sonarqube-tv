@@ -180,6 +180,14 @@ describe("VideoCard", () => {
       const { queryByLabelText } = render(<VideoCard video={mockVideo} />);
       expect(queryByLabelText(/Remove.*from continue watching/)).toBeNull();
     });
+
+    it("remove button has max-sm:opacity-100 class so it is always visible on mobile touch screens", () => {
+      const onRemove = vi.fn();
+      const { getByLabelText } = render(<VideoCard video={mockVideo} onRemove={onRemove} />);
+      const btn = getByLabelText("Remove Getting Started with SonarQube from continue watching");
+      // max-sm:opacity-100 ensures the button is visible on mobile (≤639px) where hover is unavailable
+      expect(btn.className).toContain("max-sm:opacity-100");
+    });
   });
 
   describe("hideCategory prop", () => {
@@ -357,6 +365,58 @@ describe("VideoCard", () => {
         <VideoCard video={videoWithDate("2025-02-01T00:00:00Z")} />
       );
       expect(getByText("1 year ago")).toBeTruthy();
+    });
+
+    describe("timeAgo exact boundary conditions", () => {
+      // System time for all tests in this suite: "2026-03-14T12:00:00Z"
+
+      it("shows '1 month ago' at exactly 30 days (minimum month threshold)", () => {
+        // days = 30; months = floor(30 / 30) = 1; years = 0 → "1 month ago"
+        // The months branch fires at exactly 30 days, not 29d 23h.
+        const { getByText } = render(
+          <VideoCard video={videoWithDate("2026-02-12T12:00:00Z")} />
+        );
+        expect(getByText("1 month ago")).toBeTruthy();
+      });
+
+      it("shows '29 days ago' at 29 days + 23 hours (just under 30-day month threshold)", () => {
+        // seconds = 29*86400 + 23*3600 = 2588400; days = 29; months = floor(29/30) = 0
+        // months < 1, days >= 1 → "29 days ago" (not "1 month ago")
+        const { getByText } = render(
+          <VideoCard video={videoWithDate("2026-02-12T13:00:00Z")} />
+        );
+        expect(getByText("29 days ago")).toBeTruthy();
+      });
+
+      it("shows '1 year ago' at exactly 365 days (minimum year threshold)", () => {
+        // days = 365; months = floor(365/30) = 12; years = floor(365/365) = 1
+        // years >= 1 fires first → "1 year ago"
+        const { getByText } = render(
+          <VideoCard video={videoWithDate("2025-03-14T12:00:00Z")} />
+        );
+        expect(getByText("1 year ago")).toBeTruthy();
+      });
+
+      it("shows '12 months ago' at exactly 364 days (one day before year threshold)", () => {
+        // days = 364; months = floor(364/30) = 12; years = floor(364/365) = 0
+        // years is 0, so the months branch fires: 12 months → "12 months ago".
+        // This is a deliberate quirk: users see "12 months ago" not "1 year ago"
+        // for a video published 364 days ago.
+        const { getByText } = render(
+          <VideoCard video={videoWithDate("2025-03-15T12:00:00Z")} />
+        );
+        expect(getByText("12 months ago")).toBeTruthy();
+      });
+
+      it("shows 'Just now' for a future-dated video (defensive fallback for bad data)", () => {
+        // A future publishedAt produces a negative diff. All if-branches require
+        // a value >= 1, so they all fail and the function falls through to "Just now".
+        // This guards against silent breakage if a video with a future date is added.
+        const { getByText } = render(
+          <VideoCard video={videoWithDate("2026-03-20T12:00:00Z")} />
+        );
+        expect(getByText("Just now")).toBeTruthy();
+      });
     });
   });
 
