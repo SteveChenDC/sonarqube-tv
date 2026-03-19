@@ -473,9 +473,10 @@ export default function Header() {
           >
             <button
               onClick={() => { setCoursesOpen((prev) => !prev); setMenuOpen(false); }}
+              aria-label="Courses"
               className={`flex items-center gap-1 rounded-lg px-3 py-2 font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
             >
-              Courses
+              <span className="hidden sm:inline">Courses</span>
               <svg
                 className={`h-3.5 w-3.5 transition-transform duration-200 ${coursesOpen ? "rotate-180" : ""}`}
                 fill="none"
@@ -573,9 +574,10 @@ export default function Header() {
           >
             <button
               onClick={() => { setMenuOpen((prev) => !prev); setCoursesOpen(false); }}
+              aria-label="Categories"
               className={`flex items-center gap-1 rounded-lg px-3 py-2 font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
             >
-              Categories
+              <span className="hidden sm:inline">Categories</span>
               <svg
                 className={`h-3.5 w-3.5 transition-transform duration-200 ${menuOpen ? "rotate-180" : ""}`}
                 fill="none"
@@ -641,7 +643,9 @@ export default function Header() {
               </div>
             )}
           </div>
-          <ThemeToggle className="text-n1/70 hover:bg-n1/10 hover:text-n1" />
+          <div className="hidden sm:flex">
+            <ThemeToggle className="text-n1/70 hover:bg-n1/10 hover:text-n1" />
+          </div>
         </nav>
       </div>
     </header>

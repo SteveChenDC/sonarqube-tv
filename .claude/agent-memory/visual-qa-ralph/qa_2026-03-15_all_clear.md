@@ -4,6 +4,31 @@ description: Running log of full visual QA passes — most recent at top
 type: project
 ---
 
+## 2026-03-18 (Pass #33)
+
+Ran full visual QA on 2026-03-18 (thirty-third run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px). Also inspected interactive-* screenshots from 16:42–16:43.
+
+**Result: All clear — no new visual bugs found.**
+
+No commits since Pass #32. All fixes from prior passes remain in place.
+
+Specific checks:
+- Desktop Home: Marquee row, Certification Courses (DEVELOPER/SECURITY/DEVOPS/AI CODE cards, BEGINNER/INTERMEDIATE badges, red Start Course buttons), Getting Started — clean
+- Desktop Home Bottom: known black screenshot artifact; DevOps & CI/CD cards (1:57, 0:59, 46:48 duration badges) — clean
+- Desktop Watch: YouTube player, Back nav, title "Auto import of GitHub repos to SonarQube Cloud in action." — correct
+- Desktop Category: Sort bar (all 4 buttons on one row, Newest red/active), 4-col grid — correct
+- Mobile Home: carousel, Certification Courses DEVELOPER card full-width (BEGINNER badge, 4 modules · 15 videos · 2h 58m, progress dots, Start Course button), Filters + scroll-to-top — no overflow
+- Mobile Home Bottom: known black area artifact; DevOps & CI/CD row with 0:41 + 1:57 duration badges — clean
+- Mobile Watch: full-width player, Back nav, title, SonarQube Cloud + March 12th 2026 tags, 0:41/Part of SCDK/Share, description, AI Summary/Transcript tabs — within viewport
+- Mobile Category: screenshot is stale (Mar 17, pre-fix); confirmed `flex-nowrap` fix (commit 171a73b) still in CategoryContent.tsx line 70 — no regression
+- Interactive Home (Mar 18 16:42): Hero "Linux Foundation: Open-Source & Clean Code | Live with Sonar", Latest row, Certification Courses — clean; grey placeholder tiles = lazy-load artifact
+- Interactive Watch (Mar 18 16:42): Full watch page with long description and AI Summary/Transcript tabs, footer — clean
+- Interactive Category page (Mar 18 16:43): Getting Started page, sort bar all 4 buttons on one row, 4-col grid — clean
+- Interactive Filters (Mar 18 16:43): Filter modal open — white modal on dark page (consistent with prior passes, noted existing behavior)
+- "N" bottom-left artifact — confirmed false positive (Next.js route announcer)
+
+---
+
 ## 2026-03-18 (Pass #32)
 
 Ran full visual QA on 2026-03-18 (thirty-second run) across all 4 pages × 2 viewports (desktop 1280px, mobile 375px). Also inspected newer qa-* screenshots.
