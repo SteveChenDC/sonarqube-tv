@@ -328,7 +328,7 @@ export default function Header() {
               <button
                 onClick={() => setSearchOpen(true)}
                 aria-label="Search videos"
-                className={`flex items-center gap-1 rounded-lg px-3 py-2 font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
+                className={`flex items-center gap-1 rounded-lg px-3 py-2 max-sm:min-h-[44px] font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
               >
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <circle cx="11" cy="11" r="8" />
@@ -399,7 +399,7 @@ export default function Header() {
             {showResults && (
               <div
                 ref={searchResultsRef}
-                className="fixed inset-x-4 top-[72px] z-50 max-h-[calc(100dvh-80px)] overflow-y-auto overscroll-contain rounded-xl border border-n8 bg-n9/95 shadow-2xl backdrop-blur-md sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-2 sm:w-96 sm:max-h-[480px]"
+                className="fixed inset-x-4 top-[80px] z-50 max-h-[calc(100dvh-88px)] overflow-y-auto overscroll-contain rounded-xl border border-n8 bg-n9/95 shadow-2xl backdrop-blur-md sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-2 sm:w-96 sm:max-h-[480px]"
               >
                 <div className="border-b border-n8 px-4 py-2.5">
                   <span className="font-heading text-xs font-medium text-n5">
@@ -488,7 +488,7 @@ export default function Header() {
             <button
               onClick={() => { setCoursesOpen((prev) => !prev); setMenuOpen(false); }}
               aria-label="Courses"
-              className={`flex items-center gap-1 rounded-lg px-3 py-2 font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
+              className={`flex items-center gap-1 rounded-lg px-3 py-2 max-sm:min-h-[44px] font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
             >
               <span className="hidden sm:inline">Courses</span>
               <svg
@@ -504,7 +504,7 @@ export default function Header() {
 
             {coursesDropdownMounted && (
               <div
-                className={`fixed inset-x-4 top-[72px] z-50 max-h-[calc(100dvh-80px)] overflow-y-auto overscroll-contain rounded-xl border border-n8 bg-n9/95 p-4 shadow-2xl backdrop-blur-md transition-all duration-200 sm:max-h-none sm:overflow-y-visible sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-2 sm:w-[480px] sm:p-5 ${
+                className={`fixed inset-x-4 top-[80px] z-50 max-h-[calc(100dvh-88px)] overflow-y-auto overscroll-contain rounded-xl border border-n8 bg-n9/95 p-4 shadow-2xl backdrop-blur-md transition-all duration-200 sm:max-h-none sm:overflow-y-visible sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-2 sm:w-[480px] sm:p-5 ${
                   coursesDropdownVisible
                     ? "scale-100 opacity-100"
                     : "pointer-events-none scale-95 opacity-0"
@@ -589,7 +589,7 @@ export default function Header() {
             <button
               onClick={() => { setMenuOpen((prev) => !prev); setCoursesOpen(false); }}
               aria-label="Categories"
-              className={`flex items-center gap-1 rounded-lg px-3 py-2 font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
+              className={`flex items-center gap-1 rounded-lg px-3 py-2 max-sm:min-h-[44px] font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
             >
               <span className="hidden sm:inline">Categories</span>
               <svg
@@ -605,7 +605,7 @@ export default function Header() {
 
             {dropdownMounted && (
               <div
-                className={`fixed inset-x-4 top-[72px] z-50 max-h-[calc(100dvh-80px)] overflow-y-auto overscroll-contain rounded-xl border border-n8 bg-n9/95 p-4 shadow-2xl backdrop-blur-md transition-all duration-200 sm:max-h-none sm:overflow-y-visible sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-2 sm:w-[720px] sm:p-6 ${
+                className={`fixed inset-x-4 top-[80px] z-50 max-h-[calc(100dvh-88px)] overflow-y-auto overscroll-contain rounded-xl border border-n8 bg-n9/95 p-4 shadow-2xl backdrop-blur-md transition-all duration-200 sm:max-h-none sm:overflow-y-visible sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-2 sm:w-[720px] sm:p-6 ${
                   dropdownVisible
                     ? "scale-100 opacity-100"
                     : "pointer-events-none scale-95 opacity-0"
