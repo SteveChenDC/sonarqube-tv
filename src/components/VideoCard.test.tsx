@@ -118,16 +118,16 @@ describe("VideoCard", () => {
       expect(container.querySelector(".bg-qube-blue\\/80")).toBeTruthy();
     });
 
-    it("uses black badge for medium videos (4-20 min)", () => {
+    it("uses neutral-dark badge for medium videos (4-20 min)", () => {
       const medVideo: Video = { ...mockVideo, duration: "12:34" };
       const { container } = render(<VideoCard video={medVideo} />);
-      expect(container.querySelector(".bg-black\\/80")).toBeTruthy();
+      expect(container.querySelector(".bg-n8\\/90")).toBeTruthy();
     });
 
-    it("uses sonar-purple badge for long videos (>20 min)", () => {
+    it("uses sonar-red badge for long videos (>20 min)", () => {
       const longVideo: Video = { ...mockVideo, duration: "45:00" };
       const { container } = render(<VideoCard video={longVideo} />);
-      expect(container.querySelector(".bg-sonar-purple\\/80")).toBeTruthy();
+      expect(container.querySelector(".bg-sonar-red\\/70")).toBeTruthy();
     });
 
     it("uses qube-blue badge for very short videos (1:30)", () => {
@@ -136,19 +136,19 @@ describe("VideoCard", () => {
       expect(container.querySelector(".bg-qube-blue\\/80")).toBeTruthy();
     });
 
-    it("uses sonar-purple badge for H:MM:SS format over 20 min", () => {
+    it("uses sonar-red badge for H:MM:SS format over 20 min", () => {
       const longVideo: Video = { ...mockVideo, duration: "1:05:00" };
       const { container } = render(<VideoCard video={longVideo} />);
-      expect(container.querySelector(".bg-sonar-purple\\/80")).toBeTruthy();
+      expect(container.querySelector(".bg-sonar-red\\/70")).toBeTruthy();
     });
 
-    it("uses sonar-purple badge for a no-colon duration string (parseDurationToMinutes ?? 0 guard)", () => {
+    it("uses sonar-red badge for a no-colon duration string (parseDurationToMinutes ?? 0 guard)", () => {
       // "45" has no colon → split(":") gives ["45"] → parts[1] is undefined
       // parseDurationToMinutes: parts[0] + (parts[1] ?? 0) / 60 = 45 + 0 = 45 minutes
-      // 45 > 20 → long → bg-sonar-purple/80
+      // 45 > 20 → long → bg-sonar-red/70
       const noColonVideo: Video = { ...mockVideo, duration: "45" };
       const { container } = render(<VideoCard video={noColonVideo} />);
-      expect(container.querySelector(".bg-sonar-purple\\/80")).toBeTruthy();
+      expect(container.querySelector(".bg-sonar-red\\/70")).toBeTruthy();
     });
   });
 
@@ -260,32 +260,32 @@ describe("VideoCard", () => {
   });
 
   describe("duration badge boundary conditions", () => {
-    it("uses black badge for a video at exactly 4:00 (first medium boundary)", () => {
+    it("uses neutral-dark badge for a video at exactly 4:00 (first medium boundary)", () => {
       const video: Video = { ...mockVideo, duration: "4:00" };
       const { container } = render(<VideoCard video={video} />);
-      expect(container.querySelector(".bg-black\\/80")).toBeTruthy();
+      expect(container.querySelector(".bg-n8\\/90")).toBeTruthy();
       expect(container.querySelector(".bg-qube-blue\\/80")).toBeNull();
     });
 
-    it("uses black badge for a video at exactly 20:00 (last medium boundary)", () => {
+    it("uses neutral-dark badge for a video at exactly 20:00 (last medium boundary)", () => {
       const video: Video = { ...mockVideo, duration: "20:00" };
       const { container } = render(<VideoCard video={video} />);
-      expect(container.querySelector(".bg-black\\/80")).toBeTruthy();
-      expect(container.querySelector(".bg-sonar-purple\\/80")).toBeNull();
+      expect(container.querySelector(".bg-n8\\/90")).toBeTruthy();
+      expect(container.querySelector(".bg-sonar-red\\/70")).toBeNull();
     });
 
-    it("uses sonar-purple badge for a video at 20:01 (first long boundary)", () => {
+    it("uses sonar-red badge for a video at 20:01 (first long boundary)", () => {
       const video: Video = { ...mockVideo, duration: "20:01" };
       const { container } = render(<VideoCard video={video} />);
-      expect(container.querySelector(".bg-sonar-purple\\/80")).toBeTruthy();
-      expect(container.querySelector(".bg-black\\/80")).toBeNull();
+      expect(container.querySelector(".bg-sonar-red\\/70")).toBeTruthy();
+      expect(container.querySelector(".bg-n8\\/90")).toBeNull();
     });
 
     it("uses qube-blue badge for a video at 3:59 (last short boundary)", () => {
       const video: Video = { ...mockVideo, duration: "3:59" };
       const { container } = render(<VideoCard video={video} />);
       expect(container.querySelector(".bg-qube-blue\\/80")).toBeTruthy();
-      expect(container.querySelector(".bg-black\\/80")).toBeNull();
+      expect(container.querySelector(".bg-n8\\/90")).toBeNull();
     });
   });
 
