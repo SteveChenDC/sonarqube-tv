@@ -79,7 +79,9 @@ async function openSearch() {
 
 /** Return the search input (assumes search bar is open). */
 function searchInput() {
-  return screen.getByRole("searchbox", { name: "Search videos" });
+  // Input has role="combobox" which overrides the implicit "searchbox" role
+  // from type="search". Using getByRole("combobox") ensures ARIA attributes are tested.
+  return screen.getByRole("combobox", { name: "Search videos" });
 }
 
 // Pre-warm the @/data/videos module mock so that subsequent dynamic imports
@@ -121,7 +123,7 @@ describe("Header — search open/close", () => {
       fireEvent.keyDown(document, { key: "Escape" });
     });
 
-    expect(screen.queryByRole("searchbox")).toBeNull();
+    expect(screen.queryByRole("combobox")).toBeNull();
     expect(screen.getByRole("button", { name: "Search videos" })).toBeInTheDocument();
   });
 
@@ -137,7 +139,7 @@ describe("Header — search open/close", () => {
     });
 
     // Search closes and input is gone — query was cleared by Escape
-    expect(screen.queryByRole("searchbox")).toBeNull();
+    expect(screen.queryByRole("combobox")).toBeNull();
     expect(screen.queryByText("SonarQube Introduction")).toBeNull();
   });
 
@@ -184,7 +186,7 @@ describe("Header — search open/close", () => {
     });
 
     // Search should remain closed
-    expect(screen.queryByRole("searchbox")).toBeNull();
+    expect(screen.queryByRole("combobox")).toBeNull();
     document.body.removeChild(fakeInput);
   });
 });
@@ -204,7 +206,8 @@ describe("Header — search results", () => {
     renderHeader();
     await openSearch();
     fireEvent.change(searchInput(), { target: { value: "zzz-no-match-xyz" } });
-    expect(screen.getByText(/No results for/)).toBeInTheDocument();
+    // Use 'p' selector to distinguish the visible heading from the sr-only live region
+    expect(screen.getByText(/No results for/, { selector: "p" })).toBeInTheDocument();
   });
 
   it("shows singular 'result' for a single match", async () => {
@@ -212,7 +215,8 @@ describe("Header — search results", () => {
     await openSearch();
     // "SonarQube" only appears in the first video's title/description
     fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
-    expect(screen.getByText("1 of 1 result")).toBeInTheDocument();
+    // Use 'span' selector to distinguish from the sr-only live region
+    expect(screen.getByText("1 of 1 result", { selector: "span" })).toBeInTheDocument();
   });
 
   it("shows plural 'results' when multiple videos match", async () => {
@@ -220,7 +224,8 @@ describe("Header — search results", () => {
     await openSearch();
     // "tutorial" is in BOTH video descriptions — so both match
     fireEvent.change(searchInput(), { target: { value: "tutorial" } });
-    expect(screen.getByText("2 of 2 results")).toBeInTheDocument();
+    // Use 'span' selector to distinguish from the sr-only live region
+    expect(screen.getByText("2 of 2 results", { selector: "span" })).toBeInTheDocument();
   });
 
   it("results dropdown does not appear when search is closed (no query shown)", () => {
@@ -276,8 +281,96 @@ describe("Header — search results", () => {
 
     // onClick calls onSearchChange("") and setSearchOpen(false)
     // → no input, no results
-    expect(screen.queryByRole("searchbox")).toBeNull();
+    expect(screen.queryByRole("combobox")).toBeNull();
     expect(screen.queryByText("SonarQube Introduction")).toBeNull();
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Search — ARIA combobox accessibility attributes
+// ─────────────────────────────────────────────────────────────────────────────
+describe("Header — search ARIA combobox", () => {
+  it("search input has role='combobox'", async () => {
+    renderHeader();
+    await openSearch();
+    const input = searchInput();
+    expect(input).toHaveAttribute("role", "combobox");
+  });
+
+  it("search input has aria-haspopup='listbox'", async () => {
+    renderHeader();
+    await openSearch();
+    expect(searchInput()).toHaveAttribute("aria-haspopup", "listbox");
+  });
+
+  it("search input has aria-autocomplete='list'", async () => {
+    renderHeader();
+    await openSearch();
+    expect(searchInput()).toHaveAttribute("aria-autocomplete", "list");
+  });
+
+  it("aria-expanded is false when no query is typed", async () => {
+    renderHeader();
+    await openSearch();
+    // No query → showResults=false → aria-expanded="false"
+    expect(searchInput()).toHaveAttribute("aria-expanded", "false");
+  });
+
+  it("aria-expanded is true when results are showing", async () => {
+    renderHeader();
+    await openSearch();
+    fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
+    expect(searchInput()).toHaveAttribute("aria-expanded", "true");
+  });
+
+  it("search input has aria-controls pointing to the listbox id", async () => {
+    renderHeader();
+    await openSearch();
+    expect(searchInput()).toHaveAttribute("aria-controls", "header-search-listbox");
+  });
+
+  it("results list has role='listbox' with the correct id", async () => {
+    renderHeader();
+    await openSearch();
+    fireEvent.change(searchInput(), { target: { value: "tutorial" } });
+    const listbox = screen.getByRole("listbox");
+    expect(listbox).toHaveAttribute("id", "header-search-listbox");
+  });
+
+  it("each result item has role='option' and aria-selected='false'", async () => {
+    renderHeader();
+    await openSearch();
+    fireEvent.change(searchInput(), { target: { value: "SonarQube" } });
+    const options = screen.getAllByRole("option");
+    expect(options.length).toBeGreaterThan(0);
+    options.forEach((opt) => {
+      expect(opt).toHaveAttribute("aria-selected", "false");
+    });
+  });
+
+  it("aria-live status region is in the DOM when search is open", async () => {
+    renderHeader();
+    await openSearch();
+    // The live region has role="status" and is always mounted when search is open
+    const liveRegion = document.querySelector('[role="status"][aria-live="polite"]');
+    expect(liveRegion).toBeInTheDocument();
+  });
+
+  it("aria-live region announces result count when results appear", async () => {
+    renderHeader();
+    await openSearch();
+    fireEvent.change(searchInput(), { target: { value: "tutorial" } });
+    // "2 of 2 results" should be in the live region
+    const liveRegion = document.querySelector('[role="status"][aria-live="polite"]');
+    expect(liveRegion?.textContent).toContain("2 of 2 results");
+  });
+
+  it("aria-live region announces 'No results' when query has no matches", async () => {
+    renderHeader();
+    await openSearch();
+    fireEvent.change(searchInput(), { target: { value: "zzz-no-match" } });
+    const liveRegion = document.querySelector('[role="status"][aria-live="polite"]');
+    expect(liveRegion?.textContent).toContain("No results");
   });
 });
 
@@ -291,7 +384,7 @@ describe("Header — search blur / click-outside", () => {
     // Input is open but query is still empty — blur should close
     expect(searchInput()).toBeInTheDocument();
     fireEvent.blur(searchInput());
-    expect(screen.queryByRole("searchbox")).toBeNull();
+    expect(screen.queryByRole("combobox")).toBeNull();
     expect(screen.getByRole("button", { name: "Search videos" })).toBeInTheDocument();
   });
 
