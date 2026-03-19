@@ -1,10 +1,12 @@
 ---
 name: project_qa_baseline
-description: Build and test baseline as of 2026-03-18 — what passes, known warnings
+description: Build and test baseline as of 2026-03-19 — what passes, known warnings
 type: project
 ---
 
-As of 2026-03-19 (run 61), `npm run build` and `npm test` both pass clean.
+As of 2026-03-19 (run 62), `npm run build` and `npm test` both pass clean.
+
+**Run 62 (2026-03-19)**: Build failed initially with `ENOENT: no such file or directory` for a `.next` tmp file (stale .next from prior run). Fix: `rm -rf .next && npm run build`. Tests: 1028/1028 (59 files), 252 pages. No code changes needed. Test/file count drop from run 61 (1039/61) is explained by removal of `e2e/Header.anchor.test.tsx` (Playwright E2E restructure) in commit 38f2d74. Uncommitted changes in HomeContent.tsx/HomeContent.test.tsx (UI copy: "Reset filters"→"Clear all filters") were already in working tree and tests passed with them.
 
 **Run 61 (2026-03-19)**: Clean pass. No changes needed. 1039/1039 tests (61 files), 252 pages.
 
@@ -95,7 +97,7 @@ As of 2026-03-19 (run 61), `npm run build` and `npm test` both pass clean.
 - Fix: `npx vitest run -u`. Committed as bb71d72.
 - Pattern: Any CSS gradient polish to Hero.tsx overlays will stale Hero.visual.test.tsx snapshot. Fix with `-u`.
 
-**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (runs 19–24, stable) → 219 (run 25, stable) → 219 (runs 26–36, stable) → 245 (run 37, 27 test files) → 318 (run 38, 36 test files) → 372 (run 39, 39 test files) → 398 (run 41, 42 test files) → 385 (run 43–44, 41 test files) → 652 (run 45, 46 test files) → 663 (run 46, 46 test files) → 673 (run 47, 46 test files) → 767 (run 49–50, 50 test files) → 923 (run 51–52, 54 test files) → 928 (run 53, 55 test files) → 963 (run 54–55, 56 test files) → 975 (run 56–57, 58 test files) → 994 (run 58, 59 test files) → 1020 (run 59, 59 test files) → 1024 (run 60, 60 test files) → 1039 (run 61, 61 test files)
+**Test count history**: 193 → 203 → 211 → 212 → 218 (stable runs 9–17) → 217 (run 18, intentional trim) → 217 (runs 19–24, stable) → 219 (run 25, stable) → 219 (runs 26–36, stable) → 245 (run 37, 27 test files) → 318 (run 38, 36 test files) → 372 (run 39, 39 test files) → 398 (run 41, 42 test files) → 385 (run 43–44, 41 test files) → 652 (run 45, 46 test files) → 663 (run 46, 46 test files) → 673 (run 47, 46 test files) → 767 (run 49–50, 50 test files) → 923 (run 51–52, 54 test files) → 928 (run 53, 55 test files) → 963 (run 54–55, 56 test files) → 975 (run 56–57, 58 test files) → 994 (run 58, 59 test files) → 1020 (run 59, 59 test files) → 1024 (run 60, 60 test files) → 1039 (run 61, 61 test files) → 1028 (run 62, 59 files, e2e restructure removed 2 vitest-picked-up files)
 **Page count history**: 242 → 243 → 250 (run 38–44) → 252 (run 45–54)
 
 **Why:** Ongoing QA baseline tracking.
@@ -123,8 +125,8 @@ If a HomeContent test calls `openFilters()` without `await` and fails with "Unab
 *HomeContent FilterBar first-use lazy loading (run 54 pattern):*
 If "filters videos by short duration (under 4 min)" fails with "Unable to find an element with the text: Under 4 min", the issue is that this is the first test in its describe block to call `openFilters()`, and FilterBar's React.lazy import hasn't resolved yet. Fix: add `await act(async () => {})` between `render(...)` and `await openFilters()` to pre-flush the lazy import.
 
-*Stale .next after Next.js upgrade (run 59 pattern):*
-After a Next.js version bump, if `npm run build` fails with `Cannot find module 'next/types.js'` during the TypeScript check phase (after Turbopack compiles OK), the fix is `rm -rf .next && npm run build`. The stale `.next/types/validator.ts` and `.next/dev/types/validator.ts` from the previous version conflict with the new Next.js release. No code changes needed — regenerating `.next` fresh resolves it.
+*Stale .next (runs 59 + 62 pattern):*
+`rm -rf .next && npm run build` fixes both: (1) After a Next.js version bump, `Cannot find module 'next/types.js'` during TypeScript check (stale type validator). (2) ENOENT on a `.next/static/.../buildManifest.js.tmp.*` file mid-build (stale tmp artifact from interrupted prior build). In both cases no code changes are needed — a clean `.next` regeneration resolves it. **Check for stale .next first** before any other diagnosis if the build errors before page generation starts.
 
 *Other patterns:*
 If `ArticleTabs.test.tsx` fails after component changes, check: (1) default tab is "summary" when article provided, (2) no collapse/expand buttons, (3) single-tab uses h3 not button, (4) tab buttons have role="tab", (5) indicator uses CSS transform classes, (6) `getByRole("heading", { level: 3 })` without name fails if markdown also has h3s — use `getAllByRole` + `.find(h => h.querySelector(...))`. If `src/data/videos.test.ts` thumbnail URL test fails, it likely means new videos use local `/thumbnails/*.jpg` paths — fix by branching on `startsWith("/thumbnails/")` and validating with `/^\/thumbnails\/.+\.jpg$/`. If Hero.visual.test.tsx fails with a src URL mismatch (YouTube maxresdefault URL vs `/snap-thumb.jpg`), check whether Hero.tsx changed to use `video.thumbnail` directly — fix by updating test assertion to `mockVideo.thumbnail` and refresh snapshots with `npx vitest run -u`. If layout.test.tsx JSON-LD test fails with a JSON parse error, check if additional JSON-LD scripts were added to layout.tsx — fix by parsing each script individually and using `.find()` by `@type`. If Hero.visual.test.tsx snapshot fails due to CSS changes, update with `npx vitest run -u`. If VideoRow.visual snapshots fail, first check if a new persistent DOM element was added to VideoCard (shimmer, overlay, badge) — stale snapshot is likely the culprit, fix with `npx vitest run -u`. If Footer link tests fail, check whether `aria-label` attributes on social/nav links were changed. If HomeContent empty-state tests fail, check whether the heading copy in HomeContent.tsx changed (exact text, punctuation included). If a new test file fails to parse (0 tests, transform error), check for `}[]` postfix array syntax in TypeScript type annotations inside vi.fn() callbacks — replace with `Array<{...}>` form. If CourseCard tests fail on shortTitle/TC text, note that CourseCard does NOT render shortTitle — fix the test to use the full title or image alt text.
