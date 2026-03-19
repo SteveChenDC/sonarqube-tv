@@ -55,6 +55,13 @@ function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, divider
   const [canScrollRight, setCanScrollRight] = useState(false);
   const [isRevealed, setIsRevealed] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
+  // Ref-based guard for handleScroll so the callback never captures
+  // hasScrolled in its closure. Without this, hasScrolled being in
+  // handleScroll's deps causes useCallback to recreate handleScroll after
+  // the first scroll, which in turn triggers the useEffect to re-run,
+  // removing and re-adding the scroll listener + disconnecting and
+  // re-connecting the ResizeObserver for all 11+ category rows.
+  const hasScrolledRef = useRef(false);
 
   // Lazy-reveal: only render full row content when section scrolls near viewport.
   // rootMargin: "400px" preloads one screen-height before the row becomes visible.
@@ -83,8 +90,11 @@ function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, divider
 
   const handleScroll = useCallback(() => {
     updateScrollState();
-    if (!hasScrolled) setHasScrolled(true);
-  }, [updateScrollState, hasScrolled]);
+    if (!hasScrolledRef.current) {
+      hasScrolledRef.current = true;
+      setHasScrolled(true);
+    }
+  }, [updateScrollState]); // hasScrolled intentionally omitted — guarded by hasScrolledRef
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -162,7 +172,16 @@ function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, divider
           <div className="flex items-center gap-3">
             <span className="inline-block h-5 w-1 shrink-0 rounded-full bg-sonar-red" aria-hidden="true" />
             <h2 className="font-heading text-lg font-semibold text-n1 sm:text-xl">
-              {title}
+              {categorySlug ? (
+                <Link
+                  href={`/category/${categorySlug}`}
+                  className="rounded transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                >
+                  {title}
+                </Link>
+              ) : (
+                title
+              )}
               <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">{totalCount ?? videos.length}</span>
             </h2>
           </div>

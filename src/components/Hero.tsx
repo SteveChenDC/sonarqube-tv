@@ -103,6 +103,10 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
         <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/15 via-[45%] to-transparent dark:from-background/55 dark:via-background/15" />
         {/* Top vignette: lifts badge row above bright sky thumbnails */}
         <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/35 to-transparent dark:from-background/35" />
+        {/* Light-mode bottom-edge blend: fades the hero into the page background so
+            there's no jarring black-to-light cliff. Hidden in dark mode because
+            `dark:from-background` on the main gradient already handles that case. */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-background dark:hidden" />
 
         <div className="absolute bottom-0 left-0 right-0 px-4 pb-16 sm:px-6">
           <div className="mx-auto max-w-7xl">

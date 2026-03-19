@@ -383,23 +383,26 @@ export default function HomeContent({
               })}
 
               {hasActiveFilters && filteredVideos.length === 0 && (
-                <div className="px-4 py-20 text-center sm:px-6">
-                  <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-n7/40 bg-n8/60">
-                    <svg className="h-8 w-8 text-n6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                <div className="px-4 py-20 text-center sm:px-6 animate-fade-in">
+                  <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl border border-n7/40 bg-gradient-to-br from-n8/70 to-n9/90 shadow-inner ring-2 ring-n7/20">
+                    <svg className="h-10 w-10 text-n5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z" />
                     </svg>
                   </div>
                   <p className="font-heading text-xl font-semibold text-n2">
                     No videos match your filters
                   </p>
-                  <p className="mt-2 text-sm text-n5">
+                  <p className="mt-2 text-sm leading-relaxed text-n5">
                     Try adjusting or removing some filters to find what you&rsquo;re looking for.
                   </p>
                   <button
                     onClick={reset}
-                    className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-qube-blue/40 bg-qube-blue/10 px-4 py-2 font-heading text-sm font-medium text-qube-blue transition-colors hover:border-qube-blue/70 hover:bg-qube-blue/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
+                    className="mt-6 inline-flex items-center gap-1.5 rounded-full border border-qube-blue/40 bg-qube-blue/10 px-5 py-2.5 font-heading text-sm font-medium text-qube-blue transition-colors hover:border-qube-blue/70 hover:bg-qube-blue/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2"
                   >
-                    Reset filters
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    Clear all filters
                   </button>
                 </div>
               )}

@@ -19,7 +19,11 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "npm run dev",
+    // NEXT_TURBOPACK_CACHE_DIR isolates the Turbopack SST cache from the project
+    // .next directory, preventing a race condition in Next.js 16 Turbopack where
+    // the cache is garbage-collected ~5 s after first compile, causing all
+    // subsequent requests to 500 until the GC cycle completes.
+    command: "NEXT_TURBOPACK_CACHE_DIR=/tmp/sqtv-turbo-cache npm run dev",
     url: "http://localhost:3000",
     reuseExistingServer: !process.env.CI,
     timeout: 30000,

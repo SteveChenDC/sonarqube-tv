@@ -186,7 +186,7 @@ describe("HomeContent", () => {
     expect(screen.getByText("No videos match your filters")).toBeTruthy();
   });
 
-  it("resets filters via empty-state Reset filters button", async () => {
+  it("resets filters via empty-state Clear all filters button", async () => {
     const oldVideos = [
       makeVideo({
         id: "old",
@@ -209,7 +209,7 @@ describe("HomeContent", () => {
     fireEvent.click(screen.getByText("Apply"));
 
     expect(screen.getByText("No videos match your filters")).toBeTruthy();
-    const resetButton = screen.getByText("Reset filters");
+    const resetButton = screen.getByText("Clear all filters");
     expect(resetButton).toBeTruthy();
 
     fireEvent.click(resetButton);

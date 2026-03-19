@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useSyncExternalStore, memo } from "react";
+import { useRef, useSyncExternalStore, memo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Video } from "@/types";
@@ -51,7 +51,16 @@ function VideoCard({ video, fluid = false, onRemove, hideCategory = false }: Rea
     () => getProgress(video.id), // getSnapshot: reads localStorage on client
     () => 0, // getServerSnapshot: safe fallback for SSR/build
   );
-  const [imageLoaded, setImageLoaded] = useState(false);
+  // useRef + direct classList mutation instead of useState: avoids a React
+  // state update (and full component re-render) when the thumbnail loads.
+  // With ~88 VideoCards per home page, this saves ~88 reconciliation cycles.
+  const shimmerRef = useRef<HTMLDivElement>(null);
+  const handleImageLoad = () => {
+    if (shimmerRef.current) {
+      shimmerRef.current.classList.remove("opacity-100");
+      shimmerRef.current.classList.add("opacity-0", "pointer-events-none");
+    }
+  };
   const categoryTitle = categories.find((c) => c.slug === video.category)?.title;
 
   return (
@@ -62,7 +71,8 @@ function VideoCard({ video, fluid = false, onRemove, hideCategory = false }: Rea
       <div className={`relative aspect-video overflow-hidden rounded-lg shadow-md shadow-transparent ring-1 ring-transparent transition-all duration-300 group-hover:shadow-lg group-hover:shadow-sonar-red/25 group-hover:ring-sonar-red/30 ${fluid ? "w-full" : "w-[280px] sm:w-[320px]"}`}>
         {/* Shimmer skeleton — visible until thumbnail loads */}
         <div
-          className={`absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 ${imageLoaded ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+          ref={shimmerRef}
+          className="absolute inset-0 animate-shimmer rounded-lg transition-opacity duration-500 opacity-100"
           aria-hidden="true"
         />
         <Image
@@ -71,8 +81,8 @@ function VideoCard({ video, fluid = false, onRemove, hideCategory = false }: Rea
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-105"
           sizes="320px"
-          onLoad={() => setImageLoaded(true)}
-          onError={() => setImageLoaded(true)}
+          onLoad={handleImageLoad}
+          onError={handleImageLoad}
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/30">
           <svg
