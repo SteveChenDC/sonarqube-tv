@@ -42,7 +42,7 @@ function timeAgo(dateString: string): string {
   return "Just now";
 }
 
-function VideoCard({ video, fluid = false, onRemove, hideCategory = false }: Readonly<{ video: Video; fluid?: boolean; onRemove?: (id: string) => void; hideCategory?: boolean }>) {
+function VideoCard({ video, fluid = false, onRemove, hideCategory = false, priority = false }: Readonly<{ video: Video; fluid?: boolean; onRemove?: (id: string) => void; hideCategory?: boolean; priority?: boolean }>) {
   // useSyncExternalStore reads localStorage synchronously on the first client
   // render — no extra re-render needed. getServerSnapshot returns 0 at SSR/build
   // time to prevent hydration mismatches (localStorage isn't available there).
@@ -80,7 +80,10 @@ function VideoCard({ video, fluid = false, onRemove, hideCategory = false }: Rea
           alt={video.title}
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-105"
-          sizes="320px"
+          sizes={fluid
+            ? "(max-width: 767px) calc(50vw - 24px), (max-width: 1279px) calc(33vw - 24px), calc(25vw - 32px)"
+            : "(max-width: 639px) 280px, 320px"}
+          priority={priority}
           onLoad={handleImageLoad}
           onError={handleImageLoad}
         />

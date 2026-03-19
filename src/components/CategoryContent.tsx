@@ -92,7 +92,7 @@ export default function CategoryContent({
             className="animate-tab-in"
             style={{ animationDelay: `${Math.min(index * 0.03, 0.45)}s` }}
           >
-            <VideoCard video={video} fluid hideCategory />
+            <VideoCard video={video} fluid hideCategory priority={index < 4} />
           </div>
         ))}
       </div>
