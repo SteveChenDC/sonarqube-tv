@@ -138,8 +138,19 @@ export default function RootLayout({
         className={`${poppins.variable} ${inter.variable} flex min-h-screen flex-col overflow-x-hidden bg-background font-body antialiased`}
       >
         <SearchProvider>
+          {/* Skip to main content — WCAG 2.4.1 Bypass Blocks (Level A).
+              Visually hidden until focused; appears top-left so keyboard-only
+              users can jump past the header nav on every page. */}
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-lg focus:bg-background focus:px-4 focus:py-2.5 focus:font-heading focus:text-sm focus:font-medium focus:text-n1 focus:ring-2 focus:ring-qube-blue focus:ring-offset-2 focus:ring-offset-background focus:shadow-xl"
+          >
+            Skip to main content
+          </a>
           <Header />
-          <main className="flex-1">{children}</main>
+          {/* id + tabIndex={-1} lets the skip link move focus here; outline-none
+              prevents a browser focus ring on the entire content area. */}
+          <main id="main-content" tabIndex={-1} className="flex-1 outline-none">{children}</main>
           <Footer />
         </SearchProvider>
       </body>
