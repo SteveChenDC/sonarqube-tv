@@ -474,3 +474,64 @@ describe("WatchPage — breadcrumb category item URL", () => {
     expect(categoryItem?.item).toContain("/category/");
   });
 });
+
+// ---------------------------------------------------------------------------
+// generateMetadata — og:video fields (added in seo: add og:video metadata commit)
+// Social platforms (Facebook, LinkedIn, Slack) read these to render an inline
+// video player instead of a static thumbnail when the URL is shared.
+// ---------------------------------------------------------------------------
+describe("generateMetadata — og:video embed fields", () => {
+  type OgWithVideos = {
+    videos?: {
+      url?: string;
+      secureUrl?: string;
+      type?: string;
+      width?: number;
+      height?: number;
+    }[];
+  };
+
+  it("og.videos[0].url is the YouTube embed URL for the video", async () => {
+    const video = videos[0];
+    const meta = await generateMetadata({
+      params: Promise.resolve({ id: video.id }),
+    });
+    const og = meta.openGraph as OgWithVideos | undefined;
+    expect(og?.videos?.[0].url).toBe(
+      `https://www.youtube.com/embed/${video.youtubeId}`
+    );
+  });
+
+  it("og.videos[0].secureUrl equals og.videos[0].url (same https embed URL)", async () => {
+    const video = videos[0];
+    const meta = await generateMetadata({
+      params: Promise.resolve({ id: video.id }),
+    });
+    const og = meta.openGraph as OgWithVideos | undefined;
+    expect(og?.videos?.[0].secureUrl).toBe(og?.videos?.[0].url);
+  });
+
+  it("og.videos[0].type is text/html (embeddable iframe, not mp4)", async () => {
+    const meta = await generateMetadata({
+      params: Promise.resolve({ id: "v1" }),
+    });
+    const og = meta.openGraph as OgWithVideos | undefined;
+    expect(og?.videos?.[0].type).toBe("text/html");
+  });
+
+  it("og.videos[0].width is 1280", async () => {
+    const meta = await generateMetadata({
+      params: Promise.resolve({ id: "v1" }),
+    });
+    const og = meta.openGraph as OgWithVideos | undefined;
+    expect(og?.videos?.[0].width).toBe(1280);
+  });
+
+  it("og.videos[0].height is 720", async () => {
+    const meta = await generateMetadata({
+      params: Promise.resolve({ id: "v1" }),
+    });
+    const og = meta.openGraph as OgWithVideos | undefined;
+    expect(og?.videos?.[0].height).toBe(720);
+  });
+});
