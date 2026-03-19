@@ -48,14 +48,14 @@ function makeVideo(overrides: Partial<Video> = {}): Video {
     description: "A test video",
     youtubeId: "abc123",
     thumbnail: "/thumbnails/abc123.jpg",
-    category: "clean-code",
+    category: "code-quality",
     duration: "5:00",
     publishedAt: "2026-01-01",
     ...overrides,
   };
 }
 
-function makeVideos(count: number, category = "clean-code"): Video[] {
+function makeVideos(count: number, category = "code-quality"): Video[] {
   return Array.from({ length: count }, (_, i) =>
     makeVideo({
       id: `v${i + 1}`,
@@ -73,15 +73,15 @@ describe("VideoRow", () => {
   it("renders the category title", () => {
     const videos = makeVideos(3);
     render(
-      <VideoRow title="Clean Code" categorySlug="clean-code" videos={videos} />
+      <VideoRow title="Code Quality" categorySlug="code-quality" videos={videos} />
     );
-    expect(screen.getByText("Clean Code")).toBeTruthy();
+    expect(screen.getByText("Code Quality")).toBeTruthy();
   });
 
   it("renders all video cards", () => {
     const videos = makeVideos(3);
     render(
-      <VideoRow title="Clean Code" categorySlug="clean-code" videos={videos} />
+      <VideoRow title="Code Quality" categorySlug="code-quality" videos={videos} />
     );
     const links = screen.getAllByRole("link").filter((a) =>
       a.getAttribute("href")?.startsWith("/watch/v")
@@ -100,12 +100,12 @@ describe("VideoRow", () => {
   it("renders category title as a heading with video count", () => {
     const videos = makeVideos(2);
     render(
-      <VideoRow title="Clean Code" categorySlug="clean-code" videos={videos} />
+      <VideoRow title="Code Quality" categorySlug="code-quality" videos={videos} />
     );
-    expect(screen.getByText("Clean Code")).toBeTruthy();
+    expect(screen.getByText("Code Quality")).toBeTruthy();
     // Category section has an id for anchor scrolling
-    const section = screen.getByText("Clean Code").closest("section");
-    expect(section?.id).toBe("clean-code");
+    const section = screen.getByText("Code Quality").closest("section");
+    expect(section?.id).toBe("code-quality");
   });
 });
 
@@ -122,7 +122,7 @@ describe("PlaylistQueue", () => {
   });
 
   it("renders the playlist queue when playlist param matches", () => {
-    mockSearchParams.set("playlist", "clean-code");
+    mockSearchParams.set("playlist", "code-quality");
     const videos = makeVideos(5);
     render(<PlaylistQueue currentVideoId="v1" allVideos={videos} />);
 
@@ -131,14 +131,14 @@ describe("PlaylistQueue", () => {
   });
 
   it("shows correct position indicator for middle video", () => {
-    mockSearchParams.set("playlist", "clean-code");
+    mockSearchParams.set("playlist", "code-quality");
     const videos = makeVideos(5);
     render(<PlaylistQueue currentVideoId="v3" allVideos={videos} />);
     expect(screen.getByText("3 / 5")).toBeInTheDocument();
   });
 
   it("renders all videos in the playlist", () => {
-    mockSearchParams.set("playlist", "clean-code");
+    mockSearchParams.set("playlist", "code-quality");
     const videos = makeVideos(4);
     render(<PlaylistQueue currentVideoId="v1" allVideos={videos} />);
 
@@ -148,9 +148,9 @@ describe("PlaylistQueue", () => {
   });
 
   it("filters videos to only the playlist category", () => {
-    mockSearchParams.set("playlist", "clean-code");
+    mockSearchParams.set("playlist", "code-quality");
     const videos = [
-      ...makeVideos(2, "clean-code"),
+      ...makeVideos(2, "code-quality"),
       makeVideo({
         id: "v99",
         title: "Other Category Video",
@@ -164,32 +164,32 @@ describe("PlaylistQueue", () => {
   });
 
   it("next link points to the next video with playlist param preserved", () => {
-    mockSearchParams.set("playlist", "clean-code");
+    mockSearchParams.set("playlist", "code-quality");
     const videos = makeVideos(3);
     render(<PlaylistQueue currentVideoId="v1" allVideos={videos} />);
 
     const nextLink = screen.getByLabelText("Next video");
-    expect(nextLink).toHaveAttribute("href", "/watch/v2?playlist=clean-code");
+    expect(nextLink).toHaveAttribute("href", "/watch/v2?playlist=code-quality");
   });
 
   it("previous link points to the previous video", () => {
-    mockSearchParams.set("playlist", "clean-code");
+    mockSearchParams.set("playlist", "code-quality");
     const videos = makeVideos(3);
     render(<PlaylistQueue currentVideoId="v2" allVideos={videos} />);
 
     const prevLink = screen.getByLabelText("Previous video");
-    expect(prevLink).toHaveAttribute("href", "/watch/v1?playlist=clean-code");
+    expect(prevLink).toHaveAttribute("href", "/watch/v1?playlist=code-quality");
   });
 
   it("disables previous on first video", () => {
-    mockSearchParams.set("playlist", "clean-code");
+    mockSearchParams.set("playlist", "code-quality");
     const videos = makeVideos(3);
     render(<PlaylistQueue currentVideoId="v1" allVideos={videos} />);
     expect(screen.queryByLabelText("Previous video")).not.toBeInTheDocument();
   });
 
   it("disables next on last video", () => {
-    mockSearchParams.set("playlist", "clean-code");
+    mockSearchParams.set("playlist", "code-quality");
     const videos = makeVideos(3);
     render(<PlaylistQueue currentVideoId="v3" allVideos={videos} />);
     expect(screen.queryByLabelText("Next video")).not.toBeInTheDocument();
@@ -205,13 +205,13 @@ describe("PlaylistQueue", () => {
   });
 
   it("each playlist item links with playlist param preserved", () => {
-    mockSearchParams.set("playlist", "clean-code");
+    mockSearchParams.set("playlist", "code-quality");
     const videos = makeVideos(3);
     render(<PlaylistQueue currentVideoId="v1" allVideos={videos} />);
 
     const links = screen.getAllByRole("link");
     const playlistLinks = links.filter((a) =>
-      a.getAttribute("href")?.includes("playlist=clean-code")
+      a.getAttribute("href")?.includes("playlist=code-quality")
     );
     // 3 video items + next button = 4 links with playlist param
     expect(playlistLinks.length).toBeGreaterThanOrEqual(3);

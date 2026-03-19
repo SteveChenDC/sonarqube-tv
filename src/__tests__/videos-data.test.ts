@@ -87,7 +87,7 @@ describe("Video data integrity", () => {
       "sonar-summit",
       "ai-code-quality",
       "code-security",
-      "clean-code",
+      "code-quality",
       "product-updates",
       "sonarqube-cloud",
       "devops-cicd",
@@ -147,10 +147,10 @@ describe("Video data helper functions", () => {
   });
 
   it("getVideosByCategory returns only videos in that category", () => {
-    const result = getVideosByCategory("clean-code");
+    const result = getVideosByCategory("code-quality");
     expect(result.length).toBeGreaterThan(0);
     for (const v of result) {
-      expect(v.category).toBe("clean-code");
+      expect(v.category).toBe("code-quality");
     }
   });
 

@@ -101,7 +101,7 @@ describe("generateMetadata", () => {
 
   it("includes twitter card metadata", async () => {
     const meta = await generateMetadata({
-      params: Promise.resolve({ slug: "clean-code" }),
+      params: Promise.resolve({ slug: "code-quality" }),
     });
     const twitter = meta.twitter as { card?: string } | undefined;
     expect(twitter?.card).toBe("summary_large_image");
@@ -240,7 +240,7 @@ describe("generateMetadata — openGraph details", () => {
 
   it("og.images array has at least one entry with url '/og-image.png'", async () => {
     const meta = await generateMetadata({
-      params: Promise.resolve({ slug: "clean-code" }),
+      params: Promise.resolve({ slug: "code-quality" }),
     });
     const og = meta.openGraph as {
       images?: { url: string; width?: number; height?: number; alt?: string }[];
@@ -252,7 +252,7 @@ describe("generateMetadata — openGraph details", () => {
 
   it("og.images[0] has width=1200, height=630", async () => {
     const meta = await generateMetadata({
-      params: Promise.resolve({ slug: "clean-code" }),
+      params: Promise.resolve({ slug: "code-quality" }),
     });
     const og = meta.openGraph as {
       images?: { url: string; width?: number; height?: number; alt?: string }[];
@@ -263,12 +263,12 @@ describe("generateMetadata — openGraph details", () => {
 
   it("og.images[0].alt contains the category title", async () => {
     const meta = await generateMetadata({
-      params: Promise.resolve({ slug: "clean-code" }),
+      params: Promise.resolve({ slug: "code-quality" }),
     });
     const og = meta.openGraph as {
       images?: { url: string; alt?: string }[];
     } | undefined;
-    expect(og?.images?.[0].alt).toContain("Clean Code");
+    expect(og?.images?.[0].alt).toContain("Code Quality");
   });
 });
 

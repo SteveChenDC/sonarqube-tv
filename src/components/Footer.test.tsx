@@ -98,7 +98,7 @@ describe("Footer", () => {
       { name: "Getting Started", href: "/category/getting-started" },
       { name: "AI & Code Verification", href: "/category/ai-code-quality" },
       { name: "Code Security", href: "/category/code-security" },
-      { name: "Clean Code", href: "/category/clean-code" },
+      { name: "Code Quality", href: "/category/code-quality" },
       { name: "DevOps & CI/CD", href: "/category/devops-cicd" },
       { name: "SonarQube Cloud", href: "/category/sonarqube-cloud" },
       { name: "SonarQube for IDE", href: "/category/sonarqube-for-ide" },
