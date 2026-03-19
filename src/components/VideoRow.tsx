@@ -162,7 +162,16 @@ function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, divider
           <div className="flex items-center gap-3">
             <span className="inline-block h-5 w-1 shrink-0 rounded-full bg-sonar-red" aria-hidden="true" />
             <h2 className="font-heading text-lg font-semibold text-n1 sm:text-xl">
-              {title}
+              {categorySlug ? (
+                <Link
+                  href={`/category/${categorySlug}`}
+                  className="rounded transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                >
+                  {title}
+                </Link>
+              ) : (
+                title
+              )}
               <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">{totalCount ?? videos.length}</span>
             </h2>
           </div>
