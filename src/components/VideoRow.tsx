@@ -55,6 +55,13 @@ function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, divider
   const [canScrollRight, setCanScrollRight] = useState(false);
   const [isRevealed, setIsRevealed] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
+  // Ref-based guard for handleScroll so the callback never captures
+  // hasScrolled in its closure. Without this, hasScrolled being in
+  // handleScroll's deps causes useCallback to recreate handleScroll after
+  // the first scroll, which in turn triggers the useEffect to re-run,
+  // removing and re-adding the scroll listener + disconnecting and
+  // re-connecting the ResizeObserver for all 11+ category rows.
+  const hasScrolledRef = useRef(false);
 
   // Lazy-reveal: only render full row content when section scrolls near viewport.
   // rootMargin: "400px" preloads one screen-height before the row becomes visible.
@@ -83,8 +90,11 @@ function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, divider
 
   const handleScroll = useCallback(() => {
     updateScrollState();
-    if (!hasScrolled) setHasScrolled(true);
-  }, [updateScrollState, hasScrolled]);
+    if (!hasScrolledRef.current) {
+      hasScrolledRef.current = true;
+      setHasScrolled(true);
+    }
+  }, [updateScrollState]); // hasScrolled intentionally omitted — guarded by hasScrolledRef
 
   useEffect(() => {
     const el = scrollRef.current;
