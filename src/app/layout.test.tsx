@@ -228,4 +228,49 @@ describe("RootLayout", () => {
     // jsdom sets document.documentElement.lang from the lang attribute
     expect(document.documentElement.lang).toBe("en");
   });
+
+  describe("skip-to-main-content link (WCAG 2.4.1)", () => {
+    it("renders a skip link with 'Skip to main content' text", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const skipLink = screen.getByText("Skip to main content");
+      expect(skipLink).toBeInTheDocument();
+      expect(skipLink.tagName).toBe("A");
+    });
+
+    it("skip link href points to #main-content", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const skipLink = screen.getByText("Skip to main content");
+      expect(skipLink.getAttribute("href")).toBe("#main-content");
+    });
+
+    it("main element has id='main-content' so skip link target exists", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const main = document.querySelector("main");
+      expect(main).not.toBeNull();
+      expect(main!.id).toBe("main-content");
+    });
+
+    it("main element has tabIndex={-1} so focus lands on it after skip", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const main = document.querySelector("main");
+      expect(main).not.toBeNull();
+      expect(main!.tabIndex).toBe(-1);
+    });
+  });
 });
