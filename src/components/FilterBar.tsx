@@ -95,15 +95,34 @@ export default function FilterBar({
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    let cancelled = false;
+    let raf1: number | null = null;
+    let raf2: number | null = null;
+    let timer: ReturnType<typeof setTimeout> | null = null;
+
     if (isOpen) {
       setMounted(true);
       // Trigger enter animation on next frame so the transition fires
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => setVisible(true));
+      raf1 = requestAnimationFrame(() => {
+        raf2 = requestAnimationFrame(() => {
+          if (!cancelled) setVisible(true);
+        });
       });
     } else {
       setVisible(false);
+      // Fallback: unmount after transition + buffer in case transitionend doesn't fire
+      // (e.g. when isOpen→false before the enter animation even started)
+      timer = setTimeout(() => {
+        if (!cancelled) setMounted(false);
+      }, 250);
     }
+
+    return () => {
+      cancelled = true;
+      if (raf1 !== null) cancelAnimationFrame(raf1);
+      if (raf2 !== null) cancelAnimationFrame(raf2);
+      if (timer !== null) clearTimeout(timer);
+    };
   }, [isOpen]);
 
   const handleTransitionEnd = useCallback(() => {
