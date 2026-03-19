@@ -574,7 +574,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v63",
-    title: "Inside the latest SonarQube Server 2026 1 LTA release our most significant ever",
+    title: "Inside the latest SonarQube Server 2026.1 LTA release — our most significant ever",
     description: "A deep dive into the SonarQube Server 2026.1 LTA release, covering the most significant new capabilities in static analysis, security detection, and enterprise-grade code governance.",
     youtubeId: "RvJjXARvtxs",
     thumbnail: "/thumbnails/RvJjXARvtxs.jpg",
@@ -781,7 +781,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v85",
-    title: "SonarQube Advanced Security now available for SonarQube Cloud Enterprise",
+    title: "SonarQube Advanced Security for SonarQube Cloud Enterprise — Full Configuration Walkthrough",
     description: "An extended walkthrough of SonarQube Advanced Security on SonarQube Cloud Enterprise, demonstrating configuration, taint analysis findings, and how teams can operationalize security at scale.",
     youtubeId: "Ublfbijaqw4",
     thumbnail: "/thumbnails/Ublfbijaqw4.jpg",
@@ -812,7 +812,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
     title: "Code Coverage: Your secret weapon for code reliability and developer productivity",
     description: "An expert-led session on using code coverage as a strategic lever for improving reliability, reducing regression risk, and boosting developer productivity across large-scale codebases.",
     youtubeId: "Dr-NHyBBZwY",
-    category: "code-security",
+    category: "code-quality",
     duration: "1:02:41",
     publishedAt: "2025-07-13",
   },
@@ -1718,7 +1718,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v189",
-    title: "Key Features of SonarQube 9 8",
+    title: "Key Features of SonarQube 9.8",
     description: "A feature tour of SonarQube 9.8 highlights new security rules, quality improvements, and developer experience enhancements introduced in this release.",
     youtubeId: "_mqCs7C5UeY",
     category: "product-updates",
