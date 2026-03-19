@@ -45,11 +45,18 @@ describe("Footer", () => {
     }
   });
 
-  it("renders a sonar-red accent line at the top", () => {
+  it("renders a brand accent line at the top with blue-red-blue gradient", () => {
     const { container } = render(<Footer />);
-    const accentLine = container.querySelector(".bg-gradient-to-r");
+    // Accent line uses inline style (multi-stop gradient) rather than Tailwind via-*
+    // because Tailwind only supports one via color stop per element.
+    const accentLine = container.querySelector(".absolute.inset-x-0.top-0.h-px");
     expect(accentLine).toBeTruthy();
-    expect(accentLine?.className).toContain("via-sonar-red");
+    const bg = (accentLine as HTMLElement).style.background;
+    // Verify both brand colors are present. Browsers may insert spaces in rgba()
+    // e.g. "rgba(18, 110, 211, 0.6)" — so we check for channel values loosely.
+    // qube-blue: rgb(18, 110, 211), sonar-red: rgb(211, 18, 29)
+    expect(bg).toMatch(/18[, ]+110[, ]+211/);
+    expect(bg).toMatch(/211[, ]+18[, ]+29/);
   });
 
   it("renders the SonarSource website nav link with correct aria-label and href", () => {

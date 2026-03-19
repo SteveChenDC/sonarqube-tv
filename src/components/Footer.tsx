@@ -4,8 +4,17 @@ export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="relative border-t border-n7/40 bg-n9 px-4 pt-10 pb-8 sm:px-6">
-      {/* Accent gradient line — qube-blue → sonar-red → qube-blue for brand identity */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-qube-blue/60 via-40% via-sonar-red/80 via-60% to-transparent" />
+      {/* Accent gradient line — qube-blue → sonar-red → qube-blue brand stripe.
+           Multi-stop linear-gradient in style prop: Tailwind only supports one via
+           color stop per element (both via-* classes write --tw-gradient-via, so the
+           last one wins). Inline style with explicit rgba stops is the reliable fix. */}
+      <div
+        className="absolute inset-x-0 top-0 h-px"
+        style={{
+          background:
+            "linear-gradient(to right, transparent 0%, rgba(18,110,211,0.6) 30%, rgba(211,18,29,0.85) 50%, rgba(18,110,211,0.6) 70%, transparent 100%)",
+        }}
+      />
 
       <div className="mx-auto max-w-7xl">
         {/* Main row */}
