@@ -183,17 +183,8 @@ describe("PlaylistQueue", () => {
 // scrollIntoView — active item auto-scroll
 //
 // PlaylistQueue calls `activeItemRef.current?.scrollIntoView?.({ block: "nearest",
-// behavior: "instant" })` inside a useEffect([currentVideoId]) so that the
-// currently-playing item is always visible in the scroll container without
-// jarring smooth-scroll animation.
-// ─────────────────────────────────────────────────────────────────────────────
-// ─────────────────────────────────────────────────────────────────────────────
-// scrollIntoView — active item auto-scroll
-//
-// PlaylistQueue calls `activeItemRef.current?.scrollIntoView?.({ block: "nearest",
-// behavior: "instant" })` inside a useEffect([currentVideoId]) so that the
-// currently-playing item is always visible in the scroll container without
-// jarring smooth-scroll animation.
+// behavior: "smooth" })` inside a useEffect([currentVideoId]) so that the
+// currently-playing item smoothly scrolls into view when navigating the playlist.
 //
 // jsdom does NOT implement scrollIntoView, so we define it on
 // HTMLElement.prototype before each test and delete it after.
@@ -221,7 +212,7 @@ describe("PlaylistQueue — scrollIntoView on active item", () => {
     render(<PlaylistQueue currentVideoId="v2" allVideos={videos} />);
 
     // useEffect fires after mount — the active item (v2) should be scrolled into view
-    expect(scrollSpy).toHaveBeenCalledWith({ block: "nearest", behavior: "instant" });
+    expect(scrollSpy).toHaveBeenCalledWith({ block: "nearest", behavior: "smooth" });
   });
 
   it("re-calls scrollIntoView when currentVideoId changes to a different playlist video", () => {
@@ -240,7 +231,7 @@ describe("PlaylistQueue — scrollIntoView on active item", () => {
 
     // useEffect dependency [currentVideoId] re-fires — another scroll call expected
     expect(scrollSpy.mock.calls.length).toBeGreaterThan(callsAfterMount);
-    expect(scrollSpy).toHaveBeenLastCalledWith({ block: "nearest", behavior: "instant" });
+    expect(scrollSpy).toHaveBeenLastCalledWith({ block: "nearest", behavior: "smooth" });
   });
 
   it("does NOT call scrollIntoView when currentVideoId is not in the playlist", () => {

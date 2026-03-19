@@ -126,7 +126,7 @@ describe("PlaylistQueue", () => {
     const videos = makeVideos(5);
     render(<PlaylistQueue currentVideoId="v1" allVideos={videos} />);
 
-    expect(screen.getByText("Playlist")).toBeInTheDocument();
+    expect(screen.getByText("Clean Code")).toBeInTheDocument();
     expect(screen.getByText("1 / 5")).toBeInTheDocument();
   });
 

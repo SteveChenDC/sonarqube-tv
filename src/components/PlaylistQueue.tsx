@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Video } from "@/types";
+import { categories } from "@/data/categories";
 
 interface PlaylistQueueProps {
   currentVideoId: string;
@@ -20,9 +21,10 @@ export default function PlaylistQueue({
   const playlistVideos = allVideos.filter((v) => v.category === playlistSlug);
   const currentIndex = playlistVideos.findIndex((v) => v.id === currentVideoId);
   const activeItemRef = useRef<HTMLAnchorElement>(null);
+  const category = playlistSlug ? categories.find((c) => c.slug === playlistSlug) : null;
 
   useEffect(() => {
-    activeItemRef.current?.scrollIntoView?.({ block: "nearest", behavior: "instant" });
+    activeItemRef.current?.scrollIntoView?.({ block: "nearest", behavior: "smooth" });
   }, [currentVideoId]);
 
   if (!playlistSlug) return null;
@@ -50,7 +52,7 @@ export default function PlaylistQueue({
             <path d="M15 12l5 3.5V8.5z" />
           </svg>
           <span className="font-heading text-sm font-semibold text-n1">
-            Playlist
+            {category?.title ?? "Playlist"}
           </span>
           <span className="font-heading text-xs text-n6">
             {currentIndex + 1} / {playlistVideos.length}
@@ -143,7 +145,11 @@ export default function PlaylistQueue({
                 </span>
               )}
             </span>
-            <div className="relative h-10 w-[72px] shrink-0 overflow-hidden rounded-md">
+            <div className={`relative h-10 w-[72px] shrink-0 overflow-hidden rounded-md transition-shadow duration-300 ${
+              video.id === currentVideoId
+                ? "ring-2 ring-sonar-red ring-offset-1 ring-offset-background"
+                : ""
+            }`}>
               <Image
                 src={video.thumbnail}
                 alt={video.title}
