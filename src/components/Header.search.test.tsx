@@ -16,7 +16,7 @@
  * search is opened. openSearch() uses `await act(async () => ...)` to flush the
  * mocked import promise before any assertion on results.
  */
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach, beforeAll } from "vitest";
 import { render, screen, cleanup, fireEvent, act, waitFor } from "@testing-library/react";
 import Header from "./Header";
 import { SearchProvider } from "./SearchContext";
