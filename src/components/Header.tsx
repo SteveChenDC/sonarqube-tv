@@ -237,16 +237,30 @@ export default function Header() {
     }
   }, [searchOpen]);
 
-  // Search results
+  // Precompute lowercased title + description once when searchVideos loads.
+  // Without this, every keystroke calls .toLowerCase() on all 228 videos'
+  // titles (~40 chars each) and descriptions (~150 chars each) — ~43,000
+  // char operations per keypress. The index is rebuilt only when the videos
+  // array reference changes (i.e. once, when search data is lazy-loaded).
+  const searchIndex = useMemo(
+    () =>
+      searchVideos.map((v) => ({
+        video: v,
+        lowerTitle: v.title.toLowerCase(),
+        lowerDesc: v.description.toLowerCase(),
+      })),
+    [searchVideos]
+  );
+
+  // Search results — per-keystroke filter uses the precomputed index so no
+  // .toLowerCase() calls on video data are needed here.
   const searchResults = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
     if (!q) return [];
-    return searchVideos.filter(
-      (v) =>
-        v.title.toLowerCase().includes(q) ||
-        v.description.toLowerCase().includes(q)
-    );
-  }, [searchQuery, searchVideos]);
+    return searchIndex
+      .filter(({ lowerTitle, lowerDesc }) => lowerTitle.includes(q) || lowerDesc.includes(q))
+      .map(({ video }) => video);
+  }, [searchQuery, searchIndex]);
 
   const searchResultsRef = useRef<HTMLDivElement>(null);
   const showResults = searchOpen && searchQuery.trim().length > 0;
