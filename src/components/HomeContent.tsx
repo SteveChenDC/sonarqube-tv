@@ -61,12 +61,9 @@ function parseDurationMinutes(duration: string): number {
   return 0;
 }
 
-function isWithinDateRange(dateStr: string, filter: UploadDateFilter): boolean {
+function isWithinDateRange(timestampMs: number, filter: UploadDateFilter, nowMs: number): boolean {
   if (filter === "anytime") return true;
-  const date = new Date(dateStr);
-  const now = new Date();
-  const diffMs = now.getTime() - date.getTime();
-  const diffDays = diffMs / (1000 * 60 * 60 * 24);
+  const diffDays = (nowMs - timestampMs) / (1000 * 60 * 60 * 24);
   switch (filter) {
     case "today":
       return diffDays < 1;
@@ -125,19 +122,28 @@ export default function HomeContent({
   const hasActiveFilters =
     uploadDate !== "anytime" || duration !== "any" || sortBy !== "newest";
 
+  /** Timestamps precomputed once from the static videos array.
+   *  Avoids creating ~228 Date objects per filter interaction and
+   *  ~3,648 Date objects per sort comparison (O(n log n) calls). */
+  const publishedAtMs = useMemo(
+    () => new Map(videos.map((v) => [v.id, new Date(v.publishedAt).getTime()])),
+    [videos]
+  );
+
   const filteredVideos = useMemo(() => {
+    const nowMs = Date.now();
     const result = videos.filter(
       (v) =>
-        isWithinDateRange(v.publishedAt, uploadDate) &&
+        isWithinDateRange(publishedAtMs.get(v.id)!, uploadDate, nowMs) &&
         matchesDuration(v.duration, duration)
     );
     result.sort((a, b) => {
-      const dateA = new Date(a.publishedAt).getTime();
-      const dateB = new Date(b.publishedAt).getTime();
-      return sortBy === "newest" ? dateB - dateA : dateA - dateB;
+      const tsA = publishedAtMs.get(a.id)!;
+      const tsB = publishedAtMs.get(b.id)!;
+      return sortBy === "newest" ? tsB - tsA : tsA - tsB;
     });
     return result;
-  }, [videos, uploadDate, duration, sortBy]);
+  }, [videos, uploadDate, duration, sortBy, publishedAtMs]);
 
   const MAX_CATEGORY_ROW = 15;
 
@@ -156,11 +162,12 @@ export default function HomeContent({
     if (sortBy === "oldest") {
       return { topRowVideos: filteredVideos.slice(0, MAX_TOP_ROW), topRowTotalCount: filteredVideos.length };
     }
-    const thirtyDaysAgo = new Date();
-    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-    const recentVideos = filteredVideos.filter((v) => new Date(v.publishedAt) >= thirtyDaysAgo);
+    const thirtyDaysAgoMs = Date.now() - 30 * 24 * 60 * 60 * 1000;
+    // Strict `>` matches the semantic: "published within the last 30 days"
+    // (a video at exactly 30 days old is NOT within the last 30 days).
+    const recentVideos = filteredVideos.filter((v) => (publishedAtMs.get(v.id) ?? 0) > thirtyDaysAgoMs);
     return { topRowVideos: recentVideos.slice(0, MAX_TOP_ROW), topRowTotalCount: recentVideos.length };
-  }, [filteredVideos, sortBy]);
+  }, [filteredVideos, sortBy, publishedAtMs]);
 
   const reset = useCallback(() => {
     setUploadDate("anytime");

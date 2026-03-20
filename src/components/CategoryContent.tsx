@@ -21,25 +21,18 @@ function parseDurationToSeconds(duration: string): number {
   return (parts[0] ?? 0) * 60 + (parts[1] ?? 0);
 }
 
-function sortVideos(videos: Video[], sort: SortOption): Video[] {
+function sortVideos(
+  videos: Video[],
+  sort: SortOption,
+  tsMap: Map<string, number>,
+  secsMap: Map<string, number>
+): Video[] {
   const sorted = [...videos];
   switch (sort) {
-    case "newest":
-      return sorted.sort(
-        (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-      );
-    case "oldest":
-      return sorted.sort(
-        (a, b) => new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime()
-      );
-    case "shortest":
-      return sorted.sort(
-        (a, b) => parseDurationToSeconds(a.duration) - parseDurationToSeconds(b.duration)
-      );
-    case "longest":
-      return sorted.sort(
-        (a, b) => parseDurationToSeconds(b.duration) - parseDurationToSeconds(a.duration)
-      );
+    case "newest":   return sorted.sort((a, b) => tsMap.get(b.id)! - tsMap.get(a.id)!);
+    case "oldest":   return sorted.sort((a, b) => tsMap.get(a.id)! - tsMap.get(b.id)!);
+    case "shortest": return sorted.sort((a, b) => secsMap.get(a.id)! - secsMap.get(b.id)!);
+    case "longest":  return sorted.sort((a, b) => secsMap.get(b.id)! - secsMap.get(a.id)!);
   }
 }
 
@@ -53,7 +46,18 @@ export default function CategoryContent({
 }>) {
   const [sort, setSort] = useState<SortOption>("newest");
 
-  const sorted = useMemo(() => sortVideos(videos, sort), [videos, sort]);
+  /** Timestamps precomputed once from videos — avoids new Date() during each sort comparison. */
+  const tsMap = useMemo(
+    () => new Map(videos.map((v) => [v.id, new Date(v.publishedAt).getTime()])),
+    [videos]
+  );
+  /** Duration seconds precomputed once from videos — avoids repeated string parsing during sort. */
+  const secsMap = useMemo(
+    () => new Map(videos.map((v) => [v.id, parseDurationToSeconds(v.duration)])),
+    [videos]
+  );
+
+  const sorted = useMemo(() => sortVideos(videos, sort, tsMap, secsMap), [videos, sort, tsMap, secsMap]);
 
   if (videos.length === 0) {
     return null;
