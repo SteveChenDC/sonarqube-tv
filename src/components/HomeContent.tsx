@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback, useEffect, useRef } from "react";
+import { useState, useMemo, useCallback, useEffect, useRef, useReducer, useSyncExternalStore } from "react";
 import Hero from "./Hero";
 import VideoRow from "./VideoRow";
 import { getAllProgress, removeProgress } from "@/lib/watchProgress";
@@ -175,14 +175,20 @@ export default function HomeContent({
     setSortBy("newest");
   }, []);
 
-  const [coursesRowHidden, setCoursesRowHidden] = useState(false);
-  useEffect(() => {
-    try {
-      if (localStorage.getItem("sonarqube-tv-hide-courses") === "1") {
-        setCoursesRowHidden(true);
-      }
-    } catch { /* noop */ }
-  }, []);
+  // useSyncExternalStore reads localStorage synchronously during hydration (before
+  // first browser paint), eliminating the useEffect double-render and the CLS flash
+  // that occurred for users who had previously hidden the courses row.
+  // getServerSnapshot returns false (safe SSR fallback — localStorage unavailable).
+  const coursesRowHidden = useSyncExternalStore(
+    () => () => {}, // no-op subscribe — no external events to listen for
+    () => { try { return localStorage.getItem("sonarqube-tv-hide-courses") === "1"; } catch { return false; } },
+    () => false, // server snapshot
+  );
+  // Force-update trigger: useSyncExternalStore has a no-op subscribe, so it only
+  // re-evaluates its snapshot during renders. After writing to localStorage (hide
+  // button click), we call forceHideUpdate() to schedule a render, during which
+  // the snapshot re-reads localStorage and returns true.
+  const [, forceHideUpdate] = useReducer((n: number) => n + 1, 0);
 
   const [continueWatchingVideos, setContinueWatchingVideos] = useState<Video[]>([]);
 
@@ -350,8 +356,8 @@ export default function HomeContent({
                 </a>
                 <button
                   onClick={() => {
-                    setCoursesRowHidden(true);
                     try { localStorage.setItem("sonarqube-tv-hide-courses", "1"); } catch { /* noop */ }
+                    forceHideUpdate(); // triggers re-render → snapshot re-reads localStorage → true
                   }}
                   aria-label="Hide certification courses row"
                   className="flex h-7 w-7 items-center justify-center rounded-full text-n6 transition-colors hover:bg-n8 hover:text-n3"
