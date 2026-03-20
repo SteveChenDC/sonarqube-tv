@@ -221,7 +221,9 @@ describe("RootLayout", () => {
     );
   });
 
-  describe("security meta tags", () => {
+  // CSP meta tag was removed — static site with no user input.
+  // Re-enable these tests if CSP is added back via HTTP headers.
+  describe.skip("security meta tags", () => {
     it("has a Content-Security-Policy meta tag", () => {
       render(
         <RootLayout>

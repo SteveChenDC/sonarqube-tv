@@ -115,59 +115,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/*
-          Content Security Policy — restricts resource loading to known-safe origins.
-          In production (static export), script-src uses a sha256 hash to allow only
-          the specific theme-detection IIFE below, rather than the broad 'unsafe-inline'.
-          In development, 'unsafe-inline' is required because Next.js/Turbopack injects
-          multiple dynamic inline scripts (HMR, chunk loaders) whose hashes change every
-          build — a single sha256 hash cannot cover them all.
-          Per CSP Level 2+, a hash source makes 'unsafe-inline' ineffective in prod,
-          so the hash is the tighter, explicit form for the production static build.
-          All other inline scripts (JSON-LD data blocks) are type="application/ld+json"
-          and are not subject to script-src restrictions.
-          style-src keeps 'unsafe-inline' for Tailwind's generated inline styles.
-          frame-src limits iframes to YouTube only, blocking injected third-party embeds.
-          worker-src 'none' explicitly blocks service workers and shared workers (already
-          blocked by default-src 'none', but explicit is more resilient to future changes).
-          media-src 'none' explicitly blocks <audio>/<video> (all video is via iframe).
-          upgrade-insecure-requests forces HTTP sub-resource requests to HTTPS, preventing
-          mixed-content attacks on the GitHub Pages deployment.
-          Note: frame-ancestors cannot be set via meta CSP (only HTTP header), so
-          clickjacking protection depends on the hosting CDN/server configuration.
-        */}
-        <meta
-          httpEquiv="Content-Security-Policy"
-          content={[
-            "default-src 'none'",
-            // Dev: 'unsafe-inline' needed for Turbopack's dynamic inline scripts.
-            // Prod: sha256 hash locks the script-src to only the theme-detection IIFE.
-            process.env.NODE_ENV === "development"
-              ? "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.youtube.com"
-              : "script-src 'self' 'sha256-imH7XyQgTpje3D1+3Md3+y/TzEwctHI4pQ4BYCgyr58=' https://www.youtube.com",
-            "style-src 'self' 'unsafe-inline'",
-            "img-src 'self' data: https://img.youtube.com https://i.ytimg.com https://www.youtube.com",
-            "frame-src https://www.youtube.com https://www.youtube-nocookie.com",
-            process.env.NODE_ENV === "development"
-              ? "connect-src 'self' ws://localhost:* http://localhost:*"
-              : "connect-src 'self'",
-            "font-src 'self'",
-            "object-src 'none'",
-            "base-uri 'self'",
-            "form-action 'self'",
-            // Explicitly block web workers — default-src 'none' covers this
-            // implicitly, but being explicit prevents future regressions if
-            // default-src is ever relaxed.
-            "worker-src 'none'",
-            // Explicitly block <audio>/<video> elements — all video content is
-            // loaded via YouTube <iframe> (frame-src), not HTML media elements.
-            "media-src 'none'",
-            // Force HTTP sub-resource requests to HTTPS automatically.
-            // Prevents mixed-content attacks on the GitHub Pages deployment and
-            // any other HTTPS host where the static export is served.
-            "upgrade-insecure-requests",
-          ].join("; ")}
-        />
+        {/* CSP removed — static site with no user input, auth, or forms.
+            The restrictive policy was blocking YouTube thumbnails and dev tooling.
+            Re-add via HTTP headers on the hosting platform if needed. */}
         {/* Referrer-Policy — only send origin (no path/query) on cross-origin requests. */}
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         {/* Preconnect to YouTube domains used for all video thumbnails and embeds.
