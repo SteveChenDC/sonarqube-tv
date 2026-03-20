@@ -2106,7 +2106,6 @@ export function getCategoryBySlug(slug: string): Category | undefined {
 }
 
 export const featuredYoutubeIds = [
-  "F1F_CVD33WI", // Seven habits of highly effective AI coding (Erin Kouri)
   "el9OKGrqU6o", // Refactoring with Cognitive Complexity (Ann Campbell)
   "g6BqDORtdkE", // Fireside chat with DATEV (two people)
   "ACZqTrM5Frs", // Interview - Product Manager

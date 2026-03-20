@@ -58,7 +58,7 @@ describe("video data utilities", () => {
 
     it("returns a video from the featured candidates list", () => {
       const featuredIds = [
-        "F1F_CVD33WI", "el9OKGrqU6o", "DiF4VfW4zco", "g6BqDORtdkE",
+        "el9OKGrqU6o", "DiF4VfW4zco", "g6BqDORtdkE",
         "ACZqTrM5Frs", "2jYXRu9dOJM", "i95lJmsWEHc", "D-ycv935v64",
         "cPxwIpV6VBI", "doEikRO9GF8", "4Ya5K95pmKQ", "kfu0M0G591s",
         "vGfM3FInXTQ",

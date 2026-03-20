@@ -39,7 +39,6 @@ import { courses } from "@/data/courses-data";
 // Inlined from @/data/videos — avoids importing the full 228-video module
 // (101 KB) into the initial client bundle just for these 12 IDs.
 const featuredYoutubeIds = [
-  "F1F_CVD33WI", // Seven habits of highly effective AI coding (Erin Kouri)
   "el9OKGrqU6o", // Refactoring with Cognitive Complexity (Ann Campbell)
   "g6BqDORtdkE", // Fireside chat with DATEV (two people)
   "ACZqTrM5Frs", // Interview - Product Manager
