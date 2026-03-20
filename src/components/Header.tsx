@@ -328,7 +328,7 @@ export default function Header() {
               <button
                 onClick={() => setSearchOpen(true)}
                 aria-label="Search videos"
-                className={`flex items-center gap-1 rounded-lg px-3 py-2 max-sm:min-h-[44px] font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
+                className={`flex items-center gap-1 rounded-lg px-2 sm:px-3 py-2 max-sm:min-h-[44px] font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
               >
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <circle cx="11" cy="11" r="8" />
@@ -488,7 +488,7 @@ export default function Header() {
             <button
               onClick={() => { setCoursesOpen((prev) => !prev); setMenuOpen(false); }}
               aria-label="Courses"
-              className={`flex items-center gap-1 rounded-lg px-3 py-2 max-sm:min-h-[44px] font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
+              className={`flex items-center gap-1 rounded-lg px-2 sm:px-3 py-2 max-sm:min-h-[44px] font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
             >
               <span>Courses</span>
               <svg
@@ -589,7 +589,7 @@ export default function Header() {
             <button
               onClick={() => { setMenuOpen((prev) => !prev); setCoursesOpen(false); }}
               aria-label="Categories"
-              className={`flex items-center gap-1 rounded-lg px-3 py-2 max-sm:min-h-[44px] font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
+              className={`flex items-center gap-1 rounded-lg px-2 sm:px-3 py-2 max-sm:min-h-[44px] font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
             >
               <span>Categories</span>
               <svg
