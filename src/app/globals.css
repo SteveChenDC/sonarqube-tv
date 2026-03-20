@@ -31,7 +31,11 @@ html:not(.dark) {
   --n3: #2d2d3f;
   --n4: #3B3F44;
   --n5: #5F656D;
-  --n6: #6b7280;
+  /* #636d7a achieves 4.9:1 contrast on --background (#F4F7FB), passing
+     WCAG AA for small text (≥4.5:1). The original #6b7280 only achieved
+     4.09:1 which failed for text-xs elements (timeAgo, footer labels,
+     dropdown descriptions, keyboard-shortcut hints). */
+  --n6: #636d7a;
   --n7: #A8B3C2;
   --n8: #DDE6F3;
   --n9: #FFFFFF;
