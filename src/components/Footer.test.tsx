@@ -1,6 +1,14 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import Footer from "./Footer";
+
+// ThemeToggle reads localStorage + matchMedia — mock the theme lib to keep
+// Footer tests focused on Footer, not ThemeToggle internals.
+vi.mock("@/lib/theme", () => ({
+  getEffectiveTheme: vi.fn(() => "dark"),
+  toggleTheme: vi.fn(() => "light"),
+  subscribeToSystemTheme: vi.fn(() => vi.fn()),
+}));
 
 describe("Footer", () => {
   it("renders the SonarQube.tv tagline with inline SonarSource link", () => {
@@ -142,5 +150,13 @@ describe("Footer", () => {
     const nav = screen.getByRole("navigation", { name: "External links" });
     const externalLinks = Array.from(nav.querySelectorAll("a[target='_blank']"));
     expect(externalLinks).toHaveLength(3);
+  });
+
+  it("renders a theme toggle button in the footer copyright area (mobile access)", () => {
+    render(<Footer />);
+    // ThemeToggle is rendered in the footer so mobile users (who can't see the
+    // header toggle) can still switch between light and dark mode.
+    const toggle = screen.getByRole("button", { name: /switch to (light|dark) mode/i });
+    expect(toggle).toBeInTheDocument();
   });
 });

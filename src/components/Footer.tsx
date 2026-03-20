@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -175,11 +176,15 @@ export default function Footer() {
           </nav>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-8 border-t border-n8/50 pt-6 text-center sm:text-left">
-          <p className="font-body text-xs text-n6">
+        {/* Copyright — flex on mobile to pair with the theme toggle; block on sm+ (toggle hidden) */}
+        <div className="mt-8 border-t border-n8/50 pt-6 flex items-center justify-between sm:block">
+          <p className="font-body text-xs text-n6 sm:text-left">
             &copy; {year} SonarSource SA. All rights reserved.
           </p>
+          {/* Theme toggle — only visible on mobile; desktop users have it in the header */}
+          <div className="sm:hidden shrink-0 -mr-1">
+            <ThemeToggle className="text-n5 hover:bg-n8/50 hover:text-n1" />
+          </div>
         </div>
       </div>
     </footer>
