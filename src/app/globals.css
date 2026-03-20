@@ -241,6 +241,13 @@ html:not(.dark) .animate-shimmer {
   padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
 }
 
+/* iOS safe-area bottom position — used by fixed floating buttons (FABs).
+   Keeps buttons 1.5rem above the home indicator on notch/bar devices;
+   falls back to 1.5rem (= bottom-6) on devices without a home indicator. */
+@utility bottom-safe {
+  bottom: calc(env(safe-area-inset-bottom) + 1.5rem);
+}
+
 /* Hide scrollbar for horizontal scroll rows */
 .scrollbar-hide {
   -ms-overflow-style: none;

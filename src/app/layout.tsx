@@ -59,6 +59,10 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  // viewport-fit=cover lets content extend edge-to-edge on devices with a
+  // notch or home indicator. Combined with env(safe-area-inset-*) utilities
+  // (pb-safe, bottom-safe) this ensures fixed elements sit above the home bar.
+  viewportFit: "cover",
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#D3121D" },
     { media: "(prefers-color-scheme: light)", color: "#D3121D" },
