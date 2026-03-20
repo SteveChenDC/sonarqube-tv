@@ -155,7 +155,7 @@ function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, divider
         <span className="inline-block h-5 w-1 shrink-0 rounded-full bg-sonar-red" aria-hidden="true" />
         <h2 className="font-heading text-lg font-semibold text-n1 whitespace-nowrap sm:text-xl">
           {label}
-          <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">
+          <span className="ml-2 inline-block align-middle rounded-full border border-n7/30 bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">
             {count}
           </span>
         </h2>
@@ -182,7 +182,7 @@ function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, divider
               ) : (
                 title
               )}
-              <span className="ml-2 inline-block align-middle rounded-full bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">{totalCount ?? videos.length}</span>
+              <span className="ml-2 inline-block align-middle rounded-full border border-n7/30 bg-n8/50 px-2 py-0.5 text-xs font-normal text-n5">{totalCount ?? videos.length}</span>
             </h2>
           </div>
           <div className="flex items-center gap-2">
@@ -207,7 +207,7 @@ function VideoRow({ title, categorySlug, videos, totalCount, hideHeader, divider
             {categorySlug && totalCount !== undefined && totalCount > videos.length && (
               <Link
                 href={`/category/${categorySlug}`}
-                className="group inline-flex items-center gap-1 font-heading text-xs font-medium text-qube-blue transition-colors hover:text-qube-blue/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
+                className="group inline-flex items-center gap-1 rounded-full border border-qube-blue/30 bg-qube-blue/5 px-3 py-1 font-heading text-xs font-medium text-qube-blue transition-all duration-200 hover:border-qube-blue/60 hover:bg-qube-blue/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qube-blue focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 View all
                 <svg
