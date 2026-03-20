@@ -366,6 +366,51 @@ describe("RootLayout", () => {
       expect(content).toContain("form-action 'self'");
     });
 
+    it("CSP includes upgrade-insecure-requests (forces HTTP→HTTPS)", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const cspMeta = document.querySelector(
+        'meta[http-equiv="Content-Security-Policy"]'
+      );
+      const content = cspMeta?.getAttribute("content") ?? "";
+      // upgrade-insecure-requests automatically upgrades any HTTP sub-resource
+      // request to HTTPS, preventing mixed-content attacks on the static export
+      expect(content).toContain("upgrade-insecure-requests");
+    });
+
+    it("CSP blocks worker-src (prevents rogue service/shared workers)", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const cspMeta = document.querySelector(
+        'meta[http-equiv="Content-Security-Policy"]'
+      );
+      const content = cspMeta?.getAttribute("content") ?? "";
+      // worker-src 'none' is explicit defence-in-depth — covered implicitly by
+      // default-src 'none' but explicit to prevent regression if default-src changes
+      expect(content).toContain("worker-src 'none'");
+    });
+
+    it("CSP blocks media-src (no <audio>/<video> — all video is via iframe)", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const cspMeta = document.querySelector(
+        'meta[http-equiv="Content-Security-Policy"]'
+      );
+      const content = cspMeta?.getAttribute("content") ?? "";
+      // media-src 'none' ensures no <audio> or <video> elements can load external
+      // media; all video is embedded via YouTube <iframe> (covered by frame-src)
+      expect(content).toContain("media-src 'none'");
+    });
+
     it("CSP script-src uses sha256 hash instead of unsafe-inline", () => {
       render(
         <RootLayout>

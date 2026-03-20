@@ -128,6 +128,11 @@ export default function RootLayout({
           and are not subject to script-src restrictions.
           style-src keeps 'unsafe-inline' for Tailwind's generated inline styles.
           frame-src limits iframes to YouTube only, blocking injected third-party embeds.
+          worker-src 'none' explicitly blocks service workers and shared workers (already
+          blocked by default-src 'none', but explicit is more resilient to future changes).
+          media-src 'none' explicitly blocks <audio>/<video> (all video is via iframe).
+          upgrade-insecure-requests forces HTTP sub-resource requests to HTTPS, preventing
+          mixed-content attacks on the GitHub Pages deployment.
           Note: frame-ancestors cannot be set via meta CSP (only HTTP header), so
           clickjacking protection depends on the hosting CDN/server configuration.
         */}
@@ -148,6 +153,17 @@ export default function RootLayout({
             "object-src 'none'",
             "base-uri 'self'",
             "form-action 'self'",
+            // Explicitly block web workers — default-src 'none' covers this
+            // implicitly, but being explicit prevents future regressions if
+            // default-src is ever relaxed.
+            "worker-src 'none'",
+            // Explicitly block <audio>/<video> elements — all video content is
+            // loaded via YouTube <iframe> (frame-src), not HTML media elements.
+            "media-src 'none'",
+            // Force HTTP sub-resource requests to HTTPS automatically.
+            // Prevents mixed-content attacks on the GitHub Pages deployment and
+            // any other HTTPS host where the static export is served.
+            "upgrade-insecure-requests",
           ].join("; ")}
         />
         {/* Referrer-Policy — only send origin (no path/query) on cross-origin requests. */}
