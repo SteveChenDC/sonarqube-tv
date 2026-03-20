@@ -837,7 +837,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v91",
-    title: "Discover the new Enterprise features for SonarCloud",
+    title: "Discover the New Enterprise Features for SonarQube Cloud",
     description: "A tour of SonarQube Cloud's newest Enterprise capabilities, including portfolio-level reporting, advanced governance controls, and features designed to scale code quality across large engineering organizations.",
     youtubeId: "WEYhvmoLK3g",
     category: "sonarqube-cloud",
@@ -937,7 +937,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v102",
-    title: "SonarCloud Enterprise Plan: Key Features",
+    title: "SonarQube Cloud Enterprise Plan: Key Features",
     description: "A concise overview of the key features included in SonarQube Cloud's Enterprise Plan, covering portfolio dashboards, advanced governance controls, and priority support for large-scale development teams.",
     youtubeId: "7neGGobzQJE",
     category: "sonarqube-cloud",
@@ -946,7 +946,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v103",
-    title: "What is SonarCloud?",
+    title: "What is SonarQube Cloud?",
     description: "A brief explainer on what SonarQube Cloud is, how it delivers cloud-native static analysis for code quality and security, and why teams choose it over self-hosted alternatives.",
     youtubeId: "3R2stYMh-fk",
     category: "sonarqube-cloud",
@@ -1018,7 +1018,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v111",
-    title: "Achieve Clean Blazor Code with SonarQube and SonarCloud",
+    title: "Achieve Clean Blazor Code with SonarQube and SonarQube Cloud",
     description: "A comprehensive walkthrough of achieving clean, idiomatic Blazor code using SonarQube Server and SonarQube Cloud, covering C# analysis rules, quality gates, and CI integration for .NET web applications.",
     youtubeId: "_8L1jTr1CFM",
     category: "sonarqube-cloud",
@@ -1154,7 +1154,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v126",
-    title: "Joomla: Multiple XSS Vulnerabilities, detected with SonarCloud",
+    title: "Joomla: Multiple XSS Vulnerabilities, Detected with SonarQube Cloud",
     description: "Watch how SonarQube Cloud's cross-file taint analysis detects multiple cross-site scripting vulnerabilities in the Joomla CMS, demonstrating the power of cloud-based static analysis on open-source projects.",
     youtubeId: "4HmGMSWry_c",
     category: "sonarqube-cloud",
@@ -1237,7 +1237,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v135",
-    title: "pfSense Security Vulnerabilities: Discovery & Demonstration on test Instance with SonarCloud",
+    title: "pfSense Security Vulnerabilities: Discovered with SonarQube Cloud",
     description: "A live demonstration of security vulnerabilities discovered in pfSense using SonarQube Cloud, showing how cloud-based static analysis can uncover exploitable flaws in widely-deployed network software.",
     youtubeId: "w0WIqSlUlNY",
     category: "sonarqube-cloud",
@@ -1291,7 +1291,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v141",
-    title: "SQL Injection with Java and SonarLint + SonarCloud",
+    title: "SQL Injection with Java — SonarQube for IDE + SonarQube Cloud",
     description: "A concise demonstration of how SonarQube for IDE catches SQL injection vulnerabilities in Java code in real time, and how connecting to SonarQube Cloud synchronizes shared security rules across your team.",
     youtubeId: "gFaPDrVGdUo",
     category: "sonarqube-for-ide",
@@ -1466,7 +1466,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v161",
-    title: "Automatic Analysis for C and C++ | SonarCloud",
+    title: "Automatic Analysis for C and C++ | SonarQube Cloud",
     description: "A quick look at SonarQube Cloud's automatic analysis support for C and C++ projects, enabling teams to get meaningful static analysis results without writing a single line of CI configuration.",
     youtubeId: "_EhqQAMscTQ",
     category: "sonarqube-cloud",
@@ -1646,7 +1646,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v181",
-    title: "What is SonarCloud?",
+    title: "SonarQube Cloud: Automatic Code Quality with Zero Infrastructure",
     description: "Get a quick overview of SonarQube Cloud — Sonar's SaaS offering that delivers automatic code quality and security analysis without any infrastructure to manage.",
     youtubeId: "GCTGSvP_UAo",
     category: "sonarqube-cloud",
