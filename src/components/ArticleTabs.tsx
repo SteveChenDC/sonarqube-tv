@@ -154,19 +154,19 @@ function renderMarkdown(md: string) {
     if (tok.type === "li") {
       const { items, nextIndex } = collectListItems(tokens, i, "li", key);
       elements.push(
-        <ul key={key.v++} className="my-4 ml-4 list-disc space-y-1.5 marker:text-qube-blue">{items}</ul>
+        <ul key={key.v++} className="my-4 ml-4 list-disc space-y-2 marker:text-qube-blue">{items}</ul>
       );
       i = nextIndex;
     } else if (tok.type === "oli") {
       const { items, nextIndex } = collectListItems(tokens, i, "oli", key);
       elements.push(
-        <ol key={key.v++} className="my-4 ml-4 list-decimal space-y-1.5 marker:font-heading marker:text-xs marker:font-semibold marker:text-qube-blue">{items}</ol>
+        <ol key={key.v++} className="my-4 ml-4 list-decimal space-y-2 marker:font-heading marker:text-xs marker:font-semibold marker:text-qube-blue">{items}</ol>
       );
       i = nextIndex;
     } else if (tok.type === "blockquote") {
       const { lines, nextIndex } = collectBlockquoteLines(tokens, i, key);
       elements.push(
-        <blockquote key={key.v++} className="my-4 border-l-2 border-qube-blue/40 pl-4 py-0.5 text-[14px] italic leading-relaxed text-n5">{lines}</blockquote>
+        <blockquote key={key.v++} className="my-4 rounded-r-md border-l-2 border-qube-blue/50 bg-qube-blue/5 pl-4 py-2 text-[14px] italic leading-relaxed text-n4">{lines}</blockquote>
       );
       i = nextIndex;
     } else {
@@ -220,7 +220,7 @@ export default function ArticleTabs({
           )}
         </div>
         <div className="p-5 sm:p-6">
-          {article && <div>{renderMarkdown(article.markdown)}</div>}
+          {article && <div className="max-w-prose">{renderMarkdown(article.markdown)}</div>}
           {transcript && <TranscriptView segments={transcript.segments} chapters={chapters} />}
         </div>
       </div>
@@ -286,7 +286,7 @@ export default function ArticleTabs({
           }`}
         >
           {activeTab === "summary" && article && (
-            <div>{renderMarkdown(article.markdown)}</div>
+            <div className="max-w-prose">{renderMarkdown(article.markdown)}</div>
           )}
           {activeTab === "transcript" && transcript && (
             <TranscriptView segments={transcript.segments} chapters={chapters} />
