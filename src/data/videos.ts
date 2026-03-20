@@ -1108,7 +1108,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v121",
-    title: "SonarLint for Eclipse Overview | a free and open source IDE extension",
+    title: "SonarQube for IDE: Eclipse Overview | a free and open source IDE extension",
     description: "A hands-on walkthrough of the SonarQube for IDE Eclipse extension, showing how to catch bugs, code smells, and security hotspots directly in your IDE without leaving your development environment.",
     youtubeId: "DJkNl6Q5I5A",
     category: "sonarqube-for-ide",
@@ -1163,7 +1163,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v127",
-    title: "How SonarQube and SonarLint combine to help review and fix coding issues | #CleanCodeTips",
+    title: "How SonarQube and SonarQube for IDE combine to help review and fix coding issues | #CleanCodeTips",
     description: "See how SonarQube for IDE's real-time feedback integrates seamlessly with SonarQube Server rules and quality gates, creating a continuous feedback loop from local development to CI/CD pipeline.",
     youtubeId: "PIWh-ro9Y2g",
     category: "sonarqube-for-ide",
@@ -1273,7 +1273,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v139",
-    title: "SonarLint for Visual Studio Overview | a free and open source IDE extension",
+    title: "SonarQube for IDE: Visual Studio Overview | a free and open source IDE extension",
     description: "Get started with the SonarQube for IDE Visual Studio extension, a free plugin that surfaces code quality and security issues inline as you type, powered by the same rules engine as SonarQube.",
     youtubeId: "nASTGaxYXOo",
     category: "sonarqube-for-ide",
@@ -1327,7 +1327,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v145",
-    title: "SonarLint for IntelliJ and other JetBrains IDEs Overview | a free and open source IDE extension",
+    title: "SonarQube for IDE: IntelliJ and JetBrains IDEs Overview | a free and open source IDE extension",
     description: "A comprehensive overview of the SonarQube for IDE extension for JetBrains IDEs including IntelliJ IDEA, showing connected mode setup, rule configuration, and how real-time analysis speeds up code review cycles.",
     youtubeId: "6Bv1wmj0jZI",
     category: "sonarqube-for-ide",
@@ -1375,7 +1375,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v151",
-    title: "SonarLint for PL/SQL Overview | a free and open source IDE extension",
+    title: "SonarQube for IDE: PL/SQL Overview | a free and open source IDE extension",
     description: "A brief introduction to the SonarQube for IDE extension for PL/SQL developers, demonstrating how it brings database code quality rules into the IDE to catch issues in stored procedures and SQL scripts early.",
     youtubeId: "MxH4PfiDx7Y",
     category: "sonarqube-for-ide",
@@ -1439,7 +1439,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v158",
-    title: "SonarLint for VS Code Overview | a free and open source IDE extension",
+    title: "SonarQube for IDE: VS Code Overview | a free and open source IDE extension",
     description: "A getting-started guide for SonarQube for IDE in VS Code, covering installation, connected mode configuration, and how the extension integrates with SonarQube Server or SonarQube Cloud to enforce team-wide quality rules.",
     youtubeId: "m8sAdYCIWhY",
     category: "sonarqube-for-ide",
@@ -1529,7 +1529,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v168",
-    title: "SonarLint for Python: How to Get Started",
+    title: "SonarQube for IDE for Python: How to Get Started",
     description: "Learn how to set up SonarQube for IDE for Python in your editor of choice, with a walkthrough of rule customization, connected mode with SonarQube Server or SonarQube Cloud, and detecting common Python anti-patterns.",
     youtubeId: "pAz9O_N1Vs8",
     category: "sonarqube-for-ide",
@@ -1808,7 +1808,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v199",
-    title: "Intro to C++ Quick Fixes in VS Code with SonarLint",
+    title: "Intro to C++ Quick Fixes in VS Code with SonarQube for IDE",
     description: "A hands-on tutorial showing how SonarQube for IDE's C++ quick-fix suggestions work inside VS Code, letting developers resolve issues with a single click without leaving the editor.",
     youtubeId: "LO0mUe_YYY4",
     category: "sonarqube-for-ide",
@@ -1844,7 +1844,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v203",
-    title: "Intro to C++ Quick Fixes in Visual Studio with SonarLint",
+    title: "Intro to C++ Quick Fixes in Visual Studio with SonarQube for IDE",
     description: "Learn how to use SonarQube for IDE's automated C++ quick fixes inside Visual Studio to correct code issues on the spot without interrupting your development workflow.",
     youtubeId: "svzaGMRcfrU",
     category: "sonarqube-for-ide",
@@ -1862,7 +1862,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v205",
-    title: "Intro to C++ Quick Fixes in CLion with SonarLint",
+    title: "Intro to C++ Quick Fixes in CLion with SonarQube for IDE",
     description: "Discover how SonarQube for IDE integrates with CLion to provide real-time C++ analysis and one-click quick fixes, helping JetBrains users write safer code from the start.",
     youtubeId: "GBoTe9OmCeM",
     category: "sonarqube-for-ide",
@@ -1907,7 +1907,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v210",
-    title: "Modernize Code Quality with Quick-Fixes | SonarLint",
+    title: "Modernize Code Quality with Quick-Fixes | SonarQube for IDE",
     description: "See how SonarQube for IDE's quick-fix feature automates the resolution of common code quality issues, letting developers clean up code without manual effort.",
     youtubeId: "nn3OyFsEPQE",
     thumbnail: "/thumbnails/nn3OyFsEPQE.jpg",
@@ -1980,7 +1980,7 @@ const rawVideos: (Omit<Video, "thumbnail"> & { thumbnail?: string })[] = [
   },
   {
     id: "v218",
-    title: "Multiple Issue Locations or Flows in SonarLint for Eclipse",
+    title: "Multiple Issue Locations or Flows in SonarQube for IDE for Eclipse",
     description: "See how SonarQube for IDE for Eclipse visualizes multi-location issues and data flows, making it easier to trace the root cause of complex bugs across multiple files.",
     youtubeId: "fty4Ofxcy9g",
     category: "sonarqube-for-ide",
