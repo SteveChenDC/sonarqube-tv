@@ -87,7 +87,7 @@ export default function Hero({ video, actions }: Readonly<{ video: Video; action
       </section>
 
       {/* Desktop full-bleed hero */}
-      <section className="relative hidden h-[70vh] min-h-[500px] w-full sm:block">
+      <section className="relative hidden h-[70vh] min-h-[400px] max-h-[600px] w-full overflow-hidden sm:block">
         <Image
           src={heroSrc}
           alt={video.title}
