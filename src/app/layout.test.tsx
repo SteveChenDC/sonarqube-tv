@@ -365,6 +365,30 @@ describe("RootLayout", () => {
       // to a third-party URL by an injected <form action="..."> element
       expect(content).toContain("form-action 'self'");
     });
+
+    it("CSP script-src uses sha256 hash instead of unsafe-inline", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const cspMeta = document.querySelector(
+        'meta[http-equiv="Content-Security-Policy"]'
+      );
+      const content = cspMeta?.getAttribute("content") ?? "";
+      // Extract just the script-src directive value to scope the assertion
+      const scriptSrcMatch = content.match(/script-src ([^;]+)/);
+      const scriptSrc = scriptSrcMatch ? scriptSrcMatch[1] : "";
+      // Must contain the sha256 hash of the theme-detection IIFE — this is the only
+      // inline script that should be allowed to execute; all other inline scripts
+      // (injected XSS payloads) will be blocked by the browser
+      expect(scriptSrc).toContain(
+        "'sha256-imH7XyQgTpje3D1+3Md3+y/TzEwctHI4pQ4BYCgyr58='"
+      );
+      // 'unsafe-inline' must NOT be present in script-src — it would allow any
+      // attacker-injected inline script to execute, defeating the hash restriction
+      expect(scriptSrc).not.toContain("'unsafe-inline'");
+    });
   });
 
   it("html element has lang='en' for accessibility", () => {

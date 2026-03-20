@@ -113,9 +113,13 @@ export default function RootLayout({
       <head>
         {/*
           Content Security Policy — restricts resource loading to known-safe origins.
-          'unsafe-inline' on script-src is required for the theme-detection IIFE below
-          and for Tailwind's inline styles on style-src. frame-src limits iframes to
-          YouTube only, blocking any injected third-party embeds.
+          script-src uses a sha256 hash to allow only the specific theme-detection IIFE
+          below, rather than the broad 'unsafe-inline'. Per CSP Level 2+, a hash source
+          makes 'unsafe-inline' ineffective, so the hash is the tighter, explicit form.
+          All other inline scripts (JSON-LD data blocks) are type="application/ld+json"
+          and are not subject to script-src restrictions.
+          style-src keeps 'unsafe-inline' for Tailwind's generated inline styles.
+          frame-src limits iframes to YouTube only, blocking injected third-party embeds.
           Note: frame-ancestors cannot be set via meta CSP (only HTTP header), so
           clickjacking protection depends on the hosting CDN/server configuration.
         */}
@@ -123,7 +127,9 @@ export default function RootLayout({
           httpEquiv="Content-Security-Policy"
           content={[
             "default-src 'none'",
-            "script-src 'self' 'unsafe-inline' https://www.youtube.com",
+            // sha256 hash of the theme-detection IIFE below — allows only that one
+            // specific inline script. Any other injected inline script is blocked.
+            "script-src 'self' 'sha256-imH7XyQgTpje3D1+3Md3+y/TzEwctHI4pQ4BYCgyr58=' https://www.youtube.com",
             "style-src 'self' 'unsafe-inline'",
             "img-src 'self' data: https://img.youtube.com https://i.ytimg.com https://www.youtube.com",
             "frame-src https://www.youtube.com https://www.youtube-nocookie.com",
