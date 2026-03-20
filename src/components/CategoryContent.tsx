@@ -76,7 +76,7 @@ export default function CategoryContent({
             <button
               key={option.value}
               onClick={() => setSort(option.value)}
-              className={`rounded-md px-3 py-1.5 font-heading text-xs font-medium transition-all duration-200 ${
+              className={`min-h-[44px] sm:min-h-0 rounded-md px-3 py-1.5 font-heading text-xs font-medium transition-all duration-200 ${
                 sort === option.value
                   ? "bg-sonar-red text-white shadow-sm"
                   : "text-n5 hover:bg-n8/60 hover:text-n2"
