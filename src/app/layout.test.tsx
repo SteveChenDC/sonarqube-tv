@@ -286,6 +286,83 @@ describe("RootLayout", () => {
         "strict-origin-when-cross-origin"
       );
     });
+
+    it("CSP has default-src 'none' as restrictive baseline", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const cspMeta = document.querySelector(
+        'meta[http-equiv="Content-Security-Policy"]'
+      );
+      const content = cspMeta?.getAttribute("content") ?? "";
+      // default-src 'none' ensures no resource type is implicitly allowed;
+      // every directive must be explicitly listed — weakening this widens the attack surface
+      expect(content).toContain("default-src 'none'");
+    });
+
+    it("CSP script-src allowlists YouTube IFrame API origin", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const cspMeta = document.querySelector(
+        'meta[http-equiv="Content-Security-Policy"]'
+      );
+      const content = cspMeta?.getAttribute("content") ?? "";
+      // https://www.youtube.com must be in script-src so the YouTube IFrame API
+      // script can load; removing it would break all video embeds
+      expect(content).toContain("script-src");
+      expect(content).toContain("https://www.youtube.com");
+    });
+
+    it("CSP img-src includes YouTube thumbnail CDN (i.ytimg.com)", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const cspMeta = document.querySelector(
+        'meta[http-equiv="Content-Security-Policy"]'
+      );
+      const content = cspMeta?.getAttribute("content") ?? "";
+      // i.ytimg.com serves YouTube thumbnails; omitting it would cause thumbnail
+      // images to fail to load on browsers that enforce CSP
+      expect(content).toContain("img-src");
+      expect(content).toContain("https://i.ytimg.com");
+    });
+
+    it("CSP frame-src includes youtube-nocookie.com for privacy-enhanced embeds", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const cspMeta = document.querySelector(
+        'meta[http-equiv="Content-Security-Policy"]'
+      );
+      const content = cspMeta?.getAttribute("content") ?? "";
+      // youtube-nocookie.com is the privacy-enhanced embed domain; removing it
+      // would break players configured with enablejsapi=1 on nocookie URLs
+      expect(content).toContain("https://www.youtube-nocookie.com");
+    });
+
+    it("CSP restricts form-action to self (prevents form-hijack attacks)", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const cspMeta = document.querySelector(
+        'meta[http-equiv="Content-Security-Policy"]'
+      );
+      const content = cspMeta?.getAttribute("content") ?? "";
+      // form-action 'self' ensures any future form submission cannot be redirected
+      // to a third-party URL by an injected <form action="..."> element
+      expect(content).toContain("form-action 'self'");
+    });
   });
 
   it("html element has lang='en' for accessibility", () => {
