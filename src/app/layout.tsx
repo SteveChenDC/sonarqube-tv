@@ -113,9 +113,13 @@ export default function RootLayout({
       <head>
         {/*
           Content Security Policy — restricts resource loading to known-safe origins.
-          script-src uses a sha256 hash to allow only the specific theme-detection IIFE
-          below, rather than the broad 'unsafe-inline'. Per CSP Level 2+, a hash source
-          makes 'unsafe-inline' ineffective, so the hash is the tighter, explicit form.
+          In production (static export), script-src uses a sha256 hash to allow only
+          the specific theme-detection IIFE below, rather than the broad 'unsafe-inline'.
+          In development, 'unsafe-inline' is required because Next.js/Turbopack injects
+          multiple dynamic inline scripts (HMR, chunk loaders) whose hashes change every
+          build — a single sha256 hash cannot cover them all.
+          Per CSP Level 2+, a hash source makes 'unsafe-inline' ineffective in prod,
+          so the hash is the tighter, explicit form for the production static build.
           All other inline scripts (JSON-LD data blocks) are type="application/ld+json"
           and are not subject to script-src restrictions.
           style-src keeps 'unsafe-inline' for Tailwind's generated inline styles.
@@ -127,9 +131,11 @@ export default function RootLayout({
           httpEquiv="Content-Security-Policy"
           content={[
             "default-src 'none'",
-            // sha256 hash of the theme-detection IIFE below — allows only that one
-            // specific inline script. Any other injected inline script is blocked.
-            "script-src 'self' 'sha256-imH7XyQgTpje3D1+3Md3+y/TzEwctHI4pQ4BYCgyr58=' https://www.youtube.com",
+            // Dev: 'unsafe-inline' needed for Turbopack's dynamic inline scripts.
+            // Prod: sha256 hash locks the script-src to only the theme-detection IIFE.
+            process.env.NODE_ENV === "development"
+              ? "script-src 'self' 'unsafe-inline' https://www.youtube.com"
+              : "script-src 'self' 'sha256-imH7XyQgTpje3D1+3Md3+y/TzEwctHI4pQ4BYCgyr58=' https://www.youtube.com",
             "style-src 'self' 'unsafe-inline'",
             "img-src 'self' data: https://img.youtube.com https://i.ytimg.com https://www.youtube.com",
             "frame-src https://www.youtube.com https://www.youtube-nocookie.com",
