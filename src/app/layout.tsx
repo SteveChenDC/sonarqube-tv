@@ -143,12 +143,14 @@ export default function RootLayout({
             // Dev: 'unsafe-inline' needed for Turbopack's dynamic inline scripts.
             // Prod: sha256 hash locks the script-src to only the theme-detection IIFE.
             process.env.NODE_ENV === "development"
-              ? "script-src 'self' 'unsafe-inline' https://www.youtube.com"
+              ? "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.youtube.com"
               : "script-src 'self' 'sha256-imH7XyQgTpje3D1+3Md3+y/TzEwctHI4pQ4BYCgyr58=' https://www.youtube.com",
             "style-src 'self' 'unsafe-inline'",
             "img-src 'self' data: https://img.youtube.com https://i.ytimg.com https://www.youtube.com",
             "frame-src https://www.youtube.com https://www.youtube-nocookie.com",
-            "connect-src 'self'",
+            process.env.NODE_ENV === "development"
+              ? "connect-src 'self' ws://localhost:* http://localhost:*"
+              : "connect-src 'self'",
             "font-src 'self'",
             "object-src 'none'",
             "base-uri 'self'",
