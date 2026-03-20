@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 export type UploadDateFilter = "anytime" | "today" | "this-week" | "this-month" | "this-year";
 export type DurationFilter = "any" | "short" | "medium" | "long";
@@ -127,9 +127,20 @@ export default function FilterBar({
     };
   }, [isOpen]);
 
-  const handleTransitionEnd = useCallback(() => {
-    if (!visible) setMounted(false);
-  }, [visible]);
+  // Keep a ref to the latest `visible` value so handleTransitionEnd never
+  // reads a stale closure — critical when the modal is rapidly closed then
+  // re-opened and child transitionend events bubble up before React has
+  // committed the new `visible = true` state update.
+  const visibleRef = useRef(visible);
+  visibleRef.current = visible;
+
+  const handleTransitionEnd = useCallback((e: React.TransitionEvent) => {
+    // Ignore transitionend events that bubble up from child elements
+    // (e.g. filter pill buttons with transition-colors) to prevent premature
+    // unmounts caused by stale closures on rapid open/close cycles.
+    if (e.target !== e.currentTarget) return;
+    if (!visibleRef.current) setMounted(false);
+  }, []); // stable — reads from ref, not stale closure
 
   // Focus management: save the trigger's focus, move focus into modal on open,
   // restore focus to the trigger when modal closes (WCAG 2.4.3 Focus Order).
