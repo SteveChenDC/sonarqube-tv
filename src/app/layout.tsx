@@ -107,6 +107,31 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/*
+          Content Security Policy — restricts resource loading to known-safe origins.
+          'unsafe-inline' on script-src is required for the theme-detection IIFE below
+          and for Tailwind's inline styles on style-src. frame-src limits iframes to
+          YouTube only, blocking any injected third-party embeds.
+          Note: frame-ancestors cannot be set via meta CSP (only HTTP header), so
+          clickjacking protection depends on the hosting CDN/server configuration.
+        */}
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content={[
+            "default-src 'none'",
+            "script-src 'self' 'unsafe-inline' https://www.youtube.com",
+            "style-src 'self' 'unsafe-inline'",
+            "img-src 'self' data: https://img.youtube.com https://i.ytimg.com https://www.youtube.com",
+            "frame-src https://www.youtube.com https://www.youtube-nocookie.com",
+            "connect-src 'self'",
+            "font-src 'self'",
+            "object-src 'none'",
+            "base-uri 'self'",
+            "form-action 'self'",
+          ].join("; ")}
+        />
+        {/* Referrer-Policy — only send origin (no path/query) on cross-origin requests. */}
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
         {/* Preconnect to YouTube domains used for all video thumbnails and embeds.
             Eliminates DNS + TCP + TLS round-trips before the LCP thumbnail image
             starts downloading, improving Core Web Vitals (LCP) across all pages. */}

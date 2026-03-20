@@ -219,6 +219,75 @@ describe("RootLayout", () => {
     );
   });
 
+  describe("security meta tags", () => {
+    it("has a Content-Security-Policy meta tag", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const cspMeta = document.querySelector(
+        'meta[http-equiv="Content-Security-Policy"]'
+      );
+      expect(cspMeta).not.toBeNull();
+    });
+
+    it("CSP restricts frame-src to YouTube domains only", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const cspMeta = document.querySelector(
+        'meta[http-equiv="Content-Security-Policy"]'
+      );
+      const content = cspMeta?.getAttribute("content") ?? "";
+      expect(content).toContain("frame-src");
+      expect(content).toContain("youtube.com");
+      // Must not permit wildcard frames
+      expect(content).not.toContain("frame-src *");
+    });
+
+    it("CSP blocks object-src (prevents plugin-based attacks)", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const cspMeta = document.querySelector(
+        'meta[http-equiv="Content-Security-Policy"]'
+      );
+      const content = cspMeta?.getAttribute("content") ?? "";
+      expect(content).toContain("object-src 'none'");
+    });
+
+    it("CSP restricts base-uri to self (prevents base-tag injection)", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const cspMeta = document.querySelector(
+        'meta[http-equiv="Content-Security-Policy"]'
+      );
+      const content = cspMeta?.getAttribute("content") ?? "";
+      expect(content).toContain("base-uri 'self'");
+    });
+
+    it("has a Referrer-Policy meta tag set to strict-origin-when-cross-origin", () => {
+      render(
+        <RootLayout>
+          <div>content</div>
+        </RootLayout>
+      );
+      const referrerMeta = document.querySelector('meta[name="referrer"]');
+      expect(referrerMeta).not.toBeNull();
+      expect(referrerMeta?.getAttribute("content")).toBe(
+        "strict-origin-when-cross-origin"
+      );
+    });
+  });
+
   it("html element has lang='en' for accessibility", () => {
     render(
       <RootLayout>
