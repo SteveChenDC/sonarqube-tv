@@ -111,7 +111,9 @@ describe("FilterBar", () => {
 
   it("calls onOpenChange(false) when clicking the backdrop", () => {
     const { props } = renderFilterBar();
-    const backdrop = screen.getByLabelText("Close filters");
+    // The backdrop button has tabIndex={-1}; the X close button does not.
+    const closeBtns = screen.getAllByLabelText("Close filters");
+    const backdrop = closeBtns.find((el) => el.getAttribute("tabindex") === "-1");
     if (!backdrop) throw new Error("Backdrop button not found");
     fireEvent.click(backdrop);
     expect(props.onOpenChange).toHaveBeenCalledWith(false);
@@ -124,6 +126,56 @@ describe("FilterBar — accessibility & active state", () => {
     const dialog = document.querySelector("[role='dialog']");
     expect(dialog).not.toBeNull();
     expect(dialog).toHaveAttribute("aria-modal", "true");
+  });
+
+  it("dialog has aria-labelledby pointing to the 'Filters' heading id", () => {
+    renderFilterBar();
+    const dialog = document.querySelector("[role='dialog']");
+    expect(dialog).toHaveAttribute("aria-labelledby", "filter-dialog-title");
+    const heading = document.getElementById("filter-dialog-title");
+    expect(heading).not.toBeNull();
+    expect(heading?.textContent?.trim()).toBe("Filters");
+  });
+
+  it("close (X) button has aria-label='Close filters'", () => {
+    renderFilterBar();
+    // Both the X button and the invisible backdrop button are labeled "Close filters".
+    // The X button is the primary interactive close — it has no tabIndex=-1.
+    const btns = screen.getAllByLabelText("Close filters");
+    const xBtn = btns.find((el) => el.getAttribute("tabindex") !== "-1");
+    expect(xBtn).toBeDefined();
+    expect(xBtn?.tagName).toBe("BUTTON");
+  });
+
+  it("selected filter button has aria-pressed=true", () => {
+    renderFilterBar({ uploadDate: "this-week" });
+    const activeBtn = screen.getByText("This week");
+    expect(activeBtn).toHaveAttribute("aria-pressed", "true");
+  });
+
+  it("unselected filter buttons have aria-pressed=false", () => {
+    renderFilterBar({ uploadDate: "this-week" });
+    const inactiveBtn = screen.getByText("Any time");
+    expect(inactiveBtn).toHaveAttribute("aria-pressed", "false");
+  });
+
+  it("aria-pressed updates when a different filter is selected", () => {
+    const { props, rerender } = renderFilterBar({ uploadDate: "anytime" });
+    // Initially "Any time" is active
+    expect(screen.getByText("Any time")).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByText("Today")).toHaveAttribute("aria-pressed", "false");
+    // Simulate parent changing selection to "today"
+    rerender(<FilterBar {...props} uploadDate="today" />);
+    expect(screen.getByText("Today")).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByText("Any time")).toHaveAttribute("aria-pressed", "false");
+  });
+
+  it("duration and sort filter buttons also carry aria-pressed", () => {
+    renderFilterBar({ duration: "short", sortBy: "oldest" });
+    expect(screen.getByText("Under 4 min")).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByText("Any duration")).toHaveAttribute("aria-pressed", "false");
+    expect(screen.getByText("Oldest")).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByText("Newest")).toHaveAttribute("aria-pressed", "false");
   });
 
   it("active upload date button has highlight class (bg-qube-blue)", () => {

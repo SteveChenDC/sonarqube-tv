@@ -61,6 +61,7 @@ function FilterGroup<T extends string>({
           <button
             key={opt.value}
             onClick={() => onChange(opt.value)}
+            aria-pressed={value === opt.value}
             className={`rounded-full px-4 py-2.5 sm:px-3 sm:py-1.5 font-heading text-sm sm:text-xs font-medium transition-colors ${
               value === opt.value
                 ? "bg-qube-blue text-white"
@@ -146,6 +147,7 @@ export default function FilterBar({
         <div
           role="dialog"
           aria-modal="true"
+          aria-labelledby="filter-dialog-title"
           className={`fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm transition-colors duration-200 ${
             visible ? "bg-black/60" : "bg-black/0"
           }`}
@@ -171,11 +173,12 @@ export default function FilterBar({
               <div className="h-1 w-10 rounded-full bg-n7" />
             </div>
             <div className="mb-6 flex items-center justify-between">
-              <h2 className="font-heading text-lg font-semibold text-n1">
+              <h2 id="filter-dialog-title" className="font-heading text-lg font-semibold text-n1">
                 Filters
               </h2>
               <button
                 onClick={() => setIsOpen(false)}
+                aria-label="Close filters"
                 className="flex h-11 w-11 items-center justify-center rounded-lg text-n6 transition-colors hover:bg-n8 hover:text-n3"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
