@@ -160,4 +160,34 @@ describe("Hero", () => {
       expect(img.getAttribute("src")).toBe("/hero-thumb.jpg");
     }
   });
+
+  // ── Desktop hero tablet viewport height constraints (commit a769233) ────────
+
+  it("desktop section has max-h-[600px] to prevent hero stretching on tablet viewports", () => {
+    // Regression guard for commit a769233 — unconstrained min-h-[500px] caused
+    // the hero image to stretch vertically on tablet-sized screens between 500px
+    // and 70vh. max-h-[600px] caps the height so the image never over-extends.
+    const { container } = render(<Hero video={mockVideo} />);
+    const desktopSection = container.querySelector(".hidden.sm\\:block");
+    expect(desktopSection).toBeTruthy();
+    expect(desktopSection?.className).toContain("max-h-[600px]");
+  });
+
+  it("desktop section has overflow-hidden to clip any image that exceeds the capped height", () => {
+    // overflow-hidden works together with max-h-[600px]: without it, the <Image>
+    // could bleed outside the section boundary even with the max-height cap.
+    const { container } = render(<Hero video={mockVideo} />);
+    const desktopSection = container.querySelector(".hidden.sm\\:block");
+    expect(desktopSection?.className).toContain("overflow-hidden");
+  });
+
+  it("desktop section uses min-h-[400px] (reduced from 500px after tablet fix)", () => {
+    // The original min-h was 500px; the tablet fix lowered it to 400px so that
+    // the max-h-[600px] cap has effective headroom. Reverting to 500px would
+    // re-introduce the tablet stretch on narrow-tall screens.
+    const { container } = render(<Hero video={mockVideo} />);
+    const desktopSection = container.querySelector(".hidden.sm\\:block");
+    expect(desktopSection?.className).toContain("min-h-[400px]");
+    expect(desktopSection?.className).not.toContain("min-h-[500px]");
+  });
 });
