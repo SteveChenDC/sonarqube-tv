@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
-import { render, screen, cleanup, fireEvent } from "@testing-library/react";
+import { render, screen, cleanup, fireEvent, act } from "@testing-library/react";
 import FilterBar from "./FilterBar";
 import { FilterTrigger } from "./FilterTrigger";
 
@@ -346,6 +346,112 @@ describe("FilterBar — all duration callback values", () => {
     const { props } = renderFilterBar({ duration: "short" });
     fireEvent.click(screen.getByText("Any duration"));
     expect(props.onDurationChange).toHaveBeenCalledWith("any");
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Focus trap
+//
+// When the FilterBar modal opens, focus must move into the modal and be
+// contained there (Tab/Shift+Tab cycle within the focusable elements).
+// When it closes, focus must return to the element that triggered it.
+// WCAG 2.4.3 Focus Order (Level A) + 2.1.2 No Keyboard Trap (Level A).
+// ─────────────────────────────────────────────────────────────────────────────
+describe("FilterBar — focus trap", () => {
+  it("restores focus to the previously focused element when the dialog closes", () => {
+    // Create a stand-in trigger button and focus it before opening the dialog
+    const trigger = document.createElement("button");
+    document.body.appendChild(trigger);
+    trigger.focus();
+    expect(document.activeElement).toBe(trigger);
+
+    const { props, rerender } = renderFilterBar({ isOpen: true });
+
+    // Closing the dialog should synchronously restore focus to the trigger
+    rerender(<FilterBar {...props} isOpen={false} />);
+    expect(document.activeElement).toBe(trigger);
+
+    document.body.removeChild(trigger);
+  });
+
+  it("Tab from the last focusable element wraps to the first", () => {
+    renderFilterBar();
+    // The implementation queries modalRef.current (inner panel), which excludes
+    // the backdrop button that has tabIndex={-1}. Mirror that by excluding
+    // tabindex="-1" elements so the test's "first/last" matches the implementation.
+    const modal = document.querySelector("[role='dialog']")!;
+    const focusable = Array.from(
+      modal.querySelectorAll<HTMLElement>(
+        'button:not([disabled]):not([tabindex="-1"])'
+      )
+    );
+    expect(focusable.length).toBeGreaterThan(1);
+
+    // Focus the last element, then press Tab — should wrap to first
+    focusable[focusable.length - 1].focus();
+    expect(document.activeElement).toBe(focusable[focusable.length - 1]);
+
+    fireEvent.keyDown(document, { key: "Tab", shiftKey: false });
+
+    expect(document.activeElement).toBe(focusable[0]);
+  });
+
+  it("Shift+Tab from the first focusable element wraps to the last", () => {
+    renderFilterBar();
+    const modal = document.querySelector("[role='dialog']")!;
+    const focusable = Array.from(
+      modal.querySelectorAll<HTMLElement>(
+        'button:not([disabled]):not([tabindex="-1"])'
+      )
+    );
+    expect(focusable.length).toBeGreaterThan(1);
+
+    // Focus the first element, then press Shift+Tab — should wrap to last
+    focusable[0].focus();
+    expect(document.activeElement).toBe(focusable[0]);
+
+    fireEvent.keyDown(document, { key: "Tab", shiftKey: true });
+
+    expect(document.activeElement).toBe(focusable[focusable.length - 1]);
+  });
+
+  it("Tab on a middle element does not wrap (native browser handles it)", () => {
+    renderFilterBar();
+    const modal = document.querySelector("[role='dialog']")!;
+    const focusable = Array.from(
+      modal.querySelectorAll<HTMLElement>(
+        'button:not([disabled]):not([tabindex="-1"])'
+      )
+    );
+    // Pick a middle element — there must be at least 3 buttons
+    expect(focusable.length).toBeGreaterThan(2);
+    const middle = focusable[1];
+    middle.focus();
+
+    // Tab on a non-boundary element should NOT preventDefault — focus stays
+    // wherever the browser naturally moves it (jsdom: typically unchanged)
+    fireEvent.keyDown(document, { key: "Tab", shiftKey: false });
+
+    // The handler should NOT have moved focus away from the middle button
+    // (wrapping only applies at boundaries)
+    expect(document.activeElement).toBe(middle);
+  });
+
+  it("moves focus into the modal when it opens", async () => {
+    renderFilterBar({ isOpen: true });
+
+    // Allow requestAnimationFrame to fire
+    await act(async () => {
+      await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
+    });
+
+    // Focus should land on the Close (X) button — first natural-tab-order
+    // focusable inside the inner modal panel (the backdrop button is excluded
+    // because it carries tabIndex={-1})
+    const closeBtn = screen.getAllByLabelText("Close filters").find(
+      (el) => el.getAttribute("tabindex") !== "-1"
+    );
+    expect(document.activeElement).toBe(closeBtn);
   });
 });
 

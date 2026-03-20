@@ -89,6 +89,7 @@ export default function FilterBar({
   onOpenChange,
 }: Readonly<FilterBarProps>) {
   const modalRef = useRef<HTMLDivElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
   const setIsOpen = onOpenChange;
 
   // Animation state: keep modal mounted during exit transition
@@ -130,11 +131,55 @@ export default function FilterBar({
     if (!visible) setMounted(false);
   }, [visible]);
 
+  // Focus management: save the trigger's focus, move focus into modal on open,
+  // restore focus to the trigger when modal closes (WCAG 2.4.3 Focus Order).
+  useEffect(() => {
+    if (isOpen) {
+      previousFocusRef.current = document.activeElement as HTMLElement;
+      // rAF ensures the modal panel is in the DOM before we try to focus
+      requestAnimationFrame(() => {
+        const firstFocusable = modalRef.current?.querySelector<HTMLElement>(
+          'button:not([disabled]), [href], input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        );
+        firstFocusable?.focus();
+      });
+    } else {
+      // Restore focus to the element that triggered the dialog
+      previousFocusRef.current?.focus();
+      previousFocusRef.current = null;
+    }
+  }, [isOpen]);
+
+  // Keyboard: Escape to close + Tab focus trap (WCAG 2.1.2 No Keyboard Trap).
   useEffect(() => {
     if (!isOpen) return;
 
     function handleKeyDown(e: KeyboardEvent) {
-      if (e.key === "Escape") setIsOpen(false);
+      if (e.key === "Escape") {
+        setIsOpen(false);
+        return;
+      }
+
+      // Focus trap: cycle Tab/Shift+Tab within the modal panel
+      if (e.key === "Tab") {
+        const modal = modalRef.current;
+        if (!modal) return;
+        const focusable = Array.from(
+          modal.querySelectorAll<HTMLElement>(
+            'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+          )
+        );
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     }
 
     document.addEventListener("keydown", handleKeyDown);
