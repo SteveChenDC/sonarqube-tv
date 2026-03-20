@@ -9,7 +9,7 @@ Netflix-style video hub for SonarQube tutorials and certification courses. Brows
 - **Next.js 16** (App Router, SSG via `generateStaticParams`)
 - **React 19** + TypeScript
 - **Tailwind CSS 4** with Sonar brand design tokens
-- **Vitest** — 890+ unit tests across 53 test files
+- **Vitest** — 1,160+ unit tests across 70 test files
 - **Playwright** — 28 E2E tests across 6 spec files
 
 ## Quick Start
@@ -67,15 +67,7 @@ docs/                        # E2E test documentation
 
 ## Design System
 
-Follows the [Sonar brand guide](https://brand.sonarsource.com). Key tokens:
-
-| Color | Hex | Usage |
-|-------|-----|-------|
-| Persistence Purple | `#290042` | Accents, badges |
-| Sonar Red | `#D3121D` | CTAs, active states |
-| Qube Blue | `#126ED3` | Links, interactive |
-
-Fonts: **Poppins** (headings) + **Inter** (body)
+This app uses the latest [Sonar brand guidelines](https://brand.sonarsource.com) as of March 20, 2026.
 
 ## Organic Search Strategy
 
@@ -99,7 +91,7 @@ Every one of the 240+ pages emits structured data that qualifies for [Google Vid
 | Viewer watches on YouTube, leaves | Viewer watches on Sonar.tv, sees related tutorials, certification courses, category pages — deeper engagement |
 | No retargeting, no attribution | Full analytics, engagement tracking, progress data on your domain |
 
-Video rich results in Google Search have [significantly higher CTR](https://developers.google.com/search/docs/appearance/structured-data/video) than plain blue links. Sonar.tv creates 240+ new opportunities for Sonar to appear in search with rich thumbnails — on queries like "code quality static analysis tutorial," "SonarQube setup," "clean code practices," and "SAST tool comparison."
+Video rich results in Google Search have [significantly higher CTR](https://developers.google.com/search/docs/appearance/structured-data/video) than plain blue links. Sonar.tv creates 240+ new opportunities for Sonar to appear in search with rich thumbnails — on queries like "code quality static analysis tutorial," "SonarQube setup," "code quality practices," and "SAST tool comparison."
 
 ### Sitemap and crawlability
 
@@ -115,10 +107,34 @@ Watch pages use YouTube `maxresdefault` (1280x720) as the OG image. When someone
 
 The entire site is built on the [Sonar brand guide](https://brand.sonarsource.com):
 
-- **Persistence Purple** (`#290042`), **Sonar Red** (`#D3121D`), **Qube Blue** (`#126ED3`), and the full n1-n9 neutral scale — no off-brand colors anywhere
+- **Persistence Purple** (`#290042`), **Sonar Red** (`#D3121D`), **Qube Blue** (`#126ED3`), and the full n1–n9 neutral scale — no off-brand colors anywhere
 - **Poppins** for headings, **Inter** for body text — matching Sonar's typography system
 - Dark theme as default (background `#0a0a0a`) with light mode toggle
 - Every component, badge, button, and hover state uses design tokens from the brand guide
+
+### Naming Conventions
+
+| In this app | Not used | Why |
+|-------------|----------|-----|
+| **Sonar.tv** | SonarQube TV | App brand — renders as "Sonar" + ".tv" in Qube Blue |
+| **SonarSource** | — | Company entity (footer, legal) |
+| **SonarQube Cloud** | SonarCloud | Product rebrand |
+| **SonarQube Server** | SonarQube (self-hosted) | Deployment distinction |
+| **SonarQube for IDE** | SonarLint | Product rebrand |
+| code quality / code health | Clean Code (branded) | More precise and descriptive |
+
+### Voice and Tone
+
+- **Authoritative, not arrogant** — confidence from 16+ years of trust with millions of developers
+- **Insightful, not abstract** — connect tactical code issues to strategic business challenges
+- **Empowering, not prescriptive** — help developers grow their skills and reduce toil
+- **"Vibe, then verify"** — approved messaging framework for AI-assisted development
+
+### Company Boilerplate
+
+> Sonar, the industry standard for code verification and automated code review, helps reduce outages, improve security, and lower risks associated with AI and agentic coding. As an independent verification platform, Sonar enables organizations to securely develop at the speed of AI. Sonar is the foundation for high performance software engineering, analyzing over 750 billion lines of code daily to ensure applications are secure, reliable, and maintainable. Rooted in the open source community, Sonar is trusted by 7M+ developers globally, including teams at Snowflake, Booking.com, Deutsche Bank, AstraZeneca, and Ford Motor Company.
+
+**Mission:** Supercharge developers to build better, faster.
 
 This isn't a third-party platform with Sonar content on it. It's a Sonar-owned experience that looks and feels like the rest of the Sonar ecosystem.
 
@@ -155,7 +171,7 @@ Fast pages rank higher and retain visitors longer. Sonar.tv is built for speed.
 
 ## Testing
 
-890+ unit tests and 28 end-to-end tests ensure nothing breaks when content is updated. Tests run automatically and cover navigation, search, filters, video playback, mobile interactions, and accessibility.
+1,160+ unit tests and 28 end-to-end tests ensure nothing breaks when content is updated. Tests run automatically and cover navigation, search, filters, video playback, mobile interactions, and accessibility.
 
 See [`docs/e2e-tests.md`](docs/e2e-tests.md) for the full E2E test reference.
 
