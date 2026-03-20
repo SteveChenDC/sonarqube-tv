@@ -24,7 +24,7 @@ vi.mock("@/components/SearchContext", () => ({
   ),
 }));
 
-import RootLayout, { metadata } from "./layout";
+import RootLayout, { metadata, viewport } from "./layout";
 
 describe("layout metadata", () => {
   it("has correct metadataBase URL", () => {
@@ -488,6 +488,47 @@ describe("RootLayout", () => {
       const main = document.querySelector("main");
       expect(main).not.toBeNull();
       expect(main!.tabIndex).toBe(-1);
+    });
+  });
+
+  describe("viewport export", () => {
+    it("viewportFit is 'cover' so env(safe-area-inset-*) returns real insets on iOS", () => {
+      // viewport-fit=cover is required for env(safe-area-inset-bottom) to return
+      // the actual notch/home-bar inset value (34px on iPhone X+) rather than 0.
+      // Removing it silently breaks the bottom-safe FAB positioning on iOS.
+      expect(viewport.viewportFit).toBe("cover");
+    });
+
+    it("width is 'device-width'", () => {
+      expect(viewport.width).toBe("device-width");
+    });
+
+    it("initialScale is 1", () => {
+      expect(viewport.initialScale).toBe(1);
+    });
+
+    it("themeColor dark entry uses Sonar Red (#D3121D)", () => {
+      const themeColors = viewport.themeColor as {
+        media: string;
+        color: string;
+      }[];
+      const darkEntry = themeColors.find((t) =>
+        t.media.includes("dark")
+      );
+      expect(darkEntry).toBeDefined();
+      expect(darkEntry!.color).toBe("#D3121D");
+    });
+
+    it("themeColor light entry uses Sonar Red (#D3121D)", () => {
+      const themeColors = viewport.themeColor as {
+        media: string;
+        color: string;
+      }[];
+      const lightEntry = themeColors.find((t) =>
+        t.media.includes("light")
+      );
+      expect(lightEntry).toBeDefined();
+      expect(lightEntry!.color).toBe("#D3121D");
     });
   });
 });

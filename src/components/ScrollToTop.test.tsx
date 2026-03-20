@@ -119,4 +119,14 @@ describe("ScrollToTop", () => {
     unmount();
     expect(removeSpy).toHaveBeenCalledWith("scroll", expect.any(Function));
   });
+
+  it("button uses bottom-safe class (not bottom-6) so iOS home-indicator clearance is respected", () => {
+    // bottom-safe = calc(env(safe-area-inset-bottom) + 1.5rem) — requires
+    // viewport-fit=cover in layout.tsx to return the real 34px inset on iPhone X+.
+    // Reverting to bottom-6 would make the button overlap the iOS home indicator.
+    render(<ScrollToTop />);
+    const button = screen.getByRole("button", { name: "Scroll to top" });
+    expect(button.className).toContain("bottom-safe");
+    expect(button.className).not.toContain("bottom-6");
+  });
 });
