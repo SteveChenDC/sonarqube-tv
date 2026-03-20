@@ -79,9 +79,11 @@ describe("layout metadata", () => {
   it("has twitter card type summary_large_image", () => {
     const twitter = metadata.twitter as {
       card: string;
+      site: string;
       images: string[];
     };
     expect(twitter.card).toBe("summary_large_image");
+    expect(twitter.site).toBe("@SonarSource");
     expect(twitter.images).toContain("/og-image.png");
   });
 });

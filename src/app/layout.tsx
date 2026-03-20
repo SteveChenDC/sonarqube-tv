@@ -48,6 +48,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    // @SonarSource is the official Twitter/X account for the brand.
+    // Appears in the "from @SonarSource" attribution line on Twitter cards,
+    // and is inherited by child pages via Next.js metadata merging.
+    site: "@SonarSource",
     images: ["/og-image.png"],
   },
 };
