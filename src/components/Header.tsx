@@ -490,7 +490,7 @@ export default function Header() {
               aria-label="Courses"
               className={`flex items-center gap-1 rounded-lg px-3 py-2 max-sm:min-h-[44px] font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
             >
-              <span className="hidden sm:inline">Courses</span>
+              <span>Courses</span>
               <svg
                 className={`h-3.5 w-3.5 transition-transform duration-200 ${coursesOpen ? "rotate-180" : ""}`}
                 fill="none"
@@ -545,7 +545,7 @@ export default function Header() {
                             className="group flex items-start gap-3 rounded-lg p-2.5 transition-colors hover:bg-n8/50"
                           >
                             <img
-                              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/courses/${course.id}.png`}
+                              src={`/courses/${course.id}.png`}
                               alt={course.title}
                               className="mt-0.5 h-8 w-14 shrink-0 rounded object-cover"
                             />
@@ -591,7 +591,7 @@ export default function Header() {
               aria-label="Categories"
               className={`flex items-center gap-1 rounded-lg px-3 py-2 max-sm:min-h-[44px] font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
             >
-              <span className="hidden sm:inline">Categories</span>
+              <span>Categories</span>
               <svg
                 className={`h-3.5 w-3.5 transition-transform duration-200 ${menuOpen ? "rotate-180" : ""}`}
                 fill="none"

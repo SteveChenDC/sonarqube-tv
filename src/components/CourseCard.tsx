@@ -56,7 +56,7 @@ export default function CourseCard({
       {/* Course image header */}
       <div className="relative h-36 overflow-hidden">
         <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/courses/${course.id}.png`}
+          src={`/courses/${course.id}.png`}
           alt={course.title}
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-105"

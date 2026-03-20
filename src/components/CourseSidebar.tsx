@@ -62,7 +62,7 @@ export default function CourseSidebar({
           ) : (
             <div className="relative h-28 w-full overflow-hidden rounded-lg">
               <Image
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/courses/${course.id}.png`}
+                src={`/courses/${course.id}.png`}
                 alt={course.title}
                 fill
                 className="object-cover"
