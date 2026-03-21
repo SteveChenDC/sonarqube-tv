@@ -131,9 +131,6 @@ export default function Header() {
 
   const handleMouseEnter = useCallback(() => {
     clearTimeout(timeoutRef.current);
-    clearTimeout(coursesTimeoutRef.current);
-    setMenuOpen(true);
-    setCoursesOpen(false);
   }, []);
 
   const handleMouseLeave = useCallback(() => {
@@ -154,9 +151,6 @@ export default function Header() {
 
   const handleCoursesMouseEnter = useCallback(() => {
     clearTimeout(coursesTimeoutRef.current);
-    clearTimeout(timeoutRef.current);
-    setCoursesOpen(true);
-    setMenuOpen(false);
   }, []);
 
   const handleCoursesMouseLeave = useCallback(() => {
