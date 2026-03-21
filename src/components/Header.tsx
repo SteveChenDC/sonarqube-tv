@@ -486,7 +486,7 @@ export default function Header() {
             className={`relative ${searchOpen ? "hidden sm:block" : ""}`}
           >
             <button
-              onClick={() => { setCoursesOpen((prev) => !prev); setMenuOpen(false); }}
+              onClick={() => { setCoursesOpen((prev) => !prev); setMenuOpen(false); setDropdownVisible(false); setDropdownMounted(false); }}
               aria-label="Courses"
               className={`flex items-center gap-1 rounded-lg px-2 sm:px-3 py-2 max-sm:min-h-[44px] font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
             >
@@ -587,7 +587,7 @@ export default function Header() {
             className={`relative ${searchOpen ? "hidden sm:block" : ""}`}
           >
             <button
-              onClick={() => { setMenuOpen((prev) => !prev); setCoursesOpen(false); }}
+              onClick={() => { setMenuOpen((prev) => !prev); setCoursesOpen(false); setCoursesDropdownVisible(false); setCoursesDropdownMounted(false); }}
               aria-label="Categories"
               className={`flex items-center gap-1 rounded-lg px-2 sm:px-3 py-2 max-sm:min-h-[44px] font-heading text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-qube-blue focus-visible:outline-offset-2 ${navText}`}
             >
